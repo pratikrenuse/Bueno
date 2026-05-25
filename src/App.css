@@ -185,7 +185,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
 }
 
@@ -885,18 +885,69 @@ body {
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
-  .intro-hero { grid-template-columns: 1fr; }
+  .intro-hero { grid-template-columns: 1fr; min-height: 100vh; }
   .intro-right { display: none; }
-  .intro-left { padding: 100px 32px 64px; }
+  .intro-left { padding: 100px 32px 64px; min-height: 100vh; }
 }
 
 @media (max-width: 640px) {
-  .calc-header { padding: 16px 24px; }
-  .progress-wrap { padding: 0 24px; }
-  .step-inner { padding: 0 24px; }
-  .results-inner { padding: 0 24px; }
-  .calc-footer { padding: 16px 24px; }
-  .country-grid { grid-template-columns: 1fr 1fr; }
-  .three-choice { grid-template-columns: 1fr; }
-  .tax-panel-grid { grid-template-columns: 1fr; gap: 14px; }
+  html { overflow-x: hidden; }
+  body { overflow-x: hidden; }
+
+  .calc-header { padding: 14px 20px; }
+  .calc-logo-img { height: 22px; }
+
+  .progress-wrap { padding: 0 20px; top: 56px; }
+  .progress-inner { height: 38px; gap: 10px; }
+  .progress-label { font-size: 9px; }
+
+  .intro-left { padding: 80px 24px 48px; }
+  .intro-headline { font-size: 32px; line-height: 1.1; }
+  .intro-body { font-size: 15px; margin-bottom: 32px; }
+  .btn-primary-outline { max-width: 100%; width: 100%; }
+  .intro-trust-row { flex-wrap: wrap; gap: 10px; margin-top: 28px; padding-top: 28px; }
+
+  .step-screen { padding-top: 110px; padding-bottom: 60px; }
+  .step-inner { padding: 0 20px; }
+  .step-question { font-size: 24px; }
+  .step-hint { font-size: 13px; margin-bottom: 24px; }
+
+  .country-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .country-btn { padding: 11px 12px; font-size: 12px; }
+
+  .option-stack { gap: 6px; }
+  .option-card { padding: 15px 16px; }
+  .option-title { font-size: 13px; }
+  .option-desc { font-size: 11px; }
+
+  .three-choice { grid-template-columns: 1fr; gap: 6px; }
+  .choice-btn { padding: 14px; font-size: 13px; }
+
+  .value-input { font-size: 20px; padding: 14px 16px; }
+  .input-prefix { font-size: 18px; padding: 14px 10px 14px 16px; }
+
+  .email-input { padding: 14px 16px; font-size: 15px; }
+
+  .btn-primary { padding: 15px 24px; font-size: 11px; }
+  .btn-back { margin-bottom: 20px; }
+
+  .results-screen { padding-top: 90px; }
+  .results-inner { padding: 0 20px; }
+  .results-headline { font-size: 22px; }
+
+  .tax-panel { padding: 24px 20px; }
+  .tax-panel-amount { font-size: 44px; }
+  .tax-panel-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .liability-panel { padding: 20px; }
+  .ai-panel { padding: 20px; }
+  .cta-panel { padding: 20px; }
+
+  .calc-footer { padding: 16px 20px; font-size: 10px; }
+}
+
+@media (max-width: 380px) {
+  .intro-headline { font-size: 28px; }
+  .tax-panel-grid { grid-template-columns: 1fr; }
+  .country-grid { grid-template-columns: 1fr; }
 }
