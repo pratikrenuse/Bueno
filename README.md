@@ -65,7 +65,7 @@ npm run dev
 **Important:** `ANTHROPIC_API_KEY` must NOT be prefixed with `VITE_`. It is only used server-side in the API route.
 
 ---
- 
+
 ## Supabase setup
 
 Run this SQL in your Supabase SQL editor:
