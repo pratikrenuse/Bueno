@@ -44,12 +44,12 @@ const progressForStep = (step) => {
 function Logo({ white }) {
   return (
     <div className="calc-logo-wrap">
-      <img className="calc-logo-img" src="/bueno-logo.jpg" alt="Bueno"
-        style={{ filter: white ? 'brightness(0) invert(1)' : 'none' }}
-        onError={(e) => { e.target.style.display = 'none'; }} />
-      <span className={`calc-logo-text ${white ? 'white' : ''}`}>Bueno</span>
-      <span className="calc-logo-divider" />
-      <span className={`calc-logo-sub ${white ? 'white' : ''}`}>Property Simplified</span>
+      <img
+        className="calc-logo-img"
+        src={white ? '/images/bueno-logo-transparent.png' : '/images/bueno-logo-white.png'}
+        alt="Bueno | Property Simplified"
+        style={white ? { filter: 'brightness(0) invert(1)' } : {}}
+      />
     </div>
   );
 }
@@ -120,19 +120,24 @@ export default function TaxCalculator() {
 
       {step === 'intro' && (
         <div className="intro-hero">
-          <div className="intro-hero-inner">
-            <div className="intro-eyebrow"><span className="intro-eyebrow-line" /><span className="intro-eyebrow-text">Free for foreign property owners</span></div>
-            <h1 className="intro-headline">How much Spanish<br />property tax do<br />you owe <em>this year?</em></h1>
-            <p className="intro-body">Most foreign property owners underpay, miss the deadline, or have never filed at all. This calculator shows your exact Modelo 210 obligation in under 2 minutes.</p>
-            <div className="intro-cta-row">
-              <button className="btn-primary-outline" onClick={() => go('country')}>Calculate my tax <span>&#8594;</span></button>
+          <div className="intro-left">
+            <div className="intro-hero-inner">
+              <div className="intro-eyebrow"><span className="intro-eyebrow-line" /><span className="intro-eyebrow-text">Free for foreign property owners</span></div>
+              <h1 className="intro-headline">How much Spanish<br />property tax do<br />you owe <em>this year?</em></h1>
+              <p className="intro-body">Most foreign property owners underpay, miss the deadline, or have never filed at all. This calculator shows your exact Modelo 210 obligation in under 2 minutes.</p>
+              <div className="intro-cta-row">
+                <button className="btn-primary-outline" onClick={() => go('country')}>Calculate my tax <span>&#8594;</span></button>
+              </div>
+              <div className="intro-trust-row">
+                <span className="intro-trust-item">Takes 2 minutes</span><span className="intro-trust-dot" />
+                <span className="intro-trust-item">No account needed</span><span className="intro-trust-dot" />
+                <span className="intro-trust-item">Free</span><span className="intro-trust-dot" />
+                <span className="intro-trust-item">Trusted by 2,000+ owners</span>
+              </div>
             </div>
-            <div className="intro-trust-row">
-              <span className="intro-trust-item">Takes 2 minutes</span><span className="intro-trust-dot" />
-              <span className="intro-trust-item">No account needed</span><span className="intro-trust-dot" />
-              <span className="intro-trust-item">Free</span><span className="intro-trust-dot" />
-              <span className="intro-trust-item">Trusted by 2,000+ owners</span>
-            </div>
+          </div>
+          <div className="intro-right">
+            <img src="/images/hero.jpg" alt="Spanish property owners" />
           </div>
         </div>
       )}
