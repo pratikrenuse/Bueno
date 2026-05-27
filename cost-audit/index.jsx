@@ -18,13 +18,17 @@ const progressForStep = (step) => {
 
 function Logo({ white }) {
   return (
-    <div className="calc-logo-wrap">
-      <img
-        className="calc-logo-img"
-        src={white ? '/images/bueno-logo-transparent.png' : '/images/bueno-logo-white.png'}
-        alt="Bueno | Property Simplified"
-        style={white ? { filter: 'brightness(0) invert(1)' } : {}}
-      />
+    <div className="site-brand">
+      <span className={`site-brand-name ${white ? 'white' : ''}`}>Spain 24/7</span>
+      <span className={`site-brand-powered ${white ? 'white' : ''}`}>
+        Powered by
+        <img
+          src={white ? '/images/bueno-logo-transparent.png' : '/images/bueno-logo-white.png'}
+          alt="Bueno"
+          style={white ? { filter: 'brightness(0) invert(1)', opacity: 0.6 } : { opacity: 0.65 }}
+        />
+        Bueno
+      </span>
     </div>
   );
 }

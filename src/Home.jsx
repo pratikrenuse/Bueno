@@ -8,11 +8,13 @@ const ALL_TOOLS = Object.values(metaModules)
   .sort((a, b) => a.order - b.order)
 
 export default function Home() {
-  const navRef  = useRef(null)
-  const logoRef = useRef(null)
+  const navRef          = useRef(null)
+  const logoRef         = useRef(null)
+  const brandNameRef    = useRef(null)
+  const brandPoweredRef = useRef(null)
 
   useEffect(() => {
-    document.title = 'Spanish Property Insights | Free Tools | Bueno'
+    document.title = 'Spain 24/7 | Free Tools | Bueno'
 
     const hero = document.querySelector('.home-hero')
     if (!hero) return
@@ -22,9 +24,16 @@ export default function Home() {
       if (navRef.current) {
         navRef.current.className = `home-nav ${inHero ? 'top' : 'scrolled'}`
       }
+      if (brandNameRef.current) {
+        brandNameRef.current.className = `site-brand-name ${inHero ? 'white' : ''}`
+      }
+      if (brandPoweredRef.current) {
+        brandPoweredRef.current.className = `site-brand-powered ${inHero ? 'white' : ''}`
+      }
       if (logoRef.current) {
-        logoRef.current.src    = inHero ? '/images/bueno-logo-transparent.png' : '/images/bueno-logo-white.png'
+        logoRef.current.src          = inHero ? '/images/bueno-logo-transparent.png' : '/images/bueno-logo-white.png'
         logoRef.current.style.filter = inHero ? 'brightness(0) invert(1)' : 'none'
+        logoRef.current.style.opacity = inHero ? '0.6' : '0.7'
       }
     }, { threshold: 0.05 })
 
@@ -37,9 +46,14 @@ export default function Home() {
 
       {/* NAV */}
       <nav className="home-nav top" ref={navRef}>
-        <div className="home-nav-logo">
-          <img ref={logoRef} src="/images/bueno-logo-transparent.png" alt="Bueno | Property Simplified"
-               style={{ filter: 'brightness(0) invert(1)' }} />
+        <div className="site-brand">
+          <span ref={brandNameRef} className="site-brand-name white">Spain 24/7</span>
+          <span ref={brandPoweredRef} className="site-brand-powered white">
+            Powered by
+            <img ref={logoRef} src="/images/bueno-logo-transparent.png" alt="Bueno"
+                 style={{ filter: 'brightness(0) invert(1)' }} />
+            Bueno
+          </span>
         </div>
         <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-nav-cta">
           Get Bueno &#8594;
@@ -62,10 +76,9 @@ export default function Home() {
               Understand your tax obligations, check if you are overpaying,
               and manage everything with confidence.
             </p>
-            <button className="home-scroll-btn"
+            <button className="btn-primary-outline" style={{ maxWidth: 280 }}
               onClick={() => document.getElementById('tools').scrollIntoView({ behavior: 'smooth' })}>
-              <span className="home-scroll-line" />
-              Explore the tools
+              Explore the tools &#8595;
             </button>
             <div className="home-trust">
               <span className="home-trust-item">100% free</span>
@@ -81,6 +94,14 @@ export default function Home() {
         <div className="home-hero-right">
           <img src="/images/hero-home.jpg" alt="Spanish property" />
         </div>
+
+        {/* Scroll cue */}
+        <div className="hero-scroll-cue"
+          onClick={() => document.getElementById('tools').scrollIntoView({ behavior: 'smooth' })}>
+          <span className="hero-scroll-cue-label">Scroll</span>
+          <div className="hero-scroll-arrow">&#8595;</div>
+        </div>
+
       </section>
 
       {/* TOOLS */}
@@ -169,8 +190,14 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="home-footer">
-        <div className="home-footer-logo">
-          <img src="/images/bueno-logo-transparent.png" alt="Bueno | Property Simplified" />
+        <div className="site-brand">
+          <span className="site-brand-name white" style={{ fontSize: 14 }}>Spain 24/7</span>
+          <span className="site-brand-powered white">
+            Powered by
+            <img src="/images/bueno-logo-transparent.png" alt="Bueno"
+                 style={{ filter: 'brightness(0) invert(1)', opacity: 0.6 }} />
+            Bueno
+          </span>
         </div>
         <div className="home-footer-links">
           <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer">getbueno.com</a>
