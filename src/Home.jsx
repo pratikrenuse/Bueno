@@ -49,10 +49,7 @@ export default function Home() {
         <div className="site-brand">
           <span ref={brandNameRef} className="site-brand-name white">Spain 24/7</span>
           <span ref={brandPoweredRef} className="site-brand-powered white">
-            Powered by
-            <img ref={logoRef} src="/images/bueno-logo-transparent.png" alt="Bueno"
-                 style={{ filter: 'brightness(0) invert(1)' }} />
-            Bueno
+            Powered by Bueno
           </span>
         </div>
         <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-nav-cta">
@@ -193,10 +190,7 @@ export default function Home() {
         <div className="site-brand">
           <span className="site-brand-name white" style={{ fontSize: 14 }}>Spain 24/7</span>
           <span className="site-brand-powered white">
-            Powered by
-            <img src="/images/bueno-logo-transparent.png" alt="Bueno"
-                 style={{ filter: 'brightness(0) invert(1)', opacity: 0.6 }} />
-            Bueno
+            Powered by Bueno
           </span>
         </div>
         <div className="home-footer-links">
