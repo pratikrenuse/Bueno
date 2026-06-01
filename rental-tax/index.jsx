@@ -110,7 +110,7 @@ export default function RentalTaxCalculator() {
     residency: '',
     rentalIncome: '', daysRented: '',
     // Prorated
-    ibiTax: '', basura: '', ibiGarage: '',
+    ibiTax: '', basura: '',
     insurance: '', communityFees: '', mortgageInterest: '',
     electricity: '', gas: '', water: '', internet: '', alarm: '',
     // Annual (not prorated)
@@ -136,7 +136,7 @@ export default function RentalTaxCalculator() {
     setResults(null);
     setForm({
       residency: '', rentalIncome: '', daysRented: '',
-      ibiTax: '', basura: '', ibiGarage: '',
+      ibiTax: '', basura: '',
       insurance: '', communityFees: '', mortgageInterest: '',
       electricity: '', gas: '', water: '', internet: '', alarm: '',
       maintenance: '', managementFees: '', advertising: '', legalFees: '',
@@ -280,7 +280,6 @@ export default function RentalTaxCalculator() {
             <ExpenseSection title="Property taxes">
               <NumberInput label="IBI property tax" value={form.ibiTax} onChange={set('ibiTax')} />
               <NumberInput label="Basura (waste collection)" value={form.basura} onChange={set('basura')} />
-              <NumberInput label="IBI garage tax" value={form.ibiGarage} onChange={set('ibiGarage')} />
             </ExpenseSection>
 
             <ExpenseSection title="Other annual costs">
@@ -358,6 +357,21 @@ export default function RentalTaxCalculator() {
         <div className="results-screen">
           <div className="results-inner">
 
+            <div style={{
+              background: 'rgba(201,169,110,0.12)',
+              border: '1px solid var(--gold)',
+              borderRadius: 2,
+              padding: '12px 16px',
+              marginBottom: 20,
+              fontFamily: 'var(--font-sans)',
+              fontSize: 12,
+              color: 'var(--navy)',
+              fontWeight: 300,
+              lineHeight: 1.6
+            }}>
+              This is an estimate based on the information you provided. It is not a guarantee of your final tax liability. Always consult a qualified tax advisor for your specific situation.
+            </div>
+
             <div className={`status-badge ${results.taxable === 0 ? 'current' : results.totalDeductions > 0 ? 'current' : 'at_risk'}`}>
               <span className="status-dot" />
               {results.isEUEEA ? 'Deductions applied' : 'Non-EU rate — no deductions'}
@@ -370,9 +384,9 @@ export default function RentalTaxCalculator() {
 
             {/* Main panel */}
             <div className="tax-panel">
-              <p className="tax-panel-label">Tax owed</p>
+              <p className="tax-panel-label">Tax to pay (Modelo 210)</p>
               <p className="tax-panel-amount">{fmt(results.tax)}</p>
-              <p className="tax-panel-period">Annual / Modelo 210 / deadline December 31</p>
+              <p className="tax-panel-period">Quarterly filings / Modelo 210 / Q4 deadline January 20</p>
               <div className="tax-panel-grid">
                 <div>
                   <p className="tax-panel-item-label">Tax rate</p>

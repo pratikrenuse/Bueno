@@ -28,7 +28,6 @@ export const calculateRentalTax = (formData) => {
   const annualProrated =
     n(formData.ibiTax)          +
     n(formData.basura)          +
-    n(formData.ibiGarage)       +
     n(formData.insurance)       +
     n(formData.communityFees)   +
     n(formData.mortgageInterest)+
