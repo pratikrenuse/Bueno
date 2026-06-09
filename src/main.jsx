@@ -1,3 +1,10 @@
-// DEPRECATED. The app now boots from /main.jsx at the repo root (see index.html).
-// This old entry is no longer imported and can be removed with: git rm src/main.jsx
-export {};
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './App.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
