@@ -1,23 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { calculateRentalTax } from './rentalTaxCalculations';
-
-if (typeof document !== 'undefined') {
-  document.title = 'Spanish Rental Income Tax Calculator | Spain 24/7';
-}
+import { useT, LLink } from '../i18n.jsx';
+import LangSwitcher from '../LangSwitcher.jsx';
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
 
-const fmtPct = (n) => `${(n * 100).toFixed(1)}%`;
-
 const TOTAL_STEPS = 5; // residency, income, prorated expenses, annual expenses, depreciation
 
-function Logo({ white }) {
+function Logo({ white, sub }) {
   return (
     <div className="site-brand">
       <span className={`site-brand-name ${white ? 'white' : ''}`}>Spain 24/7</span>
-      <span className={`site-brand-powered ${white ? 'white' : ''}`}>Free property tools</span>
+      <span className={`site-brand-powered ${white ? 'white' : ''}`}>{sub}</span>
     </div>
   );
 }
@@ -105,6 +100,14 @@ function ExpenseSection({ title, children }) {
 }
 
 export default function RentalTaxCalculator() {
+  const t  = useT();
+  const tt = (k) => t('calc_rental.' + k);
+  const tc = (k) => t('common.' + k);
+
+  if (typeof document !== 'undefined') {
+    document.title = `${t('cards.rental.title')} | Spain 24/7`;
+  }
+
   const [step, setStep]       = useState('intro');
   const [form, setForm]       = useState({
     residency: '',
@@ -150,17 +153,20 @@ export default function RentalTaxCalculator() {
       {/* Header */}
       <header className="calc-header"
         style={isOnDark ? { background: 'transparent', borderBottom: '1px solid rgba(255,255,255,0.1)', position: 'absolute' } : {}}>
-        <Logo white={isOnDark} />
-        {!isOnDark && step !== 'results' && (
-          <span className="calc-header-tag">Rental Tax Calculator</span>
-        )}
+        <Logo white={isOnDark} sub={t('home.brand_sub')} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {!isOnDark && step !== 'results' && (
+            <span className="calc-header-tag">{tt('header_tag')}</span>
+          )}
+          <LangSwitcher />
+        </div>
       </header>
 
       {/* Progress */}
       {!['intro', 'results'].includes(step) && (
         <div className="progress-wrap">
           <div className="progress-inner">
-            <span className="progress-label">Step {stepNum} of {isEU ? TOTAL_STEPS : 2}</span>
+            <span className="progress-label">{tc('step')} {stepNum} {tc('of')} {isEU ? TOTAL_STEPS : 2}</span>
             <div className="progress-track">
               <div className="progress-fill"
                 style={{ width: `${(stepNum / (isEU ? TOTAL_STEPS : 2)) * 100}%` }} />
@@ -176,28 +182,26 @@ export default function RentalTaxCalculator() {
             <div className="intro-hero-inner">
               <div className="intro-eyebrow">
                 <span className="intro-eyebrow-line" />
-                <span className="intro-eyebrow-text">Free rental tax calculator</span>
+                <span className="intro-eyebrow-text">{tt('intro_eyebrow')}</span>
               </div>
               <h1 className="intro-headline">
-                What is your actual<br />Spanish rental<br /><em>income tax?</em>
+                {tt('intro_h1')}<br />{tt('intro_h2')}<br /><em>{tt('intro_em')}</em>
               </h1>
               <p className="intro-body">
-                Most foreign property owners pay more rental tax than they need to.
-                EU and EEA residents can deduct property costs, utilities, management fees,
-                and depreciation. This calculator shows your exact liability after all legal deductions.
+                {tt('intro_body')}
               </p>
               <div className="intro-cta-row">
                 <button className="btn-primary-outline" style={{ maxWidth: 280 }}
                   onClick={() => setStep('residency')}>
-                  Calculate my rental tax &#8594;
+                  {tt('intro_cta')} &#8594;
                 </button>
               </div>
               <div className="intro-trust-row">
-                <span className="intro-trust-item">Takes 3 minutes</span>
+                <span className="intro-trust-item">{tc('takes_3_min')}</span>
                 <span className="intro-trust-dot" />
-                <span className="intro-trust-item">No account needed</span>
+                <span className="intro-trust-item">{tc('no_account')}</span>
                 <span className="intro-trust-dot" />
-                <span className="intro-trust-item">Free</span>
+                <span className="intro-trust-item">{tc('free')}</span>
               </div>
             </div>
           </div>
@@ -211,19 +215,16 @@ export default function RentalTaxCalculator() {
       {step === 'residency' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('intro')}>&#8592; Back</button>
-            <p className="step-meta">Question 1 of {isEU ? TOTAL_STEPS : 2}</p>
-            <h2 className="step-question">Where do you live?</h2>
+            <button className="btn-back" onClick={() => setStep('intro')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 1 {tc('of')} {isEU ? TOTAL_STEPS : 2}</p>
+            <h2 className="step-question">{tt('residency_q')}</h2>
             <p className="step-hint">
-              EU and EEA residents can deduct property expenses and pay 19% tax.
-              UK and non-EU residents pay 24% on gross rental income with no deductions.
+              {tt('residency_hint')}
             </p>
             <div className="option-stack">
               {[
-                { val: 'eu_eea', title: 'EU or EEA country',
-                  desc: 'Norway, Sweden, Denmark, Germany, France, Netherlands, Belgium, Ireland, Finland, Austria, Iceland, or any other EU/EEA country.' },
-                { val: 'non_eu', title: 'UK or non-EU country',
-                  desc: 'United Kingdom, USA, Canada, Australia, or any country outside the EU/EEA.' },
+                { val: 'eu_eea', title: tt('res_eu_t'), desc: tt('res_eu_d') },
+                { val: 'non_eu', title: tt('res_noneu_t'), desc: tt('res_noneu_d') },
               ].map(o => (
                 <button key={o.val}
                   className={`option-card ${form.residency === o.val ? 'selected' : ''}`}
@@ -243,22 +244,22 @@ export default function RentalTaxCalculator() {
       {step === 'income' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('residency')}>&#8592; Back</button>
-            <p className="step-meta">Question 2 of {isEU ? TOTAL_STEPS : 2}</p>
-            <h2 className="step-question">Your rental income and days.</h2>
+            <button className="btn-back" onClick={() => setStep('residency')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 2 {tc('of')} {isEU ? TOTAL_STEPS : 2}</p>
+            <h2 className="step-question">{tt('income_q')}</h2>
             <p className="step-hint">
-              Enter your total rental income and how many days the property was rented out last year.
+              {tt('income_hint')}
             </p>
-            <NumberInput label="Total rental income" hint="All income received from tenants or guests, in euros." value={form.rentalIncome} onChange={set('rentalIncome')} />
-            <NumberInput label="Days rented out" hint="Total number of days the property was occupied by paying guests." value={form.daysRented} onChange={set('daysRented')} prefix="🗓" />
+            <NumberInput label={tt('income_label')} hint={tt('income_label_hint')} value={form.rentalIncome} onChange={set('rentalIncome')} />
+            <NumberInput label={tt('days_label')} hint={tt('days_hint')} value={form.daysRented} onChange={set('daysRented')} prefix="🗓" />
             <button className="btn-primary"
               disabled={!form.rentalIncome || parseFloat(form.rentalIncome) <= 0 || !form.daysRented || parseFloat(form.daysRented) <= 0}
               onClick={() => isEU ? setStep('prorated') : runCalc()}>
-              {isEU ? 'Continue to expenses' : 'Calculate my tax'} <span className="arrow">&#8594;</span>
+              {isEU ? tt('income_cta_eu') : tt('income_cta_noneu')} <span className="arrow">&#8594;</span>
             </button>
             {!isEU && (
               <p className="privacy-note" style={{ marginTop: 12 }}>
-                As a non-EU/UK resident, expenses are not deductible. Your tax is calculated on gross income at 24%.
+                {tt('noneu_note')}
               </p>
             )}
           </div>
@@ -269,37 +270,36 @@ export default function RentalTaxCalculator() {
       {step === 'prorated' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('income')}>&#8592; Back</button>
-            <p className="step-meta">Question 3 of {TOTAL_STEPS}</p>
-            <h2 className="step-question">Annual property costs.</h2>
+            <button className="btn-back" onClick={() => setStep('income')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 3 {tc('of')} {TOTAL_STEPS}</p>
+            <h2 className="step-question">{tt('prorated_q')}</h2>
             <p className="step-hint">
-              These are prorated: we divide each by 365 and multiply by your rental days.
-              Enter the full annual amount. Leave blank if not applicable.
+              {tt('prorated_hint')}
             </p>
 
-            <ExpenseSection title="Property taxes">
-              <NumberInput label="IBI property tax" value={form.ibiTax} onChange={set('ibiTax')} />
-              <NumberInput label="Basura (waste collection)" value={form.basura} onChange={set('basura')} />
+            <ExpenseSection title={tt('section_taxes')}>
+              <NumberInput label={tt('lbl_ibi')} value={form.ibiTax} onChange={set('ibiTax')} />
+              <NumberInput label={tt('lbl_basura')} value={form.basura} onChange={set('basura')} />
             </ExpenseSection>
 
-            <ExpenseSection title="Other annual costs">
-              <NumberInput label="Property insurance" value={form.insurance} onChange={set('insurance')} />
-              <NumberInput label="Community fees" value={form.communityFees} onChange={set('communityFees')} />
-              <NumberInput label="Mortgage interest" hint="Spanish annual bank statement required." value={form.mortgageInterest} onChange={set('mortgageInterest')} />
+            <ExpenseSection title={tt('section_other')}>
+              <NumberInput label={tt('lbl_insurance')} value={form.insurance} onChange={set('insurance')} />
+              <NumberInput label={tt('lbl_community')} value={form.communityFees} onChange={set('communityFees')} />
+              <NumberInput label={tt('lbl_mortgage_int')} hint={tt('hint_mortgage_int')} value={form.mortgageInterest} onChange={set('mortgageInterest')} />
             </ExpenseSection>
 
-            <ExpenseSection title="Utilities">
-              <NumberInput label="Electricity" hint="Only if not charged to guests." value={form.electricity} onChange={set('electricity')} />
-              <NumberInput label="Gas" value={form.gas} onChange={set('gas')} />
-              <NumberInput label="Water" value={form.water} onChange={set('water')} />
-              <NumberInput label="Internet" value={form.internet} onChange={set('internet')} />
-              <NumberInput label="Alarm" value={form.alarm} onChange={set('alarm')} />
+            <ExpenseSection title={tt('section_utilities')}>
+              <NumberInput label={tt('lbl_electricity')} hint={tt('hint_electricity')} value={form.electricity} onChange={set('electricity')} />
+              <NumberInput label={tt('lbl_gas')} value={form.gas} onChange={set('gas')} />
+              <NumberInput label={tt('lbl_water')} value={form.water} onChange={set('water')} />
+              <NumberInput label={tt('lbl_internet')} value={form.internet} onChange={set('internet')} />
+              <NumberInput label={tt('lbl_alarm')} value={form.alarm} onChange={set('alarm')} />
             </ExpenseSection>
 
             <button className="btn-primary" onClick={() => setStep('annual')}>
-              Continue <span className="arrow">&#8594;</span>
+              {tc('continue')} <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={() => setStep('annual')}>Skip — I have no prorated expenses</button>
+            <button className="btn-skip" onClick={() => setStep('annual')}>{tt('skip_prorated')}</button>
           </div>
         </div>
       )}
@@ -308,22 +308,22 @@ export default function RentalTaxCalculator() {
       {step === 'annual' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('prorated')}>&#8592; Back</button>
-            <p className="step-meta">Question 4 of {TOTAL_STEPS}</p>
-            <h2 className="step-question">Management and maintenance costs.</h2>
+            <button className="btn-back" onClick={() => setStep('prorated')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 4 {tc('of')} {TOTAL_STEPS}</p>
+            <h2 className="step-question">{tt('annual_q')}</h2>
             <p className="step-hint">
-              These are deducted in full, not prorated. They must relate directly to the rental activity and require an official invoice with IVA.
+              {tt('annual_hint')}
             </p>
 
-            <NumberInput label="Maintenance and repairs" hint="Official invoice with IVA required. Only if property is used solely for rental." value={form.maintenance} onChange={set('maintenance')} />
-            <NumberInput label="Property management fees" hint="Includes cleaning fees. Invoice with IVA required." value={form.managementFees} onChange={set('managementFees')} />
-            <NumberInput label="Advertising" hint="Airbnb, Booking.com fees, or your own advertising costs." value={form.advertising} onChange={set('advertising')} />
-            <NumberInput label="Legal and accounting fees" hint="Fees paid for legal or accounting services related to the rental." value={form.legalFees} onChange={set('legalFees')} />
+            <NumberInput label={tt('lbl_maintenance')} hint={tt('hint_maintenance')} value={form.maintenance} onChange={set('maintenance')} />
+            <NumberInput label={tt('lbl_mgmt')} hint={tt('hint_mgmt')} value={form.managementFees} onChange={set('managementFees')} />
+            <NumberInput label={tt('lbl_advertising')} hint={tt('hint_advertising')} value={form.advertising} onChange={set('advertising')} />
+            <NumberInput label={tt('lbl_legal')} hint={tt('hint_legal')} value={form.legalFees} onChange={set('legalFees')} />
 
             <button className="btn-primary" onClick={() => setStep('depreciation')}>
-              Continue <span className="arrow">&#8594;</span>
+              {tc('continue')} <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={() => setStep('depreciation')}>Skip — I have no management costs</button>
+            <button className="btn-skip" onClick={() => setStep('depreciation')}>{tt('skip_annual')}</button>
           </div>
         </div>
       )}
@@ -332,22 +332,21 @@ export default function RentalTaxCalculator() {
       {step === 'depreciation' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('annual')}>&#8592; Back</button>
-            <p className="step-meta">Question 5 of {TOTAL_STEPS}</p>
-            <h2 className="step-question">Property depreciation.</h2>
+            <button className="btn-back" onClick={() => setStep('annual')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 5 {tc('of')} {TOTAL_STEPS}</p>
+            <h2 className="step-question">{tt('depreciation_q')}</h2>
             <p className="step-hint">
-              You can deduct 3% per year of the building value (not land), prorated by rental days.
-              Use cadastral values if you do not have purchase price and land split.
+              {tt('depreciation_hint')}
             </p>
 
-            <NumberInput label="Property purchase price" hint="Or total cadastral property value (including land)." value={form.propertyValue} onChange={set('propertyValue')} />
-            <NumberInput label="Land value" hint="Or cadastral land value. Depreciation applies only to the building, not the land." value={form.landValue} onChange={set('landValue')} />
-            <NumberInput label="Annual furniture depreciation" hint="Enter 10% of your furniture purchase price. Furniture is written off over 10 years." value={form.furnitureDepr} onChange={set('furnitureDepr')} />
+            <NumberInput label={tt('lbl_property_value')} hint={tt('hint_property_value')} value={form.propertyValue} onChange={set('propertyValue')} />
+            <NumberInput label={tt('lbl_land_value')} hint={tt('hint_land_value')} value={form.landValue} onChange={set('landValue')} />
+            <NumberInput label={tt('lbl_furniture')} hint={tt('hint_furniture')} value={form.furnitureDepr} onChange={set('furnitureDepr')} />
 
             <button className="btn-primary" onClick={runCalc}>
-              Calculate my tax <span className="arrow">&#8594;</span>
+              {tt('calc_cta')} <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={runCalc}>Skip — I will not claim depreciation</button>
+            <button className="btn-skip" onClick={runCalc}>{tt('skip_depr')}</button>
           </div>
         </div>
       )}
@@ -369,40 +368,40 @@ export default function RentalTaxCalculator() {
               fontWeight: 300,
               lineHeight: 1.6
             }}>
-              This is an estimate based on the information you provided. It is not a guarantee of your final tax liability. Always consult a qualified tax advisor for your specific situation.
+              {tt('estimate_note')}
             </div>
 
             <div className={`status-badge ${results.taxable === 0 ? 'current' : results.totalDeductions > 0 ? 'current' : 'at_risk'}`}>
               <span className="status-dot" />
-              {results.isEUEEA ? 'Deductions applied' : 'Non-EU rate — no deductions'}
+              {results.isEUEEA ? tt('status_eu') : tt('status_noneu')}
             </div>
 
-            <h2 className="results-headline">Your rental income tax for this year.</h2>
+            <h2 className="results-headline">{tt('result_headline')}</h2>
             <p className="results-subline">
-              Based on {fmt(results.income)} rental income over {results.days} days.
+              {tt('result_subline').replace('{income}', fmt(results.income)).replace('{days}', results.days)}
             </p>
 
             {/* Main panel */}
             <div className="tax-panel">
-              <p className="tax-panel-label">Tax to pay (Modelo 210)</p>
+              <p className="tax-panel-label">{tt('panel_label')}</p>
               <p className="tax-panel-amount">{fmt(results.tax)}</p>
-              <p className="tax-panel-period">Quarterly filings / Modelo 210 / Q4 deadline January 20</p>
+              <p className="tax-panel-period">{tt('panel_period')}</p>
               <div className="tax-panel-grid">
                 <div>
-                  <p className="tax-panel-item-label">Tax rate</p>
+                  <p className="tax-panel-item-label">{tt('panel_rate')}</p>
                   <p className="tax-panel-item-value">{results.taxRate}%</p>
                 </div>
                 <div>
-                  <p className="tax-panel-item-label">Taxable income</p>
+                  <p className="tax-panel-item-label">{tt('panel_taxable')}</p>
                   <p className="tax-panel-item-value">{fmt(results.taxable)}</p>
                 </div>
                 <div>
-                  <p className="tax-panel-item-label">Gross rental income</p>
+                  <p className="tax-panel-item-label">{tt('panel_gross')}</p>
                   <p className="tax-panel-item-value">{fmt(results.income)}</p>
                 </div>
                 {results.isEUEEA && (
                   <div>
-                    <p className="tax-panel-item-label">Total deductions</p>
+                    <p className="tax-panel-item-label">{tt('panel_deductions')}</p>
                     <p className="tax-panel-item-value">{fmt(results.totalDeductions)}</p>
                   </div>
                 )}
@@ -412,38 +411,38 @@ export default function RentalTaxCalculator() {
             {/* Deduction breakdown for EU/EEA */}
             {results.isEUEEA && results.totalDeductions > 0 && (
               <div className="breakdown-panel">
-                <p className="breakdown-title">Deduction breakdown</p>
+                <p className="breakdown-title">{tt('breakdown_title')}</p>
                 {results.proratedExpenses > 0 && (
                   <div className="breakdown-row">
-                    <span className="breakdown-row-label">Property costs (prorated by {Math.round(results.proRata * 100)}% rental days)</span>
+                    <span className="breakdown-row-label">{tt('prop_costs').replace('{pct}', Math.round(results.proRata * 100))}</span>
                     <span className="breakdown-row-value">{fmt(results.proratedExpenses)}</span>
                   </div>
                 )}
                 {results.annualExpenses > 0 && (
                   <div className="breakdown-row">
-                    <span className="breakdown-row-label">Management and maintenance</span>
+                    <span className="breakdown-row-label">{tt('mgmt_row')}</span>
                     <span className="breakdown-row-value">{fmt(results.annualExpenses)}</span>
                   </div>
                 )}
                 {results.buildingDepr > 0 && (
                   <div className="breakdown-row">
-                    <span className="breakdown-row-label">Building depreciation (3% prorated)</span>
+                    <span className="breakdown-row-label">{tt('building_depr')}</span>
                     <span className="breakdown-row-value">{fmt(results.buildingDepr)}</span>
                   </div>
                 )}
                 {results.furnitureDepr > 0 && (
                   <div className="breakdown-row">
-                    <span className="breakdown-row-label">Furniture depreciation (10% prorated)</span>
+                    <span className="breakdown-row-label">{tt('furniture_depr')}</span>
                     <span className="breakdown-row-value">{fmt(results.furnitureDepr)}</span>
                   </div>
                 )}
                 <div className="breakdown-row" style={{ fontWeight: 600 }}>
-                  <span>Total deducted</span>
+                  <span>{tt('total_deducted')}</span>
                   <span className="breakdown-row-value breakdown-row-value green">{fmt(results.totalDeductions)}</span>
                 </div>
                 {results.deductionsCapped && (
                   <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 10, fontFamily: 'var(--font-sans)', fontWeight: 300 }}>
-                    Deductions capped at rental income. Expenses cannot create a tax refund.
+                    {tt('capped')}
                   </p>
                 )}
               </div>
@@ -452,52 +451,48 @@ export default function RentalTaxCalculator() {
             {/* Non-EU note */}
             {!results.isEUEEA && (
               <div className="ai-panel" style={{ marginBottom: 16 }}>
-                <p className="ai-panel-label">About your rate</p>
+                <p className="ai-panel-label">{tt('about_label')}</p>
                 <p className="ai-panel-text">
-                  As a non-EU resident, Spain does not allow you to deduct property expenses from rental income.
-                  You pay a flat 24% on gross rental income. If your country has a double taxation treaty with Spain,
-                  you may be able to claim relief in your home country. Consult a tax advisor for your specific situation.
+                  {tt('about_body')}
                 </p>
               </div>
             )}
 
             {/* CTA */}
             <div className="cta-panel">
-              <p className="cta-eyebrow">Bueno Tax Filing</p>
-              <p className="cta-title">Let Bueno file your Modelo 210.</p>
+              <p className="cta-eyebrow">{tt('cta_eyebrow')}</p>
+              <p className="cta-title">{tt('cta_title')}</p>
               <p className="cta-body">
-                Bueno files your Spanish rental income tax in English. We handle the quarterly and annual returns,
-                ensure all deductions are correctly applied, and deal with the tax office on your behalf.
+                {tt('cta_body')}
               </p>
               <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer"
                 style={{ textDecoration: 'none', display: 'block' }}>
                 <button className="btn-primary" style={{ marginBottom: 0 }}>
-                  Get started with Bueno <span className="arrow">&#8594;</span>
+                  {tt('cta_button')} <span className="arrow">&#8594;</span>
                 </button>
               </a>
-              <p className="cta-price">€99/year includes tax filing, Spanish account, Visa card, and human support.</p>
+              <p className="cta-price">{tt('cta_price')}</p>
             </div>
 
             {/* Cross-links */}
             <div style={{ textAlign: 'center', padding: '16px 0 4px', borderTop: '1px solid var(--border)', marginTop: 8 }}>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>Also from Spain 24/7</p>
-              <Link to="/tax-calculator" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--accent)', textDecoration: 'none', display: 'block', marginBottom: 6 }}>
-                General Spanish property tax calculator &#8594;
-              </Link>
-              <Link to="/cost-audit" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--accent)', textDecoration: 'none' }}>
-                Check if you are overpaying on banking and energy &#8594;
-              </Link>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>{tt('also_from')}</p>
+              <LLink to="/tax-calculator" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--accent)', textDecoration: 'none', display: 'block', marginBottom: 6 }}>
+                {tt('cross_tax')} &#8594;
+              </LLink>
+              <LLink to="/cost-audit" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--accent)', textDecoration: 'none' }}>
+                {tt('cross_cost')} &#8594;
+              </LLink>
             </div>
 
-            <button className="btn-skip" onClick={restart}>Start a new calculation</button>
+            <button className="btn-skip" onClick={restart}>{tt('restart')}</button>
           </div>
         </div>
       )}
 
       {step !== 'intro' && (
         <footer className="calc-footer">
-          Based on verified calculation model. For guidance only. Not legal or tax advice.
-          Consult a qualified tax professional for your specific situation. Spain 24/7.
+          {tt('footer')}
         </footer>
       )}
 
