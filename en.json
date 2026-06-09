@@ -1,0 +1,53 @@
+{
+  "site": {
+    "name": "Spain 24/7",
+    "tagline": "Tools for foreign property owners in Spain"
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "tax": "Tax Calculator",
+    "cost": "Cost Audit",
+    "rental": "Rental Tax"
+  },
+  "hero": {
+    "eyebrow": "Free tools",
+    "title": "Own a home in Spain? Here is the easy part.",
+    "sub": "Calculate your taxes, audit your costs, and stay on top of your Spanish property in minutes. No Spanish required."
+  },
+  "tools": {
+    "heading": "Three tools. Built for your Spanish property.",
+    "sub": "Made by people who own property in Spain. Free, accurate, and clear."
+  },
+  "tool": {
+    "tax": {
+      "title": "Modelo 210 Tax Calculator",
+      "desc": "Work out your non-resident property tax in under two minutes. Get a clear, personalised breakdown.",
+      "cta": "Calculate my tax"
+    },
+    "cost": {
+      "title": "Property Cost Audit",
+      "desc": "See what your Spanish home really costs you each year. Find hidden fees and easy savings.",
+      "cta": "Audit my costs"
+    },
+    "rental": {
+      "title": "Rental Income Tax",
+      "desc": "Work out the tax on your Spanish rental income, quarter by quarter. Built for non-residents.",
+      "cta": "Calculate rental tax"
+    }
+  },
+  "why": {
+    "heading": "Why we built these tools",
+    "body": "Owning a home in Spain should feel like a holiday, not a paperwork project. Spanish-only websites, confusing tax forms, and hidden fees waste your time and your money. These tools give you clear answers in your own language so you can make confident decisions about your property."
+  },
+  "footer": {
+    "tagline": "Tools for foreign property owners in Spain",
+    "rights": "All rights reserved.",
+    "lang": "Language"
+  },
+  "bueno_cta": {
+    "tax_title": "Want this filed for you?",
+    "tax_body": "We can file your Modelo 210 for you, in your language, with real human support. Transparent fees. No surprises.",
+    "button": "See how it works"
+  }
+}

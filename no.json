@@ -1,0 +1,53 @@
+{
+  "site": {
+    "name": "Spain 24/7",
+    "tagline": "Verktøy for utenlandske boligeiere i Spania"
+  },
+  "nav": {
+    "home": "Hjem",
+    "tools": "Verktøy",
+    "tax": "Skattekalkulator",
+    "cost": "Kostnadsoversikt",
+    "rental": "Utleieskatt"
+  },
+  "hero": {
+    "eyebrow": "Gratis verktøy",
+    "title": "Eier du bolig i Spania? Her er den enkle delen.",
+    "sub": "Beregn skatten din, få oversikt over kostnadene og hold styr på den spanske boligen din på minutter. Ingen spansk nødvendig."
+  },
+  "tools": {
+    "heading": "Tre verktøy. Laget for din spanske bolig.",
+    "sub": "Laget av folk som selv eier bolig i Spania. Gratis, nøyaktig og tydelig."
+  },
+  "tool": {
+    "tax": {
+      "title": "Modelo 210 Skattekalkulator",
+      "desc": "Regn ut skatten din som ikke-resident eiendomsbesitter på under to minutter. Få en tydelig, personlig oversikt.",
+      "cta": "Beregn skatten min"
+    },
+    "cost": {
+      "title": "Eiendomskostnadsoversikt",
+      "desc": "Se hva den spanske boligen din faktisk koster deg hvert år. Finn skjulte gebyrer og enkle besparelser.",
+      "cta": "Sjekk kostnadene mine"
+    },
+    "rental": {
+      "title": "Skatt på leieinntekt",
+      "desc": "Beregn skatten på den spanske leieinntekten din, kvartal for kvartal. Laget for ikke-residenter.",
+      "cta": "Beregn leieskatt"
+    }
+  },
+  "why": {
+    "heading": "Hvorfor vi lagde disse verktøyene",
+    "body": "Å eie en bolig i Spania skal føles som en ferie, ikke som et papirarbeidsprosjekt. Nettsider kun på spansk, forvirrende skatteskjemaer og skjulte gebyrer kaster bort tid og penger. Disse verktøyene gir deg tydelige svar på ditt eget språk, så du kan ta trygge avgjørelser om boligen din."
+  },
+  "footer": {
+    "tagline": "Verktøy for utenlandske boligeiere i Spania",
+    "rights": "Alle rettigheter forbeholdt.",
+    "lang": "Språk"
+  },
+  "bueno_cta": {
+    "tax_title": "Vil du at vi tar oss av det?",
+    "tax_body": "Vi kan levere Modelo 210 for deg, på ditt eget språk, med ekte menneskelig støtte. Tydelige priser. Ingen overraskelser.",
+    "button": "Se hvordan det fungerer"
+  }
+}

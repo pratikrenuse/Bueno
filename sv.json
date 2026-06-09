@@ -1,0 +1,53 @@
+{
+  "site": {
+    "name": "Spain 24/7",
+    "tagline": "Verktyg för utländska bostadsägare i Spanien"
+  },
+  "nav": {
+    "home": "Hem",
+    "tools": "Verktyg",
+    "tax": "Skatteräknare",
+    "cost": "Kostnadsöversikt",
+    "rental": "Hyresinkomstskatt"
+  },
+  "hero": {
+    "eyebrow": "Gratis verktyg",
+    "title": "Äger du bostad i Spanien? Här är den enkla delen.",
+    "sub": "Räkna ut din skatt, granska dina kostnader och håll koll på din spanska bostad på minuter. Ingen spanska behövs."
+  },
+  "tools": {
+    "heading": "Tre verktyg. Gjorda för din spanska bostad.",
+    "sub": "Skapade av människor som själva äger bostad i Spanien. Gratis, korrekta och tydliga."
+  },
+  "tool": {
+    "tax": {
+      "title": "Modelo 210 Skatteräknare",
+      "desc": "Räkna ut din fastighetsskatt som icke-resident på under två minuter. Få en tydlig och personlig sammanställning.",
+      "cta": "Räkna ut min skatt"
+    },
+    "cost": {
+      "title": "Bostadskostnadsöversikt",
+      "desc": "Se vad ditt spanska hem faktiskt kostar dig varje år. Hitta dolda avgifter och enkla besparingar.",
+      "cta": "Granska mina kostnader"
+    },
+    "rental": {
+      "title": "Skatt på hyresinkomst",
+      "desc": "Räkna ut skatten på din spanska hyresinkomst, kvartal för kvartal. Gjord för icke-residenter.",
+      "cta": "Räkna ut hyresskatt"
+    }
+  },
+  "why": {
+    "heading": "Därför byggde vi de här verktygen",
+    "body": "Att äga ett hem i Spanien ska kännas som en semester, inte ett pappersarbete. Webbplatser bara på spanska, krångliga skatteblanketter och dolda avgifter slösar din tid och dina pengar. De här verktygen ger dig tydliga svar på ditt eget språk så att du kan ta trygga beslut om din bostad."
+  },
+  "footer": {
+    "tagline": "Verktyg för utländska bostadsägare i Spanien",
+    "rights": "Alla rättigheter förbehållna.",
+    "lang": "Språk"
+  },
+  "bueno_cta": {
+    "tax_title": "Vill du att vi sköter det åt dig?",
+    "tax_body": "Vi kan lämna in Modelo 210 åt dig, på ditt eget språk, med riktig mänsklig support. Tydliga avgifter. Inga överraskningar.",
+    "button": "Se hur det fungerar"
+  }
+}
