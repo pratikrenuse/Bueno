@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useT, LLink, useLocale } from '../lib/i18n.jsx';
+import { useT, LLink, useLocale } from './i18n.jsx';
 import LangSwitcher from './LangSwitcher.jsx';
 
 export default function Nav() {

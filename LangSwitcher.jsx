@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocale, useSwitchLocalePath, SUPPORTED_LOCALES, LOCALE_LABELS } from '../lib/i18n.jsx';
+import { useLocale, useSwitchLocalePath, SUPPORTED_LOCALES, LOCALE_LABELS } from './i18n.jsx';
 
 export default function LangSwitcher() {
   const { locale } = useLocale();

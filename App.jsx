@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './components/Layout.jsx';
-import Home from './pages/Home.jsx';
-import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from './lib/i18n.jsx';
+import Layout from './Layout.jsx';
+import Home from './Home.jsx';
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from './i18n.jsx';
 
 // Auto-discover tool folders: each tool exports default Component + meta from index.jsx.
-// Tools live at /tools/<slug>/index.jsx, mirroring the existing repo convention.
-const toolModules = import.meta.glob('../tools/*/index.jsx', { eager: true });
+// Tools live at /<slug>/index.jsx at the repo root (existing repo convention).
+const toolModules = import.meta.glob('./*/index.jsx', { eager: true });
 const tools = Object.entries(toolModules).map(([path, mod]) => {
   const slug = path.split('/').slice(-2, -1)[0];
   return {

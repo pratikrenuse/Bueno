@@ -368,8 +368,7 @@ button { font-family: inherit; }
   gap: 12px;
   margin-bottom: 4px;
 }
-.s247-bueno-cta-icon { border-radius: 10px; }
-.s247-bueno-cta-wordmark { filter: brightness(0) invert(1); }
+.s247-bueno-cta-wordmark { display: block; }
 .s247-bueno-cta-title {
   font-family: var(--serif);
   font-size: 26px;

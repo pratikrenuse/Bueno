@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { calculateAudit, BANKS, ENERGY_PROVIDERS } from './auditCalculations';
+import BuenoCTA from '../BuenoCTA.jsx';
 
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 
@@ -20,9 +21,6 @@ function Logo({ white }) {
   return (
     <div className="site-brand">
       <span className={`site-brand-name ${white ? 'white' : ''}`}>Spain 24/7</span>
-      <span className={`site-brand-powered ${white ? 'white' : ''}`}>
-        Powered by Bueno
-      </span>
     </div>
   );
 }
@@ -31,7 +29,7 @@ function Logo({ white }) {
 
 export default function CostAudit() {
   if (typeof document !== 'undefined') {
-    document.title = 'Spanish Property Cost Audit | Bueno';
+    document.title = 'Spanish Property Cost Audit | Spain 24/7';
   }
   const [step, setStep]       = useState('intro');
   const [form, setForm]       = useState({ bank: '', mortgage: '', energyProvider: '' });
@@ -115,7 +113,7 @@ export default function CostAudit() {
             </div>
           </div>
           <div className="intro-right">
-            <img src="/images/hero.jpg" alt="Foreign property owners in Spain" />
+            <img src="/images/hero-audit.jpg" alt="Foreign property owners in Spain" />
           </div>
         </div>
       )}
@@ -179,7 +177,7 @@ export default function CostAudit() {
             <button className="btn-back" onClick={back}>&#8592; Back</button>
             <p className="step-meta">Question 3 of {TOTAL_STEPS}</p>
             <h2 className="step-question">Who is your Spanish electricity provider?</h2>
-            <p className="step-hint">Bueno Energy customers save up to 50% on electricity bills. This shows your potential saving.</p>
+            <p className="step-hint">Switching to a better electricity provider can save up to 50% on bills. This shows your potential saving.</p>
             <div className="option-stack">
               {ENERGY_PROVIDERS.map(e => (
                 <button
@@ -218,9 +216,9 @@ export default function CostAudit() {
             {/* Savings hero */}
             {results.netSavings > 0 && (
               <div className="savings-hero">
-                <p className="savings-hero-label">Estimated annual saving with Bueno</p>
+                <p className="savings-hero-label">Your estimated annual saving</p>
                 <p className="savings-hero-amount">{fmt(results.netSavings)}</p>
-                <p className="savings-hero-sub">per year — after Bueno membership of €99</p>
+                <p className="savings-hero-sub">per year, after a €99 all-in-one plan</p>
               </div>
             )}
 
@@ -243,7 +241,7 @@ export default function CostAudit() {
                   </div>
                   <div className="vs-labels">
                     <span>Current ({fmt(results.totalCurrentCost)}/yr)</span>
-                    <span>With Bueno ({fmt(results.buenoAnnualCost)}/yr)</span>
+                    <span>All-in-one ({fmt(results.buenoAnnualCost)}/yr)</span>
                   </div>
                 </>
               )}
@@ -262,57 +260,24 @@ export default function CostAudit() {
               )}
               {results.hasEnergy && results.energyOverpayment > 0 && (
                 <div className="breakdown-row">
-                  <span className="breakdown-row-label">Energy overpayment vs Bueno Energy</span>
+                  <span className="breakdown-row-label">Energy overpayment vs a cheaper provider</span>
                   <span className="breakdown-row-value red">{fmt(results.energyOverpayment)}/yr</span>
                 </div>
               )}
               <div className="breakdown-row">
-                <span className="breakdown-row-label">Bueno membership</span>
+                <span className="breakdown-row-label">All-in-one plan</span>
                 <span className="breakdown-row-value">{fmt(results.buenoAnnualCost)}/yr</span>
               </div>
               <div className="breakdown-row" style={{ fontWeight: 600 }}>
-                <span>Net saving with Bueno</span>
+                <span>Net saving</span>
                 <span className="breakdown-row-value" style={{ color: results.netSavings > 0 ? '#1A7A4A' : 'inherit' }}>
-                  {results.netSavings > 0 ? fmt(results.netSavings) : '—'}
+                  {results.netSavings > 0 ? fmt(results.netSavings) : '-'}
                 </span>
               </div>
             </div>
 
-            {/* What Bueno includes */}
-            <div className="ai-panel" style={{ marginBottom: 16 }}>
-              <p className="ai-panel-label">What is included in Bueno</p>
-              <div className="ai-panel-text">
-                <p>
-                  Your €99 Bueno membership includes a Spanish IBAN account, Visa debit card, multilingual human support,
-                  Bueno Energy switching, Modelo 210 tax filing, and the Bueno Club perks programme.
-                </p>
-                <p>
-                  Unlike traditional Spanish banks, there are no hidden charges, no language barriers,
-                  and no unexpected fees. Everything is transparent from day one.
-                </p>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="cta-panel">
-              <p className="cta-eyebrow">Switch to Bueno</p>
-              <p className="cta-title">
-                {results.netSavings > 0
-                  ? `Start saving ${fmt(results.netSavings)} this year.`
-                  : 'Simplify your Spanish property finances.'}
-              </p>
-              <p className="cta-body">
-                Open your Bueno account in minutes. No Spanish residency required.
-                Human support in English, Norwegian, Swedish, Danish, German, and French.
-              </p>
-              <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer"
-                style={{ textDecoration: 'none', display: 'block' }}>
-                <button className="btn-primary" style={{ marginBottom: 0 }}>
-                  Open my Bueno account <span className="arrow">&#8594;</span>
-                </button>
-              </a>
-              <p className="cta-price">€99/year. Cancel anytime. Setup takes under 10 minutes.</p>
-            </div>
+            {/* Bueno marketing block (results screen only) */}
+            <BuenoCTA variant="cost" href="https://getbueno.com" />
 
             {/* Also try tax calculator */}
             <div style={{
@@ -322,7 +287,7 @@ export default function CostAudit() {
               marginBottom: 16
             }}>
               <p style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-muted)', marginBottom: 10 }}>
-                Also from Bueno
+                Also from Spain 24/7
               </p>
               <Link to="/tax-calculator" style={{
                 fontFamily: 'var(--font-sans)',
@@ -349,7 +314,7 @@ export default function CostAudit() {
       {/* Footer */}
       {step !== 'intro' && (
         <footer className="calc-footer">
-          Estimates based on published bank tariffs and average energy consumption. For guidance only. Built by Bueno. getbueno.com
+          Estimates based on published account tariffs and average energy consumption. For guidance only. Spain 24/7.
         </footer>
       )}
 

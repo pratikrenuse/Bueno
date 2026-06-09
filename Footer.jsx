@@ -1,5 +1,5 @@
 import React from 'react';
-import { useT, LLink } from '../lib/i18n.jsx';
+import { useT, LLink } from './i18n.jsx';
 
 export default function Footer() {
   const t = useT();

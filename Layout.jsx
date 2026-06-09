@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
-import { LocaleProvider } from '../lib/i18n.jsx';
+import { LocaleProvider } from './i18n.jsx';
 
 export default function Layout() {
   return (

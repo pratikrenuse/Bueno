@@ -1,5 +1,5 @@
 import React from 'react';
-import { useT } from '../lib/i18n.jsx';
+import { useT } from './i18n.jsx';
 
 /**
  * BuenoCTA — the only place on Spain 24/7 where Bueno is mentioned.
@@ -15,16 +15,9 @@ export default function BuenoCTA({ variant = 'tax', href = 'https://getbueno.com
     <aside className="s247-bueno-cta" aria-label="Bueno">
       <div className="s247-bueno-cta-mark">
         <img
-          src="/images/bueno-b-icon.png"
-          alt=""
-          width="48"
-          height="48"
-          className="s247-bueno-cta-icon"
-        />
-        <img
-          src="/images/bueno-wordmark.jpg"
+          src="/images/bueno-logo-white.png"
           alt="Bueno"
-          height="22"
+          height="26"
           className="s247-bueno-cta-wordmark"
         />
       </div>

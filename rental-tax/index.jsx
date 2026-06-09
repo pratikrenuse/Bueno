@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { calculateRentalTax } from './rentalTaxCalculations';
+import BuenoCTA from '../BuenoCTA.jsx';
 
 if (typeof document !== 'undefined') {
   document.title = 'Spanish Rental Income Tax Calculator | Spain 24/7';
@@ -17,7 +18,6 @@ function Logo({ white }) {
   return (
     <div className="site-brand">
       <span className={`site-brand-name ${white ? 'white' : ''}`}>Spain 24/7</span>
-      <span className={`site-brand-powered ${white ? 'white' : ''}`}>Powered by Bueno</span>
     </div>
   );
 }
@@ -299,7 +299,7 @@ export default function RentalTaxCalculator() {
             <button className="btn-primary" onClick={() => setStep('annual')}>
               Continue <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={() => setStep('annual')}>Skip — I have no prorated expenses</button>
+            <button className="btn-skip" onClick={() => setStep('annual')}>Skip, I have no prorated expenses</button>
           </div>
         </div>
       )}
@@ -323,7 +323,7 @@ export default function RentalTaxCalculator() {
             <button className="btn-primary" onClick={() => setStep('depreciation')}>
               Continue <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={() => setStep('depreciation')}>Skip — I have no management costs</button>
+            <button className="btn-skip" onClick={() => setStep('depreciation')}>Skip, I have no management costs</button>
           </div>
         </div>
       )}
@@ -347,7 +347,7 @@ export default function RentalTaxCalculator() {
             <button className="btn-primary" onClick={runCalc}>
               Calculate my tax <span className="arrow">&#8594;</span>
             </button>
-            <button className="btn-skip" onClick={runCalc}>Skip — I will not claim depreciation</button>
+            <button className="btn-skip" onClick={runCalc}>Skip, I will not claim depreciation</button>
           </div>
         </div>
       )}
@@ -374,7 +374,7 @@ export default function RentalTaxCalculator() {
 
             <div className={`status-badge ${results.taxable === 0 ? 'current' : results.totalDeductions > 0 ? 'current' : 'at_risk'}`}>
               <span className="status-dot" />
-              {results.isEUEEA ? 'Deductions applied' : 'Non-EU rate — no deductions'}
+              {results.isEUEEA ? 'Deductions applied' : 'Non-EU rate, no deductions'}
             </div>
 
             <h2 className="results-headline">Your rental income tax for this year.</h2>
@@ -461,22 +461,8 @@ export default function RentalTaxCalculator() {
               </div>
             )}
 
-            {/* CTA */}
-            <div className="cta-panel">
-              <p className="cta-eyebrow">Bueno Tax Filing</p>
-              <p className="cta-title">Let Bueno file your Modelo 210.</p>
-              <p className="cta-body">
-                Bueno files your Spanish rental income tax in English. We handle the quarterly and annual returns,
-                ensure all deductions are correctly applied, and deal with the tax office on your behalf.
-              </p>
-              <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer"
-                style={{ textDecoration: 'none', display: 'block' }}>
-                <button className="btn-primary" style={{ marginBottom: 0 }}>
-                  Get started with Bueno <span className="arrow">&#8594;</span>
-                </button>
-              </a>
-              <p className="cta-price">€99/year includes tax filing, Spanish account, Visa card, and human support.</p>
-            </div>
+            {/* Bueno marketing block (results screen only) */}
+            <BuenoCTA variant="rental" href="https://getbueno.com" />
 
             {/* Cross-links */}
             <div style={{ textAlign: 'center', padding: '16px 0 4px', borderTop: '1px solid var(--border)', marginTop: 8 }}>
@@ -497,7 +483,7 @@ export default function RentalTaxCalculator() {
       {step !== 'intro' && (
         <footer className="calc-footer">
           Based on verified calculation model. For guidance only. Not legal or tax advice.
-          Consult a qualified tax professional for your specific situation. Spain 24/7 by Bueno.
+          Consult a qualified tax professional for your specific situation. Spain 24/7.
         </footer>
       )}
 

@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useMemo } from 'react';
-import { useParams, useLocation, Link } from 'react-router-dom';
-import en from '../i18n/en.json';
-import no from '../i18n/no.json';
-import sv from '../i18n/sv.json';
+import { useLocation, Link } from 'react-router-dom';
+import en from './en.json';
+import no from './no.json';
+import sv from './sv.json';
 
 const DICTS = { en, no, sv };
 export const SUPPORTED_LOCALES = ['en', 'no', 'sv'];
@@ -12,8 +12,11 @@ export const DEFAULT_LOCALE = 'en';
 const LocaleContext = createContext({ locale: DEFAULT_LOCALE });
 
 export function LocaleProvider({ children }) {
-  const { lang } = useParams();
-  const locale = SUPPORTED_LOCALES.includes(lang) ? lang : DEFAULT_LOCALE;
+  // Derive locale from the first path segment so it resolves reliably from the
+  // layout level regardless of route nesting (e.g. /no/tax-calculator -> "no").
+  const { pathname } = useLocation();
+  const first = pathname.split('/').filter(Boolean)[0];
+  const locale = SUPPORTED_LOCALES.includes(first) ? first : DEFAULT_LOCALE;
   const value = useMemo(() => ({ locale, dict: DICTS[locale] }), [locale]);
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
 }
