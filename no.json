@@ -1,49 +1,65 @@
 {
-  "site": {
-    "name": "Spain 24/7",
-    "tagline": "Verktøy for utenlandske boligeiere i Spania"
-  },
   "nav": {
-    "home": "Hjem",
-    "tools": "Verktøy",
     "tax": "Skattekalkulator",
     "cost": "Kostnadsoversikt",
-    "rental": "Utleieskatt"
+    "rental": "Utleieskatt",
+    "language": "Språk"
   },
-  "hero": {
-    "eyebrow": "Gratis verktøy",
-    "title": "Eier du bolig i Spania? Her er den enkle delen.",
-    "sub": "Beregn skatten din, få oversikt over kostnadene og hold styr på den spanske boligen din på minutter. Ingen spansk nødvendig."
+  "home": {
+    "brand_sub": "Gratis boligverktøy",
+    "nav_cta": "Kom i gang",
+    "hero_eyebrow": "Gratis boligverktøy",
+    "hero_title": "Få full oversikt over den spanske boligen din",
+    "hero_em": "ned til detaljen.",
+    "hero_body": "Gratis verktøy for utenlandske boligeiere i Spania. Forstå skatteforpliktelsene dine, sjekk om du betaler for mye, og ha kontroll på alt med trygghet.",
+    "hero_cta": "Utforsk verktøyene",
+    "trust_free": "100 % gratis",
+    "trust_account": "Ingen konto nødvendig",
+    "trust_trusted": "Brukt av over 2 000 eiere",
+    "trust_lang": "Norsk språk",
+    "tools_eyebrow": "Gratis verktøy",
+    "tools_heading": "Alt du trenger å vite om den spanske boligen din.",
+    "tools_sub": "Laget for utenlandske boligeiere som vil ha klarhet uten komplikasjoner. Alle verktøy er gratis, tar under to minutter og krever ingen konto.",
+    "scroll": "Bla ned",
+    "soon": "Kommer snart",
+    "soon_link": "Kommer snart",
+    "readiness_title": "Vurdering av boligberedskap",
+    "readiness_desc": "En full gjennomgang av oppsettet for den spanske boligen din innen konto, skatteoverholdelse, strøm, forsikring og boligforvaltning. Få vite nøyaktig hvor hullene dine er.",
+    "why_eyebrow": "Hvorfor disse verktøyene",
+    "why_heading": "Bolig forenklet.",
+    "why_sub": "Gratis verktøy laget for utenlandske boligeiere i Spania.",
+    "why_1_t": "Menneskelig støtte, ikke roboter",
+    "why_1_b": "Ekte mennesker som snakker språket ditt. Engelsk, norsk, svensk, dansk, tysk og fransk. Saker løses i løpet av timer.",
+    "why_2_t": "Tydelige priser",
+    "why_2_b": "€99 per år, alt inkludert. Ingen skjulte gebyrer. De fleste medlemmer sparer mer enn medlemskapet koster det første året.",
+    "why_3_t": "Alt på ett sted",
+    "why_3_b": "Spansk IBAN, Visa-kort, strømbytte, Modelo 210-levering, boligplattform og fordelsprogrammet Club.",
+    "why_4_t": "Laget for ikke-residenter",
+    "why_4_b": "Ingen spansk skattemessig bosted nødvendig. Ingen filialbesøk. Åpne kontoen din på minutter, hvor som helst i verden.",
+    "band_text": "Klar til å slutte å betale for mye og begynne å forvalte den spanske boligen din",
+    "band_em": "med trygghet?",
+    "band_cta": "Kom i gang",
+    "footer_copy": "© 2025 Spain 24/7. Kun til veiledning. Ikke juridisk eller skattemessig rådgivning."
   },
-  "tools": {
-    "heading": "Tre verktøy. Laget for din spanske bolig.",
-    "sub": "Laget av folk som selv eier bolig i Spania. Gratis, nøyaktig og tydelig."
-  },
-  "tool": {
+  "cards": {
     "tax": {
-      "title": "Modelo 210 Skattekalkulator",
-      "desc": "Regn ut skatten din som ikke-resident eiendomsbesitter på under to minutter. Få en tydelig, personlig oversikt.",
+      "tag": "Skatt",
+      "title": "Spansk eiendomsskattkalkulator",
+      "desc": "Finn ut nøyaktig hvor mye Modelo 210-skatt du som ikke-resident skylder i år. Dekker eget bruk, ferieutleie, langtidsutleie og blandet bruk. Viser utestående uleverte år og total forpliktelse.",
       "cta": "Beregn skatten min"
     },
     "cost": {
+      "tag": "Besparelser",
       "title": "Eiendomskostnadsoversikt",
-      "desc": "Se hva den spanske boligen din faktisk koster deg hvert år. Finn skjulte gebyrer og enkle besparelser.",
-      "cta": "Sjekk kostnadene mine"
+      "desc": "Finn ut hva den spanske boligen din faktisk koster deg hvert år. De fleste utenlandske eiere betaler €200-400 for mye på kontogebyrer og strøm alene. Se din nøyaktige overbetaling og mulige besparelse.",
+      "cta": "Start oversikten min"
     },
     "rental": {
-      "title": "Skatt på leieinntekt",
-      "desc": "Beregn skatten på den spanske leieinntekten din, kvartal for kvartal. Laget for ikke-residenter.",
+      "tag": "Utleie",
+      "title": "Kalkulator for skatt på leieinntekt",
+      "desc": "Beregn din nøyaktige spanske skatt på leieinntekt etter alle tillatte fradrag. Bosatte i EU/EØS kan trekke fra boligkostnader, strøm, forvaltningsgebyrer og avskrivning. De fleste eiere krever langt mindre enn de har rett til.",
       "cta": "Beregn leieskatt"
     }
-  },
-  "why": {
-    "heading": "Hvorfor vi lagde disse verktøyene",
-    "body": "Å eie en bolig i Spania skal føles som en ferie, ikke som et papirarbeidsprosjekt. Nettsider kun på spansk, forvirrende skatteskjemaer og skjulte gebyrer kaster bort tid og penger. Disse verktøyene gir deg tydelige svar på ditt eget språk, så du kan ta trygge avgjørelser om boligen din."
-  },
-  "footer": {
-    "tagline": "Verktøy for utenlandske boligeiere i Spania",
-    "rights": "Alle rettigheter forbeholdt.",
-    "lang": "Språk"
   },
   "common": {
     "back": "Tilbake",
@@ -55,85 +71,7 @@
     "no_account": "Ingen konto nødvendig",
     "takes_2_min": "Tar 2 minutter",
     "takes_3_min": "Tar 3 minutter",
-    "trusted": "Brukt av over 2 000 boligeiere"
-  },
-  "calc": {
-    "tax": {
-      "doc_title": "Spansk eiendomsskattkalkulator | Spain 24/7",
-      "header_tag": "Gratis skattekalkulator",
-      "intro_eyebrow": "Gratis for utenlandske boligeiere",
-      "intro_headline_1": "Hvor mye spansk",
-      "intro_headline_2": "eiendomsskatt",
-      "intro_headline_3": "skylder du",
-      "intro_headline_em": "i år?",
-      "intro_body": "De fleste utenlandske boligeiere betaler for lite, glemmer fristen eller har aldri levert i det hele tatt. Denne kalkulatoren viser din nøyaktige Modelo 210-forpliktelse på under to minutter.",
-      "intro_cta": "Beregn skatten min",
-      "country_q": "Hvor bor du?",
-      "country_hint": "Bostedslandet ditt avgjør skattesatsen din i Spania.",
-      "use_q": "Hvordan bruker du den spanske boligen din?",
-      "use_hint": "Dette avgjør hvordan den skattepliktige inntekten din beregnes.",
-      "cadastral_q": "Hva er ligningsverdien (valor catastral) på boligen din?",
-      "cadastral_hint": "Du finner den på den årlige IBI-regningen (kommunal eiendomsskatt), oppført som \"Valor catastral\".",
-      "cadastral_skip": "Bruk et typisk anslag (€100 000) og fortsett",
-      "revision_q": "Har ligningsverdien din blitt revidert de siste 10 årene?",
-      "revision_hint": "En generell ligningsrevisjon endrer skattesatsen din fra 2 % til 1,1 %. Er du usikker, bruker vi 2 %, det mest forsiktige anslaget.",
-      "revision_yes": "Ja, det har den",
-      "revision_no": "Nei, det har den ikke",
-      "revision_unsure": "Usikker",
-      "rental_q": "Hva var den totale leieinntekten din i fjor?",
-      "rental_hint": "Oppgi brutto leieinntekt før kostnader. Bosatte i EU/EØS kan trekke fra kostnader. Bosatte i Storbritannia og utenfor EU skattlegges på bruttoinntekt.",
-      "filing_q": "Har du levert Modelo 210 tidligere?",
-      "filing_hint": "Modelo 210 er den spanske eiendomsskattemeldingen for ikke-residenter, med frist 31. desember hvert år.",
-      "email_q": "Skatterapporten din er klar.",
-      "email_hint": "Oppgi e-posten din for å motta hele oversikten og et personlig sammendrag av situasjonen din.",
-      "email_invalid": "Vennligst oppgi en gyldig e-postadresse.",
-      "email_cta": "Vis resultatene mine",
-      "email_privacy": "Vi deler ikke e-posten din. Brukt av over 2 000 utenlandske boligeiere i Spania.",
-      "loading_title": "Beregner skatteforpliktelsen din",
-      "loading_sub": "Forbereder den personlige rapporten din",
-      "status_current": "Levering à jour",
-      "status_at_risk": "Mulige utestående meldinger",
-      "status_overdue": "Sannsynlig utestående meldinger",
-      "result_headline_current": "Her er din årlige skatteforpliktelse.",
-      "result_headline_unfiled_one": "Du kan ha 1 år med uleverte meldinger.",
-      "result_headline_unfiled_many": "Du kan ha {n} år med uleverte meldinger.",
-      "result_subline": "Bosatt i {country}. {use}.",
-      "panel_label": "Årlig skatteforpliktelse",
-      "panel_period": "Per år. Modelo 210. Frist 31. desember",
-      "panel_rate": "Skattesats",
-      "panel_residency": "Bosted",
-      "panel_eu": "EU / EØS",
-      "panel_non_eu": "Utenfor EU",
-      "panel_deemed": "Beregnet inntekt",
-      "panel_rental_assessed": "Vurdert leieinntekt",
-      "liability_title": "Anslag på utestående forpliktelse",
-      "liability_this_year": "Årets skatt",
-      "liability_unpaid": "Ubetalte år",
-      "liability_penalty": "Tilleggsavgift for forsinket betaling (anslått)",
-      "liability_total": "Total mulig forpliktelse",
-      "liability_disclaimer": "Kun anslag. Spania kan etterberegne inntil 4 tidligere år. Rådfør deg med en skatterådgiver for din nøyaktige situasjon.",
-      "ai_label": "Ditt personlige sammendrag",
-      "footer": "Kun til veiledning. Ikke juridisk eller skattemessig rådgivning. Rådfør deg med en kvalifisert skatterådgiver for din situasjon. Spain 24/7.",
-      "also_from": "Også fra Spain 24/7",
-      "cross_cost": "Sjekk om du betaler for mye på gebyrer og strøm",
-      "restart": "Start en ny beregning",
-      "use_personal_t": "Kun til eget bruk",
-      "use_personal_d": "Jeg bruker den selv. Jeg leier den ikke ut.",
-      "use_short_t": "Korttids- / feriutleie",
-      "use_short_d": "Leid ut til turister eller gjester, vanligvis per uke.",
-      "use_long_t": "Langtidsutleie",
-      "use_long_d": "Leid ut til leietakere månedlig eller årlig.",
-      "use_mixed_t": "Blandet eget bruk og utleie",
-      "use_mixed_d": "Jeg bruker den deler av året og leier den ut resten.",
-      "filing_always_t": "Ja, hvert år",
-      "filing_always_d": "Jeg har levert Modelo 210 hvert år uten unntak.",
-      "filing_missed_t": "Ikke alltid",
-      "filing_missed_d": "Jeg har gått glipp av ett eller flere år.",
-      "filing_never_t": "Nei, aldri",
-      "filing_never_d": "Jeg har ikke levert en spansk eiendomsskattemelding.",
-      "filing_unsure_t": "Jeg er ikke sikker",
-      "filing_unsure_d": "Jeg er ikke sikker på hva Modelo 210 er eller om jeg har levert."
-    }
+    "trusted": "Brukt av over 2 000 eiere"
   },
   "countries": {
     "norway": "Norge",
@@ -150,14 +88,5 @@
     "iceland": "Island",
     "other_eu_eea": "Annet EU / EØS",
     "other": "Annet land"
-  },
-  "bueno_cta": {
-    "tax_title": "Vil du at vi tar oss av det?",
-    "tax_body": "Vi kan levere Modelo 210 for deg, på ditt eget språk, med ekte menneskelig støtte. Tydelige priser. Ingen overraskelser.",
-    "cost_title": "Vil du slutte å betale for mye?",
-    "cost_body": "Vi samler den spanske kontoen, kortet, strømmen og skatteleveringen din på ett sted, på ditt eget språk, til én tydelig årlig pris. De fleste medlemmer sparer mer enn det koster.",
-    "rental_title": "Vil du at vi leverer utleieskatten din?",
-    "rental_body": "Vi leverer Modelo 210 for deg, kvartalsvis og årlig, på ditt eget språk, med alle fradrag riktig anvendt og ekte menneskelig støtte. Tydelige priser. Ingen overraskelser.",
-    "button": "Se hvordan det fungerer"
   }
 }

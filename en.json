@@ -1,49 +1,65 @@
 {
-  "site": {
-    "name": "Spain 24/7",
-    "tagline": "Tools for foreign property owners in Spain"
-  },
   "nav": {
-    "home": "Home",
-    "tools": "Tools",
     "tax": "Tax Calculator",
     "cost": "Cost Audit",
-    "rental": "Rental Tax"
+    "rental": "Rental Tax",
+    "language": "Language"
   },
-  "hero": {
-    "eyebrow": "Free tools",
-    "title": "Own a home in Spain? Here is the easy part.",
-    "sub": "Calculate your taxes, audit your costs, and stay on top of your Spanish property in minutes. No Spanish required."
+  "home": {
+    "brand_sub": "Free property tools",
+    "nav_cta": "Get started",
+    "hero_eyebrow": "Free property tools",
+    "hero_title": "Know your Spanish property",
+    "hero_em": "inside out.",
+    "hero_body": "Free tools for foreign property owners in Spain. Understand your tax obligations, check if you are overpaying, and manage everything with confidence.",
+    "hero_cta": "Explore the tools",
+    "trust_free": "100% free",
+    "trust_account": "No account needed",
+    "trust_trusted": "Trusted by 2,000+ owners",
+    "trust_lang": "English language",
+    "tools_eyebrow": "Free Tools",
+    "tools_heading": "Everything you need to know about your Spanish property.",
+    "tools_sub": "Built for foreign property owners who want clarity without the complexity. All tools are free, take under 2 minutes, and require no account.",
+    "scroll": "Scroll",
+    "soon": "Coming Soon",
+    "soon_link": "Coming soon",
+    "readiness_title": "Property Readiness Assessment",
+    "readiness_desc": "A full health check of your Spanish property setup across banking, tax compliance, energy, insurance, and property management. Know exactly where your gaps are.",
+    "why_eyebrow": "Why these tools",
+    "why_heading": "Property simplified.",
+    "why_sub": "Free tools built for foreign property owners in Spain.",
+    "why_1_t": "Human support, not bots",
+    "why_1_b": "Real people who speak your language. English, Norwegian, Swedish, Danish, German, and French. Issues resolved within hours.",
+    "why_2_t": "Transparent fees",
+    "why_2_b": "€99 per year, all-inclusive. No hidden charges. Most members save more than the membership cost in the first year.",
+    "why_3_t": "Everything in one place",
+    "why_3_b": "Spanish IBAN, Visa card, energy switching, Modelo 210 filing, property platform, and the Club perks programme.",
+    "why_4_t": "Built for non-residents",
+    "why_4_b": "No Spanish tax residency required. No branch visits. Open your account in minutes from anywhere in the world.",
+    "band_text": "Ready to stop overpaying and start managing your Spanish property",
+    "band_em": "with confidence?",
+    "band_cta": "Get started",
+    "footer_copy": "© 2025 Spain 24/7. For guidance only. Not legal or tax advice."
   },
-  "tools": {
-    "heading": "Three tools. Built for your Spanish property.",
-    "sub": "Made by people who own property in Spain. Free, accurate, and clear."
-  },
-  "tool": {
+  "cards": {
     "tax": {
-      "title": "Modelo 210 Tax Calculator",
-      "desc": "Work out your non-resident property tax in under two minutes. Get a clear, personalised breakdown.",
+      "tag": "Tax",
+      "title": "Spanish Property Tax Calculator",
+      "desc": "Find out exactly how much Modelo 210 non-resident property tax you owe this year. Covers personal use, holiday rental, long-term rental, and mixed use. Shows outstanding unfiled years and total liability.",
       "cta": "Calculate my tax"
     },
     "cost": {
-      "title": "Property Cost Audit",
-      "desc": "See what your Spanish home really costs you each year. Find hidden fees and easy savings.",
-      "cta": "Audit my costs"
+      "tag": "Savings",
+      "title": "Spanish Property Cost Audit",
+      "desc": "Find out how much your Spanish home really costs you each year. Most foreign owners overpay by €200-400 on account fees and energy alone. See your exact overpayment and potential saving.",
+      "cta": "Start my audit"
     },
     "rental": {
-      "title": "Rental Income Tax",
-      "desc": "Work out the tax on your Spanish rental income, quarter by quarter. Built for non-residents.",
+      "tag": "Rental",
+      "title": "Rental Income Tax Calculator",
+      "desc": "Calculate your exact Spanish rental income tax after all allowable deductions. EU/EEA residents can deduct property expenses, utilities, management fees, and depreciation. Most owners claim far less than they are entitled to.",
       "cta": "Calculate rental tax"
     }
-  },
-  "why": {
-    "heading": "Why we built these tools",
-    "body": "Owning a home in Spain should feel like a holiday, not a paperwork project. Spanish-only websites, confusing tax forms, and hidden fees waste your time and your money. These tools give you clear answers in your own language so you can make confident decisions about your property."
-  },
-  "footer": {
-    "tagline": "Tools for foreign property owners in Spain",
-    "rights": "All rights reserved.",
-    "lang": "Language"
   },
   "common": {
     "back": "Back",
@@ -56,84 +72,6 @@
     "takes_2_min": "Takes 2 minutes",
     "takes_3_min": "Takes 3 minutes",
     "trusted": "Trusted by 2,000+ owners"
-  },
-  "calc": {
-    "tax": {
-      "doc_title": "Spanish Property Tax Calculator | Spain 24/7",
-      "header_tag": "Free Tax Calculator",
-      "intro_eyebrow": "Free for foreign property owners",
-      "intro_headline_1": "How much Spanish",
-      "intro_headline_2": "property tax do",
-      "intro_headline_3": "you owe",
-      "intro_headline_em": "this year?",
-      "intro_body": "Most foreign property owners underpay, miss the deadline, or have never filed at all. This calculator shows your exact Modelo 210 obligation in under 2 minutes.",
-      "intro_cta": "Calculate my tax",
-      "country_q": "Where do you live?",
-      "country_hint": "Your country of residence determines your tax rate in Spain.",
-      "use_q": "How do you use your Spanish property?",
-      "use_hint": "This determines how your taxable income is calculated.",
-      "cadastral_q": "What is your property's cadastral value?",
-      "cadastral_hint": "Find it on your annual IBI (council tax) bill, listed as \"Valor catastral\".",
-      "cadastral_skip": "Use a typical estimate (€100,000) and continue",
-      "revision_q": "Has your cadastral value been revised in the last 10 years?",
-      "revision_hint": "A General Cadastral Revision changes your tax rate from 2% to 1.1%. If unsure, we use 2%, the more conservative assumption.",
-      "revision_yes": "Yes, it has",
-      "revision_no": "No, it has not",
-      "revision_unsure": "Not sure",
-      "rental_q": "What was your total rental income last year?",
-      "rental_hint": "Enter gross rental income before expenses. EU/EEA residents may deduct costs. UK and non-EU residents are taxed on gross income.",
-      "filing_q": "Have you filed Modelo 210 before?",
-      "filing_hint": "Modelo 210 is the Spanish non-resident property tax return, due by December 31 each year.",
-      "email_q": "Your tax report is ready.",
-      "email_hint": "Enter your email to receive your full breakdown and a personalised summary of your situation.",
-      "email_invalid": "Please enter a valid email address.",
-      "email_cta": "Show my results",
-      "email_privacy": "We will not share your email. Trusted by 2,000+ foreign property owners in Spain.",
-      "loading_title": "Calculating your tax obligation",
-      "loading_sub": "Preparing your personalised report",
-      "status_current": "Filing up to date",
-      "status_at_risk": "Possible outstanding returns",
-      "status_overdue": "Outstanding returns likely",
-      "result_headline_current": "Here is your annual tax obligation.",
-      "result_headline_unfiled_one": "You may have 1 year of unfiled returns.",
-      "result_headline_unfiled_many": "You may have {n} years of unfiled returns.",
-      "result_subline": "{country} resident. {use}.",
-      "panel_label": "Annual tax obligation",
-      "panel_period": "Per year. Modelo 210. Deadline December 31",
-      "panel_rate": "Tax rate",
-      "panel_residency": "Residency",
-      "panel_eu": "EU / EEA",
-      "panel_non_eu": "Non-EU",
-      "panel_deemed": "Deemed income",
-      "panel_rental_assessed": "Rental income assessed",
-      "liability_title": "Outstanding liability estimate",
-      "liability_this_year": "This year's tax",
-      "liability_unpaid": "Unpaid years",
-      "liability_penalty": "Late payment surcharge (estimated)",
-      "liability_total": "Total potential liability",
-      "liability_disclaimer": "Estimates only. Spain can assess up to 4 prior years. Consult a tax professional for your exact position.",
-      "ai_label": "Your personalised summary",
-      "footer": "For guidance only. Not legal or tax advice. Consult a qualified tax professional for your specific situation. Spain 24/7.",
-      "also_from": "Also from Spain 24/7",
-      "cross_cost": "Check if you are overpaying on fees and energy",
-      "restart": "Start a new calculation",
-      "use_personal_t": "Personal use only",
-      "use_personal_d": "I use it myself. I do not rent it out.",
-      "use_short_t": "Short-term / holiday rental",
-      "use_short_d": "Rented to tourists or guests, usually by the week.",
-      "use_long_t": "Long-term rental",
-      "use_long_d": "Rented to tenants on a monthly or annual basis.",
-      "use_mixed_t": "Mixed personal and rental",
-      "use_mixed_d": "I use it part of the year and rent it out the rest.",
-      "filing_always_t": "Yes, every year",
-      "filing_always_d": "I have filed Modelo 210 every year without exception.",
-      "filing_missed_t": "Not always",
-      "filing_missed_d": "I have missed one or more years.",
-      "filing_never_t": "No, never",
-      "filing_never_d": "I have not filed a Spanish property tax return.",
-      "filing_unsure_t": "I am not sure",
-      "filing_unsure_d": "I am not certain what Modelo 210 is or whether I have filed."
-    }
   },
   "countries": {
     "norway": "Norway",
@@ -150,14 +88,5 @@
     "iceland": "Iceland",
     "other_eu_eea": "Other EU / EEA",
     "other": "Other country"
-  },
-  "bueno_cta": {
-    "tax_title": "Want this filed for you?",
-    "tax_body": "We can file your Modelo 210 for you, in your language, with real human support. Transparent fees. No surprises.",
-    "cost_title": "Want to stop overpaying?",
-    "cost_body": "We bring your Spanish account, card, energy, and tax filing into one place, in your language, for one transparent yearly price. Most members save more than it costs.",
-    "rental_title": "Want your rental tax filed for you?",
-    "rental_body": "We file your quarterly and annual Modelo 210 for you, in your language, with every deduction correctly applied and real human support. Transparent fees. No surprises.",
-    "button": "See how it works"
   }
 }

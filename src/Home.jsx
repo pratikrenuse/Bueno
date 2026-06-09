@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useT, LLink } from '../i18n.jsx'
+import LangSwitcher from '../LangSwitcher.jsx'
 
 // Auto-discovers all tool meta.js files — no changes needed when adding new tools
 const metaModules = import.meta.glob('../*/meta.js', { eager: true })
@@ -7,7 +8,11 @@ const ALL_TOOLS = Object.values(metaModules)
   .map(m => m.default)
   .sort((a, b) => a.order - b.order)
 
+// Map a tool path to its i18n card key
+const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental' }
+
 export default function Home() {
+  const t = useT()
   const navRef          = useRef(null)
   const logoRef         = useRef(null)
   const brandNameRef    = useRef(null)
@@ -49,12 +54,15 @@ export default function Home() {
         <div className="site-brand">
           <span ref={brandNameRef} className="site-brand-name white">Spain 24/7</span>
           <span ref={brandPoweredRef} className="site-brand-powered white">
-            Free property tools
+            {t('home.brand_sub')}
           </span>
         </div>
-        <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-nav-cta">
-          Get started &#8594;
-        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <LangSwitcher />
+          <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-nav-cta">
+            {t('home.nav_cta')} &#8594;
+          </a>
+        </div>
       </nav>
 
       {/* HERO */}
@@ -63,28 +71,26 @@ export default function Home() {
           <div className="home-hero-inner">
             <div className="home-eyebrow">
               <span className="home-eyebrow-line" />
-              <span className="home-eyebrow-text">Free property tools</span>
+              <span className="home-eyebrow-text">{t('home.hero_eyebrow')}</span>
             </div>
             <h1 className="home-headline">
-              Know your Spanish<br />property <em>inside out.</em>
+              {t('home.hero_title')} <em>{t('home.hero_em')}</em>
             </h1>
             <p className="home-body">
-              Free tools for foreign property owners in Spain.
-              Understand your tax obligations, check if you are overpaying,
-              and manage everything with confidence.
+              {t('home.hero_body')}
             </p>
             <button className="btn-primary-outline" style={{ maxWidth: 280 }}
               onClick={() => document.getElementById('tools').scrollIntoView({ behavior: 'smooth' })}>
-              Explore the tools &#8595;
+              {t('home.hero_cta')} &#8595;
             </button>
             <div className="home-trust">
-              <span className="home-trust-item">100% free</span>
+              <span className="home-trust-item">{t('home.trust_free')}</span>
               <span className="home-trust-dot" />
-              <span className="home-trust-item">No account needed</span>
+              <span className="home-trust-item">{t('home.trust_account')}</span>
               <span className="home-trust-dot" />
-              <span className="home-trust-item">Trusted by 2,000+ owners</span>
+              <span className="home-trust-item">{t('home.trust_trusted')}</span>
               <span className="home-trust-dot" />
-              <span className="home-trust-item">English language</span>
+              <span className="home-trust-item">{t('home.trust_lang')}</span>
             </div>
           </div>
         </div>
@@ -95,7 +101,7 @@ export default function Home() {
         {/* Scroll cue */}
         <div className="hero-scroll-cue"
           onClick={() => document.getElementById('tools').scrollIntoView({ behavior: 'smooth' })}>
-          <span className="hero-scroll-cue-label">Scroll</span>
+          <span className="hero-scroll-cue-label">{t('home.scroll')}</span>
           <div className="hero-scroll-arrow">&#8595;</div>
         </div>
 
@@ -103,46 +109,44 @@ export default function Home() {
 
       {/* TOOLS */}
       <section className="home-tools" id="tools">
-        <p className="home-section-eyebrow">Free Tools</p>
-        <h2 className="home-section-headline">Everything you need to know about your Spanish property.</h2>
+        <p className="home-section-eyebrow">{t('home.tools_eyebrow')}</p>
+        <h2 className="home-section-headline">{t('home.tools_heading')}</h2>
         <p className="home-section-sub">
-          Built for foreign property owners who want clarity without the complexity.
-          All tools are free, take under 2 minutes, and require no account.
+          {t('home.tools_sub')}
         </p>
 
         <div className="tools-grid">
 
-          {ALL_TOOLS.map((tool, i) => (
-            tool.active ? (
-              <Link key={tool.path} to={tool.path} className="tool-card">
-                <span className={`tool-tag ${tool.tagStyle === 'gold' ? 'gold' : ''}`}>{tool.tag}</span>
+          {ALL_TOOLS.map((tool, i) => {
+            const key = CARD_KEY[tool.path]
+            return tool.active ? (
+              <LLink key={tool.path} to={tool.path} className="tool-card">
+                <span className={`tool-tag ${tool.tagStyle === 'gold' ? 'gold' : ''}`}>{t(`cards.${key}.tag`)}</span>
                 <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
-                <h3 className="tool-title">{tool.title}</h3>
-                <p className="tool-desc">{tool.description}</p>
-                <span className={`tool-link ${tool.ctaStyle === 'gold' ? 'gold' : ''}`}>{tool.cta} &#8594;</span>
-              </Link>
+                <h3 className="tool-title">{t(`cards.${key}.title`)}</h3>
+                <p className="tool-desc">{t(`cards.${key}.desc`)}</p>
+                <span className={`tool-link ${tool.ctaStyle === 'gold' ? 'gold' : ''}`}>{t(`cards.${key}.cta`)} &#8594;</span>
+              </LLink>
             ) : (
               <div key={tool.path} className="tool-card disabled">
-                <span className="tool-tag grey">Coming Soon</span>
+                <span className="tool-tag grey">{t('home.soon')}</span>
                 <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
-                <h3 className="tool-title">{tool.title}</h3>
-                <p className="tool-desc">{tool.description}</p>
-                <span className="tool-link muted">Coming soon</span>
+                <h3 className="tool-title">{t(`cards.${key}.title`)}</h3>
+                <p className="tool-desc">{t(`cards.${key}.desc`)}</p>
+                <span className="tool-link muted">{t('home.soon_link')}</span>
               </div>
             )
-          ))}
+          })}
 
           {/* Placeholder card always shown at end */}
           <div className="tool-card disabled">
-            <span className="tool-tag grey">Coming Soon</span>
+            <span className="tool-tag grey">{t('home.soon')}</span>
             <p className="tool-number">{String(ALL_TOOLS.length + 1).padStart(2, '0')}</p>
-            <h3 className="tool-title">Property Readiness Assessment</h3>
+            <h3 className="tool-title">{t('home.readiness_title')}</h3>
             <p className="tool-desc">
-              A full health check of your Spanish property setup across banking,
-              tax compliance, energy, insurance, and property management.
-              Know exactly where your gaps are.
+              {t('home.readiness_desc')}
             </p>
-            <span className="tool-link muted">Coming soon</span>
+            <span className="tool-link muted">{t('home.soon_link')}</span>
           </div>
 
         </div>
@@ -151,20 +155,20 @@ export default function Home() {
       {/* WHY */}
       <section className="home-why">
         <div>
-          <p className="home-section-eyebrow" style={{ color: 'var(--gold)' }}>Why these tools</p>
+          <p className="home-section-eyebrow" style={{ color: 'var(--gold)' }}>{t('home.why_eyebrow')}</p>
           <h2 className="home-section-headline" style={{ color: 'var(--white)', maxWidth: 240 }}>
-            Property simplified.
+            {t('home.why_heading')}
           </h2>
           <p className="home-section-sub" style={{ color: 'rgba(255,255,255,0.45)', marginBottom: 0 }}>
-            Free tools built for foreign property owners in Spain.
+            {t('home.why_sub')}
           </p>
         </div>
         <div className="why-grid">
           {[
-            { n: '01', title: 'Human support, not bots',    body: 'Real people who speak your language. English, Norwegian, Swedish, Danish, German, and French. Issues resolved within hours.' },
-            { n: '02', title: 'Transparent fees',           body: '€99 per year, all-inclusive. No hidden charges. Most members save more than the membership cost in the first year.' },
-            { n: '03', title: 'Everything in one place',    body: 'Spanish IBAN, Visa card, energy switching, Modelo 210 filing, property platform, and the Club perks programme.' },
-            { n: '04', title: 'Built for non-residents',    body: 'No Spanish tax residency required. No branch visits. Open your account in minutes from anywhere in the world.' },
+            { n: '01', title: t('home.why_1_t'), body: t('home.why_1_b') },
+            { n: '02', title: t('home.why_2_t'), body: t('home.why_2_b') },
+            { n: '03', title: t('home.why_3_t'), body: t('home.why_3_b') },
+            { n: '04', title: t('home.why_4_t'), body: t('home.why_4_b') },
           ].map(item => (
             <div key={item.n}>
               <p className="why-item-number">{item.n}</p>
@@ -178,10 +182,10 @@ export default function Home() {
       {/* BAND */}
       <section className="home-band">
         <p className="home-band-text">
-          Ready to stop overpaying and start managing your Spanish property <em>with confidence?</em>
+          {t('home.band_text')} <em>{t('home.band_em')}</em>
         </p>
         <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-band-cta">
-          Get started &#8594;
+          {t('home.band_cta')} &#8594;
         </a>
       </section>
 
@@ -190,15 +194,15 @@ export default function Home() {
         <div className="site-brand">
           <span className="site-brand-name white" style={{ fontSize: 14 }}>Spain 24/7</span>
           <span className="site-brand-powered white">
-            Free property tools
+            {t('home.brand_sub')}
           </span>
         </div>
         <div className="home-footer-links">
-          <Link to="/tax-calculator">Tax Calculator</Link>
-          <Link to="/cost-audit">Cost Audit</Link>
+          <LLink to="/tax-calculator">{t('nav.tax')}</LLink>
+          <LLink to="/cost-audit">{t('nav.cost')}</LLink>
         </div>
         <p className="home-footer-copy">
-          &copy; 2025 Spain 24/7. For guidance only. Not legal or tax advice.
+          {t('home.footer_copy')}
         </p>
       </footer>
 
