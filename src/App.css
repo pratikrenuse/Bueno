@@ -339,11 +339,12 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 13px 12px;
-  border: none;
-  background: transparent;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
   cursor: pointer;
-  transition: background var(--transition), box-shadow var(--transition);
+  transition: all var(--transition);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
@@ -351,13 +352,12 @@ body {
   text-align: left;
 }
 
-.country-btn:hover { background: var(--off-white); }
+.country-btn:hover { border-color: var(--navy); background: var(--off-white); }
 
 .country-btn.selected {
-  background: var(--off-white);
-  color: var(--navy);
-  font-weight: 600;
-  box-shadow: inset 0 -2px 0 var(--gold);
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
 }
 
 .country-flag {
@@ -369,40 +369,38 @@ body {
   color: var(--text-muted);
   min-width: 20px;
 }
-.country-btn.selected .country-flag { color: var(--accent); }
+.country-btn.selected .country-flag { color: rgba(255,255,255,0.7); }
 
 /* === OPTION CARDS === */
 .option-stack {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 8px;
   margin-bottom: 28px;
-  border-top: 1px solid var(--border);
 }
 
 .option-card {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  padding: 20px 4px 20px 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  background: transparent;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
   cursor: pointer;
-  transition: padding-left var(--transition), background var(--transition);
+  transition: all var(--transition);
   text-align: left;
 }
 
-.option-card:hover { background: var(--off-white); padding-left: 16px; }
+.option-card:hover { border-color: var(--navy); }
 
 .option-card.selected {
-  background: var(--off-white);
-  padding-left: 16px;
-  color: var(--navy);
-  box-shadow: inset 3px 0 0 var(--gold);
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
 }
 
-.option-card.selected .option-desc { color: var(--text-muted); }
+.option-card.selected .option-desc { color: rgba(255,255,255,0.55); }
 
 .option-title {
   font-family: var(--font-sans);
@@ -425,22 +423,22 @@ body {
 .input-prefix-wrap {
   display: flex;
   align-items: center;
-  border: none;
-  border-bottom: 1.5px solid var(--navy);
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
   transition: border-color var(--transition);
+  overflow: hidden;
 }
 
-.input-prefix-wrap:focus-within { border-bottom-color: var(--gold); }
+.input-prefix-wrap:focus-within { border-color: var(--navy); }
 
 .input-prefix {
   font-family: var(--font-serif);
-  font-size: 22px;
-  color: var(--navy);
-  padding: 12px 12px 12px 0;
-  border-right: none;
-  background: transparent;
+  font-size: 20px;
+  color: var(--text-muted);
+  padding: 16px 14px 16px 20px;
+  border-right: 1px solid var(--border);
+  background: var(--off-white);
   user-select: none;
 }
 
@@ -479,42 +477,41 @@ body {
 
 .choice-btn {
   padding: 16px 12px;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
   cursor: pointer;
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
   color: var(--navy);
-  transition: background var(--transition), box-shadow var(--transition);
+  transition: all var(--transition);
   text-align: center;
   line-height: 1.4;
 }
 
-.choice-btn:hover { background: var(--off-white); }
-.choice-btn.selected { color: var(--navy); font-weight: 600; border-bottom-color: var(--navy); box-shadow: inset 0 -2px 0 var(--gold); }
+.choice-btn:hover { border-color: var(--navy); }
+.choice-btn.selected { border-color: var(--navy); background: var(--navy); color: var(--white); }
 
 /* === EMAIL INPUT === */
 .email-input-wrap { margin-bottom: 16px; }
 
 .email-input {
   width: 100%;
-  padding: 14px 0;
+  padding: 16px 20px;
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--navy);
-  border: none;
-  border-bottom: 1.5px solid var(--navy);
-  border-radius: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   outline: none;
   transition: border-color var(--transition);
-  background: transparent;
+  background: var(--white);
 }
 
 .email-input::placeholder { color: rgba(1,2,33,0.25); }
-.email-input:focus { border-bottom-color: var(--gold); }
-.email-input.error { border-bottom-color: #C0392B; }
+.email-input:focus { border-color: var(--navy); }
+.email-input.error { border-color: #C0392B; }
 
 .privacy-note {
   font-size: 13px;
@@ -534,7 +531,7 @@ body {
   background: var(--navy);
   color: var(--white);
   border: none;
-  border-radius: 0;
+  border-radius: 14px;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
@@ -560,7 +557,7 @@ body {
   background: transparent;
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 0;
+  border-radius: 14px;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
@@ -666,7 +663,7 @@ body {
 /* Main tax panel */
 .tax-panel {
   background: var(--navy);
-  border-radius: 0;
+  border-radius: 16px;
   padding: 36px;
   margin-bottom: 16px;
   color: var(--white);
@@ -725,11 +722,11 @@ body {
 
 /* Liability panel */
 .liability-panel {
-  background: transparent;
-  border-radius: 0;
-  padding: 4px 0 4px 22px;
-  margin-bottom: 24px;
-  border-left: 2px solid var(--gold);
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--gold);
 }
 
 .liability-title {
@@ -773,11 +770,10 @@ body {
 
 /* AI report */
 .ai-panel {
-  background: transparent;
-  border-radius: 0;
-  border-left: 2px solid var(--gold);
-  padding: 4px 0 4px 22px;
-  margin-bottom: 24px;
+  background: var(--light-blue);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 16px;
 }
 
 .ai-panel-label {
@@ -800,14 +796,13 @@ body {
 
 .ai-panel-text p + p { margin-top: 12px; }
 
-/* CTA panel — open closing section, not a boxed card */
+/* CTA panel */
 .cta-panel {
-  border: none;
-  border-top: 1px solid var(--border);
-  border-radius: 0;
-  padding: 34px 0 4px;
-  margin: 24px 0 16px;
-  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 16px;
+  background: var(--white);
 }
 
 .cta-eyebrow {
@@ -1010,7 +1005,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 0;
+  border-radius: 14px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -1200,21 +1195,22 @@ body {
 }
 
 .tool-card {
-  background: transparent;
-  border: none;
-  border-top: 1px solid var(--navy);
-  border-radius: 0;
-  padding: 28px 0 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: border-color 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .tool-card:hover {
-  border-top-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(1,2,33,0.10);
+  border-color: transparent;
 }
 
 .tool-card.disabled {
@@ -1373,7 +1369,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 0;
+  border-radius: 14px;
   white-space: nowrap;
   transition: background 0.2s;
 }
@@ -1443,7 +1439,7 @@ body {
 /* === COST AUDIT SPECIFIC === */
 .savings-hero {
   background: var(--navy);
-  border-radius: 0;
+  border-radius: 16px;
   padding: 36px;
   margin-bottom: 16px;
   text-align: center;
@@ -1477,11 +1473,10 @@ body {
 }
 
 .breakdown-panel {
-  background: transparent;
-  border-radius: 0;
-  border-top: 1px solid var(--border);
-  padding: 24px 0 4px;
-  margin-bottom: 24px;
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 16px;
 }
 
 .breakdown-title {
@@ -1508,7 +1503,7 @@ body {
 .breakdown-row-value.red { color: #C0392B; }
 .breakdown-row-value.green { color: #1A7A4A; }
 
-.vs-bar { display: flex; gap: 2px; border-radius: 0; overflow: hidden; height: 8px; margin-bottom: 8px; }
+.vs-bar { display: flex; gap: 2px; border-radius: 999px; overflow: hidden; height: 8px; margin-bottom: 8px; }
 .vs-bar-current { background: #C0392B; opacity: 0.7; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
 .vs-bar-bueno { background: var(--accent); opacity: 0.8; }
 .vs-labels {
