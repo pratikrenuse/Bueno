@@ -159,7 +159,7 @@ export default function Home() {
           <h2 className="home-section-headline" style={{ color: 'var(--white)', maxWidth: 240 }}>
             {t('home.why_heading')}
           </h2>
-          <p className="home-section-sub" style={{ color: 'rgba(255,255,255,0.45)', marginBottom: 0 }}>
+          <p className="home-section-sub" style={{ color: 'rgba(255,255,255,0.62)', marginBottom: 0 }}>
             {t('home.why_sub')}
           </p>
         </div>
