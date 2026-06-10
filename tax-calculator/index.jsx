@@ -3,6 +3,7 @@ import { calculateTax } from './taxCalculations';
 import { saveLead } from './supabase';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import enDict from '../en.json';
 
 // code/flag/isEUEEA stay constant; display names come from i18n
 const COUNTRIES = [
@@ -87,7 +88,9 @@ export default function TaxCalculator() {
     if (!validateEmail(form.email)) { setEmailError(tt('email_invalid')); return; }
     setEmailError(''); setIsLoading(true); setStep('loading');
     const calc = calculateTax(form); setResults(calc);
-    await saveLead({ email: form.email, formData: form, results: calc });
+    // Persist the canonical English country name to Supabase regardless of UI language
+    const enCountryName = (enDict.countries && enDict.countries[form.country]) || form.countryName;
+    await saveLead({ email: form.email, formData: { ...form, countryName: enCountryName }, results: calc });
     try {
       const res  = await fetch('/api/generate-report', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ taxData: { countryName: form.countryName, taxRate: calc.taxRate, isEUEEA: calc.isEUEEA, propertyUse: form.propertyUse, annualTax: calc.annualTax, filingHistory: form.filingHistory, yearsUnfiled: calc.yearsUnfiled, totalLiability: calc.totalLiability } }) });
       const data = await res.json(); if (data.report) setAiReport(data.report);
