@@ -4,7 +4,7 @@ import { useLocale, useSwitchLocalePath, SUPPORTED_LOCALES, LOCALE_LABELS } from
 
 // Lightweight language switcher. Self-contained inline styles so it drops into
 // any existing nav (light or dark) without touching the surrounding design.
-const SHORT = { en: 'EN', no: 'NO', sv: 'SV' };
+const SHORT = { en: 'EN', no: 'NO', sv: 'SV', de: 'DE', fr: 'FR', nl: 'NL' };
 
 export default function LangSwitcher() {
   const { locale } = useLocale();

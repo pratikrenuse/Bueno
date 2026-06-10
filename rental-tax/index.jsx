@@ -44,7 +44,7 @@ function NumberInput({ label, hint, value, onChange, prefix = '€' }) {
         </p>
       )}
       <div className="input-prefix-wrap">
-        <span className="input-prefix" style={{ fontSize: 16, padding: '12px 10px 12px 16px' }}>{prefix}</span>
+        {prefix && <span className="input-prefix" style={{ fontSize: 16, padding: '12px 10px 12px 16px' }}>{prefix}</span>}
         <input
           className="value-input"
           type="number"
@@ -251,7 +251,7 @@ export default function RentalTaxCalculator() {
               {tt('income_hint')}
             </p>
             <NumberInput label={tt('income_label')} hint={tt('income_label_hint')} value={form.rentalIncome} onChange={set('rentalIncome')} />
-            <NumberInput label={tt('days_label')} hint={tt('days_hint')} value={form.daysRented} onChange={set('daysRented')} prefix="🗓" />
+            <NumberInput label={tt('days_label')} hint={tt('days_hint')} value={form.daysRented} onChange={set('daysRented')} prefix={null} />
             <button className="btn-primary"
               disabled={!form.rentalIncome || parseFloat(form.rentalIncome) <= 0 || !form.daysRented || parseFloat(form.daysRented) <= 0}
               onClick={() => isEU ? setStep('prorated') : runCalc()}>

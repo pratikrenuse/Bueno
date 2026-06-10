@@ -341,7 +341,7 @@ body {
   gap: 10px;
   padding: 13px 16px;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--white);
   cursor: pointer;
   transition: all var(--transition);
@@ -360,7 +360,16 @@ body {
   color: var(--white);
 }
 
-.country-flag { font-size: 18px; line-height: 1; }
+.country-flag {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--text-muted);
+  min-width: 20px;
+}
+.country-btn.selected .country-flag { color: rgba(255,255,255,0.7); }
 
 /* === OPTION CARDS === */
 .option-stack {
@@ -376,7 +385,7 @@ body {
   gap: 16px;
   padding: 18px 20px;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--white);
   cursor: pointer;
   transition: all var(--transition);
@@ -415,7 +424,7 @@ body {
   display: flex;
   align-items: center;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--white);
   transition: border-color var(--transition);
   overflow: hidden;
@@ -469,7 +478,7 @@ body {
 .choice-btn {
   padding: 16px 12px;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--white);
   cursor: pointer;
   font-family: var(--font-sans);
@@ -494,7 +503,7 @@ body {
   font-size: 15px;
   color: var(--navy);
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   outline: none;
   transition: border-color var(--transition);
   background: var(--white);
@@ -522,7 +531,7 @@ body {
   background: var(--navy);
   color: var(--white);
   border: none;
-  border-radius: 2px;
+  border-radius: 0;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
@@ -548,7 +557,7 @@ body {
   background: transparent;
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 2px;
+  border-radius: 0;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
@@ -616,20 +625,22 @@ body {
 .status-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
-  border-radius: 100px;
+  gap: 9px;
+  padding: 0;
+  background: transparent;
   font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  margin-bottom: 24px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 26px;
 }
 
-.status-badge.current  { background: #D1FAE5; color: #065F46; }
-.status-badge.at_risk  { background: #FEF3C7; color: #92400E; }
-.status-badge.overdue  { background: #FEE2E2; color: #991B1B; }
-.status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.status-badge.current .status-dot  { background: #1A7A4A; }
+.status-badge.at_risk .status-dot  { background: var(--gold); }
+.status-badge.overdue .status-dot  { background: #B0413A; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--navy); }
 
 .results-headline {
   font-family: var(--font-serif);
@@ -652,7 +663,7 @@ body {
 /* Main tax panel */
 .tax-panel {
   background: var(--navy);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 36px;
   margin-bottom: 16px;
   color: var(--white);
@@ -712,7 +723,7 @@ body {
 /* Liability panel */
 .liability-panel {
   background: var(--off-white);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 28px;
   margin-bottom: 16px;
   border-left: 2px solid var(--gold);
@@ -760,7 +771,7 @@ body {
 /* AI report */
 .ai-panel {
   background: var(--light-blue);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 28px;
   margin-bottom: 16px;
 }
@@ -785,13 +796,14 @@ body {
 
 .ai-panel-text p + p { margin-top: 12px; }
 
-/* CTA panel */
+/* CTA panel — open closing section, not a boxed card */
 .cta-panel {
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 28px;
-  margin-bottom: 16px;
-  background: var(--white);
+  border: none;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  padding: 34px 0 4px;
+  margin: 24px 0 16px;
+  background: transparent;
 }
 
 .cta-eyebrow {
@@ -994,7 +1006,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 0;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -1186,19 +1198,18 @@ body {
 .tool-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 36px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .tool-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(1,2,33,0.08);
+  border-color: var(--navy);
 }
 
 .tool-card.disabled {
@@ -1207,22 +1218,31 @@ body {
 }
 
 .tool-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-sans);
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  border-radius: 100px;
-  padding: 4px 10px;
-  margin-bottom: 20px;
+  padding: 0;
+  margin-bottom: 22px;
   width: fit-content;
   color: var(--accent);
-  border: 1px solid var(--accent);
 }
 
-.tool-tag.gold  { color: var(--gold);       border-color: var(--gold); }
-.tool-tag.grey  { color: var(--text-muted); border-color: var(--warm-grey); }
+/* small leading rule instead of a chip outline */
+.tool-tag::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.tool-tag.gold  { color: var(--gold); }
+.tool-tag.grey  { color: var(--text-muted); }
 
 .tool-number {
   font-family: var(--font-serif);
@@ -1348,7 +1368,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 0;
   white-space: nowrap;
   transition: background 0.2s;
 }
@@ -1418,7 +1438,7 @@ body {
 /* === COST AUDIT SPECIFIC === */
 .savings-hero {
   background: var(--navy);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 36px;
   margin-bottom: 16px;
   text-align: center;
@@ -1453,7 +1473,7 @@ body {
 
 .breakdown-panel {
   background: var(--off-white);
-  border-radius: 2px;
+  border-radius: 0;
   padding: 28px;
   margin-bottom: 16px;
 }
@@ -1482,7 +1502,7 @@ body {
 .breakdown-row-value.red { color: #C0392B; }
 .breakdown-row-value.green { color: #1A7A4A; }
 
-.vs-bar { display: flex; gap: 2px; border-radius: 2px; overflow: hidden; height: 8px; margin-bottom: 8px; }
+.vs-bar { display: flex; gap: 2px; border-radius: 0; overflow: hidden; height: 8px; margin-bottom: 8px; }
 .vs-bar-current { background: #C0392B; opacity: 0.7; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
 .vs-bar-bueno { background: var(--accent); opacity: 0.8; }
 .vs-labels {

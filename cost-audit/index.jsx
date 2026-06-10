@@ -115,7 +115,7 @@ export default function CostAudit() {
             </div>
           </div>
           <div className="intro-right">
-            <img src="/images/hero.jpg" alt="Foreign property owners in Spain" />
+            <img src="/images/hero-audit.jpg" alt="Foreign property owners in Spain" />
           </div>
         </div>
       )}

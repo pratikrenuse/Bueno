@@ -6,20 +6,20 @@ import LangSwitcher from '../LangSwitcher.jsx';
 
 // code/flag/isEUEEA stay constant; display names come from i18n
 const COUNTRIES = [
-  { code: 'norway',         flag: '🇳🇴', isEUEEA: true  },
-  { code: 'sweden',         flag: '🇸🇪', isEUEEA: true  },
-  { code: 'denmark',        flag: '🇩🇰', isEUEEA: true  },
-  { code: 'germany',        flag: '🇩🇪', isEUEEA: true  },
-  { code: 'france',         flag: '🇫🇷', isEUEEA: true  },
-  { code: 'netherlands',    flag: '🇳🇱', isEUEEA: true  },
-  { code: 'united_kingdom', flag: '🇬🇧', isEUEEA: false },
-  { code: 'belgium',        flag: '🇧🇪', isEUEEA: true  },
-  { code: 'ireland',        flag: '🇮🇪', isEUEEA: true  },
-  { code: 'finland',        flag: '🇫🇮', isEUEEA: true  },
-  { code: 'austria',        flag: '🇦🇹', isEUEEA: true  },
-  { code: 'iceland',        flag: '🇮🇸', isEUEEA: true  },
-  { code: 'other_eu_eea',   flag: '🇪🇺', isEUEEA: true  },
-  { code: 'other',          flag: '🌍', isEUEEA: false },
+  { code: 'norway',         abbr: 'NO',  isEUEEA: true  },
+  { code: 'sweden',         abbr: 'SE',  isEUEEA: true  },
+  { code: 'denmark',        abbr: 'DK',  isEUEEA: true  },
+  { code: 'germany',        abbr: 'DE',  isEUEEA: true  },
+  { code: 'france',         abbr: 'FR',  isEUEEA: true  },
+  { code: 'netherlands',    abbr: 'NL',  isEUEEA: true  },
+  { code: 'united_kingdom', abbr: 'UK',  isEUEEA: false },
+  { code: 'belgium',        abbr: 'BE',  isEUEEA: true  },
+  { code: 'ireland',        abbr: 'IE',  isEUEEA: true  },
+  { code: 'finland',        abbr: 'FI',  isEUEEA: true  },
+  { code: 'austria',        abbr: 'AT',  isEUEEA: true  },
+  { code: 'iceland',        abbr: 'IS',  isEUEEA: true  },
+  { code: 'other_eu_eea',   abbr: 'EU',  isEUEEA: true  },
+  { code: 'other',          abbr: 'INT', isEUEEA: false },
 ];
 
 const PROPERTY_USE_CODES = ['personal', 'short_rental', 'long_rental', 'mixed'];
@@ -146,7 +146,7 @@ export default function TaxCalculator() {
             </div>
           </div>
           <div className="intro-right">
-            <img src="/images/hero.jpg" alt="Spanish property owners" />
+            <img src="/images/hero-tax.jpg" alt="Spanish property owners" />
           </div>
         </div>
       )}
@@ -160,7 +160,7 @@ export default function TaxCalculator() {
           <div className="country-grid">
             {COUNTRIES.map(c => (
               <button key={c.code} className={`country-btn ${form.country === c.code ? 'selected' : ''}`} onClick={() => selectCountry(c)}>
-                <span className="country-flag">{c.flag}</span><span>{countryName(c.code)}</span>
+                <span className="country-flag">{c.abbr}</span><span>{countryName(c.code)}</span>
               </button>
             ))}
           </div>

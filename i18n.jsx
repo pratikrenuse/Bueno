@@ -3,10 +3,13 @@ import { useLocation, Link } from 'react-router-dom';
 import en from './en.json';
 import no from './no.json';
 import sv from './sv.json';
+import de from './de.json';
+import fr from './fr.json';
+import nl from './nl.json';
 
-const DICTS = { en, no, sv };
-export const SUPPORTED_LOCALES = ['en', 'no', 'sv'];
-export const LOCALE_LABELS = { en: 'English', no: 'Norsk', sv: 'Svenska' };
+const DICTS = { en, no, sv, de, fr, nl };
+export const SUPPORTED_LOCALES = ['en', 'no', 'sv', 'de', 'fr', 'nl'];
+export const LOCALE_LABELS = { en: 'English', no: 'Norsk', sv: 'Svenska', de: 'Deutsch', fr: 'Français', nl: 'Nederlands' };
 export const DEFAULT_LOCALE = 'en';
 
 const LocaleContext = createContext({ locale: DEFAULT_LOCALE });
