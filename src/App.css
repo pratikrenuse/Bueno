@@ -339,12 +339,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 13px 16px;
-  border: 1px solid var(--border);
-  border-radius: 0;
-  background: var(--white);
+  padding: 13px 12px;
+  border: none;
+  background: transparent;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background var(--transition), box-shadow var(--transition);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
@@ -352,12 +351,13 @@ body {
   text-align: left;
 }
 
-.country-btn:hover { border-color: var(--navy); background: var(--off-white); }
+.country-btn:hover { background: var(--off-white); }
 
 .country-btn.selected {
-  border-color: var(--navy);
-  background: var(--navy);
-  color: var(--white);
+  background: var(--off-white);
+  color: var(--navy);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--gold);
 }
 
 .country-flag {
@@ -369,38 +369,40 @@ body {
   color: var(--text-muted);
   min-width: 20px;
 }
-.country-btn.selected .country-flag { color: rgba(255,255,255,0.7); }
+.country-btn.selected .country-flag { color: var(--accent); }
 
 /* === OPTION CARDS === */
 .option-stack {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
   margin-bottom: 28px;
+  border-top: 1px solid var(--border);
 }
 
 .option-card {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  padding: 18px 20px;
-  border: 1px solid var(--border);
-  border-radius: 0;
-  background: var(--white);
+  padding: 20px 4px 20px 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: padding-left var(--transition), background var(--transition);
   text-align: left;
 }
 
-.option-card:hover { border-color: var(--navy); }
+.option-card:hover { background: var(--off-white); padding-left: 16px; }
 
 .option-card.selected {
-  border-color: var(--navy);
-  background: var(--navy);
-  color: var(--white);
+  background: var(--off-white);
+  padding-left: 16px;
+  color: var(--navy);
+  box-shadow: inset 3px 0 0 var(--gold);
 }
 
-.option-card.selected .option-desc { color: rgba(255,255,255,0.55); }
+.option-card.selected .option-desc { color: var(--text-muted); }
 
 .option-title {
   font-family: var(--font-sans);
@@ -423,22 +425,22 @@ body {
 .input-prefix-wrap {
   display: flex;
   align-items: center;
-  border: 1px solid var(--border);
+  border: none;
+  border-bottom: 1.5px solid var(--navy);
   border-radius: 0;
-  background: var(--white);
+  background: transparent;
   transition: border-color var(--transition);
-  overflow: hidden;
 }
 
-.input-prefix-wrap:focus-within { border-color: var(--navy); }
+.input-prefix-wrap:focus-within { border-bottom-color: var(--gold); }
 
 .input-prefix {
   font-family: var(--font-serif);
-  font-size: 20px;
-  color: var(--text-muted);
-  padding: 16px 14px 16px 20px;
-  border-right: 1px solid var(--border);
-  background: var(--off-white);
+  font-size: 22px;
+  color: var(--navy);
+  padding: 12px 12px 12px 0;
+  border-right: none;
+  background: transparent;
   user-select: none;
 }
 
@@ -477,41 +479,42 @@ body {
 
 .choice-btn {
   padding: 16px 12px;
-  border: 1px solid var(--border);
-  border-radius: 0;
-  background: var(--white);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
   cursor: pointer;
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
   color: var(--navy);
-  transition: all var(--transition);
+  transition: background var(--transition), box-shadow var(--transition);
   text-align: center;
   line-height: 1.4;
 }
 
-.choice-btn:hover { border-color: var(--navy); }
-.choice-btn.selected { border-color: var(--navy); background: var(--navy); color: var(--white); }
+.choice-btn:hover { background: var(--off-white); }
+.choice-btn.selected { color: var(--navy); font-weight: 600; border-bottom-color: var(--navy); box-shadow: inset 0 -2px 0 var(--gold); }
 
 /* === EMAIL INPUT === */
 .email-input-wrap { margin-bottom: 16px; }
 
 .email-input {
   width: 100%;
-  padding: 16px 20px;
+  padding: 14px 0;
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--navy);
-  border: 1px solid var(--border);
+  border: none;
+  border-bottom: 1.5px solid var(--navy);
   border-radius: 0;
   outline: none;
   transition: border-color var(--transition);
-  background: var(--white);
+  background: transparent;
 }
 
 .email-input::placeholder { color: rgba(1,2,33,0.25); }
-.email-input:focus { border-color: var(--navy); }
-.email-input.error { border-color: #C0392B; }
+.email-input:focus { border-bottom-color: var(--gold); }
+.email-input.error { border-bottom-color: #C0392B; }
 
 .privacy-note {
   font-size: 13px;
@@ -722,10 +725,10 @@ body {
 
 /* Liability panel */
 .liability-panel {
-  background: var(--off-white);
+  background: transparent;
   border-radius: 0;
-  padding: 28px;
-  margin-bottom: 16px;
+  padding: 4px 0 4px 22px;
+  margin-bottom: 24px;
   border-left: 2px solid var(--gold);
 }
 
@@ -770,10 +773,11 @@ body {
 
 /* AI report */
 .ai-panel {
-  background: var(--light-blue);
+  background: transparent;
   border-radius: 0;
-  padding: 28px;
-  margin-bottom: 16px;
+  border-left: 2px solid var(--gold);
+  padding: 4px 0 4px 22px;
+  margin-bottom: 24px;
 }
 
 .ai-panel-label {
@@ -1196,20 +1200,21 @@ body {
 }
 
 .tool-card {
-  background: var(--white);
-  border: 1px solid var(--border);
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--navy);
   border-radius: 0;
-  padding: 36px;
+  padding: 28px 0 0;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: border-color 0.25s ease, background 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 
 .tool-card:hover {
-  border-color: var(--navy);
+  border-top-color: var(--gold);
 }
 
 .tool-card.disabled {
@@ -1472,10 +1477,11 @@ body {
 }
 
 .breakdown-panel {
-  background: var(--off-white);
+  background: transparent;
   border-radius: 0;
-  padding: 28px;
-  margin-bottom: 16px;
+  border-top: 1px solid var(--border);
+  padding: 24px 0 4px;
+  margin-bottom: 24px;
 }
 
 .breakdown-title {
