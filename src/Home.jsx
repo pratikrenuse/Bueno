@@ -9,7 +9,7 @@ const ALL_TOOLS = Object.values(metaModules)
   .sort((a, b) => a.order - b.order)
 
 // Map a tool path to its i18n card key
-const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental' }
+const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental', '/mortgage-claim': 'claim' }
 
 export default function Home() {
   const t = useT()

@@ -74,6 +74,12 @@ Keep it warm, calm and plain. No jargon where a simple word works.
 | free | gratis | gratis | kostenlos | gratuit | gratis |
 | account (the finance one) | konto | konto | Konto | compte | rekening |
 | guidance only, not advice | kun til veiledning | endast som vägledning | nur zur Orientierung | à titre indicatif | alleen ter informatie |
+| compensation (mortgage) | kompensasjon | ersättning | Entschädigung | indemnisation | compensatie |
+| claim (compensation) | krav | anspråk | Anspruch | réclamation | claim |
+| set-up / arrangement fees | etableringsgebyrer | uppläggningsavgifter | Bearbeitungsgebühren | frais de dossier | afsluitkosten |
+| floor clause (clausula suelo) | rentegulv | räntegolv | Zinsuntergrenze | clause plancher | bodemrenteclausule |
+| mis-sold insurance | feilsolgt forsikring | felsåld försäkring | falsch verkaufte Versicherung | assurance mal vendue | verkeerd verkochte verzekering |
+| no win, no fee | ingen seier, ingen betaling | ingen vinst, ingen avgift | kein Erfolg, keine Kosten | sans gain, sans frais | no cure, no pay |
 
 (Add a row whenever a reviewer corrects a recurring term.)
 
@@ -90,3 +96,4 @@ Format: `YYYY-MM-DD — lang — key — was → now (reason)`
 - 2026-06-10 — all — generic "energy" → "electricity" in cost copy (NO "strøm", SV "el"); users understand "electricity".
 - 2026-06-10 — SV — preferred terms: property = fastighet (not bostad), owner = husägare (not bostadsägare), rental income = hyresintäkt (not hyresinkomst), "EU residents" = invånare i EU.
 - 2026-06-10 — NO — management (rental) = administrasjon; drop "lovlige" before "fradrag"; write the range as "200–400 euro".
+- 2026-06-25 — all — NEW tool `calc_claim` (Spanish Mortgage Compensation) AI-drafted in all six languages. Mortgage-claim terminology table rows added above. Pending native review for NO/SV/DE/FR/NL before this is considered locked.
