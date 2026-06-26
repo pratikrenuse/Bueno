@@ -6,17 +6,24 @@
 //   2. Floor clause (clausula suelo) overpaid interest
 //   3. Mis-sold single-premium life insurance
 //
-// These are ESTIMATES only. They are scaled from average reported claim
-// outcomes and are not a guarantee. Actual compensation depends on the
-// individual contract, the lender, and a formal legal review.
+// These are ESTIMATES only. They are scaled from reported claim outcomes and
+// are not a guarantee. Actual compensation depends on the individual contract,
+// the lender, and a formal legal review.
+//
+// Figures cross-checked (June 2026) against published recovery ranges:
+//   - Set-up / gastos hipotecarios: ~€1,000–€4,000 typical (notary 50%,
+//     registry, gestoria; AJD stamp duty generally NOT recoverable).
+//   - Floor clause / clausula suelo: ~€5,000–€25,000 (CostaLuz Lawyers, 2026).
+//   - Single-premium life insurance: ~€5,000–€20,000+ (Spanish legal sources).
+// Each claim is clamped so the output never exceeds these documented ranges.
 
-// Reference mortgage the published averages are anchored to.
+// Reference mortgage the ranges are anchored to.
 const REF_MORTGAGE = 150000;
 
-// Average reported payout per claim type at the reference mortgage size.
+// Central reported payout per claim type at the reference mortgage size.
 const BASE = {
-  setup:     2500,
-  floor:     20000,
+  setup:     2000,
+  floor:     12000,
   insurance: 5000,
 };
 
@@ -58,17 +65,17 @@ export const calculateClaim = (form) => {
   let total = 0;
 
   if (claims.includes('setup')) {
-    const amount = clamp(BASE.setup * factor, 600, 6500);
+    const amount = clamp(BASE.setup * factor, 800, 4000);
     items.push({ type: 'setup', amount });
     total += amount;
   }
   if (claims.includes('floor')) {
-    const amount = clamp(BASE.floor * factor * (band.floorMult || 1), 3000, 45000);
+    const amount = clamp(BASE.floor * factor * (band.floorMult || 1), 4000, 25000);
     items.push({ type: 'floor', amount });
     total += amount;
   }
   if (claims.includes('insurance')) {
-    const amount = clamp(BASE.insurance * factor, 1000, 12000);
+    const amount = clamp(BASE.insurance * factor, 1500, 20000);
     items.push({ type: 'insurance', amount });
     total += amount;
   }

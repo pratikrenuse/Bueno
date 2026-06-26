@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { calculateClaim, YEAR_CODES, CLAIM_CODES } from './mortgageCalculations';
 import { saveLead } from './supabase';
 import { useT, LLink } from '../i18n.jsx';
@@ -37,6 +37,15 @@ export default function MortgageClaim() {
   const [results, setResults]   = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [emailError, setError]  = useState('');
+
+  // Each step change should land at the top so the headline and total are seen
+  // first, rather than keeping the previous step's scroll position.
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+    }
+  }, [step]);
 
   const go = (s) => setStep(s);
 
