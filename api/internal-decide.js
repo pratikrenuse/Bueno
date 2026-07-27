@@ -1,5 +1,5 @@
 // POST /api/internal-decide  { id, action: "approved"|"rejected", comment }
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') return res.status(405).json({ error: 'method not allowed' });
   if (req.headers['x-passcode'] !== process.env.INTERNAL_PASSCODE) {

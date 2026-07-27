@@ -1,7 +1,7 @@
 // GET /api/internal-packages?status=pending
 // Shared-password gate: x-passcode header must match INTERNAL_PASSCODE (Vercel env).
 // Talks to Supabase REST with the service key (Vercel env), never exposed to the browser.
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   try {
     if (req.headers['x-passcode'] !== process.env.INTERNAL_PASSCODE) {
       return res.status(401).json({ error: 'unauthorized' });
