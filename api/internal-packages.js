@@ -3,7 +3,8 @@
 // Talks to Supabase REST with the service key (Vercel env), never exposed to the browser.
 export default async function handler(req, res) {
   try {
-    if (req.headers['x-passcode'] !== process.env.INTERNAL_PASSCODE) {
+    const pass = req.headers['x-passcode'] || req.query.pass;
+    if (pass !== process.env.INTERNAL_PASSCODE) {
       return res.status(401).json({ error: 'unauthorized' });
     }
     const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;

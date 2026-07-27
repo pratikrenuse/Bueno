@@ -146,6 +146,16 @@ export default function Internal() {
               {t === 'review' ? `Review${deck.length ? ` (${deck.length})` : ''}` : t}
             </button>
           ))}
+          <button onClick={async () => {
+            if (!confirm('Put every approved and rejected post back into the deck?')) return
+            const r = await fetch('/api/internal-reset', { method: 'POST', headers: { 'x-passcode': pass } })
+            const j = await r.json()
+            alert(j.error ? j.error : `${j.reset} posts back in the deck.`)
+            setView('review'); loadDeck(pass)
+          }}
+            style={{ ...btn('transparent', LBLUE), border: '1px dashed #3a3f5c', marginLeft: 14, marginTop: 0, padding: '7px 13px', fontSize: 13 }}>
+            Reset deck
+          </button>
         </nav>
       </header>
 
