@@ -16,11 +16,19 @@ export default function Internal() {
 
   const load = useCallback(async (p, t) => {
     setBusy(true); setErr('')
-    const r = await fetch(`/api/internal-packages?status=${t}`, { headers: { 'x-passcode': p } })
-    if (r.status === 401) { setEntered(false); setErr('Wrong password'); setBusy(false); return }
-    const j = await r.json()
-    setItems(j.packages || []); setBusy(false)
-    sessionStorage.setItem('studio_pass', p)
+    try {
+      const r = await fetch(`/api/internal-packages?status=${t}`, { headers: { 'x-passcode': p } })
+      if (r.status === 401) { setEntered(false); setErr('Wrong password'); setBusy(false); return }
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 300)}`) }
+      if (j.error) throw new Error(j.error)
+      setItems(j.packages || [])
+      sessionStorage.setItem('studio_pass', p)
+    } catch (e) {
+      setItems([]); setErr(String(e.message || e))
+    }
+    setBusy(false)
   }, [])
 
   useEffect(() => { document.title = 'Studio | 24/7 Spain' }, [])
@@ -76,7 +84,12 @@ export default function Internal() {
 
       <main style={{ maxWidth: 1100, margin: '0 auto', padding: 20 }}>
         {busy && <p>Loading…</p>}
-        {!busy && items.length === 0 && <p style={{ color: '#667' }}>Nothing in “{tab}”.</p>}
+        {!busy && err && (
+          <div style={{ background: '#fff', border: '1px solid #e0b4b4', color: '#8a1f1f', borderRadius: 12, padding: 16, marginBottom: 16, fontSize: 14, wordBreak: 'break-word' }}>
+            {err}
+          </div>
+        )}
+        {!busy && !err && items.length === 0 && <p style={{ color: '#667' }}>Nothing in “{tab}”.</p>}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: 20 }}>
           {items.map(p => (
             <div key={p.id} style={{ background: '#fff', borderRadius: 16, boxShadow: '0 4px 16px rgba(1,2,33,.08)', overflow: 'hidden' }}>

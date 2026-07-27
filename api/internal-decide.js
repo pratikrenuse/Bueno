@@ -1,5 +1,6 @@
 // POST /api/internal-decide  { id, action: "approved"|"rejected", comment }
 module.exports = async function handler(req, res) {
+  try {
   if (req.method !== 'POST') return res.status(405).json({ error: 'method not allowed' });
   if (req.headers['x-passcode'] !== process.env.INTERNAL_PASSCODE) {
     return res.status(401).json({ error: 'unauthorized' });
@@ -29,6 +30,9 @@ module.exports = async function handler(req, res) {
       updated_at: new Date().toISOString(),
     }),
   });
-  if (!r.ok) return res.status(500).json({ error: await r.text() });
+  if (!r.ok) return res.status(500).json({ error: `Supabase ${r.status}: ${await r.text()}` });
   res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: String((e && e.message) || e) });
+  }
 };
