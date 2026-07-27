@@ -4,7 +4,15 @@ on:
   push:
     paths:
       - "studio/content/**.json"
+      - "studio/content_batch.json"
+      - "studio/renderer/**"
+      - "studio/photos/**"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-render everything, even packages that already have assets"
+        type: boolean
+        default: false
 
 jobs:
   render:
@@ -22,4 +30,5 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FORCE_RERENDER: ${{ github.event.inputs.force }}
         run: python studio/render_and_upload.py

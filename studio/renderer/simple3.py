@@ -52,6 +52,16 @@ def tw(s,fo):
     b=meas.textbbox((0,0),s,font=fo); return b[2]-b[0]
 def ease(t): return 1-(1-t)**3
 
+def fit(th,kind,size,texts,maxw,min_size=13):
+    """Return a font of the largest size <= size at which ALL texts fit maxw px.
+    Guarantees no text ever leaves its box, whatever the language."""
+    if isinstance(texts,str): texts=[texts]
+    while size>min_size:
+        f=th.f(kind,size)
+        if all(tw(t,f)<=maxw for t in texts): return f
+        size-=1
+    return th.f(kind,min_size)
+
 def icon(name,d,cx,cy,s,th):
     NAVY=th.c["primary"]; GOLD=th.c["gold"]
     w=max(4,int(s/6))
@@ -111,7 +121,8 @@ def draw_footer(d,img,th,W,H,FOOT,scale=1.0):
         d.text((W-MX-tw(f["disclaimer"],fd),H-FOOT+int(62*scale)),f["disclaimer"],font=fd,fill=c["footer_sub"])
 
 # ---------------- IMAGE (1080x1080) ----------------
-LAYOUTS=["rows","hero","path","flow"]
+LAYOUTS=["rows","hero","path","flow","photo"]
+PHOTOS_DIR=os.environ.get("STUDIO_PHOTOS","studio/photos")
 def pick_layout(c):
     if c.get("layout") in LAYOUTS: return c["layout"]
     return LAYOUTS[sum(ord(ch) for ch in c["slug"])%len(LAYOUTS)]
@@ -151,12 +162,12 @@ def render_image_hero(c,th,outpath):
     ly=head_h+26
     d.rounded_rectangle(((W-lw_)/2-28,ly,(W+lw_)/2+28,ly+48),24,outline=cc["gold"],width=2)
     d.text(((W-lw_)/2,ly+9),hero["label"].upper(),font=f_lab,fill=cc["primary"])
-    f_hero=th.f("bold",64)
+    f_hero=fit(th,"bold",64,hero["fact"],W-160)
     hy=ly+84
     for l in hero["fact"]:
         d.text(((W-tw(l,f_hero))//2,hy),l,font=f_hero,fill=cc["primary"]); hy+=84
     if hero.get("detail"):
-        f_d=th.f("regular",26)
+        f_d=fit(th,"regular",26,hero["detail"],W-160)
         d.text(((W-tw(hero["detail"],f_d))//2,hy+4),hero["detail"],font=f_d,fill=cc["detail"])
         hy+=48
     cw_=(W-2*MX-28)//2; ch_=300; cy0=hy+40
@@ -167,9 +178,9 @@ def render_image_hero(c,th,outpath):
         ccx=x0+cw_//2
         d.ellipse((ccx-40,cy0+26,ccx+40,cy0+106),fill=cc["highlight"])
         icon(row["icon"],d,ccx,cy0+64,24,th)
-        f_l2=th.f("semibold",27)
+        f_l2=fit(th,"semibold",27,row["label"],cw_-48)
         d.text((ccx-tw(row["label"],f_l2)//2,cy0+118),row["label"],font=f_l2,fill=cc["primary"])
-        f_f2=th.f("semibold",27)
+        f_f2=fit(th,"semibold",27,row["fact"],cw_-44)
         fy=cy0+164
         for l in row["fact"]:
             d.text((ccx-tw(l,f_f2)//2,fy),l,font=f_f2,fill=cc["primary"]); fy+=37
@@ -202,14 +213,15 @@ def render_image_path(c,th,outpath):
         f_n=th.f("bold",30)
         d.text((lx-tw(str(i+1),f_n)//2,ny-21),str(i+1),font=f_n,fill=cc["primary"])
         tx=lx+86
-        f_l=th.f("medium",24)
+        maxw=W-72-tx
+        f_l=fit(th,"medium",24,row["label"].upper(),maxw)
         d.text((tx,ny-74),row["label"].upper(),font=f_l,fill=cc["accent"])
-        f_f=th.f("semibold",36)
+        f_f=fit(th,"semibold",36,row["fact"],maxw)
         fy=ny-34
         for l in row["fact"]:
             d.text((tx,fy),l,font=f_f,fill=cc["primary"]); fy+=47
         if row.get("detail"):
-            d.text((tx,fy+6),row["detail"],font=th.f("regular",23),fill=cc["detail"])
+            d.text((tx,fy+6),row["detail"],font=fit(th,"regular",23,row["detail"],maxw),fill=cc["detail"])
     draw_footer(d,img,th,W,H,112,scale=0.95)
     img.save(outpath); return outpath
 
@@ -241,14 +253,63 @@ def render_image_flow(c,th,outpath):
         icon(row["icon"],d,icx,y0+ch_//2,26,th)
         d.text((x0+22,y0+14),"0%d"%(i+1),font=th.f("bold",22),fill=cc["gold"])
         tx=x0+162
-        f_l=th.f("medium",21)
+        maxw=x1-tx-24
+        f_l=fit(th,"medium",21,row["label"].upper(),maxw)
         d.text((tx,y0+26),row["label"].upper(),font=f_l,fill=cc["accent"])
-        f_f=th.f("semibold",30)
+        f_f=fit(th,"semibold",30,row["fact"],maxw)
         fy=y0+60
         for l in row["fact"]:
             d.text((tx,fy),l,font=f_f,fill=cc["primary"]); fy+=39
         if row.get("detail"):
-            d.text((tx,fy+8),row["detail"],font=th.f("regular",19),fill=cc["detail"])
+            d.text((tx,fy+8),row["detail"],font=fit(th,"regular",19,row["detail"],maxw),fill=cc["detail"])
+    draw_footer(d,img,th,W,H,112,scale=0.95)
+    img.save(outpath); return outpath
+
+def render_image_photo(c,th,outpath):
+    """Photo as a clean inset panel at the top; ALL text below on the plain
+    canvas. Text is never drawn over the photograph."""
+    W=H=1080; MX=72; cc=th.c
+    files=sorted(f for f in os.listdir(PHOTOS_DIR) if f.lower().endswith((".jpg",".jpeg",".png")))
+    if not files: raise RuntimeError("no photos in "+PHOTOS_DIR)
+    fname=c.get("photo") if c.get("photo") in files else files[sum(ord(x) for x in c["slug"])%len(files)]
+    img=Image.new("RGB",(W,H),cc["canvas"])
+    # inset photo card, rounded corners, top of the square
+    px0,py0,px1,py1=40,40,W-40,414
+    pw_,phh=px1-px0,py1-py0
+    ph=Image.open(os.path.join(PHOTOS_DIR,fname)).convert("RGB")
+    r=max(pw_/ph.width,phh/ph.height)
+    ph=ph.resize((int(ph.width*r)+1,int(ph.height*r)+1))
+    ph=ph.crop(((ph.width-pw_)//2,(ph.height-phh)//2,(ph.width-pw_)//2+pw_,(ph.height-phh)//2+phh))
+    card_shadow(img,(px0,py0,px1,py1),28)
+    mask=Image.new("L",(pw_,phh),0)
+    ImageDraw.Draw(mask).rounded_rectangle((0,0,pw_,phh),28,fill=255)
+    img.paste(ph,(px0,py0),mask)
+    d=ImageDraw.Draw(img,"RGBA")
+    # header below the photo, on clean canvas
+    f_eb=th.f("medium",21); ls=5
+    ebw=sum(tw(x,f_eb) for x in c["eyebrow"])+ls*(len(c["eyebrow"])-1)
+    x=(W-ebw)//2
+    for chx in c["eyebrow"]:
+        d.text((x,446),chx,font=f_eb,fill=cc["accent"]); x+=tw(chx,f_eb)+ls
+    f_h=fit(th,"semibold",44,c["headline"],W-160)
+    hy=482
+    for l in c["headline"]:
+        d.text(((W-tw(l,f_h))//2,hy),l,font=f_h,fill=cc["primary"]); hy+=56
+    # three compact fact rows, left aligned, navy on canvas
+    ry=hy+26
+    for i,row in enumerate(c["rows"]):
+        f_n=th.f("bold",22)
+        d.text((MX,ry),"0%d"%(i+1),font=f_n,fill=cc["gold"])
+        f_l=fit(th,"medium",20,row["label"].upper(),W-2*MX-60)
+        d.text((MX+52,ry+2),row["label"].upper(),font=f_l,fill=cc["accent"])
+        fact=" ".join(row["fact"])
+        f_f=fit(th,"semibold",31,fact,W-2*MX)
+        d.text((MX,ry+32),fact,font=f_f,fill=cc["primary"])
+        yy=ry+74
+        if row.get("detail"):
+            f_d=fit(th,"regular",20,row["detail"],W-2*MX)
+            d.text((MX,yy),row["detail"],font=f_d,fill=cc["detail"]); yy+=30
+        ry=yy+16
     draw_footer(d,img,th,W,H,112,scale=0.95)
     img.save(outpath); return outpath
 
@@ -257,6 +318,7 @@ def render_image(c,th,outpath):
     if layout=="hero": return render_image_hero(c,th,outpath)
     if layout=="path": return render_image_path(c,th,outpath)
     if layout=="flow": return render_image_flow(c,th,outpath)
+    if layout=="photo": return render_image_photo(c,th,outpath)
     W=H=1080; MX=72
     cc=th.c
     img=Image.new("RGB",(W,H),cc["canvas"])
@@ -272,16 +334,17 @@ def render_image(c,th,outpath):
         lcx=MX+178
         d.ellipse((lcx-42,y0+30,lcx+42,y0+114),fill=cc["highlight"])
         icon(row["icon"],d,lcx,y0+72,26,th)
-        f_lab=th.f("semibold",29)
+        f_lab=fit(th,"semibold",29,row["label"],280)
         d.text((lcx-tw(row["label"],f_lab)//2,y0+128),row["label"],font=f_lab,fill=cc["primary"])
         d.line((split+60,y0+30,split+60,y1-30),fill=cc["hairline"],width=2)
         rcx=(split+60+W-MX)//2
-        f_f=th.f("semibold",35)
+        cellw=(W-MX)-(split+60)-36
+        f_f=fit(th,"semibold",35,row["fact"],cellw)
         fy=y0+34 if len(row["fact"])==2 else y0+58
         for l in row["fact"]:
             d.text((rcx-tw(l,f_f)//2,fy),l,font=f_f,fill=cc["primary"]); fy+=48
         if row.get("detail"):
-            f_d=th.f("regular",22)
+            f_d=fit(th,"regular",22,row["detail"],cellw)
             d.text((rcx-tw(row["detail"],f_d)//2,y0+rh-58),row["detail"],font=f_d,fill=cc["detail"])
         ry+=rh+gap
     draw_footer(d,img,th,W,H,112,scale=0.95)
@@ -300,7 +363,7 @@ def render_video_frames(c,th,frames_dir,fps=30,dur=12.0):
     x=(W-ebw)//2
     for ch in c["eyebrow"]:
         hd.text((x,225),ch,font=f_eb,fill=cc["accent"]); x+=tw(ch,f_eb)+ls
-    f_h=th.f("semibold",62)
+    f_h=fit(th,"semibold",62,c["headline"],W-140)
     hy=280
     for l in c["headline"]:
         hd.text(((W-tw(l,f_h))//2,hy),l,font=f_h,fill=cc["primary"]); hy+=82
@@ -320,11 +383,12 @@ def render_video_frames(c,th,frames_dir,fps=30,dur=12.0):
         lcx=MX+196
         d2.ellipse((lcx-54,y0+46,lcx+54,y0+154),fill=cc["highlight"])
         icon(row["icon"],d2,lcx,y0+100,29,th)
-        f_lab=th.f("semibold",35)
+        f_lab=fit(th,"semibold",35,row["label"],300)
         d2.text((lcx-tw(row["label"],f_lab)//2,y0+172),row["label"],font=f_lab,fill=cc["primary"])
         d2.line((split+70,y0+46,split+70,y1-46),fill=cc["hairline"],width=2)
         rcx=(split+70+W-MX)//2
-        f_f=th.f("semibold",42)
+        cellw=(W-MX)-(split+70)-36
+        f_f=fit(th,"semibold",42,row["fact"],cellw)
         fy=y0+62 if len(row["fact"])==2 else y0+92
         for l in row["fact"]:
             d2.text((rcx-tw(l,f_f)//2,fy),l,font=f_f,fill=cc["primary"]); fy+=60
@@ -332,7 +396,7 @@ def render_video_frames(c,th,frames_dir,fps=30,dur=12.0):
         det=sprite()
         if row.get("detail"):
             dd=ImageDraw.Draw(det)
-            f_d=th.f("regular",26)
+            f_d=fit(th,"regular",26,row["detail"],cellw)
             dd.text((rcx-tw(row["detail"],f_d)//2,y0+rh-72),row["detail"],font=f_d,fill=cc["detail"])
         details.append(det)
     FOOT=150
