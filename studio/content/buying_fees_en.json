@@ -1,0 +1,29 @@
+{
+  "format": "simple3",
+  "slug": "buying_fees_en",
+  "language": "en",
+  "source": "How much does it cost in fees to buy a property in Spain",
+  "eyebrow": "BUYING PROPERTY · THE REAL COSTS",
+  "headline": ["Buying in Spain?", "Budget 12-14% extra."],
+  "rows": [
+    {
+      "icon": "percent",
+      "label": "Transfer tax",
+      "fact": ["Resale homes: 6% to 10%,", "set by your region."],
+      "detail": "New builds pay 10% VAT plus a document fee instead."
+    },
+    {
+      "icon": "euro",
+      "label": "Agent fees",
+      "fact": ["5-6% on the coasts,", "often split with buyer."],
+      "detail": "In Madrid 3% is typical, and the seller pays it."
+    },
+    {
+      "icon": "document",
+      "label": "The rest",
+      "fact": ["Notary, registry, NIE:", "around €1,500 to €2,000."],
+      "detail": "A lawyer adds more, essential for rural property."
+    }
+  ],
+  "layout": "hero"
+}

@@ -1,0 +1,28 @@
+{
+  "format": "simple3",
+  "slug": "modelo210_en",
+  "language": "en",
+  "eyebrow": "MODELO 210 · NON-RESIDENT TAX",
+  "headline": ["Own in Spain?", "Three things to know."],
+  "rows": [
+    {
+      "icon": "house",
+      "label": "Empty home",
+      "fact": ["You still file this tax", "every single year."],
+      "detail": "Spain taxes the use of the home, not only rent."
+    },
+    {
+      "icon": "euro",
+      "label": "The math",
+      "fact": ["About €221 a year on a", "€46,000 cadastral value."],
+      "detail": "Value x 1.1% or 2%, then x 19% EU · 24% non-EU."
+    },
+    {
+      "icon": "calendar",
+      "label": "The deadline",
+      "fact": ["31 December for the", "previous year."],
+      "detail": "Renting out? Quarterly: 20 Apr, Jul, Oct, Jan."
+    }
+  ],
+  "layout": "rows"
+}

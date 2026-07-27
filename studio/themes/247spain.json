@@ -1,0 +1,29 @@
+{
+  "name": "247spain",
+  "colors": {
+    "primary": [1, 2, 33],
+    "card_bg": [255, 255, 255],
+    "canvas": [248, 247, 244],
+    "highlight": [203, 239, 255],
+    "accent": [91, 127, 204],
+    "gold": [201, 169, 110],
+    "muted": [45, 47, 80],
+    "detail": [110, 115, 145],
+    "hairline": [215, 215, 222],
+    "footer_text": [255, 255, 255],
+    "footer_sub": [150, 165, 200]
+  },
+  "fonts_dir": "public/fonts",
+  "fonts": {
+    "bold": "FSSiena-Bold.otf",
+    "semibold": "FSSiena-SemiBold.otf",
+    "medium": "FSSiena-Medium.otf",
+    "regular": "FSSiena-Regular.otf"
+  },
+  "footer": {
+    "type": "wordmark_247",
+    "payoff": "PROPERTY · TAX · LIFE IN SPAIN",
+    "domain": "247spain.es",
+    "disclaimer": "General information, not tax advice."
+  }
+}

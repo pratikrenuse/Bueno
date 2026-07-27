@@ -1,0 +1,29 @@
+{
+  "format": "simple3",
+  "slug": "ibi_sv",
+  "language": "sv",
+  "source": "IBI Tax in Spain: What It Is, How It Works, and How to Pay It Easily",
+  "eyebrow": "IBI · SPANIENS KOMMUNALA SKATT",
+  "headline": ["Äger du i Spanien?", "Tre fakta om IBI."],
+  "rows": [
+    {
+      "icon": "euro",
+      "label": "Beloppet",
+      "fact": ["0,3% till 1,1% av", "taxeringsvärdet per år."],
+      "detail": "Taxeringsvärdet är oftast lägre än marknadsvärdet."
+    },
+    {
+      "icon": "calendar",
+      "label": "Räkningen",
+      "fact": ["Skickas maj till oktober,", "ofta bara inom Spanien."],
+      "detail": "Be om e-faktura, brev når sällan utlandet."
+    },
+    {
+      "icon": "document",
+      "label": "Vid köp",
+      "fact": ["Obetald IBI följer", "fastigheten, inte ägaren."],
+      "detail": "Kontrollera via en Nota Simple innan du köper."
+    }
+  ],
+  "layout": "hero"
+}

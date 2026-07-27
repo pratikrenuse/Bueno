@@ -1,0 +1,29 @@
+{
+  "format": "simple3",
+  "slug": "squatters_no",
+  "language": "no",
+  "source": "Spanish Squatter Laws: Protecting Your Property As An Owner",
+  "eyebrow": "OKUPAS · HUSOKKUPANTER I SPANIA",
+  "headline": ["Eier du bolig i Spania?", "Tre fakta om okupas."],
+  "rows": [
+    {
+      "icon": "key",
+      "label": "48 timer",
+      "fact": ["Politiet kan kaste ut", "okupas innen 48 timer."],
+      "detail": "Etter det kreves dom, det kan ta 18 til 24 måneder."
+    },
+    {
+      "icon": "house",
+      "label": "Forebygging",
+      "fact": ["Lys med timer, alarm og", "naboer som følger med."],
+      "detail": "Målet er at boligen aldri ser tom ut."
+    },
+    {
+      "icon": "document",
+      "label": "Forsikring",
+      "fact": ["Egen dekning for ulovlig", "okkupasjon finnes."],
+      "detail": "Ikke bytt lås selv, det kan være straffbart."
+    }
+  ],
+  "layout": "rows"
+}

@@ -1,0 +1,29 @@
+{
+  "format": "simple3",
+  "slug": "scams_en",
+  "language": "en",
+  "source": "Common Scams Targeting Foreign Property Owners in Spain",
+  "eyebrow": "PROPERTY SCAMS · HOW TO SPOT THEM",
+  "headline": ["Buying from abroad?", "Three scam red flags."],
+  "rows": [
+    {
+      "icon": "house",
+      "label": "The listing",
+      "fact": ["A price far below the", "area is the first flag."],
+      "detail": "Never pay a reservation fee before a real viewing."
+    },
+    {
+      "icon": "document",
+      "label": "The emails",
+      "fact": ["Payment details changed", "by email? Stop and call."],
+      "detail": "Criminals intercept email threads near completion."
+    },
+    {
+      "icon": "key",
+      "label": "The license",
+      "fact": ["'You can rent it out' is", "a claim, not a fact."],
+      "detail": "Verify the tourist license exists and transfers."
+    }
+  ],
+  "layout": "flow"
+}

@@ -1,0 +1,29 @@
+{
+  "format": "simple3",
+  "slug": "owners_year_en",
+  "language": "en",
+  "source": "A Month-by-Month Checklist for Non-Resident Property Owners in Spain",
+  "eyebrow": "THE OWNER'S YEAR · KEY DATES",
+  "headline": ["Own in Spain?", "Three dates that matter."],
+  "rows": [
+    {
+      "icon": "calendar",
+      "label": "May-October",
+      "fact": ["IBI, the local tax, is", "billed in this window."],
+      "detail": "Councils rarely post abroad. Set a direct debit."
+    },
+    {
+      "icon": "euro",
+      "label": "All year",
+      "fact": ["Community fees vary:", "monthly or quarterly."],
+      "detail": "Read invoices: communities also bill for big works."
+    },
+    {
+      "icon": "house",
+      "label": "31 December",
+      "fact": ["Modelo 210 closes the", "year for non-residents."],
+      "detail": "No tenants? You still file for the empty months."
+    }
+  ],
+  "layout": "path"
+}
