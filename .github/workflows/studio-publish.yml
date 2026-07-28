@@ -1,0 +1,30 @@
+name: Studio publish
+
+on:
+  schedule:
+    # 10:00 and 17:00 Spain time (CET/CEST varies; cron is UTC)
+    - cron: "0 8 * * *"
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+    inputs:
+      posts:
+        description: "How many approved posts to publish in this run"
+        default: "1"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publish next approved post(s)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          POSTS_PER_RUN: ${{ github.event.inputs.posts || '1' }}
+        run: python studio/publish.py

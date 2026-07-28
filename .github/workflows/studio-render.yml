@@ -5,6 +5,7 @@ on:
     paths:
       - "studio/content/**.json"
       - "studio/content_batch.json"
+      - "studio/captions.json"
       - "studio/renderer/**"
       - "studio/photos/**"
   workflow_dispatch:

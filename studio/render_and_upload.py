@@ -29,6 +29,12 @@ def all_packages():
     batch = "studio/content_batch.json"
     if os.path.exists(batch):
         pkgs += simple3.load(batch)
+    caps_path = "studio/captions.json"
+    if os.path.exists(caps_path):
+        caps = simple3.load(caps_path)
+        for c in pkgs:
+            if c["slug"] in caps:
+                c["caption"] = caps[c["slug"]]
     return pkgs
 
 
@@ -41,7 +47,9 @@ def main():
         force = os.environ.get("FORCE_RERENDER", "").lower() in ("1", "true", "yes")
         existing = SB.table("studio_packages").select("id,status,image_url,video_url").eq("slug", slug).execute().data
         if not force and existing and existing[0].get("image_url") and existing[0]["status"] != "rejected":
-            print("skip", slug)
+            # no re-render needed, but keep the stored content (captions etc.) in sync
+            SB.table("studio_packages").update({"content": c, "updated_at": __import__("datetime").datetime.utcnow().isoformat()}).eq("slug", slug).execute()
+            print("skip (content synced)", slug)
             continue
         errs = simple3.validate(c)
         if errs:

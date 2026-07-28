@@ -203,6 +203,18 @@ export default function Internal() {
                 )}
                 {current.image_url && <img src={current.image_url} alt={current.slug} draggable={false} style={{ width: '100%', display: 'block' }} />}
               </div>
+              {current.content && current.content.caption && (
+                <div style={{ background: '#fff', border: CARD_BORDER, borderRadius: 14, padding: '12px 14px', marginTop: 12 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                    <span style={{ fontSize: 12, color: ACCENT, textTransform: 'uppercase', letterSpacing: 1 }}>Caption</span>
+                    <button onClick={() => { navigator.clipboard.writeText(current.content.caption) }}
+                      style={{ ...btn('#EEF1F6', NAVY), padding: '4px 12px', fontSize: 12, marginTop: 0 }}>Copy</button>
+                  </div>
+                  <div style={{ fontSize: 13, color: '#3a3f52', whiteSpace: 'pre-wrap', maxHeight: 130, overflowY: 'auto' }}>
+                    {current.content.caption}
+                  </div>
+                </div>
+              )}
               <div style={{ display: 'flex', gap: 14, marginTop: 16 }}>
                 <button onClick={() => decide('rejected')} style={{ ...btn('#fff', '#8c1a1a'), flex: 1, padding: '16px', fontSize: 17, border: '2px solid #8c1a1a', borderRadius: 16 }}>✕ Reject</button>
                 <button onClick={() => decide('approved')} style={{ ...btn(NAVY, '#fff'), flex: 1, padding: '16px', fontSize: 17, borderRadius: 16 }}>✓ Approve</button>
@@ -224,8 +236,18 @@ export default function Internal() {
                 <div style={{ padding: 10 }}>
                   <div style={{ fontSize: 11, color: ACCENT, textTransform: 'uppercase', letterSpacing: 1 }}>{p.language} · {p.layout || 'rows'}</div>
                   <div style={{ fontWeight: 700, color: NAVY, fontSize: 13 }}>{p.slug}</div>
+                  {p.content && p.content.caption && (
+                    <button onClick={() => navigator.clipboard.writeText(p.content.caption)}
+                      style={{ ...btn('#EEF1F6', NAVY), padding: '4px 12px', fontSize: 12, marginTop: 6 }}>Copy caption</button>
+                  )}
                   {p.reject_comment && view === 'rejected' && (
                     <p style={{ color: '#8a1f1f', fontSize: 12, background: '#faf1f1', borderRadius: 8, padding: '6px 8px', margin: '6px 0 0' }}>{p.reject_comment}</p>
+                  )}
+                  {view === 'published' && p.content && p.content.published && (
+                    <a href={p.content.published.ig_url} target="_blank" rel="noreferrer"
+                      style={{ display: 'inline-block', fontSize: 12, color: ACCENT, marginTop: 6 }}>
+                      View on Instagram
+                    </a>
                   )}
                 </div>
               </div>
