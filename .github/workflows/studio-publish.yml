@@ -27,4 +27,5 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           POSTS_PER_RUN: ${{ github.event.inputs.posts || '1' }}
+          LANGS: "en"
         run: python studio/publish.py
