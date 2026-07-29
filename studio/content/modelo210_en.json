@@ -21,7 +21,7 @@
       "icon": "calendar",
       "label": "The deadline",
       "fact": ["31 December for the", "previous year."],
-      "detail": "Renting out? Quarterly: 20 Apr, Jul, Oct, Jan."
+      "detail": "Renting out? Rental income is now filed annually."
     }
   ],
   "layout": "rows"
