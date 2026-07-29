@@ -1,10 +1,19 @@
-"""Simple 3 renderer: one content JSON -> matching image (1080x1080) and video (1080x1920, 12s).
+"""Simple 3 renderer v3: one content JSON -> matching image (1080x1080) and video.
+Editorial design: photography-led, flat, left-aligned FS Siena, thin gold rules,
+no icon discs, no navy footer bar. Discreet 247spain.es mark only.
+
+Layout names kept for content compatibility; their designs are:
+  rows / photo -> EDITORIAL   photo across the top, facts below
+  flow         -> SPLIT       photo left half, text column right
+  hero         -> STAT        big statement + photo band at the bottom
+  path         -> MINIMAL     pure typography, no photo
+If the photos folder is missing, photo layouts degrade gracefully to typographic
+versions, so a render run never fails.
+
 Usage (from repo root):
   python3 studio/renderer/simple3.py check studio/content/modelo210_en.json
   python3 studio/renderer/simple3.py image studio/content/modelo210_en.json studio/themes/247spain.json
   python3 studio/renderer/simple3.py video studio/content/modelo210_en.json studio/themes/247spain.json
-Layout is code. Content and brand are data. If a budget fails, rendering refuses.
-Layouts: rows | hero | path | flow (set "layout" in the content JSON, or slug hash decides).
 """
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import json, os, shutil, sys
@@ -53,8 +62,6 @@ def tw(s,fo):
 def ease(t): return 1-(1-t)**3
 
 def fit(th,kind,size,texts,maxw,min_size=13):
-    """Return a font of the largest size <= size at which ALL texts fit maxw px.
-    Guarantees no text ever leaves its box, whatever the language."""
     if isinstance(texts,str): texts=[texts]
     while size>min_size:
         f=th.f(kind,size)
@@ -62,6 +69,7 @@ def fit(th,kind,size,texts,maxw,min_size=13):
         size-=1
     return th.f(kind,min_size)
 
+# kept for the video renderer
 def icon(name,d,cx,cy,s,th):
     NAVY=th.c["primary"]; GOLD=th.c["gold"]
     w=max(4,int(s/6))
@@ -92,14 +100,15 @@ def icon(name,d,cx,cy,s,th):
         d.ellipse((cx-s*0.9,cy-s*0.9,cx-s*0.25,cy-s*0.25),outline=NAVY,width=w)
         d.ellipse((cx+s*0.25,cy+s*0.25,cx+s*0.9,cy+s*0.9),outline=NAVY,width=w)
 
+# kept for the video renderer
 def draw_footer(d,img,th,W,H,FOOT,scale=1.0):
     c=th.c; f=th.t["footer"]
     d.rectangle((0,H-FOOT,W,H),fill=c["primary"])
-    MX=int(72*scale)
+    MXf=int(72*scale)
     if f["type"]=="wordmark_247":
         fw=th.f("bold",int(40*scale)); fp=th.f("medium",int(17*scale)); ls=max(2,int(3*scale))
         wm=[("24",c["footer_text"]),("/",c["gold"]),("7",c["footer_text"]),(" SPAIN",c["footer_text"])]
-        x=MX; fy=H-FOOT+(FOOT-int(52*scale))//2
+        x=MXf; fy=H-FOOT+(FOOT-int(52*scale))//2
         for t_,col in wm:
             d.text((x,fy),t_,font=fw,fill=col); x+=tw(t_,fw)
         bx=x+int(26*scale)
@@ -113,250 +122,208 @@ def draw_footer(d,img,th,W,H,FOOT,scale=1.0):
         wl=Image.new("RGBA",logo.size,c["footer_text"]+(255,)); wl.putalpha(a)
         lw=int(380*scale); lh=int(logo.height*lw/logo.width)
         wl=wl.resize((lw,lh))
-        img.paste(c["footer_text"],(MX,H-FOOT+(FOOT-lh)//2),wl)
+        img.paste(c["footer_text"],(MXf,H-FOOT+(FOOT-lh)//2),wl)
     fu=th.f("regular",int(26*scale))
-    d.text((W-MX-tw(f["domain"],fu),H-FOOT+int(17*scale)),f["domain"],font=fu,fill=c["footer_text"])
+    d.text((W-MXf-tw(f["domain"],fu),H-FOOT+int(17*scale)),f["domain"],font=fu,fill=c["footer_text"])
     if f.get("disclaimer"):
         fd=th.f("regular",int(17*scale))
-        d.text((W-MX-tw(f["disclaimer"],fd),H-FOOT+int(62*scale)),f["disclaimer"],font=fd,fill=c["footer_sub"])
+        d.text((W-MXf-tw(f["disclaimer"],fd),H-FOOT+int(62*scale)),f["disclaimer"],font=fd,fill=c["footer_sub"])
 
-# ---------------- IMAGE (1080x1080) ----------------
+# ---------------- IMAGE (1080x1080), editorial v3 ----------------
 LAYOUTS=["rows","hero","path","flow","photo"]
 PHOTOS_DIR=os.environ.get("STUDIO_PHOTOS","studio/photos")
+MX=84
+
 def pick_layout(c):
     if c.get("layout") in LAYOUTS: return c["layout"]
     return LAYOUTS[sum(ord(ch) for ch in c["slug"])%len(LAYOUTS)]
 
-def draw_header(d,c,th,W):
-    cc=th.c
-    f_eb=th.f("medium",22); ls=5
-    ebw=sum(tw(x,f_eb) for x in c["eyebrow"])+ls*(len(c["eyebrow"])-1)
-    x=(W-ebw)//2
-    for ch in c["eyebrow"]:
-        d.text((x,56),ch,font=f_eb,fill=cc["accent"]); x+=tw(ch,f_eb)+ls
-    hl=c["headline"]
-    if len(hl)==1:
-        d.text(((W-tw(hl[0],th.f("semibold",52)))//2,98),hl[0],font=th.f("semibold",52),fill=cc["primary"]); return 190
-    d.text(((W-tw(hl[0],th.f("semibold",50)))//2,94),hl[0],font=th.f("semibold",50),fill=cc["primary"])
-    d.text(((W-tw(hl[1],th.f("semibold",50)))//2,158),hl[1],font=th.f("semibold",50),fill=cc["primary"])
-    return 238
-
-def card_shadow(img,box,r=30):
-    W,H=img.size
-    sh=Image.new("RGBA",(W,H),(0,0,0,0))
-    sd=ImageDraw.Draw(sh)
-    x0,y0,x1,y1=box
-    sd.rounded_rectangle((x0,y0+7,x1,y1+7),r,fill=(1,2,33,30))
-    sh=sh.filter(ImageFilter.GaussianBlur(16))
-    img.paste(Image.new("RGB",(W,H),(0,0,0)),(0,0),sh)
-
-def render_image_hero(c,th,outpath):
-    """Row 1 becomes a giant stat/statement; rows 2-3 sit side by side below."""
-    W=H=1080; MX=72; cc=th.c
-    img=Image.new("RGB",(W,H),cc["canvas"])
-    d=ImageDraw.Draw(img,"RGBA")
-    head_h=draw_header(d,c,th,W)
-    hero=c["rows"][0]
-    f_lab=th.f("medium",24)
-    lw_=tw(hero["label"].upper(),f_lab)
-    ly=head_h+26
-    d.rounded_rectangle(((W-lw_)/2-28,ly,(W+lw_)/2+28,ly+48),24,outline=cc["gold"],width=2)
-    d.text(((W-lw_)/2,ly+9),hero["label"].upper(),font=f_lab,fill=cc["primary"])
-    f_hero=fit(th,"bold",64,hero["fact"],W-160)
-    hy=ly+84
-    for l in hero["fact"]:
-        d.text(((W-tw(l,f_hero))//2,hy),l,font=f_hero,fill=cc["primary"]); hy+=84
-    if hero.get("detail"):
-        f_d=fit(th,"regular",26,hero["detail"],W-160)
-        d.text(((W-tw(hero["detail"],f_d))//2,hy+4),hero["detail"],font=f_d,fill=cc["detail"])
-        hy+=48
-    cw_=(W-2*MX-28)//2; ch_=300; cy0=hy+40
-    for i,row in enumerate(c["rows"][1:3]):
-        x0=MX+i*(cw_+28); x1=x0+cw_; y1=cy0+ch_
-        card_shadow(img,(x0,cy0,x1,y1)); d=ImageDraw.Draw(img,"RGBA")
-        d.rounded_rectangle((x0,cy0,x1,y1),30,fill=cc["card_bg"])
-        ccx=x0+cw_//2
-        d.ellipse((ccx-40,cy0+26,ccx+40,cy0+106),fill=cc["highlight"])
-        icon(row["icon"],d,ccx,cy0+64,24,th)
-        f_l2=fit(th,"semibold",27,row["label"],cw_-48)
-        d.text((ccx-tw(row["label"],f_l2)//2,cy0+118),row["label"],font=f_l2,fill=cc["primary"])
-        f_f2=fit(th,"semibold",27,row["fact"],cw_-44)
-        fy=cy0+164
-        for l in row["fact"]:
-            d.text((ccx-tw(l,f_f2)//2,fy),l,font=f_f2,fill=cc["primary"]); fy+=37
-        if row.get("detail"):
-            f_d2=th.f("regular",19)
-            lines=[row["detail"]]
-            if tw(row["detail"],f_d2)>cw_-48:
-                ws=row["detail"].split(); mid=len(ws)//2
-                lines=[" ".join(ws[:mid])," ".join(ws[mid:])]
-            dy=y1-30-24*len(lines)
-            for ln in lines:
-                d.text((ccx-tw(ln,f_d2)//2,dy),ln,font=f_d2,fill=cc["detail"]); dy+=24
-    draw_footer(d,img,th,W,H,112,scale=0.95)
-    img.save(outpath); return outpath
-
-def render_image_path(c,th,outpath):
-    """Numbered vertical journey, airy, no boxes: line + gold number discs."""
-    W=H=1080; MX=72; cc=th.c
-    img=Image.new("RGB",(W,H),cc["canvas"])
-    d=ImageDraw.Draw(img,"RGBA")
-    head_h=draw_header(d,c,th,W)
-    lx=178
-    top=head_h+50; bot=930
-    d.line((lx,top,lx,bot),fill=cc["hairline"],width=3)
-    step=(bot-top)//3
-    for i,row in enumerate(c["rows"]):
-        ny=top+step//2+i*step
-        d.ellipse((lx-37,ny-37,lx+37,ny+37),fill=cc["highlight"])
-        d.ellipse((lx-37,ny-37,lx+37,ny+37),outline=cc["gold"],width=3)
-        f_n=th.f("bold",30)
-        d.text((lx-tw(str(i+1),f_n)//2,ny-21),str(i+1),font=f_n,fill=cc["primary"])
-        tx=lx+86
-        maxw=W-72-tx
-        f_l=fit(th,"medium",24,row["label"].upper(),maxw)
-        d.text((tx,ny-74),row["label"].upper(),font=f_l,fill=cc["accent"])
-        f_f=fit(th,"semibold",36,row["fact"],maxw)
-        fy=ny-34
-        for l in row["fact"]:
-            d.text((tx,fy),l,font=f_f,fill=cc["primary"]); fy+=47
-        if row.get("detail"):
-            d.text((tx,fy+6),row["detail"],font=fit(th,"regular",23,row["detail"],maxw),fill=cc["detail"])
-    draw_footer(d,img,th,W,H,112,scale=0.95)
-    img.save(outpath); return outpath
-
-def render_image_flow(c,th,outpath):
-    """Flowchart look: zigzag connected cards with elbow arrows, like a process diagram."""
-    W=H=1080; MX=72; cc=th.c
-    img=Image.new("RGB",(W,H),cc["canvas"])
-    d=ImageDraw.Draw(img,"RGBA")
-    head_h=draw_header(d,c,th,W)
-    cw_=620; ch_=196; vgap=52
-    top=head_h+18
-    xs=[MX, W-MX-cw_, MX]
-    line_col=cc["hairline"]
-    for i,row in enumerate(c["rows"]):
-        x0=xs[i]; y0=top+i*(ch_+vgap); x1=x0+cw_; y1=y0+ch_
-        if i<2:
-            nx=xs[i+1]+ (110 if xs[i+1]==MX else cw_-110)
-            sx=x0+ (cw_-110 if x0==MX else 110)
-            my=y1+vgap//2
-            d.line((sx,y1,sx,my),fill=line_col,width=4)
-            d.line((sx,my,nx,my),fill=line_col,width=4)
-            d.line((nx,my,nx,y1+vgap-14),fill=line_col,width=4)
-            d.polygon([(nx-9,y1+vgap-16),(nx+9,y1+vgap-16),(nx,y1+vgap)],fill=cc["gold"])
-            d.ellipse((sx-6,y1-2,sx+6,y1+10),fill=cc["gold"])
-        card_shadow(img,(x0,y0,x1,y1),26); d=ImageDraw.Draw(img,"RGBA")
-        d.rounded_rectangle((x0,y0,x1,y1),26,fill=cc["card_bg"])
-        icx=x0+86
-        d.ellipse((icx-44,y0+ch_//2-44,icx+44,y0+ch_//2+44),fill=cc["highlight"])
-        icon(row["icon"],d,icx,y0+ch_//2,26,th)
-        d.text((x0+22,y0+14),"0%d"%(i+1),font=th.f("bold",22),fill=cc["gold"])
-        tx=x0+162
-        maxw=x1-tx-24
-        f_l=fit(th,"medium",21,row["label"].upper(),maxw)
-        d.text((tx,y0+26),row["label"].upper(),font=f_l,fill=cc["accent"])
-        f_f=fit(th,"semibold",30,row["fact"],maxw)
-        fy=y0+60
-        for l in row["fact"]:
-            d.text((tx,fy),l,font=f_f,fill=cc["primary"]); fy+=39
-        if row.get("detail"):
-            d.text((tx,fy+8),row["detail"],font=fit(th,"regular",19,row["detail"],maxw),fill=cc["detail"])
-    draw_footer(d,img,th,W,H,112,scale=0.95)
-    img.save(outpath); return outpath
-
-def render_image_photo(c,th,outpath):
-    """Photo as a clean inset panel at the top; ALL text below on the plain
-    canvas. Text is never drawn over the photograph."""
-    W=H=1080; MX=72; cc=th.c
-    files=sorted(f for f in os.listdir(PHOTOS_DIR) if f.lower().endswith((".jpg",".jpeg",".png")))
-    if not files: raise RuntimeError("no photos in "+PHOTOS_DIR)
+def get_photo(c):
+    try:
+        files=sorted(f for f in os.listdir(PHOTOS_DIR) if f.lower().endswith((".jpg",".jpeg",".png")))
+    except Exception:
+        return None
+    if not files: return None
     fname=c.get("photo") if c.get("photo") in files else files[sum(ord(x) for x in c["slug"])%len(files)]
-    img=Image.new("RGB",(W,H),cc["canvas"])
-    # inset photo card, rounded corners, top of the square
-    px0,py0,px1,py1=40,40,W-40,414
-    pw_,phh=px1-px0,py1-py0
-    ph=Image.open(os.path.join(PHOTOS_DIR,fname)).convert("RGB")
-    r=max(pw_/ph.width,phh/ph.height)
-    ph=ph.resize((int(ph.width*r)+1,int(ph.height*r)+1))
-    ph=ph.crop(((ph.width-pw_)//2,(ph.height-phh)//2,(ph.width-pw_)//2+pw_,(ph.height-phh)//2+phh))
-    card_shadow(img,(px0,py0,px1,py1),28)
-    mask=Image.new("L",(pw_,phh),0)
-    ImageDraw.Draw(mask).rounded_rectangle((0,0,pw_,phh),28,fill=255)
-    img.paste(ph,(px0,py0),mask)
-    d=ImageDraw.Draw(img,"RGBA")
-    # header below the photo, on clean canvas
-    f_eb=th.f("medium",21); ls=5
-    ebw=sum(tw(x,f_eb) for x in c["eyebrow"])+ls*(len(c["eyebrow"])-1)
-    x=(W-ebw)//2
-    for chx in c["eyebrow"]:
-        d.text((x,446),chx,font=f_eb,fill=cc["accent"]); x+=tw(chx,f_eb)+ls
-    f_h=fit(th,"semibold",44,c["headline"],W-160)
-    hy=482
-    for l in c["headline"]:
-        d.text(((W-tw(l,f_h))//2,hy),l,font=f_h,fill=cc["primary"]); hy+=56
-    # three compact fact rows, left aligned, navy on canvas
-    ry=hy+26
-    for i,row in enumerate(c["rows"]):
-        f_n=th.f("bold",22)
-        d.text((MX,ry),"0%d"%(i+1),font=f_n,fill=cc["gold"])
-        f_l=fit(th,"medium",20,row["label"].upper(),W-2*MX-60)
-        d.text((MX+52,ry+2),row["label"].upper(),font=f_l,fill=cc["accent"])
-        fact=" ".join(row["fact"])
-        f_f=fit(th,"semibold",31,fact,W-2*MX)
-        d.text((MX,ry+32),fact,font=f_f,fill=cc["primary"])
-        yy=ry+74
+    try: return Image.open(os.path.join(PHOTOS_DIR,fname)).convert("RGB")
+    except Exception: return None
+
+def cover(ph,w,h):
+    r=max(w/ph.width,h/ph.height)
+    p=ph.resize((int(ph.width*r)+1,int(ph.height*r)+1))
+    return p.crop(((p.width-w)//2,(p.height-h)//2,(p.width-w)//2+w,(p.height-h)//2+h))
+
+def spaced(d,s,f,ls,x,y,col):
+    cx=x
+    for ch in s:
+        d.text((cx,y),ch,font=f,fill=col); cx+=tw(ch,f)+ls
+    return cx-x
+
+DISCLAIMERS={"en":"General information, not advice.","no":"Generell informasjon.","sv":"Allmän information."}
+
+def mark(d,th,c,W,on_photo_top=False,disc_y=1042,disc_x=None):
+    """Discreet branding: small domain top right, tiny disclaimer bottom left."""
+    f=th.f("medium",20)
+    s="247spain.es"
+    col=(255,255,255) if on_photo_top else (158,162,178)
+    d.text((W-MX-tw(s,f),52),s,font=f,fill=col)
+    dis=DISCLAIMERS.get(c.get("language","en"),DISCLAIMERS["en"])
+    fd=th.f("regular",16)
+    d.text((disc_x if disc_x is not None else MX,disc_y),dis,font=fd,fill=(182,185,196))
+
+def facts_block(d,th,c,x,y,colw,fact_size=29,label_size=19,detail_size=19,gap=26,two_line=False):
+    cc=th.c
+    for row in c["rows"]:
+        fl=th.f("medium",label_size)
+        spaced(d,row["label"].upper(),fl,3,x,y,cc["accent"])
+        y+=label_size+9
+        if two_line:
+            ff=fit(th,"semibold",fact_size,row["fact"],colw)
+            for l in row["fact"]:
+                d.text((x,y),l,font=ff,fill=cc["primary"]); y+=fact_size+8
+        else:
+            fact=" ".join(row["fact"])
+            ff=fit(th,"semibold",fact_size,fact,colw)
+            d.text((x,y),fact,font=ff,fill=cc["primary"]); y+=fact_size+9
         if row.get("detail"):
-            f_d=fit(th,"regular",20,row["detail"],W-2*MX)
-            d.text((MX,yy),row["detail"],font=f_d,fill=cc["detail"]); yy+=30
-        ry=yy+16
-    draw_footer(d,img,th,W,H,112,scale=0.95)
+            fdt=fit(th,"regular",detail_size,row["detail"],colw)
+            d.text((x,y),row["detail"],font=fdt,fill=cc["detail"]); y+=detail_size+6
+        y+=gap
+    return y
+
+def gold_rule(d,th,x,y,w=64):
+    d.rectangle((x,y,x+w,y+3),fill=th.c["gold"])
+
+def render_editorial(c,th,outpath):
+    """Photo across the top, editorial text below. rows + photo layouts."""
+    W=H=1080; cc=th.c
+    img=Image.new("RGB",(W,H),cc["canvas"])
+    d=ImageDraw.Draw(img,"RGBA")
+    ph=get_photo(c)
+    if ph:
+        img.paste(cover(ph,W,470),(0,0)); d=ImageDraw.Draw(img,"RGBA")
+        ty=506
+    else:
+        ty=150
+    mark(d,th,c,W,on_photo_top=bool(ph))
+    f_eb=th.f("medium",21)
+    spaced(d,c["eyebrow"],f_eb,4,MX,ty,cc["accent"]); ty+=44
+    f_h=fit(th,"semibold",52 if ph else 66,c["headline"],W-2*MX)
+    for l in c["headline"]:
+        d.text((MX,ty),l,font=f_h,fill=cc["primary"]); ty+=(60 if ph else 78)
+    ty+=16; gold_rule(d,th,MX,ty); ty+=34
+    facts_block(d,th,c,MX,ty,W-2*MX,fact_size=29 if ph else 33,gap=24 if ph else 34)
+    img.save(outpath); return outpath
+
+def render_split(c,th,outpath):
+    """Photo left half, text column right. flow layout."""
+    W=H=1080; cc=th.c
+    ph=get_photo(c)
+    if not ph: return render_minimal(c,th,outpath)
+    img=Image.new("RGB",(W,H),cc["canvas"])
+    img.paste(cover(ph,470,H),(0,0))
+    d=ImageDraw.Draw(img,"RGBA")
+    x=540; colw=W-x-MX
+    mark(d,th,c,W,disc_x=x)
+    y=104
+    f_eb=th.f("medium",20)
+    spaced(d,c["eyebrow"],f_eb,3,x,y,cc["accent"]); y+=42
+    f_h=fit(th,"semibold",44,c["headline"],colw)
+    for l in c["headline"]:
+        d.text((x,y),l,font=f_h,fill=cc["primary"]); y+=54
+    y+=14; gold_rule(d,th,x,y); y+=32
+    facts_block(d,th,c,x,y,colw,fact_size=26,label_size=18,detail_size=18,gap=28,two_line=True)
+    img.save(outpath); return outpath
+
+def render_minimal(c,th,outpath):
+    """Pure typography, generous whitespace. path layout."""
+    W=H=1080; cc=th.c
+    img=Image.new("RGB",(W,H),cc["canvas"])
+    d=ImageDraw.Draw(img,"RGBA")
+    mark(d,th,c,W)
+    y=140
+    f_eb=th.f("medium",22)
+    spaced(d,c["eyebrow"],f_eb,5,MX,y,cc["accent"]); y+=52
+    f_h=fit(th,"semibold",72,c["headline"],W-2*MX)
+    for l in c["headline"]:
+        d.text((MX,y),l,font=f_h,fill=cc["primary"]); y+=86
+    y+=18; gold_rule(d,th,MX,y,90); y+=44
+    for i,row in enumerate(c["rows"]):
+        fn=th.f("regular",44)
+        d.text((MX,y-2),str(i+1),font=fn,fill=cc["gold"])
+        tx=MX+64
+        fl=th.f("medium",19)
+        spaced(d,row["label"].upper(),fl,3,tx,y,cc["accent"])
+        fact=" ".join(row["fact"])
+        ff=fit(th,"semibold",31,fact,W-tx-MX)
+        d.text((tx,y+28),fact,font=ff,fill=cc["primary"])
+        yy=y+70
+        if row.get("detail"):
+            fdt=fit(th,"regular",20,row["detail"],W-tx-MX)
+            d.text((tx,yy),row["detail"],font=fdt,fill=cc["detail"]); yy+=30
+        y=yy+34
+    img.save(outpath); return outpath
+
+def render_stat(c,th,outpath):
+    """Big statement, supporting facts, photo band across the bottom. hero layout."""
+    W=H=1080; cc=th.c
+    img=Image.new("RGB",(W,H),cc["canvas"])
+    d=ImageDraw.Draw(img,"RGBA")
+    ph=get_photo(c)
+    band=300 if ph else 0
+    mark(d,th,c,W,disc_y=(H-band-38) if ph else 1042)
+    y=96
+    f_eb=th.f("medium",21)
+    spaced(d,c["eyebrow"],f_eb,4,MX,y,cc["accent"]); y+=44
+    f_h=fit(th,"semibold",40,c["headline"],W-2*MX)
+    for l in c["headline"]:
+        d.text((MX,y),l,font=f_h,fill=cc["primary"]); y+=50
+    y+=18; gold_rule(d,th,MX,y); y+=34
+    hero=c["rows"][0]
+    fl=th.f("medium",20)
+    spaced(d,hero["label"].upper(),fl,3,MX,y,cc["accent"]); y+=32
+    f_big=fit(th,"bold",58,hero["fact"],W-2*MX)
+    for l in hero["fact"]:
+        d.text((MX,y),l,font=f_big,fill=cc["primary"]); y+=f_big.size+12
+    if hero.get("detail"):
+        fdt=fit(th,"regular",21,hero["detail"],W-2*MX)
+        d.text((MX,y),hero["detail"],font=fdt,fill=cc["detail"]); y+=34
+    y+=26
+    colw=(W-2*MX-56)//2
+    for i,row in enumerate(c["rows"][1:3]):
+        x=MX+i*(colw+56)
+        fl2=th.f("medium",18)
+        spaced(d,row["label"].upper(),fl2,3,x,y,cc["accent"])
+        ff=fit(th,"semibold",24,row["fact"],colw)
+        yy=y+28
+        for l in row["fact"]:
+            d.text((x,yy),l,font=ff,fill=cc["primary"]); yy+=32
+        if row.get("detail"):
+            fdt=fit(th,"regular",17,row["detail"],colw)
+            d.text((x,yy+2),row["detail"],font=fdt,fill=cc["detail"])
+    if ph:
+        img.paste(cover(ph,W,band),(0,H-band))
     img.save(outpath); return outpath
 
 def render_image(c,th,outpath):
     layout=pick_layout(c)
-    if layout=="hero": return render_image_hero(c,th,outpath)
-    if layout=="path": return render_image_path(c,th,outpath)
-    if layout=="flow": return render_image_flow(c,th,outpath)
-    if layout=="photo": return render_image_photo(c,th,outpath)
-    W=H=1080; MX=72
-    cc=th.c
-    img=Image.new("RGB",(W,H),cc["canvas"])
-    d=ImageDraw.Draw(img,"RGBA")
-    head_h=draw_header(d,c,th,W)
-    rh=220; gap=22; ry=head_h+2
-    split=MX+330
-    for i,row in enumerate(c["rows"]):
-        y0=ry; y1=ry+rh
-        card_shadow(img,(MX,y0,W-MX,y1)); d=ImageDraw.Draw(img,"RGBA")
-        d.rounded_rectangle((MX,y0,W-MX,y1),30,fill=cc["card_bg"])
-        d.text((MX+30,y0+20),"0%d"%(i+1),font=th.f("bold",25),fill=cc["gold"])
-        lcx=MX+178
-        d.ellipse((lcx-42,y0+30,lcx+42,y0+114),fill=cc["highlight"])
-        icon(row["icon"],d,lcx,y0+72,26,th)
-        f_lab=fit(th,"semibold",29,row["label"],280)
-        d.text((lcx-tw(row["label"],f_lab)//2,y0+128),row["label"],font=f_lab,fill=cc["primary"])
-        d.line((split+60,y0+30,split+60,y1-30),fill=cc["hairline"],width=2)
-        rcx=(split+60+W-MX)//2
-        cellw=(W-MX)-(split+60)-36
-        f_f=fit(th,"semibold",35,row["fact"],cellw)
-        fy=y0+34 if len(row["fact"])==2 else y0+58
-        for l in row["fact"]:
-            d.text((rcx-tw(l,f_f)//2,fy),l,font=f_f,fill=cc["primary"]); fy+=48
-        if row.get("detail"):
-            f_d=fit(th,"regular",22,row["detail"],cellw)
-            d.text((rcx-tw(row["detail"],f_d)//2,y0+rh-58),row["detail"],font=f_d,fill=cc["detail"])
-        ry+=rh+gap
-    draw_footer(d,img,th,W,H,112,scale=0.95)
-    img.save(outpath)
-    return outpath
+    if layout in ("rows","photo"): return render_editorial(c,th,outpath)
+    if layout=="flow": return render_split(c,th,outpath)
+    if layout=="path": return render_minimal(c,th,outpath)
+    return render_stat(c,th,outpath)  # hero
 
 # ---------------- VIDEO (1080x1920, 12s) ----------------
 def render_video_frames(c,th,frames_dir,fps=30,dur=12.0):
-    W,H=1080,1920; MX=72
+    W,H=1080,1920; MXv=72
     cc=th.c
     shutil.rmtree(frames_dir,ignore_errors=True); os.makedirs(frames_dir)
     def sprite(): return Image.new("RGBA",(W,H),(0,0,0,0))
+    def card_shadow_v(sp,box,r=34):
+        shl=Image.new("RGBA",(W,H),(0,0,0,0))
+        sd=ImageDraw.Draw(shl)
+        x0,y0,x1,y1=box
+        sd.rounded_rectangle((x0,y0+9,x1,y1+9),r,fill=(1,2,33,32))
+        return Image.alpha_composite(sp,shl.filter(ImageFilter.GaussianBlur(18)))
     head=sprite(); hd=ImageDraw.Draw(head)
     f_eb=th.f("medium",26); ls=6
     ebw=sum(tw(x,f_eb) for x in c["eyebrow"])+ls*(len(c["eyebrow"])-1)
@@ -368,26 +335,23 @@ def render_video_frames(c,th,frames_dir,fps=30,dur=12.0):
     for l in c["headline"]:
         hd.text(((W-tw(l,f_h))//2,hy),l,font=f_h,fill=cc["primary"]); hy+=82
     rh=310; gap=40; ry0=530
-    split=MX+360
+    split=MXv+360
     cards=[]; details=[]
     for i,row in enumerate(c["rows"]):
         sp=sprite()
         y0=ry0+i*(rh+gap); y1=y0+rh
-        shl=Image.new("RGBA",(W,H),(0,0,0,0))
-        sd=ImageDraw.Draw(shl)
-        sd.rounded_rectangle((MX,y0+9,W-MX,y1+9),34,fill=(1,2,33,32))
-        shl=shl.filter(ImageFilter.GaussianBlur(18))
-        sp=Image.alpha_composite(sp,shl); d2=ImageDraw.Draw(sp)
-        d2.rounded_rectangle((MX,y0,W-MX,y1),34,fill=cc["card_bg"])
-        d2.text((MX+36,y0+26),"0%d"%(i+1),font=th.f("bold",30),fill=cc["gold"])
-        lcx=MX+196
+        sp=card_shadow_v(sp,(MXv,y0,W-MXv,y1))
+        d2=ImageDraw.Draw(sp)
+        d2.rounded_rectangle((MXv,y0,W-MXv,y1),34,fill=cc["card_bg"])
+        d2.text((MXv+36,y0+26),"0%d"%(i+1),font=th.f("bold",30),fill=cc["gold"])
+        lcx=MXv+196
         d2.ellipse((lcx-54,y0+46,lcx+54,y0+154),fill=cc["highlight"])
         icon(row["icon"],d2,lcx,y0+100,29,th)
         f_lab=fit(th,"semibold",35,row["label"],300)
         d2.text((lcx-tw(row["label"],f_lab)//2,y0+172),row["label"],font=f_lab,fill=cc["primary"])
         d2.line((split+70,y0+46,split+70,y1-46),fill=cc["hairline"],width=2)
-        rcx=(split+70+W-MX)//2
-        cellw=(W-MX)-(split+70)-36
+        rcx=(split+70+W-MXv)//2
+        cellw=(W-MXv)-(split+70)-36
         f_f=fit(th,"semibold",42,row["fact"],cellw)
         fy=y0+62 if len(row["fact"])==2 else y0+92
         for l in row["fact"]:
