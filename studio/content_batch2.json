@@ -1,0 +1,2092 @@
+[
+ {
+  "slug": "squatter_eviction_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Squatters in Spain: What Property Owners Need to Know",
+  "eyebrow": "SQUATTERS · EVICTION PROCESS",
+  "headline": [
+   "The 48 hour rule",
+   "decides everything"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "First 48h",
+    "fact": [
+     "Police can evict fast if",
+     "entry was under 48h ago"
+    ],
+    "detail": "Prove ownership and no court date is needed"
+   },
+   {
+    "icon": "document",
+    "label": "After 48h",
+    "fact": [
+     "Only a court can order",
+     "the squatters out"
+    ],
+    "detail": "Changing the locks yourself risks legal trouble"
+   },
+   {
+    "icon": "calendar",
+    "label": "Timeline",
+    "fact": [
+     "Court evictions can run",
+     "18 months to 2 years"
+    ],
+    "detail": "Varies by region; many cases resolve faster"
+   }
+  ],
+  "layout": "photo",
+  "photo": "coast_bay.jpg"
+ },
+ {
+  "slug": "squatter_prevention_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Squatters in Spain: What Property Owners Need to Know",
+  "eyebrow": "SQUATTERS · PREVENTION",
+  "headline": [
+   "Make an empty home",
+   "look lived in"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "Alarm system",
+    "fact": [
+     "Connect it to police to",
+     "timestamp any break in"
+    ],
+    "detail": "Proof of entry time keeps the 48h route open"
+   },
+   {
+    "icon": "house",
+    "label": "Occupancy",
+    "fact": [
+     "Automated lights and",
+     "blinds mimic presence"
+    ],
+    "detail": "Empty looking homes are the prime targets"
+   },
+   {
+    "icon": "calendar",
+    "label": "Eyes on it",
+    "fact": [
+     "A neighbour collecting",
+     "post shortens discovery"
+    ],
+    "detail": "Renting it out finds squatters within 48 hours"
+   }
+  ],
+  "layout": "flow",
+  "photo": "golden_coast.jpg"
+ },
+ {
+  "slug": "squatter_insurance_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Squatters in Spain: What Property Owners Need to Know",
+  "eyebrow": "SQUATTERS · INSURANCE COVER",
+  "headline": [
+   "Cover exists for",
+   "illegal occupation"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "The cover",
+    "fact": [
+     "Policies can include",
+     "illegal occupation cover"
+    ],
+    "detail": "Offered by many insurers at reasonable prices"
+   },
+   {
+    "icon": "euro",
+    "label": "What it pays",
+    "fact": [
+     "Financial losses while",
+     "your home is occupied"
+    ],
+    "detail": "Evictions can run 18 months to 2 years"
+   },
+   {
+    "icon": "house",
+    "label": "Who needs it",
+    "fact": [
+     "Homes left empty for",
+     "long stretches of time"
+    ],
+    "detail": "Low season is when owners find out too late"
+   }
+  ],
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg"
+ },
+ {
+  "slug": "irnr_who_pays_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Non-Resident Income Tax (IRNR): Implications For Expats In Spain",
+  "eyebrow": "SPANISH TAX · IRNR",
+  "headline": [
+   "Non-resident tax is",
+   "owed on empty homes"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "183 day rule",
+    "fact": [
+     "Over 183 days a year in",
+     "Spain makes you resident"
+    ],
+    "detail": "A spouse or minor children there also count"
+   },
+   {
+    "icon": "percent",
+    "label": "The charge",
+    "fact": [
+     "Tax is due even with no",
+     "rental income at all"
+    ],
+    "detail": "1.1% of cadastral value, taxed at 19% or 24%"
+   },
+   {
+    "icon": "euro",
+    "label": "Unpaid IRNR",
+    "fact": [
+     "Fines, closed accounts,",
+     "even property seizure"
+    ],
+    "detail": "Filed on Modelo 210, due by 31 December"
+   }
+  ],
+  "layout": "rows",
+  "photo": "sunset_village.jpg"
+ },
+ {
+  "slug": "wealth_tax_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Non-Resident Income Tax (IRNR): Implications For Expats In Spain",
+  "eyebrow": "SPANISH TAX · WEALTH TAX",
+  "headline": [
+   "The €700,000",
+   "line most never cross"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Threshold",
+    "fact": [
+     "Assets above €700,000",
+     "trigger the tax"
+    ],
+    "detail": "Applies to residents and non-residents alike"
+   },
+   {
+    "icon": "percent",
+    "label": "The rates",
+    "fact": [
+     "Progressive, from 0.2%",
+     "up to 2.5% at the top"
+    ],
+    "detail": "Charged incrementally on wealth above the line"
+   },
+   {
+    "icon": "house",
+    "label": "Regions",
+    "fact": [
+     "Madrid applies a 100%",
+     "discount on wealth tax"
+    ],
+    "detail": "Residents get €300,000 more for a main home"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "modelo210_scenarios_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Non-resident property tax in Spain",
+  "eyebrow": "SPANISH TAX · MODELO 210",
+  "headline": [
+   "Bought or sold",
+   "mid-year? It prorates"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "Buy in June",
+    "fact": [
+     "First return is not due",
+     "until the next year"
+    ],
+    "detail": "Tax counts only the days you actually owned"
+   },
+   {
+    "icon": "key",
+    "label": "Sell mid-year",
+    "fact": [
+     "You still file for the",
+     "days up to completion"
+    ],
+    "detail": "That return is filed early the following year"
+   },
+   {
+    "icon": "house",
+    "label": "Part rental",
+    "fact": [
+     "Empty days: imputed tax.",
+     "Rented days: income tax."
+    ],
+    "detail": "Each co-owner files and pays their own share"
+   }
+  ],
+  "layout": "photo",
+  "photo": "pool_dusk.jpg"
+ },
+ {
+  "slug": "spanish_wills_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Estate Planning And Inheritance: What Expats Need To Know About Spanish Law",
+  "eyebrow": "ESTATE PLANNING · SPANISH WILLS",
+  "headline": [
+   "Spain decides who",
+   "inherits, unless you do"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Forced heirs",
+    "fact": [
+     "Two thirds of the estate",
+     "is reserved for children"
+    ],
+    "detail": "The spouse takes half of joint property first"
+   },
+   {
+    "icon": "key",
+    "label": "No will",
+    "fact": [
+     "Children inherit first,",
+     "then parents, then spouse"
+    ],
+    "detail": "With no relatives at all, the state takes it"
+   },
+   {
+    "icon": "house",
+    "label": "Step-family",
+    "fact": [
+     "Stepchildren get nothing",
+     "unless a will names them"
+    ],
+    "detail": "Some regions apply their own inheritance rules"
+   }
+  ],
+  "layout": "flow",
+  "photo": "marina.jpg"
+ },
+ {
+  "slug": "inheritance_tax_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Estate Planning And Inheritance: What Expats Need To Know About Spanish Law",
+  "eyebrow": "ESTATE PLANNING · INHERITANCE TAX",
+  "headline": [
+   "Heirs pay the tax",
+   "before they inherit"
+  ],
+  "rows": [
+   {
+    "icon": "percent",
+    "label": "The rate",
+    "fact": [
+     "Runs from 7.65% up to",
+     "36.5%, set by region"
+    ],
+    "detail": "Andalucia charges among the lowest in Spain"
+   },
+   {
+    "icon": "calendar",
+    "label": "The deadline",
+    "fact": [
+     "6 months to pay before",
+     "surcharges begin"
+    ],
+    "detail": "5% added every 3 months, capped at 20%"
+   },
+   {
+    "icon": "euro",
+    "label": "Who pays",
+    "fact": [
+     "The beneficiary, not",
+     "the estate, owes the tax"
+    ],
+    "detail": "Assets stay locked until the tax is settled"
+   }
+  ],
+  "layout": "hero",
+  "photo": "cove_house.jpg"
+ },
+ {
+  "slug": "inheritance_foreign_law_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Estate Planning And Inheritance: What Expats Need To Know About Spanish Law",
+  "eyebrow": "ESTATE PLANNING · CHOICE OF LAW",
+  "headline": [
+   "Your will can opt",
+   "out of Spanish law"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "The rule",
+    "fact": [
+     "EU regulation lets you",
+     "pick your national law"
+    ],
+    "detail": "Applies to deaths after 17 August 2015"
+   },
+   {
+    "icon": "key",
+    "label": "The catch",
+    "fact": [
+     "The choice must be",
+     "written into your will"
+    ],
+    "detail": "Silence means Spanish forced heirship applies"
+   },
+   {
+    "icon": "house",
+    "label": "Non-residents",
+    "fact": [
+     "Spanish assets need the",
+     "clause in your will too"
+    ],
+    "detail": "A holiday home alone is enough to be caught"
+   }
+  ],
+  "layout": "rows",
+  "photo": "arch_terrace.jpg"
+ },
+ {
+  "slug": "gift_tax_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Estate Planning And Inheritance: What Expats Need To Know About Spanish Law",
+  "eyebrow": "ESTATE PLANNING · GIFT TAX",
+  "headline": [
+   "Gifts in Spain",
+   "come with a tax bill"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Who pays",
+    "fact": [
+     "The recipient owes the",
+     "tax, not the giver"
+    ],
+    "detail": "Applies to money and gifted assets alike"
+   },
+   {
+    "icon": "calendar",
+    "label": "30 day rule",
+    "fact": [
+     "Gift tax is due within",
+     "30 days of the gift"
+    ],
+    "detail": "Inheritance tax allows 6 months; gifts do not"
+   },
+   {
+    "icon": "percent",
+    "label": "The rate",
+    "fact": [
+     "Set region by region,",
+     "so location sets the bill"
+    ],
+    "detail": "Check your region before gifting anything of value"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "accountant_worth_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Do I Need an Accountant as a Non-Resident When Buying Property in Spain?",
+  "eyebrow": "BUYING · IS AN ACCOUNTANT WORTH IT",
+  "headline": [
+   "Not required.",
+   "Sometimes worth it."
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Not mandatory",
+    "fact": [
+     "Unlike the NIE, notary",
+     "and Contrato de Arras"
+    ],
+    "detail": "No law says a buyer needs an accountant"
+   },
+   {
+    "icon": "euro",
+    "label": "Where it pays",
+    "fact": [
+     "The 10% Arras deposit",
+     "often goes to the seller"
+    ],
+    "detail": "Advice: route it to a safeguarded account"
+   },
+   {
+    "icon": "percent",
+    "label": "The trade-off",
+    "fact": [
+     "Good multilingual help",
+     "costs real money"
+    ],
+    "detail": "Ask for full costs upfront; watch hidden fees"
+   }
+  ],
+  "layout": "photo",
+  "photo": "couple_beach.jpg"
+ },
+ {
+  "slug": "tax_installments_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "How to Avoid Penalties When Filing Property Taxes Late in Spain",
+  "eyebrow": "SPANISH TAX · LATE FILING",
+  "headline": [
+   "Late on tax? Move",
+   "before the letter"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "Act first",
+    "fact": [
+     "File voluntarily before",
+     "the tax office writes"
+    ],
+    "detail": "1% surcharge plus 1% per month; 15% after a year"
+   },
+   {
+    "icon": "euro",
+    "label": "Installments",
+    "fact": [
+     "You can ask to pay the",
+     "debt in installments"
+    ],
+    "detail": "Justify hardship; big sums may need a guarantee"
+   },
+   {
+    "icon": "percent",
+    "label": "The catch",
+    "fact": [
+     "Interest still runs on",
+     "every installment"
+    ],
+    "detail": "Pay each one on time or penalties come back"
+   }
+  ],
+  "layout": "flow",
+  "photo": "poolside.jpg"
+ },
+ {
+  "slug": "ibi_deep_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "IBI Tax in Spain: What It Is, How It Works, and How to Pay It Easily",
+  "eyebrow": "SPANISH TAX · IBI",
+  "headline": [
+   "The local tax that",
+   "follows the property"
+  ],
+  "rows": [
+   {
+    "icon": "percent",
+    "label": "The formula",
+    "fact": [
+     "Cadastral value times",
+     "your municipal rate"
+    ],
+    "detail": "Rates average 0.3% to 1.1% depending on town"
+   },
+   {
+    "icon": "calendar",
+    "label": "The bill",
+    "fact": [
+     "Issued May to October;",
+     "many never reach abroad"
+    ],
+    "detail": "Ask the town hall for electronic notices"
+   },
+   {
+    "icon": "house",
+    "label": "If unpaid",
+    "fact": [
+     "Unpaid IBI can stay",
+     "attached to the property"
+    ],
+    "detail": "Surcharges start near 5% and can pass 20%"
+   }
+  ],
+  "layout": "hero",
+  "photo": "coast_bay.jpg"
+ },
+ {
+  "slug": "bank_fees_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Bank Accounts in Spain: How Many Unexpected Fees Are You Paying?",
+  "eyebrow": "BANKING · ACCOUNT FEES",
+  "headline": [
+   "Spanish bank fees",
+   "hide in five places"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Maintenance",
+    "fact": [
+     "Billed monthly, quarterly",
+     "or once a year"
+    ],
+    "detail": "Spanish fees average above most of Europe"
+   },
+   {
+    "icon": "percent",
+    "label": "Spend rules",
+    "fact": [
+     "Miss a minimum spend and",
+     "a penalty fee kicks in"
+    ],
+    "detail": "Some banks count transactions, not just euros"
+   },
+   {
+    "icon": "key",
+    "label": "Card & ATM",
+    "fact": [
+     "Owning the card itself",
+     "can carry a charge"
+    ],
+    "detail": "Out of network ATMs and transfers cost extra"
+   }
+  ],
+  "layout": "rows",
+  "photo": "golden_coast.jpg"
+ },
+ {
+  "slug": "free_banking_myth_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Why Is Free Banking in Spain Not Actually \"Free\"?",
+  "eyebrow": "BANKING · THE FREE MYTH",
+  "headline": [
+   "Free banking in Spain",
+   "rarely stays free"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Base cost",
+    "fact": [
+     "Major banks charge €240",
+     "a year in maintenance"
+    ],
+    "detail": "Cards add €20 to €30 each on top of that"
+   },
+   {
+    "icon": "percent",
+    "label": "Spend traps",
+    "fact": [
+     "Free needs a minimum",
+     "card spend every month"
+    ],
+    "detail": "Miss it and the fees quietly start stacking"
+   },
+   {
+    "icon": "euro",
+    "label": "Transfers",
+    "fact": [
+     "Foreign transfers cost",
+     "up to €35 each time"
+    ],
+    "detail": "A monthly pension can lose hundreds a year"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "credit_card_fees_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Are Credit Card Fees Higher in Spain? What Expats Should Know",
+  "eyebrow": "BANKING · CREDIT CARDS",
+  "headline": [
+   "Credit cards in Spain",
+   "play by other rules"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "Getting one",
+    "fact": [
+     "Under 180 days a year?",
+     "Banks will likely say no"
+    ],
+    "detail": "Exception: a card written into mortgage terms"
+   },
+   {
+    "icon": "document",
+    "label": "Credit score",
+    "fact": [
+     "Your home rating does",
+     "not cross the border"
+    ],
+    "detail": "Utilities in your name rebuild it locally"
+   },
+   {
+    "icon": "percent",
+    "label": "Fee timing",
+    "fact": [
+     "Card fee rules often",
+     "start after year one"
+    ],
+    "detail": "Paying in pounds via DCC costs more, pick euros"
+   }
+  ],
+  "layout": "photo",
+  "photo": "terrace_sunset.jpg"
+ },
+ {
+  "slug": "cash_rules_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Spain’s New Cash Withdrawal Rules and Possible Penalties",
+  "eyebrow": "BANKING · CASH RULES 2025",
+  "headline": [
+   "Cash in Spain now",
+   "comes with paperwork"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Withdrawals",
+    "fact": [
+     "Over €3,000: give the",
+     "tax office 24h notice"
+    ],
+    "detail": "€100,000 or more requires 72 hours notice"
+   },
+   {
+    "icon": "percent",
+    "label": "Payments",
+    "fact": [
+     "Cash payments cap at",
+     "€1,000 for most deals"
+    ],
+    "detail": "Non-residents not taxed here get €10,000"
+   },
+   {
+    "icon": "document",
+    "label": "Penalties",
+    "fact": [
+     "Fines run 50% to 150%",
+     "of the amount involved"
+    ],
+    "detail": "Self-report within 3 months and it may be waived"
+   }
+  ],
+  "layout": "flow",
+  "photo": "sunset_village.jpg"
+ },
+ {
+  "slug": "currency_transfer_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Currency Transfer and Exchange: Best practices for holiday home owners and expats moving money to Spain",
+  "eyebrow": "BANKING · CURRENCY TRANSFERS",
+  "headline": [
+   "Moving money to Spain",
+   "is mostly timing"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "Timing",
+    "fact": [
+     "Late funds can cost the",
+     "10% arras deposit"
+    ],
+    "detail": "Completion deadlines do not wait for banks"
+   },
+   {
+    "icon": "percent",
+    "label": "The rate",
+    "fact": [
+     "Rates move all day, so",
+     "set alerts, not guesses"
+    ],
+    "detail": "Small margins are real money on large sums"
+   },
+   {
+    "icon": "key",
+    "label": "Safety",
+    "fact": [
+     "Client funds belong in",
+     "segregated accounts"
+    ],
+    "detail": "Kept apart from the provider's own money"
+   }
+  ],
+  "layout": "hero",
+  "photo": "pool_dusk.jpg"
+ },
+ {
+  "slug": "nie_realities_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Applying for a NIE (Número de Identificación de Extranjero)",
+  "eyebrow": "RESIDENCY · NIE PROCESS",
+  "headline": [
+   "The NIE process runs",
+   "in a strict order"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Step order",
+    "fact": [
+     "Pay the modelo 790 at",
+     "a bank branch first"
+    ],
+    "detail": "The fee is rarely payable online or by card"
+   },
+   {
+    "icon": "document",
+    "label": "The form",
+    "fact": [
+     "EX-18: two copies,",
+     "submitted in Spanish"
+    ],
+    "detail": "The English version is a guide, not valid"
+   },
+   {
+    "icon": "key",
+    "label": "Your reason",
+    "fact": [
+     "A translated letter",
+     "must prove your purpose"
+    ],
+    "detail": "A purchase or mortgage agreement counts"
+   }
+  ],
+  "layout": "rows",
+  "photo": "marina.jpg"
+ },
+ {
+  "slug": "lost_documents_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "What to Do If You Lose Property Documentation in Spain",
+  "eyebrow": "PROPERTY · LOST DOCUMENTS",
+  "headline": [
+   "Lost Spanish papers",
+   "all have a way back"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Deeds",
+    "fact": [
+     "The notary who signed",
+     "holds the original"
+    ],
+    "detail": "Land Registry can name the notary for you"
+   },
+   {
+    "icon": "house",
+    "label": "Nota Simple",
+    "fact": [
+     "Reordered online for",
+     "around €10"
+    ],
+    "detail": "In person costs more via the registrars"
+   },
+   {
+    "icon": "key",
+    "label": "NIE",
+    "fact": [
+     "Stolen? File a denuncia",
+     "then request a duplicate"
+    ],
+    "detail": "EX-15 form plus the Tasa 790 payment proof"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "local_tax_office_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Your Local Tax Office in Spain: What It Does and Why It Matters",
+  "eyebrow": "TAX · LOCAL TAX OFFICE",
+  "headline": [
+   "Your town hall bills",
+   "more than the IBI"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "IBI",
+    "fact": [
+     "Billed on cadastral",
+     "value, not market value"
+    ],
+    "detail": "Some provinces use a collection agency instead"
+   },
+   {
+    "icon": "euro",
+    "label": "Waste tax",
+    "fact": [
+     "€50 to €200 a year,",
+     "billed June to October"
+    ],
+    "detail": "Some councils base it on water use or bin count"
+   },
+   {
+    "icon": "calendar",
+    "label": "Vehicle tax",
+    "fact": [
+     "€20 to €200+ a year,",
+     "often due January 1"
+    ],
+    "detail": "Priced by fiscal horsepower and emissions"
+   }
+  ],
+  "layout": "photo",
+  "photo": "cove_house.jpg"
+ },
+ {
+  "slug": "utilities_setup_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Utility setup and management: A guide to Spanish service providers",
+  "eyebrow": "PROPERTY · UTILITIES SETUP",
+  "headline": [
+   "Spanish utilities:",
+   "what you can choose"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "Water",
+    "fact": [
+     "No supplier choice;",
+     "change owner at town hall"
+    ],
+    "detail": "Unconnected homes take far longer to hook up"
+   },
+   {
+    "icon": "house",
+    "label": "Gas",
+    "fact": [
+     "Mains gas reaches only",
+     "certain towns"
+    ],
+    "detail": "Canisters elsewhere; yearly check about €70"
+   },
+   {
+    "icon": "document",
+    "label": "To sign up",
+    "fact": [
+     "ID, NIE, Spanish bank",
+     "and proof of address"
+    ],
+    "detail": "Start comparing right after the arras contract"
+   }
+  ],
+  "layout": "flow",
+  "photo": "arch_terrace.jpg"
+ },
+ {
+  "slug": "healthcare_access_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Healthcare in Spain for Expats",
+  "eyebrow": "LIVING · HEALTHCARE ACCESS",
+  "headline": [
+   "Public healthcare has",
+   "four ways in"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "The routes",
+    "fact": [
+     "Work, the S1 form, or",
+     "being a dependent"
+    ],
+    "detail": "Spouses and children count as dependents"
+   },
+   {
+    "icon": "calendar",
+    "label": "No job?",
+    "fact": [
+     "Resident over a year?",
+     "A pay-in scheme exists"
+    ],
+    "detail": "Five years unlocks full access via residency"
+   },
+   {
+    "icon": "percent",
+    "label": "Costs",
+    "fact": [
+     "The state pays 40-60%",
+     "of prescription costs"
+    ],
+    "detail": "Retirees pay just 10%; dental only if emergency"
+   }
+  ],
+  "layout": "hero",
+  "photo": "couple_beach.jpg"
+ },
+ {
+  "slug": "consorcio_insurance_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "The Importance of Earthquake and Flood Insurance in Spain",
+  "eyebrow": "INSURANCE · EXTRAORDINARY RISK",
+  "headline": [
+   "Flood cover in Spain",
+   "is already in place"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "The scheme",
+    "fact": [
+     "A surcharge on every",
+     "policy funds state cover"
+    ],
+    "detail": "Mandatory extension for extraordinary risks"
+   },
+   {
+    "icon": "document",
+    "label": "Covered",
+    "fact": [
+     "Floods, quakes, tsunamis,",
+     "winds over 120 km/h"
+    ],
+    "detail": "Slower winds and landslides fall to your insurer"
+   },
+   {
+    "icon": "key",
+    "label": "Claims",
+    "fact": [
+     "Automatic cover, no",
+     "disaster declaration"
+    ],
+    "detail": "No upper limit; floods are 70% of payouts"
+   }
+  ],
+  "layout": "rows",
+  "photo": "poolside.jpg"
+ },
+ {
+  "slug": "uk_move_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Guide to Moving from The UK to Spain",
+  "eyebrow": "MOVING · UK TO SPAIN",
+  "headline": [
+   "The UK to Spain move",
+   "runs on paperwork"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Before you go",
+    "fact": [
+     "Pensioners: request the",
+     "S1 form while still in UK"
+    ],
+    "detail": "Spain then covers costs for registered residents"
+   },
+   {
+    "icon": "key",
+    "label": "Two numbers",
+    "fact": [
+     "The NIE is a number;",
+     "the TIE is the ID card"
+    ],
+    "detail": "The card shows your NIE, name and address"
+   },
+   {
+    "icon": "house",
+    "label": "Belongings",
+    "fact": [
+     "Furniture in Spain often",
+     "beats the shipping cost"
+    ],
+    "detail": "Use an accredited UK to Europe remover if you ship"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "contract_glossary_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Spanish Property Contracts: A Guide to Legal Terms",
+  "eyebrow": "BUYING · CONTRACT SEQUENCE",
+  "headline": [
+   "Five contracts, in order",
+   "of a Spanish purchase"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Offer stage",
+    "fact": [
+     "About €2,000 reserves",
+     "the bid, back if refused"
+    ],
+    "detail": "Or credited to agency fees of 3 to 5%"
+   },
+   {
+    "icon": "key",
+    "label": "No mortgage?",
+    "fact": [
+     "Skip the FEIN, sign a",
+     "Contrato de Compraventa"
+    ],
+    "detail": "Drawn up by a lawyer or often the agency"
+   },
+   {
+    "icon": "calendar",
+    "label": "Completion",
+    "fact": [
+     "Arras to completion is",
+     "usually 2 to 3 months"
+    ],
+    "detail": "Set enough time for documents and mortgage"
+   }
+  ],
+  "layout": "photo",
+  "photo": "coast_bay.jpg"
+ },
+ {
+  "slug": "escritura_notary_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Spanish Property Contracts: A Guide to Legal Terms",
+  "eyebrow": "BUYING · THE NOTARY DEED",
+  "headline": [
+   "What the notary",
+   "does and does not do"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Read aloud",
+    "fact": [
+     "The deed is read out to",
+     "both parties in full"
+    ],
+    "detail": "A translator may be required by the notary"
+   },
+   {
+    "icon": "house",
+    "label": "Impartial",
+    "fact": [
+     "The notary advises both",
+     "sides, not just you"
+    ],
+    "detail": "Bring your own lawyer to defend your side"
+   },
+   {
+    "icon": "key",
+    "label": "After signing",
+    "fact": [
+     "The deed alone does not",
+     "register ownership"
+    ],
+    "detail": "Registration at the Land Registry comes next"
+   }
+  ],
+  "layout": "flow",
+  "photo": "golden_coast.jpg"
+ },
+ {
+  "slug": "arras_contract_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Spanish Property Contracts: A Guide to Legal Terms",
+  "eyebrow": "BUYING · ARRAS CONTRACT",
+  "headline": [
+   "The arras contract:",
+   "what must be inside"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Specifics",
+    "fact": [
+     "Furniture, repairs and",
+     "appliances go in writing"
+    ],
+    "detail": "Not written in the arras means not agreed"
+   },
+   {
+    "icon": "calendar",
+    "label": "Review time",
+    "fact": [
+     "The draft arrives days",
+     "before signing day"
+    ],
+    "detail": "Use that window to request amendments"
+   },
+   {
+    "icon": "euro",
+    "label": "The 10%",
+    "fact": [
+     "Safer to a safeguarded",
+     "account than the seller"
+    ],
+    "detail": "Direct transfer to owners is common but risky"
+   }
+  ],
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg"
+ },
+ {
+  "slug": "land_registry_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Spanish Land Registry: Essential Insights For Property Buyers",
+  "eyebrow": "BUYING · LAND REGISTRY",
+  "headline": [
+   "The land registry:",
+   "who sees what"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Access",
+    "fact": [
+     "Anyone with legitimate",
+     "interest can look"
+    ],
+    "detail": "Buyers, lawyers, heirs and administrators"
+   },
+   {
+    "icon": "house",
+    "label": "Which office",
+    "fact": [
+     "Valencia has 18 offices,",
+     "Alicante has 8"
+    ],
+    "detail": "Line one of the Nota Simple names yours"
+   },
+   {
+    "icon": "key",
+    "label": "Register it",
+    "fact": [
+     "Ownership is recognised",
+     "only once registered"
+    ],
+    "detail": "A separate step after signing at the notary"
+   }
+  ],
+  "layout": "rows",
+  "photo": "sunset_village.jpg"
+ },
+ {
+  "slug": "bank_guarantee_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Bank Guarantees In Spain For New-Build Properties: Safeguarding Deposits For Property Buyers",
+  "eyebrow": "NEW BUILDS · BANK GUARANTEES",
+  "headline": [
+   "Off plan? Demand the",
+   "bank guarantee"
+  ],
+  "rows": [
+   {
+    "icon": "percent",
+    "label": "Exposure",
+    "fact": [
+     "Instalments can reach",
+     "80% before the deed"
+    ],
+    "detail": "Paid while the home is still being built"
+   },
+   {
+    "icon": "euro",
+    "label": "The refund",
+    "fact": [
+     "All payments returned",
+     "plus interest on failure"
+    ],
+    "detail": "Law 57/68, the guarantee must never expire"
+   },
+   {
+    "icon": "key",
+    "label": "Ring fenced",
+    "fact": [
+     "A dedicated account,",
+     "construction use only"
+    ],
+    "detail": "Never a personal or pre existing account"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "rural_property_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Buying a rural property or farmland in Spain",
+  "eyebrow": "BUYING · RURAL PROPERTY",
+  "headline": [
+   "Rural land: the",
+   "checks that differ"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Two registries",
+    "fact": [
+     "Land and Cadastral data",
+     "often mismatch reality"
+    ],
+    "detail": "Size, description, boundaries carry risk"
+   },
+   {
+    "icon": "house",
+    "label": "Legal build?",
+    "fact": [
+     "A shed permit can mask",
+     "an unpermitted villa"
+    ],
+    "detail": "Pre 1956 builds legal, extensions often not"
+   },
+   {
+    "icon": "key",
+    "label": "Wastewater",
+    "fact": [
+     "Septic tanks, not mains,",
+     "are the rural norm"
+    ],
+    "detail": "Renovation can force a new tank, thousands"
+   }
+  ],
+  "layout": "photo",
+  "photo": "pool_dusk.jpg"
+ },
+ {
+  "slug": "leasehold_freehold_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Leasehold vs. Freehold Properties in Spain",
+  "eyebrow": "BUYING · FREEHOLD VS LEASEHOLD",
+  "headline": [
+   "Leasehold in Spain:",
+   "rare, easy to miss"
+  ],
+  "rows": [
+   {
+    "icon": "key",
+    "label": "Spot it",
+    "fact": [
+     "Derecho de uso, usufructo,",
+     "concesion administrativa"
+    ],
+    "detail": "Contract terms that mean time limited use"
+   },
+   {
+    "icon": "calendar",
+    "label": "The clock",
+    "fact": [
+     "Terms run 30 to 99 yrs,",
+     "then rights revert"
+    ],
+    "detail": "Value can fall as the lease shortens"
+   },
+   {
+    "icon": "euro",
+    "label": "Financing",
+    "fact": [
+     "Banks want 60 to 75",
+     "years left to lend"
+    ],
+    "detail": "Smaller loans, stricter terms than freehold"
+   }
+  ],
+  "layout": "flow",
+  "photo": "marina.jpg"
+ },
+ {
+  "slug": "buying_cost_stages_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Cost of Buying Property in Spain: Everything Expats Need to Know",
+  "eyebrow": "BUYING · PAYMENT STAGES",
+  "headline": [
+   "One home, three",
+   "payment stages"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Stage 1",
+    "fact": [
+     "Reservation fee 1,000",
+     "to €6,000 holds it"
+    ],
+    "detail": "Refunded if the deal fails before the arras"
+   },
+   {
+    "icon": "percent",
+    "label": "Stage 2",
+    "fact": [
+     "10% at the arras,",
+     "reservation included"
+    ],
+    "detail": "The remaining 90% is paid at the notary"
+   },
+   {
+    "icon": "document",
+    "label": "The forgotten",
+    "fact": [
+     "Registry fee 500 to",
+     "€1,000, on the buyer"
+    ],
+    "detail": "Plus rubbish collection billed 1 to 4x yearly"
+   }
+  ],
+  "layout": "hero",
+  "photo": "cove_house.jpg"
+ },
+ {
+  "slug": "new_build_vs_resale_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Key Questions to Ask Before Buying Property in Spain as a Foreigner",
+  "eyebrow": "BUYING · NEW BUILD VS RESALE",
+  "headline": [
+   "New build or resale:",
+   "what to ask first"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "Hidden flaws",
+    "fact": [
+     "Illegal renovations",
+     "become yours at signing"
+    ],
+    "detail": "Expensive to resolve once in your name"
+   },
+   {
+    "icon": "document",
+    "label": "Seller intel",
+    "fact": [
+     "Time on market and the",
+     "reason for selling"
+    ],
+    "detail": "Ask about debts, past works, the neighbours"
+   },
+   {
+    "icon": "euro",
+    "label": "IBI varies",
+    "fact": [
+     "Annual IBI depends on",
+     "region and build type"
+    ],
+    "detail": "Based on cadastral value, confirm in advance"
+   }
+  ],
+  "layout": "rows",
+  "photo": "arch_terrace.jpg"
+ },
+ {
+  "slug": "property_search_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "How to Start a Property Search in Spain",
+  "eyebrow": "BUYING · SEARCH PREPARATION",
+  "headline": [
+   "Line these up before",
+   "your first viewing"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "NIE first",
+    "fact": [
+     "No NIE, no offer, and",
+     "queues can be long"
+    ],
+    "detail": "Police station route issues it same day"
+   },
+   {
+    "icon": "euro",
+    "label": "Budget +10%",
+    "fact": [
+     "Allow 10% extra for",
+     "tax, notary, registry"
+    ],
+    "detail": "Costa Blanca purchase tax alone is 10%"
+   },
+   {
+    "icon": "key",
+    "label": "Your team",
+    "fact": [
+     "Agents hold non public",
+     "listings, ask for them"
+    ],
+    "detail": "A lawyer can act for you via power of attorney"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "brexit_buying_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Buying Property in Spain – The Impact of Brexit on Brits",
+  "eyebrow": "BUYING · BREXIT IMPACT",
+  "headline": [
+   "Brexit and buying:",
+   "what really changed"
+  ],
+  "rows": [
+   {
+    "icon": "euro",
+    "label": "Unchanged",
+    "fact": [
+     "Purchase costs are the",
+     "same as for EU buyers"
+    ],
+    "detail": "Price, tax, notary fees ignore nationality"
+   },
+   {
+    "icon": "percent",
+    "label": "Rental tax",
+    "fact": [
+     "19 to 24% IRNR, and",
+     "no expense deductions"
+    ],
+    "detail": "Spanish tax can be offset against UK tax"
+   },
+   {
+    "icon": "calendar",
+    "label": "Stays",
+    "fact": [
+     "90 days in any 180",
+     "without a permit"
+    ],
+    "detail": "Longer needs a residence permit application"
+   }
+  ],
+  "layout": "photo",
+  "photo": "couple_beach.jpg"
+ },
+ {
+  "slug": "market_seasons_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Understanding Property Market Seasons in Spain: When to Buy or Sell",
+  "eyebrow": "MARKET · WHEN TO BUY OR SELL",
+  "headline": [
+   "The Spanish market",
+   "runs on seasons"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "Sell: spring",
+    "fact": [
+     "Buyers push to exchange",
+     "before summer starts"
+    ],
+    "detail": "Autumn adds post holiday and school deadlines"
+   },
+   {
+    "icon": "euro",
+    "label": "Buy: winter",
+    "fact": [
+     "Sellers negotiate and",
+     "prices can dip"
+    ],
+    "detail": "Few buy big with Christmas around the corner"
+   },
+   {
+    "icon": "house",
+    "label": "August trap",
+    "fact": [
+     "Agencies, lawyers, banks",
+     "close much of the month"
+    ],
+    "detail": "Fallas and the Seville feria spike demand"
+   }
+  ],
+  "layout": "flow",
+  "photo": "poolside.jpg"
+ },
+ {
+  "slug": "tourist_license_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Legally Renting Out Your Property in Spain – Does Yours Fit The Bill?",
+  "eyebrow": "RENTALS · TOURIST LICENSE",
+  "headline": [
+   "Renting to tourists",
+   "needs a licence"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Two types",
+    "fact": [
+     "Individual for owners",
+     "Collective for firms"
+    ],
+    "detail": "Any stay under 3 months counts as short term"
+   },
+   {
+    "icon": "calendar",
+    "label": "Approval",
+    "fact": [
+     "Takes 1 to 6 months",
+     "after you submit"
+    ],
+    "detail": "Habitability and energy certificates come first"
+   },
+   {
+    "icon": "euro",
+    "label": "Fines",
+    "fact": [
+     "€4,000 to 60,000",
+     "Ibiza: up to 111,000"
+    ],
+    "detail": "Catalunya runs teams hunting illegal rentals"
+   }
+  ],
+  "layout": "hero",
+  "photo": "coast_bay.jpg"
+ },
+ {
+  "slug": "community_rental_ban_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Spanish supreme court upholds ban on tourist apartments by residents’ associations",
+  "eyebrow": "LEGAL · TOURIST RENTAL BAN",
+  "headline": [
+   "Your neighbours can",
+   "ban tourist lets"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "The ruling",
+    "fact": [
+     "Limit includes ban,",
+     "Supreme Court says"
+    ],
+    "detail": "Article 17.12 wording confused judges since 2019"
+   },
+   {
+    "icon": "percent",
+    "label": "Vote needed",
+    "fact": [
+     "3/5 of owners is",
+     "enough, 60%"
+    ],
+    "detail": "Marbella test case passed by 48 votes to 3"
+   },
+   {
+    "icon": "key",
+    "label": "The limits",
+    "fact": [
+     "Not retroactive and",
+     "must be justified"
+    ],
+    "detail": "Problems must be ongoing, per the LPH rules"
+   }
+  ],
+  "layout": "rows",
+  "photo": "golden_coast.jpg"
+ },
+ {
+  "slug": "noneu_tax_proposal_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Spain’s Proposal for 100% Tax on Property Purchases by Non-EU Buyers – How Will You Be Affected?",
+  "eyebrow": "TAX · NON-EU BUYER PROPOSAL",
+  "headline": [
+   "The 100% tax:",
+   "who it would hit"
+  ],
+  "rows": [
+   {
+    "icon": "percent",
+    "label": "Who pays",
+    "fact": [
+     "Non-EU non-residents,",
+     "under 183 days a year"
+    ],
+    "detail": "Includes UK and US buyers of second homes"
+   },
+   {
+    "icon": "euro",
+    "label": "The scale",
+    "fact": [
+     "Non-EU buyers: 5% of",
+     "sales, 27,000 in 2023"
+    ],
+    "detail": "All foreigners: 15%, or 87,000 of 583,000 sales"
+   },
+   {
+    "icon": "calendar",
+    "label": "Status",
+    "fact": [
+     "A proposal, no law",
+     "or start date yet"
+    ],
+    "detail": "One of 12 measures; Golden Visa ends April 2025"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "hoa_how_it_works_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Homeowners’ Association Rules: What Foreigners Need to Know in Spain",
+  "eyebrow": "COMMUNITY · HOW THE HOA WORKS",
+  "headline": [
+   "Inside the Spanish",
+   "owners' community"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "Who runs it",
+    "fact": [
+     "President, assembly",
+     "and an administrator"
+    ],
+    "detail": "President is an owner; many buildings rotate"
+   },
+   {
+    "icon": "euro",
+    "label": "Fees + buffer",
+    "fact": [
+     "Sized to your property,",
+     "plus a surplus"
+    ],
+    "detail": "Surplus funds facade work every decade or so"
+   },
+   {
+    "icon": "key",
+    "label": "The lift rule",
+    "fact": [
+     "Vote no and skip the",
+     "cost, but get no key"
+    ],
+    "detail": "Top floors can pay more; they gain most value"
+   }
+  ],
+  "layout": "photo",
+  "photo": "terrace_sunset.jpg"
+ },
+ {
+  "slug": "hoa_disagree_vote_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Homeowners’ Association Rules: What Foreigners Need to Know in Spain",
+  "eyebrow": "COMMUNITY · VOTES AND DEBTS",
+  "headline": [
+   "Outvoted by your",
+   "building? Read this"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Vote weight",
+    "fact": [
+     "Own several flats,",
+     "hold a bigger share"
+    ],
+    "detail": "Majority usually wins; proxy votes are allowed"
+   },
+   {
+    "icon": "key",
+    "label": "Overturning",
+    "fact": [
+     "Votes fall if illegal",
+     "or harm the community"
+    ],
+    "detail": "The only two grounds to revoke a decision"
+   },
+   {
+    "icon": "euro",
+    "label": "Non-payment",
+    "fact": [
+     "Legal action, seizure,",
+     "sale at public auction"
+    ],
+    "detail": "Check the Nota Simple before signing the Arras"
+   }
+  ],
+  "layout": "flow",
+  "photo": "sunset_village.jpg"
+ },
+ {
+  "slug": "rental_roi_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "How to Maximise ROI When Renting to Seasonal Tourists in Spain",
+  "eyebrow": "RENTALS · SEASONAL ROI",
+  "headline": [
+   "What actually lifts",
+   "holiday rental ROI"
+  ],
+  "rows": [
+   {
+    "icon": "calendar",
+    "label": "Season logic",
+    "fact": [
+     "Coasts peak in summer,",
+     "cities in cool months"
+    ],
+    "detail": "Digital nomads often book the low season"
+   },
+   {
+    "icon": "key",
+    "label": "Guest fit",
+    "fact": [
+     "Desks for nomads, kid",
+     "kit for families"
+    ],
+    "detail": "School holidays set family-market high season"
+   },
+   {
+    "icon": "percent",
+    "label": "Pricing",
+    "fact": [
+     "Dynamic rates plus",
+     "long-stay discounts"
+    ],
+    "detail": "Early offers work as repeat-booking incentives"
+   }
+  ],
+  "layout": "hero",
+  "photo": "pool_dusk.jpg"
+ },
+ {
+  "slug": "pest_prevention_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Preventing Pest Infestations in Spanish Holiday Homes",
+  "eyebrow": "MAINTENANCE · PEST PREVENTION",
+  "headline": [
+   "Empty home, open",
+   "invitation to pests"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "Before leaving",
+    "fact": [
+     "Clear all dry food:",
+     "flour, pasta, grains"
+    ],
+    "detail": "Pantry moths and roaches love an empty house"
+   },
+   {
+    "icon": "key",
+    "label": "Entry points",
+    "fact": [
+     "Roaches can climb in",
+     "through your pipes"
+    ],
+    "detail": "Plug drains overnight; boiling water helps too"
+   },
+   {
+    "icon": "document",
+    "label": "Warning signs",
+    "fact": [
+     "Hissing in cupboards,",
+     "scuttling in the roof"
+    ],
+    "detail": "Also droppings, gnaw marks and odd smells"
+   }
+  ],
+  "layout": "rows",
+  "photo": "marina.jpg"
+ },
+ {
+  "slug": "maintenance_calendar_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Preventative Maintenance Tips to Avoid Major Repairs in Spanish Homes",
+  "eyebrow": "MAINTENANCE · SEASONAL UPKEEP",
+  "headline": [
+   "The Spanish climate",
+   "bills you later"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "Sun and salt",
+    "fact": [
+     "UV makes terracotta",
+     "brittle; salt eats metal"
+    ],
+    "detail": "Coastal humidity brings mould and wood rot"
+   },
+   {
+    "icon": "calendar",
+    "label": "By season",
+    "fact": [
+     "Spring: gutters, AC.",
+     "Autumn: roof, boiler"
+    ],
+    "detail": "Summer is for outdoor pipes and irrigation"
+   },
+   {
+    "icon": "key",
+    "label": "Hard water",
+    "fact": [
+     "Valencia and the",
+     "costas need softeners"
+    ],
+    "detail": "Limescale quietly kills appliances and pipes"
+   }
+  ],
+  "layout": "path"
+ },
+ {
+  "slug": "renovation_permits_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Property Renovation in Spain: Legal and Banking Considerations",
+  "eyebrow": "RENOVATION · PERMITS + PREP",
+  "headline": [
+   "Renovating in Spain",
+   "starts at town hall"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Permits",
+    "fact": [
+     "Town hall issues one",
+     "for each aspect"
+    ],
+    "detail": "Some builders manage this, often for a fee"
+   },
+   {
+    "icon": "euro",
+    "label": "Budget",
+    "fact": [
+     "It will cost more",
+     "than you planned"
+    ],
+    "detail": "Old pipes, price rises; keep a reserve aside"
+   },
+   {
+    "icon": "key",
+    "label": "Ask builders",
+    "fact": [
+     "IVA included? Fixed",
+     "price? Insured?"
+    ],
+    "detail": "Also: who does the work, who checks materials"
+   }
+  ],
+  "layout": "photo",
+  "photo": "cove_house.jpg"
+ },
+ {
+  "slug": "extension_deeds_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Everything You Need to Know About Extending Your Spanish Property (And Adding It to The Deeds)",
+  "eyebrow": "RENOVATION · EXTENSIONS + DEEDS",
+  "headline": [
+   "Build the pool, then",
+   "put it on the deeds"
+  ],
+  "rows": [
+   {
+    "icon": "document",
+    "label": "Two permits",
+    "fact": [
+     "Obra mayor: structure",
+     "Obra menor: finishes"
+    ],
+    "detail": "Even retiling or repainting needs the minor one"
+   },
+   {
+    "icon": "euro",
+    "label": "The taxes",
+    "fact": [
+     "ICIO runs 2-5% of",
+     "construction cost"
+    ],
+    "detail": "Plus a smaller urban development licence tax"
+   },
+   {
+    "icon": "calendar",
+    "label": "No licence?",
+    "fact": [
+     "Antiquity route: wait",
+     "4 or 15 years by date"
+    ],
+    "detail": "Works after Aug 2014 need 15 years to legalise"
+   }
+  ],
+  "layout": "flow",
+  "photo": "arch_terrace.jpg"
+ },
+ {
+  "slug": "invest_locations_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "The 10 Best Places to Invest in Property in Spain",
+  "eyebrow": "INVESTING · WHERE TO BUY",
+  "headline": [
+   "Where rental demand",
+   "never sleeps"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "Madrid",
+    "fact": [
+     "Students and workers",
+     "rent all year round"
+    ],
+    "detail": "Consistency coastal markets cannot guarantee"
+   },
+   {
+    "icon": "percent",
+    "label": "Barcelona",
+    "fact": [
+     "Tourist lets curbed;",
+     "think long-term rents"
+    ],
+    "detail": "New tourist licences are no longer issued"
+   },
+   {
+    "icon": "key",
+    "label": "Value picks",
+    "fact": [
+     "Valencia + Alicante:",
+     "more space per euro"
+    ],
+    "detail": "Costa Brava suits mid or long-term rentals"
+   }
+  ],
+  "layout": "hero",
+  "photo": "couple_beach.jpg"
+ },
+ {
+  "slug": "costa_blanca_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "The Top 8 Places to Buy Property on The Costa Blanca",
+  "eyebrow": "BUYING · COSTA BLANCA TOWNS",
+  "headline": [
+   "Costa Blanca: pick",
+   "your town wisely"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "The stretch",
+    "fact": [
+     "200km, Denia south to",
+     "Pilar de la Horadada"
+    ],
+    "detail": "330 days of sun; Alicante sits mid-coast"
+   },
+   {
+    "icon": "key",
+    "label": "Character",
+    "fact": [
+     "Javea has three faces:",
+     "port, beach, old town"
+    ],
+    "detail": "Denia runs daily ferries to the Balearics"
+   },
+   {
+    "icon": "euro",
+    "label": "Quieter buys",
+    "fact": [
+     "Xalo: wine country 30",
+     "mins from the beach"
+    ],
+    "detail": "Torrevieja in the south draws retirees"
+   }
+  ],
+  "layout": "rows",
+  "photo": "poolside.jpg"
+ },
+ {
+  "slug": "retire_city_town_en",
+  "language": "en",
+  "format": "simple3",
+  "source": "Retirement in Spain: Urban Living vs. Small Towns",
+  "eyebrow": "RETIREMENT · CITY VS TOWN",
+  "headline": [
+   "Retire to a city or",
+   "a Spanish village?"
+  ],
+  "rows": [
+   {
+    "icon": "house",
+    "label": "City case",
+    "fact": [
+     "Airports, hospitals",
+     "and year-round life"
+    ],
+    "detail": "Cost: pricier homes, weaker community feel"
+   },
+   {
+    "icon": "key",
+    "label": "Town case",
+    "fact": [
+     "Bigger home, garden,",
+     "neighbours you know"
+    ],
+    "detail": "But deeper medical care means travelling"
+   },
+   {
+    "icon": "calendar",
+    "label": "Seasonality",
+    "fact": [
+     "Coastal towns can",
+     "empty out in winter"
+    ],
+    "detail": "Shops and restaurants close in low season"
+   }
+  ],
+  "layout": "path"
+ }
+]

@@ -26,15 +26,16 @@ def upload(local, remote):
 
 def all_packages():
     pkgs = [simple3.load(p) for p in sorted(glob.glob("studio/content/*.json"))]
-    batch = "studio/content_batch.json"
-    if os.path.exists(batch):
-        pkgs += simple3.load(batch)
-    caps_path = "studio/captions.json"
-    if os.path.exists(caps_path):
-        caps = simple3.load(caps_path)
-        for c in pkgs:
-            if c["slug"] in caps:
-                c["caption"] = caps[c["slug"]]
+    for batch in ("studio/content_batch.json", "studio/content_batch2.json"):
+        if os.path.exists(batch):
+            pkgs += simple3.load(batch)
+    caps = {}
+    for caps_path in ("studio/captions.json", "studio/captions2.json"):
+        if os.path.exists(caps_path):
+            caps.update(simple3.load(caps_path))
+    for c in pkgs:
+        if c["slug"] in caps:
+            c["caption"] = caps[c["slug"]]
     return pkgs
 
 
