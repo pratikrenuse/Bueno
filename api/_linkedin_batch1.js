@@ -1,0 +1,273 @@
+// Batches 1+2: 30 English master LinkedIn posts. Generated from linkedin_posts_batch1.md. Do not hand-edit; regenerate instead.
+export default [
+ {
+  "slug": "arras_contract",
+  "batch": 1,
+  "day": 1,
+  "language": "en",
+  "member": "",
+  "title": "The arras contract decides what you bought",
+  "post_text": "You're about to sign for a house in Spain. Quick question: does your contract say whether the electricity will be switched on when you get the keys?\n\nMost buyers check the price in the arras contract and skim the rest. But the arras decides what you actually bought.\n\nBeyond price and description, it should fix:\n\nThe completion date.\nThe penalties if either side pulls out.\nWhich furniture the sellers leave.\nWhich repairs they agreed to pay for.\nWhether appliances are included.\nWhether water and electricity will be on.\n\nIf it's not written in the arras, it was never agreed. Verbal promises evaporate at the notary's table.\n\nHere's the part almost nobody uses: the draft arrives a couple of days before the agreed signing date. That window exists precisely so you or your lawyer can request amendments. Read it the day it arrives, not at the table.\n\nAnd your 10 percent deposit? It often goes directly to the owners. That's common, but a safeguarded account at a financial institution is the safer route. Ask for it.\n\nBuying new build? Add completion date clauses too.\n\nGeneral information, not legal advice.\n\n#SpainProperty #BuyingInSpain #MoveToSpain"
+ },
+ {
+  "slug": "irnr_who_pays",
+  "batch": 1,
+  "day": 2,
+  "language": "en",
+  "member": "",
+  "title": "Spain taxes your empty holiday home",
+  "post_text": "Your Spanish holiday home earned you nothing this year. Spain will still tax you for it. And plenty of owners find out years late, with penalties attached.\n\nFirst, check which side of the line you're on. You're a Spanish tax resident if any of these is true:\n\nYou spent more than 183 days in Spain this calendar year (continuous or not).\nYour spouse and underage children live there.\nMost of your income arises in Spain.\n\nNone of those? Then you're a non-resident, and IRNR applies. Just owning the property triggers it. Spain imputes income at 1.1% of the cadastral value, taxed at 19% if you live in the EU or EEA, 24% for everyone else.\n\nReal numbers: on a €300,000 property, that's around €627 a year at the 19% rate. Not ruinous. But ignore it and things escalate: fines, closed bank accounts, and in extreme cases property confiscation.\n\nThe filing is Modelo 210, due by 31 December.\n\nSo two things this week: count your days in Spain last year, and check whether Modelo 210 has actually been filed. You'd be surprised how many owners assume someone else did it.\n\nGeneral information, not tax advice.\n\n#SpanishTax #Modelo210 #HolidayHome"
+ },
+ {
+  "slug": "squatter_eviction",
+  "batch": 1,
+  "day": 3,
+  "language": "en",
+  "member": "",
+  "title": "The 48-hour squatter rule",
+  "post_text": "48 hours. If your Spanish home is ever occupied, that number decides whether this is a bad week or a two-year legal battle.\n\nInside 48 hours of someone entering, police can remove them without a court date, as long as you can prove the property is yours.\n\nPast that window, it becomes a court case. You hire a lawyer, file for eviction, and prove ownership with deeds, photos of you in the home, flight tickets, even neighbour statements. The squatters get to argue their own claim or show they're paying to stay. Only when a judge sets a date can police remove them by force. Depending on the region, that can take 18 months to 2 years, though many cases resolve much faster.\n\nNow the part that feels wrong but matters most: do not change the locks. Do not block re-entry. Do not confront them. Spanish law can turn all of that against you, the owner.\n\nWhat actually protects you is speed. If you or a neighbour spot any sign of entry, report it to the police the same day. For absentee owners, that means having someone who checks the property and knows to call you immediately.\n\nGeneral information, not legal advice.\n\n#SpainProperty #SpanishHomeOwners #HolidayHome"
+ },
+ {
+  "slug": "cash_rules",
+  "batch": 1,
+  "day": 4,
+  "language": "en",
+  "member": "",
+  "title": "Cash in Spain now needs paperwork",
+  "post_text": "Try withdrawing €3,000 in cash from your Spanish bank tomorrow. You can't. Not without telling the tax office today.\n\nSince 2025, withdrawals above €3,000, or any amount involving €500 notes, must be reported to the tax agency 24 hours in advance. You notify via its website with proof of ID, sometimes proof of where the funds came from, and you get a certificate to present at the bank. Planning to move €100,000 or more? The notice period becomes 72 hours.\n\nPaying in cash has its own ceilings:\n\n€1,000 for any transaction involving a business, or between private individuals.\n€10,000 if you're a non-resident not taxed in Spain.\n\nBreak the caps and fines run from 50 to 150 percent of the amount involved. One softener: self-reporting within three months may earn you an exemption.\n\nCrossing the border? Anything over €10,000 in cash must be declared.\n\nIf you're buying property, furnishing one, or paying builders, plan on transfers, not envelopes. And keep receipts for large transactions for at least five years, because questions can come long after the money moved.\n\nGeneral information, not tax advice.\n\n#BankingInSpain #SpanishTax #ExpatSpain"
+ },
+ {
+  "slug": "tourist_license",
+  "batch": 1,
+  "day": 5,
+  "language": "en",
+  "member": "",
+  "title": "Tourist rentals need a licence",
+  "post_text": "\"We'll rent it to tourists when we're not there. It'll pay for itself.\" I hear this a lot. Sometimes it's true. But there's a licence between you and that plan.\n\nIn Spain, any rental contract under three months makes you a tourist landlord. That requires a tourist licence: an individual one for private owners, a collective one for companies managing several properties.\n\nThe process: bring the property up to hygiene and safety standards, get habitability and energy efficiency certificates, register with the local tourism agency where required, then file at your tourist office. Approval takes one to six months depending on region and demand.\n\nSkipping it is expensive. Fines typically run €4,000 to €60,000, rising sharply for repeat infractions, and reaching €111,000 in Ibiza.\n\nAnd the map is tightening. Catalunya has dedicated teams tracking illegal lets. Barcelona bans short-term private room rentals. Valencia mostly issues new licences to ground-floor properties only.\n\nSo if rental income is part of your purchase maths, check licence availability in that exact area before you buy, not after. Two streets apart can be two different answers.\n\nGeneral information, not legal advice.\n\n#HolidayRental #SpainProperty #HolidayHome"
+ },
+ {
+  "slug": "nota_simple",
+  "batch": 1,
+  "day": 6,
+  "language": "en",
+  "member": "",
+  "title": "The €10 document that saves purchases",
+  "post_text": "The cheapest document in a Spanish property purchase is about €10. Skipping it has cost buyers tens of thousands.\n\nIt's called a Nota Simple, from the Land Registry. One page showing the registered owner, mortgages, embargoes and unpaid debts, plus boundaries, square metres and land classification.\n\nWhy does that page matter so much? Because in Spain, debts travel with the home, not the seller. Buy a property with an embargo on it and congratulations, it's your embargo now. The Nota Simple tells you what you'd really be buying. It also lists the cadastral value, which a bank may look at when sizing your mortgage.\n\nAnyone with a legitimate interest can order one: around €10 online, a little more in person, and the online copy usually arrives the same day. You'll need the property details or its registry identifier, which your agent can supply.\n\nThe habit that protects you: order one before signing the arras contract, then order a fresh copy right before completion. Things can change between viewing and keys, and you want to know before the notary does.\n\nGeneral information, not legal advice.\n\n#SpainProperty #BuyingInSpain #NotaSimple"
+ },
+ {
+  "slug": "wealth_tax",
+  "batch": 1,
+  "day": 7,
+  "language": "en",
+  "member": "",
+  "title": "The €700,000 wealth tax line",
+  "post_text": "Spain has a second tax most property owners never meet. But if your Spanish assets are creeping toward €700,000, keep reading.\n\nWealth tax applies to residents and non-residents alike. Below €700,000, nothing. Above it, the tax bites incrementally, only on the value over the line, at progressive rates from 0.2% to 2.5%.\n\nHere's the twist: where you own matters as much as what you own. The tax is shaped by local government, and Madrid applies a 100% discount. Same assets, zero bill. Residents also get an extra €300,000 allowance on a main home they live in.\n\nWho actually gets caught? Two profiles. Non-residents with one high-value property. And owners with several Spanish assets, the apartment, the garage, the plot, that quietly add up past the threshold without anyone noticing.\n\nThe discipline is one hour a year: total your Spanish assets. If you're anywhere near the line, get advice for your specific region, because in this tax, geography changes everything.\n\nGeneral information, not tax advice.\n\n#SpanishTax #WealthTax #SpainProperty"
+ },
+ {
+  "slug": "community_rental_ban",
+  "batch": 1,
+  "day": 8,
+  "language": "en",
+  "member": "",
+  "title": "Neighbours can ban your tourist let",
+  "post_text": "Your neighbours can now vote your tourist rental out of existence. Legally. The Supreme Court has settled how.\n\nSince 2019, Article 17.12 of the Horizontal Property Law has let owner communities condition and limit tourist lets in their building. But judges across Spain disagreed on whether \"limiting\" included banning outright, and the law never defined a voting threshold.\n\nBoth questions now have answers: prohibition counts as a form of limitation, and a three-fifths majority, 60 percent of owners, is enough. No unanimity required.\n\nThe case that forced it came from Marbella. Owners voted 48 to 3 to ban tourist flats after complaints about noise, damage and misuse of common spaces. Two companies owning six apartments fought it and lost.\n\nIf you let short term in a community building, two safeguards still protect you: bans are not retroactive, and they must be properly justified by problems still affecting residents.\n\nBut don't rely on safeguards you haven't checked. Read your community statutes this month, and go to the next owners' assembly. That's where your rental's future gets decided, with or without you in the room.\n\nGeneral information, not legal advice.\n\n#HolidayRental #SpainProperty #SpanishHomeOwners"
+ },
+ {
+  "slug": "currency_transfer",
+  "batch": 1,
+  "day": 9,
+  "language": "en",
+  "member": "",
+  "title": "Moving money to Spain is timing",
+  "post_text": "In a Spanish property purchase, the deadline is fixed and the exchange rate is not. Plenty of buyers discover this tension at the worst possible moment.\n\nOnce you sign the arras contract, completion funds must land in the right account on time. Arrive late and your 10 percent deposit can be lost. Read that again: the transfer plan is part of the purchase, not an afterthought for the week before completion.\n\nExchange rates move throughout the day. Rather than guessing, set rate alerts and transfer when the level works in your favour. On a purchase-sized sum, a small difference in rate is real money.\n\nBefore you send anything through any provider, check three things:\n\nClient funds held in segregated accounts, separate from the company's own money.\nFees stated upfront, not folded quietly into the rate.\nRegular payments, like a pension or a mortgage abroad, can be automated and tracked.\n\nThe right moment to plan your transfer timeline is the day you sign the arras. Everything after that is a countdown.\n\nGeneral information, not financial advice.\n\n#BuyingInSpain #SpainProperty #BankingInSpain"
+ },
+ {
+  "slug": "inheritance_foreign_law",
+  "batch": 1,
+  "day": 10,
+  "language": "en",
+  "member": "",
+  "title": "One will clause opts out of Spanish law",
+  "post_text": "One clause in your will decides whether Spain gets to say who inherits your Spanish home. Most foreign owners have never checked if it's there.\n\nUnder the European Inheritance Regulation of 2012, anyone who dies after 17 August 2015 can choose the inheritance law of their home country instead of the law of the country where they live.\n\nThe condition is strict: the choice must be stated clearly in a Spanish or international will. Live in Spain and stay silent, and Spanish law governs your entire estate, including forced heirship, the fixed shares reserved by law for your spouse and children, whatever your wishes were.\n\nNon-residents, this reaches you too. If you keep a holiday home in Spain, your will should state which country's law governs those Spanish assets. Otherwise the default can still catch them.\n\nThe fix costs an hour: reread your existing will this month. If it predates your Spanish property and names no governing law, amend it while the choice is still yours to make. After a certain point, it's your family's problem instead.\n\nGeneral information, not legal advice.\n\n#SpainProperty #ExpatSpain #InheritancePlanning"
+ },
+ {
+  "slug": "bank_guarantee",
+  "batch": 1,
+  "day": 11,
+  "language": "en",
+  "member": "",
+  "title": "Off plan? Demand the bank guarantee",
+  "post_text": "Buying off plan in Spain can mean handing over up to 80 percent of the price for a home that doesn't exist yet. One document protects that money. Some developers hope you won't ask for it.\n\nSince Law 57/68, any developer taking staged payments must do two things:\n\nOpen a specific bank account for buyer deposits. Not a personal account, not a previously held one. An account usable only for the construction of your property.\n\nProvide a bank guarantee that refunds every payment plus interest if the build is not started, or not finished, by the agreed completion date. And that guarantee must have no expiry date. It stays valid until the property is fully finished and safe to live in.\n\nHere's the thing: it costs you nothing. It costs the developer a lot. Which is exactly why some try to work around it, occasionally by dangling better conditions instead.\n\nSo make it your one non-negotiable. If a developer resists the guarantee, walk away, whatever the discount. A discount on a home that never gets built is not a discount.\n\nGeneral information, not legal advice.\n\n#SpainProperty #OffPlan #BuyingInSpain"
+ },
+ {
+  "slug": "noneu_tax_proposal",
+  "batch": 1,
+  "day": 12,
+  "language": "en",
+  "member": "",
+  "title": "The 100% tax: the real numbers",
+  "post_text": "\"Spain will charge non-EU buyers 100% tax.\" If that headline made you shelve your plans, here are the numbers behind it.\n\nYes, Spain has proposed a 100 percent tax on property purchases by non-EU buyers. It targets non-residents: anyone spending under 183 days a year in Spain, which includes UK and US buyers of second homes.\n\nThe context: it's one of twelve measures announced against a housing crisis in which prices have nearly doubled in a decade, and Madrid and Barcelona rents rose by as much as 33 percent in five years. It also landed alongside the Golden Visa closing on 3 April 2025.\n\nNow the scale nobody quotes. In 2023, foreigners bought 15 percent of Spanish properties: 87,000 of 583,000 sales. But non-EU non-residents? Just 27,000, around 5 percent, mostly coastal holiday homes rather than the city flats at the heart of the crisis.\n\nAnd the part that matters most: this remains a proposal under study. There is no final text.\n\nSo watch the legislation, by all means. But don't restructure your life around a headline.\n\nGeneral information, not legal advice.\n\n#SpainProperty #BuyingInSpain #MoveToSpain"
+ },
+ {
+  "slug": "rental_rule_changes",
+  "batch": 1,
+  "day": 13,
+  "language": "en",
+  "member": "",
+  "title": "New rental register rules for 2025",
+  "post_text": "Renting out your Spanish place short term? As of 2025, your listing needs its own registration number, and platforms are deleting the ones without it.\n\nEvery rental property now needs a number from a single national register, run through the Colegio de Registradores, and it must appear on the advert itself. Platforms are required to check, and they're removing listings that don't comply.\n\nTo register, you'll show proof of ownership and proof that you comply with local and regional rules. One catch worth knowing in advance: the code is only issued if your building allows tourist lets.\n\nThe number is valid for 12 months. Renewal means listing the leases from the past year and, for short lets, signing a declaración responsable explaining why they were short term.\n\nTwo things to do this week if you're a landlord:\n\nRead your community statutes, because a vote to ban tourist rentals binds you.\nSet a renewal reminder before your code lapses. A lapsed code plus platform checks equals a delisted property in high season.\n\nGeneral information, not legal advice.\n\n#HolidayRental #SpainProperty #SpanishHomeOwners"
+ },
+ {
+  "slug": "epc_certificates",
+  "batch": 1,
+  "day": 14,
+  "language": "en",
+  "member": "",
+  "title": "Fined for the advert itself: the EPC",
+  "post_text": "In Spain you can be fined for the property advert itself, before a single viewing happens.\n\nThe energy certificate (EPC) is required at the advertising stage, not just at the sale. Advertising without one typically draws fines of €300 to €600, rising to €1,000 to €6,000 for having no certificate at all or falsifying one.\n\nThe good news: getting one is easy. A certified technician inspects insulation, windows, heating, cooling and lighting, then issues a rating from A to G. Expect €100 to €300 and less than a week. It stays valid for ten years, and a decent rating can support your asking price and open access to green subsidies.\n\nBut here's the step that catches even professionals: the certificate must be registered with your regional authority. An unregistered certificate does not count. Technician issues it, nobody files it, and the owner thinks they're covered when they're not.\n\nSo confirm your technician registers it, and keep the reference with your property papers. Selling or letting soon? This is the first document to sort, because it's needed before the listing goes live.\n\nGeneral information, not legal advice.\n\n#SpainProperty #SellingInSpain #EPC"
+ },
+ {
+  "slug": "plusvalia",
+  "batch": 1,
+  "day": 15,
+  "language": "en",
+  "member": "",
+  "title": "Buying from a non-resident seller",
+  "post_text": "Buying from a non-resident seller in Spain? You just inherited two of their tax jobs. Most buyers have no idea until the notary mentions it.\n\nJob one: you withhold 3% of the purchase price and pay it to the tax office within a month. It's an advance on the seller's capital gains bill. If their final tax comes to less, they claim the difference back, but the withholding duty is yours.\n\nJob two: plusvalía, the municipal tax on the rise in urban land value. When the seller lives abroad, you file it, paid from money withheld from the seller, with 30 days for it to reach the council.\n\nHow much? It depends on local rates and how long the seller owned the home, up to a 20-year cap. And if the land value genuinely fell, there may be nothing to pay at all.\n\nNone of this needs to be stressful if you do one thing: agree in writing, before completion, who handles each payment and which sums are withheld from the seller. Ten minutes of clarity now, zero arguments later.\n\nGeneral information, not tax advice.\n\n#SpainProperty #SpanishTax #BuyingInSpain"
+ },
+ {
+  "slug": "buying_fees",
+  "batch": 2,
+  "day": 16,
+  "language": "en",
+  "member": "",
+  "title": "The real price is 12-14% higher",
+  "post_text": "The asking price is never the real price in Spain. Budget 12 to 14 percent on top, or the notary's office is where you find out.\n\nWhere it goes:\n\nOn resales, the biggest piece is transfer tax, and it varies by region. The same home can cost thousands more a few kilometres away. New builds skip it and pay 10% VAT plus stamp duty instead.\n\nThen the fixed layer: notary fees of roughly €1,000 on a €250,000 purchase, land registry fees of €400 to €700, and a lawyer at a few thousand euros, or a gestor at a few hundred.\n\nBorrowing adds its own: bank setup fees of up to 2% of the loan, and valuation reports of €250 to €600 that sometimes land on the buyer.\n\nAnd the part that catches people with money but no plan: all of it falls due around completion. Keep that money liquid, not invested.\n\nBefore you sign anything, ask for a full written cost breakdown. Worth saving for when you start browsing listings.\n\nGeneral information, not tax advice.\n\n#SpainProperty #BuyingInSpain #MoveToSpain"
+ },
+ {
+  "slug": "ibi_deep",
+  "batch": 2,
+  "day": 17,
+  "language": "en",
+  "member": "",
+  "title": "IBI: the tax that stays with the house",
+  "post_text": "IBI is the Spanish tax that stays with the house even when the owner changes. Which makes it an owner's chore and a buyer's trap at the same time.\n\nThe bill itself: your property's cadastral value, an official valuation from the Land Registry based on location, size, age and characteristics, usually below market value, multiplied by your municipality's rate. Across Spain that averages 0.3% to 1.1%. Santander, Zaragoza and Madrid sit low; parts of Catalunya and the Costa Blanca run higher.\n\nBills arrive between May and October. And many councils will not post abroad, which is exactly how absent owners miss them.\n\nIgnore it and the sequence is predictable: a reminder, then surcharges from around 5% rising to 20% or more, then debt collection. That means money seized from your Spanish account, charges placed against the property, and trouble when you try to sell.\n\nFor owners: set up a direct debit and request electronic notices from the town hall.\nFor buyers: unpaid IBI can stay attached to the property. Check before you purchase.\n\nGeneral information, not tax advice.\n\n#IBI #SpanishTax #SpainProperty"
+ },
+ {
+  "slug": "frozen_account",
+  "batch": 2,
+  "day": 18,
+  "language": "en",
+  "member": "",
+  "title": "Why Spanish banks freeze accounts",
+  "post_text": "A Spanish bank account can be blocked while you're 2,000 km away. Most owners find out when the card stops working.\n\nBanks freeze accounts under anti-money-laundering rules, and the warning letters usually arrive by post, in Spanish, at your Spanish address. If nobody reads that mailbox, the first sign is a declined card.\n\nThe most common trigger is also the easiest fix: an expired passport. Send updated documents and the account usually reopens within days.\n\nThe serious causes are unpaid taxes, IBI included, where the tax agency can freeze the account through court-ordered debt collection, and missed loan payments.\n\nOne more filter people trip without knowing: unusual transfers. A large or out-of-pattern payment, a property purchase being the classic case, can set off the fraud checks. Tell your bank before you move the money, not after.\n\nThree habits prevent nearly all of it: give the bank a current email address, keep every ID document valid, and have someone check the mailbox.\n\nGeneral information, not financial advice.\n\n#BankingInSpain #SpanishHomeOwners #ExpatSpain"
+ },
+ {
+  "slug": "community_fees",
+  "batch": 2,
+  "day": 19,
+  "language": "en",
+  "member": "",
+  "title": "Community fees: the underestimated cost",
+  "post_text": "Community fees are the running cost new owners underestimate most. Some pay around €100 a quarter. High-end developments run past 1,000.\n\nThe fees fund lifts, pools, gardens, security and the fabric of the building itself. Your share depends on the services provided and the size of your property, and that same share sets your voting weight at the annual general meeting, where budgets and increases get decided.\n\nTwo protections matter before you buy:\n\nAsk for a certificate confirming the seller owes nothing. Part of any old debt can pass to you with the keys.\n\nAnd understand what unpaid fees lead to: interest, legal costs, and in extreme cases a forced sale.\n\nOnce you own, the rule is simple. Attend the annual meeting or send a proxy. Fee rises and big works are decided in that room, with or without you in it.\n\nGeneral information, not legal advice.\n\n#SpainProperty #SpanishHomeOwners #CommunityFees"
+ },
+ {
+  "slug": "modelo210_scenarios",
+  "batch": 2,
+  "day": 20,
+  "language": "en",
+  "member": "",
+  "title": "Modelo 210 prorates by days",
+  "post_text": "Bought in June? Sold in March? Spain does not charge you Modelo 210 for the full year. Almost nobody knows the formula, so here it is.\n\nCadastral value x 2% (or 1.1% where the municipality has had a general cadastral revision in the last 10 years) x 19% for EU and EEA residents or 24% for everyone else, x days owned over 365.\n\nReal example: a UK owner with a cadastral value of €45,986 pays about €220 for a full year.\n\nThe scenarios:\n\nBuy mid-year, and your first return is due the following year, covering only your days of ownership.\nSell, and you file for the days up to completion, early the next year.\nRent for part of the year, and there are two pieces: rental income declared annually, plus imputed tax for the days the property stood empty.\nCo-owners each file and pay their own share. Two names on the deed means two returns.\n\nYour cadastral value is sitting on your IBI bill. Pull it out and run your own numbers. This is one to save.\n\nGeneral information, not tax advice.\n\n#Modelo210 #SpanishTax #HolidayHome"
+ },
+ {
+  "slug": "escritura_notary",
+  "batch": 2,
+  "day": 21,
+  "language": "en",
+  "member": "",
+  "title": "The notary is not your lawyer",
+  "post_text": "The notary is not your lawyer. In Spain, the notary is impartial by design, and buyers who don't know this leave a hole in their team.\n\nAt the escritura pública, the deed of sale, the notary prepares and oversees the document, reads it out to buyer and seller together, and checks both fully understand it before anyone signs. If your Spanish is not strong, you may be required to bring a translator or a Spanish-speaking legal adviser.\n\nBuying with a mortgage? You meet the notary at least 24 hours before signing the mortgage deed, so they can take you through the loan conditions first.\n\nWhat the notary does not do is represent your interests. They act as an impartial adviser to both parties and confirm the sale is legal. Nothing more.\n\nAnd signing is not the finish line: the property and the new owners still have to be registered at the Land Registry Office afterwards.\n\nSo bring your own adviser to the table, and plan the registration step before the signing day, not after.\n\nGeneral information, not legal advice.\n\n#SpainProperty #BuyingInSpain #ExpatSpain"
+ },
+ {
+  "slug": "owners_year",
+  "batch": 2,
+  "day": 22,
+  "language": "en",
+  "member": "",
+  "title": "The absent owner's bill calendar",
+  "post_text": "Spanish property bills don't arrive all at once. They arrive all year. Here's the calendar every absent owner should have on the wall.\n\nMay to October: IBI, the local property tax. It's charged to whoever owns the home at the start of the year, and it lands whenever your municipality sends it. It often goes only to a Spanish address, which is how absent owners miss it. The fix is a direct debit with the town hall, so the bill gets paid whether you're there or not.\n\nAll year: community fees, ticking along monthly or quarterly. Any increases get decided at the annual general meeting.\n\n31 December: the non-resident tax return closes the year.\n\nThree moves cover all of it. Put the three dates on one annual calendar. Set up direct debits for the recurring ones. And have someone check the mailbox.\n\nMost surprises in Spanish property ownership are really just missed post.\n\nGeneral information, not tax advice.\n\n#SpainProperty #SpanishHomeOwners #Modelo210"
+ },
+ {
+  "slug": "free_banking_myth",
+  "batch": 2,
+  "day": 23,
+  "language": "en",
+  "member": "",
+  "title": "The free banking myth",
+  "post_text": "\"Free banking\" in Spain usually means an account that is free only while you behave exactly as the bank hopes.\n\nThe base costs first: several major banks charge around €240 a year in maintenance on a standard current account. A credit card adds roughly €20, a debit card up to 30.\n\nThen the conditions. Miss the minimum monthly card spend or transaction count and extra fees start stacking. Take out a mortgage and you may be required to hold the bank's property insurance for at least the first year.\n\nAnd the quiet drain almost everyone misses: international transfers. Moving money from another currency can cost up to €35 per transfer. A pension arriving every month can lose hundreds a year to fees alone.\n\nBefore signing anything, map your real usage: monthly card spend, transfers in, transfers out. Then check it line by line against the account's conditions. The account that's free for a Spanish salary earner is rarely free for a foreign owner.\n\nGeneral information, not financial advice.\n\n#BankingInSpain #ExpatSpain #RetireInSpain"
+ },
+ {
+  "slug": "inheritance_tax",
+  "batch": 2,
+  "day": 24,
+  "language": "en",
+  "member": "",
+  "title": "Heirs pay before they inherit",
+  "post_text": "In Spain, heirs pay the tax before they touch the inheritance. The estate stays locked until the bill is paid.\n\nSuccession tax falls on the beneficiary, not the estate. Rates are progressive, from 7.65% to 36.5%, and they vary sharply by region: Andalucía sits among the lowest in the country. The relationship between the deceased and the beneficiary, and the value inherited, also shape the final figure.\n\nResidents and non-residents alike pay it on assets located in Spain.\n\nThe deadline is 6 months, though an extension is possible. Miss it and 5% is added every 3 months, up to a maximum of 20% on top.\n\nOne reach worth knowing: assets outside Spain escape Spanish inheritance tax unless the beneficiary is a Spanish resident.\n\nIf you stand to inherit Spanish property, start the paperwork early. Six months disappears fast when you're working across two legal systems, and the property can't be touched while the clock runs.\n\nGeneral information, not tax advice.\n\n#InheritanceTax #SpanishTax #SpainProperty"
+ },
+ {
+  "slug": "rural_property",
+  "batch": 2,
+  "day": 25,
+  "language": "en",
+  "member": "",
+  "title": "Rural land: run these four checks",
+  "post_text": "Rural land in Spain fails checks that urban flats pass. Before you fall for the finca, run these four.\n\nOne: compare paper to ground. The Land Registry and the Cadastral Registry frequently disagree with real life on plot size, property description and boundaries, and any discrepancy brings legal and financial consequences. If the Title Deed is missing or outdated, wait until the vendor updates it at the Land Registry, at their expense, before proceeding.\n\nTwo: check the build is legal. Some owners register a casa de aperos, a shed, to dodge planning rules, then build a villa. A surveyor can confirm Town Hall permission; without it, walk away. Pre-1956 constructions are usually legal but often cannot be extended.\n\nThree: easements. Rural plots carry rights urban homes rarely do: rights of way, of view, to extract water. Know who can cross your land before it's yours.\n\nFour: wastewater. Septic tanks are the norm, and a renovation can force a modern replacement costing thousands.\n\nThe one-line summary: hire an independent surveyor before signing anything.\n\nGeneral information, not legal advice.\n\n#SpainProperty #RuralSpain #BuyingInSpain"
+ },
+ {
+  "slug": "late_tax_penalties",
+  "batch": 2,
+  "day": 26,
+  "language": "en",
+  "member": "",
+  "title": "Missed a deadline? Move first",
+  "post_text": "Missed a Spanish tax deadline? The order of events decides the cost. Filing before the letter arrives is worth real money.\n\nFile voluntarily before any letter, and the surcharge starts at 1% plus 1% for each month of delay, reaching 15% plus interest once you pass a year. Annoying, survivable.\n\nWait until the tax office contacts you, and proper penalties apply instead. Those can add at least half of the tax owed on top of the original bill.\n\nThe same logic covers mistakes: a complementary return filed before any notification keeps corrections cheap.\n\nWhy do so many foreign owners end up here? Because the non-resident tax runs on its own quiet schedule, due by 31 December the following year. No reminder comes.\n\nIf the catch-up sum is uncomfortable, an instalment plan can be requested from the tax agency, though interest still runs.\n\nThe rule to remember: file first, then fix. Catching up is usually simpler than people fear, and every week you move before they do is money.\n\nGeneral information, not tax advice.\n\n#SpanishTax #Modelo210 #SpanishHomeOwners"
+ },
+ {
+  "slug": "property_insurance",
+  "batch": 2,
+  "day": 27,
+  "language": "en",
+  "member": "",
+  "title": "The vacant-home insurance trap",
+  "post_text": "Home insurance is not legally required in Spain. That's not the interesting part. The vacant-home clause is.\n\nMany standard policies limit payouts if the property sits empty for months. A burst pipe that goes unnoticed in an empty holiday home is exactly the claim that gets refused. If your Spanish property spends most of the year without you, ask specifically about vacant-home cover before you sign anything.\n\nThe rest of the checklist:\n\nIf you have a mortgage, the bank will insist on cover, and the policy it sells can cost well above market price. You're free to buy elsewhere, even if the bank nudges your interest rate in return.\n\nKnow the difference between building cover and contents cover, and check that liability is included.\n\nSee what your community's block policy already insures, so you don't pay twice for the same walls.\n\nAnd if you rent out, look at cover for tenant damage too.\n\nOne question to your insurer this week: \"What happens to my claim if the home has been sitting empty for months?\"\n\nGeneral information, not financial advice.\n\n#SpainProperty #HolidayHome #HomeInsurance"
+ },
+ {
+  "slug": "gift_tax",
+  "batch": 2,
+  "day": 28,
+  "language": "en",
+  "member": "",
+  "title": "Gifts are taxed within 30 days",
+  "post_text": "Gift a property or a sum of money in Spain and the recipient has 30 days to pay tax on it. Not six months. Thirty days.\n\nGift tax here falls on the person receiving, not the person giving. If you're planning to pass on money or an asset to family, they are the ones who will face the bill, and the clock is short.\n\nCompare that with inheritance tax, where beneficiaries usually get 6 months and can even request an extension. Gifts get no such grace.\n\nThe rates aren't national either. Gift tax varies from region to region across Spain, so an identical gift can produce a very different bill depending on where the assets and the people involved are.\n\nParents helping children buy in Spain, this is your homework before the transfer, not after.\n\nBefore moving anything of value, speak to an adviser who knows your specific region. Timing and geography decide most of the cost.\n\nGeneral information, not tax advice.\n\n#SpanishTax #GiftTax #SpainProperty"
+ },
+ {
+  "slug": "extension_deeds",
+  "batch": 2,
+  "day": 29,
+  "language": "en",
+  "member": "",
+  "title": "Pools and extensions belong on deeds",
+  "post_text": "That pool, extra floor or enclosed porch is legally an extension in Spain. If it's not on your deeds, it will surface at the worst possible moment: the sale.\n\nThe proper route: structural work needs an Obra Mayor licence. Even non-structural jobs like retiling, repainting or same-size window swaps need the Obra Menor. A licensed technical architect drafts the plans, you file them at the town hall, and if the property shares communal spaces, your neighbours must approve, with the community's certificate signed before a notary.\n\nThe cost: ICIO tax of 2 to 5 percent of construction cost, plus a smaller urban development licence fee. Processing runs from a few weeks to several months.\n\nWhen work finishes, the architect issues the Certificado Final de Obra, and the extension is declared before a notary and entered in the land registry.\n\nAlready built without a licence? The antiquity certificate can legalise it retrospectively, but works completed after August 2014 must be 15 years old, versus 4 for earlier ones.\n\nUnregistered extensions stall sales and risk demolition orders. Legalise before you list.\n\nGeneral information, not legal advice.\n\n#SpainProperty #SpanishHomeOwners #HolidayHome"
+ },
+ {
+  "slug": "brexit_buying",
+  "batch": 2,
+  "day": 30,
+  "language": "en",
+  "member": "",
+  "title": "What Brexit really changed",
+  "post_text": "Brexit did not change the price of a Spanish home by one euro. It changed almost everything around it.\n\nWhat stayed the same: the right to buy never depended on nationality, and purchase costs, tax, notary and registration fees are identical for UK and EU buyers.\n\nWhat changed sits downstream:\n\nNon-resident income tax on rental income rose from 19 to 24 percent for Brits. And rental expenses can no longer be deducted before the tax is applied, though tax paid in Spain can be offset against tax in the UK.\n\nMortgages involve more paperwork and can take longer. NIE appointments can be slower for UK applicants.\n\nTime itself is capped: 90 days in any 180 without a residence permit. And the Golden Visa route for larger property investors has ended.\n\nNone of this says don't buy. It says model it first. If you plan to rent out or stay long, run the numbers on the 24 percent and the calendar before you commit, not after.\n\nGeneral information, not legal advice.\n\n#SpainProperty #BuyingInSpain #MoveToSpain"
+ }
+];
