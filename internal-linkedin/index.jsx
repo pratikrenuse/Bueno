@@ -123,7 +123,7 @@ export default function InternalLinkedIn() {
   async function seed() {
     setSeeding(true); setErr('')
     try {
-      const r = await fetch('/api/linkedin-seed', { headers: { 'x-passcode': pass } })
+      const r = await fetch('/api/linkedin-refresh', { headers: { 'x-passcode': pass } })
       const text = await r.text()
       let j
       try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
@@ -202,8 +202,9 @@ export default function InternalLinkedIn() {
         </button>
       </header>
 
-      {/* Stream switcher */}
-      <div style={{ maxWidth: 555, margin: '14px auto 0', padding: '0 12px' }}>
+      {/* Sticky controls: stream switcher, progress, status filter */}
+      <div style={{ position: 'sticky', top: 0, zIndex: 5, background: BG, boxShadow: '0 8px 14px -10px rgba(1,2,33,.18)' }}>
+      <div style={{ maxWidth: 555, margin: '0 auto', padding: '10px 12px' }}>
         <div style={{ display: 'flex', background: '#fff', border: CARD_BORDER, borderRadius: 12, padding: 4, gap: 4 }}>
           {STREAMS.map(s => {
             const active = s.key === stream
@@ -252,6 +253,7 @@ export default function InternalLinkedIn() {
             </button>
           ))}
         </div>
+      </div>
       </div>
 
       {err && (
@@ -346,6 +348,11 @@ export default function InternalLinkedIn() {
                   </div>
                 )}
 
+                {p.image_url && !isEditing && (
+                  <img src={p.image_url} alt="" draggable={false} loading="lazy"
+                    style={{ width: '100%', display: 'block', maxHeight: 340, objectFit: 'cover' }} />
+                )}
+
                 <div style={{ borderTop: '1px solid #EBEBEB', margin: '0 12px', padding: '6px 4px', display: 'flex', justifyContent: 'space-around', color: 'rgba(0,0,0,.6)', fontSize: 13, fontWeight: 600 }}>
                   <span style={{ padding: '6px 8px' }}>Like</span>
                   <span style={{ padding: '6px 8px' }}>Comment</span>
@@ -356,7 +363,12 @@ export default function InternalLinkedIn() {
 
               <div style={{ background: '#FAFAF8', border: CARD_BORDER, borderTop: 'none', borderRadius: '0 0 10px 10px', padding: '10px 14px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-                  <span style={{ fontSize: 12, background: st.bg, color: st.fg, borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>{st.label}</span>
+                  <span style={{ display: 'inline-flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: 12, background: st.bg, color: st.fg, borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>{st.label}</span>
+                    {p.slug.includes('partner') && (
+                      <span style={{ fontSize: 12, background: '#F4EBDD', color: '#7a611c', borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>Partner post</span>
+                    )}
+                  </span>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     <button onClick={() => copyText(p)} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 14px', fontSize: 13 }}>
                       {copiedId === p.id ? 'Copied' : 'Copy text'}

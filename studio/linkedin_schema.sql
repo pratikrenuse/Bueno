@@ -22,3 +22,6 @@ create table if not exists linkedin_posts (
 -- Migration 19 Aug 2026: three content streams. Run this line in the SQL editor
 -- (safe on a fresh table too; existing rows become 'owners').
 alter table linkedin_posts add column if not exists audience text not null default 'owners';
+
+-- Migration 20 Aug 2026: post images (served from /photos/ on the site).
+alter table linkedin_posts add column if not exists image_url text;
