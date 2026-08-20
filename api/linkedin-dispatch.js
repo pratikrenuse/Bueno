@@ -57,6 +57,7 @@ export default async function handler(req, res) {
             body: JSON.stringify({
               from,
               to: [m.email],
+              reply_to: 'pratik.y.renuse@gmail.com',
               subject: `Your LinkedIn post for tomorrow: ${post.title}`,
               html: emailHtml(m.name, post, text),
             }),
@@ -88,6 +89,7 @@ export default async function handler(req, res) {
             body: JSON.stringify({
               from,
               to: OVERSIGHT,
+              reply_to: 'pratik.y.renuse@gmail.com',
               subject: `[Copy] ${stream} day ${post.day}: ${post.title}`,
               html: `<p style="font-family:Georgia,serif;font-size:13px;color:#5a5f73">Oversight copy. Sent to: ${esc(recipients)}</p>` + emailHtml('team', post, text),
             }),
