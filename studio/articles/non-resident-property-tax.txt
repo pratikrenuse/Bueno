@@ -1,0 +1,40 @@
+TITLE: Non-resident property tax in Spain
+CATEGORY: tax
+SOURCE: google-doc 1qBC9L05EfDZStFtynKeOgKsy7hVrFZ23c2TmPmVk9zE
+---
+Non-resident property tax in Spain
+
+
+
+
+If you own a property in Spain as a non-resident you must pay tax on the property, known as ‘Modelo 210’. Here is a simple overview of the tax system:
+I do not rent out the property
+You are required to submit an annual tax return for non-residents. You report the previous year’s ownership, for example in 2023, you report and pay tax for 2022. Tax reporting and payment of the tax can be done throughout the year but must be paid by the end of the year.
+I rented out the property for the entire year
+You will not submit the annual tax return, instead, you must declare your rental income quarterly. Note that rental income is reported in the year of rental, for example, rental income for January to March 2023 will be reported and paid for in April 2023. The quarterly deadlines are the 20th of April, July, October and January.
+I partially let the property out
+You must submit the annual tax return for the days that you did not rent out the property plus you have to declare the rental income quarterly for when it was rented out, per to the information above.
+I bought my property this year
+If you do not rent out your property, you will not have to submit your tax return until the next year. For example, if you bought a property in 2023, your first annual return will be due in 2024. However, If you rent out the property you will have to report this income quarterly for 2023 during 2023, per the above.
+I sold my property this year
+You are required to submit your annual tax return up to the date that you sold your property. If you did not rent out the property you would submit the tax return early next year, however, any rental income would have to be declared during the current year.
+Non-resident tax calculation with no rental income
+You will need your property’s cadastral value (Valor Catastral). This can be found on your local property tax payment document (IBI). The value will be multiplied by 2.0% or 1.1%. As a general rule, the 2% percentage applies unless there has been a General Cadastral Revision in the municipality in the previous 10 tax years.
+Calculation:
+Cadastral Value x Percentage (2% or 1.1%) x Tax Rate (24% or 19%).
+The tax rate is 19% for EU/EEA residents and 24% for non-residents (including those from the UK).
+The tax is divided among the owners of the property. For example, two owners will pay half the tax each. Each owner has to report and pay their tax.
+Example of calculation for the 2022 tax year:
+Cadastral value: 45 986.60€
+Tax rate: 2% imputed percentage as the last general revision from Catastro has not taken place within the past 10 years.
+Tax Rate based on non-resident from the United Kingdom: 24% (non-EU)
+The property was not rented in 2021.
+Tax = 45 986.60 x 2% x 24% x 365/365 = 220.73€
+Keep in mind that in addition to the national property tax you also have your local tax, IBI.
+What happens if I miss the non-resident tax return deadline?
+If you fail to submit your tax return on time, you can be fined at least 50% of the tax you owe on top of your original tax bill. Additionally, you may have to pay interest on the late payment.
+You can avoid penalties if you file voluntarily before the tax office contacts you. If you pay your tax bill between 1 to 12 months late, you’ll pay a surcharge of 1% to 12% of the tax you owe. If you pay your tax more than 12 months late, you’ll be subject to a surcharge of 15% of your tax bill plus interest for the late payment.
+Additional information to keep in mind if you rent out your property
+Many owners rent out their property using internet platforms like Airbnb and Vrbo (previously HomeAway). These platforms now report your rental revenue to the Spanish tax office, so be sure you report your income to avoid penalties.
+In general, holiday lettings are VAT exempt. But if hospitality services, such as laundry, meals or a regular cleaning service are offered, as happens in hotels, the rental is subject to 10% VAT.
+If the owner signs a sublease contract with a third party (for example, a broker agent or a booking platform), allowing them to re-rent the house or apartment, the rental will be identified as commercial (e.g. not focused on providing common housing) and VAT will be increased to 21%.

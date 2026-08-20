@@ -25,3 +25,33 @@ alter table linkedin_posts add column if not exists audience text not null defau
 
 -- Migration 20 Aug 2026: post images (served from /photos/ on the site).
 alter table linkedin_posts add column if not exists image_url text;
+
+-- Migration 20 Aug 2026 (phase 2): team roster, email log, dispatch tracking.
+alter table linkedin_posts add column if not exists sent_at timestamptz;
+
+create table if not exists team_members (
+  id uuid primary key default gen_random_uuid(),
+  name text not null unique,
+  email text,                               -- fill in; members without email are skipped
+  language text not null default 'en',
+  stream text not null default 'owners',    -- which content stream this member posts: owners | agents | attorneys
+  active boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
+insert into team_members (name, language) values
+  ('Monique','nl'), ('Izahbel','sv'), ('Petter','no'), ('Yenna','es'), ('Amina','fr'), ('Felix','en')
+on conflict (name) do nothing;
+
+create table if not exists linkedin_emails (
+  id uuid primary key default gen_random_uuid(),
+  post_id uuid references linkedin_posts(id) on delete set null,
+  post_slug text,
+  post_title text,
+  member_name text,
+  member_email text,
+  status text not null default 'sent',      -- sent | failed
+  error text,
+  resend_id text,
+  sent_at timestamptz not null default now()
+);

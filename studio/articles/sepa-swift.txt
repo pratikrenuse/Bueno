@@ -1,0 +1,17 @@
+TITLE: What is the difference between SEPA and SWIFT transfers
+CATEGORY: banking
+SOURCE: google-doc 1uS5ce_Psabm-ryBTXSciZzh-YbY0ZN41S7XKAS3-ekc
+---
+What is the difference between SEPA and SWIFT transfers
+
+
+In the banking world, there are two traditional networks for transferring money across borders, as well as internal networks within national borders. We will try to explain the difference in a simple way.
+SEPA – Bueno only supports these transfers
+SEPA (Single Euro Payments Area) is a common payment market/regulation for all Euro payments within the EU, EEA and the UK. A SEPA payment is faster and cheaper than other international payments.
+SEPA transfers require the use of an IBAN account number; most European countries have already replaced old account numbers with IBAN. In some countries, like the UK, the national account format is still used, your UK IBAN number includes your UK account number and bank details.
+When sending money to the Bueno account, make sure to send euros and that the money is sent via the SEPA network. By default most UK banks will send European transfers as SEPA.
+SWIFT
+The Society for Worldwide Interbank Financial Telecommunication, SWIFT, is a Belgian cooperative company that offers services related to the execution of financial transactions and payments between certain banks worldwide. Banks connected to the network assist other banks in sending international transfers, known as correspondent banks.
+SWIFT takes longer and is more expensive because the money is sent through multiple banks, and each of them needs to be paid. This was one of the reasons why the EU developed SEPA, to simplify transfers within Europe and reduce costs. If you send money outside Europe these will be sent on the SWIFT network. Some same day transfers even within Europe can be sent as SWIFT but this is rare.
+Local banking networks
+Most countries have their own payment networks. Even Spain, which fully supports SEPA, has its own network, Iberpay, owned by Spanish banks. This is why you need a Spanish account to pay all your bills in Spain; many entities still use Iberpay for direct debits, as they simply do not support SEPA debits. The direct debits also work differently in Spain compared to the UK, in Spain the utility company create the direct debit and can basically collect money from any Spanish account (an agreement is required but in theory utility companies in Spain can charge an account without an agreement in place).

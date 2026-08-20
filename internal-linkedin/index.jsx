@@ -41,6 +41,11 @@ export default function InternalLinkedIn() {
   const [seeding, setSeeding] = useState(false)
   const [focusId, setFocusId] = useState(null)
   const [flash, setFlash] = useState(null)         // { id, kind }
+  const [view, setView] = useState('deck')         // deck | dash
+  const [dash, setDash] = useState(null)           // { members, emails }
+  const [dashBusy, setDashBusy] = useState(false)
+  const [dispatching, setDispatching] = useState(false)
+  const [dispatchResult, setDispatchResult] = useState(null)
   const listRef = useRef(null)
 
   const load = useCallback(async (p) => {
@@ -133,6 +138,34 @@ export default function InternalLinkedIn() {
     setSeeding(false)
   }
 
+  async function loadDash() {
+    setDashBusy(true); setErr('')
+    try {
+      const r = await fetch('/api/linkedin-emails', { headers: { 'x-passcode': pass } })
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      if (j.error) throw new Error(j.error)
+      setDash(j)
+    } catch (e) { setErr(String(e.message || e)) }
+    setDashBusy(false)
+  }
+
+  async function sendNow(dry) {
+    if (!dry && !confirm('Send the next approved post of each stream to its team members now?')) return
+    setDispatching(true); setDispatchResult(null); setErr('')
+    try {
+      const r = await fetch(`/api/linkedin-dispatch${dry ? '?dry=1' : ''}`, { headers: { 'x-passcode': pass } })
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      if (j.error) throw new Error(j.error)
+      setDispatchResult(j)
+      if (!dry) { load(pass); loadDash() }
+    } catch (e) { setErr(String(e.message || e)) }
+    setDispatching(false)
+  }
+
   function copyText(p) {
     navigator.clipboard.writeText(p.edited_text || p.post_text)
     setCopiedId(p.id)
@@ -196,12 +229,21 @@ export default function InternalLinkedIn() {
         <div style={{ fontSize: 19, fontWeight: 700 }}>
           24<span style={{ color: GOLD }}>/</span>7 SPAIN <span style={{ fontWeight: 400, fontSize: 12, color: LBLUE }}>linkedin</span>
         </div>
-        <button onClick={seed} disabled={seeding}
-          style={{ ...btn('transparent', LBLUE), border: '1px dashed #3a3f5c', marginTop: 0, padding: '7px 13px', fontSize: 13 }}>
-          {seeding ? 'Syncing…' : 'Sync new posts'}
-        </button>
+        <nav style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
+          {[['deck', 'Review deck'], ['dash', 'Dashboard']].map(([v, label]) => (
+            <button key={v} onClick={() => { setView(v); if (v === 'dash') loadDash() }}
+              style={{ ...btn(view === v ? GOLD : 'transparent', view === v ? NAVY : '#fff'), border: '1px solid ' + (view === v ? GOLD : '#3a3f5c'), marginTop: 0, padding: '7px 13px', fontSize: 13 }}>
+              {label}
+            </button>
+          ))}
+          <button onClick={seed} disabled={seeding}
+            style={{ ...btn('transparent', LBLUE), border: '1px dashed #3a3f5c', marginLeft: 8, marginTop: 0, padding: '7px 13px', fontSize: 13 }}>
+            {seeding ? 'Syncing…' : 'Sync new posts'}
+          </button>
+        </nav>
       </header>
 
+      {view === 'deck' && <>
       {/* Sticky controls: stream switcher, progress, status filter */}
       <div style={{ position: 'sticky', top: 0, zIndex: 5, background: BG, boxShadow: '0 8px 14px -10px rgba(1,2,33,.18)' }}>
       <div style={{ maxWidth: 555, margin: '0 auto', padding: '10px 12px' }}>
@@ -424,9 +466,106 @@ export default function InternalLinkedIn() {
           </p>
         )}
       </main>
+      </>}
+
+      {view === 'dash' && (
+        <main style={{ maxWidth: 920, margin: '0 auto', padding: '18px 14px 60px' }}>
+          {err && (
+            <div style={{ background: '#fff', border: '1px solid #e0b4b4', color: '#8a1f1f', borderRadius: 12, padding: '12px 16px', fontSize: 14, marginBottom: 14 }}>{err}</div>
+          )}
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 14 }}>
+            {STREAMS.map(s => {
+              const sp = posts.filter(p => (p.audience || 'owners') === s.key)
+              const n = k => sp.filter(p => p.status === k).length
+              return (
+                <div key={s.key} style={{ background: '#fff', border: CARD_BORDER, borderRadius: 14, padding: '14px 16px' }}>
+                  <div style={{ fontWeight: 700, color: NAVY, marginBottom: 8 }}>{s.label} <span style={{ fontWeight: 400, color: '#8a8fa3', fontSize: 12 }}>{sp.length} posts</span></div>
+                  <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                    <Stat label="Approved" value={n('approved')} color="#2e7d32" />
+                    <Stat label="Rejected" value={n('rejected')} color="#b02a2a" />
+                    <Stat label="Pending" value={n('pending')} color="#7a611c" />
+                    <Stat label="Emailed" value={sp.filter(p => p.sent_at).length} color={ACCENT} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          <Card title="Daily email dispatch">
+            <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 10px' }}>
+              Weekdays at 15:00 UTC, each stream's next approved post is emailed to that stream's team members, ready to copy for the next day. You can also trigger it manually.
+            </p>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button onClick={() => sendNow(true)} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
+                {dispatching ? 'Working…' : "Preview today's send"}
+              </button>
+              <button onClick={() => sendNow(false)} disabled={dispatching} style={{ ...btn(NAVY, '#fff'), marginTop: 0, padding: '9px 18px', fontSize: 13, fontWeight: 700 }}>Send now</button>
+            </div>
+            {dispatchResult && (
+              <div style={{ marginTop: 10, fontSize: 13, background: '#F8F7F4', borderRadius: 8, padding: '10px 12px' }}>
+                {dispatchResult.results.map((r, i) => (
+                  <div key={i} style={{ padding: '2px 0' }}>
+                    <b style={{ textTransform: 'capitalize' }}>{r.stream}</b>:{' '}
+                    {r.skipped ? r.skipped
+                      : r.would_send ? `would send "${r.would_send}" (day ${r.day}) to ${r.to.join(', ')}`
+                      : `sent "${r.post}" (day ${r.day}) to ${r.sent} member${r.sent === 1 ? '' : 's'}${r.failed ? `, ${r.failed} failed` : ''}`}
+                  </div>
+                ))}
+              </div>
+            )}
+          </Card>
+
+          <Card title="Why posts were rejected">
+            {posts.filter(p => p.status === 'rejected').length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>No rejections yet.</p>}
+            {posts.filter(p => p.status === 'rejected').map(p => (
+              <div key={p.id} style={{ padding: '8px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13 }}>
+                <span style={{ fontWeight: 600, color: NAVY }}>{p.title}</span>
+                <span style={{ color: '#8a8fa3' }}> · {(p.audience || 'owners')} · day {p.day}</span>
+                <div style={{ color: '#8a1f1f', marginTop: 2 }}>{p.reject_comment || 'No note'}</div>
+              </div>
+            ))}
+          </Card>
+
+          <Card title="Team roster">
+            {dashBusy && <p style={{ fontSize: 13, margin: 0 }}>Loading…</p>}
+            {dash && dash.members.map(m => (
+              <div key={m.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13, flexWrap: 'wrap', gap: 4 }}>
+                <span><b style={{ color: NAVY }}>{m.name}</b> <span style={{ color: '#8a8fa3' }}>· {m.language} · {m.stream}{m.active ? '' : ' · inactive'}</span></span>
+                {m.email ? <span style={{ color: '#3a3f52' }}>{m.email}</span> : <span style={{ color: '#b02a2a', fontWeight: 600 }}>email missing</span>}
+              </div>
+            ))}
+            {dash && <p style={{ fontSize: 12, color: '#8a8fa3', margin: '8px 0 0' }}>Members without an email are skipped by the dispatch. The roster lives in the team_members table.</p>}
+          </Card>
+
+          <Card title="Email log (latest 100)">
+            {dash && dash.emails.length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>Nothing sent yet.</p>}
+            {dash && dash.emails.map(e => (
+              <div key={e.id} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, padding: '6px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13, flexWrap: 'wrap' }}>
+                <span>{new Date(e.sent_at).toLocaleString()} · <b>{e.member_name}</b> · {e.post_title}</span>
+                <span style={{ color: e.status === 'sent' ? '#2e7d32' : '#b02a2a', fontWeight: 600 }}>{e.status}{e.error ? `: ${e.error.slice(0, 80)}` : ''}</span>
+              </div>
+            ))}
+          </Card>
+        </main>
+      )}
     </div>
   )
 }
+
+const Card = ({ title, children }) => (
+  <div style={{ background: '#fff', border: CARD_BORDER, borderRadius: 14, padding: '14px 16px', marginTop: 14 }}>
+    <div style={{ fontWeight: 700, color: NAVY, marginBottom: 8 }}>{title}</div>
+    {children}
+  </div>
+)
+
+const Stat = ({ label, value, color }) => (
+  <span style={{ fontSize: 13 }}>
+    <span style={{ fontSize: 20, fontWeight: 700, color }}>{value}</span>
+    <span style={{ color: '#5a5f73', marginLeft: 5 }}>{label}</span>
+  </span>
+)
 
 const btn = (bg, color) => ({
   background: bg, color, padding: '10px 16px', borderRadius: 999, border: 'none',
