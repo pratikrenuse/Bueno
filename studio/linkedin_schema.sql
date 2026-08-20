@@ -18,3 +18,7 @@ create table if not exists linkedin_posts (
   updated_at timestamptz not null default now(),
   unique (slug, language, member)
 );
+
+-- Migration 19 Aug 2026: three content streams. Run this line in the SQL editor
+-- (safe on a fresh table too; existing rows become 'owners').
+alter table linkedin_posts add column if not exists audience text not null default 'owners';

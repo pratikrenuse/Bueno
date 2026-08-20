@@ -1,7 +1,9 @@
 // GET or POST /api/linkedin-seed?pass=...
-// Idempotent: inserts the batch from api/_linkedin_batch1.js, skipping rows that already
-// exist (unique slug+language+member), so re-running never overwrites decisions or edits.
-import batch from './_linkedin_batch1.js';
+// Idempotent: inserts all content streams (owners, agents, attorneys), skipping rows that
+// already exist (unique slug+language+member), so re-running never overwrites decisions or edits.
+import owners from './_linkedin_batch1.js';
+import agents from './_linkedin_agents.js';
+import attorneys from './_linkedin_attorneys.js';
 
 export default async function handler(req, res) {
   try {
@@ -14,6 +16,13 @@ export default async function handler(req, res) {
     if (!url) return res.status(500).json({ error: 'Missing env var: SUPABASE_URL (or VITE_SUPABASE_URL)' });
     if (!key) return res.status(500).json({ error: 'Missing env var: SUPABASE_SERVICE_KEY. Add it in Vercel and redeploy.' });
 
+    // owners batch predates the audience column; stamp it. Strip helper fields the table doesn't have.
+    const rows = [
+      ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
+      ...agents,
+      ...attorneys,
+    ].map(({ source_slug, ...rest }) => rest);
+
     const r = await fetch(
       `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?on_conflict=slug,language,member`,
       {
@@ -24,14 +33,14 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json',
           Prefer: 'resolution=ignore-duplicates,return=representation',
         },
-        body: JSON.stringify(batch),
+        body: JSON.stringify(rows),
       }
     );
     const text = await r.text();
     if (!r.ok) return res.status(500).json({ error: `Supabase ${r.status}: ${text}` });
     let inserted = [];
     try { inserted = JSON.parse(text); } catch { /* return=representation should give JSON */ }
-    res.json({ ok: true, batch_size: batch.length, newly_inserted: inserted.length });
+    res.json({ ok: true, batch_size: rows.length, newly_inserted: inserted.length });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }

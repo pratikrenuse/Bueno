@@ -16,9 +16,11 @@ export default async function handler(req, res) {
     const statusFilter = status === 'all' ? 'status=in.(pending,approved,rejected)' : `status=eq.${status}`;
     const lang = /^[a-z]{2}$/.test(req.query.lang || '') ? req.query.lang : 'en';
     const langFilter = req.query.lang === 'all' ? '' : `&language=eq.${lang}`;
+    const audFilter = ['owners', 'agents', 'attorneys'].includes(req.query.aud)
+      ? `&audience=eq.${req.query.aud}` : '';
 
     const r = await fetch(
-      `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?${statusFilter}${langFilter}&order=day.asc&select=*`,
+      `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?${statusFilter}${langFilter}${audFilter}&order=day.asc&select=*`,
       { headers: { apikey: key, Authorization: `Bearer ${key}` } }
     );
     if (!r.ok) return res.status(500).json({ error: `Supabase ${r.status}: ${await r.text()}` });
