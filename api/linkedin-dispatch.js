@@ -6,6 +6,8 @@
 // Auth: team passcode (header/query), CRON_SECRET bearer if configured, or Vercel cron itself.
 
 const SITE = 'https://247spain.es';
+// Every dispatched post is also copied to these addresses for oversight.
+const OVERSIGHT = ['pratik.y.renuse@gmail.com', 'john@getbueno.com'];
 
 export default async function handler(req, res) {
   try {
@@ -75,13 +77,39 @@ export default async function handler(req, res) {
         if (status === 'sent') sent += 1; else failed += 1;
       }
 
+      // Oversight copy: one email per dispatched post to Pratik and John.
+      let oversight = 'skipped';
       if (sent > 0) {
+        try {
+          const recipients = streamMembers.map(m => `${m.name} <${m.email}>`).join(', ');
+          const or = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              from,
+              to: OVERSIGHT,
+              subject: `[Copy] ${stream} day ${post.day}: ${post.title}`,
+              html: `<p style="font-family:Georgia,serif;font-size:13px;color:#5a5f73">Oversight copy. Sent to: ${esc(recipients)}</p>` + emailHtml('team', post, text),
+            }),
+          });
+          oversight = or.ok ? 'sent' : `failed (${or.status})`;
+          await fetch(`${url}/rest/v1/linkedin_emails`, {
+            method: 'POST',
+            headers: { ...H, Prefer: 'return=minimal' },
+            body: JSON.stringify({
+              post_id: post.id, post_slug: post.slug, post_title: post.title,
+              member_name: 'Oversight (Pratik + John)', member_email: OVERSIGHT.join(', '),
+              status: or.ok ? 'sent' : 'failed', error: or.ok ? null : `Resend ${or.status}`,
+            }),
+          });
+        } catch (e) { oversight = `failed (${String((e && e.message) || e).slice(0, 80)})`; }
+
         await fetch(`${url}/rest/v1/linkedin_posts?id=eq.${post.id}`, {
           method: 'PATCH', headers: { ...H, Prefer: 'return=minimal' },
           body: JSON.stringify({ sent_at: new Date().toISOString() }),
         });
       }
-      results.push({ stream, post: post.title, day: post.day, sent, failed });
+      results.push({ stream, post: post.title, day: post.day, sent, failed, oversight });
     }
 
     res.json({ ok: true, dry, results });

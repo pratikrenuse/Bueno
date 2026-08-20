@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
       ...agents,
       ...attorneys,
-    ].map(({ source_slug, source_slug2, ...rest }) => rest);
+    ].map(({ source_slug, source_slug2, source_article, ...rest }) => rest);
 
     // 1. Clear pending, unedited rows (their fresh versions come back in step 2).
     const del = await fetch(`${url}/rest/v1/linkedin_posts?status=eq.pending&edited_text=is.null`, {

@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
       ...agents,
       ...attorneys,
-    ].map(({ source_slug, ...rest }) => rest);
+    ].map(({ source_slug, source_slug2, source_article, ...rest }) => rest);
 
     const r = await fetch(
       `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?on_conflict=slug,language,member`,
