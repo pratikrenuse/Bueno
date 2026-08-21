@@ -7,6 +7,7 @@
 import owners from './_linkedin_batch1.js';
 import agents from './_linkedin_agents.js';
 import attorneys from './_linkedin_attorneys.js';
+import translations from './_linkedin_translations.js';
 
 export default async function handler(req, res) {
   try {
@@ -24,10 +25,13 @@ export default async function handler(req, res) {
       ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
       ...agents,
       ...attorneys,
+      ...translations,
     ].map(({ source_slug, source_slug2, source_article, ...rest }) => rest);
 
-    // 1. Clear pending, unedited rows (their fresh versions come back in step 2).
-    const del = await fetch(`${url}/rest/v1/linkedin_posts?status=eq.pending&edited_text=is.null`, {
+    // 1. Clear pending, unedited English rows (their fresh versions come back in step 2).
+    //    Translation rows are seeded as 'approved' and ride along with the English master's
+    //    decision, so they are not part of the pending sweep.
+    const del = await fetch(`${url}/rest/v1/linkedin_posts?status=eq.pending&edited_text=is.null&language=eq.en`, {
       method: 'DELETE', headers: { ...H, Prefer: 'count=exact' },
     });
     if (!del.ok) return res.status(500).json({ error: `Supabase delete ${del.status}: ${await del.text()}` });

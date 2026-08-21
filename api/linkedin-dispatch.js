@@ -44,11 +44,38 @@ export default async function handler(req, res) {
       const post = (await pr.json())[0];
       if (!post) { results.push({ stream, skipped: 'no approved unsent posts' }); continue; }
 
-      if (dry) { results.push({ stream, would_send: post.title, day: post.day, to: streamMembers.map(m => m.name) }); continue; }
+      // The English master is what John approves. Each member receives that same post in
+      // their own language: look up the translation row for this slug + their language.
+      const langs = [...new Set(streamMembers.map(m => m.language || 'en'))].filter(l => l !== 'en');
+      let translations = {};
+      if (langs.length) {
+        const tr = await fetch(
+          `${url}/rest/v1/linkedin_posts?slug=eq.${encodeURIComponent(post.slug)}&language=in.(${langs.join(',')})&select=language,post_text,edited_text,title`,
+          { headers: H });
+        if (!tr.ok) return res.status(500).json({ error: `Supabase translations ${tr.status}: ${await tr.text()}` });
+        (await tr.json()).forEach(t => { translations[t.language] = t; });
+      }
+      const forMember = (m) => {
+        const lang = m.language || 'en';
+        if (lang === 'en') return { text: post.edited_text || post.post_text, title: post.title, lang: 'en', translated: true };
+        const t = translations[lang];
+        if (t) return { text: t.edited_text || t.post_text, title: t.title || post.title, lang, translated: true };
+        return { text: post.edited_text || post.post_text, title: post.title, lang, translated: false };
+      };
+
+      if (dry) {
+        results.push({
+          stream, would_send: post.title, day: post.day,
+          to: streamMembers.map(m => `${m.name} (${forMember(m).translated ? (m.language || 'en') : (m.language || 'en') + ': TRANSLATION MISSING, would send English'})`),
+        });
+        continue;
+      }
 
       const text = post.edited_text || post.post_text;
-      let sent = 0, failed = 0;
+      let sent = 0, failed = 0, missingTranslations = [];
       for (const m of streamMembers) {
+        const v = forMember(m);
+        if (!v.translated) missingTranslations.push(`${m.name} (${v.lang})`);
         let status = 'sent', error = null, resendId = null;
         try {
           const er = await fetch('https://api.resend.com/emails', {
@@ -58,8 +85,8 @@ export default async function handler(req, res) {
               from,
               to: [m.email],
               reply_to: 'pratik.y.renuse@gmail.com',
-              subject: `Your LinkedIn post for tomorrow: ${post.title}`,
-              html: emailHtml(m.name, post, text),
+              subject: `Your LinkedIn post for tomorrow: ${v.title}`,
+              html: emailHtml(m.name, post, v.text, v.lang, v.translated),
             }),
           });
           const ej = await er.json().catch(() => ({}));
@@ -72,7 +99,8 @@ export default async function handler(req, res) {
           headers: { ...H, Prefer: 'return=minimal' },
           body: JSON.stringify({
             post_id: post.id, post_slug: post.slug, post_title: post.title,
-            member_name: m.name, member_email: m.email, status, error, resend_id: resendId,
+            member_name: `${m.name} (${v.lang}${v.translated ? '' : ', EN fallback'})`,
+            member_email: m.email, status, error, resend_id: resendId,
           }),
         });
         if (status === 'sent') sent += 1; else failed += 1;
@@ -111,7 +139,8 @@ export default async function handler(req, res) {
           body: JSON.stringify({ sent_at: new Date().toISOString() }),
         });
       }
-      results.push({ stream, post: post.title, day: post.day, sent, failed, oversight });
+      results.push({ stream, post: post.title, day: post.day, sent, failed, oversight,
+        ...(missingTranslations.length ? { translations_missing: missingTranslations } : {}) });
     }
 
     res.json({ ok: true, dry, results });
@@ -124,7 +153,16 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function emailHtml(name, post, text) {
+function emailHtml(name, post, text, lang = 'en', translated = true) {
+  const intro = lang === 'en'
+    ? 'Here is your LinkedIn post for tomorrow. Copy the text below, adjust anything that does not sound like you, attach the image, and post.'
+    : 'Here is your LinkedIn post for tomorrow, already in your language. Copy the text below, adjust anything that does not sound like you, attach the image, and post.';
+  const warn = translated ? '' :
+    `<p style="margin:0 0 12px;font-size:13px;color:#8a1f1f;background:#FAEDED;border-radius:8px;padding:8px 10px">The ${esc(lang.toUpperCase())} version was not ready, so this is the English original. Please translate before posting.</p>`;
+  return emailShell(name, post, text, intro, warn);
+}
+
+function emailShell(name, post, text, intro, warn) {
   const img = post.image_url
     ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">Attach this image to the post (tap and hold / right click to save):</p>
        <img src="${SITE}${post.image_url}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
@@ -137,7 +175,8 @@ function emailHtml(name, post, text) {
       </div>
       <div style="padding:22px">
         <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi ${esc(name)},</p>
-        <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">Here is your LinkedIn post for tomorrow. Copy the text below, adapt it to your language and voice if you like, attach the image, and post.</p>
+        <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">${esc(intro)}</p>
+        ${warn}
         <div style="background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:16px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111;white-space:pre-wrap">${esc(text)}</div>
         ${img}
         <p style="margin:18px 0 0;font-size:13px;color:#5a5f73">Day ${post.day} of the plan. Questions or edits: just reply to this email.</p>
