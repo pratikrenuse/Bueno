@@ -43,6 +43,11 @@ insert into team_members (name, language) values
   ('Monique','nl'), ('Izahbel','sv'), ('Petter','no'), ('Yenna','es'), ('Amina','fr'), ('Felix','en')
 on conflict (name) do nothing;
 
+-- Migration 21 Aug 2026: translation freshness. A translation row stores the SHA1 of the
+-- English text it was made from, so an edit to the master marks it stale and it gets
+-- regenerated automatically before the next send.
+alter table linkedin_posts add column if not exists source_hash text;
+
 create table if not exists linkedin_emails (
   id uuid primary key default gen_random_uuid(),
   post_id uuid references linkedin_posts(id) on delete set null,

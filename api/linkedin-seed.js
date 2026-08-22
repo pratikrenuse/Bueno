@@ -4,6 +4,7 @@
 import owners from './_linkedin_batch1.js';
 import agents from './_linkedin_agents.js';
 import attorneys from './_linkedin_attorneys.js';
+import translations from './_linkedin_translations.js';
 
 export default async function handler(req, res) {
   try {
@@ -16,12 +17,27 @@ export default async function handler(req, res) {
     if (!url) return res.status(500).json({ error: 'Missing env var: SUPABASE_URL (or VITE_SUPABASE_URL)' });
     if (!key) return res.status(500).json({ error: 'Missing env var: SUPABASE_SERVICE_KEY. Add it in Vercel and redeploy.' });
 
-    // owners batch predates the audience column; stamp it. Strip helper fields the table doesn't have.
+    // PostgREST bulk insert requires an identical key set on every row, so build rows explicitly.
+    const norm = (p, defaults = {}) => ({
+      slug: p.slug,
+      batch: p.batch ?? 1,
+      day: p.day ?? null,
+      language: p.language || 'en',
+      member: p.member || '',
+      audience: p.audience || defaults.audience || 'owners',
+      title: p.title || null,
+      post_text: p.post_text,
+      image_url: p.image_url ?? null,
+      status: p.status || defaults.status || 'pending',
+      source_hash: p.source_hash ?? null,
+    });
+
     const rows = [
-      ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
-      ...agents,
-      ...attorneys,
-    ].map(({ source_slug, source_slug2, source_article, ...rest }) => rest);
+      ...owners.map(p => norm(p, { audience: 'owners' })),
+      ...agents.map(p => norm(p, { audience: 'agents' })),
+      ...attorneys.map(p => norm(p, { audience: 'attorneys' })),
+      ...translations.map(p => norm(p, { status: 'approved' })),
+    ];
 
     const r = await fetch(
       `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?on_conflict=slug,language,member`,

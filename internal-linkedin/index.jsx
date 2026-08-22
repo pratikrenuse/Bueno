@@ -151,6 +151,43 @@ export default function InternalLinkedIn() {
     setDashBusy(false)
   }
 
+  async function runHealth() {
+    setDispatching(true); setDispatchResult(null); setErr('')
+    try {
+      const r = await fetch('/api/linkedin-health', { headers: { 'x-passcode': pass } })
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      if (j.error) throw new Error(j.error)
+      setDispatchResult({
+        results: j.checks.map(c => ({ stream: `${c.ok ? 'OK' : 'ACTION NEEDED'} ${c.name}`, skipped: c.detail })),
+      })
+    } catch (e) { setErr(String(e.message || e)) }
+    setDispatching(false)
+  }
+
+  async function refreshTranslations() {
+    setDispatching(true); setDispatchResult(null); setErr('')
+    try {
+      const r = await fetch('/api/linkedin-translate', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-passcode': pass }, body: '{}',
+      })
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      if (j.error) throw new Error(j.error)
+      setDispatchResult({
+        results: [{
+          stream: 'translations',
+          skipped: j.refreshed === 0
+            ? `All ${j.posts_checked} approved posts are already translated and up to date.`
+            : `Refreshed ${j.refreshed} translation${j.refreshed === 1 ? '' : 's'} across ${j.posts_checked} approved posts.${j.failures ? ` ${j.failures} failed.` : ''}`,
+        }],
+      })
+    } catch (e) { setErr(String(e.message || e)) }
+    setDispatching(false)
+  }
+
   async function sendNow(dry) {
     if (!dry && !confirm('Send the next approved post of each stream to its team members now?')) return
     setDispatching(true); setDispatchResult(null); setErr('')
@@ -501,7 +538,16 @@ export default function InternalLinkedIn() {
                 {dispatching ? 'Working…' : "Preview today's send"}
               </button>
               <button onClick={() => sendNow(false)} disabled={dispatching} style={{ ...btn(NAVY, '#fff'), marginTop: 0, padding: '9px 18px', fontSize: 13, fontWeight: 700 }}>Send now</button>
+              <button onClick={refreshTranslations} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
+                Refresh translations
+              </button>
+              <button onClick={runHealth} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
+                Run health check
+              </button>
             </div>
+            <p style={{ fontSize: 12, color: '#8a8fa3', margin: '8px 0 0' }}>
+              Edited an approved post? Its translations are regenerated automatically before the next send. Use Refresh translations to update them right away.
+            </p>
             {dispatchResult && (
               <div style={{ marginTop: 10, fontSize: 13, background: '#F8F7F4', borderRadius: 8, padding: '10px 12px' }}>
                 {dispatchResult.results.map((r, i) => (
@@ -510,6 +556,15 @@ export default function InternalLinkedIn() {
                     {r.skipped ? r.skipped
                       : r.would_send ? `would send "${r.would_send}" (day ${r.day}) to ${r.to.join(', ')}`
                       : `sent "${r.post}" (day ${r.day}) to ${r.sent} member${r.sent === 1 ? '' : 's'}${r.failed ? `, ${r.failed} failed` : ''}`}
+                    {r.retranslated && r.retranslated.updated && r.retranslated.updated.length > 0 && (
+                      <div style={{ color: '#2e7d32', fontSize: 12 }}>Translations refreshed before sending: {r.retranslated.updated.join(', ')}</div>
+                    )}
+                    {r.translations_stale && (
+                      <div style={{ color: '#7a611c', fontSize: 12 }}>Older translation used for: {r.translations_stale.join(', ')}</div>
+                    )}
+                    {r.translations_missing && (
+                      <div style={{ color: '#b02a2a', fontSize: 12 }}>English fallback sent to: {r.translations_missing.join(', ')}</div>
+                    )}
                   </div>
                 ))}
               </div>

@@ -21,12 +21,28 @@ export default async function handler(req, res) {
     if (!key) return res.status(500).json({ error: 'Missing env var: SUPABASE_SERVICE_KEY. Add it in Vercel and redeploy.' });
     const H = { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' };
 
+    // PostgREST bulk insert requires every row to carry an identical key set, so build each
+    // row explicitly instead of spreading whatever the data modules happen to contain.
+    const norm = (p, defaults = {}) => ({
+      slug: p.slug,
+      batch: p.batch ?? 1,
+      day: p.day ?? null,
+      language: p.language || 'en',
+      member: p.member || '',
+      audience: p.audience || defaults.audience || 'owners',
+      title: p.title || null,
+      post_text: p.post_text,
+      image_url: p.image_url ?? null,
+      status: p.status || defaults.status || 'pending',
+      source_hash: p.source_hash ?? null,
+    });
+
     const rows = [
-      ...owners.map(p => ({ ...p, audience: p.audience || 'owners' })),
-      ...agents,
-      ...attorneys,
-      ...translations,
-    ].map(({ source_slug, source_slug2, source_article, ...rest }) => rest);
+      ...owners.map(p => norm(p, { audience: 'owners' })),
+      ...agents.map(p => norm(p, { audience: 'agents' })),
+      ...attorneys.map(p => norm(p, { audience: 'attorneys' })),
+      ...translations.map(p => norm(p, { status: 'approved' })),
+    ];
 
     // 1. Clear pending, unedited English rows (their fresh versions come back in step 2).
     //    Translation rows are seeded as 'approved' and ride along with the English master's

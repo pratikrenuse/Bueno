@@ -5,6 +5,8 @@
 // ?dry=1 previews what would be sent without sending anything.
 // Auth: team passcode (header/query), CRON_SECRET bearer if configured, or Vercel cron itself.
 
+import { syncTranslations, hashText, getApiKey } from './_translate.js';
+
 const SITE = 'https://247spain.es';
 // Every dispatched post is also copied to these addresses for oversight.
 const OVERSIGHT = ['pratik.y.renuse@gmail.com', 'john@getbueno.com'];
@@ -26,6 +28,7 @@ export default async function handler(req, res) {
     const dry = req.query.dry === '1';
     if (!resendKey && !dry) return res.status(500).json({ error: 'Missing env var: RESEND_API_KEY. Add it in Vercel and redeploy.' });
     const from = process.env.RESEND_FROM || '24/7 Spain <onboarding@resend.dev>';
+    const anthropicKey = getApiKey();
     const H = { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' };
 
     const mr = await fetch(`${url}/rest/v1/team_members?active=eq.true&order=name.asc&select=*`, { headers: H });
@@ -45,22 +48,34 @@ export default async function handler(req, res) {
       if (!post) { results.push({ stream, skipped: 'no approved unsent posts' }); continue; }
 
       // The English master is what John approves. Each member receives that same post in
-      // their own language: look up the translation row for this slug + their language.
+      // their own language. Before sending we refresh any translation that is missing or
+      // stale (John edited the English after it was translated), so edits always carry through.
       const langs = [...new Set(streamMembers.map(m => m.language || 'en'))].filter(l => l !== 'en');
-      let translations = {};
+      let translations = {}, retranslated = null;
       if (langs.length) {
+        if (anthropicKey && !dry) {
+          try {
+            const sync = await syncTranslations({ apiKey: anthropicKey, url, headers: H, post, langs });
+            if (sync.updated.length || sync.failed.length) retranslated = sync;
+          } catch (e) { retranslated = { failed: [String((e && e.message) || e).slice(0, 200)] }; }
+        }
         const tr = await fetch(
-          `${url}/rest/v1/linkedin_posts?slug=eq.${encodeURIComponent(post.slug)}&language=in.(${langs.join(',')})&select=language,post_text,edited_text,title`,
+          `${url}/rest/v1/linkedin_posts?slug=eq.${encodeURIComponent(post.slug)}&audience=eq.${stream}&language=in.(${langs.join(',')})&select=language,post_text,edited_text,title,source_hash`,
           { headers: H });
         if (!tr.ok) return res.status(500).json({ error: `Supabase translations ${tr.status}: ${await tr.text()}` });
         (await tr.json()).forEach(t => { translations[t.language] = t; });
       }
+      const masterHash = hashText(post.edited_text || post.post_text);
       const forMember = (m) => {
         const lang = m.language || 'en';
-        if (lang === 'en') return { text: post.edited_text || post.post_text, title: post.title, lang: 'en', translated: true };
+        if (lang === 'en') return { text: post.edited_text || post.post_text, title: post.title, lang: 'en', translated: true, stale: false };
         const t = translations[lang];
-        if (t) return { text: t.edited_text || t.post_text, title: t.title || post.title, lang, translated: true };
-        return { text: post.edited_text || post.post_text, title: post.title, lang, translated: false };
+        if (t) {
+          // A translation whose source_hash no longer matches was made from older English.
+          const stale = !!t.source_hash && t.source_hash !== masterHash;
+          return { text: t.edited_text || t.post_text, title: t.title || post.title, lang, translated: true, stale };
+        }
+        return { text: post.edited_text || post.post_text, title: post.title, lang, translated: false, stale: false };
       };
 
       if (dry) {
@@ -72,10 +87,11 @@ export default async function handler(req, res) {
       }
 
       const text = post.edited_text || post.post_text;
-      let sent = 0, failed = 0, missingTranslations = [];
+      let sent = 0, failed = 0, missingTranslations = [], staleTranslations = [];
       for (const m of streamMembers) {
         const v = forMember(m);
         if (!v.translated) missingTranslations.push(`${m.name} (${v.lang})`);
+        else if (v.stale) staleTranslations.push(`${m.name} (${v.lang})`);
         let status = 'sent', error = null, resendId = null;
         try {
           const er = await fetch('https://api.resend.com/emails', {
@@ -86,7 +102,7 @@ export default async function handler(req, res) {
               to: [m.email],
               reply_to: 'pratik.y.renuse@gmail.com',
               subject: `Your LinkedIn post for tomorrow: ${v.title}`,
-              html: emailHtml(m.name, post, v.text, v.lang, v.translated),
+              html: emailHtml(m.name, post, v.text, v.lang, v.translated, v.stale),
             }),
           });
           const ej = await er.json().catch(() => ({}));
@@ -140,7 +156,9 @@ export default async function handler(req, res) {
         });
       }
       results.push({ stream, post: post.title, day: post.day, sent, failed, oversight,
-        ...(missingTranslations.length ? { translations_missing: missingTranslations } : {}) });
+        ...(retranslated ? { retranslated } : {}),
+        ...(missingTranslations.length ? { translations_missing: missingTranslations } : {}),
+        ...(staleTranslations.length ? { translations_stale: staleTranslations } : {}) });
     }
 
     res.json({ ok: true, dry, results });
@@ -153,12 +171,16 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function emailHtml(name, post, text, lang = 'en', translated = true) {
+function emailHtml(name, post, text, lang = 'en', translated = true, stale = false) {
   const intro = lang === 'en'
     ? 'Here is your LinkedIn post for tomorrow. Copy the text below, adjust anything that does not sound like you, attach the image, and post.'
     : 'Here is your LinkedIn post for tomorrow, already in your language. Copy the text below, adjust anything that does not sound like you, attach the image, and post.';
-  const warn = translated ? '' :
-    `<p style="margin:0 0 12px;font-size:13px;color:#8a1f1f;background:#FAEDED;border-radius:8px;padding:8px 10px">The ${esc(lang.toUpperCase())} version was not ready, so this is the English original. Please translate before posting.</p>`;
+  let warn = '';
+  if (!translated) {
+    warn = `<p style="margin:0 0 12px;font-size:13px;color:#8a1f1f;background:#FAEDED;border-radius:8px;padding:8px 10px">The ${esc(lang.toUpperCase())} version was not ready, so this is the English original. Please translate before posting.</p>`;
+  } else if (stale) {
+    warn = `<p style="margin:0 0 12px;font-size:13px;color:#7a611c;background:#FBF3DF;border-radius:8px;padding:8px 10px">The English original was edited after this ${esc(lang.toUpperCase())} version was made, and the update could not be applied automatically. Worth a quick read before posting.</p>`;
+  }
   return emailShell(name, post, text, intro, warn);
 }
 
