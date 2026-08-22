@@ -46,6 +46,7 @@ export default function InternalLinkedIn() {
   const [dashBusy, setDashBusy] = useState(false)
   const [dispatching, setDispatching] = useState(false)
   const [dispatchResult, setDispatchResult] = useState(null)
+  const [sendTo, setSendTo] = useState('all')
   const listRef = useRef(null)
 
   const load = useCallback(async (p) => {
@@ -188,17 +189,19 @@ export default function InternalLinkedIn() {
     setDispatching(false)
   }
 
-  async function sendNow(dry) {
-    if (!dry && !confirm('Send the next approved post of each stream to its team members now?')) return
+  async function sendNow() {
+    const who = sendTo === 'all' ? 'the whole team' : sendTo
+    if (!confirm(`Send the next approved post of each stream to ${who} now?`)) return
     setDispatching(true); setDispatchResult(null); setErr('')
     try {
-      const r = await fetch(`/api/linkedin-dispatch${dry ? '?dry=1' : ''}`, { headers: { 'x-passcode': pass } })
+      const q = sendTo === 'all' ? '' : `?member=${encodeURIComponent(sendTo)}`
+      const r = await fetch(`/api/linkedin-dispatch${q}`, { headers: { 'x-passcode': pass } })
       const text = await r.text()
       let j
       try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
       if (j.error) throw new Error(j.error)
       setDispatchResult(j)
-      if (!dry) { load(pass); loadDash() }
+      load(pass); loadDash()
     } catch (e) { setErr(String(e.message || e)) }
     setDispatching(false)
   }
@@ -531,13 +534,22 @@ export default function InternalLinkedIn() {
 
           <Card title="Daily email dispatch">
             <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 10px' }}>
-              Weekdays at 15:00 UTC, each stream's next approved post is emailed to that stream's team members, ready to copy for the next day. You can also trigger it manually.
+              Approving a post emails it to Pratik and John straight away. The team's own send runs automatically on weekdays at 15:00 UTC: each stream's next approved post goes to that stream's members in their own language, ready to copy for the next day. Send it early, or to one person only, here.
             </p>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <button onClick={() => sendNow(true)} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
-                {dispatching ? 'Working…' : "Preview today's send"}
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+              <label style={{ fontSize: 13, color: '#3a3f52' }}>
+                Send to{' '}
+                <select value={sendTo} onChange={e => setSendTo(e.target.value)}
+                  style={{ fontFamily: 'inherit', fontSize: 13, padding: '8px 10px', borderRadius: 8, border: '1px solid #c4c9d4', background: '#fff' }}>
+                  <option value="all">the whole team</option>
+                  {(dash ? dash.members : []).filter(m => m.email && m.active !== false).map(m => (
+                    <option key={m.id} value={m.name}>{m.name} ({m.language})</option>
+                  ))}
+                </select>
+              </label>
+              <button onClick={sendNow} disabled={dispatching} style={{ ...btn(NAVY, '#fff'), marginTop: 0, padding: '9px 18px', fontSize: 13, fontWeight: 700 }}>
+                {dispatching ? 'Working…' : 'Send now'}
               </button>
-              <button onClick={() => sendNow(false)} disabled={dispatching} style={{ ...btn(NAVY, '#fff'), marginTop: 0, padding: '9px 18px', fontSize: 13, fontWeight: 700 }}>Send now</button>
               <button onClick={refreshTranslations} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
                 Refresh translations
               </button>
@@ -554,7 +566,7 @@ export default function InternalLinkedIn() {
                   <div key={i} style={{ padding: '2px 0' }}>
                     <b style={{ textTransform: 'capitalize' }}>{r.stream}</b>:{' '}
                     {r.skipped ? r.skipped
-                      : r.would_send ? `would send "${r.would_send}" (day ${r.day}) to ${r.to.join(', ')}`
+                      : r.would_send ? `would send "${r.would_send}" (day ${r.day}) to ${(r.to || []).join(', ')}`
                       : `sent "${r.post}" (day ${r.day}) to ${r.sent} member${r.sent === 1 ? '' : 's'}${r.failed ? `, ${r.failed} failed` : ''}`}
                     {r.retranslated && r.retranslated.updated && r.retranslated.updated.length > 0 && (
                       <div style={{ color: '#2e7d32', fontSize: 12 }}>Translations refreshed before sending: {r.retranslated.updated.join(', ')}</div>

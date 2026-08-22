@@ -33,7 +33,14 @@ export default async function handler(req, res) {
 
     const mr = await fetch(`${url}/rest/v1/team_members?active=eq.true&order=name.asc&select=*`, { headers: H });
     if (!mr.ok) return res.status(500).json({ error: `Supabase members ${mr.status}: ${await mr.text()}` });
-    const members = (await mr.json()).filter(m => m.email && m.email.includes('@'));
+    let members = (await mr.json()).filter(m => m.email && m.email.includes('@'));
+
+    // ?member=Name sends to that one person only. Default: everyone.
+    const only = (req.body && req.body.member) || req.query.member;
+    if (only && only !== 'all') {
+      members = members.filter(m => m.name.toLowerCase() === String(only).toLowerCase());
+      if (!members.length) return res.status(400).json({ error: `No active team member with an email named "${only}".` });
+    }
 
     const results = [];
     for (const stream of ['owners', 'agents', 'attorneys']) {
@@ -161,7 +168,7 @@ export default async function handler(req, res) {
         ...(staleTranslations.length ? { translations_stale: staleTranslations } : {}) });
     }
 
-    res.json({ ok: true, dry, results });
+    res.json({ ok: true, dry, ...(only && only !== 'all' ? { sent_to_only: only } : {}), results });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }
