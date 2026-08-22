@@ -56,15 +56,23 @@ export default async function handler(req, res) {
       const post = pr.ok ? (await pr.json())[0] : null;
       if (post) {
         const body = post.edited_text || post.post_text;
+        const streamName = { owners: 'property owners', agents: 'estate agents', attorneys: 'legal advisers' }[post.audience || 'owners'] || post.audience;
         const mail = await sendMail({
           to: OVERSIGHT,
-          subject: `Approved: ${post.title || post.slug}`,
+          subject: `Approved for the team: ${post.title || post.slug} (day ${post.day})`,
           html: shell({
-            heading: 'approved',
-            greeting: 'Approved just now',
-            intro: `${post.audience || 'owners'} stream, day ${post.day}. This is what the team will receive, each in their own language, on the next send.`,
+            heading: 'review deck',
+            greeting: 'A post was just approved.',
+            intro: `This is a notification for you and John only. Nothing has gone to the team yet.`,
+            notice: `<div style="margin:0 0 16px;font-size:13px;color:#3a3f52;background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:12px 14px">
+                <div style="margin-bottom:4px"><b>What this is:</b> post day ${post.day} of the series written for ${streamName}.</div>
+                <div style="margin-bottom:4px"><b>What happens next:</b> it goes to the team on the next send, weekdays at 15:00 UTC, or immediately if you press Send now in the dashboard.</div>
+                <div><b>What they receive:</b> this exact post, translated into each member's own language, with the image attached and you and John on copy.</div>
+              </div>
+              <p style="margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5B7FCC">The approved post</p>`,
             body,
-            footer: imageBlock(post.image_url, 'Image attached to this post:'),
+            footer: imageBlock(post.image_url, 'Image that goes out with this post:')
+              + `<p style="margin:18px 0 0;font-size:13px;color:#5a5f73">Spotted a problem? Open the review deck, press Undo on this post, and edit it. Translations update themselves before the send.</p>`,
           }),
         });
         notified = mail.ok ? 'sent' : mail.error;

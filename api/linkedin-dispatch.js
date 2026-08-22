@@ -6,10 +6,7 @@
 // Auth: team passcode (header/query), CRON_SECRET bearer if configured, or Vercel cron itself.
 
 import { syncTranslations, hashText, getApiKey } from './_translate.js';
-
-const SITE = 'https://247spain.es';
-// Every dispatched post is also copied to these addresses for oversight.
-const OVERSIGHT = ['pratik.y.renuse@gmail.com', 'john@getbueno.com'];
+import { OVERSIGHT, SITE, esc, sendMail, COPY, STREAM_LABEL } from './_email.js';
 
 export default async function handler(req, res) {
   try {
@@ -93,76 +90,45 @@ export default async function handler(req, res) {
         continue;
       }
 
-      const text = post.edited_text || post.post_text;
+      // What is queued behind this one, for the "coming up" section of the email.
+      const ur = await fetch(
+        `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&day=gt.${post.day}&order=day.asc&select=day,title`,
+        { headers: H });
+      const upcoming = ur.ok ? await ur.json() : [];
+
       let sent = 0, failed = 0, missingTranslations = [], staleTranslations = [];
       for (const m of streamMembers) {
         const v = forMember(m);
         if (!v.translated) missingTranslations.push(`${m.name} (${v.lang})`);
         else if (v.stale) staleTranslations.push(`${m.name} (${v.lang})`);
-        let status = 'sent', error = null, resendId = null;
-        try {
-          const er = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              from,
-              to: [m.email],
-              reply_to: 'pratik.y.renuse@gmail.com',
-              subject: `Your LinkedIn post for tomorrow: ${v.title}`,
-              html: emailHtml(m.name, post, v.text, v.lang, v.translated, v.stale),
-            }),
-          });
-          const ej = await er.json().catch(() => ({}));
-          if (!er.ok) { status = 'failed'; error = `Resend ${er.status}: ${JSON.stringify(ej).slice(0, 300)}`; }
-          else resendId = ej.id || null;
-        } catch (e) { status = 'failed'; error = String((e && e.message) || e); }
+
+        const mail = await sendMail({
+          to: [m.email],
+          cc: OVERSIGHT,
+          subject: (COPY[v.lang] || COPY.en).subject(v.title),
+          html: memberEmail({ member: m, post, text: v.text, lang: v.lang, stream, upcoming, translated: v.translated, stale: v.stale }),
+        });
 
         await fetch(`${url}/rest/v1/linkedin_emails`, {
           method: 'POST',
           headers: { ...H, Prefer: 'return=minimal' },
           body: JSON.stringify({
             post_id: post.id, post_slug: post.slug, post_title: post.title,
-            member_name: `${m.name} (${v.lang}${v.translated ? '' : ', EN fallback'})`,
-            member_email: m.email, status, error, resend_id: resendId,
+            member_name: `${m.name} (${v.lang}${v.translated ? '' : ', EN fallback'}, cc Pratik + John)`,
+            member_email: m.email, status: mail.ok ? 'sent' : 'failed',
+            error: mail.ok ? null : mail.error, resend_id: mail.id || null,
           }),
         });
-        if (status === 'sent') sent += 1; else failed += 1;
+        if (mail.ok) sent += 1; else failed += 1;
       }
 
-      // Oversight copy: one email per dispatched post to Pratik and John.
-      let oversight = 'skipped';
       if (sent > 0) {
-        try {
-          const recipients = streamMembers.map(m => `${m.name} <${m.email}>`).join(', ');
-          const or = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              from,
-              to: OVERSIGHT,
-              reply_to: 'pratik.y.renuse@gmail.com',
-              subject: `[Copy] ${stream} day ${post.day}: ${post.title}`,
-              html: `<p style="font-family:Georgia,serif;font-size:13px;color:#5a5f73">Oversight copy. Sent to: ${esc(recipients)}</p>` + emailHtml('team', post, text),
-            }),
-          });
-          oversight = or.ok ? 'sent' : `failed (${or.status})`;
-          await fetch(`${url}/rest/v1/linkedin_emails`, {
-            method: 'POST',
-            headers: { ...H, Prefer: 'return=minimal' },
-            body: JSON.stringify({
-              post_id: post.id, post_slug: post.slug, post_title: post.title,
-              member_name: 'Oversight (Pratik + John)', member_email: OVERSIGHT.join(', '),
-              status: or.ok ? 'sent' : 'failed', error: or.ok ? null : `Resend ${or.status}`,
-            }),
-          });
-        } catch (e) { oversight = `failed (${String((e && e.message) || e).slice(0, 80)})`; }
-
         await fetch(`${url}/rest/v1/linkedin_posts?id=eq.${post.id}`, {
           method: 'PATCH', headers: { ...H, Prefer: 'return=minimal' },
           body: JSON.stringify({ sent_at: new Date().toISOString() }),
         });
       }
-      results.push({ stream, post: post.title, day: post.day, sent, failed, oversight,
+      results.push({ stream, post: post.title, day: post.day, sent, failed, cc: OVERSIGHT.join(', '),
         ...(retranslated ? { retranslated } : {}),
         ...(missingTranslations.length ? { translations_missing: missingTranslations } : {}),
         ...(staleTranslations.length ? { translations_stale: staleTranslations } : {}) });
@@ -174,28 +140,39 @@ export default async function handler(req, res) {
   }
 }
 
-function esc(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
+// The member email, in their language: context first, then the post and its image,
+// then what is coming next.
+function memberEmail({ member, post, text, lang, stream, upcoming, translated, stale }) {
+  const c = COPY[lang] || COPY.en;
+  const audience = (STREAM_LABEL[lang] || STREAM_LABEL.en)[stream] || stream;
 
-function emailHtml(name, post, text, lang = 'en', translated = true, stale = false) {
-  const intro = lang === 'en'
-    ? 'Here is your LinkedIn post for tomorrow. Copy the text below, adjust anything that does not sound like you, attach the image, and post.'
-    : 'Here is your LinkedIn post for tomorrow, already in your language. Copy the text below, adjust anything that does not sound like you, attach the image, and post.';
   let warn = '';
   if (!translated) {
-    warn = `<p style="margin:0 0 12px;font-size:13px;color:#8a1f1f;background:#FAEDED;border-radius:8px;padding:8px 10px">The ${esc(lang.toUpperCase())} version was not ready, so this is the English original. Please translate before posting.</p>`;
+    warn = `<p style="margin:0 0 14px;font-size:13px;color:#8a1f1f;background:#FAEDED;border-radius:8px;padding:10px 12px">The ${esc(String(lang).toUpperCase())} version was not ready, so this is the English original. Please translate it before posting.</p>`;
   } else if (stale) {
-    warn = `<p style="margin:0 0 12px;font-size:13px;color:#7a611c;background:#FBF3DF;border-radius:8px;padding:8px 10px">The English original was edited after this ${esc(lang.toUpperCase())} version was made, and the update could not be applied automatically. Worth a quick read before posting.</p>`;
+    warn = `<p style="margin:0 0 14px;font-size:13px;color:#7a611c;background:#FBF3DF;border-radius:8px;padding:10px 12px">The English original was edited after this version was translated, so give it a quick read before posting.</p>`;
   }
-  return emailShell(name, post, text, intro, warn);
-}
 
-function emailShell(name, post, text, intro, warn) {
+  const context = `
+    <p style="margin:0 0 10px;font-size:14px;color:#3a3f52">${esc(c.what)}</p>
+    <p style="margin:0 0 6px;font-size:14px;color:#3a3f52">${esc(c.how)}</p>
+    <p style="margin:0 0 16px;font-size:13px;color:#8a8fa3">${esc(c.dayLine(post.day, audience))}</p>`;
+
   const img = post.image_url
-    ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">Attach this image to the post (tap and hold / right click to save):</p>
+    ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">${esc(c.imageLabel)}</p>
        <img src="${SITE}${post.image_url}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
     : '';
+
+  const next = (upcoming && upcoming.length)
+    ? `<div style="margin-top:22px;border-top:1px solid #EDEBE6;padding-top:14px">
+         <p style="margin:0 0 6px;font-size:13px;font-weight:bold;color:#010221">${esc(c.nextLabel)}</p>
+         <ul style="margin:0 0 8px;padding-left:18px;font-size:13px;color:#5a5f73">
+           ${upcoming.slice(0, 3).map(u => `<li style="margin-bottom:3px">${esc(u.title || '')}</li>`).join('')}
+         </ul>
+         <p style="margin:0;font-size:13px;color:#8a8fa3">${esc(c.remaining(upcoming.length))}</p>
+       </div>`
+    : '';
+
   return `
   <div style="background:#F4F2EE;padding:24px 12px;font-family:Georgia,serif">
     <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #E0DFDC">
@@ -203,12 +180,14 @@ function emailShell(name, post, text, intro, warn) {
         24<span style="color:#C9A96E">/</span>7 SPAIN
       </div>
       <div style="padding:22px">
-        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi ${esc(name)},</p>
-        <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">${esc(intro)}</p>
+        <p style="margin:0 0 10px;font-size:15px;color:#010221">${esc(c.greeting(member.name))}</p>
+        ${context}
         ${warn}
+        <p style="margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5B7FCC">${esc(c.postLabel)}</p>
         <div style="background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:16px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111;white-space:pre-wrap">${esc(text)}</div>
         ${img}
-        <p style="margin:18px 0 0;font-size:13px;color:#5a5f73">Day ${post.day} of the plan. Questions or edits: just reply to this email.</p>
+        ${next}
+        <p style="margin:18px 0 0;font-size:13px;color:#5a5f73">${esc(c.reply)}</p>
       </div>
     </div>
   </div>`;
