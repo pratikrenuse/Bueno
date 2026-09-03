@@ -47,6 +47,8 @@ export default function InternalLinkedIn() {
   const [dispatching, setDispatching] = useState(false)
   const [dispatchResult, setDispatchResult] = useState(null)
   const [sendTo, setSendTo] = useState('all')
+  const [allRows, setAllRows] = useState([])   // every row incl. translations, for coverage
+  const [logFilter, setLogFilter] = useState('all')
   const listRef = useRef(null)
 
   const load = useCallback(async (p) => {
@@ -142,12 +144,22 @@ export default function InternalLinkedIn() {
   async function loadDash() {
     setDashBusy(true); setErr('')
     try {
-      const r = await fetch('/api/linkedin-emails', { headers: { 'x-passcode': pass } })
-      const text = await r.text()
+      const [er, ar] = await Promise.all([
+        fetch('/api/linkedin-emails', { headers: { 'x-passcode': pass } }),
+        fetch('/api/linkedin-posts?status=all&lang=all', { headers: { 'x-passcode': pass } }),
+      ])
+      const etext = await er.text()
       let j
-      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      try { j = JSON.parse(etext) } catch { throw new Error(`Server error ${er.status}: ${etext.slice(0, 200)}`) }
       if (j.error) throw new Error(j.error)
       setDash(j)
+      if (ar.ok) {
+        const atext = await ar.text()
+        try {
+          const aj = JSON.parse(atext)
+          if (!aj.error) setAllRows(aj.posts || [])
+        } catch { /* coverage panel simply stays empty */ }
+      }
     } catch (e) { setErr(String(e.message || e)) }
     setDashBusy(false)
   }
@@ -526,126 +538,283 @@ export default function InternalLinkedIn() {
       </main>
       </>}
 
-      {view === 'dash' && (
-        <main style={{ maxWidth: 920, margin: '0 auto', padding: '18px 14px 60px' }}>
+      {view === 'dash' && (() => {
+        const pendingAll = posts.filter(p => p.status === 'pending')
+        const approvedAll = posts.filter(p => p.status === 'approved')
+        const rejectedAll = posts.filter(p => p.status === 'rejected')
+        const sentAll = posts.filter(p => p.sent_at)
+        const queued = approvedAll.filter(p => !p.sent_at)
+        const weeksOfRunway = Math.floor(sentAll.length ? queued.length / 2 : queued.length / 2)
+        const members = (dash ? dash.members : []).filter(m => m.active !== false)
+        const mailable = members.filter(m => m.email && m.email.includes('@'))
+        const emails = dash ? dash.emails : []
+        const failedMails = emails.filter(e => e.status !== 'sent')
+        const nextDay = (() => {
+          const d = new Date().getUTCDay()
+          const toTue = (2 - d + 7) % 7 || 7
+          const toThu = (4 - d + 7) % 7 || 7
+          return toTue <= toThu ? 'Tuesday' : 'Thursday'
+        })()
+        const langs = [...new Set(mailable.map(m => m.language || 'en'))].filter(l => l !== 'en')
+        const lastFor = (name) => {
+          const hit = emails.find(e => (e.member_name || '').toLowerCase().startsWith(String(name).toLowerCase()))
+          return hit ? new Date(hit.sent_at) : null
+        }
+        const wordCount = posts.reduce((n, p) => n + (p.post_text || '').split(/\s+/).length, 0)
+
+        return (
+        <main style={{ maxWidth: 980, margin: '0 auto', padding: '18px 14px 60px' }}>
           {err && (
             <div style={{ background: '#fff', border: '1px solid #e0b4b4', color: '#8a1f1f', borderRadius: 12, padding: '12px 16px', fontSize: 14, marginBottom: 14 }}>{err}</div>
           )}
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 14 }}>
+          {/* Where things stand, and the one thing to do about it */}
+          <div style={{ background: NAVY, color: '#fff', borderRadius: 18, padding: '22px 24px', marginBottom: 16 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+              <div style={{ minWidth: 240 }}>
+                <div style={{ fontSize: 12, letterSpacing: 1.4, textTransform: 'uppercase', color: GOLD, marginBottom: 6 }}>Next posting day</div>
+                <div style={{ fontSize: 30, fontWeight: 700, lineHeight: 1.1 }}>{nextDay}</div>
+                <div style={{ fontSize: 13, color: LBLUE, marginTop: 8 }}>
+                  {queued.length > 0
+                    ? `${queued.length} post${queued.length === 1 ? '' : 's'} approved and with the team. That is about ${weeksOfRunway} week${weeksOfRunway === 1 ? '' : 's'} of posting at two a week.`
+                    : 'Nothing approved yet. The team has nothing to post.'}
+                </div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                {pendingAll.length > 0 ? (
+                  <>
+                    <div style={{ fontSize: 44, fontWeight: 700, lineHeight: 1, color: GOLD }}>{pendingAll.length}</div>
+                    <div style={{ fontSize: 13, color: LBLUE, margin: '4px 0 10px' }}>waiting for review</div>
+                    <button onClick={() => { setView('deck'); setTab('pending') }}
+                      style={{ ...btn(GOLD, NAVY), marginTop: 0, padding: '11px 22px', fontSize: 14, fontWeight: 700 }}>
+                      Review them now
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ fontSize: 22, fontWeight: 700, lineHeight: 1.2 }}>All reviewed</div>
+                    <div style={{ fontSize: 13, color: LBLUE, marginTop: 4 }}>Nothing is waiting on John.</div>
+                  </>
+                )}
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: 26, flexWrap: 'wrap', marginTop: 20, paddingTop: 16, borderTop: '1px solid rgba(255,255,255,.14)' }}>
+              <HeroStat label="Approved" value={approvedAll.length} />
+              <HeroStat label="Sent to team" value={sentAll.length} />
+              <HeroStat label="Rejected" value={rejectedAll.length} />
+              <HeroStat label="Team members" value={mailable.length} />
+              <HeroStat label="Emails delivered" value={emails.filter(e => e.status === 'sent').length} />
+              {failedMails.length > 0 && <HeroStat label="Failed" value={failedMails.length} tone="#ff9d9d" />}
+            </div>
+          </div>
+
+          {/* Per stream progress */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 14 }}>
             {STREAMS.map(s => {
               const sp = posts.filter(p => (p.audience || 'owners') === s.key)
               const n = k => sp.filter(p => p.status === k).length
+              const done = sp.length - n('pending')
+              const pct = sp.length ? Math.round((done / sp.length) * 100) : 0
+              const streamMembers = mailable.filter(m => (m.stream || 'owners') === s.key)
               return (
-                <div key={s.key} style={{ background: '#fff', border: CARD_BORDER, borderRadius: 14, padding: '14px 16px' }}>
-                  <div style={{ fontWeight: 700, color: NAVY, marginBottom: 8 }}>{s.label} <span style={{ fontWeight: 400, color: '#8a8fa3', fontSize: 12 }}>{sp.length} posts</span></div>
-                  <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                <div key={s.key} style={{ background: '#fff', border: CARD_BORDER, borderRadius: 16, padding: '16px 18px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <div style={{ fontWeight: 700, color: NAVY, fontSize: 16 }}>{s.label}</div>
+                    <div style={{ fontSize: 12, color: '#8a8fa3' }}>{sp.length} posts</div>
+                  </div>
+                  <div style={{ fontSize: 12, color: '#8a8fa3', margin: '2px 0 10px' }}>
+                    {streamMembers.length
+                      ? `${streamMembers.map(m => m.name).join(', ')}`
+                      : 'No one assigned, this stream will not send'}
+                  </div>
+                  <div style={{ height: 8, background: '#EDEAE4', borderRadius: 999, overflow: 'hidden', marginBottom: 10 }}>
+                    <div style={{ height: '100%', width: `${pct}%`, background: pct === 100 ? '#2e7d32' : ACCENT, transition: 'width .4s ease' }} />
+                  </div>
+                  <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
                     <Stat label="Approved" value={n('approved')} color="#2e7d32" />
-                    <Stat label="Rejected" value={n('rejected')} color="#b02a2a" />
                     <Stat label="Pending" value={n('pending')} color="#7a611c" />
-                    <Stat label="Emailed" value={sp.filter(p => p.sent_at).length} color={ACCENT} />
+                    <Stat label="Rejected" value={n('rejected')} color="#b02a2a" />
+                    <Stat label="Sent" value={sp.filter(p => p.sent_at).length} color={ACCENT} />
                   </div>
                 </div>
               )
             })}
           </div>
 
-          <Card title="Daily email dispatch">
-            <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 10px' }}>
-              Approving a post sends it to the whole team immediately, each person in their own language, with Pratik and John on copy. The team publishes on Tuesdays and Thursdays. John gets a review reminder on Sunday and Tuesday evenings. Use Send now only to catch up something approved that never went out, or to resend to one person.
+          {/* Actions */}
+          <Card title="Actions">
+            <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 12px' }}>
+              Approving a post already sends it to the whole team, each person in their own language, with you and John on copy. Everything here is for the exceptions.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
               <label style={{ fontSize: 13, color: '#3a3f52' }}>
-                Send to{' '}
+                Catch up unsent posts for{' '}
                 <select value={sendTo} onChange={e => setSendTo(e.target.value)}
                   style={{ fontFamily: 'inherit', fontSize: 13, padding: '8px 10px', borderRadius: 8, border: '1px solid #c4c9d4', background: '#fff' }}>
                   <option value="all">the whole team</option>
-                  {(dash ? dash.members : []).filter(m => m.email && m.active !== false).map(m => (
-                    <option key={m.id} value={m.name}>{m.name} ({m.language})</option>
-                  ))}
+                  {mailable.map(m => (<option key={m.id} value={m.name}>{m.name} ({m.language})</option>))}
                 </select>
               </label>
               <button onClick={sendNow} disabled={dispatching} style={{ ...btn(NAVY, '#fff'), marginTop: 0, padding: '9px 18px', fontSize: 13, fontWeight: 700 }}>
                 {dispatching ? 'Working…' : 'Send now'}
               </button>
-              <button onClick={refreshTranslations} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
-                Refresh translations
-              </button>
-              <button onClick={sendReminder} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
-                Remind John now
-              </button>
-              <button onClick={runHealth} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
-                Run health check
-              </button>
+              <button onClick={sendReminder} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>Remind John</button>
+              <button onClick={refreshTranslations} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>Refresh translations</button>
+              <button onClick={runHealth} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>Health check</button>
             </div>
-            <p style={{ fontSize: 12, color: '#8a8fa3', margin: '8px 0 0' }}>
-              Edited an approved post? Its translations are regenerated automatically before the next send. Use Refresh translations to update them right away.
-            </p>
             {dispatchResult && (
-              <div style={{ marginTop: 10, fontSize: 13, background: '#F8F7F4', borderRadius: 8, padding: '10px 12px' }}>
+              <div style={{ marginTop: 12, fontSize: 13, background: '#F8F7F4', border: CARD_BORDER, borderRadius: 10, padding: '12px 14px' }}>
                 {dispatchResult.results.map((r, i) => (
-                  <div key={i} style={{ padding: '2px 0' }}>
+                  <div key={i} style={{ padding: '3px 0' }}>
                     <b style={{ textTransform: 'capitalize' }}>{r.stream}</b>:{' '}
                     {r.skipped ? r.skipped
                       : r.would_send ? `would send "${r.would_send}" (day ${r.day}) to ${(r.to || []).join(', ')}`
                       : `sent "${r.post}" (day ${r.day}) to ${r.sent} member${r.sent === 1 ? '' : 's'}${r.failed ? `, ${r.failed} failed` : ''}`}
                     {r.retranslated && r.retranslated.updated && r.retranslated.updated.length > 0 && (
-                      <div style={{ color: '#2e7d32', fontSize: 12 }}>Translations refreshed before sending: {r.retranslated.updated.join(', ')}</div>
+                      <div style={{ color: '#2e7d32', fontSize: 12 }}>Translations refreshed first: {r.retranslated.updated.join(', ')}</div>
                     )}
-                    {r.translations_stale && (
-                      <div style={{ color: '#7a611c', fontSize: 12 }}>Older translation used for: {r.translations_stale.join(', ')}</div>
-                    )}
-                    {r.translations_missing && (
-                      <div style={{ color: '#b02a2a', fontSize: 12 }}>English fallback sent to: {r.translations_missing.join(', ')}</div>
-                    )}
+                    {r.translations_stale && <div style={{ color: '#7a611c', fontSize: 12 }}>Older translation used for: {r.translations_stale.join(', ')}</div>}
+                    {r.translations_missing && <div style={{ color: '#b02a2a', fontSize: 12 }}>English fallback sent to: {r.translations_missing.join(', ')}</div>}
+                    {r.errors && r.errors.map((x, k) => <div key={k} style={{ color: '#b02a2a', fontSize: 12 }}>{x}</div>)}
                   </div>
                 ))}
               </div>
             )}
           </Card>
 
-          <Card title="Why posts were rejected">
-            {posts.filter(p => p.status === 'rejected').length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>No rejections yet.</p>}
-            {posts.filter(p => p.status === 'rejected').map(p => (
-              <div key={p.id} style={{ padding: '8px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13 }}>
+          {/* Language coverage */}
+          <Card title="Language coverage">
+            {langs.length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>Everyone on the roster posts in English, so nothing needs translating.</p>}
+            {langs.length > 0 && (
+              <>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', gap: 10 }}>
+                  {langs.map(l => {
+                    const who = mailable.filter(m => (m.language || 'en') === l).map(m => m.name)
+                    const needed = posts.filter(p => mailable.some(m => (m.language || 'en') === l && (m.stream || 'owners') === (p.audience || 'owners')))
+                    const have = needed.filter(p => allRows.some(r => r.slug === p.slug && r.language === l && (r.audience || 'owners') === (p.audience || 'owners')))
+                    const pct = needed.length ? Math.round((have.length / needed.length) * 100) : 100
+                    return (
+                      <div key={l} style={{ border: CARD_BORDER, borderRadius: 12, padding: '10px 12px', background: '#FBFAF8' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                          <b style={{ color: NAVY, textTransform: 'uppercase', fontSize: 13 }}>{l}</b>
+                          <span style={{ fontSize: 12, color: pct === 100 ? '#2e7d32' : '#7a611c', fontWeight: 700 }}>{pct}%</span>
+                        </div>
+                        <div style={{ fontSize: 12, color: '#8a8fa3', margin: '2px 0 8px' }}>{who.join(', ')}</div>
+                        <div style={{ height: 6, background: '#EDEAE4', borderRadius: 999, overflow: 'hidden' }}>
+                          <div style={{ height: '100%', width: `${pct}%`, background: pct === 100 ? '#2e7d32' : GOLD }} />
+                        </div>
+                        <div style={{ fontSize: 11, color: '#8a8fa3', marginTop: 6 }}>{have.length} of {needed.length} posts</div>
+                      </div>
+                    )
+                  })}
+                </div>
+                <p style={{ fontSize: 12, color: '#8a8fa3', margin: '10px 0 0' }}>
+                  Anything missing is written automatically before that post is sent, so a gap here is not a blocker.
+                </p>
+              </>
+            )}
+          </Card>
+
+          {/* Team */}
+          <Card title="The team">
+            {dashBusy && <p style={{ fontSize: 13, margin: 0 }}>Loading…</p>}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))', gap: 10 }}>
+              {(dash ? dash.members : []).map(m => {
+                const last = lastFor(m.name)
+                const ok = m.email && m.email.includes('@')
+                return (
+                  <div key={m.id} style={{ border: CARD_BORDER, borderRadius: 12, padding: '12px 14px', background: ok ? '#FBFAF8' : '#FDF6F6' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                      <b style={{ color: NAVY }}>{m.name}</b>
+                      <span style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: 1, color: ACCENT }}>{m.language}</span>
+                    </div>
+                    <div style={{ fontSize: 12, color: '#8a8fa3', marginTop: 2 }}>{m.stream} stream{m.active === false ? ' · inactive' : ''}</div>
+                    <div style={{ fontSize: 12, color: ok ? '#3a3f52' : '#b02a2a', fontWeight: ok ? 400 : 700, marginTop: 6, wordBreak: 'break-all' }}>
+                      {ok ? m.email : 'Email missing, this person is skipped'}
+                    </div>
+                    <div style={{ fontSize: 12, color: '#8a8fa3', marginTop: 6 }}>
+                      {last ? `Last post sent ${last.toLocaleDateString()}` : 'Nothing sent yet'}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </Card>
+
+          {/* Rejections */}
+          <Card title={`Rejected posts${rejectedAll.length ? ` (${rejectedAll.length})` : ''}`}>
+            {rejectedAll.length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>Nothing rejected. Rejections show here with John's note so they can be rewritten.</p>}
+            {rejectedAll.map(p => (
+              <div key={p.id} style={{ padding: '10px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13 }}>
                 <span style={{ fontWeight: 600, color: NAVY }}>{p.title}</span>
                 <span style={{ color: '#8a8fa3' }}> · {(p.audience || 'owners')} · day {p.day}</span>
-                <div style={{ color: '#8a1f1f', marginTop: 2 }}>{p.reject_comment || 'No note'}</div>
+                <div style={{ color: '#8a1f1f', marginTop: 4, background: '#FAEDED', borderRadius: 8, padding: '7px 10px' }}>{p.reject_comment || 'No note left'}</div>
               </div>
             ))}
           </Card>
 
-          <Card title="Team roster">
-            {dashBusy && <p style={{ fontSize: 13, margin: 0 }}>Loading…</p>}
-            {dash && dash.members.map(m => (
-              <div key={m.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13, flexWrap: 'wrap', gap: 4 }}>
-                <span><b style={{ color: NAVY }}>{m.name}</b> <span style={{ color: '#8a8fa3' }}>· {m.language} · {m.stream}{m.active ? '' : ' · inactive'}</span></span>
-                {m.email ? <span style={{ color: '#3a3f52' }}>{m.email}</span> : <span style={{ color: '#b02a2a', fontWeight: 600 }}>email missing</span>}
+          {/* Email log */}
+          <Card title="Email log">
+            <div style={{ display: 'flex', gap: 6, marginBottom: 10, flexWrap: 'wrap' }}>
+              {[['all', `All (${emails.length})`], ['failed', `Failed (${failedMails.length})`]].map(([k, label]) => (
+                <button key={k} onClick={() => setLogFilter(k)}
+                  style={{ padding: '6px 12px', borderRadius: 999, cursor: 'pointer', fontFamily: 'inherit', fontSize: 12,
+                    border: '1px solid ' + (logFilter === k ? NAVY : '#D5D2CA'), background: logFilter === k ? NAVY : '#fff',
+                    color: logFilter === k ? '#fff' : '#3a3f52', fontWeight: logFilter === k ? 700 : 400 }}>
+                  {label}
+                </button>
+              ))}
+            </div>
+            {emails.length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>Nothing sent yet. Approve a post and it goes straight to the team.</p>}
+            {(logFilter === 'failed' ? failedMails : emails).map(e => (
+              <div key={e.id} style={{ display: 'flex', justifyContent: 'space-between', gap: 10, padding: '8px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13, flexWrap: 'wrap' }}>
+                <span style={{ minWidth: 0 }}>
+                  <b style={{ color: NAVY }}>{e.member_name}</b>
+                  <span style={{ color: '#8a8fa3' }}> · {e.post_title || 'no post'}</span>
+                  <div style={{ color: '#8a8fa3', fontSize: 12 }}>{new Date(e.sent_at).toLocaleString()}</div>
+                </span>
+                <span style={{ fontSize: 12, fontWeight: 700, whiteSpace: 'nowrap',
+                  color: e.status === 'sent' ? '#2e7d32' : '#b02a2a',
+                  background: e.status === 'sent' ? '#E8F3E8' : '#FAEDED', borderRadius: 999, padding: '4px 12px', height: 'fit-content' }}>
+                  {e.status}
+                </span>
+                {e.error && <div style={{ width: '100%', color: '#b02a2a', fontSize: 12 }}>{e.error}</div>}
               </div>
             ))}
-            {dash && <p style={{ fontSize: 12, color: '#8a8fa3', margin: '8px 0 0' }}>Members without an email are skipped by the dispatch. The roster lives in the team_members table.</p>}
           </Card>
 
-          <Card title="Email log (latest 100)">
-            {dash && dash.emails.length === 0 && <p style={{ fontSize: 13, color: '#5a5f73', margin: 0 }}>Nothing sent yet.</p>}
-            {dash && dash.emails.map(e => (
-              <div key={e.id} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, padding: '6px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13, flexWrap: 'wrap' }}>
-                <span>{new Date(e.sent_at).toLocaleString()} · <b>{e.member_name}</b> · {e.post_title}</span>
-                <span style={{ color: e.status === 'sent' ? '#2e7d32' : '#b02a2a', fontWeight: 600 }}>{e.status}{e.error ? `: ${e.error.slice(0, 80)}` : ''}</span>
-              </div>
-            ))}
+          {/* Library */}
+          <Card title="The content library">
+            <div style={{ display: 'flex', gap: 26, flexWrap: 'wrap' }}>
+              <Stat label="English posts" value={posts.length} color={NAVY} />
+              <Stat label="With a photo" value={posts.filter(p => p.image_url).length} color={NAVY} />
+              <Stat label="Translated rows" value={allRows.filter(r => r.language !== 'en').length} color={NAVY} />
+              <Stat label="Edited by John" value={posts.filter(p => p.edited_text).length} color={NAVY} />
+              <Stat label="Words written" value={wordCount.toLocaleString()} color={NAVY} />
+            </div>
+            <p style={{ fontSize: 12, color: '#8a8fa3', margin: '10px 0 0' }}>
+              Every fact traces back to the 24/7 Spain article library. Posts run day 1 upward within each stream, and the team receives them in that order.
+            </p>
           </Card>
         </main>
-      )}
+        )
+      })()}
     </div>
   )
 }
 
 const Card = ({ title, children }) => (
-  <div style={{ background: '#fff', border: CARD_BORDER, borderRadius: 14, padding: '14px 16px', marginTop: 14 }}>
-    <div style={{ fontWeight: 700, color: NAVY, marginBottom: 8 }}>{title}</div>
+  <div style={{ background: '#fff', border: CARD_BORDER, borderRadius: 16, padding: '16px 18px', marginTop: 14, boxShadow: '0 1px 3px rgba(1,2,33,.04)' }}>
+    <div style={{ fontWeight: 700, color: NAVY, marginBottom: 10, fontSize: 15 }}>{title}</div>
     {children}
   </div>
+)
+
+const HeroStat = ({ label, value, tone }) => (
+  <span>
+    <div style={{ fontSize: 22, fontWeight: 700, color: tone || '#fff', lineHeight: 1.1 }}>{value}</div>
+    <div style={{ fontSize: 12, color: '#9aa0bb' }}>{label}</div>
+  </span>
 )
 
 const Stat = ({ label, value, color }) => (
