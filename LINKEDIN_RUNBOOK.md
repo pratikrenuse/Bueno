@@ -48,18 +48,23 @@ Safe to press again later: decisions and edits are never overwritten.
 
 ---
 
-## Daily operation
+## How it runs
+
+The team publishes on **Tuesdays and Thursdays**.
 
 1. **John reviews** in the deck. Approve, Reject with a note, or Edit the text directly.
    Keyboard: `J`/`K` move, `A` approve, `R` reject, `E` edit, `C` copy.
-2. **Weekdays at 15:00 UTC** the dispatch runs automatically: for each stream it takes the
-   oldest approved post that has not been sent, translates it per member language if needed,
-   and emails it to that stream's members, ready to post the next day.
-3. **Pratik and John** receive a copy of every post that goes out.
-4. Replies to any of these emails go to pratik.y.renuse@gmail.com.
+2. **Approving sends immediately.** The post goes to every member of that stream, each in
+   their own language, with the image attached and Pratik and John on copy. John and Pratik
+   also get a separate record of what was sent.
+3. **Reminders to John** go out Sunday and Tuesday at 17:00 UTC, ahead of each posting day.
+   They list what is pending, what is approved, and link straight to the deck. If nothing
+   needs attention, no reminder is sent.
+4. **A catch-up run** on Monday and Wednesday at 08:00 UTC picks up anything approved that
+   never reached the team, for example during a Resend outage. Normally it finds nothing.
+5. Replies to any of these emails go to pratik.y.renuse@gmail.com.
 
-Nothing is sent the moment a post is approved. Approving builds a queue that drains one post
-per stream per weekday.
+Approve only when you are happy for the team to have it. There is no undo on a sent email.
 
 ---
 

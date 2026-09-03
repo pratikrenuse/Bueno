@@ -3,7 +3,9 @@
 //   { id, action: "edit", text }                                   -> saves edited_text only, status untouched
 // Approving also emails the post straight to Pratik and John so they see what was approved
 // the moment it happens. The team's own send still runs through /api/linkedin-dispatch.
-import { OVERSIGHT, sendMail, shell, imageBlock } from './_email.js';
+import { OVERSIGHT, sendMail, shell, imageBlock, esc } from './_email.js';
+import { sendPostToTeam } from './_dispatch.js';
+import { getApiKey } from './_translate.js';
 
 export default async function handler(req, res) {
   try {
@@ -47,13 +49,29 @@ export default async function handler(req, res) {
     });
     if (!r.ok) return res.status(500).json({ error: `Supabase ${r.status}: ${await r.text()}` });
 
-    // On approval, send the oversight copy immediately.
-    let notified = null;
+    // Approving sends the post to the whole team straight away, each in their own
+    // language, with Pratik and John cc'd, plus a separate notice to Pratik and John.
+    let notified = null, delivery = null;
     if (action === 'approved') {
       const base = url.replace(/\/$/, '');
       const H = { apikey: key, Authorization: `Bearer ${key}` };
       const pr = await fetch(`${base}/rest/v1/linkedin_posts?id=eq.${encodeURIComponent(id)}&select=*`, { headers: H });
       const post = pr.ok ? (await pr.json())[0] : null;
+
+      if (post && post.language === 'en' && !post.sent_at) {
+        try {
+          const mr = await fetch(`${base}/rest/v1/team_members?active=eq.true&order=name.asc&select=*`, { headers: H });
+          if (mr.ok) {
+            const members = await mr.json();
+            delivery = await sendPostToTeam({ url: base, headers: H, post, members, anthropicKey: getApiKey() });
+          } else {
+            delivery = { error: `Supabase members ${mr.status}` };
+          }
+        } catch (e) { delivery = { error: String((e && e.message) || e).slice(0, 200) }; }
+      } else if (post && post.sent_at) {
+        delivery = { skipped: 'already sent to the team' };
+      }
+
       if (post) {
         const body = post.edited_text || post.post_text;
         const streamName = { owners: 'property owners', agents: 'estate agents', attorneys: 'legal advisers' }[post.audience || 'owners'] || post.audience;
@@ -63,16 +81,18 @@ export default async function handler(req, res) {
           html: shell({
             heading: 'review deck',
             greeting: 'A post was just approved.',
-            intro: `This is a notification for you and John only. Nothing has gone to the team yet.`,
+            intro: `It has just gone out to the team. You are receiving this as the record of what was sent.`,
             notice: `<div style="margin:0 0 16px;font-size:13px;color:#3a3f52;background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:12px 14px">
                 <div style="margin-bottom:4px"><b>What this is:</b> post day ${post.day} of the series written for ${streamName}.</div>
-                <div style="margin-bottom:4px"><b>What happens next:</b> it goes to the team on the next send, weekdays at 15:00 UTC, or immediately if you press Send now in the dashboard.</div>
-                <div><b>What they receive:</b> this exact post, translated into each member's own language, with the image attached and you and John on copy.</div>
+                <div style="margin-bottom:4px"><b>Sent to:</b> ${delivery && delivery.sent ? `${delivery.sent} team member${delivery.sent === 1 ? '' : 's'}` : 'the team'}, each in their own language, with the image attached and you and John on copy of every one.</div>
+                <div><b>They post it:</b> on the next posting day, Tuesday or Thursday.</div>
+                ${delivery && delivery.failed ? `<div style="color:#8a1f1f;margin-top:4px"><b>${delivery.failed} email(s) failed.</b> Check the email log in the dashboard.</div>` : ''}
+                ${delivery && delivery.error ? `<div style="color:#8a1f1f;margin-top:4px"><b>Delivery problem:</b> ${esc(String(delivery.error))}</div>` : ''}
               </div>
               <p style="margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5B7FCC">The approved post</p>`,
             body,
-            footer: imageBlock(post.image_url, 'Image that goes out with this post:')
-              + `<p style="margin:18px 0 0;font-size:13px;color:#5a5f73">Spotted a problem? Open the review deck, press Undo on this post, and edit it. Translations update themselves before the send.</p>`,
+            footer: imageBlock(post.image_url, 'Image that went out with this post:')
+              + `<p style="margin:18px 0 0;font-size:13px;color:#5a5f73">Spotted a problem after the fact? Edit the post in the review deck and tell the team to use the corrected version. Approving already sent it, so there is no undo on the email itself.</p>`,
           }),
         });
         notified = mail.ok ? 'sent' : mail.error;
@@ -88,7 +108,7 @@ export default async function handler(req, res) {
       }
     }
 
-    res.json({ ok: true, ...(notified ? { approval_email: notified } : {}) });
+    res.json({ ok: true, ...(notified ? { approval_email: notified } : {}), ...(delivery ? { delivery } : {}) });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }

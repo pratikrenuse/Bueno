@@ -152,6 +152,24 @@ export default function InternalLinkedIn() {
     setDashBusy(false)
   }
 
+  async function sendReminder() {
+    setDispatching(true); setDispatchResult(null); setErr('')
+    try {
+      const r = await fetch('/api/linkedin-remind?force=1', { headers: { 'x-passcode': pass } })
+      const text = await r.text()
+      let j
+      try { j = JSON.parse(text) } catch { throw new Error(`Server error ${r.status}: ${text.slice(0, 200)}`) }
+      if (j.error) throw new Error(j.error)
+      setDispatchResult({
+        results: [{
+          stream: 'reminder to John',
+          skipped: `Sent. ${j.pending} pending review, ${j.approved_unsent} approved and not yet emailed, ${j.sent} already out. Next posting day: ${j.next_posting_day}.`,
+        }],
+      })
+    } catch (e) { setErr(String(e.message || e)) }
+    setDispatching(false)
+  }
+
   async function runHealth() {
     setDispatching(true); setDispatchResult(null); setErr('')
     try {
@@ -534,7 +552,7 @@ export default function InternalLinkedIn() {
 
           <Card title="Daily email dispatch">
             <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 10px' }}>
-              Approving a post emails it to Pratik and John straight away. The team's own send runs automatically on weekdays at 15:00 UTC: each stream's next approved post goes to that stream's members in their own language, ready to copy for the next day. Send it early, or to one person only, here.
+              Approving a post sends it to the whole team immediately, each person in their own language, with Pratik and John on copy. The team publishes on Tuesdays and Thursdays. John gets a review reminder on Sunday and Tuesday evenings. Use Send now only to catch up something approved that never went out, or to resend to one person.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
               <label style={{ fontSize: 13, color: '#3a3f52' }}>
@@ -552,6 +570,9 @@ export default function InternalLinkedIn() {
               </button>
               <button onClick={refreshTranslations} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
                 Refresh translations
+              </button>
+              <button onClick={sendReminder} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
+                Remind John now
               </button>
               <button onClick={runHealth} disabled={dispatching} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 16px', fontSize: 13 }}>
                 Run health check
