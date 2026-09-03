@@ -1,0 +1,5 @@
+# Keeps the deployment under the Hobby plan's 12 serverless function limit.
+# linkedin-seed.js is superseded by linkedin-refresh.js (the deck's Sync button calls
+# refresh, which inserts missing rows without deleting anything). The file stays in the
+# repo for reference but is not deployed.
+api/linkedin-seed.js
