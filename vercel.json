@@ -4,7 +4,7 @@
   "framework": "vite",
   "crons": [
     { "path": "/api/linkedin-dispatch", "schedule": "0 6 * * 2,4" },
-    { "path": "/api/linkedin-remind", "schedule": "0 17 * * 0,2" }
+    { "path": "/api/linkedin-remind", "schedule": "0 15 * * 0,2" }
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
