@@ -1,8 +1,10 @@
 // GET or POST /api/linkedin-refresh?pass=...
-// Safe content refresh, used by the deck's Sync button:
-//   1. deletes rows that are still pending AND unedited (no decision or edit is ever lost),
-//   2. re-inserts the full current content set (ignore-duplicates, so decided/edited rows stay),
-//   3. updates image_url on the surviving rows so photos stay in sync everywhere.
+// Safe content refresh, used by the deck's Sync button. Nothing is ever deleted:
+//   1. reads what is already in the table,
+//   2. inserts only the rows that are missing,
+//   3. updates the text, title and image of rows that are still pending and unedited,
+//      so rewritten content reaches the deck.
+// Approved masters, rejected posts and anything a reviewer edited are never overwritten.
 // Idempotent: safe to press any number of times.
 import owners from './_linkedin_batch1.js';
 import agents from './_linkedin_agents.js';
@@ -44,44 +46,67 @@ export default async function handler(req, res) {
       ...translations.map(p => norm(p, { status: 'approved' })),
     ];
 
-    // 1. Clear pending, unedited English rows (their fresh versions come back in step 2).
-    //    Translation rows are seeded as 'approved' and ride along with the English master's
-    //    decision, so they are not part of the pending sweep.
-    const del = await fetch(`${url}/rest/v1/linkedin_posts?status=eq.pending&edited_text=is.null&language=eq.en`, {
-      method: 'DELETE', headers: { ...H, Prefer: 'count=exact' },
-    });
-    if (!del.ok) return res.status(500).json({ error: `Supabase delete ${del.status}: ${await del.text()}` });
-    const cleared = Number((del.headers.get('content-range') || '').split('/')[1] || 0);
+    // Non-destructive sync. Nothing is ever deleted, so a failure part way through can
+    // never empty the deck. Order: read what exists, add what is new, then update the text
+    // of rows that are still pending and unedited. Decided or edited rows are left alone.
+    const cur = await fetch(
+      `${url}/rest/v1/linkedin_posts?select=id,slug,language,member,status,edited_text,post_text,title,image_url,source_hash&limit=5000`,
+      { headers: H });
+    if (!cur.ok) return res.status(500).json({ error: `Supabase read ${cur.status}: ${await cur.text()}` });
+    const existing = new Map((await cur.json()).map(r => [`${r.slug}|${r.language}|${r.member}`, r]));
 
-    // 2. Insert everything; existing (decided or edited) rows are skipped.
-    const ins = await fetch(`${url}/rest/v1/linkedin_posts?on_conflict=slug,language,member`, {
-      method: 'POST',
-      headers: { ...H, Prefer: 'resolution=ignore-duplicates,return=representation' },
-      body: JSON.stringify(rows),
-    });
-    const insText = await ins.text();
-    if (!ins.ok) return res.status(500).json({ error: `Supabase insert ${ins.status}: ${insText}` });
+    // 1. Add rows that do not exist yet.
+    const toInsert = rows.filter(p => !existing.has(`${p.slug}|${p.language}|${p.member}`));
     let inserted = [];
-    try { inserted = JSON.parse(insText); } catch { /* representation expected */ }
-
-    // 3. Sync image_url on rows that survived step 1 (grouped: one call per distinct image).
-    const groups = {};
-    rows.forEach(p => {
-      const k = p.image_url || 'null';
-      (groups[k] = groups[k] || []).push(p.slug);
-    });
-    let imageUpdates = 0;
-    for (const [img, slugs] of Object.entries(groups)) {
-      const r = await fetch(`${url}/rest/v1/linkedin_posts?slug=in.(${slugs.join(',')})`, {
-        method: 'PATCH',
-        headers: { ...H, Prefer: 'return=minimal' },
-        body: JSON.stringify({ image_url: img === 'null' ? null : img }),
+    if (toInsert.length) {
+      const ins = await fetch(`${url}/rest/v1/linkedin_posts?on_conflict=slug,language,member`, {
+        method: 'POST',
+        headers: { ...H, Prefer: 'resolution=ignore-duplicates,return=representation' },
+        body: JSON.stringify(toInsert),
       });
-      if (!r.ok) return res.status(500).json({ error: `Supabase image sync ${r.status}: ${await r.text()}` });
-      imageUpdates += 1;
+      const insText = await ins.text();
+      if (!ins.ok) return res.status(500).json({ error: `Supabase insert ${ins.status}: ${insText}` });
+      try { inserted = JSON.parse(insText); } catch { /* representation expected */ }
     }
 
-    res.json({ ok: true, total: rows.length, refreshed: cleared, newly_inserted: inserted.length, image_groups: imageUpdates });
+    // 2. Refresh rows that already exist but are untouched by a reviewer, so rewritten
+    //    content reaches the deck. Anything approved, rejected or hand-edited is preserved.
+    const changed = rows.filter(p => {
+      const e = existing.get(`${p.slug}|${p.language}|${p.member}`);
+      if (!e || e.edited_text) return false;
+      if (e.status !== 'pending' && e.status !== 'approved') return false;
+      if (e.status === 'approved' && p.language === 'en') return false; // never rewrite an approved master
+      return e.post_text !== p.post_text || e.title !== p.title || (e.image_url || null) !== (p.image_url || null)
+        || (e.source_hash || null) !== (p.source_hash || null);
+    });
+    let updated = 0;
+    const updateErrors = [];
+    for (const p of changed.slice(0, 400)) {
+      const e = existing.get(`${p.slug}|${p.language}|${p.member}`);
+      const r = await fetch(`${url}/rest/v1/linkedin_posts?id=eq.${e.id}`, {
+        method: 'PATCH',
+        headers: { ...H, Prefer: 'return=minimal' },
+        body: JSON.stringify({
+          post_text: p.post_text, title: p.title, image_url: p.image_url,
+          source_hash: p.source_hash, updated_at: new Date().toISOString(),
+        }),
+      });
+      if (r.ok) updated += 1;
+      else updateErrors.push(`${p.slug} (${p.language}): ${r.status}`);
+    }
+
+    res.json({
+      ok: true,
+      total: rows.length,
+      already_present: rows.length - toInsert.length,
+      newly_inserted: inserted.length,
+      content_updated: updated,
+      untouched_because_reviewed: rows.filter(p => {
+        const e = existing.get(`${p.slug}|${p.language}|${p.member}`);
+        return e && (e.edited_text || e.status === 'rejected' || (e.status === 'approved' && p.language === 'en'));
+      }).length,
+      ...(updateErrors.length ? { update_errors: updateErrors.slice(0, 10) } : {}),
+    });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }
