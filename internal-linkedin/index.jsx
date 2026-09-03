@@ -644,11 +644,11 @@ export default function InternalLinkedIn() {
           {/* Actions */}
           <Card title="Actions">
             <p style={{ fontSize: 13, color: '#5a5f73', margin: '0 0 12px' }}>
-              Approving a post already sends it to the whole team, each person in their own language, with you and John on copy. Everything here is for the exceptions.
+              Approving a post emails it to you and John only, as a record of what was signed off. The team receives the backlog automatically on Tuesday and Thursday at 08:00 Barcelona time, one post per posting day, oldest first. Send it early or to one person here.
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
               <label style={{ fontSize: 13, color: '#3a3f52' }}>
-                Catch up unsent posts for{' '}
+                Send the next post now to{' '}
                 <select value={sendTo} onChange={e => setSendTo(e.target.value)}
                   style={{ fontFamily: 'inherit', fontSize: 13, padding: '8px 10px', borderRadius: 8, border: '1px solid #c4c9d4', background: '#fff' }}>
                   <option value="all">the whole team</option>

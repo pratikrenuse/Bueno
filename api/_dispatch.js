@@ -120,8 +120,8 @@ export function memberEmail({ member, post, text, lang, stream, upcoming, transl
       <div style="padding:22px">
         <p style="margin:0 0 10px;font-size:15px;color:#010221">${esc(c.greeting(member.name))}</p>
         <p style="margin:0 0 10px;font-size:14px;color:#3a3f52">${esc(c.what)}</p>
-        <p style="margin:0 0 6px;font-size:14px;color:#3a3f52">${esc(c.how)}</p>
-        <p style="margin:0 0 16px;font-size:13px;color:#8a8fa3">${esc(c.dayLine(post.day, audience))}</p>
+        <p style="margin:0 0 12px;font-size:14px;color:#3a3f52">${esc(c.how)}</p>
+        <p style="margin:0 0 16px;font-size:13px;color:#5a5f73;background:#F4F2EE;border-radius:8px;padding:10px 12px">${esc(c.goal ? c.goal(audience) : '')}</p>
         ${warn}
         <p style="margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5B7FCC">${esc(c.postLabel)}</p>
         <div style="background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:16px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111;white-space:pre-wrap">${esc(text)}</div>

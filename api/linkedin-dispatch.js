@@ -1,9 +1,8 @@
 // GET or POST /api/linkedin-dispatch
-// The safety net. Approving a post in the review deck already sends it to the team
-// (see /api/linkedin-decide), so this normally finds nothing. It exists to catch anything
-// approved that never went out: a Resend outage, a member added after the fact, or a post
-// approved before their email was filled in. Runs Monday and Wednesday mornings via cron,
-// the day before each posting day, and from the dashboard's Send now button.
+// The team send. Runs Tuesday and Thursday at 06:00 UTC, which is 08:00 in Barcelona
+// during summer time, and takes the oldest approved post that has not been sent yet from
+// each stream's backlog. Members receive it in their own language, to post that day, with
+// Pratik and John cc'd. Also available on demand from the dashboard's Send now button.
 //   ?member=Name  sends to that one person only
 //   ?dry=1        reports what would be sent without sending
 // Auth: team passcode (header or query), CRON_SECRET bearer if configured, or Vercel cron.
