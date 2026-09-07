@@ -65,6 +65,12 @@
       "title": "Compensatie Spaanse hypotheek",
       "desc": "Heeft u tussen 2000 en 2019 een Spaanse hypotheek afgesloten? Mogelijk kunt u te hoge afsluitkosten, een bodemrenteclausule of een verkeerd verkochte verzekering terugvorderen. Schat in 2 minuten wat u kunt terugvragen.",
       "cta": "Controleer mijn hypotheek"
+    },
+    "directory": {
+      "tag": "Gids",
+      "title": "Vakmensengids voor Spanje",
+      "desc": "Loodgieter, elektricien, slotenmaker, airconditioning, zwembad of aannemer. Bekijk de best beoordeelde in uw Spaanse plaats, gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
+      "cta": "Vakman vinden"
     }
   },
   "calc_tax": {
@@ -380,5 +386,47 @@
     "iceland": "IJsland",
     "other_eu_eea": "Ander EU / EER",
     "other": "Ander land"
+  },
+  "calc_directory": {
+    "meta_title": "Vakmensengids voor Spanje",
+    "eyebrow": "Gratis tool",
+    "headline": "Wie u belt als er iets stukgaat",
+    "lede": "De boiler begeeft het op een vrijdag en u zit 2.000 km verderop. Hier ziet u de best beoordeelde loodgieters, elektriciens en andere vakmensen in uw Spaanse plaats, met de beoordelingen die zij kregen en de taal waarin die zijn geschreven.",
+    "where_label": "Uw plaats in Spanje",
+    "where_placeholder": "Begin te typen, bijvoorbeeld Javea of Marbella",
+    "no_locality": "Die plaats dekken we nog niet. De gids bevat op dit moment {count} plaatsen aan de kusten, op de eilanden en in de grotere steden. Probeer de dichtstbijzijnde grotere plaats.",
+    "change_town": "Plaats wijzigen",
+    "trade_label": "Wat heeft u nodig",
+    "cat_plumber": "Loodgieter",
+    "cat_electrician": "Elektricien",
+    "cat_locksmith": "Slotenmaker",
+    "cat_aircon": "Airconditioning en verwarming",
+    "cat_pool": "Zwembadonderhoud",
+    "cat_builder": "Aannemer en verbouwing",
+    "loading": "Beoordelingen ophalen",
+    "err_unreadable": "De server stuurde iets dat we niet konden lezen.",
+    "err_generic": "Er ging iets mis.",
+    "none_found": "Geen {trade} in {town} heeft genoeg beoordelingen voor een eerlijke rangschikking. Probeer de dichtstbijzijnde grotere plaats.",
+    "results_label": "Best beoordeelde {trade} in {town}",
+    "best_rated": "Best beoordeeld",
+    "rank_also": "Ook sterk",
+    "rating_line": "{rating} uit {count} Google-beoordelingen",
+    "langs_line": "Beoordelingen in {langs}",
+    "call": "Bellen",
+    "no_phone": "Geen telefoonnummer vermeld",
+    "website": "Website",
+    "on_google": "Bekijken op Google Maps",
+    "read_on_google": "Lees deze beoordeling op Google Maps",
+    "also_rated": "Anderen die een telefoontje waard zijn",
+    "method_title": "Hoe deze zijn gerangschikt",
+    "method_1": "We nemen de bedrijven die Google voor dit vak bij u in de buurt vermeldt, houden de bedrijven over die open zijn en minstens vijf beoordelingen hebben, en rangschikken op cijfer gewogen naar het aantal beoordelingen. Een 5,0 op basis van drie mensen verslaat geen 4,7 op basis van vierhonderd.",
+    "method_2": "De getoonde beoordelingen zijn die welke Google als meest relevant teruggeeft, niet de nieuwste. We tonen de taal van elke beoordeling, zodat u kunt inschatten of het bedrijf gewend is aan buitenlandse eigenaren.",
+    "method_3": "Cijfers en beoordelingen worden minstens elke 30 dagen ververst.",
+    "powered_by": "Cijfers en beoordelingen van",
+    "honest_title": "Wat dit is, en wat het niet is",
+    "honest_1": "Dit is een weergave van openbare Google-beoordelingen, meer niet. Wij hebben deze bedrijven niet ontmoet, wij hebben geen vergunningen of verzekeringen gecontroleerd, en niemand betaalt om hier te staan. Een hoog cijfer is een goed teken, geen garantie.",
+    "honest_2": "Spreek altijd een schriftelijke prijs af voordat het werk begint, en vraag om een factura.",
+    "cross_link": "Bekijk wat uw Spaanse woning echt per jaar kost",
+    "footer": "Algemene informatie, geen fiscaal of juridisch advies."
   }
 }

@@ -3,11 +3,19 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "crons": [
-    { "path": "/api/linkedin-dispatch", "schedule": "0 6 * * 2,4" },
-    { "path": "/api/linkedin-remind", "schedule": "0 15 * * 0,2" }
+    { "path": "/api/linkedin/dispatch", "schedule": "0 6 * * 2,4" },
+    { "path": "/api/linkedin/remind", "schedule": "0 15 * * 0,2" }
   ],
   "rewrites": [
+    { "source": "/api/linkedin-decide", "destination": "/api/linkedin/decide" },
+    { "source": "/api/linkedin-dispatch", "destination": "/api/linkedin/dispatch" },
+    { "source": "/api/linkedin-emails", "destination": "/api/linkedin/emails" },
+    { "source": "/api/linkedin-health", "destination": "/api/linkedin/health" },
+    { "source": "/api/linkedin-posts", "destination": "/api/linkedin/posts" },
+    { "source": "/api/linkedin-refresh", "destination": "/api/linkedin/refresh" },
+    { "source": "/api/linkedin-remind", "destination": "/api/linkedin/remind" },
+    { "source": "/api/linkedin-translate", "destination": "/api/linkedin/translate" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)",     "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

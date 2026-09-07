@@ -65,6 +65,12 @@
       "title": "Guide till ersättning för spanskt bolån",
       "desc": "Tog du ett spanskt bolån mellan 2000 och 2019? Det kan finnas grund att undersöka om du betalade för höga uppläggningsavgifter, räntegolv eller fick felsåld försäkring. Se vad som kan vara värt att titta närmare på.",
       "cta": "Kontrollera mitt bolån"
+    },
+    "directory": {
+      "tag": "Register",
+      "title": "Hantverkarregister för Spanien",
+      "desc": "Rörmokare, elektriker, låssmed, luftkonditionering, pool eller byggare. Se de bäst betygsatta på din spanska ort, rankade efter Google-omdömen, med omdömena och språket de skrevs på.",
+      "cta": "Hitta en hantverkare"
     }
   },
   "calc_tax": {
@@ -380,5 +386,47 @@
     "iceland": "Island",
     "other_eu_eea": "Övriga EU / EES",
     "other": "Annat land"
+  },
+  "calc_directory": {
+    "meta_title": "Hantverkarregister för Spanien",
+    "eyebrow": "Gratis verktyg",
+    "headline": "Vem du ringer när något går sönder",
+    "lede": "Varmvattenberedaren går sönder en fredag och du är 2 000 km bort. Här ser du de bäst betygsatta rörmokarna, elektrikerna och andra hantverkare på din spanska ort, med omdömena de fått och vilket språk omdömena är skrivna på.",
+    "where_label": "Din ort i Spanien",
+    "where_placeholder": "Börja skriva, till exempel Javea eller Marbella",
+    "no_locality": "Vi täcker inte den orten än. Registret innehåller {count} platser längs kusterna, på öarna och i de större städerna. Prova närmaste större ort.",
+    "change_town": "Byt ort",
+    "trade_label": "Vad behöver du",
+    "cat_plumber": "Rörmokare",
+    "cat_electrician": "Elektriker",
+    "cat_locksmith": "Låssmed",
+    "cat_aircon": "Luftkonditionering och värme",
+    "cat_pool": "Poolunderhåll",
+    "cat_builder": "Byggare och renovering",
+    "loading": "Hämtar omdömen",
+    "err_unreadable": "Servern skickade något vi inte kunde läsa.",
+    "err_generic": "Något gick fel.",
+    "none_found": "Ingen {trade} i {town} har tillräckligt många omdömen för en rättvis rankning. Prova närmaste större ort.",
+    "results_label": "Bäst betygsatta {trade} i {town}",
+    "best_rated": "Bäst betyg",
+    "rank_also": "Också stark",
+    "rating_line": "{rating} från {count} Google-omdömen",
+    "langs_line": "Omdömen på {langs}",
+    "call": "Ring",
+    "no_phone": "Inget telefonnummer angivet",
+    "website": "Webbplats",
+    "on_google": "Se på Google Maps",
+    "read_on_google": "Läs omdömet på Google Maps",
+    "also_rated": "Andra värda ett samtal",
+    "method_title": "Så här är de rankade",
+    "method_1": "Vi tar de företag Google listar för yrket nära din ort, behåller dem som är öppna och har minst fem omdömen, och rankar dem efter betyg viktat för hur många omdömen det bygger på. En 5,0 från tre personer slår inte en 4,7 från fyrahundra.",
+    "method_2": "Omdömena som visas är de Google returnerar som mest relevanta, inte de nyaste. Vi visar vilket språk vart och ett är skrivet på, så att du kan bedöma om företaget är vant vid utländska ägare.",
+    "method_3": "Betyg och omdömen uppdateras minst var 30:e dag.",
+    "powered_by": "Betyg och omdömen från",
+    "honest_title": "Vad detta är, och vad det inte är",
+    "honest_1": "Detta är en läsning av offentliga Google-omdömen, inget mer. Vi har inte träffat företagen, vi har inte kontrollerat licenser eller försäkringar, och ingen betalar för att synas här. Ett högt betyg är ett gott tecken, inte en garanti.",
+    "honest_2": "Kom alltid överens om ett skriftligt pris innan arbetet börjar, och be om factura.",
+    "cross_link": "Se vad din spanska bostad faktiskt kostar per år",
+    "footer": "Allmän information, inte skatte- eller juridisk rådgivning."
   }
 }

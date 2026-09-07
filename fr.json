@@ -65,6 +65,12 @@
       "title": "Indemnisation de prêt immobilier espagnol",
       "desc": "Vous avez souscrit un prêt immobilier espagnol entre 2000 et 2019 ? Vous pouvez peut-être récupérer des frais de dossier trop élevés, des intérêts d'une clause plancher ou une assurance mal vendue. Estimez en 2 minutes ce que vous pourriez récupérer.",
       "cta": "Vérifier mon prêt"
+    },
+    "directory": {
+      "tag": "Annuaire",
+      "title": "Annuaire des artisans en Espagne",
+      "desc": "Plombier, électricien, serrurier, climatisation, piscine ou rénovation. Voyez les mieux notés dans votre commune espagnole, classés selon les avis Google, avec les avis et leur langue.",
+      "cta": "Trouver un artisan"
     }
   },
   "calc_tax": {
@@ -380,5 +386,47 @@
     "iceland": "Islande",
     "other_eu_eea": "Autre UE / EEE",
     "other": "Autre pays"
+  },
+  "calc_directory": {
+    "meta_title": "Annuaire des artisans en Espagne",
+    "eyebrow": "Outil gratuit",
+    "headline": "Qui appeler quand quelque chose casse",
+    "lede": "Le chauffe-eau lâche un vendredi et vous êtes à 2 000 km. Voici les plombiers, électriciens et autres artisans les mieux notés dans votre commune espagnole, avec les avis obtenus et la langue dans laquelle ils ont été écrits.",
+    "where_label": "Votre commune en Espagne",
+    "where_placeholder": "Commencez à taper, par exemple Javea ou Marbella",
+    "no_locality": "Nous ne couvrons pas encore cette commune. L'annuaire compte actuellement {count} localités sur les côtes, les îles et dans les grandes villes. Essayez la ville importante la plus proche.",
+    "change_town": "Changer de commune",
+    "trade_label": "De quoi avez-vous besoin",
+    "cat_plumber": "Plombier",
+    "cat_electrician": "Électricien",
+    "cat_locksmith": "Serrurier",
+    "cat_aircon": "Climatisation et chauffage",
+    "cat_pool": "Entretien de piscine",
+    "cat_builder": "Entreprise de rénovation",
+    "loading": "Recherche des avis",
+    "err_unreadable": "Le serveur a renvoyé une réponse illisible.",
+    "err_generic": "Une erreur est survenue.",
+    "none_found": "Aucun {trade} à {town} n'a assez d'avis pour un classement équitable. Essayez la ville importante la plus proche.",
+    "results_label": "{trade} les mieux notés à {town}",
+    "best_rated": "Mieux noté",
+    "rank_also": "Également solide",
+    "rating_line": "{rating} sur {count} avis Google",
+    "langs_line": "Avis en {langs}",
+    "call": "Appeler",
+    "no_phone": "Aucun numéro indiqué",
+    "website": "Site web",
+    "on_google": "Voir sur Google Maps",
+    "read_on_google": "Lire cet avis sur Google Maps",
+    "also_rated": "D'autres méritent un appel",
+    "method_title": "Comment ce classement est établi",
+    "method_1": "Nous prenons les entreprises que Google référence pour ce métier près de chez vous, gardons celles qui sont ouvertes et comptent au moins cinq avis, puis les classons selon une note pondérée par le nombre d'avis. Un 5,0 fondé sur trois avis ne devance pas un 4,7 fondé sur quatre cents.",
+    "method_2": "Les avis affichés sont ceux que Google renvoie comme les plus pertinents, pas les plus récents. Nous indiquons la langue de chacun, pour que vous puissiez juger de leur habitude des propriétaires étrangers.",
+    "method_3": "Les notes et les avis sont actualisés au moins tous les 30 jours.",
+    "powered_by": "Notes et avis de",
+    "honest_title": "Ce que c'est, et ce que ce n'est pas",
+    "honest_1": "Il s'agit d'une lecture des avis publics Google, rien de plus. Nous n'avons pas rencontré ces entreprises, nous n'avons vérifié ni licences ni assurances, et personne ne paie pour figurer ici. Une bonne note est un bon signe, pas une garantie.",
+    "honest_2": "Convenez toujours d'un prix écrit avant le début des travaux, et demandez une factura.",
+    "cross_link": "Voyez ce que votre bien espagnol vous coûte réellement chaque année",
+    "footer": "Informations générales, ni conseil fiscal ni conseil juridique."
   }
 }

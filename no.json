@@ -65,6 +65,12 @@
       "title": "Kompensasjon for spansk boliglån",
       "desc": "Tok du opp et spansk boliglån mellom 2000 og 2019? Du kan ha rett til å kreve tilbake for høye etableringsgebyrer, rentegulv eller feilsolgt forsikring. Se hva du kan kreve tilbake på 2 minutter.",
       "cta": "Sjekk boliglånet mitt"
+    },
+    "directory": {
+      "tag": "Register",
+      "title": "Håndverkerregister for Spania",
+      "desc": "Rørlegger, elektriker, låsesmed, klimaanlegg, basseng eller byggmester. Se de best omtalte i din spanske by, rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
+      "cta": "Finn en håndverker"
     }
   },
   "calc_tax": {
@@ -380,5 +386,47 @@
     "iceland": "Island",
     "other_eu_eea": "Annet EU / EØS",
     "other": "Annet land"
+  },
+  "calc_directory": {
+    "meta_title": "Håndverkerregister for Spania",
+    "eyebrow": "Gratis verktøy",
+    "headline": "Hvem du ringer når noe ryker",
+    "lede": "Varmtvannsberederen svikter en fredag, og du er 2 000 km unna. Her ser du de best omtalte rørleggerne, elektrikerne og andre håndverkere i din spanske by, med omtalene de har fått og språket omtalene er skrevet på.",
+    "where_label": "Byen din i Spania",
+    "where_placeholder": "Begynn å skrive, for eksempel Javea eller Marbella",
+    "no_locality": "Vi dekker ikke den byen ennå. Registeret inneholder {count} steder langs kysten, på øyene og i de største byene. Prøv nærmeste større by.",
+    "change_town": "Bytt by",
+    "trade_label": "Hva trenger du",
+    "cat_plumber": "Rørlegger",
+    "cat_electrician": "Elektriker",
+    "cat_locksmith": "Låsesmed",
+    "cat_aircon": "Klimaanlegg og varme",
+    "cat_pool": "Vedlikehold av basseng",
+    "cat_builder": "Byggmester og oppussing",
+    "loading": "Henter omtaler",
+    "err_unreadable": "Serveren sendte noe vi ikke kunne lese.",
+    "err_generic": "Noe gikk galt.",
+    "none_found": "Ingen {trade} i {town} har nok omtaler til å rangeres rettferdig. Prøv nærmeste større by.",
+    "results_label": "Best omtalte {trade} i {town}",
+    "best_rated": "Best omtalt",
+    "rank_also": "Også sterk",
+    "rating_line": "{rating} fra {count} Google-omtaler",
+    "langs_line": "Omtaler på {langs}",
+    "call": "Ring",
+    "no_phone": "Ingen telefonnummer oppgitt",
+    "website": "Nettside",
+    "on_google": "Se på Google Maps",
+    "read_on_google": "Les denne omtalen på Google Maps",
+    "also_rated": "Andre verdt en telefon",
+    "method_title": "Slik er de rangert",
+    "method_1": "Vi tar bedriftene Google lister for dette faget nær byen din, beholder dem som er åpne og har minst fem omtaler, og rangerer dem etter vurdering vektet for hvor mange omtaler den bygger på. En 5,0 fra tre personer slår ikke en 4,7 fra fire hundre.",
+    "method_2": "Omtalene som vises er de Google returnerer som mest relevante, ikke de nyeste. Vi viser hvilket språk hver enkelt er skrevet på, så du kan vurdere om bedriften er vant til å jobbe med utenlandske eiere.",
+    "method_3": "Vurderinger og omtaler oppdateres minst hver 30. dag.",
+    "powered_by": "Vurderinger og omtaler fra",
+    "honest_title": "Hva dette er, og hva det ikke er",
+    "honest_1": "Dette er en lesning av offentlige Google-omtaler, ikke noe mer. Vi har ikke møtt disse bedriftene, vi har ikke sjekket lisenser eller forsikring, og ingen betaler for å stå her. Høy vurdering er et godt tegn, ikke en garanti.",
+    "honest_2": "Avtal alltid en skriftlig pris før arbeidet starter, og be om factura.",
+    "cross_link": "Se hva den spanske boligen din faktisk koster i året",
+    "footer": "Generell informasjon, ikke skatte- eller juridisk rådgivning."
   }
 }

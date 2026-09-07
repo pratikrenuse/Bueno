@@ -3,3 +3,21 @@
 # refresh, which inserts missing rows without deleting anything). The file stays in the
 # repo for reference but is not deployed.
 api/linkedin-seed.js
+
+# The eight handlers below were consolidated behind api/linkedin/[action].js, which is a
+# single serverless function. Each one was copied byte for byte to api/_lk_<action>.js
+# (files starting with "_" are not routes, so they cost nothing) and vercel.json rewrites
+# every original /api/linkedin-<action> URL to the router. The originals stay in the repo
+# as a reference for one release, but must NOT be deployed: each one Vercel sees here
+# costs a function slot, and eight of them put the deployment back over the limit.
+#
+# Once the router has run in production for a cycle these nine files can be deleted
+# outright. Nothing imports them.
+api/linkedin-decide.js
+api/linkedin-dispatch.js
+api/linkedin-emails.js
+api/linkedin-health.js
+api/linkedin-posts.js
+api/linkedin-refresh.js
+api/linkedin-remind.js
+api/linkedin-translate.js

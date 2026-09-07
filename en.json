@@ -65,6 +65,12 @@
       "title": "Spanish Mortgage Compensation",
       "desc": "Took out a Spanish mortgage between 2000 and 2019? You may be able to reclaim overcharged set-up fees, floor clause interest, or mis-sold insurance. Estimate what you could claim back in 2 minutes.",
       "cta": "Check my mortgage"
+    },
+    "directory": {
+      "tag": "Directory",
+      "title": "Spanish Trades Directory",
+      "desc": "Plumber, electrician, locksmith, air conditioning, pool or builder. See the best reviewed in your Spanish town, ranked from Google reviews, with the reviews shown and the language they were written in.",
+      "cta": "Find a tradesperson"
     }
   },
   "calc_tax": {
@@ -380,5 +386,47 @@
     "iceland": "Iceland",
     "other_eu_eea": "Other EU / EEA",
     "other": "Other country"
+  },
+  "calc_directory": {
+    "meta_title": "Spanish Trades Directory",
+    "eyebrow": "Free tool",
+    "headline": "Who to call when something breaks",
+    "lede": "The boiler fails on a Friday and you are 2,000 km away. This shows the best reviewed plumbers, electricians and other trades in your Spanish town, with the reviews they earned and the language those reviews were written in.",
+    "where_label": "Your town in Spain",
+    "where_placeholder": "Start typing, for example Javea or Marbella",
+    "no_locality": "We do not cover that town yet. The directory currently includes {count} places across the coasts, the islands and the major cities. Try the nearest larger town.",
+    "change_town": "Change town",
+    "trade_label": "What do you need",
+    "cat_plumber": "Plumber",
+    "cat_electrician": "Electrician",
+    "cat_locksmith": "Locksmith",
+    "cat_aircon": "Air conditioning and heating",
+    "cat_pool": "Pool maintenance",
+    "cat_builder": "Builder and reformas",
+    "loading": "Looking up reviews",
+    "err_unreadable": "The server sent something we could not read.",
+    "err_generic": "Something went wrong.",
+    "none_found": "No {trade} in {town} has enough reviews to rank fairly. Try the nearest larger town.",
+    "results_label": "Best reviewed {trade} in {town}",
+    "best_rated": "Best rated",
+    "rank_also": "Also strong",
+    "rating_line": "{rating} from {count} Google reviews",
+    "langs_line": "Reviews in {langs}",
+    "call": "Call",
+    "no_phone": "No phone number listed",
+    "website": "Website",
+    "on_google": "See on Google Maps",
+    "read_on_google": "Read this review on Google Maps",
+    "also_rated": "Others worth a call",
+    "method_title": "How these were ordered",
+    "method_1": "We take the businesses Google lists for this trade near your town, keep the ones that are open and have at least five reviews, and rank them by rating weighted for how many reviews it is based on. A 5.0 from three people does not outrank a 4.7 from four hundred.",
+    "method_2": "The reviews shown are the ones Google returns as most relevant, not the newest. We show the language each was written in, so you can judge whether a business is used to working with foreign owners.",
+    "method_3": "Ratings and reviews are refreshed at least every 30 days.",
+    "powered_by": "Ratings and reviews from",
+    "honest_title": "What this is, and what it is not",
+    "honest_1": "This is a reading of public Google reviews, nothing more. We have not met these businesses, we have not checked their licences or insurance, and none of them pay to appear here. A high rating is a good sign, not a guarantee.",
+    "honest_2": "Always agree a written price before work starts, and ask for a factura.",
+    "cross_link": "See what your Spanish home really costs each year",
+    "footer": "General information, not tax or legal advice."
   }
 }
