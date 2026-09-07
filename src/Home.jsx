@@ -160,17 +160,20 @@ function ProfessionalsFeature() {
             </h2>
           </div>
           <p className="proffeat-sub">
-            {t('home.prof_sub').replace('{count}', String(LOCALITIES.length))}
+            {t('home.prof_sub').replace('{n}', String(PROFESSIONALS.length)).replace('{count}', String(LOCALITIES.length))}
           </p>
         </div>
 
-        <div className="proffeat-grid">
-          {PROFESSIONALS.map(c => (
-            <button key={c.slug} type="button" className="proffeat-tile"
+        <div className="proffeat-list">
+          {PROFESSIONALS.map((c, i) => (
+            <button key={c.slug} type="button" className="proffeat-item"
               onClick={() => navigate(`${lp('/spain-professionals')}?trade=${c.slug}`)}>
-              <span className="n">{tt(`cat_${c.slug}`)}</span>
-              <span className="d">{tt(`does_${c.slug}`)}</span>
-              <span className="go">{tt('find_cta')} &#8594;</span>
+              <span className="num">{String(i + 1).padStart(2, '0')}</span>
+              <span className="body">
+                <span className="n">{tt(`cat_${c.slug}`)}</span>
+                <span className="d">{tt(`does_${c.slug}`)}</span>
+              </span>
+              <span className="arrow" aria-hidden="true">&#8594;</span>
             </button>
           ))}
         </div>

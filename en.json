@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Free to use. Nobody pays to be listed here.",
     "dir_title_em": "Spanish town",
-    "prof_title": "Every professional a Spanish home eventually needs, in your",
-    "prof_title_em": "Spanish town",
-    "prof_sub": "Ten of them, across {count} towns. Ranked from real Google reviews, with the reviews shown and the language they were written in."
+    "prof_title": "Owning in Spain means dealing with people you have",
+    "prof_title_em": "never heard of",
+    "prof_sub": "A gestoría, an administrador de fincas, a sworn translator. Here is what each one actually does, and who is well reviewed in your town."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Property professionals",
     "prof_meta_title": "Spanish Property Professionals",
     "prof_headline": "Find an estate agent, gestoría or property lawyer in your Spanish town",
-    "prof_lede": "Buying, selling, or drowning in paperwork. Ten kinds of property professional in your town, ranked from Google reviews, with the reviews shown.",
+    "prof_lede": "Buying, selling, or just trying to get the paperwork done. Pick your town and see who the reviews actually rate.",
     "prof_note": "One more thing for legal work. A star rating is no substitute for checking that anyone you instruct is registered with the local Colegio de Abogados, and that their fees are in writing before you engage them.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "gestorías",
-    "cat_tax-adviser": "Tax adviser",
-    "cat_tax-adviser_pl": "tax advisers",
-    "cat_notary": "Notary",
-    "cat_notary_pl": "notaries",
     "cat_architect": "Architect",
     "cat_architect_pl": "architects",
     "cat_community-admin": "Community administrator",
@@ -499,8 +495,6 @@
     "does_real-estate": "Buying or selling, and what things really go for locally.",
     "does_lawyer": "Contracts, disputes, inheritance, anything with a deadline.",
     "does_gestoria": "NIE, residency paperwork, tax filings, vehicle admin.",
-    "does_tax-adviser": "Modelo 210, rental income, what you owe as a non-resident.",
-    "does_notary": "Signs the public deed, the step before the Land Registry.",
     "does_architect": "Licences, extensions, and the energy certificate.",
     "does_community-admin": "Runs the community your flat belongs to.",
     "does_surveyor": "What the property is worth on paper, for a bank or a court.",

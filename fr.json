@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici.",
     "dir_title_em": "votre commune espagnole",
-    "prof_title": "Tous les professionnels qu'un bien espagnol finit par exiger, dans",
-    "prof_title_em": "votre commune espagnole",
-    "prof_sub": "Dix d'entre eux, dans {count} communes. Classés selon de vrais avis Google, avec les avis et leur langue."
+    "prof_title": "Posséder en Espagne, c'est traiter avec des gens dont vous",
+    "prof_title_em": "n'avez jamais entendu parler",
+    "prof_sub": "Une gestoría, un administrador de fincas, un traducteur assermenté. Voici ce que chacun fait vraiment, et qui est bien noté dans votre commune."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Professionnels de l'immobilier",
     "prof_meta_title": "Professionnels de l'immobilier en Espagne",
     "prof_headline": "Trouvez un agent immobilier, une gestoría ou un avocat immobilier dans votre commune espagnole",
-    "prof_lede": "Acheter, vendre, ou crouler sous les formalités. Dix types de professionnels de l'immobilier dans votre commune, classés selon les avis Google, avec les avis affichés.",
+    "prof_lede": "Acheter, vendre, ou simplement venir à bout des formalités. Choisissez votre commune et voyez qui les avis recommandent vraiment.",
     "prof_note": "Une précision pour le juridique. Une note ne remplace pas la vérification que le cabinet que vous mandatez est inscrit au Colegio de Abogados local, et que ses honoraires sont écrits avant tout engagement.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "gestorías",
-    "cat_tax-adviser": "Conseiller fiscal",
-    "cat_tax-adviser_pl": "conseillers fiscaux",
-    "cat_notary": "Notaire",
-    "cat_notary_pl": "notaires",
     "cat_architect": "Architecte",
     "cat_architect_pl": "architectes",
     "cat_community-admin": "Syndic de copropriété",
@@ -499,8 +495,6 @@
     "does_real-estate": "Acheter ou vendre, et ce que les biens valent vraiment sur place.",
     "does_lawyer": "Contrats, litiges, succession, tout ce qui a une échéance.",
     "does_gestoria": "NIE, papiers de résidence, déclarations, démarches véhicule.",
-    "does_tax-adviser": "Modelo 210, revenu locatif, ce que vous devez en non-résident.",
-    "does_notary": "Signe l'acte public, l'étape avant le registre foncier.",
     "does_architect": "Permis, extensions et le certificat énergétique.",
     "does_community-admin": "Gère la copropriété dont votre appartement fait partie.",
     "does_surveyor": "La valeur du bien sur le papier, pour une banque ou un tribunal.",

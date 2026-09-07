@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här.",
     "dir_title_em": "din spanska ort",
-    "prof_title": "Alla experter en spansk bostad förr eller senare behöver, på",
-    "prof_title_em": "din spanska ort",
-    "prof_sub": "Tio av dem, på {count} orter. Rankade efter äkta Google-omdömen, med omdömena och språket de skrevs på."
+    "prof_title": "Att äga i Spanien innebär kontakt med människor du",
+    "prof_title_em": "aldrig hört talas om",
+    "prof_sub": "En gestoría, en administrador de fincas, en auktoriserad översättare. Här är vad var och en faktiskt gör, och vilka som får bra omdömen på din ort."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Fastighetsexperter",
     "prof_meta_title": "Spanska fastighetsexperter",
     "prof_headline": "Hitta en fastighetsmäklare, gestoría eller fastighetsjurist på din spanska ort",
-    "prof_lede": "Köp, försäljning eller pappersarbete som växer. Tio sorters fastighetsexperter på din ort, rankade efter Google-omdömen, med omdömena visade.",
+    "prof_lede": "Köp, försäljning, eller bara att få pappersarbetet gjort. Välj din ort och se vilka omdömena faktiskt lyfter fram.",
     "prof_note": "En sak till för juridiskt arbete. Ett betyg ersätter inte en kontroll av att den du anlitar är registrerad hos det lokala Colegio de Abogados, och att arvodet är skriftligt innan du ger uppdraget.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "gestorías",
-    "cat_tax-adviser": "Skatterådgivare",
-    "cat_tax-adviser_pl": "skatterådgivare",
-    "cat_notary": "Notarie",
-    "cat_notary_pl": "notarier",
     "cat_architect": "Arkitekt",
     "cat_architect_pl": "arkitekter",
     "cat_community-admin": "Föreningsförvaltare",
@@ -499,8 +495,6 @@
     "does_real-estate": "Köp eller försäljning, och vad saker faktiskt går för lokalt.",
     "does_lawyer": "Avtal, tvister, arv, allt med en deadline.",
     "does_gestoria": "NIE, uppehållspapper, deklarationer, fordonsadmin.",
-    "does_tax-adviser": "Modelo 210, hyresintäkt, vad du är skyldig som icke-resident.",
-    "does_notary": "Undertecknar köpebrevet, steget före fastighetsregistret.",
     "does_architect": "Tillstånd, tillbyggnader och energicertifikatet.",
     "does_community-admin": "Sköter föreningen din lägenhet tillhör.",
     "does_surveyor": "Vad bostaden är värd på papper, för bank eller domstol.",

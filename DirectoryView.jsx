@@ -320,7 +320,7 @@ export default function DirectoryView({
               <span className="home-eyebrow-text">{tt(keys.eyebrow)}</span>
             </div>
             <h1 className="dir-h1">{tt(keys.headline)}</h1>
-            <p className="dir-lede">{tt(keys.lede)}</p>
+            <p className="dir-lede">{tt(keys.lede).replace('{n}', String(categories.length))}</p>
 
             <form className="dir-form" onSubmit={(e) => { e.preventDefault(); run(town, trade); }}>
               <div className="dir-field">

@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis. Niemand betaalt om hier te staan.",
     "dir_title_em": "uw Spaanse plaats",
-    "prof_title": "Alle professionals die een Spaanse woning uiteindelijk nodig heeft, in",
-    "prof_title_em": "uw Spaanse plaats",
-    "prof_sub": "Tien ervan, in {count} plaatsen. Gerangschikt op echte Google-beoordelingen, met de beoordelingen en hun taal."
+    "prof_title": "Bezit in Spanje betekent omgaan met mensen van wie u",
+    "prof_title_em": "nog nooit gehoord hebt",
+    "prof_sub": "Een gestoría, een administrador de fincas, een beëdigd vertaler. Hier staat wat elk van hen echt doet, en wie in uw plaats goed beoordeeld wordt."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Vastgoedprofessionals",
     "prof_meta_title": "Spaanse vastgoedprofessionals",
     "prof_headline": "Vind een makelaar, gestoría of vastgoedadvocaat in uw Spaanse plaats",
-    "prof_lede": "Kopen, verkopen of verdrinken in papierwerk. Tien soorten vastgoedprofessionals in uw plaats, gerangschikt op Google-beoordelingen, met de beoordelingen erbij.",
+    "prof_lede": "Kopen, verkopen, of gewoon het papierwerk rondkrijgen. Kies uw plaats en zie wie de beoordelingen echt aanraden.",
     "prof_note": "Nog iets voor juridisch werk. Een cijfer vervangt geen controle of het kantoor dat u inschakelt is ingeschreven bij het lokale Colegio de Abogados, en of het honorarium schriftelijk vaststaat voordat u opdracht geeft.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "gestorías",
-    "cat_tax-adviser": "Belastingadviseur",
-    "cat_tax-adviser_pl": "belastingadviseurs",
-    "cat_notary": "Notaris",
-    "cat_notary_pl": "notarissen",
     "cat_architect": "Architect",
     "cat_architect_pl": "architecten",
     "cat_community-admin": "VvE-beheerder",
@@ -499,8 +495,6 @@
     "does_real-estate": "Kopen of verkopen, en wat dingen lokaal echt opbrengen.",
     "does_lawyer": "Contracten, geschillen, erfenis, alles met een deadline.",
     "does_gestoria": "NIE, verblijfspapieren, aangiftes, voertuigadministratie.",
-    "does_tax-adviser": "Modelo 210, huurinkomen, wat u als niet-resident verschuldigd bent.",
-    "does_notary": "Tekent de notariële akte, de stap voor het Kadaster.",
     "does_architect": "Vergunningen, aanbouw en het energiecertificaat.",
     "does_community-admin": "Beheert de VvE waar uw appartement onder valt.",
     "does_surveyor": "Wat de woning op papier waard is, voor bank of rechter.",

@@ -44,8 +44,6 @@ export const PROFESSIONALS = [
   { slug: 'real-estate',      query: 'inmobiliaria' },
   { slug: 'lawyer',           query: 'abogados' },
   { slug: 'gestoria',         query: 'gestoría administrativa' },
-  { slug: 'tax-adviser',      query: 'asesoría fiscal' },
-  { slug: 'notary',           query: 'notaría' },
   { slug: 'architect',        query: 'arquitecto' },
   { slug: 'community-admin',  query: 'administrador de fincas' },
   { slug: 'surveyor',         query: 'tasador inmobiliario' },

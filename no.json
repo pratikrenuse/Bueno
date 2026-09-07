@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis å bruke. Ingen betaler for å stå her.",
     "dir_title_em": "din spanske by",
-    "prof_title": "Alle fagfolkene en spansk bolig før eller siden trenger, i",
-    "prof_title_em": "din spanske by",
-    "prof_sub": "Ti av dem, i {count} byer. Rangert etter ekte Google-omtaler, med omtalene og språket de er skrevet på."
+    "prof_title": "Å eie i Spania betyr å forholde seg til folk du",
+    "prof_title_em": "aldri har hørt om",
+    "prof_sub": "En gestoría, en administrador de fincas, en statsautorisert translatør. Her er hva hver av dem faktisk gjør, og hvem som får gode omtaler i byen din."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Eiendomsfagfolk",
     "prof_meta_title": "Spanske eiendomsfagfolk",
     "prof_headline": "Finn en eiendomsmegler, gestoría eller eiendomsadvokat i din spanske by",
-    "prof_lede": "Kjøp, salg eller papirarbeid som tar overhånd. Ti typer eiendomsfagfolk i byen din, rangert etter Google-omtaler, med omtalene vist.",
+    "prof_lede": "Kjøp, salg, eller bare å få papirene i orden. Velg byen din og se hvem omtalene faktisk anbefaler.",
     "prof_note": "En ting til for juridisk arbeid. En stjernevurdering erstatter ikke en sjekk av at den du engasjerer er registrert hos det lokale Colegio de Abogados, og at honoraret foreligger skriftlig før du gir oppdraget.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "gestorías",
-    "cat_tax-adviser": "Skatterådgiver",
-    "cat_tax-adviser_pl": "skatterådgivere",
-    "cat_notary": "Notar",
-    "cat_notary_pl": "notarer",
     "cat_architect": "Arkitekt",
     "cat_architect_pl": "arkitekter",
     "cat_community-admin": "Sameieforvalter",
@@ -499,8 +495,6 @@
     "does_real-estate": "Kjøp eller salg, og hva ting faktisk går for lokalt.",
     "does_lawyer": "Kontrakter, tvister, arv, alt med en frist.",
     "does_gestoria": "NIE, oppholdspapirer, skattemeldinger, kjøretøysadmin.",
-    "does_tax-adviser": "Modelo 210, leieinntekt, hva du skylder som ikke-resident.",
-    "does_notary": "Signerer skjøtet, steget før eiendomsregisteret.",
     "does_architect": "Tillatelser, tilbygg og energisertifikatet.",
     "does_community-admin": "Driver sameiet leiligheten din tilhører.",
     "does_surveyor": "Hva boligen er verdt på papiret, for bank eller domstol.",

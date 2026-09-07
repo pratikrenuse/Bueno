@@ -60,9 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier.",
     "dir_title_em": "Ihrem spanischen Ort",
-    "prof_title": "Alle Fachleute, die eine spanische Immobilie irgendwann braucht, in",
-    "prof_title_em": "Ihrem spanischen Ort",
-    "prof_sub": "Zehn davon, in {count} Orten. Sortiert nach echten Google-Bewertungen, mit den Bewertungen und ihrer Sprache."
+    "prof_title": "Eine Immobilie in Spanien heißt Umgang mit Leuten, von denen Sie",
+    "prof_title_em": "nie gehört haben",
+    "prof_sub": "Eine Gestoría, ein Administrador de Fincas, ein beeidigter Übersetzer. Hier steht, was jeder davon wirklich macht, und wer in Ihrem Ort gut bewertet ist."
   },
   "cards": {
     "tax": {
@@ -478,14 +478,10 @@
     "prof_eyebrow": "Immobilienfachleute",
     "prof_meta_title": "Immobilienfachleute in Spanien",
     "prof_headline": "Immobilienmakler, Gestoría oder Immobilienanwalt in Ihrem spanischen Ort",
-    "prof_lede": "Kauf, Verkauf oder ein Papierberg. Zehn Arten von Immobilienfachleuten in Ihrem Ort, sortiert nach Google-Bewertungen, mit den Bewertungen dazu.",
+    "prof_lede": "Kaufen, verkaufen, oder einfach den Papierkram erledigen. Wählen Sie Ihren Ort und sehen Sie, wen die Bewertungen wirklich empfehlen.",
     "prof_note": "Noch eines für rechtliche Fragen. Eine Bewertung ersetzt nicht die Prüfung, dass die von Ihnen beauftragte Kanzlei beim örtlichen Colegio de Abogados eingetragen ist und ihr Honorar vor der Beauftragung schriftlich vorliegt.",
     "cat_gestoria": "Gestoría",
     "cat_gestoria_pl": "Gestorías",
-    "cat_tax-adviser": "Steuerberater",
-    "cat_tax-adviser_pl": "Steuerberater",
-    "cat_notary": "Notar",
-    "cat_notary_pl": "Notare",
     "cat_architect": "Architekt",
     "cat_architect_pl": "Architekten",
     "cat_community-admin": "Hausverwaltung",
@@ -499,8 +495,6 @@
     "does_real-estate": "Kauf oder Verkauf, und was vor Ort wirklich bezahlt wird.",
     "does_lawyer": "Verträge, Streitfälle, Erbschaft, alles mit einer Frist.",
     "does_gestoria": "NIE, Aufenthaltspapiere, Steuererklärungen, Fahrzeugverwaltung.",
-    "does_tax-adviser": "Modelo 210, Mieteinkommen, was Sie als Nicht-Resident schulden.",
-    "does_notary": "Beurkundet den Kaufvertrag, der Schritt vor dem Grundbuch.",
     "does_architect": "Genehmigungen, Anbauten und der Energieausweis.",
     "does_community-admin": "Führt die Eigentümergemeinschaft Ihrer Wohnung.",
     "does_surveyor": "Was die Immobilie auf dem Papier wert ist, für Bank oder Gericht.",
