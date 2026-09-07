@@ -43,8 +43,8 @@
     "band_cta": "Kom igång",
     "footer_copy": "© 2025 Spain 24/7. Endast som vägledning. Inte juridisk eller skattemässig rådgivning.",
     "dir_eyebrow": "Hantverkarregister",
-    "dir_title": "Varmvattenberedaren går sönder en fredag. Vem ringer du?",
-    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter äkta Google-omdömen.",
+    "dir_title": "Hitta en rörmokare, elektriker eller byggare på",
+    "dir_sub": "Sex yrken, 94 orter, rankade efter äkta Google-omdömen. Läs omdömena och se vilket språk de skrevs på, innan du lyfter luren.",
     "dir_proof_title": "Stjärnor ensamma är lätta att köpa",
     "dir_proof_a": "5,0 från 3 omdömen",
     "dir_proof_a_verdict": "Rankas lägre",
@@ -54,7 +54,8 @@
     "dir_stat_towns": "spanska orter, från kusterna till öarna",
     "dir_stat_trades": "yrken, från ett spräckt rör till en full renovering",
     "dir_stat_free_n": "€0",
-    "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här."
+    "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här.",
+    "dir_title_em": "din spanska ort"
   },
   "cards": {
     "tax": {
@@ -405,7 +406,7 @@
   "calc_directory": {
     "meta_title": "Hantverkarregister för Spanien",
     "eyebrow": "Gratis verktyg",
-    "headline": "Vem du ringer när något går sönder",
+    "headline": "Hitta en rörmokare, elektriker eller byggare på din spanska ort",
     "lede": "Varmvattenberedaren går sönder en fredag och du är 2 000 km bort. Här ser du de bäst betygsatta rörmokarna, elektrikerna och andra hantverkare på din spanska ort, med omdömena de fått och vilket språk omdömena är skrivna på.",
     "where_label": "Din ort i Spanien",
     "where_placeholder": "Börja skriva, till exempel Javea eller Marbella",
@@ -454,6 +455,8 @@
     "cat_locksmith_pl": "låssmeder",
     "cat_aircon_pl": "luftkonditioneringstekniker",
     "cat_pool_pl": "poolfirmor",
-    "cat_builder_pl": "byggare"
+    "cat_builder_pl": "byggare",
+    "review_count_line": "{count} Google-omdömen",
+    "meta_free": "Gratis, och ingen betalar för att synas"
   }
 }

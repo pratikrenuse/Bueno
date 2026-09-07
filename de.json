@@ -43,8 +43,8 @@
     "band_cta": "Loslegen",
     "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung.",
     "dir_eyebrow": "Handwerkerverzeichnis",
-    "dir_title": "Der Boiler fällt an einem Freitag aus. Wen rufen Sie an?",
-    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach echten Google-Bewertungen.",
+    "dir_title": "Installateur, Elektriker oder Bauunternehmen in",
+    "dir_sub": "Sechs Gewerke, 94 Orte, sortiert nach echten Google-Bewertungen. Lesen Sie die Bewertungen und sehen Sie, in welcher Sprache sie verfasst sind, bevor Sie anrufen.",
     "dir_proof_title": "Sterne allein sind leicht zu kaufen",
     "dir_proof_a": "5,0 aus 3 Bewertungen",
     "dir_proof_a_verdict": "Niedriger sortiert",
@@ -54,7 +54,8 @@
     "dir_stat_towns": "spanische Orte, von den Küsten bis zu den Inseln",
     "dir_stat_trades": "Gewerke, vom Rohrbruch bis zur kompletten Renovierung",
     "dir_stat_free_n": "€0",
-    "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier."
+    "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier.",
+    "dir_title_em": "Ihrem spanischen Ort"
   },
   "cards": {
     "tax": {
@@ -405,7 +406,7 @@
   "calc_directory": {
     "meta_title": "Handwerkerverzeichnis für Spanien",
     "eyebrow": "Kostenloses Tool",
-    "headline": "Wen Sie anrufen, wenn etwas kaputtgeht",
+    "headline": "Installateur, Elektriker oder Bauunternehmen in Ihrem spanischen Ort",
     "lede": "Der Boiler fällt an einem Freitag aus und Sie sind 2.000 km entfernt. Hier sehen Sie die am besten bewerteten Installateure, Elektriker und weiteren Gewerke in Ihrem spanischen Ort, mit den Bewertungen und der Sprache, in der sie geschrieben wurden.",
     "where_label": "Ihr Ort in Spanien",
     "where_placeholder": "Tippen Sie los, zum Beispiel Javea oder Marbella",
@@ -454,6 +455,8 @@
     "cat_locksmith_pl": "Schlüsseldienste",
     "cat_aircon_pl": "Klimatechniker",
     "cat_pool_pl": "Poolservices",
-    "cat_builder_pl": "Bauunternehmen"
+    "cat_builder_pl": "Bauunternehmen",
+    "review_count_line": "{count} Google-Bewertungen",
+    "meta_free": "Kostenlos, und niemand bezahlt für einen Platz"
   }
 }

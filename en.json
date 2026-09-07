@@ -43,8 +43,8 @@
     "band_cta": "Get started",
     "footer_copy": "© 2025 Spain 24/7. For guidance only. Not legal or tax advice.",
     "dir_eyebrow": "Trades directory",
-    "dir_title": "The boiler fails on a Friday. Who do you call?",
-    "dir_sub": "Plumbers, electricians, locksmiths, air conditioning, pool and building work in 94 Spanish towns. Ranked from real Google reviews.",
+    "dir_title": "Find a plumber, electrician or builder in your",
+    "dir_sub": "Six trades, 94 towns, ranked from real Google reviews. Read the reviews and see which language they were written in, before you pick up the phone.",
     "dir_proof_title": "Stars alone are easy to buy",
     "dir_proof_a": "5.0 from 3 reviews",
     "dir_proof_a_verdict": "Ranked lower",
@@ -54,7 +54,8 @@
     "dir_stat_towns": "Spanish towns, from the costas to the islands",
     "dir_stat_trades": "trades, from a burst pipe to a full reforma",
     "dir_stat_free_n": "€0",
-    "dir_stat_free": "Free to use. Nobody pays to be listed here."
+    "dir_stat_free": "Free to use. Nobody pays to be listed here.",
+    "dir_title_em": "Spanish town"
   },
   "cards": {
     "tax": {
@@ -405,7 +406,7 @@
   "calc_directory": {
     "meta_title": "Spanish Trades Directory",
     "eyebrow": "Free tool",
-    "headline": "Who to call when something breaks",
+    "headline": "Find a plumber, electrician or builder in your Spanish town",
     "lede": "The boiler fails on a Friday and you are 2,000 km away. This shows the best reviewed plumbers, electricians and other trades in your Spanish town, with the reviews they earned and the language those reviews were written in.",
     "where_label": "Your town in Spain",
     "where_placeholder": "Start typing, for example Javea or Marbella",
@@ -454,6 +455,8 @@
     "cat_locksmith_pl": "locksmiths",
     "cat_aircon_pl": "air conditioning engineers",
     "cat_pool_pl": "pool services",
-    "cat_builder_pl": "builders"
+    "cat_builder_pl": "builders",
+    "review_count_line": "{count} Google reviews",
+    "meta_free": "Free, and nobody pays to be listed"
   }
 }

@@ -43,8 +43,8 @@
     "band_cta": "Aan de slag",
     "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies.",
     "dir_eyebrow": "Vakmensengids",
-    "dir_title": "De boiler begeeft het op een vrijdag. Wie belt u?",
-    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op echte Google-beoordelingen.",
+    "dir_title": "Vind een loodgieter, elektricien of aannemer in",
+    "dir_sub": "Zes vakken, 94 plaatsen, gerangschikt op echte Google-beoordelingen. Lees de beoordelingen en zie in welke taal ze zijn geschreven, voordat u belt.",
     "dir_proof_title": "Sterren alleen zijn makkelijk te kopen",
     "dir_proof_a": "5,0 uit 3 beoordelingen",
     "dir_proof_a_verdict": "Lager gerangschikt",
@@ -54,7 +54,8 @@
     "dir_stat_towns": "Spaanse plaatsen, van de kusten tot de eilanden",
     "dir_stat_trades": "vakken, van een gesprongen leiding tot een volledige verbouwing",
     "dir_stat_free_n": "€0",
-    "dir_stat_free": "Gratis. Niemand betaalt om hier te staan."
+    "dir_stat_free": "Gratis. Niemand betaalt om hier te staan.",
+    "dir_title_em": "uw Spaanse plaats"
   },
   "cards": {
     "tax": {
@@ -405,7 +406,7 @@
   "calc_directory": {
     "meta_title": "Vakmensengids voor Spanje",
     "eyebrow": "Gratis tool",
-    "headline": "Wie u belt als er iets stukgaat",
+    "headline": "Vind een loodgieter, elektricien of aannemer in uw Spaanse plaats",
     "lede": "De boiler begeeft het op een vrijdag en u zit 2.000 km verderop. Hier ziet u de best beoordeelde loodgieters, elektriciens en andere vakmensen in uw Spaanse plaats, met de beoordelingen die zij kregen en de taal waarin die zijn geschreven.",
     "where_label": "Uw plaats in Spanje",
     "where_placeholder": "Begin te typen, bijvoorbeeld Javea of Marbella",
@@ -454,6 +455,8 @@
     "cat_locksmith_pl": "slotenmakers",
     "cat_aircon_pl": "airco-monteurs",
     "cat_pool_pl": "zwembadservices",
-    "cat_builder_pl": "aannemers"
+    "cat_builder_pl": "aannemers",
+    "review_count_line": "{count} Google-beoordelingen",
+    "meta_free": "Gratis, en niemand betaalt om vermeld te worden"
   }
 }

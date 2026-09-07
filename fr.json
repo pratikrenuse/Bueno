@@ -43,8 +43,8 @@
     "band_cta": "Commencer",
     "footer_copy": "© 2025 Spain 24/7. À titre indicatif uniquement. Pas de conseil juridique ou fiscal.",
     "dir_eyebrow": "Annuaire des artisans",
-    "dir_title": "Le chauffe-eau lâche un vendredi. Qui appelez-vous ?",
-    "dir_sub": "Plombiers, électriciens, serruriers, climatisation, piscine et travaux dans 94 communes espagnoles. Classés selon de vrais avis Google.",
+    "dir_title": "Trouvez un plombier, un électricien ou un maçon dans",
+    "dir_sub": "Six métiers, 94 communes, classés selon de vrais avis Google. Lisez les avis et voyez dans quelle langue ils ont été écrits, avant de décrocher.",
     "dir_proof_title": "Des étoiles seules, cela s'achète",
     "dir_proof_a": "5,0 sur 3 avis",
     "dir_proof_a_verdict": "Classé plus bas",
@@ -54,7 +54,8 @@
     "dir_stat_towns": "communes espagnoles, des côtes aux îles",
     "dir_stat_trades": "métiers, de la fuite d'eau à la rénovation complète",
     "dir_stat_free_n": "€0",
-    "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici."
+    "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici.",
+    "dir_title_em": "votre commune espagnole"
   },
   "cards": {
     "tax": {
@@ -405,7 +406,7 @@
   "calc_directory": {
     "meta_title": "Annuaire des artisans en Espagne",
     "eyebrow": "Outil gratuit",
-    "headline": "Qui appeler quand quelque chose casse",
+    "headline": "Trouvez un plombier, un électricien ou un maçon dans votre commune espagnole",
     "lede": "Le chauffe-eau lâche un vendredi et vous êtes à 2 000 km. Voici les plombiers, électriciens et autres artisans les mieux notés dans votre commune espagnole, avec les avis obtenus et la langue dans laquelle ils ont été écrits.",
     "where_label": "Votre commune en Espagne",
     "where_placeholder": "Commencez à taper, par exemple Javea ou Marbella",
@@ -454,6 +455,8 @@
     "cat_locksmith_pl": "serruriers",
     "cat_aircon_pl": "climaticiens",
     "cat_pool_pl": "services de piscine",
-    "cat_builder_pl": "entreprises de rénovation"
+    "cat_builder_pl": "entreprises de rénovation",
+    "review_count_line": "{count} avis Google",
+    "meta_free": "Gratuit, et personne ne paie pour figurer ici"
   }
 }
