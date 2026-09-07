@@ -41,10 +41,14 @@ import { CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
 const BUCKET = 'directory-cache';
 // Bump when the shape of a stored cell changes. Cached objects live for 30 days, so
 // without this a fix to what we store would not reach anyone who already has a cell.
-// v2: review text is now Google's English translation rather than the Spanish original.
-const CACHE_VERSION = 'v2';
+// v2: review text is Google's English translation rather than the Spanish original.
+// v3: dropped includedType and widened the radius, which was returning one result for
+//     towns the size of Benidorm.
+const CACHE_VERSION = 'v3';
 const CACHE_DAYS = 30;
-const SEARCH_RADIUS_M = 15000;
+// A plumber drives. 15 km was drawn around the town as if a trade only serves its own
+// postcode, which starved smaller towns of candidates for no good reason.
+const SEARCH_RADIUS_M = 25000;
 
 // Worst case 30 refreshes a day is 900 Google calls a month, inside the 1,000 free
 // Enterprise + Atmosphere allowance. Raise it only alongside the budget cap in Google
@@ -63,8 +67,16 @@ const DAILY_CELL_BUDGET = Number(process.env.DIRECTORY_DAILY_BUDGET || 30);
 const PRIOR_COUNT = 50;
 const PRIOR_RATING = 4.3;
 
-// A business with a handful of reviews carries no signal worth ranking on.
+// A business with a handful of reviews carries no signal worth ranking on, so five is
+// the bar. But in a smaller town five can leave one lonely result, which reads as a broken
+// tool rather than an honest one. So the floor is tiered: take everyone at five or more,
+// and only if that leaves fewer than MIN_RESULTS do we top up from the three-and-four
+// review businesses in the SAME response. No second API call, no extra cost, and the
+// review count is on every card so nobody is misled about how thin the evidence is.
 const MIN_REVIEWS = 5;
+const FALLBACK_MIN_REVIEWS = 3;
+const MIN_RESULTS = 4;
+const MAX_RESULTS = 12;
 
 const FIELD_MASK = [
   'places.id',
@@ -254,7 +266,10 @@ async function fetchFromGoogle(locality, category, googleKey) {
       },
     },
   };
-  if (category.types && category.types.length) body.includedType = category.types[0];
+  // Deliberately no includedType. It restricts results to places whose PRIMARY Google
+  // type matches exactly, and most Spanish trade businesses are filed as
+  // general_contractor, a store, or just a point of interest. Setting it to "plumber"
+  // returned a single result for Benidorm. The Spanish text query is specific enough.
 
   const r = await fetch('https://places.googleapis.com/v1/places:searchText', {
     method: 'POST',
@@ -276,13 +291,21 @@ async function fetchFromGoogle(locality, category, googleKey) {
     throw new Error(`Google Places returned a non-JSON body: ${raw.slice(0, 200)}`);
   }
 
-  const places = Array.isArray(data.places) ? data.places : [];
-  return places
+  const places = (Array.isArray(data.places) ? data.places : [])
     .filter(p => p.businessStatus === 'OPERATIONAL')
-    .filter(p => typeof p.rating === 'number' && (p.userRatingCount || 0) >= MIN_REVIEWS)
-    .map(shapePlace)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 8);
+    .filter(p => typeof p.rating === 'number');
+
+  const rank = (list) => list.map(shapePlace).sort((a, b) => b.score - a.score);
+
+  const strong = rank(places.filter(p => (p.userRatingCount || 0) >= MIN_REVIEWS));
+  if (strong.length >= MIN_RESULTS) return strong.slice(0, MAX_RESULTS);
+
+  // Thin town: top up from the businesses just under the bar rather than showing one card.
+  const thin = rank(places.filter(p => {
+    const n = p.userRatingCount || 0;
+    return n >= FALLBACK_MIN_REVIEWS && n < MIN_REVIEWS;
+  }));
+  return [...strong, ...thin].slice(0, MAX_RESULTS);
 }
 
 // ---------------------------------------------------------------------------

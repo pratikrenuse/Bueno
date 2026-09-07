@@ -109,6 +109,22 @@ const STYLES = `
 .dir-quote-text { font-family: var(--font-sans); font-size: 14px; font-weight: 300; line-height: 1.7;
   color: var(--navy); margin: 0; }
 
+.dir-result-label { font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+.dir-more-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+  padding: 16px 20px; margin-bottom: 8px; }
+.dir-more-row .n { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted);
+  min-width: 18px; }
+.dir-more-row .nm { font-family: var(--font-serif); font-size: 18px; color: var(--navy);
+  flex: 1 1 220px; line-height: 1.25; }
+.dir-more-row .sc { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted);
+  white-space: nowrap; }
+.dir-more-row .sc b { font-family: var(--font-serif); font-size: 17px; color: var(--navy); font-weight: 400; }
+.dir-more-row a { font-family: var(--font-sans); font-size: 13px; color: var(--accent);
+  text-decoration: none; white-space: nowrap; padding: 6px 0; }
+.dir-more-row a:hover { text-decoration: underline; }
+
 .dir-more-title { font-family: var(--font-sans); font-size: 10px; font-weight: 500;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
 .dir-attrib { font-family: var(--font-sans); font-size: 12px; font-weight: 300;
@@ -396,7 +412,7 @@ export default function SpainDirectory() {
 
               {state === 'done' && providers.length > 0 && (
                 <section aria-live="polite">
-                  {providers.map((p, i) => {
+                  {providers.slice(0, 3).map((p, i) => {
                     const foreign = Object.keys(p.review_langs || {}).filter(l => l && l !== 'es');
                     const reviews = (p.reviews || []).slice(0, i === 0 ? 2 : 1);
                     return (
@@ -441,6 +457,29 @@ export default function SpainDirectory() {
                       </article>
                     );
                   })}
+
+                  {/* Everyone else Google returned, as one line each. Three full cards
+                      is enough to compare properly; a list this size is there so the page
+                      does not look like the town has one plumber. */}
+                  {providers.length > 3 && (
+                    <>
+                      <p className="dir-result-label" style={{ marginTop: 30, marginBottom: 12 }}>
+                        {tt('also_rated')}
+                      </p>
+                      {providers.slice(3).map((p, i) => (
+                        <div className="dir-more-row" key={p.id}>
+                          <span className="n">{i + 4}</span>
+                          <span className="nm">{p.name}</span>
+                          <span className="sc">
+                            <b>{Number(p.rating).toFixed(1)}</b>{' '}
+                            {tt('review_count_line').replace('{count}', String(p.review_count))}
+                          </span>
+                          {p.phone && <a href={`tel:${p.phone.replace(/\s/g, '')}`}>{p.phone}</a>}
+                          {p.maps_uri && <a href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
+                        </div>
+                      ))}
+                    </>
+                  )}
 
                   <p style={{ marginTop: 26, fontFamily: 'var(--font-sans)', fontSize: 13 }}>
                     <LLink to="/cost-audit" style={{ color: 'var(--accent)', textDecoration: 'none' }}>
