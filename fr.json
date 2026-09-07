@@ -5,7 +5,8 @@
     "rental": "Impôt locatif",
     "language": "Langue",
     "directory": "Annuaire des artisans",
-    "claim": "Réclamation prêt"
+    "claim": "Réclamation prêt",
+    "professionals": "Professionnels immobiliers"
   },
   "home": {
     "brand_sub": "Outils immobiliers gratuits",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "métiers, de la fuite d'eau à la rénovation complète",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici.",
-    "dir_title_em": "votre commune espagnole"
+    "dir_title_em": "votre commune espagnole",
+    "prof_title": "Acheter, vendre, ou crouler sous les formalités dans",
+    "prof_title_em": "votre commune espagnole",
+    "prof_sub": "Dix types de professionnels dont un propriétaire étranger a réellement besoin, dans {count} communes. Classés selon de vrais avis Google, avec les avis affichés.",
+    "prof_all": "Également couverts"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Annuaire des artisans en Espagne",
       "desc": "Plombier, électricien, serrurier, climatisation, piscine ou rénovation. Voyez les mieux notés dans votre commune espagnole, classés selon les avis Google, avec les avis et leur langue.",
       "cta": "Trouver un artisan"
+    },
+    "professionals": {
+      "tag": "Immobilier",
+      "title": "Professionnels de l'immobilier en Espagne",
+      "desc": "Agents immobiliers et avocats immobiliers dans votre commune espagnole, classés selon les avis Google, avec les avis et leur langue.",
+      "cta": "Trouver un professionnel"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "services de piscine",
     "cat_builder_pl": "entreprises de rénovation",
     "review_count_line": "{count} avis Google",
-    "meta_free": "Gratuit, et personne ne paie pour figurer ici"
+    "meta_free": "Gratuit, et personne ne paie pour figurer ici",
+    "cat_real-estate": "Agent immobilier",
+    "cat_real-estate_pl": "agents immobiliers",
+    "cat_lawyer": "Avocat immobilier",
+    "cat_lawyer_pl": "avocats immobiliers",
+    "prof_eyebrow": "Professionnels de l'immobilier",
+    "prof_meta_title": "Professionnels de l'immobilier en Espagne",
+    "prof_headline": "Trouvez un agent immobilier, une gestoría ou un avocat immobilier dans votre commune espagnole",
+    "prof_lede": "Acheter, vendre, ou crouler sous les formalités. Dix types de professionnels de l'immobilier dans votre commune, classés selon les avis Google, avec les avis affichés.",
+    "prof_note": "Une précision pour le juridique. Une note ne remplace pas la vérification que le cabinet que vous mandatez est inscrit au Colegio de Abogados local, et que ses honoraires sont écrits avant tout engagement.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "gestorías",
+    "cat_tax-adviser": "Conseiller fiscal",
+    "cat_tax-adviser_pl": "conseillers fiscaux",
+    "cat_notary": "Notaire",
+    "cat_notary_pl": "notaires",
+    "cat_architect": "Architecte",
+    "cat_architect_pl": "architectes",
+    "cat_community-admin": "Syndic de copropriété",
+    "cat_community-admin_pl": "syndics de copropriété",
+    "cat_surveyor": "Expert immobilier",
+    "cat_surveyor_pl": "experts immobiliers",
+    "cat_insurance": "Courtier en assurance",
+    "cat_insurance_pl": "courtiers en assurance",
+    "cat_translator": "Traducteur assermenté",
+    "cat_translator_pl": "traducteurs assermentés"
   }
 }

@@ -5,7 +5,8 @@
     "rental": "Rental Tax",
     "language": "Language",
     "directory": "Trades Directory",
-    "claim": "Mortgage Claim"
+    "claim": "Mortgage Claim",
+    "professionals": "Property Professionals"
   },
   "home": {
     "brand_sub": "Free property tools",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "trades, from a burst pipe to a full reforma",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Free to use. Nobody pays to be listed here.",
-    "dir_title_em": "Spanish town"
+    "dir_title_em": "Spanish town",
+    "prof_title": "Buying, selling, or drowning in paperwork in your",
+    "prof_title_em": "Spanish town",
+    "prof_sub": "Ten kinds of professional a foreign owner actually ends up needing, across {count} towns. Ranked from real Google reviews, with the reviews shown.",
+    "prof_all": "Also covered"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Spanish Trades Directory",
       "desc": "Plumber, electrician, locksmith, air conditioning, pool or builder. See the best reviewed in your Spanish town, ranked from Google reviews, with the reviews shown and the language they were written in.",
       "cta": "Find a tradesperson"
+    },
+    "professionals": {
+      "tag": "Property",
+      "title": "Spanish Property Professionals",
+      "desc": "Estate agents and property lawyers in your Spanish town, ranked from Google reviews, with the reviews shown and the language they were written in.",
+      "cta": "Find a professional"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "pool services",
     "cat_builder_pl": "builders",
     "review_count_line": "{count} Google reviews",
-    "meta_free": "Free, and nobody pays to be listed"
+    "meta_free": "Free, and nobody pays to be listed",
+    "cat_real-estate": "Estate agent",
+    "cat_real-estate_pl": "estate agents",
+    "cat_lawyer": "Property lawyer",
+    "cat_lawyer_pl": "property lawyers",
+    "prof_eyebrow": "Property professionals",
+    "prof_meta_title": "Spanish Property Professionals",
+    "prof_headline": "Find an estate agent, gestoría or property lawyer in your Spanish town",
+    "prof_lede": "Buying, selling, or drowning in paperwork. Ten kinds of property professional in your town, ranked from Google reviews, with the reviews shown.",
+    "prof_note": "One more thing for legal work. A star rating is no substitute for checking that anyone you instruct is registered with the local Colegio de Abogados, and that their fees are in writing before you engage them.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "gestorías",
+    "cat_tax-adviser": "Tax adviser",
+    "cat_tax-adviser_pl": "tax advisers",
+    "cat_notary": "Notary",
+    "cat_notary_pl": "notaries",
+    "cat_architect": "Architect",
+    "cat_architect_pl": "architects",
+    "cat_community-admin": "Community administrator",
+    "cat_community-admin_pl": "community administrators",
+    "cat_surveyor": "Surveyor and valuer",
+    "cat_surveyor_pl": "surveyors and valuers",
+    "cat_insurance": "Insurance broker",
+    "cat_insurance_pl": "insurance brokers",
+    "cat_translator": "Sworn translator",
+    "cat_translator_pl": "sworn translators"
   }
 }

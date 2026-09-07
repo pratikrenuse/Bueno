@@ -30,6 +30,7 @@ export default function SiteFooter({ note }) {
 
         <nav className="s247f-links" aria-label="Footer">
           <LLink to="/spain-directory">{t('nav.directory')}</LLink>
+          <LLink to="/spain-professionals">{t('nav.professionals')}</LLink>
           <LLink to="/tax-calculator">{t('nav.tax')}</LLink>
           <LLink to="/cost-audit">{t('nav.cost')}</LLink>
           <LLink to="/rental-tax">{t('nav.rental')}</LLink>

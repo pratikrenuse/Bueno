@@ -36,7 +36,7 @@
 // results were ordered.
 
 import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
-import { CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
+import { ANY_CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
 
 const BUCKET = 'directory-cache';
 // Bump when the shape of a stored cell changes. Cached objects live for 30 days, so
@@ -358,7 +358,7 @@ export default async function handler(req, res) {
     // Only slugs from our own lists are ever turned into a Google query. Without this,
     // anyone could point our billed API key at arbitrary searches.
     const locality = LOCALITY_BY_SLUG[localitySlug];
-    const category = CATEGORY_BY_SLUG[categorySlug];
+    const category = ANY_CATEGORY_BY_SLUG[categorySlug];
     if (!locality) return res.status(400).json({ error: `Unknown locality "${localitySlug}".` });
     if (!category) return res.status(400).json({ error: `Unknown category "${categorySlug}".` });
 

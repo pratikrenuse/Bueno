@@ -5,7 +5,8 @@
     "rental": "Hyresinkomstskatt",
     "language": "Språk",
     "directory": "Hantverkarregister",
-    "claim": "Bolåneanspråk"
+    "claim": "Bolåneanspråk",
+    "professionals": "Fastighetsexperter"
   },
   "home": {
     "brand_sub": "Gratis bostadsguider",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "yrken, från ett spräckt rör till en full renovering",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här.",
-    "dir_title_em": "din spanska ort"
+    "dir_title_em": "din spanska ort",
+    "prof_title": "Köp, försäljning eller pappersarbete som växer på",
+    "prof_title_em": "din spanska ort",
+    "prof_sub": "Tio sorters experter som en utländsk ägare faktiskt behöver, på {count} orter. Rankade efter äkta Google-omdömen, med omdömena visade.",
+    "prof_all": "Även med"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Hantverkarregister för Spanien",
       "desc": "Rörmokare, elektriker, låssmed, luftkonditionering, pool eller byggare. Se de bäst betygsatta på din spanska ort, rankade efter Google-omdömen, med omdömena och språket de skrevs på.",
       "cta": "Hitta en hantverkare"
+    },
+    "professionals": {
+      "tag": "Fastighet",
+      "title": "Spanska fastighetsexperter",
+      "desc": "Fastighetsmäklare och fastighetsjurister på din spanska ort, rankade efter Google-omdömen, med omdömena och språket de skrevs på.",
+      "cta": "Hitta en expert"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "poolfirmor",
     "cat_builder_pl": "byggare",
     "review_count_line": "{count} Google-omdömen",
-    "meta_free": "Gratis, och ingen betalar för att synas"
+    "meta_free": "Gratis, och ingen betalar för att synas",
+    "cat_real-estate": "Fastighetsmäklare",
+    "cat_real-estate_pl": "fastighetsmäklare",
+    "cat_lawyer": "Fastighetsjurist",
+    "cat_lawyer_pl": "fastighetsjurister",
+    "prof_eyebrow": "Fastighetsexperter",
+    "prof_meta_title": "Spanska fastighetsexperter",
+    "prof_headline": "Hitta en fastighetsmäklare, gestoría eller fastighetsjurist på din spanska ort",
+    "prof_lede": "Köp, försäljning eller pappersarbete som växer. Tio sorters fastighetsexperter på din ort, rankade efter Google-omdömen, med omdömena visade.",
+    "prof_note": "En sak till för juridiskt arbete. Ett betyg ersätter inte en kontroll av att den du anlitar är registrerad hos det lokala Colegio de Abogados, och att arvodet är skriftligt innan du ger uppdraget.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "gestorías",
+    "cat_tax-adviser": "Skatterådgivare",
+    "cat_tax-adviser_pl": "skatterådgivare",
+    "cat_notary": "Notarie",
+    "cat_notary_pl": "notarier",
+    "cat_architect": "Arkitekt",
+    "cat_architect_pl": "arkitekter",
+    "cat_community-admin": "Föreningsförvaltare",
+    "cat_community-admin_pl": "föreningsförvaltare",
+    "cat_surveyor": "Värderingsman",
+    "cat_surveyor_pl": "värderingsmän",
+    "cat_insurance": "Försäkringsmäklare",
+    "cat_insurance_pl": "försäkringsmäklare",
+    "cat_translator": "Auktoriserad översättare",
+    "cat_translator_pl": "auktoriserade översättare"
   }
 }

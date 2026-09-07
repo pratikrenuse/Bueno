@@ -5,7 +5,8 @@
     "rental": "Verhuurbelasting",
     "language": "Taal",
     "directory": "Vakmensengids",
-    "claim": "Hypotheekclaim"
+    "claim": "Hypotheekclaim",
+    "professionals": "Vastgoedprofessionals"
   },
   "home": {
     "brand_sub": "Gratis vastgoedtools",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "vakken, van een gesprongen leiding tot een volledige verbouwing",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis. Niemand betaalt om hier te staan.",
-    "dir_title_em": "uw Spaanse plaats"
+    "dir_title_em": "uw Spaanse plaats",
+    "prof_title": "Kopen, verkopen of verdrinken in papierwerk in",
+    "prof_title_em": "uw Spaanse plaats",
+    "prof_sub": "Tien soorten professionals die een buitenlandse eigenaar echt nodig heeft, in {count} plaatsen. Gerangschikt op echte Google-beoordelingen, met de beoordelingen erbij.",
+    "prof_all": "Ook gedekt"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Vakmensengids voor Spanje",
       "desc": "Loodgieter, elektricien, slotenmaker, airconditioning, zwembad of aannemer. Bekijk de best beoordeelde in uw Spaanse plaats, gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
       "cta": "Vakman vinden"
+    },
+    "professionals": {
+      "tag": "Vastgoed",
+      "title": "Spaanse vastgoedprofessionals",
+      "desc": "Makelaars en vastgoedadvocaten in uw Spaanse plaats, gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
+      "cta": "Professional vinden"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "zwembadservices",
     "cat_builder_pl": "aannemers",
     "review_count_line": "{count} Google-beoordelingen",
-    "meta_free": "Gratis, en niemand betaalt om vermeld te worden"
+    "meta_free": "Gratis, en niemand betaalt om vermeld te worden",
+    "cat_real-estate": "Makelaar",
+    "cat_real-estate_pl": "makelaars",
+    "cat_lawyer": "Vastgoedadvocaat",
+    "cat_lawyer_pl": "vastgoedadvocaten",
+    "prof_eyebrow": "Vastgoedprofessionals",
+    "prof_meta_title": "Spaanse vastgoedprofessionals",
+    "prof_headline": "Vind een makelaar, gestoría of vastgoedadvocaat in uw Spaanse plaats",
+    "prof_lede": "Kopen, verkopen of verdrinken in papierwerk. Tien soorten vastgoedprofessionals in uw plaats, gerangschikt op Google-beoordelingen, met de beoordelingen erbij.",
+    "prof_note": "Nog iets voor juridisch werk. Een cijfer vervangt geen controle of het kantoor dat u inschakelt is ingeschreven bij het lokale Colegio de Abogados, en of het honorarium schriftelijk vaststaat voordat u opdracht geeft.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "gestorías",
+    "cat_tax-adviser": "Belastingadviseur",
+    "cat_tax-adviser_pl": "belastingadviseurs",
+    "cat_notary": "Notaris",
+    "cat_notary_pl": "notarissen",
+    "cat_architect": "Architect",
+    "cat_architect_pl": "architecten",
+    "cat_community-admin": "VvE-beheerder",
+    "cat_community-admin_pl": "VvE-beheerders",
+    "cat_surveyor": "Taxateur",
+    "cat_surveyor_pl": "taxateurs",
+    "cat_insurance": "Verzekeringsmakelaar",
+    "cat_insurance_pl": "verzekeringsmakelaars",
+    "cat_translator": "Beëdigd vertaler",
+    "cat_translator_pl": "beëdigde vertalers"
   }
 }

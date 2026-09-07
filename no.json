@@ -5,7 +5,8 @@
     "rental": "Utleieskatt",
     "language": "Språk",
     "directory": "Håndverkerregister",
-    "claim": "Boliglånskrav"
+    "claim": "Boliglånskrav",
+    "professionals": "Eiendomsfagfolk"
   },
   "home": {
     "brand_sub": "Gratis boligverktøy",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "fag, fra sprukket rør til full oppussing",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis å bruke. Ingen betaler for å stå her.",
-    "dir_title_em": "din spanske by"
+    "dir_title_em": "din spanske by",
+    "prof_title": "Kjøp, salg eller papirarbeid som tar overhånd i",
+    "prof_title_em": "din spanske by",
+    "prof_sub": "Ti typer fagfolk en utenlandsk eier faktisk ender opp med å trenge, i {count} byer. Rangert etter ekte Google-omtaler, med omtalene vist.",
+    "prof_all": "Også dekket"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Håndverkerregister for Spania",
       "desc": "Rørlegger, elektriker, låsesmed, klimaanlegg, basseng eller byggmester. Se de best omtalte i din spanske by, rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
       "cta": "Finn en håndverker"
+    },
+    "professionals": {
+      "tag": "Eiendom",
+      "title": "Spanske eiendomsfagfolk",
+      "desc": "Eiendomsmeglere og eiendomsadvokater i din spanske by, rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
+      "cta": "Finn en fagperson"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "bassengfirmaer",
     "cat_builder_pl": "byggmestere",
     "review_count_line": "{count} Google-omtaler",
-    "meta_free": "Gratis, og ingen betaler for å stå her"
+    "meta_free": "Gratis, og ingen betaler for å stå her",
+    "cat_real-estate": "Eiendomsmegler",
+    "cat_real-estate_pl": "eiendomsmeglere",
+    "cat_lawyer": "Eiendomsadvokat",
+    "cat_lawyer_pl": "eiendomsadvokater",
+    "prof_eyebrow": "Eiendomsfagfolk",
+    "prof_meta_title": "Spanske eiendomsfagfolk",
+    "prof_headline": "Finn en eiendomsmegler, gestoría eller eiendomsadvokat i din spanske by",
+    "prof_lede": "Kjøp, salg eller papirarbeid som tar overhånd. Ti typer eiendomsfagfolk i byen din, rangert etter Google-omtaler, med omtalene vist.",
+    "prof_note": "En ting til for juridisk arbeid. En stjernevurdering erstatter ikke en sjekk av at den du engasjerer er registrert hos det lokale Colegio de Abogados, og at honoraret foreligger skriftlig før du gir oppdraget.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "gestorías",
+    "cat_tax-adviser": "Skatterådgiver",
+    "cat_tax-adviser_pl": "skatterådgivere",
+    "cat_notary": "Notar",
+    "cat_notary_pl": "notarer",
+    "cat_architect": "Arkitekt",
+    "cat_architect_pl": "arkitekter",
+    "cat_community-admin": "Sameieforvalter",
+    "cat_community-admin_pl": "sameieforvaltere",
+    "cat_surveyor": "Takstmann",
+    "cat_surveyor_pl": "takstmenn",
+    "cat_insurance": "Forsikringsmegler",
+    "cat_insurance_pl": "forsikringsmeglere",
+    "cat_translator": "Statsautorisert translatør",
+    "cat_translator_pl": "statsautoriserte translatører"
   }
 }

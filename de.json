@@ -5,7 +5,8 @@
     "rental": "Mietsteuer",
     "language": "Sprache",
     "directory": "Handwerkerverzeichnis",
-    "claim": "Hypotheken-Anspruch"
+    "claim": "Hypotheken-Anspruch",
+    "professionals": "Immobilienfachleute"
   },
   "home": {
     "brand_sub": "Kostenlose Immobilien-Tools",
@@ -55,7 +56,11 @@
     "dir_stat_trades": "Gewerke, vom Rohrbruch bis zur kompletten Renovierung",
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier.",
-    "dir_title_em": "Ihrem spanischen Ort"
+    "dir_title_em": "Ihrem spanischen Ort",
+    "prof_title": "Kauf, Verkauf oder ein Papierberg in",
+    "prof_title_em": "Ihrem spanischen Ort",
+    "prof_sub": "Zehn Arten von Fachleuten, die ein ausländischer Eigentümer wirklich braucht, in {count} Orten. Sortiert nach echten Google-Bewertungen, mit den Bewertungen dazu.",
+    "prof_all": "Ebenfalls dabei"
   },
   "cards": {
     "tax": {
@@ -87,6 +92,12 @@
       "title": "Handwerkerverzeichnis für Spanien",
       "desc": "Installateur, Elektriker, Schlüsseldienst, Klimaanlage, Pool oder Bauunternehmen. Sehen Sie die bestbewerteten in Ihrem spanischen Ort, sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
       "cta": "Handwerker finden"
+    },
+    "professionals": {
+      "tag": "Immobilien",
+      "title": "Immobilienfachleute in Spanien",
+      "desc": "Immobilienmakler und Immobilienanwälte in Ihrem spanischen Ort, sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
+      "cta": "Fachmann finden"
     }
   },
   "calc_tax": {
@@ -457,6 +468,31 @@
     "cat_pool_pl": "Poolservices",
     "cat_builder_pl": "Bauunternehmen",
     "review_count_line": "{count} Google-Bewertungen",
-    "meta_free": "Kostenlos, und niemand bezahlt für einen Platz"
+    "meta_free": "Kostenlos, und niemand bezahlt für einen Platz",
+    "cat_real-estate": "Immobilienmakler",
+    "cat_real-estate_pl": "Immobilienmakler",
+    "cat_lawyer": "Immobilienanwalt",
+    "cat_lawyer_pl": "Immobilienanwälte",
+    "prof_eyebrow": "Immobilienfachleute",
+    "prof_meta_title": "Immobilienfachleute in Spanien",
+    "prof_headline": "Immobilienmakler, Gestoría oder Immobilienanwalt in Ihrem spanischen Ort",
+    "prof_lede": "Kauf, Verkauf oder ein Papierberg. Zehn Arten von Immobilienfachleuten in Ihrem Ort, sortiert nach Google-Bewertungen, mit den Bewertungen dazu.",
+    "prof_note": "Noch eines für rechtliche Fragen. Eine Bewertung ersetzt nicht die Prüfung, dass die von Ihnen beauftragte Kanzlei beim örtlichen Colegio de Abogados eingetragen ist und ihr Honorar vor der Beauftragung schriftlich vorliegt.",
+    "cat_gestoria": "Gestoría",
+    "cat_gestoria_pl": "Gestorías",
+    "cat_tax-adviser": "Steuerberater",
+    "cat_tax-adviser_pl": "Steuerberater",
+    "cat_notary": "Notar",
+    "cat_notary_pl": "Notare",
+    "cat_architect": "Architekt",
+    "cat_architect_pl": "Architekten",
+    "cat_community-admin": "Hausverwaltung",
+    "cat_community-admin_pl": "Hausverwaltungen",
+    "cat_surveyor": "Gutachter",
+    "cat_surveyor_pl": "Gutachter",
+    "cat_insurance": "Versicherungsmakler",
+    "cat_insurance_pl": "Versicherungsmakler",
+    "cat_translator": "Beeidigter Übersetzer",
+    "cat_translator_pl": "beeidigte Übersetzer"
   }
 }

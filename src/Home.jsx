@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useT, LLink, useLocalisedPath } from '../i18n.jsx'
 import LangSwitcher from '../LangSwitcher.jsx'
 import { LOCALITIES, REGIONS } from '../spain-directory/localities.js'
-import { CATEGORIES } from '../spain-directory/categories.js'
+import { CATEGORIES, PROFESSIONALS } from '../spain-directory/categories.js'
 
 // Auto-discovers all tool meta.js files — no changes needed when adding new tools
 const metaModules = import.meta.glob('../*/meta.js', { eager: true })
@@ -12,7 +12,7 @@ const ALL_TOOLS = Object.values(metaModules)
   .sort((a, b) => a.order - b.order)
 
 // Map a tool path to its i18n card key
-const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental', '/mortgage-claim': 'claim', '/spain-directory': 'directory' }
+const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental', '/mortgage-claim': 'claim', '/spain-directory': 'directory', '/spain-professionals': 'professionals' }
 
 // The directory is the one tool whose use starts before the visitor knows we have a
 // tool. Somebody whose boiler has just failed is not going to scroll a grid of cards
@@ -122,6 +122,84 @@ function DirectoryFeature() {
           ))}
         </div>
 
+      </div>
+    </section>
+  )
+}
+
+// Property professionals. Deliberately below the tools grid rather than under the hero:
+// the trades directory is the emergency ("the boiler has failed"), this is the considered
+// decision ("we are buying"). Stacking them together would make the page argue with
+// itself about what it is for.
+//
+// The full list of ten is spelled out as chips instead of hidden in the menu. A visitor
+// should be able to see that a gestoría or a sworn translator is in here without opening
+// anything, which is the whole difference between looking exhaustive and being exhaustive.
+function ProfessionalsFeature() {
+  const t = useT()
+  const tt = (k) => t(`calc_directory.${k}`)
+  const navigate = useNavigate()
+  const lp = useLocalisedPath()
+  const [town, setTown] = useState('')
+  const [who, setWho] = useState('real-estate')
+
+  const grouped = useMemo(() => {
+    const out = []
+    for (const [key, label] of Object.entries(REGIONS)) {
+      const items = LOCALITIES.filter(l => l.region === key).sort((a, b) => a.name.localeCompare(b.name))
+      if (items.length) out.push({ key, label, items })
+    }
+    return out
+  }, [])
+
+  const go = (townSlug, whoSlug) =>
+    navigate(`${lp('/spain-professionals')}?town=${townSlug}&trade=${whoSlug}`)
+
+  return (
+    <section className="proffeat" id="professionals">
+      <div className="proffeat-panel">
+        <p className="home-section-eyebrow">{tt('prof_eyebrow')}</p>
+        <h2 className="proffeat-head">
+          {t('home.prof_title')} <em>{t('home.prof_title_em')}</em>
+        </h2>
+        <p className="proffeat-sub">
+          {t('home.prof_sub').replace('{count}', String(LOCALITIES.length))}
+        </p>
+
+        <form className="proffeat-form" onSubmit={(e) => { e.preventDefault(); if (town) go(town, who) }}>
+          <div>
+            <label htmlFor="home-prof-town">{tt('where_label')}</label>
+            <select id="home-prof-town" className="proffeat-select" value={town}
+              onChange={(e) => setTown(e.target.value)}>
+              <option value="">{tt('town_placeholder')}</option>
+              {grouped.map(g => (
+                <optgroup key={g.key} label={g.label}>
+                  {g.items.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="home-prof-who">{tt('trade_label')}</label>
+            <select id="home-prof-who" className="proffeat-select" value={who}
+              onChange={(e) => setWho(e.target.value)}>
+              {PROFESSIONALS.map(c => <option key={c.slug} value={c.slug}>{tt(`cat_${c.slug}`)}</option>)}
+            </select>
+          </div>
+          <button type="submit" className="btn-primary proffeat-go" disabled={!town}>{tt('find_cta')}</button>
+        </form>
+
+        <div className="proffeat-all">
+          <p>{t('home.prof_all')}</p>
+          <div className="proffeat-chips">
+            {PROFESSIONALS.map(c => (
+              <button key={c.slug} type="button"
+                onClick={() => (town ? go(town, c.slug) : setWho(c.slug))}>
+                {tt(`cat_${c.slug}`)}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -270,6 +348,9 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* PROFESSIONALS: the considered decision, kept apart from the emergency */}
+      <ProfessionalsFeature />
 
       {/* WHY */}
       <section className="home-why">

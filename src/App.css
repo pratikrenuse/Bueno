@@ -1869,3 +1869,116 @@ body {
   .dirfeat-stats { gap: 28px; padding-top: 28px; }
   .dirfeat-stat-l { max-width: none; }
 }
+
+/* ============================================================================
+   PROFESSIONALS SECTION (src/Home.jsx -> ProfessionalsFeature)
+   Sits below the tools grid, not under the hero: the trades directory is the
+   emergency, this is the considered decision, and putting them side by side
+   would make the page argue with itself. Light blue panel on white, so it reads
+   as a sibling of the navy trades panel rather than a repeat of it.
+   ========================================================================== */
+
+.proffeat { background: var(--white); padding: 0 64px 96px; }
+
+.proffeat-panel {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--light-blue);
+  border-radius: 28px;
+  padding: 52px 56px;
+}
+
+.proffeat-head {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  max-width: 700px;
+}
+
+.proffeat-head em { font-style: italic; color: var(--accent); }
+
+.proffeat-sub {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(1,2,33,0.62);
+  max-width: 60ch;
+  margin: 0 0 28px;
+}
+
+.proffeat-form { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 12px; align-items: end; max-width: 860px; }
+
+.proffeat-form label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(1,2,33,0.5);
+  margin-bottom: 8px;
+}
+
+.proffeat-select {
+  width: 100%;
+  min-height: 54px;
+  padding: 15px 42px 15px 18px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--navy);
+  background-color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.proffeat-select:focus { outline: 3px solid var(--navy); outline-offset: 2px; }
+
+.proffeat-go { width: auto; min-height: 54px; padding: 15px 30px; margin-bottom: 0; white-space: nowrap; }
+
+/* The full list, spelled out. A visitor should not have to open a menu to find
+   out whether the thing they need is in here. */
+.proffeat-all { margin-top: 30px; padding-top: 26px; border-top: 1px solid rgba(1,2,33,0.12); }
+
+.proffeat-all p {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(1,2,33,0.5);
+  margin: 0 0 14px;
+}
+
+.proffeat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.proffeat-chips button {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 8px 16px;
+  min-height: 38px;
+  border: 1px solid rgba(1,2,33,0.18);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.proffeat-chips button:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+@media (max-width: 900px) {
+  .proffeat { padding: 0 24px 64px; }
+  .proffeat-panel { padding: 32px 24px; border-radius: 22px; }
+  .proffeat-form { grid-template-columns: 1fr; }
+  .proffeat-go { width: 100%; }
+}
