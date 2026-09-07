@@ -47,7 +47,7 @@ function DirectoryFeature() {
         <div>
           <p className="home-section-eyebrow" style={{ color: 'var(--gold)' }}>{t('home.dir_eyebrow')}</p>
           <h2 className="dirfeat-head">{t('home.dir_title')} <em>{t('home.dir_title_em')}</em></h2>
-          <p className="dirfeat-sub">{t('home.dir_sub')}</p>
+          <p className="dirfeat-sub">{t('home.dir_sub').replace('{count}', String(LOCALITIES.length))}</p>
 
           <form onSubmit={(e) => { e.preventDefault(); if (town) go(town, trade) }}>
             <div className="dirfeat-form">

@@ -1,7 +1,7 @@
 # Spain 24/7 Trades Directory - runbook
 
 `/spain-directory` shows the best reviewed plumbers, electricians, locksmiths, air
-conditioning engineers, pool services and builders in 94 Spanish localities, ranked from
+conditioning engineers, pool services and builders in 660 Spanish localities across all 52 provinces, ranked from
 Google reviews.
 
 Two things shipped together. The directory itself, and a consolidation of the LinkedIn
@@ -105,14 +105,20 @@ rating, review count and review text in a single response, so there is no second
 Details lookup. That call bills as Enterprise + Atmosphere: **1,000 free per month**, $40
 per 1,000 after.
 
-- 94 localities x 6 trades = **564 objects**, the worst case if every combination is
-  viewed inside the same 30 days.
+- 660 localities x 6 trades = **3,960 objects**, but that number never becomes a bill:
+  it is the size of the catalogue, not the spend. A cell only costs a Google call when
+  somebody actually opens it, and then not again for 30 days.
 - `DIRECTORY_DAILY_BUDGET` of 30 caps the month at 900 even if something goes wrong.
 - Both sit inside the 1,000 free allowance.
 
-To add a locality, add one line to `spain-directory/localities.js`. Nothing else changes.
-Under about 165 localities it stays free. Past that it is roughly $40 per additional
-1,000 objects, and the Google Cloud budget cap is what guarantees no surprises either way.
+The daily budget, not the length of the list, is what keeps this free. Coverage can grow
+as far as you like; `DIRECTORY_DAILY_BUDGET` is the ceiling, and the Google Cloud budget
+cap behind it is the hard stop.
+
+`spain-directory/localities.js` is generated (see the header comment in that file).
+Hand-added resort towns under the population threshold are kept verbatim on every rebuild.
+**Never rename or renumber a slug**: slugs are in live URLs and are the cache keys, so
+changing one breaks shared links and orphans a cell you already paid an API call for.
 
 ---
 
