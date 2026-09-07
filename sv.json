@@ -44,7 +44,7 @@
     "footer_copy": "© 2025 Spain 24/7. Endast som vägledning. Inte juridisk eller skattemässig rådgivning.",
     "dir_eyebrow": "Hantverkarregister",
     "dir_title": "Varmvattenberedaren går sönder en fredag. Vem ringer du?",
-    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter Google-omdömen, med omdömena och språket de skrevs på.",
+    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter äkta Google-omdömen.",
     "dir_proof_title": "Stjärnor ensamma är lätta att köpa",
     "dir_proof_a": "5,0 från 3 omdömen",
     "dir_proof_a_verdict": "Rankas lägre",
@@ -446,6 +446,14 @@
     "town_placeholder": "Välj en ort",
     "find_cta": "Hitta",
     "popular": "Populära:",
-    "how_summary": "Så rankar vi, och vad listan inte är"
+    "how_summary": "Så rankar vi, och vad listan inte är",
+    "results_headline": "De bäst betygsatta {trade} i {town}",
+    "meta_ranked": "Rankade efter Google-omdömen",
+    "cat_plumber_pl": "rörmokare",
+    "cat_electrician_pl": "elektriker",
+    "cat_locksmith_pl": "låssmeder",
+    "cat_aircon_pl": "luftkonditioneringstekniker",
+    "cat_pool_pl": "poolfirmor",
+    "cat_builder_pl": "byggare"
   }
 }

@@ -44,7 +44,7 @@
     "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies.",
     "dir_eyebrow": "Vakmensengids",
     "dir_title": "De boiler begeeft het op een vrijdag. Wie belt u?",
-    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
+    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op echte Google-beoordelingen.",
     "dir_proof_title": "Sterren alleen zijn makkelijk te kopen",
     "dir_proof_a": "5,0 uit 3 beoordelingen",
     "dir_proof_a_verdict": "Lager gerangschikt",
@@ -446,6 +446,14 @@
     "town_placeholder": "Kies een plaats",
     "find_cta": "Zoeken",
     "popular": "Populair:",
-    "how_summary": "Hoe wij rangschikken, en wat deze lijst niet is"
+    "how_summary": "Hoe wij rangschikken, en wat deze lijst niet is",
+    "results_headline": "De best beoordeelde {trade} in {town}",
+    "meta_ranked": "Gerangschikt op Google-beoordelingen",
+    "cat_plumber_pl": "loodgieters",
+    "cat_electrician_pl": "elektriciens",
+    "cat_locksmith_pl": "slotenmakers",
+    "cat_aircon_pl": "airco-monteurs",
+    "cat_pool_pl": "zwembadservices",
+    "cat_builder_pl": "aannemers"
   }
 }

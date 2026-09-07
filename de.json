@@ -44,7 +44,7 @@
     "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung.",
     "dir_eyebrow": "Handwerkerverzeichnis",
     "dir_title": "Der Boiler fällt an einem Freitag aus. Wen rufen Sie an?",
-    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
+    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach echten Google-Bewertungen.",
     "dir_proof_title": "Sterne allein sind leicht zu kaufen",
     "dir_proof_a": "5,0 aus 3 Bewertungen",
     "dir_proof_a_verdict": "Niedriger sortiert",
@@ -446,6 +446,14 @@
     "town_placeholder": "Ort wählen",
     "find_cta": "Suchen",
     "popular": "Beliebt:",
-    "how_summary": "Wie wir sortieren, und was diese Liste nicht ist"
+    "how_summary": "Wie wir sortieren, und was diese Liste nicht ist",
+    "results_headline": "Die bestbewerteten {trade} in {town}",
+    "meta_ranked": "Sortiert nach Google-Bewertungen",
+    "cat_plumber_pl": "Installateure",
+    "cat_electrician_pl": "Elektriker",
+    "cat_locksmith_pl": "Schlüsseldienste",
+    "cat_aircon_pl": "Klimatechniker",
+    "cat_pool_pl": "Poolservices",
+    "cat_builder_pl": "Bauunternehmen"
   }
 }

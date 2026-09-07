@@ -39,6 +39,10 @@ import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
 import { CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
 
 const BUCKET = 'directory-cache';
+// Bump when the shape of a stored cell changes. Cached objects live for 30 days, so
+// without this a fix to what we store would not reach anyone who already has a cell.
+// v2: review text is now Google's English translation rather than the Spanish original.
+const CACHE_VERSION = 'v2';
 const CACHE_DAYS = 30;
 const SEARCH_RADIUS_M = 15000;
 
@@ -91,7 +95,7 @@ const auth = (key) => ({ apikey: key, Authorization: `Bearer ${key}` });
 // Storage helpers. Plain REST against Supabase Storage with the service key.
 // ---------------------------------------------------------------------------
 
-const cellPath = (loc, cat) => `cells/${loc}/${cat}.json`;
+const cellPath = (loc, cat) => `cells/${CACHE_VERSION}/${loc}/${cat}.json`;
 const budgetPath = () => `budget/${new Date().toISOString().slice(0, 10)}.json`;
 
 async function readObject(url, key, path) {
@@ -171,18 +175,31 @@ function bayesian(rating, count) {
   return (v / (v + PRIOR_COUNT)) * r + (PRIOR_COUNT / (v + PRIOR_COUNT)) * PRIOR_RATING;
 }
 
+// Cut on a word boundary. Slicing at a fixed character count produced endings like
+// "en cuanto a la calidad del tr...", which reads as a bug rather than an excerpt.
+function trim(text, max) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${(lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[\s,.;:]+$/, '')}...`;
+}
+
 // Trim a Google review to what the card shows, keeping every field the attribution rules
 // require: who wrote it, their photo, a link to their profile, and a link to the review.
 function shapeReview(rv, placeMapsUri) {
   if (!rv) return null;
-  const body = rv.originalText || rv.text || {};
+  // `text` is Google's translation into the language we asked for, `originalText` is
+  // what the reviewer actually wrote. Show the translation, report the original's
+  // language. Taking originalText first was why every card was a wall of Spanish.
+  const shown = rv.text || rv.originalText || {};
+  const source = rv.originalText || rv.text || {};
   const author = rv.authorAttribution || {};
-  const text = String(body.text || '').trim();
+  const text = String(shown.text || '').trim();
   if (!text) return null;
   return {
     rating: rv.rating ?? null,
-    text: text.length > 420 ? `${text.slice(0, 417)}...` : text,
-    lang: body.languageCode || null,
+    text: trim(text, 260),
+    lang: source.languageCode || null,
     published: rv.publishTime || null,
     relative: rv.relativePublishTimeDescription || null,
     author: author.displayName || null,
@@ -224,7 +241,11 @@ function shapePlace(p) {
 async function fetchFromGoogle(locality, category, googleKey) {
   const body = {
     textQuery: `${category.query} ${locality.name}`,
-    languageCode: 'es',
+    // English, not Spanish. The businesses are searched for in Spanish (category.query)
+    // because that is how they list themselves, but the reviews come back translated,
+    // and so does "3 months ago". The badge still reports the language each review was
+    // actually written in, so nothing is misrepresented.
+    languageCode: 'en',
     regionCode: 'ES',
     locationBias: {
       circle: {
@@ -280,8 +301,17 @@ export default async function handler(req, res) {
       let storage = 'not created yet, it will be made on the first lookup';
       try {
         const br = await fetch(`${url}/storage/v1/bucket/${BUCKET}`, { headers: auth(key) });
-        if (br.ok) storage = 'ready';
-        else if (br.status !== 404) storage = `Storage ${br.status}: ${(await br.text()).slice(0, 150)}`;
+        if (br.ok) {
+          storage = 'ready';
+        } else {
+          // Supabase reports a missing bucket as HTTP 400 with a 404 buried in the JSON
+          // body, so the status code alone is not enough to tell "not made yet" apart
+          // from a real fault. Reading the body keeps a normal pre-first-use state from
+          // looking like a broken deployment.
+          const body = (await br.text()).slice(0, 200);
+          const missing = br.status === 404 || /NoSuchBucket|not\s*found/i.test(body);
+          if (!missing) storage = `Storage ${br.status}: ${body}`;
+        }
       } catch (e) {
         storage = `unreachable: ${String((e && e.message) || e)}`;
       }

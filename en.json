@@ -44,7 +44,7 @@
     "footer_copy": "© 2025 Spain 24/7. For guidance only. Not legal or tax advice.",
     "dir_eyebrow": "Trades directory",
     "dir_title": "The boiler fails on a Friday. Who do you call?",
-    "dir_sub": "Plumbers, electricians, locksmiths, air conditioning, pool and building work in 94 Spanish towns. Ranked from Google reviews, with the reviews shown and the language they were written in.",
+    "dir_sub": "Plumbers, electricians, locksmiths, air conditioning, pool and building work in 94 Spanish towns. Ranked from real Google reviews.",
     "dir_proof_title": "Stars alone are easy to buy",
     "dir_proof_a": "5.0 from 3 reviews",
     "dir_proof_a_verdict": "Ranked lower",
@@ -446,6 +446,14 @@
     "town_placeholder": "Choose a town",
     "find_cta": "Find",
     "popular": "Popular:",
-    "how_summary": "How we rank these, and what this list is not"
+    "how_summary": "How we rank these, and what this list is not",
+    "results_headline": "The best rated {trade} in {town}",
+    "meta_ranked": "Ranked from Google reviews",
+    "cat_plumber_pl": "plumbers",
+    "cat_electrician_pl": "electricians",
+    "cat_locksmith_pl": "locksmiths",
+    "cat_aircon_pl": "air conditioning engineers",
+    "cat_pool_pl": "pool services",
+    "cat_builder_pl": "builders"
   }
 }

@@ -44,7 +44,7 @@
     "footer_copy": "© 2025 Spain 24/7. À titre indicatif uniquement. Pas de conseil juridique ou fiscal.",
     "dir_eyebrow": "Annuaire des artisans",
     "dir_title": "Le chauffe-eau lâche un vendredi. Qui appelez-vous ?",
-    "dir_sub": "Plombiers, électriciens, serruriers, climatisation, piscine et travaux dans 94 communes espagnoles. Classés selon les avis Google, avec les avis et leur langue.",
+    "dir_sub": "Plombiers, électriciens, serruriers, climatisation, piscine et travaux dans 94 communes espagnoles. Classés selon de vrais avis Google.",
     "dir_proof_title": "Des étoiles seules, cela s'achète",
     "dir_proof_a": "5,0 sur 3 avis",
     "dir_proof_a_verdict": "Classé plus bas",
@@ -446,6 +446,14 @@
     "town_placeholder": "Choisissez une commune",
     "find_cta": "Rechercher",
     "popular": "Populaires :",
-    "how_summary": "Comment nous classons, et ce que cette liste n'est pas"
+    "how_summary": "Comment nous classons, et ce que cette liste n'est pas",
+    "results_headline": "Les {trade} les mieux notés à {town}",
+    "meta_ranked": "Classés selon les avis Google",
+    "cat_plumber_pl": "plombiers",
+    "cat_electrician_pl": "électriciens",
+    "cat_locksmith_pl": "serruriers",
+    "cat_aircon_pl": "climaticiens",
+    "cat_pool_pl": "services de piscine",
+    "cat_builder_pl": "entreprises de rénovation"
   }
 }

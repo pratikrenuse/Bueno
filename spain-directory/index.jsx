@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useT, LLink } from '../i18n.jsx';
+import { useT, LLink, useLocale } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
 import SiteFooter from '../SiteFooter.jsx';
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from './localities.js';
@@ -60,16 +60,6 @@ const STYLES = `
 .dir-quick button:hover, .dir-switch button:hover { border-color: var(--navy); }
 
 /* Once there are results this replaces the whole form. */
-.dir-context { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-  padding: 14px 20px; background: var(--off-white); border: 1px solid var(--border);
-  border-radius: 14px; margin-bottom: 18px; }
-.dir-context-town { font-family: var(--font-serif); font-size: 19px; color: var(--navy); }
-.dir-context-prov { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
-.dir-context button { margin-left: auto; font-family: var(--font-sans); font-size: 12px;
-  font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
-  background: none; border: 0; cursor: pointer; padding: 8px; min-height: 40px; }
-.dir-context button:hover { text-decoration: underline; }
-
 .dir-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .dir-switch button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--white); }
 
@@ -96,7 +86,20 @@ const STYLES = `
 .dir-count { font-family: var(--font-sans); font-size: 13px; font-weight: 300; color: var(--text-muted); }
 .dir-langs { font-family: var(--font-sans); font-size: 12px; color: var(--navy);
   background: var(--light-blue); border-radius: 999px; padding: 5px 13px; }
-.dir-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+.dir-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.dir-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.dir-links a { font-family: var(--font-sans); font-size: 13px; color: var(--accent);
+  text-decoration: none; border-bottom: 1px solid transparent; padding: 6px 0; }
+.dir-links a:hover { border-bottom-color: var(--accent); }
+.dir-nophone { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
+.dir-h1 { font-family: var(--font-serif); font-size: clamp(25px, 3.6vw, 36px); font-weight: 400;
+  color: var(--navy); line-height: 1.14; letter-spacing: -0.01em; margin: 0 0 10px; }
+.dir-h1 em { font-style: italic; color: var(--accent); }
+.dir-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 22px;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 300; color: var(--text-muted); }
+.dir-meta button { font-family: var(--font-sans); font-size: 13px; color: var(--accent);
+  background: none; border: 0; cursor: pointer; padding: 6px 0; text-decoration: underline; }
+.dir-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--warm-grey); }
 .dir-call { display: inline-flex; align-items: center; min-height: 50px; padding: 15px 28px;
   background: var(--navy); color: var(--white); border-radius: 14px; text-decoration: none;
   font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
@@ -147,6 +150,12 @@ const STYLES = `
 
 const QUICK = ['torrevieja', 'marbella', 'javea', 'benidorm', 'palma', 'alicante'];
 
+// Intl gives us localised language names for free, so a Norwegian sees "engelsk".
+function langName(code, locale) {
+  try { return new Intl.DisplayNames([locale], { type: 'language' }).of(code); }
+  catch { return String(code || '').toUpperCase(); }
+}
+
 const STARS = (rating) => {
   const full = Math.round(Number(rating) || 0);
   return '★'.repeat(full) + '☆'.repeat(Math.max(0, 5 - full));
@@ -155,6 +164,7 @@ const STARS = (rating) => {
 export default function SpainDirectory() {
   const t = useT();
   const tt = (k) => t(`calc_directory.${k}`);
+  const { locale } = useLocale();
   const [params, setParams] = useSearchParams();
 
   const urlTown = params.get('town') || '';
@@ -283,13 +293,24 @@ export default function SpainDirectory() {
             </>
           )}
 
-          {/* Once there are results the whole form above becomes this one line. */}
+{/* Once there are results the form above collapses into this. A deep link from the
+              home page lands here with no form at all, so this headline is the only thing
+              telling the visitor what they are looking at. It doubles as the page's H1. */}
           {!formOpen && shownTown && (
-            <div className="dir-context">
-              <span className="dir-context-town">{shownTown.name}</span>
-              <span className="dir-context-prov">{shownTown.province}</span>
-              <button type="button" onClick={() => setFormOpen(true)}>{tt('change_town')}</button>
-            </div>
+            <>
+              <h1 className="dir-h1">
+                {tt('results_headline')
+                  .replace('{trade}', tt(`cat_${shownTrade}_pl`))
+                  .replace('{town}', shownTown.name)}
+              </h1>
+              <div className="dir-meta">
+                <span>{shownTown.province}</span>
+                <span className="dir-dot" />
+                <span>{tt('meta_ranked')}</span>
+                <span className="dir-dot" />
+                <button type="button" onClick={() => setFormOpen(true)}>{tt('change_town')}</button>
+              </div>
+            </>
           )}
 
           {/* Switching trade is one tap, and it stays put while results load. */}
@@ -321,10 +342,6 @@ export default function SpainDirectory() {
 
           {state === 'done' && shownTown && providers.length > 0 && (
             <section aria-live="polite">
-              <p className="dir-result-label">
-                {tt('results_label').replace('{trade}', tt(`cat_${shownTrade}`)).replace('{town}', shownTown.name)}
-              </p>
-
               {top3.map((p, i) => (
                 <article key={p.id} className={`dir-card ${i === 0 ? 'top' : ''}`}>
                   <p className="dir-rank">
@@ -340,23 +357,32 @@ export default function SpainDirectory() {
                     <span className="dir-count">
                       {tt('rating_line').replace('{rating}', Number(p.rating).toFixed(1)).replace('{count}', String(p.review_count))}
                     </span>
-                    {Object.keys(p.review_langs || {}).length > 0 && (
-                      <span className="dir-langs">
-                        {tt('langs_line').replace('{langs}', Object.entries(p.review_langs)
-                          .map(([l, n]) => `${n} ${l.toUpperCase()}`).join(', '))}
-                      </span>
-                    )}
+{/* Spanish reviews are the default and saying so tells a foreign owner
+                        nothing. A review written in English or German does tell them
+                        something, so that is the only case worth a badge. */}
+                    {(() => {
+                      const foreign = Object.keys(p.review_langs || {}).filter(l => l && l !== 'es');
+                      return foreign.length ? (
+                        <span className="dir-langs">
+                          {tt('langs_line').replace('{langs}', foreign.map(l => langName(l, locale)).join(', '))}
+                        </span>
+                      ) : null;
+                    })()}
                   </div>
 
+{/* One thing to press. Three uppercase pills wrapped onto two rows and
+                      made every card look like a form. */}
                   <div className="dir-actions">
                     {p.phone
                       ? <a className="dir-call" href={`tel:${p.phone.replace(/\s/g, '')}`}>{tt('call')} {p.phone}</a>
-                      : <span className="dir-secondary" aria-disabled="true">{tt('no_phone')}</span>}
-                    {p.website && <a className="dir-secondary" href={p.website} target="_blank" rel="noopener noreferrer nofollow">{tt('website')}</a>}
-                    {p.maps_uri && <a className="dir-secondary" href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
+                      : <span className="dir-nophone">{tt('no_phone')}</span>}
+                    <span className="dir-links">
+                      {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer nofollow">{tt('website')}</a>}
+                      {p.maps_uri && <a href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
+                    </span>
                   </div>
 
-                  {(p.reviews || []).slice(0, 2).map((rv, ri) => (
+                  {(p.reviews || []).slice(0, i === 0 ? 2 : 1).map((rv, ri) => (
                     <div className="dir-quote" key={ri}>
                       <div className="dir-quote-head">
                         {rv.author_photo && <img src={rv.author_photo} alt="" loading="lazy" />}
