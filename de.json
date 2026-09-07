@@ -3,7 +3,8 @@
     "tax": "Steuerrechner",
     "cost": "Kostenanalyse",
     "rental": "Mietsteuer",
-    "language": "Sprache"
+    "language": "Sprache",
+    "directory": "Handwerkerverzeichnis"
   },
   "home": {
     "brand_sub": "Kostenlose Immobilien-Tools",
@@ -39,7 +40,10 @@
     "band_text": "Bereit, nicht mehr zu viel zu zahlen und Ihre spanische Immobilie zu verwalten",
     "band_em": "mit Zuversicht?",
     "band_cta": "Loslegen",
-    "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung."
+    "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung.",
+    "dir_eyebrow": "Handwerkerverzeichnis",
+    "dir_title": "Der Boiler fällt an einem Freitag aus. Wen rufen Sie an?",
+    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache."
   },
   "cards": {
     "tax": {
@@ -427,6 +431,9 @@
     "honest_1": "Das ist eine Auswertung öffentlicher Google-Bewertungen, nicht mehr. Wir kennen diese Betriebe nicht persönlich, wir haben weder Lizenzen noch Versicherungen geprüft, und niemand bezahlt für einen Platz hier. Eine hohe Bewertung ist ein gutes Zeichen, keine Garantie.",
     "honest_2": "Vereinbaren Sie immer einen schriftlichen Preis, bevor die Arbeit beginnt, und verlangen Sie eine factura.",
     "cross_link": "Sehen Sie, was Ihre spanische Immobilie wirklich pro Jahr kostet",
-    "footer": "Allgemeine Informationen, keine Steuer- oder Rechtsberatung."
+    "footer": "Allgemeine Informationen, keine Steuer- oder Rechtsberatung.",
+    "town_placeholder": "Ort wählen",
+    "find_cta": "Suchen",
+    "popular": "Beliebt:"
   }
 }

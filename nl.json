@@ -3,7 +3,8 @@
     "tax": "Belastingcalculator",
     "cost": "Kostenanalyse",
     "rental": "Verhuurbelasting",
-    "language": "Taal"
+    "language": "Taal",
+    "directory": "Vakmensengids"
   },
   "home": {
     "brand_sub": "Gratis vastgoedtools",
@@ -39,7 +40,10 @@
     "band_text": "Klaar om niet langer te veel te betalen en uw Spaanse woning te beheren",
     "band_em": "met vertrouwen?",
     "band_cta": "Aan de slag",
-    "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies."
+    "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies.",
+    "dir_eyebrow": "Vakmensengids",
+    "dir_title": "De boiler begeeft het op een vrijdag. Wie belt u?",
+    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal."
   },
   "cards": {
     "tax": {
@@ -427,6 +431,9 @@
     "honest_1": "Dit is een weergave van openbare Google-beoordelingen, meer niet. Wij hebben deze bedrijven niet ontmoet, wij hebben geen vergunningen of verzekeringen gecontroleerd, en niemand betaalt om hier te staan. Een hoog cijfer is een goed teken, geen garantie.",
     "honest_2": "Spreek altijd een schriftelijke prijs af voordat het werk begint, en vraag om een factura.",
     "cross_link": "Bekijk wat uw Spaanse woning echt per jaar kost",
-    "footer": "Algemene informatie, geen fiscaal of juridisch advies."
+    "footer": "Algemene informatie, geen fiscaal of juridisch advies.",
+    "town_placeholder": "Kies een plaats",
+    "find_cta": "Zoeken",
+    "popular": "Populair:"
   }
 }

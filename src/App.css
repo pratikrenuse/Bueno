@@ -1022,17 +1022,17 @@ body {
 
 /* === HOMEPAGE HERO === */
 .home-hero {
-  min-height: 100vh;
+  min-height: 78vh;
   background: var(--navy);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.45fr 1fr;
   animation: fadeIn 0.6s ease both;
 }
 
 .home-hero-left {
   display: flex;
   align-items: center;
-  padding: 120px 64px 80px;
+  padding: 130px 64px 90px;
 }
 
 .home-hero-inner { max-width: 520px; }
@@ -1040,7 +1040,7 @@ body {
 .home-hero-right {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 0;
 }
 
 .home-hero-right img {

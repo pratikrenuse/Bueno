@@ -3,7 +3,8 @@
     "tax": "Skatteguide",
     "cost": "Kostnadsöversikt",
     "rental": "Hyresinkomstskatt",
-    "language": "Språk"
+    "language": "Språk",
+    "directory": "Hantverkarregister"
   },
   "home": {
     "brand_sub": "Gratis bostadsguider",
@@ -39,7 +40,10 @@
     "band_text": "Redo att få koll på din spanska fastighet och",
     "band_em": "samla allt på ett ställe?",
     "band_cta": "Kom igång",
-    "footer_copy": "© 2025 Spain 24/7. Endast som vägledning. Inte juridisk eller skattemässig rådgivning."
+    "footer_copy": "© 2025 Spain 24/7. Endast som vägledning. Inte juridisk eller skattemässig rådgivning.",
+    "dir_eyebrow": "Hantverkarregister",
+    "dir_title": "Varmvattenberedaren går sönder en fredag. Vem ringer du?",
+    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter Google-omdömen, med omdömena och språket de skrevs på."
   },
   "cards": {
     "tax": {
@@ -427,6 +431,9 @@
     "honest_1": "Detta är en läsning av offentliga Google-omdömen, inget mer. Vi har inte träffat företagen, vi har inte kontrollerat licenser eller försäkringar, och ingen betalar för att synas här. Ett högt betyg är ett gott tecken, inte en garanti.",
     "honest_2": "Kom alltid överens om ett skriftligt pris innan arbetet börjar, och be om factura.",
     "cross_link": "Se vad din spanska bostad faktiskt kostar per år",
-    "footer": "Allmän information, inte skatte- eller juridisk rådgivning."
+    "footer": "Allmän information, inte skatte- eller juridisk rådgivning.",
+    "town_placeholder": "Välj en ort",
+    "find_cta": "Hitta",
+    "popular": "Populära:"
   }
 }

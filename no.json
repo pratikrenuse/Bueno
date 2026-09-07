@@ -3,7 +3,8 @@
     "tax": "Skattekalkulator",
     "cost": "Kostnadsoversikt",
     "rental": "Utleieskatt",
-    "language": "Språk"
+    "language": "Språk",
+    "directory": "Håndverkerregister"
   },
   "home": {
     "brand_sub": "Gratis boligverktøy",
@@ -39,7 +40,10 @@
     "band_text": "Klar til å slutte å betale for mye og begynne å forvalte den spanske boligen din",
     "band_em": "med trygghet?",
     "band_cta": "Kom i gang",
-    "footer_copy": "© 2025 Spain 24/7. Kun til veiledning. Ikke juridisk eller skattemessig rådgivning."
+    "footer_copy": "© 2025 Spain 24/7. Kun til veiledning. Ikke juridisk eller skattemessig rådgivning.",
+    "dir_eyebrow": "Håndverkerregister",
+    "dir_title": "Varmtvannsberederen svikter en fredag. Hvem ringer du?",
+    "dir_sub": "Rørleggere, elektrikere, låsesmeder, klimaanlegg, basseng og byggearbeid i 94 spanske byer. Rangert etter Google-omtaler, med omtalene og språket de er skrevet på."
   },
   "cards": {
     "tax": {
@@ -427,6 +431,9 @@
     "honest_1": "Dette er en lesning av offentlige Google-omtaler, ikke noe mer. Vi har ikke møtt disse bedriftene, vi har ikke sjekket lisenser eller forsikring, og ingen betaler for å stå her. Høy vurdering er et godt tegn, ikke en garanti.",
     "honest_2": "Avtal alltid en skriftlig pris før arbeidet starter, og be om factura.",
     "cross_link": "Se hva den spanske boligen din faktisk koster i året",
-    "footer": "Generell informasjon, ikke skatte- eller juridisk rådgivning."
+    "footer": "Generell informasjon, ikke skatte- eller juridisk rådgivning.",
+    "town_placeholder": "Velg en by",
+    "find_cta": "Finn",
+    "popular": "Populære:"
   }
 }

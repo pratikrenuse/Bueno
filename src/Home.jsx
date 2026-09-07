@@ -1,6 +1,9 @@
-import { useEffect, useRef } from 'react'
-import { useT, LLink } from '../i18n.jsx'
+import { useEffect, useRef, useState, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useT, LLink, useLocalisedPath } from '../i18n.jsx'
 import LangSwitcher from '../LangSwitcher.jsx'
+import { LOCALITIES, REGIONS } from '../spain-directory/localities.js'
+import { CATEGORIES } from '../spain-directory/categories.js'
 
 // Auto-discovers all tool meta.js files — no changes needed when adding new tools
 const metaModules = import.meta.glob('../*/meta.js', { eager: true })
@@ -10,6 +13,82 @@ const ALL_TOOLS = Object.values(metaModules)
 
 // Map a tool path to its i18n card key
 const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental', '/mortgage-claim': 'claim', '/spain-directory': 'directory' }
+
+// The directory is the one tool with a use that starts before the visitor knows we have
+// a tool. Somebody whose boiler has just failed is not going to scroll a grid of cards
+// reading tags. So the two menus that start it live on the home page directly, right
+// under the hero, and hand off to /spain-directory with the answer already loading.
+const STRIP_CSS = `
+.dir-strip { background: var(--light-blue); padding: 64px; }
+@media (max-width: 900px) { .dir-strip { padding: 48px 24px; } }
+.dir-strip-inner { max-width: 1100px; margin: 0 auto; }
+.dir-strip h2 { font-family: var(--font-serif); font-size: clamp(24px, 3vw, 34px); font-weight: 400;
+  color: var(--navy); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 10px; max-width: 620px; }
+.dir-strip p.sub { font-family: var(--font-sans); font-size: 16px; font-weight: 300; line-height: 1.7;
+  color: rgba(1,2,33,0.62); max-width: 56ch; margin: 0 0 28px; }
+.dir-strip form { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 12px; align-items: end;
+  max-width: 860px; }
+@media (max-width: 780px) { .dir-strip form { grid-template-columns: 1fr; } }
+.dir-strip label { display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase; color: rgba(1,2,33,0.55); margin-bottom: 8px; }
+.dir-strip select { width: 100%; min-height: 56px; padding: 16px 44px 16px 18px;
+  font-family: var(--font-sans); font-size: 16px; color: var(--navy); background-color: var(--white);
+  border: 1px solid rgba(1,2,33,0.14); border-radius: 12px; appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 18px center; }
+.dir-strip select:focus { outline: 3px solid rgba(1,2,33,0.25); outline-offset: 1px; }
+.dir-strip button { min-height: 56px; padding: 16px 32px; width: auto; margin-bottom: 0; white-space: nowrap; }
+@media (max-width: 780px) { .dir-strip button { width: 100%; } }
+`
+
+function DirectoryStrip() {
+  const t = useT()
+  const tt = (k) => t(`calc_directory.${k}`)
+  const navigate = useNavigate()
+  const lp = useLocalisedPath()
+  const [town, setTown] = useState('')
+  const [trade, setTrade] = useState('plumber')
+
+  const grouped = useMemo(() => {
+    const out = []
+    for (const [key, label] of Object.entries(REGIONS)) {
+      const items = LOCALITIES.filter(l => l.region === key).sort((a, b) => a.name.localeCompare(b.name))
+      if (items.length) out.push({ key, label, items })
+    }
+    return out
+  }, [])
+
+  return (
+    <section className="dir-strip">
+      <style>{STRIP_CSS}</style>
+      <div className="dir-strip-inner">
+        <p className="home-section-eyebrow">{t('home.dir_eyebrow')}</p>
+        <h2>{t('home.dir_title')}</h2>
+        <p className="sub">{t('home.dir_sub')}</p>
+        <form onSubmit={(e) => { e.preventDefault(); if (town) navigate(`${lp('/spain-directory')}?town=${town}&trade=${trade}`) }}>
+          <div>
+            <label htmlFor="home-dir-town">{tt('where_label')}</label>
+            <select id="home-dir-town" value={town} onChange={(e) => setTown(e.target.value)}>
+              <option value="">{tt('town_placeholder')}</option>
+              {grouped.map(g => (
+                <optgroup key={g.key} label={g.label}>
+                  {g.items.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="home-dir-trade">{tt('trade_label')}</label>
+            <select id="home-dir-trade" value={trade} onChange={(e) => setTrade(e.target.value)}>
+              {CATEGORIES.map(c => <option key={c.slug} value={c.slug}>{tt(`cat_${c.slug}`)}</option>)}
+            </select>
+          </div>
+          <button type="submit" className="btn-primary" disabled={!town}>{tt('find_cta')}</button>
+        </form>
+      </div>
+    </section>
+  )
+}
 
 export default function Home() {
   const t = useT()
@@ -107,6 +186,9 @@ export default function Home() {
 
       </section>
 
+      {/* DIRECTORY: the one tool people need before they know we have tools */}
+      <DirectoryStrip />
+
       {/* TOOLS */}
       <section className="home-tools" id="tools">
         <p className="home-section-eyebrow">{t('home.tools_eyebrow')}</p>
@@ -200,6 +282,7 @@ export default function Home() {
         <div className="home-footer-links">
           <LLink to="/tax-calculator">{t('nav.tax')}</LLink>
           <LLink to="/cost-audit">{t('nav.cost')}</LLink>
+          <LLink to="/spain-directory">{t('nav.directory')}</LLink>
         </div>
         <p className="home-footer-copy">
           {t('home.footer_copy')}
