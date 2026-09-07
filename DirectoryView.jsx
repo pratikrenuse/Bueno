@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useT, LLink, useLocale } from '../i18n.jsx';
-import LangSwitcher from '../LangSwitcher.jsx';
-import SiteFooter from '../SiteFooter.jsx';
+import { useT, LLink, useLocale } from './i18n.jsx';
+import LangSwitcher from './LangSwitcher.jsx';
+import SiteFooter from './SiteFooter.jsx';
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from './spain-directory/localities.js';
 
 // Spain 24/7 trade directory.
