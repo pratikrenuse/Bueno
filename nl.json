@@ -4,7 +4,8 @@
     "cost": "Kostenanalyse",
     "rental": "Verhuurbelasting",
     "language": "Taal",
-    "directory": "Vakmensengids"
+    "directory": "Vakmensengids",
+    "claim": "Hypotheekclaim"
   },
   "home": {
     "brand_sub": "Gratis vastgoedtools",
@@ -43,7 +44,17 @@
     "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies.",
     "dir_eyebrow": "Vakmensengids",
     "dir_title": "De boiler begeeft het op een vrijdag. Wie belt u?",
-    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal."
+    "dir_sub": "Loodgieters, elektriciens, slotenmakers, airconditioning, zwembad en bouwwerk in 94 Spaanse plaatsen. Gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
+    "dir_proof_title": "Sterren alleen zijn makkelijk te kopen",
+    "dir_proof_a": "5,0 uit 3 beoordelingen",
+    "dir_proof_a_verdict": "Lager gerangschikt",
+    "dir_proof_b": "4,7 uit 412 beoordelingen",
+    "dir_proof_b_verdict": "Eerst gerangschikt",
+    "dir_proof_caption": "We wegen elk cijfer naar het aantal beoordelingen waarop het rust. Een handvol lovende beoordelingen verslaat geen honderden echte, en precies dat gat gebruikt een gekochte vermelding.",
+    "dir_stat_towns": "Spaanse plaatsen, van de kusten tot de eilanden",
+    "dir_stat_trades": "vakken, van een gesprongen leiding tot een volledige verbouwing",
+    "dir_stat_free_n": "€0",
+    "dir_stat_free": "Gratis. Niemand betaalt om hier te staan."
   },
   "cards": {
     "tax": {
@@ -434,6 +445,7 @@
     "footer": "Algemene informatie, geen fiscaal of juridisch advies.",
     "town_placeholder": "Kies een plaats",
     "find_cta": "Zoeken",
-    "popular": "Populair:"
+    "popular": "Populair:",
+    "how_summary": "Hoe wij rangschikken, en wat deze lijst niet is"
   }
 }

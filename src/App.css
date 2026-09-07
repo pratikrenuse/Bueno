@@ -1599,3 +1599,273 @@ body {
 
 /* Make hero position: relative to contain the cue */
 .home-hero { position: relative; }
+
+/* ============================================================================
+   SITE FOOTER (SiteFooter.jsx)
+   Every tool page ends here. Replaces the single line of disclaimer text that
+   used to be the whole footer and was hidden on intro screens.
+   ========================================================================== */
+
+.s247f {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 64px 32px;
+}
+
+.s247f-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.s247f-brand { display: flex; flex-direction: column; gap: 2px; }
+
+.s247f-links { display: flex; gap: 28px; flex-wrap: wrap; }
+
+.s247f-links a {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.s247f-links a:hover { color: var(--white); }
+
+.s247f-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.32);
+  line-height: 1.6;
+}
+
+.s247f-copy { white-space: nowrap; }
+
+@media (max-width: 780px) {
+  .s247f { padding: 40px 24px 28px; }
+  .s247f-links { gap: 16px 20px; }
+}
+
+/* ============================================================================
+   DIRECTORY FEATURE SECTION (src/Home.jsx -> DirectoryFeature)
+   Sits between the hero and the tools grid. White ground so it does not merge
+   into the navy hero above it, with a navy panel so it reads as a product in
+   its own right rather than one more card in the grid.
+   ========================================================================== */
+
+.dirfeat { background: var(--white); padding: 96px 64px; }
+
+.dirfeat-panel {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--navy);
+  border-radius: 28px;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.dirfeat-head {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.dirfeat-head em { font-style: italic; color: var(--gold); }
+
+.dirfeat-sub {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 30px;
+}
+
+.dirfeat-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+
+.dirfeat-form label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 8px;
+}
+
+.dirfeat-select {
+  width: 100%;
+  min-height: 54px;
+  padding: 15px 42px 15px 18px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--navy);
+  background-color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.dirfeat-select:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.dirfeat-go {
+  width: 100%;
+  min-height: 54px;
+  margin-bottom: 14px;
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.dirfeat-go:hover:not(:disabled) { background: #d9bc85; }
+
+.dirfeat-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.dirfeat-quick span {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-right: 2px;
+}
+
+.dirfeat-quick button {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 7px 15px;
+  min-height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.dirfeat-quick button:hover { background: var(--white); border-color: var(--white); color: var(--navy); }
+
+/* The proof panel. This is the part that has to earn the section: it shows in one
+   glance why this beats searching Google yourself. */
+.dirfeat-proof {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.dirfeat-proof h3 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.25;
+  margin: 0 0 22px;
+}
+
+.dirfeat-bar-row { margin-bottom: 20px; }
+
+.dirfeat-bar-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+.dirfeat-bar-top b { font-weight: 500; color: var(--white); }
+
+.dirfeat-verdict {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dirfeat-verdict.down { color: rgba(255,255,255,0.4); }
+.dirfeat-verdict.up { color: var(--gold); }
+
+.dirfeat-bar { height: 8px; border-radius: 999px; background: rgba(255,255,255,0.1); overflow: hidden; }
+.dirfeat-bar i { display: block; height: 100%; border-radius: 999px; }
+.dirfeat-bar i.down { width: 34%; background: rgba(255,255,255,0.28); }
+.dirfeat-bar i.up { width: 93%; background: var(--gold); }
+
+.dirfeat-caption {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+  margin: 22px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.dirfeat-stats {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  padding-top: 34px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.dirfeat-stat-n {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.dirfeat-stat-l {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+  display: block;
+  max-width: 190px;
+}
+
+@media (max-width: 900px) {
+  .dirfeat { padding: 64px 24px; }
+  .dirfeat-panel { grid-template-columns: 1fr; gap: 36px; padding: 34px 26px; border-radius: 22px; }
+  .dirfeat-form { grid-template-columns: 1fr; }
+  .dirfeat-stats { gap: 28px; padding-top: 28px; }
+  .dirfeat-stat-l { max-width: none; }
+}

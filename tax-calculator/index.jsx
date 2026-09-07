@@ -3,6 +3,7 @@ import { calculateTax } from './taxCalculations';
 import { saveLead } from './supabase';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import SiteFooter from '../SiteFooter.jsx';
 import enDict from '../en.json';
 
 // code/flag/isEUEEA stay constant; display names come from i18n
@@ -335,9 +336,7 @@ export default function TaxCalculator() {
         </div></div>
       )}
 
-      {!['intro'].includes(step) && (
-        <footer className="calc-footer">{tt('footer')}</footer>
-      )}
+      <SiteFooter note={tt('footer')} />
 
     </div>
   );

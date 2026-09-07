@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { calculateRentalTax } from './rentalTaxCalculations';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import SiteFooter from '../SiteFooter.jsx';
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
@@ -490,11 +491,7 @@ export default function RentalTaxCalculator() {
         </div>
       )}
 
-      {step !== 'intro' && (
-        <footer className="calc-footer">
-          {tt('footer')}
-        </footer>
-      )}
+      <SiteFooter note={tt('footer')} />
 
     </div>
   );

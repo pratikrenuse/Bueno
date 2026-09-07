@@ -4,7 +4,8 @@
     "cost": "Kostenanalyse",
     "rental": "Mietsteuer",
     "language": "Sprache",
-    "directory": "Handwerkerverzeichnis"
+    "directory": "Handwerkerverzeichnis",
+    "claim": "Hypotheken-Anspruch"
   },
   "home": {
     "brand_sub": "Kostenlose Immobilien-Tools",
@@ -43,7 +44,17 @@
     "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung.",
     "dir_eyebrow": "Handwerkerverzeichnis",
     "dir_title": "Der Boiler fällt an einem Freitag aus. Wen rufen Sie an?",
-    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache."
+    "dir_sub": "Installateure, Elektriker, Schlüsseldienste, Klimaanlagen, Pool und Bauarbeiten in 94 spanischen Orten. Sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
+    "dir_proof_title": "Sterne allein sind leicht zu kaufen",
+    "dir_proof_a": "5,0 aus 3 Bewertungen",
+    "dir_proof_a_verdict": "Niedriger sortiert",
+    "dir_proof_b": "4,7 aus 412 Bewertungen",
+    "dir_proof_b_verdict": "Zuerst gelistet",
+    "dir_proof_caption": "Wir gewichten jede Bewertung danach, auf wie vielen Stimmen sie beruht. Eine Handvoll begeisterter Bewertungen schlägt keine Hunderte echter, und genau diese Lücke nutzt ein gekaufter Eintrag.",
+    "dir_stat_towns": "spanische Orte, von den Küsten bis zu den Inseln",
+    "dir_stat_trades": "Gewerke, vom Rohrbruch bis zur kompletten Renovierung",
+    "dir_stat_free_n": "€0",
+    "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier."
   },
   "cards": {
     "tax": {
@@ -434,6 +445,7 @@
     "footer": "Allgemeine Informationen, keine Steuer- oder Rechtsberatung.",
     "town_placeholder": "Ort wählen",
     "find_cta": "Suchen",
-    "popular": "Beliebt:"
+    "popular": "Beliebt:",
+    "how_summary": "Wie wir sortieren, und was diese Liste nicht ist"
   }
 }

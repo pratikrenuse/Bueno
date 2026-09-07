@@ -3,6 +3,7 @@ import { calculateClaim, YEAR_CODES, CLAIM_CODES } from './mortgageCalculations'
 import { saveLead } from './supabase';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import SiteFooter from '../SiteFooter.jsx';
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
@@ -337,9 +338,7 @@ export default function MortgageClaim() {
       )}
 
       {/* Footer */}
-      {step !== 'intro' && (
-        <footer className="calc-footer">{tt('footer')}</footer>
-      )}
+      <SiteFooter note={tt('footer')} />
 
     </div>
   );

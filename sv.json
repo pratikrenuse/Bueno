@@ -4,7 +4,8 @@
     "cost": "Kostnadsöversikt",
     "rental": "Hyresinkomstskatt",
     "language": "Språk",
-    "directory": "Hantverkarregister"
+    "directory": "Hantverkarregister",
+    "claim": "Bolåneanspråk"
   },
   "home": {
     "brand_sub": "Gratis bostadsguider",
@@ -43,7 +44,17 @@
     "footer_copy": "© 2025 Spain 24/7. Endast som vägledning. Inte juridisk eller skattemässig rådgivning.",
     "dir_eyebrow": "Hantverkarregister",
     "dir_title": "Varmvattenberedaren går sönder en fredag. Vem ringer du?",
-    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter Google-omdömen, med omdömena och språket de skrevs på."
+    "dir_sub": "Rörmokare, elektriker, låssmeder, luftkonditionering, pool och byggarbeten på 94 spanska orter. Rankade efter Google-omdömen, med omdömena och språket de skrevs på.",
+    "dir_proof_title": "Stjärnor ensamma är lätta att köpa",
+    "dir_proof_a": "5,0 från 3 omdömen",
+    "dir_proof_a_verdict": "Rankas lägre",
+    "dir_proof_b": "4,7 från 412 omdömen",
+    "dir_proof_b_verdict": "Rankas först",
+    "dir_proof_caption": "Vi viktar varje betyg efter hur många omdömen det bygger på. En handfull lysande omdömen slår inte hundratals äkta, och det är precis det glapp en köpt annons lever på.",
+    "dir_stat_towns": "spanska orter, från kusterna till öarna",
+    "dir_stat_trades": "yrken, från ett spräckt rör till en full renovering",
+    "dir_stat_free_n": "€0",
+    "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här."
   },
   "cards": {
     "tax": {
@@ -434,6 +445,7 @@
     "footer": "Allmän information, inte skatte- eller juridisk rådgivning.",
     "town_placeholder": "Välj en ort",
     "find_cta": "Hitta",
-    "popular": "Populära:"
+    "popular": "Populära:",
+    "how_summary": "Så rankar vi, och vad listan inte är"
   }
 }

@@ -2,40 +2,48 @@ import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import SiteFooter from '../SiteFooter.jsx';
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from './localities.js';
 import { CATEGORIES, CATEGORY_BY_SLUG } from './categories.js';
 
 // Spain 24/7 trade directory.
 //
-// The screen answers one question a property owner has at a bad moment: who do I call.
-// So the controls are two dropdowns and a button, which is a shape everyone has used
-// before and nobody has to learn. Typing was the only way in the first version and it
-// was not obvious enough: a search box with no visible options gives the visitor nothing
-// to react to. A select shows there are 94 towns before you touch it.
+// Two decisions drive this layout.
 //
-// The layout uses the site's own step-screen / step-inner / option-card classes rather
-// than its own. That is not only for looks: .calc-header is position:fixed, and
-// .step-screen is what reserves the 130px of top padding that stops the headline
-// disappearing underneath it.
+// First, the controls are two dropdowns and a button, a shape everyone has used before.
+// The original version only let you type, and a search box with no visible options gives
+// a visitor nothing to react to. A menu shows there are 94 towns before you touch it.
+//
+// Second, the form collapses once there are results. Leaving a full-size form, six
+// shortcut chips and a lede sitting above the answer pushed the first plumber most of a
+// screen down and left the page looking empty. After a search it becomes one line naming
+// the town, and the answer starts near the top where it belongs.
+//
+// The layout uses the site's own step-screen / step-inner classes. That is not only for
+// looks: .calc-header is position:fixed, and .step-screen is what reserves the 130px of
+// top padding that stops the headline disappearing underneath it.
 //
 // Town and trade are mirrored into the URL (?town=javea&trade=plumber) so the home page
-// can link straight to a result, and so a result can be shared or indexed.
+// can link straight to an answer, and so a result can be shared or indexed.
 //
-// Everything shown about a business comes from Google. We have not met these people and
-// the page says so, in the same calm voice as the rest of the site. Google's terms
-// require the attribution under the results, the reviewer's name, photo and profile link
-// on each quote, a link to the review itself, and a plain statement of how results were
-// ordered. All of that is below and must not be removed.
+// Everything shown about a business comes from Google. Two things below are required and
+// must not be removed: the visible "Ratings and reviews from Google Maps" line, and the
+// reviewer name, photo, profile link and review link on every quote. The longer
+// explanation of how results are ordered is also required by Google's terms, but it
+// lives in a disclosure rather than a slab of grey text, because nobody was reading it
+// where it was.
 
 const STYLES = `
-.dir-form { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 12px; align-items: end;
-  margin-bottom: 14px; }
+.dir-lede { font-family: var(--font-sans); font-size: 17px; font-weight: 300; line-height: 1.75;
+  color: var(--text-muted); max-width: 58ch; margin: 0 0 26px; }
+
+.dir-form { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 12px; align-items: end; margin-bottom: 14px; }
 @media (max-width: 720px) { .dir-form { grid-template-columns: 1fr; } }
 .dir-field label { display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
 .dir-select { width: 100%; min-height: 56px; padding: 16px 44px 16px 18px;
   font-family: var(--font-sans); font-size: 16px; color: var(--navy);
-  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  background-color: var(--white); border: 1px solid var(--border); border-radius: 12px;
   appearance: none; cursor: pointer;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 18px center; }
@@ -43,88 +51,100 @@ const STYLES = `
 .dir-go { min-height: 56px; padding: 16px 30px; white-space: nowrap; margin-bottom: 0; width: auto; }
 @media (max-width: 720px) { .dir-go { width: 100%; } }
 
-.dir-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 42px; }
-.dir-quick-label { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted); margin-right: 4px; }
-.dir-chip { font-family: var(--font-sans); font-size: 13px; padding: 8px 16px; min-height: 38px;
-  border: 1px solid var(--border); border-radius: 999px; background: var(--white);
-  color: var(--navy); cursor: pointer; transition: all var(--transition); }
-.dir-chip:hover { border-color: var(--navy); background: var(--navy); color: var(--white); }
+.dir-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 30px; }
+.dir-quick > span { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted); margin-right: 2px; }
+.dir-quick button, .dir-switch button { font-family: var(--font-sans); font-size: 13px;
+  padding: 8px 16px; min-height: 38px; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--white); color: var(--navy); cursor: pointer; transition: all var(--transition); }
+.dir-quick button:hover, .dir-switch button:hover { border-color: var(--navy); }
 
-.dir-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
-.dir-switch button { font-family: var(--font-sans); font-size: 13px; padding: 9px 18px; min-height: 40px;
-  border: 1px solid var(--border); border-radius: 999px; background: var(--white);
-  color: var(--navy); cursor: pointer; transition: all var(--transition); }
-.dir-switch button:hover { border-color: var(--navy); }
+/* Once there are results this replaces the whole form. */
+.dir-context { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 14px 20px; background: var(--off-white); border: 1px solid var(--border);
+  border-radius: 14px; margin-bottom: 18px; }
+.dir-context-town { font-family: var(--font-serif); font-size: 19px; color: var(--navy); }
+.dir-context-prov { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
+.dir-context button { margin-left: auto; font-family: var(--font-sans); font-size: 12px;
+  font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+  background: none; border: 0; cursor: pointer; padding: 8px; min-height: 40px; }
+.dir-context button:hover { text-decoration: underline; }
+
+.dir-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .dir-switch button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--white); }
 
 .dir-result-label { font-family: var(--font-sans); font-size: 10px; font-weight: 500;
-  letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
 
 .dir-card { background: var(--white); border: 1px solid var(--border); border-radius: 18px;
-  padding: 32px; margin-bottom: 16px; }
-.dir-card.top { border: 1px solid var(--gold); box-shadow: 0 14px 40px rgba(1,2,33,0.07); }
+  padding: 26px; margin-bottom: 12px; }
+.dir-card.top { border: 1px solid var(--gold); box-shadow: 0 12px 34px rgba(1,2,33,0.07); }
 .dir-rank { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-sans);
   font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--text-muted); margin-bottom: 14px; }
+  color: var(--text-muted); margin-bottom: 12px; }
 .dir-rank .num { display: inline-flex; align-items: center; justify-content: center;
-  width: 22px; height: 22px; border-radius: 50%; background: var(--navy); color: var(--white);
+  width: 21px; height: 21px; border-radius: 50%; background: var(--navy); color: var(--white);
   font-size: 11px; letter-spacing: 0; }
 .dir-card.top .dir-rank { color: #9A7B37; }
 .dir-card.top .dir-rank .num { background: var(--gold); color: var(--navy); }
-.dir-name { font-family: var(--font-serif); font-size: 25px; font-weight: 400; color: var(--navy);
-  line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 6px; }
-.dir-addr { font-family: var(--font-sans); font-size: 14px; font-weight: 300;
-  color: var(--text-muted); margin: 0 0 18px; }
-.dir-stars { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
-.dir-score { font-family: var(--font-serif); font-size: 30px; color: var(--navy); line-height: 1; }
-.dir-count { font-family: var(--font-sans); font-size: 14px; font-weight: 300; color: var(--text-muted); }
+.dir-name { font-family: var(--font-serif); font-size: 24px; font-weight: 400; color: var(--navy);
+  line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 4px; }
+.dir-addr { font-family: var(--font-sans); font-size: 13px; font-weight: 300;
+  color: var(--text-muted); margin: 0 0 14px; }
+.dir-stars { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; margin-bottom: 16px; }
+.dir-score { font-family: var(--font-serif); font-size: 28px; color: var(--navy); line-height: 1; }
+.dir-count { font-family: var(--font-sans); font-size: 13px; font-weight: 300; color: var(--text-muted); }
 .dir-langs { font-family: var(--font-sans); font-size: 12px; color: var(--navy);
-  background: var(--light-blue); border-radius: 999px; padding: 6px 14px; }
-.dir-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
-.dir-call { display: inline-flex; align-items: center; min-height: 52px; padding: 16px 30px;
+  background: var(--light-blue); border-radius: 999px; padding: 5px 13px; }
+.dir-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+.dir-call { display: inline-flex; align-items: center; min-height: 50px; padding: 15px 28px;
   background: var(--navy); color: var(--white); border-radius: 14px; text-decoration: none;
   font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
   text-transform: uppercase; transition: background var(--transition); }
 .dir-call:hover { background: #1a1d4a; }
-.dir-secondary { display: inline-flex; align-items: center; min-height: 52px; padding: 16px 24px;
+.dir-secondary { display: inline-flex; align-items: center; min-height: 50px; padding: 15px 22px;
   border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--navy);
   font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
   text-transform: uppercase; background: var(--white); transition: all var(--transition); }
 .dir-secondary:hover { border-color: var(--navy); }
-.dir-quote { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 20px; }
-.dir-quote-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.dir-quote-head img { width: 26px; height: 26px; border-radius: 50%; }
+.dir-quote { border-top: 1px solid var(--border); padding-top: 15px; margin-top: 16px; }
+.dir-quote-head { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; flex-wrap: wrap; }
+.dir-quote-head img { width: 24px; height: 24px; border-radius: 50%; }
 .dir-quote-who { font-family: var(--font-sans); font-size: 13px; color: var(--navy); text-decoration: none; }
 .dir-quote-who:hover { text-decoration: underline; }
 .dir-quote-when { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted); }
-.dir-quote-text { font-family: var(--font-sans); font-size: 15px; font-weight: 300; line-height: 1.7;
-  color: var(--navy); margin: 0 0 8px; }
+.dir-quote-text { font-family: var(--font-sans); font-size: 15px; font-weight: 300; line-height: 1.65;
+  color: var(--navy); margin: 0 0 6px; }
 .dir-quote-link { font-family: var(--font-sans); font-size: 12px; color: var(--accent); text-decoration: none; }
 
-.dir-note { background: var(--off-white); border: 1px solid var(--border); border-radius: 18px;
-  padding: 28px 30px; margin-top: 32px; font-family: var(--font-sans); font-size: 14px;
-  font-weight: 300; line-height: 1.75; color: var(--navy); }
-.dir-note h3 { font-family: var(--font-sans); font-size: 10px; font-weight: 500; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
-.dir-note p { margin: 0 0 12px; }
-.dir-note p:last-child { margin: 0; }
-.dir-attrib { display: flex; align-items: center; gap: 6px; font-size: 13px;
-  color: var(--text-muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+/* Attribution stays visible. The long explanation folds away. */
+.dir-attrib { display: flex; align-items: center; gap: 6px; font-family: var(--font-sans);
+  font-size: 12px; color: var(--text-muted); margin: 16px 0 0; }
+.dir-more { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px; }
+.dir-more summary { font-family: var(--font-sans); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); cursor: pointer;
+  list-style: none; padding: 8px 0; min-height: 38px; display: flex; align-items: center; gap: 8px; }
+.dir-more summary::-webkit-details-marker { display: none; }
+.dir-more summary::after { content: '+'; font-size: 15px; }
+.dir-more[open] summary::after { content: '\\2212'; }
+.dir-more-body { font-family: var(--font-sans); font-size: 14px; font-weight: 300; line-height: 1.75;
+  color: var(--text-muted); padding-bottom: 8px; max-width: 62ch; }
+.dir-more-body p { margin: 0 0 12px; }
+.dir-more-body p:last-child { margin: 0; }
+.dir-more-body strong { color: var(--navy); font-weight: 500; }
 
 .dir-msg { font-family: var(--font-sans); font-size: 15px; font-weight: 300; line-height: 1.7;
-  padding: 24px 26px; border-radius: 14px; }
+  padding: 22px 24px; border-radius: 14px; }
 .dir-msg.err { background: #FDF4F4; border: 1px solid #EBCFCF; color: #8A2F2F; }
 .dir-msg.info { background: var(--off-white); border: 1px solid var(--border); color: var(--navy); }
 
-.dir-skel { height: 150px; border-radius: 18px; margin-bottom: 16px; border: 1px solid var(--border);
+.dir-skel { height: 140px; border-radius: 18px; margin-bottom: 12px; border: 1px solid var(--border);
   background: linear-gradient(90deg,#FAFAF8 25%,#F0EFEB 37%,#FAFAF8 63%); background-size: 400% 100%;
   animation: dirsheen 1.4s ease infinite; }
 @keyframes dirsheen { 0% { background-position: 100% 0 } 100% { background-position: 0 0 } }
 @media (prefers-reduced-motion: reduce) { .dir-skel { animation: none } }
 `;
 
-// Towns a foreign owner is most likely to want, offered as one-click shortcuts so the
-// page is usable without opening a menu at all.
 const QUICK = ['torrevieja', 'marbella', 'javea', 'benidorm', 'palma', 'alicante'];
 
 const STARS = (rating) => {
@@ -139,15 +159,17 @@ export default function SpainDirectory() {
 
   const urlTown = params.get('town') || '';
   const urlTrade = params.get('trade') || '';
+  const deepLinked = !!(LOCALITY_BY_SLUG[urlTown] && CATEGORY_BY_SLUG[urlTrade]);
 
   const [town, setTown] = useState(LOCALITY_BY_SLUG[urlTown] ? urlTown : '');
   const [trade, setTrade] = useState(CATEGORY_BY_SLUG[urlTrade] ? urlTrade : 'plumber');
-  const [shown, setShown] = useState(null); // {town, trade} actually being displayed
-  const [state, setState] = useState('idle'); // idle | loading | done | error
+  const [formOpen, setFormOpen] = useState(!deepLinked);
+  const [shown, setShown] = useState(null);
+  const [state, setState] = useState('idle');
   const [providers, setProviders] = useState([]);
   const [message, setMessage] = useState('');
 
-  // Towns grouped by coast, so a menu of 94 entries reads as eight short lists.
+  // 94 towns grouped by coast reads as eight short lists instead of one long one.
   const grouped = useMemo(() => {
     const out = [];
     for (const [key, label] of Object.entries(REGIONS)) {
@@ -159,10 +181,8 @@ export default function SpainDirectory() {
 
   useEffect(() => { document.title = `${tt('meta_title')} | Spain 24/7`; }, []);
 
-  // A link that already names a town and trade runs the lookup on arrival, which is what
-  // makes the home page shortcut land on an answer rather than on an empty form.
   useEffect(() => {
-    if (LOCALITY_BY_SLUG[urlTown] && CATEGORY_BY_SLUG[urlTrade]) run(urlTown, urlTrade);
+    if (deepLinked) run(urlTown, urlTrade);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -172,6 +192,7 @@ export default function SpainDirectory() {
     setMessage('');
     setProviders([]);
     setShown({ town: townSlug, trade: tradeSlug });
+    setFormOpen(false);
     setParams({ town: townSlug, trade: tradeSlug }, { replace: true });
     try {
       const r = await fetch(`/api/directory?locality=${encodeURIComponent(townSlug)}&category=${encodeURIComponent(tradeSlug)}`);
@@ -196,6 +217,7 @@ export default function SpainDirectory() {
   const shownTrade = shown && shown.trade;
   const top3 = providers.slice(0, 3);
   const rest = providers.slice(3);
+  const busy = state === 'loading';
 
   return (
     <div className="calc-shell">
@@ -212,66 +234,77 @@ export default function SpainDirectory() {
         </div>
       </header>
 
-      <main className="step-screen">
+      <main className="step-screen" style={{ minHeight: 0 }}>
         <div className="step-inner" style={{ maxWidth: 780 }}>
 
-          <div className="home-eyebrow" style={{ marginBottom: 18 }}>
-            <span className="home-eyebrow-line" />
-            <span className="home-eyebrow-text">{tt('eyebrow')}</span>
-          </div>
+          {formOpen && (
+            <>
+              <div className="home-eyebrow" style={{ marginBottom: 16 }}>
+                <span className="home-eyebrow-line" />
+                <span className="home-eyebrow-text">{tt('eyebrow')}</span>
+              </div>
+              <h1 className="step-question" style={{ marginBottom: 12 }}>{tt('headline')}</h1>
+              <p className="dir-lede">{tt('lede')}</p>
 
-          <h1 className="step-question" style={{ marginBottom: 14 }}>{tt('headline')}</h1>
+              <form className="dir-form" onSubmit={(e) => { e.preventDefault(); run(town, trade); }}>
+                <div className="dir-field">
+                  <label htmlFor="dir-town">{tt('where_label')}</label>
+                  <select id="dir-town" className="dir-select" value={town}
+                    onChange={(e) => setTown(e.target.value)}>
+                    <option value="">{tt('town_placeholder')}</option>
+                    {grouped.map(g => (
+                      <optgroup key={g.key} label={g.label}>
+                        {g.items.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
+                      </optgroup>
+                    ))}
+                  </select>
+                </div>
+                <div className="dir-field">
+                  <label htmlFor="dir-trade">{tt('trade_label')}</label>
+                  <select id="dir-trade" className="dir-select" value={trade}
+                    onChange={(e) => setTrade(e.target.value)}>
+                    {CATEGORIES.map(c => <option key={c.slug} value={c.slug}>{tt(`cat_${c.slug}`)}</option>)}
+                  </select>
+                </div>
+                <button type="submit" className="btn-primary dir-go" disabled={!town}>{tt('find_cta')}</button>
+              </form>
 
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 17, fontWeight: 300,
-            lineHeight: 1.75, color: 'var(--text-muted)', maxWidth: '58ch', margin: '0 0 34px' }}>
-            {tt('lede')}
-          </p>
+              <div className="dir-quick">
+                <span>{tt('popular')}</span>
+                {QUICK.map(slug => {
+                  const l = LOCALITY_BY_SLUG[slug];
+                  return l ? (
+                    <button key={slug} type="button" onClick={() => { setTown(slug); run(slug, trade); }}>
+                      {l.name}
+                    </button>
+                  ) : null;
+                })}
+              </div>
+            </>
+          )}
 
-          {/* Two menus and a button. Nothing to learn. */}
-          <form className="dir-form" onSubmit={(e) => { e.preventDefault(); run(town, trade); }}>
-            <div className="dir-field">
-              <label htmlFor="dir-town">{tt('where_label')}</label>
-              <select id="dir-town" className="dir-select" value={town}
-                onChange={(e) => setTown(e.target.value)}>
-                <option value="">{tt('town_placeholder')}</option>
-                {grouped.map(g => (
-                  <optgroup key={g.key} label={g.label}>
-                    {g.items.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
-                  </optgroup>
-                ))}
-              </select>
+          {/* Once there are results the whole form above becomes this one line. */}
+          {!formOpen && shownTown && (
+            <div className="dir-context">
+              <span className="dir-context-town">{shownTown.name}</span>
+              <span className="dir-context-prov">{shownTown.province}</span>
+              <button type="button" onClick={() => setFormOpen(true)}>{tt('change_town')}</button>
             </div>
+          )}
 
-            <div className="dir-field">
-              <label htmlFor="dir-trade">{tt('trade_label')}</label>
-              <select id="dir-trade" className="dir-select" value={trade}
-                onChange={(e) => setTrade(e.target.value)}>
-                {CATEGORIES.map(c => (
-                  <option key={c.slug} value={c.slug}>{tt(`cat_${c.slug}`)}</option>
-                ))}
-              </select>
-            </div>
-
-            <button type="submit" className="btn-primary dir-go" disabled={!town}>
-              {tt('find_cta')}
-            </button>
-          </form>
-
-          <div className="dir-quick">
-            <span className="dir-quick-label">{tt('popular')}</span>
-            {QUICK.map(slug => {
-              const l = LOCALITY_BY_SLUG[slug];
-              if (!l) return null;
-              return (
-                <button key={slug} type="button" className="dir-chip"
-                  onClick={() => { setTown(slug); run(slug, trade); }}>
-                  {l.name}
+          {/* Switching trade is one tap, and it stays put while results load. */}
+          {!formOpen && shownTown && (
+            <div className="dir-switch">
+              {CATEGORIES.map(c => (
+                <button key={c.slug} type="button" aria-pressed={c.slug === shownTrade} disabled={busy}
+                  onClick={() => { setTrade(c.slug); run(shown.town, c.slug); }}>
+                  {tt(`cat_${c.slug}`)}
                 </button>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          )}
 
-          {state === 'loading' && (
+          {busy && (
             <div aria-live="polite">
               <p className="dir-result-label">{tt('loading')}</p>
               <div className="dir-skel" /><div className="dir-skel" /><div className="dir-skel" />
@@ -280,131 +313,116 @@ export default function SpainDirectory() {
 
           {state === 'error' && <div className="dir-msg err" role="alert">{message}</div>}
 
-          {state === 'done' && shownTown && (
+          {state === 'done' && shownTown && providers.length === 0 && (
+            <div className="dir-msg info">
+              {tt('none_found').replace('{trade}', tt(`cat_${shownTrade}`)).replace('{town}', shownTown.name)}
+            </div>
+          )}
+
+          {state === 'done' && shownTown && providers.length > 0 && (
             <section aria-live="polite">
-              {/* Once there are results, switching trade is one tap rather than a trip
-                  back to the menu. This is the fast path people actually use. */}
-              <div className="dir-switch">
-                {CATEGORIES.map(c => (
-                  <button key={c.slug} type="button" aria-pressed={c.slug === shownTrade}
-                    onClick={() => { setTrade(c.slug); run(shown.town, c.slug); }}>
-                    {tt(`cat_${c.slug}`)}
-                  </button>
-                ))}
-              </div>
+              <p className="dir-result-label">
+                {tt('results_label').replace('{trade}', tt(`cat_${shownTrade}`)).replace('{town}', shownTown.name)}
+              </p>
 
-              {providers.length === 0 ? (
-                <div className="dir-msg info">
-                  {tt('none_found').replace('{trade}', tt(`cat_${shownTrade}`)).replace('{town}', shownTown.name)}
-                </div>
-              ) : (
-                <>
-                  <p className="dir-result-label">
-                    {tt('results_label').replace('{trade}', tt(`cat_${shownTrade}`)).replace('{town}', shownTown.name)}
+              {top3.map((p, i) => (
+                <article key={p.id} className={`dir-card ${i === 0 ? 'top' : ''}`}>
+                  <p className="dir-rank">
+                    <span className="num">{i + 1}</span>
+                    {i === 0 ? tt('best_rated') : tt('rank_also')}
                   </p>
+                  <h2 className="dir-name">{p.name}</h2>
+                  {p.address && <p className="dir-addr">{p.address}</p>}
 
-                  {top3.map((p, i) => (
-                    <article key={p.id} className={`dir-card ${i === 0 ? 'top' : ''}`}>
-                      <p className="dir-rank">
-                        <span className="num">{i + 1}</span>
-                        {i === 0 ? tt('best_rated') : tt('rank_also')}
-                      </p>
-                      <h2 className="dir-name">{p.name}</h2>
-                      {p.address && <p className="dir-addr">{p.address}</p>}
+                  <div className="dir-stars">
+                    <span className="dir-score" aria-hidden="true">{Number(p.rating).toFixed(1)}</span>
+                    <span aria-hidden="true" style={{ color: 'var(--gold)', fontSize: 15 }}>{STARS(p.rating)}</span>
+                    <span className="dir-count">
+                      {tt('rating_line').replace('{rating}', Number(p.rating).toFixed(1)).replace('{count}', String(p.review_count))}
+                    </span>
+                    {Object.keys(p.review_langs || {}).length > 0 && (
+                      <span className="dir-langs">
+                        {tt('langs_line').replace('{langs}', Object.entries(p.review_langs)
+                          .map(([l, n]) => `${n} ${l.toUpperCase()}`).join(', '))}
+                      </span>
+                    )}
+                  </div>
 
-                      <div className="dir-stars">
-                        <span className="dir-score" aria-hidden="true">{Number(p.rating).toFixed(1)}</span>
-                        <span aria-hidden="true" style={{ color: 'var(--gold)', fontSize: 16 }}>{STARS(p.rating)}</span>
+                  <div className="dir-actions">
+                    {p.phone
+                      ? <a className="dir-call" href={`tel:${p.phone.replace(/\s/g, '')}`}>{tt('call')} {p.phone}</a>
+                      : <span className="dir-secondary" aria-disabled="true">{tt('no_phone')}</span>}
+                    {p.website && <a className="dir-secondary" href={p.website} target="_blank" rel="noopener noreferrer nofollow">{tt('website')}</a>}
+                    {p.maps_uri && <a className="dir-secondary" href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
+                  </div>
+
+                  {(p.reviews || []).slice(0, 2).map((rv, ri) => (
+                    <div className="dir-quote" key={ri}>
+                      <div className="dir-quote-head">
+                        {rv.author_photo && <img src={rv.author_photo} alt="" loading="lazy" />}
+                        {rv.author_uri
+                          ? <a className="dir-quote-who" href={rv.author_uri} target="_blank" rel="noopener noreferrer">{rv.author}</a>
+                          : <span className="dir-quote-who">{rv.author}</span>}
+                        <span className="dir-quote-when">{rv.relative}</span>
+                        {rv.lang && <span className="dir-quote-when">{rv.lang.toUpperCase()}</span>}
+                      </div>
+                      <p className="dir-quote-text">{rv.text}</p>
+                      {rv.uri && <a className="dir-quote-link" href={rv.uri} target="_blank" rel="noopener noreferrer">{tt('read_on_google')}</a>}
+                    </div>
+                  ))}
+                </article>
+              ))}
+
+              {rest.length > 0 && (
+                <>
+                  <p className="dir-result-label" style={{ marginTop: 26 }}>{tt('also_rated')}</p>
+                  {rest.map(p => (
+                    <article key={p.id} className="dir-card" style={{ padding: 20 }}>
+                      <h2 className="dir-name" style={{ fontSize: 18 }}>{p.name}</h2>
+                      <div className="dir-stars" style={{ marginBottom: 12 }}>
+                        <span className="dir-score" style={{ fontSize: 20 }}>{Number(p.rating).toFixed(1)}</span>
                         <span className="dir-count">
                           {tt('rating_line').replace('{rating}', Number(p.rating).toFixed(1)).replace('{count}', String(p.review_count))}
                         </span>
-                        {Object.keys(p.review_langs || {}).length > 0 && (
-                          <span className="dir-langs">
-                            {tt('langs_line').replace('{langs}', Object.entries(p.review_langs)
-                              .map(([l, n]) => `${n} ${l.toUpperCase()}`).join(', '))}
-                          </span>
-                        )}
                       </div>
-
                       <div className="dir-actions">
-                        {p.phone
-                          ? <a className="dir-call" href={`tel:${p.phone.replace(/\s/g, '')}`}>{tt('call')} {p.phone}</a>
-                          : <span className="dir-secondary" aria-disabled="true">{tt('no_phone')}</span>}
-                        {p.website && <a className="dir-secondary" href={p.website} target="_blank" rel="noopener noreferrer nofollow">{tt('website')}</a>}
+                        {p.phone && <a className="dir-secondary" href={`tel:${p.phone.replace(/\s/g, '')}`}>{p.phone}</a>}
                         {p.maps_uri && <a className="dir-secondary" href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
                       </div>
-
-                      {(p.reviews || []).slice(0, 2).map((rv, ri) => (
-                        <div className="dir-quote" key={ri}>
-                          <div className="dir-quote-head">
-                            {rv.author_photo && <img src={rv.author_photo} alt="" loading="lazy" />}
-                            {rv.author_uri
-                              ? <a className="dir-quote-who" href={rv.author_uri} target="_blank" rel="noopener noreferrer">{rv.author}</a>
-                              : <span className="dir-quote-who">{rv.author}</span>}
-                            <span className="dir-quote-when">{rv.relative}</span>
-                            {rv.lang && <span className="dir-quote-when">{rv.lang.toUpperCase()}</span>}
-                          </div>
-                          <p className="dir-quote-text">{rv.text}</p>
-                          {rv.uri && <a className="dir-quote-link" href={rv.uri} target="_blank" rel="noopener noreferrer">{tt('read_on_google')}</a>}
-                        </div>
-                      ))}
                     </article>
                   ))}
-
-                  {rest.length > 0 && (
-                    <>
-                      <p className="dir-result-label" style={{ marginTop: 34 }}>{tt('also_rated')}</p>
-                      {rest.map(p => (
-                        <article key={p.id} className="dir-card" style={{ padding: 24 }}>
-                          <h2 className="dir-name" style={{ fontSize: 19 }}>{p.name}</h2>
-                          <div className="dir-stars" style={{ marginBottom: 14 }}>
-                            <span className="dir-score" style={{ fontSize: 21 }}>{Number(p.rating).toFixed(1)}</span>
-                            <span className="dir-count">
-                              {tt('rating_line').replace('{rating}', Number(p.rating).toFixed(1)).replace('{count}', String(p.review_count))}
-                            </span>
-                          </div>
-                          <div className="dir-actions" style={{ marginBottom: 0 }}>
-                            {p.phone && <a className="dir-secondary" href={`tel:${p.phone.replace(/\s/g, '')}`}>{p.phone}</a>}
-                            {p.maps_uri && <a className="dir-secondary" href={p.maps_uri} target="_blank" rel="noopener noreferrer">{tt('on_google')}</a>}
-                          </div>
-                        </article>
-                      ))}
-                    </>
-                  )}
-
-                  {/* Google requires that we say how these were ordered and filtered, and
-                      that the Google Maps mark appears with the content. */}
-                  <div className="dir-note">
-                    <h3>{tt('method_title')}</h3>
-                    <p>{tt('method_1')}</p>
-                    <p>{tt('method_2')}</p>
-                    <p>{tt('method_3')}</p>
-                    <div className="dir-attrib">
-                      <span>{tt('powered_by')}</span>
-                      <strong style={{ color: 'var(--navy)', fontWeight: 500 }}>Google Maps</strong>
-                    </div>
-                  </div>
                 </>
               )}
+
+              {/* Required by Google and stays visible. */}
+              <p className="dir-attrib">
+                {tt('powered_by')} <strong style={{ color: 'var(--navy)', fontWeight: 500 }}>Google Maps</strong>
+              </p>
+
+              {/* Also required, but folded away so it stops swallowing the page. */}
+              <details className="dir-more">
+                <summary>{tt('how_summary')}</summary>
+                <div className="dir-more-body">
+                  <p>{tt('method_1')}</p>
+                  <p>{tt('method_2')}</p>
+                  <p>{tt('method_3')}</p>
+                  <p><strong>{tt('honest_title')}</strong> {tt('honest_1')}</p>
+                  <p>{tt('honest_2')}</p>
+                </div>
+              </details>
+
+              <p style={{ marginTop: 22, fontFamily: 'var(--font-sans)', fontSize: 13 }}>
+                <LLink to="/cost-audit" style={{ color: 'var(--accent)', textDecoration: 'none' }}>
+                  {tt('cross_link')} &#8594;
+                </LLink>
+              </p>
             </section>
           )}
-
-          <div className="dir-note">
-            <h3>{tt('honest_title')}</h3>
-            <p>{tt('honest_1')}</p>
-            <p>{tt('honest_2')}</p>
-          </div>
-
-          <p style={{ marginTop: 30, fontFamily: 'var(--font-sans)', fontSize: 13 }}>
-            <LLink to="/cost-audit" style={{ color: 'var(--accent)', textDecoration: 'none' }}>
-              {tt('cross_link')} &#8594;
-            </LLink>
-          </p>
 
         </div>
       </main>
 
-      <footer className="calc-footer">{tt('footer')}</footer>
+      <SiteFooter note={tt('footer')} />
     </div>
   );
 }

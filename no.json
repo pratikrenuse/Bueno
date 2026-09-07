@@ -4,7 +4,8 @@
     "cost": "Kostnadsoversikt",
     "rental": "Utleieskatt",
     "language": "Språk",
-    "directory": "Håndverkerregister"
+    "directory": "Håndverkerregister",
+    "claim": "Boliglånskrav"
   },
   "home": {
     "brand_sub": "Gratis boligverktøy",
@@ -43,7 +44,17 @@
     "footer_copy": "© 2025 Spain 24/7. Kun til veiledning. Ikke juridisk eller skattemessig rådgivning.",
     "dir_eyebrow": "Håndverkerregister",
     "dir_title": "Varmtvannsberederen svikter en fredag. Hvem ringer du?",
-    "dir_sub": "Rørleggere, elektrikere, låsesmeder, klimaanlegg, basseng og byggearbeid i 94 spanske byer. Rangert etter Google-omtaler, med omtalene og språket de er skrevet på."
+    "dir_sub": "Rørleggere, elektrikere, låsesmeder, klimaanlegg, basseng og byggearbeid i 94 spanske byer. Rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
+    "dir_proof_title": "Stjerner alene er lette å kjøpe",
+    "dir_proof_a": "5,0 fra 3 omtaler",
+    "dir_proof_a_verdict": "Rangert lavere",
+    "dir_proof_b": "4,7 fra 412 omtaler",
+    "dir_proof_b_verdict": "Rangert først",
+    "dir_proof_caption": "Vi vekter hver vurdering etter hvor mange omtaler den bygger på. En håndfull strålende omtaler slår ikke hundrevis av ekte, og det er akkurat det gapet en kjøpt oppføring lever av.",
+    "dir_stat_towns": "spanske byer, fra kysten til øyene",
+    "dir_stat_trades": "fag, fra sprukket rør til full oppussing",
+    "dir_stat_free_n": "€0",
+    "dir_stat_free": "Gratis å bruke. Ingen betaler for å stå her."
   },
   "cards": {
     "tax": {
@@ -434,6 +445,7 @@
     "footer": "Generell informasjon, ikke skatte- eller juridisk rådgivning.",
     "town_placeholder": "Velg en by",
     "find_cta": "Finn",
-    "popular": "Populære:"
+    "popular": "Populære:",
+    "how_summary": "Slik rangerer vi, og hva denne listen ikke er"
   }
 }

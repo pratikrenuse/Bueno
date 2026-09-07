@@ -4,7 +4,8 @@
     "cost": "Audit des coûts",
     "rental": "Impôt locatif",
     "language": "Langue",
-    "directory": "Annuaire des artisans"
+    "directory": "Annuaire des artisans",
+    "claim": "Réclamation prêt"
   },
   "home": {
     "brand_sub": "Outils immobiliers gratuits",
@@ -43,7 +44,17 @@
     "footer_copy": "© 2025 Spain 24/7. À titre indicatif uniquement. Pas de conseil juridique ou fiscal.",
     "dir_eyebrow": "Annuaire des artisans",
     "dir_title": "Le chauffe-eau lâche un vendredi. Qui appelez-vous ?",
-    "dir_sub": "Plombiers, électriciens, serruriers, climatisation, piscine et travaux dans 94 communes espagnoles. Classés selon les avis Google, avec les avis et leur langue."
+    "dir_sub": "Plombiers, électriciens, serruriers, climatisation, piscine et travaux dans 94 communes espagnoles. Classés selon les avis Google, avec les avis et leur langue.",
+    "dir_proof_title": "Des étoiles seules, cela s'achète",
+    "dir_proof_a": "5,0 sur 3 avis",
+    "dir_proof_a_verdict": "Classé plus bas",
+    "dir_proof_b": "4,7 sur 412 avis",
+    "dir_proof_b_verdict": "Classé premier",
+    "dir_proof_caption": "Nous pondérons chaque note par le nombre d'avis sur lesquels elle repose. Une poignée d'avis élogieux ne devance pas des centaines d'avis réels, et c'est précisément la faille dont vit une fiche achetée.",
+    "dir_stat_towns": "communes espagnoles, des côtes aux îles",
+    "dir_stat_trades": "métiers, de la fuite d'eau à la rénovation complète",
+    "dir_stat_free_n": "€0",
+    "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici."
   },
   "cards": {
     "tax": {
@@ -434,6 +445,7 @@
     "footer": "Informations générales, ni conseil fiscal ni conseil juridique.",
     "town_placeholder": "Choisissez une commune",
     "find_cta": "Rechercher",
-    "popular": "Populaires :"
+    "popular": "Populaires :",
+    "how_summary": "Comment nous classons, et ce que cette liste n'est pas"
   }
 }
