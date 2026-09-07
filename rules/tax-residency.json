@@ -1,0 +1,60 @@
+{
+  "domain": "Spanish tax residency",
+  "rules": [
+    {
+      "id": "residency.tests",
+      "statement": "A person is tax resident in Spain if any one of three tests is met: more than 183 days in Spain in the calendar year; the main nucleus or base of their activities or economic interests is in Spain; or, rebuttably, their non-separated spouse and dependent minor children habitually reside in Spain.",
+      "value": {
+        "days": 183,
+        "tests": [
+          "permanence",
+          "economic centre",
+          "family presumption"
+        ]
+      },
+      "unit": "days",
+      "status": "partial",
+      "source": {
+        "name": "AEAT",
+        "ref": "art. 9 LIRPF, Manual de Tributacion de No Residentes cap. 1",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/capitulo-01-contribuyente-residencia/residencia-personas-fisicas.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: the BOE consolidated LIRPF truncated before the full text of art. 9 could be quoted. Spanish nationals moving to a non-cooperative jurisdiction remain IRPF taxpayers for the year of change and the four following years."
+    },
+    {
+      "id": "residency.day_counting",
+      "statement": "Permanence aggregates three components: certified days of presence, presumed days falling between two certified presences, and sporadic absences, which are ADDED to the count unless tax residence elsewhere is proved by certificate.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT",
+        "ref": "TEAC criterion on 'dias de permanencia'",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/informacion-institucional/sobre-agencia-tributaria/2023/El_TEAC_define_el_concepto__dias_de_permanencia__para_determinar_la_residencia_habitual_en_Espana.html",
+        "source_dated": "2023-01-01",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE PART CALCULATORS GET WRONG. 'Sporadic absence' is not a defined trip length; it is an additive concept. There is no de minimis number of days that makes an absence non-sporadic. Do NOT build a rule that treats absences under, say, 30 days as sporadic and longer ones as not. One documented day of presence counts in full whatever the hours."
+    },
+    {
+      "id": "residency.treaty_override",
+      "statement": "A double tax treaty tie-breaker overrides the domestic test where the person is resident in both states under domestic law.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT",
+        "ref": "Manual de Tributacion de No Residentes cap. 1",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/capitulo-01-contribuyente-residencia/residencia-personas-fisicas.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Norway, Sweden, Germany, the UK and France all have treaties with Spain. Any residency tool must say so rather than returning a bare domestic-law verdict."
+    }
+  ]
+}

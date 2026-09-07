@@ -1,0 +1,121 @@
+{
+  "domain": "NIE, residence documents and visa thresholds",
+  "rules": [
+    {
+      "id": "nie.form",
+      "statement": "EX-15 is the NIE application form. EX-18 is the EU citizen registration certificate application and is a different procedure under RD 240/2007.",
+      "value": {
+        "nie": "EX-15",
+        "eu_registration": "EX-18",
+        "tie": "EX-17"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Policia Nacional sede electronica",
+        "ref": "Asignacion de NIE a instancia de interesado",
+        "url": "https://sede.policia.gob.es/portalCiudadano/_es/tramites_extranjeria_tramite_asignacion_nie.php",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "EX-18 is often given in error. The EX-15 form still carries an RD 557/2011 citation in its header even though RD 1155/2024 replaced it from 20 May 2025; the form remains in use."
+    },
+    {
+      "id": "nie.fee",
+      "statement": "The tasa for assignment of a NIE is 9.84 euros.",
+      "value": 9.84,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Orden PJC/617/2025 de 13 de junio, annex 5.12, in force 16 June 2025",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-12056",
+        "source_dated": "2025-06-16",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Related fees from the same annex: certificado de residente or no residente 7.31; certificado de registro de ciudadano de la UE 12.00; TIE first temporary residence 16.08, renewal 19.30, long-term 21.87, family member of a Spanish national 12.00. The 790/012 form covers many procedures at different prices, so select the fee by procedure, not by form number."
+    },
+    {
+      "id": "nie.permanence",
+      "statement": "The NIE number is personal, unique and sequential. The certificate that carries it is what expires: a certificado de no residente is valid three months from issue.",
+      "value": {
+        "number_expires": false,
+        "certificate_valid_months": 3
+      },
+      "unit": "months",
+      "status": "partial",
+      "source": {
+        "name": "Ministerio del Interior",
+        "ref": "Numero de Identidad de Extranjero",
+        "url": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: art. 205 RD 1155/2024 could not be read verbatim, so the absence of an expiry provision is strong but not an express rule. SAFE PUBLIC WORDING: 'Your NIE number stays with you. The certificate that proves it is only accepted for three months, so banks, notaries and tax offices may ask for a fresh one.' Never say 'the NIE expires'."
+    },
+    {
+      "id": "visa.non_lucrative",
+      "statement": "The non-lucrative residence visa requires 400 percent of IPREM for the main applicant and 100 percent of IPREM per dependant.",
+      "value": {
+        "main_pct": 400,
+        "per_dependant_pct": 100,
+        "iprem_month": 600,
+        "iprem_year": 7200,
+        "main_year": 28800,
+        "per_dependant_year": 7200
+      },
+      "unit": "eur",
+      "status": "partial",
+      "source": {
+        "name": "Ministerio de Asuntos Exteriores",
+        "ref": "Visado de residencia no lucrativa, consular requirements",
+        "url": "https://www.exteriores.gob.es/en/ServiciosAlCiudadano/Paginas/Servicios-consulares.aspx",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "IPREM has been frozen at 600 euros a month since Ley 31/2022 through successive budget prorogas, and SEPE still publishes 600 monthly / 7,200 annual. No 2026 instrument fixing IPREM was found. Re-check every January. The 8,400 annual IPREM variant, used where a rule refers to the SMI in annual terms, was not verified."
+    },
+    {
+      "id": "visa.digital_nomad",
+      "statement": "The international teleworking visa requires 200 percent of the SMI monthly, plus 75 percent of SMI for a second household member and 25 percent per additional member.",
+      "value": {
+        "main_pct": 200,
+        "second_member_pct": 75,
+        "additional_pct": 25,
+        "smi_2026_month_14pay": 1221,
+        "smi_2026_year": 17094
+      },
+      "unit": "eur",
+      "status": "partial",
+      "source": {
+        "name": "Ministerio de Inclusion",
+        "ref": "Instruccion conjunta sobre teletrabajadores de caracter internacional",
+        "url": "https://www.inclusion.gob.es/documents/410169/0/report_report_2301+Instrucci%C3%B3n+conjunta+Teletrabajadores+de+car%C3%A1cter+internacional_rev13_FIRMADAS.pdf",
+        "source_dated": "2023-03-30",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "DO NOT PUBLISH A EURO FIGURE. The Instruccion says 200 percent of the SMI monthly but does not state whether the base is the 12-payment monthly figure or the annual figure divided by twelve. The two readings give roughly 2,442 and 2,849 euros a month. State the rule as '200 percent of the Spanish minimum wage' and link to the SMI. SMI 2026 set by RD 126/2026: 40.70 per day, 1,221 per month in 14 payments, 17,094 per year."
+    },
+    {
+      "id": "visa.golden_closed",
+      "statement": "The investor residence route closed to new applications on 3 April 2025.",
+      "value": "2025-04-03",
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Ley Organica 1/2025, emptying arts. 63 to 67 of Ley 14/2013",
+        "url": "https://boe.es/buscar/act.php?id=BOE-A-2025-76",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This closed the WHOLE investor route, not only the property variant. Applications filed before 3 April 2025 continue under the old rules; existing authorisations keep their validity; renewals are decided under the law in force when the original permit was granted. Dates of April 2024 and April 2025 are both circulating. 3 April 2025 is the correct one, and the investment threshold was denominated in euros, not dollars."
+    }
+  ]
+}

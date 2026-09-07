@@ -1,0 +1,74 @@
+{
+  "domain": "The national short-term rental registry. STATUS: ANNULLED.",
+  "rules": [
+    {
+      "id": "registry.annulled",
+      "statement": "The national registration-number procedure created by Real Decreto 1312/2024 has been ANNULLED by the Tribunal Supremo. There is no state registration number requirement.",
+      "value": "annulled",
+      "unit": null,
+      "status": "annulled",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "STS Sala Tercera of 19 May 2026, recurso 1/143/2025",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-12300",
+        "source_dated": "2026-06-08",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "Three judgments: 19 May 2026 (BOE-A-2026-12300), 21 May 2026 (BOE-A-2026-13893) and 1 June 2026 (BOE-A-2026-15677). Annulled: arts. 1 (part), 2.f, 2.i, 2.j (part), 5, 6 (part), 8, 9, 10, 12.b, 12.c, disposicion adicional 2 and disposicion final 1. Ground: the State lacks competence to create the registry. The consolidated RD on BOE was updated 18 July 2026 to reflect this."
+    },
+    {
+      "id": "registry.survives",
+      "statement": "The Ventanilla Unica Digital and the platform data-sharing duties survive, implementing EU Regulation 2024/1028.",
+      "value": {
+        "surviving": [
+          "art. 7",
+          "most of art. 6"
+        ]
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1312/2024 consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-26931",
+        "source_dated": "2026-07-18",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "Art. 6.g survives: platforms have 48 hours from notification to comply with administrative orders removing listings tied to a suspended or withdrawn number."
+    },
+    {
+      "id": "registry.annual_filing_claim",
+      "statement": "The claimed annual renewal window of 1 February to 2 March never existed as described, and the underlying obligation is now void.",
+      "value": false,
+      "unit": null,
+      "status": "myth",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2.2 Orden VAU/1560/2025 of 22 December 2025",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-27116",
+        "source_dated": "2025-12-31",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "What existed was an annual INFORMATIVE declaration filed during the month of February, not a renewal of the number, and the number itself was not time-limited. The '2 March' figure is most likely someone applying the rule that a deadline falling on a Saturday rolls to the next working day. Article 10 of the RD, which the Orden develops, was annulled. Whether the Orden has been formally repealed or merely left without legal basis is UNVERIFIED."
+    },
+    {
+      "id": "registry.regional_unaffected",
+      "statement": "Regional tourist registration and licensing is unaffected by the annulments and remains fully in force.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "STS 19 May 2026",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-12300",
+        "source_dated": "2026-06-08",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "PRODUCT WARNING. If a tool tells a foreign owner they need a national registration number, that is now wrong at state level. What binds them is the REGIONAL licence, which varies by region and increasingly by municipality. Platforms may still be asking for a number in practice, and the Ministry's own Ventanilla Unica pages had not been updated to reflect the annulments when read."
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "domain": "Impuesto sobre el Patrimonio and the solidarity tax on large fortunes",
+  "rules": [
+    {
+      "id": "ip.minimo_exento",
+      "statement": "The 700,000 euro minimo exento applies to non-residents taxed by obligacion real.",
+      "value": 700000,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 28 Ley 19/1991",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392",
+        "source_dated": "2023-12-28",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": null
+    },
+    {
+      "id": "ip.filing_trigger",
+      "statement": "A return is due where the cuota after deductions is payable, or where the value of assets and rights exceeds 2,000,000 euros counting exempt assets and without deducting charges or debts.",
+      "value": {
+        "cuota_payable": true,
+        "assets_over": 2000000
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Quienes estan obligados a presentar declaracion",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/declaraciones-informativas-otros-impuestos-tasas/impuesto-sobre-patrimonio/quienes-estan-obligados-presentar-declaracion-ipatrimonio.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": "The second trigger catches non-residents with a Spanish property above 2 million even when no tax is due."
+    },
+    {
+      "id": "ip.state_scale",
+      "statement": "State scale, 2025.",
+      "value": [
+        {
+          "upto": 167129.45,
+          "cumulative": 0.0,
+          "rate": 0.2
+        },
+        {
+          "upto": 334252.88,
+          "cumulative": 334.26,
+          "rate": 0.3
+        },
+        {
+          "upto": 668499.75,
+          "cumulative": 835.63,
+          "rate": 0.5
+        },
+        {
+          "upto": 1336999.51,
+          "cumulative": 2506.86,
+          "rate": 0.9
+        },
+        {
+          "upto": 2673999.01,
+          "cumulative": 8523.36,
+          "rate": 1.3
+        },
+        {
+          "upto": 5347998.03,
+          "cumulative": 25904.35,
+          "rate": 1.7
+        },
+        {
+          "upto": 10695996.06,
+          "cumulative": 71362.33,
+          "rate": 2.1
+        },
+        {
+          "above": 10695996.06,
+          "cumulative": 183670.29,
+          "rate": 3.5
+        }
+      ],
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 30 LIP, Manual Patrimonio 2025",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/patrimonio-2025/c-4-determinacion-base-liquidable-integra/determinacion-cuota-integra/regla-general/escala-estatal.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": null
+    },
+    {
+      "id": "ip.main_home_allowance",
+      "statement": "The 300,000 euro main-home exemption requires the property to be the taxpayer's vivienda habitual, which requires three continuous years of residence. A non-resident whose Spanish property is a second home does not qualify.",
+      "value": 300000,
+      "unit": "eur",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 4.Cuatro Ley 19/1991",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1991-14392",
+        "source_dated": "2023-12-28",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": "PARTIAL: this is a reading of art. 4.Cuatro, not a quoted AEAT statement addressed to non-residents. Confirm with a DGT binding consulta before a tool denies the allowance. Do not confuse it with the Supreme Court holding on the 60 percent cuota limit, which is a different point."
+    },
+    {
+      "id": "ip.filing_window_2025",
+      "statement": "The 2025 Patrimonio return is filed between 8 April and 30 June 2026.",
+      "value": {
+        "from": "2026-04-08",
+        "to": "2026-06-30"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Patrimonio 2025, principales novedades",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/patrimonio-2025/principales-novedades.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": null
+    },
+    {
+      "id": "ip.eu_option",
+      "statement": "EU and EEA non-residents may opt to apply the autonomic rules of the Comunidad where the greatest value of their assets sits.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Exigibilidad del Impuesto sobre el Patrimonio, no residentes",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-patrimonio/exigibilidad-impuesto-sobre-patrimonio-no-residentes.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": "Build this as an explicit user input, never inferred from where the property sits. A non-resident who does not opt in is taxed under state rules and no regional bonificacion applies."
+    },
+    {
+      "id": "itsgf.in_force",
+      "statement": "The Impuesto Temporal de Solidaridad de las Grandes Fortunas is still in force, prorogued indefinitely.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 3 Ley 38/2022, prorogued by RDL 8/2023",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-22684",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": "Confirmed operative in 2026 by Orden HAC/652/2026 modifying modelo 718. It is absent from most English-language guidance for foreign owners."
+    },
+    {
+      "id": "itsgf.thresholds",
+      "statement": "Hecho imponible is net wealth above 3,000,000 euros. The base is then reduced by a 700,000 euro minimo exento, which applies to obligacion real. Scale: 0 percent to 3,000,000 of base liquidable, then 1.7, 2.1 and 3.5 percent.",
+      "value": {
+        "hecho_imponible": 3000000,
+        "minimo_exento": 700000,
+        "scale": [
+          {
+            "upto": 3000000,
+            "rate": 0
+          },
+          {
+            "upto": 5347998.03,
+            "cumulative": 0,
+            "rate": 1.7
+          },
+          {
+            "upto": 10695996.06,
+            "cumulative": 39915.97,
+            "rate": 2.1
+          },
+          {
+            "above": 10695996.06,
+            "cumulative": 152223.93,
+            "rate": 3.5
+          }
+        ]
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 3 Ley 38/2022",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-22684",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-04-01",
+      "notes": "TRAP: model two thresholds separately. The hecho imponible is crossed at 3,000,000 of net wealth, but because the 700,000 reduction applies before a scale that is 0 percent to 3,000,000 of base liquidable, tax only actually starts around 3.7 million. Deduct IP effectively paid. A 60 percent combined limit with IRPF and IP applies. Modelo 718, filed 1 to 31 July; direct debit 1 to 26 July."
+    }
+  ]
+}

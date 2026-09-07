@@ -62,7 +62,15 @@
     "dir_title_em": "uw Spaanse plaats",
     "prof_title": "Bezit in Spanje betekent omgaan met mensen van wie u",
     "prof_title_em": "nog nooit gehoord hebt",
-    "prof_sub": "Een gestoría, een administrador de fincas, een beëdigd vertaler. Hier staat wat elk van hen echt doet, en wie in uw plaats goed beoordeeld wordt."
+    "prof_sub": "Een gestoría, een administrador de fincas, een beëdigd vertaler. Hier staat wat elk van hen echt doet, en wie in uw plaats goed beoordeeld wordt.",
+    "tools_filter_label": "Filter tools",
+    "group_all": "Alle",
+    "group_buying": "Kopen",
+    "group_tax": "Belasting",
+    "group_renting": "Verhuren",
+    "group_money": "Geld",
+    "group_owning": "Een huis bezitten",
+    "group_status": "Status en verblijf"
   },
   "cards": {
     "tax": {

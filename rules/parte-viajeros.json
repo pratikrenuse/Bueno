@@ -1,0 +1,23 @@
+{
+  "domain": "Guest registration and reporting for short-term lets",
+  "rules": [
+    {
+      "id": "parte.obligation",
+      "statement": "Anyone carrying on or intermediating in lodging activity, expressly including private individuals letting short-term tourist dwellings through portals, must report the guest and transaction data in Anexo I to the Secretaria de Estado de Seguridad within 24 hours of the start of the service, and keep a documentary register.",
+      "value": {
+        "deadline_hours": 24
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Real Decreto 933/2021, consolidated, no modifications",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-17461",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "A private foreign owner letting short term IS a sujeto obligado. Anexo I includes payment data: payment type, card or IBAN, date of payment. Communication obligations took effect from 2 January 2023 under disposicion final 3. The widely cited 2 December 2024 date is UNVERIFIED and appears to be an administrative deferral of enforcement rather than a change in the law; RD 933/2021 has never been amended."
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "domain": "IRNR filing windows. Changed twice in recent years. This is the highest-risk file in the set.",
+  "rules": [
+    {
+      "id": "deadline.imputed.upto_2025",
+      "statement": "For accruals up to and including 2025, the imputed income return is filed during the whole of the following calendar year, to 31 December. Direct debit closes on 23 December.",
+      "value": {
+        "file_from": "01-01",
+        "file_to": "12-31",
+        "direct_debit_to": "12-23"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 5 Orden EHA/3316/2010, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-19707",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Direct debit closes eight days before filing does. That gap is the most common way an owner believes they have paid and has not."
+    },
+    {
+      "id": "deadline.imputed.from_2026",
+      "statement": "For accruals from 2026, the imputed income return is filed from 1 April to 31 December of the following year. Direct debit runs 1 April to 23 December.",
+      "value": {
+        "file_from": "04-01",
+        "file_to": "12-31",
+        "direct_debit_from": "04-01",
+        "direct_debit_to": "12-23"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Orden HAC/623/2026 de 12 de junio, amending art. 5 Orden EHA/3316/2010",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-13573",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "In force 24 June 2026. A correccion de errores was published as BOE-A-2026-14499 on 4 July 2026."
+    },
+    {
+      "id": "deadline.rental.2024_2025",
+      "statement": "Rental income accrued in 2024 and 2025 is filed as a single grouped annual return from 1 to 20 January of the following year. Direct debit 1 to 15 January.",
+      "value": {
+        "file_from": "01-01",
+        "file_to": "01-20",
+        "direct_debit_to": "01-15"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Nota sobre modificaciones de plazos de presentacion del modelo 210",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-no-residentes/modelo-210-irnr______a-no-residentes-permanente_/nota-modificaciones-plazos-presentacion-modelo-210.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "The grouping period moved from quarterly to annual for accruals from 2024. Guidance describing quarterly filing on 20 April, July, October and January is out of date."
+    },
+    {
+      "id": "deadline.rental.from_2026",
+      "statement": "Rental income accrued from 2026, and separate returns from Q4 2026 onward, is filed in the first 20 calendar days of April of the following year. Direct debit 1 to 15 April.",
+      "value": {
+        "file_from": "04-01",
+        "file_to": "04-20",
+        "direct_debit_to": "04-15"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Orden HAC/623/2026, art. 5 Orden EHA/3316/2010 as amended",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-19707",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": null
+    },
+    {
+      "id": "deadline.rental.last_quarterly",
+      "statement": "The last quarterly rental filing is Q3 2026, due 1 to 20 October 2026. Income accrued from 1 October 2026 goes into the annual April 2027 window.",
+      "value": {
+        "quarter": "2026Q3",
+        "file_from": "2026-10-01",
+        "file_to": "2026-10-20"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Orden HAC/623/2026",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-13573",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-10-21",
+      "notes": "IMMEDIATELY ACTIONABLE. This deadline falls within a month of writing. Any owner letting a Spanish property has one last quarterly return to file."
+    },
+    {
+      "id": "deadline.210.zero_result",
+      "statement": "A modelo 210 with a nil result is filed 1 to 20 January.",
+      "value": {
+        "file_from": "01-01",
+        "file_to": "01-20"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 5 Orden EHA/3316/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-19707",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": null
+    },
+    {
+      "id": "deadline.210.refund",
+      "statement": "A modelo 210 with a refund result may be filed from 1 February, within four years of the end of the filing period for the withheld amount.",
+      "value": {
+        "file_from": "02-01",
+        "limit_years": 4
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 5 Orden EHA/3316/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-19707",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": null
+    },
+    {
+      "id": "deadline.210.sale",
+      "statement": "The return for income from a property transfer is filed within three months once one month has elapsed from the date of transfer. In practice the window opens one month after completion and closes four months after it.",
+      "value": {
+        "opens_months_after": 1,
+        "window_months": 3
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 5 and 8 Orden EHA/3316/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-19707",
+        "source_dated": "2026-06-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "UNCHANGED by Orden HAC/623/2026. Do not let the new April rule leak into the sale flow."
+    },
+    {
+      "id": "deadline.210.new_fields_2027",
+      "statement": "New annexes and fields, including days available and ownership percentage, apply to every modelo 210 submitted from 1 January 2027 regardless of accrual year.",
+      "value": {
+        "applies_from": "2027-01-01"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Nota sobre modificaciones de plazos",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-no-residentes/modelo-210-irnr______a-no-residentes-permanente_/nota-modificaciones-plazos-presentacion-modelo-210.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "domain": "Illegal occupation. Contains the single most damaging error in circulation on this subject.",
+  "rules": [
+    {
+      "id": "squat.offences",
+      "statement": "Allanamiento de morada, art. 202.1 CP, six months to two years prison, applies where the property is a morada. Usurpacion with violence, art. 245.1, one to two years. Peaceful occupation of a property that is not a morada, art. 245.2, a fine of three to six months.",
+      "value": {
+        "art_202_1": "6 months to 2 years prison",
+        "art_245_1": "1 to 2 years prison",
+        "art_245_2": "fine of 3 to 6 months"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Instruccion 1/2020 Fiscalia General del Estado, quoting the Codigo Penal",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-11243",
+        "source_dated": "2020-10-14",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "squat.second_home_is_morada",
+      "statement": "Second residences and seasonal residences ARE a morada, provided the legitimate occupiers carry on their private life there, even occasionally.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Instruccion 1/2020 FGE",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-11243",
+        "source_dated": "2020-10-14",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE MOST USEFUL FACT FOR OUR AUDIENCE, and it cuts in their favour. A holiday home in regular personal use can be a morada, which makes the occupation the more serious art. 202 offence and opens the door to precautionary eviction. A purely investment property, empty and never personally used, likely falls under art. 245.2, a fine-level offence. A tool should give the test and say it turns on evidence of personal use. It must not tell a customer which one applies."
+    },
+    {
+      "id": "squat.48_hour_rule",
+      "statement": "There is no 48-hour rule in Spanish law. It does not exist as legislation and it is not Spanish police operational practice.",
+      "value": false,
+      "unit": null,
+      "status": "myth",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Instruccion 1/2020 FGE",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-11243",
+        "source_dated": "2020-10-14",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE ORIGIN OF THE MYTH IS VISIBLE IN THE SOURCE ITSELF. Instruccion 1/2020 mentions 48 hours only as a FOREIGN comparison, describing French police powers, alongside a 24-hour reference for Germany. Spain has no equivalent. What exists instead is a test, not a clock: solid indications the offence was committed, urgency and harm to the legitimate possessor, and proportionality. CORRECT FRAMING: speed matters because it supports flagrancia and the urgency test, not because any statute grants a 48-hour window. The 48-hour rule is stated as Spanish law across most English-language guidance on this subject. It is not."
+    },
+    {
+      "id": "squat.fast_track_2025",
+      "statement": "Ley Organica 1/2025 added allanamiento de morada and usurpacion to the fast-track criminal route in art. 795.1.2 LECrim, with effect from 3 April 2025. The trial is listed within fifteen days of the guard court stage.",
+      "value": {
+        "effective": "2025-04-03",
+        "trial_within_days": 15
+      },
+      "unit": "days",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Circular 1/2025 Fiscalia General del Estado, 26 June 2025",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-17153",
+        "source_dated": "2025-08-25",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: disposicion final 38 of LO 1/2025 lists exceptions to the 3 April date and could not be read, so confirm the LECrim amendment is not among them. This is a criminal trial listed within fifteen days, NOT a fifteen-day eviction. Timelines of 18 months to 2 years predate this reform."
+    },
+    {
+      "id": "squat.civil_express",
+      "statement": "The civil express recovery route under art. 250.1.4 LEC is open to natural persons, non-profits with a right to possess, and public social-housing bodies. Occupiers have five days to justify a title.",
+      "value": {
+        "days_to_show_title": 5,
+        "available_to": [
+          "natural persons",
+          "non-profits",
+          "public social housing bodies"
+        ]
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Ley 5/2018 de 11 de junio, arts. 250.1.4 and 441.1 bis LEC",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-7833",
+        "source_dated": "2018-06-11",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "LOAD-BEARING FOR OUR AUDIENCE: an owner who holds the property through a company or SL is EXCLUDED from this route and must use the ordinary one. No 2025 or 2026 amendment extending it to legal persons was found."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "domain": "Plusvalia municipal (IIVTNU)",
+  "rules": [
+    {
+      "id": "plusvalia.methods",
+      "statement": "Two methods. Objective: cadastral LAND value multiplied by a coefficient for the holding period. Real gain: where the taxpayer shows the actual increase is lower, that lower figure is the base. The taxpayer may elect the lower.",
+      "value": {
+        "methods": [
+          "objective",
+          "real_gain"
+        ],
+        "taxpayer_may_elect": true
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 107.5 TRLRHL as rewritten by RDL 26/2021",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-18276",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "In force 10 November 2021 following STC 182/2021. The land value is the cadastral value of the LAND only, not the total cadastral value. Election is on request and requires evidence of both acquisition and transfer values."
+    },
+    {
+      "id": "plusvalia.no_gain",
+      "statement": "There is no liability where it is shown that no increase in value arose. The transfer must still be declared with both deeds attached; there is simply no assessment.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 104.5 TRLRHL",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-18276",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "plusvalia.deadlines",
+      "statement": "Sale: 30 working days from the date of the public deed. Inheritance: six months from death, extendable to one year if requested within the initial six months.",
+      "value": {
+        "sale_working_days": 30,
+        "death_months": 6,
+        "extension_to_months": 12
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "Ajuntament de Barcelona",
+        "ref": "Municipal tax portal, IIVTNU",
+        "url": "https://seuelectronica.ajuntament.barcelona.cat/APPS/portaltramits/es/ciudadano/descripcio/T08/default.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Working days, so Saturdays, Sundays and holidays do not count. August DOES count as working days for this tax."
+    },
+    {
+      "id": "plusvalia.non_resident_seller",
+      "statement": "Where the seller is a non-resident individual the buyer becomes sustituto del contribuyente and is the person the council can pursue.",
+      "value": "buyer_is_sustituto",
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Ajuntament de Barcelona",
+        "ref": "art. 106.2 TRLRHL as applied",
+        "url": "https://seuelectronica.ajuntament.barcelona.cat/APPS/portaltramits/es/ciudadano/descripcio/T08/default.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: confirmed through an official municipal portal rather than from the BOE text. What this means in practice, and what a good deal of published guidance gets wrong, is that the cost does not disappear for the seller. Because the buyer carries the liability, buyers and their lawyers routinely retain the estimated plusvalia out of the purchase price at completion, on top of the 3 percent IRNR retention. A non-resident seller should expect both deductions at the notary. Present this as market practice, not as a rule of law."
+    },
+    {
+      "id": "plusvalia.municipal_variation",
+      "statement": "Coefficients, the tax rate, and whether the municipality operates by declaration or self-assessment are all set by local ordinance.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ayuntamiento de Malaga",
+        "ref": "Gestrisam, plusvalia",
+        "url": "https://gestrisam.malaga.eu/tributos/tributos-destacados/plusvalia/",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The state sets maximum coefficients (0.14 under one year to 0.45 at 20 years or more) and a maximum rate. NEVER quote a single national figure. Whether the state maxima were updated for 2026 is unverified; there is no 2026 budget law."
+    }
+  ]
+}

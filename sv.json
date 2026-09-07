@@ -62,7 +62,15 @@
     "dir_title_em": "din spanska ort",
     "prof_title": "Att äga i Spanien innebär kontakt med människor du",
     "prof_title_em": "aldrig hört talas om",
-    "prof_sub": "En gestoría, en administrador de fincas, en auktoriserad översättare. Här är vad var och en faktiskt gör, och vilka som får bra omdömen på din ort."
+    "prof_sub": "En gestoría, en administrador de fincas, en auktoriserad översättare. Här är vad var och en faktiskt gör, och vilka som får bra omdömen på din ort.",
+    "tools_filter_label": "Filtrera verktyg",
+    "group_all": "Alla",
+    "group_buying": "Köpa",
+    "group_tax": "Skatt",
+    "group_renting": "Uthyrning",
+    "group_money": "Pengar",
+    "group_owning": "Äga bostad",
+    "group_status": "Status och vistelse"
   },
   "cards": {
     "tax": {

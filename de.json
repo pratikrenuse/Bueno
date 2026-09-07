@@ -62,7 +62,15 @@
     "dir_title_em": "Ihrem spanischen Ort",
     "prof_title": "Eine Immobilie in Spanien heißt Umgang mit Leuten, von denen Sie",
     "prof_title_em": "nie gehört haben",
-    "prof_sub": "Eine Gestoría, ein Administrador de Fincas, ein beeidigter Übersetzer. Hier steht, was jeder davon wirklich macht, und wer in Ihrem Ort gut bewertet ist."
+    "prof_sub": "Eine Gestoría, ein Administrador de Fincas, ein beeidigter Übersetzer. Hier steht, was jeder davon wirklich macht, und wer in Ihrem Ort gut bewertet ist.",
+    "tools_filter_label": "Werkzeuge filtern",
+    "group_all": "Alle",
+    "group_buying": "Kaufen",
+    "group_tax": "Steuern",
+    "group_renting": "Vermieten",
+    "group_money": "Geld",
+    "group_owning": "Immobilie besitzen",
+    "group_status": "Status und Aufenthalt"
   },
   "cards": {
     "tax": {

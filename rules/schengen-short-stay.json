@@ -1,0 +1,65 @@
+{
+  "domain": "Schengen short-stay allowance for third-country nationals, and the parallel EU free-movement registration",
+  "rules": [
+    {
+      "id": "schengen.short_stay",
+      "statement": "A third-country national may stay in the Schengen area for no more than 90 days in any 180-day period, which entails considering the 180-day period preceding each day of stay.",
+      "value": {
+        "max_days": 90,
+        "window_days": 180
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex, Official Journal",
+        "ref": "art. 6(1) Regulation (EU) 2016/399 (Schengen Borders Code)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/399/oj/eng",
+        "source_dated": "2016-03-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE PART CALCULATORS GET WRONG. The window is measured against the 180 days preceding EACH day of stay, so a plan has to be tested on every day of a trip, not only its first or last day. The allowance is for the Schengen area as a whole, not for Spain alone, so a week in France spends the same allowance as a week in Alicante. It is an immigration rule and has no bearing on tax residence, which is a separate test at 183 days. British citizens have been third-country nationals for this purpose since the end of the transition period."
+    },
+    {
+      "id": "schengen.entry_exit_days",
+      "statement": "The date of entry counts as the first day of stay and the date of exit counts as the last day of stay. Time spent under a residence permit or a long-stay visa is not counted.",
+      "value": {
+        "entry_counts": true,
+        "exit_counts": true,
+        "residence_permit_excluded": true
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex, Official Journal",
+        "ref": "art. 6(2) Regulation (EU) 2016/399 (Schengen Borders Code)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/399/oj/eng",
+        "source_dated": "2016-03-23",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Both ends of a trip are full days however few hours are actually spent. A four-night stay is five days. This is where most owners undercount."
+    },
+    {
+      "id": "eu.registration_over_three_months",
+      "statement": "A citizen of an EU or EEA State who resides in Spain for more than three months must register in person in the Registro Central de Extranjeros. The application is made within three months of entry, on form EX-18.",
+      "value": {
+        "over_months": 3,
+        "apply_within_months": 3,
+        "form": "EX-18",
+        "registry": "Registro Central de Extranjeros"
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 7 Real Decreto 240/2007",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-4184",
+        "source_dated": "2015-11-09",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Registration is a residence formality, not a limit on time in the country. Art. 7.1 sets conditions for residence beyond three months, as a worker, as a person with sufficient resources and sickness cover, or as a student. Those conditions were not read in full and this rule states only the registration duty and its window. Swiss citizens are dealt with under the 1999 EU and Switzerland agreement and are handled by the same offices in practice, but RD 240/2007 was read for EU and EEA nationals only, so do not cite this rule as authority for Switzerland."
+    }
+  ]
+}

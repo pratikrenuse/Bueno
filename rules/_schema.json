@@ -1,0 +1,17 @@
+{
+  "$comment": "Shape of every entry in every rules file. Nothing enters a tool that does not have all of these fields filled.",
+  "id": "dotted.unique.identifier",
+  "statement": "The rule in one plain sentence, as a tool would express it.",
+  "value": "number, string, array or object. null where the rule is qualitative.",
+  "unit": "percent | eur | days | months | km_h | null",
+  "status": "verified | partial | unverified | annulled | myth",
+  "source": {
+    "name": "Publisher, e.g. BOE consolidated text, AEAT sede electronica",
+    "ref": "Law and article, e.g. art. 27 Ley 58/2003 (LGT)",
+    "url": "The exact page that was read",
+    "source_dated": "The consolidation or publication date shown on that page",
+    "read_on": "2026-09-07"
+  },
+  "review_by": "ISO date. After this the tool must show the figure as needing review.",
+  "notes": "Anything a developer would otherwise get wrong."
+}

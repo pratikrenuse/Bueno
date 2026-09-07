@@ -62,7 +62,15 @@
     "dir_title_em": "Spanish town",
     "prof_title": "Owning in Spain means dealing with people you have",
     "prof_title_em": "never heard of",
-    "prof_sub": "A gestoría, an administrador de fincas, a sworn translator. Here is what each one actually does, and who is well reviewed in your town."
+    "prof_sub": "A gestoría, an administrador de fincas, a sworn translator. Here is what each one actually does, and who is well reviewed in your town.",
+    "tools_filter_label": "Filter tools",
+    "group_all": "All",
+    "group_buying": "Buying",
+    "group_tax": "Tax",
+    "group_renting": "Renting out",
+    "group_money": "Money",
+    "group_owning": "Owning a home",
+    "group_status": "Status and stays"
   },
   "cards": {
     "tax": {

@@ -1,0 +1,642 @@
+{
+  "domain": "Property purchase tax by autonomous community. Rates are ceded to the regions and change often.",
+  "critical_notes": [
+    "Most reduced rates require the property to be the buyer's vivienda habitual. A non-resident buying a second or holiday home almost never qualifies. A calculator that offers reduced rates by default will understate the tax badly for exactly our audience.",
+    "Banded regimes are progressive by tranche, each slice taxed at its own rate. Flattening a banded scale to one number is a real source of error.",
+    "Since 1 January 2022 the taxable base is the higher of the agreed price and the Catastro valor de referencia. See minimum_base below."
+  ],
+  "minimum_base": {
+    "id": "itp.base.valor_referencia",
+    "statement": "The taxable base for ITP and AJD on immovable property is the valor de referencia published by the Direccion General del Catastro, or the declared price or consideration where that is higher. The base is the greater of the two.",
+    "status": "verified",
+    "source": {
+      "name": "BOE consolidated text",
+      "ref": "art. 10 RDLeg 1/1993, as amended by Ley 11/2021 with effect 1 January 2022",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+      "source_dated": "2026-03-21",
+      "read_on": "2026-09-07"
+    },
+    "lookup_url": "https://www.sedecatastro.gob.es/Accesos/SECAccvr.aspx",
+    "review_by": "2027-06-01",
+    "tool_design": "A calculator cannot compute the valor de referencia; it is property-specific. Compute tax on the entered price, state plainly that this is a MINIMUM, and prompt the user to look up the reference value and re-run if it is higher. Never present the price-based figure as the final number."
+  },
+  "itp_resale": [
+    {
+      "region": "Comunitat Valenciana",
+      "general": 9.0,
+      "banded": true,
+      "status": "partial",
+      "notes": "9 percent from 1 June 2026, was 10. An 11 percent band above 1,000,000 euros applied as at 29 April 2026; survival of that band after the June cut is NOT confirmed. Reduced rates all unverified.",
+      "statement": "ITP on a resale home in Comunitat Valenciana.",
+      "source": {
+        "name": "Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded ITP rate, Comunitat Valenciana",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-ii-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Andalucia",
+      "general": 7.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "Widely still quoted as 8 percent. It has been 7 percent since Ley 5/2021.",
+      "statement": "ITP on a resale home in Andalucia.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Andalucia",
+        "url": "https://www.juntadeandalucia.es/organismos/economiahaciendayfondoseuropeos/areas/tributos-juego/tributos/paginas/impuestos-cedidos-transmisiones.html",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Illes Balears",
+      "general": null,
+      "banded": true,
+      "status": "verified",
+      "bands": [
+        {
+          "from": 0,
+          "cumulative_cuota": 0,
+          "slice": 400000,
+          "rate": 8.0
+        },
+        {
+          "from": 400000.01,
+          "cumulative_cuota": 32000,
+          "slice": 200000,
+          "rate": 9.0
+        },
+        {
+          "from": 600000.01,
+          "cumulative_cuota": 50000,
+          "slice": 400000,
+          "rate": 10.0
+        },
+        {
+          "from": 1000000.01,
+          "cumulative_cuota": 90000,
+          "slice": 1000000,
+          "rate": 12.0,
+          "to": 2000000
+        },
+        {
+          "from": 2000000.01,
+          "cumulative_cuota": 210000,
+          "slice": null,
+          "rate": 13.0
+        }
+      ],
+      "notes": "Progressive by tranche, cumulative cuota confirmed. Island value caps for reduced rates updated by Orden 5/2026 from 1 March 2026: Mallorca 307,089, Menorca 270,151.20, Eivissa and Formentera 378,212. The ATIB rates page still shows the old single cap; use the Orden. Transcription fix 2026-09-07: the 12 percent band slice was recorded as 2,000,000; it is 1,000,000 (from 1,000,000.01 to 2,000,000). The cumulative cuota column of 210,000 for the next band confirms it. Caught by the cumulative reconciliation test, not by eye.",
+      "statement": "ITP on a resale home in Illes Balears.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Illes Balears",
+        "url": "https://www.atib.es/TA/contenido.aspx?Id=16198&lang=es",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Canarias",
+      "general": 6.5,
+      "banded": false,
+      "status": "verified",
+      "notes": "Reduced: 5 percent main residence, 1 percent large family / single parent / disability 65 percent or more, 0 percent protected housing as first main residence.",
+      "statement": "ITP on a resale home in Canarias.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Canarias",
+        "url": "https://www3.gobiernodecanarias.org/tributos/atc/estatico/asistencia_contribuyente/guias/pdf/guia_completa_itp_y_ajd.pdf",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Region de Murcia",
+      "general": 8.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "Reduced 3 percent for buyers 40 or under, disability 65 percent or more, or large families, each with income tests and a 12-month occupation requirement.",
+      "statement": "ITP on a resale home in Region de Murcia.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Region de Murcia",
+        "url": "https://agenciatributaria.carm.es/en/faqs-itpajd",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Catalunya",
+      "general": null,
+      "banded": true,
+      "status": "verified",
+      "bands": [
+        {
+          "upto": 600000,
+          "rate": 10.0
+        },
+        {
+          "upto": 900000,
+          "rate": 11.0
+        },
+        {
+          "upto": 1500000,
+          "rate": 12.0
+        },
+        {
+          "above": 1500000,
+          "rate": 13.0
+        }
+      ],
+      "notes": "Decreto-ley 5/2025, art. 5. Also 20 percent for gran tenidor buyers and for whole residential buildings, which is a large-holder rule not a nationality rule. 5 percent for buyers 35 or under buying a main residence with income up to 36,000. CONFIRM whether the scale is progressive by tranche before coding; the cumulative cuota column was not seen.",
+      "statement": "ITP on a resale home in Catalunya.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Catalunya",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-10270",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Madrid",
+      "general": 6.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "10 percent bonificacion of the cuota for a main residence at 250,000 or less. 4 percent for large families. 100 percent bonificacion for buyers under 35 in municipalities under 2,500 inhabitants.",
+      "statement": "ITP on a resale home in Madrid.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Madrid",
+        "url": "https://www.comunidad.madrid/atencion-contribuyente/transmisiones-patrimoniales-onerosas",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Aragon",
+      "general": null,
+      "banded": true,
+      "status": "verified",
+      "bands": [
+        {
+          "from": 0,
+          "cumulative_cuota": 0,
+          "slice": 400000,
+          "rate": 8.0
+        },
+        {
+          "from": 400000,
+          "cumulative_cuota": 32000,
+          "slice": 50000,
+          "rate": 8.5
+        },
+        {
+          "from": 450000,
+          "cumulative_cuota": 36250,
+          "slice": 50000,
+          "rate": 9.0
+        },
+        {
+          "from": 500000,
+          "cumulative_cuota": 40750,
+          "slice": 250000,
+          "rate": 9.5
+        },
+        {
+          "from": 750000,
+          "cumulative_cuota": 64500,
+          "slice": null,
+          "rate": 10.0
+        }
+      ],
+      "notes": "Progressive by tranche, cumulative cuota confirmed.",
+      "statement": "ITP on a resale home in Aragon.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Aragon",
+        "url": "https://www.aragon.es/-/transmisiones-patrimoniales-onerosas",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Castilla y Leon",
+      "general": null,
+      "banded": true,
+      "status": "verified",
+      "bands": [
+        {
+          "upto": 250000,
+          "rate": 8.0
+        },
+        {
+          "above": 250000,
+          "rate": 10.0
+        }
+      ],
+      "notes": "Progressive by tranche.",
+      "statement": "ITP on a resale home in Castilla y Leon.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Castilla y Leon",
+        "url": "https://tributos.jcyl.es/web/es/informacion-tributaria/transmisiones-patrimoniales-onerosas.html",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Extremadura",
+      "general": null,
+      "banded": true,
+      "status": "verified",
+      "bands": [
+        {
+          "upto": 360000,
+          "rate": 8.0
+        },
+        {
+          "upto": 600000,
+          "rate": 10.0
+        },
+        {
+          "above": 600000,
+          "rate": 11.0
+        }
+      ],
+      "notes": "CONFIRM progressive-by-tranche mechanics. Prior 20 percent quota bonificaciones abolished 8 April 2025 by Ley 1/2025.",
+      "statement": "ITP on a resale home in Extremadura.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Extremadura",
+        "url": "https://portaltributario.juntaex.es/PortalTributario/web/guest/transmisiones-patrimoniales-onerosas",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Galicia",
+      "general": 8.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "Many main-residence reduced rates from 7 down to 3 percent. Ceilings raised by Ley 5/2025 with effect 2026.",
+      "statement": "ITP on a resale home in Galicia.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Galicia",
+        "url": "https://www.atriga.gal/es_ES/preguntas-frecuentes/imposto-sobre-transmisions-patrimoniais-e-actos-xuridicos-documentados",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Castilla-La Mancha",
+      "general": 9.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "Ley 1/2026 effective 31 March 2026: first home 6 percent to a 240,000 ceiling; 3 percent for buyers under 36, disability 65 percent or more, large and single-parent families.",
+      "statement": "ITP on a resale home in Castilla-La Mancha.",
+      "source": {
+        "name": "Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded ITP rate, Castilla-La Mancha",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Cantabria",
+      "general": 9.0,
+      "banded": false,
+      "status": "partial",
+      "notes": "General rate only. Reduced rates unverified; a 7 percent rate to 300,000 was announced for the 2026 budget but is unconfirmed.",
+      "statement": "ITP on a resale home in Cantabria.",
+      "source": {
+        "name": "Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded ITP rate, Cantabria",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "La Rioja",
+      "general": 7.0,
+      "banded": false,
+      "status": "partial",
+      "notes": "General rate only.",
+      "statement": "ITP on a resale home in La Rioja.",
+      "source": {
+        "name": "Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded ITP rate, La Rioja",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Principado de Asturias",
+      "general": null,
+      "banded": true,
+      "status": "unverified",
+      "notes": "A banded scale in the 8 to 10 percent range exists but the bands were not obtained. DO NOT PUBLISH a rate for Asturias.",
+      "statement": "ITP on a resale home in Principado de Asturias.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Principado de Asturias",
+        "url": "https://sede.tributasenasturias.es/sites/epstpa/default/es_ES/tributos/transmisiones-patrimoniales/Beneficios-fiscales/Principado-de-Asturias",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Comunidad Foral de Navarra",
+      "general": null,
+      "banded": null,
+      "status": "unverified",
+      "notes": "Foral tax with its own law. Nothing obtained. DO NOT PUBLISH.",
+      "statement": "ITP on a resale home in Comunidad Foral de Navarra.",
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Pais Vasco",
+      "general": null,
+      "banded": null,
+      "status": "unverified",
+      "notes": "THREE separate regimes: Bizkaia, Gipuzkoa and Alava, each with its own Norma Foral. Never publish a single Pais Vasco rate.",
+      "statement": "ITP on a resale home in Pais Vasco.",
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Ceuta",
+      "general": 6.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "State rate art. 11.1.a, then a 50 percent bonificacion on the cuota under art. 57 bis. Effective around 3 percent. Confirm the scope of art. 57 bis before publishing an effective rate.",
+      "statement": "ITP on a resale home in Ceuta.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Ceuta",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Melilla",
+      "general": 6.0,
+      "banded": false,
+      "status": "verified",
+      "notes": "As Ceuta.",
+      "statement": "ITP on a resale home in Melilla.",
+      "source": {
+        "name": "Regional tax agency or official gazette",
+        "ref": "Ceded ITP rate, Melilla",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    }
+  ],
+  "ajd_new_build": [
+    {
+      "region": "Comunitat Valenciana",
+      "rate": 1.4,
+      "status": "verified",
+      "notes": "From 1 June 2026, was 1.5.",
+      "statement": "AJD on a new-build home in Comunitat Valenciana.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Comunitat Valenciana",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Andalucia",
+      "rate": 1.2,
+      "status": "verified",
+      "notes": null,
+      "statement": "AJD on a new-build home in Andalucia.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Andalucia",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Canarias",
+      "rate": 0.75,
+      "status": "verified",
+      "notes": null,
+      "statement": "AJD on a new-build home in Canarias.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Canarias",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Region de Murcia",
+      "rate": 2.0,
+      "status": "verified",
+      "notes": "Highest in Spain and a common source of underestimation on new builds.",
+      "statement": "AJD on a new-build home in Region de Murcia.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Region de Murcia",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Madrid",
+      "rate": 0.75,
+      "status": "verified",
+      "notes": "AJD on new-build purchases by individuals is itself value-banded: 0.2 percent VPO under 90 m2, 0.4 percent to 120,000, 0.5 percent 120,001 to 180,000, 0.75 percent above 180,000. Garages and annexes count towards the valuation.",
+      "statement": "AJD on a new-build home in Madrid.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Madrid",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Galicia",
+      "rate": 1.5,
+      "status": "verified",
+      "notes": null,
+      "statement": "AJD on a new-build home in Galicia.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Galicia",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "La Rioja",
+      "rate": 1.0,
+      "status": "verified",
+      "notes": null,
+      "statement": "AJD on a new-build home in La Rioja.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, La Rioja",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Ceuta",
+      "rate": 0.5,
+      "status": "verified",
+      "notes": "Then 50 percent bonificacion.",
+      "statement": "AJD on a new-build home in Ceuta.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Ceuta",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Melilla",
+      "rate": 0.5,
+      "status": "verified",
+      "notes": "Then 50 percent bonificacion.",
+      "statement": "AJD on a new-build home in Melilla.",
+      "source": {
+        "name": "Regional tax agency or Ministerio de Hacienda, Tributacion Autonomica 2026",
+        "ref": "Ceded AJD rate, Melilla",
+        "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+        "source_dated": "2026-04-29",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31"
+    },
+    {
+      "region": "Catalunya",
+      "rate": null,
+      "status": "unverified",
+      "notes": "Only the 3.5 percent IVA-waiver rate was confirmed. DO NOT PUBLISH a general rate.",
+      "statement": "AJD on a new-build home in Catalunya."
+    },
+    {
+      "region": "Illes Balears",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Illes Balears."
+    },
+    {
+      "region": "Aragon",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Aragon."
+    },
+    {
+      "region": "Castilla y Leon",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Castilla y Leon."
+    },
+    {
+      "region": "Castilla-La Mancha",
+      "rate": null,
+      "status": "unverified",
+      "notes": "First-home reduced rates 0.75 and 0.50, and 0.25 for buyers under 36, are verified. The general rate is not.",
+      "statement": "AJD on a new-build home in Castilla-La Mancha."
+    },
+    {
+      "region": "Extremadura",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Extremadura."
+    },
+    {
+      "region": "Cantabria",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Cantabria."
+    },
+    {
+      "region": "Asturias",
+      "rate": null,
+      "status": "unverified",
+      "notes": "Reduced rates 0.3 and 0.1 exist. General rate not obtained.",
+      "statement": "AJD on a new-build home in Asturias."
+    },
+    {
+      "region": "Navarra",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Navarra."
+    },
+    {
+      "region": "Pais Vasco",
+      "rate": null,
+      "status": "unverified",
+      "notes": "DO NOT PUBLISH.",
+      "statement": "AJD on a new-build home in Pais Vasco."
+    }
+  ],
+  "foreign_buyer_surcharge": {
+    "statement": "No surcharge on non-resident or foreign buyers is enacted anywhere in Spain.",
+    "status": "verified",
+    "source": {
+      "name": "Ministerio de Hacienda",
+      "ref": "Tributacion Autonomica 2026, chapters I and II",
+      "url": "https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-i-tributacion-autonomica-2026.pdf",
+      "source_dated": "2026-04-29",
+      "read_on": "2026-09-07"
+    },
+    "notes": "The reported state-level tax on non-EU non-resident buyers remains a proposal with no enacting instrument found on BOE. Catalonia's 20 percent rate is a large-holder and whole-building rule that applies equally to Spanish buyers; it is not a nationality rule. The proposed 100 percent charge on non-EU buyers is frequently described as though it were in force. It is not.",
+    "review_by": "2026-12-31"
+  }
+}

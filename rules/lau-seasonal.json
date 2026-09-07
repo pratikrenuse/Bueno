@@ -1,0 +1,69 @@
+{
+  "domain": "Seasonal lets versus tourist lets",
+  "rules": [
+    {
+      "id": "lau.seasonal_basis",
+      "statement": "A seasonal let is an arrendamiento para uso distinto del de vivienda under art. 3 LAU, which expressly includes lets by season, summer or otherwise. It is governed by Title III LAU and largely by the parties' free will.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 3 Ley 29/1994, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2023-05-25",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "lau.tourist_excluded",
+      "statement": "Tourist lets are excluded from the LAU by art. 5.e: temporary transfer of use of a whole furnished dwelling in immediate-use condition, marketed or promoted through tourist channels, where subject to a specific regional tourism regime.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 5.e Ley 29/1994",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2023-05-25",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The dividing line is drawn by regional tourism law, not by the LAU, and marketing through tourist channels is exactly what pulls a let into art. 5.e. Regional re-characterisation criteria are UNVERIFIED."
+    },
+    {
+      "id": "lau.2025_2026_reform",
+      "statement": "No 2025 or 2026 tightening of seasonal lets has been enacted. The LAU consolidated text is unchanged since 25 May 2023.",
+      "value": false,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Congreso de los Diputados",
+        "ref": "Proposicion de Ley 122/000136, BOCG of 2 December 2025",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-154-6.PDF",
+        "source_dated": "2025-12-02",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "The bill on temporary and room lets is still in tramitacion before the Comision de Vivienda. Verified only to 2 December 2025 plus the negative check on the LAU. Re-check Congress before publishing."
+    },
+    {
+      "id": "lau.short_term_definitions",
+      "statement": "Available guidance defines short-term letting in at least three incompatible ways: under 3 months, one to twelve months, and under one month. These route an owner to entirely different licensing obligations.",
+      "value": null,
+      "unit": null,
+      "status": "unverified",
+      "source": {
+        "name": "internal",
+        "ref": "legally-renting.txt, rental-rule-changes.txt, seasonal-vs-tourist-rentals.txt",
+        "url": null,
+        "source_dated": null,
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "Fix the taxonomy in the articles before building the let-type decision tree."
+    }
+  ]
+}

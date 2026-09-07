@@ -62,7 +62,15 @@
     "dir_title_em": "din spanske by",
     "prof_title": "Å eie i Spania betyr å forholde seg til folk du",
     "prof_title_em": "aldri har hørt om",
-    "prof_sub": "En gestoría, en administrador de fincas, en statsautorisert translatør. Her er hva hver av dem faktisk gjør, og hvem som får gode omtaler i byen din."
+    "prof_sub": "En gestoría, en administrador de fincas, en statsautorisert translatør. Her er hva hver av dem faktisk gjør, og hvem som får gode omtaler i byen din.",
+    "tools_filter_label": "Filtrer verktøy",
+    "group_all": "Alle",
+    "group_buying": "Kjøpe",
+    "group_tax": "Skatt",
+    "group_renting": "Utleie",
+    "group_money": "Penger",
+    "group_owning": "Eie bolig",
+    "group_status": "Status og opphold"
   },
   "cards": {
     "tax": {

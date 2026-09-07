@@ -1,0 +1,156 @@
+{
+  "domain": "Regional tourist letting registers, for the six regions where foreign owners actually buy",
+  "rules": [
+    {
+      "region": "Comunitat Valenciana",
+      "register": "Registro de Turismo de la Comunitat Valenciana",
+      "status": "verified",
+      "source": {
+        "name": "DOGV",
+        "ref": "Decreto-ley 9/2024 de 2 de agosto del Consell, in force 8 August 2024",
+        "url": "https://www.boe.es/buscar/doc.php?id=DOGV-r-2024-90168",
+        "source_dated": "2024-08-08",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [
+        "A favourable municipal report of urbanistic compatibility for tourist use is required.",
+        "Registration has five-year validity, renewable with a fresh declaration and updated municipal report.",
+        "Municipalities may cap numbers.",
+        "The registration number must appear in all advertising; failure is a serious infraction.",
+        "Letting room by room within a registered VUT is a very serious infraction."
+      ],
+      "notes": "Which specific municipalities have suspended new registrations is municipal-level and must be checked town by town.",
+      "statement": "Tourist letting register and current position in Comunitat Valenciana.",
+      "review_by": "2026-12-31"
+    },
+    {
+      "region": "Andalucia",
+      "register": "Registro de Turismo de Andalucia, entry by declaracion responsable",
+      "status": "verified",
+      "source": {
+        "name": "BOJA",
+        "ref": "Decreto 31/2024 de 29 de enero",
+        "url": "https://www.juntadeandalucia.es/boja/2024/24/50",
+        "source_dated": "2024-01-29",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [
+        "Municipalities may limit numbers per building, sector, area or period for an overriding reason of general interest.",
+        "A statutory prohibition in the community's title or estatutos blocks tourist use."
+      ],
+      "notes": "Entry into force date of Decreto 31/2024 not verified. Which municipalities have adopted caps not verified.",
+      "statement": "Tourist letting register and current position in Andalucia.",
+      "review_by": "2026-12-31"
+    },
+    {
+      "region": "Catalunya",
+      "register": null,
+      "status": "unverified",
+      "source": {
+        "name": "DOGC",
+        "ref": "Decreto ley 3/2023 de 7 de noviembre, existence confirmed via BOE",
+        "url": "https://www.boe.es/buscar/doc.php?id=DOGC-f-2023-90341",
+        "source_dated": "2023-11-07",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [],
+      "notes": "BLOCKED. Every Generalitat host (portaljuridic, canalempresa, tramits.gencat.cat) is disallowed to automated fetching. The commonly repeated points, a municipal urbanistic licence required in 262 municipalities, the Registre de Turisme de Catalunya, and existing HUT licences expiring five years after entry into force, are NOT verified. Do not publish anything for Catalunya.",
+      "statement": "Tourist letting register and current position in Catalunya.",
+      "review_by": "2026-12-31"
+    },
+    {
+      "region": "Illes Balears",
+      "register": "Consells insulars, new places via the Consorci Borsa d'Allotjaments Turistics",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Ley 8/2012 del Turismo de las Illes Balears, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2012-10610",
+        "source_dated": "2026-06-13",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [
+        "New tourist places for ETV are rationed through periodic calls, not freely available.",
+        "Ley 1/2025 of 13 June 2025 makes failure to include a party prohibition in the contract, and failure to require a disruptive guest to leave within 24 hours, a serious infraction."
+      ],
+      "notes": "Precise moratorium status per island and per building type not verified.",
+      "statement": "Tourist letting register and current position in Illes Balears.",
+      "review_by": "2026-12-31"
+    },
+    {
+      "region": "Canarias",
+      "register": "Registro General Turistico",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Ley 6/2025 de 10 de diciembre de Ordenacion Sostenible del Uso Turistico de Viviendas",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-26358",
+        "source_dated": "2025-12-10",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [
+        "Conditions the activity on municipal urbanistic authorisation.",
+        "Provides for suspension of new authorisations in areas declared to have a stressed residential market."
+      ],
+      "notes": "Article numbering, the residential-reserve percentages, the transitional regime and the entry-into-force date all need a direct read. Do not code detail.",
+      "statement": "Tourist letting register and current position in Canarias.",
+      "review_by": "2026-12-31"
+    },
+    {
+      "region": "Region de Murcia",
+      "register": "Registro de Empresas y Actividades Turisticas de la Region de Murcia",
+      "status": "verified",
+      "source": {
+        "name": "CARM sede electronica",
+        "ref": "Decreto 256/2019 and Ley 12/2013 de Turismo",
+        "url": "https://sede.carm.es/web/pagina?IDCONTENIDO=1890&IDTIPO=240&RASTRO=c$m40288",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "key_facts": [
+        "Entry by declaracion responsable. Procedure continuously open, activity may begin on submission with a provisional number.",
+        "No regional suspension of new registrations.",
+        "CARM confirms express community approval is now needed following Ley Organica 1/2025."
+      ],
+      "notes": null,
+      "statement": "Tourist letting register and current position in Region de Murcia.",
+      "review_by": "2026-12-31"
+    }
+  ],
+  "penalties": {
+    "statement": "The commonly cited range of 4,000 to 60,000 euros with an Ibiza ceiling of 111,000 is NOT supported and is wrong for the Balearics.",
+    "status": "partial",
+    "balears": {
+      "serious": "4,001 to 40,000 euros (art. 119 Ley 8/2012)",
+      "very_serious": "40,001 to 400,000 euros (art. 120 Ley 8/2012)",
+      "status": "partial",
+      "statement": "Balearic penalties for marketing tourist stays without authorisation: serious 4,001 to 40,000 euros, very serious 40,001 to 400,000 euros.",
+      "source": {
+        "name": "Consell d'Eivissa",
+        "ref": "arts. 119 and 120 Ley 8/2012",
+        "url": "https://www.conselldeivissa.es/es/departamento-territorio-mobilidad-infraestructuras-intrusismo-oturistica/lucha-contra-el-intrusismo",
+        "source_dated": "2026",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2026-12-31",
+      "notes": "Partial: confirmed from an official island council page citing the law, not from the article text itself. There is no 111,000 euro Ibiza ceiling; the statutory ceiling is 400,000."
+    },
+    "comunitat_valenciana": {
+      "status": "unverified",
+      "notes": "Ley 15/2018 sanctions articles could not be reached. DO NOT PUBLISH A FIGURE."
+    },
+    "andalucia": {
+      "status": "unverified",
+      "notes": "Ley 13/2011 art. 78 could not be reached on BOE, BOJA or the consolidated PDF. DO NOT PUBLISH A FIGURE."
+    },
+    "notes": "There is no 111,000 euro Ibiza ceiling. The Balearic statutory ceiling is 400,000. Figures in that range should not be repeated.",
+    "review_by": "2026-12-31",
+    "source": {
+      "name": "Consell d'Eivissa, official island council page citing Ley 8/2012",
+      "ref": "arts. 119 and 120 Ley 8/2012 de Turismo de las Illes Balears",
+      "url": "https://www.conselldeivissa.es/es/departamento-territorio-mobilidad-infraestructuras-intrusismo-oturistica/lucha-contra-el-intrusismo",
+      "source_dated": "2026",
+      "read_on": "2026-09-07"
+    }
+  }
+}

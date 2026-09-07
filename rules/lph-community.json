@@ -1,0 +1,100 @@
+{
+  "domain": "Ley de Propiedad Horizontal and tourist letting in a community of owners",
+  "rules": [
+    {
+      "id": "lph.17_12.majority",
+      "statement": "A three-fifths majority of owners who also represent three-fifths of participation quotas is required to APPROVE, limit, condition or prohibit tourist letting in the building.",
+      "value": {
+        "fraction": "3/5",
+        "of": [
+          "owners",
+          "participation_quotas"
+        ],
+        "covers": [
+          "approve",
+          "limit",
+          "condition",
+          "prohibit"
+        ]
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.12 Ley 49/1960, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE WORD 'APPROVE' IS THE CHANGE. Before Ley Organica 1/2025 the three-fifths rule covered only limiting, conditioning or prohibiting, so 3/5 was the threshold to ban. Now the same majority is needed to permit a new tourist let at all. Most guidance still describes the old position. It is a majority of owners AND of quotas, not one or the other."
+    },
+    {
+      "id": "lph.17_12.effective_date",
+      "statement": "The current wording takes effect from 3 April 2025.",
+      "value": "2025-04-03",
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 4.2 Ley Organica 1/2025",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Later amendments to art. 17 (RDL 7/2025 of 24 June and RDL 7/2026 of 20 March) touch art. 17.1 only, not 17.12."
+    },
+    {
+      "id": "lph.17_12.retroactivity",
+      "statement": "The agreements have no retroactive effect. An owner already carrying on the activity before the change may continue, but only where the tourist licence or declaracion responsable was obtained before 3 April 2025.",
+      "value": {
+        "retroactive": false,
+        "grandfather_cutoff": "2025-04-03"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Resolucion DGSJFP of 8 October 2025, published 22 January 2026",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-1528",
+        "source_dated": "2026-01-22",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "A prior municipal urbanistic compatibility report alone is not enough. Two further resolutions on the same point: BOE-A-2026-6851 and BOE-A-2026-14949."
+    },
+    {
+      "id": "lph.17_12.expense_surcharge",
+      "statement": "The same three-fifths majority may set a special expense quota or increased share of common expenses for the dwelling carrying on the activity, capped at a 20 percent increase.",
+      "value": 20,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.12 Ley 49/1960",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "lph.scope",
+      "statement": "Article 17.12 is tied to the activity in art. 5.e LAU, that is tourist letting under regional tourism rules. A genuine seasonal let under art. 3 LAU falls outside it.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.12 Ley 49/1960 read with arts. 3 and 5.e Ley 29/1994",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2023-05-25",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "A community can still restrict uses by other routes such as statutory clauses. The boundary is heavily litigated. Ley Organica 1/2025 also added a new disposicion adicional 2 to the LPH whose text was not read; do not build on it."
+    }
+  ]
+}

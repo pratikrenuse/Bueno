@@ -1,0 +1,216 @@
+{
+  "domain": "Non-resident income tax (IRNR) on Spanish property",
+  "rules": [
+    {
+      "id": "irnr.imputed.base",
+      "statement": "Imputed income is a percentage of the cadastral value shown on the IBI receipt, not of market value or purchase price.",
+      "value": "cadastral_value",
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Calculo de la renta imputada",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/imputacion-rentas-inmobiliarias/calculo-renta-imputada.html",
+        "source_dated": "2026-03-20",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-03-01",
+      "notes": "A common error is to apply the rate to the property's market or purchase value. That overstates the tax several times over, because cadastral values sit well below market."
+    },
+    {
+      "id": "irnr.imputed.no_cadastral_value",
+      "statement": "Where the property has no cadastral value or it has not been notified, apply 1.1 percent to 50 percent of the greater of the acquisition price or the value verified by the Administration.",
+      "value": {
+        "rate": 1.1,
+        "base_fraction": 0.5
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Calculo de la renta imputada",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/imputacion-rentas-inmobiliarias/calculo-renta-imputada.html",
+        "source_dated": "2026-03-20",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "irnr.imputed.rate_standing",
+      "statement": "Standing rule: 1.1 percent where the cadastral values were revised by a general collective valuation procedure taking effect in the tax period or the previous ten tax periods. Otherwise 2 percent.",
+      "value": {
+        "revised": 1.1,
+        "not_revised": 2.0,
+        "lookback_tax_periods": 10
+      },
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 85 LIRPF as quoted in Manual de Tributacion de No Residentes, cap. 3",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/capitulo-03-tributacion-rentas-comunes-nr/rentas-imputadas-bienes-inmuebles-urbanos.html",
+        "source_dated": "2026-07-01",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "PARTIAL: art. 85 LIRPF could not be read verbatim on BOE because the consolidated text truncates. Quoted through the AEAT manual. Confirm before launch."
+    },
+    {
+      "id": "irnr.imputed.rate_special_2023_2025",
+      "statement": "For 2023, 2024 and 2025 only, the 1.1 percent rate applies where the cadastral values were revised with effect from 1 January 2012 onwards.",
+      "value": {
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "rate": 1.1,
+        "revision_from": "2012-01-01"
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "disposicion adicional 55 LIRPF, quoted in Manual de Tributacion de No Residentes",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/capitulo-03-tributacion-rentas-comunes-nr/rentas-imputadas-bienes-inmuebles-urbanos.html",
+        "source_dated": "2026-07-01",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": null
+    },
+    {
+      "id": "irnr.imputed.rate_2026",
+      "statement": "BLOCKER. Whether the 1.1 percent special rule is extended to the 2026 accrual is not established.",
+      "value": null,
+      "unit": null,
+      "status": "unverified",
+      "source": {
+        "name": "none",
+        "ref": "disposiciones adicionales LIRPF",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764",
+        "source_dated": "2026-09-02",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "As of July 2026 the AEAT manual still shows DA 55 covering 2023 to 2025 only, and RDL 16/2025 did not extend it. On the face of it a 2026 accrual falls back to the ten-tax-period test, which moves some properties from 1.1 to 2 percent, an 80 percent tax increase. The 2026 window does not open until 1 April 2027, so there is time. A tool must not state a 2026 figure until this is settled."
+    },
+    {
+      "id": "irnr.imputed.no_deductions",
+      "statement": "No expenses of any kind may be deducted against imputed income.",
+      "value": false,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Calculo de la renta imputada",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/imputacion-rentas-inmobiliarias/calculo-renta-imputada.html",
+        "source_dated": "2026-03-20",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "irnr.rates",
+      "statement": "IRNR rates on imputed and rental income are 19 percent for residents of the EU, Iceland, Norway and Liechtenstein, and 24 percent for all other non-residents. Capital gains on sale are 19 percent for everyone.",
+      "value": {
+        "imputed": {
+          "eu_eea": 19,
+          "other": 24
+        },
+        "rental": {
+          "eu_eea": 19,
+          "other": 24
+        },
+        "capital_gain": {
+          "all": 19
+        }
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Tipos de gravamen IRNR sin establecimiento permanente",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/tipos-gravamen-irnr-sin-establecimiento-permanente.html",
+        "source_dated": "2025-06-18",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Liechtenstein takes 19 percent only from 11 July 2021. Capital gains are frequently quoted with the 19 and 24 percent split applied to them. That split is for imputed and rental income. A progressive 19 to 28 figure sometimes seen is the resident savings scale and does not apply to a non-resident."
+    },
+    {
+      "id": "irnr.rental.deductibility",
+      "statement": "Rental expenses are deductible for residents of another EU Member State or an EEA State with effective exchange of tax information. Norway, Iceland and Liechtenstein qualify. Everyone else is taxed on gross rent with no deductions.",
+      "value": {
+        "deductible_for": [
+          "EU",
+          "Norway",
+          "Iceland",
+          "Liechtenstein"
+        ],
+        "otherwise": "gross"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 24.6 TRLIRNR, Determinacion de la base imponible",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/determinacion-bi-irnr-sin-establecimiento-permanente.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Rate and deductibility are governed by different tests but for Norway, Iceland and Liechtenstein both come out favourable. A certificate of tax residence from the home state is required. Expenses must be directly and inseparably linked to the Spanish activity."
+    },
+    {
+      "id": "irnr.sale.gain_base",
+      "statement": "The gain is the transfer value less the acquisition value. Transfer value is the real amount of the sale less the expenses and taxes inherent to the transfer borne by the seller. Acquisition value is the real amount paid, plus the cost of investments and improvements, plus the expenses and taxes inherent to the acquisition, less any amortisation properly deducted.",
+      "value": {
+        "transfer_value": [
+          "sale_price",
+          "less_seller_transfer_costs"
+        ],
+        "acquisition_value": [
+          "purchase_price",
+          "plus_improvements",
+          "plus_acquisition_costs",
+          "less_amortisation"
+        ]
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Manual de Tributacion de No Residentes, cap. 3, ganancias patrimoniales derivadas de la venta de inmuebles",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/capitulo-03-tributacion-rentas-comunes-nr/ganancias-patrimoniales/ganancias-patrimoniales-derivadas-venta-inmuebles.html",
+        "source_dated": "2026-07-01",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Agent commission and the notary, registry and legal costs of the sale come off the transfer value. The ITP or AJD and the notary and registry costs paid on the way in are added to the acquisition value, which is why keeping the original completion file matters years later. Where the property was let, the amortisation that was deducted against rental income reduces the acquisition value and therefore raises the gain. A tool cannot know that figure and must say so rather than ignore it. Properties acquired before 31 December 1994 have a transitional regime that is not covered here."
+    },
+    {
+      "id": "irnr.sale.retention",
+      "statement": "The buyer of a property from a non-resident must withhold 3 percent of the agreed consideration and pay it over on modelo 211 within one month of the transfer.",
+      "value": {
+        "rate": 3,
+        "model": "211",
+        "deadline_months": 1,
+        "base": "agreed_consideration"
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Retencion del adquirente de un inmueble",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/retenciones-irnr-sin-establecimiento-permanente/retencion-adquirente-inmueble.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "3 percent of the price, not of the gain. Applies whether or not the buyer is resident. AEAT maintains a list of cases where no withholding applies; that list was not read, so do not say 'always'."
+    }
+  ]
+}

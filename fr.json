@@ -62,7 +62,15 @@
     "dir_title_em": "votre commune espagnole",
     "prof_title": "Posséder en Espagne, c'est traiter avec des gens dont vous",
     "prof_title_em": "n'avez jamais entendu parler",
-    "prof_sub": "Une gestoría, un administrador de fincas, un traducteur assermenté. Voici ce que chacun fait vraiment, et qui est bien noté dans votre commune."
+    "prof_sub": "Une gestoría, un administrador de fincas, un traducteur assermenté. Voici ce que chacun fait vraiment, et qui est bien noté dans votre commune.",
+    "tools_filter_label": "Filtrer les outils",
+    "group_all": "Tous",
+    "group_buying": "Acheter",
+    "group_tax": "Impôts",
+    "group_renting": "Location",
+    "group_money": "Argent",
+    "group_owning": "Posséder un bien",
+    "group_status": "Statut et séjours"
   },
   "cards": {
     "tax": {

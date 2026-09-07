@@ -12,8 +12,31 @@ const ALL_TOOLS = Object.values(metaModules)
   .map(m => m.default)
   .sort((a, b) => a.order - b.order)
 
-// Map a tool path to its i18n card key
+// Map a tool path to its i18n card key.
+//
+// Only the first six tools have translated card copy in the locale files. Everything
+// added since falls back to the English strings in its own meta.js, which is why
+// `cardText` below never reads a `cards.*` key it cannot resolve. Before this, a tool
+// without an entry here rendered the literal string "cards.undefined.tag" on the home
+// page, and every tool from the seventh onward did exactly that.
 const CARD_KEY = { '/tax-calculator': 'tax', '/cost-audit': 'cost', '/rental-tax': 'rental', '/mortgage-claim': 'claim', '/spain-directory': 'directory', '/spain-professionals': 'professionals' }
+
+// The six groups the grid filters by. `directory` is deliberately absent: both directories
+// have their own full-width sections above and below this grid, so listing them here as
+// well was duplication rather than navigation.
+const GROUPS = ['all', 'buying', 'tax', 'renting', 'money', 'owning', 'status']
+
+function useCardText() {
+  const t = useT()
+  return function cardText(tool, field) {
+    const key = CARD_KEY[tool.path]
+    if (key) {
+      const translated = t(`cards.${key}.${field}`)
+      if (translated !== `cards.${key}.${field}`) return translated
+    }
+    return { tag: tool.tag, title: tool.title, desc: tool.description, cta: tool.cta }[field]
+  }
+}
 
 // The directory is the one tool whose use starts before the visitor knows we have a
 // tool. Somebody whose boiler has just failed is not going to scroll a grid of cards
@@ -182,6 +205,76 @@ function ProfessionalsFeature() {
   )
 }
 
+
+// The tools grid.
+//
+// At six tools a flat grid was the right answer. At sixteen it stops being navigation and
+// becomes a wall, so the grid filters. The filter is client side and does not touch the
+// URL, because a visitor narrowing a list is not making a decision worth a page load or a
+// back-button entry.
+//
+// The count next to each filter is there so nobody taps into an empty category, and the
+// grid keeps its numbering continuous within the current view rather than carrying the
+// global order number, which would jump about as soon as anything was filtered out.
+function ToolsSection() {
+  const t = useT()
+  const cardText = useCardText()
+  const [group, setGroup] = useState('all')
+
+  const gridTools = useMemo(() => ALL_TOOLS.filter(x => x.group !== 'directory'), [])
+  const counts = useMemo(() => {
+    const c = { all: gridTools.length }
+    for (const x of gridTools) c[x.group] = (c[x.group] || 0) + 1
+    return c
+  }, [gridTools])
+  const shown = group === 'all' ? gridTools : gridTools.filter(x => x.group === group)
+
+  return (
+    <section className="home-tools" id="tools">
+      <p className="home-section-eyebrow">{t('home.tools_eyebrow')}</p>
+      <h2 className="home-section-headline">{t('home.tools_heading')}</h2>
+      <p className="home-section-sub">{t('home.tools_sub')}</p>
+
+      <div className="tool-filters" role="tablist" aria-label={t('home.tools_filter_label')}>
+        {GROUPS.filter(g => counts[g]).map(g => (
+          <button
+            key={g}
+            role="tab"
+            aria-selected={group === g}
+            className={`tool-filter${group === g ? ' current' : ''}`}
+            onClick={() => setGroup(g)}
+          >
+            {t(`home.group_${g}`)}
+            <span className="tool-filter-count">{counts[g]}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="tools-grid">
+        {shown.map((tool, i) => (
+          tool.active ? (
+            <LLink key={tool.path} to={tool.path} className="tool-card">
+              <span className={`tool-tag ${tool.tagStyle === 'gold' ? 'gold' : ''}`}>{cardText(tool, 'tag')}</span>
+              <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
+              <h3 className="tool-title">{cardText(tool, 'title')}</h3>
+              <p className="tool-desc">{cardText(tool, 'desc')}</p>
+              <span className={`tool-link ${tool.ctaStyle === 'gold' ? 'gold' : ''}`}>{cardText(tool, 'cta')} &#8594;</span>
+            </LLink>
+          ) : (
+            <div key={tool.path} className="tool-card disabled">
+              <span className="tool-tag grey">{t('home.soon')}</span>
+              <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
+              <h3 className="tool-title">{cardText(tool, 'title')}</h3>
+              <p className="tool-desc">{cardText(tool, 'desc')}</p>
+              <span className="tool-link muted">{t('home.soon_link')}</span>
+            </div>
+          )
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   const t = useT()
   const navRef          = useRef(null)
@@ -283,49 +376,7 @@ export default function Home() {
       <DirectoryFeature />
 
       {/* TOOLS */}
-      <section className="home-tools" id="tools">
-        <p className="home-section-eyebrow">{t('home.tools_eyebrow')}</p>
-        <h2 className="home-section-headline">{t('home.tools_heading')}</h2>
-        <p className="home-section-sub">
-          {t('home.tools_sub')}
-        </p>
-
-        <div className="tools-grid">
-
-          {ALL_TOOLS.map((tool, i) => {
-            const key = CARD_KEY[tool.path]
-            return tool.active ? (
-              <LLink key={tool.path} to={tool.path} className="tool-card">
-                <span className={`tool-tag ${tool.tagStyle === 'gold' ? 'gold' : ''}`}>{t(`cards.${key}.tag`)}</span>
-                <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
-                <h3 className="tool-title">{t(`cards.${key}.title`)}</h3>
-                <p className="tool-desc">{t(`cards.${key}.desc`)}</p>
-                <span className={`tool-link ${tool.ctaStyle === 'gold' ? 'gold' : ''}`}>{t(`cards.${key}.cta`)} &#8594;</span>
-              </LLink>
-            ) : (
-              <div key={tool.path} className="tool-card disabled">
-                <span className="tool-tag grey">{t('home.soon')}</span>
-                <p className="tool-number">{String(i + 1).padStart(2, '0')}</p>
-                <h3 className="tool-title">{t(`cards.${key}.title`)}</h3>
-                <p className="tool-desc">{t(`cards.${key}.desc`)}</p>
-                <span className="tool-link muted">{t('home.soon_link')}</span>
-              </div>
-            )
-          })}
-
-          {/* Placeholder card always shown at end */}
-          <div className="tool-card disabled">
-            <span className="tool-tag grey">{t('home.soon')}</span>
-            <p className="tool-number">{String(ALL_TOOLS.length + 1).padStart(2, '0')}</p>
-            <h3 className="tool-title">{t('home.readiness_title')}</h3>
-            <p className="tool-desc">
-              {t('home.readiness_desc')}
-            </p>
-            <span className="tool-link muted">{t('home.soon_link')}</span>
-          </div>
-
-        </div>
-      </section>
+      <ToolsSection />
 
       {/* PROFESSIONALS: the considered decision, kept apart from the emergency */}
       <ProfessionalsFeature />

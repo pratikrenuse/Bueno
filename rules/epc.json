@@ -1,0 +1,56 @@
+{
+  "domain": "Energy performance certificate",
+  "rules": [
+    {
+      "id": "epc.requirement",
+      "statement": "A registered certificate is required for new buildings and for existing buildings or parts sold or let to a NEW tenant. On sale a copy of the registered certificate and the label are annexed to the contract; on letting the label is annexed and the recommendations handed over.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 3 and 17 Real Decreto 390/2021, in force 3 June 2021",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Letting requires a certificate for a NEW tenant, so a renewal with the same tenant does not itself trigger the obligation."
+    },
+    {
+      "id": "epc.validity",
+      "statement": "Maximum validity is ten years, except where the rating is G, in which case it is five years.",
+      "value": {
+        "default_years": 10,
+        "rating_g_years": 5
+      },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 13.1 RD 390/2021",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THIS SPLIT IS THE CHANGE INTRODUCED BY RD 390/2021. Under the repealed RD 235/2013 it was ten years for every rating. HIGH VALUE FOR OUR AUDIENCE: a large share of older Spanish coastal stock is rated E, F or G. Any tool storing an expiry date must branch on the rating letter or it will tell G-rated owners their certificate lasts five years longer than it does."
+    },
+    {
+      "id": "epc.penalties",
+      "statement": "Breaches are sanctioned under disposicion adicional duodecima of RDLeg 7/2015, with consumer-facing breaches also routed to the consumer protection law.",
+      "value": null,
+      "unit": null,
+      "status": "unverified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21 RD 390/2021",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "DO NOT PUBLISH FIGURES. Disposicion adicional duodecima of RDLeg 7/2015 could not be read; the BOE consolidated text truncates before the additional provisions. The bands circulating online (300 to 600, 601 to 1,000, 1,001 to 6,000) have no primary source that was reached. Enforcement is devolved, so the state provision is the floor and the applicable body is regional."
+    }
+  ]
+}

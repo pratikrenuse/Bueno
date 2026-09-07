@@ -1,0 +1,95 @@
+{
+  "domain": "Surcharges, penalties and interest on late tax",
+  "rules": [
+    {
+      "id": "late.recargo.voluntary",
+      "statement": "Filing late without a prior demand carries a surcharge of 1 percent plus a further 1 percent for each complete month of delay, up to 12 months. From month 13 the surcharge is a flat 15 percent plus late-payment interest running from the day after month 12.",
+      "value": {
+        "per_month": 1,
+        "base": 1,
+        "max_within_12m": 12,
+        "after_12m": 15,
+        "interest_from_month": 13
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 27 Ley 58/2003 (LGT), consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186",
+        "source_dated": "2024-12-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This replaced the old 5/10/15/20 tiers via Ley 11/2021. No interest is charged in the first 12 months. A schedule of 5 percent every three months to a maximum of 20 is the pre-2021 regime and no longer applies."
+    },
+    {
+      "id": "late.recargo.excludes_penalty",
+      "statement": "The surcharge excludes any penalty that could otherwise have been imposed.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 27 LGT",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186",
+        "source_dated": "2024-12-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "late.recargo.reduction",
+      "statement": "The surcharge is reduced by 25 percent where the conditions of art. 27.5 LGT are met, essentially full payment within the voluntary payment period opened by the notification.",
+      "value": 25,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 27.5 LGT, Recargos aplicables, Manual IRPF 2025",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/c18-cuota-liquida-resultante-autoliquidacion/regularizacion-situaciones-tributarias/recargos-aplicables.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "late.sancion.after_requerimiento",
+      "statement": "Once the tax office has issued a demand the surcharge regime no longer applies and the conduct becomes a tax infraction, with a minimum proportional fine of 50 percent of the amount unpaid.",
+      "value": 50,
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 191 LGT",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186",
+        "source_dated": "2024-12-21",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: art. 191 could not be read verbatim, the consolidated LGT truncates. Confirm before this figure appears in public copy. A tool must present the voluntary and demanded routes as separate branches, never blending 1 percent per month with a 50 percent fine."
+    },
+    {
+      "id": "late.interest",
+      "statement": "For 2026 the legal interest rate is 3.25 percent and the late-payment interest rate is 4.0625 percent.",
+      "value": {
+        "legal": 3.25,
+        "demora": 4.0625,
+        "year": 2026
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Otras cuestiones de interes, Manual IRPF 2025",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/irpf-2025/guia-principales-novedades/otras-cuestiones-interes.html",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Set annually. Same figures applied in 2025."
+    }
+  ]
+}

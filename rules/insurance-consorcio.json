@@ -1,0 +1,98 @@
+{
+  "domain": "Extraordinary risk cover through the Consorcio de Compensacion de Seguros",
+  "rules": [
+    {
+      "id": "consorcio.perils",
+      "statement": "The Consorcio covers, as extraordinary risks: earthquakes and seaquakes, extraordinary flooding, volcanic eruptions, atypical cyclonic storm, and the fall of meteorites and celestial bodies. It also covers terrorism, rebellion, sedition, riot and civil commotion, and acts of the armed forces and security forces in peacetime.",
+      "value": [
+        "terremoto",
+        "maremoto",
+        "inundacion extraordinaria",
+        "erupcion volcanica",
+        "tempestad ciclonica atipica",
+        "caida de cuerpos siderales y aerolitos",
+        "terrorismo",
+        "rebelion",
+        "sedicion",
+        "motin",
+        "tumulto popular",
+        "actuaciones de las Fuerzas Armadas y Cuerpos de Seguridad en tiempo de paz"
+      ],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1 Real Decreto 300/2004, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-3373",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "consorcio.wind_threshold",
+      "statement": "Extraordinary wind means gusts exceeding 120 km/h, measured as a three-second gust. Below that, storm damage is a matter for the private insurer under the ordinary storm cover of the policy.",
+      "value": 120,
+      "unit": "km_h",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2 RD 300/2004",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-3373",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THIS IS THE CRUX OF THE CLAIM-ROUTING LOGIC. The measurement basis matters: a storm reported by average wind speed can easily produce qualifying gusts, and vice versa. The reference is the meteorological gust record, not the homeowner's impression. A routing tool should ask for the date and location and then check the official gust record, never ask the customer how windy it was."
+    },
+    {
+      "id": "consorcio.precondition",
+      "statement": "The cover is not standalone. The owner must hold an ordinary insurance policy in a qualifying branch. The surcharge in favour of the Consorcio is compulsory and is collected automatically by the insurer with the premium. There is nothing separate to buy.",
+      "value": true,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 4.1 and 5.1 RD 300/2004",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-3373",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "THE PART THAT COSTS CUSTOMERS MONEY: the Consorcio indemnity is capped at the sums insured in the ordinary policy. An owner who under-insures the building to save premium is under-insured against earthquake and extraordinary flood in exactly the same proportion. An uninsured property has NO Consorcio cover at all. Art. 8 sets a waiting period after inception, so cover is not immediate on day one."
+    },
+    {
+      "id": "consorcio.exclusions",
+      "statement": "Excluded: damage to property not covered by a qualifying policy; armed conflict; damage from the mere action of time, that is ordinary wear and weathering; damage from natural phenomena other than those listed; the insured's bad faith; losses within the waiting period; and indirect losses beyond the business interruption expressly covered. Property cover is limited to events occurring in Spain.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 6 RD 300/2004",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-3373",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The 'natural phenomena other than those listed' exclusion is what sends ordinary rain, hail, sub-threshold wind and water ingress back to the private insurer. An ordinary burst pipe or roof leak is NEVER a Consorcio matter; only inundacion extraordinaria is."
+    },
+    {
+      "id": "consorcio.notification",
+      "statement": "The general rule is that the loss must be notified within seven days of the policyholder or insured becoming aware of it, unless the policy allows longer.",
+      "value": 7,
+      "unit": "days",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 16 Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: consorseguros.es blocks automated access, so the Consorcio's own published deadline was not read. This is the general insurance-contract rule, not a Consorcio-specific published deadline. IMPORTANT FOR OUR AUDIENCE: seven days runs from when the owner KNEW, which for a non-resident abroad is not the date of the storm. Say that plainly; owners often learn of damage weeks later and assume they are out of time. The current ministerial deductible under art. 9.1 was not obtained."
+    }
+  ]
+}

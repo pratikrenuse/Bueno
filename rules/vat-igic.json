@@ -1,0 +1,94 @@
+{
+  "domain": "Indirect tax on new-build homes and on letting",
+  "rules": [
+    {
+      "id": "vat.newbuild.mainland",
+      "statement": "The first delivery of a new dwelling in mainland Spain and the Balearics is subject to 10 percent IVA, including up to two parking spaces and annexes transferred together.",
+      "value": 10,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 91.Uno.1.7 Ley 37/1992, Tipos impositivos en el IVA 2026",
+        "url": "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/IVA/IVA_reperc/Tipos_IVA_2026_26_02_2026.pdf",
+        "source_dated": "2026-02-26",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "vat.newbuild.vpo",
+      "statement": "Viviendas de proteccion oficial of regimen especial or promocion publica, delivered by the promoter, take 4 percent IVA.",
+      "value": 4,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 91.Dos.1.6 Ley 37/1992",
+        "url": "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/IVA/IVA_reperc/Tipos_IVA_2026_26_02_2026.pdf",
+        "source_dated": "2026-02-26",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Not every price-limited dwelling qualifies. Only regimen especial or promocion publica. Other protected housing takes 10 percent."
+    },
+    {
+      "id": "igic.canarias",
+      "statement": "A new-build home in the Canary Islands is subject to IGIC, not IVA. The Canaries sit outside the EU VAT territory. General rate 7 percent; 5 percent where it will be the buyer's main residence; 3 percent for qualifying categories; 0 percent for VPO of regimen general.",
+      "value": {
+        "general": 7,
+        "main_residence": 5,
+        "special_categories": 3,
+        "vpo_general": 0
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Agencia Tributaria Canaria",
+        "ref": "art. 58 Ley 4/2012 as amended by Ley 4/2018",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-283",
+        "source_dated": "2026-09-07",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-01-31",
+      "notes": "CRITICAL for our audience: the 5 and 3 percent rates require vivienda habitual. A non-resident buying a Canary holiday home pays the 7 percent general rate. This is often labelled 'VAT 7 percent'. The rate is right, the label is wrong, and a reader searching for Canary VAT will find nothing. Ley 9/2025 (Canary 2026 budget) did not change the general rate; it widened reduced-rate income limits and raised the reduced-rate age threshold from 35 to 40."
+    },
+    {
+      "id": "vat.ceuta_melilla",
+      "statement": "Ceuta and Melilla are outside the IVA territory and apply IPSI instead.",
+      "value": null,
+      "unit": null,
+      "status": "unverified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Tipos impositivos en el IVA 2026",
+        "url": "https://sede.agenciatributaria.gob.es/static_files/Sede/Tema/IVA/IVA_reperc/Tipos_IVA_2026_26_02_2026.pdf",
+        "source_dated": "2026-02-26",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "IPSI rates on new builds not obtained. Treat as unverified."
+    },
+    {
+      "id": "vat.letting",
+      "statement": "Residential letting is exempt from IVA. Where the landlord provides hotel-type complementary services the let is taxed at 10 percent. 21 percent applies where the operation is neither an exempt residential let nor a hotel-type accommodation service.",
+      "value": {
+        "exempt": 0,
+        "with_hotel_services": 10,
+        "other": 21
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 20.Uno.23 and 91.Uno.2.2 Ley 37/1992, consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740",
+        "source_dated": "2026-02-28",
+        "read_on": "2026-09-07"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Hotel-type services means reception, cleaning during the stay, linen changes, restaurant, laundry and similar. No enacted Spanish change to short-term let VAT has taken effect; the much-discussed 21 percent on tourist lets remains a proposal. Do not code the speculative line that appears in much of the available guidance."
+    }
+  ]
+}
