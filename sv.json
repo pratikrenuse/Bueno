@@ -6,7 +6,10 @@
     "language": "Språk",
     "directory": "Hantverkarregister",
     "claim": "Bolåneanspråk",
-    "professionals": "Fastighetsexperter"
+    "professionals": "Fastighetsexperter",
+    "menu_trades": "Hantverkare",
+    "menu_tools": "Gratis verktyg",
+    "menu_pros": "Experter"
   },
   "home": {
     "brand_sub": "Gratis bostadsguider",
@@ -57,10 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis att använda. Ingen betalar för att synas här.",
     "dir_title_em": "din spanska ort",
-    "prof_title": "Köp, försäljning eller pappersarbete som växer på",
+    "prof_title": "Alla experter en spansk bostad förr eller senare behöver, på",
     "prof_title_em": "din spanska ort",
-    "prof_sub": "Tio sorters experter som en utländsk ägare faktiskt behöver, på {count} orter. Rankade efter äkta Google-omdömen, med omdömena visade.",
-    "prof_all": "Även med"
+    "prof_sub": "Tio av dem, på {count} orter. Rankade efter äkta Google-omdömen, med omdömena och språket de skrevs på."
   },
   "cards": {
     "tax": {
@@ -493,6 +495,16 @@
     "cat_insurance": "Försäkringsmäklare",
     "cat_insurance_pl": "försäkringsmäklare",
     "cat_translator": "Auktoriserad översättare",
-    "cat_translator_pl": "auktoriserade översättare"
+    "cat_translator_pl": "auktoriserade översättare",
+    "does_real-estate": "Köp eller försäljning, och vad saker faktiskt går för lokalt.",
+    "does_lawyer": "Avtal, tvister, arv, allt med en deadline.",
+    "does_gestoria": "NIE, uppehållspapper, deklarationer, fordonsadmin.",
+    "does_tax-adviser": "Modelo 210, hyresintäkt, vad du är skyldig som icke-resident.",
+    "does_notary": "Undertecknar köpebrevet, steget före fastighetsregistret.",
+    "does_architect": "Tillstånd, tillbyggnader och energicertifikatet.",
+    "does_community-admin": "Sköter föreningen din lägenhet tillhör.",
+    "does_surveyor": "Vad bostaden är värd på papper, för bank eller domstol.",
+    "does_insurance": "Hem- och lösöreförsäkring som betalar ut från utlandet.",
+    "does_translator": "De enda översättningar ett spanskt register godtar."
   }
 }

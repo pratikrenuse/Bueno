@@ -6,7 +6,10 @@
     "language": "Sprache",
     "directory": "Handwerkerverzeichnis",
     "claim": "Hypotheken-Anspruch",
-    "professionals": "Immobilienfachleute"
+    "professionals": "Immobilienfachleute",
+    "menu_trades": "Handwerker",
+    "menu_tools": "Gratis-Tools",
+    "menu_pros": "Fachleute"
   },
   "home": {
     "brand_sub": "Kostenlose Immobilien-Tools",
@@ -57,10 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Kostenlos. Niemand bezahlt für einen Platz hier.",
     "dir_title_em": "Ihrem spanischen Ort",
-    "prof_title": "Kauf, Verkauf oder ein Papierberg in",
+    "prof_title": "Alle Fachleute, die eine spanische Immobilie irgendwann braucht, in",
     "prof_title_em": "Ihrem spanischen Ort",
-    "prof_sub": "Zehn Arten von Fachleuten, die ein ausländischer Eigentümer wirklich braucht, in {count} Orten. Sortiert nach echten Google-Bewertungen, mit den Bewertungen dazu.",
-    "prof_all": "Ebenfalls dabei"
+    "prof_sub": "Zehn davon, in {count} Orten. Sortiert nach echten Google-Bewertungen, mit den Bewertungen und ihrer Sprache."
   },
   "cards": {
     "tax": {
@@ -493,6 +495,16 @@
     "cat_insurance": "Versicherungsmakler",
     "cat_insurance_pl": "Versicherungsmakler",
     "cat_translator": "Beeidigter Übersetzer",
-    "cat_translator_pl": "beeidigte Übersetzer"
+    "cat_translator_pl": "beeidigte Übersetzer",
+    "does_real-estate": "Kauf oder Verkauf, und was vor Ort wirklich bezahlt wird.",
+    "does_lawyer": "Verträge, Streitfälle, Erbschaft, alles mit einer Frist.",
+    "does_gestoria": "NIE, Aufenthaltspapiere, Steuererklärungen, Fahrzeugverwaltung.",
+    "does_tax-adviser": "Modelo 210, Mieteinkommen, was Sie als Nicht-Resident schulden.",
+    "does_notary": "Beurkundet den Kaufvertrag, der Schritt vor dem Grundbuch.",
+    "does_architect": "Genehmigungen, Anbauten und der Energieausweis.",
+    "does_community-admin": "Führt die Eigentümergemeinschaft Ihrer Wohnung.",
+    "does_surveyor": "Was die Immobilie auf dem Papier wert ist, für Bank oder Gericht.",
+    "does_insurance": "Wohngebäude und Hausrat, die auch aus dem Ausland zahlen.",
+    "does_translator": "Die einzigen Übersetzungen, die ein spanisches Register annimmt."
   }
 }

@@ -1871,32 +1871,73 @@ body {
 }
 
 /* ============================================================================
-   PROFESSIONALS SECTION (src/Home.jsx -> ProfessionalsFeature)
-   Sits below the tools grid, not under the hero: the trades directory is the
-   emergency, this is the considered decision, and putting them side by side
-   would make the page argue with itself. Light blue panel on white, so it reads
-   as a sibling of the navy trades panel rather than a repeat of it.
+   SITE NAV (SiteNav.jsx) - the three destinations, in every sticky header
    ========================================================================== */
 
-.proffeat { background: var(--white); padding: 0 64px 96px; }
+.site-nav { display: flex; align-items: center; gap: 28px; }
 
-.proffeat-panel {
-  max-width: 1120px;
-  margin: 0 auto;
-  background: var(--light-blue);
-  border-radius: 28px;
-  padding: 52px 56px;
+.site-nav-link {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition), opacity var(--transition);
+  white-space: nowrap;
+}
+
+.site-nav-link:hover { border-bottom-color: var(--navy); }
+.site-nav-link.current { color: var(--accent); border-bottom-color: var(--accent); }
+
+.home-nav.top .site-nav-link { color: rgba(255,255,255,0.75); }
+.home-nav.top .site-nav-link:hover { color: var(--white); border-bottom-color: var(--white); }
+
+@media (max-width: 860px) {
+  .site-nav { gap: 16px; }
+  .site-nav-link { font-size: 10px; letter-spacing: 0.08em; }
+}
+@media (max-width: 560px) {
+  .site-nav { display: none; }
+}
+
+/* ============================================================================
+   PROFESSIONALS SECTION v2 (src/Home.jsx -> ProfessionalsFeature)
+   A grid of what each professional actually DOES, not a second copy of the
+   trades form. Most foreign owners could not tell you what a gestoría or an
+   administrador de fincas is for, so this section explains rather than asks.
+
+   White ground on purpose: the section above it is off-white and the one below
+   is navy, so navy here would have merged straight into "Why". The dense
+   five-across tile grid is also a different rhythm from the three big cards in
+   the tools grid, so the two do not read as the same thing twice.
+   ========================================================================== */
+
+.proffeat { background: var(--white); padding: 96px 64px; }
+
+.proffeat-inner { max-width: 1180px; margin: 0 auto; }
+
+.proffeat-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .proffeat-head {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 3vw, 36px);
+  font-size: clamp(26px, 3vw, 38px);
   font-weight: 400;
   color: var(--navy);
   line-height: 1.14;
   letter-spacing: -0.01em;
   margin: 0 0 12px;
-  max-width: 700px;
+  max-width: 16ch;
 }
 
 .proffeat-head em { font-style: italic; color: var(--accent); }
@@ -1906,79 +1947,72 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.75;
-  color: rgba(1,2,33,0.62);
-  max-width: 60ch;
-  margin: 0 0 28px;
+  color: var(--text-muted);
+  max-width: 44ch;
+  margin: 0;
 }
 
-.proffeat-form { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 12px; align-items: end; max-width: 860px; }
-
-.proffeat-form label {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(1,2,33,0.5);
-  margin-bottom: 8px;
+.proffeat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.proffeat-select {
-  width: 100%;
-  min-height: 54px;
-  padding: 15px 42px 15px 18px;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  color: var(--navy);
-  background-color: var(--white);
-  border: 1px solid transparent;
-  border-radius: 12px;
-  appearance: none;
+.proffeat-tile {
+  background: var(--white);
+  border: 0;
+  text-align: left;
+  padding: 26px 22px 22px;
+  min-height: 168px;
   cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background var(--transition);
+  font-family: inherit;
 }
 
-.proffeat-select:focus { outline: 3px solid var(--navy); outline-offset: 2px; }
+.proffeat-tile:hover { background: var(--off-white); }
+.proffeat-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
 
-.proffeat-go { width: auto; min-height: 54px; padding: 15px 30px; margin-bottom: 0; white-space: nowrap; }
-
-/* The full list, spelled out. A visitor should not have to open a menu to find
-   out whether the thing they need is in here. */
-.proffeat-all { margin-top: 30px; padding-top: 26px; border-top: 1px solid rgba(1,2,33,0.12); }
-
-.proffeat-all p {
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(1,2,33,0.5);
-  margin: 0 0 14px;
+.proffeat-tile .n {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.25;
 }
 
-.proffeat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.proffeat-chips button {
+.proffeat-tile .d {
   font-family: var(--font-sans);
   font-size: 13px;
-  padding: 8px 16px;
-  min-height: 38px;
-  border: 1px solid rgba(1,2,33,0.18);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--navy);
-  cursor: pointer;
-  transition: all var(--transition);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-muted);
 }
 
-.proffeat-chips button:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
-
-@media (max-width: 900px) {
-  .proffeat { padding: 0 24px 64px; }
-  .proffeat-panel { padding: 32px 24px; border-radius: 22px; }
-  .proffeat-form { grid-template-columns: 1fr; }
-  .proffeat-go { width: 100%; }
+.proffeat-tile .go {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity var(--transition);
 }
+
+.proffeat-tile:hover .go, .proffeat-tile:focus-visible .go { opacity: 1; }
+
+@media (max-width: 1100px) { .proffeat-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) {
+  .proffeat { padding: 64px 24px; }
+  .proffeat-grid { grid-template-columns: repeat(2, 1fr); }
+  .proffeat-tile { min-height: 142px; padding: 20px 16px; }
+}
+@media (max-width: 420px) { .proffeat-grid { grid-template-columns: 1fr; } }

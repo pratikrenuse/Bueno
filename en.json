@@ -6,7 +6,10 @@
     "language": "Language",
     "directory": "Trades Directory",
     "claim": "Mortgage Claim",
-    "professionals": "Property Professionals"
+    "professionals": "Property Professionals",
+    "menu_trades": "Trades",
+    "menu_tools": "Free Tools",
+    "menu_pros": "Professionals"
   },
   "home": {
     "brand_sub": "Free property tools",
@@ -57,10 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Free to use. Nobody pays to be listed here.",
     "dir_title_em": "Spanish town",
-    "prof_title": "Buying, selling, or drowning in paperwork in your",
+    "prof_title": "Every professional a Spanish home eventually needs, in your",
     "prof_title_em": "Spanish town",
-    "prof_sub": "Ten kinds of professional a foreign owner actually ends up needing, across {count} towns. Ranked from real Google reviews, with the reviews shown.",
-    "prof_all": "Also covered"
+    "prof_sub": "Ten of them, across {count} towns. Ranked from real Google reviews, with the reviews shown and the language they were written in."
   },
   "cards": {
     "tax": {
@@ -493,6 +495,16 @@
     "cat_insurance": "Insurance broker",
     "cat_insurance_pl": "insurance brokers",
     "cat_translator": "Sworn translator",
-    "cat_translator_pl": "sworn translators"
+    "cat_translator_pl": "sworn translators",
+    "does_real-estate": "Buying or selling, and what things really go for locally.",
+    "does_lawyer": "Contracts, disputes, inheritance, anything with a deadline.",
+    "does_gestoria": "NIE, residency paperwork, tax filings, vehicle admin.",
+    "does_tax-adviser": "Modelo 210, rental income, what you owe as a non-resident.",
+    "does_notary": "Signs the public deed, the step before the Land Registry.",
+    "does_architect": "Licences, extensions, and the energy certificate.",
+    "does_community-admin": "Runs the community your flat belongs to.",
+    "does_surveyor": "What the property is worth on paper, for a bank or a court.",
+    "does_insurance": "Home and contents cover that pays out from abroad.",
+    "does_translator": "The only translations a Spanish registry will accept."
   }
 }

@@ -4,6 +4,7 @@ import { saveLead } from './supabase';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
 import SiteFooter from '../SiteFooter.jsx';
+import SiteNav from '../SiteNav.jsx';
 import enDict from '../en.json';
 
 // code/flag/isEUEEA stay constant; display names come from i18n
@@ -118,7 +119,7 @@ export default function TaxCalculator() {
         <Logo white={isOnDark} sub={t('home.brand_sub')} />
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {!isOnDark && !['loading','results'].includes(step) && <span className="calc-header-tag">{tt('header_tag')}</span>}
-          <LangSwitcher />
+          <SiteNav active="tools" /><LangSwitcher />
         </div>
       </header>
 

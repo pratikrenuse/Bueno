@@ -3,6 +3,7 @@ import { calculateRentalTax } from './rentalTaxCalculations';
 import { useT, LLink } from '../i18n.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
 import SiteFooter from '../SiteFooter.jsx';
+import SiteNav from '../SiteNav.jsx';
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
@@ -159,7 +160,7 @@ export default function RentalTaxCalculator() {
           {!isOnDark && step !== 'results' && (
             <span className="calc-header-tag">{tt('header_tag')}</span>
           )}
-          <LangSwitcher />
+          <SiteNav active="tools" /><LangSwitcher />
         </div>
       </header>
 

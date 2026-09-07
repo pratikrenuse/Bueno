@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useT, LLink, useLocale } from './i18n.jsx';
 import LangSwitcher from './LangSwitcher.jsx';
 import SiteFooter from './SiteFooter.jsx';
+import SiteNav from './SiteNav.jsx';
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from './spain-directory/localities.js';
 
 // Spain 24/7 trade directory.
@@ -230,6 +231,7 @@ export default function DirectoryView({
   path,                // this page's route, for the URL it writes back
   keys,                // which i18n strings name this page
   extraNote,           // optional extra line in the disclosure, e.g. for legal advice
+  navActive,           // which menu item this page is, so the menu shows where you are
 }) {
   const t = useT();
   const tt = (k) => t(`calc_directory.${k}`);
@@ -305,7 +307,7 @@ export default function DirectoryView({
           <span className="site-brand-powered">{t('home.brand_sub')}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <span className="calc-header-tag">{tt(keys.eyebrow)}</span>
+          <SiteNav active={navActive} />
           <LangSwitcher />
         </div>
       </header>

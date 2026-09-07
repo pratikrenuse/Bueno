@@ -11,6 +11,7 @@ export default function SpainDirectory() {
       bySlug={CATEGORY_BY_SLUG}
       defaultCategory="plumber"
       path="/spain-directory"
+      navActive="trades"
       keys={{ eyebrow: 'eyebrow', headline: 'headline', lede: 'lede', metaTitle: 'meta_title' }}
     />
   );

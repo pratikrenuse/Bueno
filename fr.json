@@ -6,7 +6,10 @@
     "language": "Langue",
     "directory": "Annuaire des artisans",
     "claim": "Réclamation prêt",
-    "professionals": "Professionnels immobiliers"
+    "professionals": "Professionnels immobiliers",
+    "menu_trades": "Artisans",
+    "menu_tools": "Outils gratuits",
+    "menu_pros": "Professionnels"
   },
   "home": {
     "brand_sub": "Outils immobiliers gratuits",
@@ -57,10 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratuit. Personne ne paie pour figurer ici.",
     "dir_title_em": "votre commune espagnole",
-    "prof_title": "Acheter, vendre, ou crouler sous les formalités dans",
+    "prof_title": "Tous les professionnels qu'un bien espagnol finit par exiger, dans",
     "prof_title_em": "votre commune espagnole",
-    "prof_sub": "Dix types de professionnels dont un propriétaire étranger a réellement besoin, dans {count} communes. Classés selon de vrais avis Google, avec les avis affichés.",
-    "prof_all": "Également couverts"
+    "prof_sub": "Dix d'entre eux, dans {count} communes. Classés selon de vrais avis Google, avec les avis et leur langue."
   },
   "cards": {
     "tax": {
@@ -493,6 +495,16 @@
     "cat_insurance": "Courtier en assurance",
     "cat_insurance_pl": "courtiers en assurance",
     "cat_translator": "Traducteur assermenté",
-    "cat_translator_pl": "traducteurs assermentés"
+    "cat_translator_pl": "traducteurs assermentés",
+    "does_real-estate": "Acheter ou vendre, et ce que les biens valent vraiment sur place.",
+    "does_lawyer": "Contrats, litiges, succession, tout ce qui a une échéance.",
+    "does_gestoria": "NIE, papiers de résidence, déclarations, démarches véhicule.",
+    "does_tax-adviser": "Modelo 210, revenu locatif, ce que vous devez en non-résident.",
+    "does_notary": "Signe l'acte public, l'étape avant le registre foncier.",
+    "does_architect": "Permis, extensions et le certificat énergétique.",
+    "does_community-admin": "Gère la copropriété dont votre appartement fait partie.",
+    "does_surveyor": "La valeur du bien sur le papier, pour une banque ou un tribunal.",
+    "does_insurance": "Habitation et contenu, avec indemnisation depuis l'étranger.",
+    "does_translator": "Les seules traductions qu'un registre espagnol accepte."
   }
 }

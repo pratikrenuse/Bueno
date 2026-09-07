@@ -17,6 +17,7 @@ export default function SpainProfessionals() {
       bySlug={PROFESSIONAL_BY_SLUG}
       defaultCategory="real-estate"
       path="/spain-professionals"
+      navActive="pros"
       keys={{ eyebrow: 'prof_eyebrow', headline: 'prof_headline', lede: 'prof_lede', metaTitle: 'prof_meta_title' }}
       extraNote="prof_note"
     />

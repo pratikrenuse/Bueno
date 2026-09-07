@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useT, LLink, useLocalisedPath } from '../i18n.jsx'
 import LangSwitcher from '../LangSwitcher.jsx'
+import SiteNav from '../SiteNav.jsx'
 import { LOCALITIES, REGIONS } from '../spain-directory/localities.js'
 import { CATEGORIES, PROFESSIONALS } from '../spain-directory/categories.js'
 
@@ -127,78 +128,51 @@ function DirectoryFeature() {
   )
 }
 
-// Property professionals. Deliberately below the tools grid rather than under the hero:
-// the trades directory is the emergency ("the boiler has failed"), this is the considered
-// decision ("we are buying"). Stacking them together would make the page argue with
-// itself about what it is for.
+// Property professionals. Below the tools grid, not under the hero: the trades directory
+// is the emergency ("the boiler has failed"), this is the considered decision ("we are
+// buying"). Stacking them together would make the page argue with itself.
 //
-// The full list of ten is spelled out as chips instead of hidden in the menu. A visitor
-// should be able to see that a gestoría or a sworn translator is in here without opening
-// anything, which is the whole difference between looking exhaustive and being exhaustive.
+// This deliberately is NOT the trades section again. The first version was the same
+// eyebrow, headline, two dropdowns and a button in a blue slab, which made the page look
+// like it repeated itself, left half the panel empty, and hid the ten professions behind
+// a menu labelled "also covered" that in fact listed the same ten.
+//
+// So it explains instead of asking. Most foreign owners genuinely could not tell you what
+// a gestoría does, or that an administrador de fincas runs the community their flat sits
+// in, or that a traductor jurado is the only person whose translation a Spanish registry
+// will accept. A tile per profession, saying what it is for, is the useful thing and it
+// doubles as proof the list is complete. Picking a tile carries the profession through to
+// the directory, where the town is chosen.
 function ProfessionalsFeature() {
   const t = useT()
   const tt = (k) => t(`calc_directory.${k}`)
   const navigate = useNavigate()
   const lp = useLocalisedPath()
-  const [town, setTown] = useState('')
-  const [who, setWho] = useState('real-estate')
-
-  const grouped = useMemo(() => {
-    const out = []
-    for (const [key, label] of Object.entries(REGIONS)) {
-      const items = LOCALITIES.filter(l => l.region === key).sort((a, b) => a.name.localeCompare(b.name))
-      if (items.length) out.push({ key, label, items })
-    }
-    return out
-  }, [])
-
-  const go = (townSlug, whoSlug) =>
-    navigate(`${lp('/spain-professionals')}?town=${townSlug}&trade=${whoSlug}`)
 
   return (
     <section className="proffeat" id="professionals">
-      <div className="proffeat-panel">
-        <p className="home-section-eyebrow">{tt('prof_eyebrow')}</p>
-        <h2 className="proffeat-head">
-          {t('home.prof_title')} <em>{t('home.prof_title_em')}</em>
-        </h2>
-        <p className="proffeat-sub">
-          {t('home.prof_sub').replace('{count}', String(LOCALITIES.length))}
-        </p>
-
-        <form className="proffeat-form" onSubmit={(e) => { e.preventDefault(); if (town) go(town, who) }}>
+      <div className="proffeat-inner">
+        <div className="proffeat-top">
           <div>
-            <label htmlFor="home-prof-town">{tt('where_label')}</label>
-            <select id="home-prof-town" className="proffeat-select" value={town}
-              onChange={(e) => setTown(e.target.value)}>
-              <option value="">{tt('town_placeholder')}</option>
-              {grouped.map(g => (
-                <optgroup key={g.key} label={g.label}>
-                  {g.items.map(l => <option key={l.slug} value={l.slug}>{l.name}</option>)}
-                </optgroup>
-              ))}
-            </select>
+            <p className="home-section-eyebrow">{tt('prof_eyebrow')}</p>
+            <h2 className="proffeat-head">
+              {t('home.prof_title')} <em>{t('home.prof_title_em')}</em>
+            </h2>
           </div>
-          <div>
-            <label htmlFor="home-prof-who">{tt('trade_label')}</label>
-            <select id="home-prof-who" className="proffeat-select" value={who}
-              onChange={(e) => setWho(e.target.value)}>
-              {PROFESSIONALS.map(c => <option key={c.slug} value={c.slug}>{tt(`cat_${c.slug}`)}</option>)}
-            </select>
-          </div>
-          <button type="submit" className="btn-primary proffeat-go" disabled={!town}>{tt('find_cta')}</button>
-        </form>
+          <p className="proffeat-sub">
+            {t('home.prof_sub').replace('{count}', String(LOCALITIES.length))}
+          </p>
+        </div>
 
-        <div className="proffeat-all">
-          <p>{t('home.prof_all')}</p>
-          <div className="proffeat-chips">
-            {PROFESSIONALS.map(c => (
-              <button key={c.slug} type="button"
-                onClick={() => (town ? go(town, c.slug) : setWho(c.slug))}>
-                {tt(`cat_${c.slug}`)}
-              </button>
-            ))}
-          </div>
+        <div className="proffeat-grid">
+          {PROFESSIONALS.map(c => (
+            <button key={c.slug} type="button" className="proffeat-tile"
+              onClick={() => navigate(`${lp('/spain-professionals')}?trade=${c.slug}`)}>
+              <span className="n">{tt(`cat_${c.slug}`)}</span>
+              <span className="d">{tt(`does_${c.slug}`)}</span>
+              <span className="go">{tt('find_cta')} &#8594;</span>
+            </button>
+          ))}
         </div>
       </div>
     </section>
@@ -251,7 +225,8 @@ export default function Home() {
             {t('home.brand_sub')}
           </span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+          <SiteNav home />
           <LangSwitcher />
           <a href="https://getbueno.com" target="_blank" rel="noopener noreferrer" className="home-nav-cta">
             {t('home.nav_cta')} &#8594;

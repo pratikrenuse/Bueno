@@ -6,7 +6,10 @@
     "language": "Språk",
     "directory": "Håndverkerregister",
     "claim": "Boliglånskrav",
-    "professionals": "Eiendomsfagfolk"
+    "professionals": "Eiendomsfagfolk",
+    "menu_trades": "Håndverkere",
+    "menu_tools": "Gratis verktøy",
+    "menu_pros": "Fagfolk"
   },
   "home": {
     "brand_sub": "Gratis boligverktøy",
@@ -57,10 +60,9 @@
     "dir_stat_free_n": "€0",
     "dir_stat_free": "Gratis å bruke. Ingen betaler for å stå her.",
     "dir_title_em": "din spanske by",
-    "prof_title": "Kjøp, salg eller papirarbeid som tar overhånd i",
+    "prof_title": "Alle fagfolkene en spansk bolig før eller siden trenger, i",
     "prof_title_em": "din spanske by",
-    "prof_sub": "Ti typer fagfolk en utenlandsk eier faktisk ender opp med å trenge, i {count} byer. Rangert etter ekte Google-omtaler, med omtalene vist.",
-    "prof_all": "Også dekket"
+    "prof_sub": "Ti av dem, i {count} byer. Rangert etter ekte Google-omtaler, med omtalene og språket de er skrevet på."
   },
   "cards": {
     "tax": {
@@ -493,6 +495,16 @@
     "cat_insurance": "Forsikringsmegler",
     "cat_insurance_pl": "forsikringsmeglere",
     "cat_translator": "Statsautorisert translatør",
-    "cat_translator_pl": "statsautoriserte translatører"
+    "cat_translator_pl": "statsautoriserte translatører",
+    "does_real-estate": "Kjøp eller salg, og hva ting faktisk går for lokalt.",
+    "does_lawyer": "Kontrakter, tvister, arv, alt med en frist.",
+    "does_gestoria": "NIE, oppholdspapirer, skattemeldinger, kjøretøysadmin.",
+    "does_tax-adviser": "Modelo 210, leieinntekt, hva du skylder som ikke-resident.",
+    "does_notary": "Signerer skjøtet, steget før eiendomsregisteret.",
+    "does_architect": "Tillatelser, tilbygg og energisertifikatet.",
+    "does_community-admin": "Driver sameiet leiligheten din tilhører.",
+    "does_surveyor": "Hva boligen er verdt på papiret, for bank eller domstol.",
+    "does_insurance": "Bolig- og innboforsikring som utbetaler fra utlandet.",
+    "does_translator": "De eneste oversettelsene et spansk register godtar."
   }
 }
