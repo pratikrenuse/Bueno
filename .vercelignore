@@ -21,3 +21,17 @@ api/linkedin-posts.js
 api/linkedin-refresh.js
 api/linkedin-remind.js
 api/linkedin-translate.js
+
+# Superseded by api/linkedin.js. The router used to live at api/linkedin/[action].js and
+# that function was missing from production entirely: /api/linkedin-posts AND the direct
+# /api/linkedin/posts both returned the SPA's index.html with a 200, which is what you get
+# when no function matches and the catch-all rewrite takes over. Every other function was
+# live at the time, so it was not a build failure and not the rewrites.
+#
+# Square brackets are glob metacharacters and get mangled by enough tooling that betting
+# the LinkedIn surface on one bracketed filename in a nested folder was a bad trade. The
+# router is now a plain file at the api root and the action arrives as a query parameter.
+#
+# This file is ignored rather than deleted because deleting is not something this session
+# can do. Delete api/linkedin/ by hand once the new router has run for a cycle.
+api/linkedin/[action].js

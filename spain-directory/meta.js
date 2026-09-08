@@ -3,9 +3,10 @@ export default {
   path:        '/spain-directory',
   tag:         'Directory',
   tagStyle:    'gold',
-  title:       'Spanish Trades Directory',
-  description: 'Find the best reviewed plumber, electrician, locksmith, air conditioning engineer, pool service or builder in your Spanish town. Ranked from Google reviews, with the reviews shown, and the languages they were written in.',
+  title:       'Home repairs in Spain',
+  description: 'A plumber, electrician, locksmith, air conditioning engineer, pool service or builder in 660 Spanish towns, ranked from Google reviews and sorted so the ones already reviewed in your language come first. Say which language you need help in and the page shows you who has it.',
   cta:         'Find a tradesperson',
   ctaStyle:    'gold',
+  group:       'directory',
   active:      true,
 }

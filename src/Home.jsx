@@ -72,6 +72,7 @@ function DirectoryFeature() {
           <p className="home-section-eyebrow" style={{ color: 'var(--gold)' }}>{t('home.dir_eyebrow')}</p>
           <h2 className="dirfeat-head">{t('home.dir_title')} <em>{t('home.dir_title_em')}</em></h2>
           <p className="dirfeat-sub">{t('home.dir_sub').replace('{count}', String(LOCALITIES.length))}</p>
+          <p className="dirfeat-langline">{t('home.dir_lang_line')}</p>
 
           <form onSubmit={(e) => { e.preventDefault(); if (town) go(town, trade) }}>
             <div className="dirfeat-form">
@@ -184,6 +185,9 @@ function ProfessionalsFeature() {
           </div>
           <p className="proffeat-sub">
             {t('home.prof_sub').replace('{n}', String(PROFESSIONALS.length)).replace('{count}', String(LOCALITIES.length))}
+          </p>
+          <p className="proffeat-langline">
+            {t('home.prof_lang_line')}
           </p>
         </div>
 

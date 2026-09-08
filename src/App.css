@@ -2305,3 +2305,893 @@ body {
   .tool-filters { margin: 28px 0 28px; gap: 6px; }
   .tool-filter { padding: 9px 14px; font-size: 0.8125rem; }
 }
+
+/* ==========================================================================
+   TRADES DIRECTORY  /spain-directory
+   --------------------------------------------------------------------------
+   A pipe has burst, the owner is in Oslo, it is Sunday, and there is water
+   coming through a ceiling they cannot see. They do not want to read. They
+   want a phone number for someone who will understand them.
+
+   So this block is the opposite of the professionals page: navy ground,
+   compact rows in one column, tight vertical rhythm, and a phone number that
+   is the largest thing in every row. Nothing here touches the dir-* rules,
+   which /spain-professionals still uses. The few dir-* selectors below are
+   scoped inside .trades-page and only restyle the shared compliance
+   components (the language label, the fit signals, the review quote, the
+   attribution and the method disclosure) for a dark surface. They add, they
+   do not override anything that exists.
+
+   Every colour is a token or a token at an alpha. --text-muted is NOT used on
+   navy: it lands at 4.15:1, under the bar, so muted text here is white at an
+   alpha instead.
+   ========================================================================== */
+
+.trades-shell { background: var(--navy); }
+
+.trades-header {
+  background: rgba(1, 2, 33, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.trades-header-right { display: flex; align-items: center; gap: 16px; }
+.trades-header .site-nav-link { color: rgba(255, 255, 255, 0.75); }
+.trades-header .site-nav-link:hover { color: var(--white); border-bottom-color: var(--white); }
+.trades-header .site-nav-link.current { color: var(--light-blue); border-bottom-color: var(--light-blue); }
+
+.trades-page {
+  flex: 1;
+  background: var(--navy);
+  color: var(--white);
+  padding: 96px 0 64px;
+}
+
+/* ---------- landing ------------------------------------------------------ */
+
+.trades-hero { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+.trades-back {
+  font-family: var(--font-sans); font-size: 13px; color: var(--light-blue);
+  background: none; border: 0; padding: 10px 0; min-height: 44px; cursor: pointer;
+  text-decoration: underline; display: block; margin-bottom: 4px;
+}
+
+.trades-eyebrow {
+  font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  margin: 0 0 14px;
+}
+
+.trades-h1 {
+  font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(30px, 5.2vw, 54px); line-height: 1.05; letter-spacing: -0.015em;
+  color: var(--white); margin: 0 0 16px; max-width: 20ch;
+}
+
+.trades-lede {
+  font-family: var(--font-sans); font-size: 16px; font-weight: 300; line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78); max-width: 62ch; margin: 0 0 26px;
+}
+
+/* The language control. In the hero it is set at hero size on a light blue
+   panel, because "I need help in Norwegian" is the entire value proposition
+   and burying it in a sidebar would throw the tool away. */
+.trades-lang { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+.trades-lang-hero {
+  display: inline-flex;
+  background: rgba(203, 239, 255, 0.09);
+  border: 1px solid rgba(203, 239, 255, 0.30);
+  border-radius: 14px; padding: 14px 18px; margin-bottom: 10px;
+}
+.trades-lang-hero .trades-lang-label {
+  font-family: var(--font-serif); font-size: clamp(18px, 2.4vw, 24px); font-weight: 400;
+  color: var(--light-blue); letter-spacing: 0; text-transform: none;
+}
+.trades-lang-hero .trades-lang-select {
+  min-height: 52px; font-size: 19px; padding: 12px 46px 12px 18px;
+}
+
+.trades-lang-label {
+  font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255, 255, 255, 0.66);
+}
+
+.trades-lang-select {
+  font-family: var(--font-sans); font-size: 15px; font-weight: 500;
+  min-height: 48px; padding: 10px 40px 10px 15px;
+  color: var(--navy); background-color: var(--light-blue);
+  border: 1px solid var(--light-blue); border-radius: 10px;
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+}
+.trades-lang-select:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-lang-help {
+  font-family: var(--font-sans); font-size: 13px; font-weight: 300; line-height: 1.6;
+  color: rgba(255, 255, 255, 0.62); max-width: 56ch; margin: 0 0 26px;
+}
+
+.trades-form {
+  display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 12px; align-items: end;
+  margin-bottom: 16px;
+}
+.trades-field label {
+  display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255, 255, 255, 0.66);
+  margin-bottom: 8px;
+}
+.trades-select {
+  width: 100%; min-height: 60px; padding: 16px 44px 16px 18px;
+  font-family: var(--font-sans); font-size: 17px; color: var(--white);
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.26); border-radius: 12px;
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FFFFFF' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 18px center;
+}
+/* Native option lists do not inherit the dark ground on every platform, so they
+   are painted explicitly rather than left as white on white. */
+.trades-select option, .trades-select optgroup, .trades-lang-select option {
+  color: var(--navy); background-color: var(--white);
+}
+.trades-select:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-go {
+  min-height: 60px; padding: 0 34px; white-space: nowrap; cursor: pointer;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--navy); background: var(--light-blue);
+  border: 0; border-radius: 12px; transition: background var(--transition);
+}
+.trades-go:hover:not(:disabled) { background: var(--white); }
+.trades-go:disabled { opacity: 0.4; cursor: not-allowed; }
+.trades-go:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 30px; }
+.trades-quick > span {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(255, 255, 255, 0.6); margin-right: 4px;
+}
+.trades-quick button {
+  font-family: var(--font-sans); font-size: 14px; min-height: 48px; padding: 12px 20px;
+  color: var(--white); background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.26); border-radius: 999px;
+  cursor: pointer; transition: all var(--transition);
+}
+.trades-quick button:hover { background: var(--light-blue); border-color: var(--light-blue); color: var(--navy); }
+.trades-quick button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-proof {
+  list-style: none; margin: 0; padding: 22px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex; flex-wrap: wrap; gap: 10px 30px;
+}
+.trades-proof li {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-sans); font-size: 13px; color: rgba(255, 255, 255, 0.72);
+}
+.trades-proof li::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--gold); flex: 0 0 auto;
+}
+
+/* ---------- results: sticky control bar ---------------------------------- */
+
+.trades-bar {
+  position: sticky; top: 68px; z-index: 30;
+  background: rgba(1, 2, 33, 0.96); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+/* Two deliberate lines, not a wrap: where and which language on top, the six
+   trades as a strip underneath. Wrapping put the language control in a
+   different place depending on the window width, which is the one control on
+   this page that must always be where the visitor last saw it. */
+.trades-bar-in {
+  max-width: 1000px; margin: 0 auto; padding: 8px 32px 9px;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.trades-bar-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap;
+}
+
+.trades-town-btn {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  min-height: 46px; padding: 4px 0; background: none; border: 0;
+  cursor: pointer; text-align: left;
+}
+.trades-town-name {
+  font-family: var(--font-serif); font-size: 19px; font-weight: 400; color: var(--white);
+  line-height: 1.1;
+}
+.trades-town-change {
+  font-family: var(--font-sans); font-size: 11px; color: var(--light-blue);
+  text-decoration: underline;
+}
+.trades-town-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-chips {
+  display: flex; gap: 6px; min-width: 0;
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.trades-chips::-webkit-scrollbar { display: none; }
+.trades-chips button {
+  font-family: var(--font-sans); font-size: 12.5px; white-space: nowrap;
+  min-height: 42px; padding: 8px 14px; cursor: pointer; flex: 0 0 auto;
+  color: rgba(255, 255, 255, 0.86); background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 999px;
+  transition: all var(--transition);
+}
+.trades-chips button:hover:not(:disabled) { border-color: var(--white); color: var(--white); }
+.trades-chips button[aria-pressed="true"] {
+  background: var(--light-blue); border-color: var(--light-blue); color: var(--navy); font-weight: 600;
+}
+.trades-chips button:disabled { opacity: 0.45; cursor: default; }
+.trades-chips button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.trades-lang-bar .trades-lang-label { font-size: 9px; }
+.trades-lang-bar .trades-lang-select { min-height: 44px; font-size: 14px; padding: 8px 36px 8px 13px; }
+
+/* ---------- results: the answer ------------------------------------------ */
+
+.trades-results { max-width: 1000px; margin: 0 auto; padding: 26px 32px 0; }
+
+.trades-h2 {
+  font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(23px, 3.2vw, 34px); line-height: 1.12; letter-spacing: -0.01em;
+  color: var(--white); margin: 0 0 14px;
+}
+
+/* The one sentence the page exists to produce. It is set larger than the
+   heading's supporting text and directly under it, because it is the answer. */
+.trades-match {
+  font-family: var(--font-sans); font-weight: 500;
+  font-size: clamp(17px, 2.1vw, 21px); line-height: 1.45;
+  color: var(--light-blue); max-width: 50ch; margin: 0 0 8px;
+}
+/* No evidence is not a result to celebrate, so it is not painted like one. */
+.trades-match-none { color: rgba(255, 255, 255, 0.82); font-weight: 400; font-size: 16px; }
+
+.trades-sorted {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 300;
+  color: rgba(255, 255, 255, 0.55); margin: 0 0 20px;
+}
+
+.trades-thin {
+  font-family: var(--font-sans); font-size: 13px; line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78); background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0;
+  padding: 12px 14px; margin: 0 0 16px;
+}
+
+.trades-loading {
+  font-family: var(--font-sans); font-size: 13px; letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.7); margin: 0 0 12px;
+}
+
+.trades-msg {
+  font-family: var(--font-sans); font-size: 15px; font-weight: 300; line-height: 1.65;
+  color: var(--white); background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 12px; padding: 18px 20px;
+}
+.trades-msg.err { border-left: 3px solid var(--gold); }
+.trades-msg-label {
+  display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+}
+
+.trades-skel {
+  height: 96px; border-radius: 12px; margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.12) 37%, rgba(255,255,255,0.04) 63%);
+  background-size: 400% 100%; animation: tradessheen 1.4s ease infinite;
+}
+@keyframes tradessheen { 0% { background-position: 100% 0 } 100% { background-position: 0 0 } }
+@media (prefers-reduced-motion: reduce) { .trades-skel { animation: none } }
+
+/* ---------- results: the rows -------------------------------------------- */
+
+.trades-list { display: flex; flex-direction: column; gap: 8px; }
+
+.trades-row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) minmax(212px, 250px);
+  grid-template-areas: "pos main act" "sp extra extra";
+  column-gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 12px; padding: 14px 16px;
+}
+.trades-row:hover { border-color: rgba(255, 255, 255, 0.22); }
+
+.trades-pos {
+  grid-area: pos; align-self: start;
+  font-family: var(--font-sans); font-size: 16px; font-weight: 600;
+  font-variant-numeric: tabular-nums; letter-spacing: 0.04em;
+  color: var(--gold); margin: 1px 0 0;
+}
+
+.trades-main { grid-area: main; min-width: 0; }
+.trades-name {
+  font-family: var(--font-serif); font-size: 18px; font-weight: 400; line-height: 1.2;
+  color: var(--white); margin: 0 0 6px;
+}
+.trades-facts { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; }
+.trades-rate {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  font-family: var(--font-sans); font-size: 12.5px; color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+.trades-rate b {
+  font-family: var(--font-serif); font-size: 17px; font-weight: 400; color: var(--white);
+  font-variant-numeric: tabular-nums;
+}
+.trades-star { color: var(--gold); font-size: 12px; }
+.trades-addr {
+  font-family: var(--font-sans); font-size: 12.5px; font-weight: 300; line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6); margin: 6px 0 0;
+}
+
+/* The one primary action in the row, and the largest thing on it. */
+.trades-act { grid-area: act; display: flex; flex-direction: column; gap: 7px; align-items: stretch; }
+.trades-call {
+  display: flex; flex-direction: column; justify-content: center; gap: 1px;
+  min-height: 64px; padding: 9px 16px; text-decoration: none;
+  background: var(--light-blue); color: var(--navy); border-radius: 10px;
+  transition: background var(--transition);
+}
+.trades-call:hover { background: var(--white); }
+.trades-call:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.trades-call-word {
+  font-family: var(--font-sans); font-size: 9px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); opacity: 0.72;
+}
+.trades-call-num {
+  font-family: var(--font-sans); font-size: clamp(18px, 2.2vw, 22px); font-weight: 600;
+  line-height: 1.15; color: var(--navy); font-variant-numeric: tabular-nums;
+}
+.trades-nophone {
+  font-family: var(--font-sans); font-size: 13px; line-height: 1.4;
+  color: rgba(255, 255, 255, 0.66);
+  border: 1px dashed rgba(255, 255, 255, 0.26); border-radius: 10px;
+  padding: 14px 16px; min-height: 64px; display: flex; align-items: center;
+}
+.trades-links { display: flex; gap: 14px; flex-wrap: wrap; }
+.trades-links a {
+  font-family: var(--font-sans); font-size: 12.5px; color: var(--light-blue);
+  text-decoration: none; border-bottom: 1px solid transparent; padding: 5px 0;
+}
+.trades-links a:hover { border-bottom-color: var(--light-blue); }
+.trades-links a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.trades-extra { grid-area: extra; min-width: 0; }
+.trades-extra:empty { display: none; }
+
+/* ---------- results: method ---------------------------------------------- */
+
+.trades-method {
+  margin-top: 26px; padding: 20px 22px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px;
+}
+.trades-cross { margin: 14px 0 0; }
+.trades-cross a {
+  font-family: var(--font-sans); font-size: 13px; color: var(--light-blue); text-decoration: none;
+  display: inline-block; padding: 8px 0; min-height: 40px;
+}
+.trades-cross a:hover { text-decoration: underline; }
+
+/* ---------- shared compliance components, on a dark ground ----------------
+   These restyle DirectoryCompliance.jsx inside this page only. They are new
+   rules scoped to .trades-page and never edit the dir-* rules themselves, so
+   /spain-professionals is untouched. Nothing here reduces what is shown: the
+   attribution stays legible, every review keeps its author, photo, profile
+   link and link to the review, and the method disclosure stays reachable. */
+
+.trades-page .dir-lang {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-sans); font-size: 12px; line-height: 1.35;
+  border-radius: 999px; padding: 5px 11px;
+}
+.trades-page .dir-lang-strong { background: var(--light-blue); color: var(--navy); font-weight: 600; }
+.trades-page .dir-lang-mid { background: rgba(203, 239, 255, 0.18); color: var(--light-blue); font-weight: 500; }
+.trades-page .dir-lang-weak { background: rgba(255, 255, 255, 0.12); color: rgba(255, 255, 255, 0.9); }
+.trades-page .dir-lang-none {
+  background: transparent; border: 1px dashed rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.trades-page .dir-fit { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; }
+.trades-page .dir-fit-item {
+  display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline;
+  font-family: var(--font-sans); font-size: 12.5px; line-height: 1.5;
+}
+.trades-page .dir-fit-label { color: var(--light-blue); font-weight: 500; }
+.trades-page .dir-fit-quote { color: rgba(255, 255, 255, 0.64); font-style: italic; min-width: 0; }
+
+.trades-page .dir-quote {
+  margin-top: 10px; padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 2px solid var(--gold); border-radius: 0 8px 8px 0;
+}
+.trades-page .dir-quote-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+.trades-page .dir-quote-head img { width: 22px; height: 22px; border-radius: 50%; }
+.trades-page .dir-quote-who {
+  font-family: var(--font-sans); font-size: 12.5px; color: var(--white);
+  text-decoration: none; display: inline-block; padding: 7px 0;
+}
+.trades-page .dir-quote-who:hover { text-decoration: underline; }
+.trades-page .dir-quote-when {
+  font-family: var(--font-sans); font-size: 12px; color: var(--light-blue);
+  text-decoration: none; display: inline-block; padding: 7px 0;
+}
+.trades-page .dir-quote-when:hover { text-decoration: underline; }
+.trades-page .dir-quote-text {
+  font-family: var(--font-sans); font-size: 13.5px; font-weight: 300; line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86); margin: 0;
+}
+@media (pointer: coarse) {
+  .trades-page .dir-quote-who, .trades-page .dir-quote-when { padding: 13px 0; }
+  .trades-links a { padding: 12px 0; }
+}
+
+.trades-page .dir-more-title {
+  font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62); margin: 0 0 8px;
+}
+.trades-page .dir-attrib {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 400;
+  color: rgba(255, 255, 255, 0.78); margin: 0 0 6px;
+}
+.trades-page .dir-more summary {
+  font-family: var(--font-sans); font-size: 13px; color: var(--light-blue);
+  cursor: pointer; list-style: none; padding: 10px 0; min-height: 44px;
+  display: flex; align-items: center; gap: 8px;
+}
+.trades-page .dir-more summary::-webkit-details-marker { display: none; }
+.trades-page .dir-more summary::after { content: '+'; font-size: 15px; }
+.trades-page .dir-more[open] summary::after { content: '\2212'; }
+.trades-page .dir-more summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.trades-page .dir-more-body {
+  font-family: var(--font-sans); font-size: 12.5px; font-weight: 300; line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72); padding: 4px 0 2px; max-width: 76ch;
+}
+.trades-page .dir-more-body p { margin: 0 0 10px; }
+.trades-page .dir-more-body p:last-child { margin: 0; }
+.trades-page .dir-more-body strong { color: var(--white); font-weight: 500; }
+
+/* ---------- narrow ------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .trades-page { padding: 84px 0 48px; }
+  .trades-bar { top: 56px; }
+  .trades-hero, .trades-bar-in, .trades-results { padding-left: 20px; padding-right: 20px; }
+  .trades-form { grid-template-columns: 1fr; }
+  .trades-go { width: 100%; }
+  .trades-bar-top { flex-wrap: nowrap; gap: 10px; }
+  .trades-town-name { font-size: 17px; }
+}
+
+@media (max-width: 640px) {
+  .trades-row {
+    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-areas: "pos main" "act act" "extra extra";
+    row-gap: 12px; padding: 14px;
+  }
+  /* The primary action goes full width on a phone, because a phone is where a
+     burst pipe is actually dealt with. */
+  .trades-call { min-height: 68px; align-items: flex-start; }
+  .trades-call-num { font-size: 23px; }
+  .trades-links { justify-content: flex-start; }
+  .trades-h1 { max-width: none; }
+  .trades-proof { gap: 8px 20px; }
+}
+
+/* ==========================================================================
+   PROPERTY PROFESSIONALS  (/spain-professionals)
+   --------------------------------------------------------------------------
+   The considered half of the directory. Light, warm, spacious, editorial.
+   The trades page is its opposite on purpose: dark, dense, phone first. Two
+   different jobs, two different pages, and a visitor should never confuse them.
+
+   Everything here is prefixed pros-. The dir- rules belong to the trades page
+   and are not touched. Where a shared compliance component renders a fixed
+   dir- class (the review quote, the language label, the fit signals, the
+   method disclosure) it is styled here scoped under .pros-page, so this block
+   can never reach out and restyle the other directory.
+
+   Comparison is the whole layout idea. Every result renders the same three
+   cells in the same widths, so the eye can run down a column. A missing value
+   prints as a stated absence rather than collapsing the row.
+   ========================================================================== */
+
+.pros-page { background: var(--off-white); flex: 1; padding: 132px 0 88px; }
+.pros-wrap { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
+.pros-header-right { display: flex; align-items: center; gap: 16px; }
+
+.pros-sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.pros-page :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ---- hero ---------------------------------------------------------------- */
+.pros-hero { max-width: 34em; margin-bottom: 48px; }
+.pros-eyebrow {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 18px;
+}
+.pros-h1 {
+  font-family: var(--font-serif); font-size: clamp(30px, 4.2vw, 50px); font-weight: 400;
+  line-height: 1.1; letter-spacing: -0.015em; color: var(--navy); margin: 0 0 20px;
+}
+.pros-h1-results { font-size: clamp(26px, 3.4vw, 40px); margin-bottom: 8px; }
+/* The heading is built from a plural profession label, which is lower case in most of
+   the six languages. Capitalising the first letter here keeps the sentence natural in
+   all of them, which text-transform: capitalize would not. */
+.pros-h1-results::first-letter { text-transform: uppercase; }
+.pros-lede {
+  font-family: var(--font-sans); font-size: 1.0625rem; font-weight: 300; line-height: 1.75;
+  color: var(--navy); margin: 0; max-width: 56ch;
+}
+
+/* ---- the search panel ---------------------------------------------------- */
+.pros-panel {
+  background: var(--white); border: 1px solid var(--border); border-radius: 20px;
+  padding: 34px 36px 30px; margin-bottom: 56px;
+}
+.pros-panel-title {
+  font-family: var(--font-serif); font-size: 1.375rem; font-weight: 400;
+  color: var(--navy); margin: 0 0 22px;
+}
+.pros-form {
+  display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 16px; align-items: end;
+}
+.pros-form .pros-cta { grid-column: 1 / -1; }
+.pros-field-label {
+  display: block; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 9px;
+}
+.pros-select {
+  width: 100%; min-height: 56px; padding: 15px 44px 15px 18px;
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 400; color: var(--navy);
+  background-color: var(--white); border: 1px solid rgba(1, 2, 33, 0.28); border-radius: 12px;
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23010221' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 18px center;
+}
+.pros-select:hover { border-color: var(--navy); }
+.pros-select:disabled { opacity: 0.55; cursor: default; }
+
+/* The language control is the value proposition, so it reads as a first class
+   field and never as a filter tucked into a corner. */
+.pros-lang-lg .pros-select { background-color: var(--light-blue); border-color: rgba(1, 2, 33, 0.3); }
+/* In the results the same light blue ties the control to the sentence it changes. */
+.pros-lang-sm .pros-select { background-color: var(--light-blue); border-color: rgba(1, 2, 33, 0.3); }
+.pros-lang-help {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; line-height: 1.65;
+  color: var(--text-muted); margin: 16px 0 0; max-width: 62ch;
+}
+
+.pros-cta {
+  min-height: 58px; padding: 18px 34px; border: 0; border-radius: 14px; cursor: pointer;
+  background: var(--navy); color: var(--white);
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  transition: background var(--transition);
+}
+.pros-cta:hover { background: #1a1d4a; }
+
+.pros-hint {
+  font-family: var(--font-sans); font-size: 0.875rem; color: var(--navy);
+  background: var(--light-blue); border-radius: 10px; padding: 12px 16px; margin: 16px 0 0;
+}
+
+.pros-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 22px; }
+.pros-quick > span {
+  font-family: var(--font-sans); font-size: 0.6875rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted); margin-right: 4px;
+}
+.pros-quick button {
+  min-height: 44px; padding: 11px 18px; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--white); color: var(--navy); cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.875rem; transition: all var(--transition);
+}
+.pros-quick button:hover { border-color: var(--navy); background: var(--navy); color: var(--white); }
+
+/* ---- who does what ------------------------------------------------------- */
+.pros-section-title {
+  font-family: var(--font-serif); font-size: clamp(24px, 2.8vw, 32px); font-weight: 400;
+  color: var(--navy); margin: 0 0 12px; letter-spacing: -0.01em;
+}
+.pros-section-lede {
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 300; line-height: 1.7;
+  color: var(--text-muted); margin: 0 0 32px; max-width: 56ch;
+}
+.pros-who { margin-bottom: 64px; }
+.pros-who-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px;
+  background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
+}
+.pros-who-item { background: var(--white); padding: 28px 30px 22px; display: flex; flex-direction: column; }
+.pros-who-num {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  color: var(--text-muted); margin-bottom: 12px;
+}
+.pros-who-name {
+  font-family: var(--font-serif); font-size: 1.375rem; font-weight: 400; line-height: 1.2;
+  color: var(--navy); margin: 0 0 10px;
+}
+.pros-who-text {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; line-height: 1.7;
+  color: var(--navy); margin: 0 0 18px; flex: 1;
+}
+.pros-who-go {
+  align-self: flex-start; min-height: 44px; padding: 11px 0; border: 0; background: none;
+  cursor: pointer; font-family: var(--font-sans); font-size: 0.875rem; color: var(--navy);
+  border-bottom: 1px solid var(--navy); border-radius: 0;
+}
+.pros-who-go:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---- the profession explainer -------------------------------------------- */
+.pros-note {
+  background: var(--white); border: 1px solid var(--border); border-radius: 20px;
+  padding: 34px 36px; margin: 0 0 48px;
+}
+.pros-note-eyebrow {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 10px;
+}
+.pros-note-title {
+  font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400; color: var(--navy);
+  margin: 0 0 26px; letter-spacing: -0.01em;
+}
+.pros-note-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 44px; }
+.pros-note-label {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 10px;
+}
+.pros-note-body {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; line-height: 1.75;
+  color: var(--navy); margin: 0; max-width: 46ch;
+}
+.pros-note-caveat {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; line-height: 1.65;
+  color: var(--text-muted); margin: 10px 0 0; max-width: 46ch;
+}
+.pros-note-questions { margin: 0; padding-left: 20px; display: grid; gap: 10px; }
+.pros-note-questions li {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; line-height: 1.65;
+  color: var(--navy); max-width: 44ch;
+}
+.pros-note-questions li::marker { color: var(--text-muted); font-size: 0.8125rem; }
+
+/* ---- results ------------------------------------------------------------- */
+.pros-crumb { margin-bottom: 22px; }
+.pros-back, .pros-change {
+  border: 0; background: none; cursor: pointer; padding: 12px 0; min-height: 44px;
+  font-family: var(--font-sans); font-size: 0.875rem; color: var(--navy);
+  border-bottom: 1px solid var(--navy); border-radius: 0;
+}
+.pros-back:hover, .pros-change:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.pros-town-line {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 0 0 30px;
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; color: var(--text-muted);
+}
+
+/* The one sentence the page exists to produce. Light blue, because on this
+   screen it is the thing that matters most. */
+.pros-verdict {
+  background: var(--light-blue); border-radius: 18px; padding: 28px 32px; margin: 0 0 28px;
+}
+.pros-verdict-text {
+  font-family: var(--font-serif); font-size: clamp(20px, 2.4vw, 27px); font-weight: 400;
+  line-height: 1.35; color: var(--navy); margin: 0; max-width: 34ch;
+}
+.pros-sorted {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; line-height: 1.6;
+  color: var(--navy); opacity: 0.72; margin: 14px 0 0;
+}
+
+.pros-controls {
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: end; margin: 0 0 40px;
+}
+.pros-controls .pros-lang, .pros-field-sm { min-width: 210px; }
+.pros-controls .pros-select { min-height: 48px; padding: 12px 40px 12px 15px; font-size: 0.9375rem; }
+
+.pros-thin {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; line-height: 1.7;
+  color: var(--navy); background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; padding: 18px 22px; margin: 0 0 20px;
+}
+
+/* The column head makes the rows read as a comparison rather than a feed. It
+   carries the same track sizes as every row below it. */
+.pros-colhead {
+  display: grid; grid-template-columns: minmax(0, 2.4fr) 132px minmax(0, 1.7fr); gap: 32px;
+  padding: 0 30px 12px; border-bottom: 1px solid var(--border); margin-bottom: 14px;
+}
+.pros-colhead span {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+
+.pros-row {
+  display: grid; grid-template-columns: minmax(0, 2.4fr) 132px minmax(0, 1.7fr); gap: 32px;
+  background: var(--white); border: 1px solid var(--border); border-radius: 18px;
+  padding: 28px 30px; margin-bottom: 14px;
+}
+.pros-cell { min-width: 0; }
+.pros-name {
+  font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; line-height: 1.2;
+  letter-spacing: -0.01em; color: var(--navy); margin: 0 0 8px;
+}
+.pros-addr {
+  font-family: var(--font-sans); font-size: 0.875rem; font-weight: 300; line-height: 1.6;
+  color: var(--text-muted); margin: 0 0 14px;
+}
+.pros-contact { margin: 0 0 6px; }
+.pros-phone {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-family: var(--font-sans); font-size: 1rem; color: var(--navy); text-decoration: none;
+  border-bottom: 1px solid rgba(1, 2, 33, 0.3);
+}
+.pros-phone:hover { border-bottom-color: var(--navy); }
+.pros-absent, .pros-links {
+  font-family: var(--font-sans); font-size: 0.875rem; font-weight: 300; color: var(--text-muted);
+}
+.pros-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 10px 0 0; }
+.pros-links a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--border);
+}
+.pros-links a:hover { border-bottom-color: var(--navy); }
+
+.pros-cell-rating { display: flex; flex-direction: column; gap: 2px; }
+.pros-score {
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 400; line-height: 1; color: var(--navy);
+}
+.pros-stars { color: var(--gold); font-size: 0.875rem; letter-spacing: 2px; }
+.pros-count {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.pros-cell-lang { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+
+.pros-quotes {
+  grid-column: 1 / -1; background: var(--off-white); border-radius: 14px;
+  padding: 20px 24px; margin-top: 6px;
+}
+.pros-quotes-label {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 14px;
+}
+
+/* ---- states -------------------------------------------------------------- */
+.pros-loading {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300;
+  color: var(--text-muted); margin: 0 0 16px;
+}
+.pros-skel {
+  height: 148px; border-radius: 18px; margin-bottom: 14px; border: 1px solid var(--border);
+  background: linear-gradient(90deg, #FFFFFF 25%, #F1F0EC 37%, #FFFFFF 63%);
+  background-size: 400% 100%; animation: prossheen 1.4s ease infinite;
+}
+@keyframes prossheen { 0% { background-position: 100% 0 } 100% { background-position: 0 0 } }
+@media (prefers-reduced-motion: reduce) { .pros-skel { animation: none } }
+
+.pros-msg {
+  font-family: var(--font-sans); font-size: 1rem; font-weight: 300; line-height: 1.75;
+  padding: 24px 26px; border-radius: 16px; margin-bottom: 28px;
+}
+.pros-msg-err { background: #FDF4F4; border: 1px solid #EBCFCF; color: #8A2F2F; }
+.pros-msg-info { background: var(--white); border: 1px solid var(--border); color: var(--navy); }
+
+.pros-method { margin-top: 44px; padding-top: 30px; border-top: 1px solid var(--border); }
+.pros-cross { margin: 30px 0 0; font-family: var(--font-sans); font-size: 0.9375rem; }
+.pros-cross a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 3px; }
+.pros-cross a:hover { border-bottom-color: var(--navy); }
+
+/* ---- shared compliance components, scoped to this page ------------------- */
+.pros-page .dir-lang {
+  display: inline-block; font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.4;
+  border-radius: 999px; padding: 7px 14px;
+}
+.pros-page .dir-lang-strong { background: var(--light-blue); color: var(--navy); font-weight: 500; }
+.pros-page .dir-lang-mid { background: rgba(203, 239, 255, 0.5); color: var(--navy); }
+.pros-page .dir-lang-weak { background: var(--off-white); color: var(--navy); border: 1px solid var(--border); }
+.pros-page .dir-lang-none {
+  background: none; color: var(--text-muted); border: 1px dashed var(--warm-grey); padding: 6px 13px;
+}
+
+.pros-page .dir-fit { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pros-page .dir-fit-item { display: block; }
+.pros-page .dir-fit-label {
+  display: block; font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500;
+  color: var(--navy); margin-bottom: 3px;
+}
+.pros-page .dir-fit-quote {
+  display: block; font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300;
+  line-height: 1.6; color: var(--text-muted); font-style: italic;
+}
+
+.pros-page .dir-quote + .dir-quote {
+  margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border);
+}
+.pros-page .dir-quote-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.pros-page .dir-quote-head img { width: 26px; height: 26px; border-radius: 50%; }
+.pros-page .dir-quote-who {
+  font-family: var(--font-sans); font-size: 0.875rem; color: var(--navy); text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+.pros-page .dir-quote-who:hover { border-bottom-color: var(--navy); }
+.pros-page .dir-quote-when {
+  font-family: var(--font-sans); font-size: 0.8125rem; color: var(--text-muted); text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.pros-page .dir-quote-when:hover { color: var(--navy); border-bottom-color: var(--navy); }
+.pros-page .dir-quote-text {
+  font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; line-height: 1.75;
+  color: var(--navy); margin: 0;
+}
+
+.pros-page .dir-more-title {
+  font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px;
+}
+.pros-page .dir-attrib {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; color: var(--text-muted); margin: 0 0 10px;
+}
+.pros-page .dir-more summary {
+  font-family: var(--font-sans); font-size: 0.875rem; color: var(--navy); cursor: pointer;
+  list-style: none; padding: 10px 0; min-height: 44px; display: flex; align-items: center; gap: 8px;
+}
+.pros-page .dir-more summary::-webkit-details-marker { display: none; }
+.pros-page .dir-more summary::after { content: '+'; font-size: 1rem; color: var(--text-muted); }
+.pros-page .dir-more[open] summary::after { content: '\2212'; }
+.pros-page .dir-more-body {
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 300; line-height: 1.8;
+  color: var(--text-muted); padding: 6px 0 4px; max-width: 78ch;
+}
+.pros-page .dir-more-body p { margin: 0 0 12px; }
+.pros-page .dir-more-body p:last-child { margin: 0; }
+.pros-page .dir-more-body strong { color: var(--navy); font-weight: 500; }
+
+/* ---- narrower screens ---------------------------------------------------- */
+@media (max-width: 900px) {
+  .pros-page { padding: 112px 0 64px; }
+  .pros-wrap { padding: 0 24px; }
+  .pros-panel, .pros-note { padding: 26px 22px; border-radius: 16px; }
+  .pros-form { grid-template-columns: 1fr; }
+  .pros-note-grid, .pros-who-grid { grid-template-columns: minmax(0, 1fr); }
+  .pros-who-item { padding: 24px 22px 20px; }
+  .pros-colhead { display: none; }
+  .pros-row { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 24px 22px; }
+  .pros-cell-rating { flex-direction: row; align-items: baseline; gap: 10px; }
+  .pros-cell-rating .pros-count { margin-top: 0; }
+  .pros-quotes { padding: 18px 18px; }
+  .pros-controls { gap: 14px; }
+  .pros-controls .pros-lang, .pros-field-sm { min-width: 100%; }
+}
+
+/* The one line on the home page that names what the directories now do differently:
+   they show which language a business has already been reviewed in. Set apart from the
+   section's own argument rather than folded into it. */
+.dirfeat-langline {
+  /* The form sits directly beneath this on the home page, so it needs a real gap under it
+     as well as over it, or it collides with the first field label. */
+  margin: 14px 0 28px; font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.1875rem); line-height: 1.45; color: var(--light-blue);
+  max-width: 34ch;
+}
+.proffeat-langline {
+  margin: 14px 0 4px; font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.1875rem); line-height: 1.45; color: var(--accent);
+  max-width: 36ch;
+}

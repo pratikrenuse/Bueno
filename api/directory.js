@@ -35,6 +35,7 @@
 // the reviewer's name and photo, a link to the review, and a plain statement of how
 // results were ordered.
 
+import { fitProfile } from './_fit.js';
 import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
 import { ANY_CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
 
@@ -44,7 +45,7 @@ const BUCKET = 'directory-cache';
 // v2: review text is Google's English translation rather than the Spanish original.
 // v3: dropped includedType and widened the radius, which was returning one result for
 //     towns the size of Benidorm.
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const CACHE_DAYS = 30;
 // A plumber drives. 15 km was drawn around the town as if a trade only serves its own
 // postcode, which starved smaller towns of candidates for no good reason.
@@ -223,13 +224,22 @@ function shapeReview(rv, placeMapsUri) {
 
 function shapePlace(p) {
   const mapsUri = p.googleMapsUri || null;
-  const reviews = Array.isArray(p.reviews)
-    ? p.reviews.map(r => shapeReview(r, mapsUri)).filter(Boolean).slice(0, 3)
-    : [];
 
-  // Which languages this business has actually been reviewed in. This is the honest
-  // version of "do they speak English": it says what language the reviews are written
-  // in, not what language the business claims to speak.
+  // Google returns up to five reviews in the response we already pay for. Analyse all of
+  // them, show three. That doubles the language and fit signal for no extra spend, which
+  // is the whole reason the analysed count is reported on the page.
+  const allReviews = Array.isArray(p.reviews)
+    ? p.reviews.map(r => shapeReview(r, mapsUri)).filter(Boolean)
+    : [];
+  const reviews = allReviews.slice(0, 3);
+
+  // What a foreign owner actually needs to know, derived from the reviews rather than
+  // asserted. See api/_fit.js for the honesty rule this has to obey: none of this says a
+  // business speaks a language, only that a customer wrote in one or mentioned one.
+  const profile = fitProfile(allReviews);
+
+  // Kept for backwards compatibility with any cached v3 cell still being read. The richer
+  // profile above supersedes it.
   const langs = {};
   for (const r of reviews) if (r.lang) langs[r.lang] = (langs[r.lang] || 0) + 1;
 
@@ -246,6 +256,10 @@ function shapePlace(p) {
     maps_uri: mapsUri,
     score: Number(bayesian(p.rating, p.userRatingCount).toFixed(4)),
     review_langs: langs,
+    fit_langs: profile.langs,
+    fit_evidence: profile.evidence,
+    fit: profile.fit,
+    reviews_analysed: profile.analysed,
     reviews,
   };
 }

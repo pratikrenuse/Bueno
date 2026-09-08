@@ -4,12 +4,12 @@
     "cost": "Kostenanalyse",
     "rental": "Verhuurbelasting",
     "language": "Taal",
-    "directory": "Vakmensengids",
+    "directory": "Reparaties",
     "claim": "Hypotheekclaim",
-    "professionals": "Vastgoedprofessionals",
-    "menu_trades": "Vakmensen",
+    "professionals": "Vastgoedexperts",
+    "menu_trades": "Reparaties",
     "menu_tools": "Gratis tools",
-    "menu_pros": "Professionals"
+    "menu_pros": "Vastgoedexperts"
   },
   "home": {
     "brand_sub": "Gratis vastgoedtools",
@@ -46,9 +46,9 @@
     "band_em": "met vertrouwen?",
     "band_cta": "Aan de slag",
     "footer_copy": "© 2025 Spain 24/7. Alleen ter informatie. Geen juridisch of fiscaal advies.",
-    "dir_eyebrow": "Vakmensengids",
+    "dir_eyebrow": "Reparaties",
     "dir_title": "Vind een loodgieter, elektricien of aannemer in",
-    "dir_sub": "Zes vakken, {count} plaatsen in alle Spaanse provincies, gerangschikt op echte Google-beoordelingen. Lees de beoordelingen en zie in welke taal ze zijn geschreven, voordat u belt.",
+    "dir_sub": "Zes vakken, {count} plaatsen in elke Spaanse provincie, gerangschikt op echte Google-recensies. Vertel ons in welke taal u hulp nodig heeft en wij zetten de bedrijven die al iemand hebben geholpen die daarin schrijft bovenaan.",
     "dir_proof_title": "Sterren alleen zijn makkelijk te kopen",
     "dir_proof_a": "5,0 uit 3 beoordelingen",
     "dir_proof_a_verdict": "Lager gerangschikt",
@@ -62,7 +62,7 @@
     "dir_title_em": "uw Spaanse plaats",
     "prof_title": "Bezit in Spanje betekent omgaan met mensen van wie u",
     "prof_title_em": "nog nooit gehoord hebt",
-    "prof_sub": "Een gestoría, een administrador de fincas, een beëdigd vertaler. Hier staat wat elk van hen echt doet, en wie in uw plaats goed beoordeeld wordt.",
+    "prof_sub": "Een gestoría, een administrador de fincas, een beëdigd vertaler. Hier staat wat elk van hen echt doet, wie in uw plaats goed beoordeeld is, en aan wie een recensent in uw taal heeft geschreven.",
     "tools_filter_label": "Filter tools",
     "group_all": "Alle",
     "group_buying": "Kopen",
@@ -70,7 +70,9 @@
     "group_renting": "Verhuren",
     "group_money": "Geld",
     "group_owning": "Een huis bezitten",
-    "group_status": "Status en verblijf"
+    "group_status": "Status en verblijf",
+    "dir_lang_line": "Niemand hoeft hier een gesprongen leiding in het Spaans uit te leggen.",
+    "prof_lang_line": "Het papierwerk is al moeilijk genoeg zonder de taal erbij."
   },
   "cards": {
     "tax": {
@@ -99,15 +101,15 @@
     },
     "directory": {
       "tag": "Gids",
-      "title": "Vakmensengids voor Spanje",
+      "title": "Reparaties in Spanje",
       "desc": "Loodgieter, elektricien, slotenmaker, airconditioning, zwembad of aannemer. Bekijk de best beoordeelde in uw Spaanse plaats, gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
       "cta": "Vakman vinden"
     },
     "professionals": {
       "tag": "Vastgoed",
-      "title": "Spaanse vastgoedprofessionals",
+      "title": "Vastgoedexperts in Spanje",
       "desc": "Makelaars en vastgoedadvocaten in uw Spaanse plaats, gerangschikt op Google-beoordelingen, met de beoordelingen en hun taal.",
-      "cta": "Professional vinden"
+      "cta": "Vind een expert"
     }
   },
   "calc_tax": {
@@ -425,7 +427,7 @@
     "other": "Ander land"
   },
   "calc_directory": {
-    "meta_title": "Vakmensengids voor Spanje",
+    "meta_title": "Reparaties in Spanje",
     "eyebrow": "Gratis tool",
     "headline": "Vind een loodgieter, elektricien of aannemer in uw Spaanse plaats",
     "lede": "De boiler begeeft het op een vrijdag en u zit 2.000 km verderop. Hier ziet u de best beoordeelde loodgieters, elektriciens en andere vakmensen in uw Spaanse plaats, met de beoordelingen die zij kregen en de taal waarin die zijn geschreven.",
@@ -483,8 +485,8 @@
     "cat_real-estate_pl": "makelaars",
     "cat_lawyer": "Vastgoedadvocaat",
     "cat_lawyer_pl": "vastgoedadvocaten",
-    "prof_eyebrow": "Vastgoedprofessionals",
-    "prof_meta_title": "Spaanse vastgoedprofessionals",
+    "prof_eyebrow": "Vastgoedexperts",
+    "prof_meta_title": "Vastgoedexperts in Spanje",
     "prof_headline": "Vind een makelaar, gestoría of vastgoedadvocaat in uw Spaanse plaats",
     "prof_lede": "Kopen, verkopen, of gewoon het papierwerk rondkrijgen. Kies uw plaats en zie wie de beoordelingen echt aanraden.",
     "prof_note": "Nog iets voor juridisch werk. Een cijfer vervangt geen controle of het kantoor dat u inschakelt is ingeschreven bij het lokale Colegio de Abogados, en of het honorarium schriftelijk vaststaat voordat u opdracht geeft.",
@@ -507,6 +509,132 @@
     "does_community-admin": "Beheert de VvE waar uw appartement onder valt.",
     "does_surveyor": "Wat de woning op papier waard is, voor bank of rechter.",
     "does_insurance": "Opstal en inboedel die ook vanuit het buitenland uitkeert.",
-    "does_translator": "De enige vertalingen die een Spaans register accepteert."
+    "does_translator": "De enige vertalingen die een Spaans register accepteert.",
+    "method_lang": "Waar een taal wordt vermeld, betekent dat dat een recensie in die taal is geschreven of dat een recensent die noemde. Het is niet iets dat het bedrijf ons heeft verteld.",
+    "honest_lang": "We hebben niemand gebeld om te vragen welke talen ze spreken. Alles op deze pagina over taal komt uit de recensies zelf, en u kunt de recensie teruglezen.",
+    "lang_none": "Geen taalbewijs",
+    "lang_none_help": "We hebben hier geen recensies in uw taal en geen die de taal noemt. Dat betekent niet dat ze u niet kunnen helpen, alleen dat wij het niet kunnen weten.",
+    "lang_reviewed_one": "Een keer beoordeeld in het {lang}",
+    "lang_reviewed_many": "{n} keer beoordeeld in het {lang}",
+    "lang_english_one": "Een keer beoordeeld in het Engels",
+    "lang_english_many": "{n} keer beoordeeld in het Engels",
+    "lang_mentioned": "Een recensent noemt taal",
+    "fit_remote": "Werkte voor een eigenaar in het buitenland",
+    "fit_updates": "Hield de eigenaar op de hoogte",
+    "fit_paperwork": "Offerte of factuur op schrift",
+    "fit_access": "Regelde toegang tot een leeg pand",
+    "pref_label": "Ik heb hulp nodig in het",
+    "pref_help": "We zetten bedrijven die al iemand hebben geholpen die in uw taal schrijft bovenaan, en laten zien welke.",
+    "match_none": "Geen van deze heeft een recensie in het {lang} of Engels. Ze kunnen u nog steeds helpen. We hebben alleen geen bewijs in welke richting dan ook.",
+    "match_some": "{n} van deze {total} zijn beoordeeld door iemand die in het {lang} of Engels schrijft.",
+    "match_all": "Alle {total} zijn beoordeeld door iemand die in het {lang} of Engels schrijft.",
+    "sorted_note": "Gesorteerd op taalbewijs eerst, daarna op recensies.",
+    "trades_eyebrow": "Reparaties",
+    "trades_headline": "Water door het plafond, en u bent niet in het land.",
+    "trades_lede": "De best beoordeelde loodgieters, elektriciens, slotenmakers, airco-monteurs, zwembadbedrijven en aannemers in 660 Spaanse plaatsen. Gerangschikt op Google-beoordelingen, met de taal waarin elke beoordeling is geschreven naast elke naam.",
+    "trades_proof_1": "660 plaatsen in Spanje",
+    "trades_proof_2": "Zes vakgebieden",
+    "trades_proof_3": "Gratis te gebruiken",
+    "trades_proof_4": "Niemand betaalt om vermeld te worden",
+    "trades_new_search": "Plaats of vak wijzigen",
+    "trades_back_results": "Terug naar de resultaten",
+    "trades_error_label": "Kon niet worden geladen",
+    "trades_thin": "Dit is iedereen in {town} met genoeg beoordelingen voor een eerlijke rangschikking. De dichtstbijzijnde grotere plaats heeft er meer.",
+    "trades_call_aria": "{name} bellen op {phone}",
+    "trades_match_none_en": "Geen van deze heeft een beoordeling die in het Engels is geschreven. Ze kunnen u alsnog helpen. Wij hebben er alleen geen aanwijzingen voor of tegen.",
+    "trades_match_some_en": "{n} van deze {total} zijn beoordeeld door iemand die in het Engels schrijft.",
+    "trades_match_all_en": "Alle {total} zijn beoordeeld door iemand die in het Engels schrijft.",
+    "pro_land_h1": "Een woning bezitten in Spanje betekent omgaan met beroepen waarvan u nooit hebt gehoord, in een taal die u niet spreekt.",
+    "pro_land_lede": "Deze pagina doet twee dingen. Ze legt uit wie elk van deze mensen is en waar ze werkelijk voor dienen, en ze toont de best beoordeelde in uw plaats, met bovenaan wie al beoordeeld is door iemand die in uw taal schrijft.",
+    "pro_form_title": "Iemand vinden in uw plaats",
+    "pro_cta_full": "Toon {trade} in {town}",
+    "pro_cta": "Toon {trade}",
+    "pro_who_title": "Wie doet wat",
+    "pro_who_lede": "Acht beroepen, en degene die u nodig hebt is vaak niet degene die u verwachtte. Lees de twee waartussen u kiest.",
+    "pro_choose": "Toon deze",
+    "pro_choose_in": "Toon deze in {town}",
+    "pro_need_town": "Kies eerst uw plaats, dan laten we zien wie daar zit.",
+    "pro_ex_eyebrow": "Voordat u kiest",
+    "pro_ex_does": "Wat ze doen",
+    "pro_ex_when": "Wanneer u er een nodig hebt",
+    "pro_ex_cost": "Hoe ze rekenen",
+    "pro_ex_ask": "Vraag dit eerst",
+    "pro_ex_cost_note": "Wij publiceren geen prijzen. Tarieven verschillen per plaats, per kantoor en per opdracht, en een bedrag waar wij niet voor konden instaan zou slechter zijn dan geen bedrag.",
+    "pro_results_h1": "{trade} in {town}",
+    "pro_col_business": "Bedrijf",
+    "pro_col_rating": "Google-beoordeling",
+    "pro_col_lang": "Taal en geschiktheid",
+    "pro_reviews_label": "Wat beoordelaars schreven",
+    "pro_thin": "Slechts {n} hier hebben genoeg beoordelingen om eerlijk te vergelijken. Een grotere plaats in de buurt heeft er meestal meer.",
+    "pro_see_all": "Alle acht beroepen",
+    "pro_back_results": "Terug naar de resultaten",
+    "pro_no_address": "Geen adres vermeld",
+    "pro_match_none_en": "Geen van deze heeft een beoordeling in het Engels. Ze kunnen u nog steeds helpen. Wij hebben er alleen geen enkele aanwijzing voor, in geen van beide richtingen.",
+    "pro_match_some_en": "{n} van deze {total} zijn beoordeeld door iemand die in het Engels schrijft.",
+    "pro_match_all_en": "Alle {total} zijn beoordeeld door iemand die in het Engels schrijft.",
+    "pro_does_real-estate": "Zet de woning in de verkoop, regelt de bezichtigingen en voert de onderhandeling tot aan het voorlopige koopcontract. In Spanje krijgt de makelaar de opdracht normaal van de verkoper en wordt hij door de verkoper betaald, dus bij een aankoop is hij niet uw adviseur.",
+    "pro_when_real-estate": "Als u verkoopt, en als u koopt en iemand ter plaatse wilt die weet waarvoor een straat werkelijk verkocht wordt in plaats van waarvoor hij te koop staat.",
+    "pro_cost_real-estate": "Een percentage van de verkoopprijs, betaald door de verkoper en afgesproken in de verkoopopdracht. Het percentage verschilt sterk per regio en per kantoor. Er bestaat in Spanje geen enkele nationale vergunning voor makelaars, en de registratieregels verschillen per regio.",
+    "pro_ask_real-estate": [
+      "Treedt u op voor de verkoper, voor mij, of voor ons allebei",
+      "Is de opdracht exclusief, en hoe lang loopt zij",
+      "Mag ik de nota simple en de servicekosten zien voordat ik een aanbetaling doe"
+    ],
+    "pro_does_lawyer": "Controleert of wat u koopt overeenkomt met wat het register zegt, stelt de contracten op en beoordeelt ze, en behandelt geschillen, erfenissen en volmachten. Een abogado kan u ook voor de rechter vertegenwoordigen, wat een gestoría niet kan.",
+    "pro_when_lawyer": "Voordat u een aanbetaling doet. Het voorlopige koopcontract is meestal het punt waarop u gebonden bent, en het wordt lang voor de notaris getekend.",
+    "pro_cost_lawyer": "Meestal een vast tarief voor een aankoop of verkoop, en een uurtarief bij een geschil. Vraag het tarief schriftelijk, met IVA en kosten van derden apart vermeld, voordat u iemand inschakelt.",
+    "pro_ask_lawyer": [
+      "Bij welk Colegio de Abogados staat u ingeschreven, en wat is uw nummer",
+      "Dekt uw tarief de controles op register, schulden en vergunningen, of alleen het contract",
+      "Hebt u enige band met de verkoper of met het makelaarskantoor"
+    ],
+    "pro_does_gestoria": "Regelt het papierwerk tussen u en de Spaanse overheid: de NIE, verblijfspapieren, belastingaangiften, voertuig- en socialezekerheidszaken. Een gestoría is geen advocatenkantoor. Zij geeft geen juridisch advies en kan u niet in een geschil vertegenwoordigen.",
+    "pro_when_gestoria": "Voor alles wat terugkeert. De inkomstenbelasting voor niet-ingezetenen, de energierekeningen op uw eigen naam zetten, een auto die uit het buitenland is meegenomen.",
+    "pro_cost_gestoria": "Meestal een vast tarief per klus, of een jaartarief voor aangiften die zich herhalen. Vraag wat het tarief dekt, wat apart in rekening wordt gebracht, en of de belasting zelf door hen of door u wordt betaald.",
+    "pro_ask_gestoria": [
+      "Is de gestor colegiado, en bij welk Colegio",
+      "Wat is er precies inbegrepen, en wat komt erbovenop",
+      "Wie houdt de termijnen bij, en wat gebeurt er als een aangifte te laat is"
+    ],
+    "pro_does_architect": "Ontwerpt het werk, stelt het project op dat een gemeentehuis accepteert, en ondertekent het. Veel van wat een buitenlandse eigenaar tegenkomt is een vergunningsprobleem en geen ontwerpprobleem: een aanbouw, een zwembad, een dichtgezet terras, of het legaliseren van iets dat een vorige eigenaar bouwde.",
+    "pro_when_architect": "Voordat u zich vastlegt op bouwen, en voordat u een woning koopt waarvan de papieren niet kloppen met wat er op het perceel staat.",
+    "pro_cost_architect": "Per project, soms als percentage van het bouwbudget en soms als vast bedrag. Het honorarium, de stempel van de architectenorde die visado heet, en de gemeentelijke leges zijn drie verschillende dingen, dus vraag welke daarvan in uw offerte zitten.",
+    "pro_ask_architect": [
+      "Hebt u dit soort vergunning eerder bij dit gemeentehuis geregeld",
+      "Is de offerte een vast bedrag of een percentage van het werk",
+      "Zitten het visado, de gemeentelijke leges en de begeleiding op de bouw erin"
+    ],
+    "pro_does_community-admin": "Bestuurt de comunidad de propietarios waartoe uw gebouw behoort: de begroting, de bijdragen, de notulen van de jaarlijkse junta, de aannemers en de achterstanden. Ligt uw appartement in een complex of een afgesloten urbanisatie, dan hebt u er al een.",
+    "pro_when_community-admin": "U kiest normaal niet uw eigen beheerder, want de eigenaren benoemen hem op de junta. U zoekt hier als uw vereniging van beheerder wisselt, als u in het bestuur zit, of als u koopt en het bewijs nodig hebt dat de verkoper de vereniging niets schuldig is.",
+    "pro_cost_community-admin": "Betaald door de vereniging uit de gemeenschappelijke bijdragen, normaal een tarief per woning per jaar waarover de eigenaren stemmen. Het is geen rekening die u apart bereikt.",
+    "pro_ask_community-admin": [
+      "Kunnen wij de rekening, de begroting en de laatste notulen schriftelijk krijgen",
+      "Stuurt u oproepen per e-mail, en in een andere taal dan het Spaans",
+      "Hoe stemt een eigenaar die niet bij de junta kan zijn"
+    ],
+    "pro_does_surveyor": "Zet een bedrag op wat een woning waard is, in een rapport dat een geldverstrekker, een rechtbank of de belastingdienst accepteert. Dat is een ander werk dan een bouwkundige keuring. Een taxatie zegt wat het pand waard is, niet of het dak lekt.",
+    "pro_when_surveyor": "Als een Spaanse geldverstrekker om een tasación vraagt voordat een hypotheek wordt verstrekt, en bij erfenis, scheiding of onenigheid over de waarde. Wilt u het gebouw zelf laten onderzoeken, vraag dan om een bouwkundige keuring en controleer of het kantoor die werkelijk uitvoert.",
+    "pro_cost_surveyor": "Een vast tarief, meestal bepaald door de grootte en het type woning. Een taxatie voor een hypotheek moet komen van een bedrijf dat daarvoor is geregistreerd bij de Spaanse centrale bank, en zij verloopt, dus vraag hoe lang de uwe wordt geaccepteerd.",
+    "pro_ask_surveyor": [
+      "Is dit een hypotheektaxatie, een marktwaardebepaling of een bouwkundige keuring",
+      "Is het bedrijf geregistreerd om taxaties te maken die een geldverstrekker accepteert",
+      "Hoe lang blijft het rapport geldig"
+    ],
+    "pro_does_insurance": "Een correduría vergelijkt de dekking van meerdere verzekeraars in plaats van de polissen van één maatschappij te verkopen, regelt de dekking en behandelt de schade samen met u. Een gebonden agent werkt voor één verzekeraar, wat een andere verhouding is, en het is de moeite waard te weten met wie u praat.",
+    "pro_when_insurance": "Bij aankoop, omdat een geldverstrekker normaal opstalverzekering eist, en telkens als de woning maandenlang leegstaat en u moet weten dat de polis nog uitkeert.",
+    "pro_cost_insurance": "U betaalt de premie. Een makelaar krijgt provisie van de verzekeraar, dus vraag wat dat betekent voor het advies dat u krijgt. Verzekeringsmakelaars staan geregistreerd bij de toezichthouder DGSFP, en u kunt om het registratienummer vragen.",
+    "pro_ask_insurance": [
+      "Bent u makelaar voor meerdere verzekeraars, of gebonden aan één",
+      "Dekt de polis de woning terwijl zij onbewoond is, en na hoeveel dagen verandert dat",
+      "Kan ik de polis lezen en schade melden in mijn eigen taal"
+    ],
+    "pro_does_translator": "Maakt de gestempelde en ondertekende vertalingen die Spaanse instanties accepteren, en kan optreden als beëdigd tolk. Beëdigde vertalers worden benoemd door het Spaanse ministerie van Buitenlandse Zaken, dat de lijst publiceert, dus dit is een van de weinige titels die u in een minuut zelf kunt controleren.",
+    "pro_when_translator": "Voor een buitenlandse geboorte-, huwelijks- of overlijdensakte, een buitenlands testament, een volmacht, gerechtelijke stukken, en bij een ondertekening bij de notaris als u het Spaans niet goed genoeg volgt om zeker te weten waarmee u instemt.",
+    "pro_cost_translator": "Meestal per woord of per document, met een toeslag voor spoed en voor persoonlijke aanwezigheid. Vraag een prijs op de werkelijke documenten, niet een tarief.",
+    "pro_ask_translator": [
+      "Staat u op de lijst van het ministerie van Buitenlandse Zaken voor deze talencombinatie",
+      "Accepteert de instantie waar ik dit indien uw stempel",
+      "Kunt u ook bij de notaris aanwezig zijn, en wat kost dat"
+    ]
   }
 }

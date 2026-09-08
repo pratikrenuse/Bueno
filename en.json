@@ -4,12 +4,12 @@
     "cost": "Cost Audit",
     "rental": "Rental Tax",
     "language": "Language",
-    "directory": "Trades Directory",
+    "directory": "Home repairs",
     "claim": "Mortgage Claim",
-    "professionals": "Property Professionals",
-    "menu_trades": "Trades",
+    "professionals": "Property experts",
+    "menu_trades": "Home repairs",
     "menu_tools": "Free Tools",
-    "menu_pros": "Professionals"
+    "menu_pros": "Property experts"
   },
   "home": {
     "brand_sub": "Free property tools",
@@ -46,9 +46,9 @@
     "band_em": "with confidence?",
     "band_cta": "Get started",
     "footer_copy": "© 2025 Spain 24/7. For guidance only. Not legal or tax advice.",
-    "dir_eyebrow": "Trades directory",
+    "dir_eyebrow": "Home repairs",
     "dir_title": "Find a plumber, electrician or builder in your",
-    "dir_sub": "Six trades, {count} towns across every Spanish province, ranked from real Google reviews. Read the reviews and see which language they were written in, before you pick up the phone.",
+    "dir_sub": "Six trades, {count} towns across every Spanish province, ranked from real Google reviews. Tell us the language you need help in and we put the businesses that have already served someone writing in it first.",
     "dir_proof_title": "Stars alone are easy to buy",
     "dir_proof_a": "5.0 from 3 reviews",
     "dir_proof_a_verdict": "Ranked lower",
@@ -62,7 +62,7 @@
     "dir_title_em": "Spanish town",
     "prof_title": "Owning in Spain means dealing with people you have",
     "prof_title_em": "never heard of",
-    "prof_sub": "A gestoría, an administrador de fincas, a sworn translator. Here is what each one actually does, and who is well reviewed in your town.",
+    "prof_sub": "A gestoría, an administrador de fincas, a sworn translator. Here is what each one actually does, who is well reviewed in your town, and which of them a reviewer has written to in your language.",
     "tools_filter_label": "Filter tools",
     "group_all": "All",
     "group_buying": "Buying",
@@ -70,7 +70,9 @@
     "group_renting": "Renting out",
     "group_money": "Money",
     "group_owning": "Owning a home",
-    "group_status": "Status and stays"
+    "group_status": "Status and stays",
+    "dir_lang_line": "Nobody here has to explain a burst pipe in Spanish.",
+    "prof_lang_line": "The paperwork is hard enough without the language on top."
   },
   "cards": {
     "tax": {
@@ -99,15 +101,15 @@
     },
     "directory": {
       "tag": "Directory",
-      "title": "Spanish Trades Directory",
+      "title": "Home repairs in Spain",
       "desc": "Plumber, electrician, locksmith, air conditioning, pool or builder. See the best reviewed in your Spanish town, ranked from Google reviews, with the reviews shown and the language they were written in.",
       "cta": "Find a tradesperson"
     },
     "professionals": {
       "tag": "Property",
-      "title": "Spanish Property Professionals",
+      "title": "Property experts in Spain",
       "desc": "Estate agents and property lawyers in your Spanish town, ranked from Google reviews, with the reviews shown and the language they were written in.",
-      "cta": "Find a professional"
+      "cta": "Find an expert"
     }
   },
   "calc_tax": {
@@ -425,7 +427,7 @@
     "other": "Other country"
   },
   "calc_directory": {
-    "meta_title": "Spanish Trades Directory",
+    "meta_title": "Home repairs in Spain",
     "eyebrow": "Free tool",
     "headline": "Find a plumber, electrician or builder in your Spanish town",
     "lede": "The boiler fails on a Friday and you are 2,000 km away. This shows the best reviewed plumbers, electricians and other trades in your Spanish town, with the reviews they earned and the language those reviews were written in.",
@@ -483,8 +485,8 @@
     "cat_real-estate_pl": "estate agents",
     "cat_lawyer": "Property lawyer",
     "cat_lawyer_pl": "property lawyers",
-    "prof_eyebrow": "Property professionals",
-    "prof_meta_title": "Spanish Property Professionals",
+    "prof_eyebrow": "Property experts",
+    "prof_meta_title": "Property experts in Spain",
     "prof_headline": "Find an estate agent, gestoría or property lawyer in your Spanish town",
     "prof_lede": "Buying, selling, or just trying to get the paperwork done. Pick your town and see who the reviews actually rate.",
     "prof_note": "One more thing for legal work. A star rating is no substitute for checking that anyone you instruct is registered with the local Colegio de Abogados, and that their fees are in writing before you engage them.",
@@ -507,6 +509,132 @@
     "does_community-admin": "Runs the community your flat belongs to.",
     "does_surveyor": "What the property is worth on paper, for a bank or a court.",
     "does_insurance": "Home and contents cover that pays out from abroad.",
-    "does_translator": "The only translations a Spanish registry will accept."
+    "does_translator": "The only translations a Spanish registry will accept.",
+    "method_lang": "Where you see a language noted, it means a review was written in that language, or a reviewer mentioned it. It is not something the business has told us.",
+    "honest_lang": "We have not phoned anyone to ask what languages they speak. Everything on this page about language comes from the reviews themselves, and you can read the review it came from.",
+    "lang_none": "No language evidence",
+    "lang_none_help": "We have no reviews here in your language and none mentioning it. That does not mean they cannot help you, only that we cannot tell.",
+    "lang_reviewed_one": "Reviewed once in {lang}",
+    "lang_reviewed_many": "Reviewed {n} times in {lang}",
+    "lang_english_one": "Reviewed once in English",
+    "lang_english_many": "Reviewed {n} times in English",
+    "lang_mentioned": "A reviewer mentions language",
+    "fit_remote": "Worked for an owner who was abroad",
+    "fit_updates": "Kept the owner updated",
+    "fit_paperwork": "Quote or invoice in writing",
+    "fit_access": "Handled access to an empty property",
+    "pref_label": "I need help in",
+    "pref_help": "We move businesses that have already served someone writing in your language to the top, and tell you which.",
+    "match_none": "None of these has a review in {lang} or in English. They may still be able to help. We just have no evidence either way.",
+    "match_some": "{n} of these {total} have been reviewed by someone writing in {lang} or English.",
+    "match_all": "All {total} of these have been reviewed by someone writing in {lang} or English.",
+    "sorted_note": "Sorted by language evidence first, then by reviews.",
+    "trades_eyebrow": "Home repairs",
+    "trades_headline": "Water through the ceiling, and you are not in the country.",
+    "trades_lede": "The best reviewed plumbers, electricians, locksmiths, air conditioning engineers, pool services and builders in 660 Spanish towns. Ranked from Google reviews, with the language each review was written in shown against every name.",
+    "trades_proof_1": "660 towns across Spain",
+    "trades_proof_2": "Six trades",
+    "trades_proof_3": "Free to use",
+    "trades_proof_4": "Nobody pays to be listed",
+    "trades_new_search": "Change town or trade",
+    "trades_back_results": "Back to the results",
+    "trades_error_label": "Could not load",
+    "trades_thin": "That is everyone in {town} with enough reviews to rank fairly. The nearest larger town will have more.",
+    "trades_call_aria": "Call {name} on {phone}",
+    "trades_match_none_en": "None of these has a review written in English. They may still be able to help. We just have no evidence either way.",
+    "trades_match_some_en": "{n} of these {total} have been reviewed by someone writing in English.",
+    "trades_match_all_en": "All {total} of these have been reviewed by someone writing in English.",
+    "pro_land_h1": "Owning in Spain means dealing with professions you have never heard of, in a language you do not speak.",
+    "pro_land_lede": "This page does two things. It explains who each of these people is and what they are actually for, and it shows the best reviewed ones in your town, with anyone already reviewed by somebody writing in your language at the top.",
+    "pro_form_title": "Find someone in your town",
+    "pro_cta_full": "Show {trade} in {town}",
+    "pro_cta": "Show {trade}",
+    "pro_who_title": "Who does what",
+    "pro_who_lede": "Eight professions, and the one you need is often not the one you expected. Read the two you are choosing between.",
+    "pro_choose": "Show these",
+    "pro_choose_in": "Show these in {town}",
+    "pro_need_town": "Choose your town first and we will show you who is there.",
+    "pro_ex_eyebrow": "Before you choose",
+    "pro_ex_does": "What they do",
+    "pro_ex_when": "When you need one",
+    "pro_ex_cost": "How they charge",
+    "pro_ex_ask": "Worth asking first",
+    "pro_ex_cost_note": "We do not publish prices. Fees differ by town, by firm and by job, and a number we could not stand behind would be worse than none.",
+    "pro_results_h1": "{trade} in {town}",
+    "pro_col_business": "Business",
+    "pro_col_rating": "Google rating",
+    "pro_col_lang": "Language and fit",
+    "pro_reviews_label": "What reviewers said",
+    "pro_thin": "Only {n} here have enough reviews to compare fairly. A larger town nearby will usually have more.",
+    "pro_see_all": "All eight professions",
+    "pro_back_results": "Back to the results",
+    "pro_no_address": "No address listed",
+    "pro_match_none_en": "None of these has a review written in English. They may still be able to help. We just have no evidence either way.",
+    "pro_match_some_en": "{n} of these {total} have been reviewed by someone writing in English.",
+    "pro_match_all_en": "All {total} of these have been reviewed by someone writing in English.",
+    "pro_does_real-estate": "Lists and sells property, arranges the viewings and carries the negotiation as far as the deposit contract. In Spain the agent is normally instructed and paid by the seller, so when you are buying they are not your adviser.",
+    "pro_when_real-estate": "When you are selling, and when you are buying and want somebody local who knows what a street actually sells for rather than what it is listed at.",
+    "pro_cost_real-estate": "A percentage of the sale price, paid by the seller and agreed in the listing agreement. The percentage varies a great deal between regions and agencies. There is no single national licence for estate agents in Spain, and the registration rules differ from one region to the next.",
+    "pro_ask_real-estate": [
+      "Are you acting for the seller, for me, or for both of us",
+      "Is the mandate exclusive, and for how long does it run",
+      "Can I see the nota simple and the community charges before I pay any deposit"
+    ],
+    "pro_does_lawyer": "Checks that what you are buying is what the register says it is, drafts and reviews the contracts, and handles disputes, inheritance and powers of attorney. An abogado can also act for you in court, which a gestoría cannot.",
+    "pro_when_lawyer": "Before you pay any deposit. The deposit contract is usually the point at which you are committed, and it is signed long before you get to the notary.",
+    "pro_cost_lawyer": "Usually a fixed fee for a purchase or a sale, and by the hour for a dispute. Ask for the fee in writing, with IVA and third party costs shown separately, before you engage anybody.",
+    "pro_ask_lawyer": [
+      "Which Colegio de Abogados are you registered with, and what is your number",
+      "Does your fee cover the register, debt and licence checks, or only the contract",
+      "Do you have any connection to the seller or to the agency"
+    ],
+    "pro_does_gestoria": "Handles the paperwork between you and the Spanish administration: the NIE, residency forms, tax filings, vehicle and social security admin. A gestoría is not a law firm. It does not give legal advice and cannot act for you in a dispute.",
+    "pro_when_gestoria": "For anything that recurs. The non resident income tax return, putting the utility bills into your own name, a car brought in from abroad.",
+    "pro_cost_gestoria": "Usually a fixed fee per task, or a yearly fee for filings that repeat. Ask what the fee covers, what is billed separately, and whether the tax itself is paid by them or by you.",
+    "pro_ask_gestoria": [
+      "Is the gestor colegiado, and with which Colegio",
+      "What exactly is included, and what is charged on top",
+      "Who keeps track of the deadlines, and what happens if a filing is late"
+    ],
+    "pro_does_architect": "Designs the work, prepares the project a town hall will accept, and signs it. Many of the jobs a foreign owner runs into are licence problems rather than design problems: an extension, a pool, an enclosed terrace, or legalising something a previous owner built.",
+    "pro_when_architect": "Before you commit to building anything, and before you buy a property where the paperwork does not match what is standing on the plot.",
+    "pro_cost_architect": "Per project, sometimes as a percentage of the building budget and sometimes as a fixed sum. The professional fee, the college stamp known as the visado, and the town hall fees are three different things, so ask which of them your quote includes.",
+    "pro_ask_architect": [
+      "Have you obtained this kind of licence from this town hall before",
+      "Is the quote a fixed sum or a percentage of the works",
+      "Does it include the visado, the town hall fees and supervision on site"
+    ],
+    "pro_does_community-admin": "Runs the comunidad de propietarios your building belongs to: the budget, the quotas, the minutes of the annual junta, the contractors and the arrears. If your flat is in a block or a gated urbanisation, you already have one.",
+    "pro_when_community-admin": "You do not usually choose your own, because the owners appoint the administrator at the junta. You are looking here if your community is changing administrator, if you sit on the committee, or if you are buying and need the certificate confirming the seller owes the community nothing.",
+    "pro_cost_community-admin": "Paid by the community out of the community fees, normally a fee per property per year that the owners vote on. It is not a bill that reaches you separately.",
+    "pro_ask_community-admin": [
+      "Can we have the accounts, the budget and the last minutes in writing",
+      "Do you send notices by email, and in any language other than Spanish",
+      "How does an owner who cannot attend the junta cast a vote"
+    ],
+    "pro_does_surveyor": "Puts a figure on what a property is worth, in a report a lender, a court or the tax office will accept. That is a different job from a condition survey. A valuation tells you what the place is worth, not whether the roof leaks.",
+    "pro_when_surveyor": "When a Spanish lender asks for a tasación before granting a mortgage, and for inheritance, divorce or an argument about value. If you want the building itself inspected, ask for a condition report and check the firm actually produces them.",
+    "pro_cost_surveyor": "A fixed fee, usually set by the size and type of property. A valuation for a mortgage has to come from a firm registered for that purpose with the Bank of Spain, and it expires, so ask how long yours will be accepted for.",
+    "pro_ask_surveyor": [
+      "Is this a mortgage valuation, a market appraisal or a condition report",
+      "Is the firm registered to produce valuations a lender will accept",
+      "How long will the report stay valid"
+    ],
+    "pro_does_insurance": "A correduría compares cover across several insurers rather than selling the policies of one company, arranges the cover and handles the claim alongside you. A tied agent works for a single insurer, which is a different relationship, and it is worth knowing which one you are talking to.",
+    "pro_when_insurance": "When you buy, because a lender will normally require buildings cover, and whenever the property stands empty for months and you need to know the policy still pays.",
+    "pro_cost_insurance": "You pay the premium. A broker is paid commission by the insurer, so ask what that means for the advice you get. Brokers are registered with the insurance regulator, the DGSFP, and you can ask for the registration number.",
+    "pro_ask_insurance": [
+      "Are you a broker across several insurers, or tied to one",
+      "Does the policy cover the property while it is unoccupied, and after how many days does that change",
+      "Can I read the policy and make a claim in my own language"
+    ],
+    "pro_does_translator": "Produces the stamped and signed translations Spanish authorities accept, and can act as a sworn interpreter. Sworn translators are appointed by the Spanish Ministry of Foreign Affairs, which publishes the list, so this is one of the few titles you can check yourself in a minute.",
+    "pro_when_translator": "For a foreign birth, marriage or death certificate, a foreign will, a power of attorney, court papers, and at a notary signing if you do not follow Spanish well enough to be sure what you are agreeing to.",
+    "pro_cost_translator": "Usually per word or per document, with a surcharge for urgent work and for attending in person. Ask for a price on the actual documents rather than a rate.",
+    "pro_ask_translator": [
+      "Are you on the Foreign Ministry list for this language pair",
+      "Will the office I am submitting this to accept your stamp",
+      "Can you attend the notary as well, and what is the fee for that"
+    ]
   }
 }

@@ -4,12 +4,12 @@
     "cost": "Kostnadsoversikt",
     "rental": "Utleieskatt",
     "language": "Språk",
-    "directory": "Håndverkerregister",
+    "directory": "Reparasjoner",
     "claim": "Boliglånskrav",
-    "professionals": "Eiendomsfagfolk",
-    "menu_trades": "Håndverkere",
+    "professionals": "Boligeksperter",
+    "menu_trades": "Reparasjoner",
     "menu_tools": "Gratis verktøy",
-    "menu_pros": "Fagfolk"
+    "menu_pros": "Boligeksperter"
   },
   "home": {
     "brand_sub": "Gratis boligverktøy",
@@ -46,9 +46,9 @@
     "band_em": "med trygghet?",
     "band_cta": "Kom i gang",
     "footer_copy": "© 2025 Spain 24/7. Kun til veiledning. Ikke juridisk eller skattemessig rådgivning.",
-    "dir_eyebrow": "Håndverkerregister",
+    "dir_eyebrow": "Reparasjoner",
     "dir_title": "Finn en rørlegger, elektriker eller byggmester i",
-    "dir_sub": "Seks fag, {count} byer i alle spanske provinser, rangert etter ekte Google-omtaler. Les omtalene og se hvilket språk de er skrevet på, før du tar telefonen.",
+    "dir_sub": "Seks fag, {count} byer i alle spanske provinser, rangert etter ekte Google-anmeldelser. Fortell oss hvilket språk du trenger hjelp på, så setter vi de som allerede har hjulpet noen som skriver på det, øverst.",
     "dir_proof_title": "Stjerner alene er lette å kjøpe",
     "dir_proof_a": "5,0 fra 3 omtaler",
     "dir_proof_a_verdict": "Rangert lavere",
@@ -62,7 +62,7 @@
     "dir_title_em": "din spanske by",
     "prof_title": "Å eie i Spania betyr å forholde seg til folk du",
     "prof_title_em": "aldri har hørt om",
-    "prof_sub": "En gestoría, en administrador de fincas, en statsautorisert translatør. Her er hva hver av dem faktisk gjør, og hvem som får gode omtaler i byen din.",
+    "prof_sub": "En gestoría, en administrador de fincas, en statsautorisert translatør. Her er hva hver av dem faktisk gjør, hvem som har gode anmeldelser i din by, og hvem en anmelder har skrevet til på ditt språk.",
     "tools_filter_label": "Filtrer verktøy",
     "group_all": "Alle",
     "group_buying": "Kjøpe",
@@ -70,7 +70,9 @@
     "group_renting": "Utleie",
     "group_money": "Penger",
     "group_owning": "Eie bolig",
-    "group_status": "Status og opphold"
+    "group_status": "Status og opphold",
+    "dir_lang_line": "Ingen her må forklare et sprukket rør på spansk.",
+    "prof_lang_line": "Papirarbeidet er vanskelig nok uten språket i tillegg."
   },
   "cards": {
     "tax": {
@@ -99,15 +101,15 @@
     },
     "directory": {
       "tag": "Register",
-      "title": "Håndverkerregister for Spania",
+      "title": "Reparasjoner i Spania",
       "desc": "Rørlegger, elektriker, låsesmed, klimaanlegg, basseng eller byggmester. Se de best omtalte i din spanske by, rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
       "cta": "Finn en håndverker"
     },
     "professionals": {
       "tag": "Eiendom",
-      "title": "Spanske eiendomsfagfolk",
+      "title": "Boligeksperter i Spania",
       "desc": "Eiendomsmeglere og eiendomsadvokater i din spanske by, rangert etter Google-omtaler, med omtalene og språket de er skrevet på.",
-      "cta": "Finn en fagperson"
+      "cta": "Finn en ekspert"
     }
   },
   "calc_tax": {
@@ -425,7 +427,7 @@
     "other": "Annet land"
   },
   "calc_directory": {
-    "meta_title": "Håndverkerregister for Spania",
+    "meta_title": "Reparasjoner i Spania",
     "eyebrow": "Gratis verktøy",
     "headline": "Finn en rørlegger, elektriker eller byggmester i din spanske by",
     "lede": "Varmtvannsberederen svikter en fredag, og du er 2 000 km unna. Her ser du de best omtalte rørleggerne, elektrikerne og andre håndverkere i din spanske by, med omtalene de har fått og språket omtalene er skrevet på.",
@@ -483,8 +485,8 @@
     "cat_real-estate_pl": "eiendomsmeglere",
     "cat_lawyer": "Eiendomsadvokat",
     "cat_lawyer_pl": "eiendomsadvokater",
-    "prof_eyebrow": "Eiendomsfagfolk",
-    "prof_meta_title": "Spanske eiendomsfagfolk",
+    "prof_eyebrow": "Boligeksperter",
+    "prof_meta_title": "Boligeksperter i Spania",
     "prof_headline": "Finn en eiendomsmegler, gestoría eller eiendomsadvokat i din spanske by",
     "prof_lede": "Kjøp, salg, eller bare å få papirene i orden. Velg byen din og se hvem omtalene faktisk anbefaler.",
     "prof_note": "En ting til for juridisk arbeid. En stjernevurdering erstatter ikke en sjekk av at den du engasjerer er registrert hos det lokale Colegio de Abogados, og at honoraret foreligger skriftlig før du gir oppdraget.",
@@ -507,6 +509,132 @@
     "does_community-admin": "Driver sameiet leiligheten din tilhører.",
     "does_surveyor": "Hva boligen er verdt på papiret, for bank eller domstol.",
     "does_insurance": "Bolig- og innboforsikring som utbetaler fra utlandet.",
-    "does_translator": "De eneste oversettelsene et spansk register godtar."
+    "does_translator": "De eneste oversettelsene et spansk register godtar.",
+    "method_lang": "Der et språk er notert, betyr det at en anmeldelse ble skrevet på det språket, eller at en anmelder nevnte det. Det er ikke noe virksomheten har fortalt oss.",
+    "honest_lang": "Vi har ikke ringt noen for å spørre hvilke språk de snakker. Alt på denne siden om språk kommer fra anmeldelsene selv, og du kan lese anmeldelsen det kom fra.",
+    "lang_none": "Ingen språkbevis",
+    "lang_none_help": "Vi har ingen anmeldelser her på ditt språk og ingen som nevner det. Det betyr ikke at de ikke kan hjelpe deg, bare at vi ikke kan vite det.",
+    "lang_reviewed_one": "Anmeldt én gang på {lang}",
+    "lang_reviewed_many": "Anmeldt {n} ganger på {lang}",
+    "lang_english_one": "Anmeldt én gang på engelsk",
+    "lang_english_many": "Anmeldt {n} ganger på engelsk",
+    "lang_mentioned": "En anmelder nevner språk",
+    "fit_remote": "Jobbet for en eier som var i utlandet",
+    "fit_updates": "Holdt eieren oppdatert",
+    "fit_paperwork": "Tilbud eller faktura skriftlig",
+    "fit_access": "Håndterte adgang til en tom bolig",
+    "pref_label": "Jeg trenger hjelp på",
+    "pref_help": "Vi flytter virksomheter som allerede har hjulpet noen som skriver på ditt språk, opp, og forteller deg hvilke.",
+    "match_none": "Ingen av disse har en anmeldelse på {lang} eller engelsk. De kan fortsatt hjelpe. Vi har bare ingen bevis hverken for eller imot.",
+    "match_some": "{n} av disse {total} har blitt anmeldt av noen som skriver på {lang} eller engelsk.",
+    "match_all": "Alle {total} av disse har blitt anmeldt av noen som skriver på {lang} eller engelsk.",
+    "sorted_note": "Sortert etter språkbevis først, deretter etter anmeldelser.",
+    "trades_eyebrow": "Reparasjoner",
+    "trades_headline": "Vann gjennom taket, og du er ikke i landet.",
+    "trades_lede": "De best omtalte rørleggerne, elektrikerne, låsesmedene, klimateknikerne, bassengfirmaene og byggmesterne i 660 spanske byer. Rangert etter Google-omtaler, med språket hver omtale er skrevet på vist ved hvert navn.",
+    "trades_proof_1": "660 byer i Spania",
+    "trades_proof_2": "Seks fag",
+    "trades_proof_3": "Gratis å bruke",
+    "trades_proof_4": "Ingen betaler for å stå her",
+    "trades_new_search": "Bytt by eller fag",
+    "trades_back_results": "Tilbake til resultatene",
+    "trades_error_label": "Kunne ikke laste",
+    "trades_thin": "Dette er alle i {town} med nok omtaler til å rangeres rettferdig. Nærmeste større by har flere.",
+    "trades_call_aria": "Ring {name} på {phone}",
+    "trades_match_none_en": "Ingen av disse har en omtale skrevet på engelsk. De kan fortsatt hjelpe deg. Vi har bare ingen holdepunkter hverken for eller mot.",
+    "trades_match_some_en": "{n} av disse {total} har blitt anmeldt av noen som skriver på engelsk.",
+    "trades_match_all_en": "Alle {total} har blitt anmeldt av noen som skriver på engelsk.",
+    "pro_land_h1": "Å eie i Spania betyr å forholde seg til yrker du aldri har hørt om, på et språk du ikke snakker.",
+    "pro_land_lede": "Denne siden gjør to ting. Den forklarer hvem hver av disse menneskene er og hva de faktisk brukes til, og den viser de best omtalte i byen din, med dem som allerede er omtalt av noen som skriver på ditt språk øverst.",
+    "pro_form_title": "Finn noen i byen din",
+    "pro_cta_full": "Vis {trade} i {town}",
+    "pro_cta": "Vis {trade}",
+    "pro_who_title": "Hvem gjør hva",
+    "pro_who_lede": "Åtte yrker, og det du trenger er ofte ikke det du trodde. Les om de to du velger mellom.",
+    "pro_choose": "Vis disse",
+    "pro_choose_in": "Vis disse i {town}",
+    "pro_need_town": "Velg byen din først, så viser vi deg hvem som finnes der.",
+    "pro_ex_eyebrow": "Før du velger",
+    "pro_ex_does": "Hva de gjør",
+    "pro_ex_when": "Når du trenger en",
+    "pro_ex_cost": "Hvordan de tar betalt",
+    "pro_ex_ask": "Verdt å spørre om først",
+    "pro_ex_cost_note": "Vi publiserer ikke priser. Honorarene varierer med by, firma og oppdrag, og et tall vi ikke kunne stå inne for ville vært verre enn ingen tall.",
+    "pro_results_h1": "{trade} i {town}",
+    "pro_col_business": "Virksomhet",
+    "pro_col_rating": "Google-vurdering",
+    "pro_col_lang": "Språk og egnethet",
+    "pro_reviews_label": "Dette skrev anmelderne",
+    "pro_thin": "Bare {n} her har nok anmeldelser til å sammenlignes rettferdig. En større by i nærheten har som regel flere.",
+    "pro_see_all": "Alle åtte yrkene",
+    "pro_back_results": "Tilbake til resultatene",
+    "pro_no_address": "Ingen adresse oppgitt",
+    "pro_match_none_en": "Ingen av disse har en anmeldelse skrevet på engelsk. De kan fortsatt hjelpe deg. Vi har bare ingen holdepunkter noen vei.",
+    "pro_match_some_en": "{n} av disse {total} er anmeldt av noen som skriver på engelsk.",
+    "pro_match_all_en": "Alle {total} av disse er anmeldt av noen som skriver på engelsk.",
+    "pro_does_real-estate": "Legger ut og selger eiendom, ordner visninger og fører forhandlingen fram til kontrakten med forskudd. I Spania er det normalt selgeren som gir megleren oppdraget og betaler ham, så når du kjøper er han ikke din rådgiver.",
+    "pro_when_real-estate": "Når du selger, og når du kjøper og vil ha noen lokalt som vet hva en gate faktisk selges for, ikke hva den er prisantydet til.",
+    "pro_cost_real-estate": "En prosent av salgssummen, betalt av selgeren og avtalt i oppdragsavtalen. Prosenten varierer mye mellom regioner og meglerhus. Det finnes ingen felles nasjonal bevilling for eiendomsmeglere i Spania, og reglene for registrering er ulike fra region til region.",
+    "pro_ask_real-estate": [
+      "Handler du på vegne av selgeren, av meg, eller av oss begge",
+      "Er oppdraget eksklusivt, og hvor lenge løper det",
+      "Kan jeg få se nota simple og fellesutgiftene før jeg betaler forskudd"
+    ],
+    "pro_does_lawyer": "Kontrollerer at det du kjøper er det registeret sier at det er, utformer og gjennomgår kontraktene, og håndterer tvister, arv og fullmakter. En abogado kan også opptre for deg i retten, noe en gestoría ikke kan.",
+    "pro_when_lawyer": "Før du betaler noe forskudd. Kontrakten med forskudd er som regel punktet der du er bundet, og den signeres lenge før du kommer til notaren.",
+    "pro_cost_lawyer": "Vanligvis et fast honorar for et kjøp eller et salg, og timepris i en tvist. Be om honoraret skriftlig, med IVA og tredjepartskostnader oppgitt hver for seg, før du engasjerer noen.",
+    "pro_ask_lawyer": [
+      "Hvilket Colegio de Abogados er du registrert i, og hva er nummeret ditt",
+      "Dekker honoraret kontroll av register, gjeld og tillatelser, eller bare kontrakten",
+      "Har du noen forbindelse til selgeren eller til meglerhuset"
+    ],
+    "pro_does_gestoria": "Håndterer papirarbeidet mellom deg og spanske myndigheter: NIE, oppholdspapirer, skattemeldinger, kjøretøy og trygd. En gestoría er ikke et advokatkontor. Den gir ikke juridiske råd og kan ikke opptre for deg i en tvist.",
+    "pro_when_gestoria": "For alt som gjentar seg. Skattemeldingen for ikke-bosatte, å få strøm- og vannregningene i ditt eget navn, en bil tatt inn fra utlandet.",
+    "pro_cost_gestoria": "Vanligvis et fast honorar per oppdrag, eller et årlig honorar for meldinger som gjentar seg. Spør hva honoraret dekker, hva som faktureres separat, og om skatten selv betales av dem eller av deg.",
+    "pro_ask_gestoria": [
+      "Er gestoren colegiado, og i hvilket Colegio",
+      "Hva er nøyaktig inkludert, og hva kommer i tillegg",
+      "Hvem holder oversikt over fristene, og hva skjer hvis en melding kommer for sent"
+    ],
+    "pro_does_architect": "Prosjekterer arbeidet, utarbeider prosjektet kommunen godtar, og signerer det. Mye av det en utenlandsk eier møter er spørsmål om tillatelser snarere enn om design: et tilbygg, et basseng, en innglasset terrasse, eller å lovliggjøre noe en tidligere eier bygde.",
+    "pro_when_architect": "Før du forplikter deg til å bygge noe, og før du kjøper en eiendom der papirene ikke stemmer med det som står på tomten.",
+    "pro_cost_architect": "Per prosjekt, noen ganger som en prosent av byggebudsjettet og noen ganger som en fast sum. Honoraret, stempelet fra arkitektforeningen som kalles visado, og kommunens gebyrer er tre forskjellige ting, så spør hvilke av dem tilbudet ditt inkluderer.",
+    "pro_ask_architect": [
+      "Har du hentet denne typen tillatelse hos denne kommunen før",
+      "Er tilbudet en fast sum eller en prosent av arbeidene",
+      "Inkluderer det visado, kommunale gebyrer og oppfølging på stedet"
+    ],
+    "pro_does_community-admin": "Driver den comunidad de propietarios bygget ditt hører til: budsjettet, andelene, protokollen fra den årlige junta, håndverkerne og restansene. Ligger leiligheten din i en blokk eller et lukket boligområde, har du allerede en.",
+    "pro_when_community-admin": "Du velger normalt ikke din egen, for eierne utnevner forvalteren på junta. Du leter her hvis sameiet skal bytte forvalter, hvis du sitter i styret, eller hvis du kjøper og trenger attesten på at selgeren ikke skylder sameiet noe.",
+    "pro_cost_community-admin": "Betales av sameiet over fellesutgiftene, normalt et honorar per bolig per år som eierne stemmer over. Det er ikke en regning som kommer til deg separat.",
+    "pro_ask_community-admin": [
+      "Kan vi få regnskapet, budsjettet og siste protokoll skriftlig",
+      "Sender dere innkallinger på e-post, og på andre språk enn spansk",
+      "Hvordan stemmer en eier som ikke kan møte på junta"
+    ],
+    "pro_does_surveyor": "Setter et tall på hva en eiendom er verdt, i en rapport en långiver, en domstol eller skattemyndighetene godtar. Det er en annen jobb enn en tilstandsrapport. En verdivurdering forteller hva stedet er verdt, ikke om taket lekker.",
+    "pro_when_surveyor": "Når en spansk långiver ber om en tasación før lån innvilges, og ved arv, skilsmisse eller uenighet om verdi. Vil du ha selve bygningen undersøkt, be om en tilstandsrapport og sjekk at firmaet faktisk lager slike.",
+    "pro_cost_surveyor": "Et fast honorar, vanligvis bestemt av eiendommens størrelse og type. En verdivurdering til lån må komme fra et firma som er registrert for formålet hos Spanias sentralbank, og den utløper, så spør hvor lenge din blir godtatt.",
+    "pro_ask_surveyor": [
+      "Er dette en verdivurdering til lån, en markedsvurdering eller en tilstandsrapport",
+      "Er firmaet registrert for å lage vurderinger en långiver godtar",
+      "Hvor lenge er rapporten gyldig"
+    ],
+    "pro_does_insurance": "En correduría sammenligner dekning på tvers av flere selskaper i stedet for å selge ett selskaps poliser, ordner dekningen og følger skadesaken sammen med deg. En bundet agent arbeider for ett selskap, som er et annet forhold, og det er verdt å vite hvem du snakker med.",
+    "pro_when_insurance": "Når du kjøper, fordi en långiver normalt krever bygningsforsikring, og når boligen står tom i månedsvis og du trenger å vite at polisen fortsatt betaler.",
+    "pro_cost_insurance": "Du betaler premien. En megler får provisjon fra selskapet, så spør hva det betyr for rådet du får. Meglere er registrert hos forsikringstilsynet DGSFP, og du kan be om registreringsnummeret.",
+    "pro_ask_insurance": [
+      "Er du megler på tvers av flere selskaper, eller bundet til ett",
+      "Dekker polisen boligen mens den står tom, og etter hvor mange dager endrer det seg",
+      "Kan jeg lese polisen og melde skade på mitt eget språk"
+    ],
+    "pro_does_translator": "Lager de stemplede og signerte oversettelsene spanske myndigheter godtar, og kan opptre som statsautorisert tolk. Statsautoriserte translatører utnevnes av det spanske utenriksdepartementet, som publiserer listen, så dette er en av de få titlene du kan kontrollere selv på et minutt.",
+    "pro_when_translator": "For utenlandsk fødsels-, vigsels- eller dødsattest, et utenlandsk testament, en fullmakt, rettsdokumenter, og ved signering hos notar hvis du ikke følger spansk godt nok til å være sikker på hva du samtykker til.",
+    "pro_cost_translator": "Vanligvis per ord eller per dokument, med tillegg for hastearbeid og for å møte personlig. Be om pris på de faktiske dokumentene, ikke en sats.",
+    "pro_ask_translator": [
+      "Står du på utenriksdepartementets liste for dette språkparet",
+      "Vil kontoret jeg leverer dette til godta stempelet ditt",
+      "Kan du også møte hos notaren, og hva koster det"
+    ]
   }
 }

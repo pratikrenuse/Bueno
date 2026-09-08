@@ -4,12 +4,12 @@
     "cost": "Kostenanalyse",
     "rental": "Mietsteuer",
     "language": "Sprache",
-    "directory": "Handwerkerverzeichnis",
+    "directory": "Reparaturen",
     "claim": "Hypotheken-Anspruch",
-    "professionals": "Immobilienfachleute",
-    "menu_trades": "Handwerker",
+    "professionals": "Immobilienexperten",
+    "menu_trades": "Reparaturen",
     "menu_tools": "Gratis-Tools",
-    "menu_pros": "Fachleute"
+    "menu_pros": "Immobilienexperten"
   },
   "home": {
     "brand_sub": "Kostenlose Immobilien-Tools",
@@ -46,9 +46,9 @@
     "band_em": "mit Zuversicht?",
     "band_cta": "Loslegen",
     "footer_copy": "© 2025 Spain 24/7. Nur zur Orientierung. Keine Rechts- oder Steuerberatung.",
-    "dir_eyebrow": "Handwerkerverzeichnis",
+    "dir_eyebrow": "Reparaturen",
     "dir_title": "Installateur, Elektriker oder Bauunternehmen in",
-    "dir_sub": "Sechs Gewerke, {count} Orte in allen spanischen Provinzen, sortiert nach echten Google-Bewertungen. Lesen Sie die Bewertungen und sehen Sie, in welcher Sprache sie verfasst sind, bevor Sie anrufen.",
+    "dir_sub": "Sechs Gewerke, {count} Orte in allen spanischen Provinzen, sortiert nach echten Google-Bewertungen. Sagen Sie uns, in welcher Sprache Sie Hilfe brauchen, und wir setzen die Betriebe nach oben, die schon jemandem geholfen haben, der in dieser Sprache schreibt.",
     "dir_proof_title": "Sterne allein sind leicht zu kaufen",
     "dir_proof_a": "5,0 aus 3 Bewertungen",
     "dir_proof_a_verdict": "Niedriger sortiert",
@@ -62,7 +62,7 @@
     "dir_title_em": "Ihrem spanischen Ort",
     "prof_title": "Eine Immobilie in Spanien heißt Umgang mit Leuten, von denen Sie",
     "prof_title_em": "nie gehört haben",
-    "prof_sub": "Eine Gestoría, ein Administrador de Fincas, ein beeidigter Übersetzer. Hier steht, was jeder davon wirklich macht, und wer in Ihrem Ort gut bewertet ist.",
+    "prof_sub": "Eine gestoría, ein administrador de fincas, ein vereidigter Übersetzer. Hier steht, was jeder davon tatsächlich macht, wer in Ihrem Ort gut bewertet ist, und wem ein Bewerter in Ihrer Sprache geschrieben hat.",
     "tools_filter_label": "Werkzeuge filtern",
     "group_all": "Alle",
     "group_buying": "Kaufen",
@@ -70,7 +70,9 @@
     "group_renting": "Vermieten",
     "group_money": "Geld",
     "group_owning": "Immobilie besitzen",
-    "group_status": "Status und Aufenthalt"
+    "group_status": "Status und Aufenthalt",
+    "dir_lang_line": "Hier muss niemand einen Rohrbruch auf Spanisch erklären.",
+    "prof_lang_line": "Der Papierkram ist schwer genug, auch ohne die Sprache."
   },
   "cards": {
     "tax": {
@@ -99,15 +101,15 @@
     },
     "directory": {
       "tag": "Verzeichnis",
-      "title": "Handwerkerverzeichnis für Spanien",
+      "title": "Reparaturen in Spanien",
       "desc": "Installateur, Elektriker, Schlüsseldienst, Klimaanlage, Pool oder Bauunternehmen. Sehen Sie die bestbewerteten in Ihrem spanischen Ort, sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
       "cta": "Handwerker finden"
     },
     "professionals": {
       "tag": "Immobilien",
-      "title": "Immobilienfachleute in Spanien",
+      "title": "Immobilienexperten in Spanien",
       "desc": "Immobilienmakler und Immobilienanwälte in Ihrem spanischen Ort, sortiert nach Google-Bewertungen, mit den Bewertungen und ihrer Sprache.",
-      "cta": "Fachmann finden"
+      "cta": "Einen Experten finden"
     }
   },
   "calc_tax": {
@@ -425,7 +427,7 @@
     "other": "Anderes Land"
   },
   "calc_directory": {
-    "meta_title": "Handwerkerverzeichnis für Spanien",
+    "meta_title": "Reparaturen in Spanien",
     "eyebrow": "Kostenloses Tool",
     "headline": "Installateur, Elektriker oder Bauunternehmen in Ihrem spanischen Ort",
     "lede": "Der Boiler fällt an einem Freitag aus und Sie sind 2.000 km entfernt. Hier sehen Sie die am besten bewerteten Installateure, Elektriker und weiteren Gewerke in Ihrem spanischen Ort, mit den Bewertungen und der Sprache, in der sie geschrieben wurden.",
@@ -483,8 +485,8 @@
     "cat_real-estate_pl": "Immobilienmakler",
     "cat_lawyer": "Immobilienanwalt",
     "cat_lawyer_pl": "Immobilienanwälte",
-    "prof_eyebrow": "Immobilienfachleute",
-    "prof_meta_title": "Immobilienfachleute in Spanien",
+    "prof_eyebrow": "Immobilienexperten",
+    "prof_meta_title": "Immobilienexperten in Spanien",
     "prof_headline": "Immobilienmakler, Gestoría oder Immobilienanwalt in Ihrem spanischen Ort",
     "prof_lede": "Kaufen, verkaufen, oder einfach den Papierkram erledigen. Wählen Sie Ihren Ort und sehen Sie, wen die Bewertungen wirklich empfehlen.",
     "prof_note": "Noch eines für rechtliche Fragen. Eine Bewertung ersetzt nicht die Prüfung, dass die von Ihnen beauftragte Kanzlei beim örtlichen Colegio de Abogados eingetragen ist und ihr Honorar vor der Beauftragung schriftlich vorliegt.",
@@ -507,6 +509,132 @@
     "does_community-admin": "Führt die Eigentümergemeinschaft Ihrer Wohnung.",
     "does_surveyor": "Was die Immobilie auf dem Papier wert ist, für Bank oder Gericht.",
     "does_insurance": "Wohngebäude und Hausrat, die auch aus dem Ausland zahlen.",
-    "does_translator": "Die einzigen Übersetzungen, die ein spanisches Register annimmt."
+    "does_translator": "Die einzigen Übersetzungen, die ein spanisches Register annimmt.",
+    "method_lang": "Wo eine Sprache vermerkt ist, bedeutet das, dass eine Bewertung in dieser Sprache geschrieben wurde oder ein Bewerter sie erwähnt hat. Es ist nichts, was das Unternehmen uns mitgeteilt hat.",
+    "honest_lang": "Wir haben niemanden angerufen, um zu fragen, welche Sprachen gesprochen werden. Alles auf dieser Seite zum Thema Sprache stammt aus den Bewertungen selbst, und Sie können die Bewertung nachlesen.",
+    "lang_none": "Kein Sprachnachweis",
+    "lang_none_help": "Wir haben hier keine Bewertungen in Ihrer Sprache und keine, die sie erwähnt. Das heißt nicht, dass Ihnen nicht geholfen werden kann, nur dass wir es nicht wissen können.",
+    "lang_reviewed_one": "Einmal auf {lang} bewertet",
+    "lang_reviewed_many": "{n} mal auf {lang} bewertet",
+    "lang_english_one": "Einmal auf Englisch bewertet",
+    "lang_english_many": "{n} mal auf Englisch bewertet",
+    "lang_mentioned": "Ein Bewerter erwähnt Sprache",
+    "fit_remote": "Hat für einen Eigentümer im Ausland gearbeitet",
+    "fit_updates": "Hat den Eigentümer auf dem Laufenden gehalten",
+    "fit_paperwork": "Angebot oder Rechnung schriftlich",
+    "fit_access": "Hat den Zugang zu einer leeren Immobilie geregelt",
+    "pref_label": "Ich brauche Hilfe auf",
+    "pref_help": "Wir setzen Betriebe nach oben, die bereits jemandem geholfen haben, der in Ihrer Sprache schreibt, und sagen Ihnen welche.",
+    "match_none": "Keiner davon hat eine Bewertung auf {lang} oder Englisch. Helfen können sie trotzdem. Wir haben nur keinen Beleg in die eine oder andere Richtung.",
+    "match_some": "{n} von diesen {total} wurden von jemandem bewertet, der auf {lang} oder Englisch schreibt.",
+    "match_all": "Alle {total} wurden von jemandem bewertet, der auf {lang} oder Englisch schreibt.",
+    "sorted_note": "Sortiert zuerst nach Sprachnachweis, dann nach Bewertungen.",
+    "trades_eyebrow": "Reparaturen",
+    "trades_headline": "Wasser durch die Decke, und Sie sind nicht im Land.",
+    "trades_lede": "Die am besten bewerteten Installateure, Elektriker, Schlüsseldienste, Klimatechniker, Poolservices und Bauunternehmen in 660 spanischen Orten. Sortiert nach Google-Bewertungen, mit der Sprache, in der jede Bewertung geschrieben wurde, neben jedem Namen.",
+    "trades_proof_1": "660 Orte in Spanien",
+    "trades_proof_2": "Sechs Gewerke",
+    "trades_proof_3": "Kostenlos nutzbar",
+    "trades_proof_4": "Niemand bezahlt für einen Platz",
+    "trades_new_search": "Ort oder Gewerk ändern",
+    "trades_back_results": "Zurück zu den Ergebnissen",
+    "trades_error_label": "Konnte nicht geladen werden",
+    "trades_thin": "Das sind alle in {town} mit genug Bewertungen für ein faires Ranking. Der nächstgrößere Ort hat mehr.",
+    "trades_call_aria": "{name} unter {phone} anrufen",
+    "trades_match_none_en": "Keiner von diesen hat eine auf Englisch geschriebene Bewertung. Sie können Ihnen trotzdem helfen. Wir haben nur keine Belege in die eine oder andere Richtung.",
+    "trades_match_some_en": "{n} von diesen {total} wurden von jemandem bewertet, der auf Englisch schreibt.",
+    "trades_match_all_en": "Alle {total} wurden von jemandem bewertet, der auf Englisch schreibt.",
+    "pro_land_h1": "Eine Immobilie in Spanien zu besitzen heißt, mit Berufen zu tun zu haben, von denen Sie nie gehört haben, in einer Sprache, die Sie nicht sprechen.",
+    "pro_land_lede": "Diese Seite tut zwei Dinge. Sie erklärt, wer diese Menschen jeweils sind und wofür man sie wirklich braucht, und sie zeigt die am besten bewerteten in Ihrer Stadt, mit denen zuerst, die jemand in Ihrer Sprache bereits bewertet hat.",
+    "pro_form_title": "Jemanden in Ihrer Stadt finden",
+    "pro_cta_full": "{trade} in {town} anzeigen",
+    "pro_cta": "{trade} anzeigen",
+    "pro_who_title": "Wer macht was",
+    "pro_who_lede": "Acht Berufe, und der, den Sie brauchen, ist oft nicht der, den Sie erwartet haben. Lesen Sie die beiden, zwischen denen Sie wählen.",
+    "pro_choose": "Diese anzeigen",
+    "pro_choose_in": "Diese in {town} anzeigen",
+    "pro_need_town": "Wählen Sie zuerst Ihre Stadt, dann zeigen wir Ihnen, wer dort ist.",
+    "pro_ex_eyebrow": "Bevor Sie wählen",
+    "pro_ex_does": "Was sie tun",
+    "pro_ex_when": "Wann Sie einen brauchen",
+    "pro_ex_cost": "Wie abgerechnet wird",
+    "pro_ex_ask": "Vorher fragen",
+    "pro_ex_cost_note": "Wir veröffentlichen keine Preise. Honorare unterscheiden sich nach Ort, Büro und Auftrag, und eine Zahl, für die wir nicht einstehen könnten, wäre schlechter als keine.",
+    "pro_results_h1": "{trade} in {town}",
+    "pro_col_business": "Betrieb",
+    "pro_col_rating": "Google-Bewertung",
+    "pro_col_lang": "Sprache und Eignung",
+    "pro_reviews_label": "Das schrieben die Bewertenden",
+    "pro_thin": "Nur {n} hier haben genug Bewertungen für einen fairen Vergleich. Eine größere Stadt in der Nähe hat meist mehr.",
+    "pro_see_all": "Alle acht Berufe",
+    "pro_back_results": "Zurück zu den Ergebnissen",
+    "pro_no_address": "Keine Adresse angegeben",
+    "pro_match_none_en": "Keiner von ihnen hat eine Bewertung auf Englisch. Sie können Ihnen trotzdem helfen. Wir haben dazu nur keinerlei Anhaltspunkte.",
+    "pro_match_some_en": "{n} von diesen {total} wurden von jemandem bewertet, der auf Englisch schreibt.",
+    "pro_match_all_en": "Alle {total} wurden von jemandem bewertet, der auf Englisch schreibt.",
+    "pro_does_real-estate": "Bietet Immobilien an, organisiert die Besichtigungen und führt die Verhandlung bis zum Anzahlungsvertrag. In Spanien wird der Makler in der Regel vom Verkäufer beauftragt und bezahlt, beim Kauf ist er also nicht Ihr Berater.",
+    "pro_when_real-estate": "Wenn Sie verkaufen, und wenn Sie kaufen und jemanden vor Ort wollen, der weiß, wofür eine Straße tatsächlich verkauft wird und nicht, wofür sie inseriert ist.",
+    "pro_cost_real-estate": "Ein Prozentsatz des Kaufpreises, gezahlt vom Verkäufer und im Maklerauftrag vereinbart. Der Satz schwankt stark zwischen Regionen und Büros. Es gibt in Spanien keine einheitliche nationale Zulassung für Immobilienmakler, und die Registrierungsregeln unterscheiden sich von Region zu Region.",
+    "pro_ask_real-estate": [
+      "Handeln Sie für den Verkäufer, für mich, oder für uns beide",
+      "Ist der Auftrag exklusiv, und wie lange läuft er",
+      "Kann ich die nota simple und die Gemeinschaftskosten sehen, bevor ich eine Anzahlung leiste"
+    ],
+    "pro_does_lawyer": "Prüft, ob das, was Sie kaufen, dem entspricht, was im Register steht, entwirft und prüft die Verträge und bearbeitet Streitfälle, Erbschaften und Vollmachten. Ein abogado kann Sie außerdem vor Gericht vertreten, eine gestoría nicht.",
+    "pro_when_lawyer": "Bevor Sie eine Anzahlung leisten. Der Anzahlungsvertrag ist meist der Punkt, an dem Sie gebunden sind, und er wird lange vor dem Notartermin unterschrieben.",
+    "pro_cost_lawyer": "Meist ein Festhonorar für einen Kauf oder Verkauf und ein Stundensatz im Streitfall. Lassen Sie sich das Honorar schriftlich geben, mit IVA und Fremdkosten getrennt ausgewiesen, bevor Sie jemanden beauftragen.",
+    "pro_ask_lawyer": [
+      "Bei welchem Colegio de Abogados sind Sie eingetragen, und wie lautet Ihre Nummer",
+      "Deckt Ihr Honorar die Register-, Schulden- und Genehmigungsprüfung ab, oder nur den Vertrag",
+      "Haben Sie eine Verbindung zum Verkäufer oder zum Maklerbüro"
+    ],
+    "pro_does_gestoria": "Erledigt den Schriftverkehr zwischen Ihnen und der spanischen Verwaltung: NIE, Aufenthaltsunterlagen, Steuererklärungen, Fahrzeug- und Sozialversicherungsangelegenheiten. Eine gestoría ist keine Kanzlei. Sie berät nicht rechtlich und kann Sie in einem Streit nicht vertreten.",
+    "pro_when_gestoria": "Für alles, was wiederkehrt. Die Einkommensteuererklärung für Nichtansässige, die Umschreibung der Versorgungsrechnungen auf Ihren Namen, ein aus dem Ausland eingeführtes Auto.",
+    "pro_cost_gestoria": "Meist ein Festhonorar je Vorgang oder ein Jahreshonorar für wiederkehrende Erklärungen. Fragen Sie, was das Honorar abdeckt, was gesondert berechnet wird und ob die Steuer selbst von ihnen oder von Ihnen gezahlt wird.",
+    "pro_ask_gestoria": [
+      "Ist der gestor colegiado, und bei welchem Colegio",
+      "Was genau ist enthalten, und was kommt obendrauf",
+      "Wer behält die Fristen im Blick, und was passiert, wenn eine Erklärung zu spät kommt"
+    ],
+    "pro_does_architect": "Plant die Arbeiten, erstellt das Projekt, das ein Rathaus akzeptiert, und unterschreibt es. Vieles, worauf ein ausländischer Eigentümer stößt, ist ein Genehmigungsproblem und kein Entwurfsproblem: ein Anbau, ein Pool, eine verglaste Terrasse oder die Legalisierung dessen, was ein Vorbesitzer gebaut hat.",
+    "pro_when_architect": "Bevor Sie sich zum Bauen verpflichten, und bevor Sie eine Immobilie kaufen, deren Unterlagen nicht zu dem passen, was auf dem Grundstück steht.",
+    "pro_cost_architect": "Je Projekt, mal als Prozentsatz des Baubudgets, mal als Festbetrag. Das Honorar, der Stempel der Architektenkammer, visado genannt, und die Gebühren des Rathauses sind drei verschiedene Dinge. Fragen Sie, welche davon Ihr Angebot enthält.",
+    "pro_ask_architect": [
+      "Haben Sie diese Art von Genehmigung bei diesem Rathaus schon einmal erwirkt",
+      "Ist das Angebot ein Festbetrag oder ein Prozentsatz der Bauarbeiten",
+      "Enthält es das visado, die Gebühren des Rathauses und die Bauüberwachung"
+    ],
+    "pro_does_community-admin": "Führt die comunidad de propietarios, zu der Ihr Gebäude gehört: Haushalt, Umlagen, Protokoll der jährlichen junta, Handwerker und Rückstände. Liegt Ihre Wohnung in einem Block oder einer geschlossenen Anlage, haben Sie bereits einen.",
+    "pro_when_community-admin": "Sie wählen normalerweise nicht Ihren eigenen, denn die Eigentümer bestellen den Verwalter auf der junta. Sie suchen hier, wenn Ihre Gemeinschaft den Verwalter wechselt, wenn Sie im Vorstand sitzen, oder wenn Sie kaufen und die Bescheinigung brauchen, dass der Verkäufer der Gemeinschaft nichts schuldet.",
+    "pro_cost_community-admin": "Wird von der Gemeinschaft aus den Gemeinschaftskosten bezahlt, normalerweise ein Honorar je Wohnung und Jahr, über das die Eigentümer abstimmen. Es ist keine Rechnung, die Sie gesondert erreicht.",
+    "pro_ask_community-admin": [
+      "Können wir die Abrechnung, den Haushalt und das letzte Protokoll schriftlich bekommen",
+      "Verschicken Sie Einladungen per E-Mail, und in einer anderen Sprache als Spanisch",
+      "Wie stimmt ein Eigentümer ab, der nicht zur junta kommen kann"
+    ],
+    "pro_does_surveyor": "Setzt einen Wert für eine Immobilie fest, in einem Gutachten, das eine Bank, ein Gericht oder das Finanzamt akzeptiert. Das ist etwas anderes als ein Zustandsgutachten. Eine Bewertung sagt, was das Objekt wert ist, nicht ob das Dach undicht ist.",
+    "pro_when_surveyor": "Wenn ein spanischer Kreditgeber vor der Zusage eine tasación verlangt, und bei Erbschaft, Scheidung oder Streit über den Wert. Wollen Sie das Gebäude selbst untersucht haben, verlangen Sie ein Zustandsgutachten und prüfen Sie, ob das Büro solche überhaupt erstellt.",
+    "pro_cost_surveyor": "Ein Festhonorar, meist nach Größe und Art der Immobilie. Eine Bewertung für eine Finanzierung muss von einem Unternehmen kommen, das dafür bei der spanischen Zentralbank registriert ist, und sie verfällt, fragen Sie also, wie lange Ihre anerkannt wird.",
+    "pro_ask_surveyor": [
+      "Ist das eine Beleihungsbewertung, eine Marktbewertung oder ein Zustandsgutachten",
+      "Ist das Unternehmen registriert, um Bewertungen zu erstellen, die ein Kreditgeber akzeptiert",
+      "Wie lange bleibt das Gutachten gültig"
+    ],
+    "pro_does_insurance": "Eine correduría vergleicht den Schutz mehrerer Versicherer, statt die Policen eines einzigen zu verkaufen, richtet den Schutz ein und begleitet Sie im Schadensfall. Ein gebundener Vertreter arbeitet für einen einzigen Versicherer, was ein anderes Verhältnis ist, und es lohnt sich zu wissen, mit wem Sie sprechen.",
+    "pro_when_insurance": "Beim Kauf, weil ein Kreditgeber in der Regel eine Gebäudeversicherung verlangt, und immer dann, wenn die Immobilie monatelang leer steht und Sie wissen müssen, dass die Police weiterhin zahlt.",
+    "pro_cost_insurance": "Sie zahlen die Prämie. Ein Makler wird vom Versicherer über Provision vergütet, fragen Sie also, was das für die Beratung bedeutet, die Sie bekommen. Makler sind bei der Versicherungsaufsicht DGSFP registriert, und Sie können nach der Registernummer fragen.",
+    "pro_ask_insurance": [
+      "Sind Sie Makler für mehrere Versicherer oder an einen gebunden",
+      "Deckt die Police die Immobilie, während sie unbewohnt ist, und nach wie vielen Tagen ändert sich das",
+      "Kann ich die Police lesen und einen Schaden in meiner Sprache melden"
+    ],
+    "pro_does_translator": "Erstellt die gestempelten und unterschriebenen Übersetzungen, die spanische Behörden akzeptieren, und kann als vereidigter Dolmetscher auftreten. Vereidigte Übersetzer werden vom spanischen Außenministerium ernannt, das die Liste veröffentlicht, das ist also einer der wenigen Titel, die Sie selbst in einer Minute prüfen können.",
+    "pro_when_translator": "Für eine ausländische Geburts-, Heirats- oder Sterbeurkunde, ein ausländisches Testament, eine Vollmacht, Gerichtsunterlagen, und bei der Unterschrift beim Notar, wenn Sie dem Spanischen nicht gut genug folgen, um sicher zu sein, wozu Sie Ja sagen.",
+    "pro_cost_translator": "Meist je Wort oder je Dokument, mit Zuschlag für Eilarbeit und für persönliches Erscheinen. Lassen Sie sich einen Preis für die tatsächlichen Unterlagen nennen, nicht einen Tarif.",
+    "pro_ask_translator": [
+      "Stehen Sie für dieses Sprachenpaar auf der Liste des Außenministeriums",
+      "Wird die Stelle, bei der ich das einreiche, Ihren Stempel akzeptieren",
+      "Können Sie auch zum Notar mitkommen, und was kostet das"
+    ]
   }
 }
