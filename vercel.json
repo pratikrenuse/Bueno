@@ -3,13 +3,31 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "crons": [
-    { "path": "/api/linkedin-dispatch", "schedule": "0 6 * * 2,4" },
-    { "path": "/api/linkedin-remind", "schedule": "0 15 * * 0,2" }
+    {
+      "path": "/api/linkedin-remind",
+      "schedule": "0 7 * * 1,3"
+    },
+    {
+      "path": "/api/linkedin-dispatch",
+      "schedule": "0 6 * * 2,4"
+    }
   ],
   "rewrites": [
-    { "source": "/api/linkedin/:action", "destination": "/api/linkedin?action=:action" },
-    { "source": "/api/linkedin-:action", "destination": "/api/linkedin?action=:action" },
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/linkedin/:action",
+      "destination": "/api/linkedin?action=:action"
+    },
+    {
+      "source": "/api/linkedin-:action",
+      "destination": "/api/linkedin?action=:action"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

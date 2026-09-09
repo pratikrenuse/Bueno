@@ -1,5 +1,25 @@
 // Shared email plumbing for the LinkedIn program.
-export const OVERSIGHT = ['pratik.y.renuse@gmail.com', 'john@getbueno.com'];
+// Who receives what. This was one list called OVERSIGHT, and it was three different
+// audiences wearing the same name.
+//
+// John signs the posts off. Pratik runs the programme and wants sight of everything.
+// Everybody else is a team member who posts from their own LinkedIn profile.
+const JOHN = 'john@getbueno.com';
+const PRATIK = 'pratik.y.renuse@gmail.com';
+
+// The review reminder. John is the one who has to act on it, so it is addressed to him and
+// Pratik is copied. Putting both in To made it nobody's job in particular.
+export const REVIEW_TO = [JOHN];
+export const REVIEW_CC = [PRATIK];
+
+// The preview that goes out the moment a post is approved, so both of them can see what
+// was signed off before the team gets it. Addressed to both: it is a record, not a task.
+export const APPROVAL_TO = [JOHN, PRATIK];
+
+// Copied on what the team actually receives. John is a team member himself now and gets
+// his own English post, so he is deliberately NOT here: he does not want the five that go
+// to Amina, Izahbel, Monique, Petter and Yenna. That is thirty emails a month.
+export const TEAM_CC = [PRATIK];
 export const REPLY_TO = 'pratik.y.renuse@gmail.com';
 // The www host, because that is the one that answers. The apex 301s to it, and an <img>
 // in an email is fetched by the mail client or its image proxy, so every redirect is a
@@ -60,7 +80,7 @@ export const COPY = {
     nextLabel: 'Coming up',
     remaining: (n) => `${n} more posts approved and waiting after this one.`,
     dayLine: (d, s) => `Day ${d} of the plan, ${s} series.`,
-    reply: 'Questions, or want a different angle? Just reply to this email. Pratik and John are on copy.',
+    reply: 'Questions, or want a different angle? Just reply to this email. Pratik is on copy.',
   },
   nl: {
     greeting: (n) => `Beste ${n},`,
@@ -73,7 +93,7 @@ export const COPY = {
     nextLabel: 'Binnenkort',
     remaining: (n) => `Nog ${n} goedgekeurde posts staan na deze klaar.`,
     dayLine: (d, s) => `Dag ${d} van het plan, serie ${s}.`,
-    reply: 'Vragen, of liever een andere invalshoek? Beantwoord deze e-mail. Pratik en John staan in de kopie.',
+    reply: 'Vragen, of liever een andere invalshoek? Beantwoord deze e-mail. Pratik staat in de kopie.',
   },
   sv: {
     greeting: (n) => `Hej ${n},`,
@@ -86,7 +106,7 @@ export const COPY = {
     nextLabel: 'Kommande',
     remaining: (n) => `${n} godkända inlägg väntar efter det här.`,
     dayLine: (d, s) => `Dag ${d} i planen, serien ${s}.`,
-    reply: 'Frågor, eller vill du ha en annan vinkel? Svara bara på det här mejlet. Pratik och John har kopia.',
+    reply: 'Frågor, eller vill du ha en annan vinkel? Svara bara på det här mejlet. Pratik har kopia.',
   },
   no: {
     greeting: (n) => `Hei ${n},`,
@@ -99,7 +119,7 @@ export const COPY = {
     nextLabel: 'Kommer',
     remaining: (n) => `${n} godkjente innlegg står klare etter dette.`,
     dayLine: (d, s) => `Dag ${d} i planen, serien ${s}.`,
-    reply: 'Spørsmål, eller vil du ha en annen vinkling? Bare svar på denne e-posten. Pratik og John står i kopi.',
+    reply: 'Spørsmål, eller vil du ha en annen vinkling? Bare svar på denne e-posten. Pratik står i kopi.',
   },
   es: {
     greeting: (n) => `Hola ${n},`,
@@ -112,7 +132,7 @@ export const COPY = {
     nextLabel: 'Próximamente',
     remaining: (n) => `Quedan ${n} publicaciones aprobadas después de esta.`,
     dayLine: (d, s) => `Día ${d} del plan, serie ${s}.`,
-    reply: '¿Dudas, o prefieres otro enfoque? Responde a este correo. Pratik y John están en copia.',
+    reply: '¿Dudas, o prefieres otro enfoque? Responde a este correo. Pratik está en copia.',
   },
   fr: {
     greeting: (n) => `Bonjour ${n},`,
@@ -125,7 +145,7 @@ export const COPY = {
     nextLabel: 'A venir',
     remaining: (n) => `${n} publications approuvees attendent apres celle-ci.`,
     dayLine: (d, s) => `Jour ${d} du plan, serie ${s}.`,
-    reply: 'Une question, ou envie d\'un autre angle ? Repondez simplement a cet e-mail. Pratik et John sont en copie.',
+    reply: 'Une question, ou envie d\'un autre angle ? Repondez simplement a cet e-mail. Pratik est en copie.',
   },
 };
 

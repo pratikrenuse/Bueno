@@ -8,7 +8,7 @@
 // decide sent to the team, which is worth correcting rather than leaving, because it is the
 // kind of thing somebody reads once and then trusts.
 import { syncTranslations, hashText } from './_translate.js';
-import { OVERSIGHT, SITE, esc, sendMail, COPY, STREAM_LABEL } from './_email.js';
+import { TEAM_CC, SITE, esc, sendMail, COPY, STREAM_LABEL } from './_email.js';
 
 export async function sendPostToTeam({ url, headers, post, members, anthropicKey }) {
   const stream = post.audience || 'owners';
@@ -53,9 +53,15 @@ export async function sendPostToTeam({ url, headers, post, members, anthropicKey
     if (!v.translated) missingTranslations.push(`${m.name} (${v.lang})`);
     else if (v.stale) staleTranslations.push(`${m.name} (${v.lang})`);
 
+    // Pratik is copied on what the team receives. Anyone on that list who is also the
+    // recipient is dropped from it: a person in both To and Cc shows as a duplicate in some
+    // clients and gets listed twice by reply-all. A no-op for everybody else, and a guard
+    // that keeps holding if the copy line changes again.
+    const cc = TEAM_CC.filter(a => a.toLowerCase() !== String(m.email).toLowerCase());
+
     const mail = await sendMail({
       to: [m.email],
-      cc: OVERSIGHT,
+      cc,
       subject: (COPY[v.lang] || COPY.en).subject(v.title),
       html: memberEmail({ member: m, post, text: v.text, lang: v.lang, stream, upcoming, translated: v.translated, stale: v.stale }),
     });
@@ -66,7 +72,10 @@ export async function sendPostToTeam({ url, headers, post, members, anthropicKey
       headers: { ...headers, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
       body: JSON.stringify({
         post_id: post.id, post_slug: post.slug, post_title: post.title,
-        member_name: `${m.name} (${v.lang}${v.translated ? '' : ', EN fallback'}, cc Pratik + John)`,
+        // The cc label is built from the addresses actually used, not typed in. It used to
+        // read "cc Pratik + John" whoever was on the list, which stops being true the moment
+        // the list changes.
+        member_name: `${m.name} (${v.lang}${v.translated ? '' : ', EN fallback'}${cc.length ? `, cc ${cc.length}` : ', no cc'})`,
         member_email: m.email, status: mail.ok ? 'sent' : 'failed',
         error: mail.ok ? null : mail.error, resend_id: mail.id || null,
       }),
@@ -82,7 +91,7 @@ export async function sendPostToTeam({ url, headers, post, members, anthropicKey
   }
 
   return {
-    stream, post: post.title, day: post.day, sent, failed, cc: OVERSIGHT.join(', '),
+    stream, post: post.title, day: post.day, sent, failed, cc: TEAM_CC.join(', '),
     ...(retranslated ? { retranslated } : {}),
     ...(missingTranslations.length ? { translations_missing: missingTranslations } : {}),
     ...(staleTranslations.length ? { translations_stale: staleTranslations } : {}),

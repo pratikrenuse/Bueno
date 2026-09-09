@@ -8,7 +8,7 @@
 // Auth: team passcode (header or query), CRON_SECRET bearer if configured, or Vercel cron.
 
 import { getApiKey } from './_translate.js';
-import { OVERSIGHT } from './_email.js';
+import { TEAM_CC } from './_email.js';
 import { sendPostToTeam } from './_dispatch.js';
 
 export default async function handler(req, res) {
@@ -61,7 +61,7 @@ export default async function handler(req, res) {
       results.push(await sendPostToTeam({ url, headers: H, post, members: streamMembers, anthropicKey: getApiKey() }));
     }
 
-    res.json({ ok: true, dry, cc: OVERSIGHT.join(', '), ...(only && only !== 'all' ? { sent_to_only: only } : {}), results });
+    res.json({ ok: true, dry, cc: TEAM_CC.join(', '), ...(only && only !== 'all' ? { sent_to_only: only } : {}), results });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }

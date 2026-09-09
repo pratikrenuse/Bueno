@@ -1,10 +1,16 @@
 // GET or POST /api/linkedin-remind
-// A short, polite nudge to John and Pratik before each posting day. The team posts on
-// Tuesdays and Thursdays, so this runs Sunday and Tuesday at 17:00 Barcelona time.
+// The nudge that keeps the queue full. Addressed to John, who approves; Pratik is copied.
+//
+// The team posts on Tuesdays and Thursdays, so this runs the morning before each of those:
+// Monday and Wednesday at 07:00 UTC. That is 09:00 in Barcelona through the summer and
+// 08:00 through the winter, because Vercel schedules crons in UTC and does not shift them
+// for daylight saving. An hour early in winter is the right way round for a reminder, and
+// the local time it actually fired at is reported below so the drift is visible rather
+// than something to rediscover.
 // It says how many posts are waiting for review, how many are approved and queued, and
 // warns plainly when the next posting day has nothing ready to go.
 // ?force=1 sends it on demand from the dashboard.
-import { OVERSIGHT, sendMail, esc, SITE } from './_email.js';
+import { REVIEW_TO, REVIEW_CC, sendMail, esc, SITE } from './_email.js';
 
 const DECK = `${SITE}/internal-linkedin`;
 
@@ -82,7 +88,7 @@ export default async function handler(req, res) {
           24<span style="color:#C9A96E">/</span>7 SPAIN <span style="font-weight:normal;font-size:12px;color:#CBEFFF">review reminder</span>
         </div>
         <div style="padding:22px">
-          <p style="margin:0 0 12px;font-size:15px;color:#010221">Hi John, hi Pratik,</p>
+          <p style="margin:0 0 12px;font-size:15px;color:#010221">Hi John,</p>
           <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">
             A gentle reminder before ${esc(nextDay)}, when the team's next posts go out. No rush, whenever suits you.
           </p>
@@ -101,7 +107,7 @@ export default async function handler(req, res) {
             Password: <b style="font-family:monospace;background:#F4F2EE;padding:2px 7px;border-radius:5px">${esc(process.env.INTERNAL_PASSCODE || '')}</b>
           </p>
           <p style="margin:0;font-size:13px;color:#8a8fa3">
-            Approving a post emails it to the two of you only. The team receives the queue automatically on Tuesday and Thursday mornings. Thank you.
+            Approving a post emails a copy to you and Pratik only. The team receives the queue automatically on Tuesday and Thursday mornings. Pratik is copied on this reminder. Thank you.
           </p>
         </div>
       </div>
@@ -115,20 +121,29 @@ export default async function handler(req, res) {
         ? `${pending.length} post${pending.length === 1 ? '' : 's'} waiting for a quick look before ${nextDay}`
         : `${queued.length} posts queued, all set for ${nextDay}`;
 
-    const mail = await sendMail({ to: OVERSIGHT, subject, html });
+    const mail = await sendMail({ to: REVIEW_TO, cc: REVIEW_CC, subject, html });
 
     await fetch(`${url}/rest/v1/linkedin_emails`, {
       method: 'POST',
       headers: { ...H, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
       body: JSON.stringify({
         post_title: `Review reminder before ${nextDay}`,
-        member_name: 'Review reminder (John + Pratik)', member_email: OVERSIGHT.join(', '),
+        member_name: `Review reminder (to ${REVIEW_TO.join(', ')}, cc ${REVIEW_CC.join(', ')})`,
+        member_email: REVIEW_TO.join(', '),
         status: mail.ok ? 'sent' : 'failed', error: mail.ok ? null : mail.error, resend_id: mail.id || null,
       }),
     });
 
+    // What the clock said in Barcelona when this fired. The cron is UTC, so this moves by
+    // an hour twice a year, and a number in the response beats somebody wondering later.
+    const barcelona = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Madrid', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false,
+    }).format(new Date());
+
     res.json({
-      ok: mail.ok, next_posting_day: nextDay, pending: pending.length,
+      ok: mail.ok, fired_at_barcelona: barcelona,
+      to: REVIEW_TO.join(', '), cc: REVIEW_CC.join(', '),
+      next_posting_day: nextDay, pending: pending.length,
       approved_unsent: queued.length, sent: sent.length,
       streams: perStream, ...(mail.ok ? {} : { error: mail.error }),
     });

@@ -3,7 +3,7 @@
 //   { id, action: "edit", text }                                   -> saves edited_text only, status untouched
 // Approving also emails the post straight to Pratik and John so they see what was approved
 // the moment it happens. The team's own send still runs through /api/linkedin-dispatch.
-import { OVERSIGHT, sendMail, shell, imageBlock, esc } from './_email.js';
+import { APPROVAL_TO, sendMail, shell, imageBlock, esc } from './_email.js';
 
 export default async function handler(req, res) {
   try {
@@ -61,7 +61,7 @@ export default async function handler(req, res) {
         const body = post.edited_text || post.post_text;
         const streamName = { owners: 'property owners', agents: 'estate agents', attorneys: 'legal advisers' }[post.audience || 'owners'] || post.audience;
         const mail = await sendMail({
-          to: OVERSIGHT,
+          to: APPROVAL_TO,
           subject: `[Internal] Approved, not yet sent: ${post.title || post.slug} (day ${post.day})`,
           html: shell({
             heading: 'review deck',
@@ -85,7 +85,7 @@ export default async function handler(req, res) {
           headers: { ...H, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
           body: JSON.stringify({
             post_id: post.id, post_slug: post.slug, post_title: post.title,
-            member_name: 'Approval notice (Pratik + John)', member_email: OVERSIGHT.join(', '),
+            member_name: `Approval notice (${APPROVAL_TO.join(', ')})`, member_email: APPROVAL_TO.join(', '),
             status: mail.ok ? 'sent' : 'failed', error: mail.ok ? null : mail.error, resend_id: mail.id || null,
           }),
         });
