@@ -1,14 +1,42 @@
 import { useState } from 'react';
-import { calculateRentalTax } from './rentalTaxCalculations';
-import { useT, LLink } from '../i18n.jsx';
+import { calculateRentalTax, daysInYear } from './rentalTaxCalculations';
+import { deadlineRuleId, deadlineDate, directDebitGapDays } from '../late-surcharge/calc.js';
+import { useT, LLink, useLocale } from '../i18n.jsx';
+import SourceNote from '../SourceNote.jsx';
+import { rule } from '../rules/index.js';
+import copyDict from './copy.js';
 import LangSwitcher from '../LangSwitcher.jsx';
 import SiteFooter from '../SiteFooter.jsx';
-import SiteNav from '../SiteNav.jsx';
+
+// Rental income tax, on the rules base.
+//
+// This screen used to print "Quarterly filings / Modelo 210 / Q4 deadline January 20" under
+// every result. The grouping period moved from quarterly to annual for rent accrued from
+// 2024, and moved again to an April window for rent accrued from 2026. The rules base says
+// both of those things and says the quarterly guidance is out of date, so the tool now asks
+// which year the rent belongs to and reads the window from the rule that covers it. The
+// router that picks the rule is the one late-surcharge already uses.
+//
+// The other fix here is smaller and was just as visible: the days-let box had no ceiling, so
+// 3650 days produced "Property costs (1000% of year)" and a tax bill of zero. Days are
+// capped at the days in the year, at the box and again in the arithmetic.
+
+const RATES = rule('irnr.rates');
+
+const THIS_YEAR = new Date().getFullYear();
+const YEARS = [0, 1, 2, 3].map(n => THIS_YEAR - n);
+
+const longDate = (iso) => {
+  if (!iso) return '';
+  const d = new Date(`${iso}T00:00:00`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+};
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
 
-const TOTAL_STEPS = 5; // residency, income, prorated expenses, annual expenses, depreciation
+const TOTAL_STEPS = 6; // residency, year, income, prorated expenses, annual expenses, depreciation
 
 function Logo({ white, sub }) {
   return (
@@ -19,7 +47,7 @@ function Logo({ white, sub }) {
   );
 }
 
-function NumberInput({ label, hint, value, onChange, prefix = '€' }) {
+function NumberInput({ label, hint, value, onChange, prefix = '€', max }) {
   return (
     <div style={{ marginBottom: 14 }}>
       <label style={{
@@ -52,6 +80,7 @@ function NumberInput({ label, hint, value, onChange, prefix = '€' }) {
           type="number"
           placeholder="0"
           min="0"
+          max={max}
           value={value}
           onChange={e => onChange(e.target.value)}
           style={{ fontSize: 18, padding: '12px 16px' }}
@@ -103,8 +132,13 @@ function ExpenseSection({ title, children }) {
 
 export default function RentalTaxCalculator() {
   const t  = useT();
+  const { locale } = useLocale();
   const tt = (k) => t('calc_rental.' + k);
   const tc = (k) => t('common.' + k);
+  const c  = (k) => {
+    const dict = copyDict[locale] || copyDict.en;
+    return dict[k] != null ? dict[k] : (copyDict.en[k] != null ? copyDict.en[k] : k);
+  };
 
   if (typeof document !== 'undefined') {
     document.title = `${t('cards.rental.title')} | Spain 24/7`;
@@ -112,7 +146,7 @@ export default function RentalTaxCalculator() {
 
   const [step, setStep]       = useState('intro');
   const [form, setForm]       = useState({
-    residency: '',
+    residency: '', taxYear: '',
     rentalIncome: '', daysRented: '',
     // Prorated
     ibiTax: '', basura: '',
@@ -128,11 +162,23 @@ export default function RentalTaxCalculator() {
   const set = (k) => (v) => setForm(f => ({ ...f, [k]: v }));
 
   const isEU      = form.residency === 'eu_eea';
-  const stepNum   = { residency: 1, income: 2, prorated: 3, annual: 4, depreciation: 5 }[step];
+  const stepNum   = { residency: 1, tax_year: 2, income: 3, prorated: 4, annual: 5, depreciation: 6 }[step];
   const isOnDark  = step === 'intro';
+  const steps     = isEU ? TOTAL_STEPS : 3;
+
+  // Deductibility is a rule, not a guess. irnr.rental.deductibility names who may deduct,
+  // and irnr.rates gives the rate that goes with the same split.
+  const canDeduct = isEU;
+  const ratePercent = isEU ? RATES.value.rental.eu_eea : RATES.value.rental.other;
+
+  const yearDays  = daysInYear(form.taxYear);
 
   const runCalc = () => {
-    setResults(calculateRentalTax(form));
+    setResults({
+      ...calculateRentalTax(form, { ratePercent, canDeduct }),
+      year: Number(form.taxYear),
+      deadlineId: deadlineRuleId('rental', form.taxYear),
+    });
     setStep('results');
   };
 
@@ -140,7 +186,7 @@ export default function RentalTaxCalculator() {
     setStep('intro');
     setResults(null);
     setForm({
-      residency: '', rentalIncome: '', daysRented: '',
+      residency: '', taxYear: '', rentalIncome: '', daysRented: '',
       ibiTax: '', basura: '',
       insurance: '', communityFees: '', mortgageInterest: '',
       electricity: '', gas: '', water: '', internet: '', alarm: '',
@@ -160,7 +206,7 @@ export default function RentalTaxCalculator() {
           {!isOnDark && step !== 'results' && (
             <span className="calc-header-tag">{tt('header_tag')}</span>
           )}
-          <SiteNav active="tools" /><LangSwitcher />
+          <LangSwitcher />
         </div>
       </header>
 
@@ -168,10 +214,10 @@ export default function RentalTaxCalculator() {
       {!['intro', 'results'].includes(step) && (
         <div className="progress-wrap">
           <div className="progress-inner">
-            <span className="progress-label">{tc('step')} {stepNum} {tc('of')} {isEU ? TOTAL_STEPS : 2}</span>
+            <span className="progress-label">{tc('step')} {stepNum} {tc('of')} {steps}</span>
             <div className="progress-track">
               <div className="progress-fill"
-                style={{ width: `${(stepNum / (isEU ? TOTAL_STEPS : 2)) * 100}%` }} />
+                style={{ width: `${(stepNum / steps) * 100}%` }} />
             </div>
           </div>
         </div>
@@ -218,11 +264,14 @@ export default function RentalTaxCalculator() {
         <div className="step-screen">
           <div className="step-inner">
             <button className="btn-back" onClick={() => setStep('intro')}>&#8592; {tc('back')}</button>
-            <p className="step-meta">{tc('question')} 1 {tc('of')} {isEU ? TOTAL_STEPS : 2}</p>
+            <p className="step-meta">{tc('question')} 1 {tc('of')} {steps}</p>
             <h2 className="step-question">{tt('residency_q')}</h2>
             <p className="step-hint">
-              {tt('residency_hint')}
+              {c('residency_hint')
+                .replace('{eu}', RATES.value.rental.eu_eea)
+                .replace('{other}', RATES.value.rental.other)}
             </p>
+            <SourceNote ids={['irnr.rates', 'irnr.rental.deductibility']} />
             <div className="option-stack">
               {[
                 { val: 'eu_eea', title: tt('res_eu_t'), desc: tt('res_eu_d') },
@@ -230,7 +279,7 @@ export default function RentalTaxCalculator() {
               ].map(o => (
                 <button key={o.val}
                   className={`option-card ${form.residency === o.val ? 'selected' : ''}`}
-                  onClick={() => { setForm(f => ({ ...f, residency: o.val })); setTimeout(() => setStep('income'), 160); }}>
+                  onClick={() => { setForm(f => ({ ...f, residency: o.val })); setTimeout(() => setStep('tax_year'), 160); }}>
                   <div>
                     <p className="option-title">{o.title}</p>
                     <p className="option-desc">{o.desc}</p>
@@ -242,18 +291,41 @@ export default function RentalTaxCalculator() {
         </div>
       )}
 
+      {/* ── TAX YEAR ── */}
+      {step === 'tax_year' && (
+        <div className="step-screen">
+          <div className="step-inner">
+            <button className="btn-back" onClick={() => setStep('residency')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 2 {tc('of')} {steps}</p>
+            <h2 className="step-question">{c('year_q')}</h2>
+            <p className="step-hint">{c('year_hint')}</p>
+            <div className="three-choice">
+              {YEARS.map(y => (
+                <button key={y}
+                  className={`choice-btn ${form.taxYear === String(y) ? 'selected' : ''}`}
+                  onClick={() => { setForm(f => ({ ...f, taxYear: String(y) })); setTimeout(() => setStep('income'), 160); }}>
+                  {y}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ── INCOME ── */}
       {step === 'income' && (
         <div className="step-screen">
           <div className="step-inner">
-            <button className="btn-back" onClick={() => setStep('residency')}>&#8592; {tc('back')}</button>
-            <p className="step-meta">{tc('question')} 2 {tc('of')} {isEU ? TOTAL_STEPS : 2}</p>
+            <button className="btn-back" onClick={() => setStep('tax_year')}>&#8592; {tc('back')}</button>
+            <p className="step-meta">{tc('question')} 3 {tc('of')} {steps}</p>
             <h2 className="step-question">{tt('income_q')}</h2>
             <p className="step-hint">
               {tt('income_hint')}
             </p>
             <NumberInput label={tt('income_label')} hint={tt('income_label_hint')} value={form.rentalIncome} onChange={set('rentalIncome')} />
-            <NumberInput label={tt('days_label')} hint={tt('days_hint')} value={form.daysRented} onChange={set('daysRented')} prefix={null} />
+            <NumberInput label={tt('days_label')}
+              hint={`${tt('days_hint')} ${c('days_hint_max').replace('{max}', yearDays).replace('{year}', form.taxYear)}`}
+              value={form.daysRented} onChange={set('daysRented')} prefix={null} max={yearDays} />
             <button className="btn-primary"
               disabled={!form.rentalIncome || parseFloat(form.rentalIncome) <= 0 || !form.daysRented || parseFloat(form.daysRented) <= 0}
               onClick={() => isEU ? setStep('prorated') : runCalc()}>
@@ -261,7 +333,7 @@ export default function RentalTaxCalculator() {
             </button>
             {!isEU && (
               <p className="privacy-note" style={{ marginTop: 12 }}>
-                {tt('noneu_note')}
+                {c('noneu_note').replace('{other}', RATES.value.rental.other)}
               </p>
             )}
           </div>
@@ -273,10 +345,10 @@ export default function RentalTaxCalculator() {
         <div className="step-screen">
           <div className="step-inner">
             <button className="btn-back" onClick={() => setStep('income')}>&#8592; {tc('back')}</button>
-            <p className="step-meta">{tc('question')} 3 {tc('of')} {TOTAL_STEPS}</p>
+            <p className="step-meta">{tc('question')} 4 {tc('of')} {TOTAL_STEPS}</p>
             <h2 className="step-question">{tt('prorated_q')}</h2>
             <p className="step-hint">
-              {tt('prorated_hint')}
+              {c('prorated_hint').replace('{days}', yearDays).replace('{year}', form.taxYear)}
             </p>
 
             <ExpenseSection title={tt('section_taxes')}>
@@ -311,7 +383,7 @@ export default function RentalTaxCalculator() {
         <div className="step-screen">
           <div className="step-inner">
             <button className="btn-back" onClick={() => setStep('prorated')}>&#8592; {tc('back')}</button>
-            <p className="step-meta">{tc('question')} 4 {tc('of')} {TOTAL_STEPS}</p>
+            <p className="step-meta">{tc('question')} 5 {tc('of')} {TOTAL_STEPS}</p>
             <h2 className="step-question">{tt('annual_q')}</h2>
             <p className="step-hint">
               {tt('annual_hint')}
@@ -335,7 +407,7 @@ export default function RentalTaxCalculator() {
         <div className="step-screen">
           <div className="step-inner">
             <button className="btn-back" onClick={() => setStep('annual')}>&#8592; {tc('back')}</button>
-            <p className="step-meta">{tc('question')} 5 {tc('of')} {TOTAL_STEPS}</p>
+            <p className="step-meta">{tc('question')} 6 {tc('of')} {TOTAL_STEPS}</p>
             <h2 className="step-question">{tt('depreciation_q')}</h2>
             <p className="step-hint">
               {tt('depreciation_hint')}
@@ -387,7 +459,7 @@ export default function RentalTaxCalculator() {
             <div className="tax-panel">
               <p className="tax-panel-label">{tt('panel_label')}</p>
               <p className="tax-panel-amount">{fmt(results.tax)}</p>
-              <p className="tax-panel-period">{tt('panel_period')}</p>
+              <p className="tax-panel-period">{c('panel_period_year').replace('{year}', results.year)}</p>
               <div className="tax-panel-grid">
                 <div>
                   <p className="tax-panel-item-label">{tt('panel_rate')}</p>
@@ -410,13 +482,27 @@ export default function RentalTaxCalculator() {
               </div>
             </div>
 
+            {results.daysClamped && (
+              <p className="tk-para" style={{ marginTop: 12 }}>
+                {c('days_clamped').replace('{max}', results.yearDays).replace('{year}', results.year)}
+              </p>
+            )}
+
+            <DeadlinePanel results={results} c={c} />
+
+            <section className="tk-panel tk-panel-quiet">
+              <h3 className="tk-panel-title">{c('method_title')}</h3>
+              <p className="tk-para">{c('method_body')}</p>
+              <SourceNote ids={['irnr.rates', 'irnr.rental.deductibility']} />
+            </section>
+
             {/* Deduction breakdown for EU/EEA */}
             {results.isEUEEA && results.totalDeductions > 0 && (
               <div className="breakdown-panel">
                 <p className="breakdown-title">{tt('breakdown_title')}</p>
                 {results.proratedExpenses > 0 && (
                   <div className="breakdown-row">
-                    <span className="breakdown-row-label">{tt('prop_costs').replace('{pct}', Math.round(results.proRata * 100))}</span>
+                    <span className="breakdown-row-label">{tt('prop_costs').replace('{pct}', Math.min(100, Math.round(results.proRata * 100)))}</span>
                     <span className="breakdown-row-value">{fmt(results.proratedExpenses)}</span>
                   </div>
                 )}
@@ -455,8 +541,9 @@ export default function RentalTaxCalculator() {
               <div className="ai-panel" style={{ marginBottom: 16 }}>
                 <p className="ai-panel-label">{tt('about_label')}</p>
                 <p className="ai-panel-text">
-                  {tt('about_body')}
+                  {c('about_body').replace('{other}', RATES.value.rental.other)}
                 </p>
+                <SourceNote ids={['irnr.rates', 'irnr.rental.deductibility']} />
               </div>
             )}
 
@@ -495,5 +582,43 @@ export default function RentalTaxCalculator() {
       <SiteFooter note={tt('footer')} />
 
     </div>
+  );
+}
+
+// Which window this return is filed in. Read from the rule that covers the accrual year,
+// never from a sentence typed into a locale file.
+function DeadlinePanel({ results, c }) {
+  const id = results.deadlineId;
+  if (!id) {
+    return (
+      <section className="tk-panel tk-panel-key">
+        <h3 className="tk-panel-title">{c('deadline_title')}</h3>
+        <p className="tk-para">{c('deadline_unknown')}</p>
+      </section>
+    );
+  }
+
+  const r = rule(id);
+  const from  = r.value.file_from ? deadlineDate(results.year, r.value.file_from) : null;
+  const to    = r.value.file_to ? deadlineDate(results.year, r.value.file_to) : null;
+  const debit = r.value.direct_debit_to ? deadlineDate(results.year, r.value.direct_debit_to) : null;
+  const gap   = directDebitGapDays(results.year, r.value.file_to, r.value.direct_debit_to);
+  const lastQuarterly = id === 'deadline.rental.from_2026' ? rule('deadline.rental.last_quarterly') : null;
+
+  return (
+    <section className="tk-panel tk-panel-key">
+      <h3 className="tk-panel-title">{c('deadline_title')}</h3>
+      <p className="tk-para">
+        {c('deadline_window').replace('{from}', longDate(from)).replace('{to}', longDate(to))}
+      </p>
+      {debit && (
+        <p className="tk-para">
+          {c('deadline_debit').replace('{date}', longDate(debit)).replace('{n}', gap)}
+        </p>
+      )}
+      <p className="tk-para">{c('deadline_quarterly_note')}</p>
+      {lastQuarterly && <p className="tk-para">{lastQuarterly.statement}</p>}
+      <SourceNote ids={[id].concat(lastQuarterly ? ['deadline.rental.last_quarterly'] : [])} />
+    </section>
   );
 }

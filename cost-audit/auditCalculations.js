@@ -56,7 +56,14 @@ export const calculateAudit = (formData) => {
   const bankData  = BANK_FEES[formData.bank] || BANK_FEES.other;
   const hasMortgage = formData.mortgage === 'yes';
   const currentBankCost = hasMortgage ? bankData.with_mortgage : bankData.no_mortgage;
-  const energyOverpayment = ENERGY_OVERPAYMENT[formData.energyProvider] || ENERGY_OVERPAYMENT.unsure;
+  // Presence check, not a truthiness check. "No electricity contract" is 0, and 0 is
+  // falsy, so `|| ENERGY_OVERPAYMENT.unsure` silently charged those readers 220 euros of
+  // overpayment they do not have. The figure then never appeared as a line item, because
+  // the breakdown hides the energy row when there is no contract, so the total did not add
+  // up and nothing on screen said why.
+  const energyOverpayment = Object.prototype.hasOwnProperty.call(ENERGY_OVERPAYMENT, formData.energyProvider)
+    ? ENERGY_OVERPAYMENT[formData.energyProvider]
+    : ENERGY_OVERPAYMENT.unsure;
 
   const totalCurrentCost  = currentBankCost + energyOverpayment;
   const netSavings        = Math.max(0, totalCurrentCost - BUENO_ANNUAL_COST);

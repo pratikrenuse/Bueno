@@ -1,7 +1,10 @@
 // Shared email plumbing for the LinkedIn program.
 export const OVERSIGHT = ['pratik.y.renuse@gmail.com', 'john@getbueno.com'];
 export const REPLY_TO = 'pratik.y.renuse@gmail.com';
-export const SITE = 'https://247spain.es';
+// The www host, because that is the one that answers. The apex 301s to it, and an <img>
+// in an email is fetched by the mail client or its image proxy, so every redirect is a
+// chance for a picture not to appear.
+export const SITE = 'https://www.247spain.es';
 
 export const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

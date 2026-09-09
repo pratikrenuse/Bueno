@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import { useLocale } from './i18n.jsx';
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from './spain-directory/localities.js';
 import { SUPPORTED_PREF_LANGS, defaultPrefLang, rankForLanguage } from './directory-ranking.js';
@@ -26,9 +26,24 @@ export { SUPPORTED_PREF_LANGS, defaultPrefLang, evidenceFor, rankForLanguage } f
 export function useDirectory({ bySlug, defaultCategory, path }) {
   const { locale } = useLocale();
   const [params, setParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const urlTown = params.get('town') || '';
-  const urlTrade = params.get('trade') || '';
+  // The canonical URL shape is a path: /spain-directory/javea/plumber.
+  //
+  // It used to be a query string, and a query string cannot be a static file, cannot carry
+  // its own title and description, and is not reliably indexed. Everything about getting
+  // these pages into search results depends on this being a path.
+  //
+  // Old query-string links still work. They are read here and rewritten to the path form
+  // below, so a link somebody shared or a search engine already saw keeps resolving.
+  const seg = location.pathname.split('/').filter(Boolean);
+  const toolIdx = seg.findIndex(s => s === path.replace(/^\//, ''));
+  const pathTown = toolIdx >= 0 ? (seg[toolIdx + 1] || '') : '';
+  const pathTrade = toolIdx >= 0 ? (seg[toolIdx + 2] || '') : '';
+
+  const urlTown = pathTown || params.get('town') || '';
+  const urlTrade = pathTrade || params.get('trade') || '';
   const urlLang = params.get('lang') || '';
   const deepLinked = !!(LOCALITY_BY_SLUG[urlTown] && bySlug[urlTrade]);
 
@@ -57,13 +72,28 @@ export function useDirectory({ bySlug, defaultCategory, path }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function writeUrl(t, c, l) {
-    const next = { town: t, trade: c };
+  // Build the canonical path for a town and category, keeping any locale prefix.
+  function urlFor(t, c, l) {
+    const prefix = locale === 'en' ? '' : `/${locale}`;
     // Only carry the language in the URL once the visitor has actually chosen one, so a
     // shared link does not silently impose the sharer's language on whoever opens it.
-    if (l && l !== defaultPrefLang(locale)) next.lang = l;
-    setParams(next, { replace: true });
+    const q = l && l !== defaultPrefLang(locale) ? `?lang=${encodeURIComponent(l)}` : '';
+    return `${prefix}${path}/${encodeURIComponent(t)}/${encodeURIComponent(c)}${q}`;
   }
+
+  function writeUrl(t, c, l) {
+    navigate(urlFor(t, c, l), { replace: true });
+  }
+
+  // A visitor who arrived on the old query-string URL is moved to the path form once, so
+  // the address bar, anything they share next, and anything a crawler sees all agree.
+  useEffect(() => {
+    if (!pathTown && params.get('town') && LOCALITY_BY_SLUG[params.get('town')]) {
+      const c = bySlug[params.get('trade')] ? params.get('trade') : defaultCategory;
+      navigate(urlFor(params.get('town'), c, params.get('lang') || ''), { replace: true });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   async function run(townSlug, tradeSlug, lang = prefLang) {
     if (!townSlug) return;
@@ -108,6 +138,13 @@ export function useDirectory({ bySlug, defaultCategory, path }) {
   return {
     // selection
     town, setTown, trade, setTrade, picking, setPicking, grouped,
+    // What the URL says this page is, as opposed to what the picker currently holds.
+    // The internal link block has to follow the URL: /spain-directory/javea is a town hub
+    // and links to the six trades, while the picker has already defaulted `trade` to
+    // plumber, which would make the page link like a plumber page and disagree with the
+    // prerendered file for the same URL.
+    urlTown: LOCALITY_BY_SLUG[urlTown] ? urlTown : '',
+    urlTrade: bySlug[urlTrade] ? urlTrade : '',
     // language preference
     prefLang, setPrefLang: choosePrefLang,
     // results

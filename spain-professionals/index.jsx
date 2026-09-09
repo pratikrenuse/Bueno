@@ -10,6 +10,7 @@ import { PROFESSIONALS, PROFESSIONAL_BY_SLUG } from '../spain-directory/categori
 import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
 import ProfessionNote from './ProfessionNote.jsx';
 import { doesKey, nameKey, pluralKey } from './professions.js';
+import PageLinks from '../seo/PageLinks.jsx';
 
 // Spain 24/7 property professionals.
 //
@@ -407,6 +408,9 @@ export default function SpainProfessionals() {
             </p>
           </div>
         )}
+        {/* Same reason as the trades page: React replaces the prerendered block, and a
+            <select> is not a link. These are the only links a crawler sees. */}
+        <PageLinks hub="pros" town={d.urlTown} category={d.urlTrade} locale={locale} />
       </main>
 
       <SiteFooter note={tt('footer')} />

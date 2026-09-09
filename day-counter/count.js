@@ -40,12 +40,38 @@ export function toISO(day) {
   return new Date(day * DAY_MS).toISOString().slice(0, 10);
 }
 
-// A trip is valid when both ends parse and the departure is not before the arrival.
+// The longest single trip this tool will count, in days. Five years.
+//
+// It is a guard, not a legal figure. Every function below that walks a trip day by day is
+// bounded by the trip's own length, so without a cap a typed year of 9999 asks for nearly
+// three million iterations of work that is itself a loop, and the tab stops responding
+// before it finishes. A frozen page is the worst failure this tool has, because it looks
+// like the whole site is broken rather than like one bad date.
+//
+// Five years is far past any honest short-stay plan and far short of the number that
+// hangs. A trip longer than this is a typo, and the screen says so.
+export const MAX_TRIP_DAYS = 1830;
+
+// A trip is valid when both ends parse, the departure is not before the arrival, and it is
+// short enough to count without hanging the page.
 export function tripIsValid(trip) {
   if (!trip) return false;
   const a = toDay(trip.start);
   const b = toDay(trip.end);
-  return a != null && b != null && b >= a;
+  if (a == null || b == null || b < a) return false;
+  return b - a + 1 <= MAX_TRIP_DAYS;
+}
+
+// Why a parsed trip was refused, so the screen can say which of the two it was rather than
+// showing one message for both.
+export function tripProblem(trip) {
+  if (!trip) return 'missing';
+  const a = toDay(trip.start);
+  const b = toDay(trip.end);
+  if (a == null || b == null) return 'unparsed';
+  if (b < a) return 'reversed';
+  if (b - a + 1 > MAX_TRIP_DAYS) return 'too_long';
+  return null;
 }
 
 // Drop anything unusable, sort, then merge trips that overlap or touch.

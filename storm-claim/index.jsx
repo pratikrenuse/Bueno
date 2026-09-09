@@ -3,6 +3,7 @@ import ToolShell, { Intro, Step, Options, Result, Panel, Rows, DateField, useCop
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
 import copyDict from './copy.js';
+import { daysSince, isFutureDate, todayISO } from './calc.js';
 
 // Who pays for storm damage in Spain.
 //
@@ -23,14 +24,6 @@ const EXCLUSIONS = rule('consorcio.exclusions');
 const NOTIFY = rule('consorcio.notification');
 
 const CONSORCIO_CAUSES = ['flood', 'quake', 'volcano'];
-
-function daysSince(iso) {
-  if (!iso) return null;
-  const then = new Date(iso + 'T00:00:00');
-  if (Number.isNaN(then.getTime())) return null;
-  const now = new Date();
-  return Math.floor((now - then) / 86400000);
-}
 
 export default function StormClaim() {
   const c = useCopy(copyDict);
@@ -64,7 +57,9 @@ export default function StormClaim() {
     return 'insurer';
   };
   const verdict = route();
-  const days = daysSince(a.when);
+  const today = todayISO();
+  const whenIsFuture = isFutureDate(a.when, today);
+  const days = daysSince(a.when, today);
   const lateWarning = days != null && days > NOTIFY.value;
 
   const opt = (k, n) => ({ value: k, label: c(`${n}_${k}`), desc: c(`${n}_${k}_d`) === `${n}_${k}_d` ? null : c(`${n}_${k}_d`) });
@@ -118,9 +113,10 @@ export default function StormClaim() {
 
       {step === 'when' && (
         <Step n={order.length} of={order.length} question={c('q_when')} hint={c('q_when_hint')} onBack={back}
-          onNext={() => setStep('result')} nextDisabled={!a.when} nextLabel="See the answer">
+          onNext={() => setStep('result')} nextDisabled={!a.when || whenIsFuture} nextLabel="See the answer">
           <DateField label="The day you found out" value={a.when} onChange={v => setA(p => ({ ...p, when: v }))}
-            max={new Date().toISOString().slice(0, 10)} />
+            max={today}
+            hint={whenIsFuture ? 'That date is still to come. The clock starts on the day you found out, so it cannot be later than today.' : null} />
         </Step>
       )}
 
@@ -202,7 +198,7 @@ export default function StormClaim() {
           {verdict !== 'uninsured' && (
             <Panel title="Your deadline" kind={lateWarning ? 'dark' : 'quiet'}>
               <Rows items={[
-                { label: 'You found out', value: new Date(a.when + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) },
+                { label: 'You found out', value: days == null ? 'not given' : new Date(a.when + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) },
                 { label: 'Days since', value: days == null ? 'unknown' : `${days}` },
                 { label: 'Notification window', value: `${NOTIFY.value} days from finding out`, strong: true },
               ]} />

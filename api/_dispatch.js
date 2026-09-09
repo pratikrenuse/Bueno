@@ -1,6 +1,12 @@
-// Sending one approved post to its team, shared by /api/linkedin-decide (fires the moment
-// John approves) and /api/linkedin-dispatch (the safety net that catches anything approved
-// but never sent). Each member gets the post in their own language, with Pratik and John cc'd.
+// Sending one approved post to its team. Each member gets it in their own language, with
+// Pratik and John cc'd.
+//
+// The ONLY caller is /api/linkedin-dispatch, which runs Tuesday and Thursday at 06:00 UTC
+// and can also be fired from the dashboard. Approving a post does NOT send it: /api/
+// linkedin-decide emails a preview to Pratik and John so they can see what was signed off,
+// and nothing reaches the team until dispatch runs. An earlier version of this comment said
+// decide sent to the team, which is worth correcting rather than leaving, because it is the
+// kind of thing somebody reads once and then trusts.
 import { syncTranslations, hashText } from './_translate.js';
 import { OVERSIGHT, SITE, esc, sendMail, COPY, STREAM_LABEL } from './_email.js';
 

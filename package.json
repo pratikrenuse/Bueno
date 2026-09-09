@@ -4,8 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "mkdir -p public/photos && cp studio/photos/*.jpg public/photos/ && vite build",
-    "preview": "vite preview"
+    "build": "mkdir -p public/photos && cp -f studio/photos/*.jpg public/photos/ 2>/dev/null || true; vite build && node seo/prerender.mjs && node seo/sitemap.mjs && node seo/check_seo.mjs",
+    "preview": "vite preview",
+    "seo": "node seo/prerender.mjs && node seo/sitemap.mjs && node seo/check_seo.mjs",
+    "serve": "node serve_dist.mjs",
+    "test": "node validate_rules.mjs && node test_rules.mjs && node fit.test.mjs && node directory-ranking.test.mjs && node linkedin-router.test.mjs && node day-counter/count.test.mjs && node sale-tax/calc.test.mjs && node late-surcharge/calc.test.mjs && node cost-audit/audit.test.mjs && node tax-calculator/taxCalculations.test.mjs && node rental-tax/rentalTaxCalculations.test.mjs && node storm-claim/calc.test.mjs && node calculators-crossproduct.test.mjs && node check_api.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "playwright": "^1.49.0"
   }
 }

@@ -8,6 +8,7 @@ import { Method, OnGoogle, LanguageEvidence, FitSignals, Review, langName } from
 import { CATEGORIES, CATEGORY_BY_SLUG } from './categories.js';
 import { LOCALITY_BY_SLUG } from './localities.js';
 import { pickEvidenceReview, position, telHref } from './trades-helpers.js';
+import PageLinks from '../seo/PageLinks.jsx';
 
 // Spain 24/7 trades directory.
 //
@@ -344,6 +345,10 @@ export default function SpainDirectory() {
             </div>
           </>
         )}
+        {/* The links out. They are on the page, not only in the prerendered HTML, because
+            React replaces that HTML the moment it boots and the town picker is a <select>,
+            which passes nothing to a crawler. Without this every town page is an orphan. */}
+        <PageLinks hub="trades" town={d.urlTown} category={d.urlTrade} locale={locale} className="pagelinks-dark" />
       </main>
 
       <SiteFooter note={tt('footer')} />

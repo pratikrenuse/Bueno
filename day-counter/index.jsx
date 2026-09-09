@@ -3,7 +3,7 @@ import ToolShell, { Intro, Step, Options, Result, Panel, Rows, DateField, useCop
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
 import copyDict from './copy.js';
-import { analyse, tripLength, tripIsValid, toDay } from './count.js';
+import { analyse, tripLength, tripIsValid, tripProblem, toDay } from './count.js';
 
 // The rolling short-stay allowance, for owners who are now third-country nationals.
 //
@@ -73,7 +73,9 @@ export default function DayCounter() {
     setTimeout(() => setStep(v === 'eu' ? 'result' : 'trips'), 150);
   };
 
-  const draftReversed = draft.start && draft.end && !tripIsValid(draft);
+  // Both ends typed but the trip refused. Saying which of the two it was matters: a
+  // mistyped year used to leave the Add button dead with a message about the wrong thing.
+  const draftProblem = draft.start && draft.end ? tripProblem(draft) : null;
   const canAdd = tripIsValid(draft);
 
   const addTrip = () => {
@@ -164,7 +166,8 @@ export default function DayCounter() {
             min={draft.start || undefined}
             onChange={v => setDraft(p => ({ ...p, end: v }))} />
 
-          {draftReversed && <p className="tk-hint tk-hint-tight">{c('trip_bad')}</p>}
+          {draftProblem === 'reversed' && <p className="tk-hint tk-hint-tight">{c('trip_bad')}</p>}
+          {draftProblem === 'too_long' && <p className="tk-hint tk-hint-tight">{c('trip_too_long')}</p>}
 
           <button type="button" className="option-card tk-option" onClick={addTrip} disabled={!canAdd}
             style={{ opacity: canAdd ? 1 : 0.4, justifyContent: 'center' }}>

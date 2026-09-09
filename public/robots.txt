@@ -1,0 +1,10 @@
+# Spain 24/7
+# Everything is open except the API and the two internal routes.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /internal
+Disallow: /internal-linkedin
+
+Sitemap: https://www.247spain.es/sitemap.xml

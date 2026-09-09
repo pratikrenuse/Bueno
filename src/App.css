@@ -3195,3 +3195,213 @@ body {
   font-size: clamp(1rem, 2vw, 1.1875rem); line-height: 1.45; color: var(--accent);
   max-width: 36ch;
 }
+
+/* ============================================================================
+   AREA HUBS: /areas, /areas/<province>, /coast/<coast>
+   ----------------------------------------------------------------------------
+   A third surface, deliberately neither of the two directories. Trades is dark
+   and dense because a burst pipe is an emergency. Professionals is off-white and
+   editorial because choosing a lawyer is a decision. This page is a map: white,
+   quiet, and almost entirely made of links, because the only thing anybody wants
+   from it is to leave it for the right town.
+
+   Colours are the existing tokens only. Every list is a real <ul> of real links,
+   which is the whole point of the page.
+   ========================================================================== */
+
+.areas-shell { background: var(--white); }
+.areas-header-right { display: flex; align-items: center; gap: 24px; }
+
+.areas-page {
+  background: var(--white);
+  padding: 40px 24px 72px;
+}
+.areas-wrap { max-width: 1080px; margin: 0 auto; }
+
+/* --- hero ---------------------------------------------------------------- */
+
+.areas-crumbs { margin-bottom: 20px; }
+.areas-crumbs ol {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin: 0; padding: 0; list-style: none;
+  font-size: 0.8125rem; color: var(--text-muted);
+}
+.areas-crumbs li + li::before { content: '/'; margin-right: 8px; color: var(--border); }
+.areas-crumbs a { color: var(--text-muted); text-decoration: none; }
+.areas-crumbs a:hover { color: var(--accent); text-decoration: underline; }
+.areas-crumbs [aria-current='page'] { color: var(--navy); }
+
+.areas-hero {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.areas-h1 {
+  margin: 0 0 16px;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.areas-lede {
+  margin: 0 0 10px;
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--navy);
+  opacity: 0.82;
+}
+.areas-lede:last-child { margin-bottom: 0; }
+
+/* --- sections ------------------------------------------------------------ */
+
+.areas-section { margin-bottom: 48px; }
+.areas-section:last-child { margin-bottom: 0; }
+.areas-h2 {
+  margin: 0 0 18px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* --- coasts: the way most people actually think about where they bought --- */
+
+.areas-coasts {
+  display: grid; gap: 12px; margin: 0; padding: 0; list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.areas-coast {
+  display: flex; flex-direction: column; gap: 4px;
+  min-height: 104px; padding: 18px 20px;
+  background: var(--light-blue);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.areas-coast:hover { background: var(--navy); }
+.areas-coast:hover .areas-coast-name,
+.areas-coast:hover .areas-coast-meta,
+.areas-coast:hover .areas-coast-count { color: var(--white); }
+.areas-coast-name { font-size: 1.125rem; font-weight: 600; color: var(--navy); }
+.areas-coast-meta { font-size: 0.875rem; color: var(--navy); opacity: 0.7; }
+.areas-coast-count { margin-top: auto; font-size: 0.8125rem; color: var(--navy); opacity: 0.6; }
+
+/* --- provinces: 52 of them, so a plain dense index ---------------------- */
+
+.areas-provinces {
+  display: grid; gap: 2px; margin: 0; padding: 0; list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.areas-provinces a {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  min-height: 44px; padding: 10px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.areas-provinces a:hover { background: var(--off-white); }
+.areas-prov-name { font-size: 0.9375rem; color: var(--accent); }
+.areas-provinces a:hover .areas-prov-name { text-decoration: underline; }
+.areas-prov-count { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+
+/* --- towns: the row that leads to a page that can rank ------------------ */
+
+.areas-towns { margin: 0; padding: 0; list-style: none; }
+.areas-town {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.areas-town-name { font-size: 1.0625rem; font-weight: 600; color: var(--navy); }
+.areas-town-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.areas-town-links a {
+  display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 16px;
+  border: 1px solid var(--border); border-radius: 999px;
+  font-size: 0.875rem; color: var(--accent); text-decoration: none;
+}
+.areas-town-links a:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+/* --- siblings and mentions ---------------------------------------------- */
+
+.areas-siblings {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none;
+}
+.areas-siblings a {
+  display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 16px;
+  background: var(--off-white); border-radius: 999px;
+  font-size: 0.875rem; color: var(--navy); text-decoration: none;
+}
+.areas-siblings a:hover { background: var(--light-blue); }
+
+.areas-mentions {
+  margin: 0; max-width: 80ch;
+  font-size: 0.9375rem; line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* --- the two doors out -------------------------------------------------- */
+
+.areas-doors { display: flex; flex-wrap: wrap; gap: 12px; }
+.areas-door {
+  display: inline-flex; align-items: center;
+  min-height: 52px; padding: 0 28px;
+  background: var(--navy); border-radius: 8px;
+  font-size: 1rem; font-weight: 600; color: var(--white); text-decoration: none;
+}
+.areas-door:hover { background: var(--accent); }
+
+@media (max-width: 560px) {
+  .areas-page { padding: 28px 16px 56px; }
+  .areas-town { flex-direction: column; align-items: flex-start; }
+  .areas-town-links a { flex: 1 1 auto; justify-content: center; }
+}
+
+/* ============================================================================
+   PAGE LINKS: the block of internal links at the foot of both directories
+   ----------------------------------------------------------------------------
+   Rendered on the page, not only in the prerendered HTML, because React replaces
+   that HTML when it boots and the town picker is a <select>, which passes nothing
+   to a crawler. Without these links every town page is an orphan.
+
+   It is quiet by design. Somebody who found what they needed will not read it.
+   Somebody who did not is exactly who it is for.
+   ========================================================================== */
+
+.pagelinks {
+  max-width: 1080px;
+  margin: 56px auto 0;
+  padding: 32px 24px 8px;
+  border-top: 1px solid var(--border);
+}
+.pagelinks-title {
+  margin: 0 0 16px;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pagelinks-list {
+  display: grid; gap: 4px 24px; margin: 0; padding: 0; list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.pagelinks-list li {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 44px; padding: 4px 0;
+}
+.pagelinks-list a { font-size: 0.9375rem; color: var(--accent); text-decoration: none; }
+.pagelinks-list a:hover { text-decoration: underline; }
+.pagelinks-note { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.4; }
+
+/* The trades page is navy, so the same block has to invert. Same structure, and it
+   stays as quiet there as it is on the light surface. */
+.pagelinks-dark { border-top-color: rgba(255, 255, 255, 0.14); }
+.pagelinks-dark .pagelinks-title { color: rgba(255, 255, 255, 0.5); }
+.pagelinks-dark .pagelinks-list a { color: var(--light-blue); }
+.pagelinks-dark .pagelinks-note { color: rgba(255, 255, 255, 0.5); }
+
+@media (max-width: 560px) {
+  .pagelinks { margin-top: 40px; padding: 24px 16px 8px; }
+}

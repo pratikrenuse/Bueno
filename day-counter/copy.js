@@ -28,6 +28,7 @@ export default {
     trip_remove: 'Remove',
     trip_none: 'No trips added yet.',
     trip_bad: 'The departure date needs to be on or after the arrival date.',
+    trip_too_long: 'That trip is longer than five years, so one of the dates is probably a typo. Check the year.',
 
     see: 'See where I stand',
     restart: 'Start again',
