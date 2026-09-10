@@ -58,6 +58,8 @@ export default async function handler(req, res) {
       const post = pr.ok ? (await pr.json())[0] : null;
 
       if (post) {
+        // Show it exactly as the team will get it, call to action and all. An approver
+        // reviewing something different from what is sent is not reviewing.
         const body = post.edited_text || post.post_text;
         const streamName = { owners: 'property owners', agents: 'estate agents', attorneys: 'legal advisers' }[post.audience || 'owners'] || post.audience;
         const mail = await sendMail({

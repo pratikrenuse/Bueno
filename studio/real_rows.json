@@ -1,0 +1,75 @@
+{
+ "master": {
+  "id": "real-1",
+  "slug": "free_banking_myth",
+  "day": 23,
+  "title": "The free banking myth",
+  "post_text": "Free banking in Spain mostly belongs to mortgage customers. Everyone else pays, one condition at a time, and foreign owners are usually in the everyone else column.\n\nThe game works like this. Take a loan from a Spanish bank and you'll often get free banking bundled in. No loan? Then free usually means conditional: you buy the bank's products and push a minimum transaction volume through the account every month, and the moment you miss the conditions, the fees start.\n\nWhy does that matter for foreign owners specifically? Because 60 to 70 percent of foreigners who buy property in Spain never take a Spanish loan. The free-banking route was never built for you.\n\n#BankingInSpain #ExpatSpain #RetireInSpain\n\nOwning or planning to buy property in Spain? Bueno is trusted by homeowners from 25+ countries. getbueno.com",
+  "edited_text": null,
+  "audience": "owners",
+  "language": "en",
+  "image_url": "https://images.pexels.com/photos/5239818/pexels-photo-5239818.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+  "source_hash": null
+ },
+ "translations": [
+  {
+   "language": "no",
+   "title": "Myten om gratis bank i Spania",
+   "post_text": "Gratis bank i Spania er stort sett forbeholdt lånekunder. Alle andre betaler, ett vilkår om gangen, og utenlandske boligeiere havner som regel i kolonnen for alle andre.\n\nSpillet fungerer slik. Tar du et lån i en spansk bank, får du ofte gratis banktjenester med på kjøpet. Ikke noe lån? Da betyr gratis som regel betinget: du kjøper bankens produkter og sender et minstevolum av transaksjoner gjennom kontoen hver måned, og i det øyeblikket du bommer på vilkårene, starter gebyrene.\n\n#BankingInSpain #ExpatSpain #RetireInSpain\n\nEier du bolig i Spania, eller vurderer du å kjøpe? Bueno brukes av boligeiere fra over 25 land. getbueno.com/no",
+   "edited_text": null,
+   "image_url": "https://images.pexels.com/photos/5239818/pexels-photo-5239818.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+   "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11"
+  }
+ ],
+ "members": [
+  {
+   "name": "Amina",
+   "email": "amina@getbueno.com",
+   "language": "fr",
+   "stream": "owners",
+   "active": true
+  },
+  {
+   "name": "Felix",
+   "email": "felix@getbueno.com",
+   "language": "en",
+   "stream": "owners",
+   "active": false
+  },
+  {
+   "name": "Izahbel",
+   "email": "izahbelle@getbueno.com",
+   "language": "sv",
+   "stream": "owners",
+   "active": true
+  },
+  {
+   "name": "John",
+   "email": "john@getbueno.com",
+   "language": "en",
+   "stream": "owners",
+   "active": true
+  },
+  {
+   "name": "Monique",
+   "email": "monique@getbueno.com",
+   "language": "nl",
+   "stream": "owners",
+   "active": true
+  },
+  {
+   "name": "Petter",
+   "email": "petter@getbueno.com",
+   "language": "no",
+   "stream": "owners",
+   "active": true
+  },
+  {
+   "name": "Yenna",
+   "email": "yenna@getbueno.com",
+   "language": "es",
+   "stream": "owners",
+   "active": true
+  }
+ ]
+}

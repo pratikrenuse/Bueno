@@ -20,6 +20,60 @@ export const APPROVAL_TO = [JOHN, PRATIK];
 // his own English post, so he is deliberately NOT here: he does not want the five that go
 // to Amina, Izahbel, Monique, Petter and Yenna. That is thirty emails a month.
 export const TEAM_CC = [PRATIK];
+// The call to action appended to every post the team receives.
+//
+// ONE PLACE, ON PURPOSE. Writing it into 255 database rows would mean 255 rows to correct
+// the next time the wording or the country count changes. Appending it here means the team
+// copies the current version out of the email every time, and a change lands everywhere at
+// once.
+//
+// THE NUMBER. getbueno.com says "trusted by homeowners from 25+ countries" in English,
+// "boligeiere fra over 25 land" in Norwegian and "über 25 Ländern" in German. The internal
+// brief says 28+, a draft of this CTA said 30+, and two posts say 28. Only 25+ is
+// supported by anything a reader can check, so 25+ is what goes out. If the real figure is
+// higher, change the website first and this line second.
+//
+// THE LINKS. Each language points at a page that returns 200, verified by reading the
+// actual words on it rather than trusting the html lang attribute.
+//
+// THE PATHS ARE COUNTRY CODES, NOT LANGUAGE CODES, for the Nordics. Swedish is /se, not
+// /sv, and Danish is /dk, not /da. An earlier version of this file tested /sv, got a 404,
+// and concluded there was no Swedish site at all. There is: getbueno.com/se, and it is the
+// market Izahbel posts into. Check the site's own language switcher before adding a locale.
+export const CTA = {
+  en: 'Owning or planning to buy property in Spain? Bueno is trusted by homeowners from 25+ countries. getbueno.com',
+  no: 'Eier du bolig i Spania, eller vurderer du å kjøpe? Bueno brukes av boligeiere fra over 25 land. getbueno.com/no',
+  sv: 'Äger du bostad i Spanien, eller funderar du på att köpa? Bueno används av husägare från över 25 länder. getbueno.com/se',
+  de: 'Sie besitzen eine Immobilie in Spanien oder planen einen Kauf? Bueno wird von Eigentümern in über 25 Ländern genutzt. getbueno.com/de',
+  fr: "Vous possédez un bien en Espagne, ou vous envisagez d'acheter ? Bueno est utilisé par des propriétaires de plus de 25 pays. getbueno.com/fr",
+  nl: 'Bezit u een woning in Spanje, of overweegt u te kopen? Bueno wordt gebruikt door huiseigenaren uit meer dan 25 landen. getbueno.com/nl',
+  es: '¿Tiene una propiedad en España o está pensando en comprar? Bueno lo utilizan propietarios de más de 25 países. getbueno.com/es',
+};
+
+// The page each language is sent to. All eight verified live: status 200, and the words on
+// the page are in that language.
+//   /      English      /se   Swedish      /dk   Danish       /no   Norwegian
+//   /de    German       /fr   French       /es   Spanish      /nl   Dutch
+export const CTA_URL = {
+  en: 'https://getbueno.com',      no: 'https://getbueno.com/no',
+  sv: 'https://getbueno.com/se',   de: 'https://getbueno.com/de',
+  fr: 'https://getbueno.com/fr',   nl: 'https://getbueno.com/nl',
+  es: 'https://getbueno.com/es',   da: 'https://getbueno.com/dk',
+};
+
+/** The post text with the call to action on the end, in the reader's language. */
+// Used ONLY by _lk_refresh.js, when a post is written into the table. By the time a post
+// reaches the deck the CTA is already part of post_text, so a reviewer sees it, can edit
+// it, and what they approve is exactly what the team is sent. The send path must never
+// call this: nothing is added to a post after review.
+export function withCta(text, lang) {
+  const line = CTA[lang] || CTA.en;
+  if (!text) return line;
+  // Never append twice, whatever else has been done to the post.
+  if (text.includes('getbueno.com')) return text;
+  return `${text.trimEnd()}\n\n${line}`;
+}
+
 export const REPLY_TO = 'pratik.y.renuse@gmail.com';
 // The www host, because that is the one that answers. The apex 301s to it, and an <img>
 // in an email is fetched by the mail client or its image proxy, so every redirect is a
@@ -158,8 +212,16 @@ export const STREAM_LABEL = {
   fr: { owners: 'proprietaires', agents: 'agents immobiliers', attorneys: 'conseillers juridiques' },
 };
 
+// An image can live on our own site as a path, or on a stock CDN as a full URL. Both are
+// valid: the team downloads the picture out of the email either way, and a hosted stock URL
+// means a new image needs no deploy and no file in the repo.
+export const imageSrc = (imageUrl) => {
+  if (!imageUrl) return '';
+  return /^https?:\/\//i.test(imageUrl) ? imageUrl : `${SITE}${imageUrl}`;
+};
+
 export const imageBlock = (imageUrl, label = 'Attach this image to the post (tap and hold or right click to save):') =>
   imageUrl
     ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">${esc(label)}</p>
-       <img src="${SITE}${imageUrl}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
+       <img src="${imageSrc(imageUrl)}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
     : '';

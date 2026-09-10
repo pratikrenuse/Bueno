@@ -8,7 +8,7 @@
 // decide sent to the team, which is worth correcting rather than leaving, because it is the
 // kind of thing somebody reads once and then trusts.
 import { syncTranslations, hashText } from './_translate.js';
-import { TEAM_CC, SITE, esc, sendMail, COPY, STREAM_LABEL } from './_email.js';
+import { TEAM_CC, esc, sendMail, COPY, STREAM_LABEL, imageSrc } from './_email.js';
 
 export async function sendPostToTeam({ url, headers, post, members, anthropicKey }) {
   const stream = post.audience || 'owners';
@@ -32,11 +32,21 @@ export async function sendPostToTeam({ url, headers, post, members, anthropicKey
   }
 
   const masterHash = hashText(post.edited_text || post.post_text);
+  // Nothing below alters the text. The call to action is part of post_text, written when
+  // the row is refreshed, so the reviewer saw and could edit exactly what is sent here.
+  //
+  // masterHash is the sha1 of the English text as it stands now. A translation stores, in
+  // source_hash, the sha1 of the English it was made from. If they differ, syncTranslations
+  // MACHINE-RETRANSLATES that language and overwrites post_text, title and edited_text. So
+  // any edit to an English master must be followed by refreshing the translations' hashes,
+  // or the next send silently discards the reviewed translations.
   const forMember = (m) => {
     const lang = m.language || 'en';
     if (lang === 'en') return { text: post.edited_text || post.post_text, title: post.title, lang, translated: true, stale: false };
     const t = translations[lang];
     if (t) return { text: t.edited_text || t.post_text, title: t.title || post.title, lang, translated: true, stale: !!t.source_hash && t.source_hash !== masterHash };
+    // No translation yet, so the English post goes out with a warning. The call to action
+    // still goes in the member's own language, because that part we do have.
     return { text: post.edited_text || post.post_text, title: post.title, lang, translated: false, stale: false };
   };
 
@@ -113,7 +123,7 @@ export function memberEmail({ member, post, text, lang, stream, upcoming, transl
 
   const img = post.image_url
     ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">${esc(c.imageLabel)}</p>
-       <img src="${SITE}${post.image_url}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
+       <img src="${imageSrc(post.image_url)}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
     : '';
 
   const next = (upcoming && upcoming.length)

@@ -4,8 +4,12 @@
 //   2. inserts only the rows that are missing,
 //   3. updates the text, title and image of rows that are still pending and unedited,
 //      so rewritten content reaches the deck.
+// Every row it writes is the finished post: CTA already appended, image already resolved
+// from _lk_images.js. The deck shows exactly what will be emailed.
 // Approved masters, rejected posts and anything a reviewer edited are never overwritten.
 // Idempotent: safe to press any number of times.
+import { withCta } from './_email.js';
+import { imageFor } from './_lk_images.js';
 import owners from './_linkedin_batch1.js';
 import agents from './_linkedin_agents.js';
 import attorneys from './_linkedin_attorneys.js';
@@ -25,19 +29,27 @@ export default async function handler(req, res) {
 
     // PostgREST bulk insert requires every row to carry an identical key set, so build each
     // row explicitly instead of spreading whatever the data modules happen to contain.
-    const norm = (p, defaults = {}) => ({
-      slug: p.slug,
-      batch: p.batch ?? 1,
-      day: p.day ?? null,
-      language: p.language || 'en',
-      member: p.member || '',
-      audience: p.audience || defaults.audience || 'owners',
-      title: p.title || null,
-      post_text: p.post_text,
-      image_url: p.image_url ?? null,
-      status: p.status || defaults.status || 'pending',
-      source_hash: p.source_hash ?? null,
-    });
+    // The row this builds is the FINISHED post: the CTA is already on the end and the
+    // image is already chosen. What the deck shows is what the team receives. Nothing is
+    // added, appended or swapped later in the send path.
+    const norm = (p, defaults = {}) => {
+      const language = p.language || 'en';
+      const audience = p.audience || defaults.audience || 'owners';
+      const day = p.day ?? null;
+      return {
+        slug: p.slug,
+        batch: p.batch ?? 1,
+        day,
+        language,
+        member: p.member || '',
+        audience,
+        title: p.title || null,
+        post_text: withCta(p.post_text, language),
+        image_url: imageFor(audience, day, p.image_url ?? null),
+        status: p.status || defaults.status || 'pending',
+        source_hash: p.source_hash ?? null,
+      };
+    };
 
     const rows = [
       ...owners.map(p => norm(p, { audience: 'owners' })),
@@ -76,6 +88,16 @@ export default async function handler(req, res) {
       if (!e || e.edited_text) return false;
       if (e.status !== 'pending' && e.status !== 'approved') return false;
       if (e.status === 'approved' && p.language === 'en') return false; // never rewrite an approved master
+      // A slug whose source title no longer matches the stored title is a slug whose
+      // content has been re-pointed. Nine partner slugs are in exactly that state: the
+      // table holds the post the deck reviewed, the source module holds a different post
+      // altogether. Rewriting the body from source there would silently replace reviewed
+      // copy with unrelated copy, so the body is left alone and only the CTA and the image
+      // are allowed through. Remove this guard once the source modules are reconciled.
+      const slugRepointed = !!e.title && !!p.title && e.title !== p.title;
+      if (slugRepointed) {
+        return (e.image_url || null) !== (p.image_url || null);
+      }
       return e.post_text !== p.post_text || e.title !== p.title || (e.image_url || null) !== (p.image_url || null)
         || (e.source_hash || null) !== (p.source_hash || null);
     });
@@ -86,10 +108,16 @@ export default async function handler(req, res) {
       const r = await fetch(`${url}/rest/v1/linkedin_posts?id=eq.${e.id}`, {
         method: 'PATCH',
         headers: { ...H, Prefer: 'return=minimal' },
-        body: JSON.stringify({
-          post_text: p.post_text, title: p.title, image_url: p.image_url,
-          source_hash: p.source_hash, updated_at: new Date().toISOString(),
-        }),
+        // Same guard on the write side: a re-pointed slug gets its image refreshed and
+        // nothing else, so reviewed copy survives a Sync.
+        body: JSON.stringify(
+          (!!e.title && !!p.title && e.title !== p.title)
+            ? { image_url: p.image_url, updated_at: new Date().toISOString() }
+            : {
+                post_text: p.post_text, title: p.title, image_url: p.image_url,
+                source_hash: p.source_hash, updated_at: new Date().toISOString(),
+              }
+        ),
       });
       if (r.ok) updated += 1;
       else updateErrors.push(`${p.slug} (${p.language}): ${r.status}`);

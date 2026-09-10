@@ -80,6 +80,35 @@ for (const p of all) {
   }
 }
 
+// --- 3b. every import from a shared module actually exists --------------------
+// api/_email.js used to export OVERSIGHT. It now exports APPROVAL_TO, REVIEW_TO, REVIEW_CC
+// and TEAM_CC instead, because one list was serving three different audiences. Three
+// superseded files under /api still import the old name. They are in .vercelignore so they
+// cannot deploy today, and that single config line is the only thing standing between a
+// dead import and a function that throws the moment it is invoked.
+//
+// So the import is checked rather than trusted. This catches a stale import in a file that
+// is ignored now and might not be later, and it catches a rename that misses a caller.
+for (const p of all) {
+  if (!RUNTIME_EXT.test(p)) continue;
+  const src = readFileSync(p, 'utf8');
+  for (const m of src.matchAll(/import\s*\{([^}]+)\}\s*from\s*['"](\.[^'"]+)['"]/g)) {
+    const names = m[1].split(',').map(n => n.trim().split(/\s+as\s+/)[0].trim()).filter(Boolean);
+    const target = join(p, '..', m[2]);
+    if (!existsSync(target)) { errors.push(`${p} imports from ${m[2]}, which does not exist.`); continue; }
+    const targetSrc = readFileSync(target, 'utf8');
+    for (const name of names) {
+      const exported = new RegExp(`export\\s+(?:const|let|var|function|async\\s+function|class)\\s+${name}\\b`).test(targetSrc)
+        || new RegExp(`export\\s*\\{[^}]*\\b${name}\\b`).test(targetSrc);
+      if (!exported) {
+        const msg = `${p} imports { ${name} } from ${m[2]}, which does not export it. Invoking this function would throw.`;
+        if (isIgnored(p)) warnings.push(`${msg} It is in .vercelignore so it cannot deploy, but delete the file rather than leaving a broken import in the tree.`);
+        else errors.push(msg);
+      }
+    }
+  }
+}
+
 // --- 4. rewrites and crons resolve -------------------------------------------
 const vercel = existsSync('vercel.json') ? JSON.parse(readFileSync('vercel.json', 'utf8')) : {};
 const rewrites = vercel.rewrites || [];
