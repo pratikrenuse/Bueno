@@ -9,7 +9,7 @@
 // Approved masters, rejected posts and anything a reviewer edited are never overwritten.
 // Idempotent: safe to press any number of times.
 import { withCta } from './_email.js';
-import { imageFor } from './_lk_images.js';
+import { imageFor, imageOptionsFor } from './_lk_images.js';
 import owners from './_linkedin_batch1.js';
 import agents from './_linkedin_agents.js';
 import attorneys from './_linkedin_attorneys.js';
@@ -46,10 +46,21 @@ export default async function handler(req, res) {
         title: p.title || null,
         post_text: withCta(p.post_text, language),
         image_url: imageFor(audience, day, p.image_url ?? null),
+        image_options: imageOptionsFor(audience, day),
         status: p.status || defaults.status || 'pending',
         source_hash: p.source_hash ?? null,
       };
     };
+
+    // A reviewer can swap a post's photograph in the deck. That choice is always one of
+    // the post's own image_options, so a Sync must leave it alone: only the option list
+    // is refreshed, and image_url is rewritten only when the stored one is no longer on
+    // the list at all. Otherwise pressing Sync would quietly undo everyone's picks.
+    const sameList = (a = [], b = []) => a.length === b.length && a.every((x, i) => x === b[i]);
+    const keepsImage = (e, p) => !!e.image_url && (p.image_options || []).includes(e.image_url);
+    const imageChanged = (e, p) =>
+      !sameList(e.image_options || [], p.image_options || []) ||
+      (!keepsImage(e, p) && (e.image_url || null) !== (p.image_url || null));
 
     const rows = [
       ...owners.map(p => norm(p, { audience: 'owners' })),
@@ -62,7 +73,7 @@ export default async function handler(req, res) {
     // never empty the deck. Order: read what exists, add what is new, then update the text
     // of rows that are still pending and unedited. Decided or edited rows are left alone.
     const cur = await fetch(
-      `${url}/rest/v1/linkedin_posts?select=id,slug,language,member,status,edited_text,post_text,title,image_url,source_hash&limit=5000`,
+      `${url}/rest/v1/linkedin_posts?select=id,slug,language,member,status,edited_text,post_text,title,image_url,image_options,source_hash&limit=5000`,
       { headers: H });
     if (!cur.ok) return res.status(500).json({ error: `Supabase read ${cur.status}: ${await cur.text()}` });
     const existing = new Map((await cur.json()).map(r => [`${r.slug}|${r.language}|${r.member}`, r]));
@@ -96,9 +107,9 @@ export default async function handler(req, res) {
       // are allowed through. Remove this guard once the source modules are reconciled.
       const slugRepointed = !!e.title && !!p.title && e.title !== p.title;
       if (slugRepointed) {
-        return (e.image_url || null) !== (p.image_url || null);
+        return imageChanged(e, p);
       }
-      return e.post_text !== p.post_text || e.title !== p.title || (e.image_url || null) !== (p.image_url || null)
+      return e.post_text !== p.post_text || e.title !== p.title || imageChanged(e, p)
         || (e.source_hash || null) !== (p.source_hash || null);
     });
     let updated = 0;
@@ -112,9 +123,11 @@ export default async function handler(req, res) {
         // nothing else, so reviewed copy survives a Sync.
         body: JSON.stringify(
           (!!e.title && !!p.title && e.title !== p.title)
-            ? { image_url: p.image_url, updated_at: new Date().toISOString() }
+            ? { image_options: p.image_options, ...(keepsImage(e, p) ? {} : { image_url: p.image_url }), updated_at: new Date().toISOString() }
             : {
-                post_text: p.post_text, title: p.title, image_url: p.image_url,
+                post_text: p.post_text, title: p.title,
+                image_options: p.image_options,
+                ...(keepsImage(e, p) ? {} : { image_url: p.image_url }),
                 source_hash: p.source_hash, updated_at: new Date().toISOString(),
               }
         ),

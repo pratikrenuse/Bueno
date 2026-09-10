@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     if (!url) return res.status(500).json({ error: 'Missing env var: SUPABASE_URL (or VITE_SUPABASE_URL)' });
     if (!key) return res.status(500).json({ error: 'Missing env var: SUPABASE_SERVICE_KEY. Add it in Vercel and redeploy.' });
 
-    const { id, action, comment, text } = req.body || {};
+    const { id, action, comment, text, image_url } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id required' });
 
     let patch;
@@ -31,8 +31,23 @@ export default async function handler(req, res) {
         decided_at: action === 'pending' ? null : new Date().toISOString(),
         updated_at: new Date().toISOString(),
       };
+    } else if (action === 'image') {
+      // The reviewer picked a different photograph from the grid. Only a URL that is
+      // already one of that post's own image_options is accepted, so this endpoint can
+      // never be used to point a post at an arbitrary image.
+      if (typeof image_url !== 'string' || !image_url) return res.status(400).json({ error: 'image needs image_url' });
+      const cur = await fetch(
+        `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?id=eq.${encodeURIComponent(id)}&select=image_options`,
+        { headers: { apikey: key, Authorization: `Bearer ${key}` } });
+      if (!cur.ok) return res.status(500).json({ error: `Supabase read ${cur.status}: ${await cur.text()}` });
+      const row = (await cur.json())[0];
+      if (!row) return res.status(404).json({ error: 'post not found' });
+      if (!(row.image_options || []).includes(image_url)) {
+        return res.status(400).json({ error: 'that image is not one of this post\'s options' });
+      }
+      patch = { image_url, updated_at: new Date().toISOString() };
     } else {
-      return res.status(400).json({ error: 'valid action required (approved, rejected, pending, edit)' });
+      return res.status(400).json({ error: 'valid action required (approved, rejected, pending, edit, image)' });
     }
 
     const r = await fetch(`${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?id=eq.${encodeURIComponent(id)}`, {

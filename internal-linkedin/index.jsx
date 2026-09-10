@@ -38,6 +38,7 @@ export default function InternalLinkedIn() {
   const [editing, setEditing] = useState(null)    // { id, text }
   const [rejecting, setRejecting] = useState(null) // { id, note }
   const [copiedId, setCopiedId] = useState(null)
+  const [picking, setPicking] = useState(null)   // post id whose image grid is open
   const [seeding, setSeeding] = useState(false)
   const [focusId, setFocusId] = useState(null)
   const [flash, setFlash] = useState(null)         // { id, kind }
@@ -126,6 +127,16 @@ export default function InternalLinkedIn() {
       setPosts(list => list.map(x => (x.id === p.id ? { ...x, edited_text: text } : x)))
       setEditing(null)
     } catch (e) { setErr(String(e.message || e)) }
+  }
+
+  // Change image. The choices come with the post as image_options, so the grid opens
+  // instantly and John picks by eye rather than describing what he wants.
+  async function chooseImage(p, url) {
+    const prev = posts
+    setPosts(list => list.map(x => (x.id === p.id ? { ...x, image_url: url } : x)))
+    setPicking(null)
+    try { await api('/api/linkedin-decide', { id: p.id, action: 'image', image_url: url }) }
+    catch (e) { setPosts(prev); setErr(`Could not change the image on "${p.title}": ${e.message}`) }
   }
 
   async function seed() {
@@ -465,12 +476,6 @@ export default function InternalLinkedIn() {
                     style={{ width: '100%', display: 'block', maxHeight: 340, objectFit: 'cover' }} />
                 )}
 
-                <div style={{ borderTop: '1px solid #EBEBEB', margin: '0 12px', padding: '6px 4px', display: 'flex', justifyContent: 'space-around', color: 'rgba(0,0,0,.6)', fontSize: 13, fontWeight: 600 }}>
-                  <span style={{ padding: '6px 8px' }}>Like</span>
-                  <span style={{ padding: '6px 8px' }}>Comment</span>
-                  <span style={{ padding: '6px 8px' }}>Repost</span>
-                  <span style={{ padding: '6px 8px' }}>Send</span>
-                </div>
               </article>
 
               <div style={{ background: '#FAFAF8', border: CARD_BORDER, borderTop: 'none', borderRadius: '0 0 10px 10px', padding: '10px 14px' }}>
@@ -485,6 +490,12 @@ export default function InternalLinkedIn() {
                     <button onClick={() => copyText(p)} style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 14px', fontSize: 13 }}>
                       {copiedId === p.id ? 'Copied' : 'Copy text'}
                     </button>
+                    {!isEditing && (p.image_options || []).length > 1 && (
+                      <button onClick={() => setPicking(picking === p.id ? null : p.id)}
+                        style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 14px', fontSize: 13 }}>
+                        {picking === p.id ? 'Close images' : 'Change image'}
+                      </button>
+                    )}
                     {!isEditing && (
                       <button onClick={() => setEditing({ id: p.id, text: p.edited_text || p.post_text })}
                         style={{ ...btn('#EEF1F6', NAVY), marginTop: 0, padding: '9px 14px', fontSize: 13 }}>Edit</button>
@@ -502,6 +513,34 @@ export default function InternalLinkedIn() {
                     )}
                   </div>
                 </div>
+
+                {picking === p.id && (
+                  <div style={{ marginTop: 12 }}>
+                    <p style={{ margin: '0 0 8px', fontSize: 13, color: '#5a5f73' }}>
+                      Pick the image for this post. It saves as soon as you click.
+                    </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 8 }}>
+                      {(p.image_options || []).map(url => {
+                        const current = url === p.image_url
+                        return (
+                          <button key={url} onClick={() => chooseImage(p, url)} title={current ? 'Currently on this post' : 'Use this image'}
+                            style={{
+                              padding: 0, border: current ? `3px solid ${NAVY}` : '1px solid #d8dbe4',
+                              borderRadius: 8, overflow: 'hidden', cursor: 'pointer', background: '#EDEBE6',
+                              position: 'relative', lineHeight: 0,
+                            }}>
+                            <img src={url.replace('w=1200&h=630', 'w=400&h=210')} alt="" loading="lazy"
+                              style={{ width: '100%', display: 'block', aspectRatio: '1200 / 630', objectFit: 'cover' }} />
+                            {current && (
+                              <span style={{ position: 'absolute', left: 6, bottom: 6, background: NAVY, color: '#fff',
+                                fontSize: 11, fontWeight: 600, borderRadius: 999, padding: '2px 8px', lineHeight: 1.5 }}>In use</span>
+                            )}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
 
                 {isRejecting && (
                   <div style={{ marginTop: 10 }}>

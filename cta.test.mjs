@@ -122,7 +122,41 @@ for (const [name, src] of [['dispatch', dispatchSrc], ['decide', decideSrc], ['r
 // A Sync must not undo any of this, and must not swap reviewed copy for unrelated copy.
 // Nine partner slugs point at different posts in the source modules than in the table.
 ok_('a re-pointed slug is detected by title', /slugRepointed/.test(refreshSrc));
-ok_('and only its image is refreshed', /\{ image_url: p\.image_url, updated_at/.test(refreshSrc));
+ok_('and its body copy is left alone',
+  /e\.title !== p\.title\)\s*\n\s*\? \{ image_options: p\.image_options/.test(refreshSrc));
+
+// The reviewer can swap a post's photograph in the deck. A Sync must not undo that.
+ok_('a Sync refreshes the option list', /image_options: p\.image_options/.test(refreshSrc));
+ok_('and keeps an image the reviewer chose', /keepsImage\(e, p\) \? \{\} : \{ image_url: p\.image_url \}/.test(refreshSrc));
+ok_('a chosen image counts as kept only if it is still an option',
+  /includes\(e\.image_url\)/.test(refreshSrc));
+
+// Only an image already offered for that post can be set through the API.
+const decideSrc2 = readFileSync(new URL('./api/_lk_decide.js', import.meta.url), 'utf8');
+ok_('the image action exists', /action === 'image'/.test(decideSrc2));
+ok_('and refuses a URL that is not one of the post options',
+  /image_options \|\| \[\]\)\.includes\(image_url\)/.test(decideSrc2));
+
+// Every post offers a real choice, and the default is the first of them.
+const { imageOptionsFor } = await import('./api/_lk_images.js');
+for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attorneys', 15]]) {
+  const opts = imageOptionsFor(aud, day);
+  ok_(`${aud} ${day}: twelve images to choose from`, opts.length === 12, String(opts.length));
+  ok_(`${aud} ${day}: no duplicates in the grid`, new Set(opts).size === 12);
+  ok_(`${aud} ${day}: the default is the first one`, imageFor(aud, day) === opts[0]);
+  ok_(`${aud} ${day}: every option is a real render URL`,
+    opts.every(u => /^https:\/\/images\.pexels\.com\/photos\/\d+\/pexels-photo-\d+\.(jpe?g|png)\?/.test(u)
+                 && u.endsWith('w=1200&h=630&fit=crop')));
+}
+
+// The deck must not pretend to be LinkedIn itself.
+const deckSrc = readFileSync(new URL('./internal-linkedin/index.jsx', import.meta.url), 'utf8');
+for (const w of ['Like', 'Repost']) {
+  ok_(`the deck no longer shows a fake ${w} control`,
+    !new RegExp(`>\\s*${w}\\s*<`).test(deckSrc));
+}
+ok_('the deck offers Change image', /Change image/.test(deckSrc));
+ok_('and saves the pick through the image action', /action: 'image', image_url: url/.test(deckSrc));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
