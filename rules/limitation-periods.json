@@ -1,0 +1,293 @@
+{
+  "domain": "How long an owner has to act on a property dispute in Spain. The clock, where it starts, and what stops it. These are the figures that decide whether a claim is still alive, and they are the ones foreign owners most often learn about too late.",
+  "rules": [
+    {
+      "id": "limit.contract.general",
+      "statement": "A personal action with no special period runs out after five years, counted from when performance of the obligation could be demanded. It was fifteen years before 7 October 2015.",
+      "value": 5,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1964.2 Codigo Civil, as amended by Ley 42/2015",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.extracontractual",
+      "statement": "A claim for damage caused by someone you have no contract with runs out after one year, counted from when the injured party found out about the damage.",
+      "value": 1,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1968.2 Codigo Civil, with art. 1902",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.interruption",
+      "statement": "Three things stop the clock and restart it: going to court, an out of court demand by the creditor, and any acknowledgement of the debt by the debtor. A written demand is enough, which is unusual and is why a burofax matters.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1973 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": "Applies to prescripcion only. It does not extend the community challenge windows, the four year annulment window or the six month hidden defects window, which are caducidad."
+    },
+    {
+      "id": "limit.interruption.guarantor",
+      "statement": "A court claim against the main debtor also stops the clock against a guarantor, but an out of court demand or a private acknowledgement does not.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1975 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.rent.arrears",
+      "statement": "Unpaid rent runs out after five years, and each month counts from the day that month fell due.",
+      "value": 5,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1966.2 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.deposit.return",
+      "statement": "Recovering a rental deposit has no period of its own in the tenancy law, so the general five year period applies. Statutory interest starts one month after the keys are handed back.",
+      "value": 5,
+      "unit": "years",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 36.4 Ley 29/1994 (LAU) with art. 1964.2 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "1994-11-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": "The tenancy law fixes when interest starts, not when the clock starts. Handing back the keys is the practical starting point rather than a statutory one, so treat the five years as the outer limit and act sooner."
+    },
+    {
+      "id": "limit.community.challenge",
+      "statement": "Challenging a decision of the owners meeting: three months if the ground is that it seriously harms the community or unfairly harms one owner, one year if the ground is that it breaks the law or the statutes.",
+      "value": { "general": "3 months", "contrary_to_law_or_statutes": "12 months" },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18.3 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "1960-07-23",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.community.challenge.absent",
+      "statement": "An owner who was not at the meeting counts the window from the day the decision was communicated to them, not from the day of the meeting. This is the single most useful rule for an owner who lives abroad.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18.3 Ley 49/1960 (LPH), with art. 9",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "1960-07-23",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.community.challenge.standing",
+      "statement": "To challenge a decision you must be up to date with community payments, or have paid the disputed amount into court first. The exception is a challenge about the shares themselves.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18.2 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "1960-07-23",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.community.buyer_liability",
+      "statement": "A buyer takes on the seller's unpaid community charges for the elapsed part of the year of purchase plus the three previous calendar years, and the property itself answers for them.",
+      "value": { "current_year_part": true, "previous_calendar_years": 3 },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.e Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "1960-07-23",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": "This is not a limitation period. It is how far back a buyer inherits the debt. The same article carries a second, almost identically worded three year figure about where the community ranks as a creditor. Two different rules, easily confused."
+    },
+    {
+      "id": "limit.building.guarantee",
+      "statement": "Building guarantees run from the date the works were signed off: ten years for structural defects, three years for defects that make the home unfit to live in, one year for finishes and against the builder only.",
+      "value": { "structural": 10, "habitability": 3, "finishes": 1 },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.1 Ley 38/1999 (LOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567",
+        "source_dated": "1999-11-06",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.building.action",
+      "statement": "Once a covered defect appears you have two years to bring the claim, counted from when the damage occurred, not from when the building was signed off.",
+      "value": 2,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18.1 Ley 38/1999 (LOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567",
+        "source_dated": "1999-11-06",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.building.scope",
+      "statement": "These guarantees apply to buildings whose planning permission was applied for on or after 6 May 2000. Older buildings fall under the previous regime.",
+      "value": "2000-05-06",
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "disposicion transitoria primera, Ley 38/1999 (LOE)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567",
+        "source_dated": "1999-11-06",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.hidden_defects",
+      "statement": "A claim against the seller for hidden defects dies six months after the property was handed over, not six months after you found the defect. This is the shortest and harshest clock on the list.",
+      "value": 6,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1490 Codigo Civil, with art. 1484",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.contract.annulment",
+      "statement": "Setting a contract aside for mistake or deceit has a four year window, counted from completion of the contract.",
+      "value": 4,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1301 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.insurance.own_claim",
+      "statement": "A claim against your own insurer under a property policy runs out after two years.",
+      "value": 2,
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 23 Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.absent_owner.usucapion",
+      "statement": "For the purposes of someone acquiring your property by long possession, an owner living abroad counts as absent, which doubles the ordinary period from ten years to twenty.",
+      "value": { "present": 10, "absent": 20, "without_title_or_good_faith": 30 },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 1957, 1958 and 1959 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "1889-07-25",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "limit.catalonia",
+      "statement": "Catalonia has its own civil code with its own limitation regime and a longer general period, so the Civil Code figures on this page are not the ones that apply to a property in Catalonia.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Codi civil de Catalunya, llibre primer",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-15759",
+        "source_dated": "2002-07-13",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-03-01",
+      "notes": "The Catalan periods themselves have not been checked to the same standard as the rest of this file, so the page says only that Catalonia is different and to take local advice. Do not display a Catalan figure until it has been verified."
+    }
+  ]
+}

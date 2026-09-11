@@ -23,11 +23,14 @@ import squatting from './squatting.json';
 import succession from './succession.json';
 import consorcio from './insurance-consorcio.json';
 import epc from './epc.json';
+import limitationPeriods from './limitation-periods.json';
+import legalCover from './legal-cover.json';
 
 const FILES = [
   irnr, deadlines, lateFiling, itpAjd, vatIgic, wealthTax, plusvalia, taxResidency,
   lphCommunity, rentalRegistry, regionalTouristLicence, lauSeasonal, parteViajeros,
   immigration, schengen, squatting, succession, consorcio, epc,
+  limitationPeriods, legalCover,
 ];
 
 // Flatten every rule that carries an id into one lookup.

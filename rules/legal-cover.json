@@ -1,0 +1,248 @@
+{
+  "domain": "Legal expenses cover inside an ordinary Spanish home policy. Most owners never read this chapter because it is in Spanish, and pay a lawyer privately for something they were already covered for. These are the statutory rights, which no policy can take away.",
+  "rules": [
+    {
+      "id": "cover.definition",
+      "statement": "Under a legal expenses cover the insurer pays the costs you run up in an administrative, court or arbitration procedure, and provides legal help both in and out of court, within the limits set by law and by the policy.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 76 a Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.free_choice",
+      "statement": "You have the right to choose your own lawyer and procurador in any kind of proceedings, and the lawyer you choose takes instructions from you, never from the insurer. The right does not depend on the insurer agreeing, and it does not depend on there being a conflict of interest.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 76 d Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.mandatory",
+      "statement": "The rules of the insurance contract law are binding. A policy may only depart from them in the insured's favour.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2 Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.separate_chapter",
+      "statement": "Inside a combined home policy the legal expenses cover must appear as a separate chapter, stating what it covers and carrying its own premium. If you cannot find a separate premium line for it, that is worth asking about.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 76 c Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.policy_must_state",
+      "statement": "The policy has to set out your right to choose your own lawyer in so many words. If there is a conflict of interest, or you and the insurer disagree about how to run the case, the insurer must tell you about that right immediately.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 76 f Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.fines_excluded",
+      "statement": "Fines and the cost of penalties imposed by an administrative or judicial authority are excluded by the law itself, not merely by the policy.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 76 b Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.liability_defence_is_different",
+      "statement": "The defence your insurer runs when a third party sues you sits under the liability section, not under legal expenses, and the free choice rules do not apply to it. There you may take your own lawyer when there is a conflict of interest, and the insurer pays up to the policy limit.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 74 and 76 g Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.limiting_clause_form",
+      "statement": "A clause that limits your rights, such as a cap on the fees of a lawyer you choose yourself, has to be highlighted in the policy and specifically accepted by you in writing. General conditions may never be harmful to the insured.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 3 Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.arbitration_repealed",
+      "statement": "The article that used to let either side send a legal expenses dispute to arbitration was struck down as unconstitutional and is void. You cannot force your insurer into arbitration, whatever an older policy or an out of date article may say.",
+      "value": null,
+      "unit": null,
+      "status": "annulled",
+      "source": {
+        "name": "BOE",
+        "ref": "art. 76 e Ley 50/1980, annulled by Sentencia del Tribunal Constitucional 1/2018 de 11 de enero",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-1677",
+        "source_dated": "2018-02-07",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": "Kept in the rules base precisely because it is still repeated as current in circulation. The page must show it as no longer available, never as an option."
+    },
+    {
+      "id": "cover.complaint_route",
+      "statement": "If the insurer refuses, you must complain to its own customer service department first. Only then can you take it to the insurance supervisor, whose report is free but not binding and cannot order anyone to pay. Courts remain the only binding route.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General de Seguros y Fondos de Pensiones",
+        "ref": "Guia practica del Servicio de Reclamaciones",
+        "url": "https://dgsfp.mineco.gob.es/es/Consumidor/Reclamaciones/Documentos%20Reclamaciones/DOC%202%20GUIA%20PRACTICA-NUEVO.pdf",
+        "source_dated": "2024-01-01",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "cover.cap_lawful_but_limited",
+      "statement": "A cap on the fees of a lawyer you choose yourself is lawful in principle, but not if it is set so low that the right to choose becomes meaningless.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Court of Justice of the European Union",
+        "ref": "C-442/12 Sneller, paragraphs 27 and 28",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62012CJ0442",
+        "source_dated": "2013-11-07",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-03-01",
+      "notes": "Where the line falls is decided case by case. Spanish rulings on particular figures were found only through case notes, not read in the original, so no euro threshold is published here. Ask what your own cap is and in which clause it appears."
+    },
+    {
+      "id": "cover.search_terms",
+      "statement": "The Spanish phrases to search for in your own policy document. Finding them tells you what you have; not finding them tells you what to ask about.",
+      "value": [
+        "Defensa juridica",
+        "Reclamacion de danos",
+        "Libre eleccion de abogado",
+        "Libre designacion de abogado y procurador",
+        "Honorarios de abogado",
+        "Procurador",
+        "Asesoramiento juridico telefonico",
+        "Conflicto de intereses",
+        "Ambito territorial",
+        "Cuantia minima litigiosa",
+        "Suma asegurada",
+        "Sublimite",
+        "Clausulas limitativas",
+        "Exclusiones",
+        "Hechos anteriores",
+        "Comunidad de propietarios",
+        "Arrendamiento",
+        "Prima"
+      ],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "terms drawn from arts. 3, 74 and 76 a to 76 g Ley 50/1980 de Contrato de Seguro",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": null
+    },
+    {
+      "id": "cover.phone_advice_is_not_cover",
+      "statement": "A telephone legal advice line is orientation only. It is not the same as a cover that pays for a lawyer and court costs, and having one tells you nothing about whether you are covered for a case.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "read against the definition in art. 76 a Ley 50/1980",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+        "source_dated": "1980-10-17",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-09-01",
+      "notes": "The insurance contract law does not define a telephone advice service, so this is how the market uses the term rather than a statutory category. Treat it as a prompt to check the policy, not as a finding."
+    },
+    {
+      "id": "cover.let_property_check",
+      "statement": "A home policy written for a property you live in yourself may not respond in the same way once the property is let, and landlord and tenant disputes are commonly handled by a separate rental product rather than by the home policy.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Direccion General de Seguros y Fondos de Pensiones",
+        "ref": "Guia tecnica de buenas practicas en el seguro de defensa juridica",
+        "url": "https://dgsfp.mineco.gob.es/es/Entidades/Criterios%20de%20conductas%20de%20mercado1/GU%C3%8DA%20TECNICA_BUENAS%20PRACTICAS%20SEGURO%20DEFENSA%20JUR%C3%8DDICA%20%20vnoviembre%202022%20vpublicar.pdf",
+        "source_dated": "2022-11-01",
+        "read_on": "2026-09-10"
+      },
+      "review_by": "2027-03-01",
+      "notes": "This is how the market is generally arranged, not a rule of law. It varies by policy, so the page tells the owner to ask rather than telling them the answer."
+    }
+  ]
+}

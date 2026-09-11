@@ -1,7 +1,7 @@
 import { useLocale, useT } from './i18n.jsx';
 import { Link } from 'react-router-dom';
 
-// The site's menu. Three destinations, on every page, in the sticky header.
+// The site's menu. Four destinations, on every page, in the sticky header.
 //
 // Before this the header held a brand mark and a language switcher and nothing else, so
 // the only way between the calculators and the two directories was to scroll to the
@@ -19,6 +19,7 @@ export default function SiteNav({ active, home = false }) {
     { key: 'trades', label: t('nav.menu_trades'), to: lp('/spain-directory'), anchor: '#directory' },
     { key: 'tools',  label: t('nav.menu_tools'),  to: lp('/'),                anchor: '#tools' },
     { key: 'pros',   label: t('nav.menu_pros'),   to: lp('/spain-professionals'), anchor: '#professionals' },
+    { key: 'rights', label: t('nav.menu_rights'), to: lp('/your-rights'),          anchor: '#rights' },
   ];
 
   return (

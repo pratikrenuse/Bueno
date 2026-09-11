@@ -28,7 +28,11 @@ export async function loadTools() {
     // rather than implying a translation that is not there.
     const indexPath = join(ROOT, name.name, 'index.jsx');
     const src = existsSync(indexPath) ? readFileSync(indexPath, 'utf8') : '';
-    const translated = /\buseT\s*\(/.test(src) || /\buseLocale\s*\(/.test(src);
+    // Two patterns count. A tool either reads the site dictionary with useT, or keeps its
+    // own copy.js and resolves it with useCopy. Both give the reader all six languages;
+    // only useT was checked here before, which quietly marked fully translated tools as
+    // English only in their own static block.
+    const translated = /\buseT\s*\(/.test(src) || /\buseLocale\s*\(/.test(src) || /\buseCopy\s*\(/.test(src);
 
     out.push({
       slug: name.name,
