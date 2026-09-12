@@ -48,7 +48,7 @@ const srv = http.createServer((req, res) => {
         else if (b.action === 'image' || b.action === 'image_custom') patch.image_url = b.image;
         else if (b.action === 'note') patch.note = b.note;
         else if (b.action === 'rejected') { patch.status = 'rejected'; patch.reject_comment = b.comment ?? null; }
-        else if (b.action === 'approved') { patch.status = 'approved'; patch.sent_at = '2026-09-11T09:00:00Z'; patch.sent_to = 'himanshu1997bisht@gmail.com'; }
+        else if (b.action === 'approved') { patch.status = 'approved'; patch.sent_at = '2026-09-11T09:00:00Z'; patch.sent_to = 'himanshu1997bisht@gmail.com, himanshubisht1407@gmail.com'; }
         else if (b.action) patch.status = b.action;
         Object.assign(row, patch);
         res.writeHead(200, { 'content-type': 'application/json' });
@@ -168,7 +168,9 @@ await page.waitForTimeout(400);
   await card.locator('button', { hasText: 'Approve and send' }).click();
   await page.waitForTimeout(500);
   ok('approving calls the API once', DECISIONS.filter(d => d.action === 'approved').length === 1);
-  ok('the card says where it went', /himanshu1997bisht@gmail\.com/.test(await card.innerText()));
+  ok('the card names both publisher addresses',
+     /himanshu1997bisht@gmail\.com/.test(await card.innerText())
+     && /himanshubisht1407@gmail\.com/.test(await card.innerText()));
   ok('and offers to send again rather than approve twice',
      (await card.locator('button', { hasText: 'Approve and send' }).count()) === 0
      && (await card.locator('button', { hasText: 'Send again' }).count()) === 1);

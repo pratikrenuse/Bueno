@@ -230,7 +230,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email appends no call to action', !/getbueno/i.test(html));
   ok('the email names no brand', !/\b(Bueno|Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
   ok('the subject names the language', /\(German\)/.test(subjectFor(p)));
-  ok('one recipient, one copy', SEND_TO.length === 1 && SEND_CC.length === 1);
+  ok('both publisher addresses, one copy', SEND_TO.length === 2 && SEND_CC.length === 1);
 }
 {
   const html = bodyFor(samplePost({ note: null }));
@@ -305,7 +305,8 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   const mail = calls.find(c => /resend/.test(c.url));
   ok('exactly one email was sent', calls.filter(c => /resend/.test(c.url)).length === 1);
   const sent = JSON.parse(mail.body);
-  ok('it went to the intern', sent.to.join() === 'himanshu1997bisht@gmail.com', sent.to.join());
+  ok('it went to both of the publisher addresses',
+     sent.to.join(',') === 'himanshu1997bisht@gmail.com,himanshubisht1407@gmail.com', sent.to.join(','));
   ok('with Pratik copied', sent.cc.join() === 'pratik.y.renuse@gmail.com', String(sent.cc));
   ok('and a reply goes back to Pratik', sent.reply_to === 'pratik.y.renuse@gmail.com');
 }
@@ -352,7 +353,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
     note: 'Costa Blanca group', posted_at: null, image_url: null,
     edited_text: 'My own version of the ninety days post.',
     reject_comment: null, sent_at: '2026-09-10T08:00:00Z',
-    sent_to: 'himanshu1997bisht@gmail.com', send_error: null,
+    sent_to: 'himanshu1997bisht@gmail.com, himanshubisht1407@gmail.com', send_error: null,
   }];
   const calls = fakeSupabase(existing);
   const res = makeRes();
@@ -360,7 +361,8 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   const written = JSON.parse(calls.find(c => c.method === 'POST' && /fb_posts/.test(c.url)).body);
   const a = written.find(r => r.idea_key === 'ninety-days' && r.language === 'en');
   ok('a reseed keeps the edit', a.edited_text === 'My own version of the ninety days post.');
-  ok('a reseed keeps the record of the send', a.sent_at === '2026-09-10T08:00:00Z' && a.sent_to === 'himanshu1997bisht@gmail.com');
+  ok('a reseed keeps the record of the send',
+     a.sent_at === '2026-09-10T08:00:00Z' && a.sent_to === 'himanshu1997bisht@gmail.com, himanshubisht1407@gmail.com');
   ok('a reseed still refreshes the original writing', a.post_text.includes('90 days'));
   ok('a reseed sends nothing', calls.filter(c => /resend/.test(c.url)).length === 0);
 }
@@ -375,7 +377,9 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   await fbRouter({ ...req('/api/fb?action=decide'), method: 'POST', body: { id: '1', action: 'approved' } }, res);
   ok('a sandbox send is flagged rather than reported as delivered',
      res.body.sent === true && /RESEND_FROM is not set/.test(res.body.warning || ''));
-  ok('the warning names who did not receive it', /himanshu1997bisht@gmail\.com/.test(res.body.warning || ''));
+  ok('the warning names both people who did not receive it',
+     /himanshu1997bisht@gmail\.com/.test(res.body.warning || '')
+     && /himanshubisht1407@gmail\.com/.test(res.body.warning || ''));
   if (before) process.env.RESEND_FROM = before;
 }
 {

@@ -68,7 +68,8 @@ ok('only _fb_db.js builds a Supabase URL', handlersNameTable.length === 0, handl
 
 // 2b. The recipients are named once, in the email module, and nowhere else.
 const email = code('./api/_fb_email.js');
-ok('the publisher is the intern address', /himanshu1997bisht@gmail\.com/.test(email));
+ok('both of the publisher addresses are there',
+   /himanshu1997bisht@gmail\.com/.test(email) && /himanshubisht1407@gmail\.com/.test(email));
 ok('Pratik is copied on every send', /export const SEND_CC = \[PRATIK\]/.test(email));
 ok('the copy list is not empty', !/export const SEND_CC = \[\]/.test(email));
 for (const f of FB.filter(x => x !== '_fb_email.js')) {

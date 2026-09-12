@@ -11,10 +11,12 @@
 // One recipient, one copy. Himanshu publishes the post; Pratik is copied on every send so
 // he has a record of exactly what left, without having to trust the deck's own display.
 
-const INTERN = 'himanshu1997bisht@gmail.com';
+// Himanshu reads two mailboxes, so both are on every send. Gmail local parts are case
+// insensitive, so these are stored lower case regardless of how they were written down.
+const HIMANSHU = ['himanshu1997bisht@gmail.com', 'himanshubisht1407@gmail.com'];
 const PRATIK = 'pratik.y.renuse@gmail.com';
 
-export const SEND_TO = [INTERN];
+export const SEND_TO = HIMANSHU;
 export const SEND_CC = [PRATIK];
 export const REPLY_TO = PRATIK;
 
