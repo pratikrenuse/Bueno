@@ -1,0 +1,55 @@
+// The photographs the deck offers for each post, and the alternates Pratik can switch to.
+// The first id in each row is the default; the rest are the grid.
+//
+// WHY THIS FILE DUPLICATES A SET THAT EXISTS ELSEWHERE
+// The team's LinkedIn deck has its own image module. This one deliberately does not import
+// it, and never will. The two surfaces are meant to share nothing at all, so that no edit
+// to one can reach the other. Photo ids are cheap; an accidental coupling is not.
+//
+// Chosen for warmth and for Spain: coves, coasts at golden hour, whitewashed towns,
+// terraces and pools, bougainvillea streets, harbours, olive country, people in their
+// forties to seventies. Not literal illustrations of the subject. A post about a filing
+// deadline gets a Spanish evening, not a photograph of a form.
+//
+// The Pexels licence does not require a credit and nothing here renders one.
+
+const PNG = new Set([30616143,30681578,30736927,33691573,33691574]);
+
+const OPTIONS = {
+  'ninety-days': [6076164,2289180,4819300,27993172,12633940,36532613,3532527,19805956,16946214,6007018,3157917,12633946],
+  'imputed-income-empty-home': [7587923,14205214,11829139,6295963,12256501,39257974,27397561,14234129,14786097,16549991,10135367,13717503],
+  'quarterly-rental-filing-ends': [12234423,28905960,16901575,8465249,36055015,8078628,6076164,28054849,33881205,16901576,9510821,8317006],
+  'late-filing-two-regimes': [14234129,23938784,29749216,16743486,36609883,17740863,19075385,11315557,30749703,18771947,24906297,22695684],
+  'eu-eea-deductions': [11829139,12633946,33844732,35808341,34396811,6585286,30179660,7631185,5929769,32200074,14965658,13869627],
+  'three-percent-retention': [9268088,13717503,16946211,12307498,16558109,19001400,31156673,12194064,29150124,27794396,5857921,5095086],
+  'plusvalia-two-methods': [17108467,8317006,33998589,7587923,13246483,33987126,18816779,9874531,38280889,33691574,8669175,14018340],
+  'iva-holiday-let': [20975726,22695684,22033617,19075389,11542659,11952455,30736927,1683916,29300400,4760721,11631647,12898239],
+  'consorcio-storm': [31156673,13869627,307008,38422363,9268088,7405768,10521312,33691573,6148878,1212611,38499007,17108467],
+  'legal-cover-you-already-pay-for': [36532613,5095086,19884454,31530645,12225957,30820125,12696255,5961887,2289180,4819300,27993172,12633940],
+  'community-decision-clock': [33844732,14018340,5470587,18816780,12113635,28586234,22798478,12234423,14205214,11829139,6295963,12256501],
+  'builder-quote-red-flags': [9874531,11631647,12898239,5079145,27556847,5663203,8972291,20975727,28905960,16901575,8465249,36055015],
+  'what-a-year-actually-costs': [8317006,17108467,14515702,13207675,33354159,4050933,19075383,11979943,23938784,29749216,16743486,36609883],
+  'leaving-it-empty': [28586234,12633940,36532613,3532527,19805956,16946214,6007018,3157917,12633946,33844732,35808341,34396811],
+  'utilities-in-order': [12696255,12256501,39257974,27397561,14234129,14786097,16549991,10135367,13717503,16946211,12307498,16558109],
+  'tradesperson-in-your-language': [35808341,36055015,8078628,6076164,28054849,33881205,16901576,9510821,8317006,33998589,7587923,13246483],
+  'who-does-what': [33691573,36609883,17740863,19075385,11315557,30749703,18771947,24906297,22695684,22033617,19075389,11542659],
+  'maintenance-is-a-year': [5663203,34396811,6585286,30179660,7631185,5929769,32200074,14965658,13869627,307008,38422363,9268088],
+  'pests-by-property': [22798478,16558109,19001400,31156673,12194064,29150124,27794396,5857921,5095086,19884454,31530645,12225957],
+  'pre-2019-mortgage-costs': [19805956,13246483,33987126,18816779,9874531,38280889,33691574,8669175,14018340,5470587,18816780,12113635],
+};
+
+const RENDER = '?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
+
+const urlFor = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.${PNG.has(id) ? 'png' : 'jpeg'}${RENDER}`;
+
+export function imageOptionsFor(ideaKey) {
+  const ids = OPTIONS[ideaKey];
+  return ids ? ids.map(urlFor) : [];
+}
+
+export function imageFor(ideaKey, fallback = null) {
+  const opts = imageOptionsFor(ideaKey);
+  return opts.length ? opts[0] : (fallback ?? null);
+}
+
+export const IMAGE_KEYS = Object.keys(OPTIONS);

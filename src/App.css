@@ -3470,3 +3470,117 @@ body {
   .yr-main h1 { font-size: 25px; }
   .yr-rule { flex-direction: column; gap: 7px; }
 }
+
+/* ---------------------------------------------------------------------------
+   /internal-pratik, the personal Facebook post deck.
+   Prefixed .fbp- so nothing here can reach the team deck's styles, which are .lk-.
+   --------------------------------------------------------------------------- */
+
+.fbp-gate { min-height: 100vh; display: grid; place-items: center; background: #010221; padding: 24px; }
+.fbp-gate form { width: min(360px, 100%); background: #fff; border-radius: 14px; padding: 26px; }
+.fbp-gate h1 { margin: 0 0 6px; font: 600 22px/1.2 Georgia, serif; color: #010221; }
+.fbp-gate p { margin: 0 0 16px; font: 13px/1.5 system-ui, sans-serif; color: #555; }
+.fbp-gate input { width: 100%; padding: 11px 12px; border: 1px solid #D5DAE3; border-radius: 9px;
+  font: 15px system-ui, sans-serif; margin-bottom: 10px; }
+.fbp-gate button { width: 100%; padding: 11px; border: 0; border-radius: 9px; background: #5B7FCC;
+  color: #fff; font: 600 15px system-ui, sans-serif; cursor: pointer; }
+
+.fbp { min-height: 100vh; padding-bottom: 60px; }
+.fbp-head { background: #010221; color: #fff; }
+.fbp-head-in { max-width: 860px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.fbp-brand { font: 600 15px/1 Georgia, serif; letter-spacing: .08em; }
+.fbp-mine { font: 13px/1 system-ui, sans-serif; color: #CBEFFF; }
+.fbp-seed { margin-left: auto; padding: 8px 13px; border: 1px solid rgba(255,255,255,.3); border-radius: 8px;
+  background: transparent; color: #fff; font: 13px system-ui, sans-serif; cursor: pointer; }
+.fbp-seed:disabled { opacity: .5; cursor: default; }
+
+.fbp-bar { max-width: 860px; margin: 0 auto; padding: 14px 16px 4px; }
+.fbp-filters { display: flex; flex-direction: column; gap: 8px; }
+.fbp-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.fbp-chip { padding: 6px 11px; border: 1px solid #D5DAE3; border-radius: 999px; background: #fff;
+  font: 13px system-ui, sans-serif; color: #333; cursor: pointer; min-height: 32px; }
+.fbp-chip.current { background: #010221; border-color: #010221; color: #CBEFFF; }
+.fbp-count { max-width: 860px; margin: 8px 0 0; font: 12px system-ui, sans-serif; color: #667; }
+
+.fbp-wide { max-width: 860px; margin: 10px auto; padding: 0 16px; font: 14px system-ui, sans-serif; }
+.fbp-err { color: #b02a2a; }
+.fbp-ok { color: #2e7d32; }
+
+.fbp-list { max-width: 860px; margin: 0 auto; padding: 10px 16px; display: flex; flex-direction: column; gap: 16px; }
+.fbp-card { background: #fff; border: 1px solid #D5DAE3; border-radius: 14px; padding: 16px; }
+.fbp-meta { display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
+  font: 12px system-ui, sans-serif; color: #667; margin-bottom: 10px; }
+.fbp-meta b { color: #010221; font-weight: 600; }
+.fbp-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.fbp-tool, .fbp-lang { border: 1px solid #E2E6EE; border-radius: 6px; padding: 2px 7px; }
+
+/* The post text is what gets copied, so it leads. The photograph is a preview of what will
+   sit above it in the group, not the subject of the card, and it is capped so a card stays
+   scannable. The tinted ground means a photo that has not loaded yet reads as a pending
+   image rather than as a hole in the layout. */
+.fbp-img { width: 100%; max-width: 100%; aspect-ratio: 40 / 21; max-height: 240px;
+  object-fit: cover; border-radius: 10px; display: block; margin-bottom: 12px;
+  background: #DDE3EC; }
+
+.fbp-text { white-space: pre-wrap; word-break: break-word; margin: 0 0 10px;
+  font: 15px/1.62 system-ui, -apple-system, sans-serif; color: #16171f; }
+
+.fbp-rules { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 12px;
+  font: 11.5px system-ui, sans-serif; color: #7a8194; }
+.fbp-rules code { background: #F2F4F8; border-radius: 5px; padding: 2px 6px; font-size: 11px; }
+
+.fbp-actions { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+.fbp-actions button, .fbp-actions a { padding: 8px 12px; border: 1px solid #D5DAE3; border-radius: 8px;
+  background: #fff; color: #010221; font: 13px system-ui, sans-serif; cursor: pointer;
+  text-decoration: none; min-height: 36px; display: inline-flex; align-items: center; }
+.fbp-actions button:hover, .fbp-actions a:hover { border-color: #5B7FCC; color: #5B7FCC; }
+.fbp-spacer { flex: 1 1 auto; }
+
+.fbp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 12px; }
+.fbp-opt { position: relative; padding: 0; border: 2px solid transparent; border-radius: 9px;
+  overflow: hidden; background: none; cursor: pointer; line-height: 0; }
+.fbp-opt.current { border-color: #5B7FCC; }
+.fbp-opt img { width: 100%; max-width: 100%; aspect-ratio: 40 / 21; object-fit: cover; display: block; background: #DDE3EC; }
+.fbp-inuse { position: absolute; left: 6px; bottom: 6px; background: #5B7FCC; color: #fff;
+  border-radius: 5px; padding: 2px 6px; font: 10px system-ui, sans-serif; line-height: 1.4; }
+
+.fbp-note { display: block; margin-top: 12px; }
+.fbp-note span { display: block; font: 11.5px system-ui, sans-serif; color: #7a8194; margin-bottom: 5px; }
+.fbp-note input { width: 100%; padding: 9px 11px; border: 1px solid #D5DAE3; border-radius: 8px;
+  font: 13px system-ui, sans-serif; }
+
+@media (max-width: 520px) {
+  .fbp-head-in { gap: 8px; }
+  .fbp-seed { margin-left: 0; width: 100%; }
+  .fbp-actions button, .fbp-actions a { flex: 1 1 auto; justify-content: center; }
+}
+
+/* The review additions: status pill, edit, park, send state, custom image. */
+.fbp-card.cursor { border-color: #5B7FCC; box-shadow: 0 0 0 3px rgba(91,127,204,.14); }
+.fbp-pill { border-radius: 999px; padding: 3px 9px; font: 600 11px system-ui, sans-serif; }
+.fbp-tag { border: 1px solid #C9A96E; color: #8a6d1f; border-radius: 6px; padding: 2px 7px; }
+.fbp-keys { color: #98a0b2; margin-left: 8px; }
+
+.fbp-sent { margin: 0 0 10px; font: 12.5px system-ui, sans-serif; color: #2e7d32;
+  background: #E8F3E8; border-radius: 8px; padding: 8px 11px; }
+.fbp-parked { margin: 0 0 10px; font: 12.5px system-ui, sans-serif; color: #b02a2a;
+  background: #FAEDED; border-radius: 8px; padding: 8px 11px; }
+.fbp-err.fbp-inline { margin: 0 0 10px; font: 12.5px system-ui, sans-serif;
+  background: #FAEDED; border-radius: 8px; padding: 8px 11px; }
+
+.fbp-edit textarea { width: 100%; box-sizing: border-box; padding: 13px; border: 1px solid #5B7FCC;
+  border-radius: 10px; font: 15px/1.62 system-ui, -apple-system, sans-serif; color: #16171f;
+  resize: vertical; min-height: 260px; }
+.fbp-editbtns { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0 4px; }
+.fbp-editbtns button { padding: 8px 13px; border: 1px solid #D5DAE3; border-radius: 8px;
+  background: #fff; color: #010221; font: 13px system-ui, sans-serif; cursor: pointer; min-height: 36px; }
+
+.fbp-primary { background: #010221 !important; border-color: #010221 !important; color: #fff !important; font-weight: 600; }
+.fbp-primary:hover { background: #5B7FCC !important; border-color: #5B7FCC !important; color: #fff !important; }
+.fbp-actions button:disabled { opacity: .5; cursor: default; }
+
+.fbp-park, .fbp-custom { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+.fbp-park input, .fbp-custom input { flex: 1 1 220px; min-width: 0; padding: 9px 11px;
+  border: 1px solid #D5DAE3; border-radius: 8px; font: 13px system-ui, sans-serif; }
+.fbp-park button, .fbp-custom button { padding: 8px 13px; border: 1px solid #D5DAE3; border-radius: 8px;
+  background: #fff; color: #010221; font: 13px system-ui, sans-serif; cursor: pointer; min-height: 36px; }

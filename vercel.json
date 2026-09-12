@@ -22,6 +22,14 @@
       "destination": "/api/linkedin?action=:action"
     },
     {
+      "source": "/api/fb/:action",
+      "destination": "/api/fb?action=:action"
+    },
+    {
+      "source": "/api/fb-:action",
+      "destination": "/api/fb?action=:action"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

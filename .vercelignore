@@ -35,3 +35,12 @@ api/linkedin-translate.js
 # This file is ignored rather than deleted because deleting is not something this session
 # can do. Delete api/linkedin/ by hand once the new router has run for a cycle.
 api/linkedin/[action].js
+
+# The /internal Studio deck is retired. Its page is now a stub that points at
+# /internal-pratik, so these three functions have no caller left. They are ignored rather
+# than deleted because studio_packages still holds its 100 rows and restoring the deck
+# should stay a matter of reverting one file. Ignoring them also frees three function slots,
+# which is what makes room for api/fb.js without going back over the Hobby plan limit.
+api/internal-packages.js
+api/internal-decide.js
+api/internal-reset.js
