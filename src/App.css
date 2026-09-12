@@ -3584,3 +3584,30 @@ body {
   border: 1px solid #D5DAE3; border-radius: 8px; font: 13px system-ui, sans-serif; }
 .fbp-park button, .fbp-custom button { padding: 8px 13px; border: 1px solid #D5DAE3; border-radius: 8px;
   background: #fff; color: #010221; font: 13px system-ui, sans-serif; cursor: pointer; min-height: 36px; }
+
+/* The dashboard, the empty states and the translations drawer. */
+.fbp-dash { background: #fff; border: 1px solid #D5DAE3; border-radius: 12px; padding: 13px 15px; margin-bottom: 12px; }
+.fbp-progress-head { display: flex; justify-content: space-between; font: 12.5px system-ui, sans-serif;
+  color: #5a5f73; margin-bottom: 6px; }
+.fbp-progress { height: 6px; background: #E4E7EE; border-radius: 999px; overflow: hidden; }
+.fbp-progress-fill { height: 100%; border-radius: 999px; transition: width .4s ease; }
+.fbp-stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 11px;
+  font: 12.5px system-ui, sans-serif; color: #5a5f73; }
+.fbp-stats b { color: #010221; font-size: 14px; }
+
+.fbp-empty { max-width: 860px; margin: 16px auto; padding: 30px 24px; background: #fff;
+  border: 1px solid #D5DAE3; border-radius: 14px; text-align: center; }
+.fbp-empty h2 { margin: 0 0 6px; font: 600 20px/1.25 Georgia, serif; color: #010221; }
+.fbp-empty p { margin: 0 auto 18px; max-width: 460px; font: 14px/1.6 system-ui, sans-serif; color: #5a5f73; }
+.fbp-big { padding: 13px 26px !important; font-size: 15px !important; border-radius: 9px; border: 1px solid #010221; cursor: pointer; }
+
+.fbp-tr { margin-top: 12px; }
+.fbp-trbtn { padding: 7px 12px; border: 1px solid #D5DAE3; border-radius: 8px; background: #fff;
+  color: #5B7FCC; font: 12.5px system-ui, sans-serif; cursor: pointer; min-height: 34px; }
+.fbp-trnote { display: block; margin-top: 7px; font: 11.5px/1.5 system-ui, sans-serif; color: #8a6d1f; }
+.fbp-trlist { margin-top: 10px; border: 1px solid #E2E6EE; border-radius: 10px; overflow: hidden; }
+.fbp-trlist details { border-bottom: 1px solid #E2E6EE; }
+.fbp-trlist details:last-child { border-bottom: 0; }
+.fbp-trlist summary { padding: 9px 12px; cursor: pointer; font: 600 12.5px system-ui, sans-serif; color: #010221; background: #F8FAFC; }
+.fbp-trlist pre { margin: 0; padding: 12px 14px; white-space: pre-wrap; word-break: break-word;
+  font: 13.5px/1.6 system-ui, sans-serif; color: #16171f; background: #fff; }

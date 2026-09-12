@@ -10,7 +10,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
-import { IDEAS, LANGS, renderPost, linkFor } from './api/_fb_content.js';
+import { IDEAS, TRANSLATION_LANGS, renderPost, linkFor } from './api/_fb_content.js';
 import { imageOptionsFor, imageFor } from './api/_fb_images.js';
 
 const DIST = './dist';
@@ -20,13 +20,15 @@ const firstLine = (t) => (t.split('\n').find(l => l.trim()) || '').trim();
 
 const ROWS = [];
 let n = 0;
-for (const idea of IDEAS) for (const lang of LANGS) {
-  const text = renderPost(idea, lang);
+for (const idea of IDEAS) {
+  const text = renderPost(idea, 'en');
+  const translations = Object.fromEntries(TRANSLATION_LANGS.map(l => [l, renderPost(idea, l)]));
   ROWS.push({
-    id: `row-${++n}`, idea_key: idea.key, language: lang, tool_slug: idea.tool,
-    tool_url: linkFor(idea.tool, lang), kind: idea.kind, hook: firstLine(text),
-    post_text: text, image_url: imageFor(idea.key), image_options: imageOptionsFor(idea.key),
-    rule_ids: idea.rules || [], status: 'pending', note: null, posted_at: null,
+    id: `row-${++n}`, idea_key: idea.key, language: 'en', tool_slug: idea.tool,
+    tool_url: linkFor(idea.tool, 'en'), kind: idea.kind, hook: firstLine(text),
+    post_text: text, translations, edited_text: null,
+    image_url: imageFor(idea.key), image_options: imageOptionsFor(idea.key),
+    rule_ids: idea.rules || [], status: 'pending', note: null, posted_at: null, sent_at: null,
   });
 }
 
@@ -55,10 +57,12 @@ const srv = http.createServer((req, res) => {
         res.end(JSON.stringify({ ok: true, post: row, sent: b.action === 'approved' }));
       });
     }
-    const lang = u.searchParams.get('lang') || 'en';
-    const rows = ROWS.filter(r => r.language === lang);
+    const status = u.searchParams.get('status') || 'all';
+    const rows = status === 'all' ? ROWS : ROWS.filter(r => r.status === status);
+    const counts = { pending: 0, approved: 0, rejected: 0, posted: 0, all: ROWS.length };
+    for (const r of ROWS) if (counts[r.status] != null) counts[r.status] += 1;
     res.writeHead(200, { 'content-type': 'application/json' });
-    return res.end(JSON.stringify({ posts: rows, counts: { pending: rows.length, approved: 0, rejected: 0, posted: 0 }, total: rows.length }));
+    return res.end(JSON.stringify({ posts: rows, counts, total: rows.length }));
   }
   let f = path.join(DIST, u.pathname);
   if (existsSync(f) && statSync(f).isDirectory()) f = path.join(f, 'index.html');
@@ -86,26 +90,50 @@ await page.fill('input[type=password]', 'anything');
 await page.click('button[type=submit]');
 await page.waitForSelector('.fbp-card', { timeout: 8000 });
 
-for (const lang of LANGS) {
-  const label = { en: 'English', no: 'Norsk', sv: 'Svenska', de: 'Deutsch', fr: 'Français', nl: 'Nederlands' }[lang];
-  await page.locator('.fbp-chip', { hasText: label }).first().click();
-  await page.waitForTimeout(450);
+ok('every idea is offered', (await page.locator('.fbp-card').count()) === IDEAS.length,
+   String(await page.locator('.fbp-card').count()));
 
-  const cards = await page.locator('.fbp-card').count();
-  ok(`${lang}: every idea is offered`, cards === IDEAS.length, String(cards));
+const texts = await page.locator('.fbp-text').allInnerTexts();
+ok('the text shown is the English that will be sent',
+   texts.every((t, i) => t.trim() === renderPost(IDEAS[i], 'en').trim()));
+ok('every post carries its English link',
+   texts.every((t, i) => t.includes(linkFor(IDEAS[i].tool, 'en'))));
+ok('no em or en dash anywhere on the page', !/[\u2014\u2013]/.test(await page.locator('.fbp-list').innerText()));
 
-  const texts = await page.locator('.fbp-text').allInnerTexts();
-  ok(`${lang}: the text shown is the text that will be copied`,
-     texts.every((t, i) => t.trim() === renderPost(IDEAS[i], lang).trim()));
-  ok(`${lang}: every post carries its localised link`,
-     texts.every((t, i) => t.includes(linkFor(IDEAS[i].tool, lang))));
-  ok(`${lang}: no em or en dash anywhere on the page`,
-     !/[—–]/.test(await page.locator('.fbp-list').innerText()));
+// The dashboard.
+ok('the dashboard shows progress', (await page.locator('.fbp-progress').count()) === 1);
+ok('and how many are reviewed', /of \d+ reviewed|Everything reviewed/.test(await page.locator('.fbp-dash').innerText()));
+ok('and the three outcome counts', /approved and emailed/.test(await page.locator('.fbp-stats').innerText())
+   && /live/.test(await page.locator('.fbp-stats').innerText())
+   && /parked/.test(await page.locator('.fbp-stats').innerText()));
+ok('the status filter carries counts', /To review \(\d+\)/.test(await page.locator('.fbp-bar').innerText()));
+
+// No language switcher anywhere. This is the thing that was explicitly removed.
+{
+  const bar = await page.locator('.fbp-bar').innerText();
+  ok('the deck offers no language chips', !/Norsk|Svenska|Nederlands|Deutsch|Français/.test(bar), bar.slice(0, 120));
+}
+
+// The translations are there to look at, not to choose between.
+{
+  const card = page.locator('.fbp-card').first();
+  ok('translations are hidden until asked for', (await page.locator('.fbp-trlist').count()) === 0);
+  await card.locator('button', { hasText: 'See the other five languages' }).click();
+  await page.waitForSelector('.fbp-trlist');
+  ok('all five are there', (await card.locator('.fbp-trlist details').count()) === 5);
+  const names = await card.locator('.fbp-trlist summary').allInnerTexts();
+  ok('each is named', ['Norwegian', 'Swedish', 'German', 'French', 'Dutch'].every(n => names.includes(n)), names.join(', '));
+  await card.locator('.fbp-trlist summary', { hasText: 'German' }).click();
+  await page.waitForTimeout(150);
+  const german = await card.locator('.fbp-trlist details', { hasText: 'German' }).locator('pre').innerText();
+  ok('the German version is the German version', german.trim() === renderPost(IDEAS[0], 'de').trim());
+  ok('and links to the German page', german.includes(linkFor(IDEAS[0].tool, 'de')));
+  await card.locator('button', { hasText: 'Hide the other five languages' }).click();
+  await page.waitForTimeout(150);
+  ok('and they fold away again', (await page.locator('.fbp-trlist').count()) === 0);
 }
 
 // The image picker offers this post's own options and marks the one in use.
-await page.locator('.fbp-chip', { hasText: 'English' }).first().click();
-await page.waitForTimeout(400);
 const first = page.locator('.fbp-card').first();
 ok('no image grid until it is asked for', (await page.locator('.fbp-grid').count()) === 0);
 await first.locator('button', { hasText: 'Change image' }).click();
@@ -130,8 +158,6 @@ ok('the page names no brand', !/\b(Bueno|Sabadell|BBVA|CaixaBank|Revolut|Wise)\b
 
 // The review loop: edit, then park, then approve. Approve is the send, so the card has to
 // say so afterwards rather than leaving the reviewer guessing.
-await page.locator('.fbp-chip', { hasText: 'English' }).first().click();
-await page.waitForTimeout(400);
 {
   const card = page.locator('.fbp-card').first();
   await card.locator('button', { hasText: 'Edit' }).first().click();

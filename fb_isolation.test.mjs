@@ -15,7 +15,7 @@
 //      the wording the brand rules forbid.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
-import { IDEAS, LANGS, renderPost, linkFor } from './api/_fb_content.js';
+import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor } from './api/_fb_content.js';
 import { imageOptionsFor, imageFor, IMAGE_KEYS } from './api/_fb_images.js';
 
 let pass = 0, fail = 0;
@@ -43,6 +43,8 @@ for (const f of FB) {
   const local = importsOf(code(`./api/${f}`)).filter(s => s.startsWith('.'));
   const bad = local.filter(s => !/^\.\/_fb_[a-z_]+\.js$/.test(s));
   ok(`api/${f} imports only its own siblings`, bad.length === 0, bad.join(', '));
+  const node = importsOf(code(`./api/${f}`)).filter(s => !s.startsWith('.'));
+  ok(`api/${f} pulls in no third party module`, node.every(s => s.startsWith('node:')), node.join(', '));
 }
 for (const f of LK) {
   const bad = importsOf(code(`./api/${f}`)).filter(s => /_fb_|\bfb\.js\b/i.test(s));
@@ -52,6 +54,9 @@ for (const f of LK) {
 const deck = code('./internal-pratik/index.jsx');
 const teamDeck = code('./internal-linkedin/index.jsx');
 ok('the personal deck calls no LinkedIn endpoint', !/api\/linkedin/.test(deck));
+ok('the deck asks for no language', !/action=posts[^`'"]*lang=/.test(deck));
+ok('the deck has no language switcher', !/setLang|Nederlands|Svenska|Norsk/.test(deck));
+ok('the deck shows a dashboard', /fbp-progress/.test(deck) && /reviewed/.test(deck));
 ok('the personal deck names no LinkedIn table', !/linkedin_posts|studio_packages/.test(deck));
 ok('the team deck calls no Facebook endpoint', !/api\/fb\b|action=seed/.test(teamDeck));
 ok('the team deck is still wired to its own API', /api\/linkedin/.test(teamDeck));
@@ -93,6 +98,7 @@ const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/u;
 
 ok('twenty ideas', IDEAS.length === 20, String(IDEAS.length));
 ok('six languages', LANGS.length === 6);
+ok('five of them are translations', TRANSLATION_LANGS.length === 5 && !TRANSLATION_LANGS.includes('en'));
 ok('every idea has images', IMAGE_KEYS.length === IDEAS.length && IDEAS.every(i => imageOptionsFor(i.key).length === 12));
 ok('every idea has a distinct lead image', new Set(IDEAS.map(i => imageFor(i.key))).size === IDEAS.length);
 
@@ -121,7 +127,10 @@ for (const idea of IDEAS) {
     ok(`${at}: names no brand`, !BANNED.test(t), (t.match(BANNED) || [])[0] || '');
     ok(`${at}: no hype words`, !HYPE.test(t));
     const words = t.split(/\s+/).length;
-    ok(`${at}: reads as a group post, not an essay`, words >= 90 && words <= 230, String(words));
+    // French and German run longer than English for the same content, which is a property of
+    // the languages and not of the writing. The band is on the English; translations get room.
+    const cap = lang === 'en' ? 230 : 260;
+    ok(`${at}: reads as a group post, not an essay`, words >= 90 && words <= cap, String(words));
   }
 }
 
@@ -137,6 +146,19 @@ for (const idea of IDEAS) {
     ok(`${idea.key}: rule ${id} is verified`, RULES[id] && RULES[id].status === 'verified',
        RULES[id] ? RULES[id].status : 'missing');
   }
+}
+
+// THE VOICE. The first version of this content was correct and read like a reference note,
+// which is the one failure none of the other assertions here would catch. Contractions are a
+// crude proxy for spoken English, but a crude proxy beats none: a post with no contractions
+// at all has almost certainly drifted back into the old register.
+{
+  const english = IDEAS.map(i => renderPost(i, 'en'));
+  const withContractions = english.filter(t => /\b\w+'(s|t|re|ve|ll|d|m)\b/.test(t)).length;
+  ok('the English reads as someone speaking', withContractions >= IDEAS.length - 2,
+     `${withContractions} of ${IDEAS.length} posts use contractions`);
+  const opensOnAThesis = english.filter(t => /^(There are|These are|It is important|The following)/.test(t)).length;
+  ok('no post opens by announcing its own thesis', opensOnAThesis === 0, String(opensOnAThesis));
 }
 
 // The first person here is a builder, not an owner. Pratik does not own property in Spain,

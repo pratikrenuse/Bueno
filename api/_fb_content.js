@@ -1,23 +1,30 @@
-// The posts Pratik writes under his own name in Facebook groups, in all six site languages.
+// The posts Pratik writes under his own name in Facebook groups, and their translations.
 //
 // WHAT THIS IS, AND WHAT IT IS EMPHATICALLY NOT
-// This is a personal surface. One person writes these, one person posts them by hand into
-// groups, and nobody else sees the deck. It has nothing to do with api/_lk_*.js, with
-// linkedin_posts, or with the team deck at /internal-linkedin. Those are reviewed by John
-// and go out over the team's names. Nothing in this file may be copied there and nothing
-// from there may be copied here. The two surfaces share no module, no table and no helper,
-// which is the point: a mistake in one cannot reach the other.
+// This is a personal surface. Pratik reviews and approves; Himanshu publishes. It has nothing
+// to do with api/_lk_*.js, with linkedin_posts, or with the team deck at /internal-linkedin.
+// Those are reviewed by John and go out over the team's names. Nothing in this file may be
+// copied there and nothing from there may be copied here.
 //
-// HOW THESE ARE WRITTEN
-// First person, the way a person writes in a group, not the way a brand writes an ad.
-//   - Every factual claim traces to a verified rule in ../rules. The `rules` array on each
-//     idea names them, so the deck can show the article behind a sentence before it is
-//     posted. If a figure is not in the rules base it does not go in a post.
+// HOW THESE ARE WRITTEN, AND WHY THEY READ THE WAY THEY DO
+// The first version of this file was correct and unreadable. Every post opened with its own
+// thesis and stayed there, so twenty of them sounded like twenty pages of the same reference
+// note. Nobody talks like that in a Facebook group, and nobody stops scrolling for it.
+//
+// These open on a moment instead. Something that happened, something people keep asking,
+// something that took a while to work out. The fact arrives inside the telling rather than
+// as a heading. Sentences are short and uneven, contractions are used the way people use
+// them, and the tool gets mentioned the way you would mention it to someone in a pub, not
+// the way a landing page mentions itself.
+//
+// WHAT DOES NOT BEND FOR THE SAKE OF VOICE
+//   - Every figure traces to a verified rule in ../rules. The `rules` array names the ids.
+//     Warmth is a matter of how a fact is said, never of which facts are allowed.
 //   - The first person is a builder, never an owner. Pratik does not own property in Spain,
-//     so no post says or implies that he does. What he can honestly say is that he reads
-//     the BOE pages, gets the same question repeatedly, and built something.
-//   - No brand name. These go into groups whose rules bar promotion, and a free tool posted
-//     honestly is welcome in a way that a company link is not.
+//     so no post says or implies that he does. What he can honestly say is that this gets
+//     asked in these groups constantly, that he read the official page, and that he built
+//     something. He never invents a private conversation or a villa.
+//   - No brand name. These go into groups whose rules bar promotion.
 //   - No emoji, no em dash, no competitor named, no penalty-flavoured urgency.
 //
 // {link} is substituted at seed time with the localised tool URL, so a translated post can
@@ -25,6 +32,11 @@
 
 export const SITE = 'https://www.247spain.es';
 export const LANGS = ['en', 'no', 'sv', 'de', 'fr', 'nl'];
+export const TRANSLATION_LANGS = LANGS.filter(l => l !== 'en');
+export const LANG_NAME = {
+  en: 'English', no: 'Norwegian', sv: 'Swedish',
+  de: 'German', fr: 'French', nl: 'Dutch',
+};
 
 export function linkFor(tool, lang) {
   return lang === 'en' ? `${SITE}/${tool}` : `${SITE}/${lang}/${tool}`;
@@ -43,72 +55,84 @@ export const IDEAS = [
   kind: 'story',
   rules: ['schengen.short_stay', 'schengen.entry_exit_days'],
   text: {
-    en: `A question I kept getting wrong in my own head: is it 90 days a year, or 90 days in 180?
+    en: `Every few weeks someone in a group like this asks the same question, and it always gets about four different answers.
 
-It is 90 days in any rolling 180. Not per calendar year. And the day you land counts as a full day, the same as the day you fly home. A long weekend is four days, not two.
+Is it 90 days a year, or 90 days in 180?
 
-The rolling part is what catches people out. You can be comfortably inside your limit in March and over it in May without taking a single extra trip, because last autumn is still sitting inside the window.
+It's 90 in any rolling 180. Not per calendar year. And here's the bit that catches people: the day you land counts as a whole day, and so does the day you fly home. So a long weekend isn't two days. It's four.
 
-I got tired of working it out on paper, so I built a counter. You put in the trips you have taken and the ones you have booked, and it gives you the days left, the date the window refreshes, and the exact day a planned trip would tip you over.
+The rolling part is the sneaky one. You can be nowhere near your limit in March and over it in May without booking a single extra trip, because last October is still sitting inside the window, quietly counting against you.
 
-{link}
-
-Free, nothing to sign up for. If it disagrees with your own count I would rather hear about it than have you trust it blindly.`,
-    no: `Et spørsmål jeg selv rotet med lenge: er det 90 dager i året, eller 90 dager av 180?
-
-Det er 90 dager innenfor enhver rullerende 180-dagersperiode. Ikke per kalenderår. Og dagen du lander teller som en hel dag, akkurat som dagen du reiser hjem. En lang helg er fire dager, ikke to.
-
-Det er det rullerende som lurer folk. Du kan ligge godt innenfor i mars og over grensen i mai uten å ha tatt en eneste ekstra tur, fordi dagene fra i høst fortsatt ligger inne i vinduet.
-
-Jeg ble lei av å regne på papir, så jeg bygde en teller. Du legger inn turene du har tatt og de du har bestilt, og den gir deg dagene du har igjen, datoen vinduet friskner opp, og nøyaktig hvilken dag en planlagt tur ville tippet deg over.
+I got fed up working it out on the back of an envelope, so I built a counter. You put in the trips you've taken and the ones you've already booked, and it tells you what's left, the date the window clears, and the exact day a planned trip would tip you over.
 
 {link}
 
-Gratis, ingenting å registrere seg for. Er den uenig med din egen telling, vil jeg heller høre det enn at du stoler blindt på den.`,
-    sv: `En fråga jag själv hade fel om länge: är det 90 dagar om året, eller 90 dagar av 180?
+Free, nothing to sign up for. And if it argues with your own count, tell me. I'd much rather fix it than have you trust it.`,
+    no: `Med noen ukers mellomrom spør noen i en gruppe som denne om det samme, og det kommer alltid fire ulike svar.
 
-Det är 90 dagar inom varje rullande 180-dagarsperiod. Inte per kalenderår. Och dagen du landar räknas som en hel dag, precis som dagen du flyger hem. En långhelg är fyra dagar, inte två.
+Er det 90 dager i året, eller 90 dager av 180?
 
-Det är det rullande som lurar folk. Du kan ligga med god marginal i mars och vara över i maj utan att ha gjort en enda extra resa, eftersom dagarna från i höstas fortfarande ligger kvar i fönstret.
+Det er 90 innenfor enhver rullerende 180-dagersperiode. Ikke per kalenderår. Og her er det folk går på: dagen du lander teller som en hel dag, og det gjør dagen du flyr hjem også. En lang helg er altså ikke to dager. Det er fire.
 
-Jag tröttnade på att räkna på papper och byggde en räknare. Du lägger in resorna du har gjort och de du har bokat, och den ger dig dagarna du har kvar, datumet då fönstret förnyas, och exakt vilken dag en planerad resa skulle tippa över.
+Det rullerende er det lumske. Du kan ligge langt under grensen i mars og over den i mai uten å ha bestilt en eneste ekstra tur, fordi oktober i fjor fortsatt ligger inne i vinduet og teller i det stille.
 
-{link}
-
-Gratis, inget att registrera sig för. Om den inte stämmer med din egen räkning vill jag hellre veta det än att du litar blint på den.`,
-    de: `Eine Frage, bei der ich selbst lange danebenlag: sind es 90 Tage im Jahr oder 90 Tage in 180?
-
-Es sind 90 Tage in jedem rollierenden Zeitraum von 180 Tagen. Nicht pro Kalenderjahr. Und der Tag der Ankunft zählt als voller Tag, genauso wie der Tag des Rückflugs. Ein langes Wochenende sind vier Tage, nicht zwei.
-
-Das Rollierende ist es, was die Leute erwischt. Sie können im März bequem darunter liegen und im Mai darüber sein, ohne eine einzige zusätzliche Reise gemacht zu haben, weil die Tage vom letzten Herbst noch im Fenster stecken.
-
-Ich hatte keine Lust mehr, das auf Papier zu rechnen, also habe ich einen Zähler gebaut. Sie tragen die Reisen ein, die Sie gemacht haben, und die, die Sie gebucht haben, und er nennt Ihnen die verbleibenden Tage, das Datum, an dem sich das Fenster erneuert, und genau den Tag, an dem eine geplante Reise zu viel wäre.
+Jeg ble lei av å regne på baksiden av en konvolutt, så jeg bygde en teller. Du legger inn turene du har tatt og de du allerede har bestilt, og den sier hva du har igjen, datoen vinduet friskner opp, og nøyaktig hvilken dag en planlagt tur ville tippet deg over.
 
 {link}
 
-Kostenlos, nichts anzumelden. Wenn er Ihrer eigenen Rechnung widerspricht, höre ich das lieber, als dass Sie ihm blind vertrauen.`,
-    fr: `Une question sur laquelle je me trompais moi-même : est-ce 90 jours par an, ou 90 jours sur 180 ?
+Gratis, ingenting å registrere seg for. Og er den uenig med din egen telling, si fra. Jeg fikser den heller enn at du skal stole blindt på den.`,
+    sv: `Med några veckors mellanrum ställer någon i en grupp som den här samma fråga, och det kommer alltid ungefär fyra olika svar.
 
-C'est 90 jours sur toute période glissante de 180 jours. Pas par année civile. Et le jour de l'arrivée compte comme une journée entière, tout comme le jour du retour. Un long week-end fait quatre jours, pas deux.
+Är det 90 dagar om året, eller 90 dagar av 180?
 
-C'est le caractère glissant qui piège. Vous pouvez être largement dans les clous en mars et au-dessus en mai sans avoir fait un seul voyage de plus, parce que les jours de l'automne dernier sont encore dans la fenêtre.
+Det är 90 inom varje rullande 180-dagarsperiod. Inte per kalenderår. Och här är det folk går bet: dagen du landar räknas som en hel dag, och det gör dagen du flyger hem också. En långhelg är alltså inte två dagar. Det är fyra.
 
-J'en ai eu assez de calculer sur papier, alors j'ai construit un compteur. Vous saisissez les voyages faits et ceux que vous avez réservés, et il vous donne les jours restants, la date à laquelle la fenêtre se renouvelle, et le jour exact où un voyage prévu vous ferait dépasser.
+Det rullande är det lömska. Du kan ligga långt under gränsen i mars och över den i maj utan att ha bokat en enda extra resa, för oktober i fjol ligger fortfarande kvar i fönstret och räknas i tysthet.
 
-{link}
-
-Gratuit, rien à créer comme compte. S'il contredit votre propre calcul, je préfère l'entendre plutôt que vous le croyiez sur parole.`,
-    nl: `Een vraag waar ik zelf lang naast zat: is het 90 dagen per jaar, of 90 dagen van 180?
-
-Het is 90 dagen binnen elke voortschrijdende periode van 180 dagen. Niet per kalenderjaar. En de dag dat u landt telt als hele dag, net als de dag dat u terugvliegt. Een lang weekend is vier dagen, geen twee.
-
-Het voortschrijdende deel is wat mensen verrast. U kunt in maart ruim binnen de grens zitten en in mei eroverheen, zonder ook maar een extra reis te hebben gemaakt, omdat de dagen van afgelopen najaar nog in het venster zitten.
-
-Ik werd het zat om het op papier uit te rekenen, dus bouwde ik een teller. U vult de reizen in die u heeft gemaakt en die u heeft geboekt, en hij geeft u de resterende dagen, de datum waarop het venster ververst, en precies de dag waarop een geplande reis eroverheen zou gaan.
+Jag tröttnade på att räkna på baksidan av ett kuvert, så jag byggde en räknare. Du lägger in resorna du gjort och de du redan bokat, och den säger vad du har kvar, datumet då fönstret förnyas, och exakt vilken dag en planerad resa skulle tippa över.
 
 {link}
 
-Gratis, niets om aan te melden. Klopt hij niet met uw eigen telling, dan hoor ik dat liever dan dat u er blind op vertrouwt.`,
+Gratis, inget att registrera sig för. Och om den säger emot din egen räkning, hör av dig. Jag fixar hellre den än att du litar blint på den.`,
+    de: `Alle paar Wochen stellt jemand in einer Gruppe wie dieser dieselbe Frage, und es kommen immer etwa vier verschiedene Antworten.
+
+Sind es 90 Tage im Jahr oder 90 Tage in 180?
+
+Es sind 90 in jedem rollierenden Zeitraum von 180 Tagen. Nicht pro Kalenderjahr. Und hier stolpern die Leute: der Tag der Ankunft zählt als ganzer Tag, und der Tag des Rückflugs auch. Ein langes Wochenende sind also keine zwei Tage. Es sind vier.
+
+Das Rollierende ist das Tückische. Sie können im März weit unter der Grenze liegen und im Mai darüber, ohne eine einzige zusätzliche Reise gebucht zu haben, weil der letzte Oktober noch im Fenster steckt und leise mitzählt.
+
+Ich hatte es satt, das auf einem Briefumschlag auszurechnen, also habe ich einen Zähler gebaut. Sie tragen die Reisen ein, die Sie gemacht und die Sie schon gebucht haben, und er sagt Ihnen, was übrig ist, wann sich das Fenster erneuert, und genau den Tag, an dem eine geplante Reise zu viel wäre.
+
+{link}
+
+Kostenlos, nichts anzumelden. Und wenn er Ihrer eigenen Rechnung widerspricht, sagen Sie mir Bescheid. Mir ist lieber, ich repariere ihn, als dass Sie ihm blind vertrauen.`,
+    fr: `Toutes les deux ou trois semaines, quelqu'un dans un groupe comme celui-ci pose la même question, et il arrive toujours quatre réponses différentes.
+
+C'est 90 jours par an, ou 90 jours sur 180 ?
+
+C'est 90 sur toute période glissante de 180 jours. Pas par année civile. Et voilà où les gens se font avoir : le jour de l'arrivée compte comme une journée entière, et le jour du retour aussi. Un long week-end, ce n'est donc pas deux jours. C'est quatre.
+
+Le glissant, c'est le piège. Vous pouvez être loin de la limite en mars et au-dessus en mai sans avoir réservé un seul voyage de plus, parce qu'octobre dernier est encore dans la fenêtre et compte en silence.
+
+J'en ai eu assez de calculer au dos d'une enveloppe, alors j'ai fait un compteur. Vous entrez les voyages faits et ceux déjà réservés, et il vous dit ce qu'il reste, la date où la fenêtre se renouvelle, et le jour exact où un voyage prévu vous ferait dépasser.
+
+{link}
+
+Gratuit, rien à créer. Et s'il contredit votre propre calcul, dites-le-moi. Je préfère le corriger que vous le voir croire sur parole.`,
+    nl: `Om de paar weken stelt iemand in een groep als deze dezelfde vraag, en er komen altijd een stuk of vier verschillende antwoorden.
+
+Is het 90 dagen per jaar, of 90 dagen van 180?
+
+Het is 90 binnen elke voortschrijdende periode van 180 dagen. Niet per kalenderjaar. En hier gaan mensen de mist in: de dag dat u landt telt als hele dag, en de dag dat u terugvliegt ook. Een lang weekend is dus geen twee dagen. Het zijn er vier.
+
+Het voortschrijdende is het gemene. U kunt in maart ver onder de grens zitten en in mei eroverheen zonder ook maar één extra reis te hebben geboekt, want afgelopen oktober zit nog in het venster en telt stilletjes mee.
+
+Ik werd het zat om het op de achterkant van een envelop uit te rekenen, dus bouwde ik een teller. U vult de reizen in die u heeft gemaakt en die u al heeft geboekt, en hij zegt wat er over is, wanneer het venster ververst, en precies de dag waarop een geplande reis eroverheen zou gaan.
+
+{link}
+
+Gratis, niets om aan te melden. En spreekt hij uw eigen telling tegen, laat het me weten. Ik repareer hem liever dan dat u er blind op vertrouwt.`,
   },
 },
 {
@@ -117,82 +141,94 @@ Gratis, niets om aan te melden. Klopt hij niet met uw eigen telling, dan hoor ik
   kind: 'informative',
   rules: ['irnr.imputed.base', 'irnr.imputed.no_deductions', 'irnr.rates'],
   text: {
-    en: `The one that surprises people most: you can owe Spanish tax on a property you never rent out and barely use.
+    en: `This is the one that makes people put their coffee down.
 
-It is called imputed income. Spain treats a second home at your disposal as producing a notional income, and taxes that. Two things worth knowing about it.
+You can owe Spanish tax on a place you never rent out, never advertise, and use for three weeks a year. It's called imputed income. Spain treats a second home that's sitting there at your disposal as if it produced an income, and then taxes that imaginary income.
 
-First, the base is the cadastral value on your IBI receipt, not what you paid and not what the place is worth today. Those three numbers are usually nowhere near each other.
+Two things about it that nobody tells you until it's too late.
 
-Second, nothing is deductible against it. Not the community fee, not the insurance, not the IBI itself. That surprises people who are used to deducting costs at home.
+The base isn't what you paid, and it isn't what the place is worth now. It's the cadastral value, the number printed on your IBI bill. Go and look at it, because it's usually nothing like either of the other two.
 
-The rate is 19 percent for residents of the EU, Norway, Iceland and Liechtenstein, and 24 percent for everyone else.
+And nothing comes off it. Not the community fee, not the insurance, not even the IBI itself. If you're used to deducting your costs at home, that one stings.
 
-I put the whole calculation into a free page, including the years you may not have filed:
+The rate is 19 percent if you live in the EU, Norway, Iceland or Liechtenstein. 24 percent for everyone else.
 
-{link}`,
-    no: `Den som overrasker flest: du kan skylde spansk skatt på en bolig du aldri leier ut og knapt bruker.
-
-Det heter imputert inntekt. Spania behandler en sekundærbolig som står til din disposisjon som om den gir en tenkt inntekt, og skattlegger den. To ting er verdt å vite.
-
-For det første er grunnlaget matrikkelverdien som står på IBI-regningen, ikke det du betalte og ikke det boligen er verdt i dag. De tre tallene ligger som regel langt fra hverandre.
-
-For det andre kan ingenting trekkes fra. Ikke fellesutgiftene, ikke forsikringen, ikke IBI selv. Det overrasker folk som er vant til å trekke fra kostnader hjemme.
-
-Satsen er 19 prosent for bosatte i EU, Norge, Island og Liechtenstein, og 24 prosent for alle andre.
-
-Jeg la hele regnestykket inn på en gratis side, inkludert årene du kanskje ikke har levert for:
+I put the whole thing on a page, including the years you might quietly not have filed:
 
 {link}`,
-    sv: `Den som överraskar flest: du kan vara skyldig spansk skatt på en bostad du aldrig hyr ut och knappt använder.
+    no: `Dette er den som får folk til å sette fra seg kaffekoppen.
 
-Det kallas schablonintäkt. Spanien behandlar en andrabostad som står till ditt förfogande som om den ger en tänkt inkomst, och beskattar den. Två saker är värda att veta.
+Du kan skylde spansk skatt på en bolig du aldri leier ut, aldri annonserer, og bruker tre uker i året. Det heter imputert inntekt. Spania behandler en sekundærbolig som står der til din disposisjon som om den ga en inntekt, og skattlegger så den innbilte inntekten.
 
-För det första är underlaget taxeringsvärdet som står på IBI-avin, inte vad du betalade och inte vad bostaden är värd i dag. De tre siffrorna ligger oftast långt ifrån varandra.
+To ting om den som ingen forteller deg før det er for sent.
 
-För det andra får ingenting dras av. Inte samfällighetsavgiften, inte försäkringen, inte IBI självt. Det överraskar den som är van att dra av kostnader hemma.
+Grunnlaget er ikke det du betalte, og det er ikke det boligen er verdt nå. Det er matrikkelverdien, tallet som står trykt på IBI-regningen. Gå og se på det, for det ligner som regel ikke på noen av de to andre.
 
-Skattesatsen är 19 procent för boende i EU, Norge, Island och Liechtenstein, och 24 procent för alla andra.
+Og ingenting trekkes fra. Ikke fellesutgiftene, ikke forsikringen, ikke engang IBI selv. Er du vant til å føre kostnadene dine hjemme, svir den.
 
-Jag lade hela uträkningen på en gratis sida, inklusive de år du kanske inte har deklarerat:
+Satsen er 19 prosent hvis du bor i EU, Norge, Island eller Liechtenstein. 24 prosent for alle andre.
 
-{link}`,
-    de: `Das, was die meisten überrascht: Sie können spanische Steuer auf eine Immobilie schulden, die Sie nie vermieten und kaum nutzen.
-
-Das nennt sich fiktive Einkünfte. Spanien behandelt eine Zweitwohnung, die Ihnen zur Verfügung steht, so, als brächte sie einen gedachten Ertrag, und besteuert diesen. Zwei Dinge sind dazu wichtig.
-
-Erstens ist die Bemessungsgrundlage der Katasterwert auf Ihrem IBI-Bescheid, nicht der Kaufpreis und nicht der heutige Wert. Diese drei Zahlen liegen meist weit auseinander.
-
-Zweitens ist nichts abziehbar. Nicht das Hausgeld, nicht die Versicherung, nicht die IBI selbst. Das überrascht alle, die es gewohnt sind, zu Hause Kosten abzusetzen.
-
-Der Satz beträgt 19 Prozent für Ansässige in der EU, Norwegen, Island und Liechtenstein und 24 Prozent für alle übrigen.
-
-Ich habe die ganze Rechnung auf eine kostenlose Seite gelegt, samt der Jahre, die Sie womöglich nicht erklärt haben:
+Jeg la hele greia på en side, inkludert årene du kanskje stille har unnlatt å levere for:
 
 {link}`,
-    fr: `Celle qui surprend le plus : vous pouvez devoir de l'impôt espagnol sur un bien que vous ne louez jamais et que vous utilisez à peine.
+    sv: `Det här är den som får folk att ställa ifrån sig kaffekoppen.
 
-Cela s'appelle le revenu imputé. L'Espagne considère qu'une résidence secondaire à votre disposition produit un revenu théorique, et l'impose. Deux choses à savoir.
+Du kan vara skyldig spansk skatt på en bostad du aldrig hyr ut, aldrig annonserar och använder tre veckor om året. Det kallas schablonintäkt. Spanien behandlar en andrabostad som står där till ditt förfogande som om den gav en inkomst, och beskattar sedan den inbillade inkomsten.
 
-D'abord, la base est la valeur cadastrale figurant sur votre avis d'IBI, pas le prix payé ni la valeur actuelle du bien. Ces trois chiffres sont rarement proches.
+Två saker som ingen berättar förrän det är för sent.
 
-Ensuite, rien n'est déductible. Ni les charges de copropriété, ni l'assurance, ni l'IBI lui-même. Cela surprend ceux qui ont l'habitude de déduire leurs frais chez eux.
+Underlaget är inte vad du betalade, och inte vad bostaden är värd i dag. Det är taxeringsvärdet, siffran som står tryckt på IBI-avin. Gå och titta på den, för den brukar inte likna någon av de två andra.
 
-Le taux est de 19 pour cent pour les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein, et de 24 pour cent pour tous les autres.
+Och ingenting dras av. Inte samfällighetsavgiften, inte försäkringen, inte ens IBI självt. Är du van att dra av dina kostnader hemma så svider den.
 
-J'ai mis tout le calcul sur une page gratuite, y compris les années que vous n'avez peut-être pas déclarées :
+Skattesatsen är 19 procent om du bor i EU, Norge, Island eller Liechtenstein. 24 procent för alla andra.
+
+Jag lade hela saken på en sida, inklusive de år du kanske tyst har låtit bli att deklarera:
 
 {link}`,
-    nl: `Degene die de meeste mensen verrast: u kunt Spaanse belasting verschuldigd zijn over een woning die u nooit verhuurt en nauwelijks gebruikt.
+    de: `Das ist die, bei der die Leute die Kaffeetasse abstellen.
 
-Het heet fictief inkomen. Spanje behandelt een tweede woning die u ter beschikking staat alsof die een gedacht inkomen oplevert, en belast dat. Twee dingen die u moet weten.
+Sie können spanische Steuer auf eine Immobilie schulden, die Sie nie vermieten, nie inserieren und drei Wochen im Jahr nutzen. Das heißt fiktive Einkünfte. Spanien behandelt eine Zweitwohnung, die Ihnen einfach zur Verfügung steht, so, als brächte sie einen Ertrag, und besteuert dann diesen eingebildeten Ertrag.
 
-Ten eerste is de grondslag de kadastrale waarde op uw IBI-aanslag, niet wat u betaalde en niet wat de woning nu waard is. Die drie bedragen liggen meestal ver uit elkaar.
+Zwei Dinge dazu, die einem niemand sagt, bis es zu spät ist.
 
-Ten tweede is niets aftrekbaar. Niet de VvE-bijdrage, niet de verzekering, niet de IBI zelf. Dat verrast wie gewend is thuis kosten af te trekken.
+Die Grundlage ist nicht der Kaufpreis, und auch nicht der heutige Wert. Es ist der Katasterwert, die Zahl, die auf Ihrem IBI-Bescheid steht. Schauen Sie sie sich an, denn sie ähnelt meist keiner der beiden anderen.
 
-Het tarief is 19 procent voor inwoners van de EU, Noorwegen, IJsland en Liechtenstein, en 24 procent voor alle anderen.
+Und es geht nichts ab. Nicht das Hausgeld, nicht die Versicherung, nicht einmal die IBI selbst. Wenn Sie es gewohnt sind, Ihre Kosten zu Hause abzusetzen, tut das weh.
 
-Ik heb de hele berekening op een gratis pagina gezet, inclusief de jaren die u misschien niet heeft aangegeven:
+Der Satz liegt bei 19 Prozent, wenn Sie in der EU, Norwegen, Island oder Liechtenstein leben. 24 Prozent für alle anderen.
+
+Ich habe das Ganze auf eine Seite gelegt, samt der Jahre, die Sie vielleicht still und leise nicht erklärt haben:
+
+{link}`,
+    fr: `C'est celle qui fait poser la tasse de café.
+
+Vous pouvez devoir de l'impôt espagnol sur un bien que vous ne louez jamais, que vous n'annoncez nulle part et que vous occupez trois semaines par an. Cela s'appelle le revenu imputé. L'Espagne considère qu'une résidence secondaire qui reste là, à votre disposition, produit un revenu, puis impose ce revenu imaginaire.
+
+Deux choses que personne ne vous dit avant qu'il soit trop tard.
+
+La base, ce n'est pas ce que vous avez payé, et ce n'est pas ce que le bien vaut aujourd'hui. C'est la valeur cadastrale, le chiffre imprimé sur votre avis d'IBI. Allez le regarder, parce qu'il ne ressemble en général à aucun des deux autres.
+
+Et rien ne s'en déduit. Ni les charges, ni l'assurance, ni même l'IBI. Si vous avez l'habitude de déduire vos frais chez vous, celle-là pique.
+
+Le taux est de 19 pour cent si vous vivez dans l'UE, en Norvège, en Islande ou au Liechtenstein. 24 pour cent pour tous les autres.
+
+J'ai mis tout ça sur une page, y compris les années que vous n'avez peut-être jamais déclarées :
+
+{link}`,
+    nl: `Dit is degene waarbij mensen hun kopje neerzetten.
+
+U kunt Spaanse belasting verschuldigd zijn over een woning die u nooit verhuurt, nooit adverteert en drie weken per jaar gebruikt. Het heet fictief inkomen. Spanje behandelt een tweede woning die daar gewoon tot uw beschikking staat alsof die inkomen oplevert, en belast dan dat ingebeelde inkomen.
+
+Twee dingen die niemand u vertelt tot het te laat is.
+
+De grondslag is niet wat u betaalde, en niet wat de woning nu waard is. Het is de kadastrale waarde, het getal dat op uw IBI-aanslag staat. Ga er eens naar kijken, want het lijkt meestal op geen van beide andere.
+
+En er gaat niets af. Niet de VvE-bijdrage, niet de verzekering, zelfs de IBI niet. Bent u gewend uw kosten thuis af te trekken, dan doet die pijn.
+
+Het tarief is 19 procent als u in de EU, Noorwegen, IJsland of Liechtenstein woont. 24 procent voor alle anderen.
+
+Ik heb het hele verhaal op een pagina gezet, inclusief de jaren die u misschien stilletjes niet heeft aangegeven:
 
 {link}`,
   },
@@ -203,70 +239,82 @@ Ik heb de hele berekening op een gratis pagina gezet, inclusief de jaren die u m
   kind: 'informative',
   rules: ['deadline.rental.last_quarterly', 'deadline.rental.from_2026'],
   text: {
-    en: `If you let a place in Spain, the quarterly filing rhythm you are used to is about to stop.
+    en: `If you let a place in Spain, the rhythm you've got used to is about to change, and it's the kind of change that catches people precisely because they're organised.
 
-Q3 2026 is the last quarterly rental return. It is due between 1 and 20 October 2026.
+Four filings a year, every year, and then suddenly not.
 
-Rental income accrued from 1 October 2026 onwards does not get its own quarterly return. It goes into a single annual return filed in the first 20 calendar days of April the following year. So the next thing you file after this October is in April 2027, and it covers the last quarter of 2026.
+Q3 2026 is the last quarterly rental return. It's due between 1 and 20 October 2026. After that, rental income from 1 October onwards doesn't get its own quarter. It rolls into one annual return, filed in the first 20 days of April the following year.
 
-Worth putting in a calendar now, because the muscle memory of four filings a year is exactly the sort of thing that quietly stops matching reality.
+So the next thing you file after this October isn't in January. It's April 2027, and it covers the last quarter of 2026.
 
-I built a free page that works out what is owed on rental income after the deductions you are actually entitled to:
+Put it in the calendar now, while you're thinking about it. Habits are the easiest thing in the world to keep doing after they've stopped being right.
 
-{link}`,
-    no: `Leier du ut en bolig i Spania, er den kvartalsvise leveringsrytmen du er vant til i ferd med å ta slutt.
-
-Q3 2026 er den siste kvartalsvise leieoppgaven. Den skal leveres mellom 1. og 20. oktober 2026.
-
-Leieinntekt som påløper fra 1. oktober 2026 får ikke sin egen kvartalsoppgave. Den går inn i én årlig oppgave som leveres i de første 20 kalenderdagene i april året etter. Det neste du leverer etter oktober i år er altså i april 2027, og det dekker siste kvartal 2026.
-
-Verdt å legge i kalenderen nå, for vanen med fire leveringer i året er nettopp den typen ting som stille slutter å stemme.
-
-Jeg laget en gratis side som regner ut hva som skal betales på leieinntekt etter de fradragene du faktisk har rett på:
+The page I built works out what's actually owed on rental income once you've taken the deductions you're entitled to, which is usually more than people claim:
 
 {link}`,
-    sv: `Hyr du ut en bostad i Spanien håller den kvartalsvisa rytmen du är van vid på att ta slut.
+    no: `Leier du ut en bolig i Spania, er rytmen du har vent deg til i ferd med å endre seg, og det er den typen endring som tar folk nettopp fordi de er ryddige.
 
-Q3 2026 är den sista kvartalsvisa hyresdeklarationen. Den ska lämnas mellan 1 och 20 oktober 2026.
+Fire leveringer i året, hvert år, og så plutselig ikke.
 
-Hyresinkomst som uppkommer från och med 1 oktober 2026 får ingen egen kvartalsdeklaration. Den går in i en enda årlig deklaration som lämnas under de första 20 kalenderdagarna i april året därpå. Nästa gång du deklarerar efter den här oktober är alltså i april 2027, och den täcker sista kvartalet 2026.
+Q3 2026 er den siste kvartalsvise leieoppgaven. Den skal leveres mellom 1. og 20. oktober 2026. Etter det får ikke leieinntekt fra 1. oktober og utover sitt eget kvartal. Den går inn i én årlig oppgave, levert i de første 20 dagene i april året etter.
 
-Värt att lägga in i kalendern nu, för vanan vid fyra deklarationer om året är precis den sortens sak som tyst slutar stämma.
+Det neste du leverer etter oktober i år er altså ikke i januar. Det er april 2027, og det dekker siste kvartal 2026.
 
-Jag byggde en gratis sida som räknar ut vad som ska betalas på hyresinkomst efter de avdrag du faktiskt har rätt till:
+Legg det i kalenderen nå, mens du tenker på det. Vaner er det letteste i verden å fortsette med etter at de har sluttet å stemme.
 
-{link}`,
-    de: `Wenn Sie in Spanien vermieten, endet der vierteljährliche Rhythmus, den Sie gewohnt sind, demnächst.
-
-Q3 2026 ist die letzte vierteljährliche Mieterklärung. Sie ist zwischen dem 1. und dem 20. Oktober 2026 abzugeben.
-
-Mieteinkünfte, die ab dem 1. Oktober 2026 anfallen, bekommen keine eigene Quartalserklärung mehr. Sie gehen in eine einzige Jahreserklärung ein, die in den ersten 20 Kalendertagen des April des Folgejahres abzugeben ist. Das Nächste, was Sie nach diesem Oktober abgeben, ist also im April 2027 und betrifft das letzte Quartal 2026.
-
-Jetzt in den Kalender zu schreiben, denn die Gewohnheit von vier Erklärungen im Jahr ist genau die Art Sache, die still und leise aufhört zu stimmen.
-
-Ich habe eine kostenlose Seite gebaut, die ausrechnet, was auf Mieteinkünfte zu zahlen ist, nach den Abzügen, die Ihnen wirklich zustehen:
+Siden jeg laget regner ut hva som faktisk skal betales på leieinntekt når du har tatt de fradragene du har rett på, som regel flere enn folk fører:
 
 {link}`,
-    fr: `Si vous louez un bien en Espagne, le rythme trimestriel auquel vous êtes habitué va s'arrêter.
+    sv: `Hyr du ut en bostad i Spanien håller rytmen du vant dig vid på att ändras, och det är den sortens ändring som tar folk just för att de är ordningsamma.
 
-Le troisième trimestre 2026 est la dernière déclaration locative trimestrielle. Elle est à déposer entre le 1er et le 20 octobre 2026.
+Fyra deklarationer om året, varje år, och så plötsligt inte.
 
-Les revenus locatifs perçus à partir du 1er octobre 2026 n'ont plus de déclaration trimestrielle propre. Ils entrent dans une déclaration annuelle unique, déposée pendant les 20 premiers jours d'avril de l'année suivante. La prochaine échéance après cet octobre est donc avril 2027, et elle couvre le dernier trimestre 2026.
+Q3 2026 är den sista kvartalsvisa hyresdeklarationen. Den ska in mellan 1 och 20 oktober 2026. Därefter får hyresinkomst från 1 oktober och framåt inget eget kvartal. Den går in i en enda årlig deklaration, inlämnad under de första 20 dagarna i april året därpå.
 
-À noter dans l'agenda dès maintenant, car l'habitude de quatre déclarations par an est exactement le genre de chose qui cesse discrètement de correspondre à la réalité.
+Nästa gång du deklarerar efter den här oktober är alltså inte i januari. Det är april 2027, och den täcker sista kvartalet 2026.
 
-J'ai fait une page gratuite qui calcule ce qui est dû sur les revenus locatifs après les déductions auxquelles vous avez réellement droit :
+Lägg in det i kalendern nu, medan du tänker på det. Vanor är det lättaste i världen att fortsätta med sedan de slutat stämma.
+
+Sidan jag byggde räknar ut vad som faktiskt ska betalas på hyresinkomst när du tagit de avdrag du har rätt till, oftast fler än folk tar upp:
 
 {link}`,
-    nl: `Verhuurt u een woning in Spanje, dan houdt het kwartaalritme waaraan u gewend bent binnenkort op.
+    de: `Wenn Sie in Spanien vermieten, ändert sich gleich der Rhythmus, an den Sie sich gewöhnt haben, und es ist die Art Änderung, die gerade die Ordentlichen erwischt.
 
-Q3 2026 is de laatste kwartaalaangifte voor huurinkomsten. Die moet tussen 1 en 20 oktober 2026 worden ingediend.
+Vier Erklärungen im Jahr, jedes Jahr, und dann plötzlich nicht mehr.
 
-Huurinkomsten vanaf 1 oktober 2026 krijgen geen eigen kwartaalaangifte meer. Die gaan op in één jaarlijkse aangifte, in te dienen in de eerste 20 kalenderdagen van april van het jaar daarna. Het eerstvolgende dat u na deze oktober indient is dus in april 2027, en dat betreft het laatste kwartaal van 2026.
+Q3 2026 ist die letzte vierteljährliche Mieterklärung. Sie ist zwischen dem 1. und dem 20. Oktober 2026 fällig. Danach bekommen Mieteinkünfte ab dem 1. Oktober kein eigenes Quartal mehr. Sie gehen in eine einzige Jahreserklärung ein, abzugeben in den ersten 20 Tagen des April im Folgejahr.
 
-De moeite waard om nu in de agenda te zetten, want de gewoonte van vier aangiftes per jaar is precies het soort ding dat stilletjes ophoudt te kloppen.
+Das Nächste, was Sie nach diesem Oktober abgeben, ist also nicht im Januar. Es ist der April 2027, und er betrifft das letzte Quartal 2026.
 
-Ik heb een gratis pagina gemaakt die uitrekent wat over huurinkomsten verschuldigd is, na de aftrekposten waar u werkelijk recht op heeft:
+Schreiben Sie es sich jetzt in den Kalender, solange Sie daran denken. Gewohnheiten sind das Einfachste der Welt, um sie beizubehalten, nachdem sie aufgehört haben zu stimmen.
+
+Die Seite, die ich gebaut habe, rechnet aus, was auf Mieteinkünfte wirklich zu zahlen ist, wenn Sie die Abzüge genommen haben, die Ihnen zustehen, meist mehr als angesetzt werden:
+
+{link}`,
+    fr: `Si vous louez un bien en Espagne, le rythme auquel vous vous êtes habitué va changer, et c'est le genre de changement qui piège surtout les gens organisés.
+
+Quatre déclarations par an, tous les ans, et puis d'un coup non.
+
+Le troisième trimestre 2026 est la dernière déclaration locative trimestrielle. Elle est à déposer entre le 1er et le 20 octobre 2026. Ensuite, les revenus locatifs à partir du 1er octobre n'ont plus leur propre trimestre. Ils entrent dans une seule déclaration annuelle, déposée dans les 20 premiers jours d'avril de l'année suivante.
+
+La prochaine échéance après cet octobre n'est donc pas en janvier. C'est avril 2027, et elle couvre le dernier trimestre 2026.
+
+Mettez-le dans l'agenda maintenant, pendant que vous y pensez. Les habitudes sont la chose la plus facile au monde à poursuivre une fois qu'elles ont cessé d'être justes.
+
+La page que j'ai faite calcule ce qui est réellement dû sur les revenus locatifs une fois prises les déductions auxquelles vous avez droit, en général plus que ce que les gens déclarent :
+
+{link}`,
+    nl: `Verhuurt u een woning in Spanje, dan verandert het ritme waaraan u gewend bent, en het is het soort verandering dat juist de georganiseerde mensen te pakken neemt.
+
+Vier aangiftes per jaar, elk jaar, en dan ineens niet meer.
+
+Q3 2026 is de laatste kwartaalaangifte voor huurinkomsten. Die moet tussen 1 en 20 oktober 2026 binnen zijn. Daarna krijgen huurinkomsten vanaf 1 oktober geen eigen kwartaal meer. Ze gaan op in één jaarlijkse aangifte, in te dienen in de eerste 20 dagen van april van het jaar daarna.
+
+Het eerstvolgende dat u na deze oktober indient is dus niet in januari. Het is april 2027, en het betreft het laatste kwartaal van 2026.
+
+Zet het nu in de agenda, nu u eraan denkt. Gewoontes zijn het makkelijkste ter wereld om vol te houden nadat ze zijn opgehouden te kloppen.
+
+De pagina die ik maakte rekent uit wat er werkelijk over huurinkomsten verschuldigd is nadat u de aftrekposten heeft genomen waar u recht op heeft, meestal meer dan mensen opvoeren:
 
 {link}`,
   },
@@ -277,70 +325,94 @@ Ik heb een gratis pagina gemaakt die uitrekent wat over huurinkomsten verschuldi
   kind: 'informative',
   rules: ['late.recargo.voluntary', 'late.recargo.excludes_penalty', 'late.recargo.reduction'],
   text: {
-    en: `If a modelo 210 is late, the single most useful thing to establish is whether the tax office has written to you yet. The two situations are not variations of each other, they are different regimes.
+    en: `If a modelo 210 is late, there's one question worth answering before anything else, and it isn't how much.
 
-File late on your own initiative, before any demand, and it is a surcharge. One percent, plus another one percent for each complete month of delay, up to twelve months. From month thirteen it becomes a flat fifteen percent plus late payment interest. That surcharge excludes any penalty that could otherwise have been imposed, which is the part most people do not realise.
+It's whether the tax office has written to you yet.
 
-There is also a twenty five percent reduction on the surcharge if you pay within the voluntary period once you are notified.
+Those two situations aren't a bit different from each other. They're two different regimes, and the gap between them is enormous.
 
-Once a demand has landed, none of that applies and you are somewhere else entirely.
+File late on your own, before any letter arrives, and it's a surcharge. One percent, plus another one percent for every full month you're late, up to twelve. From month thirteen it becomes a flat fifteen percent plus interest. And here's the part almost nobody knows: that surcharge replaces the penalty you could otherwise have been given. There's also a twenty five percent reduction on it if you pay inside the voluntary window once they notify you.
 
-I built a page that asks which of the two you are in, works out the figure, and shows the date your clock actually started running from:
+Once a demand has landed, none of that is on the table any more. You're somewhere else entirely.
 
-{link}`,
-    no: `Er en modelo 210 levert for sent, er det mest nyttige å avklare om skattekontoret allerede har skrevet til deg. De to situasjonene er ikke varianter av hverandre, de er ulike regelsett.
+So if you're sitting on an unfiled year, the useful thing is to check the post, not the calculator.
 
-Leverer du for sent på eget initiativ, før noe krav er kommet, er det et tillegg. Én prosent, pluss én prosent til for hver hele måned forsinkelse, opp til tolv måneder. Fra måned tretten blir det flate femten prosent pluss forsinkelsesrente. Det tillegget utelukker enhver bot som ellers kunne blitt ilagt, og det er den delen de fleste ikke er klar over.
-
-Det finnes også en reduksjon på tjuefem prosent av tillegget hvis du betaler innenfor den frivillige perioden etter varsel.
-
-Har kravet først kommet, gjelder ingenting av dette, og du er et helt annet sted.
-
-Jeg laget en side som spør hvilken av de to du er i, regner ut beløpet, og viser datoen klokken din faktisk begynte å løpe fra:
+Then the page asks you which of the two you're in, works out the figure, and shows you the date your clock actually started from:
 
 {link}`,
-    sv: `Är en modelo 210 försenad är det mest användbara att klargöra om skattemyndigheten redan har skrivit till dig. De två situationerna är inte varianter av varandra, de är olika regelverk.
+    no: `Er en modelo 210 levert for sent, er det ett spørsmål som er verdt å svare på før alt annet, og det er ikke hvor mye.
 
-Deklarerar du sent på eget initiativ, innan något krav kommit, är det ett tillägg. En procent, plus ytterligare en procent för varje hel månads dröjsmål, upp till tolv månader. Från månad tretton blir det platta femton procent plus dröjsmålsränta. Det tillägget utesluter varje sanktionsavgift som annars hade kunnat påföras, och det är den delen de flesta inte känner till.
+Det er om skattekontoret har skrevet til deg ennå.
 
-Det finns också en nedsättning på tjugofem procent av tillägget om du betalar inom den frivilliga perioden efter underrättelse.
+De to situasjonene er ikke litt forskjellige fra hverandre. De er to ulike regelsett, og avstanden mellom dem er enorm.
 
-Har kravet väl kommit gäller inget av detta, och då är du någon helt annanstans.
+Leverer du for sent av deg selv, før noe brev kommer, er det et tillegg. Én prosent, pluss én prosent til for hver hele måned du er forsinket, opp til tolv. Fra måned tretten blir det flate femten prosent pluss renter. Og her er delen nesten ingen kjenner: det tillegget erstatter boten du ellers kunne fått. Det finnes også en reduksjon på tjuefem prosent av det hvis du betaler innenfor den frivillige fristen etter varselet.
 
-Jag byggde en sida som frågar vilken av de två du befinner dig i, räknar ut beloppet, och visar datumet din klocka faktiskt började löpa från:
+Har kravet først landet, er ingenting av dette på bordet lenger. Da er du et helt annet sted.
 
-{link}`,
-    de: `Ist eine modelo 210 verspätet, ist das Nützlichste zunächst zu klären, ob das Finanzamt Ihnen schon geschrieben hat. Die beiden Situationen sind keine Spielarten voneinander, es sind unterschiedliche Regime.
+Sitter du på et år du ikke har levert for, er det altså posten som er verdt å sjekke, ikke kalkulatoren.
 
-Geben Sie aus eigenem Antrieb verspätet ab, bevor eine Aufforderung kommt, ist es ein Zuschlag. Ein Prozent, plus ein weiteres Prozent für jeden vollen Monat Verzug, bis zu zwölf Monaten. Ab Monat dreizehn sind es pauschal fünfzehn Prozent plus Verzugszinsen. Dieser Zuschlag schließt jede Sanktion aus, die sonst hätte verhängt werden können, und das ist der Teil, den die meisten nicht kennen.
-
-Es gibt außerdem eine Minderung des Zuschlags um fünfundzwanzig Prozent, wenn Sie nach der Mitteilung innerhalb der freiwilligen Frist zahlen.
-
-Ist die Aufforderung erst einmal da, gilt nichts davon, und Sie sind an einem ganz anderen Ort.
-
-Ich habe eine Seite gebaut, die fragt, in welcher der beiden Lagen Sie sind, den Betrag ausrechnet und das Datum zeigt, ab dem Ihre Frist tatsächlich lief:
+Så spør siden hvilken av de to du er i, regner ut beløpet, og viser datoen klokken din faktisk begynte å løpe fra:
 
 {link}`,
-    fr: `Si une modelo 210 est en retard, la chose la plus utile à établir est de savoir si le fisc vous a déjà écrit. Les deux situations ne sont pas des variantes l'une de l'autre, ce sont deux régimes différents.
+    sv: `Är en modelo 210 försenad finns det en fråga värd att besvara före allt annat, och det är inte hur mycket.
 
-Déclarez de votre propre initiative, avant toute mise en demeure, et c'est une majoration. Un pour cent, plus un pour cent par mois complet de retard, jusqu'à douze mois. À partir du treizième mois, c'est quinze pour cent forfaitaires plus les intérêts de retard. Cette majoration exclut toute sanction qui aurait autrement pu être infligée, et c'est la partie que la plupart des gens ignorent.
+Det är om skattemyndigheten har skrivit till dig än.
 
-Il existe aussi une réduction de vingt-cinq pour cent de la majoration si vous payez dans le délai volontaire ouvert par la notification.
+De två situationerna är inte lite olika varandra. De är två skilda regelverk, och avståndet mellan dem är enormt.
 
-Une fois la mise en demeure arrivée, rien de tout cela ne s'applique et vous êtes ailleurs.
+Deklarerar du sent på eget bevåg, innan något brev kommer, är det ett tillägg. En procent, plus ytterligare en procent för varje hel månad du är sen, upp till tolv. Från månad tretton blir det platta femton procent plus ränta. Och här är den del nästan ingen känner till: det tillägget ersätter den sanktionsavgift du annars kunde ha fått. Det finns också en nedsättning på tjugofem procent av det om du betalar inom den frivilliga fristen efter underrättelsen.
 
-J'ai fait une page qui demande dans laquelle des deux vous êtes, calcule le montant, et affiche la date à partir de laquelle votre délai a réellement couru :
+Har kravet väl landat är inget av det här kvar på bordet. Då är du någon helt annanstans.
+
+Sitter du på ett år du inte deklarerat är det alltså posten som är värd att kolla, inte kalkylatorn.
+
+Sedan frågar sidan vilken av de två du befinner dig i, räknar ut beloppet, och visar datumet din klocka faktiskt började löpa från:
 
 {link}`,
-    nl: `Is een modelo 210 te laat, dan is het nuttigste om eerst vast te stellen of de belastingdienst u al heeft aangeschreven. De twee situaties zijn geen varianten van elkaar, het zijn verschillende regimes.
+    de: `Ist eine modelo 210 verspätet, gibt es eine Frage, die sich vor allem anderen lohnt, und es ist nicht die nach der Höhe.
 
-Dient u uit eigen beweging te laat in, voordat er een aanmaning is, dan is het een toeslag. Eén procent, plus nog eens één procent voor elke volle maand vertraging, tot twaalf maanden. Vanaf maand dertien wordt het een vlakke vijftien procent plus vertragingsrente. Die toeslag sluit elke boete uit die anders opgelegd had kunnen worden, en dat is het deel dat de meesten niet weten.
+Es ist die, ob das Finanzamt Ihnen schon geschrieben hat.
 
-Er is ook een vermindering van vijfentwintig procent op de toeslag als u betaalt binnen de vrijwillige termijn na de kennisgeving.
+Diese beiden Lagen sind nicht ein bisschen verschieden. Es sind zwei verschiedene Regime, und der Abstand dazwischen ist gewaltig.
 
-Zodra de aanmaning er is, geldt hier niets van en zit u ergens heel anders.
+Geben Sie von sich aus verspätet ab, bevor ein Brief kommt, ist es ein Zuschlag. Ein Prozent, plus ein weiteres Prozent für jeden vollen Monat Verspätung, bis zu zwölf. Ab Monat dreizehn sind es pauschal fünfzehn Prozent plus Zinsen. Und hier der Teil, den fast niemand kennt: dieser Zuschlag tritt an die Stelle der Sanktion, die Sie sonst bekommen hätten. Es gibt außerdem eine Minderung um fünfundzwanzig Prozent, wenn Sie nach der Mitteilung innerhalb der freiwilligen Frist zahlen.
 
-Ik heb een pagina gemaakt die vraagt in welke van de twee u zit, het bedrag uitrekent, en de datum toont waarvandaan uw termijn werkelijk liep:
+Ist die Aufforderung einmal da, liegt nichts davon mehr auf dem Tisch. Dann sind Sie an einem ganz anderen Ort.
+
+Wenn Sie also auf einem nicht erklärten Jahr sitzen, lohnt sich der Blick in die Post, nicht in den Rechner.
+
+Dann fragt die Seite, in welcher der beiden Lagen Sie sind, rechnet den Betrag aus und zeigt das Datum, ab dem Ihre Frist wirklich lief:
+
+{link}`,
+    fr: `Si une modelo 210 est en retard, il y a une question à trancher avant toutes les autres, et ce n'est pas combien.
+
+C'est de savoir si le fisc vous a déjà écrit.
+
+Ces deux situations ne sont pas un peu différentes l'une de l'autre. Ce sont deux régimes distincts, et l'écart entre eux est énorme.
+
+Déclarez de vous-même, avant l'arrivée de la moindre lettre, et c'est une majoration. Un pour cent, plus un pour cent par mois complet de retard, jusqu'à douze. À partir du treizième mois, quinze pour cent forfaitaires plus les intérêts. Et voici ce que presque personne ne sait : cette majoration remplace la sanction que vous auriez pu recevoir autrement. Il existe aussi une réduction de vingt-cinq pour cent si vous payez dans le délai volontaire une fois la notification reçue.
+
+Une fois la mise en demeure arrivée, plus rien de tout cela n'est sur la table. Vous êtes ailleurs.
+
+Donc si vous avez une année non déclarée qui traîne, ce qui vaut la peine d'être vérifié, c'est le courrier, pas la calculette.
+
+Ensuite la page vous demande dans laquelle des deux vous êtes, calcule le montant, et affiche la date à partir de laquelle votre délai a réellement couru :
+
+{link}`,
+    nl: `Is een modelo 210 te laat, dan is er één vraag die het waard is om eerst te beantwoorden, en dat is niet hoeveel.
+
+Het is of de belastingdienst u al heeft aangeschreven.
+
+Die twee situaties verschillen niet een beetje van elkaar. Het zijn twee verschillende regimes, en het gat ertussen is enorm.
+
+Dient u uit eigen beweging te laat in, voordat er een brief komt, dan is het een toeslag. Eén procent, plus nog eens één procent voor elke volle maand dat u te laat bent, tot twaalf. Vanaf maand dertien wordt het een vlakke vijftien procent plus rente. En dit is het deel dat bijna niemand weet: die toeslag komt in plaats van de boete die u anders had kunnen krijgen. Er is ook een vermindering van vijfentwintig procent als u na de kennisgeving binnen de vrijwillige termijn betaalt.
+
+Zodra de aanmaning binnen is, ligt daar niets meer van op tafel. Dan zit u ergens heel anders.
+
+Heeft u dus een jaar liggen dat niet is aangegeven, dan is het de post die het controleren waard is, niet de rekenhulp.
+
+Daarna vraagt de pagina in welke van de twee u zit, rekent het bedrag uit, en toont de datum waarvandaan uw termijn werkelijk liep:
 
 {link}`,
   },
@@ -351,84 +423,108 @@ Ik heb een pagina gemaakt die vraagt in welke van de twee u zit, het bedrag uitr
   kind: 'story',
   rules: ['irnr.rental.deductibility', 'irnr.rates'],
   text: {
-    en: `I spent a while convinced I had misread this, because it is such a sharp line.
+    en: `I read this three times because I was sure I'd misunderstood it. The line is that sharp.
 
-If you are resident in an EU country, or in Norway, Iceland or Liechtenstein, you can deduct expenses against Spanish rental income. Management fees, insurance, repairs, the community charge, the interest, the depreciation. You are taxed on what is left, at 19 percent.
+Two flats. Same building, same floor, same tenant paying the same rent in the same year.
 
-If you are resident anywhere else, you are taxed on the gross rent. No deductions at all, at 24 percent.
+If you live in an EU country, or in Norway, Iceland or Liechtenstein, you can deduct your costs. Management fees, insurance, repairs, the community charge, the mortgage interest, the depreciation. You're taxed on what's left, at 19 percent.
 
-Same flat, same tenant, same year. The number that decides it is where the owner lives.
+If you live anywhere else, you're taxed on the gross rent. No deductions at all. At 24 percent.
 
-What I keep seeing is owners on the deductible side who claim two or three of the categories and not the rest, usually because nobody ever handed them the full list.
+Same flat. The only thing that moved was where the owner sleeps at night.
 
-So I made the list into a page. You go through what you actually paid and it shows the gap between that and what you are entitled to claim:
+And what I keep noticing is that even people firmly on the deductible side put through two or three of the categories and stop. Not because they're being cautious. Because nobody ever handed them the full list.
 
-{link}`,
-    no: `Jeg brukte en stund på å tro at jeg hadde lest feil, for skillet er så skarpt.
+So I turned the list into a page. You go through what you actually paid, line by line, and it shows you the gap between that and what you're allowed to claim.
 
-Bor du i et EU-land, eller i Norge, Island eller Liechtenstein, kan du trekke fra utgifter mot spansk leieinntekt. Forvaltningshonorar, forsikring, reparasjoner, fellesutgifter, renter, avskrivning. Du skattlegges av det som står igjen, med 19 prosent.
+{link}
 
-Bor du et annet sted, skattlegges du av brutto leie. Ingen fradrag i det hele tatt, med 24 prosent.
+Worth ten minutes, I think.`,
+    no: `Jeg leste dette tre ganger fordi jeg var sikker på at jeg hadde misforstått. Så skarp er grensen.
 
-Samme leilighet, samme leietaker, samme år. Det som avgjør, er hvor eieren bor.
+To leiligheter. Samme bygg, samme etasje, samme leietaker som betaler samme leie samme år.
 
-Det jeg stadig ser, er eiere på fradragssiden som fører to eller tre av postene og ikke resten, som regel fordi ingen noen gang ga dem hele listen.
+Bor du i et EU-land, eller i Norge, Island eller Liechtenstein, kan du trekke fra kostnadene dine. Forvaltning, forsikring, reparasjoner, fellesutgifter, renter på lånet, avskrivning. Du skattlegges av det som står igjen, med 19 prosent.
 
-Så jeg gjorde listen om til en side. Du går gjennom det du faktisk har betalt, og den viser avstanden mellom det og det du har rett til å føre:
+Bor du et annet sted, skattlegges du av brutto leie. Ingen fradrag i det hele tatt. Med 24 prosent.
 
-{link}`,
-    sv: `Jag var ett tag övertygad om att jag hade läst fel, för gränsen är så skarp.
+Samme leilighet. Det eneste som flyttet seg var hvor eieren sover om natten.
 
-Bor du i ett EU-land, eller i Norge, Island eller Liechtenstein, får du dra av kostnader mot spansk hyresinkomst. Förvaltningsarvode, försäkring, reparationer, samfällighetsavgift, ränta, avskrivning. Du beskattas på det som blir kvar, med 19 procent.
+Og det jeg stadig legger merke til, er at selv folk godt på fradragssiden fører to eller tre av postene og stopper der. Ikke fordi de er forsiktige. Fordi ingen noen gang ga dem hele listen.
 
-Bor du någon annanstans beskattas du på bruttohyran. Inga avdrag alls, med 24 procent.
+Så jeg gjorde listen om til en side. Du går gjennom det du faktisk har betalt, post for post, og den viser avstanden mellom det og det du har lov til å føre.
 
-Samma lägenhet, samma hyresgäst, samma år. Det som avgör är var ägaren bor.
+{link}
 
-Det jag ser om och om igen är ägare på avdragssidan som tar upp två eller tre av posterna och inte resten, oftast för att ingen någonsin gav dem hela listan.
+Verdt ti minutter, tenker jeg.`,
+    sv: `Jag läste det här tre gånger för jag var säker på att jag missförstått. Så skarp är gränsen.
 
-Så jag gjorde listan till en sida. Du går igenom vad du faktiskt betalat och den visar skillnaden mellan det och vad du har rätt att dra av:
+Två lägenheter. Samma hus, samma våning, samma hyresgäst som betalar samma hyra samma år.
 
-{link}`,
-    de: `Ich war eine Weile überzeugt, mich verlesen zu haben, so scharf ist diese Grenze.
+Bor du i ett EU-land, eller i Norge, Island eller Liechtenstein, får du dra av dina kostnader. Förvaltning, försäkring, reparationer, samfällighetsavgift, räntan på lånet, avskrivning. Du beskattas på det som blir kvar, med 19 procent.
 
-Sind Sie in einem EU-Land ansässig, oder in Norwegen, Island oder Liechtenstein, können Sie Kosten gegen spanische Mieteinkünfte absetzen. Verwaltungshonorar, Versicherung, Reparaturen, Hausgeld, Zinsen, Abschreibung. Besteuert wird, was übrig bleibt, mit 19 Prozent.
+Bor du någon annanstans beskattas du på bruttohyran. Inga avdrag alls. Med 24 procent.
 
-Sind Sie anderswo ansässig, wird die Bruttomiete besteuert. Gar keine Abzüge, mit 24 Prozent.
+Samma lägenhet. Det enda som flyttade sig var var ägaren sover om natten.
 
-Dieselbe Wohnung, derselbe Mieter, dasselbe Jahr. Entschieden wird es davon, wo der Eigentümer lebt.
+Och det jag ständigt lägger märke till är att även folk med god marginal på avdragssidan tar upp två eller tre poster och stannar där. Inte för att de är försiktiga. För att ingen någonsin gav dem hela listan.
 
-Was mir immer wieder begegnet, sind Eigentümer auf der abzugsberechtigten Seite, die zwei oder drei der Posten ansetzen und den Rest nicht, meist weil ihnen nie jemand die vollständige Liste gegeben hat.
+Så jag gjorde listan till en sida. Du går igenom vad du faktiskt betalat, rad för rad, och den visar skillnaden mellan det och vad du får dra av.
 
-Also habe ich die Liste zu einer Seite gemacht. Sie gehen durch, was Sie tatsächlich gezahlt haben, und sie zeigt den Abstand zu dem, was Sie ansetzen dürften:
+{link}
 
-{link}`,
-    fr: `J'ai mis un moment à croire que j'avais bien lu, tant la ligne est nette.
+Värt tio minuter, tycker jag.`,
+    de: `Ich habe das dreimal gelesen, weil ich sicher war, es falsch verstanden zu haben. So scharf ist die Grenze.
 
-Si vous résidez dans un pays de l'UE, ou en Norvège, en Islande ou au Liechtenstein, vous pouvez déduire vos charges des revenus locatifs espagnols. Honoraires de gestion, assurance, réparations, charges de copropriété, intérêts, amortissement. Vous êtes imposé sur ce qui reste, à 19 pour cent.
+Zwei Wohnungen. Gleiches Haus, gleiches Stockwerk, derselbe Mieter, dieselbe Miete, dasselbe Jahr.
 
-Si vous résidez ailleurs, vous êtes imposé sur le loyer brut. Aucune déduction, à 24 pour cent.
+Wenn Sie in einem EU-Land leben, oder in Norwegen, Island oder Liechtenstein, können Sie Ihre Kosten absetzen. Verwaltung, Versicherung, Reparaturen, Hausgeld, Kreditzinsen, Abschreibung. Besteuert wird, was übrig bleibt, mit 19 Prozent.
 
-Même appartement, même locataire, même année. Ce qui tranche, c'est le lieu de résidence du propriétaire.
+Leben Sie anderswo, wird die Bruttomiete besteuert. Gar keine Abzüge. Mit 24 Prozent.
 
-Ce que je vois sans arrêt, ce sont des propriétaires du côté déductible qui portent deux ou trois postes et pas le reste, en général parce que personne ne leur a jamais donné la liste complète.
+Dieselbe Wohnung. Das Einzige, was sich bewegt hat, ist, wo der Eigentümer nachts schläft.
 
-J'ai donc transformé la liste en une page. Vous parcourez ce que vous avez réellement payé et elle montre l'écart avec ce que vous auriez le droit de déduire :
+Und was mir immer wieder auffällt: selbst Leute, die klar auf der abzugsberechtigten Seite stehen, setzen zwei oder drei Posten an und hören dann auf. Nicht aus Vorsicht. Weil ihnen nie jemand die vollständige Liste gegeben hat.
 
-{link}`,
-    nl: `Ik was er een tijd van overtuigd dat ik het verkeerd had gelezen, zo scherp is de grens.
+Also habe ich die Liste zu einer Seite gemacht. Sie gehen durch, was Sie tatsächlich gezahlt haben, Posten für Posten, und sie zeigt den Abstand zu dem, was Sie ansetzen dürfen.
 
-Woont u in een EU-land, of in Noorwegen, IJsland of Liechtenstein, dan mag u kosten aftrekken van Spaanse huurinkomsten. Beheerkosten, verzekering, reparaties, VvE-bijdrage, rente, afschrijving. U wordt belast over wat overblijft, tegen 19 procent.
+{link}
 
-Woont u ergens anders, dan wordt u belast over de brutohuur. Helemaal geen aftrek, tegen 24 procent.
+Zehn Minuten wert, finde ich.`,
+    fr: `J'ai relu ça trois fois parce que j'étais sûr d'avoir mal compris. La ligne est nette à ce point.
 
-Dezelfde woning, dezelfde huurder, hetzelfde jaar. Wat het beslist is waar de eigenaar woont.
+Deux appartements. Même immeuble, même étage, même locataire qui paie le même loyer la même année.
 
-Wat ik steeds weer zie zijn eigenaren aan de aftrekbare kant die twee of drie posten opvoeren en de rest niet, meestal omdat niemand hun ooit de volledige lijst heeft gegeven.
+Si vous vivez dans un pays de l'UE, ou en Norvège, en Islande ou au Liechtenstein, vous déduisez vos charges. Gestion, assurance, réparations, charges de copropriété, intérêts du prêt, amortissement. Vous êtes imposé sur ce qui reste, à 19 pour cent.
 
-Dus maakte ik van die lijst een pagina. U loopt door wat u werkelijk betaalde, en hij toont het gat tussen dat en wat u mag opvoeren:
+Si vous vivez ailleurs, vous êtes imposé sur le loyer brut. Aucune déduction. À 24 pour cent.
 
-{link}`,
+Même appartement. La seule chose qui a bougé, c'est l'endroit où le propriétaire dort la nuit.
+
+Et ce que je remarque sans cesse, c'est que même des gens franchement du bon côté portent deux ou trois postes et s'arrêtent là. Pas par prudence. Parce que personne ne leur a jamais donné la liste complète.
+
+J'ai donc transformé la liste en une page. Vous parcourez ce que vous avez réellement payé, ligne par ligne, et elle montre l'écart avec ce que vous avez le droit de déduire.
+
+{link}
+
+Ça vaut dix minutes, je trouve.`,
+    nl: `Ik heb dit drie keer gelezen omdat ik zeker wist dat ik het verkeerd begreep. Zo scherp is de grens.
+
+Twee appartementen. Zelfde gebouw, zelfde verdieping, dezelfde huurder die dezelfde huur betaalt in hetzelfde jaar.
+
+Woont u in een EU-land, of in Noorwegen, IJsland of Liechtenstein, dan trekt u uw kosten af. Beheer, verzekering, reparaties, VvE-bijdrage, hypotheekrente, afschrijving. U wordt belast over wat overblijft, tegen 19 procent.
+
+Woont u ergens anders, dan wordt u belast over de brutohuur. Helemaal geen aftrek. Tegen 24 procent.
+
+Hetzelfde appartement. Het enige dat verschoof, is waar de eigenaar 's nachts slaapt.
+
+En wat me steeds opvalt: zelfs mensen die ruim aan de aftrekbare kant zitten voeren twee of drie posten op en stoppen daar. Niet uit voorzichtigheid. Omdat niemand hun ooit de volledige lijst gaf.
+
+Dus maakte ik van die lijst een pagina. U loopt door wat u werkelijk betaalde, regel voor regel, en hij toont het gat tussen dat en wat u mag opvoeren.
+
+{link}
+
+Tien minuten waard, denk ik.`,
   },
 },
 {
@@ -437,70 +533,94 @@ Dus maakte ik van die lijst een pagina. U loopt door wat u werkelijk betaalde, e
   kind: 'informative',
   rules: ['irnr.sale.retention', 'deadline.210.sale', 'irnr.rates'],
   text: {
-    en: `Selling as a non-resident, the three percent is the part that confuses everyone, so here is what it actually is.
+    en: `Nothing on a Spanish sale confuses non-residents more than the three percent, and it's because of one word nobody says out loud.
 
-The buyer must hold back three percent of the agreed price and pay it to the tax office on modelo 211 within a month of the transfer. It is not a tax and it is not a fee. It is a payment on account of your capital gains tax.
+It isn't a tax.
 
-Your actual capital gains tax is 19 percent of the gain, for everyone, resident of anywhere. So the three percent of the whole price and the 19 percent of the gain are two different numbers, and they can land either way round. If the three percent overshoots what you owe, the difference comes back to you. If your gain was small or you sold at a loss, most of it comes back.
+The buyer has to hold back three percent of the agreed price and pay it to the tax office on modelo 211 within a month of the sale. That's it. It's a deposit against your capital gains tax, paid on your behalf, in advance.
 
-The window for your own return is a strange one. It opens one month after completion and closes three months later.
+Your actual capital gains tax is 19 percent of the gain. Not of the price. Of the gain. And that's 19 percent for everybody, wherever you live.
 
-I built a page that does the gain, the tax, the retention and the refund position, and turns every deadline into a real date from your completion day:
+So you've got three percent of one number and 19 percent of a completely different number, and they can land either way round. If the three percent came to more than you owe, the difference comes back to you. If your gain was small, or you sold at a loss, most of it comes back.
 
-{link}`,
-    no: `Selger du som ikke-bosatt, er de tre prosentene det som forvirrer alle, så her er hva det faktisk er.
+The catch is the window for claiming it, and it's an odd one. It opens a month after completion and closes three months after that.
 
-Kjøperen må holde tilbake tre prosent av avtalt pris og betale det til skattekontoret på modelo 211 innen en måned etter overdragelsen. Det er verken en skatt eller et gebyr. Det er en akontobetaling på din gevinstskatt.
-
-Selve gevinstskatten er 19 prosent av gevinsten, for alle, uansett hvor du bor. Tre prosent av hele prisen og 19 prosent av gevinsten er altså to forskjellige tall, og de kan slå ut begge veier. Skyter de tre prosentene over det du skylder, kommer differansen tilbake til deg. Var gevinsten liten eller solgte du med tap, kommer det meste tilbake.
-
-Fristen for din egen oppgave er en underlig en. Den åpner en måned etter overdragelsen og lukker tre måneder senere.
-
-Jeg laget en side som regner gevinsten, skatten, tilbakeholdet og refusjonssituasjonen, og gjør hver frist om til en faktisk dato fra din overdragelsesdag:
+The page does the gain, the tax, the retention and the refund, and turns every deadline into a real date off your completion day:
 
 {link}`,
-    sv: `Säljer du som icke-bosatt är de tre procenten det som förvirrar alla, så här är vad det faktiskt är.
+    no: `Ingenting ved et spansk salg forvirrer ikke-bosatte mer enn de tre prosentene, og det skyldes ett ord ingen sier høyt.
 
-Köparen måste hålla inne tre procent av det avtalade priset och betala in det till skattemyndigheten på modelo 211 inom en månad från överlåtelsen. Det är varken en skatt eller en avgift. Det är en preliminär betalning på din kapitalvinstskatt.
+Det er ikke en skatt.
 
-Själva kapitalvinstskatten är 19 procent av vinsten, för alla, oavsett var du bor. Tre procent av hela priset och 19 procent av vinsten är alltså två olika tal, och de kan slå åt båda hållen. Skjuter de tre procenten över vad du är skyldig kommer mellanskillnaden tillbaka. Var vinsten liten eller sålde du med förlust kommer det mesta tillbaka.
+Kjøperen må holde tilbake tre prosent av avtalt pris og betale det til skattekontoret på modelo 211 innen en måned etter salget. Det er alt. Det er et depositum mot gevinstskatten din, betalt på dine vegne, på forskudd.
 
-Fönstret för din egen deklaration är egendomligt. Det öppnar en månad efter tillträdet och stänger tre månader senare.
+Selve gevinstskatten er 19 prosent av gevinsten. Ikke av prisen. Av gevinsten. Og det er 19 prosent for alle, uansett hvor du bor.
 
-Jag byggde en sida som räknar vinsten, skatten, innehållandet och återbetalningsläget, och gör varje frist till ett verkligt datum från din tillträdesdag:
+Du har altså tre prosent av ett tall og 19 prosent av et helt annet tall, og de kan slå ut begge veier. Ble de tre prosentene mer enn du skylder, kommer differansen tilbake. Var gevinsten liten, eller solgte du med tap, kommer det meste tilbake.
 
-{link}`,
-    de: `Beim Verkauf als Nichtansässiger sind die drei Prozent das, was alle verwirrt, also hier, was sie wirklich sind.
+Haken er fristen for å kreve det, og den er underlig. Den åpner en måned etter overdragelsen og lukker tre måneder etter det igjen.
 
-Der Käufer muss drei Prozent des vereinbarten Preises einbehalten und sie binnen eines Monats nach der Übertragung mit modelo 211 an das Finanzamt abführen. Es ist weder eine Steuer noch eine Gebühr. Es ist eine Vorauszahlung auf Ihre Gewinnsteuer.
-
-Ihre eigentliche Gewinnsteuer beträgt 19 Prozent des Gewinns, für alle, ganz gleich wo sie ansässig sind. Drei Prozent vom ganzen Preis und 19 Prozent vom Gewinn sind also zwei verschiedene Zahlen, und es kann in beide Richtungen ausgehen. Übersteigen die drei Prozent das Geschuldete, kommt die Differenz zurück. War der Gewinn klein oder haben Sie mit Verlust verkauft, kommt das meiste zurück.
-
-Die Frist für Ihre eigene Erklärung ist eine seltsame. Sie öffnet einen Monat nach dem Notartermin und schließt drei Monate später.
-
-Ich habe eine Seite gebaut, die Gewinn, Steuer, Einbehalt und Erstattungslage rechnet und jede Frist in ein echtes Datum ab Ihrem Übergabetag verwandelt:
+Siden regner gevinsten, skatten, tilbakeholdet og refusjonen, og gjør hver frist om til en faktisk dato fra din overdragelsesdag:
 
 {link}`,
-    fr: `À la vente en tant que non-résident, les trois pour cent sont ce qui trouble tout le monde, alors voici ce que c'est réellement.
+    sv: `Inget vid en spansk försäljning förvirrar icke-bosatta mer än de tre procenten, och det beror på ett ord ingen säger högt.
 
-L'acheteur doit retenir trois pour cent du prix convenu et les verser au fisc sur le modelo 211 dans le mois suivant la transmission. Ce n'est ni un impôt ni des frais. C'est un acompte sur votre impôt sur la plus-value.
+Det är inte en skatt.
 
-Votre impôt sur la plus-value est lui de 19 pour cent du gain, pour tout le monde, où que vous résidiez. Trois pour cent du prix total et 19 pour cent du gain sont donc deux chiffres différents, et cela peut pencher dans les deux sens. Si les trois pour cent dépassent ce que vous devez, la différence vous revient. Si le gain était faible ou si vous avez vendu à perte, l'essentiel revient.
+Köparen måste hålla inne tre procent av det avtalade priset och betala in det till skattemyndigheten på modelo 211 inom en månad från försäljningen. Det är allt. Det är en deposition mot din kapitalvinstskatt, inbetald för din räkning, i förskott.
 
-La fenêtre de votre propre déclaration est particulière. Elle s'ouvre un mois après la signature et se ferme trois mois plus tard.
+Själva kapitalvinstskatten är 19 procent av vinsten. Inte av priset. Av vinsten. Och det är 19 procent för alla, var du än bor.
 
-J'ai fait une page qui calcule le gain, l'impôt, la retenue et la position de remboursement, et transforme chaque échéance en date réelle à partir de votre jour de signature :
+Du har alltså tre procent av ett tal och 19 procent av ett helt annat tal, och de kan slå åt båda hållen. Blev de tre procenten mer än du är skyldig kommer mellanskillnaden tillbaka. Var vinsten liten, eller sålde du med förlust, kommer det mesta tillbaka.
+
+Haken är fristen för att kräva det, och den är egendomlig. Den öppnar en månad efter tillträdet och stänger tre månader efter det.
+
+Sidan räknar vinsten, skatten, innehållandet och återbetalningen, och gör varje frist till ett verkligt datum från din tillträdesdag:
 
 {link}`,
-    nl: `Bij verkoop als niet-inwoner zijn de drie procent wat iedereen in verwarring brengt, dus hier is wat het werkelijk is.
+    de: `Nichts an einem spanischen Verkauf verwirrt Nichtansässige mehr als die drei Prozent, und das liegt an einem Wort, das niemand ausspricht.
 
-De koper moet drie procent van de overeengekomen prijs inhouden en binnen een maand na de overdracht met modelo 211 aan de belastingdienst afdragen. Het is geen belasting en geen kosten. Het is een voorschot op uw vermogenswinstbelasting.
+Es ist keine Steuer.
 
-Uw werkelijke vermogenswinstbelasting is 19 procent over de winst, voor iedereen, waar u ook woont. Drie procent van de hele prijs en 19 procent van de winst zijn dus twee verschillende bedragen, en het kan beide kanten op vallen. Schieten de drie procent over wat u verschuldigd bent, dan komt het verschil terug. Was de winst klein of verkocht u met verlies, dan komt het meeste terug.
+Der Käufer muss drei Prozent des vereinbarten Preises einbehalten und binnen eines Monats nach dem Verkauf mit modelo 211 ans Finanzamt abführen. Das ist alles. Es ist eine Anzahlung auf Ihre Gewinnsteuer, für Sie geleistet, im Voraus.
 
-Het venster voor uw eigen aangifte is een vreemde. Het opent een maand na de overdracht en sluit drie maanden later.
+Ihre eigentliche Gewinnsteuer beträgt 19 Prozent des Gewinns. Nicht des Preises. Des Gewinns. Und das sind 19 Prozent für alle, egal wo Sie leben.
 
-Ik heb een pagina gemaakt die de winst, de belasting, de inhouding en de teruggaafpositie berekent, en elke termijn omzet in een echte datum vanaf uw overdrachtsdag:
+Sie haben also drei Prozent von einer Zahl und 19 Prozent von einer völlig anderen, und es kann in beide Richtungen ausgehen. Waren die drei Prozent mehr, als Sie schulden, kommt die Differenz zurück. War der Gewinn klein, oder haben Sie mit Verlust verkauft, kommt das meiste zurück.
+
+Der Haken ist die Frist, um es zurückzuholen, und die ist merkwürdig. Sie öffnet einen Monat nach dem Notartermin und schließt drei Monate danach.
+
+Die Seite rechnet Gewinn, Steuer, Einbehalt und Erstattung und verwandelt jede Frist in ein echtes Datum ab Ihrem Übergabetag:
+
+{link}`,
+    fr: `Rien dans une vente espagnole ne trouble davantage les non-résidents que les trois pour cent, et c'est à cause d'un mot que personne ne dit tout haut.
+
+Ce n'est pas un impôt.
+
+L'acheteur doit retenir trois pour cent du prix convenu et les verser au fisc sur le modelo 211 dans le mois qui suit la vente. C'est tout. C'est un acompte sur votre impôt sur la plus-value, versé pour vous, à l'avance.
+
+Votre impôt sur la plus-value, lui, est de 19 pour cent du gain. Pas du prix. Du gain. Et c'est 19 pour cent pour tout le monde, où que vous viviez.
+
+Vous avez donc trois pour cent d'un chiffre et 19 pour cent d'un chiffre complètement différent, et cela peut pencher des deux côtés. Si les trois pour cent dépassent ce que vous devez, la différence revient. Si le gain était faible, ou si vous avez vendu à perte, l'essentiel revient.
+
+Le hic, c'est la fenêtre pour le réclamer, et elle est bizarre. Elle s'ouvre un mois après la signature et se ferme trois mois plus tard.
+
+La page calcule le gain, l'impôt, la retenue et le remboursement, et transforme chaque échéance en date réelle à partir de votre jour de signature :
+
+{link}`,
+    nl: `Niets aan een Spaanse verkoop verwart niet-inwoners meer dan de drie procent, en dat komt door één woord dat niemand hardop zegt.
+
+Het is geen belasting.
+
+De koper moet drie procent van de overeengekomen prijs inhouden en binnen een maand na de verkoop met modelo 211 aan de belastingdienst afdragen. Dat is het. Het is een voorschot op uw vermogenswinstbelasting, namens u betaald, vooruit.
+
+Uw werkelijke vermogenswinstbelasting is 19 procent over de winst. Niet over de prijs. Over de winst. En dat is 19 procent voor iedereen, waar u ook woont.
+
+U heeft dus drie procent van het ene bedrag en 19 procent van een heel ander bedrag, en het kan beide kanten op vallen. Waren de drie procent meer dan u verschuldigd bent, dan komt het verschil terug. Was de winst klein, of verkocht u met verlies, dan komt het meeste terug.
+
+De adder is het venster om het terug te vragen, en dat is een vreemde. Het opent een maand na de overdracht en sluit drie maanden daarna.
+
+De pagina rekent de winst, de belasting, de inhouding en de teruggaaf, en zet elke termijn om in een echte datum vanaf uw overdrachtsdag:
 
 {link}`,
   },
@@ -511,82 +631,82 @@ Ik heb een pagina gemaakt die de winst, de belasting, de inhouding en de terugga
   kind: 'informative',
   rules: ['plusvalia.methods', 'plusvalia.no_gain', 'plusvalia.deadlines'],
   text: {
-    en: `The municipal tax on a sale, the plusvalia, is the one most sellers first hear about at the notary. Three things make it less alarming than it sounds.
+    en: `Most sellers meet the plusvalia for the first time at the notary's table, about ninety seconds before they're asked to accept it. Not ideal.
 
-There are two ways of working it out. The objective method takes the cadastral land value and multiplies it by a coefficient for how long you held the property. The real gain method uses the actual increase between the two deeds. You may choose whichever produces the lower figure.
+It's the municipal tax on the sale, and three things make it a lot less frightening than it sounds when someone says the number out loud.
 
-If there was no increase at all, there is no liability. You still have to declare the transfer and attach both deeds, but there is nothing to assess.
+There are two ways of calculating it, and you get to pick. The objective method takes the cadastral value of the land and multiplies it by a coefficient for how long you owned the place. The real gain method uses the actual increase between what the two deeds say. Whichever comes out lower is the one you can go with.
 
-The deadline is thirty working days from the date of the public deed. Working days, not calendar days.
+If there was no increase at all, there's nothing to pay. You still have to declare the sale and hand over both deeds, but there's no bill.
 
-One honest caveat: the coefficients, the rate, and whether your town works by declaration or self assessment all vary by municipality, so the final number has to come from the town hall.
+The deadline is thirty working days from the date of the deed. Working days. Not thirty days.
 
-I built a page that does the gain, the national tax, the retention and this one, with every deadline as a real date:
-
-{link}`,
-    no: `Den kommunale skatten ved salg, plusvalia, er den de fleste selgere først hører om hos notaren. Tre ting gjør den mindre skremmende enn den høres ut.
-
-Den kan regnes på to måter. Den objektive metoden tar matrikkelverdien på grunnen og ganger den med en koeffisient for hvor lenge du eide eiendommen. Metoden med reell gevinst bruker den faktiske økningen mellom de to skjøtene. Du kan velge den som gir lavest beløp.
-
-Var det ingen økning i det hele tatt, er det ingen skatt. Overdragelsen må fortsatt meldes, med begge skjøtene vedlagt, men det er ingenting å utligne.
-
-Fristen er tretti virkedager fra datoen på det offentlige skjøtet. Virkedager, ikke kalenderdager.
-
-Et ærlig forbehold: koeffisientene, satsen og om kommunen din bruker melding eller egenfastsetting varierer fra kommune til kommune, så det endelige tallet må komme fra rådhuset.
-
-Jeg laget en side som regner gevinsten, den nasjonale skatten, tilbakeholdet og denne, med hver frist som en faktisk dato:
+One honest caveat, because I'd rather say it than have you rely on me: the coefficients, the rate, and whether your town wants a declaration or a self assessment all vary by municipality. The final number has to come from the town hall.
 
 {link}`,
-    sv: `Den kommunala skatten vid försäljning, plusvalia, är den de flesta säljare först hör talas om hos notarien. Tre saker gör den mindre skrämmande än den låter.
+    no: `De fleste selgere møter plusvalia for første gang ved notarens bord, omtrent nitti sekunder før de blir bedt om å godta den. Ikke ideelt.
 
-Den kan räknas på två sätt. Den objektiva metoden tar markens taxeringsvärde och multiplicerar med en koefficient för hur länge du ägt fastigheten. Metoden med verklig vinst använder den faktiska ökningen mellan de två handlingarna. Du får välja den som ger lägst belopp.
+Det er den kommunale skatten på salget, og tre ting gjør den langt mindre skremmende enn den høres ut når noen sier tallet høyt.
 
-Fanns ingen ökning alls finns ingen skatt. Överlåtelsen måste ändå anmälas, med båda handlingarna bifogade, men det finns inget att påföra.
+Den kan regnes på to måter, og du velger. Den objektive metoden tar matrikkelverdien på grunnen og ganger den med en koeffisient for hvor lenge du eide stedet. Metoden med reell gevinst bruker den faktiske økningen mellom det de to skjøtene sier. Den som gir lavest beløp er den du kan gå for.
 
-Fristen är trettio arbetsdagar från datumet på den offentliga handlingen. Arbetsdagar, inte kalenderdagar.
+Var det ingen økning i det hele tatt, er det ingenting å betale. Salget må fortsatt meldes og begge skjøtene leveres, men det kommer ingen regning.
 
-En ärlig reservation: koefficienterna, skattesatsen och om din kommun arbetar med anmälan eller självdeklaration varierar mellan kommuner, så den slutliga siffran måste komma från kommunhuset.
+Fristen er tretti virkedager fra datoen på skjøtet. Virkedager. Ikke tretti dager.
 
-Jag byggde en sida som räknar vinsten, den nationella skatten, innehållandet och den här, med varje frist som ett verkligt datum:
-
-{link}`,
-    de: `Die kommunale Steuer beim Verkauf, die plusvalia, ist die, von der die meisten Verkäufer zuerst beim Notar hören. Drei Dinge machen sie weniger bedrohlich, als sie klingt.
-
-Es gibt zwei Berechnungswege. Die objektive Methode nimmt den Katasterwert des Grundes und multipliziert ihn mit einem Koeffizienten für die Haltedauer. Die Methode des tatsächlichen Gewinns nimmt die reale Wertsteigerung zwischen den beiden Urkunden. Sie dürfen die wählen, die den niedrigeren Betrag ergibt.
-
-Gab es gar keine Steigerung, entsteht keine Steuer. Die Übertragung ist trotzdem zu erklären, mit beiden Urkunden, aber es gibt nichts festzusetzen.
-
-Die Frist beträgt dreißig Werktage ab dem Datum der öffentlichen Urkunde. Werktage, nicht Kalendertage.
-
-Ein ehrlicher Vorbehalt: die Koeffizienten, der Satz und ob Ihre Gemeinde mit Erklärung oder Selbstveranlagung arbeitet, sind von Gemeinde zu Gemeinde verschieden, die endgültige Zahl muss also vom Rathaus kommen.
-
-Ich habe eine Seite gebaut, die den Gewinn, die staatliche Steuer, den Einbehalt und diese hier rechnet, mit jeder Frist als echtem Datum:
+Ett ærlig forbehold, for jeg sier det heller enn at du skal stole på meg: koeffisientene, satsen og om kommunen din vil ha melding eller egenfastsetting varierer fra kommune til kommune. Det endelige tallet må komme fra rådhuset.
 
 {link}`,
-    fr: `L'impôt municipal sur la vente, la plusvalia, est celui dont la plupart des vendeurs entendent parler pour la première fois chez le notaire. Trois choses le rendent moins inquiétant qu'il n'y paraît.
+    sv: `De flesta säljare möter plusvalia för första gången vid notariens bord, ungefär nittio sekunder innan de ombeds godta den. Inte idealiskt.
 
-Il y a deux façons de le calculer. La méthode objective prend la valeur cadastrale du terrain et la multiplie par un coefficient lié à la durée de détention. La méthode du gain réel utilise l'augmentation effective entre les deux actes. Vous pouvez choisir celle qui donne le montant le plus faible.
+Det är den kommunala skatten på försäljningen, och tre saker gör den betydligt mindre skrämmande än den låter när någon säger siffran högt.
 
-S'il n'y a eu aucune augmentation, il n'y a pas d'impôt. La transmission doit tout de même être déclarée, avec les deux actes joints, mais il n'y a rien à liquider.
+Den kan räknas på två sätt, och du får välja. Den objektiva metoden tar markens taxeringsvärde och multiplicerar med en koefficient för hur länge du ägt stället. Metoden med verklig vinst använder den faktiska ökningen mellan vad de två handlingarna säger. Den som blir lägst är den du kan ta.
 
-Le délai est de trente jours ouvrables à compter de la date de l'acte public. Jours ouvrables, pas jours calendaires.
+Fanns ingen ökning alls finns inget att betala. Försäljningen måste ändå anmälas och båda handlingarna lämnas in, men det kommer ingen räkning.
 
-Une réserve honnête : les coefficients, le taux et le fait que votre commune fonctionne par déclaration ou par autoliquidation varient d'une commune à l'autre, le chiffre final doit donc venir de la mairie.
+Fristen är trettio arbetsdagar från datumet på handlingen. Arbetsdagar. Inte trettio dagar.
 
-J'ai fait une page qui calcule le gain, l'impôt national, la retenue et celui-ci, avec chaque échéance en date réelle :
+En ärlig reservation, för jag säger den hellre än att du ska lita på mig: koefficienterna, skattesatsen och om din kommun vill ha anmälan eller självdeklaration varierar mellan kommuner. Den slutliga siffran måste komma från kommunhuset.
 
 {link}`,
-    nl: `De gemeentelijke belasting bij verkoop, de plusvalia, is degene waar de meeste verkopers pas bij de notaris van horen. Drie dingen maken hem minder alarmerend dan hij klinkt.
+    de: `Die meisten Verkäufer begegnen der plusvalia zum ersten Mal am Tisch des Notars, ungefähr neunzig Sekunden bevor sie sie akzeptieren sollen. Nicht ideal.
 
-Er zijn twee manieren om hem te berekenen. De objectieve methode neemt de kadastrale grondwaarde en vermenigvuldigt die met een coëfficiënt voor de bezitsduur. De methode van de werkelijke winst gebruikt de feitelijke stijging tussen de twee akten. U mag degene kiezen die het laagste bedrag oplevert.
+Es ist die kommunale Steuer auf den Verkauf, und drei Dinge machen sie deutlich weniger bedrohlich, als sie klingt, wenn jemand die Zahl laut ausspricht.
 
-Was er helemaal geen stijging, dan is er geen belasting. De overdracht moet nog steeds worden aangegeven, met beide akten erbij, maar er valt niets op te leggen.
+Es gibt zwei Berechnungswege, und Sie dürfen wählen. Die objektive Methode nimmt den Katasterwert des Grundstücks und multipliziert ihn mit einem Koeffizienten für Ihre Haltedauer. Die Methode des tatsächlichen Gewinns nimmt die reale Steigerung zwischen dem, was die beiden Urkunden sagen. Was niedriger herauskommt, dürfen Sie nehmen.
 
-De termijn is dertig werkdagen vanaf de datum van de notariële akte. Werkdagen, geen kalenderdagen.
+Gab es gar keine Steigerung, ist nichts zu zahlen. Der Verkauf muss trotzdem erklärt und beide Urkunden müssen vorgelegt werden, aber es kommt keine Rechnung.
 
-Een eerlijk voorbehoud: de coëfficiënten, het tarief en of uw gemeente met aangifte of zelfaanslag werkt, verschillen per gemeente, dus het eindbedrag moet van het gemeentehuis komen.
+Die Frist beträgt dreißig Werktage ab dem Datum der Urkunde. Werktage. Nicht dreißig Tage.
 
-Ik heb een pagina gemaakt die de winst, de landelijke belasting, de inhouding en deze berekent, met elke termijn als echte datum:
+Ein ehrlicher Vorbehalt, weil ich ihn lieber ausspreche, als dass Sie sich auf mich verlassen: die Koeffizienten, der Satz und ob Ihre Gemeinde eine Erklärung oder eine Selbstveranlagung will, sind von Gemeinde zu Gemeinde verschieden. Die endgültige Zahl muss vom Rathaus kommen.
+
+{link}`,
+    fr: `La plupart des vendeurs découvrent la plusvalia pour la première fois à la table du notaire, environ quatre-vingt-dix secondes avant qu'on leur demande de l'accepter. Pas idéal.
+
+C'est l'impôt municipal sur la vente, et trois choses la rendent bien moins effrayante qu'elle n'en a l'air quand quelqu'un prononce le chiffre.
+
+Il y a deux façons de la calculer, et c'est vous qui choisissez. La méthode objective prend la valeur cadastrale du terrain et la multiplie par un coefficient lié à la durée de détention. La méthode du gain réel prend l'augmentation effective entre ce que disent les deux actes. Celle qui sort la plus basse, vous pouvez la prendre.
+
+S'il n'y a eu aucune augmentation, il n'y a rien à payer. La vente doit tout de même être déclarée et les deux actes fournis, mais il n'arrive pas de facture.
+
+Le délai est de trente jours ouvrables à compter de la date de l'acte. Ouvrables. Pas trente jours.
+
+Une réserve honnête, parce que je préfère la dire que vous voir vous fier à moi : les coefficients, le taux et le fait que votre commune veuille une déclaration ou une autoliquidation varient d'une commune à l'autre. Le chiffre final doit venir de la mairie.
+
+{link}`,
+    nl: `De meeste verkopers ontmoeten de plusvalia voor het eerst aan de tafel van de notaris, ongeveer negentig seconden voordat ze worden gevraagd hem te aanvaarden. Niet ideaal.
+
+Het is de gemeentelijke belasting op de verkoop, en drie dingen maken hem een stuk minder eng dan hij klinkt als iemand het bedrag hardop zegt.
+
+Er zijn twee manieren om hem te berekenen, en u mag kiezen. De objectieve methode neemt de kadastrale grondwaarde en vermenigvuldigt die met een coëfficiënt voor hoe lang u de woning had. De methode van de werkelijke winst neemt de feitelijke stijging tussen wat de twee akten zeggen. Welke het laagst uitkomt, mag u nemen.
+
+Was er helemaal geen stijging, dan valt er niets te betalen. De verkoop moet nog steeds worden aangegeven en beide akten ingeleverd, maar er komt geen rekening.
+
+De termijn is dertig werkdagen vanaf de datum van de akte. Werkdagen. Geen dertig dagen.
+
+Eén eerlijk voorbehoud, want ik zeg het liever dan dat u op mij vaart: de coëfficiënten, het tarief en of uw gemeente een aangifte of een zelfaanslag wil, verschillen per gemeente. Het eindbedrag moet van het gemeentehuis komen.
 
 {link}`,
   },
@@ -597,82 +717,82 @@ Ik heb een pagina gemaakt die de winst, de landelijke belasting, de inhouding en
   kind: 'informative',
   rules: ['vat.letting'],
   text: {
-    en: `A holiday let question that gets answered wrongly more often than almost any other: does IVA depend on how long the guest stays?
+    en: `Ask ten people whether IVA applies to a holiday let and you'll get told it depends how long the guest stays. It doesn't. That's the wrong question, and it's been the wrong question for years.
 
-No. It turns on what you provide during the stay.
+It depends on what you do for them while they're there.
 
-A residential let with no services is exempt from IVA. Add hotel type services during the stay, and the let is taxed at 10 percent. Twenty one percent is for an operation that is neither an exempt residential let nor a hotel type accommodation service.
+Let the place with no services and it's exempt from IVA. Add hotel type services during the stay and it's taxed at 10 percent. Twenty one percent is for something that's neither an exempt residential let nor a hotel type service.
 
-Hotel type is the phrase doing the work, and it means services during the stay. A clean and a change of linen between guests is not the same thing as a daily clean, reception, or breakfast. Two owners on the same corridor, letting for the same week at the same price, can genuinely land on different sides of this.
+"Hotel type" is the phrase carrying all the weight, and it means services during the stay. A clean and fresh sheets between guests is not the same animal as a daily clean, a reception desk, or breakfast. Two owners on the same landing, letting the same week at the same price, can genuinely end up on opposite sides of this.
 
-The other half of the question is who the guest actually books from, which changes the answer again.
+Then there's the second half of it, which is who the guest actually books through. That can change the answer all over again.
 
-Three questions and a straight answer here:
-
-{link}`,
-    no: `Et spørsmål om korttidsutleie som besvares feil oftere enn nesten alle andre: avhenger IVA av hvor lenge gjesten blir?
-
-Nei. Det avhenger av hva du leverer under oppholdet.
-
-En boligutleie uten tjenester er fritatt for IVA. Legger du til hotelliknende tjenester under oppholdet, beskattes utleien med 10 prosent. Tjueen prosent gjelder en virksomhet som verken er en fritatt boligutleie eller en hotelliknende overnattingstjeneste.
-
-Hotelliknende er uttrykket som gjør jobben, og det betyr tjenester under oppholdet. Vask og skift av sengetøy mellom gjester er ikke det samme som daglig renhold, resepsjon eller frokost. To eiere i samme korridor, som leier ut samme uke til samme pris, kan reelt havne på hver sin side av dette.
-
-Den andre halvdelen av spørsmålet er hvem gjesten faktisk bestiller fra, noe som endrer svaret igjen.
-
-Tre spørsmål og et rett svar her:
+Three questions and a straight answer, here:
 
 {link}`,
-    sv: `En fråga om korttidsuthyrning som besvaras fel oftare än nästan alla andra: beror IVA på hur länge gästen stannar?
+    no: `Spør ti personer om IVA gjelder for korttidsutleie, og du får høre at det avhenger av hvor lenge gjesten blir. Det gjør det ikke. Det er feil spørsmål, og det har vært feil spørsmål i årevis.
 
-Nej. Det beror på vad du tillhandahåller under vistelsen.
+Det avhenger av hva du gjør for dem mens de er der.
 
-En bostadsuthyrning utan tjänster är undantagen från IVA. Lägger du till hotelliknande tjänster under vistelsen beskattas uthyrningen med 10 procent. Tjugoen procent gäller en verksamhet som varken är en undantagen bostadsuthyrning eller en hotelliknande logitjänst.
+Leier du ut uten tjenester, er det fritatt for IVA. Legger du til hotelliknende tjenester under oppholdet, beskattes det med 10 prosent. Tjueen prosent er for noe som verken er en fritatt boligutleie eller en hotelliknende tjeneste.
 
-Hotelliknande är uttrycket som gör jobbet, och det betyder tjänster under vistelsen. Städning och byte av lakan mellan gäster är inte samma sak som daglig städning, reception eller frukost. Två ägare i samma trappuppgång, som hyr ut samma vecka till samma pris, kan verkligen hamna på var sin sida av detta.
+Hotelliknende er uttrykket som bærer hele vekten, og det betyr tjenester under oppholdet. Vask og rene laken mellom gjester er ikke samme dyr som daglig renhold, resepsjon eller frokost. To eiere i samme oppgang, som leier ut samme uke til samme pris, kan reelt havne på hver sin side av dette.
 
-Den andra halvan av frågan är vem gästen faktiskt bokar av, vilket ändrar svaret igen.
+Så er det den andre halvdelen, nemlig hvem gjesten faktisk bestiller gjennom. Det kan snu svaret på nytt.
 
-Tre frågor och ett rakt svar här:
-
-{link}`,
-    de: `Eine Frage zur Ferienvermietung, die häufiger falsch beantwortet wird als fast jede andere: hängt die IVA davon ab, wie lange der Gast bleibt?
-
-Nein. Sie hängt davon ab, was Sie während des Aufenthalts erbringen.
-
-Eine Wohnraumvermietung ohne Leistungen ist von der IVA befreit. Kommen hotelartige Leistungen während des Aufenthalts hinzu, wird die Vermietung mit 10 Prozent besteuert. Einundzwanzig Prozent gelten für einen Vorgang, der weder eine befreite Wohnraumvermietung noch eine hotelartige Beherbergungsleistung ist.
-
-Hotelartig ist der Begriff, auf den es ankommt, und er meint Leistungen während des Aufenthalts. Eine Reinigung und ein Wäschewechsel zwischen den Gästen sind nicht dasselbe wie tägliche Reinigung, Rezeption oder Frühstück. Zwei Eigentümer im selben Treppenhaus, die dieselbe Woche zum selben Preis vermieten, können hier tatsächlich auf verschiedenen Seiten landen.
-
-Die andere Hälfte der Frage ist, bei wem der Gast tatsächlich bucht, und das ändert die Antwort erneut.
-
-Drei Fragen und eine klare Antwort hier:
+Tre spørsmål og et rett svar, her:
 
 {link}`,
-    fr: `Une question sur la location saisonnière à laquelle on répond mal plus souvent qu'à presque toute autre : l'IVA dépend-elle de la durée du séjour ?
+    sv: `Fråga tio personer om IVA gäller för korttidsuthyrning så får du höra att det beror på hur länge gästen stannar. Det gör det inte. Det är fel fråga, och det har varit fel fråga i åratal.
 
-Non. Elle dépend de ce que vous fournissez pendant le séjour.
+Det beror på vad du gör för dem medan de är där.
 
-Une location résidentielle sans services est exonérée d'IVA. Ajoutez des services de type hôtelier pendant le séjour, et la location est taxée à 10 pour cent. Vingt et un pour cent s'appliquent à une opération qui n'est ni une location résidentielle exonérée ni un service d'hébergement de type hôtelier.
+Hyr ut utan tjänster så är det undantaget från IVA. Lägg till hotelliknande tjänster under vistelsen så beskattas det med 10 procent. Tjugoen procent är för något som varken är en undantagen bostadsuthyrning eller en hotelliknande tjänst.
 
-Type hôtelier est l'expression qui fait le travail, et elle vise des services pendant le séjour. Un ménage et un changement de linge entre deux séjours, ce n'est pas la même chose qu'un ménage quotidien, une réception ou un petit déjeuner. Deux propriétaires du même palier, louant la même semaine au même prix, peuvent réellement se retrouver de part et d'autre de cette ligne.
+Hotelliknande är uttrycket som bär hela tyngden, och det betyder tjänster under vistelsen. Städning och rena lakan mellan gäster är inte samma djur som daglig städning, reception eller frukost. Två ägare i samma trapphus, som hyr ut samma vecka till samma pris, kan verkligen hamna på var sin sida.
 
-L'autre moitié de la question est de savoir auprès de qui le client réserve vraiment, ce qui change encore la réponse.
+Sedan finns andra halvan, nämligen vem gästen faktiskt bokar genom. Det kan vända svaret igen.
 
-Trois questions et une réponse nette ici :
+Tre frågor och ett rakt svar, här:
 
 {link}`,
-    nl: `Een vraag over vakantieverhuur die vaker verkeerd wordt beantwoord dan bijna elke andere: hangt de IVA af van hoe lang de gast blijft?
+    de: `Fragen Sie zehn Leute, ob auf eine Ferienvermietung IVA anfällt, und man sagt Ihnen, es komme darauf an, wie lange der Gast bleibt. Tut es nicht. Das ist die falsche Frage, und sie ist seit Jahren die falsche.
 
-Nee. Het hangt af van wat u tijdens het verblijf levert.
+Es kommt darauf an, was Sie für ihn tun, solange er da ist.
 
-Woonruimteverhuur zonder diensten is vrijgesteld van IVA. Voegt u hoteldiensten toe tijdens het verblijf, dan wordt de verhuur belast tegen 10 procent. Eenentwintig procent geldt voor een activiteit die noch een vrijgestelde woonverhuur, noch een hotelmatige logiesdienst is.
+Vermieten Sie ohne Leistungen, ist es von der IVA befreit. Kommen hotelartige Leistungen während des Aufenthalts dazu, sind es 10 Prozent. Einundzwanzig Prozent gelten für etwas, das weder eine befreite Wohnraumvermietung noch eine hotelartige Leistung ist.
 
-Hotelmatig is de term die het werk doet, en die slaat op diensten tijdens het verblijf. Schoonmaken en beddengoed verschonen tussen gasten is niet hetzelfde als dagelijks schoonmaken, receptie of ontbijt. Twee eigenaren in hetzelfde portiek, die dezelfde week voor dezelfde prijs verhuren, kunnen hier werkelijk aan weerszijden uitkomen.
+Hotelartig ist der Begriff, der die ganze Last trägt, und er meint Leistungen während des Aufenthalts. Einmal putzen und frische Bettwäsche zwischen zwei Gästen ist nicht dasselbe Tier wie tägliche Reinigung, Rezeption oder Frühstück. Zwei Eigentümer auf demselben Treppenabsatz, die dieselbe Woche zum selben Preis vermieten, können hier tatsächlich auf verschiedenen Seiten landen.
 
-De andere helft van de vraag is bij wie de gast eigenlijk boekt, en dat verandert het antwoord opnieuw.
+Dann gibt es die zweite Hälfte, nämlich über wen der Gast tatsächlich bucht. Das kann die Antwort noch einmal drehen.
 
-Drie vragen en een recht antwoord hier:
+Drei Fragen und eine klare Antwort, hier:
+
+{link}`,
+    fr: `Demandez à dix personnes si l'IVA s'applique à une location saisonnière et on vous dira que ça dépend de la durée du séjour. Non. C'est la mauvaise question, et elle l'est depuis des années.
+
+Ça dépend de ce que vous faites pour eux pendant qu'ils sont là.
+
+Louez sans services et c'est exonéré d'IVA. Ajoutez des services de type hôtelier pendant le séjour et c'est taxé à 10 pour cent. Vingt et un pour cent, c'est pour quelque chose qui n'est ni une location résidentielle exonérée ni un service de type hôtelier.
+
+« Type hôtelier », voilà l'expression qui porte tout le poids, et elle vise des services pendant le séjour. Un ménage et des draps propres entre deux séjours, ce n'est pas la même bête qu'un ménage quotidien, une réception ou un petit déjeuner. Deux propriétaires du même palier, louant la même semaine au même prix, peuvent vraiment se retrouver de part et d'autre.
+
+Et puis il y a l'autre moitié : auprès de qui le client réserve réellement. Ça peut retourner la réponse une fois de plus.
+
+Trois questions et une réponse nette, ici :
+
+{link}`,
+    nl: `Vraag tien mensen of IVA geldt bij vakantieverhuur en u krijgt te horen dat het afhangt van hoe lang de gast blijft. Dat doet het niet. Dat is de verkeerde vraag, en dat is het al jaren.
+
+Het hangt af van wat u voor ze doet terwijl ze er zijn.
+
+Verhuurt u zonder diensten, dan is het vrijgesteld van IVA. Voegt u hoteldiensten toe tijdens het verblijf, dan wordt het belast tegen 10 procent. Eenentwintig procent is voor iets dat noch een vrijgestelde woonverhuur, noch een hotelmatige dienst is.
+
+Hotelmatig is de term die al het gewicht draagt, en die slaat op diensten tijdens het verblijf. Schoonmaken en schoon beddengoed tussen gasten is niet hetzelfde beest als dagelijks schoonmaken, een receptie of ontbijt. Twee eigenaren op dezelfde overloop, die dezelfde week voor dezelfde prijs verhuren, kunnen echt aan weerszijden uitkomen.
+
+En dan is er de tweede helft: via wie de gast eigenlijk boekt. Dat kan het antwoord opnieuw omdraaien.
+
+Drie vragen en een recht antwoord, hier:
 
 {link}`,
   },
@@ -683,80 +803,80 @@ Drie vragen en een recht antwoord hier:
   kind: 'story',
   rules: ['consorcio.perils', 'consorcio.wind_threshold', 'consorcio.precondition'],
   text: {
-    en: `I learned this one the slow way, reading a claim refusal that was entirely correct and still left the owner with the wrong idea.
+    en: `I learned this one reading a claim refusal that was completely correct and still left the owner believing the wrong thing.
 
-For certain kinds of damage in Spain, your insurer is not who pays. A public body called the Consorcio de Compensacion de Seguros does. Earthquake, extraordinary flood, volcanic eruption, atypical cyclonic storm, and a short list of others.
+For certain kinds of damage in Spain, your insurer isn't the one who pays. A public body called the Consorcio de Compensacion de Seguros is. Earthquake, extraordinary flood, volcanic eruption, atypical cyclonic storm, and a short list of others.
 
-The wind threshold is a real number: gusts above 120 km per hour, measured as a three second gust. Below that, storm damage is an ordinary matter for your own insurer under the storm cover of your policy. Above it, you may be looking at the Consorcio instead.
+And the wind one has an actual number attached, which I didn't expect. Gusts above 120 km an hour, measured as a three second gust. Below that, storm damage is your own insurer's problem under the storm cover in your policy. Above it, you might be looking at the Consorcio instead.
 
-The part worth knowing in advance: this is not something you buy. If you hold an ordinary policy in a qualifying branch, the surcharge is already collected with your premium automatically. You are paying for it whether or not you have heard of it.
+Here's the part worth knowing before anything happens: this isn't something you buy. If you hold an ordinary policy in a qualifying branch, the surcharge is already being collected with your premium, automatically. You've been paying for it whether or not you'd ever heard the name.
 
-So after a storm the useful question is not what your policy covers, it is which of the two you should be calling.
+So the morning after a storm, the useful question isn't what your policy covers. It's which of the two you should be phoning.
 
 Four questions and it tells you:
 
 {link}`,
-    no: `Denne lærte jeg den langsomme veien, ved å lese et avslag som var helt korrekt og likevel etterlot eieren med feil oppfatning.
+    no: `Denne lærte jeg av å lese et avslag som var helt korrekt og likevel etterlot eieren med feil oppfatning.
 
 For visse typer skade i Spania er det ikke forsikringsselskapet ditt som betaler. Det er et offentlig organ som heter Consorcio de Compensacion de Seguros. Jordskjelv, ekstraordinær flom, vulkanutbrudd, atypisk syklonstorm, og en kort liste til.
 
-Vindgrensen er et reelt tall: kast over 120 km i timen, målt som tresekunders kast. Under det er stormskade en ordinær sak for ditt eget selskap under stormdekningen i polisen. Over det kan det være Consorcio som gjelder.
+Og vindgrensen har et faktisk tall festet til seg, noe jeg ikke hadde ventet. Kast over 120 km i timen, målt som tresekunders kast. Under det er stormskade ditt eget selskaps problem under stormdekningen i polisen. Over det kan det være Consorcio i stedet.
 
-Det som er verdt å vite på forhånd: dette er ikke noe du kjøper. Har du en ordinær polise i en kvalifiserende bransje, kreves tillegget allerede inn sammen med premien, automatisk. Du betaler for det enten du har hørt om det eller ikke.
+Her er det som er verdt å vite før noe skjer: dette er ikke noe du kjøper. Har du en ordinær polise i en kvalifiserende bransje, kreves tillegget allerede inn sammen med premien, automatisk. Du har betalt for det enten du hadde hørt navnet eller ikke.
 
-Etter en storm er derfor det nyttige spørsmålet ikke hva polisen din dekker, men hvem av de to du skal ringe.
+Så morgenen etter en storm er det nyttige spørsmålet ikke hva polisen din dekker. Det er hvem av de to du skal ringe.
 
 Fire spørsmål, så sier den det:
 
 {link}`,
-    sv: `Den här lärde jag mig den långsamma vägen, genom att läsa ett avslag som var helt korrekt och ändå lämnade ägaren med fel uppfattning.
+    sv: `Den här lärde jag mig av att läsa ett avslag som var helt korrekt och ändå lämnade ägaren med fel uppfattning.
 
 För vissa typer av skada i Spanien är det inte ditt försäkringsbolag som betalar. Det är ett offentligt organ som heter Consorcio de Compensacion de Seguros. Jordbävning, extraordinär översvämning, vulkanutbrott, atypisk cyklonstorm, och en kort lista till.
 
-Vindgränsen är ett verkligt tal: byar över 120 km i timmen, mätt som tresekundersby. Under det är stormskada en vanlig sak för ditt eget bolag under stormskyddet i försäkringen. Över det kan det vara Consorcio som gäller.
+Och vindgränsen har en faktisk siffra fäst vid sig, vilket jag inte väntat mig. Byar över 120 km i timmen, mätt som tresekundersby. Under det är stormskada ditt eget bolags problem under stormskyddet i försäkringen. Över det kan det vara Consorcio i stället.
 
-Det som är värt att veta i förväg: detta är inget du köper. Har du en vanlig försäkring i en kvalificerande gren tas tillägget redan ut tillsammans med premien, automatiskt. Du betalar för det oavsett om du har hört talas om det eller inte.
+Här är det värt att veta innan något händer: det här är inget du köper. Har du en vanlig försäkring i en kvalificerande gren tas tillägget redan ut med premien, automatiskt. Du har betalat för det oavsett om du hört namnet eller inte.
 
-Efter en storm är därför den användbara frågan inte vad din försäkring täcker, utan vem av de två du ska ringa.
+Så morgonen efter en storm är den användbara frågan inte vad din försäkring täcker. Det är vem av de två du ska ringa.
 
 Fyra frågor, sedan säger den det:
 
 {link}`,
-    de: `Das habe ich auf dem langsamen Weg gelernt, beim Lesen einer Ablehnung, die völlig richtig war und den Eigentümer trotzdem mit der falschen Vorstellung zurückließ.
+    de: `Das habe ich beim Lesen einer Ablehnung gelernt, die völlig richtig war und den Eigentümer trotzdem mit der falschen Vorstellung zurückließ.
 
 Bei bestimmten Schadensarten in Spanien zahlt nicht Ihr Versicherer. Das tut eine öffentliche Stelle namens Consorcio de Compensacion de Seguros. Erdbeben, außergewöhnliche Überschwemmung, Vulkanausbruch, atypischer Zyklonsturm und eine kurze weitere Liste.
 
-Die Windschwelle ist eine echte Zahl: Böen über 120 km pro Stunde, gemessen als Dreisekundenbö. Darunter ist Sturmschaden eine gewöhnliche Sache für Ihren eigenen Versicherer unter der Sturmdeckung der Police. Darüber kann stattdessen der Consorcio zuständig sein.
+Und beim Wind hängt eine echte Zahl daran, womit ich nicht gerechnet hatte. Böen über 120 km pro Stunde, gemessen als Dreisekundenbö. Darunter ist Sturmschaden das Problem Ihres eigenen Versicherers unter der Sturmdeckung der Police. Darüber kann stattdessen der Consorcio zuständig sein.
 
-Das, was man vorher wissen sollte: das kauft man nicht. Halten Sie eine gewöhnliche Police in einer qualifizierenden Sparte, wird der Zuschlag bereits automatisch mit der Prämie eingezogen. Sie zahlen dafür, ob Sie davon gehört haben oder nicht.
+Und hier das, was man vorher wissen sollte: das kauft man nicht. Halten Sie eine gewöhnliche Police in einer qualifizierenden Sparte, wird der Zuschlag bereits automatisch mit der Prämie eingezogen. Sie zahlen dafür, ob Sie den Namen je gehört hatten oder nicht.
 
-Nach einem Sturm lautet die nützliche Frage also nicht, was Ihre Police deckt, sondern welchen der beiden Sie anrufen sollten.
+Am Morgen nach einem Sturm lautet die nützliche Frage also nicht, was Ihre Police deckt. Sondern welchen der beiden Sie anrufen sollten.
 
 Vier Fragen, dann sagt sie es Ihnen:
 
 {link}`,
-    fr: `J'ai appris celle-ci lentement, en lisant un refus de sinistre parfaitement fondé qui laissait pourtant le propriétaire avec une idée fausse.
+    fr: `J'ai appris celle-ci en lisant un refus de sinistre parfaitement fondé qui laissait pourtant le propriétaire avec une idée fausse.
 
 Pour certains types de dommages en Espagne, ce n'est pas votre assureur qui paie. C'est un organisme public appelé Consorcio de Compensacion de Seguros. Séisme, inondation extraordinaire, éruption volcanique, tempête cyclonique atypique, et une courte liste d'autres cas.
 
-Le seuil de vent est un chiffre réel : des rafales supérieures à 120 km par heure, mesurées sur trois secondes. En dessous, le dégât de tempête relève normalement de votre propre assureur au titre de la garantie tempête. Au-dessus, c'est peut-être le Consorcio.
+Et pour le vent, il y a un vrai chiffre attaché, ce à quoi je ne m'attendais pas. Des rafales au-dessus de 120 km par heure, mesurées sur trois secondes. En dessous, le dégât de tempête est l'affaire de votre propre assureur au titre de la garantie tempête. Au-dessus, c'est peut-être le Consorcio.
 
-Ce qu'il vaut mieux savoir à l'avance : cela ne s'achète pas. Si vous détenez un contrat ordinaire dans une branche éligible, la surprime est déjà prélevée avec votre cotisation, automatiquement. Vous la payez, que vous en ayez entendu parler ou non.
+Et voici ce qu'il vaut mieux savoir avant que quoi que ce soit arrive : cela ne s'achète pas. Si vous détenez un contrat ordinaire dans une branche éligible, la surprime est déjà prélevée avec votre cotisation, automatiquement. Vous la payez que vous ayez entendu le nom ou non.
 
-Après une tempête, la vraie question n'est donc pas ce que couvre votre contrat, mais lequel des deux appeler.
+Donc le lendemain d'une tempête, la question utile n'est pas ce que couvre votre contrat. C'est lequel des deux appeler.
 
-Quatre questions, et elle vous le dit :
+Quatre questions et elle vous le dit :
 
 {link}`,
-    nl: `Deze heb ik langzaam geleerd, door een afwijzing te lezen die volkomen juist was en de eigenaar toch met het verkeerde idee achterliet.
+    nl: `Deze leerde ik door een afwijzing te lezen die volkomen juist was en de eigenaar toch met het verkeerde idee achterliet.
 
 Bij bepaalde soorten schade in Spanje betaalt uw verzekeraar niet. Dat doet een publiek orgaan dat Consorcio de Compensacion de Seguros heet. Aardbeving, buitengewone overstroming, vulkaanuitbarsting, atypische cycloonstorm, en een korte lijst andere gevallen.
 
-De windgrens is een echt getal: windstoten boven 120 km per uur, gemeten als drie-secondenstoot. Daaronder is stormschade een gewone zaak voor uw eigen verzekeraar onder de stormdekking van de polis. Daarboven kan het juist het Consorcio zijn.
+En aan de wind hangt een echt getal, wat ik niet had verwacht. Windstoten boven 120 km per uur, gemeten als drie-secondenstoot. Daaronder is stormschade het probleem van uw eigen verzekeraar onder de stormdekking in de polis. Daarboven kan het juist het Consorcio zijn.
 
-Wat u vooraf wilt weten: dit koopt u niet. Heeft u een gewone polis in een kwalificerende branche, dan wordt de opslag al automatisch met uw premie geïnd. U betaalt ervoor, of u er nu van gehoord heeft of niet.
+En dit is het wat u wilt weten voordat er iets gebeurt: dit koopt u niet. Heeft u een gewone polis in een kwalificerende branche, dan wordt de opslag al automatisch met uw premie geïnd. U betaalt ervoor, of u de naam ooit had gehoord of niet.
 
-Na een storm is de nuttige vraag dus niet wat uw polis dekt, maar wie van de twee u moet bellen.
+De ochtend na een storm is de nuttige vraag dus niet wat uw polis dekt. Het is wie van de twee u moet bellen.
 
 Vier vragen en hij zegt het:
 
@@ -769,70 +889,70 @@ Vier vragen en hij zegt het:
   kind: 'story',
   rules: ['cover.free_choice', 'cover.separate_chapter', 'cover.search_terms', 'cover.policy_must_state'],
   text: {
-    en: `This is the one I did not expect to find, and it is the reason I built the page at all.
+    en: `This is the one I wasn't expecting to find, and honestly it's the reason the whole page exists.
 
-A lot of Spanish home policies contain a legal expenses chapter. Defensa juridica. It pays your lawyer, the procurador and court costs when you are in a case. Inside a combined home policy it has to appear as a separate chapter with its own premium, so if you cannot find a separate premium line for it, that alone is worth asking about.
+A lot of Spanish home policies have a legal expenses chapter buried in them. Defensa juridica. It pays your lawyer, the procurador and the court costs when you're actually in a case. And inside a combined home policy it has to appear as its own chapter, with its own premium line. So if you go looking and there's no separate premium for it, that alone is worth a phone call.
 
-And the part that surprised me most: you have the right to choose your own lawyer. The lawyer you choose takes instructions from you, not from the insurer. That right does not depend on the insurer agreeing and it does not depend on there being a conflict of interest. The policy has to say so in so many words.
+Then there's the part that genuinely surprised me. You have the right to choose your own lawyer. Not one off their list. Yours. And the lawyer you pick takes instructions from you, not from the insurer. That right doesn't depend on the insurer agreeing to it, and it doesn't depend on there being a conflict of interest. The policy has to spell it out in so many words.
 
-So before anyone pays a lawyer privately, it is worth opening the policy and searching for those Spanish phrases. Finding them tells you what you have. Not finding them tells you what to ask about.
+So before anyone pays a lawyer out of their own pocket, it's worth half an hour with the policy and the Spanish phrases to search for. Finding them tells you what you've got. Not finding them tells you what to ask about.
 
-I put the phrases, the articles and the clocks on one page:
-
-{link}`,
-    no: `Dette er den jeg ikke ventet å finne, og grunnen til at jeg laget siden i det hele tatt.
-
-Mange spanske husforsikringer inneholder et kapittel om juridisk bistand. Defensa juridica. Det dekker advokaten din, prosessfullmektigen og rettsomkostninger når du står i en sak. Inne i en kombinert husforsikring må det stå som et eget kapittel med egen premie, så finner du ingen egen premielinje for det, er allerede det verdt å spørre om.
-
-Og det som overrasket meg mest: du har rett til å velge din egen advokat. Advokaten du velger tar instruks fra deg, ikke fra selskapet. Den retten er ikke avhengig av at selskapet samtykker, og ikke av at det foreligger en interessekonflikt. Polisen må si det uttrykkelig.
-
-Så før noen betaler en advokat av egen lomme, er det verdt å åpne polisen og søke etter de spanske uttrykkene. Finner du dem, vet du hva du har. Finner du dem ikke, vet du hva du skal spørre om.
-
-Jeg samlet uttrykkene, lovhjemlene og fristene på én side:
+The phrases, the articles and the time limits are all on one page:
 
 {link}`,
-    sv: `Det här är den jag inte väntade mig att hitta, och skälet till att jag byggde sidan över huvud taget.
+    no: `Dette er den jeg ikke ventet å finne, og ærlig talt er den grunnen til at hele siden finnes.
 
-Många spanska hemförsäkringar innehåller ett kapitel om rättsskydd. Defensa juridica. Det betalar din advokat, ombudet och rättegångskostnader när du står i ett ärende. Inuti en kombinerad hemförsäkring måste det stå som ett eget kapitel med egen premie, så hittar du ingen egen premierad för det är redan det värt att fråga om.
+Mange spanske husforsikringer har et kapittel om juridisk bistand begravd i seg. Defensa juridica. Det dekker advokaten din, prosessfullmektigen og rettsomkostningene når du faktisk står i en sak. Og inne i en kombinert husforsikring må det stå som sitt eget kapittel, med sin egen premielinje. Så leter du og finner ingen egen premie for det, er allerede det verdt en telefon.
 
-Och det som förvånade mig mest: du har rätt att välja din egen advokat. Den advokat du väljer tar instruktioner av dig, inte av bolaget. Den rätten beror inte på att bolaget går med på det, och inte på att det finns en intressekonflikt. Försäkringsbrevet måste säga det uttryckligen.
+Så kommer delen som faktisk overrasket meg. Du har rett til å velge din egen advokat. Ikke en fra deres liste. Din. Og advokaten du velger tar instruks fra deg, ikke fra selskapet. Den retten er ikke avhengig av at selskapet sier ja, og ikke av at det foreligger en interessekonflikt. Polisen må si det med rene ord.
 
-Så innan någon betalar en advokat ur egen ficka är det värt att öppna försäkringsbrevet och söka på de spanska uttrycken. Hittar du dem vet du vad du har. Hittar du dem inte vet du vad du ska fråga om.
+Så før noen betaler en advokat av egen lomme, er det verdt en halvtime med polisen og de spanske uttrykkene å søke etter. Finner du dem, vet du hva du har. Finner du dem ikke, vet du hva du skal spørre om.
 
-Jag samlade uttrycken, lagrummen och fristerna på en sida:
-
-{link}`,
-    de: `Das ist die Sache, mit der ich nicht gerechnet hatte, und der Grund, warum ich die Seite überhaupt gebaut habe.
-
-Viele spanische Wohngebäudepolicen enthalten ein Kapitel Rechtsschutz. Defensa juridica. Es zahlt Ihren Anwalt, den Prozessvertreter und Gerichtskosten, wenn Sie in einem Verfahren stehen. In einer kombinierten Police muss es als eigenes Kapitel mit eigener Prämie erscheinen, wenn Sie also keine eigene Prämienzeile dafür finden, lohnt allein das die Nachfrage.
-
-Und was mich am meisten überrascht hat: Sie haben das Recht, Ihren eigenen Anwalt zu wählen. Der Anwalt, den Sie wählen, nimmt Weisungen von Ihnen entgegen, nicht vom Versicherer. Dieses Recht hängt weder von dessen Zustimmung noch vom Vorliegen eines Interessenkonflikts ab. Die Police muss es ausdrücklich benennen.
-
-Bevor also jemand einen Anwalt aus eigener Tasche bezahlt, lohnt es, die Police zu öffnen und nach diesen spanischen Begriffen zu suchen. Sie zu finden sagt Ihnen, was Sie haben. Sie nicht zu finden sagt Ihnen, wonach Sie fragen sollten.
-
-Ich habe die Begriffe, die Artikel und die Fristen auf eine Seite gelegt:
+Uttrykkene, lovhjemlene og fristene ligger alle på én side:
 
 {link}`,
-    fr: `C'est celle que je ne m'attendais pas à trouver, et la raison pour laquelle j'ai fait cette page.
+    sv: `Det här är den jag inte väntade mig att hitta, och ärligt talat är den skälet till att hela sidan finns.
 
-Beaucoup de contrats habitation espagnols contiennent un chapitre de protection juridique. Defensa juridica. Il paie votre avocat, le procurador et les frais de justice quand vous êtes dans une procédure. Dans un contrat multirisque il doit figurer comme un chapitre distinct avec sa propre prime, donc si vous ne trouvez pas de ligne de prime distincte, cela seul mérite une question.
+Många spanska hemförsäkringar har ett kapitel om rättsskydd begravt i sig. Defensa juridica. Det betalar din advokat, ombudet och rättegångskostnaderna när du faktiskt står i ett ärende. Och inuti en kombinerad hemförsäkring måste det stå som ett eget kapitel, med en egen premierad. Så letar du och hittar ingen egen premie för det, är redan det värt ett telefonsamtal.
 
-Et ce qui m'a le plus surpris : vous avez le droit de choisir votre propre avocat. L'avocat que vous choisissez reçoit ses instructions de vous, pas de l'assureur. Ce droit ne dépend ni de son accord ni de l'existence d'un conflit d'intérêts. Le contrat doit l'énoncer expressément.
+Sedan kommer den del som verkligen förvånade mig. Du har rätt att välja din egen advokat. Inte en från deras lista. Din. Och den advokat du väljer tar instruktioner av dig, inte av bolaget. Den rätten beror inte på att bolaget säger ja, och inte på att det finns en intressekonflikt. Försäkringsbrevet måste säga det rent ut.
 
-Donc avant que quiconque paie un avocat de sa poche, il vaut la peine d'ouvrir le contrat et de chercher ces expressions espagnoles. Les trouver vous dit ce que vous avez. Ne pas les trouver vous dit ce qu'il faut demander.
+Så innan någon betalar en advokat ur egen ficka är det värt en halvtimme med försäkringsbrevet och de spanska uttrycken att söka på. Hittar du dem vet du vad du har. Hittar du dem inte vet du vad du ska fråga om.
 
-J'ai mis les expressions, les articles et les délais sur une seule page :
+Uttrycken, lagrummen och fristerna ligger alla på en sida:
 
 {link}`,
-    nl: `Dit is degene die ik niet verwachtte te vinden, en de reden dat ik de pagina überhaupt heb gemaakt.
+    de: `Das ist die Sache, mit der ich nicht gerechnet hatte, und ehrlich gesagt der Grund, warum es die Seite überhaupt gibt.
 
-Veel Spaanse woonpolissen bevatten een hoofdstuk rechtsbijstand. Defensa juridica. Het betaalt uw advocaat, de procurador en de proceskosten als u in een zaak zit. Binnen een gecombineerde woonpolis moet het als apart hoofdstuk met een eigen premie staan, dus vindt u geen aparte premieregel, dan is dat alleen al een vraag waard.
+In vielen spanischen Wohngebäudepolicen steckt ein Kapitel Rechtsschutz. Defensa juridica. Es zahlt Ihren Anwalt, den Prozessvertreter und die Gerichtskosten, wenn Sie tatsächlich in einem Verfahren stehen. Und in einer kombinierten Police muss es als eigenes Kapitel erscheinen, mit eigener Prämienzeile. Wenn Sie also nachsehen und keine eigene Prämie dafür finden, ist allein das einen Anruf wert.
 
-En wat mij het meest verraste: u heeft het recht uw eigen advocaat te kiezen. De advocaat die u kiest neemt instructies van u aan, niet van de verzekeraar. Dat recht hangt niet af van instemming van de verzekeraar en niet van het bestaan van een belangenconflict. De polis moet het met zoveel woorden vastleggen.
+Dann kommt der Teil, der mich wirklich überrascht hat. Sie haben das Recht, Ihren eigenen Anwalt zu wählen. Keinen von deren Liste. Ihren. Und der Anwalt, den Sie wählen, nimmt Weisungen von Ihnen entgegen, nicht vom Versicherer. Dieses Recht hängt nicht davon ab, dass der Versicherer zustimmt, und nicht davon, dass ein Interessenkonflikt vorliegt. Die Police muss es ausdrücklich benennen.
 
-Dus voordat iemand een advocaat uit eigen zak betaalt, loont het de polis te openen en op die Spaanse termen te zoeken. Ze vinden zegt u wat u heeft. Ze niet vinden zegt u waar u naar moet vragen.
+Bevor also jemand einen Anwalt aus eigener Tasche bezahlt, lohnt sich eine halbe Stunde mit der Police und den spanischen Suchbegriffen. Sie zu finden sagt Ihnen, was Sie haben. Sie nicht zu finden sagt Ihnen, wonach Sie fragen sollten.
 
-Ik heb de termen, de artikelen en de termijnen op één pagina gezet:
+Die Begriffe, die Artikel und die Fristen stehen alle auf einer Seite:
+
+{link}`,
+    fr: `C'est celle que je ne m'attendais pas à trouver, et honnêtement c'est la raison pour laquelle toute la page existe.
+
+Beaucoup de contrats habitation espagnols contiennent un chapitre de protection juridique enfoui dedans. Defensa juridica. Il paie votre avocat, le procurador et les frais de justice quand vous êtes réellement dans une procédure. Et dans un contrat multirisque, il doit figurer comme son propre chapitre, avec sa propre ligne de prime. Donc si vous cherchez et qu'il n'y a pas de prime distincte, cela seul mérite un coup de fil.
+
+Puis vient la partie qui m'a vraiment surpris. Vous avez le droit de choisir votre propre avocat. Pas un de leur liste. Le vôtre. Et l'avocat que vous choisissez reçoit ses instructions de vous, pas de l'assureur. Ce droit ne dépend pas de l'accord de l'assureur, ni de l'existence d'un conflit d'intérêts. Le contrat doit l'énoncer noir sur blanc.
+
+Donc avant que quiconque paie un avocat de sa poche, ça vaut une demi-heure avec le contrat et les expressions espagnoles à chercher. Les trouver vous dit ce que vous avez. Ne pas les trouver vous dit ce qu'il faut demander.
+
+Les expressions, les articles et les délais sont tous sur une seule page :
+
+{link}`,
+    nl: `Dit is degene die ik niet verwachtte te vinden, en eerlijk gezegd is het de reden dat de hele pagina bestaat.
+
+In veel Spaanse woonpolissen zit een hoofdstuk rechtsbijstand begraven. Defensa juridica. Het betaalt uw advocaat, de procurador en de proceskosten als u werkelijk in een zaak zit. En binnen een gecombineerde woonpolis moet het als een eigen hoofdstuk staan, met een eigen premieregel. Dus gaat u kijken en is er geen aparte premie voor, dan is dat alleen al een telefoontje waard.
+
+Dan komt het deel dat me echt verraste. U heeft het recht uw eigen advocaat te kiezen. Niet een van hun lijst. De uwe. En de advocaat die u kiest neemt instructies van u aan, niet van de verzekeraar. Dat recht hangt niet af van de instemming van de verzekeraar, en niet van het bestaan van een belangenconflict. De polis moet het met zoveel woorden vastleggen.
+
+Dus voordat iemand een advocaat uit eigen zak betaalt, loont een half uur met de polis en de Spaanse zoektermen. Ze vinden zegt u wat u heeft. Ze niet vinden zegt u waar u naar moet vragen.
+
+De termen, de artikelen en de termijnen staan allemaal op één pagina:
 
 {link}`,
   },
@@ -843,70 +963,82 @@ Ik heb de termen, de artikelen en de termijnen op één pagina gezet:
   kind: 'informative',
   rules: ['limit.community.challenge', 'limit.community.challenge.absent', 'limit.community.challenge.standing'],
   text: {
-    en: `For anyone who owns in a building and was not at the last owners meeting, this is the rule most worth knowing.
+    en: `If you own in a building and you weren't at the last owners meeting, there's one rule that's worth more to you than all the others put together.
 
-If you want to challenge a decision, the window is three months where the ground is that it seriously harms the community or unfairly harms one owner, and one year where the ground is that it breaks the law or the statutes.
+You get three months to challenge a decision if your ground is that it seriously harms the community or unfairly harms one owner. A year if your ground is that it breaks the law or the statutes.
 
-Here is the part that matters for an owner abroad: if you were not at the meeting, your window runs from the day the decision was communicated to you. Not from the day of the meeting. So keep the envelope, or the email, with its date. That date is your starting line and nothing else is.
+And here's the bit for anyone who lives abroad: if you weren't at the meeting, your clock doesn't start at the meeting. It starts the day the decision was communicated to you.
 
-One condition worth checking before you plan anything: to challenge, you generally need to be up to date with community payments, or have paid the disputed amount into court first.
+Which means the envelope matters. Or the email. Keep it, with its date on it, because that date is your starting line and nothing else is. People throw those away all the time and then can't prove when their window opened.
 
-I put the clocks, the articles they come from and what to gather on one page:
+One condition to check before you plan anything, because it catches people out: to challenge a decision you generally need to be up to date with the community payments, or to have paid the disputed amount into court first.
 
-{link}`,
-    no: `For alle som eier i et sameie og ikke var på siste sameiermøte, er dette regelen det er mest verdt å kunne.
-
-Vil du angripe et vedtak, er fristen tre måneder når grunnlaget er at det skader sameiet alvorlig eller rammer én eier urimelig, og ett år når grunnlaget er at det bryter loven eller vedtektene.
-
-Her er det som betyr noe for en eier i utlandet: var du ikke på møtet, løper fristen din fra dagen vedtaket ble meddelt deg. Ikke fra møtedagen. Så ta vare på konvolutten, eller e-posten, med datoen. Den datoen er startstreken din, og ingenting annet.
-
-Én betingelse det er verdt å sjekke før du planlegger noe: for å angripe må du som regel være à jour med fellesutgiftene, eller først ha deponert det omtvistede beløpet i retten.
-
-Jeg samlet fristene, lovhjemlene de kommer fra og hva du bør sikre, på én side:
+The clocks, the articles they come from, and what to gather while you still can, all here:
 
 {link}`,
-    sv: `För alla som äger i en samfällighet och inte var på senaste stämman är det här den regel som är mest värd att kunna.
+    no: `Eier du i et sameie og ikke var på siste sameiermøte, finnes det én regel som er verdt mer for deg enn alle de andre til sammen.
 
-Vill du klandra ett beslut är fristen tre månader när grunden är att det allvarligt skadar samfälligheten eller drabbar en ägare oskäligt, och ett år när grunden är att det strider mot lag eller stadgar.
+Du får tre måneder på å angripe et vedtak hvis grunnlaget ditt er at det skader sameiet alvorlig eller rammer én eier urimelig. Ett år hvis grunnlaget er at det bryter loven eller vedtektene.
 
-Här är det som spelar roll för en ägare utomlands: var du inte på stämman löper din frist från den dag beslutet meddelades dig. Inte från stämmodagen. Så spara kuvertet, eller mejlet, med dess datum. Det datumet är din startlinje och inget annat.
+Og her er delen for alle som bor i utlandet: var du ikke på møtet, starter ikke klokken din på møtet. Den starter den dagen vedtaket ble meddelt deg.
 
-Ett villkor värt att kontrollera innan du planerar något: för att klandra behöver du normalt vara i fas med samfällighetsavgifterna, eller först ha deponerat det omtvistade beloppet i domstol.
+Det betyr at konvolutten betyr noe. Eller e-posten. Ta vare på den, med datoen på, for den datoen er startstreken din, og ingenting annet er det. Folk kaster slike hele tiden og kan så ikke bevise når vinduet deres åpnet.
 
-Jag samlade fristerna, lagrummen de kommer från och vad du bör samla in på en sida:
+Én betingelse å sjekke før du planlegger noe, for den tar folk: for å angripe et vedtak må du som regel være à jour med fellesutgiftene, eller først ha deponert det omtvistede beløpet i retten.
 
-{link}`,
-    de: `Für alle, die in einer Eigentümergemeinschaft besitzen und bei der letzten Versammlung nicht dabei waren, ist das die Regel, die man am ehesten kennen sollte.
-
-Wollen Sie einen Beschluss anfechten, beträgt die Frist drei Monate, wenn der Grund ist, dass er die Gemeinschaft schwer schädigt oder einen Eigentümer unbillig benachteiligt, und ein Jahr, wenn der Grund ist, dass er gegen Gesetz oder Satzung verstößt.
-
-Und nun der Teil, auf den es für einen Eigentümer im Ausland ankommt: waren Sie nicht bei der Versammlung, läuft Ihre Frist ab dem Tag, an dem Ihnen der Beschluss mitgeteilt wurde. Nicht ab dem Versammlungstag. Heben Sie also den Umschlag oder die E-Mail mit ihrem Datum auf. Dieses Datum ist Ihre Startlinie, kein anderes.
-
-Eine Bedingung, die sich vorher zu prüfen lohnt: um anzufechten, müssen Sie in der Regel mit den Gemeinschaftszahlungen aktuell sein oder den streitigen Betrag zuvor bei Gericht hinterlegt haben.
-
-Ich habe die Fristen, die Artikel, aus denen sie stammen, und was zu sammeln ist, auf eine Seite gelegt:
+Fristene, lovhjemlene de kommer fra, og hva du bør sikre mens du ennå kan, alt sammen her:
 
 {link}`,
-    fr: `Pour toute personne propriétaire en copropriété qui n'était pas à la dernière assemblée, c'est la règle qu'il vaut le plus la peine de connaître.
+    sv: `Äger du i en samfällighet och inte var på senaste stämman finns det en regel som är värd mer för dig än alla de andra tillsammans.
 
-Si vous voulez contester une décision, le délai est de trois mois lorsque le motif est qu'elle nuit gravement à la copropriété ou lèse injustement un copropriétaire, et d'un an lorsque le motif est qu'elle enfreint la loi ou les statuts.
+Du får tre månader att klandra ett beslut om din grund är att det allvarligt skadar samfälligheten eller drabbar en ägare oskäligt. Ett år om grunden är att det strider mot lag eller stadgar.
 
-Voici ce qui compte pour un propriétaire à l'étranger : si vous n'étiez pas à l'assemblée, votre délai court à partir du jour où la décision vous a été communiquée. Pas du jour de l'assemblée. Gardez donc l'enveloppe, ou le courriel, avec sa date. Cette date est votre ligne de départ, et aucune autre.
+Och här är biten för alla som bor utomlands: var du inte på stämman startar inte din klocka vid stämman. Den startar den dag beslutet meddelades dig.
 
-Une condition à vérifier avant de prévoir quoi que ce soit : pour contester, il faut en général être à jour des charges de copropriété, ou avoir préalablement consigné en justice le montant contesté.
+Vilket betyder att kuvertet spelar roll. Eller mejlet. Spara det, med datumet på, för det datumet är din startlinje och inget annat är det. Folk slänger sådana hela tiden och kan sedan inte visa när deras fönster öppnade.
 
-J'ai mis les délais, les articles dont ils viennent et ce qu'il faut rassembler sur une seule page :
+Ett villkor att kolla innan du planerar något, för det tar folk på sängen: för att klandra ett beslut behöver du normalt vara i fas med samfällighetsavgifterna, eller först ha deponerat det omtvistade beloppet i domstol.
+
+Fristerna, lagrummen de kommer från, och vad du bör samla in medan du ännu kan, allt här:
 
 {link}`,
-    nl: `Voor iedereen die in een VvE bezit en niet op de laatste vergadering was, is dit de regel die het meest de moeite waard is om te kennen.
+    de: `Wenn Sie in einer Eigentümergemeinschaft besitzen und bei der letzten Versammlung nicht dabei waren, gibt es eine Regel, die für Sie mehr wert ist als alle anderen zusammen.
 
-Wilt u een besluit aanvechten, dan is de termijn drie maanden als de grond is dat het de vereniging ernstig schaadt of een eigenaar onredelijk benadeelt, en een jaar als de grond is dat het in strijd is met de wet of de statuten.
+Sie haben drei Monate, um einen Beschluss anzufechten, wenn Ihr Grund ist, dass er die Gemeinschaft schwer schädigt oder einen Eigentümer unbillig benachteiligt. Ein Jahr, wenn Ihr Grund ist, dass er gegen Gesetz oder Satzung verstößt.
 
-Dit is het deel dat telt voor een eigenaar in het buitenland: was u niet op de vergadering, dan loopt uw termijn vanaf de dag waarop het besluit aan u is meegedeeld. Niet vanaf de vergaderdag. Bewaar dus de envelop, of de e-mail, met de datum erop. Die datum is uw startstreep en geen andere.
+Und hier der Teil für alle, die im Ausland leben: waren Sie nicht bei der Versammlung, beginnt Ihre Frist nicht mit der Versammlung. Sie beginnt an dem Tag, an dem Ihnen der Beschluss mitgeteilt wurde.
 
-Eén voorwaarde die het waard is vooraf te controleren: om aan te vechten moet u doorgaans bij zijn met de bijdragen aan de vereniging, of het betwiste bedrag eerst bij de rechtbank hebben gestort.
+Das heißt, der Umschlag zählt. Oder die E-Mail. Heben Sie ihn auf, mit dem Datum darauf, denn dieses Datum ist Ihre Startlinie, kein anderes. Solche Dinge werden ständig weggeworfen, und dann lässt sich nicht mehr belegen, wann das Fenster aufging.
 
-Ik heb de termijnen, de artikelen waar ze vandaan komen en wat u moet verzamelen op één pagina gezet:
+Eine Bedingung, die Sie prüfen sollten, bevor Sie etwas planen, weil sie die Leute erwischt: um anzufechten, müssen Sie in der Regel mit den Gemeinschaftszahlungen aktuell sein oder den streitigen Betrag zuvor bei Gericht hinterlegt haben.
+
+Die Fristen, die Artikel, aus denen sie stammen, und was zu sammeln ist, solange es noch geht, alles hier:
+
+{link}`,
+    fr: `Si vous êtes propriétaire en copropriété et que vous n'étiez pas à la dernière assemblée, il y a une règle qui vaut plus pour vous que toutes les autres réunies.
+
+Vous avez trois mois pour contester une décision si votre motif est qu'elle nuit gravement à la copropriété ou lèse injustement un copropriétaire. Un an si votre motif est qu'elle enfreint la loi ou les statuts.
+
+Et voici le passage pour ceux qui vivent à l'étranger : si vous n'étiez pas à l'assemblée, votre délai ne démarre pas à l'assemblée. Il démarre le jour où la décision vous a été communiquée.
+
+Ce qui veut dire que l'enveloppe compte. Ou le courriel. Gardez-le, avec sa date, parce que cette date est votre ligne de départ et aucune autre. Les gens jettent ça sans arrêt et ne peuvent plus prouver quand leur fenêtre s'est ouverte.
+
+Une condition à vérifier avant de prévoir quoi que ce soit, parce qu'elle piège : pour contester une décision, il faut en général être à jour des charges, ou avoir préalablement consigné en justice le montant contesté.
+
+Les délais, les articles d'où ils viennent, et ce qu'il faut rassembler tant que c'est possible, tout est ici :
+
+{link}`,
+    nl: `Bezit u in een VvE en was u niet op de laatste vergadering, dan is er één regel die meer voor u waard is dan alle andere bij elkaar.
+
+U heeft drie maanden om een besluit aan te vechten als uw grond is dat het de vereniging ernstig schaadt of een eigenaar onredelijk benadeelt. Een jaar als uw grond is dat het in strijd is met de wet of de statuten.
+
+En dit is het stuk voor wie in het buitenland woont: was u niet op de vergadering, dan begint uw klok niet bij de vergadering. Hij begint op de dag dat het besluit aan u is meegedeeld.
+
+Wat betekent dat de envelop ertoe doet. Of de e-mail. Bewaar hem, met de datum erop, want die datum is uw startstreep en geen andere. Mensen gooien zulke dingen voortdurend weg en kunnen dan niet meer aantonen wanneer hun venster openging.
+
+Eén voorwaarde om te controleren voordat u iets plant, want die verrast mensen: om een besluit aan te vechten moet u doorgaans bij zijn met de bijdragen, of het betwiste bedrag eerst bij de rechtbank hebben gestort.
+
+De termijnen, de artikelen waar ze vandaan komen, en wat u moet verzamelen zolang het nog kan, staan hier allemaal:
 
 {link}`,
   },
@@ -917,58 +1049,70 @@ Ik heb de termijnen, de artikelen waar ze vandaan komen en wat u moet verzamelen
   kind: 'story',
   rules: [],
   text: {
-    en: `Something I noticed reading through building jobs that went badly: the trouble was usually visible in the quote, and usually as something missing rather than something wrong.
+    en: `I spent a while reading through building jobs that went badly, expecting to find bad builders. Mostly I found bad quotes.
 
-No start and finish dates. No payment schedule tied to stages. Nothing saying who applies for the licence. Nothing about what happens to the rubble. No mention of the sign off certificate or its date, which is the date every guarantee period counts from. A total with no breakdown, so there is nothing to compare when the extras arrive.
+And not wrong ones. Missing ones. The trouble was almost always something the piece of paper didn't say.
 
-None of that looks alarming on its own. Together it is a quote that has left every expensive question open, and open questions get answered later by whoever is holding the money.
+No start date and no finish date. No payment schedule tied to stages, so the money goes out on trust. Nothing about who applies for the licence. Nothing about what happens to the rubble. No mention of the sign off certificate or its date, which is the date every guarantee period counts from, so you've lost your starting line before you've begun. And a single total with no breakdown, which means when the extras turn up there's nothing to compare them against.
 
-I turned it into twelve questions you can answer from the piece of paper in front of you. It gives you a count of what is missing and the exact words to put back to the contractor, in English and in Spanish, so you are not translating a difficult conversation at the same time as having it.
+None of that looks alarming on its own. That's the point. Put together it's a quote that's left every expensive question open, and open questions get answered later by whoever is holding the money.
 
-{link}`,
-    no: `Noe jeg la merke til da jeg leste gjennom byggejobber som gikk galt: problemet var som regel synlig i tilbudet, og som regel som noe som manglet, ikke noe som var feil.
-
-Ingen start- og sluttdato. Ingen betalingsplan knyttet til faser. Ingenting om hvem som søker om tillatelsen. Ingenting om hva som skjer med riveavfallet. Ingen omtale av ferdigattesten eller datoen på den, som er datoen alle garantiperioder løper fra. En totalsum uten oppdeling, så det er ingenting å sammenligne med når tilleggene kommer.
-
-Ingenting av dette ser alarmerende ut alene. Til sammen er det et tilbud som har latt hvert eneste dyre spørsmål stå åpent, og åpne spørsmål blir besvart senere av den som sitter på pengene.
-
-Jeg gjorde det om til tolv spørsmål du kan svare på fra arket foran deg. Den gir deg en telling over det som mangler og de eksakte ordene du skal sende tilbake til entreprenøren, på engelsk og på spansk, så du slipper å oversette en vanskelig samtale mens du har den.
+So I turned it into twelve questions you can answer from the paper in front of you. It gives you a count of what's missing and the exact wording to send back, in English and in Spanish, so you're not translating a difficult conversation while you're having it.
 
 {link}`,
-    sv: `Något jag lade märke till när jag gick igenom byggjobb som gick illa: problemet syntes oftast redan i offerten, och oftast som något som saknades snarare än något som var fel.
+    no: `Jeg brukte en stund på å lese gjennom byggejobber som gikk galt, og ventet å finne dårlige håndverkere. Stort sett fant jeg dårlige tilbud.
 
-Inga start- och slutdatum. Ingen betalningsplan kopplad till etapper. Inget om vem som söker bygglovet. Inget om vad som händer med rivningsmassorna. Ingen nämnd av slutbeskedet eller dess datum, som är det datum varje garantitid räknas från. En totalsumma utan uppdelning, så det finns inget att jämföra med när tilläggen kommer.
+Og ikke feil tilbud. Manglende. Problemet var nesten alltid noe arket ikke sa.
 
-Inget av det ser alarmerande ut för sig. Tillsammans är det en offert som lämnat varje dyr fråga öppen, och öppna frågor besvaras senare av den som håller i pengarna.
+Ingen startdato og ingen sluttdato. Ingen betalingsplan knyttet til faser, så pengene går ut på tillit. Ingenting om hvem som søker om tillatelsen. Ingenting om hva som skjer med riveavfallet. Ingen omtale av ferdigattesten eller datoen på den, som er datoen alle garantiperioder løper fra, så du har mistet startstreken før du har begynt. Og én totalsum uten oppdeling, som betyr at når tilleggene dukker opp finnes det ingenting å sammenligne dem med.
 
-Jag gjorde om det till tolv frågor du kan besvara utifrån pappret framför dig. Den ger dig en räkning av vad som saknas och de exakta orden att skicka tillbaka till entreprenören, på engelska och på spanska, så du slipper översätta ett svårt samtal samtidigt som du har det.
+Ingenting av dette ser alarmerende ut alene. Det er nettopp poenget. Til sammen er det et tilbud som har latt hvert eneste dyre spørsmål stå åpent, og åpne spørsmål blir besvart senere av den som sitter på pengene.
 
-{link}`,
-    de: `Etwas, das mir beim Durchlesen schiefgegangener Bauvorhaben auffiel: das Problem war meist schon im Angebot sichtbar, und meist als etwas Fehlendes, nicht als etwas Falsches.
-
-Kein Anfangs- und Endtermin. Kein an Bauabschnitte gekoppelter Zahlungsplan. Nichts dazu, wer die Genehmigung beantragt. Nichts dazu, was mit dem Bauschutt geschieht. Keine Erwähnung der Abnahmebescheinigung oder ihres Datums, und das ist das Datum, ab dem jede Gewährleistungsfrist zählt. Eine Gesamtsumme ohne Aufschlüsselung, sodass es nichts zu vergleichen gibt, wenn die Nachträge kommen.
-
-Nichts davon wirkt für sich genommen alarmierend. Zusammen ist es ein Angebot, das jede teure Frage offengelassen hat, und offene Fragen beantwortet später derjenige, der das Geld hält.
-
-Ich habe daraus zwölf Fragen gemacht, die Sie vom Blatt vor sich beantworten können. Sie bekommen eine Zählung dessen, was fehlt, und die genauen Worte für die Rückfrage an den Unternehmer, auf Englisch und auf Spanisch, damit Sie ein schwieriges Gespräch nicht auch noch übersetzen müssen, während Sie es führen.
+Så jeg gjorde det om til tolv spørsmål du kan svare på fra arket foran deg. Den teller opp hva som mangler og gir deg den eksakte ordlyden å sende tilbake, på engelsk og på spansk, så du slipper å oversette en vanskelig samtale mens du har den.
 
 {link}`,
-    fr: `Quelque chose que j'ai remarqué en parcourant des chantiers qui ont mal tourné : le problème était en général déjà visible dans le devis, et le plus souvent comme un manque plutôt qu'une erreur.
+    sv: `Jag ägnade ett tag åt att läsa igenom byggjobb som gick illa, och väntade mig att hitta dåliga byggare. Mest hittade jag dåliga offerter.
 
-Pas de dates de début et de fin. Pas d'échéancier de paiement adossé aux étapes. Rien sur qui demande le permis. Rien sur le sort des gravats. Aucune mention du certificat de réception ni de sa date, qui est pourtant la date d'où part chaque garantie. Un total sans détail, donc rien à comparer quand les suppléments arrivent.
+Och inte felaktiga. Ofullständiga. Problemet var nästan alltid något pappret inte sa.
 
-Rien de tout cela n'est alarmant isolément. Ensemble, c'est un devis qui a laissé ouverte chaque question coûteuse, et les questions ouvertes sont tranchées plus tard par celui qui tient l'argent.
+Inget startdatum och inget slutdatum. Ingen betalningsplan kopplad till etapper, så pengarna går ut på förtroende. Inget om vem som söker bygglovet. Inget om vad som händer med rivningsmassorna. Ingen nämnd av slutbeskedet eller dess datum, som är det datum varje garantitid räknas från, så du har tappat startlinjen innan du börjat. Och en enda totalsumma utan uppdelning, vilket betyder att när tilläggen dyker upp finns inget att jämföra dem med.
 
-J'en ai fait douze questions auxquelles vous pouvez répondre à partir de la feuille devant vous. Elle vous donne le compte de ce qui manque et les mots exacts à renvoyer à l'entreprise, en anglais et en espagnol, pour ne pas avoir à traduire une conversation difficile en même temps que vous la menez.
+Inget av det ser alarmerande ut för sig. Det är just poängen. Tillsammans är det en offert som lämnat varje dyr fråga öppen, och öppna frågor besvaras senare av den som håller i pengarna.
+
+Så jag gjorde om det till tolv frågor du kan besvara utifrån pappret framför dig. Den räknar vad som saknas och ger dig den exakta formuleringen att skicka tillbaka, på engelska och på spanska, så du slipper översätta ett svårt samtal medan du har det.
 
 {link}`,
-    nl: `Iets dat me opviel bij het doorlezen van bouwklussen die misgingen: het probleem was meestal al zichtbaar in de offerte, en meestal als iets dat ontbrak in plaats van iets dat fout was.
+    de: `Ich habe eine Weile schiefgegangene Bauvorhaben durchgelesen und erwartet, schlechte Handwerker zu finden. Gefunden habe ich vor allem schlechte Angebote.
 
-Geen begin- en einddatum. Geen betalingsschema gekoppeld aan fases. Niets over wie de vergunning aanvraagt. Niets over wat er met het puin gebeurt. Geen vermelding van het opleveringscertificaat of de datum daarvan, en dat is de datum waarvandaan elke garantietermijn telt. Een totaalbedrag zonder specificatie, dus niets om mee te vergelijken als het meerwerk komt.
+Und zwar nicht falsche. Unvollständige. Das Problem war fast immer etwas, das auf dem Blatt nicht stand.
 
-Niets daarvan oogt op zichzelf alarmerend. Samen is het een offerte die elke dure vraag open heeft gelaten, en open vragen worden later beantwoord door wie het geld vasthoudt.
+Kein Anfangs- und kein Endtermin. Kein an Bauabschnitte gekoppelter Zahlungsplan, das Geld geht also auf Vertrauen hinaus. Nichts dazu, wer die Genehmigung beantragt. Nichts dazu, was mit dem Bauschutt passiert. Keine Erwähnung der Abnahmebescheinigung oder ihres Datums, und das ist das Datum, ab dem jede Gewährleistungsfrist zählt, Sie haben Ihre Startlinie also verloren, bevor es losging. Und eine einzige Gesamtsumme ohne Aufschlüsselung, was heißt: wenn die Nachträge kommen, gibt es nichts zum Vergleichen.
 
-Ik heb er twaalf vragen van gemaakt die u kunt beantwoorden vanaf het papier dat voor u ligt. Hij geeft u een telling van wat ontbreekt en de exacte woorden om terug te leggen bij de aannemer, in het Engels en in het Spaans, zodat u een lastig gesprek niet ook nog hoeft te vertalen terwijl u het voert.
+Nichts davon wirkt für sich alarmierend. Genau das ist der Punkt. Zusammen ist es ein Angebot, das jede teure Frage offengelassen hat, und offene Fragen beantwortet später derjenige, der das Geld hält.
+
+Also habe ich daraus zwölf Fragen gemacht, die Sie vom Blatt vor sich beantworten können. Sie zählt, was fehlt, und gibt Ihnen den genauen Wortlaut für die Rückfrage, auf Englisch und auf Spanisch, damit Sie ein schwieriges Gespräch nicht übersetzen müssen, während Sie es führen.
+
+{link}`,
+    fr: `J'ai passé un moment à lire des chantiers qui avaient mal tourné, en m'attendant à trouver de mauvais artisans. J'ai surtout trouvé de mauvais devis.
+
+Et pas des devis faux. Des devis incomplets. Le problème était presque toujours quelque chose que la feuille ne disait pas.
+
+Pas de date de début ni de date de fin. Pas d'échéancier adossé aux étapes, donc l'argent part sur la confiance. Rien sur qui demande le permis. Rien sur le sort des gravats. Aucune mention du certificat de réception ni de sa date, qui est pourtant la date d'où part chaque garantie : vous avez perdu votre ligne de départ avant même de commencer. Et un total unique sans détail, ce qui veut dire que quand les suppléments arrivent, il n'y a rien à comparer.
+
+Rien de tout cela n'est alarmant isolément. C'est justement le point. Ensemble, c'est un devis qui a laissé ouverte chaque question coûteuse, et les questions ouvertes sont tranchées plus tard par celui qui tient l'argent.
+
+J'en ai donc fait douze questions auxquelles vous répondez à partir de la feuille devant vous. Elle compte ce qui manque et vous donne la formulation exacte à renvoyer, en anglais et en espagnol, pour ne pas traduire une conversation difficile pendant que vous la menez.
+
+{link}`,
+    nl: `Ik heb een tijd bouwklussen doorgelezen die misgingen, en verwachtte slechte aannemers te vinden. Vooral vond ik slechte offertes.
+
+En niet foute. Onvolledige. Het probleem was bijna altijd iets dat het papier niet zei.
+
+Geen begindatum en geen einddatum. Geen betalingsschema gekoppeld aan fases, dus het geld gaat op vertrouwen de deur uit. Niets over wie de vergunning aanvraagt. Niets over wat er met het puin gebeurt. Geen vermelding van het opleveringscertificaat of de datum ervan, en dat is de datum waarvandaan elke garantietermijn telt, dus u bent uw startstreep kwijt voordat u begonnen bent. En één totaalbedrag zonder specificatie, wat betekent dat er niets is om het meerwerk mee te vergelijken als het opduikt.
+
+Niets daarvan oogt op zichzelf alarmerend. Dat is precies het punt. Samen is het een offerte die elke dure vraag open heeft gelaten, en open vragen worden later beantwoord door wie het geld vasthoudt.
+
+Dus maakte ik er twaalf vragen van die u vanaf het papier voor u kunt beantwoorden. Hij telt wat ontbreekt en geeft u de exacte formulering om terug te sturen, in het Engels en in het Spaans, zodat u een lastig gesprek niet hoeft te vertalen terwijl u het voert.
 
 {link}`,
   },
@@ -979,58 +1123,70 @@ Ik heb er twaalf vragen van gemaakt die u kunt beantwoorden vanaf het papier dat
   kind: 'story',
   rules: [],
   text: {
-    en: `Every owner I have talked to can tell me what their place cost to buy. Almost nobody can tell me what it costs to keep, without going and looking.
+    en: `Ask anyone what their place in Spain cost to buy and they'll tell you to the euro. Ask what it costs to keep and almost nobody can answer without going and looking.
 
-That is not carelessness. The costs arrive separately and at different times of year, in different currencies sometimes, from six or seven different places. Account charges. Electricity standing charge, which runs whether anyone is there or not. Water. Insurance. The community charge. IBI. The gestoria. Individually none of them is worth a morning's attention, so none of them gets one.
+That isn't carelessness. It's arithmetic that's been deliberately scattered.
 
-I built a page that puts the year in one column. You put in what you actually pay, line by line, and it shows you the total and where it sits against what the same property typically costs.
+The costs arrive one at a time, at different points in the year, sometimes in different currencies, from six or seven different places. Account charges. The standing charge on the electricity, which runs whether anyone's there or not. Water. Insurance. The community fee. IBI. The gestoria. On its own, not one of them is worth a morning of anyone's attention, so not one of them gets it. And that's exactly how a few hundred euros a year goes unnoticed for a decade.
 
-The point is not to make anyone feel bad about a number. It is that you cannot decide whether a cost is worth it until you can see it next to the others.
+So I built a page that puts the whole year in one column. You put in what you actually pay, line by line, and it shows you the total, and where that total sits next to what the same kind of property usually costs.
 
-{link}`,
-    no: `Hver eier jeg har snakket med kan si hva boligen kostet å kjøpe. Nesten ingen kan si hva den koster å ha, uten å gå og se etter.
-
-Det er ikke slurv. Kostnadene kommer hver for seg og på ulike tider av året, noen ganger i ulike valutaer, fra seks eller sju forskjellige steder. Kontogebyrer. Fastledd på strøm, som løper enten noen er der eller ikke. Vann. Forsikring. Fellesutgifter. IBI. Gestoria. Hver for seg er ingen av dem verdt en formiddag, så ingen av dem får en.
-
-Jeg laget en side som setter hele året i én kolonne. Du legger inn det du faktisk betaler, post for post, og den viser totalen og hvor den ligger mot det samme type bolig vanligvis koster.
-
-Poenget er ikke å få noen til å føle seg dårlig over et tall. Det er at du ikke kan avgjøre om en kostnad er verdt det før du ser den ved siden av de andre.
+It isn't there to make anyone feel bad about a number. It's that you can't decide whether a cost is worth paying until you can see it standing next to the others.
 
 {link}`,
-    sv: `Varje ägare jag har talat med kan säga vad bostaden kostade att köpa. Nästan ingen kan säga vad den kostar att ha, utan att gå och kolla.
+    no: `Spør hvem som helst hva boligen i Spania kostet å kjøpe, og de svarer deg på euroen. Spør hva den koster å ha, og nesten ingen kan svare uten å gå og se etter.
 
-Det är inte slarv. Kostnaderna kommer var för sig och vid olika tider på året, ibland i olika valutor, från sex eller sju olika håll. Kontoavgifter. Fast elavgift, som löper oavsett om någon är där. Vatten. Försäkring. Samfällighetsavgiften. IBI. Gestorian. Var för sig är ingen av dem värd en förmiddag, så ingen får en.
+Det er ikke slurv. Det er regnestykker som er blitt spredt med vilje.
 
-Jag byggde en sida som lägger hela året i en kolumn. Du fyller i vad du faktiskt betalar, rad för rad, och den visar totalen och var den ligger mot vad samma sorts bostad brukar kosta.
+Kostnadene kommer én om gangen, på ulike tidspunkt i året, noen ganger i ulike valutaer, fra seks eller sju forskjellige steder. Kontogebyrer. Fastleddet på strømmen, som løper enten noen er der eller ikke. Vann. Forsikring. Fellesutgifter. IBI. Gestoria. Alene er ingen av dem verdt en formiddag av noens oppmerksomhet, så ingen av dem får det. Og det er nøyaktig slik noen hundre euro i året går upåaktet hen i ti år.
 
-Poängen är inte att få någon att må dåligt över en siffra. Det är att du inte kan avgöra om en kostnad är värd den förrän du ser den bredvid de andra.
+Så jeg bygde en side som setter hele året i én kolonne. Du legger inn det du faktisk betaler, post for post, og den viser deg totalen, og hvor den totalen ligger ved siden av det samme type bolig vanligvis koster.
 
-{link}`,
-    de: `Jeder Eigentümer, mit dem ich gesprochen habe, kann mir sagen, was die Immobilie im Kauf gekostet hat. Fast niemand kann sagen, was sie im Unterhalt kostet, ohne erst nachzusehen.
-
-Das ist keine Nachlässigkeit. Die Kosten kommen getrennt und zu verschiedenen Zeiten im Jahr, manchmal in verschiedenen Währungen, aus sechs oder sieben verschiedenen Richtungen. Kontoentgelte. Der Grundpreis beim Strom, der läuft, ob jemand da ist oder nicht. Wasser. Versicherung. Das Hausgeld. IBI. Die gestoria. Einzeln ist keine davon einen Vormittag wert, also bekommt keine einen.
-
-Ich habe eine Seite gebaut, die das ganze Jahr in eine Spalte legt. Sie tragen ein, was Sie tatsächlich zahlen, Posten für Posten, und sie zeigt die Summe und wo sie im Vergleich zu dem liegt, was dieselbe Art Immobilie üblicherweise kostet.
-
-Es geht nicht darum, jemandem wegen einer Zahl ein schlechtes Gefühl zu machen. Es geht darum, dass man nicht entscheiden kann, ob eine Kostenposition es wert ist, solange man sie nicht neben den anderen sieht.
+Den er ikke der for å få noen til å føle seg dårlig over et tall. Den er der fordi du ikke kan avgjøre om en kostnad er verdt å betale før du ser den stå ved siden av de andre.
 
 {link}`,
-    fr: `Chaque propriétaire à qui j'ai parlé peut me dire ce que son bien a coûté à l'achat. Presque personne ne peut dire ce qu'il coûte à garder, sans aller vérifier.
+    sv: `Fråga vem som helst vad bostaden i Spanien kostade att köpa, så svarar de på euron. Fråga vad den kostar att ha, och nästan ingen kan svara utan att gå och kolla.
 
-Ce n'est pas de la négligence. Les coûts arrivent séparément et à différents moments de l'année, parfois dans différentes devises, de six ou sept endroits différents. Les frais de compte. L'abonnement électrique, qui court que quelqu'un soit là ou non. L'eau. L'assurance. Les charges de copropriété. L'IBI. Le gestoria. Pris isolément, aucun ne vaut une matinée d'attention, donc aucun n'en reçoit.
+Det är inte slarv. Det är räkneuppgifter som spridits ut med flit.
 
-J'ai fait une page qui met l'année entière dans une seule colonne. Vous saisissez ce que vous payez réellement, ligne par ligne, et elle affiche le total et sa position par rapport à ce que coûte habituellement le même type de bien.
+Kostnaderna kommer en i taget, vid olika tidpunkter på året, ibland i olika valutor, från sex eller sju olika håll. Kontoavgifter. Den fasta elavgiften, som löper oavsett om någon är där. Vatten. Försäkring. Samfällighetsavgiften. IBI. Gestorian. Var för sig är ingen av dem värd en förmiddag av någons uppmärksamhet, så ingen får det. Och det är precis så några hundra euro om året går obemärkt i tio år.
 
-L'idée n'est pas de faire culpabiliser sur un chiffre. C'est qu'on ne peut pas décider si une dépense en vaut la peine avant de la voir à côté des autres.
+Så jag byggde en sida som lägger hela året i en kolumn. Du fyller i vad du faktiskt betalar, rad för rad, och den visar totalen, och var den totalen ligger bredvid vad samma sorts bostad brukar kosta.
+
+Den finns inte för att få någon att må dåligt över en siffra. Den finns för att du inte kan avgöra om en kostnad är värd att betala förrän du ser den stå bredvid de andra.
 
 {link}`,
-    nl: `Elke eigenaar met wie ik heb gesproken kan zeggen wat de woning kostte om te kopen. Bijna niemand kan zeggen wat hij kost om te houden, zonder het op te zoeken.
+    de: `Fragen Sie irgendwen, was die Immobilie in Spanien im Kauf gekostet hat, und Sie bekommen die Antwort auf den Euro genau. Fragen Sie, was sie im Unterhalt kostet, und fast niemand kann antworten, ohne erst nachzusehen.
 
-Dat is geen slordigheid. De kosten komen apart en op verschillende momenten in het jaar, soms in verschillende valuta, uit zes of zeven verschillende hoeken. Rekeningkosten. Het vastrecht op stroom, dat doorloopt of er nu iemand is of niet. Water. Verzekering. De VvE-bijdrage. IBI. De gestoria. Afzonderlijk is geen ervan een ochtend aandacht waard, dus krijgt geen ervan die.
+Das ist keine Nachlässigkeit. Das ist Rechnerei, die absichtlich verstreut wurde.
 
-Ik heb een pagina gemaakt die het hele jaar in één kolom zet. U vult in wat u werkelijk betaalt, regel voor regel, en hij toont het totaal en waar dat staat ten opzichte van wat hetzelfde soort woning normaal kost.
+Die Kosten kommen einzeln, zu verschiedenen Zeitpunkten im Jahr, manchmal in verschiedenen Währungen, aus sechs oder sieben Richtungen. Kontoentgelte. Der Grundpreis beim Strom, der läuft, ob jemand da ist oder nicht. Wasser. Versicherung. Das Hausgeld. IBI. Die gestoria. Für sich genommen ist keine davon einen Vormittag Aufmerksamkeit wert, also bekommt keine einen. Und genau so bleiben ein paar hundert Euro im Jahr zehn Jahre lang unbemerkt.
 
-Het gaat er niet om iemand een rotgevoel te geven over een bedrag. Het gaat erom dat u niet kunt bepalen of een kostenpost het waard is voordat u hem naast de andere ziet.
+Also habe ich eine Seite gebaut, die das ganze Jahr in eine Spalte legt. Sie tragen ein, was Sie tatsächlich zahlen, Posten für Posten, und sie zeigt Ihnen die Summe, und wo diese Summe im Vergleich zu dem liegt, was dieselbe Art Immobilie üblicherweise kostet.
+
+Sie ist nicht da, um jemandem wegen einer Zahl ein schlechtes Gefühl zu machen. Sie ist da, weil man nicht entscheiden kann, ob eine Kostenposition ihr Geld wert ist, solange man sie nicht neben den anderen stehen sieht.
+
+{link}`,
+    fr: `Demandez à n'importe qui ce que son bien en Espagne a coûté à l'achat et il vous répondra à l'euro près. Demandez ce qu'il coûte à garder et presque personne ne peut répondre sans aller vérifier.
+
+Ce n'est pas de la négligence. C'est un calcul qu'on a délibérément éparpillé.
+
+Les coûts arrivent un par un, à des moments différents de l'année, parfois dans des devises différentes, depuis six ou sept endroits différents. Les frais de compte. L'abonnement électrique, qui court que quelqu'un soit là ou non. L'eau. L'assurance. Les charges. L'IBI. Le gestoria. Pris isolément, aucun ne mérite une matinée d'attention, donc aucun n'en reçoit. Et c'est exactement comme ça que quelques centaines d'euros par an passent inaperçus pendant dix ans.
+
+Alors j'ai fait une page qui met l'année entière dans une seule colonne. Vous saisissez ce que vous payez réellement, ligne par ligne, et elle vous montre le total, et où ce total se situe à côté de ce que coûte habituellement le même type de bien.
+
+Elle n'est pas là pour faire culpabiliser sur un chiffre. Elle est là parce qu'on ne peut pas décider si une dépense vaut la peine avant de la voir posée à côté des autres.
+
+{link}`,
+    nl: `Vraag wie dan ook wat zijn woning in Spanje kostte om te kopen en u krijgt het antwoord tot op de euro. Vraag wat hij kost om te houden en bijna niemand kan antwoorden zonder het op te zoeken.
+
+Dat is geen slordigheid. Het is rekenwerk dat bewust is uitgesmeerd.
+
+De kosten komen één voor één, op verschillende momenten in het jaar, soms in verschillende valuta, uit zes of zeven verschillende hoeken. Rekeningkosten. Het vastrecht op de stroom, dat doorloopt of er nu iemand is of niet. Water. Verzekering. De VvE-bijdrage. IBI. De gestoria. Op zichzelf is geen ervan een ochtend aandacht waard, dus krijgt geen ervan die. En precies zo blijven een paar honderd euro per jaar tien jaar lang onopgemerkt.
+
+Dus bouwde ik een pagina die het hele jaar in één kolom zet. U vult in wat u werkelijk betaalt, regel voor regel, en hij toont u het totaal, en waar dat totaal staat naast wat hetzelfde soort woning normaal kost.
+
+Hij is er niet om iemand een rotgevoel te geven over een bedrag. Hij is er omdat u niet kunt bepalen of een kostenpost het waard is voordat u hem naast de andere ziet staan.
 
 {link}`,
   },
@@ -1041,60 +1197,72 @@ Het gaat er niet om iemand een rotgevoel te geven over een bedrag. Het gaat erom
   kind: 'story',
   rules: ['squat.second_home_is_morada'],
   text: {
-    en: `The question I get more than any other in autumn: what do I actually need to do before I lock up for the winter?
+    en: `Every autumn, the same question turns up in these groups. What do I actually need to do before I lock up for the winter?
 
-There is a long version and a short version, and the short version depends on three things nobody asks about. How long you will be away. Which season it is. And whether anyone is going to look in while you are gone. Those three change the list more than the size of the property does.
+There's a long answer and a short one, and the short one depends on three things almost nobody gets asked about. How long you'll be away. What time of year it is. And whether anyone is going to look in while you're gone. Those three change the list far more than the size of the place does.
 
-One thing worth knowing, since it comes up in every one of these conversations: a second home or a seasonal residence does count as a morada under Spanish law, provided the legitimate occupiers carry on their private life there, even occasionally. That is a more reassuring position than most owners abroad assume they are in.
+One thing worth saying plainly, because it comes up in every single one of these conversations and usually with a lot of worry attached: under Spanish law a second home or a seasonal home does count as a morada, provided the people entitled to be there carry on their private life there, even occasionally. That's a considerably more reassuring position than most owners abroad assume they're in.
 
-I built a checklist that takes those three answers and gives you a dated list for the last day, rather than a generic one you have to filter yourself:
+The checklist takes those three answers and gives you a dated list for the last day, rather than a generic one you have to sit and filter yourself.
 
-{link}`,
-    no: `Spørsmålet jeg får mer enn noe annet om høsten: hva må jeg egentlig gjøre før jeg låser for vinteren?
+{link}
 
-Det finnes en lang og en kort versjon, og den korte avhenger av tre ting ingen spør om. Hvor lenge du blir borte. Hvilken årstid det er. Og om noen kommer til å se innom mens du er borte. De tre endrer listen mer enn størrelsen på boligen gjør.
+If yours is somewhere with a pool, do it before the water goes cold. Trust me on that one.`,
+    no: `Hver høst dukker det samme spørsmålet opp i disse gruppene. Hva må jeg egentlig gjøre før jeg låser for vinteren?
 
-Én ting er verdt å vite, siden den kommer opp i hver eneste av disse samtalene: en sekundærbolig eller en sesongbolig regnes som en morada etter spansk rett, forutsatt at de rettmessige beboerne lever sitt privatliv der, selv leilighetsvis. Det er en mer betryggende posisjon enn de fleste eiere i utlandet antar at de står i.
+Det finnes et langt svar og et kort, og det korte avhenger av tre ting nesten ingen blir spurt om. Hvor lenge du blir borte. Hvilken årstid det er. Og om noen kommer til å se innom mens du er borte. De tre endrer listen langt mer enn størrelsen på stedet gjør.
 
-Jeg laget en sjekkliste som tar de tre svarene og gir deg en datert liste for den siste dagen, i stedet for en generisk en du selv må sile:
+Én ting er verdt å si rett ut, for den kommer opp i hver eneste av disse samtalene, og som regel med mye bekymring festet til seg: etter spansk rett regnes en sekundærbolig eller en sesongbolig som en morada, forutsatt at de som har rett til å være der lever sitt privatliv der, om enn leilighetsvis. Det er en betydelig mer betryggende posisjon enn de fleste eiere i utlandet tror de står i.
 
-{link}`,
-    sv: `Frågan jag får mer än någon annan på hösten: vad behöver jag egentligen göra innan jag låser för vintern?
+Sjekklisten tar de tre svarene og gir deg en datert liste for den siste dagen, i stedet for en generisk en du selv må sitte og sile.
 
-Det finns en lång och en kort version, och den korta beror på tre saker ingen frågar om. Hur länge du är borta. Vilken årstid det är. Och om någon kommer att titta till stället medan du är borta. De tre ändrar listan mer än bostadens storlek gör.
+{link}
 
-En sak är värd att veta, eftersom den kommer upp i vartenda sådant samtal: en andrabostad eller en säsongsbostad räknas som en morada enligt spansk rätt, förutsatt att de rättmätiga boende lever sitt privatliv där, om än tillfälligt. Det är ett tryggare läge än de flesta ägare utomlands utgår från att de befinner sig i.
+Har du basseng, gjør det før vannet blir kaldt. Stol på meg der.`,
+    sv: `Varje höst dyker samma fråga upp i de här grupperna. Vad behöver jag egentligen göra innan jag låser för vintern?
 
-Jag byggde en checklista som tar de tre svaren och ger dig en daterad lista för sista dagen, i stället för en generisk som du själv måste sålla i:
+Det finns ett långt svar och ett kort, och det korta beror på tre saker nästan ingen får frågan om. Hur länge du är borta. Vilken årstid det är. Och om någon kommer att titta till stället medan du är borta. De tre ändrar listan långt mer än bostadens storlek gör.
 
-{link}`,
-    de: `Die Frage, die ich im Herbst häufiger bekomme als jede andere: was muss ich eigentlich tun, bevor ich für den Winter abschließe?
+En sak är värd att säga rakt ut, för den kommer upp i vartenda sådant samtal, och oftast med mycket oro fäst vid sig: enligt spansk rätt räknas en andrabostad eller en säsongsbostad som en morada, förutsatt att de som har rätt att vara där lever sitt privatliv där, om än tillfälligt. Det är ett betydligt tryggare läge än de flesta ägare utomlands tror att de befinner sig i.
 
-Es gibt eine lange und eine kurze Fassung, und die kurze hängt an drei Dingen, nach denen niemand fragt. Wie lange Sie weg sind. Welche Jahreszeit es ist. Und ob jemand nach dem Rechten sieht, während Sie fort sind. Diese drei verändern die Liste stärker als die Größe der Immobilie.
+Checklistan tar de tre svaren och ger dig en daterad lista för sista dagen, i stället för en generisk som du själv får sitta och sålla i.
 
-Eines lohnt zu wissen, weil es in jedem dieser Gespräche aufkommt: eine Zweitwohnung oder eine Saisonwohnung gilt nach spanischem Recht sehr wohl als morada, sofern die rechtmäßigen Bewohner dort ihr Privatleben führen, und sei es gelegentlich. Das ist eine beruhigendere Lage, als die meisten Eigentümer im Ausland annehmen.
+{link}
 
-Ich habe eine Checkliste gebaut, die diese drei Antworten nimmt und Ihnen eine datierte Liste für den letzten Tag gibt, statt einer allgemeinen, die Sie selbst filtern müssen:
+Har du pool, gör det innan vattnet blir kallt. Lita på mig där.`,
+    de: `Jeden Herbst taucht in diesen Gruppen dieselbe Frage auf. Was muss ich eigentlich tun, bevor ich für den Winter abschließe?
 
-{link}`,
-    fr: `La question que l'on me pose le plus en automne : que faut-il vraiment faire avant de fermer pour l'hiver ?
+Es gibt eine lange und eine kurze Antwort, und die kurze hängt an drei Dingen, nach denen fast niemand gefragt wird. Wie lange Sie weg sind. Welche Jahreszeit es ist. Und ob jemand nach dem Rechten sieht, während Sie fort sind. Diese drei verändern die Liste weit stärker als die Größe der Immobilie.
 
-Il y a une version longue et une version courte, et la courte dépend de trois choses que personne ne demande. Combien de temps vous serez absent. La saison. Et si quelqu'un passera jeter un œil pendant votre absence. Ces trois-là changent la liste davantage que la taille du bien.
+Eines lohnt es, klar zu sagen, weil es in jedem einzelnen dieser Gespräche aufkommt, meist mit viel Sorge im Schlepptau: nach spanischem Recht gilt eine Zweitwohnung oder eine Saisonwohnung sehr wohl als morada, sofern die Berechtigten dort ihr Privatleben führen, und sei es gelegentlich. Das ist eine deutlich beruhigendere Lage, als die meisten Eigentümer im Ausland annehmen.
 
-Une chose vaut la peine d'être sue, car elle revient dans chacune de ces conversations : une résidence secondaire ou saisonnière est bien une morada en droit espagnol, dès lors que les occupants légitimes y mènent leur vie privée, même occasionnellement. C'est une position plus rassurante que ce que supposent la plupart des propriétaires à l'étranger.
+Die Checkliste nimmt diese drei Antworten und gibt Ihnen eine datierte Liste für den letzten Tag, statt einer allgemeinen, die Sie selbst durchsieben müssen.
 
-J'ai fait une liste qui prend ces trois réponses et vous donne une liste datée pour le dernier jour, plutôt qu'une liste générique à filtrer vous-même :
+{link}
 
-{link}`,
-    nl: `De vraag die ik in het najaar vaker krijg dan welke andere ook: wat moet ik eigenlijk doen voordat ik voor de winter afsluit?
+Wenn ein Pool dazugehört, machen Sie es, bevor das Wasser kalt wird. Da können Sie mir glauben.`,
+    fr: `Chaque automne, la même question revient dans ces groupes. Qu'est-ce qu'il faut vraiment faire avant de fermer pour l'hiver ?
 
-Er is een lange en een korte versie, en de korte hangt af van drie dingen waar niemand naar vraagt. Hoe lang u weg bent. Welk seizoen het is. En of er iemand gaat kijken terwijl u weg bent. Die drie veranderen de lijst meer dan de grootte van de woning doet.
+Il y a une réponse longue et une courte, et la courte dépend de trois choses sur lesquelles presque personne n'est interrogé. Combien de temps vous serez absent. La saison. Et si quelqu'un passera jeter un œil pendant votre absence. Ces trois-là changent la liste bien plus que la taille du bien.
 
-Eén ding is het waard te weten, omdat het in elk van deze gesprekken opkomt: een tweede woning of een seizoenswoning telt naar Spaans recht wel degelijk als een morada, mits de rechtmatige bewoners er hun privéleven leiden, al is het af en toe. Dat is een geruststellender positie dan de meeste eigenaren in het buitenland aannemen.
+Une chose mérite d'être dite franchement, parce qu'elle revient dans chacune de ces conversations, en général avec beaucoup d'inquiétude accrochée : en droit espagnol, une résidence secondaire ou saisonnière est bien une morada, dès lors que ceux qui ont le droit d'y être y mènent leur vie privée, même de temps en temps. C'est une position nettement plus rassurante que ce que supposent la plupart des propriétaires à l'étranger.
 
-Ik heb een checklist gemaakt die die drie antwoorden neemt en u een gedateerde lijst voor de laatste dag geeft, in plaats van een algemene die u zelf moet uitfilteren:
+La liste prend ces trois réponses et vous donne une liste datée pour le dernier jour, plutôt qu'une liste générique que vous devez filtrer vous-même.
 
-{link}`,
+{link}
+
+Si vous avez une piscine, faites-le avant que l'eau refroidisse. Croyez-moi là-dessus.`,
+    nl: `Elk najaar duikt dezelfde vraag op in deze groepen. Wat moet ik eigenlijk doen voordat ik voor de winter afsluit?
+
+Er is een lang antwoord en een kort, en het korte hangt af van drie dingen waar bijna niemand naar wordt gevraagd. Hoe lang u weg bent. Welk seizoen het is. En of er iemand gaat kijken terwijl u weg bent. Die drie veranderen de lijst veel meer dan de grootte van de woning doet.
+
+Eén ding is het waard om ronduit te zeggen, want het komt in elk van deze gesprekken op, meestal met veel zorg eraan vast: naar Spaans recht telt een tweede woning of een seizoenswoning wel degelijk als een morada, mits degenen die er mogen zijn er hun privéleven leiden, al is het af en toe. Dat is een aanzienlijk geruststellender positie dan de meeste eigenaren in het buitenland aannemen.
+
+De checklist neemt die drie antwoorden en geeft u een gedateerde lijst voor de laatste dag, in plaats van een algemene die u zelf moet zitten uitfilteren.
+
+{link}
+
+Heeft u een zwembad, doe het voordat het water koud wordt. Geloof me daarin.`,
   },
 },
 {
@@ -1103,58 +1271,70 @@ Ik heb een checklist gemaakt die die drie antwoorden neemt en u een gedateerde l
   kind: 'informative',
   rules: ['nie.form', 'nie.fee'],
   text: {
-    en: `Getting the utilities on in a Spanish property is not one process. It is five, and two of them cannot start until something else has finished.
+    en: `Getting the power and water on in a Spanish property isn't one job. It's five, and two of them can't start until something else has finished.
 
-Power, water, gas, internet and the council charge each have their own office, their own form and their own document list. The ordering is the part that costs people weeks: start the wrong one first and you wait, then start it again.
+Electricity, water, gas, internet and the council charge. Five offices, five forms, five document lists, and no one of them tells you about the other four.
 
-Two small things that save a lot of confusion at the front of it. The NIE application form is the EX-15. The EX-18 is the EU citizen registration certificate and is a different procedure entirely, so being sent away with the wrong one is common. The tasa for assignment of a NIE is 9.84 euros.
+The order is what costs people weeks. Start the wrong one first and you wait, find out it can't proceed, and start it again from the beginning.
 
-I built a page that asks six questions about your situation and gives you the order the five have to happen in, with the documents each one needs:
+Two small things that save a lot of confusion right at the front of it, because this is where people get sent home. The NIE application is the EX-15. The EX-18 is the EU citizen registration certificate and is a completely different procedure, so turning up with the wrong one is common and it costs you the morning. And the fee for assigning a NIE is 9.84 euros, which is worth knowing before someone quotes you something else.
 
-{link}`,
-    no: `Å få strøm og vann på plass i en spansk bolig er ikke én prosess. Det er fem, og to av dem kan ikke starte før noe annet er ferdig.
-
-Strøm, vann, gass, internett og den kommunale avgiften har hver sitt kontor, sitt skjema og sin dokumentliste. Rekkefølgen er det som koster folk uker: starter du med feil, venter du, og så starter du på nytt.
-
-To små ting som sparer mye forvirring i starten. Søknadsskjemaet for NIE er EX-15. EX-18 er registreringsbeviset for EU-borgere og er en helt annen prosedyre, så det er vanlig å bli sendt bort med feil skjema. Gebyret for tildeling av NIE er 9,84 euro.
-
-Jeg laget en side som stiller seks spørsmål om situasjonen din og gir deg rekkefølgen de fem må skje i, med dokumentene hver av dem krever:
+The page asks six questions about your situation and gives you the order the five have to happen in, with the documents each one needs.
 
 {link}`,
-    sv: `Att få igång el och vatten i en spansk bostad är inte en process. Det är fem, och två av dem kan inte börja förrän något annat är klart.
+    no: `Å få strøm og vann på plass i en spansk bolig er ikke én jobb. Det er fem, og to av dem kan ikke starte før noe annet er ferdig.
 
-El, vatten, gas, internet och den kommunala avgiften har var sitt kontor, sin blankett och sin dokumentlista. Ordningen är det som kostar folk veckor: börjar du med fel sak får du vänta, och sedan börja om.
+Strøm, vann, gass, internett og den kommunale avgiften. Fem kontorer, fem skjemaer, fem dokumentlister, og ingen av dem forteller deg om de fire andre.
 
-Två små saker som sparar mycket förvirring i början. Ansökningsblanketten för NIE är EX-15. EX-18 är registreringsbeviset för EU-medborgare och är en helt annan procedur, så det är vanligt att bli bortskickad med fel blankett. Avgiften för tilldelning av NIE är 9,84 euro.
+Rekkefølgen er det som koster folk uker. Start med feil, og du venter, får vite at den ikke kan gå videre, og starter på nytt fra begynnelsen.
 
-Jag byggde en sida som ställer sex frågor om din situation och ger dig ordningen de fem måste ske i, med dokumenten var och en kräver:
+To små ting som sparer mye forvirring helt i starten, for det er her folk blir sendt hjem. NIE-søknaden er EX-15. EX-18 er registreringsbeviset for EU-borgere og er en helt annen prosedyre, så det er vanlig å møte opp med feil skjema, og det koster deg formiddagen. Og gebyret for tildeling av NIE er 9,84 euro, verdt å vite før noen oppgir deg noe annet.
 
-{link}`,
-    de: `Die Versorgung in einer spanischen Immobilie anzumelden ist nicht ein Vorgang. Es sind fünf, und zwei davon können nicht beginnen, bevor etwas anderes fertig ist.
-
-Strom, Wasser, Gas, Internet und die kommunale Abgabe haben je ein eigenes Amt, ein eigenes Formular und eine eigene Dokumentenliste. Die Reihenfolge kostet die Leute Wochen: fängt man mit dem Falschen an, wartet man und fängt dann noch einmal an.
-
-Zwei Kleinigkeiten, die am Anfang viel Verwirrung ersparen. Das Antragsformular für die NIE ist das EX-15. Das EX-18 ist die Anmeldebescheinigung für EU-Bürger und ein völlig anderes Verfahren, weshalb es häufig vorkommt, dass man mit dem falschen Formular weggeschickt wird. Die Gebühr für die Zuteilung einer NIE beträgt 9,84 Euro.
-
-Ich habe eine Seite gebaut, die sechs Fragen zu Ihrer Lage stellt und Ihnen die Reihenfolge nennt, in der die fünf ablaufen müssen, mit den Unterlagen, die jeder Schritt braucht:
+Siden stiller seks spørsmål om situasjonen din og gir deg rekkefølgen de fem må skje i, med dokumentene hver av dem trenger.
 
 {link}`,
-    fr: `Mettre les compteurs en service dans un bien espagnol n'est pas une démarche. C'en est cinq, et deux d'entre elles ne peuvent pas commencer tant qu'autre chose n'est pas terminé.
+    sv: `Att få igång el och vatten i en spansk bostad är inte ett jobb. Det är fem, och två av dem kan inte börja förrän något annat är klart.
 
-Électricité, eau, gaz, internet et la taxe communale ont chacun leur guichet, leur formulaire et leur liste de pièces. C'est l'ordre qui coûte des semaines : commencez par la mauvaise et vous attendez, puis vous recommencez.
+El, vatten, gas, internet och den kommunala avgiften. Fem kontor, fem blanketter, fem dokumentlistor, och inget av dem berättar om de andra fyra.
 
-Deux petites choses qui évitent beaucoup de confusion au départ. Le formulaire de demande de NIE est l'EX-15. L'EX-18 est le certificat d'enregistrement des citoyens de l'UE et relève d'une procédure entièrement différente, d'où le nombre de gens renvoyés avec le mauvais imprimé. La taxe pour l'attribution d'un NIE est de 9,84 euros.
+Ordningen är det som kostar folk veckor. Börja med fel, så väntar du, får veta att den inte kan gå vidare, och börjar om från början.
 
-J'ai fait une page qui pose six questions sur votre situation et vous donne l'ordre dans lequel les cinq doivent se dérouler, avec les documents que chacune réclame :
+Två små saker som sparar mycket förvirring alldeles i början, för det är här folk blir hemskickade. NIE-ansökan är EX-15. EX-18 är registreringsbeviset för EU-medborgare och är en helt annan procedur, så att dyka upp med fel blankett är vanligt och kostar dig förmiddagen. Och avgiften för tilldelning av NIE är 9,84 euro, värt att veta innan någon uppger något annat.
+
+Sidan ställer sex frågor om din situation och ger dig ordningen de fem måste ske i, med dokumenten var och en behöver.
 
 {link}`,
-    nl: `De nutsvoorzieningen aansluiten in een Spaanse woning is niet één proces. Het zijn er vijf, en twee daarvan kunnen pas beginnen als iets anders klaar is.
+    de: `Strom und Wasser in einer spanischen Immobilie anzumelden ist nicht eine Aufgabe. Es sind fünf, und zwei davon können nicht beginnen, bevor etwas anderes fertig ist.
 
-Stroom, water, gas, internet en de gemeentelijke heffing hebben elk hun eigen loket, hun eigen formulier en hun eigen documentenlijst. De volgorde is wat mensen weken kost: begin je met de verkeerde, dan wacht je, en begin je opnieuw.
+Strom, Wasser, Gas, Internet und die kommunale Abgabe. Fünf Ämter, fünf Formulare, fünf Dokumentenlisten, und keines erzählt Ihnen von den anderen vier.
 
-Twee kleine dingen die vooraan veel verwarring besparen. Het aanvraagformulier voor de NIE is de EX-15. De EX-18 is het registratiebewijs voor EU-burgers en is een heel andere procedure, dus met het verkeerde formulier weggestuurd worden komt vaak voor. De leges voor toekenning van een NIE bedragen 9,84 euro.
+Die Reihenfolge kostet die Leute Wochen. Fangen Sie mit dem Falschen an, warten Sie, erfahren, dass es so nicht weitergeht, und fangen von vorn an.
 
-Ik heb een pagina gemaakt die zes vragen over uw situatie stelt en u de volgorde geeft waarin de vijf moeten gebeuren, met de documenten die elk ervan nodig heeft:
+Zwei Kleinigkeiten, die ganz am Anfang viel Verwirrung ersparen, denn hier werden die Leute nach Hause geschickt. Der NIE-Antrag ist das EX-15. Das EX-18 ist die Anmeldebescheinigung für EU-Bürger und ein völlig anderes Verfahren, mit dem falschen Formular anzukommen ist häufig und kostet Sie den Vormittag. Und die Gebühr für die Zuteilung einer NIE beträgt 9,84 Euro, gut zu wissen, bevor Ihnen jemand etwas anderes nennt.
+
+Die Seite stellt sechs Fragen zu Ihrer Lage und gibt Ihnen die Reihenfolge, in der die fünf ablaufen müssen, mit den Unterlagen, die jede braucht.
+
+{link}`,
+    fr: `Mettre l'électricité et l'eau en service dans un bien espagnol, ce n'est pas une démarche. C'en est cinq, et deux d'entre elles ne peuvent pas commencer tant qu'autre chose n'est pas terminé.
+
+Électricité, eau, gaz, internet et la taxe communale. Cinq guichets, cinq formulaires, cinq listes de pièces, et aucun ne vous parle des quatre autres.
+
+C'est l'ordre qui coûte des semaines. Commencez par la mauvaise, vous attendez, on vous apprend qu'elle ne peut pas avancer, et vous recommencez du début.
+
+Deux petites choses qui évitent beaucoup de confusion tout au début, parce que c'est là qu'on renvoie les gens chez eux. La demande de NIE, c'est l'EX-15. L'EX-18 est le certificat d'enregistrement des citoyens de l'UE et relève d'une procédure entièrement différente : se présenter avec le mauvais imprimé est courant et vous coûte la matinée. Et la taxe pour l'attribution d'un NIE est de 9,84 euros, bon à savoir avant qu'on vous annonce autre chose.
+
+La page pose six questions sur votre situation et vous donne l'ordre dans lequel les cinq doivent se dérouler, avec les documents que chacune demande.
+
+{link}`,
+    nl: `Stroom en water aansluiten in een Spaanse woning is niet één klus. Het zijn er vijf, en twee daarvan kunnen pas beginnen als iets anders klaar is.
+
+Stroom, water, gas, internet en de gemeentelijke heffing. Vijf loketten, vijf formulieren, vijf documentenlijsten, en geen van alle vertelt u over de andere vier.
+
+De volgorde is wat mensen weken kost. Begin met de verkeerde en u wacht, hoort dat het zo niet verder kan, en begint opnieuw vanaf het begin.
+
+Twee kleine dingen die helemaal vooraan veel verwarring besparen, want hier worden mensen naar huis gestuurd. De NIE-aanvraag is de EX-15. De EX-18 is het registratiebewijs voor EU-burgers en is een heel andere procedure, dus met het verkeerde formulier komen opdagen gebeurt vaak en kost u de ochtend. En de leges voor toekenning van een NIE zijn 9,84 euro, goed om te weten voordat iemand u iets anders noemt.
+
+De pagina stelt zes vragen over uw situatie en geeft u de volgorde waarin de vijf moeten gebeuren, met de documenten die elk ervan nodig heeft.
 
 {link}`,
   },
@@ -1165,58 +1345,70 @@ Ik heb een pagina gemaakt die zes vragen over uw situatie stelt en u de volgorde
   kind: 'story',
   rules: [],
   text: {
-    en: `A pattern I kept seeing in this group and others: someone needs a plumber, twenty people reply with a name, and none of the replies says the one thing the person actually needs to know, which is whether the plumber can be understood on the phone in a hurry.
+    en: `Here's a pattern I keep seeing in this group and every group like it.
 
-Recommendations are personal and they do not travel. The plumber who is perfect for someone who speaks Spanish is not necessarily the right call for someone who does not, especially when the call happens with water coming through a ceiling.
+Someone needs a plumber. Twenty people reply with a name. And not one of the twenty answers the thing the person actually needs to know, which is whether they'll be able to make themselves understood on the phone when there's water coming through the ceiling.
 
-So I built a directory that sorts on exactly that. Plumber, electrician, locksmith, air conditioning engineer, pool service or builder, in 660 Spanish towns, ranked from Google reviews, with the ones already reviewed in your own language coming first. You say which language you need help in and the page reorders itself.
+Recommendations are personal, and they don't travel. The plumber who's brilliant for someone who speaks Spanish isn't necessarily the right call for someone who doesn't, and the moment you find that out is the worst possible moment.
 
-It is free, there is no listing fee and nobody pays to be higher up. If your town looks thin or something is out of date, tell me and I will look at it.
+So I built a directory that sorts on exactly that. Plumber, electrician, locksmith, air conditioning, pool service, builder, across 660 Spanish towns, ranked from Google reviews, with the ones already reviewed in your own language coming first. You say what language you need help in and the page reorders itself.
 
-{link}`,
-    no: `Et mønster jeg stadig ser i denne gruppen og andre: noen trenger en rørlegger, tjue personer svarer med et navn, og ingen av svarene sier det ene personen faktisk trenger å vite, nemlig om rørleggeren kan forstås på telefonen når det haster.
-
-Anbefalinger er personlige, og de lar seg ikke flytte. Rørleggeren som er perfekt for en som snakker spansk er ikke nødvendigvis riktig samtale for en som ikke gjør det, særlig når samtalen skjer med vann gjennom taket.
-
-Så jeg bygde en katalog som sorterer på nøyaktig det. Rørlegger, elektriker, låsesmed, klimaanleggmontør, bassengservice eller byggmester, i 660 spanske byer, rangert fra Google-anmeldelser, med de som allerede er vurdert på ditt eget språk først. Du sier hvilket språk du trenger hjelp på, og siden sorterer seg om.
-
-Den er gratis, det finnes ingen oppføringsavgift og ingen betaler for å ligge høyere. Ser byen din tynn ut, eller er noe utdatert, si fra så ser jeg på det.
+It's free, there's no listing fee, and nobody pays to sit higher up. If your town looks thin, or something's out of date, tell me and I'll go and look at it.
 
 {link}`,
-    sv: `Ett mönster jag ser om och om igen i den här gruppen och andra: någon behöver en rörmokare, tjugo personer svarar med ett namn, och inget av svaren säger det enda personen faktiskt behöver veta, nämligen om rörmokaren går att förstå i telefon när det brådskar.
+    no: `Her er et mønster jeg stadig ser i denne gruppen og alle grupper som den.
 
-Rekommendationer är personliga och de går inte att flytta. Rörmokaren som är perfekt för någon som talar spanska är inte nödvändigtvis rätt samtal för någon som inte gör det, särskilt när samtalet sker med vatten genom taket.
+Noen trenger en rørlegger. Tjue personer svarer med et navn. Og ikke én av de tjue svarer på det personen faktisk trenger å vite, nemlig om de kommer til å gjøre seg forstått på telefonen når det renner vann gjennom taket.
 
-Så jag byggde en katalog som sorterar på precis det. Rörmokare, elektriker, låssmed, luftkonditioneringstekniker, poolservice eller byggare, i 660 spanska orter, rankade utifrån Google-omdömen, med dem som redan är omdömda på ditt eget språk först. Du anger vilket språk du behöver hjälp på och sidan sorterar om sig.
+Anbefalinger er personlige, og de lar seg ikke flytte. Rørleggeren som er strålende for en som snakker spansk er ikke nødvendigvis riktig samtale for en som ikke gjør det, og øyeblikket du finner det ut på er det verst tenkelige.
 
-Den är gratis, det finns ingen listningsavgift och ingen betalar för att ligga högre. Ser din ort tunn ut, eller är något inaktuellt, säg till så tittar jag på det.
+Så jeg bygde en katalog som sorterer på nøyaktig det. Rørlegger, elektriker, låsesmed, klimaanlegg, bassengservice, byggmester, i 660 spanske byer, rangert fra Google-anmeldelser, med de som allerede er vurdert på ditt eget språk først. Du sier hvilket språk du trenger hjelp på, og siden sorterer seg om.
 
-{link}`,
-    de: `Ein Muster, das mir in dieser und anderen Gruppen immer wieder auffällt: jemand braucht einen Installateur, zwanzig Leute antworten mit einem Namen, und keine der Antworten sagt das Eine, was die Person wirklich wissen muss, nämlich ob man den Installateur am Telefon in Eile versteht.
-
-Empfehlungen sind persönlich und lassen sich nicht übertragen. Der Installateur, der für jemanden perfekt ist, der Spanisch spricht, ist nicht zwangsläufig der richtige Anruf für jemanden, der es nicht tut, erst recht nicht, wenn der Anruf stattfindet, während Wasser durch die Decke kommt.
-
-Also habe ich ein Verzeichnis gebaut, das genau danach sortiert. Installateur, Elektriker, Schlüsseldienst, Klimatechniker, Poolservice oder Bauunternehmer, in 660 spanischen Orten, nach Google-Bewertungen gereiht, mit denen zuerst, die bereits in Ihrer eigenen Sprache bewertet wurden. Sie sagen, in welcher Sprache Sie Hilfe brauchen, und die Seite ordnet sich um.
-
-Sie ist kostenlos, es gibt keine Eintragsgebühr und niemand zahlt dafür, weiter oben zu stehen. Wirkt Ihr Ort dünn besetzt oder ist etwas veraltet, sagen Sie mir Bescheid, dann sehe ich es mir an.
+Den er gratis, det er ingen oppføringsavgift, og ingen betaler for å ligge høyere. Ser byen din tynn ut, eller er noe utdatert, si fra så går jeg og ser på det.
 
 {link}`,
-    fr: `Un schéma que je vois sans cesse dans ce groupe et dans d'autres : quelqu'un cherche un plombier, vingt personnes répondent avec un nom, et aucune des réponses ne dit la seule chose que la personne a vraiment besoin de savoir, à savoir si l'on comprend ce plombier au téléphone quand c'est urgent.
+    sv: `Här är ett mönster jag ser om och om igen i den här gruppen och alla grupper som den.
 
-Les recommandations sont personnelles et elles ne se transportent pas. Le plombier parfait pour quelqu'un qui parle espagnol n'est pas forcément le bon appel pour quelqu'un qui ne le parle pas, surtout quand l'appel se passe avec de l'eau qui traverse un plafond.
+Någon behöver en rörmokare. Tjugo personer svarar med ett namn. Och inte en av de tjugo svarar på det personen faktiskt behöver veta, nämligen om de kommer att göra sig förstådda i telefon när det rinner vatten genom taket.
 
-J'ai donc construit un annuaire qui trie exactement là-dessus. Plombier, électricien, serrurier, technicien de climatisation, entretien de piscine ou maçon, dans 660 communes espagnoles, classés à partir des avis Google, avec en premier ceux déjà évalués dans votre propre langue. Vous indiquez la langue dans laquelle vous avez besoin d'aide et la page se réorganise.
+Rekommendationer är personliga, och de går inte att flytta. Rörmokaren som är lysande för någon som talar spanska är inte nödvändigtvis rätt samtal för någon som inte gör det, och stunden du får veta det är den sämsta tänkbara.
 
-C'est gratuit, il n'y a pas de frais d'inscription et personne ne paie pour remonter. Si votre commune paraît peu fournie, ou si quelque chose n'est plus à jour, dites-le-moi et j'irai voir.
+Så jag byggde en katalog som sorterar på precis det. Rörmokare, elektriker, låssmed, luftkonditionering, poolservice, byggare, i 660 spanska orter, rankade utifrån Google-omdömen, med dem som redan är omdömda på ditt eget språk först. Du säger vilket språk du behöver hjälp på och sidan sorterar om sig.
+
+Den är gratis, det finns ingen listningsavgift, och ingen betalar för att ligga högre. Ser din ort tunn ut, eller är något inaktuellt, säg till så går jag och tittar.
 
 {link}`,
-    nl: `Een patroon dat ik steeds zie in deze groep en in andere: iemand heeft een loodgieter nodig, twintig mensen antwoorden met een naam, en geen van de antwoorden zegt het enige dat die persoon echt moet weten, namelijk of de loodgieter aan de telefoon te verstaan is als het haast heeft.
+    de: `Hier ist ein Muster, das mir in dieser Gruppe und in jeder Gruppe wie ihr immer wieder begegnet.
 
-Aanbevelingen zijn persoonlijk en laten zich niet verplaatsen. De loodgieter die perfect is voor iemand die Spaans spreekt, is niet per se het juiste telefoontje voor iemand die dat niet doet, zeker niet als dat telefoontje plaatsvindt terwijl er water door een plafond komt.
+Jemand braucht einen Installateur. Zwanzig Leute antworten mit einem Namen. Und nicht einer der zwanzig beantwortet das, was die Person wirklich wissen muss, nämlich ob sie sich am Telefon verständlich machen kann, wenn Wasser durch die Decke läuft.
 
-Dus bouwde ik een gids die precies daarop sorteert. Loodgieter, elektricien, slotenmaker, airco-monteur, zwembadservice of aannemer, in 660 Spaanse plaatsen, gerangschikt op Google-recensies, met degenen die al in uw eigen taal zijn beoordeeld bovenaan. U geeft aan in welke taal u hulp nodig heeft en de pagina sorteert zichzelf opnieuw.
+Empfehlungen sind persönlich, und sie lassen sich nicht übertragen. Der Installateur, der für jemanden mit Spanisch großartig ist, ist nicht zwangsläufig der richtige Anruf für jemanden ohne, und der Moment, in dem man das herausfindet, ist der denkbar schlechteste.
 
-Hij is gratis, er is geen vermeldingskosten en niemand betaalt om hoger te staan. Ziet uw plaats er mager uit, of is iets verouderd, laat het me weten dan kijk ik ernaar.
+Also habe ich ein Verzeichnis gebaut, das genau danach sortiert. Installateur, Elektriker, Schlüsseldienst, Klimatechnik, Poolservice, Bauunternehmer, in 660 spanischen Orten, nach Google-Bewertungen gereiht, mit denen zuerst, die bereits in Ihrer Sprache bewertet wurden. Sie sagen, in welcher Sprache Sie Hilfe brauchen, und die Seite ordnet sich um.
+
+Sie ist kostenlos, es gibt keine Eintragsgebühr, und niemand zahlt dafür, weiter oben zu stehen. Wirkt Ihr Ort dünn besetzt oder ist etwas veraltet, sagen Sie Bescheid, dann sehe ich es mir an.
+
+{link}`,
+    fr: `Voici un schéma que je vois sans arrêt dans ce groupe et dans tous les groupes du même genre.
+
+Quelqu'un cherche un plombier. Vingt personnes répondent avec un nom. Et pas une des vingt ne répond à ce que la personne a réellement besoin de savoir : est-ce qu'elle arrivera à se faire comprendre au téléphone avec de l'eau qui traverse le plafond.
+
+Les recommandations sont personnelles, et elles ne se transportent pas. Le plombier génial pour quelqu'un qui parle espagnol n'est pas forcément le bon appel pour quelqu'un qui ne le parle pas, et le moment où on l'apprend est le pire possible.
+
+Alors j'ai construit un annuaire qui trie exactement là-dessus. Plombier, électricien, serrurier, climatisation, entretien de piscine, maçon, dans 660 communes espagnoles, classés à partir des avis Google, avec en tête ceux déjà évalués dans votre langue. Vous dites dans quelle langue vous avez besoin d'aide et la page se réorganise.
+
+C'est gratuit, il n'y a pas de frais d'inscription, et personne ne paie pour remonter. Si votre commune paraît vide, ou si quelque chose n'est plus à jour, dites-le-moi et j'irai voir.
+
+{link}`,
+    nl: `Hier is een patroon dat ik steeds zie in deze groep en in elke groep zoals deze.
+
+Iemand heeft een loodgieter nodig. Twintig mensen antwoorden met een naam. En geen van de twintig beantwoordt wat die persoon echt moet weten: of ze zich aan de telefoon verstaanbaar kunnen maken terwijl er water door het plafond komt.
+
+Aanbevelingen zijn persoonlijk, en ze laten zich niet verplaatsen. De loodgieter die geweldig is voor iemand die Spaans spreekt, is niet per se het juiste telefoontje voor iemand die dat niet doet, en het moment waarop u daarachter komt is het slechtst denkbare.
+
+Dus bouwde ik een gids die precies daarop sorteert. Loodgieter, elektricien, slotenmaker, airco, zwembadservice, aannemer, in 660 Spaanse plaatsen, gerangschikt op Google-recensies, met bovenaan degenen die al in uw eigen taal zijn beoordeeld. U zegt in welke taal u hulp nodig heeft en de pagina sorteert zichzelf opnieuw.
+
+Hij is gratis, er zijn geen vermeldingskosten, en niemand betaalt om hoger te staan. Ziet uw plaats er mager uit, of is iets verouderd, laat het me weten dan ga ik kijken.
 
 {link}`,
   },
@@ -1227,70 +1419,70 @@ Hij is gratis, er is geen vermeldingskosten en niemand betaalt om hoger te staan
   kind: 'informative',
   rules: [],
   text: {
-    en: `Four Spanish job titles that get used as if they were interchangeable, and are not.
+    en: `Four Spanish job titles that get used as if they meant the same thing. They don't, and picking the wrong one usually costs you a fortnight rather than money.
 
-An abogado is a lawyer and runs a case. A gestoria handles administrative filings and paperwork, and does not litigate. An administrador de fincas manages the community of owners, its accounts and its meetings. A procurador represents you procedurally before the court alongside your abogado.
+An abogado is a lawyer and runs the case. A gestoria handles filings and paperwork and does not go to court. An administrador de fincas runs the community of owners, its accounts and its meetings. A procurador represents you procedurally in front of the court, alongside your abogado.
 
-Getting this wrong costs time rather than money, usually. You explain the whole situation to someone who was never the right person for it, and then explain it again.
+What actually happens when you get it wrong is this. You explain the whole situation to someone who was never the right person for it, they're polite about it, and then you explain the whole situation again to somebody else a week later.
 
-There is a second layer too. Estate agent, architect, valuer, insurance broker and sworn translator all show up in a property problem and each does a narrow, specific thing.
+There's a second layer too. Estate agent, architect, valuer, insurance broker, sworn translator. All of them turn up in a property problem, and each one does something narrow and specific.
 
-So I built a page that explains what each one actually does before it shows you anyone. Then it ranks your town, with the ones already reviewed in your language first.
-
-{link}`,
-    no: `Fire spanske yrkestitler som brukes som om de var utbyttbare, og ikke er det.
-
-En abogado er advokat og fører saken. En gestoria tar seg av administrative innleveringer og papirarbeid, og fører ikke rettssaker. En administrador de fincas forvalter sameiet, regnskapet og møtene. En procurador representerer deg prosessuelt overfor domstolen ved siden av advokaten din.
-
-Å bomme på dette koster som regel tid, ikke penger. Du forklarer hele situasjonen til en som aldri var rett person for den, og så forklarer du den en gang til.
-
-Det finnes et lag til. Eiendomsmegler, arkitekt, takstmann, forsikringsmegler og statsautorisert translatør dukker alle opp i et eiendomsproblem, og hver av dem gjør én smal, bestemt ting.
-
-Så jeg laget en side som forklarer hva hver av dem faktisk gjør før den viser deg noen. Deretter rangerer den byen din, med de som allerede er vurdert på ditt språk først.
+So the page explains what each of them actually does before it shows you a single name. Then it ranks your town, with the ones already reviewed in your language first.
 
 {link}`,
-    sv: `Fyra spanska yrkestitlar som används som om de vore utbytbara, och inte är det.
+    no: `Fire spanske yrkestitler som brukes som om de betydde det samme. Det gjør de ikke, og å velge feil koster deg som regel fjorten dager, ikke penger.
 
-En abogado är advokat och driver ärendet. En gestoria sköter administrativa inlämningar och pappersarbete, och driver inte processer. En administrador de fincas förvaltar samfälligheten, dess räkenskaper och dess stämmor. En procurador företräder dig processuellt inför domstolen vid sidan av din advokat.
+En abogado er advokat og fører saken. En gestoria tar seg av innleveringer og papirarbeid og går ikke i retten. En administrador de fincas driver sameiet, regnskapet og møtene. En procurador representerer deg prosessuelt for domstolen, ved siden av advokaten din.
 
-Att missa det här kostar oftast tid, inte pengar. Du förklarar hela situationen för någon som aldrig var rätt person för den, och sedan förklarar du den en gång till.
+Det som faktisk skjer når du bommer, er dette. Du forklarer hele situasjonen til en som aldri var rett person for den, vedkommende er høflig om det, og så forklarer du hele situasjonen på nytt til en annen en uke senere.
 
-Det finns ett lager till. Mäklare, arkitekt, värderingsman, försäkringsmäklare och auktoriserad translator dyker alla upp i ett fastighetsproblem, och var och en gör en smal, bestämd sak.
+Det finnes et lag til. Eiendomsmegler, arkitekt, takstmann, forsikringsmegler, statsautorisert translatør. Alle dukker opp i et eiendomsproblem, og hver av dem gjør noe smalt og bestemt.
 
-Så jag byggde en sida som förklarar vad var och en faktiskt gör innan den visar dig någon. Sedan rankar den din ort, med dem som redan är omdömda på ditt språk först.
-
-{link}`,
-    de: `Vier spanische Berufsbezeichnungen, die benutzt werden, als wären sie austauschbar, und es nicht sind.
-
-Ein abogado ist Anwalt und führt den Fall. Eine gestoria erledigt Verwaltungsanmeldungen und Papierkram und prozessiert nicht. Ein administrador de fincas verwaltet die Eigentümergemeinschaft, ihre Abrechnung und ihre Versammlungen. Ein procurador vertritt Sie verfahrensrechtlich vor Gericht, neben Ihrem Anwalt.
-
-Das zu verwechseln kostet meist Zeit, nicht Geld. Sie schildern die ganze Lage jemandem, der nie der Richtige dafür war, und schildern sie dann noch einmal.
-
-Es gibt noch eine zweite Ebene. Makler, Architekt, Gutachter, Versicherungsmakler und beeidigter Übersetzer tauchen alle in einem Immobilienproblem auf, und jeder macht eine enge, bestimmte Sache.
-
-Also habe ich eine Seite gebaut, die erklärt, was jeder tatsächlich tut, bevor sie Ihnen irgendjemanden zeigt. Danach reiht sie Ihren Ort, mit denen zuerst, die bereits in Ihrer Sprache bewertet wurden.
+Så siden forklarer hva hver av dem faktisk gjør før den viser deg et eneste navn. Deretter rangerer den byen din, med de som allerede er vurdert på ditt språk først.
 
 {link}`,
-    fr: `Quatre intitulés espagnols que l'on emploie comme s'ils étaient interchangeables, et qui ne le sont pas.
+    sv: `Fyra spanska yrkestitlar som används som om de betydde samma sak. Det gör de inte, och att välja fel kostar dig oftast fjorton dagar, inte pengar.
 
-Un abogado est un avocat et mène le dossier. Un gestoria s'occupe des déclarations administratives et de la paperasse, et ne plaide pas. Un administrador de fincas gère la copropriété, ses comptes et ses assemblées. Un procurador vous représente sur le plan procédural devant le tribunal, aux côtés de votre avocat.
+En abogado är advokat och driver ärendet. En gestoria sköter inlämningar och pappersarbete och går inte i rätten. En administrador de fincas driver samfälligheten, dess räkenskaper och dess stämmor. En procurador företräder dig processuellt inför domstolen, vid sidan av din advokat.
 
-Se tromper là-dessus coûte du temps plutôt que de l'argent, en général. Vous exposez toute la situation à quelqu'un qui n'était pas la bonne personne, puis vous l'exposez une seconde fois.
+Det som faktiskt händer när du missar är det här. Du förklarar hela situationen för någon som aldrig var rätt person, den är artig om saken, och sedan förklarar du hela situationen igen för någon annan en vecka senare.
 
-Il y a une deuxième couche. Agent immobilier, architecte, expert évaluateur, courtier en assurance et traducteur assermenté apparaissent tous dans un problème immobilier, et chacun fait une chose étroite et précise.
+Det finns ett lager till. Mäklare, arkitekt, värderingsman, försäkringsmäklare, auktoriserad translator. Alla dyker upp i ett fastighetsproblem, och var och en gör något smalt och bestämt.
 
-J'ai donc fait une page qui explique ce que chacun fait réellement avant de vous montrer qui que ce soit. Ensuite elle classe votre commune, avec en premier ceux déjà évalués dans votre langue.
+Så sidan förklarar vad var och en faktiskt gör innan den visar dig ett enda namn. Sedan rankar den din ort, med dem som redan är omdömda på ditt språk först.
 
 {link}`,
-    nl: `Vier Spaanse beroepsaanduidingen die worden gebruikt alsof ze uitwisselbaar zijn, en dat niet zijn.
+    de: `Vier spanische Berufsbezeichnungen, die benutzt werden, als bedeuteten sie dasselbe. Tun sie nicht, und die falsche zu wählen kostet Sie meist zwei Wochen, nicht Geld.
 
-Een abogado is advocaat en voert de zaak. Een gestoria doet administratieve aangiftes en papierwerk, en procedeert niet. Een administrador de fincas beheert de vereniging van eigenaren, de administratie en de vergaderingen. Een procurador vertegenwoordigt u procesrechtelijk bij de rechtbank, naast uw advocaat.
+Ein abogado ist Anwalt und führt den Fall. Eine gestoria erledigt Anmeldungen und Papierkram und geht nicht vor Gericht. Ein administrador de fincas führt die Eigentümergemeinschaft, ihre Abrechnung und ihre Versammlungen. Ein procurador vertritt Sie verfahrensrechtlich vor Gericht, neben Ihrem Anwalt.
 
-Dit verwarren kost meestal tijd, geen geld. U legt de hele situatie uit aan iemand die er nooit de juiste persoon voor was, en legt hem daarna nog een keer uit.
+Was tatsächlich passiert, wenn man danebengreift, ist Folgendes. Sie schildern die ganze Lage jemandem, der nie der Richtige dafür war, er ist höflich dabei, und eine Woche später schildern Sie die ganze Lage noch einmal jemand anderem.
 
-Er is nog een tweede laag. Makelaar, architect, taxateur, verzekeringsmakelaar en beëdigd vertaler duiken allemaal op bij een vastgoedprobleem, en elk doet één smalle, specifieke ding.
+Es gibt noch eine zweite Ebene. Makler, Architekt, Gutachter, Versicherungsmakler, beeidigter Übersetzer. Alle tauchen in einem Immobilienproblem auf, und jeder macht etwas Enges und Bestimmtes.
 
-Dus maakte ik een pagina die uitlegt wat elk van hen werkelijk doet voordat hij u iemand laat zien. Daarna rangschikt hij uw plaats, met degenen die al in uw taal zijn beoordeeld bovenaan.
+Die Seite erklärt daher, was jeder von ihnen tatsächlich tut, bevor sie Ihnen einen einzigen Namen zeigt. Danach reiht sie Ihren Ort, mit denen zuerst, die bereits in Ihrer Sprache bewertet wurden.
+
+{link}`,
+    fr: `Quatre intitulés espagnols employés comme s'ils voulaient dire la même chose. Non, et se tromper vous coûte en général quinze jours, pas de l'argent.
+
+Un abogado est avocat et mène le dossier. Un gestoria s'occupe des déclarations et de la paperasse et ne va pas au tribunal. Un administrador de fincas gère la copropriété, ses comptes et ses assemblées. Un procurador vous représente sur le plan procédural devant le tribunal, aux côtés de votre avocat.
+
+Ce qui se passe réellement quand on se trompe, c'est ceci. Vous exposez toute la situation à quelqu'un qui n'était pas la bonne personne, il est poli à ce sujet, et une semaine plus tard vous exposez toute la situation à quelqu'un d'autre.
+
+Il y a une deuxième couche aussi. Agent immobilier, architecte, expert évaluateur, courtier en assurance, traducteur assermenté. Tous apparaissent dans un problème immobilier, et chacun fait quelque chose d'étroit et de précis.
+
+La page explique donc ce que chacun fait réellement avant de vous montrer le moindre nom. Ensuite elle classe votre commune, avec en tête ceux déjà évalués dans votre langue.
+
+{link}`,
+    nl: `Vier Spaanse beroepsaanduidingen die worden gebruikt alsof ze hetzelfde betekenen. Dat doen ze niet, en de verkeerde kiezen kost u meestal veertien dagen, geen geld.
+
+Een abogado is advocaat en voert de zaak. Een gestoria doet aangiftes en papierwerk en gaat niet naar de rechtbank. Een administrador de fincas runt de vereniging van eigenaren, de administratie en de vergaderingen. Een procurador vertegenwoordigt u procesrechtelijk voor de rechtbank, naast uw advocaat.
+
+Wat er werkelijk gebeurt als u ernaast zit, is dit. U legt de hele situatie uit aan iemand die er nooit de juiste persoon voor was, die is er beleefd over, en een week later legt u de hele situatie opnieuw uit aan iemand anders.
+
+Er is ook een tweede laag. Makelaar, architect, taxateur, verzekeringsmakelaar, beëdigd vertaler. Ze duiken allemaal op bij een vastgoedprobleem, en elk doet iets smals en specifieks.
+
+Dus legt de pagina uit wat elk van hen werkelijk doet voordat hij u ook maar één naam laat zien. Daarna rangschikt hij uw plaats, met bovenaan degenen die al in uw taal zijn beoordeeld.
 
 {link}`,
   },
@@ -1301,58 +1493,70 @@ Dus maakte ik een pagina die uitlegt wat elk van hen werkelijk doet voordat hij 
   kind: 'story',
   rules: [],
   text: {
-    en: `Something that took me a while to see: maintenance on a Spanish property is not a list of jobs, it is a calendar.
+    en: `Took me a while to see this one, and once I did I couldn't unsee it.
 
-Sun, salt and a wet winter break different things, and they break them at different times of year. A job done in the right month prevents something. The same job done in the wrong month is just work.
+Maintenance on a Spanish property isn't a list of jobs. It's a calendar.
 
-The other half of it, for anyone who is not there most of the year, is that some of these cannot be done by the owner at all, because they have to happen while nobody is in the country. Knowing which ones those are is what turns a list into a plan you can hand to someone.
+Sun, salt and a wet winter break different things, and they break them at different times of year. Do a job in the right month and it prevents something. Do exactly the same job in the wrong month and it's just work you paid for.
 
-So I built it as a twelve month schedule rather than a checklist. Five questions about the property, and each job comes out saying what it prevents and what has to happen when you are not there.
+And there's a second half to it if you're not there most of the year, which most people reading this aren't. Some of these jobs can't be done by the owner at all, because they have to happen while nobody is in the country. Knowing which ones those are is the difference between a list and a plan you can actually hand to somebody.
 
-{link}`,
-    no: `Noe det tok meg en stund å se: vedlikehold på en spansk eiendom er ikke en liste over oppgaver, det er en kalender.
-
-Sol, salt og en våt vinter ødelegger ulike ting, og de gjør det på ulike tider av året. En jobb gjort i riktig måned forebygger noe. Den samme jobben i feil måned er bare arbeid.
-
-Den andre halvdelen, for alle som ikke er der mesteparten av året, er at noen av disse ikke kan gjøres av eieren i det hele tatt, fordi de må skje mens ingen er i landet. Å vite hvilke det er, er det som gjør en liste om til en plan du kan gi videre til noen.
-
-Så jeg bygde det som et tolvmånedersskjema i stedet for en sjekkliste. Fem spørsmål om eiendommen, og hver jobb kommer ut med hva den forebygger og hva som må skje når du ikke er der.
+So I built it as a twelve month schedule rather than a checklist. Five questions about the property, and every job comes out saying what it prevents and what has to happen while you're away.
 
 {link}`,
-    sv: `Något det tog mig ett tag att se: underhåll på en spansk fastighet är inte en lista över jobb, det är en kalender.
+    no: `Det tok meg en stund å se denne, og da jeg først gjorde det kunne jeg ikke se den bort igjen.
 
-Sol, salt och en blöt vinter förstör olika saker, och de gör det vid olika tider på året. Ett jobb gjort i rätt månad förebygger något. Samma jobb i fel månad är bara arbete.
+Vedlikehold på en spansk eiendom er ikke en liste over oppgaver. Det er en kalender.
 
-Den andra halvan, för alla som inte är där större delen av året, är att vissa av dem inte kan göras av ägaren alls, eftersom de måste ske medan ingen är i landet. Att veta vilka de är gör en lista till en plan du kan lämna över till någon.
+Sol, salt og en våt vinter ødelegger ulike ting, og de gjør det på ulike tider av året. Gjør en jobb i riktig måned, og den forebygger noe. Gjør nøyaktig samme jobb i feil måned, og det er bare arbeid du har betalt for.
 
-Så jag byggde det som ett tolvmånadersschema i stället för en checklista. Fem frågor om fastigheten, och varje jobb kommer ut med vad det förebygger och vad som måste ske när du inte är där.
+Og det finnes en andre halvdel hvis du ikke er der mesteparten av året, noe de fleste som leser dette ikke er. Noen av disse jobbene kan eieren ikke gjøre i det hele tatt, fordi de må skje mens ingen er i landet. Å vite hvilke det er, er forskjellen mellom en liste og en plan du faktisk kan gi videre til noen.
 
-{link}`,
-    de: `Etwas, das ich eine Weile gebraucht habe zu sehen: Instandhaltung an einer spanischen Immobilie ist keine Liste von Arbeiten, sie ist ein Kalender.
-
-Sonne, Salz und ein nasser Winter zerstören Unterschiedliches, und sie tun es zu unterschiedlichen Zeiten im Jahr. Eine Arbeit im richtigen Monat verhindert etwas. Dieselbe Arbeit im falschen Monat ist nur Arbeit.
-
-Die andere Hälfte davon, für alle, die den größten Teil des Jahres nicht dort sind: manche dieser Arbeiten kann der Eigentümer gar nicht selbst erledigen, weil sie stattfinden müssen, während niemand im Land ist. Zu wissen, welche das sind, macht aus einer Liste einen Plan, den man jemandem in die Hand geben kann.
-
-Also habe ich es als Zwölfmonatsplan gebaut statt als Checkliste. Fünf Fragen zur Immobilie, und jede Arbeit kommt mit dem heraus, was sie verhindert, und dem, was geschehen muss, wenn Sie nicht da sind.
+Så jeg bygde det som et tolvmånedersskjema i stedet for en sjekkliste. Fem spørsmål om eiendommen, og hver jobb kommer ut med hva den forebygger og hva som må skje mens du er borte.
 
 {link}`,
-    fr: `Quelque chose que j'ai mis du temps à voir : l'entretien d'un bien espagnol n'est pas une liste de travaux, c'est un calendrier.
+    sv: `Det tog mig ett tag att se den här, och när jag väl gjorde det kunde jag inte sluta se den.
 
-Le soleil, le sel et un hiver humide abîment des choses différentes, et à des moments différents de l'année. Un travail fait au bon mois prévient quelque chose. Le même travail au mauvais mois n'est que du travail.
+Underhåll på en spansk fastighet är inte en lista över jobb. Det är en kalender.
 
-L'autre moitié, pour qui n'est pas sur place la plupart de l'année, c'est que certains de ces travaux ne peuvent pas être faits par le propriétaire du tout, parce qu'ils doivent avoir lieu quand personne n'est dans le pays. Savoir lesquels, c'est ce qui transforme une liste en un plan que l'on peut confier à quelqu'un.
+Sol, salt och en blöt vinter förstör olika saker, och de gör det vid olika tider på året. Gör ett jobb i rätt månad och det förebygger något. Gör exakt samma jobb i fel månad och det är bara arbete du betalat för.
 
-Je l'ai donc construit comme un calendrier sur douze mois plutôt qu'une checklist. Cinq questions sur le bien, et chaque travail ressort en disant ce qu'il prévient et ce qui doit se passer quand vous n'êtes pas là.
+Och det finns en andra halva om du inte är där större delen av året, vilket de flesta som läser det här inte är. Vissa av de här jobben kan ägaren inte göra alls, för de måste ske medan ingen är i landet. Att veta vilka de är är skillnaden mellan en lista och en plan du faktiskt kan lämna över till någon.
+
+Så jag byggde det som ett tolvmånadersschema i stället för en checklista. Fem frågor om fastigheten, och varje jobb kommer ut med vad det förebygger och vad som måste ske medan du är borta.
 
 {link}`,
-    nl: `Iets waar ik een tijd over deed om te zien: onderhoud aan een Spaanse woning is geen lijst met klussen, het is een kalender.
+    de: `Ich habe eine Weile gebraucht, um das zu sehen, und als ich es einmal gesehen hatte, ging es nicht mehr weg.
 
-Zon, zout en een natte winter slopen verschillende dingen, en ze doen dat op verschillende momenten in het jaar. Een klus in de juiste maand voorkomt iets. Dezelfde klus in de verkeerde maand is alleen maar werk.
+Instandhaltung an einer spanischen Immobilie ist keine Liste von Arbeiten. Sie ist ein Kalender.
 
-De andere helft, voor wie er het grootste deel van het jaar niet is: sommige klussen kan de eigenaar helemaal niet zelf doen, omdat ze moeten gebeuren terwijl er niemand in het land is. Weten welke dat zijn, maakt van een lijst een plan dat u aan iemand kunt overdragen.
+Sonne, Salz und ein nasser Winter zerstören Unterschiedliches, und sie tun es zu unterschiedlichen Zeiten im Jahr. Machen Sie eine Arbeit im richtigen Monat, verhindert sie etwas. Machen Sie genau dieselbe Arbeit im falschen Monat, ist es nur Arbeit, die Sie bezahlt haben.
 
-Dus bouwde ik het als een twaalfmaandsschema in plaats van een checklist. Vijf vragen over de woning, en elke klus komt eruit met wat hij voorkomt en wat er moet gebeuren als u er niet bent.
+Und es gibt eine zweite Hälfte, wenn Sie den größten Teil des Jahres nicht dort sind, was auf die meisten, die das lesen, zutrifft. Manche dieser Arbeiten kann der Eigentümer gar nicht selbst erledigen, weil sie stattfinden müssen, während niemand im Land ist. Zu wissen, welche das sind, ist der Unterschied zwischen einer Liste und einem Plan, den man wirklich jemandem in die Hand geben kann.
+
+Also habe ich es als Zwölfmonatsplan gebaut statt als Checkliste. Fünf Fragen zur Immobilie, und jede Arbeit kommt mit dem heraus, was sie verhindert, und dem, was geschehen muss, während Sie weg sind.
+
+{link}`,
+    fr: `J'ai mis un moment à voir celle-ci, et une fois vue, impossible de ne plus la voir.
+
+L'entretien d'un bien espagnol n'est pas une liste de travaux. C'est un calendrier.
+
+Le soleil, le sel et un hiver humide abîment des choses différentes, et à des moments différents de l'année. Faites un travail au bon mois et il prévient quelque chose. Faites exactement le même travail au mauvais mois et c'est juste du travail que vous avez payé.
+
+Et il y a une deuxième moitié si vous n'êtes pas sur place la plupart de l'année, ce qui est le cas de la plupart des gens qui lisent ceci. Certains de ces travaux, le propriétaire ne peut pas les faire du tout, parce qu'ils doivent avoir lieu quand personne n'est dans le pays. Savoir lesquels, c'est la différence entre une liste et un plan que vous pouvez réellement confier à quelqu'un.
+
+Je l'ai donc construit comme un calendrier sur douze mois plutôt qu'une checklist. Cinq questions sur le bien, et chaque travail ressort en disant ce qu'il prévient et ce qui doit se passer pendant votre absence.
+
+{link}`,
+    nl: `Het duurde even voordat ik dit zag, en toen ik het eenmaal zag kon ik het niet meer ontzien.
+
+Onderhoud aan een Spaanse woning is geen lijst met klussen. Het is een kalender.
+
+Zon, zout en een natte winter slopen verschillende dingen, en ze doen dat op verschillende momenten in het jaar. Doe een klus in de juiste maand en hij voorkomt iets. Doe precies dezelfde klus in de verkeerde maand en het is alleen werk waarvoor u betaald heeft.
+
+En er is een tweede helft als u er het grootste deel van het jaar niet bent, wat voor de meeste lezers hier geldt. Sommige van deze klussen kan de eigenaar helemaal niet zelf doen, omdat ze moeten gebeuren terwijl er niemand in het land is. Weten welke dat zijn is het verschil tussen een lijst en een plan dat u werkelijk aan iemand kunt overdragen.
+
+Dus bouwde ik het als een twaalfmaandsschema in plaats van een checklist. Vijf vragen over de woning, en elke klus komt eruit met wat hij voorkomt en wat er moet gebeuren terwijl u weg bent.
 
 {link}`,
   },
@@ -1363,70 +1567,70 @@ Dus bouwde ik het als een twaalfmaandsschema in plaats van een checklist. Vijf v
   kind: 'informative',
   rules: [],
   text: {
-    en: `Three things about a Spanish property each attract something different, and they hardly overlap: warm weather, a garden, and long empty periods.
+    en: `Three things about a Spanish property each attract something completely different, and they barely overlap. Warm weather. A garden. Long stretches with nobody in the place.
 
-Which is why the general advice never quite fits. The advice that works for a ground floor flat with a terrace is not the advice for a villa with pines and a pool, and neither is the advice for somewhere that stands empty from October to April.
+Which is why the general advice never quite fits anyone. What works for a ground floor flat with a terrace is not the advice for a villa with pines and a pool, and neither of those is the advice for somewhere that stands empty from October to April.
 
-The empty period is the one owners abroad underestimate. Nothing is disturbed, nothing is noticed, and the first sign of a problem is the one you see in the spring, by which point the useful moment to act was months ago.
+That last one is the one owners abroad underestimate, and I understand why. Nothing gets disturbed, nothing gets noticed, and the first sign of a problem is the one you see when you walk in at Easter. By which point the useful moment to do anything about it was months ago.
 
-I built a page that asks five questions and gives you the pests most likely for your particular property, the signs to look for, what prevents each one, and which ones are honestly not a job for the owner.
+The page asks five questions and gives you the pests most likely for your particular property, the signs to look for, what prevents each one, and which ones are honestly not a job for the owner.
 
-That last part matters. Some of these are a phone call, not a Saturday.
-
-{link}`,
-    no: `Tre ting ved en spansk eiendom tiltrekker seg hver sin ting, og de overlapper knapt: varmt vær, en hage, og lange perioder uten folk.
-
-Derfor passer de generelle rådene aldri helt. Rådet som fungerer for en leilighet i første etasje med terrasse er ikke rådet for en villa med furu og basseng, og ingen av dem er rådet for et sted som står tomt fra oktober til april.
-
-Den tomme perioden er den eiere i utlandet undervurderer. Ingenting blir forstyrret, ingenting blir lagt merke til, og det første tegnet på et problem er det du ser om våren, og da var det nyttige øyeblikket for å handle måneder siden.
-
-Jeg laget en side som stiller fem spørsmål og gir deg de skadedyrene som er mest sannsynlige for akkurat din eiendom, tegnene å se etter, hva som forebygger hver av dem, og hvilke som ærlig talt ikke er en jobb for eieren.
-
-Den siste delen betyr noe. Noen av disse er en telefonsamtale, ikke en lørdag.
+That last part matters more than it sounds. Some of these are a phone call, not a Saturday.
 
 {link}`,
-    sv: `Tre saker hos en spansk fastighet drar var sin sak till sig, och de överlappar knappt: varmt väder, en trädgård, och långa tomma perioder.
+    no: `Tre ting ved en spansk eiendom tiltrekker seg hver sin helt ulike ting, og de overlapper knapt. Varmt vær. En hage. Lange strekk uten folk i huset.
 
-Därför passar de allmänna råden aldrig riktigt. Rådet som fungerar för en bottenvåning med terrass är inte rådet för en villa med tallar och pool, och inget av dem är rådet för ett ställe som står tomt från oktober till april.
+Derfor passer de generelle rådene aldri helt for noen. Det som fungerer for en leilighet i første etasje med terrasse er ikke rådet for en villa med furu og basseng, og ingen av dem er rådet for et sted som står tomt fra oktober til april.
 
-Den tomma perioden är den ägare utomlands underskattar. Inget störs, inget märks, och det första tecknet på ett problem är det du ser på våren, och då var det nyttiga ögonblicket att agera månader sedan.
+Det siste er det eiere i utlandet undervurderer, og jeg skjønner hvorfor. Ingenting blir forstyrret, ingenting blir lagt merke til, og det første tegnet på et problem er det du ser når du går inn i påsken. Og da var det nyttige øyeblikket for å gjøre noe med det måneder siden.
 
-Jag byggde en sida som ställer fem frågor och ger dig de skadedjur som är mest sannolika för just din fastighet, tecknen att leta efter, vad som förebygger vart och ett, och vilka som ärligt talat inte är ett jobb för ägaren.
+Siden stiller fem spørsmål og gir deg skadedyrene som er mest sannsynlige for akkurat din eiendom, tegnene å se etter, hva som forebygger hver av dem, og hvilke som ærlig talt ikke er en jobb for eieren.
 
-Den sista delen spelar roll. Några av dem är ett telefonsamtal, inte en lördag.
-
-{link}`,
-    de: `Drei Dinge an einer spanischen Immobilie ziehen jeweils Verschiedenes an, und sie überschneiden sich kaum: warmes Wetter, ein Garten und lange leerstehende Zeiten.
-
-Deshalb passen die allgemeinen Ratschläge nie ganz. Der Rat, der für eine Erdgeschosswohnung mit Terrasse gilt, ist nicht der Rat für eine Villa mit Pinien und Pool, und keiner von beiden ist der Rat für ein Haus, das von Oktober bis April leer steht.
-
-Die leere Zeit ist die, die Eigentümer im Ausland unterschätzen. Nichts wird gestört, nichts fällt auf, und das erste Zeichen eines Problems ist das, was Sie im Frühjahr sehen, und da lag der nützliche Moment zum Handeln Monate zurück.
-
-Ich habe eine Seite gebaut, die fünf Fragen stellt und Ihnen die für genau Ihre Immobilie wahrscheinlichsten Schädlinge nennt, die Anzeichen, worauf zu achten ist, was jeden davon verhindert, und welche ehrlicherweise keine Aufgabe für den Eigentümer sind.
-
-Der letzte Teil zählt. Einige davon sind ein Telefonat, kein Samstag.
+Den siste delen betyr mer enn den høres ut. Noen av disse er en telefonsamtale, ikke en lørdag.
 
 {link}`,
-    fr: `Trois choses dans un bien espagnol attirent chacune quelque chose de différent, et elles se recoupent à peine : la chaleur, un jardin, et de longues périodes d'inoccupation.
+    sv: `Tre saker hos en spansk fastighet drar var sin helt olika sak till sig, och de överlappar knappt. Varmt väder. En trädgård. Långa perioder utan folk i huset.
 
-C'est pourquoi les conseils généraux ne conviennent jamais tout à fait. Le conseil valable pour un rez-de-chaussée avec terrasse n'est pas celui d'une villa avec des pins et une piscine, et aucun des deux n'est celui d'un logement vide d'octobre à avril.
+Därför passar de allmänna råden aldrig riktigt någon. Det som fungerar för en bottenvåning med terrass är inte rådet för en villa med tallar och pool, och inget av dem är rådet för ett ställe som står tomt från oktober till april.
 
-La période vide est celle que les propriétaires à l'étranger sous-estiment. Rien n'est dérangé, rien n'est remarqué, et le premier signe d'un problème est celui que vous voyez au printemps, alors que le bon moment pour agir était des mois plus tôt.
+Det sista är det ägare utomlands underskattar, och jag förstår varför. Inget störs, inget märks, och det första tecknet på ett problem är det du ser när du kliver in vid påsk. Och då var det nyttiga ögonblicket att göra något åt det månader sedan.
 
-J'ai fait une page qui pose cinq questions et vous donne les nuisibles les plus probables pour votre bien précis, les signes à repérer, ce qui prévient chacun, et ceux qui, honnêtement, ne sont pas un travail de propriétaire.
+Sidan ställer fem frågor och ger dig de skadedjur som är mest sannolika för just din fastighet, tecknen att leta efter, vad som förebygger vart och ett, och vilka som ärligt talat inte är ett jobb för ägaren.
 
-Cette dernière partie compte. Certains d'entre eux sont un coup de téléphone, pas un samedi.
+Den sista delen betyder mer än den låter. Några av dem är ett telefonsamtal, inte en lördag.
 
 {link}`,
-    nl: `Drie dingen aan een Spaanse woning trekken elk iets anders aan, en ze overlappen nauwelijks: warm weer, een tuin, en lange lege periodes.
+    de: `Drei Dinge an einer spanischen Immobilie ziehen jeweils etwas völlig Verschiedenes an, und sie überschneiden sich kaum. Warmes Wetter. Ein Garten. Lange Strecken, in denen niemand im Haus ist.
 
-Daarom past algemeen advies nooit helemaal. Het advies dat werkt voor een benedenwoning met terras is niet het advies voor een villa met pijnbomen en een zwembad, en geen van beide is het advies voor een huis dat van oktober tot april leegstaat.
+Deshalb passen die allgemeinen Ratschläge nie ganz zu irgendjemandem. Was für eine Erdgeschosswohnung mit Terrasse funktioniert, ist nicht der Rat für eine Villa mit Pinien und Pool, und keines von beidem ist der Rat für ein Haus, das von Oktober bis April leer steht.
 
-De lege periode is degene die eigenaren in het buitenland onderschatten. Er wordt niets verstoord, er valt niets op, en het eerste teken van een probleem is wat u in het voorjaar ziet, en dan lag het nuttige moment om te handelen maanden terug.
+Das Letzte unterschätzen Eigentümer im Ausland, und ich verstehe warum. Nichts wird gestört, nichts fällt auf, und das erste Anzeichen eines Problems ist das, was Sie sehen, wenn Sie zu Ostern hereinkommen. Und da lag der nützliche Moment, etwas zu tun, Monate zurück.
 
-Ik heb een pagina gemaakt die vijf vragen stelt en u de plagen geeft die voor precies uw woning het waarschijnlijkst zijn, de signalen om op te letten, wat elk ervan voorkomt, en welke eerlijk gezegd geen klus voor de eigenaar zijn.
+Die Seite stellt fünf Fragen und nennt Ihnen die für genau Ihre Immobilie wahrscheinlichsten Schädlinge, die Anzeichen, worauf zu achten ist, was jeden davon verhindert, und welche ehrlicherweise keine Aufgabe für den Eigentümer sind.
 
-Dat laatste deel doet ertoe. Sommige hiervan zijn een telefoontje, geen zaterdag.
+Der letzte Teil zählt mehr, als er klingt. Einige davon sind ein Telefonat, kein Samstag.
+
+{link}`,
+    fr: `Trois choses dans un bien espagnol attirent chacune quelque chose de complètement différent, et elles se recoupent à peine. La chaleur. Un jardin. De longues périodes sans personne dans la maison.
+
+C'est pourquoi les conseils généraux ne conviennent jamais tout à fait à quelqu'un. Ce qui marche pour un rez-de-chaussée avec terrasse n'est pas le conseil pour une villa avec des pins et une piscine, et aucun des deux n'est le conseil pour un logement vide d'octobre à avril.
+
+Ce dernier cas est celui que les propriétaires à l'étranger sous-estiment, et je comprends pourquoi. Rien n'est dérangé, rien n'est remarqué, et le premier signe d'un problème est celui que vous voyez en entrant à Pâques. Alors que le bon moment pour agir remontait à des mois.
+
+La page pose cinq questions et vous donne les nuisibles les plus probables pour votre bien précis, les signes à repérer, ce qui prévient chacun, et ceux qui, honnêtement, ne sont pas un travail de propriétaire.
+
+Cette dernière partie compte plus qu'il n'y paraît. Certains d'entre eux sont un coup de téléphone, pas un samedi.
+
+{link}`,
+    nl: `Drie dingen aan een Spaanse woning trekken elk iets totaal anders aan, en ze overlappen nauwelijks. Warm weer. Een tuin. Lange periodes zonder mensen in huis.
+
+Daarom past algemeen advies nooit helemaal bij iemand. Wat werkt voor een benedenwoning met terras is niet het advies voor een villa met pijnbomen en een zwembad, en geen van beide is het advies voor een huis dat van oktober tot april leegstaat.
+
+Dat laatste onderschatten eigenaren in het buitenland, en ik snap waarom. Er wordt niets verstoord, er valt niets op, en het eerste teken van een probleem is wat u ziet als u met Pasen binnenloopt. En dan lag het nuttige moment om er iets aan te doen maanden terug.
+
+De pagina stelt vijf vragen en geeft u de plagen die voor precies uw woning het waarschijnlijkst zijn, de signalen om op te letten, wat elk ervan voorkomt, en welke eerlijk gezegd geen klus voor de eigenaar zijn.
+
+Dat laatste deel telt zwaarder dan het klinkt. Sommige hiervan zijn een telefoontje, geen zaterdag.
 
 {link}`,
   },
@@ -1437,58 +1641,70 @@ Dat laatste deel doet ertoe. Sommige hiervan zijn een telefoontje, geen zaterdag
   kind: 'informative',
   rules: [],
   text: {
-    en: `If you took out a Spanish mortgage between 2000 and 2019, it is worth getting the file out and reading the completion costs.
+    en: `If you took out a Spanish mortgage somewhere between 2000 and 2019, it's worth digging the file out one evening and actually reading the completion costs. Most people signed those pages without reading them, which is entirely understandable and is also the whole point.
 
-Three things come up repeatedly in mortgages from that period: set-up fees charged entirely to the borrower, floor clauses that stopped the rate falling below a set level, and insurance sold alongside the loan. Whether any of them applies to you depends on your own deed and your own conditions, not on what happened to someone else with the same lender.
+Three things come up again and again in loans from that period. Set up fees charged entirely to the borrower. Floor clauses that stopped the rate falling below a level you never agreed to think about. And insurance sold alongside the loan.
 
-I want to be straight about the limits of a calculator here. It can estimate what was charged and what a claim of that type would typically cover. It cannot tell you whether a claim is still in time, because that depends on the type of claim and is genuinely contested. That part is a question for an abogado, with your deed in front of them.
+Whether any of that applies to you depends on your deed and your conditions. Not on what happened to somebody else with the same lender, which is how most of these conversations start in groups like this.
 
-What the page is good for is finding out in a couple of minutes whether it is worth asking the question at all:
+And I want to be straight about what a calculator can and can't do here. It can estimate what was charged and what a claim of that type usually covers. It cannot tell you whether a claim is still in time, because that depends on the type of claim and is genuinely contested. That part needs an abogado with your deed in front of them.
 
-{link}`,
-    no: `Tok du opp et spansk boliglån mellom 2000 og 2019, er det verdt å finne fram mappen og lese gjennom kostnadene ved opprettelsen.
-
-Tre ting går igjen i lån fra den perioden: etableringsgebyrer belastet låntakeren i sin helhet, gulvklausuler som hindret renten i å falle under et fastsatt nivå, og forsikring solgt sammen med lånet. Om noen av dem gjelder deg, avhenger av ditt eget dokument og dine egne vilkår, ikke av hva som skjedde med en annen i samme bank.
-
-Jeg vil være ærlig om hva en kalkulator kan og ikke kan. Den kan anslå hva som ble belastet og hva et krav av den typen vanligvis dekker. Den kan ikke si om et krav fortsatt er i tide, for det avhenger av kravtypen og er reelt omstridt. Den delen er et spørsmål for en abogado, med dokumentet ditt foran seg.
-
-Det siden er god til, er å finne ut på et par minutter om det i det hele tatt er verdt å stille spørsmålet:
+What the page is good for is finding out in two minutes whether it's worth asking the question at all.
 
 {link}`,
-    sv: `Tog du ett spanskt bolån mellan 2000 och 2019 är det värt att ta fram pärmen och läsa igenom kostnaderna vid uppläggningen.
+    no: `Tok du opp et spansk boliglån et sted mellom 2000 og 2019, er det verdt å grave fram mappen en kveld og faktisk lese kostnadene ved opprettelsen. De fleste signerte de sidene uten å lese dem, noe som er helt forståelig, og som også er hele poenget.
 
-Tre saker återkommer i lån från den perioden: uppläggningsavgifter som lades helt på låntagaren, golvklausuler som hindrade räntan från att falla under en viss nivå, och försäkring som såldes ihop med lånet. Om något av det gäller dig beror på din egen handling och dina egna villkor, inte på vad som hände någon annan i samma bank.
+Tre ting går igjen og igjen i lån fra den perioden. Etableringsgebyrer belastet låntakeren i sin helhet. Gulvklausuler som hindret renten i å falle under et nivå du aldri gikk med på å tenke over. Og forsikring solgt sammen med lånet.
 
-Jag vill vara rak om vad en kalkylator kan. Den kan uppskatta vad som togs ut och vad ett krav av den typen normalt täcker. Den kan inte säga om ett krav fortfarande är i tid, för det beror på kravtypen och är verkligt omtvistat. Den delen är en fråga för en abogado, med din handling framför sig.
+Om noe av det gjelder deg, avhenger av ditt dokument og dine vilkår. Ikke av hva som skjedde med en annen i samme bank, som er slik de fleste av disse samtalene starter i grupper som denne.
 
-Det sidan är bra på är att på ett par minuter ta reda på om det alls är värt att ställa frågan:
+Og jeg vil være ærlig om hva en kalkulator kan og ikke kan her. Den kan anslå hva som ble belastet og hva et krav av den typen vanligvis dekker. Den kan ikke si om et krav fortsatt er i tide, for det avhenger av kravtypen og er reelt omstridt. Den delen krever en abogado med dokumentet ditt foran seg.
 
-{link}`,
-    de: `Haben Sie zwischen 2000 und 2019 ein spanisches Hypothekendarlehen aufgenommen, lohnt es, die Akte herauszuholen und die Abschlusskosten zu lesen.
-
-Drei Dinge tauchen bei Darlehen aus dieser Zeit immer wieder auf: Bearbeitungsgebühren, die vollständig dem Darlehensnehmer auferlegt wurden, Zinsuntergrenzen, die verhinderten, dass der Satz unter ein festgelegtes Niveau fiel, und Versicherungen, die zusammen mit dem Darlehen verkauft wurden. Ob etwas davon auf Sie zutrifft, hängt von Ihrer eigenen Urkunde und Ihren eigenen Bedingungen ab, nicht davon, was jemand anderem bei demselben Institut widerfahren ist.
-
-Ich will offen sein, was ein Rechner leisten kann. Er kann schätzen, was berechnet wurde und was ein Anspruch dieser Art typischerweise umfasst. Er kann nicht sagen, ob ein Anspruch noch rechtzeitig ist, denn das hängt von der Anspruchsart ab und ist wirklich umstritten. Dieser Teil ist eine Frage für einen abogado, mit Ihrer Urkunde vor sich.
-
-Wofür die Seite gut ist: in ein paar Minuten herauszufinden, ob es überhaupt lohnt, die Frage zu stellen:
+Det siden er god til, er å finne ut på to minutter om det i det hele tatt er verdt å stille spørsmålet.
 
 {link}`,
-    fr: `Si vous avez souscrit un prêt immobilier espagnol entre 2000 et 2019, cela vaut la peine de ressortir le dossier et de relire les frais de mise en place.
+    sv: `Tog du ett spanskt bolån någon gång mellan 2000 och 2019 är det värt att gräva fram pärmen en kväll och faktiskt läsa kostnaderna vid uppläggningen. De flesta skrev under de sidorna utan att läsa dem, vilket är fullt begripligt, och också hela poängen.
 
-Trois choses reviennent régulièrement dans les prêts de cette période : des frais de dossier mis entièrement à la charge de l'emprunteur, des clauses plancher empêchant le taux de descendre sous un niveau fixé, et des assurances vendues avec le prêt. Que l'une d'elles vous concerne dépend de votre propre acte et de vos propres conditions, pas de ce qui est arrivé à quelqu'un d'autre chez le même prêteur.
+Tre saker återkommer gång på gång i lån från den perioden. Uppläggningsavgifter som lades helt på låntagaren. Golvklausuler som hindrade räntan från att falla under en nivå du aldrig gick med på att fundera över. Och försäkring som såldes ihop med lånet.
 
-Je veux être clair sur les limites d'un calculateur. Il peut estimer ce qui a été facturé et ce qu'une réclamation de ce type couvre habituellement. Il ne peut pas vous dire si une réclamation est encore dans les délais, car cela dépend du type de réclamation et fait réellement débat. Cette partie est une question pour un abogado, votre acte sous les yeux.
+Om något av det gäller dig beror på din handling och dina villkor. Inte på vad som hände någon annan i samma bank, vilket är så de flesta av de här samtalen börjar i grupper som den här.
 
-Ce à quoi la page sert, c'est à savoir en deux minutes si la question mérite d'être posée :
+Och jag vill vara rak om vad en kalkylator kan och inte kan här. Den kan uppskatta vad som togs ut och vad ett krav av den typen brukar täcka. Den kan inte säga om ett krav fortfarande är i tid, för det beror på kravtypen och är verkligt omtvistat. Den delen kräver en abogado med din handling framför sig.
+
+Det sidan är bra på är att på två minuter ta reda på om det alls är värt att ställa frågan.
 
 {link}`,
-    nl: `Heeft u tussen 2000 en 2019 een Spaanse hypotheek afgesloten, dan is het de moeite waard het dossier erbij te pakken en de afsluitkosten door te lezen.
+    de: `Wenn Sie irgendwann zwischen 2000 und 2019 ein spanisches Hypothekendarlehen aufgenommen haben, lohnt es sich, die Akte eines Abends herauszuholen und die Abschlusskosten wirklich zu lesen. Die meisten haben diese Seiten unterschrieben, ohne sie zu lesen, was völlig verständlich ist und zugleich der ganze Punkt.
 
-Drie dingen komen telkens terug bij leningen uit die periode: afsluitkosten die volledig bij de kredietnemer werden gelegd, bodemclausules die verhinderden dat de rente onder een vastgesteld niveau zakte, en verzekeringen die naast de lening werden verkocht. Of iets daarvan op u van toepassing is, hangt af van uw eigen akte en uw eigen voorwaarden, niet van wat iemand anders bij dezelfde verstrekker overkwam.
+Drei Dinge tauchen bei Darlehen aus dieser Zeit immer wieder auf. Bearbeitungsgebühren, die komplett dem Darlehensnehmer auferlegt wurden. Zinsuntergrenzen, die verhinderten, dass der Satz unter ein Niveau fiel, über das Sie nie nachzudenken zugestimmt hatten. Und Versicherungen, die zusammen mit dem Darlehen verkauft wurden.
 
-Ik wil eerlijk zijn over wat een rekenhulp kan. Hij kan schatten wat er in rekening is gebracht en wat een vordering van dat type doorgaans dekt. Hij kan niet zeggen of een vordering nog op tijd is, want dat hangt van het soort vordering af en is werkelijk betwist. Dat deel is een vraag voor een abogado, met uw akte erbij.
+Ob davon etwas auf Sie zutrifft, hängt von Ihrer Urkunde und Ihren Bedingungen ab. Nicht davon, was jemand anderem beim selben Institut widerfahren ist, und genau so beginnen die meisten dieser Gespräche in Gruppen wie dieser.
 
-Waar de pagina goed voor is, is in een paar minuten uitvinden of de vraag überhaupt de moeite waard is:
+Und ich will offen sein, was ein Rechner hier leisten kann und was nicht. Er kann schätzen, was berechnet wurde und was ein Anspruch dieser Art üblicherweise umfasst. Er kann nicht sagen, ob ein Anspruch noch rechtzeitig ist, denn das hängt von der Anspruchsart ab und ist wirklich umstritten. Dieser Teil braucht einen abogado mit Ihrer Urkunde vor sich.
+
+Wofür die Seite gut ist: in zwei Minuten herauszufinden, ob es sich überhaupt lohnt, die Frage zu stellen.
+
+{link}`,
+    fr: `Si vous avez souscrit un prêt immobilier espagnol quelque part entre 2000 et 2019, cela vaut la peine de ressortir le dossier un soir et de lire vraiment les frais de mise en place. La plupart des gens ont signé ces pages sans les lire, ce qui est parfaitement compréhensible, et c'est aussi tout le problème.
+
+Trois choses reviennent encore et encore dans les prêts de cette période. Des frais de dossier mis entièrement à la charge de l'emprunteur. Des clauses plancher qui empêchaient le taux de descendre sous un niveau auquel vous n'aviez jamais accepté de réfléchir. Et des assurances vendues avec le prêt.
+
+Que tout cela vous concerne dépend de votre acte et de vos conditions. Pas de ce qui est arrivé à quelqu'un d'autre chez le même prêteur, et c'est pourtant comme ça que commencent la plupart de ces conversations dans des groupes comme celui-ci.
+
+Et je veux être clair sur ce qu'un calculateur peut et ne peut pas faire ici. Il peut estimer ce qui a été facturé et ce qu'une réclamation de ce type couvre habituellement. Il ne peut pas vous dire si une réclamation est encore dans les délais, parce que cela dépend du type et fait réellement débat. Cette partie demande un abogado, votre acte sous les yeux.
+
+Ce à quoi la page sert, c'est à savoir en deux minutes si la question mérite seulement d'être posée.
+
+{link}`,
+    nl: `Heeft u ergens tussen 2000 en 2019 een Spaanse hypotheek afgesloten, dan is het de moeite waard om het dossier op een avond op te diepen en de afsluitkosten écht te lezen. De meeste mensen tekenden die bladzijden zonder ze te lezen, wat volkomen begrijpelijk is, en ook meteen de hele kern.
+
+Drie dingen komen keer op keer terug bij leningen uit die periode. Afsluitkosten die volledig bij de kredietnemer werden gelegd. Bodemclausules die verhinderden dat de rente onder een niveau zakte waarover u nooit had ingestemd na te denken. En verzekeringen die naast de lening werden verkocht.
+
+Of daar iets van op u van toepassing is, hangt af van uw akte en uw voorwaarden. Niet van wat iemand anders bij dezelfde verstrekker overkwam, en zo beginnen de meeste van deze gesprekken in groepen als deze nu juist wel.
+
+En ik wil eerlijk zijn over wat een rekenhulp hier wel en niet kan. Hij kan schatten wat er in rekening is gebracht en wat een vordering van dat type doorgaans dekt. Hij kan niet zeggen of een vordering nog op tijd is, want dat hangt van het soort af en is werkelijk betwist. Dat deel vraagt om een abogado met uw akte erbij.
+
+Waar de pagina goed voor is, is in twee minuten uitvinden of de vraag überhaupt de moeite waard is.
 
 {link}`,
   },

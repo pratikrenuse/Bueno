@@ -26,20 +26,21 @@ const ACCENT = '#5B7FCC'
 const GOLD = '#C9A96E'
 const PAGE_BG = '#E7EAF0'
 
-const LANGS = [
-  { key: 'en', label: 'English' },
-  { key: 'no', label: 'Norsk' },
-  { key: 'sv', label: 'Svenska' },
-  { key: 'de', label: 'Deutsch' },
-  { key: 'fr', label: 'Français' },
-  { key: 'nl', label: 'Nederlands' },
+// Pratik reviews English. The five translations travel with the post and are only ever
+// looked at, never chosen between, so there is no language switcher here on purpose.
+const TRANSLATIONS = [
+  { key: 'no', label: 'Norwegian' },
+  { key: 'sv', label: 'Swedish' },
+  { key: 'de', label: 'German' },
+  { key: 'fr', label: 'French' },
+  { key: 'nl', label: 'Dutch' },
 ]
 const STATUSES = [
-  { key: 'all', label: 'Everything' },
   { key: 'pending', label: 'To review' },
   { key: 'approved', label: 'Approved' },
   { key: 'posted', label: 'Live' },
   { key: 'rejected', label: 'Parked' },
+  { key: 'all', label: 'Everything' },
 ]
 const PILL = {
   pending: { label: 'To review', bg: '#FBF3E2', fg: '#8a6d1f' },
@@ -58,8 +59,7 @@ const fmt = (iso) => {
 export default function InternalPratik() {
   const [pass, setPass] = useState(() => sessionStorage.getItem('fb_pass') || '')
   const [entered, setEntered] = useState(false)
-  const [lang, setLang] = useState('en')
-  const [status, setStatus] = useState('all')
+  const [status, setStatus] = useState('pending')
   const [kind, setKind] = useState('all')
   const [posts, setPosts] = useState([])
   const [counts, setCounts] = useState({})
@@ -71,15 +71,16 @@ export default function InternalPratik() {
   const [editing, setEditing] = useState(null)    // { id, text }
   const [rejecting, setRejecting] = useState(null) // { id, comment }
   const [customUrl, setCustomUrl] = useState('')
+  const [showTr, setShowTr] = useState(null)
   const [cursor, setCursor] = useState(0)
   const cardRefs = useRef({})
 
   useEffect(() => { document.title = 'My Facebook posts | 24/7 Spain' }, [])
 
-  const load = useCallback(async (p, l, s) => {
+  const load = useCallback(async (p, s) => {
     setBusy(true); setErr('')
     try {
-      const r = await fetch(`/api/fb?action=posts&lang=${l}&status=${s}`, { headers: { 'x-passcode': p } })
+      const r = await fetch(`/api/fb?action=posts&status=${s}`, { headers: { 'x-passcode': p } })
       if (r.status === 401) { setEntered(false); setErr('Wrong password'); setBusy(false); return }
       const raw = await r.text()
       let j
@@ -92,12 +93,14 @@ export default function InternalPratik() {
     setBusy(false)
   }, [])
 
-  useEffect(() => { if (entered) load(pass, lang, status) }, [entered, lang, status, load, pass])
+  useEffect(() => { if (entered) load(pass, status) }, [entered, status, load, pass])
 
   const shown = useMemo(
     () => (kind === 'all' ? posts : posts.filter(p => p.kind === kind)),
     [posts, kind]
   )
+  const reviewed = (counts.approved || 0) + (counts.rejected || 0) + (counts.posted || 0)
+  const pct = counts.all ? Math.round((reviewed / counts.all) * 100) : 0
   useEffect(() => { setCursor(c => Math.min(c, Math.max(0, shown.length - 1))) }, [shown.length])
 
   async function patch(id, body) {
@@ -125,9 +128,11 @@ export default function InternalPratik() {
       // as an error on purpose: a queue that says Sent when nothing arrived is worse than
       // one that says it failed.
       if (j.warning) setErr(j.warning)
-      else if (j.sent) setFlash(`Sent to ${j.post?.sent_to || 'the publisher'}, you are copied.`)
+      else if (j.sent) setFlash(
+        `Sent to ${j.post?.sent_to || 'the publisher'}, you are copied.`
+        + (j.retranslated ? ' The five translations were rebuilt from your version first.' : ''))
       else if (j.reason === 'already sent') setFlash('Approved. It had already been emailed, so nothing was sent again.')
-      else setErr(`Approved, but the email did not go: ${j.error}`)
+      else setErr(`Approved, but nothing was sent: ${j.error}`)
     } catch (e) { setErr(String(e.message || e)) }
     setBusy(false)
   }
@@ -197,7 +202,7 @@ export default function InternalPratik() {
       const j = await r.json()
       if (j.error) throw new Error(j.error)
       setFlash(`${j.written} posts written, ${j.ideas} ideas in ${j.languages} languages. ${j.kept_decisions} decisions kept.`)
-      await load(pass, lang, status)
+      await load(pass, status)
     } catch (e) { setErr(String(e.message || e)) }
     setBusy(false)
   }
@@ -251,31 +256,40 @@ export default function InternalPratik() {
         </div>
       </header>
 
+      {/* The dashboard. Same shape as the team deck: where you are, then what to filter by. */}
       <div className="fbp-bar">
-        <div className="fbp-filters">
-          <div className="fbp-group" role="group" aria-label="Language">
-            {LANGS.map(l => (
-              <button key={l.key} className={`fbp-chip${lang === l.key ? ' current' : ''}`}
-                aria-pressed={lang === l.key} onClick={() => setLang(l.key)}>{l.label}</button>
-            ))}
+        <div className="fbp-dash">
+          <div className="fbp-progress-head">
+            <span>{counts.pending === 0 && counts.all > 0 ? 'Everything reviewed' : `${reviewed} of ${counts.all || 0} reviewed`}</span>
+            <span>{pct}%</span>
           </div>
-          <div className="fbp-group" role="group" aria-label="Status">
-            {STATUSES.map(s => (
-              <button key={s.key} className={`fbp-chip${status === s.key ? ' current' : ''}`}
-                aria-pressed={status === s.key} onClick={() => setStatus(s.key)}>
-                {s.label}{counts[s.key] != null ? ` (${counts[s.key]})` : ''}
-              </button>
-            ))}
-          </div>
-          <div className="fbp-group" role="group" aria-label="Kind">
-            {[['all', 'Both'], ['story', 'Personal story'], ['informative', 'Straight useful']].map(([k, label]) => (
-              <button key={k} className={`fbp-chip${kind === k ? ' current' : ''}`}
-                aria-pressed={kind === k} onClick={() => setKind(k)}>{label}</button>
-            ))}
+          <div className="fbp-progress"><div className="fbp-progress-fill"
+            style={{ width: `${pct}%`, background: counts.pending === 0 && counts.all > 0 ? '#2e7d32' : ACCENT }} /></div>
+          <div className="fbp-stats">
+            <span><b>{counts.approved || 0}</b> approved and emailed</span>
+            <span><b>{counts.posted || 0}</b> live</span>
+            <span><b>{counts.rejected || 0}</b> parked</span>
           </div>
         </div>
+
+        <div className="fbp-group" role="group" aria-label="Status">
+          {STATUSES.map(st => (
+            <button key={st.key} className={`fbp-chip${status === st.key ? ' current' : ''}`}
+              aria-pressed={status === st.key} onClick={() => { setStatus(st.key); setCursor(0) }}>
+              {st.label} ({counts[st.key] != null ? counts[st.key] : 0})
+            </button>
+          ))}
+        </div>
+        <div className="fbp-group" role="group" aria-label="Kind">
+          {[['all', 'Both kinds'], ['story', 'Personal story'], ['informative', 'Straight useful']].map(([k, label]) => (
+            <button key={k} className={`fbp-chip${kind === k ? ' current' : ''}`}
+              aria-pressed={kind === k} onClick={() => { setKind(k); setCursor(0) }}>{label}</button>
+          ))}
+        </div>
+
         <p className="fbp-count">
-          {shown.length} posts. Approving emails the post to the publisher and copies you.
+          You read the English. Approving translates it into five more languages and emails all
+          six to the person who publishes them, with you copied.
           <span className="fbp-keys"> j k to move, a approve, e edit, r park, c copy</span>
         </p>
       </div>
@@ -283,8 +297,25 @@ export default function InternalPratik() {
       {err && <p className="fbp-err fbp-wide">{err}</p>}
       {flash && <p className="fbp-ok fbp-wide">{flash}</p>}
       {busy && <p className="fbp-wide">Working...</p>}
-      {!busy && !shown.length && (
-        <p className="fbp-wide">Nothing here yet. Press Load the latest writing to fill the deck.</p>
+
+      {!busy && !counts.all && (
+        <div className="fbp-empty">
+          <h2>Nothing in the deck yet.</h2>
+          <p>Twenty posts, each one already written out in six languages. Safe to press twice, it
+            never overwrites a decision.</p>
+          <button className="fbp-primary fbp-big" onClick={seed} disabled={busy}>Load the latest writing</button>
+        </div>
+      )}
+
+      {!busy && counts.all > 0 && status === 'pending' && counts.pending === 0 && (
+        <div className="fbp-empty">
+          <h2>Nothing left to review.</h2>
+          <p>{counts.approved || 0} approved and emailed, {counts.posted || 0} live, {counts.rejected || 0} parked.</p>
+        </div>
+      )}
+
+      {!busy && counts.all > 0 && !shown.length && !(status === 'pending' && counts.pending === 0) && (
+        <p className="fbp-wide">Nothing in this view.</p>
       )}
 
       <main className="fbp-list">
@@ -300,7 +331,6 @@ export default function InternalPratik() {
                 <span className="fbp-pill" style={{ background: pill.bg, color: pill.fg }}>{pill.label}</span>
                 <b>{p.kind === 'story' ? 'Personal story' : 'Straight useful'}</b>
                 <span className="fbp-tool">{p.tool_slug}</span>
-                <span className="fbp-lang">{p.language.toUpperCase()}</span>
                 {p.edited_text && <span className="fbp-tag">Edited</span>}
               </div>
 
@@ -341,9 +371,30 @@ export default function InternalPratik() {
                 </p>
               )}
 
+              {!isEditing && (
+                <div className="fbp-tr">
+                  <button className="fbp-trbtn" onClick={() => setShowTr(showTr === p.id ? null : p.id)}>
+                    {showTr === p.id ? 'Hide the other five languages' : 'See the other five languages'}
+                  </button>
+                  {p.edited_text && (
+                    <span className="fbp-trnote">You edited this one, so the translations get rebuilt from your version when you approve.</span>
+                  )}
+                  {showTr === p.id && (
+                    <div className="fbp-trlist">
+                      {TRANSLATIONS.map(l => (
+                        <details key={l.key}>
+                          <summary>{l.label}</summary>
+                          <pre>{(p.translations && p.translations[l.key]) || 'Not written yet. It will be translated when you approve.'}</pre>
+                        </details>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
               <label className="fbp-note">
-                <span>Which group should this go in? This line is in the email.</span>
-                <input defaultValue={p.note || ''} placeholder="Group name, and anything the publisher needs to know"
+                <span>Which groups should this go in? This line goes into the email.</span>
+                <input defaultValue={p.note || ''} placeholder="Group names, and anything the publisher needs to know"
                   onBlur={e => saveNote(p, e.target.value)} />
               </label>
 

@@ -23,6 +23,7 @@
 // Nothing is ever appended to the text on the way out. What he approved is what is sent.
 import { gate, rest, readBody } from './_fb_db.js';
 import { sendPost, SEND_TO, finalText } from './_fb_email.js';
+import { isCurrent, translate } from './_fb_translate.js';
 
 const DECISIONS = new Set(['pending', 'approved', 'rejected', 'posted']);
 const MAX_TEXT = 8000;
@@ -79,12 +80,36 @@ export default async function handler(req, res) {
       return res.json({ ok: true, post: out[0] || null, sent: false, reason: 'already sent' });
     }
 
-    if (!finalText(row)) return res.status(400).json({ error: 'there is no text to send' });
+    const english = finalText(row);
+    if (!english) return res.status(400).json({ error: 'there is no text to send' });
 
-    const result = await sendPost(row);
+    // The translations must be of the English that is about to be sent, not of whatever the
+    // English used to say. If Pratik edited the post, the stored set is stale and is rebuilt
+    // before anything leaves. If that rebuild fails, nothing is sent at all: five stale
+    // translations going out under an approval is worse than an approval that did not land.
+    let sendable = row;
+    let retranslated = false;
+    if (!isCurrent(row, english)) {
+      const t = await translate(english, row.tool_slug);
+      if (!t.ok) {
+        const out = await save(res, id, { status: 'pending', send_error: `Not sent. ${t.error}` });
+        if (out === null) return;
+        return res.json({
+          ok: true, post: out[0] || null, sent: false,
+          error: `The translations were out of date and could not be rebuilt, so nothing was sent. ${t.error}`,
+        });
+      }
+      sendable = { ...row, translations: t.translations, translations_of: t.hash };
+      retranslated = true;
+    }
+
+    const result = await sendPost(sendable);
+    const translationPatch = retranslated
+      ? { translations: sendable.translations, translations_of: sendable.translations_of }
+      : {};
     const patch = result.ok
-      ? { status: 'approved', sent_at: new Date().toISOString(), sent_to: SEND_TO.join(', '), send_error: null, posted_at: null }
-      : { status: 'approved', send_error: result.error, posted_at: null };
+      ? { status: 'approved', sent_at: new Date().toISOString(), sent_to: SEND_TO.join(', '), send_error: null, posted_at: null, ...translationPatch }
+      : { status: 'approved', send_error: result.error, posted_at: null, ...translationPatch };
 
     const out = await save(res, id, patch);
     if (out === null) return;
@@ -92,6 +117,7 @@ export default async function handler(req, res) {
       ok: true,
       post: out[0] || null,
       sent: result.ok,
+      retranslated,
       error: result.ok ? null : result.error,
       warning: result.warning || null,
     });
@@ -104,6 +130,8 @@ export default async function handler(req, res) {
     if (typeof text !== 'string' || !text.trim()) return res.status(400).json({ error: 'text is required' });
     if (text.length > MAX_TEXT) return res.status(400).json({ error: `text is longer than ${MAX_TEXT} characters` });
     patch.edited_text = text.trim();
+    // The stored translations were made from the old wording. They are not deleted, because
+    // they are still the best fallback, but approving will notice the mismatch and rebuild.
   } else if (action === 'image_custom') {
     if (!isImageUrl(image)) return res.status(400).json({ error: 'that is not an https image address' });
     const row = await fetchOne(res, id);

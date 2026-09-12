@@ -2,19 +2,20 @@
 //
 // Writes the content module into the table. Safe to run repeatedly.
 //
-// WHAT IT WILL AND WILL NOT OVERWRITE
-// A row Pratik has already acted on keeps what he did. His status, his edit, his note, his
-// rejection reason, his chosen image, the date he posted it and the record of what was
-// emailed all survive a reseed. The original post text and the image options are refreshed
-// from the content module, because that is the thing this action exists to push. A chosen
-// image that is still one of the options is kept; one that is no longer offered falls back
-// to the new default.
+// ONE ROW PER IDEA, IN ENGLISH
+// Pratik reviews English and nothing else, so English is the row. The five translations ride
+// along in a jsonb column, stamped with the hash of the English they were made from. A post
+// is one decision, not six.
 //
-// An edit is never overwritten. post_text is the writing; edited_text is what Pratik made
-// of it, and only he can change that.
+// WHAT A RESEED WILL AND WILL NOT OVERWRITE
+// Anything Pratik did survives: his status, his edit, his note, his rejection reason, his
+// chosen image, the date he marked it live, and the record of what was emailed. The original
+// English and the image options are refreshed, because that is what this action is for. An
+// edit is never overwritten, and neither are translations he has already had sent.
 import { gate, rest, readBody } from './_fb_db.js';
-import { IDEAS, LANGS, renderPost, linkFor } from './_fb_content.js';
+import { IDEAS, TRANSLATION_LANGS, renderPost, linkFor } from './_fb_content.js';
 import { imageOptionsFor, imageFor } from './_fb_images.js';
+import { hashOf } from './_fb_translate.js';
 
 const firstLine = (t) => (t.split('\n').find(l => l.trim()) || '').trim();
 
@@ -24,41 +25,49 @@ export default async function handler(req, res) {
 
   const { dry } = readBody(req);
 
-  const existing = await rest(res, '?select=id,idea_key,language,status,note,posted_at,image_url,edited_text,reject_comment,sent_at,sent_to,send_error');
+  const existing = await rest(res, '?select=id,idea_key,status,note,posted_at,image_url,edited_text,'
+    + 'reject_comment,sent_at,sent_to,send_error,translations,translations_of');
   if (existing === null) return;
-  const byKey = new Map(existing.map(r => [`${r.idea_key}:${r.language}`, r]));
+  const byKey = new Map(existing.map(r => [r.idea_key, r]));
 
   const rows = [];
   for (const idea of IDEAS) {
     const options = imageOptionsFor(idea.key);
-    for (const lang of LANGS) {
-      const text = renderPost(idea, lang);
-      if (!text) continue;
-      const prev = byKey.get(`${idea.key}:${lang}`);
-      const keptImage = prev && prev.image_url && options.includes(prev.image_url) ? prev.image_url : null;
-      rows.push({
-        ...(prev ? { id: prev.id } : {}),
-        idea_key: idea.key,
-        language: lang,
-        tool_slug: idea.tool,
-        tool_url: linkFor(idea.tool, lang),
-        kind: idea.kind,
-        hook: firstLine(text),
-        post_text: text,
-        image_url: keptImage || imageFor(idea.key),
-        image_options: options,
-        rule_ids: idea.rules || [],
-        status: prev ? prev.status : 'pending',
-        note: prev ? prev.note : null,
-        posted_at: prev ? prev.posted_at : null,
-        edited_text: prev ? prev.edited_text : null,
-        reject_comment: prev ? prev.reject_comment : null,
-        sent_at: prev ? prev.sent_at : null,
-        sent_to: prev ? prev.sent_to : null,
-        send_error: prev ? prev.send_error : null,
-        updated_at: new Date().toISOString(),
-      });
-    }
+    const english = renderPost(idea, 'en');
+    const prev = byKey.get(idea.key);
+
+    // The written translations of the written English. If Pratik has edited the post, his
+    // edit is what gets translated at approve time and these stay as the fallback.
+    const written = {};
+    for (const lang of TRANSLATION_LANGS) written[lang] = renderPost(idea, lang);
+
+    const keptImage = prev && prev.image_url && options.includes(prev.image_url) ? prev.image_url : null;
+    const keepTranslations = prev && prev.translations_of && Object.keys(prev.translations || {}).length;
+
+    rows.push({
+      ...(prev ? { id: prev.id } : {}),
+      idea_key: idea.key,
+      language: 'en',
+      tool_slug: idea.tool,
+      tool_url: linkFor(idea.tool, 'en'),
+      kind: idea.kind,
+      hook: firstLine(english),
+      post_text: english,
+      translations: keepTranslations ? prev.translations : written,
+      translations_of: keepTranslations ? prev.translations_of : hashOf(english),
+      image_url: keptImage || imageFor(idea.key),
+      image_options: options,
+      rule_ids: idea.rules || [],
+      status: prev ? prev.status : 'pending',
+      note: prev ? prev.note : null,
+      posted_at: prev ? prev.posted_at : null,
+      edited_text: prev ? prev.edited_text : null,
+      reject_comment: prev ? prev.reject_comment : null,
+      sent_at: prev ? prev.sent_at : null,
+      sent_to: prev ? prev.sent_to : null,
+      send_error: prev ? prev.send_error : null,
+      updated_at: new Date().toISOString(),
+    });
   }
 
   if (dry) return res.json({ ok: true, dry: true, would_write: rows.length, existing: existing.length });
@@ -74,7 +83,7 @@ export default async function handler(req, res) {
     ok: true,
     written: Array.isArray(out) ? out.length : rows.length,
     ideas: IDEAS.length,
-    languages: LANGS.length,
+    languages: TRANSLATION_LANGS.length + 1,
     kept_decisions: existing.filter(r => r.status !== 'pending').length,
   });
 }
