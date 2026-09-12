@@ -379,17 +379,27 @@ process.env.ANTHROPIC_API_KEY = 'anthropic-key';
     reject_comment: null, sent_at: '2026-09-10T08:00:00Z',
     sent_to: 'himanshu1997bisht@gmail.com, himanshubisht1407@gmail.com', send_error: null,
     translations: trFor(), translations_of: 'a-hash-from-before',
+  }, {
+    // Never emailed, and carrying a set made from wording that has since been rewritten.
+    id: 'b', idea_key: 'imputed-income-empty-home', language: 'en', status: 'pending',
+    note: null, posted_at: null, image_url: null, edited_text: null,
+    reject_comment: null, sent_at: null, sent_to: null, send_error: null,
+    translations: trFor(), translations_of: 'a-stale-hash',
   }];
   const calls = fakeSupabase(existing);
   const res = makeRes();
   await fbRouter({ ...req('/api/fb?action=seed'), method: 'POST', body: {} }, res);
   const written = JSON.parse(calls.find(c => c.method === 'POST' && /fb_posts/.test(c.url)).body);
-  const a = written.find(r => r.idea_key === 'ninety-days' && r.language === 'en');
+  const a = written.find(r => r.idea_key === 'ninety-days');
+  const b = written.find(r => r.idea_key === 'imputed-income-empty-home');
   ok('a reseed keeps the edit', a.edited_text === 'My own version of the ninety days post.');
   ok('a reseed keeps the record of the send',
      a.sent_at === '2026-09-10T08:00:00Z' && a.sent_to === 'himanshu1997bisht@gmail.com, himanshubisht1407@gmail.com');
   ok('a reseed still refreshes the original writing', a.post_text.includes('90 days'));
   ok('a reseed keeps translations that have already gone out', a.translations_of === 'a-hash-from-before');
+  ok('but rewrites translations on a post that has not', b.translations_of === hashOf(b.post_text));
+  ok('and the rewritten set is the written one, not a machine rebuild',
+     ['no','sv','de','fr','nl'].every(l => b.translations[l] && b.translations[l].length > 100));
   ok('a reseed sends nothing', calls.filter(c => /resend/.test(c.url)).length === 0);
 }
 

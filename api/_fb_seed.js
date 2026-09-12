@@ -42,7 +42,17 @@ export default async function handler(req, res) {
     for (const lang of TRANSLATION_LANGS) written[lang] = renderPost(idea, lang);
 
     const keptImage = prev && prev.image_url && options.includes(prev.image_url) ? prev.image_url : null;
-    const keepTranslations = prev && prev.translations_of && Object.keys(prev.translations || {}).length;
+
+    // Translations are only kept if they have actually been emailed. Anything else takes the
+    // written set, which is hand written and better than a machine rebuild.
+    //
+    // The case this exists for: the English gets rewritten, a reseed lands, and the row still
+    // carries the previous set stamped with the previous hash. Keeping that would mean approve
+    // sees a mismatch and machine translates, quietly throwing away five hand written versions
+    // that were sitting right there. A row that has already gone out is different: what was
+    // sent is a record, and a reseed has no business rewriting history.
+    const keepTranslations = !!(prev && prev.sent_at && prev.translations_of
+      && Object.keys(prev.translations || {}).length);
 
     rows.push({
       ...(prev ? { id: prev.id } : {}),
