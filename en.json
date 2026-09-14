@@ -22,7 +22,7 @@
     "hero_cta": "Explore the tools",
     "trust_free": "100% free",
     "trust_account": "No account needed",
-    "trust_trusted": "Trusted by 2,000+ owners",
+    "trust_trusted": "Every figure sourced",
     "trust_lang": "English language",
     "tools_eyebrow": "Free Tools",
     "tools_heading": "Everything you need to know about your Spanish property.",
@@ -141,7 +141,7 @@
     "email_hint": "Enter your email to receive your full breakdown and a personalised summary of your situation.",
     "email_invalid": "Please enter a valid email address.",
     "email_cta": "Show my results",
-    "email_privacy": "We will not share your email. Trusted by 2,000+ foreign property owners in Spain.",
+    "email_privacy": "We will not share your email.",
     "loading_title": "Calculating your tax obligation",
     "loading_sub": "Preparing your personalised report",
     "status_current": "Filing up to date",
@@ -406,7 +406,7 @@
     "no_account": "No account needed",
     "takes_2_min": "Takes 2 minutes",
     "takes_3_min": "Takes 3 minutes",
-    "trusted": "Trusted by 2,000+ owners"
+    "trusted": "Every figure sourced"
   },
   "countries": {
     "norway": "Norway",

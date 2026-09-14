@@ -22,7 +22,7 @@
     "hero_cta": "Ontdek de tools",
     "trust_free": "100% gratis",
     "trust_account": "Geen account nodig",
-    "trust_trusted": "Vertrouwd door meer dan 2.000 eigenaren",
+    "trust_trusted": "Elk cijfer met bron",
     "trust_lang": "Nederlandse taal",
     "tools_eyebrow": "Gratis tools",
     "tools_heading": "Alles wat u moet weten over uw Spaanse woning.",
@@ -141,7 +141,7 @@
     "email_hint": "Voer uw e-mail in om uw volledige overzicht en een persoonlijke samenvatting van uw situatie te ontvangen.",
     "email_invalid": "Voer een geldig e-mailadres in.",
     "email_cta": "Toon mijn resultaten",
-    "email_privacy": "We delen uw e-mail niet. Vertrouwd door meer dan 2.000 buitenlandse woningeigenaren in Spanje.",
+    "email_privacy": "We delen uw e-mail niet.",
     "loading_title": "Uw belastingverplichting wordt berekend",
     "loading_sub": "Uw persoonlijke rapport wordt voorbereid",
     "status_current": "Aangifte bij",
@@ -406,7 +406,7 @@
     "no_account": "Geen account nodig",
     "takes_2_min": "Duurt 2 minuten",
     "takes_3_min": "Duurt 3 minuten",
-    "trusted": "Vertrouwd door meer dan 2.000 eigenaren"
+    "trusted": "Elk cijfer met bron"
   },
   "countries": {
     "norway": "Noorwegen",

@@ -63,8 +63,26 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
   out.push(`<meta name="twitter:title" content="${escapeHtml(route.title)}" />`);
   out.push(`<meta name="twitter:description" content="${escapeHtml(route.description)}" />`);
 
+  // Freshness, stated rather than implied. An answer engine weighs how recently a claim was
+  // checked, and this site actually knows: every rule carries the date a human last read the
+  // official page it came from.
+  if (route.lastChecked) {
+    out.push(`<meta name="last-checked" content="${escapeHtml(route.lastChecked)}" />`);
+  }
+
   // --- structured data ---------------------------------------------------------------------
   const blocks = [];
+
+  // Who is speaking. Emitted on every page, because an answer engine that cannot resolve the
+  // publisher tends not to cite the page at all.
+  const publisher = {
+    '@type': 'Organization',
+    '@id': `${SITE_ORIGIN}/#organization`,
+    name: SITE_NAME,
+    url: SITE_ORIGIN + '/',
+    description: 'Free tools and sourced answers for people who own property in Spain and live somewhere else.',
+  };
+  blocks.push({ '@context': 'https://schema.org', ...publisher });
 
   if (route.kind === 'home') {
     blocks.push({
@@ -74,6 +92,7 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
       url: SITE_ORIGIN + '/',
       inLanguage: HREFLANG[route.locale],
       description: route.description,
+      publisher: { '@id': `${SITE_ORIGIN}/#organization` },
     });
   }
 
@@ -88,7 +107,51 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
       inLanguage: HREFLANG[route.locale],
       description: route.description,
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+      publisher: { '@id': `${SITE_ORIGIN}/#organization` },
+      isAccessibleForFree: true,
     });
+  }
+
+  // An answer page is the thing an answer engine can quote, so it says so three ways: the
+  // question and answer as a pair, the page as a dated article, and the sources it rests on.
+  if (Array.isArray(route.faq) && route.faq.length) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: HREFLANG[route.locale],
+      mainEntity: route.faq.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+
+  if (route.kind === 'answer') {
+    const article = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: route.h1,
+      url,
+      inLanguage: HREFLANG[route.locale],
+      description: route.description,
+      publisher: { '@id': `${SITE_ORIGIN}/#organization` },
+      isAccessibleForFree: true,
+      // The one sentence worth reading aloud is the answer itself.
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.seo-static h1', '.seo-static p'] },
+    };
+    if (route.lastChecked) {
+      article.dateModified = route.lastChecked;
+      article.datePublished = route.lastChecked;
+    }
+    if (Array.isArray(route.citations) && route.citations.length) {
+      article.citation = route.citations.map(c => ({
+        '@type': 'CreativeWork',
+        name: [c.ref, c.name].filter(Boolean).join(', '),
+        ...(c.url ? { url: c.url } : {}),
+      }));
+    }
+    blocks.push(article);
   }
 
   if (Array.isArray(route.breadcrumbs) && route.breadcrumbs.length > 1) {

@@ -22,7 +22,7 @@
     "hero_cta": "Découvrir les outils",
     "trust_free": "100 % gratuit",
     "trust_account": "Aucun compte requis",
-    "trust_trusted": "Plus de 2 000 propriétaires nous font confiance",
+    "trust_trusted": "Chaque chiffre est sourcé",
     "trust_lang": "Langue française",
     "tools_eyebrow": "Outils gratuits",
     "tools_heading": "Tout ce que vous devez savoir sur votre bien immobilier espagnol.",
@@ -141,7 +141,7 @@
     "email_hint": "Saisissez votre e-mail pour recevoir votre décompte complet et un résumé personnalisé de votre situation.",
     "email_invalid": "Veuillez saisir une adresse e-mail valide.",
     "email_cta": "Afficher mes résultats",
-    "email_privacy": "Nous ne partagerons pas votre e-mail. Plus de 2 000 propriétaires étrangers en Espagne nous font confiance.",
+    "email_privacy": "Nous ne partagerons pas votre e-mail.",
     "loading_title": "Calcul de votre obligation fiscale",
     "loading_sub": "Préparation de votre rapport personnalisé",
     "status_current": "Déclarations à jour",
@@ -406,7 +406,7 @@
     "no_account": "Aucun compte requis",
     "takes_2_min": "Prend 2 minutes",
     "takes_3_min": "Prend 3 minutes",
-    "trusted": "Plus de 2 000 propriétaires nous font confiance"
+    "trusted": "Chaque chiffre est sourcé"
   },
   "countries": {
     "norway": "Norvège",

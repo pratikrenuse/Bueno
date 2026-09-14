@@ -22,7 +22,7 @@
     "hero_cta": "Utforska guiderna",
     "trust_free": "100% gratis",
     "trust_account": "Inget konto behövs",
-    "trust_trusted": "Används redan av över 2 000 bostadsägare",
+    "trust_trusted": "Varje siffra är källbelagd",
     "trust_lang": "Helt på svenska",
     "tools_eyebrow": "Gratis guider",
     "tools_heading": "Allt du behöver veta om din spanska fastighet.",
@@ -141,7 +141,7 @@
     "email_hint": "Ange din e-post för att få hela sammanställningen och en personlig sammanfattning av din situation.",
     "email_invalid": "Ange en giltig e-postadress.",
     "email_cta": "Visa mina resultat",
-    "email_privacy": "Vi delar inte din e-post. Används av över 2 000 utländska bostadsägare i Spanien.",
+    "email_privacy": "Vi delar inte din e-post.",
     "loading_title": "Beräknar din skatteskyldighet",
     "loading_sub": "Förbereder din personliga rapport",
     "status_current": "Inlämning à jour",
@@ -406,7 +406,7 @@
     "no_account": "Inget konto behövs",
     "takes_2_min": "Tar 2 minuter",
     "takes_3_min": "Tar 3 minuter",
-    "trusted": "Används redan av över 2 000 bostadsägare"
+    "trusted": "Varje siffra är källbelagd"
   },
   "countries": {
     "norway": "Norge",

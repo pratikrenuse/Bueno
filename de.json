@@ -22,7 +22,7 @@
     "hero_cta": "Tools entdecken",
     "trust_free": "100 % kostenlos",
     "trust_account": "Kein Konto nötig",
-    "trust_trusted": "Über 2.000 Besitzer vertrauen uns",
+    "trust_trusted": "Jede Zahl mit Quelle",
     "trust_lang": "Deutsche Sprache",
     "tools_eyebrow": "Kostenlose Tools",
     "tools_heading": "Alles, was Sie über Ihre spanische Immobilie wissen müssen.",
@@ -141,7 +141,7 @@
     "email_hint": "Geben Sie Ihre E-Mail ein, um Ihre vollständige Aufschlüsselung und eine persönliche Zusammenfassung Ihrer Situation zu erhalten.",
     "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "email_cta": "Meine Ergebnisse anzeigen",
-    "email_privacy": "Wir geben Ihre E-Mail nicht weiter. Über 2.000 ausländische Immobilienbesitzer in Spanien vertrauen uns.",
+    "email_privacy": "Wir geben Ihre E-Mail nicht weiter.",
     "loading_title": "Ihre Steuerpflicht wird berechnet",
     "loading_sub": "Ihr persönlicher Bericht wird vorbereitet",
     "status_current": "Einreichung aktuell",
@@ -406,7 +406,7 @@
     "no_account": "Kein Konto nötig",
     "takes_2_min": "Dauert 2 Minuten",
     "takes_3_min": "Dauert 3 Minuten",
-    "trusted": "Über 2.000 Besitzer vertrauen uns"
+    "trusted": "Jede Zahl mit Quelle"
   },
   "countries": {
     "norway": "Norwegen",

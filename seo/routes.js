@@ -76,6 +76,23 @@ function coastClause(t) {
  *                             Passed in rather than globbed so this module stays pure.
  * @returns {Array} one object per published URL.
  */
+// The answers layer. Question shaped pages built from the verified rules base, one per
+// question per language. They exist because a calculator cannot be quoted: an answer engine
+// needs a sentence, an article and a date, and these carry all three.
+import { ANSWERS } from '../answers/answers.js';
+import { sourceLine, lastCheckedOf, citationsOf } from '../answers/sources.js';
+
+const ANSWERS_PATH = '/answers';
+
+const ANSWERS_UI = {
+  en: { hub: 'Questions and answers', lead: 'Straight answers about owning property in Spain, each one taken from the article it comes from and dated the day it was checked.', source: 'Where this comes from', tool: 'Work it out for your own property' },
+  no: { hub: 'Spørsmål og svar', lead: 'Rette svar om det å eie bolig i Spania, hvert enkelt hentet fra lovhjemmelen det kommer fra og datert dagen det ble kontrollert.', source: 'Hvor dette kommer fra', tool: 'Regn det ut for din egen bolig' },
+  sv: { hub: 'Frågor och svar', lead: 'Raka svar om att äga bostad i Spanien, vart och ett hämtat från lagrummet det kommer från och daterat den dag det kontrollerades.', source: 'Var detta kommer ifrån', tool: 'Räkna ut det för din egen bostad' },
+  de: { hub: 'Fragen und Antworten', lead: 'Klare Antworten rund um Immobilienbesitz in Spanien, jede aus dem Artikel entnommen, aus dem sie stammt, und mit dem Tag der Prüfung datiert.', source: 'Woher das stammt', tool: 'Für die eigene Immobilie ausrechnen' },
+  fr: { hub: 'Questions et réponses', lead: "Des réponses nettes sur la propriété en Espagne, chacune tirée de l'article dont elle provient et datée du jour de sa vérification.", source: "D'où cela vient", tool: 'Calculez-le pour votre propre bien' },
+  nl: { hub: 'Vragen en antwoorden', lead: 'Rechte antwoorden over woningbezit in Spanje, elk ontleend aan het artikel waar het vandaan komt en gedateerd op de dag van controle.', source: 'Waar dit vandaan komt', tool: 'Reken het uit voor uw eigen woning' },
+};
+
 export function buildRoutes({ tools } = {}) {
   if (!Array.isArray(tools)) {
     throw new Error('buildRoutes needs the tool list. Node callers: await loadTools() from seo/tools.mjs.');
@@ -97,6 +114,9 @@ export function buildRoutes({ tools } = {}) {
     const ui = UI[locale];
     const path = lp(locale, '/');
     const links = [
+      // The answers hub sits first because it is the only part of the site a crawler or an
+      // assistant can read an actual answer out of. Everything else is a tool or a listing.
+      { href: lp(locale, ANSWERS_PATH), label: ANSWERS_UI[locale].hub },
       { href: lp(locale, HUBS.trades.path), label: ui.trades },
       { href: lp(locale, HUBS.pros.path), label: ui.pros },
       { href: lp(locale, '/areas'), label: ui.areas },
@@ -140,6 +160,10 @@ export function buildRoutes({ tools } = {}) {
         priority: locale === DEFAULT_LOCALE ? PRIORITY.tool : PRIORITY.tool - 0.1,
         links: [
           { href: lp(locale, '/'), label: ui.home },
+          // Questions this tool answers. A tool page has nothing quotable on it, so it points
+          // at the pages that do, and they point back.
+          ...ANSWERS.filter(x => x.tool === t.slug).slice(0, 4)
+            .map(x => ({ href: lp(locale, `${ANSWERS_PATH}/${x.slug}`), label: x.q[locale] })),
           ...siblings.map(o => ({ href: lp(locale, o.path), label: TOOL_COPY[o.slug]?.[locale]?.h1 || o.title })),
           { href: lp(locale, HUBS.trades.path), label: ui.trades },
           { href: lp(locale, HUBS.pros.path), label: ui.pros },
@@ -326,6 +350,65 @@ export function buildRoutes({ tools } = {}) {
     const family = byGroup.get(r.group);
     r.alternates = {};
     for (const s of family) r.alternates[s.locale] = absolute(s.path);
+  }
+
+  // --- the answers layer -------------------------------------------------------------------
+  // A hub per locale, then one page per question per locale. These are static pages like the
+  // town pages: prerendered, indexable, and quotable without JavaScript running at all.
+  for (const locale of LOCALES) {
+    const ui = UI[locale];
+    const a = ANSWERS_UI[locale];
+    const path = lp(locale, ANSWERS_PATH);
+    add({
+      path, locale, kind: 'answers-hub', group: 'answers',
+      title: `${a.hub} | ${SITE_NAME}`,
+      description: a.lead.slice(0, 155),
+      h1: a.hub,
+      intro: [a.lead],
+      breadcrumbs: [{ name: ui.home, path: lp(locale, '/') }, { name: a.hub, path }],
+      changefreq: CHANGEFREQ.tool,
+      priority: 0.8,
+      links: ANSWERS.map(x => ({ href: lp(locale, `${ANSWERS_PATH}/${x.slug}`), label: x.q[locale] })),
+      alternates: {},
+      faq: ANSWERS.map(x => ({ q: x.q[locale], a: x.a[locale] })),
+    });
+
+    for (const x of ANSWERS) {
+      const p = lp(locale, `${ANSWERS_PATH}/${x.slug}`);
+      const tool = toolPages.find(t => t.slug === x.tool);
+      const toolLabel = TOOL_COPY[x.tool]?.[locale]?.h1 || tool?.title || x.tool;
+      add({
+        path: p, locale, kind: 'answer', group: `answer:${x.slug}`,
+        // The question, on its own. Adding the site name would push the match further from
+        // the front of the title for no gain: nobody searches for the site, they search for
+        // the question.
+        title: x.q[locale],
+        description: x.a[locale].slice(0, 155),
+        h1: x.q[locale],
+        // The answer first, then where it comes from. An answer engine takes the first
+        // paragraph, so the first paragraph has to be the whole answer.
+        intro: [x.a[locale], `${a.source}: ${x.rules.map(id => sourceLine(id)).filter(Boolean).join('; ')}.`],
+        breadcrumbs: [
+          { name: ui.home, path: lp(locale, '/') },
+          { name: a.hub, path },
+          { name: x.q[locale], path: p },
+        ],
+        changefreq: CHANGEFREQ.tool,
+        priority: 0.75,
+        links: [
+          { href: lp(locale, tool ? tool.path : '/'), label: `${a.tool}: ${toolLabel}` },
+          { href: path, label: a.hub },
+          ...ANSWERS.filter(o => o.slug !== x.slug && o.tool === x.tool)
+            .slice(0, 4).map(o => ({ href: lp(locale, `${ANSWERS_PATH}/${o.slug}`), label: o.q[locale] })),
+        ],
+        alternates: {},
+        faq: [{ q: x.q[locale], a: x.a[locale] }],
+        answerRules: x.rules,
+        citations: citationsOf(x.rules),
+        lastChecked: lastCheckedOf(x.rules),
+        toolSlug: x.tool,
+      });
+    }
   }
 
   return routes;

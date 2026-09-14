@@ -22,7 +22,7 @@
     "hero_cta": "Utforsk verktøyene",
     "trust_free": "100 % gratis",
     "trust_account": "Ingen konto nødvendig",
-    "trust_trusted": "Brukt av over 2 000 eiere",
+    "trust_trusted": "Hvert tall er kildeført",
     "trust_lang": "Norsk språk",
     "tools_eyebrow": "Gratis verktøy",
     "tools_heading": "Alt du trenger å vite om den spanske boligen din.",
@@ -141,7 +141,7 @@
     "email_hint": "Oppgi e-posten din for å motta hele oversikten og et personlig sammendrag av situasjonen din.",
     "email_invalid": "Vennligst oppgi en gyldig e-postadresse.",
     "email_cta": "Vis resultatene mine",
-    "email_privacy": "Vi deler ikke e-posten din. Brukt av over 2 000 utenlandske boligeiere i Spania.",
+    "email_privacy": "Vi deler ikke e-posten din.",
     "loading_title": "Beregner skatteforpliktelsen din",
     "loading_sub": "Forbereder den personlige rapporten din",
     "status_current": "Levering à jour",
@@ -406,7 +406,7 @@
     "no_account": "Ingen konto nødvendig",
     "takes_2_min": "Tar 2 minutter",
     "takes_3_min": "Tar 3 minutter",
-    "trusted": "Brukt av over 2 000 eiere"
+    "trusted": "Hvert tall er kildeført"
   },
   "countries": {
     "norway": "Norge",

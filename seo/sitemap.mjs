@@ -15,6 +15,7 @@ import { fileURLToPath } from 'node:url';
 import { buildRoutes } from './routes.js';
 import { loadTools } from './tools.mjs';
 import { SITE_ORIGIN, escapeHtml } from './copy.js';
+import { resolveLastmod, writeLedger } from './lastmod.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -38,7 +39,8 @@ Disallow: /internal-linkedin
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
 
-function urlset(routes, lastmod) {
+// dateOf is a function rather than a single date, because every url now carries its own.
+function urlset(routes, dateOf) {
   const body = routes.map(r => {
     const loc = SITE_ORIGIN + (r.path === '/' ? '/' : r.path);
     const alts = Object.entries(r.alternates || {});
@@ -47,7 +49,7 @@ function urlset(routes, lastmod) {
       : '';
     return `  <url>
     <loc>${escapeHtml(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <lastmod>${dateOf(r.path)}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>${links}
   </url>`;
@@ -72,8 +74,12 @@ ${body}
 }
 
 async function main() {
-  const lastmod = new Date().toISOString().slice(0, 10);
   const routes = buildRoutes({ tools: await loadTools() });
+
+  // Per page dates, from the ledger, so lastmod means something. See seo/lastmod.mjs for why
+  // stamping the build date on all eleven thousand urls was actively harmful.
+  const mod = resolveLastmod(routes);
+  const buildDate = new Date().toISOString().slice(0, 10);
 
   const grouped = new Map();
   for (const r of routes) {
@@ -87,14 +93,27 @@ async function main() {
     for (let i = 0; i * MAX_PER_FILE < list.length; i++) {
       const chunk = list.slice(i * MAX_PER_FILE, (i + 1) * MAX_PER_FILE);
       const name = i === 0 ? `sitemap-${g}.xml` : `sitemap-${g}-${i + 1}.xml`;
-      writeFileSync(join(DIST, name), urlset(chunk, lastmod));
+      writeFileSync(join(DIST, name), urlset(chunk, mod.dateOf));
       files.push(name);
       console.log(`sitemap: ${name.padEnd(24)} ${chunk.length} urls`);
     }
   }
 
-  writeFileSync(join(DIST, 'sitemap.xml'), index(files, lastmod));
+  writeFileSync(join(DIST, 'sitemap.xml'), index(files, buildDate));
   console.log(`sitemap: sitemap.xml             index of ${files.length} files, ${routes.length} urls`);
+
+  writeLedger(mod.ledger);
+  // The changed list is what IndexNow gets told about. Written to dist so the submit step can
+  // read it without rebuilding the routes, and so a human can see exactly what would be sent.
+  writeFileSync(join(DIST, 'changed-urls.json'), JSON.stringify({
+    generated: new Date().toISOString(),
+    seeded: mod.seeded,
+    total: mod.total,
+    changed: mod.changed.map(p => SITE_ORIGIN + (p === '/' ? '/' : p)),
+  }, null, 2));
+  console.log(mod.seeded
+    ? `sitemap: lastmod ledger seeded with ${mod.total} pages, nothing reported as changed`
+    : `sitemap: ${mod.changed.length} pages changed, ${mod.untouched} kept their previous date`);
 
   // public/robots.txt is the source of truth and Vite copies it. This is the safety net for
   // the case where the copy did not happen, because a missing robots.txt means a missing
