@@ -15,6 +15,11 @@ import agents from './_linkedin_agents.js';
 import attorneys from './_linkedin_attorneys.js';
 import translations from './_linkedin_translations.js';
 
+// The nine re-pointed partner slugs. Their bodies in the source modules are a different
+// post from the one the table holds and the deck reviewed, so a Sync must not rewrite
+// them. Everything else is refreshed from source, titles included.
+const REPOINTED = /_partner_/;
+
 export default async function handler(req, res) {
   try {
     const pass = req.headers['x-passcode'] || req.query.pass;
@@ -99,13 +104,14 @@ export default async function handler(req, res) {
       if (!e || e.edited_text) return false;
       if (e.status !== 'pending' && e.status !== 'approved') return false;
       if (e.status === 'approved' && p.language === 'en') return false; // never rewrite an approved master
-      // A slug whose source title no longer matches the stored title is a slug whose
-      // content has been re-pointed. Nine partner slugs are in exactly that state: the
-      // table holds the post the deck reviewed, the source module holds a different post
-      // altogether. Rewriting the body from source there would silently replace reviewed
-      // copy with unrelated copy, so the body is left alone and only the CTA and the image
-      // are allowed through. Remove this guard once the source modules are reconciled.
-      const slugRepointed = !!e.title && !!p.title && e.title !== p.title;
+      // Nine partner slugs have been re-pointed: the table holds the post the deck
+      // reviewed, the source module holds a different post altogether. Rewriting the body
+      // from source there would silently replace reviewed copy with unrelated copy, so the
+      // body is left alone and only the image is allowed through. The guard is scoped to
+      // those nine slugs BY NAME rather than to "the title changed", because a corrected
+      // post legitimately changes its title and must still reach the deck. Remove this
+      // guard once the nine source modules are reconciled.
+      const slugRepointed = REPOINTED.test(p.slug);
       if (slugRepointed) {
         return imageChanged(e, p);
       }
@@ -122,7 +128,7 @@ export default async function handler(req, res) {
         // Same guard on the write side: a re-pointed slug gets its image refreshed and
         // nothing else, so reviewed copy survives a Sync.
         body: JSON.stringify(
-          (!!e.title && !!p.title && e.title !== p.title)
+          REPOINTED.test(p.slug)
             ? { image_options: p.image_options, ...(keepsImage(e, p) ? {} : { image_url: p.image_url }), updated_at: new Date().toISOString() }
             : {
                 post_text: p.post_text, title: p.title,

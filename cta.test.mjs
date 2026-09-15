@@ -121,9 +121,24 @@ for (const [name, src] of [['dispatch', dispatchSrc], ['decide', decideSrc], ['r
 
 // A Sync must not undo any of this, and must not swap reviewed copy for unrelated copy.
 // Nine partner slugs point at different posts in the source modules than in the table.
-ok_('a re-pointed slug is detected by title', /slugRepointed/.test(refreshSrc));
-ok_('and its body copy is left alone',
-  /e\.title !== p\.title\)\s*\n\s*\? \{ image_options: p\.image_options/.test(refreshSrc));
+// The guard is scoped to those slugs BY NAME. It used to fire on "the stored title differs
+// from the source title", which also caught a corrected post whose headline was wrong, and
+// silently kept the correction out of the deck. A corrected title must reach the deck.
+ok_('a re-pointed slug is detected by name, not by title', /slugRepointed/.test(refreshSrc));
+ok_('the guard is a slug pattern', /const REPOINTED = \/_partner_\//.test(refreshSrc));
+ok_('the guard is not computed from a title comparison',
+  !/slugRepointed = [^;]*e\.title/.test(refreshSrc)
+  && !/\(!!e\.title && !!p\.title && e\.title !== p\.title\)/.test(refreshSrc));
+ok_('but a changed title still counts as content to refresh', /e\.title !== p\.title \|\|/.test(refreshSrc));
+ok_('and a re-pointed slug keeps its body copy',
+  /REPOINTED\.test\(p\.slug\)\s*\n\s*\? \{ image_options: p\.image_options/.test(refreshSrc));
+{
+  const mods = await Promise.all([
+    import('./api/_linkedin_batch1.js'), import('./api/_linkedin_agents.js'), import('./api/_linkedin_attorneys.js'),
+  ]);
+  const slugs = mods.flatMap(m => m.default.map(p => p.slug));
+  eq('the guard covers exactly the nine re-pointed slugs', slugs.filter(s => /_partner_/.test(s)).length, 9);
+}
 
 // The reviewer can swap a post's photograph in the deck. A Sync must not undo that.
 ok_('a Sync refreshes the option list', /image_options: p\.image_options/.test(refreshSrc));

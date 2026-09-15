@@ -2,7 +2,7 @@
 export default [
  {
   "slug": "arras_contract",
-  "source_hash": "227996d282c8010901964dc7ce6fdeede959340a",
+  "source_hash": "933c3abb920edd5be2f012857a22fcb48a56fe4d",
   "batch": 1,
   "day": 1,
   "language": "nl",
@@ -15,7 +15,7 @@ export default [
  },
  {
   "slug": "irnr_who_pays",
-  "source_hash": "6ce19d20500e2e87d21481c0946fb51e409c2809",
+  "source_hash": "356416c02dc1ec1aa12e6302d95f53505459f5a6",
   "batch": 1,
   "day": 2,
   "language": "nl",
@@ -28,7 +28,7 @@ export default [
  },
  {
   "slug": "squatter_eviction",
-  "source_hash": "9fb4f151046caf5afc23510183fe40a4e8b75ca5",
+  "source_hash": "ced02beafe194cec8264a87ee15ef92ae36cf357",
   "batch": 1,
   "day": 3,
   "language": "nl",
@@ -41,7 +41,7 @@ export default [
  },
  {
   "slug": "cash_rules",
-  "source_hash": "cdd2e09f06ed18d3be8ef9564f237637cde732fc",
+  "source_hash": "4d7951d9edcc9c53faea0c6b74eb91e73734894d",
   "batch": 1,
   "day": 4,
   "language": "nl",
@@ -54,7 +54,7 @@ export default [
  },
  {
   "slug": "tourist_license",
-  "source_hash": "5a42f64939e1bce71ad597844b0cfb6e4bdca72a",
+  "source_hash": "c8585f303b1e41394be3b6eca7f290e9d7ecbe6d",
   "batch": 1,
   "day": 5,
   "language": "nl",
@@ -67,7 +67,7 @@ export default [
  },
  {
   "slug": "nota_simple",
-  "source_hash": "645ad11040c9e51b21175024adf8f7d690a2b941",
+  "source_hash": "48e1689fa82c52ae37f88dbd9ecfe8d3e47b7178",
   "batch": 1,
   "day": 6,
   "language": "nl",
@@ -80,7 +80,7 @@ export default [
  },
  {
   "slug": "wealth_tax",
-  "source_hash": "a4f00616667990d8768bd2a85ce20318c2ff7ec0",
+  "source_hash": "c46ed823499f3cf35715247195c869bc372f5864",
   "batch": 1,
   "day": 7,
   "language": "nl",
@@ -93,7 +93,7 @@ export default [
  },
  {
   "slug": "community_rental_ban",
-  "source_hash": "819063538e2ada80b61c9ec2834eedd6b3ae72b4",
+  "source_hash": "33ae6b5e9cb5016e73216cdcf251897943b9626f",
   "batch": 1,
   "day": 8,
   "language": "nl",
@@ -106,7 +106,7 @@ export default [
  },
  {
   "slug": "currency_transfer",
-  "source_hash": "1200aa3e76b9b0d472d047c5964cd5eaec01bbec",
+  "source_hash": "755479b4a9143d09908e6345abc5ddbdbbc84293",
   "batch": 1,
   "day": 9,
   "language": "nl",
@@ -119,7 +119,7 @@ export default [
  },
  {
   "slug": "inheritance_foreign_law",
-  "source_hash": "b4ccdb857cd5b6a353376a46868069fd45d451da",
+  "source_hash": "a11e6ef3ce6151a7b7d581316294860f328b6624",
   "batch": 1,
   "day": 10,
   "language": "nl",
@@ -132,7 +132,7 @@ export default [
  },
  {
   "slug": "bank_guarantee",
-  "source_hash": "f55f072b06f9aff9fe7ecb9d3afe6cdc5b90ae64",
+  "source_hash": "fe389b1443a6cf722105bd1c08abed57dd5bba64",
   "batch": 1,
   "day": 11,
   "language": "nl",
@@ -145,7 +145,7 @@ export default [
  },
  {
   "slug": "noneu_tax_proposal",
-  "source_hash": "605436671a07a074f27fd2bdf152ae35a2c25573",
+  "source_hash": "ed01a6dea74ad26629d0a364d067febdd3e74a10",
   "batch": 1,
   "day": 12,
   "language": "nl",
@@ -158,7 +158,7 @@ export default [
  },
  {
   "slug": "rental_rule_changes",
-  "source_hash": "2f9b5a887ef7ca7f1ddfaa0097296705164e4853",
+  "source_hash": "ab563774e7489bf81ec985c15069593a96c5138e",
   "batch": 1,
   "day": 13,
   "language": "nl",
@@ -171,7 +171,7 @@ export default [
  },
  {
   "slug": "epc_certificates",
-  "source_hash": "8845fe37fee3849ec484ae75f8b0412f9b17d73a",
+  "source_hash": "96bd0747d6d1379a8cea269970a2c0eeaa407f5f",
   "batch": 1,
   "day": 14,
   "language": "nl",
@@ -184,7 +184,7 @@ export default [
  },
  {
   "slug": "plusvalia",
-  "source_hash": "af1da95188ad234543e88ca647749ebdff288e99",
+  "source_hash": "7e9733c0273adffc3953af3c8e836b6c63638af2",
   "batch": 1,
   "day": 15,
   "language": "nl",
@@ -197,7 +197,7 @@ export default [
  },
  {
   "slug": "buying_fees",
-  "source_hash": "ad8cab1a6b76b41c6f852a361766a8bd03112a85",
+  "source_hash": "5fc35b686d0cd434fc0e181a46670c07a1c14587",
   "batch": 2,
   "day": 16,
   "language": "nl",
@@ -210,7 +210,7 @@ export default [
  },
  {
   "slug": "ibi_deep",
-  "source_hash": "a1d1746782ec3ee11e96349a6baff0be412207c4",
+  "source_hash": "113097976415b5d2207bd4657582696748684edf",
   "batch": 2,
   "day": 17,
   "language": "nl",
@@ -223,7 +223,7 @@ export default [
  },
  {
   "slug": "frozen_account",
-  "source_hash": "69838e992f9c6de39a2624c22bc0b9872a9c8f86",
+  "source_hash": "ed7b8f273b98aab7db3b487627e84d9f9bfbc5a9",
   "batch": 2,
   "day": 18,
   "language": "nl",
@@ -236,7 +236,7 @@ export default [
  },
  {
   "slug": "community_fees",
-  "source_hash": "de63c1f2e30cdef3942ee340842873bf998a0a96",
+  "source_hash": "b200ef19fecafd3fad1e7d49c7a8ec7721689392",
   "batch": 2,
   "day": 19,
   "language": "nl",
@@ -249,7 +249,7 @@ export default [
  },
  {
   "slug": "modelo210_scenarios",
-  "source_hash": "912c6e074b6af4c456a5867346c1e6f76ecd8215",
+  "source_hash": "72f10e794b4718b95e6b55d6e8713fce77e660a6",
   "batch": 2,
   "day": 20,
   "language": "nl",
@@ -262,7 +262,7 @@ export default [
  },
  {
   "slug": "escritura_notary",
-  "source_hash": "d9221e8919d04affb3b9af2c656799a0e93c6b4d",
+  "source_hash": "688c98e8c24c6858ac00db381f245afe90fbe64e",
   "batch": 2,
   "day": 21,
   "language": "nl",
@@ -275,7 +275,7 @@ export default [
  },
  {
   "slug": "owners_year",
-  "source_hash": "6f4cd479cb5a75987cc43c2e5785d5b5aac1c880",
+  "source_hash": "a70048dcd69e81d7cfe76fda8afa7880e61c8c37",
   "batch": 2,
   "day": 22,
   "language": "nl",
@@ -288,7 +288,7 @@ export default [
  },
  {
   "slug": "free_banking_myth",
-  "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11",
+  "source_hash": "35f8f9317c29f3c6f1be980ccbc1684becd18ed8",
   "batch": 2,
   "day": 23,
   "language": "nl",
@@ -301,7 +301,7 @@ export default [
  },
  {
   "slug": "inheritance_tax",
-  "source_hash": "7337db40e9f6004a4ef37023eac8314c61c92814",
+  "source_hash": "2cdba268689986dcb9a0613244d547e6e42bc04d",
   "batch": 2,
   "day": 24,
   "language": "nl",
@@ -314,7 +314,7 @@ export default [
  },
  {
   "slug": "rural_property",
-  "source_hash": "ee7e1e147a0d13b469a017f1a0550defdaf168b6",
+  "source_hash": "da9b95812a9848673253b103576ee9d664194d2a",
   "batch": 2,
   "day": 25,
   "language": "nl",
@@ -327,7 +327,7 @@ export default [
  },
  {
   "slug": "late_tax_penalties",
-  "source_hash": "c41ce6741eed41405a5dc49d75af33c46a5c9495",
+  "source_hash": "a16ce12efc925529dd63ca9f4d1605247e87cdc3",
   "batch": 2,
   "day": 26,
   "language": "nl",
@@ -340,7 +340,7 @@ export default [
  },
  {
   "slug": "property_insurance",
-  "source_hash": "1637aa911c286f2fa3145aac5b6cb7db68ed42f0",
+  "source_hash": "0a158ce75fc2451eaef220aa1529dffe310107d4",
   "batch": 2,
   "day": 27,
   "language": "nl",
@@ -353,7 +353,7 @@ export default [
  },
  {
   "slug": "gift_tax",
-  "source_hash": "cdb9d0459b9bccff4cdbabcccd7f155f26c4ca7f",
+  "source_hash": "7f0f492139c9bcfce13f3a4a3d299c76d4560986",
   "batch": 2,
   "day": 28,
   "language": "nl",
@@ -366,7 +366,7 @@ export default [
  },
  {
   "slug": "extension_deeds",
-  "source_hash": "a5dd0c9de62a0658ceaaaeaca689248860e33c0a",
+  "source_hash": "81bbfbea1d65988a87e61f087f1c04a5ebbbe09c",
   "batch": 2,
   "day": 29,
   "language": "nl",
@@ -379,7 +379,7 @@ export default [
  },
  {
   "slug": "brexit_buying",
-  "source_hash": "a36648663ce370cc86b61b999cc7f56adc290e2a",
+  "source_hash": "75fd2767b5c2f9e4bb6c5351c55ab63db6cee722",
   "batch": 2,
   "day": 30,
   "language": "nl",
@@ -392,7 +392,7 @@ export default [
  },
  {
   "slug": "arras_contract",
-  "source_hash": "227996d282c8010901964dc7ce6fdeede959340a",
+  "source_hash": "933c3abb920edd5be2f012857a22fcb48a56fe4d",
   "batch": 1,
   "day": 1,
   "language": "sv",
@@ -405,7 +405,7 @@ export default [
  },
  {
   "slug": "irnr_who_pays",
-  "source_hash": "6ce19d20500e2e87d21481c0946fb51e409c2809",
+  "source_hash": "356416c02dc1ec1aa12e6302d95f53505459f5a6",
   "batch": 1,
   "day": 2,
   "language": "sv",
@@ -418,7 +418,7 @@ export default [
  },
  {
   "slug": "squatter_eviction",
-  "source_hash": "9fb4f151046caf5afc23510183fe40a4e8b75ca5",
+  "source_hash": "ced02beafe194cec8264a87ee15ef92ae36cf357",
   "batch": 1,
   "day": 3,
   "language": "sv",
@@ -431,7 +431,7 @@ export default [
  },
  {
   "slug": "cash_rules",
-  "source_hash": "cdd2e09f06ed18d3be8ef9564f237637cde732fc",
+  "source_hash": "4d7951d9edcc9c53faea0c6b74eb91e73734894d",
   "batch": 1,
   "day": 4,
   "language": "sv",
@@ -444,7 +444,7 @@ export default [
  },
  {
   "slug": "tourist_license",
-  "source_hash": "5a42f64939e1bce71ad597844b0cfb6e4bdca72a",
+  "source_hash": "c8585f303b1e41394be3b6eca7f290e9d7ecbe6d",
   "batch": 1,
   "day": 5,
   "language": "sv",
@@ -457,7 +457,7 @@ export default [
  },
  {
   "slug": "nota_simple",
-  "source_hash": "645ad11040c9e51b21175024adf8f7d690a2b941",
+  "source_hash": "48e1689fa82c52ae37f88dbd9ecfe8d3e47b7178",
   "batch": 1,
   "day": 6,
   "language": "sv",
@@ -470,7 +470,7 @@ export default [
  },
  {
   "slug": "wealth_tax",
-  "source_hash": "a4f00616667990d8768bd2a85ce20318c2ff7ec0",
+  "source_hash": "c46ed823499f3cf35715247195c869bc372f5864",
   "batch": 1,
   "day": 7,
   "language": "sv",
@@ -483,7 +483,7 @@ export default [
  },
  {
   "slug": "community_rental_ban",
-  "source_hash": "819063538e2ada80b61c9ec2834eedd6b3ae72b4",
+  "source_hash": "33ae6b5e9cb5016e73216cdcf251897943b9626f",
   "batch": 1,
   "day": 8,
   "language": "sv",
@@ -496,7 +496,7 @@ export default [
  },
  {
   "slug": "currency_transfer",
-  "source_hash": "1200aa3e76b9b0d472d047c5964cd5eaec01bbec",
+  "source_hash": "755479b4a9143d09908e6345abc5ddbdbbc84293",
   "batch": 1,
   "day": 9,
   "language": "sv",
@@ -509,7 +509,7 @@ export default [
  },
  {
   "slug": "inheritance_foreign_law",
-  "source_hash": "b4ccdb857cd5b6a353376a46868069fd45d451da",
+  "source_hash": "a11e6ef3ce6151a7b7d581316294860f328b6624",
   "batch": 1,
   "day": 10,
   "language": "sv",
@@ -522,7 +522,7 @@ export default [
  },
  {
   "slug": "bank_guarantee",
-  "source_hash": "f55f072b06f9aff9fe7ecb9d3afe6cdc5b90ae64",
+  "source_hash": "fe389b1443a6cf722105bd1c08abed57dd5bba64",
   "batch": 1,
   "day": 11,
   "language": "sv",
@@ -535,7 +535,7 @@ export default [
  },
  {
   "slug": "noneu_tax_proposal",
-  "source_hash": "605436671a07a074f27fd2bdf152ae35a2c25573",
+  "source_hash": "ed01a6dea74ad26629d0a364d067febdd3e74a10",
   "batch": 1,
   "day": 12,
   "language": "sv",
@@ -548,7 +548,7 @@ export default [
  },
  {
   "slug": "rental_rule_changes",
-  "source_hash": "2f9b5a887ef7ca7f1ddfaa0097296705164e4853",
+  "source_hash": "ab563774e7489bf81ec985c15069593a96c5138e",
   "batch": 1,
   "day": 13,
   "language": "sv",
@@ -561,7 +561,7 @@ export default [
  },
  {
   "slug": "epc_certificates",
-  "source_hash": "8845fe37fee3849ec484ae75f8b0412f9b17d73a",
+  "source_hash": "96bd0747d6d1379a8cea269970a2c0eeaa407f5f",
   "batch": 1,
   "day": 14,
   "language": "sv",
@@ -574,7 +574,7 @@ export default [
  },
  {
   "slug": "plusvalia",
-  "source_hash": "af1da95188ad234543e88ca647749ebdff288e99",
+  "source_hash": "7e9733c0273adffc3953af3c8e836b6c63638af2",
   "batch": 1,
   "day": 15,
   "language": "sv",
@@ -587,7 +587,7 @@ export default [
  },
  {
   "slug": "buying_fees",
-  "source_hash": "ad8cab1a6b76b41c6f852a361766a8bd03112a85",
+  "source_hash": "5fc35b686d0cd434fc0e181a46670c07a1c14587",
   "batch": 2,
   "day": 16,
   "language": "sv",
@@ -600,7 +600,7 @@ export default [
  },
  {
   "slug": "ibi_deep",
-  "source_hash": "a1d1746782ec3ee11e96349a6baff0be412207c4",
+  "source_hash": "113097976415b5d2207bd4657582696748684edf",
   "batch": 2,
   "day": 17,
   "language": "sv",
@@ -613,7 +613,7 @@ export default [
  },
  {
   "slug": "frozen_account",
-  "source_hash": "69838e992f9c6de39a2624c22bc0b9872a9c8f86",
+  "source_hash": "ed7b8f273b98aab7db3b487627e84d9f9bfbc5a9",
   "batch": 2,
   "day": 18,
   "language": "sv",
@@ -626,7 +626,7 @@ export default [
  },
  {
   "slug": "community_fees",
-  "source_hash": "de63c1f2e30cdef3942ee340842873bf998a0a96",
+  "source_hash": "b200ef19fecafd3fad1e7d49c7a8ec7721689392",
   "batch": 2,
   "day": 19,
   "language": "sv",
@@ -639,7 +639,7 @@ export default [
  },
  {
   "slug": "modelo210_scenarios",
-  "source_hash": "912c6e074b6af4c456a5867346c1e6f76ecd8215",
+  "source_hash": "72f10e794b4718b95e6b55d6e8713fce77e660a6",
   "batch": 2,
   "day": 20,
   "language": "sv",
@@ -652,7 +652,7 @@ export default [
  },
  {
   "slug": "escritura_notary",
-  "source_hash": "d9221e8919d04affb3b9af2c656799a0e93c6b4d",
+  "source_hash": "688c98e8c24c6858ac00db381f245afe90fbe64e",
   "batch": 2,
   "day": 21,
   "language": "sv",
@@ -665,7 +665,7 @@ export default [
  },
  {
   "slug": "owners_year",
-  "source_hash": "6f4cd479cb5a75987cc43c2e5785d5b5aac1c880",
+  "source_hash": "a70048dcd69e81d7cfe76fda8afa7880e61c8c37",
   "batch": 2,
   "day": 22,
   "language": "sv",
@@ -678,7 +678,7 @@ export default [
  },
  {
   "slug": "free_banking_myth",
-  "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11",
+  "source_hash": "35f8f9317c29f3c6f1be980ccbc1684becd18ed8",
   "batch": 2,
   "day": 23,
   "language": "sv",
@@ -691,7 +691,7 @@ export default [
  },
  {
   "slug": "inheritance_tax",
-  "source_hash": "7337db40e9f6004a4ef37023eac8314c61c92814",
+  "source_hash": "2cdba268689986dcb9a0613244d547e6e42bc04d",
   "batch": 2,
   "day": 24,
   "language": "sv",
@@ -704,7 +704,7 @@ export default [
  },
  {
   "slug": "rural_property",
-  "source_hash": "ee7e1e147a0d13b469a017f1a0550defdaf168b6",
+  "source_hash": "da9b95812a9848673253b103576ee9d664194d2a",
   "batch": 2,
   "day": 25,
   "language": "sv",
@@ -717,7 +717,7 @@ export default [
  },
  {
   "slug": "late_tax_penalties",
-  "source_hash": "c41ce6741eed41405a5dc49d75af33c46a5c9495",
+  "source_hash": "a16ce12efc925529dd63ca9f4d1605247e87cdc3",
   "batch": 2,
   "day": 26,
   "language": "sv",
@@ -730,7 +730,7 @@ export default [
  },
  {
   "slug": "property_insurance",
-  "source_hash": "1637aa911c286f2fa3145aac5b6cb7db68ed42f0",
+  "source_hash": "0a158ce75fc2451eaef220aa1529dffe310107d4",
   "batch": 2,
   "day": 27,
   "language": "sv",
@@ -743,7 +743,7 @@ export default [
  },
  {
   "slug": "gift_tax",
-  "source_hash": "cdb9d0459b9bccff4cdbabcccd7f155f26c4ca7f",
+  "source_hash": "7f0f492139c9bcfce13f3a4a3d299c76d4560986",
   "batch": 2,
   "day": 28,
   "language": "sv",
@@ -756,7 +756,7 @@ export default [
  },
  {
   "slug": "extension_deeds",
-  "source_hash": "a5dd0c9de62a0658ceaaaeaca689248860e33c0a",
+  "source_hash": "81bbfbea1d65988a87e61f087f1c04a5ebbbe09c",
   "batch": 2,
   "day": 29,
   "language": "sv",
@@ -769,7 +769,7 @@ export default [
  },
  {
   "slug": "brexit_buying",
-  "source_hash": "a36648663ce370cc86b61b999cc7f56adc290e2a",
+  "source_hash": "75fd2767b5c2f9e4bb6c5351c55ab63db6cee722",
   "batch": 2,
   "day": 30,
   "language": "sv",
@@ -782,7 +782,7 @@ export default [
  },
  {
   "slug": "arras_contract",
-  "source_hash": "227996d282c8010901964dc7ce6fdeede959340a",
+  "source_hash": "933c3abb920edd5be2f012857a22fcb48a56fe4d",
   "batch": 1,
   "day": 1,
   "language": "no",
@@ -795,7 +795,7 @@ export default [
  },
  {
   "slug": "irnr_who_pays",
-  "source_hash": "6ce19d20500e2e87d21481c0946fb51e409c2809",
+  "source_hash": "356416c02dc1ec1aa12e6302d95f53505459f5a6",
   "batch": 1,
   "day": 2,
   "language": "no",
@@ -808,7 +808,7 @@ export default [
  },
  {
   "slug": "squatter_eviction",
-  "source_hash": "9fb4f151046caf5afc23510183fe40a4e8b75ca5",
+  "source_hash": "ced02beafe194cec8264a87ee15ef92ae36cf357",
   "batch": 1,
   "day": 3,
   "language": "no",
@@ -821,7 +821,7 @@ export default [
  },
  {
   "slug": "cash_rules",
-  "source_hash": "cdd2e09f06ed18d3be8ef9564f237637cde732fc",
+  "source_hash": "4d7951d9edcc9c53faea0c6b74eb91e73734894d",
   "batch": 1,
   "day": 4,
   "language": "no",
@@ -834,7 +834,7 @@ export default [
  },
  {
   "slug": "tourist_license",
-  "source_hash": "5a42f64939e1bce71ad597844b0cfb6e4bdca72a",
+  "source_hash": "c8585f303b1e41394be3b6eca7f290e9d7ecbe6d",
   "batch": 1,
   "day": 5,
   "language": "no",
@@ -847,7 +847,7 @@ export default [
  },
  {
   "slug": "nota_simple",
-  "source_hash": "645ad11040c9e51b21175024adf8f7d690a2b941",
+  "source_hash": "48e1689fa82c52ae37f88dbd9ecfe8d3e47b7178",
   "batch": 1,
   "day": 6,
   "language": "no",
@@ -860,7 +860,7 @@ export default [
  },
  {
   "slug": "wealth_tax",
-  "source_hash": "a4f00616667990d8768bd2a85ce20318c2ff7ec0",
+  "source_hash": "c46ed823499f3cf35715247195c869bc372f5864",
   "batch": 1,
   "day": 7,
   "language": "no",
@@ -873,7 +873,7 @@ export default [
  },
  {
   "slug": "community_rental_ban",
-  "source_hash": "819063538e2ada80b61c9ec2834eedd6b3ae72b4",
+  "source_hash": "33ae6b5e9cb5016e73216cdcf251897943b9626f",
   "batch": 1,
   "day": 8,
   "language": "no",
@@ -886,7 +886,7 @@ export default [
  },
  {
   "slug": "currency_transfer",
-  "source_hash": "1200aa3e76b9b0d472d047c5964cd5eaec01bbec",
+  "source_hash": "755479b4a9143d09908e6345abc5ddbdbbc84293",
   "batch": 1,
   "day": 9,
   "language": "no",
@@ -899,7 +899,7 @@ export default [
  },
  {
   "slug": "inheritance_foreign_law",
-  "source_hash": "b4ccdb857cd5b6a353376a46868069fd45d451da",
+  "source_hash": "a11e6ef3ce6151a7b7d581316294860f328b6624",
   "batch": 1,
   "day": 10,
   "language": "no",
@@ -912,7 +912,7 @@ export default [
  },
  {
   "slug": "bank_guarantee",
-  "source_hash": "f55f072b06f9aff9fe7ecb9d3afe6cdc5b90ae64",
+  "source_hash": "fe389b1443a6cf722105bd1c08abed57dd5bba64",
   "batch": 1,
   "day": 11,
   "language": "no",
@@ -925,7 +925,7 @@ export default [
  },
  {
   "slug": "noneu_tax_proposal",
-  "source_hash": "605436671a07a074f27fd2bdf152ae35a2c25573",
+  "source_hash": "ed01a6dea74ad26629d0a364d067febdd3e74a10",
   "batch": 1,
   "day": 12,
   "language": "no",
@@ -938,7 +938,7 @@ export default [
  },
  {
   "slug": "rental_rule_changes",
-  "source_hash": "2f9b5a887ef7ca7f1ddfaa0097296705164e4853",
+  "source_hash": "ab563774e7489bf81ec985c15069593a96c5138e",
   "batch": 1,
   "day": 13,
   "language": "no",
@@ -951,7 +951,7 @@ export default [
  },
  {
   "slug": "epc_certificates",
-  "source_hash": "8845fe37fee3849ec484ae75f8b0412f9b17d73a",
+  "source_hash": "96bd0747d6d1379a8cea269970a2c0eeaa407f5f",
   "batch": 1,
   "day": 14,
   "language": "no",
@@ -964,7 +964,7 @@ export default [
  },
  {
   "slug": "plusvalia",
-  "source_hash": "af1da95188ad234543e88ca647749ebdff288e99",
+  "source_hash": "7e9733c0273adffc3953af3c8e836b6c63638af2",
   "batch": 1,
   "day": 15,
   "language": "no",
@@ -977,7 +977,7 @@ export default [
  },
  {
   "slug": "buying_fees",
-  "source_hash": "ad8cab1a6b76b41c6f852a361766a8bd03112a85",
+  "source_hash": "5fc35b686d0cd434fc0e181a46670c07a1c14587",
   "batch": 2,
   "day": 16,
   "language": "no",
@@ -990,7 +990,7 @@ export default [
  },
  {
   "slug": "ibi_deep",
-  "source_hash": "a1d1746782ec3ee11e96349a6baff0be412207c4",
+  "source_hash": "113097976415b5d2207bd4657582696748684edf",
   "batch": 2,
   "day": 17,
   "language": "no",
@@ -1003,7 +1003,7 @@ export default [
  },
  {
   "slug": "frozen_account",
-  "source_hash": "69838e992f9c6de39a2624c22bc0b9872a9c8f86",
+  "source_hash": "ed7b8f273b98aab7db3b487627e84d9f9bfbc5a9",
   "batch": 2,
   "day": 18,
   "language": "no",
@@ -1016,7 +1016,7 @@ export default [
  },
  {
   "slug": "community_fees",
-  "source_hash": "de63c1f2e30cdef3942ee340842873bf998a0a96",
+  "source_hash": "b200ef19fecafd3fad1e7d49c7a8ec7721689392",
   "batch": 2,
   "day": 19,
   "language": "no",
@@ -1029,7 +1029,7 @@ export default [
  },
  {
   "slug": "modelo210_scenarios",
-  "source_hash": "912c6e074b6af4c456a5867346c1e6f76ecd8215",
+  "source_hash": "72f10e794b4718b95e6b55d6e8713fce77e660a6",
   "batch": 2,
   "day": 20,
   "language": "no",
@@ -1042,7 +1042,7 @@ export default [
  },
  {
   "slug": "escritura_notary",
-  "source_hash": "d9221e8919d04affb3b9af2c656799a0e93c6b4d",
+  "source_hash": "688c98e8c24c6858ac00db381f245afe90fbe64e",
   "batch": 2,
   "day": 21,
   "language": "no",
@@ -1055,7 +1055,7 @@ export default [
  },
  {
   "slug": "owners_year",
-  "source_hash": "6f4cd479cb5a75987cc43c2e5785d5b5aac1c880",
+  "source_hash": "a70048dcd69e81d7cfe76fda8afa7880e61c8c37",
   "batch": 2,
   "day": 22,
   "language": "no",
@@ -1068,7 +1068,7 @@ export default [
  },
  {
   "slug": "free_banking_myth",
-  "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11",
+  "source_hash": "35f8f9317c29f3c6f1be980ccbc1684becd18ed8",
   "batch": 2,
   "day": 23,
   "language": "no",
@@ -1081,7 +1081,7 @@ export default [
  },
  {
   "slug": "inheritance_tax",
-  "source_hash": "7337db40e9f6004a4ef37023eac8314c61c92814",
+  "source_hash": "2cdba268689986dcb9a0613244d547e6e42bc04d",
   "batch": 2,
   "day": 24,
   "language": "no",
@@ -1094,7 +1094,7 @@ export default [
  },
  {
   "slug": "rural_property",
-  "source_hash": "ee7e1e147a0d13b469a017f1a0550defdaf168b6",
+  "source_hash": "da9b95812a9848673253b103576ee9d664194d2a",
   "batch": 2,
   "day": 25,
   "language": "no",
@@ -1107,7 +1107,7 @@ export default [
  },
  {
   "slug": "late_tax_penalties",
-  "source_hash": "c41ce6741eed41405a5dc49d75af33c46a5c9495",
+  "source_hash": "a16ce12efc925529dd63ca9f4d1605247e87cdc3",
   "batch": 2,
   "day": 26,
   "language": "no",
@@ -1120,7 +1120,7 @@ export default [
  },
  {
   "slug": "property_insurance",
-  "source_hash": "1637aa911c286f2fa3145aac5b6cb7db68ed42f0",
+  "source_hash": "0a158ce75fc2451eaef220aa1529dffe310107d4",
   "batch": 2,
   "day": 27,
   "language": "no",
@@ -1133,7 +1133,7 @@ export default [
  },
  {
   "slug": "gift_tax",
-  "source_hash": "cdb9d0459b9bccff4cdbabcccd7f155f26c4ca7f",
+  "source_hash": "7f0f492139c9bcfce13f3a4a3d299c76d4560986",
   "batch": 2,
   "day": 28,
   "language": "no",
@@ -1146,7 +1146,7 @@ export default [
  },
  {
   "slug": "extension_deeds",
-  "source_hash": "a5dd0c9de62a0658ceaaaeaca689248860e33c0a",
+  "source_hash": "81bbfbea1d65988a87e61f087f1c04a5ebbbe09c",
   "batch": 2,
   "day": 29,
   "language": "no",
@@ -1159,7 +1159,7 @@ export default [
  },
  {
   "slug": "brexit_buying",
-  "source_hash": "a36648663ce370cc86b61b999cc7f56adc290e2a",
+  "source_hash": "75fd2767b5c2f9e4bb6c5351c55ab63db6cee722",
   "batch": 2,
   "day": 30,
   "language": "no",
@@ -1172,7 +1172,7 @@ export default [
  },
  {
   "slug": "arras_contract",
-  "source_hash": "227996d282c8010901964dc7ce6fdeede959340a",
+  "source_hash": "933c3abb920edd5be2f012857a22fcb48a56fe4d",
   "batch": 1,
   "day": 1,
   "language": "es",
@@ -1185,7 +1185,7 @@ export default [
  },
  {
   "slug": "irnr_who_pays",
-  "source_hash": "6ce19d20500e2e87d21481c0946fb51e409c2809",
+  "source_hash": "356416c02dc1ec1aa12e6302d95f53505459f5a6",
   "batch": 1,
   "day": 2,
   "language": "es",
@@ -1198,7 +1198,7 @@ export default [
  },
  {
   "slug": "squatter_eviction",
-  "source_hash": "9fb4f151046caf5afc23510183fe40a4e8b75ca5",
+  "source_hash": "ced02beafe194cec8264a87ee15ef92ae36cf357",
   "batch": 1,
   "day": 3,
   "language": "es",
@@ -1211,7 +1211,7 @@ export default [
  },
  {
   "slug": "cash_rules",
-  "source_hash": "cdd2e09f06ed18d3be8ef9564f237637cde732fc",
+  "source_hash": "4d7951d9edcc9c53faea0c6b74eb91e73734894d",
   "batch": 1,
   "day": 4,
   "language": "es",
@@ -1224,7 +1224,7 @@ export default [
  },
  {
   "slug": "tourist_license",
-  "source_hash": "5a42f64939e1bce71ad597844b0cfb6e4bdca72a",
+  "source_hash": "c8585f303b1e41394be3b6eca7f290e9d7ecbe6d",
   "batch": 1,
   "day": 5,
   "language": "es",
@@ -1237,7 +1237,7 @@ export default [
  },
  {
   "slug": "nota_simple",
-  "source_hash": "645ad11040c9e51b21175024adf8f7d690a2b941",
+  "source_hash": "48e1689fa82c52ae37f88dbd9ecfe8d3e47b7178",
   "batch": 1,
   "day": 6,
   "language": "es",
@@ -1250,7 +1250,7 @@ export default [
  },
  {
   "slug": "wealth_tax",
-  "source_hash": "a4f00616667990d8768bd2a85ce20318c2ff7ec0",
+  "source_hash": "c46ed823499f3cf35715247195c869bc372f5864",
   "batch": 1,
   "day": 7,
   "language": "es",
@@ -1263,7 +1263,7 @@ export default [
  },
  {
   "slug": "community_rental_ban",
-  "source_hash": "819063538e2ada80b61c9ec2834eedd6b3ae72b4",
+  "source_hash": "33ae6b5e9cb5016e73216cdcf251897943b9626f",
   "batch": 1,
   "day": 8,
   "language": "es",
@@ -1276,7 +1276,7 @@ export default [
  },
  {
   "slug": "currency_transfer",
-  "source_hash": "1200aa3e76b9b0d472d047c5964cd5eaec01bbec",
+  "source_hash": "755479b4a9143d09908e6345abc5ddbdbbc84293",
   "batch": 1,
   "day": 9,
   "language": "es",
@@ -1289,7 +1289,7 @@ export default [
  },
  {
   "slug": "inheritance_foreign_law",
-  "source_hash": "b4ccdb857cd5b6a353376a46868069fd45d451da",
+  "source_hash": "a11e6ef3ce6151a7b7d581316294860f328b6624",
   "batch": 1,
   "day": 10,
   "language": "es",
@@ -1302,7 +1302,7 @@ export default [
  },
  {
   "slug": "bank_guarantee",
-  "source_hash": "f55f072b06f9aff9fe7ecb9d3afe6cdc5b90ae64",
+  "source_hash": "fe389b1443a6cf722105bd1c08abed57dd5bba64",
   "batch": 1,
   "day": 11,
   "language": "es",
@@ -1315,7 +1315,7 @@ export default [
  },
  {
   "slug": "noneu_tax_proposal",
-  "source_hash": "605436671a07a074f27fd2bdf152ae35a2c25573",
+  "source_hash": "ed01a6dea74ad26629d0a364d067febdd3e74a10",
   "batch": 1,
   "day": 12,
   "language": "es",
@@ -1328,7 +1328,7 @@ export default [
  },
  {
   "slug": "rental_rule_changes",
-  "source_hash": "2f9b5a887ef7ca7f1ddfaa0097296705164e4853",
+  "source_hash": "ab563774e7489bf81ec985c15069593a96c5138e",
   "batch": 1,
   "day": 13,
   "language": "es",
@@ -1341,7 +1341,7 @@ export default [
  },
  {
   "slug": "epc_certificates",
-  "source_hash": "8845fe37fee3849ec484ae75f8b0412f9b17d73a",
+  "source_hash": "96bd0747d6d1379a8cea269970a2c0eeaa407f5f",
   "batch": 1,
   "day": 14,
   "language": "es",
@@ -1354,7 +1354,7 @@ export default [
  },
  {
   "slug": "plusvalia",
-  "source_hash": "af1da95188ad234543e88ca647749ebdff288e99",
+  "source_hash": "7e9733c0273adffc3953af3c8e836b6c63638af2",
   "batch": 1,
   "day": 15,
   "language": "es",
@@ -1367,7 +1367,7 @@ export default [
  },
  {
   "slug": "buying_fees",
-  "source_hash": "ad8cab1a6b76b41c6f852a361766a8bd03112a85",
+  "source_hash": "5fc35b686d0cd434fc0e181a46670c07a1c14587",
   "batch": 2,
   "day": 16,
   "language": "es",
@@ -1380,7 +1380,7 @@ export default [
  },
  {
   "slug": "ibi_deep",
-  "source_hash": "a1d1746782ec3ee11e96349a6baff0be412207c4",
+  "source_hash": "113097976415b5d2207bd4657582696748684edf",
   "batch": 2,
   "day": 17,
   "language": "es",
@@ -1393,7 +1393,7 @@ export default [
  },
  {
   "slug": "frozen_account",
-  "source_hash": "69838e992f9c6de39a2624c22bc0b9872a9c8f86",
+  "source_hash": "ed7b8f273b98aab7db3b487627e84d9f9bfbc5a9",
   "batch": 2,
   "day": 18,
   "language": "es",
@@ -1406,7 +1406,7 @@ export default [
  },
  {
   "slug": "community_fees",
-  "source_hash": "de63c1f2e30cdef3942ee340842873bf998a0a96",
+  "source_hash": "b200ef19fecafd3fad1e7d49c7a8ec7721689392",
   "batch": 2,
   "day": 19,
   "language": "es",
@@ -1419,7 +1419,7 @@ export default [
  },
  {
   "slug": "modelo210_scenarios",
-  "source_hash": "912c6e074b6af4c456a5867346c1e6f76ecd8215",
+  "source_hash": "72f10e794b4718b95e6b55d6e8713fce77e660a6",
   "batch": 2,
   "day": 20,
   "language": "es",
@@ -1432,7 +1432,7 @@ export default [
  },
  {
   "slug": "escritura_notary",
-  "source_hash": "d9221e8919d04affb3b9af2c656799a0e93c6b4d",
+  "source_hash": "688c98e8c24c6858ac00db381f245afe90fbe64e",
   "batch": 2,
   "day": 21,
   "language": "es",
@@ -1445,7 +1445,7 @@ export default [
  },
  {
   "slug": "owners_year",
-  "source_hash": "6f4cd479cb5a75987cc43c2e5785d5b5aac1c880",
+  "source_hash": "a70048dcd69e81d7cfe76fda8afa7880e61c8c37",
   "batch": 2,
   "day": 22,
   "language": "es",
@@ -1458,7 +1458,7 @@ export default [
  },
  {
   "slug": "free_banking_myth",
-  "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11",
+  "source_hash": "35f8f9317c29f3c6f1be980ccbc1684becd18ed8",
   "batch": 2,
   "day": 23,
   "language": "es",
@@ -1471,7 +1471,7 @@ export default [
  },
  {
   "slug": "inheritance_tax",
-  "source_hash": "7337db40e9f6004a4ef37023eac8314c61c92814",
+  "source_hash": "2cdba268689986dcb9a0613244d547e6e42bc04d",
   "batch": 2,
   "day": 24,
   "language": "es",
@@ -1484,7 +1484,7 @@ export default [
  },
  {
   "slug": "rural_property",
-  "source_hash": "ee7e1e147a0d13b469a017f1a0550defdaf168b6",
+  "source_hash": "da9b95812a9848673253b103576ee9d664194d2a",
   "batch": 2,
   "day": 25,
   "language": "es",
@@ -1497,7 +1497,7 @@ export default [
  },
  {
   "slug": "late_tax_penalties",
-  "source_hash": "c41ce6741eed41405a5dc49d75af33c46a5c9495",
+  "source_hash": "a16ce12efc925529dd63ca9f4d1605247e87cdc3",
   "batch": 2,
   "day": 26,
   "language": "es",
@@ -1510,7 +1510,7 @@ export default [
  },
  {
   "slug": "property_insurance",
-  "source_hash": "1637aa911c286f2fa3145aac5b6cb7db68ed42f0",
+  "source_hash": "0a158ce75fc2451eaef220aa1529dffe310107d4",
   "batch": 2,
   "day": 27,
   "language": "es",
@@ -1523,7 +1523,7 @@ export default [
  },
  {
   "slug": "gift_tax",
-  "source_hash": "cdb9d0459b9bccff4cdbabcccd7f155f26c4ca7f",
+  "source_hash": "7f0f492139c9bcfce13f3a4a3d299c76d4560986",
   "batch": 2,
   "day": 28,
   "language": "es",
@@ -1536,7 +1536,7 @@ export default [
  },
  {
   "slug": "extension_deeds",
-  "source_hash": "a5dd0c9de62a0658ceaaaeaca689248860e33c0a",
+  "source_hash": "81bbfbea1d65988a87e61f087f1c04a5ebbbe09c",
   "batch": 2,
   "day": 29,
   "language": "es",
@@ -1549,7 +1549,7 @@ export default [
  },
  {
   "slug": "brexit_buying",
-  "source_hash": "a36648663ce370cc86b61b999cc7f56adc290e2a",
+  "source_hash": "75fd2767b5c2f9e4bb6c5351c55ab63db6cee722",
   "batch": 2,
   "day": 30,
   "language": "es",
@@ -1562,7 +1562,7 @@ export default [
  },
  {
   "slug": "arras_contract",
-  "source_hash": "227996d282c8010901964dc7ce6fdeede959340a",
+  "source_hash": "933c3abb920edd5be2f012857a22fcb48a56fe4d",
   "batch": 1,
   "day": 1,
   "language": "fr",
@@ -1575,7 +1575,7 @@ export default [
  },
  {
   "slug": "irnr_who_pays",
-  "source_hash": "6ce19d20500e2e87d21481c0946fb51e409c2809",
+  "source_hash": "356416c02dc1ec1aa12e6302d95f53505459f5a6",
   "batch": 1,
   "day": 2,
   "language": "fr",
@@ -1588,7 +1588,7 @@ export default [
  },
  {
   "slug": "squatter_eviction",
-  "source_hash": "9fb4f151046caf5afc23510183fe40a4e8b75ca5",
+  "source_hash": "ced02beafe194cec8264a87ee15ef92ae36cf357",
   "batch": 1,
   "day": 3,
   "language": "fr",
@@ -1601,7 +1601,7 @@ export default [
  },
  {
   "slug": "cash_rules",
-  "source_hash": "cdd2e09f06ed18d3be8ef9564f237637cde732fc",
+  "source_hash": "4d7951d9edcc9c53faea0c6b74eb91e73734894d",
   "batch": 1,
   "day": 4,
   "language": "fr",
@@ -1614,7 +1614,7 @@ export default [
  },
  {
   "slug": "tourist_license",
-  "source_hash": "5a42f64939e1bce71ad597844b0cfb6e4bdca72a",
+  "source_hash": "c8585f303b1e41394be3b6eca7f290e9d7ecbe6d",
   "batch": 1,
   "day": 5,
   "language": "fr",
@@ -1627,7 +1627,7 @@ export default [
  },
  {
   "slug": "nota_simple",
-  "source_hash": "645ad11040c9e51b21175024adf8f7d690a2b941",
+  "source_hash": "48e1689fa82c52ae37f88dbd9ecfe8d3e47b7178",
   "batch": 1,
   "day": 6,
   "language": "fr",
@@ -1640,7 +1640,7 @@ export default [
  },
  {
   "slug": "wealth_tax",
-  "source_hash": "a4f00616667990d8768bd2a85ce20318c2ff7ec0",
+  "source_hash": "c46ed823499f3cf35715247195c869bc372f5864",
   "batch": 1,
   "day": 7,
   "language": "fr",
@@ -1653,7 +1653,7 @@ export default [
  },
  {
   "slug": "community_rental_ban",
-  "source_hash": "819063538e2ada80b61c9ec2834eedd6b3ae72b4",
+  "source_hash": "33ae6b5e9cb5016e73216cdcf251897943b9626f",
   "batch": 1,
   "day": 8,
   "language": "fr",
@@ -1666,7 +1666,7 @@ export default [
  },
  {
   "slug": "currency_transfer",
-  "source_hash": "1200aa3e76b9b0d472d047c5964cd5eaec01bbec",
+  "source_hash": "755479b4a9143d09908e6345abc5ddbdbbc84293",
   "batch": 1,
   "day": 9,
   "language": "fr",
@@ -1679,7 +1679,7 @@ export default [
  },
  {
   "slug": "inheritance_foreign_law",
-  "source_hash": "b4ccdb857cd5b6a353376a46868069fd45d451da",
+  "source_hash": "a11e6ef3ce6151a7b7d581316294860f328b6624",
   "batch": 1,
   "day": 10,
   "language": "fr",
@@ -1692,7 +1692,7 @@ export default [
  },
  {
   "slug": "bank_guarantee",
-  "source_hash": "f55f072b06f9aff9fe7ecb9d3afe6cdc5b90ae64",
+  "source_hash": "fe389b1443a6cf722105bd1c08abed57dd5bba64",
   "batch": 1,
   "day": 11,
   "language": "fr",
@@ -1705,7 +1705,7 @@ export default [
  },
  {
   "slug": "noneu_tax_proposal",
-  "source_hash": "605436671a07a074f27fd2bdf152ae35a2c25573",
+  "source_hash": "ed01a6dea74ad26629d0a364d067febdd3e74a10",
   "batch": 1,
   "day": 12,
   "language": "fr",
@@ -1718,7 +1718,7 @@ export default [
  },
  {
   "slug": "rental_rule_changes",
-  "source_hash": "2f9b5a887ef7ca7f1ddfaa0097296705164e4853",
+  "source_hash": "ab563774e7489bf81ec985c15069593a96c5138e",
   "batch": 1,
   "day": 13,
   "language": "fr",
@@ -1731,7 +1731,7 @@ export default [
  },
  {
   "slug": "epc_certificates",
-  "source_hash": "8845fe37fee3849ec484ae75f8b0412f9b17d73a",
+  "source_hash": "96bd0747d6d1379a8cea269970a2c0eeaa407f5f",
   "batch": 1,
   "day": 14,
   "language": "fr",
@@ -1744,7 +1744,7 @@ export default [
  },
  {
   "slug": "plusvalia",
-  "source_hash": "af1da95188ad234543e88ca647749ebdff288e99",
+  "source_hash": "7e9733c0273adffc3953af3c8e836b6c63638af2",
   "batch": 1,
   "day": 15,
   "language": "fr",
@@ -1757,7 +1757,7 @@ export default [
  },
  {
   "slug": "buying_fees",
-  "source_hash": "ad8cab1a6b76b41c6f852a361766a8bd03112a85",
+  "source_hash": "5fc35b686d0cd434fc0e181a46670c07a1c14587",
   "batch": 2,
   "day": 16,
   "language": "fr",
@@ -1770,7 +1770,7 @@ export default [
  },
  {
   "slug": "ibi_deep",
-  "source_hash": "a1d1746782ec3ee11e96349a6baff0be412207c4",
+  "source_hash": "113097976415b5d2207bd4657582696748684edf",
   "batch": 2,
   "day": 17,
   "language": "fr",
@@ -1783,7 +1783,7 @@ export default [
  },
  {
   "slug": "frozen_account",
-  "source_hash": "69838e992f9c6de39a2624c22bc0b9872a9c8f86",
+  "source_hash": "ed7b8f273b98aab7db3b487627e84d9f9bfbc5a9",
   "batch": 2,
   "day": 18,
   "language": "fr",
@@ -1796,7 +1796,7 @@ export default [
  },
  {
   "slug": "community_fees",
-  "source_hash": "de63c1f2e30cdef3942ee340842873bf998a0a96",
+  "source_hash": "b200ef19fecafd3fad1e7d49c7a8ec7721689392",
   "batch": 2,
   "day": 19,
   "language": "fr",
@@ -1809,7 +1809,7 @@ export default [
  },
  {
   "slug": "modelo210_scenarios",
-  "source_hash": "912c6e074b6af4c456a5867346c1e6f76ecd8215",
+  "source_hash": "72f10e794b4718b95e6b55d6e8713fce77e660a6",
   "batch": 2,
   "day": 20,
   "language": "fr",
@@ -1822,7 +1822,7 @@ export default [
  },
  {
   "slug": "escritura_notary",
-  "source_hash": "d9221e8919d04affb3b9af2c656799a0e93c6b4d",
+  "source_hash": "688c98e8c24c6858ac00db381f245afe90fbe64e",
   "batch": 2,
   "day": 21,
   "language": "fr",
@@ -1835,7 +1835,7 @@ export default [
  },
  {
   "slug": "owners_year",
-  "source_hash": "6f4cd479cb5a75987cc43c2e5785d5b5aac1c880",
+  "source_hash": "a70048dcd69e81d7cfe76fda8afa7880e61c8c37",
   "batch": 2,
   "day": 22,
   "language": "fr",
@@ -1848,7 +1848,7 @@ export default [
  },
  {
   "slug": "free_banking_myth",
-  "source_hash": "263b769329a1f03df1a3bb0b128ffdd6f0b17c11",
+  "source_hash": "35f8f9317c29f3c6f1be980ccbc1684becd18ed8",
   "batch": 2,
   "day": 23,
   "language": "fr",
@@ -1861,7 +1861,7 @@ export default [
  },
  {
   "slug": "inheritance_tax",
-  "source_hash": "7337db40e9f6004a4ef37023eac8314c61c92814",
+  "source_hash": "2cdba268689986dcb9a0613244d547e6e42bc04d",
   "batch": 2,
   "day": 24,
   "language": "fr",
@@ -1874,7 +1874,7 @@ export default [
  },
  {
   "slug": "rural_property",
-  "source_hash": "ee7e1e147a0d13b469a017f1a0550defdaf168b6",
+  "source_hash": "da9b95812a9848673253b103576ee9d664194d2a",
   "batch": 2,
   "day": 25,
   "language": "fr",
@@ -1887,7 +1887,7 @@ export default [
  },
  {
   "slug": "late_tax_penalties",
-  "source_hash": "c41ce6741eed41405a5dc49d75af33c46a5c9495",
+  "source_hash": "a16ce12efc925529dd63ca9f4d1605247e87cdc3",
   "batch": 2,
   "day": 26,
   "language": "fr",
@@ -1900,7 +1900,7 @@ export default [
  },
  {
   "slug": "property_insurance",
-  "source_hash": "1637aa911c286f2fa3145aac5b6cb7db68ed42f0",
+  "source_hash": "0a158ce75fc2451eaef220aa1529dffe310107d4",
   "batch": 2,
   "day": 27,
   "language": "fr",
@@ -1913,7 +1913,7 @@ export default [
  },
  {
   "slug": "gift_tax",
-  "source_hash": "cdb9d0459b9bccff4cdbabcccd7f155f26c4ca7f",
+  "source_hash": "7f0f492139c9bcfce13f3a4a3d299c76d4560986",
   "batch": 2,
   "day": 28,
   "language": "fr",
@@ -1926,7 +1926,7 @@ export default [
  },
  {
   "slug": "extension_deeds",
-  "source_hash": "a5dd0c9de62a0658ceaaaeaca689248860e33c0a",
+  "source_hash": "81bbfbea1d65988a87e61f087f1c04a5ebbbe09c",
   "batch": 2,
   "day": 29,
   "language": "fr",
@@ -1939,7 +1939,7 @@ export default [
  },
  {
   "slug": "brexit_buying",
-  "source_hash": "a36648663ce370cc86b61b999cc7f56adc290e2a",
+  "source_hash": "75fd2767b5c2f9e4bb6c5351c55ab63db6cee722",
   "batch": 2,
   "day": 30,
   "language": "fr",
