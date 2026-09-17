@@ -79,7 +79,10 @@ translated, so English is the only one you write.
 
 - No em dashes anywhere, in copy or in code comments. Use a full stop, a comma, or "and".
 - No emojis.
-- This site is Spain 24/7. Never mention Bueno, Currencies Direct or Energy Nordic.
+- This site is Spain 24/7. Never mention Bueno, Currencies Direct or Energy Nordic on the
+  owners' pages. The one exception is the professional sections (see below): the agents'
+  and lawyers' hubs say openly that the tools are supported by Bueno, by decision of Sep 2026.
+  Currencies Direct and Energy Nordic are never named anywhere.
 - Never name a bank, insurer, utility or competitor. Figures taken from an article that
   named a company keep the figure and drop the name.
 - No "revolutionary", "disruptive", "game-changing". No fear-based urgency. No overpromising.
@@ -126,3 +129,14 @@ esbuild src/main.jsx */index.jsx */meta.js --bundle --outdir=/tmp/out --format=e
 
 This must pass. `--bundle` matters: without it esbuild only parses and never resolves
 imports, which is how a broken import reached production once already.
+
+## Audiences: owners, agents, lawyers
+
+The site is split by who the visitor is. Owners are the root and every tool without an
+`audiences` field in its meta.js is an owner tool. Professional sections live at
+`/for-agents` and `/for-lawyers` (`AudienceHub.jsx`, one folder each). A professional tool
+declares `audiences: ['agents']` (or both) and `group: 'professional'`; it never appears on
+the owners' grid. Branding lives in `BrandProfile.jsx`, in the visitor's browser only.
+Every new professional page also needs a `TOOL_COPY` entry in `seo/copy.js`.
+`audiences.test.mjs` guards all of this, including that the internal decks stay untouched.
+See `audiences.js` for how to add the next audience.

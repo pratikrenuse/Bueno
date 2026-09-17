@@ -119,3 +119,9 @@ export const PRIORITY_TOWNS = [
   ...FEATURED_TOWNS,
   ...LOCALITIES.map(l => l.slug).filter(slug => !FEATURED_SET.has(slug)),
 ];
+
+// The towns whose pages also ship in no, sv, de, fr and nl. The featured list, because those
+// are the towns foreign buyers search for in their own language. 133 towns, 16 pages each,
+// five more languages: about 10,600 URLs. Widening it is this one line, and the copy for
+// every locale already exists in seo/copy.js (TOWN_L).
+export const LOCALISED_TOWNS = FEATURED_TOWNS;

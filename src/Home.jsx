@@ -1,15 +1,21 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useT, LLink, useLocalisedPath } from '../i18n.jsx'
+import { useT, useLocale, LLink, useLocalisedPath } from '../i18n.jsx'
 import LangSwitcher from '../LangSwitcher.jsx'
 import SiteNav from '../SiteNav.jsx'
 import { LOCALITIES, REGIONS } from '../spain-directory/localities.js'
 import { CATEGORIES, PROFESSIONALS } from '../spain-directory/categories.js'
+import AudienceSwitch from '../AudienceSwitch.jsx'
+import { isForAudience, audienceLabels } from '../audiences.js'
 
 // Auto-discovers all tool meta.js files — no changes needed when adding new tools
 const metaModules = import.meta.glob('../*/meta.js', { eager: true })
+// This is the owners' home page, so it lists owner tools only. A tool with no `audiences`
+// field in its meta.js is an owner tool, which is every tool that existed before the site
+// was split by audience. Professional tools and the audience hubs live on their own pages.
 const ALL_TOOLS = Object.values(metaModules)
   .map(m => m.default)
+  .filter(m => isForAudience(m, 'owners'))
   .sort((a, b) => a.order - b.order)
 
 // Map a tool path to its i18n card key.
@@ -281,6 +287,7 @@ function ToolsSection() {
 
 export default function Home() {
   const t = useT()
+  const aud = audienceLabels(useLocale().locale)
   const navRef          = useRef(null)
   const logoRef         = useRef(null)
   const brandNameRef    = useRef(null)
@@ -361,6 +368,7 @@ export default function Home() {
               <span className="home-trust-dot" />
               <span className="home-trust-item">{t('home.trust_lang')}</span>
             </div>
+            <AudienceSwitch current="owners" tone="dark" />
           </div>
         </div>
         <div className="home-hero-right">
@@ -434,6 +442,8 @@ export default function Home() {
           <LLink to="/tax-calculator">{t('nav.tax')}</LLink>
           <LLink to="/cost-audit">{t('nav.cost')}</LLink>
           <LLink to="/spain-directory">{t('nav.directory')}</LLink>
+          <LLink to="/for-agents">{aud.for_agents}</LLink>
+          <LLink to="/for-lawyers">{aud.for_lawyers}</LLink>
         </div>
         <p className="home-footer-copy">
           {t('home.footer_copy')}

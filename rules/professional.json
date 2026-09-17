@@ -1,0 +1,201 @@
+{
+  "domain": "Duties and procedures for the professionals who serve foreign owners: anti-money-laundering duties of estate agents, which inheritance tax rules a non-resident may use, and how a power of attorney signed abroad is used in Spain",
+  "rules": [
+    {
+      "id": "aml.obliged_agents",
+      "statement": "Estate agents who professionally act as agent, commission agent or intermediary in the sale of real estate are obliged subjects under the anti-money-laundering law. So are those intermediating leases with a total annual rent of 120,000 euros or more, or a monthly rent of 10,000 euros or more.",
+      "value": { "lease_annual_eur": 120000, "lease_monthly_eur": 10000 },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2.1.l Ley 10/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": "The rent thresholds attach to leases. SEPBLAC's own FAQ confirms that agents intermediating sales are obliged subjects, with no threshold stated. A reform of Ley 10/2010 is in draft and the EU AML Regulation 2024/1624 applies from July 2027, so review this in 2027."
+    },
+    {
+      "id": "aml.sepblac_agents",
+      "statement": "SEPBLAC confirms that estate agents hold the status of obliged subject as far as they professionally carry out agency, commission or intermediation in the purchase and sale of real estate.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "SEPBLAC",
+        "ref": "Obliged subjects, frequently asked questions",
+        "url": "https://www.sepblac.es/en/obliged-subjects/frequent-asked-questions/",
+        "source_dated": "2026-09-17",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "aml.identification",
+      "statement": "Obliged subjects must identify every natural or legal person who intends to enter a business relationship or take part in an operation, using reliable documents, before the relationship or operation begins.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 3 Ley 10/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "aml.beneficial_owner",
+      "statement": "The beneficial owner must be identified. For a company, that includes whoever holds more than 25 percent of the capital or voting rights, or otherwise controls it.",
+      "value": { "ownership_pct": 25 },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 4 Ley 10/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "aml.pep",
+      "statement": "Enhanced due diligence applies to politically exposed persons, their family members and close associates.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 14 Ley 10/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "aml.reporting",
+      "statement": "Any fact or operation that shows signs of money laundering or terrorist financing must be reported to SEPBLAC, and the client must not be told that a report has been made.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 18 and 24 Ley 10/2010",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "aml.retention",
+      "statement": "Obliged subjects keep the due diligence documentation for ten years from the end of the business relationship or the execution of the occasional operation.",
+      "value": { "years": 10 },
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Consolidated text of Ley 10/2010 as reproduced by leyes.tv",
+        "ref": "art. 25.1 Ley 10/2010",
+        "url": "https://www.leyes.tv/articulo-25-ley-102010-de-28-de-abril/",
+        "source_dated": "2026-09-17",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-03-01",
+      "notes": "The ten year period was read from a reproduction of the consolidated text, because the BOE page truncated before article 25. Confirm against the BOE text."
+    },
+    {
+      "id": "isd.nonresident_option",
+      "statement": "Non-residents, whether they live in the European Union, the European Economic Area or a third country, may choose to apply the rules of an autonomous community instead of the state rules in inheritance and gift tax.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes; disposicion adicional segunda Ley 29/1987",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-06-01",
+      "notes": "It is a choice, not an automatic assignment. Life insurance paid to someone who is not an heir can only use the state rules."
+    },
+    {
+      "id": "isd.nonresident_which_region",
+      "statement": "When the deceased was resident in a Spanish region and the heir is not, the heir may choose between the state rules and the rules of the region where the deceased lived. When the deceased was not resident in Spain, the choice is between the state rules and the rules of the region where the greatest value of the assets in Spain is located.",
+      "value": {
+        "deceased_resident": ["state", "region_of_deceased"],
+        "deceased_nonresident": ["state", "region_with_most_value_in_spain"],
+        "nonresident_no_assets_in_spain": "region_where_heir_resides"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 650, cuadro de delimitacion de competencias",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-sucesiones-donaciones/modelo-650-impue_____iones-autoliquidacion-adquisicion-causa_/cuadro-delimitacion-competencias.html",
+        "source_dated": "2026-06-09",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Gifts of real estate follow the location of the property; that case was not shown on this table and is not stated by the tool."
+    },
+    {
+      "id": "poa.apostille_parties",
+      "statement": "These states are parties to the Hague Apostille Convention, so a public document issued there is accepted in Spain with an apostille instead of consular legalisation.",
+      "value": ["Spain", "Norway", "Sweden", "Germany", "France", "Netherlands", "United Kingdom", "Belgium", "Denmark", "Finland", "Ireland", "Switzerland", "United States", "Italy", "Poland"],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "HCCH",
+        "ref": "Status table, Convention of 5 October 1961 abolishing the requirement of legalisation",
+        "url": "https://www.hcch.net/en/instruments/conventions/status-table/?cid=41",
+        "source_dated": "2026-06-30",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "poa.consular",
+      "statement": "A power of attorney granted before a Spanish consul or diplomatic agent abroad is valid in Spain without any legalisation or apostille.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Notarial commentary, El blog de Justito El Notario",
+        "ref": "Poderes extranjeros y poderes ante agentes diplomaticos y consulares de Espana",
+        "url": "https://www.justitonotario.es/poderes-extranjeros-agentes-diplomaticos-consulares-espana/",
+        "source_dated": "2026-09-17",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Confirmed from a notary's published commentary quoting the regulation, not from the regulation itself. Consular appointments are limited, so check availability with the consulate."
+    },
+    {
+      "id": "poa.foreign_notary",
+      "statement": "A power of attorney signed before a foreign notary needs an apostille, a sworn translation where it is not in Spanish, and the Spanish notary must judge both that it is equivalent to a Spanish power and that it is sufficient for the act.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Notarial commentary, El blog de Justito El Notario; Consejo General del Notariado",
+        "ref": "art. 98 Ley 24/2001 and art. 57 Ley 29/2015",
+        "url": "https://www.justitonotario.es/poderes-extranjeros-agentes-diplomaticos-consulares-espana/",
+        "source_dated": "2026-09-17",
+        "read_on": "2026-09-17"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Read from published notarial commentary; the BOE pages for both articles truncated before them. Always send the draft to the Spanish notary who will use it before it is signed."
+    }
+  ]
+}

@@ -504,6 +504,73 @@ export const TOOL_COPY = {
     fr: { h1: 'IVA sur une location saisonnière', lead: 'Exonéré, dix pour cent ou vingt et un ? Le taux ne dépend pas de la durée du séjour.', extra: 'Il dépend de ce que vous fournissez pendant le séjour et de qui reçoit la réservation.' },
     nl: { h1: 'IVA op Spaanse vakantieverhuur', lead: 'Vrijgesteld, tien procent of eenentwintig? Het tarief hangt niet af van de verblijfsduur.', extra: 'Het hangt af van wat u tijdens het verblijf biedt en bij wie de gast boekt.' },
   },
+  // The professional sections. Hubs first, then the tools they carry. These pages are for
+  // agents and lawyers, so their words say so; the owner tail sentences are never needed
+  // because each lead and extra together already clear the description minimum.
+  'for-agents': {
+    en: { h1: 'Tools for estate agents in Spain', lead: 'Free tools for agents who sell to international buyers: branded seller packs and a sale checklist.', extra: 'Plus owner tools to send clients in their own language.' },
+    no: { h1: 'Verktøy for eiendomsmeglere i Spania', lead: 'Gratis verktøy for meglere med internasjonale kjøpere: selgerpakker med ditt brevhode og en sjekkliste for salget.', extra: 'Og verktøy du kan sende kundene på deres eget språk.' },
+    sv: { h1: 'Verktyg för fastighetsmäklare i Spanien', lead: 'Gratis verktyg för mäklare med internationella köpare: säljarpaket med ditt brevhuvud och en checklista inför tillträdet.', extra: 'Och verktyg att skicka till kunder på deras eget språk.' },
+    de: { h1: 'Tools für Immobilienmakler in Spanien', lead: 'Kostenlose Tools für Makler mit internationalen Käufern: Verkäuferunterlagen mit Ihrem Briefkopf und eine Checkliste.', extra: 'Dazu Tools für Ihre Kunden in deren Sprache.' },
+    fr: { h1: 'Outils pour agents immobiliers en Espagne', lead: 'Des outils gratuits pour les agents qui vendent à des étrangers : dossiers vendeur à votre en-tête et check-list de vente.', extra: 'Et des outils à envoyer à vos clients dans leur langue.' },
+    nl: { h1: 'Tools voor makelaars in Spanje', lead: 'Gratis tools voor makelaars met internationale kopers: verkoopmappen met uw briefhoofd en een checklist voor de verkoop.', extra: 'Plus tools om klanten in hun eigen taal te sturen.' },
+  },
+  'for-lawyers': {
+    en: { h1: 'Tools for lawyers in Spain', lead: 'Free, sourced tools on the non-resident tax, deadlines and property rights foreign clients ask about.', extra: 'Plus a branded checklist for live sales.' },
+    no: { h1: 'Verktøy for advokater i Spania', lead: 'Gratis verktøy med kilder om skatt for ikke-residenter, frister og rettigheter som utenlandske klienter spør om.', extra: 'Og en sjekkliste med ditt brevhode.' },
+    sv: { h1: 'Verktyg för advokater i Spanien', lead: 'Gratis verktyg med källor om skatt för icke-residenter, frister och rättigheter som utländska klienter frågar om.', extra: 'Och en checklista med ditt brevhuvud.' },
+    de: { h1: 'Tools für Anwälte in Spanien', lead: 'Kostenlose, belegte Tools zu Steuern für Nicht-Residenten, Fristen und Rechten, nach denen ausländische Mandanten fragen.', extra: 'Dazu eine Checkliste mit Briefkopf.' },
+    fr: { h1: 'Outils pour avocats en Espagne', lead: 'Des outils gratuits et sourcés sur la fiscalité des non-résidents, les délais et les droits qui inquiètent vos clients étrangers.', extra: 'Et une check-list à votre en-tête.' },
+    nl: { h1: 'Tools voor advocaten in Spanje', lead: 'Gratis tools met bronnen over belasting voor niet-residenten, termijnen en rechten waar buitenlandse cliënten naar vragen.', extra: 'Plus een checklist met uw briefhoofd.' },
+  },
+  'deal-checklist': {
+    en: { h1: 'Sale readiness checklist', lead: 'For agents and lawyers: the tasks on a live Spanish property sale, who owns each one, and every date from completion.', extra: 'With a client letter in seven languages.' },
+    no: { h1: 'Sjekkliste for boligsalg i Spania', lead: 'For meglere og advokater: oppgavene i et pågående salg, hvem som eier hver av dem, og hver dato fra overtakelsen.', extra: 'Med brev til kunden på sju språk.' },
+    sv: { h1: 'Checklista för bostadsaffär i Spanien', lead: 'För mäklare och advokater: uppgifterna i en pågående affär, vem som äger varje uppgift och varje datum från tillträdet.', extra: 'Med brev till kunden på sju språk.' },
+    de: { h1: 'Checkliste für den Immobilienverkauf', lead: 'Für Makler und Anwälte: die Aufgaben eines laufenden Verkaufs in Spanien, die Zuständigkeiten und jede Frist ab Beurkundung.', extra: 'Mit Kundenbrief in sieben Sprachen.' },
+    fr: { h1: 'Check-list de vente immobilière', lead: 'Pour agents et avocats : les tâches d’une vente en cours en Espagne, le responsable de chacune et chaque date après la signature.', extra: 'Avec une lettre client en sept langues.' },
+    nl: { h1: 'Checklist voor een woningverkoop', lead: 'Voor makelaars en advocaten: de taken bij een lopende verkoop in Spanje, wie waarvoor zorgt en elke datum na de overdracht.', extra: 'Met een klantbrief in zeven talen.' },
+  },
+  'seller-pack': {
+    en: { h1: 'Seller meeting pack for agents', lead: 'Turn your comparables and marketing plan into a branded pack in the seller’s language, in about five minutes.', extra: 'Asking and sold prices kept apart.' },
+    no: { h1: 'Selgermøtepakke for meglere', lead: 'Gjør sammenlignbare boliger og markedsplanen din om til en pakke med ditt brevhode, på selgerens språk.', extra: 'Prisantydning og salgspris holdes adskilt.' },
+    sv: { h1: 'Säljarmötespaket för mäklare', lead: 'Gör jämförbara objekt och din marknadsplan till ett paket med ditt brevhuvud, på säljarens språk.', extra: 'Utgångspris och försäljningspris hålls isär.' },
+    de: { h1: 'Verkäuferunterlagen für Makler', lead: 'Machen Sie aus Vergleichsobjekten und Vermarktungsplan Unterlagen mit Ihrem Briefkopf in der Sprache des Verkäufers.', extra: 'Angebots- und Verkaufspreise getrennt.' },
+    fr: { h1: 'Dossier vendeur pour agents', lead: 'Transformez vos comparables et votre plan de commercialisation en dossier à votre en-tête, dans la langue du vendeur.', extra: 'Prix affichés et prix vendus séparés.' },
+    nl: { h1: 'Verkoopmap voor makelaars', lead: 'Maak van uw vergelijkbare woningen en marketingplan een map met uw briefhoofd, in de taal van de verkoper.', extra: 'Vraag- en verkoopprijzen apart gehouden.' },
+  },
+  'purchase-costs': {
+    en: { h1: 'Buying costs by region in Spain', lead: 'Transfer tax, IVA or IGIC and stamp duty on a Spanish home, region by region, with banded regions taxed slice by slice.', extra: 'No rate is shown where none is confirmed.' },
+    no: { h1: 'Kjøpskostnader per region i Spania', lead: 'Dokumentavgift, IVA eller IGIC og stempelavgift på spansk bolig, region for region, med trinnskala beregnet trinn for trinn.', extra: 'Ingen sats vises uten bekreftelse.' },
+    sv: { h1: 'Köpkostnader per region i Spanien', lead: 'Överlåtelseskatt, IVA eller IGIC och stämpelskatt på en spansk bostad, region för region, med trappsteg beräknade steg för steg.', extra: 'Ingen sats visas utan bekräftelse.' },
+    de: { h1: 'Kaufnebenkosten nach Region in Spanien', lead: 'Grunderwerbsteuer, IVA oder IGIC und Urkundensteuer auf spanische Immobilien, Region für Region, Stufentarife Stufe für Stufe.', extra: 'Kein Satz ohne Bestätigung.' },
+    fr: { h1: 'Frais d’achat par région en Espagne', lead: 'Droits de mutation, IVA ou IGIC et droit de timbre sur un logement espagnol, région par région, barèmes calculés par tranche.', extra: 'Aucun taux sans confirmation.' },
+    nl: { h1: 'Aankoopkosten per regio in Spanje', lead: 'Overdrachtsbelasting, IVA of IGIC en zegelrecht op een Spaanse woning, per regio, met schijventarieven per schijf berekend.', extra: 'Geen tarief zonder bevestiging.' },
+  },
+  'inheritance-roadmap': {
+    en: { h1: 'Inheriting a Spanish property', lead: 'Which country’s law governs the estate, which tax rules non-resident heirs may choose, and every deadline as a real date.', extra: 'With a letter to the heirs.' },
+    no: { h1: 'Arv av bolig i Spania', lead: 'Hvilket lands lov gjelder arven, hvilke skatteregler arvinger i utlandet kan velge, og hver frist som en faktisk dato.', extra: 'Med brev til arvingene.' },
+    sv: { h1: 'Ärva en bostad i Spanien', lead: 'Vilket lands lag som gäller arvet, vilka skatteregler arvingar utomlands kan välja, och varje frist som ett verkligt datum.', extra: 'Med brev till arvingarna.' },
+    de: { h1: 'Eine spanische Immobilie erben', lead: 'Welches Recht für den Nachlass gilt, welche Steuerregeln nicht ansässige Erben wählen können und jede Frist als echtes Datum.', extra: 'Mit Brief an die Erben.' },
+    fr: { h1: 'Hériter d’un bien en Espagne', lead: 'Quelle loi régit la succession, quelles règles fiscales les héritiers non résidents peuvent choisir, et chaque délai en date réelle.', extra: 'Avec une lettre aux héritiers.' },
+    nl: { h1: 'Een Spaanse woning erven', lead: 'Welk recht de nalatenschap beheerst, welke belastingregels erfgenamen in het buitenland kunnen kiezen en elke termijn als echte datum.', extra: 'Met een brief aan de erfgenamen.' },
+  },
+  'aml-file': {
+    en: { h1: 'AML client file for estate agents', lead: 'For agents in Spain: check whether a sale or lease is in scope of Ley 10/2010, see what stops it, and print a dated due diligence record.', extra: 'Nothing leaves your browser.' },
+    no: { h1: 'Hvitvaskingsmappe for meglere', lead: 'For meglere i Spania: sjekk om salg eller utleie omfattes av Ley 10/2010, se hva som stopper saken, og skriv ut en datert oversikt.', extra: 'Ingenting forlater nettleseren.' },
+    sv: { h1: 'Penningtvättsakt för mäklare', lead: 'För mäklare i Spanien: kontrollera om en försäljning eller uthyrning omfattas av Ley 10/2010, se vad som stoppar den och skriv ut en daterad akt.', extra: 'Inget lämnar webbläsaren.' },
+    de: { h1: 'Geldwäsche-Akte für Makler', lead: 'Für Makler in Spanien: prüfen, ob Verkauf oder Vermietung unter Ley 10/2010 fällt, Hindernisse erkennen und eine datierte Akte drucken.', extra: 'Nichts verlässt den Browser.' },
+    fr: { h1: 'Dossier anti-blanchiment pour agents', lead: 'Pour les agents en Espagne : vérifier si une vente ou location relève de la Ley 10/2010, voir ce qui bloque et imprimer un registre daté.', extra: 'Rien ne quitte le navigateur.' },
+    nl: { h1: 'Witwasdossier voor makelaars', lead: 'Voor makelaars in Spanje: controleer of een verkoop of verhuur onder Ley 10/2010 valt, zie wat haar tegenhoudt en druk een gedateerd dossier af.', extra: 'Niets verlaat uw browser.' },
+  },
+  'poa-planner': {
+    en: { h1: 'Power of attorney from abroad', lead: 'For lawyers and agents: consulate or local notary with apostille, compared for the client’s country, with every step and the powers to name.', extra: 'Plus a client letter.' },
+    no: { h1: 'Fullmakt fra utlandet til Spania', lead: 'For advokater og meglere: konsulat eller lokal notar med apostille, sammenlignet for kundens land, med alle steg og fullmaktene som bør nevnes.', extra: 'Med brev til kunden.' },
+    sv: { h1: 'Fullmakt från utlandet till Spanien', lead: 'För advokater och mäklare: konsulat eller lokal notarie med apostille, jämfört för kundens land, med varje steg och befogenheterna att nämna.', extra: 'Med brev till kunden.' },
+    de: { h1: 'Vollmacht aus dem Ausland für Spanien', lead: 'Für Anwälte und Makler: Konsulat oder örtlicher Notar mit Apostille, verglichen für das Land des Kunden, mit allen Schritten und Befugnissen.', extra: 'Mit Kundenbrief.' },
+    fr: { h1: 'Procuration depuis l’étranger', lead: 'Pour avocats et agents : consulat ou notaire local avec apostille, comparés pour le pays du client, avec chaque étape et les pouvoirs à citer.', extra: 'Avec une lettre au client.' },
+    nl: { h1: 'Volmacht vanuit het buitenland', lead: 'Voor advocaten en makelaars: consulaat of lokale notaris met apostille, vergeleken voor het land van de klant, met elke stap en de bevoegdheden.', extra: 'Met een klantbrief.' },
+  },
   'late-surcharge': {
     en: { h1: 'Filing a Spanish return late', lead: 'A late Modelo 210 costs a surcharge that rises by one point a month.', extra: 'It becomes something else entirely once the tax office has written to you first.' },
     no: { h1: 'Levere spansk skattemelding sent', lead: 'En for sen Modelo 210 koster et tillegg som stiger med ett poeng i måneden.', extra: 'Det blir noe helt annet dersom skattekontoret har skrevet til deg først.' },
@@ -931,7 +998,8 @@ export const S = {
 
 // --- the English town pages -------------------------------------------------------------
 //
-// English only, deliberately. 133 towns times 14 categories times six languages is a page
+// English for all 660 towns. The 133 featured towns also ship in the other five languages,
+// from TOWN_L below. Originally: 133 towns times 14 categories times six languages is a page
 // count no new domain gets crawled at, and five thin translations of a page that has not
 // ranked yet cost more than they return. The other locales reach the same towns through
 // the app, which is fully translated.
@@ -1026,6 +1094,470 @@ export const PROFESSION_DOES = {
   surveyor: 'What the property is worth on paper, for a bank or a court.',
   insurance: 'Home and contents cover that pays out from abroad.',
   translator: 'The only translations a Spanish registry will accept.',
+};
+
+// --- the town pages in the other five languages ----------------------------------------------
+//
+// The 133 featured towns (seo/priority.js, LOCALISED_TOWNS) also ship in no, sv, de, fr and
+// nl. The rest of the 660 stay English only, for the crawl budget reason given above. The
+// app at those URLs is fully translated already, so the static block and the rendered page
+// say the same thing in the same language.
+//
+// Each pack mirrors TOWN: rotating titles, leads and tails, plus the handful of sentences
+// routes.js used to hard code in English. `en` is built from TOWN itself and the English
+// sentences verbatim, so the English pages do not change by a byte.
+
+
+// "province d'Alicante", "province de Málaga".
+const deFr = name => (/^[AEIOUÁÉÍÓÚaeiou]/.test(name) ? `d'${name}` : `de ${name}`);
+
+export const TOWN_L = {
+  en: {
+    ...TOWN,
+    coastIn: coast => `${TOWN.coastPreposition(coast)} ${coast}`,
+    where: (t, clause) => `${t.townFull} is in the province of ${t.prov}${clause}.`,
+    tradesCovered: list => `Six trades are covered here: ${list}.`,
+    prosCovered: 'Eight professions, and the one you need is often not the one you expected.',
+    catWhere: (c, clause) => `${c.CatPl} in ${c.townFull}, in the province of ${c.prov}${clause}.`,
+    catQuery: q => `The list is built from a search for "${q}", the Spanish term these businesses list themselves under.`,
+    inTown: (label, town) => `${label} in ${town}`,
+  },
+
+  no: {
+    coastIn: coast => `på ${coast}`,
+    where: (t, clause) => `${t.townFull} ligger i provinsen ${t.prov}${clause}.`,
+    tradesCovered: list => `Seks fag dekkes her: ${list}.`,
+    prosCovered: 'Åtte yrker, og den du trenger er ofte ikke den du trodde.',
+    catWhere: (c, clause) => `${c.CatPl} i ${c.townFull}, i provinsen ${c.prov}${clause}.`,
+    catQuery: q => `Listen bygger på et søk etter «${q}», det spanske ordet disse bedriftene bruker om seg selv.`,
+    inTown: (label, town) => `${label} i ${town}`,
+    category: {
+      titles: c => [
+        `${c.CatPl} i ${c.town}`,
+        `${c.CatPl} i ${c.town}, ${c.prov}`,
+        `Finn ${c.catPl} i ${c.town}`,
+        `${c.CatPl} i ${c.town}, rangert etter omtaler`,
+        `Best vurderte ${c.catPl} i ${c.town}`,
+        `${c.CatPl} nær ${c.town}, ${c.prov}`,
+        `Leter du etter ${c.catPl} i ${c.town}?`,
+        `${c.CatPl} i ${c.town}: hva omtalene sier`,
+      ],
+      h1: c => `De best omtalte ${c.catPl} i ${c.townFull}`,
+      leads: c => [
+        `Best vurderte ${c.catPl} i ${c.town}, ${c.prov}, lest ut av offentlige Google-omtaler.`,
+        `${c.CatPl} i ${c.town}, rangert etter vurdering og vektet for hvor mange omtaler den bygger på.`,
+        `Leter du etter ${c.catPl} i ${c.town}? Denne listen bygger på offentlige Google-omtaler.`,
+        `Alle ${c.catPl} vi finner rundt ${c.town}, ${c.prov}, samlet i én rangert liste.`,
+      ],
+      tail: [
+        'En 5,0 fra tre personer slår ikke en 4,7 fra fire hundre.',
+        'Språket hver omtale er skrevet på, står ved hvert navn.',
+        'Gratis, og ingen betaler for å stå her.',
+        'Oppdateres minst hver 30. dag.',
+        'Vi har ikke møtt dem. Les omtalene og bestem selv.',
+      ],
+    },
+    tradesHub: {
+      titles: t => [
+        `Reparasjoner i ${t.town}`,
+        `Finn en håndverker i ${t.town}, ${t.prov}`,
+        `Rørleggere og elektrikere i ${t.town}`,
+        `Håndverkere i ${t.town}, ${t.prov}`,
+        `Hvem ringer du i ${t.town} når noe går i stykker?`,
+      ],
+      h1: t => `Håndverkere i ${t.townFull}`,
+      leads: t => [
+        `De seks fagene registeret dekker i ${t.town}, ${t.prov}, hver liste rangert etter offentlige Google-omtaler.`,
+        `Noe ødelagt i ${t.town}? Rørlegger, elektriker, låsesmed, klimaanlegg, basseng eller byggmester.`,
+        `${t.town}, ${t.prov}. Seks fag, hvert rangert etter hva anmelderne faktisk skrev.`,
+      ],
+      tail: [
+        'Språket hver omtale er skrevet på, står ved hvert navn.',
+        'Gratis, og ingen betaler for å stå her.',
+        'Oppdateres minst hver 30. dag.',
+      ],
+    },
+    prosHub: {
+      titles: t => [
+        `Boligeksperter i ${t.town}`,
+        `Advokater og gestorías i ${t.town}, ${t.prov}`,
+        `Boligfagfolk i ${t.town}`,
+        `Hvem spør du i ${t.town}, ${t.prov}?`,
+        `Hjelp med bolig i ${t.town}, ${t.prov}`,
+      ],
+      h1: t => `Boligfagfolk i ${t.townFull}`,
+      leads: t => [
+        `De åtte boligyrkene registeret dekker i ${t.town}, ${t.prov}, rangert etter Google-omtaler.`,
+        `Kjøper, selger eller skal levere noe i ${t.town}? Start med hva hver av disse faktisk gjør.`,
+        `${t.town}, ${t.prov}. Meglere, advokater, gestorías, arkitekter, takstmenn og translatører.`,
+      ],
+      tail: [
+        'Hver oppføring sier hva jobben er før den viser deg noen.',
+        'Gratis, og ingen betaler for å stå her.',
+        'Oppdateres minst hver 30. dag.',
+      ],
+    },
+  },
+
+  sv: {
+    coastIn: coast => `på ${coast}`,
+    where: (t, clause) => `${t.townFull} ligger i provinsen ${t.prov}${clause}.`,
+    tradesCovered: list => `Sex yrken finns här: ${list}.`,
+    prosCovered: 'Åtta yrken, och den du behöver är ofta inte den du trodde.',
+    catWhere: (c, clause) => `${c.CatPl} i ${c.townFull}, i provinsen ${c.prov}${clause}.`,
+    catQuery: q => `Listan bygger på en sökning efter ”${q}”, det spanska ord dessa företag använder om sig själva.`,
+    inTown: (label, town) => `${label} i ${town}`,
+    category: {
+      titles: c => [
+        `${c.CatPl} i ${c.town}`,
+        `${c.CatPl} i ${c.town}, ${c.prov}`,
+        `Hitta ${c.catPl} i ${c.town}`,
+        `${c.CatPl} i ${c.town}, rankade efter omdömen`,
+        `Bäst betygsatta ${c.catPl} i ${c.town}`,
+        `${c.CatPl} nära ${c.town}, ${c.prov}`,
+        `Letar du efter ${c.catPl} i ${c.town}?`,
+        `${c.CatPl} i ${c.town}: vad omdömena säger`,
+      ],
+      h1: c => `De bäst betygsatta ${c.catPl} i ${c.townFull}`,
+      leads: c => [
+        `Bäst betygsatta ${c.catPl} i ${c.town}, ${c.prov}, utlästa ur offentliga Google-omdömen.`,
+        `${c.CatPl} i ${c.town}, rankade efter betyg och viktade för hur många omdömen det vilar på.`,
+        `Letar du efter ${c.catPl} i ${c.town}? Listan bygger på offentliga Google-omdömen.`,
+        `Alla ${c.catPl} vi hittar runt ${c.town}, ${c.prov}, samlade i en rankad lista.`,
+      ],
+      tail: [
+        'En 5,0 från tre personer slår inte en 4,7 från fyra hundra.',
+        'Språket varje omdöme skrevs på visas vid varje namn.',
+        'Gratis, och ingen betalar för att synas.',
+        'Uppdateras minst var 30:e dag.',
+        'Vi har inte träffat dem. Läs omdömena och bestäm själv.',
+      ],
+    },
+    tradesHub: {
+      titles: t => [
+        `Reparationer i ${t.town}`,
+        `Hitta en hantverkare i ${t.town}, ${t.prov}`,
+        `Rörmokare och elektriker i ${t.town}`,
+        `Hantverkare i ${t.town}, ${t.prov}`,
+        `Vem ringer du i ${t.town} när något går sönder?`,
+      ],
+      h1: t => `Hantverkare i ${t.townFull}`,
+      leads: t => [
+        `De sex yrken katalogen täcker i ${t.town}, ${t.prov}, varje lista rankad efter offentliga Google-omdömen.`,
+        `Något trasigt i ${t.town}? Rörmokare, elektriker, låssmed, luftkonditionering, pool eller byggare.`,
+        `${t.town}, ${t.prov}. Sex yrken, vart och ett rankat efter vad recensenterna faktiskt skrev.`,
+      ],
+      tail: [
+        'Språket varje omdöme skrevs på visas vid varje namn.',
+        'Gratis, och ingen betalar för att synas.',
+        'Uppdateras minst var 30:e dag.',
+      ],
+    },
+    prosHub: {
+      titles: t => [
+        `Bostadsexperter i ${t.town}`,
+        `Jurister och gestorías i ${t.town}, ${t.prov}`,
+        `Bostadsproffs i ${t.town}`,
+        `Vem frågar du i ${t.town}, ${t.prov}?`,
+        `Hjälp med bostaden i ${t.town}, ${t.prov}`,
+      ],
+      h1: t => `Bostadsproffs i ${t.townFull}`,
+      leads: t => [
+        `De åtta bostadsyrken katalogen täcker i ${t.town}, ${t.prov}, rankade efter Google-omdömen.`,
+        `Köper, säljer eller ska deklarera i ${t.town}? Börja med vad var och en av dem faktiskt gör.`,
+        `${t.town}, ${t.prov}. Mäklare, jurister, gestorías, arkitekter, värderingsmän och översättare.`,
+      ],
+      tail: [
+        'Varje post säger vad jobbet är innan den visar dig någon.',
+        'Gratis, och ingen betalar för att synas.',
+        'Uppdateras minst var 30:e dag.',
+      ],
+    },
+  },
+
+  de: {
+    coastIn: coast => (/^Islas/.test(coast) ? `auf den ${coast}` : `an der ${coast}`),
+    where: (t, clause) => `${t.townFull} liegt in der Provinz ${t.prov}${clause}.`,
+    tradesCovered: list => `Sechs Gewerke sind hier abgedeckt: ${list}.`,
+    prosCovered: 'Acht Berufe, und der, den Sie brauchen, ist oft nicht der, den Sie erwartet haben.',
+    catWhere: (c, clause) => `${c.CatPl} in ${c.townFull}, in der Provinz ${c.prov}${clause}.`,
+    catQuery: q => `Die Liste beruht auf einer Suche nach „${q}“, dem spanischen Begriff, unter dem diese Betriebe geführt werden.`,
+    inTown: (label, town) => `${label} in ${town}`,
+    category: {
+      titles: c => [
+        `${c.CatPl} in ${c.town}`,
+        `${c.CatPl} in ${c.town}, ${c.prov}`,
+        `${c.CatPl} in ${c.town} finden`,
+        `${c.CatPl} in ${c.town}, nach Bewertungen sortiert`,
+        `Die besten ${c.catPl} in ${c.town}`,
+        `${c.CatPl} bei ${c.town}, ${c.prov}`,
+        `${c.CatPl} in ${c.town} gesucht?`,
+        `${c.CatPl} in ${c.town}: was Bewertungen sagen`,
+      ],
+      h1: c => `Die bestbewerteten ${c.catPl} in ${c.townFull}`,
+      leads: c => [
+        `Die bestbewerteten ${c.catPl} in ${c.town}, ${c.prov}, aus öffentlichen Google-Bewertungen gelesen.`,
+        `${c.CatPl} in ${c.town}, nach Bewertung sortiert und danach gewichtet, auf wie vielen Stimmen sie beruht.`,
+        `${c.CatPl} in ${c.town} gesucht? Diese Liste beruht auf öffentlichen Google-Bewertungen.`,
+        `Alle ${c.catPl}, die wir rund um ${c.town}, ${c.prov}, finden, in einer sortierten Liste.`,
+      ],
+      tail: [
+        'Eine 5,0 von drei Personen schlägt keine 4,7 von vierhundert.',
+        'Die Sprache jeder Bewertung steht bei jedem Namen.',
+        'Kostenlos, und niemand bezahlt für einen Platz.',
+        'Mindestens alle 30 Tage aktualisiert.',
+        'Wir kennen sie nicht. Lesen Sie die Bewertungen und entscheiden Sie selbst.',
+      ],
+    },
+    tradesHub: {
+      titles: t => [
+        `Reparaturen in ${t.town}`,
+        `Handwerker in ${t.town}, ${t.prov} finden`,
+        `Installateure und Elektriker in ${t.town}`,
+        `Handwerker in ${t.town}, ${t.prov}`,
+        `Wen ruft man in ${t.town}, wenn etwas kaputt ist?`,
+      ],
+      h1: t => `Handwerker in ${t.townFull}`,
+      leads: t => [
+        `Die sechs Gewerke, die das Verzeichnis in ${t.town}, ${t.prov} abdeckt, jede Liste nach Google-Bewertungen sortiert.`,
+        `Etwas kaputt in ${t.town}? Installateur, Elektriker, Schlüsseldienst, Klimaanlage, Pool oder Bau.`,
+        `${t.town}, ${t.prov}. Sechs Gewerke, jedes danach sortiert, was Bewerter wirklich geschrieben haben.`,
+      ],
+      tail: [
+        'Die Sprache jeder Bewertung steht bei jedem Namen.',
+        'Kostenlos, und niemand bezahlt für einen Platz.',
+        'Mindestens alle 30 Tage aktualisiert.',
+      ],
+    },
+    prosHub: {
+      titles: t => [
+        `Immobilienexperten in ${t.town}`,
+        `Anwälte und Gestorías in ${t.town}, ${t.prov}`,
+        `Immobilienfachleute in ${t.town}`,
+        `Wen fragt man in ${t.town}, ${t.prov}?`,
+        `Hilfe rund um die Immobilie in ${t.town}`,
+      ],
+      h1: t => `Immobilienfachleute in ${t.townFull}`,
+      leads: t => [
+        `Die acht Immobilienberufe, die das Verzeichnis in ${t.town}, ${t.prov} abdeckt, nach Google-Bewertungen sortiert.`,
+        `Kaufen, verkaufen oder etwas einreichen in ${t.town}? Zuerst, was jeder dieser Berufe wirklich macht.`,
+        `${t.town}, ${t.prov}. Makler, Anwälte, Gestorías, Architekten, Gutachter und Übersetzer.`,
+      ],
+      tail: [
+        'Jeder Eintrag sagt erst, worin die Arbeit besteht, bevor er jemanden zeigt.',
+        'Kostenlos, und niemand bezahlt für einen Platz.',
+        'Mindestens alle 30 Tage aktualisiert.',
+      ],
+    },
+  },
+
+  fr: {
+    coastIn: coast => (/^Islas/.test(coast) ? `aux ${coast}` : `sur la ${coast}`),
+    where: (t, clause) => `${t.townFull} se trouve dans la province ${deFr(t.prov)}${clause}.`,
+    tradesCovered: list => `Six métiers sont couverts ici : ${list}.`,
+    prosCovered: "Huit professions, et celle qu'il vous faut n'est souvent pas celle que vous imaginiez.",
+    catWhere: (c, clause) => `${c.CatPl} à ${c.townFull}, dans la province ${deFr(c.prov)}${clause}.`,
+    catQuery: q => `La liste repose sur une recherche de « ${q} », le terme espagnol sous lequel ces entreprises se présentent.`,
+    inTown: (label, town) => `${label} à ${town}`,
+    category: {
+      titles: c => [
+        `${c.CatPl} à ${c.town}`,
+        `${c.CatPl} à ${c.town}, ${c.prov}`,
+        `Trouver des ${c.catPl} à ${c.town}`,
+        `${c.CatPl} à ${c.town}, classés par avis`,
+        `Les ${c.catPl} les mieux notés à ${c.town}`,
+        `${c.CatPl} près de ${c.town}, ${c.prov}`,
+        `Vous cherchez des ${c.catPl} à ${c.town} ?`,
+        `${c.CatPl} à ${c.town} : ce que disent les avis`,
+      ],
+      h1: c => `Les ${c.catPl} les mieux notés à ${c.townFull}`,
+      leads: c => [
+        `Les ${c.catPl} les mieux notés à ${c.town}, ${c.prov}, lus dans les avis publics Google.`,
+        `${c.CatPl} à ${c.town}, classés par note et pondérés selon le nombre d'avis qui la fondent.`,
+        `Vous cherchez des ${c.catPl} à ${c.town} ? Cette liste repose sur les avis publics Google.`,
+        `Tous les ${c.catPl} que nous trouvons autour de ${c.town}, ${c.prov}, dans une seule liste classée.`,
+      ],
+      tail: [
+        'Un 5,0 de trois personnes ne devance pas un 4,7 de quatre cents.',
+        "La langue de chaque avis est indiquée à côté de chaque nom.",
+        'Gratuit, et personne ne paie pour figurer ici.',
+        'Actualisé au moins tous les 30 jours.',
+        "Nous ne les avons pas rencontrés. Lisez les avis et décidez.",
+      ],
+    },
+    tradesHub: {
+      titles: t => [
+        `Réparations à ${t.town}`,
+        `Trouver un artisan à ${t.town}, ${t.prov}`,
+        `Plombiers et électriciens à ${t.town}`,
+        `Artisans à ${t.town}, ${t.prov}`,
+        `Qui appeler à ${t.town} quand quelque chose casse ?`,
+      ],
+      h1: t => `Artisans à ${t.townFull}`,
+      leads: t => [
+        `Les six métiers que l'annuaire couvre à ${t.town}, ${t.prov}, chaque liste classée d'après les avis Google.`,
+        `Une panne à ${t.town} ? Plombier, électricien, serrurier, climatisation, piscine ou rénovation.`,
+        `${t.town}, ${t.prov}. Six métiers, chacun classé selon ce que les clients ont vraiment écrit.`,
+      ],
+      tail: [
+        "La langue de chaque avis est indiquée à côté de chaque nom.",
+        'Gratuit, et personne ne paie pour figurer ici.',
+        'Actualisé au moins tous les 30 jours.',
+      ],
+    },
+    prosHub: {
+      titles: t => [
+        `Spécialistes de l'immobilier à ${t.town}`,
+        `Avocats et gestorías à ${t.town}, ${t.prov}`,
+        `Professionnels de l'immobilier à ${t.town}`,
+        `À qui s'adresser à ${t.town}, ${t.prov} ?`,
+        `Aide immobilière à ${t.town}, ${t.prov}`,
+      ],
+      h1: t => `Professionnels de l'immobilier à ${t.townFull}`,
+      leads: t => [
+        `Les huit professions immobilières que l'annuaire couvre à ${t.town}, ${t.prov}, classées d'après les avis Google.`,
+        `Acheter, vendre ou déclarer à ${t.town} ? Commencez par ce que fait vraiment chacun de ces métiers.`,
+        `${t.town}, ${t.prov}. Agents, avocats, gestorías, architectes, experts, courtiers et traducteurs.`,
+      ],
+      tail: [
+        "Chaque fiche explique le métier avant de vous montrer qui que ce soit.",
+        'Gratuit, et personne ne paie pour figurer ici.',
+        'Actualisé au moins tous les 30 jours.',
+      ],
+    },
+  },
+
+  nl: {
+    coastIn: coast => (/^Islas/.test(coast) ? `op de ${coast}` : `aan de ${coast}`),
+    where: (t, clause) => `${t.townFull} ligt in de provincie ${t.prov}${clause}.`,
+    tradesCovered: list => `Zes vakgebieden staan hier: ${list}.`,
+    prosCovered: 'Acht beroepen, en degene die u nodig hebt is vaak niet degene die u verwachtte.',
+    catWhere: (c, clause) => `${c.CatPl} in ${c.townFull}, in de provincie ${c.prov}${clause}.`,
+    catQuery: q => `De lijst is gebaseerd op een zoekopdracht naar "${q}", de Spaanse term waaronder deze bedrijven staan.`,
+    inTown: (label, town) => `${label} in ${town}`,
+    category: {
+      titles: c => [
+        `${c.CatPl} in ${c.town}`,
+        `${c.CatPl} in ${c.town}, ${c.prov}`,
+        `${c.CatPl} vinden in ${c.town}`,
+        `${c.CatPl} in ${c.town}, gerangschikt op reviews`,
+        `Best beoordeelde ${c.catPl} in ${c.town}`,
+        `${c.CatPl} bij ${c.town}, ${c.prov}`,
+        `Op zoek naar ${c.catPl} in ${c.town}?`,
+        `${c.CatPl} in ${c.town}: wat de reviews zeggen`,
+      ],
+      h1: c => `De best beoordeelde ${c.catPl} in ${c.townFull}`,
+      leads: c => [
+        `De best beoordeelde ${c.catPl} in ${c.town}, ${c.prov}, gelezen uit openbare Google-beoordelingen.`,
+        `${c.CatPl} in ${c.town}, gerangschikt op cijfer en gewogen naar het aantal beoordelingen.`,
+        `Op zoek naar ${c.catPl} in ${c.town}? Deze lijst is gebaseerd op openbare Google-beoordelingen.`,
+        `Alle ${c.catPl} die we rond ${c.town}, ${c.prov} vinden, in één gerangschikte lijst.`,
+      ],
+      tail: [
+        'Een 5,0 van drie mensen verslaat geen 4,7 van vierhonderd.',
+        'Bij elke naam staat in welke taal de reviews zijn geschreven.',
+        'Gratis, en niemand betaalt om vermeld te worden.',
+        'Minstens elke 30 dagen ververst.',
+        'Wij kennen ze niet. Lees de reviews en beslis zelf.',
+      ],
+    },
+    tradesHub: {
+      titles: t => [
+        `Reparaties in ${t.town}`,
+        `Vind een vakman in ${t.town}, ${t.prov}`,
+        `Loodgieters en elektriciens in ${t.town}`,
+        `Vakmensen in ${t.town}, ${t.prov}`,
+        `Wie bel je in ${t.town} als er iets kapot is?`,
+      ],
+      h1: t => `Vakmensen in ${t.townFull}`,
+      leads: t => [
+        `De zes vakgebieden die de gids in ${t.town}, ${t.prov} dekt, elke lijst gerangschikt op Google-beoordelingen.`,
+        `Iets kapot in ${t.town}? Loodgieter, elektricien, slotenmaker, airco, zwembad of aannemer.`,
+        `${t.town}, ${t.prov}. Zes vakgebieden, elk gerangschikt op wat reviewers echt schreven.`,
+      ],
+      tail: [
+        'Bij elke naam staat in welke taal de reviews zijn geschreven.',
+        'Gratis, en niemand betaalt om vermeld te worden.',
+        'Minstens elke 30 dagen ververst.',
+      ],
+    },
+    prosHub: {
+      titles: t => [
+        `Vastgoedexperts in ${t.town}`,
+        `Advocaten en gestorías in ${t.town}, ${t.prov}`,
+        `Vastgoedprofessionals in ${t.town}`,
+        `Bij wie moet je zijn in ${t.town}, ${t.prov}?`,
+        `Hulp bij je woning in ${t.town}, ${t.prov}`,
+      ],
+      h1: t => `Vastgoedprofessionals in ${t.townFull}`,
+      leads: t => [
+        `De acht vastgoedberoepen die de gids in ${t.town}, ${t.prov} dekt, gerangschikt op Google-beoordelingen.`,
+        `Kopen, verkopen of aangifte doen in ${t.town}? Begin met wat elk van deze beroepen echt doet.`,
+        `${t.town}, ${t.prov}. Makelaars, advocaten, gestorías, architecten, taxateurs en vertalers.`,
+      ],
+      tail: [
+        'Elke vermelding zegt eerst wat het werk is, voordat er iemand wordt getoond.',
+        'Gratis, en niemand betaalt om vermeld te worden.',
+        'Minstens elke 30 dagen ververst.',
+      ],
+    },
+  },
+};
+
+// The same lines as PROFESSION_DOES, copied from each locale file's calc_directory.does_* keys so
+// the static block and the rendered professionals page agree word for word.
+export const PROFESSION_DOES_L = {
+  en: PROFESSION_DOES,
+  no: {
+    "real-estate": "Kjøp eller salg, og hva ting faktisk går for lokalt.",
+    "lawyer": "Kontrakter, tvister, arv, alt med en frist.",
+    "gestoria": "NIE, oppholdspapirer, skattemeldinger, kjøretøysadmin.",
+    "architect": "Tillatelser, tilbygg og energisertifikatet.",
+    "community-admin": "Driver sameiet leiligheten din tilhører.",
+    "surveyor": "Hva boligen er verdt på papiret, for bank eller domstol.",
+    "insurance": "Bolig- og innboforsikring som utbetaler fra utlandet.",
+    "translator": "De eneste oversettelsene et spansk register godtar.",
+  },
+  sv: {
+    "real-estate": "Köp eller försäljning, och vad saker faktiskt går för lokalt.",
+    "lawyer": "Avtal, tvister, arv, allt med en deadline.",
+    "gestoria": "NIE, uppehållspapper, deklarationer, fordonsadmin.",
+    "architect": "Tillstånd, tillbyggnader och energicertifikatet.",
+    "community-admin": "Sköter föreningen din lägenhet tillhör.",
+    "surveyor": "Vad bostaden är värd på papper, för bank eller domstol.",
+    "insurance": "Hem- och lösöreförsäkring som betalar ut från utlandet.",
+    "translator": "De enda översättningar ett spanskt register godtar.",
+  },
+  de: {
+    "real-estate": "Kauf oder Verkauf, und was vor Ort wirklich bezahlt wird.",
+    "lawyer": "Verträge, Streitfälle, Erbschaft, alles mit einer Frist.",
+    "gestoria": "NIE, Aufenthaltspapiere, Steuererklärungen, Fahrzeugverwaltung.",
+    "architect": "Genehmigungen, Anbauten und der Energieausweis.",
+    "community-admin": "Führt die Eigentümergemeinschaft Ihrer Wohnung.",
+    "surveyor": "Was die Immobilie auf dem Papier wert ist, für Bank oder Gericht.",
+    "insurance": "Wohngebäude und Hausrat, die auch aus dem Ausland zahlen.",
+    "translator": "Die einzigen Übersetzungen, die ein spanisches Register annimmt.",
+  },
+  fr: {
+    "real-estate": "Acheter ou vendre, et ce que les biens valent vraiment sur place.",
+    "lawyer": "Contrats, litiges, succession, tout ce qui a une échéance.",
+    "gestoria": "NIE, papiers de résidence, déclarations, démarches véhicule.",
+    "architect": "Permis, extensions et le certificat énergétique.",
+    "community-admin": "Gère la copropriété dont votre appartement fait partie.",
+    "surveyor": "La valeur du bien sur le papier, pour une banque ou un tribunal.",
+    "insurance": "Habitation et contenu, avec indemnisation depuis l'étranger.",
+    "translator": "Les seules traductions qu'un registre espagnol accepte.",
+  },
+  nl: {
+    "real-estate": "Kopen of verkopen, en wat dingen lokaal echt opbrengen.",
+    "lawyer": "Contracten, geschillen, erfenis, alles met een deadline.",
+    "gestoria": "NIE, verblijfspapieren, aangiftes, voertuigadministratie.",
+    "architect": "Vergunningen, aanbouw en het energiecertificaat.",
+    "community-admin": "Beheert de VvE waar uw appartement onder valt.",
+    "surveyor": "Wat de woning op papier waard is, voor bank of rechter.",
+    "insurance": "Opstal en inboedel die ook vanuit het buitenland uitkeert.",
+    "translator": "De enige vertalingen die een Spaans register accepteert.",
+  },
 };
 
 // The section headings and small counts the hub pages render on screen.

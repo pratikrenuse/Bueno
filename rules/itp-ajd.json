@@ -157,7 +157,7 @@
           "rate": 13.0
         }
       ],
-      "notes": "Decreto-ley 5/2025, art. 5. Also 20 percent for gran tenidor buyers and for whole residential buildings, which is a large-holder rule not a nationality rule. 5 percent for buyers 35 or under buying a main residence with income up to 36,000. CONFIRM whether the scale is progressive by tranche before coding; the cumulative cuota column was not seen.",
+      "notes": "Decreto-ley 5/2025, art. 5. Also 20 percent for gran tenidor buyers and for whole residential buildings, which is a large-holder rule not a nationality rule. 5 percent for buyers 35 or under buying a main residence with income up to 36,000. Progressive by tranche, confirmed 2026-09-17 against the BOE publication of Decreto-ley 5/2025 (BOE-A-2025-10270): cumulative cuota 60,000 at 600,000, 93,000 at 900,000, 165,000 at 1,500,000.",
       "statement": "ITP on a resale home in Catalunya.",
       "source": {
         "name": "Regional tax agency or official gazette",
@@ -277,7 +277,7 @@
           "rate": 11.0
         }
       ],
-      "notes": "CONFIRM progressive-by-tranche mechanics. Prior 20 percent quota bonificaciones abolished 8 April 2025 by Ley 1/2025.",
+      "notes": "Progressive by tranche per a secondary source (Ineaf, read 2026-09-17); not yet confirmed against the Decreto Legislativo 1/2018 text. Prior 20 percent quota bonificaciones abolished 8 April 2025 by Ley 1/2025.",
       "statement": "ITP on a resale home in Extremadura.",
       "source": {
         "name": "Regional tax agency or official gazette",

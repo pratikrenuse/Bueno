@@ -21,8 +21,8 @@
 
 import { LOCALITIES, LOCALITY_BY_SLUG, REGIONS } from '../spain-directory/localities.js';
 import { CATEGORIES, PROFESSIONALS } from '../spain-directory/categories.js';
-import { PRIORITY_TOWNS, COASTS } from './priority.js';
-import { S, UI, CAT_PL, PROFESSION_DOES, localePath, shortTownName, distinctTitle, fitDesc } from './copy.js';
+import { PRIORITY_TOWNS, LOCALISED_TOWNS, COASTS } from './priority.js';
+import { S, UI, CAT_PL, PROFESSION_DOES_L, TOWN_L, localePath, shortTownName, distinctTitle, fitDesc } from './copy.js';
 
 // --- derived geography, computed once and shared -------------------------------------------
 
@@ -36,6 +36,25 @@ for (const [key, c] of Object.entries(COASTS)) {
 }
 
 export const PRIORITY_SET = new Set(PRIORITY_TOWNS);
+
+// Towns whose pages exist in every locale, not only English. See seo/priority.js.
+export const LOCALISED_SET = new Set(LOCALISED_TOWNS);
+
+/** Does /<locale>/spain-directory/<slug> exist as a published page? */
+export function hasTownPage(slug, locale) {
+  if (!PRIORITY_SET.has(slug)) return false;
+  return locale === 'en' || LOCALISED_SET.has(slug);
+}
+
+/**
+ * The URL of a town page as read from a page in `locale`. A localised town keeps the
+ * reader's language; an English only town is linked unprefixed, because the prefixed URL
+ * has no file behind it.
+ */
+export function townPagePath(hubPath, slug, locale = 'en', rest = '') {
+  const p = `${hubPath}/${slug}${rest}`;
+  return hasTownPage(slug, locale) ? localePath(locale, p) : p;
+}
 
 // A typo in priority.js would put a 404 in the sitemap, which is worse than the page not
 // existing at all. Fail at import time, in the build and in the dev server alike.
@@ -76,15 +95,17 @@ export function townCtx(slug) {
   };
 }
 
-// The town pages are English only, so a link to one is unprefixed whatever locale the hub
-// page is being read in. Sending a Norwegian reader to /no/spain-directory/javea would be a
-// URL with no file behind it.
-function townPageLinks(towns, hubLabels) {
+// Featured towns have pages in every locale and are linked in the reader's language. The
+// rest are English only, so a link to one is unprefixed and labelled in English: sending a
+// Norwegian reader to /no/spain-directory/<town> for those would be a URL with no file.
+function townPageLinks(towns, locale) {
   const out = [];
   for (const t of towns) {
     const name = shortTownName(t.name);
-    out.push({ href: `${HUB_PATHS.trades}/${t.slug}`, label: `${name}: ${hubLabels.trades}` });
-    out.push({ href: `${HUB_PATHS.pros}/${t.slug}`, label: `${name}: ${hubLabels.pros}` });
+    const own = hasTownPage(t.slug, locale);
+    const labels = own ? UI[locale] : UI.en;
+    out.push({ href: townPagePath(HUB_PATHS.trades, t.slug, locale), label: `${name}: ${labels.trades}` });
+    out.push({ href: townPagePath(HUB_PATHS.pros, t.slug, locale), label: `${name}: ${labels.pros}` });
   }
   return out;
 }
@@ -163,7 +184,7 @@ export function provinceData(region, locale) {
       { href: lp(HUB_PATHS.trades), label: ui.trades },
       { href: lp(HUB_PATHS.pros), label: ui.pros },
     ],
-    townLinks: townPageLinks(priorityHere, UI.en),
+    townLinks: townPageLinks(priorityHere, locale),
     // Towns with no page of their own are named rather than linked. Naming them is true and
     // useful. Linking them would put a URL in the sitemap with no file behind it.
     mentions: townsHere.filter(t => !PRIORITY_SET.has(t.slug)).map(t => shortTownName(t.name)),
@@ -213,7 +234,7 @@ export function coastData(coastKey, locale) {
       { href: lp(HUB_PATHS.trades), label: ui.trades },
       { href: lp(HUB_PATHS.pros), label: ui.pros },
     ],
-    townLinks: townPageLinks(priorityHere, UI.en),
+    townLinks: townPageLinks(priorityHere, locale),
     mentions: townsHere.filter(t => !PRIORITY_SET.has(t.slug)).map(t => shortTownName(t.name)),
     breadcrumbs: [
       { name: ui.home, path: lp('/') },
@@ -250,53 +271,58 @@ export function directoryHubLinks(hubKey, locale) {
     { href: lp(other.path), label: UI[locale][other.ui] },
     ...Object.entries(COASTS).map(([k, c]) => ({ href: lp(`/coast/${k}`), label: c.name })),
   ];
-  // The town pages are English only, so only the English hub links straight into them.
-  if (locale === 'en') {
-    for (const slug of PRIORITY_TOWNS.slice(0, HUB_TOWN_LINKS)) {
-      links.push({ href: `${hub.path}/${slug}`, label: townCtx(slug).town });
-    }
+  // The first towns in PRIORITY_TOWNS are the featured ones, which exist in every locale,
+  // so every hub links straight into them in its own language.
+  for (const slug of PRIORITY_TOWNS.slice(0, HUB_TOWN_LINKS)) {
+    links.push({ href: townPagePath(hub.path, slug, locale), label: townCtx(slug).town });
   }
   return links;
 }
 
-/** The links on a town hub, /spain-directory/javea. English only, like the page. */
-export function townHubLinks(hubKey, slug) {
+/** The links on a town hub, /spain-directory/javea or /de/spain-directory/javea. */
+export function townHubLinks(hubKey, slug, locale = 'en') {
+  const L = hasTownPage(slug, locale) ? locale : 'en';
   const hub = DIRECTORIES[hubKey];
   const other = DIRECTORIES[hub.other];
   const t = townCtx(slug);
+  const lp = p => localePath(L, p);
+  const inTown = TOWN_L[L].inTown;
   const siblings = PRIORITY_TOWNS
-    .filter(s => s !== slug && LOCALITY_BY_SLUG[s].region === t.region)
+    .filter(s => s !== slug && LOCALITY_BY_SLUG[s].region === t.region && hasTownPage(s, L))
     .slice(0, 6);
 
   return [
     ...hub.cats.map(c => ({
-      href: `${hub.path}/${slug}/${c.slug}`,
-      label: `${cap(CAT_PL.en[c.slug])} in ${t.town}`,
-      note: hubKey === 'pros' ? PROFESSION_DOES[c.slug] : '',
+      href: lp(`${hub.path}/${slug}/${c.slug}`),
+      label: inTown(cap(CAT_PL[L][c.slug]), t.town),
+      note: hubKey === 'pros' ? PROFESSION_DOES_L[L][c.slug] : '',
     })),
-    { href: `${other.path}/${slug}`, label: `${UI.en[other.ui]} in ${t.town}` },
-    { href: `/areas/${t.region}`, label: t.prov },
-    ...(t.coastKey ? [{ href: `/coast/${t.coastKey}`, label: t.coast }] : []),
-    ...siblings.map(s => ({ href: `${hub.path}/${s}`, label: shortTownName(LOCALITY_BY_SLUG[s].name) })),
-    { href: hub.path, label: UI.en[hub.ui] },
+    { href: lp(`${other.path}/${slug}`), label: inTown(UI[L][other.ui], t.town) },
+    { href: lp(`/areas/${t.region}`), label: t.prov },
+    ...(t.coastKey ? [{ href: lp(`/coast/${t.coastKey}`), label: t.coast }] : []),
+    ...siblings.map(s => ({ href: lp(`${hub.path}/${s}`), label: shortTownName(LOCALITY_BY_SLUG[s].name) })),
+    { href: lp(hub.path), label: UI[L][hub.ui] },
   ];
 }
 
 /** The links on a town and category page, /spain-directory/javea/plumber. */
-export function townCategoryLinks(hubKey, slug, categorySlug) {
+export function townCategoryLinks(hubKey, slug, categorySlug, locale = 'en') {
+  const L = hasTownPage(slug, locale) ? locale : 'en';
   const hub = DIRECTORIES[hubKey];
   const other = DIRECTORIES[hub.other];
   const t = townCtx(slug);
+  const lp = p => localePath(L, p);
+  const inTown = TOWN_L[L].inTown;
 
   return [
     ...hub.cats.filter(o => o.slug !== categorySlug).map(o => ({
-      href: `${hub.path}/${slug}/${o.slug}`,
-      label: `${cap(CAT_PL.en[o.slug])} in ${t.town}`,
+      href: lp(`${hub.path}/${slug}/${o.slug}`),
+      label: inTown(cap(CAT_PL[L][o.slug]), t.town),
     })),
-    { href: `${hub.path}/${slug}`, label: `${UI.en[hub.ui]} in ${t.town}` },
-    { href: `${other.path}/${slug}`, label: `${UI.en[other.ui]} in ${t.town}` },
-    { href: `/areas/${t.region}`, label: t.prov },
-    ...(t.coastKey ? [{ href: `/coast/${t.coastKey}`, label: t.coast }] : []),
+    { href: lp(`${hub.path}/${slug}`), label: inTown(UI[L][hub.ui], t.town) },
+    { href: lp(`${other.path}/${slug}`), label: inTown(UI[L][other.ui], t.town) },
+    { href: lp(`/areas/${t.region}`), label: t.prov },
+    ...(t.coastKey ? [{ href: lp(`/coast/${t.coastKey}`), label: t.coast }] : []),
   ];
 }
 
@@ -307,8 +333,8 @@ export function townCategoryLinks(hubKey, slug, categorySlug) {
 export function directoryLinks({ hub, town, category, locale = 'en' }) {
   if (town && LOCALITY_BY_SLUG[town] && PRIORITY_SET.has(town)) {
     const cats = DIRECTORIES[hub].cats;
-    if (category && cats.some(c => c.slug === category)) return townCategoryLinks(hub, town, category);
-    return townHubLinks(hub, town);
+    if (category && cats.some(c => c.slug === category)) return townCategoryLinks(hub, town, category, locale);
+    return townHubLinks(hub, town, locale);
   }
   return directoryHubLinks(hub, locale);
 }

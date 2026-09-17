@@ -1,0 +1,28 @@
+{
+  "format": "tpl",
+  "slug": "owners_03_police_response_en",
+  "language": "en",
+  "template": "quote_band",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "OCCUPATION · WHAT IS TRUE",
+  "headline": [
+    "There is no 48-hour",
+    "rule in Spain."
+  ],
+  "rows": [
+    {
+      "label": "The test",
+      "fact": [
+        "What matters is not a clock but a test: clear signs an offence was committed, urgency, and proportionality."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "Since April 2025",
+      "fact": [
+        "The fast-track route lists a trial within fifteen days."
+      ],
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "format": "tpl",
+  "slug": "owners_02_imputed_tax_en",
+  "language": "en",
+  "template": "band_rules",
+  "photo": "cove_house.jpg",
+  "eyebrow": "MODELO 210 · IMPUTED INCOME",
+  "headline": [
+    "An empty home in Spain",
+    "still files a tax return."
+  ],
+  "sub": "Spain taxes the use of the home, not only the rent.",
+  "rows": [
+    {
+      "label": "The base",
+      "fact": [
+        "The figure comes off your IBI receipt, not what you paid."
+      ],
+      "detail": "Cadastral value, not market value or purchase price."
+    },
+    {
+      "label": "The maths",
+      "fact": [
+        "Cadastral value x 1.1% or 2%, then 19% EU or 24% non-EU."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "The date",
+      "fact": [
+        "31 December, for the year before."
+      ],
+      "detail": "Rental income is filed annually now, not quarterly."
+    }
+  ]
+}

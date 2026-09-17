@@ -1,0 +1,17 @@
+{
+  "note": "Backup taken 17 Sept 2026 before writing corrected copy into linkedin_posts.edited_text. Only owners day 7 had an existing edited_text among the six posts touched; it was overwritten with a surgical correction, so the original is preserved here verbatim.",
+  "project": "zwdkmqzlrhwihijgqgzl",
+  "table": "linkedin_posts",
+  "rows": [
+    {
+      "id": "d9852508-2351-4b7f-a3df-857bb5aaa30b",
+      "audience": "owners",
+      "day": 7,
+      "language": "en",
+      "slug": "wealth_tax",
+      "status_at_backup": "approved",
+      "field": "edited_text",
+      "value": "Most owners will never meet Spain's wealth tax. If your Spanish assets are drifting toward 700,000 euros, you're not most owners, so you should know exactly where the line sits.\n\nThe tax applies to residents and non-residents alike, measured on total assets. Below 700,000 euros, nothing is owed. Above it, the tax bites incrementally, only on the value over the line, at progressive rates from 0.2 to 2.5 percent. No sale, no income, no trigger. Owning is enough.\n\nWhere you own matters as much as what you own, though, because the tax is shaped by local government. Madrid and Andalucia applies a 100 percent discount, so identical assets there mean a zero bill. Residents who live in their Spanish home also get an extra 300,000 euro allowance on that main home (can vary between regions). If you're a non-resident, that allowance isn't yours.\n\nWhat is taxed? As a non-resident, the assets that count are those located in, or exercisable in, Spain:\n\nProperty located in Spain.\nSpanish bank accounts.\nShares or investments held in Spain.\nRights connected to Spanish assets.\n\nWhat if you learn about the tax late (deadline is June 30 for assets held 31.12)? Filing it yourself, before the tax office writes to you, is what keeps it cheap. That route costs a 1 percent surcharge plus 1 percent for every month you're late, climbing to 15 percent plus interest once you pass a year. If the bill lands at a bad moment, you can ask the Agencia Tributaria for an instalment plan, though interest keeps running on the instalments. And if the problem is an error rather than a missed deadline, a complementary return corrects the original filing.\n\nKeep your contact details current with the tax office. Notifications only work if they reach you, and the deadlines run whether you've read them or not. Seek advice in Spain. Let someone you trust declare the tax for you, ensuring it is filed correctly and on time.\n\n#SpanishTax #WealthTax #SpainProperty\n\nOwning or planning to buy property in Spain? Bueno is trusted by homeowners from 25+ countries. getbueno.com"
+    }
+  ]
+}

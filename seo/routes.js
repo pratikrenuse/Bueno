@@ -9,8 +9,8 @@
 // 660 towns times 14 categories times six languages is 55,440 pages. A domain with no
 // authority is crawled in the thousands, so publishing tens of thousands of near identical
 // pages gets a handful sampled, found thin, and the estimate of the whole site lowered.
-// What ships instead: the static pages in all six locales, and 133 priority towns in
-// English. seo/priority.js holds that list and widening it is a one line change.
+// What ships instead: the static pages in all six locales, every priority town in English,
+// and the 133 featured towns in all six locales. seo/priority.js holds both lists.
 //
 // This module is pure. It reads no files and imports no JSON, so it is equally safe from a
 // Node build script and from the browser bundle. The tool list is passed in rather than
@@ -23,13 +23,13 @@ import { PRIORITY_TOWNS, COASTS } from './priority.js';
 // block and by seo/Areas.jsx for the rendered page. Two copies of that content would drift,
 // and a static block that no longer matches the page it fronts is cloaking.
 import {
-  TOWNS_BY_REGION, PRIORITY_SET, townCtx,
+  TOWNS_BY_REGION, PRIORITY_SET, LOCALISED_SET, townCtx,
   areasData, provinceData, coastData,
   directoryHubLinks, townHubLinks, townCategoryLinks,
 } from './hubs.js';
 import {
-  LOCALES, DEFAULT_LOCALE, SITE_NAME, UI, S, TOWN, TOOL_COPY, TOOL_TAIL,
-  LOCALE_ENGLISH_NOTE, PROFESSION_DOES, CAT_NAME, CAT_PL,
+  LOCALES, DEFAULT_LOCALE, SITE_NAME, UI, S, TOOL_COPY, TOOL_TAIL,
+  LOCALE_ENGLISH_NOTE, PROFESSION_DOES_L, TOWN_L, CAT_NAME, CAT_PL,
   fitTitle, fitDesc, distinctTitle, shortTownName, localePath, absolute, hash,
 } from './copy.js';
 
@@ -60,10 +60,6 @@ const cap = s => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 // The geography, the priority set and the town context all come from hubs.js, so the hub
 // pages and the town pages are counting the same towns.
 
-function coastClause(t) {
-  if (!t.coast) return '';
-  return `, ${TOWN.coastPreposition(t.coast)} ${t.coast}`;
-}
 
 // --- route assembly -----------------------------------------------------------------------
 
@@ -120,7 +116,11 @@ export function buildRoutes({ tools } = {}) {
       { href: lp(locale, HUBS.trades.path), label: ui.trades },
       { href: lp(locale, HUBS.pros.path), label: ui.pros },
       { href: lp(locale, '/areas'), label: ui.areas },
-      ...toolPages.slice(0, 8).map(t => ({ href: lp(locale, t.path), label: TOOL_COPY[t.slug]?.[locale]?.h1 || t.title })),
+      // The professional sections. Owners are the root; each professional audience has a
+      // hub, and the home page links it so the hubs are never orphans. See audiences.js.
+      ...toolPages.filter(t => t.group === 'audience')
+        .map(t => ({ href: lp(locale, t.path), label: TOOL_COPY[t.slug]?.[locale]?.h1 || t.title })),
+      ...toolPages.filter(t => t.group !== 'audience' && t.group !== 'professional').slice(0, 8).map(t => ({ href: lp(locale, t.path), label: TOOL_COPY[t.slug]?.[locale]?.h1 || t.title })),
     ];
     add({
       path, locale, kind: 'home', group: 'home',
@@ -264,83 +264,114 @@ export function buildRoutes({ tools } = {}) {
     }
   }
 
-  // --- the English town pages ------------------------------------------------------------------
+  // --- the town pages ------------------------------------------------------------------------
+  // A few trade words are the same in several languages ("Gestorías in Mijas" is German and
+  // Dutch). A translated page whose title another page already carries tries the next
+  // rotation instead. English goes first for every town and never takes this path, so its
+  // titles do not move.
+  const usedTitles = new Set();
+  const townTitle = (cands, seed, h1, locale) => {
+    let title = distinctTitle(cands, seed, h1);
+    for (let i = 1; locale !== 'en' && usedTitles.has(title) && i <= cands.length; i++) {
+      title = distinctTitle(cands, `${seed}#${i}`, h1);
+    }
+    usedTitles.add(title);
+    return title;
+  };
+  // English for every priority town; the featured ones (LOCALISED_SET) in all six locales.
+  // Each locale version shares its group key with the English one, so the hreflang pass
+  // below links them without any extra bookkeeping.
   for (const slug of PRIORITY_TOWNS) {
     const t = townCtx(slug);
-    const clause = coastClause(t);
+    const locales = LOCALISED_SET.has(slug) ? LOCALES : ['en'];
 
-    for (const [hubKey, hub] of Object.entries(HUBS)) {
-      const pack = TOWN[hub.town];
-      const path = `${hub.path}/${slug}`;
-      const h1 = pack.h1(t);
+    for (const locale of locales) {
+      const T = TOWN_L[locale];
+      const N = S[locale].notes;
+      const ui = UI[locale];
+      const clause = t.coast ? `, ${T.coastIn(t.coast)}` : '';
+      // English seeds stay as they were, so the English titles do not move.
+      const sfx = locale === 'en' ? '' : `:${locale}`;
 
-      const intro = [`${t.townFull} is in the province of ${t.prov}${clause}.`];
-      if (hubKey === 'trades') {
-        intro.push(`Six trades are covered here: ${CATEGORIES.map(c => CAT_NAME.en[c.slug].toLowerCase()).join(', ')}.`);
-      } else {
-        intro.push('Eight professions, and the one you need is often not the one you expected.');
-      }
-      intro.push(S.en.notes.method, S.en.notes.lang, S.en.notes.honest, S.en.notes.loads);
+      for (const [hubKey, hub] of Object.entries(HUBS)) {
+        const pack = T[hub.town];
+        const hubPath = lp(locale, hub.path);
+        const path = lp(locale, `${hub.path}/${slug}`);
+        const h1 = pack.h1(t);
+        const hubSeed = `townhub:${hubKey}:${slug}${sfx}`;
 
-      add({
-        path, locale: 'en', kind: 'town-hub', group: `townhub:${hubKey}:${slug}`,
-        title: distinctTitle(pack.titles(t), `townhub:${hubKey}:${slug}`, h1),
-        description: fitDesc({ leads: pack.leads(t), tail: pack.tail }, `townhub:${hubKey}:${slug}`),
-        h1,
-        intro,
-        breadcrumbs: [
-          { name: UI.en.home, path: '/' },
-          { name: UI.en[hub.ui], path: hub.path },
-          { name: t.town, path },
-        ],
-        changefreq: CHANGEFREQ['town-hub'],
-        priority: PRIORITY['town-hub'],
-        links: townHubLinks(hubKey, slug),
-        alternates: {},
-        townSlug: slug, hub: hubKey,
-      });
-
-      // --- one page per category in that town -------------------------------------------------
-      for (const c of hub.cats) {
-        const catPl = CAT_PL.en[c.slug];
-        const ctx = { ...t, catPl, CatPl: cap(catPl), cat: CAT_NAME.en[c.slug], prov: t.prov };
-        const seed = `${hubKey}:${slug}:${c.slug}`;
-        const cH1 = pack === TOWN.tradesHub ? TOWN.category.h1(ctx) : TOWN.category.h1(ctx);
-        const catIntro = [`${ctx.CatPl} in ${t.townFull}, in the province of ${t.prov}${clause}.`];
-        if (hubKey === 'pros') {
-          catIntro.push(PROFESSION_DOES[c.slug]);
+        const intro = [T.where(t, clause)];
+        if (hubKey === 'trades') {
+          // German capitalises nouns, so only German keeps the names as written.
+          const lower = n => (locale === 'de' ? n : n.toLowerCase());
+          intro.push(T.tradesCovered(CATEGORIES.map(c => lower(CAT_NAME[locale][c.slug])).join(', ')));
         } else {
-          catIntro.push(`The list is built from a search for "${c.query}", the Spanish term these businesses list themselves under.`);
+          intro.push(T.prosCovered);
         }
-        catIntro.push(S.en.notes.method, S.en.notes.lang, S.en.notes.honest);
-        catIntro.push(hubKey === 'trades' ? S.en.notes.written : S.en.notes.loads);
+        intro.push(N.method, N.lang, N.honest, N.loads);
 
         add({
-          path: `${hub.path}/${slug}/${c.slug}`,
-          locale: 'en', kind: 'town-category', group: `towncat:${hubKey}:${slug}:${c.slug}`,
-          title: distinctTitle(TOWN.category.titles(ctx), seed, cH1),
-          description: fitDesc({ leads: TOWN.category.leads(ctx), tail: TOWN.category.tail }, seed),
-          h1: cH1,
-          intro: catIntro,
+          path, locale, kind: 'town-hub', group: `townhub:${hubKey}:${slug}`,
+          title: townTitle(pack.titles(t), hubSeed, h1, locale),
+          description: fitDesc({ leads: pack.leads(t), tail: pack.tail }, hubSeed),
+          h1,
+          intro,
           breadcrumbs: [
-            { name: UI.en.home, path: '/' },
-            { name: UI.en[hub.ui], path: hub.path },
-            { name: t.town, path: `${hub.path}/${slug}` },
-            { name: ctx.CatPl, path: `${hub.path}/${slug}/${c.slug}` },
+            { name: ui.home, path: lp(locale, '/') },
+            { name: ui[hub.ui], path: hubPath },
+            { name: t.town, path },
           ],
-          changefreq: CHANGEFREQ['town-category'],
-          priority: PRIORITY['town-category'],
-          links: townCategoryLinks(hubKey, slug, c.slug),
+          changefreq: CHANGEFREQ['town-hub'],
+          priority: locale === DEFAULT_LOCALE ? PRIORITY['town-hub'] : PRIORITY['town-hub'] - 0.1,
+          links: townHubLinks(hubKey, slug, locale),
           alternates: {},
-          townSlug: slug, hub: hubKey, categorySlug: c.slug,
+          townSlug: slug, hub: hubKey,
         });
+
+        // --- one page per category in that town -------------------------------------------------
+        for (const c of hub.cats) {
+          const catPl = CAT_PL[locale][c.slug];
+          const ctx = { ...t, catPl, CatPl: cap(catPl), cat: CAT_NAME[locale][c.slug], prov: t.prov };
+          const seed = `${hubKey}:${slug}:${c.slug}${sfx}`;
+          const cH1 = T.category.h1(ctx);
+          const catPath = lp(locale, `${hub.path}/${slug}/${c.slug}`);
+          const catIntro = [T.catWhere(ctx, clause)];
+          if (hubKey === 'pros') {
+            catIntro.push(PROFESSION_DOES_L[locale][c.slug]);
+          } else {
+            catIntro.push(T.catQuery(c.query));
+          }
+          catIntro.push(N.method, N.lang, N.honest);
+          catIntro.push(hubKey === 'trades' ? N.written : N.loads);
+
+          add({
+            path: catPath,
+            locale, kind: 'town-category', group: `towncat:${hubKey}:${slug}:${c.slug}`,
+            title: townTitle(T.category.titles(ctx), seed, cH1, locale),
+            description: fitDesc({ leads: T.category.leads(ctx), tail: T.category.tail }, seed),
+            h1: cH1,
+            intro: catIntro,
+            breadcrumbs: [
+              { name: ui.home, path: lp(locale, '/') },
+              { name: ui[hub.ui], path: hubPath },
+              { name: t.town, path },
+              { name: ctx.CatPl, path: catPath },
+            ],
+            changefreq: CHANGEFREQ['town-category'],
+            priority: locale === DEFAULT_LOCALE ? PRIORITY['town-category'] : PRIORITY['town-category'] - 0.1,
+            links: townCategoryLinks(hubKey, slug, c.slug, locale),
+            alternates: {},
+            townSlug: slug, hub: hubKey, categorySlug: c.slug,
+          });
+        }
       }
     }
   }
 
   // --- hreflang groups ------------------------------------------------------------------------
-  // A locale only gets an alternate where the URL genuinely exists. The English town pages
+  // A locale only gets an alternate where the URL genuinely exists. English only town pages
   // sit alone in their group, so they emit no hreflang at all and no other page claims them.
+  // The featured towns have all six, so they carry a full set.
   const byGroup = new Map();
   for (const r of routes) {
     if (!byGroup.has(r.group)) byGroup.set(r.group, []);

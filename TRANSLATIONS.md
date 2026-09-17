@@ -83,6 +83,24 @@ Keep it warm, calm and plain. No jargon where a simple word works.
 
 (Add a row whenever a reviewer corrects a recurring term.)
 
+### 5a. Currencies Direct campaign terms (NO locked 2026-09-17; other languages pending review)
+
+| EN | NO |
+|----|----|
+| cash back (the noun) | cashback |
+| exchange (verb) | veksle |
+| currency exchange | veksle valuta / valutaveksling |
+| volume exchanged | volum vekslet |
+| earn (volume over a period) | opptjene |
+| in partnership with | i samarbeid med |
+| referred by Bueno | referert av Bueno |
+| Bueno Account (in body copy) | Bueno-kontoen |
+
+Do NOT use in NO: "penger tilbake" for cash back, "sende"/"overfore penger" for the
+exchange itself, "hjemlandet" where the market can be named, or the untranslated
+string "Bueno Account" inside Norwegian sentences.
+
+
 ## 6. Verified corrections log
 
 Record human-confirmed fixes here so they are never re-introduced.
@@ -99,3 +117,7 @@ Format: `YYYY-MM-DD — lang — key — was → now (reason)`
 - 2026-06-25 — all — NEW tool `calc_claim` (Spanish Mortgage Compensation) AI-drafted in all six languages. Mortgage-claim terminology table rows added above. Pending native review for NO/SV/DE/FR/NL before this is considered locked.
 - 2026-06-26 — SV — Copywriter revision applied (Textförslag) to homepage + all 4 hero screens + cards. Swedish rebrands "verktyg/kalkylator" → "guider/guide", "husägare" → "fastighetsägare", and softens claims to estimate/overview language ("uppskatta", "få en uppskattning", "undersöka om det finns grund"). Confirms SV "EU/EES residents" = "Bosatta i EU och EES" (supersedes the earlier "invånare i EU" note for these strings). Full sweep done: no "verktyg"/"kalkylator"/"räknare" left in sv.json (header tags, why items, cross-links, and calc_claim deep-screen strings all now use "guide/guider").
 - 2026-06-26 — all — calc_claim fact-checked against published recovery ranges (CostaLuz Lawyers 2026; Comunidad de Madrid / Banco de España). Changes: floor-clause estimate base/cap lowered (was €20k base / €45k cap → €12k base / €25k cap, matching the documented €5k–€25k range); set-up base €2.5k→€2k (range €1k–€4k); claim_setup_d dropped the unverified "99%" stat → "almost all mortgages from this period"; how_p1 "Most"→"Many" no-win-no-fee; how_p2 adds that time limits (5-yr prescription, 10 in Catalonia) can apply. Window 2000–2019 and "claims still live in 2026" both confirmed.
+- 2026-09-17 - NO - Currencies Direct Facebook-group post approved by John. Locked terms: "cashback" is the noun (not "penger tilbake"); "veksle valuta" is the verb (not "sende" or "overfore penger"); name the market ("mellom Norge og Spania") rather than "hjemlandet"; write "Bueno-kontoen", never "Bueno Account", inside Norwegian sentences; the direction pair reads "fra og til Spania".
+- 2026-09-17 - all - Support languages are stated as EIGHT, not seven. The Currencies Direct landing page (go.getbueno.com/cd) still says seven, and the CD offer page copy says seven. Reconcile the page before the next asset ships.
+- 2026-09-17 - all - Currencies Direct eligibility in campaign copy: "new Currencies Direct customers, plus Bueno customers referred by Bueno" (NO: "Tilbudet gjelder kun nye kunder hos Currencies Direct samt Bueno-kunder som ble referert av Bueno"). The July 2026 T&Cs wording "new and existing Currencies Direct customers" must NOT be used in campaign copy until CD confirms which stands.
+- 2026-09-17 - all - Image pills in the Currencies Direct set are short labelled statements approved by John ("Cashback fra EUR2000 vekslet."). This overrides the general complete-sentence rule for THIS campaign's pills only; body copy stays in full sentences.

@@ -1,0 +1,35 @@
+{
+  "format": "tpl",
+  "slug": "agents_23_nie_form_en",
+  "language": "en",
+  "template": "checklist",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "NIE · FOR YOUR BUYERS",
+  "headline": [
+    "Two details that send",
+    "NIE applications back."
+  ],
+  "rows": [
+    {
+      "label": "The form",
+      "fact": [
+        "The application is the EX-15, in Spanish, in two copies."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "Not the EX-18",
+      "fact": [
+        "EX-18 is EU citizen registration. Different form, different purpose."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "The fee",
+      "fact": [
+        "9.84 euros, paid first at a bank on form 790 codigo 012."
+      ],
+      "detail": ""
+    }
+  ]
+}

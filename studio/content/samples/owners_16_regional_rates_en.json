@@ -1,0 +1,39 @@
+{
+  "format": "tpl",
+  "slug": "owners_16_regional_rates_en",
+  "language": "en",
+  "template": "compare",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "TRANSFER TAX · RESALE",
+  "headline": [
+    "The same flat is taxed",
+    "differently by region."
+  ],
+  "columns": [
+    "OFTEN ASSUMED",
+    "WHAT APPLIES"
+  ],
+  "rows": [
+    {
+      "label": "Assumed",
+      "fact": [
+        "One national rate on a resale."
+      ],
+      "detail": "There is no single Spanish rate."
+    },
+    {
+      "label": "Applies",
+      "fact": [
+        "Madrid 6%, Andalucia 7, Valencia 9 since June 2026."
+      ],
+      "detail": "Your region sets it, so check before you budget."
+    },
+    {
+      "label": "Also",
+      "fact": [
+        "New builds are a different tax altogether."
+      ],
+      "detail": ""
+    }
+  ]
+}

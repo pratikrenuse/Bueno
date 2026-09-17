@@ -4,7 +4,7 @@ import { useLocale, useT } from '../i18n.jsx';
 import SiteNav from '../SiteNav.jsx';
 import SiteFooter from '../SiteFooter.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
-import { areasData, provinceData, coastData, HUB_PATHS } from './hubs.js';
+import { areasData, provinceData, coastData, HUB_PATHS, townPagePath } from './hubs.js';
 import { UI, BLOCK, HUB_UI } from './copy.js';
 
 // The three hub pages: /areas, /areas/<province>, /coast/<coast>.
@@ -57,8 +57,8 @@ function TownRow({ town, locale }) {
     <li className="areas-town">
       <span className="areas-town-name">{town.name}</span>
       <span className="areas-town-links">
-        <Link to={`${HUB_PATHS.trades}/${town.slug}`}>{ui.trades}</Link>
-        <Link to={`${HUB_PATHS.pros}/${town.slug}`}>{ui.pros}</Link>
+        <Link to={townPagePath(HUB_PATHS.trades, town.slug, locale)}>{ui.trades}</Link>
+        <Link to={townPagePath(HUB_PATHS.pros, town.slug, locale)}>{ui.pros}</Link>
       </span>
     </li>
   );

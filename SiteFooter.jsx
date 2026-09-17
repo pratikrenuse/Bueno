@@ -1,4 +1,5 @@
-import { useT, LLink } from './i18n.jsx';
+import { useT, useLocale, LLink } from './i18n.jsx';
+import { audienceLabels } from './audiences.js';
 
 // The site's one real footer, used by every tool page.
 //
@@ -18,6 +19,7 @@ import { useT, LLink } from './i18n.jsx';
 
 export default function SiteFooter({ note }) {
   const t = useT();
+  const aud = audienceLabels(useLocale().locale);
   const year = new Date().getFullYear();
 
   return (
@@ -35,6 +37,8 @@ export default function SiteFooter({ note }) {
           <LLink to="/cost-audit">{t('nav.cost')}</LLink>
           <LLink to="/rental-tax">{t('nav.rental')}</LLink>
           <LLink to="/mortgage-claim">{t('nav.claim')}</LLink>
+          <LLink to="/for-agents">{aud.for_agents}</LLink>
+          <LLink to="/for-lawyers">{aud.for_lawyers}</LLink>
         </nav>
       </div>
 

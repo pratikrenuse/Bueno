@@ -1,0 +1,36 @@
+{
+  "format": "tpl",
+  "slug": "owners_07_wealth_tax_en",
+  "language": "en",
+  "template": "number_hero",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "WEALTH TAX · NON-RESIDENTS",
+  "figure": "0.2 to 3.5%",
+  "headline": [
+    "The state scale above",
+    "700,000 euros."
+  ],
+  "rows": [
+    {
+      "label": "The scale",
+      "fact": [
+        "0.2 to 3.5 percent"
+      ],
+      "detail": ""
+    },
+    {
+      "label": "The catch",
+      "fact": [
+        "A non-resident taxed under state rules gets no regional discount."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "Opting in",
+      "fact": [
+        "You have to opt in to your region to be considered for one."
+      ],
+      "detail": ""
+    }
+  ]
+}

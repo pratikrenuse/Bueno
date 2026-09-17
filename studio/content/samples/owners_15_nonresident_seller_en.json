@@ -1,0 +1,35 @@
+{
+  "format": "tpl",
+  "slug": "owners_15_nonresident_seller_en",
+  "language": "en",
+  "template": "timeline",
+  "photo": "marina.jpg",
+  "eyebrow": "SELLING · WHAT IS OWED",
+  "headline": [
+    "Selling up? Two numbers",
+    "people get wrong."
+  ],
+  "rows": [
+    {
+      "label": "On the gain",
+      "fact": [
+        "Capital gains on sale are 19 percent for everyone."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "After the deed",
+      "fact": [
+        "Plusvalia is due within 30 working days."
+      ],
+      "detail": ""
+    },
+    {
+      "label": "On an inheritance",
+      "fact": [
+        "The same plusvalia runs six months instead."
+      ],
+      "detail": ""
+    }
+  ]
+}
