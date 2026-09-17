@@ -1,42 +1,56 @@
 """Template pack for the Spain 24/7 / Bueno post images.
 
-Twelve 1080x1080 layouts built on the two designs Pratik approved:
-the taxes card (photo band across the top, numbered hairline rows, navy
-footer block) and the Facebook-group card (photo faded in from the right,
-white pills bleeding off the left edge, one navy pill).
+Twelve 1080x1080 layouts built on the two cards Pratik approved: the taxes card
+(band across the top, numbered hairline rows, brand bar at the base) and the
+Facebook-group card (photo faded in from the right, pills bleeding off the left).
 
-Everything is theme-driven and takes the SAME content JSON that
-simple3.py already uses, so existing content files render unchanged:
+Three rules the whole file obeys, each one from a correction:
 
-    {"slug","language","eyebrow","headline":[..],"rows":[{label,fact:[..],detail}],
-     "template": "band_rules", "photo": "coast_bay.jpg", "cta": "..."}
+1. TYPE SITS ON A GRID. Every string is drawn baseline-anchored ("ls") at the
+   same left margin MX through txt(). Never mix anchors: top-anchored and
+   baseline-anchored calls in one card drift a few pixels apart and read as
+   sloppy. Vertical movement goes through Flow, which advances by explicit
+   leading, so the rhythm is identical on all twelve.
 
-`template` picks the layout. Omit it and one is chosen from the slug, so a
-feed never repeats the same layout twice running.
+2. SURFACES VARY. A feed of identical pale blue gradients is monotonous, so each
+   card is built on one of six surfaces drawn from the brand palette, rotated by
+   slug: ivory, sky, navy, sand, photo band, photo wash. Text colour follows the
+   surface automatically.
 
-Branding comes from the theme's `footer` block, exactly as in simple3:
-  footer.type == "wordmark_247"  -> the 24/7 SPAIN wordmark  (public posts)
-  footer.type == "logo"          -> footer.logo_path lockup  (Bueno decks)
+3. THE LOCKUP IS UNTOUCHABLE. It is pasted whole and unmodified. Never crop it,
+   never re-typeset PROPERTY SIMPLIFIED. Too small? Raise LOGO_W and FOOT.
+
+Content JSON is the same shape simple3.py uses, so existing files still render:
+
+    {"slug","language","eyebrow","headline":[..],"sub","figure","columns","cta",
+     "rows":[{label,fact:[..],detail}], "template":"band_rules",
+     "surface":"navy", "photo":"coast_bay.jpg"}
+
+Leave `template` and `surface` out and both are picked from the slug, which is
+what keeps a 105-post feed from repeating itself.
 
 Usage (from repo root):
   python3 studio/renderer/tpl.py list
   python3 studio/renderer/tpl.py image studio/content/modelo210_en.json studio/themes/247spain.json
-  python3 studio/renderer/tpl.py contact studio/themes/247spain-bueno.json   # sheet of all templates
+  python3 studio/renderer/tpl.py contact studio/themes/247spain-bueno.json
 """
 from PIL import Image, ImageDraw
 import json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from simple3 import T, tw, cover, draw_footer, load  # noqa: E402
+from simple3 import T, tw, cover, load  # noqa: E402
 
 try:
     import numpy as np
-except ImportError:                                   # pillow-only fallback
+except ImportError:
     np = None
 
 W = H = 1080
-MX = 84
+MX = 88                 # the one left margin; nothing sits left of this but bleeds
+FOOT = 168              # brand bar height, sized to hold the lockup whole
+LOGO_W = 600            # lockup width in the bar; raise it and raise FOOT with it
+TOP = 96                # first baseline zone
 PHOTOS_DIR = os.environ.get("STUDIO_PHOTOS", os.path.join(HERE, "..", "photos"))
 OUTDIR = os.environ.get("STUDIO_OUT", os.path.join(HERE, "..", "out"))
 
@@ -46,69 +60,99 @@ TEMPLATES = [
     "checklist", "timeline", "compare", "number_hero",
 ]
 
+# Which surfaces suit which template. Rotated by slug so a feed mixes.
+SURFACES = {
+    "band_rules":  ["photo_top", "ivory", "sand"],
+    "pill_right":  ["photo_wash", "sky", "navy"],
+    "band_pills":  ["photo_top", "sky", "ivory"],
+    "rules_only":  ["ivory", "navy", "sand"],
+    "stat_band":   ["ivory", "sky", "sand"],
+    "split_rules": ["photo_side", "photo_side", "photo_side"],
+    "card_stack":  ["sky", "sand", "ivory"],
+    "quote_band":  ["navy", "photo_top", "ivory"],
+    "checklist":   ["ivory", "sand", "sky"],
+    "timeline":    ["ivory", "sky", "navy"],
+    "compare":     ["sand", "ivory", "sky"],
+    "number_hero": ["navy", "sky", "ivory"],
+}
 
-# ---------------------------------------------------------------- helpers
+
+# ------------------------------------------------------------------ palette
+
+def hsh(s):
+    return sum(ord(ch) * (i + 7) for i, ch in enumerate(s))
+
 
 def pick_template(c):
     t = c.get("template")
     if t in TEMPLATES:
         return t
-    return TEMPLATES[sum(ord(ch) for ch in c.get("slug", "x")) % len(TEMPLATES)]
+    return TEMPLATES[hsh(c.get("slug", "x")) % len(TEMPLATES)]
 
 
-def get_photo(c):
-    try:
-        files = sorted(f for f in os.listdir(PHOTOS_DIR)
-                       if f.lower().endswith((".jpg", ".jpeg", ".png")))
-    except Exception:
-        return None
-    if not files:
-        return None
-    name = c["photo"] if c.get("photo") in files else \
-        files[sum(ord(x) for x in c.get("slug", "x")) % len(files)]
-    try:
-        return Image.open(os.path.join(PHOTOS_DIR, name)).convert("RGB")
-    except Exception:
-        return None
+def pick_surface(c, name):
+    s = c.get("surface")
+    opts = SURFACES[name]
+    return s if s in ("ivory", "sky", "navy", "sand", "photo_top",
+                      "photo_wash", "photo_side") else opts[hsh(c.get("slug", "x")) % len(opts)]
 
 
-def duotone(ph, size, shadow, light):
-    """Flatten a photo into the brand's two blues. Keeps every card one family."""
-    p = cover(ph, *size).convert("L")
-    if np is not None:
-        g = np.asarray(p, float) / 255.0
-        sh = np.array(shadow, float)
-        hi = np.array(light, float)
-        out = sh[None, None, :] + (hi - sh)[None, None, :] * g[:, :, None]
-        return Image.fromarray(out.clip(0, 255).astype("uint8"))
-    lut = []
-    for ch in range(3):
-        lut += [int(shadow[ch] + (light[ch] - shadow[ch]) * i / 255.0) for i in range(256)]
-    return p.convert("RGB").point(lut)
+class Skin:
+    """Colours for one card, resolved from the surface so contrast is never guessed."""
+
+    def __init__(self, th, surface):
+        c = th.c
+        self.surface = surface
+        self.dark = surface == "navy"
+        if surface == "navy":
+            self.bg = c["primary"]
+            self.ink = (255, 255, 255)
+            self.soft = c["highlight"]
+            self.label = c["highlight"]
+            self.rule = (255, 255, 255, 60)
+            self.chip = (255, 255, 255)
+            self.chip_ink = c["primary"]
+        else:
+            self.bg = {"ivory": c["canvas"], "sky": c["highlight"],
+                       "sand": (0xD4, 0xCF, 0xC8)}.get(surface, c["canvas"])
+            self.ink = c["primary"]
+            self.soft = c["detail"]
+            self.label = c["accent"]
+            self.rule = c["hairline"]
+            self.chip = (255, 255, 255)
+            self.chip_ink = c["primary"]
+        self.gold = c["gold"]
+        self.bar = c["primary"] if surface != "navy" else (0x0B, 0x0D, 0x33)
 
 
-def fade_down(img, box, keep, fade):
-    """Fade the bottom `fade` px of an image strip into nothing (alpha ramp)."""
-    a = Image.new("L", img.size, 255)
-    ad = ImageDraw.Draw(a)
-    for i in range(fade):
-        y = keep + i
-        ad.line([(0, y), (img.size[0], y)], fill=int(255 * (1 - i / fade)))
-    ad.rectangle([0, keep + fade, img.size[0], img.size[1]], fill=0)
-    img.putalpha(a)
-    return img
+# ------------------------------------------------------------------ drawing
+
+def txt(d, x, y, s, font, fill):
+    """The only text call in this file. Baseline-anchored, so left edges align."""
+    d.text((x, y), s, font=font, fill=fill, anchor="ls")
 
 
-def fade_left(img, start, full):
-    """Alpha 0 left of `start`, ramping to solid at `full`. The pill-card look."""
-    a = Image.new("L", img.size, 0)
-    ad = ImageDraw.Draw(a)
-    span = max(1, full - start)
-    for x in range(img.size[0]):
-        v = 0 if x < start else min(1.0, (x - start) / span)
-        ad.line([(x, 0), (x, img.size[1])], fill=int(255 * v))
-    img.putalpha(a)
-    return img
+def tracked(d, x, y, s, font, fill, ls=6):
+    cx = x
+    for ch in s:
+        d.text((cx, y), ch, font=font, fill=fill, anchor="ls")
+        cx += tw(ch, font) + ls
+    return cx - x
+
+
+class Flow:
+    """Vertical cursor. Everything advances through here, so rhythm is uniform."""
+
+    def __init__(self, y=TOP):
+        self.y = y
+
+    def line(self, lead):
+        self.y += lead
+        return self.y
+
+    def gap(self, n):
+        self.y += n
+        return self.y
 
 
 def wrap(th, kind, size, text, maxw):
@@ -126,8 +170,7 @@ def wrap(th, kind, size, text, maxw):
     return lines, f
 
 
-def shrink(th, kind, size, lines, maxw, floor=20):
-    """Step the size down until the longest line fits."""
+def shrink(th, kind, size, lines, maxw, floor=22):
     while size > floor:
         f = th.f(kind, size)
         if max(tw(l, f) for l in lines) <= maxw:
@@ -136,387 +179,498 @@ def shrink(th, kind, size, lines, maxw, floor=20):
     return th.f(kind, floor), floor
 
 
-def spaced(d, s, f, ls, x, y, col):
-    cx = x
-    for ch in s:
-        d.text((cx, y), ch, font=f, fill=col)
-        cx += tw(ch, f) + ls
-    return cx - x
+def grow(th, kind, lines, maxw, lo=30, hi=92):
+    """Pick the largest size that still fits. This is what kills dead space."""
+    best = lo
+    for size in range(lo, hi + 1, 2):
+        f = th.f(kind, size)
+        if max(tw(l, f) for l in lines) <= maxw:
+            best = size
+        else:
+            break
+    return th.f(kind, best), best
 
 
-def pill(d, th, x, y, h_, text, font, bg, fg, pad=38, bleed=False, centre_w=None):
-    r = h_ // 2
-    w_ = tw(text, font)
-    if centre_w:
-        x0 = (W - (w_ + pad * 2)) // 2
-        x1 = x0 + w_ + pad * 2
-        tx = x0 + pad
-    elif bleed:
-        x0, x1, tx = -r, x + w_ + pad, x
+def duotone(ph, size, shadow, light):
+    p = cover(ph, *size).convert("L")
+    if np is not None:
+        g = np.asarray(p, float) / 255.0
+        sh, hi = np.array(shadow, float), np.array(light, float)
+        out = sh[None, None, :] + (hi - sh)[None, None, :] * g[:, :, None]
+        return Image.fromarray(out.clip(0, 255).astype("uint8"))
+    lut = []
+    for ch in range(3):
+        lut += [int(shadow[ch] + (light[ch] - shadow[ch]) * i / 255.0) for i in range(256)]
+    return p.convert("RGB").point(lut)
+
+
+def get_photo(c):
+    try:
+        files = sorted(f for f in os.listdir(PHOTOS_DIR)
+                       if f.lower().endswith((".jpg", ".jpeg", ".png")))
+    except Exception:
+        return None
+    if not files:
+        return None
+    name = c["photo"] if c.get("photo") in files else files[hsh(c.get("slug", "x")) % len(files)]
+    try:
+        return Image.open(os.path.join(PHOTOS_DIR, name)).convert("RGB")
+    except Exception:
+        return None
+
+
+def alpha_ramp(strip, keep, fade, axis="y"):
+    a = Image.new("L", strip.size, 255)
+    ad = ImageDraw.Draw(a)
+    n = strip.size[1] if axis == "y" else strip.size[0]
+    for i in range(fade):
+        v = int(255 * (1 - i / fade))
+        p = keep + i
+        if axis == "y":
+            ad.line([(0, p), (strip.size[0], p)], fill=v)
+        else:
+            ad.line([(p, 0), (p, strip.size[1])], fill=v)
+    if axis == "y":
+        ad.rectangle([0, keep + fade, strip.size[0], strip.size[1]], fill=0)
     else:
-        x0, x1, tx = x, x + w_ + pad * 2, x + pad
-    d.rounded_rectangle([x0, y, x1, y + h_], radius=r, fill=bg)
-    d.text((tx, y + h_ / 2), text, font=font, fill=fg, anchor="lm")
-    return x1
+        ad.rectangle([keep + fade, 0, strip.size[0], strip.size[1]], fill=0)
+    strip = strip.convert("RGBA")
+    strip.putalpha(a)
+    return strip
 
 
-def hairline(d, th, x, y, w_, alpha=46):
-    d.rectangle([x, y, x + w_, y + 1], fill=th.c["hairline"])
-
-
-def gold_rule(d, th, x, y, w_=64):
-    d.rectangle((x, y, x + w_, y + 3), fill=th.c["gold"])
-
-
-def eyebrow(d, th, c, y=None, col=None):
-    y = 84 if y is None else y
-    f = th.f("semibold", 21)
-    spaced(d, c["eyebrow"].upper(), f, 6, MX, y, col or th.c["accent"])
-    return y + 34
-
-
-def headline(d, th, c, y, size=58, maxw=None, col=None):
-    maxw = maxw or (W - MX * 2)
-    lines = c["headline"]
-    f, size = shrink(th, "semibold", size, lines, maxw)
-    for l in lines:
-        d.text((MX, y), l, font=f, fill=col or th.c["primary"])
-        y += int(size * 1.22)
-    return y
-
-
-def footer_block(img, d, th, c, foot=132):
-    """The navy bar at the base. simple3 already knows both brand marks."""
-    draw_footer(d, img, th, W, H, foot, scale=0.62)
-    return H - foot
-
-
-def cta_line(d, th, c, y, col=None):
-    if not c.get("cta"):
-        return y
-    lines, f = wrap(th, "medium", 24, c["cta"], W - MX * 2)
-    for l in lines:
-        d.text((MX, y), l, font=f, fill=col or th.c["accent"])
-        y += 32
-    return y
-
-
-def base(th):
-    img = Image.new("RGB", (W, H), th.c["canvas"])
-    return img, ImageDraw.Draw(img)
-
-
-def photo_band(img, th, c, top, height, fade=0):
+def build(th, c, name):
+    """Lay the surface down and return the canvas, drawer, skin and content top."""
+    sk = Skin(th, pick_surface(c, name))
+    img = Image.new("RGB", (W, H), sk.bg)
+    top = TOP
     ph = get_photo(c)
-    if ph is None:
-        return False
-    strip = duotone(ph, (W, height), (0x3E, 0x6C, 0x93), (0xE8, 0xF6, 0xFF))
-    if fade:
-        strip = fade_down(strip.convert("RGBA"), (0, 0, W, height), height - fade, fade)
-        img.paste(strip, (0, top), strip)
+
+    if sk.surface == "photo_top" and ph is not None:
+        bandh = 372
+        strip = duotone(ph, (W, bandh), (0x2E, 0x5A, 0x80), (0xE8, 0xF6, 0xFF))
+        img.paste(alpha_ramp(strip, bandh - 130, 130), (0, 0),
+                  alpha_ramp(strip, bandh - 130, 130))
+        top = bandh + 76
+    elif sk.surface == "photo_wash" and ph is not None:
+        sheet = duotone(ph, (W, H), (0x6C, 0xA3, 0xC8), (0xF4, 0xFB, 0xFF))
+        a = Image.new("L", (W, H), 0)
+        ad = ImageDraw.Draw(a)
+        for x in range(W):
+            v = 0 if x < W * 0.36 else min(1.0, (x - W * 0.36) / (W * 0.30))
+            ad.line([(x, 0), (x, H)], fill=int(255 * v))
+        sheet = sheet.convert("RGBA")
+        sheet.putalpha(a)
+        img.paste(sheet, (0, 0), sheet)
+    elif sk.surface == "photo_side" and ph is not None:
+        colw = 404
+        img.paste(duotone(ph, (colw, H - FOOT), (0x2E, 0x5A, 0x80), (0xE8, 0xF6, 0xFF)), (0, 0))
+
+    return img, ImageDraw.Draw(img), sk, top
+
+
+def brand_bar(img, d, th, sk):
+    """The bar at the base. The lockup goes in whole; see the module docstring."""
+    f = th.t["footer"]
+    top, mid = H - FOOT, H - FOOT + FOOT // 2
+    d.rectangle([0, top, W, H], fill=sk.bar)
+    if f.get("type") == "wordmark_247":
+        fw = th.f("bold", 48)
+        x = MX
+        for piece, col in (("24", (255, 255, 255)), ("/", th.c["gold"]),
+                           ("7 SPAIN", (255, 255, 255))):
+            d.text((x, mid), piece, font=fw, fill=col, anchor="lm")
+            x += tw(piece, fw)
+        if f.get("payoff"):
+            d.rectangle([x + 30, mid - 33, x + 32, mid + 33], fill=(255, 255, 255))
+            tracked(d, x + 60, mid + 7, f["payoff"], th.f("medium", 18), (255, 255, 255), 3)
     else:
-        img.paste(strip, (0, top))
-    return True
+        logo = Image.open(f["logo_path"]).convert("RGBA")
+        lw = f.get("logo_width", LOGO_W)
+        lh = round(logo.height * lw / logo.width)
+        logo = logo.resize((lw, lh), Image.LANCZOS)
+        mark = Image.new("RGBA", logo.size, (255, 255, 255, 255))
+        mark.putalpha(logo.split()[3])
+        img.paste(mark, (MX, mid - lh // 2), mark)
+    if f.get("domain"):
+        d.text((W - MX, mid), f["domain"], font=th.f("medium", 29),
+               fill=(255, 255, 255), anchor="rm")
 
 
-# ---------------------------------------------------------------- templates
+def eyebrow(d, th, sk, c, fl):
+    if not c.get("eyebrow"):
+        return
+    fl.line(22)
+    tracked(d, MX, fl.y, c["eyebrow"].upper(), th.f("semibold", 21), sk.label, 6)
+    fl.gap(20)
+
+
+def headline(d, th, sk, c, fl, colw=None, lo=38, hi=76):
+    colw = colw or (W - MX * 2)
+    f, size = grow(th, "semibold", c["headline"], colw, lo, hi)
+    for l in c["headline"]:
+        fl.line(int(size * 1.02))
+        txt(d, MX, fl.y, l, f, sk.ink)
+        fl.gap(int(size * 0.24))
+    return size
+
+
+def subline(d, th, sk, c, fl, colw=None, size=27):
+    if not c.get("sub"):
+        return
+    colw = colw or (W - MX * 2)
+    lines, f = wrap(th, "regular", size, c["sub"], colw)
+    fl.gap(10)
+    for l in lines:
+        fl.line(int(size * 1.35))
+        txt(d, MX, fl.y, l, f, sk.soft)
+
+
+def facts(c):
+    return [" ".join(r["fact"]) for r in c["rows"]]
+
+
+def room_for(fl, n, lo, bottom=None):
+    """How many of n stacked items actually fit. Drawing a clipped row is worse
+    than dropping it, so callers trim to this."""
+    bottom = bottom if bottom is not None else H - FOOT - 36
+    return max(1, min(n, (bottom - fl.y) // lo))
+
+
+def fit_block(fl, n, lo, hi, bottom=None):
+    """Pitch and start for n stacked items.
+
+    Centres the stack in the space it has. Without this a card with three short
+    rows clusters them under the headline and leaves a hole above the brand bar,
+    which is the dead space Pratik flagged.
+    """
+    bottom = bottom if bottom is not None else H - FOOT - 36
+    avail = max(0, bottom - fl.y)
+    pitch = max(lo, min(hi, avail // max(1, n)))
+    slack = avail - pitch * n
+    if slack > 0:
+        fl.gap(min(slack, slack // 2 + 8))
+    return pitch
+
+
+# ------------------------------------------------------------------ templates
 
 def t_band_rules(c, th):
-    """Approved taxes card. Photo band top, numbered hairline rows, navy footer."""
-    img, d = base(th)
-    photo_band(img, th, c, 0, 360, fade=110)
-    y = eyebrow(d, th, c, 408)
-    y = headline(d, th, c, y + 8, 56)
-    if c.get("sub"):
-        lines, f = wrap(th, "regular", 27, c["sub"], W - MX * 2)
-        y += 10
-        for l in lines:
-            d.text((MX, y), l, font=f, fill=th.c["muted"])
-            y += 34
-    y += 22
-    rowh = 92
-    for i, row in enumerate(c["rows"]):
-        hairline(d, th, MX, y, W - MX * 2)
-        cy = y + rowh / 2
-        d.text((MX, cy), f"0{i+1}", font=th.f("semibold", 22), fill=th.c["accent"], anchor="lm")
-        fact = " ".join(row["fact"])
-        f, _ = shrink(th, "regular", 27, [fact], W - MX * 2 - 70)
-        d.text((MX + 62, cy), fact, font=f, fill=th.c["primary"], anchor="lm")
-        y += rowh
-    hairline(d, th, MX, y, W - MX * 2)
-    footer_block(img, d, th, c)
+    img, d, sk, top = build(th, c, "band_rules")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=40, hi=64)
+    subline(d, th, sk, c, fl)
+    fl.gap(30)
+    rows = facts(c)
+    pitch = fit_block(fl, len(rows) + 0.4, 78, 116, bottom=H - FOOT - 44)
+    num = th.f("semibold", 22)
+    for i, r in enumerate(rows):
+        d.rectangle([MX, fl.y, W - MX, fl.y + 1], fill=sk.rule)
+        base = fl.y + pitch // 2 + 10
+        txt(d, MX, base, f"0{i+1}", num, sk.label)
+        f, _ = shrink(th, "regular", 28, [r], W - MX * 2 - 74)
+        txt(d, MX + 74, base, r, f, sk.ink)
+        fl.gap(pitch)
+    d.rectangle([MX, fl.y, W - MX, fl.y + 1], fill=sk.rule)
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_pill_right(c, th):
-    """Approved Facebook-group card. Photo faded in from the right, pills on the left."""
-    img, d = base(th)
-    ph = get_photo(c)
-    if ph is not None:
-        sheet = duotone(ph, (W, H), (0x6C, 0xA3, 0xC8), (0xF4, 0xFB, 0xFF)).convert("RGBA")
-        sheet = fade_left(sheet, int(W * 0.34), int(W * 0.66))
-        img.paste(sheet, (0, 0), sheet)
-        wash = Image.new("RGBA", (W, H), th.c["highlight"] + (46,))
-        img.paste(wash, (0, 0), wash)
-    y = eyebrow(d, th, c, 92)
-    y = headline(d, th, c, y + 14, 58, maxw=int(W * 0.62))
-    if c.get("sub"):
-        lines, f = wrap(th, "regular", 26, c["sub"], int(W * 0.58))
-        y += 16
-        for l in lines:
-            d.text((MX, y), l, font=f, fill=th.c["muted"])
-            y += 34
-    y = max(y + 36, 372)
-    pf = th.f("regular", 26)
-    for row in c["rows"]:
-        pill(d, th, MX, y, 74, " ".join(row["fact"]), pf, (255, 255, 255), th.c["primary"], bleed=True)
-        y += 96
+    img, d, sk, top = build(th, c, "pill_right")
+    colw = int(W * 0.60) if sk.surface == "photo_wash" else W - MX * 2
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, colw=colw, lo=42, hi=68)
+    subline(d, th, sk, c, fl, colw=colw, size=26)
+    fl.gap(34)
+    rows = facts(c)
     if c.get("cta"):
-        pill(d, th, MX, y, 76, c["cta"], th.f("semibold", 27), th.c["primary"], (255, 255, 255), bleed=True)
-    footer_block(img, d, th, c)
+        rows = rows + [c["cta"]]
+    pitch = fit_block(fl, len(rows), 88, 116)
+    ph_ = pitch - 20
+    for i, r in enumerate(rows):
+        last = c.get("cta") and i == len(rows) - 1
+        f, _ = shrink(th, "semibold" if last else "regular", 27, [r], colw - 60)
+        bg = sk.ink if last else sk.chip
+        fg = sk.bg if last else sk.chip_ink
+        wpx = tw(r, f)
+        d.rounded_rectangle([-ph_ // 2, fl.y, MX + wpx + 40, fl.y + ph_],
+                            radius=ph_ // 2, fill=bg)
+        d.text((MX, fl.y + ph_ / 2), r, font=f, fill=fg, anchor="lm")
+        fl.gap(pitch)
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_band_pills(c, th):
-    """Photo band across the top, pills below it."""
-    img, d = base(th)
-    photo_band(img, th, c, 0, 360, fade=90)
-    y = eyebrow(d, th, c, 408)
-    y = headline(d, th, c, y + 8, 54)
-    y += 34
-    pf = th.f("regular", 26)
-    for row in c["rows"]:
-        pill(d, th, MX, y, 72, " ".join(row["fact"]), pf, (255, 255, 255), th.c["primary"], bleed=True)
-        y += 96
-    footer_block(img, d, th, c)
+    img, d, sk, top = build(th, c, "band_pills")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=40, hi=62)
+    subline(d, th, sk, c, fl)
+    fl.gap(30)
+    rows = facts(c)
+    pitch = fit_block(fl, len(rows), 86, 112)
+    ph_ = pitch - 20
+    for r in rows:
+        f, _ = shrink(th, "regular", 27, [r], W - MX * 2 - 60)
+        d.rounded_rectangle([-ph_ // 2, fl.y, MX + tw(r, f) + 40, fl.y + ph_],
+                            radius=ph_ // 2, fill=sk.chip)
+        d.text((MX, fl.y + ph_ / 2), r, font=f, fill=sk.chip_ink, anchor="lm")
+        fl.gap(pitch)
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_rules_only(c, th):
-    """No photo. Pure type, hairline rows, generous air. For dense legal points."""
-    img, d = base(th)
-    y = eyebrow(d, th, c, 120)
-    y = headline(d, th, c, y + 16, 66)
-    gold_rule(d, th, MX, y + 24)
-    y += 76
-    for i, row in enumerate(c["rows"]):
-        hairline(d, th, MX, y, W - MX * 2)
-        y += 30
-        spaced(d, row["label"].upper(), th.f("medium", 18), 3, MX, y, th.c["accent"])
-        y += 32
-        fact = " ".join(row["fact"])
-        lines, f = wrap(th, "semibold", 30, fact, W - MX * 2)
+    """No photo. Type does all the work, so it runs large."""
+    img, d, sk, top = build(th, c, "rules_only")
+    fl = Flow(top + 20)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=48, hi=82)
+    fl.gap(18)
+    d.rectangle([MX, fl.y, MX + 72, fl.y + 4], fill=sk.gold)
+    fl.gap(40)
+    rows, avail = c["rows"], (H - FOOT - 40) - fl.y
+    block = avail // max(1, len(rows))
+    for r in rows:
+        y0 = fl.y
+        d.rectangle([MX, y0, W - MX, y0 + 1], fill=sk.rule)
+        fl.line(44)
+        tracked(d, MX, fl.y, r["label"].upper(), th.f("medium", 18), sk.label, 3)
+        lines, f = wrap(th, "semibold", 32, " ".join(r["fact"]), W - MX * 2)
         for l in lines:
-            d.text((MX, y), l, font=f, fill=th.c["primary"])
-            y += 40
-        if row.get("detail"):
-            lines, f = wrap(th, "regular", 21, row["detail"], W - MX * 2)
-            for l in lines:
-                d.text((MX, y), l, font=f, fill=th.c["detail"])
-                y += 28
-        y += 26
-    footer_block(img, d, th, c)
+            fl.line(43)
+            txt(d, MX, fl.y, l, f, sk.ink)
+        if r.get("detail"):
+            dl, df = wrap(th, "regular", 22, r["detail"], W - MX * 2)
+            for l in dl:
+                fl.line(31)
+                txt(d, MX, fl.y, l, df, sk.soft)
+        fl.y = y0 + block
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_stat_band(c, th):
-    """One big statement up top, two supporting rows, photo band at the bottom."""
-    img, d = base(th)
-    y = eyebrow(d, th, c, 96)
-    y = headline(d, th, c, y + 14, 70)
-    gold_rule(d, th, MX, y + 20)
-    y += 70
-    for row in c["rows"][:2]:
-        spaced(d, row["label"].upper(), th.f("medium", 18), 3, MX, y, th.c["accent"])
-        y += 30
-        lines, f = wrap(th, "regular", 25, " ".join(row["fact"]), W - MX * 2)
+    img, d, sk, top = build(th, c, "stat_band")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=50, hi=84)
+    fl.gap(16)
+    d.rectangle([MX, fl.y, MX + 72, fl.y + 4], fill=sk.gold)
+    fl.gap(40)
+    for r in c["rows"][:room_for(fl, 2, 150, bottom=H - FOOT - 40)]:
+        fl.line(30)
+        tracked(d, MX, fl.y, r["label"].upper(), th.f("medium", 18), sk.label, 3)
+        lines, f = wrap(th, "regular", 27, " ".join(r["fact"]), W - MX * 2)
         for l in lines:
-            d.text((MX, y), l, font=f, fill=th.c["primary"])
-            y += 34
-        y += 20
-    foot = 132
-    bandh = H - foot - 620
-    if bandh > 80:
-        photo_band(img, th, c, 620, bandh)
-    footer_block(img, d, th, c)
+            fl.line(38)
+            txt(d, MX, fl.y, l, f, sk.ink)
+        fl.gap(24)
+    ph = get_photo(c)
+    band_top = max(fl.y + 34, 700)
+    if (ph is not None and sk.surface != "photo_top"
+            and band_top >= fl.y + 30 and H - FOOT - band_top >= 110):
+        img.paste(duotone(ph, (W, H - FOOT - band_top), (0x2E, 0x5A, 0x80),
+                          (0xE8, 0xF6, 0xFF)), (0, band_top))
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_split_rules(c, th):
-    """Photo down the left half, numbered rows in the right column."""
-    img, d = base(th)
-    ph = get_photo(c)
-    half = 430
-    if ph is not None:
-        img.paste(duotone(ph, (half, H - 132), (0x3E, 0x6C, 0x93), (0xE8, 0xF6, 0xFF)), (0, 0))
-    x = half + 56
+    img, d, sk, top = build(th, c, "split_rules")
+    x = 404 + 56
     colw = W - x - 56
-    f = th.f("semibold", 20)
-    spaced(d, c["eyebrow"].upper(), f, 5, x, 96, th.c["accent"])
-    y = 140
-    hf, hsize = shrink(th, "semibold", 44, c["headline"], colw)
+
+    class L(Flow):
+        pass
+    fl = L(TOP + 14)
+    if c.get("eyebrow"):
+        fl.line(22)
+        tracked(d, x, fl.y, c["eyebrow"].upper(), th.f("semibold", 19), sk.label, 5)
+        fl.gap(18)
+    f, size = grow(th, "semibold", c["headline"], colw, 32, 52)
     for l in c["headline"]:
-        d.text((x, y), l, font=hf, fill=th.c["primary"])
-        y += int(hsize * 1.2)
-    y += 24
-    for i, row in enumerate(c["rows"]):
-        hairline(d, th, x, y, colw)
-        y += 22
-        d.text((x, y), f"0{i+1}", font=th.f("semibold", 19), fill=th.c["accent"])
-        wl, wf = wrap(th, "regular", 24, " ".join(row["fact"]), colw - 48)
-        yy = y
-        for l in wl:
-            d.text((x + 48, yy), l, font=wf, fill=th.c["primary"])
-            yy += 32
-        y = yy + 24
-    footer_block(img, d, th, c)
+        fl.line(int(size * 1.04))
+        txt(d, x, fl.y, l, f, sk.ink)
+        fl.gap(int(size * 0.22))
+    fl.gap(28)
+    rows, avail = facts(c), (H - FOOT - 40) - fl.y
+    block = avail // max(1, len(rows))
+    num = th.f("semibold", 19)
+    for i, r in enumerate(rows):
+        y0 = fl.y
+        d.rectangle([x, y0, W - 56, y0 + 1], fill=sk.rule)
+        fl.line(40)
+        txt(d, x, fl.y, f"0{i+1}", num, sk.label)
+        lines, rf = wrap(th, "regular", 25, r, colw - 52)
+        first = True
+        for l in lines:
+            if not first:
+                fl.line(34)
+            txt(d, x + 52, fl.y, l, rf, sk.ink)
+            first = False
+        fl.y = y0 + block
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_card_stack(c, th):
-    """Three white cards on the light ground. Good for step-by-step points."""
-    img, d = base(th)
-    photo_band(img, th, c, 0, 262, fade=80)
-    y = eyebrow(d, th, c, 306)
-    y = headline(d, th, c, y + 8, 46)
-    y += 22
-    for row in c["rows"]:
-        h_ = 132
-        d.rounded_rectangle([MX, y, W - MX, y + h_], radius=18, fill=(255, 255, 255))
-        spaced(d, row["label"].upper(), th.f("medium", 17), 3, MX + 32, y + 26, th.c["accent"])
-        wl, wf = wrap(th, "semibold", 25, " ".join(row["fact"]), W - MX * 2 - 64)
-        yy = y + 56
-        for l in wl[:2]:
-            d.text((MX + 32, yy), l, font=wf, fill=th.c["primary"])
-            yy += 32
-        y += h_ + 14
-    footer_block(img, d, th, c)
+    img, d, sk, top = build(th, c, "card_stack")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=38, hi=58)
+    fl.gap(26)
+    rows = c["rows"][:room_for(fl, len(c["rows"]), 122, bottom=H - FOOT - 30)]
+    pitch = fit_block(fl, len(rows), 122, 168, bottom=H - FOOT - 30)
+    ch = pitch - 18
+    for r in rows:
+        y0 = fl.y
+        d.rounded_rectangle([MX, y0, W - MX, y0 + ch], radius=18, fill=(255, 255, 255))
+        tracked(d, MX + 34, y0 + 42, r["label"].upper(), th.f("medium", 17),
+                th.c["accent"], 3)
+        lines, f = wrap(th, "semibold", 27, " ".join(r["fact"]), W - MX * 2 - 68)
+        yy = y0 + 84
+        for l in lines[:2]:
+            txt(d, MX + 34, yy, l, f, th.c["primary"])
+            yy += 36
+        fl.y = y0 + pitch
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_quote_band(c, th):
-    """The headline set large inside a navy block. One point, said once."""
-    img, d = base(th)
-    photo_band(img, th, c, 0, 330, fade=80)
-    top = 380
-    d.rectangle([0, top, W, top + 300], fill=th.c["primary"])
-    y = top + 52
-    qf, qsize = shrink(th, "semibold", 46, c["headline"], W - MX * 2)
-    for l in c["headline"]:
-        d.text((MX, y), l, font=qf, fill=(255, 255, 255))
-        y += int(qsize * 1.24)
-    y = top + 330
-    for row in c["rows"][:2]:
-        wl, wf = wrap(th, "regular", 24, " ".join(row["fact"]), W - MX * 2)
-        for l in wl:
-            d.text((MX, y), l, font=wf, fill=th.c["primary"])
-            y += 32
-        y += 18
-    footer_block(img, d, th, c)
+    """One point, said once, large. The card that earns its whitespace."""
+    img, d, sk, top = build(th, c, "quote_band")
+    fl = Flow(top + 30)
+    eyebrow(d, th, sk, c, fl)
+    fl.gap(14)
+    headline(d, th, sk, c, fl, lo=54, hi=92)
+    fl.gap(22)
+    d.rectangle([MX, fl.y, MX + 72, fl.y + 4], fill=sk.gold)
+    fl.gap(46)
+    for r in c["rows"][:2]:
+        lines, f = wrap(th, "regular", 27, " ".join(r["fact"]), W - MX * 2)
+        for l in lines:
+            fl.line(38)
+            txt(d, MX, fl.y, l, f, sk.soft)
+        fl.gap(20)
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_checklist(c, th):
-    """Ticks instead of numbers. For the do-this-before-you-sign posts."""
-    img, d = base(th)
-    y = eyebrow(d, th, c, 110)
-    y = headline(d, th, c, y + 14, 60)
-    gold_rule(d, th, MX, y + 22)
-    y += 74
-    for row in c["rows"]:
-        cy = y + 26
-        d.ellipse([MX, cy - 17, MX + 34, cy + 17], outline=th.c["accent"], width=2)
-        d.line([(MX + 10, cy), (MX + 16, cy + 7), (MX + 25, cy - 8)], fill=th.c["accent"], width=3)
-        wl, wf = wrap(th, "regular", 27, " ".join(row["fact"]), W - MX * 2 - 64)
-        yy = y + 8
-        for l in wl:
-            d.text((MX + 58, yy), l, font=wf, fill=th.c["primary"])
-            yy += 36
-        y = yy + 26
-    bandh = H - 132 - max(y + 20, 700)
-    if bandh > 90:
-        photo_band(img, th, c, max(y + 20, 700), bandh)
-    footer_block(img, d, th, c)
+    img, d, sk, top = build(th, c, "checklist")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=44, hi=72)
+    fl.gap(18)
+    d.rectangle([MX, fl.y, MX + 72, fl.y + 4], fill=sk.gold)
+    fl.gap(44)
+    rows = facts(c)[:room_for(fl, len(c["rows"]), 96, bottom=H - FOOT - 40)]
+    block = fit_block(fl, len(rows), 96, 140, bottom=H - FOOT - 40)
+    for r in rows:
+        y0 = fl.y
+        cy = y0 + 26
+        d.ellipse([MX, cy - 19, MX + 38, cy + 19], outline=sk.label, width=2)
+        d.line([(MX + 11, cy + 1), (MX + 18, cy + 9), (MX + 28, cy - 9)],
+               fill=sk.label, width=3)
+        lines, f = wrap(th, "regular", 28, r, W - MX * 2 - 70)
+        yy = y0 + 36
+        for l in lines:
+            txt(d, MX + 64, yy, l, f, sk.ink)
+            yy += 38
+        fl.y = y0 + block
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_timeline(c, th):
-    """Dots on a vertical rule. For deadlines and anything with an order."""
-    img, d = base(th)
-    y = eyebrow(d, th, c, 110)
-    y = headline(d, th, c, y + 14, 56)
-    y += 46
-    x = MX + 12
+    img, d, sk, top = build(th, c, "timeline")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=42, hi=66)
+    fl.gap(46)
     rows = c["rows"]
-    d.line([(x, y + 18), (x, y + (len(rows) - 1) * 130 + 18)], fill=th.c["hairline"], width=2)
-    for row in rows:
-        d.ellipse([x - 9, y + 9, x + 9, y + 27], fill=th.c["accent"])
-        spaced(d, row["label"].upper(), th.f("medium", 18), 3, x + 46, y + 8, th.c["accent"])
-        wl, wf = wrap(th, "semibold", 26, " ".join(row["fact"]), W - x - 46 - MX)
-        yy = y + 42
-        for l in wl[:2]:
-            d.text((x + 46, yy), l, font=wf, fill=th.c["primary"])
-            yy += 34
-        y += 130
-    bandh = H - 132 - max(y + 10, 720)
-    if bandh > 90:
-        photo_band(img, th, c, max(y + 10, 720), bandh)
-    footer_block(img, d, th, c)
+    block = fit_block(fl, len(rows), 116, 158, bottom=H - FOOT - 40)
+    x = MX + 11
+    d.line([(x, fl.y + 10), (x, fl.y + (len(rows) - 1) * block + 10)],
+           fill=sk.rule, width=2)
+    for r in rows:
+        y0 = fl.y
+        d.ellipse([x - 10, y0, x + 10, y0 + 20], fill=sk.label)
+        tracked(d, MX + 54, y0 + 18, r["label"].upper(), th.f("medium", 18), sk.label, 3)
+        lines, f = wrap(th, "semibold", 28, " ".join(r["fact"]), W - MX - 54 - MX)
+        yy = y0 + 58
+        for l in lines[:2]:
+            txt(d, MX + 54, yy, l, f, sk.ink)
+            yy += 37
+        fl.y = y0 + block
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_compare(c, th):
-    """Two columns: what people assume, what the rule says. Myth-busting posts."""
-    img, d = base(th)
-    y = eyebrow(d, th, c, 110)
-    y = headline(d, th, c, y + 14, 54)
-    y += 44
-    colw = (W - MX * 2 - 44) // 2
+    img, d, sk, top = build(th, c, "compare")
+    fl = Flow(top)
+    eyebrow(d, th, sk, c, fl)
+    headline(d, th, sk, c, fl, lo=40, hi=62)
+    fl.gap(40)
+    colw = (W - MX * 2 - 40) // 2
     heads = c.get("columns", ["OFTEN ASSUMED", "WHAT APPLIES"])
+    boxh = (H - FOOT - 40) - fl.y
     for i in range(2):
-        cx = MX + i * (colw + 44)
-        box = (255, 255, 255) if i else th.c["highlight"]
-        d.rounded_rectangle([cx, y, cx + colw, y + 360], radius=18, fill=box)
-        spaced(d, heads[i].upper(), th.f("medium", 17), 3, cx + 26, y + 26, th.c["accent"])
+        cx = MX + i * (colw + 40)
+        fill = (255, 255, 255) if i else th.c["highlight"]
+        d.rounded_rectangle([cx, fl.y, cx + colw, fl.y + boxh], radius=18, fill=fill)
+        tracked(d, cx + 30, fl.y + 44, heads[i].upper(), th.f("medium", 17),
+                th.c["accent"], 3)
         body = c["rows"][i] if i < len(c["rows"]) else {"fact": [""]}
-        wl, wf = wrap(th, "semibold", 25, " ".join(body["fact"]), colw - 52)
-        yy = y + 66
-        for l in wl:
-            d.text((cx + 26, yy), l, font=wf, fill=th.c["primary"])
-            yy += 33
+        lines, f = wrap(th, "semibold", 27, " ".join(body["fact"]), colw - 60)
+        yy = fl.y + 92
+        for l in lines:
+            txt(d, cx + 30, yy, l, f, th.c["primary"])
+            yy += 36
         if body.get("detail"):
-            wl, wf = wrap(th, "regular", 20, body["detail"], colw - 52)
-            yy += 12
-            for l in wl:
-                d.text((cx + 26, yy), l, font=wf, fill=th.c["detail"])
-                yy += 27
-    bandh = H - 132 - (y + 400)
-    if bandh > 90:
-        photo_band(img, th, c, y + 400, bandh)
-    footer_block(img, d, th, c)
+            dl, df = wrap(th, "regular", 21, body["detail"], colw - 60)
+            yy += 14
+            for l in dl:
+                txt(d, cx + 30, yy, l, df, th.c["detail"])
+                yy += 29
+    brand_bar(img, d, th, sk)
     return img
 
 
 def t_number_hero(c, th):
-    """One figure, very large, with the sentence that makes it mean something."""
-    img, d = base(th)
-    photo_band(img, th, c, 0, 300, fade=90)
-    y = eyebrow(d, th, c, 348)
     big = c.get("figure") or c["rows"][0]["fact"][0]
     if len(big) > 18:
-        big = big[:18].rstrip()
-    f, size = shrink(th, "bold", 150, [big], W - MX * 2)
-    d.text((MX, y + 10), big, font=f, fill=th.c["primary"])
-    y += int(size * 1.08) + 24
-    y = headline(d, th, c, y, 40)
-    y += 18
-    for row in c["rows"][1:3]:
-        wl, wf = wrap(th, "regular", 23, " ".join(row["fact"]), W - MX * 2)
-        for l in wl:
-            d.text((MX, y), l, font=wf, fill=th.c["detail"])
-            y += 31
-        y += 12
-    footer_block(img, d, th, c)
+        # Never truncate a sentence into nonsense. Hand it to stat_band, on a flat
+        # surface: stat_band needs the height a photo band would eat.
+        surf = c.get("surface")
+        return t_stat_band(dict(c, surface=surf if surf in ("ivory", "sky", "sand")
+                                else "ivory"), th)
+    img, d, sk, top = build(th, c, "number_hero")
+    fl = Flow(top + 10)
+    eyebrow(d, th, sk, c, fl)
+    f, size = grow(th, "bold", [big], W - MX * 2, 90, 190)
+    fl.line(int(size * 0.98))
+    txt(d, MX, fl.y, big, f, sk.ink)
+    fl.gap(int(size * 0.22))
+    hf, hsize = grow(th, "semibold", c["headline"], W - MX * 2, 30, 46)
+    for l in c["headline"]:
+        fl.line(int(hsize * 1.06))
+        txt(d, MX, fl.y, l, hf, sk.ink)
+    fl.gap(30)
+    for r in c["rows"][1:3]:
+        lines, rf = wrap(th, "regular", 25, " ".join(r["fact"]), W - MX * 2)
+        for l in lines:
+            fl.line(35)
+            txt(d, MX, fl.y, l, rf, sk.soft)
+        fl.gap(14)
+    brand_bar(img, d, th, sk)
     return img
 
 
@@ -536,25 +690,24 @@ def render(c, th, outpath):
     return outpath, name
 
 
-# ---------------------------------------------------------------- cli
-
 def main():
     if len(sys.argv) < 2 or sys.argv[1] == "list":
-        print("\n".join(TEMPLATES))
+        for t in TEMPLATES:
+            print(f"{t:14s} surfaces: {', '.join(dict.fromkeys(SURFACES[t]))}")
         return
     cmd = sys.argv[1]
     if cmd == "image":
         c = load(sys.argv[2])
         th = T(load(sys.argv[3]))
-        out = os.path.join(OUTDIR, f"{c['slug']}.png")
-        p, name = render(c, th, out)
+        p, name = render(c, th, os.path.join(OUTDIR, f"{c['slug']}.png"))
         print(f"{name} -> {p}")
     elif cmd == "contact":
         th = T(load(sys.argv[2]))
         c = load(os.path.join(HERE, "..", "content", "modelo210_en.json"))
         for name in TEMPLATES:
-            cc = dict(c, template=name, slug=f"contact_{name}")
-            print(render(cc, th, os.path.join(OUTDIR, f"contact_{name}.png"))[0])
+            for i, surf in enumerate(dict.fromkeys(SURFACES[name])):
+                cc = dict(c, template=name, surface=surf, slug=f"c_{name}_{surf}")
+                print(render(cc, th, os.path.join(OUTDIR, f"c_{name}_{surf}.png"))[0])
     else:
         print(__doc__)
 

@@ -2,17 +2,61 @@
   "name": "247spain-bueno",
   "note": "Same palette as 247spain. Footer carries the Bueno lockup instead of the 24/7 SPAIN wordmark. Use ONLY for the /internal-linkedin team deck images, per Pratik 17 Sept 2026.",
   "colors": {
-    "primary": [1, 2, 33],
-    "card_bg": [255, 255, 255],
-    "canvas": [248, 247, 244],
-    "highlight": [203, 239, 255],
-    "accent": [91, 127, 204],
-    "gold": [201, 169, 110],
-    "muted": [45, 47, 80],
-    "detail": [110, 115, 145],
-    "hairline": [215, 215, 222],
-    "footer_text": [255, 255, 255],
-    "footer_sub": [150, 165, 200]
+    "primary": [
+      1,
+      2,
+      33
+    ],
+    "card_bg": [
+      255,
+      255,
+      255
+    ],
+    "canvas": [
+      248,
+      247,
+      244
+    ],
+    "highlight": [
+      203,
+      239,
+      255
+    ],
+    "accent": [
+      91,
+      127,
+      204
+    ],
+    "gold": [
+      201,
+      169,
+      110
+    ],
+    "muted": [
+      45,
+      47,
+      80
+    ],
+    "detail": [
+      110,
+      115,
+      145
+    ],
+    "hairline": [
+      215,
+      215,
+      222
+    ],
+    "footer_text": [
+      255,
+      255,
+      255
+    ],
+    "footer_sub": [
+      150,
+      165,
+      200
+    ]
   },
   "fonts_dir": "public/fonts",
   "fonts": {
@@ -24,8 +68,8 @@
   "footer": {
     "type": "logo",
     "logo_path": "public/images/bueno-logo-transparent.png",
-    "payoff": "PROPERTY FINANCE SIMPLIFIED",
     "domain": "getbueno.com",
-    "disclaimer": "General information, not tax advice."
+    "logo_width": 600,
+    "note": "Paste the lockup whole. Never crop it or re-typeset PROPERTY SIMPLIFIED."
   }
 }

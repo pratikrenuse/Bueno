@@ -52,6 +52,43 @@ no-repeated-layout rule wants. Set it explicitly when a specific post needs a sp
 | `compare` | Two columns, assumed against applies | Myth-busting with the real rule beside it |
 | `number_hero` | One figure very large | A rate, a threshold, a fee |
 
+## Surfaces
+
+Every card is built on one of seven surfaces, taken from the brand palette, so a
+feed is not 105 pale blue gradients:
+
+| Surface | What it is |
+|---|---|
+| `ivory` | Off-white #F8F7F4 |
+| `sky` | Light Blue #CBEFFF |
+| `sand` | Warm Grey #D4CFC8 |
+| `navy` | Navy #010221, type reversed to white automatically |
+| `photo_top` | Duotone photo band across the top, fading into the surface |
+| `photo_wash` | Duotone photo faded in from the right |
+| `photo_side` | Duotone photo down the left column |
+
+`SURFACES` in `tpl.py` lists which surfaces suit which template, and one is
+picked from the slug unless the content file names a `surface`. Note that
+`photo_top` costs 448px of height, so templates carrying a headline plus three
+blocks (`stat_band`, `card_stack`, `checklist`) are not offered it.
+
+`Skin` resolves ink, label, rule and chip colours from the surface, so contrast
+is never guessed and navy cards reverse correctly.
+
+## Layout rules
+
+Three rules the file enforces, each from a correction:
+
+1. **Type sits on a grid.** Every string goes through `txt()`, baseline-anchored
+   at `MX`. Mixing top-anchored and baseline-anchored calls in one card drifts
+   the left edge and the rhythm. Vertical movement goes through `Flow`.
+2. **No dead space.** `grow()` picks the largest size that fits rather than a
+   fixed one, and `fit_block()` centres a stack in its space instead of
+   clustering it under the headline with a hole above the bar. `room_for()`
+   drops a trailing row rather than drawing it clipped.
+3. **The lockup is untouchable.** Pasted whole, never cropped, never
+   re-typeset. If the payoff reads small, raise `LOGO_W` and `FOOT`.
+
 ## Branding
 
 Branding comes from the theme's `footer` block, which `simple3.draw_footer` already handles:
