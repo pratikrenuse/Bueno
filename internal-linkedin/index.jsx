@@ -472,8 +472,12 @@ export default function InternalLinkedIn() {
                 )}
 
                 {p.image_url && !isEditing && (
+                  // The cards are square, 1080x1080, which is what the team posts on
+                  // LinkedIn. Do not reintroduce maxHeight with objectFit cover here:
+                  // that crops a band out of the middle of a square and eats both the
+                  // headline and the brand bar.
                   <img src={p.image_url} alt="" draggable={false} loading="lazy"
-                    style={{ width: '100%', display: 'block', maxHeight: 340, objectFit: 'cover' }} />
+                    style={{ width: '100%', display: 'block', aspectRatio: '1 / 1', objectFit: 'contain', background: '#F8F7F4' }} />
                 )}
 
               </article>
@@ -529,8 +533,8 @@ export default function InternalLinkedIn() {
                               borderRadius: 8, overflow: 'hidden', cursor: 'pointer', background: '#EDEBE6',
                               position: 'relative', lineHeight: 0,
                             }}>
-                            <img src={url.replace('w=1200&h=630', 'w=400&h=210')} alt="" loading="lazy"
-                              style={{ width: '100%', display: 'block', aspectRatio: '1200 / 630', objectFit: 'cover' }} />
+                            <img src={url.includes('images.pexels.com') ? url.replace('w=1200&h=630', 'w=400&h=400') : url} alt="" loading="lazy"
+                              style={{ width: '100%', display: 'block', aspectRatio: '1 / 1', objectFit: 'contain', background: '#EDEBE6' }} />
                             {current && (
                               <span style={{ position: 'absolute', left: 6, bottom: 6, background: NAVY, color: '#fff',
                                 fontSize: 11, fontWeight: 600, borderRadius: 999, padding: '2px 8px', lineHeight: 1.5 }}>In use</span>
