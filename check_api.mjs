@@ -76,7 +76,12 @@ for (const p of all) {
 // --- 3. test files do not belong in /api -------------------------------------
 for (const p of all) {
   if (/\.test\.(m?js|ts)$/.test(p)) {
-    errors.push(`${p} is a test file inside /api. Move it to the repo root. Test files here get bundled into the deployment and a top level process.exit() in one is a live hazard.`);
+    // The hazard is the bundling, so .vercelignore settles the severity: an ignored test
+    // file is never uploaded and cannot run in production. It still nags, because a dead
+    // duplicate in /api invites someone to copy the pattern. Delete it.
+    const msg = `${p} is a test file inside /api. Move it to the repo root. Test files here get bundled into the deployment and a top level process.exit() in one is a live hazard.`;
+    if (isIgnored(p)) warnings.push(`${msg} It is in .vercelignore so it will not deploy, but delete it.`);
+    else errors.push(msg);
   }
 }
 

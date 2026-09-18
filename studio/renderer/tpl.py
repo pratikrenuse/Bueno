@@ -674,7 +674,189 @@ def t_number_hero(c, th):
     return img
 
 
+FOCALS = [(fx, fy) for fy in (0.30, 0.45, 0.62) for fx in (0.28, 0.50, 0.72)]
+ZOOMS = (1.0, 1.18, 1.38, 1.62)
+
+
+def _crop(ph, band, fx, fy, zoom=1.0):
+    r = max(W / ph.width, band / ph.height) * zoom
+    big = ph.resize((max(W, int(ph.width * r) + 1), max(band, int(ph.height * r) + 1)),
+                    Image.LANCZOS)
+    x = int((big.width - W) * min(max(fx, 0), 1))
+    y = int((big.height - band) * min(max(fy, 0), 1))
+    return big.crop((x, y, x + W, y + band))
+
+
+def _detail(im):
+    """Mean absolute neighbour difference at 160px. Low means flat, i.e. sky."""
+    g = np.asarray(im.convert("L").resize((160, 160)), float)
+    return float(np.abs(np.diff(g, axis=0)).mean() + np.abs(np.diff(g, axis=1)).mean())
+
+
+def crop_candidates(ph, band):
+    """Every (fx, fy, zoom) crop of this photo, best detail first.
+
+    Fifteen licensed photos cover 105 posts, so each is reused seven times and
+    the reuses have to look like different pictures. Panning alone does not do
+    it: once a photo is scaled to cover 1080x912 there is often almost no slack
+    to pan into, which is why an earlier pass produced near-identical frames.
+    So the candidates vary zoom as well as focal point.
+
+    Detail is what keeps a crop off two thirds of empty sky, which reads as a
+    mistake. It is measured at final size, not on a small proxy, because the
+    caller uses the same numbers studio/check_frames.py checks afterwards and
+    the two have to agree. Each zoom is scaled once and then cropped nine ways,
+    so this stays cheap.
+
+    Returns [(detail, (fx, fy, zoom), thumb64), ...], best detail first.
+    """
+    cands = []
+    if ph is None or np is None:
+        return [(0.0, (fx, fy, z), None) for z in ZOOMS for (fx, fy) in FOCALS]
+    for z in ZOOMS:
+        r = max(W / ph.width, band / ph.height) * z
+        big = ph.resize((max(W, int(ph.width * r) + 1), max(band, int(ph.height * r) + 1)),
+                        Image.LANCZOS)
+        for fx, fy in FOCALS:
+            x = int((big.width - W) * min(max(fx, 0), 1))
+            y = int((big.height - band) * min(max(fy, 0), 1))
+            im = big.crop((x, y, x + W, y + band))
+            cands.append((_detail(im), (fx, fy, z), im.convert("L").resize((64, 64))))
+    cands.sort(key=lambda t: -t[0])
+    return cands
+
+
+def pick_crop(ph, band, start=0):
+    """One crop, good detail, different on each reuse. Returns (fx, fy, zoom)."""
+    c = crop_candidates(ph, band)
+    keep = [spec for d, spec, _ in c if d >= c[0][0] * 0.5][:9] or [c[0][1]]
+    return keep[(start * 4) % len(keep)]
+
+
+def _lockup(img, th, box, dark=True):
+    """Paste the Bueno lockup, whole, centred in `box`. Never crop or re-typeset it."""
+    f = th.t["footer"]
+    x0, y0, x1, y1 = box
+    if f.get("type") == "wordmark_247":
+        d = ImageDraw.Draw(img)
+        fw = th.f("bold", 48)
+        total = sum(tw(t_, fw) for t_ in ("24", "/", "7 SPAIN"))
+        x = x0 + ((x1 - x0) - total) // 2
+        for piece, col in (("24", (255, 255, 255)), ("/", th.c["gold"]), ("7 SPAIN", (255, 255, 255))):
+            d.text((x, (y0 + y1) // 2), piece, font=fw, fill=col, anchor="lm")
+            x += tw(piece, fw)
+        return
+    logo = Image.open(f["logo_path"]).convert("RGBA")
+    lw = min(f.get("logo_width", LOGO_W), int((x1 - x0) * 0.86))
+    lh = round(logo.height * lw / logo.width)
+    logo = logo.resize((lw, lh), Image.LANCZOS)
+    ink = (255, 255, 255, 255) if dark else tuple(th.c["primary"]) + (255,)
+    mark = Image.new("RGBA", logo.size, ink)
+    mark.putalpha(logo.split()[3])
+    img.paste(mark, (x0 + ((x1 - x0) - lw) // 2, (y0 + y1) // 2 - lh // 2), mark)
+
+
+def _warm(shot):
+    """The brand's photography is warm golden Mediterranean light. Hold that."""
+    if np is None:
+        return shot
+    a = np.asarray(shot, float)
+    a = (a - 128) * 1.05 + 128
+    a[:, :, 0] *= 1.028
+    a[:, :, 2] *= 0.985
+    return Image.fromarray(a.clip(0, 255).astype("uint8"))
+
+
+def _scrim(img, y, height, colour, strength=120):
+    """Seat a block on a photo instead of butting it against one."""
+    s = Image.new("RGBA", (W, height), tuple(colour) + (0,))
+    sd = ImageDraw.Draw(s)
+    for i in range(height):
+        sd.line([(0, i), (W, i)], fill=tuple(colour) + (int(strength * (i / height) ** 2),))
+    img.paste(s, (0, y), s)
+
+
+def f_full(ph, th, spec):
+    """Photo to the edges, brand bar at the base. The plainest of the four."""
+    img = Image.new("RGB", (W, H), th.c["canvas"])
+    band = H - FOOT
+    if ph is not None:
+        img.paste(_warm(_crop(ph, band, *spec)), (0, 0))
+        _scrim(img, band - 130, 130, th.c["primary"])
+    ImageDraw.Draw(img).rectangle([0, band, W, H], fill=th.c["primary"])
+    _lockup(img, th, (0, band, W, H))
+    return img
+
+
+def f_inset(ph, th, spec):
+    """Photo inset on an off-white field. Premium European minimalism, the white
+    space doing the work, the lockup in navy on the light ground."""
+    img = Image.new("RGB", (W, H), th.c["canvas"])
+    d = ImageDraw.Draw(img)
+    m, top = 72, 72
+    ph_h = 760
+    if ph is not None:
+        shot = _warm(_crop(ph, ph_h, *spec)).resize((W - 2 * m, ph_h), Image.LANCZOS)
+        img.paste(shot, (m, top))
+    d.rectangle([m, top + ph_h + 26, W - m, top + ph_h + 28], fill=th.c["gold"])
+    _lockup(img, th, (m, top + ph_h + 40, W - m, H - 40), dark=False)
+    return img
+
+
+def f_block(ph, th, spec):
+    """Navy block down the left, photo filling the rest. The navy block is the
+    Bueno signature, and it gives the lockup a clean ground of its own."""
+    img = Image.new("RGB", (W, H), th.c["primary"])
+    bw = 470
+    if ph is not None:
+        shot = _warm(_crop(ph, H, *spec)).resize((W - bw, H), Image.LANCZOS)
+        img.paste(shot, (bw, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, bw, H], fill=th.c["primary"])
+    d.rectangle([bw, 0, bw + 3, H], fill=th.c["gold"])
+    _lockup(img, th, (0, 0, bw, H))
+    return img
+
+
+def f_panel(ph, th, spec):
+    """Photo above, a light blue panel below, brand bar at the base. Light Blue
+    is the brand's card colour, so this is the palette's own layout."""
+    img = Image.new("RGB", (W, H), th.c["highlight"])
+    ph_h = 790
+    if ph is not None:
+        img.paste(_warm(_crop(ph, ph_h, *spec)), (0, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, ph_h, W, H - FOOT], fill=th.c["highlight"])
+    mid = (ph_h + H - FOOT) // 2
+    d.rectangle([(W - 148) // 2, mid - 1, (W + 148) // 2, mid + 2], fill=th.c["gold"])
+    d.rectangle([0, H - FOOT, W, H], fill=th.c["primary"])
+    _lockup(img, th, (0, H - FOOT, W, H))
+    return img
+
+
+FRAMES = {"full": f_full, "inset": f_inset, "block": f_block, "panel": f_panel}
+
+
+def t_brand_frame(c, th):
+    """A licensed photograph under the Bueno lockup. NO TEXT ANYWHERE.
+
+    This is the live LinkedIn image. One file serves all six languages, which is
+    the whole point: copy burned into a picture cannot be translated, so a
+    Norwegian post would go out with an English card over it.
+
+    `frame` picks the layout: full, inset, block or panel. Fifteen licensed
+    photographs cover 105 posts, so the layout varies as well as the crop,
+    and a photograph never appears twice in the same layout.
+    """
+    ph = get_photo(c)
+    frame = FRAMES.get(c.get("frame", "full"), f_full)
+    band = {"full": H - FOOT, "inset": 760, "block": H, "panel": 790}[c.get("frame", "full")]
+    spec = c.get("crop") or pick_crop(ph, band, c.get("crop_start", 0))
+    return frame(ph, th, spec)
+
+
 RENDERERS = {
+    "brand_frame": t_brand_frame,
     "band_rules": t_band_rules, "pill_right": t_pill_right, "band_pills": t_band_pills,
     "rules_only": t_rules_only, "stat_band": t_stat_band, "split_rules": t_split_rules,
     "card_stack": t_card_stack, "quote_band": t_quote_band, "checklist": t_checklist,

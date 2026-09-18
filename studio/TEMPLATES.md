@@ -1,4 +1,30 @@
-# Post image templates (studio/renderer/tpl.py)
+# Studio templates
+
+## brand_frame, the one that goes out
+
+`t_brand_frame` in `studio/renderer/tpl.py`. A licensed photograph under the Bueno
+lockup, no text anywhere. This is what the 105 LinkedIn posts use, because one image
+then serves all six languages. Rendered in bulk by `studio/render_frames.py`, checked by
+`studio/check_frames.py`.
+
+Content keys: `photo` (a filename in `studio/photos-brand`), `frame` (one of `full`,
+`inset`, `block`, `panel`), optional `crop` as `(fx, fy, zoom)`, optional `crop_start` to
+pick a different crop on a reuse. Leave the crop out and `pick_crop` chooses one with
+detail in it.
+
+The four frames exist because fifteen licensed photographs have to cover 105 posts:
+`full` is photo to the edges with the navy bar at the base, `inset` sets the photo on the
+off-white field with a gold rule and the navy lockup, `block` runs a navy block down the
+left with a gold hairline, `panel` puts a light blue panel between photo and bar. All four
+are brand palette only, and all four are text-free.
+
+The footer rule holds here as everywhere: the lockup is pasted whole. Never crop it, never
+re-typeset PROPERTY SIMPLIFIED. If it does not fit, raise `LOGO_W` or `FOOT`.
+
+The twelve card layouts below are retired from the LinkedIn feed and kept for other use.
+Their rendered PNGs are in `studio/archive/text-cards/` and their specs in the
+`linkedin_card_archive` table.
+
 
 Twelve 1080x1080 layouts, all built on the two cards Pratik approved in September 2026:
 the Bueno taxes card (photo band across the top, numbered hairline rows, navy footer block)

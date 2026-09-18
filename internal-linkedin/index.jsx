@@ -442,7 +442,7 @@ export default function InternalLinkedIn() {
                       Property, tax and life in Spain
                     </div>
                     <div style={{ fontSize: 12, color: 'rgba(0,0,0,.6)' }}>
-                      Day {p.day}{p.edited_text ? ' · Edited' : ''}
+                      Day {p.day}
                     </div>
                   </div>
                 </div>
@@ -832,7 +832,6 @@ export default function InternalLinkedIn() {
               <Stat label="English posts" value={posts.length} color={NAVY} />
               <Stat label="With a photo" value={posts.filter(p => p.image_url).length} color={NAVY} />
               <Stat label="Translated rows" value={allRows.filter(r => r.language !== 'en').length} color={NAVY} />
-              <Stat label="Edited by John" value={posts.filter(p => p.edited_text).length} color={NAVY} />
               <Stat label="Words written" value={wordCount.toLocaleString()} color={NAVY} />
             </div>
             <p style={{ fontSize: 12, color: '#8a8fa3', margin: '10px 0 0' }}>

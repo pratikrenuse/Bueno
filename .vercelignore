@@ -44,3 +44,14 @@ api/linkedin/[action].js
 api/internal-packages.js
 api/internal-decide.js
 api/internal-reset.js
+
+# The retired text cards. public/posts now serves the 105 text-free Bueno frames as
+# .jpg; the .png files beside them are the old cards with copy burned in, kept in git
+# and in studio/archive/text-cards for reuse elsewhere. Nothing references them, so they
+# do not need to reach production.
+public/posts/*.png
+
+# A duplicate of the root fit.test.mjs. A test file under /api gets bundled into the
+# deployment, and a top level process.exit() in one is a live hazard, so it must not be
+# uploaded. check_api.mjs still names it until the file is deleted.
+api/_fit.test.mjs

@@ -1,0 +1,10 @@
+# Build output and local render output. studio/out is where render_frames.py and the
+# template renderer write; the files that matter are copied into public/posts.
+dist/
+node_modules/
+studio/out/
+studio/photos-brand/
+studio/photos-brand-rejected/
+
+# macOS finder droppings
+.DS_Store

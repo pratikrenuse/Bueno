@@ -117,6 +117,129 @@ const OPTIONS = {
   'attorneys:15': [8972291,11952455,12898239,16901575,16901576,18816779,5095086,2289180,6076164,6585286,307008,1212611],
 };
 
+
+// The Bueno frame each post actually goes out with: a licensed photograph under the
+// Bueno lockup, no text on the image. One file serves all six languages, which is the
+// point. Rendered by studio/render_frames.py into public/posts, checked by
+// studio/check_frames.py. Text was tried on these cards and dropped on 17 Sept 2026,
+// because burning English copy into the picture broke every non-English post.
+//
+// This map is what keeps the frame as a post's default. A Sync rewrites image_url only
+// when the stored value is not in image_options, so the frame has to be IN the option
+// list or refresh would quietly swap all 105 posts back to a Pexels photograph.
+const FRAME = {
+  'owners:1': 'arras_contract',
+  'owners:2': 'irnr_who_pays',
+  'owners:3': 'squatter_eviction',
+  'owners:4': 'cash_rules',
+  'owners:5': 'tourist_license',
+  'owners:6': 'nota_simple',
+  'owners:7': 'wealth_tax',
+  'owners:8': 'community_rental_ban',
+  'owners:9': 'currency_transfer',
+  'owners:10': 'inheritance_foreign_law',
+  'owners:11': 'bank_guarantee',
+  'owners:12': 'noneu_tax_proposal',
+  'owners:13': 'rental_rule_changes',
+  'owners:14': 'epc_certificates',
+  'owners:15': 'plusvalia',
+  'owners:16': 'buying_fees',
+  'owners:17': 'ibi_deep',
+  'owners:18': 'frozen_account',
+  'owners:19': 'community_fees',
+  'owners:20': 'modelo210_scenarios',
+  'owners:21': 'escritura_notary',
+  'owners:22': 'owners_year',
+  'owners:23': 'free_banking_myth',
+  'owners:24': 'inheritance_tax',
+  'owners:25': 'rural_property',
+  'owners:26': 'late_tax_penalties',
+  'owners:27': 'property_insurance',
+  'owners:28': 'gift_tax',
+  'owners:29': 'extension_deeds',
+  'owners:30': 'brexit_buying',
+  'owners:31': 'retirement_183_line',
+  'owners:32': 'retire_coast_shortlist',
+  'owners:33': 'village_or_city_spain',
+  'owners:34': 's1_before_you_leave',
+  'owners:35': 'october_ibi_month',
+  'owners:36': 'buying_2026_compliance',
+  'owners:37': 'alquiler_opcion_compra',
+  'owners:38': 'seasonal_vs_tourist',
+  'owners:39': 'holiday_home_running_cost',
+  'owners:40': 'costa_blanca_eight_towns',
+  'owners:41': 'property_search_start',
+  'owners:42': 'leasehold_freehold',
+  'owners:43': 'hidden_time_cost',
+  'owners:44': 'landlord_tenant_issues',
+  'owners:45': 'accountant_non_resident',
+  'owners:46': 'nie_to_dni',
+  'owners:47': 'spanish_citizenship',
+  'owners:48': 'credit_card_fees',
+  'owners:49': 'invest_locations',
+  'owners:50': 'utilities_setup',
+  'owners:51': 'solar_panels_costs',
+  'owners:52': 'direct_debit_switch',
+  'owners:53': 'pest_prevention_empty',
+  'owners:54': 'preventative_maintenance',
+  'owners:55': 'healthcare_access_owners',
+  'owners:56': 'seasonal_rental_roi',
+  'owners:57': 'spanish_lifestyle_owner',
+  'owners:58': 'hidden_bank_fees',
+  'owners:59': 'squatter_signals',
+  'owners:60': 'occupation_cover',
+  'agents:1': 'ag_epc_advertising',
+  'agents:2': 'ag_nota_simple_twice',
+  'agents:3': 'ag_arras_window',
+  'agents:4': 'ag_offer_accepted',
+  'agents:5': 'ag_partner_week_after_keys',
+  'agents:6': 'ag_tourist_licence_first',
+  'agents:7': 'ag_seller_debt_certificate',
+  'agents:8': 'ag_3pct_withholding',
+  'agents:9': 'ag_law5768_guarantee',
+  'agents:10': 'ag_partner_utility_bill_text',
+  'agents:11': 'ag_three_fifths_ruling',
+  'agents:12': 'ag_fx_completion_funds',
+  'agents:13': 'ag_rural_land_checks',
+  'agents:14': 'ag_notary_role',
+  'agents:15': 'ag_partner_aftersales_list',
+  'agents:16': 'ag_ibi_attaches',
+  'agents:17': 'ag_true_buying_costs',
+  'agents:18': 'ag_100pct_tax_calm',
+  'agents:19': 'ag_scam_red_flags',
+  'agents:20': 'ag_partner_saying_no',
+  'agents:21': 'ag_market_calendar',
+  'agents:22': 'ag_resale_questions',
+  'agents:23': 'ag_nie_timing',
+  'agents:24': 'ag_paperwork_sequence',
+  'agents:25': 'ag_partner_handover_service',
+  'agents:26': 'ag_unregistered_extensions',
+  'agents:27': 'ag_rental_registration_2025',
+  'agents:28': 'ag_brexit_briefing',
+  'agents:29': 'ag_modelo210_answer',
+  'agents:30': 'ag_partner_99_euros',
+  'attorneys:1': 'at_arras_window',
+  'attorneys:2': 'at_choice_of_law',
+  'attorneys:3': 'at_nonresident_seller',
+  'attorneys:4': 'at_bank_guarantee',
+  'attorneys:5': 'at_partner_unbillable_email',
+  'attorneys:6': 'at_tourist_ban_ruling',
+  'attorneys:7': 'at_succession_tax',
+  'attorneys:8': 'at_notary_role',
+  'attorneys:9': 'at_rural_diligence',
+  'attorneys:10': 'at_partner_after_closing',
+  'attorneys:11': 'at_gift_tax',
+  'attorneys:12': 'at_community_debts',
+  'attorneys:13': 'at_spanish_wills',
+  'attorneys:14': 'at_extension_legalisation',
+  'attorneys:15': 'at_partner_referral_logic',
+};
+
+const frameFor = (audience, day) => {
+  const slug = FRAME[`${audience}:${day}`];
+  return slug ? `/posts/${slug}.jpg` : null;
+};
+
 const RENDER = '?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
 const urlFor = (id) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.${PNG.has(id) ? 'png' : 'jpeg'}${RENDER}`;
@@ -124,7 +247,9 @@ const urlFor = (id) =>
 // Every image this post may use, default first.
 export function imageOptionsFor(audience, day) {
   const ids = OPTIONS[`${audience}:${day}`];
-  return ids ? ids.map(urlFor) : [];
+  const frame = frameFor(audience, day);
+  const pexels = ids ? ids.map(urlFor) : [];
+  return frame ? [frame, ...pexels] : pexels;
 }
 
 // The default. A post with no entry keeps whatever it already had.

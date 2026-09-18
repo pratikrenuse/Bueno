@@ -108,8 +108,11 @@ ok_('a post outside the map keeps whatever it had', imageFor('owners', 999, '/ph
 ok_('and gets null rather than a broken URL', imageFor('owners', 999) === null);
 for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attorneys', 15]]) {
   const u = imageFor(aud, day);
-  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && u.startsWith('https://images.pexels.com/photos/'), String(u));
-  ok_(`${aud} ${day}: renders at LinkedIn's ratio`, /w=1200&h=630&fit=crop$/.test(u), String(u));
+  // The default is the post's own text-free Bueno frame in public/posts, square at
+  // 1080x1080. It is site-relative on purpose: api/_email.js prefixes the site for
+  // email, and the deck resolves it against its own host.
+  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && /^\/posts\/[a-z0-9_]+\.jpg$/.test(u), String(u));
+  ok_(`${aud} ${day}: the frame is a file in public/posts`, !/^https?:/.test(u), String(u));
 }
 
 // Nothing anywhere credits a photographer. The Pexels licence does not ask for it and the
@@ -152,15 +155,22 @@ ok_('the image action exists', /action === 'image'/.test(decideSrc2));
 ok_('and refuses a URL that is not one of the post options',
   /image_options \|\| \[\]\)\.includes\(image_url\)/.test(decideSrc2));
 
-// Every post offers a real choice, and the default is the first of them.
+// Every post offers a real choice. Since 18 September 2026 the default is the
+// post's own Bueno frame, a text-free photograph under the lockup rendered into
+// public/posts, and the twelve Pexels photographs follow it as alternates the
+// reviewer can switch to. The frame has to BE in the list: _lk_refresh.js
+// rewrites image_url whenever the stored value is not one of the options, so a
+// frame outside the list would be swapped back to a Pexels photo on the next Sync.
 const { imageOptionsFor } = await import('./api/_lk_images.js');
 for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attorneys', 15]]) {
   const opts = imageOptionsFor(aud, day);
-  ok_(`${aud} ${day}: twelve images to choose from`, opts.length === 12, String(opts.length));
-  ok_(`${aud} ${day}: no duplicates in the grid`, new Set(opts).size === 12);
+  ok_(`${aud} ${day}: thirteen images to choose from`, opts.length === 13, String(opts.length));
+  ok_(`${aud} ${day}: no duplicates in the grid`, new Set(opts).size === 13);
   ok_(`${aud} ${day}: the default is the first one`, imageFor(aud, day) === opts[0]);
-  ok_(`${aud} ${day}: every option is a real render URL`,
-    opts.every(u => /^https:\/\/images\.pexels\.com\/photos\/\d+\/pexels-photo-\d+\.(jpe?g|png)\?/.test(u)
+  ok_(`${aud} ${day}: the default is the post's own Bueno frame`,
+    /^\/posts\/[a-z0-9_]+\.jpg$/.test(opts[0]), opts[0]);
+  ok_(`${aud} ${day}: every alternate is a real render URL`,
+    opts.slice(1).every(u => /^https:\/\/images\.pexels\.com\/photos\/\d+\/pexels-photo-\d+\.(jpe?g|png)\?/.test(u)
                  && u.endsWith('w=1200&h=630&fit=crop')));
 }
 
