@@ -441,9 +441,6 @@ export default function InternalLinkedIn() {
                     <div style={{ fontSize: 12, color: 'rgba(0,0,0,.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                       Property, tax and life in Spain
                     </div>
-                    <div style={{ fontSize: 12, color: 'rgba(0,0,0,.6)' }}>
-                      Day {p.day}
-                    </div>
                   </div>
                 </div>
 
@@ -790,7 +787,7 @@ export default function InternalLinkedIn() {
             {rejectedAll.map(p => (
               <div key={p.id} style={{ padding: '10px 0', borderBottom: '1px solid #F0EEE8', fontSize: 13 }}>
                 <span style={{ fontWeight: 600, color: NAVY }}>{p.title}</span>
-                <span style={{ color: '#8a8fa3' }}> · {(p.audience || 'owners')} · day {p.day}</span>
+                <span style={{ color: '#8a8fa3' }}> · {(p.audience || 'owners')}</span>
                 <div style={{ color: '#8a1f1f', marginTop: 4, background: '#FAEDED', borderRadius: 8, padding: '7px 10px' }}>{p.reject_comment || 'No note left'}</div>
               </div>
             ))}

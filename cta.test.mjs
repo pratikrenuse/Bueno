@@ -102,17 +102,18 @@ eq('an edited post is not re-appended to', withCta(edited, 'no'), edited);
 
 // The image is resolved the same way: chosen once, stored on the row, never swapped later.
 const { imageFor, IMAGE_COUNT } = await import('./api/_lk_images.js');
+const FRAME_RE = /^(\/posts\/[a-z0-9_]+\.jpg|https:\/\/zwdkmqzlrhwihijgqgzl\.supabase\.co\/storage\/v1\/object\/public\/studio-assets\/linkedin\/photos-v2\/[a-z0-9_]+\.jpg)$/;
 eq('every post has a photograph', IMAGE_COUNT, 105);
 ok_('the refresh resolves the image too', /imageFor\(audience, day/.test(refreshSrc));
 ok_('a post outside the map keeps whatever it had', imageFor('owners', 999, '/photos/x.jpg') === '/photos/x.jpg');
 ok_('and gets null rather than a broken URL', imageFor('owners', 999) === null);
 for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attorneys', 15]]) {
   const u = imageFor(aud, day);
-  // The default is the post's own text-free Bueno frame in public/posts, square at
-  // 1080x1080. It is site-relative on purpose: api/_email.js prefixes the site for
-  // email, and the deck resolves it against its own host.
-  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && /^\/posts\/[a-z0-9_]+\.jpg$/.test(u), String(u));
-  ok_(`${aud} ${day}: the frame is a file in public/posts`, !/^https?:/.test(u), String(u));
+  // The default is the post's own text-free Bueno frame. Posts already approved or
+  // rejected keep the site-relative file in public/posts they were decided on. Every
+  // pending post has its own photograph frame in the public studio-assets bucket.
+  // api/_email.js passes an absolute URL through untouched and prefixes a relative one.
+  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && FRAME_RE.test(u), String(u));
 }
 
 // Nothing anywhere credits a photographer. The Pexels licence does not ask for it and the
@@ -167,8 +168,7 @@ for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attor
   ok_(`${aud} ${day}: thirteen images to choose from`, opts.length === 13, String(opts.length));
   ok_(`${aud} ${day}: no duplicates in the grid`, new Set(opts).size === 13);
   ok_(`${aud} ${day}: the default is the first one`, imageFor(aud, day) === opts[0]);
-  ok_(`${aud} ${day}: the default is the post's own Bueno frame`,
-    /^\/posts\/[a-z0-9_]+\.jpg$/.test(opts[0]), opts[0]);
+  ok_(`${aud} ${day}: the default is the post's own Bueno frame`, FRAME_RE.test(opts[0]), opts[0]);
   ok_(`${aud} ${day}: every alternate is a real render URL`,
     opts.slice(1).every(u => /^https:\/\/images\.pexels\.com\/photos\/\d+\/pexels-photo-\d+\.(jpe?g|png)\?/.test(u)
                  && u.endsWith('w=1200&h=630&fit=crop')));

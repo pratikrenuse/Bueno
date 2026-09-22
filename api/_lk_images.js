@@ -235,10 +235,132 @@ const FRAME = {
   'attorneys:15': 'at_partner_referral_logic',
 };
 
+// 22 September 2026. Every post still pending review goes out as its own photograph with
+// the Bueno lockup at the base and nothing else on the image. One photograph per post,
+// no photograph used twice, none shared with the seven decided posts. Rendered by the
+// lk-photo-frame edge function and hosted in the public studio-assets bucket.
+//
+// The seven posts already approved or rejected keep the frame they were decided on,
+// untouched: arras_contract, wealth_tax, community_rental_ban, bank_guarantee and
+// plusvalia (approved), squatter_eviction and cash_rules (rejected).
+const PHOTO_BASE =
+  'https://zwdkmqzlrhwihijgqgzl.supabase.co/storage/v1/object/public/studio-assets/linkedin/photos-v2/';
+const DECIDED = new Set([
+  'arras_contract', 'wealth_tax', 'community_rental_ban', 'bank_guarantee', 'plusvalia',
+  'squatter_eviction', 'cash_rules',
+]);
+
+// The Pexels photograph under each pending post's frame. Distinct by construction, and
+// posts_images.test.mjs fails if two posts ever share one.
+export const PHOTO_SOURCE = {
+  irnr_who_pays: 6585286,
+  tourist_license: 19075383,
+  nota_simple: 7587923,
+  currency_transfer: 6007018,
+  inheritance_foreign_law: 5470587,
+  noneu_tax_proposal: 307008,
+  rental_rule_changes: 2289180,
+  epc_certificates: 14018340,
+  buying_fees: 14234129,
+  ibi_deep: 16558109,
+  frozen_account: 1212611,
+  community_fees: 19075389,
+  modelo210_scenarios: 3157917,
+  escritura_notary: 11829139,
+  owners_year: 7631185,
+  free_banking_myth: 6295963,
+  inheritance_tax: 16549991,
+  rural_property: 5929769,
+  late_tax_penalties: 9268088,
+  property_insurance: 14205214,
+  gift_tax: 10135367,
+  extension_deeds: 5079145,
+  brexit_buying: 11542659,
+  retirement_183_line: 23938784,
+  retire_coast_shortlist: 5095086,
+  village_or_city_spain: 6076164,
+  s1_before_you_leave: 8669175,
+  october_ibi_month: 16946214,
+  buying_2026_compliance: 20975726,
+  alquiler_opcion_compra: 29150124,
+  seasonal_vs_tourist: 28054849,
+  holiday_home_running_cost: 8465249,
+  costa_blanca_eight_towns: 11631647,
+  property_search_start: 31156673,
+  leasehold_freehold: 30820125,
+  hidden_time_cost: 12194064,
+  landlord_tenant_issues: 12234423,
+  accountant_non_resident: 12225957,
+  nie_to_dni: 36532613,
+  spanish_citizenship: 28905960,
+  credit_card_fees: 12633940,
+  invest_locations: 9510821,
+  utilities_setup: 13246483,
+  solar_panels_costs: 33844732,
+  direct_debit_switch: 30179660,
+  pest_prevention_empty: 19001400,
+  preventative_maintenance: 32200074,
+  healthcare_access_owners: 12898239,
+  seasonal_rental_roi: 9874531,
+  spanish_lifestyle_owner: 13207675,
+  hidden_bank_fees: 12633946,
+  squatter_signals: 19884454,
+  occupation_cover: 36055015,
+  ag_epc_advertising: 8317006,
+  ag_nota_simple_twice: 27993172,
+  ag_arras_window: 38280889,
+  ag_offer_accepted: 16901575,
+  ag_partner_week_after_keys: 11952455,
+  ag_tourist_licence_first: 28586234,
+  ag_seller_debt_certificate: 39257974,
+  ag_3pct_withholding: 1675184,
+  ag_law5768_guarantee: 16946211,
+  ag_partner_utility_bill_text: 28904505,
+  ag_three_fifths_ruling: 31530645,
+  ag_fx_completion_funds: 4819300,
+  ag_rural_land_checks: 7405768,
+  ag_notary_role: 29749216,
+  ag_partner_aftersales_list: 18816779,
+  ag_ibi_attaches: 35808341,
+  ag_true_buying_costs: 18771947,
+  ag_100pct_tax_calm: 30736927,
+  ag_scam_red_flags: 14965658,
+  ag_partner_saying_no: 12113635,
+  ag_market_calendar: 33691573,
+  ag_resale_questions: 33354159,
+  ag_nie_timing: 36609883,
+  ag_paperwork_sequence: 22695684,
+  ag_partner_handover_service: 12256501,
+  ag_unregistered_extensions: 5663203,
+  ag_rental_registration_2025: 13717503,
+  ag_brexit_briefing: 33998589,
+  ag_modelo210_answer: 38758054,
+  ag_partner_99_euros: 11979943,
+  at_arras_window: 22798478,
+  at_choice_of_law: 27397561,
+  at_nonresident_seller: 12307498,
+  at_bank_guarantee: 5857921,
+  at_partner_unbillable_email: 5961887,
+  at_tourist_ban_ruling: 19805956,
+  at_succession_tax: 16743486,
+  at_notary_role: 13869627,
+  at_rural_diligence: 14515702,
+  at_partner_after_closing: 6148878,
+  at_gift_tax: 4050933,
+  at_community_debts: 17740863,
+  at_spanish_wills: 22033617,
+  at_extension_legalisation: 28111987,
+  at_partner_referral_logic: 8972291,
+};
+
 const frameFor = (audience, day) => {
   const slug = FRAME[`${audience}:${day}`];
-  return slug ? `/posts/${slug}.jpg` : null;
+  if (!slug) return null;
+  return DECIDED.has(slug) ? `/posts/${slug}.jpg` : `${PHOTO_BASE}${slug}.jpg`;
 };
+
+export const DECIDED_SLUGS = DECIDED;
+export const PHOTO_FRAME_BASE = PHOTO_BASE;
 
 const RENDER = '?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
 const urlFor = (id) =>
