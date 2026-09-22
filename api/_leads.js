@@ -380,21 +380,27 @@ export async function leadsHandler(req, res, envv) {
   }
 
   if (mode === 'export' || mode === 'purge') {
+    // Reading every stored page one after another took longer than the function is
+    // allowed to run, so the reads now happen in parallel batches, and the caller can
+    // ask for a few towns at a time with &towns=slug,slug.
+    const wanted = req.query.towns ? String(req.query.towns).split(',') : null;
+    const towns = wanted ? TOWNS.filter(t => wanted.includes(t.slug)) : TOWNS;
     const all = [];
     const paths = [];
-    for (const t of TOWNS) {
-      const items = await listObj(url, key, `leads/v1/${t.slug}/`);
+    const lists = await Promise.all(towns.map(t => listObj(url, key, `leads/v1/${t.slug}/`).then(items => ({ t, items }))));
+    for (const { t, items } of lists) {
       for (const it of items || []) {
-        if (!it.name?.endsWith('.json')) continue;
-        const p = `leads/v1/${t.slug}/${it.name}`;
-        paths.push(p);
-        if (mode === 'export') {
-          const o = await readObj(url, key, p);
-          if (o?.rows) all.push(...o.rows);
-        }
+        if (it.name?.endsWith('.json')) paths.push(`leads/v1/${t.slug}/${it.name}`);
+      }
+    }
+    if (mode === 'export') {
+      for (let i = 0; i < paths.length; i += 25) {
+        const objs = await Promise.all(paths.slice(i, i + 25).map(p => readObj(url, key, p).catch(() => null)));
+        for (const o of objs) if (o?.rows) all.push(...o.rows);
       }
     }
     if (mode === 'purge') { await delObj(url, key, paths); return res.status(200).json({ deleted: paths.length }); }
+    if (req.query.format === 'rows') return res.status(200).json({ pages: paths.length, rows: all });
     const { csv, count, without_email } = buildCsv(all, req.query.all === '1');
     if (req.query.format === 'json') return res.status(200).json({ count, without_email, pages: paths.length, csv });
     res.setHeader('Content-Type', 'text/csv; charset=utf-8');
