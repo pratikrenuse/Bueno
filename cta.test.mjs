@@ -102,7 +102,7 @@ eq('an edited post is not re-appended to', withCta(edited, 'no'), edited);
 
 // The image is resolved the same way: chosen once, stored on the row, never swapped later.
 const { imageFor, IMAGE_COUNT } = await import('./api/_lk_images.js');
-const FRAME_RE = /^(\/posts\/[a-z0-9_]+\.jpg|https:\/\/zwdkmqzlrhwihijgqgzl\.supabase\.co\/storage\/v1\/object\/public\/studio-assets\/linkedin\/photos-v2\/[a-z0-9_]+\.jpg)$/;
+const FRAME_RE = /^(\/posts\/[a-z0-9_]+\.jpg|https:\/\/zwdkmqzlrhwihijgqgzl\.supabase\.co\/storage\/v1\/object\/public\/studio-assets\/linkedin\/photos-v3\/[a-z0-9_]+\.jpg)$/;
 eq('every post has a photograph', IMAGE_COUNT, 105);
 ok_('the refresh resolves the image too', /imageFor\(audience, day/.test(refreshSrc));
 ok_('a post outside the map keeps whatever it had', imageFor('owners', 999, '/photos/x.jpg') === '/photos/x.jpg');
