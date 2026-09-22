@@ -38,6 +38,7 @@
 import { fitProfile } from './_fit.js';
 import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
 import { ANY_CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
+import { leadsHandler } from './_leads.js';
 
 const BUCKET = 'directory-cache';
 // Bump when the shape of a stored cell changes. Cached objects live for 30 days, so
@@ -324,12 +325,17 @@ async function fetchFromGoogle(locality, category, googleKey) {
 
 // ---------------------------------------------------------------------------
 
+export const config = { maxDuration: 60 };
+
 export default async function handler(req, res) {
   try {
     const { url, key, google } = env();
 
     if (!url) return res.status(500).json({ error: 'Missing env var: SUPABASE_URL (or VITE_SUPABASE_URL). Add it in Vercel and redeploy.' });
     if (!key) return res.status(500).json({ error: 'Missing env var: SUPABASE_SERVICE_KEY. Add it in Vercel and redeploy.' });
+
+    // Internal B2B lead sourcing (estate agents). Passcode gated, see api/_leads.js.
+    if (req.query.leads) return leadsHandler(req, res, { url, key, google });
 
     // Diagnostics. Read-only, spends no Google credit, answers "is this wired up".
     if (req.query.health === '1') {
