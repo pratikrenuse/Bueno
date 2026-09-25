@@ -81,11 +81,59 @@ export const TOWNS = [
   ['lloret-de-mar', 'Lloret de Mar', 'Costa Brava', 41.700, 2.845, 0],
   ['roses', 'Roses', 'Costa Brava', 42.263, 3.176, 0],
   ['empuriabrava', 'Empuriabrava', 'Costa Brava', 42.247, 3.121, 0],
+  // Second pass, 24 Sep 2026: the rest of the islands, Murcia, more Costa Brava and
+  // Costa Dorada, the inland Costa del Sol towns, and the two cities whose agencies
+  // also sell coastal property.
+  ['mahon', 'Mahón', 'Menorca', 39.889, 4.265, 0],
+  ['ciutadella', 'Ciutadella', 'Menorca', 40.000, 3.838, 0],
+  ['alcudia', 'Alcúdia', 'Mallorca', 39.853, 3.121, 1],
+  ['manacor', 'Manacor', 'Mallorca', 39.569, 3.209, 0],
+  ['santanyi', 'Santanyí', 'Mallorca', 39.354, 3.128, 0],
+  ['santa-eulalia', 'Santa Eulalia del Río', 'Ibiza', 38.984, 1.535, 0],
+  ['san-antonio', 'Sant Antoni de Portmany', 'Ibiza', 38.981, 1.304, 0],
+  ['costa-teguise', 'Costa Teguise', 'Lanzarote', 28.995, -13.500, 0],
+  ['arrecife', 'Arrecife', 'Lanzarote', 28.963, -13.548, 0],
+  ['caleta-de-fuste', 'Caleta de Fuste', 'Fuerteventura', 28.394, -13.862, 0],
+  ['puerto-del-rosario', 'Puerto del Rosario', 'Fuerteventura', 28.500, -13.863, 0],
+  ['morro-jable', 'Morro Jable', 'Fuerteventura', 28.052, -14.352, 0],
+  ['playa-de-las-americas', 'Playa de las Américas', 'Tenerife', 28.058, -16.729, 1],
+  ['golf-del-sur', 'Golf del Sur', 'Tenerife', 28.030, -16.610, 0],
+  ['los-gigantes', 'Los Gigantes', 'Tenerife', 28.243, -16.840, 0],
+  ['el-medano', 'El Médano', 'Tenerife', 28.046, -16.537, 0],
+  ['cartagena', 'Cartagena', 'Costa Cálida', 37.606, -0.987, 0],
+  ['torre-pacheco', 'Torre-Pacheco', 'Costa Cálida', 37.741, -0.951, 1],
+  ['santiago-de-la-ribera', 'Santiago de la Ribera', 'Costa Cálida', 37.796, -0.797, 0],
+  ['murcia', 'Murcia', 'Costa Cálida', 37.987, -1.130, 0],
+  ['el-campello', 'El Campello', 'Costa Blanca', 38.427, -0.401, 0],
+  ['gran-alacant', 'Gran Alacant', 'Costa Blanca South', 38.216, -0.583, 1],
+  ['elche', 'Elche', 'Costa Blanca', 38.265, -0.698, 0],
+  ['gandia', 'Gandía', 'Valencia', 38.968, -0.181, 0],
+  ['oliva', 'Oliva', 'Valencia', 38.919, -0.118, 0],
+  ['garrucha', 'Garrucha', 'Costa de Almería', 37.181, -1.822, 0],
+  ['almeria', 'Almería', 'Costa de Almería', 36.834, -2.464, 0],
+  ['la-cala-de-mijas', 'La Cala de Mijas', 'Costa del Sol', 36.507, -4.702, 1],
+  ['alhaurin-el-grande', 'Alhaurín el Grande', 'Costa del Sol', 36.642, -4.689, 0],
+  ['coin', 'Coín', 'Costa del Sol', 36.659, -4.756, 0],
+  ['ronda', 'Ronda', 'Costa del Sol', 36.742, -5.166, 0],
+  ['rincon-de-la-victoria', 'Rincón de la Victoria', 'Costa del Sol', 36.717, -4.276, 0],
+  ['velez-malaga', 'Vélez-Málaga', 'Costa del Sol', 36.782, -4.101, 0],
+  ['salobrena', 'Salobreña', 'Costa Tropical', 36.744, -3.587, 0],
+  ['blanes', 'Blanes', 'Costa Brava', 41.674, 2.792, 0],
+  ['platja-daro', "Platja d'Aro", 'Costa Brava', 41.817, 3.065, 0],
+  ['lescala', "L'Escala", 'Costa Brava', 42.124, 3.132, 0],
+  ['begur', 'Begur', 'Costa Brava', 41.954, 3.207, 0],
+  ['salou', 'Salou', 'Costa Dorada', 41.076, 1.141, 0],
+  ['cambrils', 'Cambrils', 'Costa Dorada', 41.067, 1.060, 0],
+  ['barcelona', 'Barcelona', 'Barcelona', 41.387, 2.170, 0],
+  ['madrid', 'Madrid', 'Madrid', 40.417, -3.703, 0],
 ].map(([slug, name, region, lat, lng, hub]) => ({ slug, name, region, lat, lng, hub: !!hub }));
 
 // Query 0 finds the market, 1 the English-facing agencies, 2 and 3 the Nordic ones by the
-// words they use for themselves.
-export const QUERIES = ['inmobiliaria', 'real estate agency', 'eiendomsmegler', 'fastighetsmäklare'];
+// words they use for themselves. An agency that names itself in the buyer's language is
+// the pattern worth finding, so 4 to 6 do the same in German, Dutch and Danish.
+// A query's index is part of the cache path, so these are only ever appended to.
+export const QUERIES = ['inmobiliaria', 'real estate agency', 'eiendomsmegler', 'fastighetsmäklare',
+  'immobilienmakler', 'makelaar', 'ejendomsmægler'];
 
 const FIELDS = [
   'places.id', 'places.displayName', 'places.businessStatus', 'places.rating',
