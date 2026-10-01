@@ -35,6 +35,7 @@ Allow: /
 Disallow: /api/
 Disallow: /internal
 Disallow: /internal-linkedin
+Disallow: /newsletter-guides/
 
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;

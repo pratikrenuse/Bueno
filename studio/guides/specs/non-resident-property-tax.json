@@ -1,0 +1,766 @@
+{
+ "slug": "non-resident-property-tax",
+ "file": "Non-Resident-Property-Tax-Spain-2026",
+ "meta_title": {
+  "en": "Non-resident property tax in Spain | Bueno",
+  "no": "Eiendomsskatt for ikke-residenter i Spania | Bueno",
+  "sv": "Fastighetsskatt för icke-residenter i Spanien | Bueno"
+ },
+ "title": {
+  "en": "Non-resident property tax in Spain",
+  "no": "Eiendomsskatt for ikke-residenter i Spania",
+  "sv": "Fastighetsskatt för icke-residenter i Spanien"
+ },
+ "topics": {
+  "en": [
+   "Which of the five owner situations applies to you",
+   "How the tax is worked out from the cadastral value",
+   "A worked example with real numbers",
+   "What changes if you rent your home out",
+   "The three dates to keep in mind and what late filing costs"
+  ],
+  "no": [
+   "Hvilken av de fem eiersituasjonene som gjelder deg",
+   "Hvordan skatten beregnes ut fra matrikkelverdien",
+   "Et regneeksempel med ekte tall",
+   "Hva som endrer seg hvis du leier ut boligen",
+   "De tre datoene du bør huske, og hva for sen levering koster"
+  ],
+  "sv": [
+   "Vilken av de fem ägarsituationerna som gäller dig",
+   "Hur skatten räknas ut från taxeringsvärdet",
+   "Ett räkneexempel med verkliga siffror",
+   "Vad som ändras om du hyr ut din fastighet",
+   "De tre datumen att hålla koll på och vad sen deklaration kostar"
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "cove-house",
+   "eyebrow": {
+    "en": "Your guide to the Modelo 210",
+    "no": "Din guide til Modelo 210",
+    "sv": "Din guide till Modelo 210"
+   },
+   "title": {
+    "en": "Non-resident property tax in Spain",
+    "no": "Eiendomsskatt for ikke-residenter i Spania",
+    "sv": "Fastighetsskatt för icke-residenter i Spanien"
+   },
+   "sub": {
+    "en": "What to file, when it is due and how the tax is worked out, in plain English.",
+    "no": "Hva du skal levere, når fristen er og hvordan skatten beregnes, forklart på en enkel måte.",
+    "sv": "Vad du ska deklarera, när det ska vara klart och hur skatten räknas ut, förklarat på ett enkelt sätt."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Own a home in Spain, but live somewhere else?",
+      "no": "Eier du bolig i Spania, men bor et annet sted?",
+      "sv": "Äger du en fastighet i Spanien men bor någon annanstans?"
+     },
+     "lead": {
+      "en": "Then Spain asks you to file a short tax return for it every year. It is called the Modelo 210, and this guide shows you exactly what applies to you.",
+      "no": "Da må du levere en spansk selvangivelse for boligen hvert år. Den heter Modelo 210, og denne guiden viser deg nøyaktig hva som gjelder for deg.",
+      "sv": "Då behöver du lämna en kort spansk deklaration för den varje år. Den heter Modelo 210, och den här guiden visar exakt vad som gäller för dig."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Every non-resident owner files a Modelo 210 each year.",
+       "no": "Alle eiere som er ikke-residenter leverer en Modelo 210 hvert år.",
+       "sv": "Alla fastighetsägare som är icke-residenter lämnar en Modelo 210 varje år."
+      },
+      {
+       "en": "If you do not rent out your home, last year's return is due by 31 December.",
+       "no": "Leier du ikke ut boligen, skal fjorårets selvangivelse leveres innen 31. desember.",
+       "sv": "Hyr du inte ut din fastighet ska förra årets deklaration lämnas senast den 31 december."
+      },
+      {
+       "en": "If you rent it out, the income is reported between 1 and 20 April.",
+       "no": "Leier du ut boligen, rapporteres inntektene mellom 1. og 20. april.",
+       "sv": "Hyr du ut den redovisas hyresintäkten mellan 1 och 20 april."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "beach-couple",
+     "h": 64
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Your situation",
+      "no": "Din situasjon",
+      "sv": "Din situation"
+     },
+     "num": "01",
+     "title": {
+      "en": "Which one sounds like you?",
+      "no": "Hvilken situasjon passer for deg?",
+      "sv": "Vilken situation passar dig?"
+     },
+     "lead": {
+      "en": "What you file depends on how you used your home during the year. Find the case that fits.",
+      "no": "Hva du skal levere avhenger av hvordan du brukte boligen i løpet av året. Finn situasjonen som passer.",
+      "sv": "Vad du ska deklarera beror på hur du använde fastigheten under året. Hitta den situation som passar."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "I do not rent out my property",
+        "no": "Jeg leier ikke ut eiendommen",
+        "sv": "Jag hyr inte ut min fastighet"
+       },
+       "paras": [
+        {
+         "en": "You file one annual return for non-residents. You report on the previous year, so this year you report and pay the tax for last year.",
+         "no": "Du leverer én årlig selvangivelse for ikke-residenter. Du rapporterer for fjoråret, så i år rapporterer og betaler du skatten for i fjor.",
+         "sv": "Du lämnar en årlig deklaration för icke-residenter. Du redovisar föregående år, så i år deklarerar och betalar du skatten för förra året."
+        },
+        {
+         "en": "The return for 2025 can be filed at any time until 31 December 2026. From the 2026 return onwards, filing opens on 1 April and still closes on 31 December. To pay by direct debit, file by 23 December.",
+         "no": "Selvangivelsen for 2025 kan leveres når som helst frem til 31. desember 2026. Fra og med selvangivelsen for 2026 åpner leveringen 1. april og stenger fortsatt 31. desember. Vil du betale med direkte debitering, må du levere innen 23. desember.",
+         "sv": "Deklarationen för 2025 kan lämnas när som helst fram till den 31 december 2026. Från och med deklarationen för 2026 öppnar inlämningen den 1 april och stänger fortfarande den 31 december. Vill du betala via autogiro behöver du deklarera senast den 23 december."
+        }
+       ],
+       "tag": {
+        "en": "Due by 31 December",
+        "no": "Frist 31. desember",
+        "sv": "Senast 31 december"
+       }
+      },
+      {
+       "title": {
+        "en": "I rent out my property for the whole year",
+        "no": "Jeg leier ut eiendommen hele året",
+        "sv": "Jag hyr ut min fastighet hela året"
+       },
+       "paras": [
+        {
+         "en": "You pay tax on the rental income instead of the property tax. It is reported once a year, covering the whole of the previous year.",
+         "no": "Du betaler skatt på leieinntektene i stedet for eiendomsskatten. Dette rapporteres én gang i året.",
+         "sv": "Du betalar skatt på hyresintäkten i stället för fastighetsskatten. Den redovisas en gång om året och gäller hela föregående år."
+        },
+        {
+         "en": "The return is due between 1 and 20 April. You can pay it yourself, or pay by direct debit if you file by 15 April.",
+         "no": "Skatten rapporteres mellom 1. og 20. april. Du kan betale selv, eller betale via trekk fra kontoen hvis du leverer innen 15. april.",
+         "sv": "Deklarationen ska lämnas mellan 1 och 20 april. Du kan betala själv, eller via autogiro om du deklarerar senast den 15 april."
+        }
+       ],
+       "tag": {
+        "en": "1 to 20 April",
+        "no": "1. til 20. april",
+        "sv": "1 till 20 april"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "numbered",
+     "start": 3,
+     "items": [
+      {
+       "title": {
+        "en": "I rent out my property for part of the year",
+        "no": "Jeg leier ut eiendommen deler av året",
+        "sv": "Jag hyr ut min fastighet en del av året"
+       },
+       "paras": [
+        {
+         "en": "You file the annual return for the days the property was not rented out. You also report the rental income for the days it was let out, between 1 and 20 April.",
+         "no": "Du leverer den årlige selvangivelsen for de dagene eiendommen ikke var utleid. I tillegg rapporterer du leieinntektene for dagene den var utleid, mellom 1. og 20. april.",
+         "sv": "Du lämnar den årliga deklarationen för de dagar fastigheten inte var uthyrd. Du redovisar också hyresintäkten för de dagar den var uthyrd, mellan 1 och 20 april."
+        }
+       ],
+       "tag": {
+        "en": "Two parts, two deadlines",
+        "no": "To deler, to frister",
+        "sv": "Två delar, två deadlines"
+       }
+      },
+      {
+       "title": {
+        "en": "I bought my property this year",
+        "no": "Jeg kjøpte eiendommen i år",
+        "sv": "Jag köpte min fastighet i år"
+       },
+       "paras": [
+        {
+         "en": "If you do not rent it out, your first return is due next year and covers only the days you owned it. Any rental income is reported between 1 and 20 April of the following year.",
+         "no": "Leier du den ikke ut, skal den første selvangivelsen leveres neste år, og denne gjelder bare dagene du eide boligen. Eventuelle leieinntekter rapporteres mellom 1. og 20. april året etter.",
+         "sv": "Hyr du inte ut den ska din första deklaration lämnas nästa år, och den gäller bara de dagar du ägde fastigheten. Eventuell hyresintäkt redovisas mellan 1 och 20 april året därpå."
+        }
+       ],
+       "tag": {
+        "en": "First return due next year",
+        "no": "Første levering neste år",
+        "sv": "Första deklarationen nästa år"
+       }
+      },
+      {
+       "title": {
+        "en": "I sold my property this year",
+        "no": "Jeg solgte eiendommen i år",
+        "sv": "Jag sålde min fastighet i år"
+       },
+       "paras": [
+        {
+         "en": "You still file the annual return for the period up to the date you sold, on the usual timetable the following year. Any rental income is reported between 1 and 20 April of the following year.",
+         "no": "Du leverer fortsatt den årlige selvangivelsen for perioden frem til salgsdatoen, med de vanlige fristene året etter. Eventuelle leieinntekter rapporteres mellom 1. og 20. april året etter.",
+         "sv": "Du lämnar fortfarande den årliga deklarationen för perioden fram till försäljningsdagen, enligt den vanliga tidsplanen året därpå. Eventuell hyresintäkt redovisas mellan 1 och 20 april året därpå."
+        },
+        {
+         "en": "When you sell, the buyer keeps back 3% of the price and pays it to the tax office. You then file a return on the sale within four months. Any gain is taxed at 19%, and if the 3% is more than you owe, you can claim the difference back.",
+         "no": "Ved salg holder kjøperen tilbake 3 % av kjøpesummen og betaler det til skattekontoret. Deretter leverer du en egen selvangivelse for salget innen fire måneder. En eventuell gevinst skattlegges med 19 %, og utgjør de 3 % mer enn du skal betale, kan du kreve forskjellen tilbakebetalt.",
+         "sv": "Vid en försäljning håller köparen inne 3 % av priset och betalar in det till skattemyndigheten. Därefter lämnar du en deklaration för försäljningen inom fyra månader. En eventuell vinst beskattas med 19 %, och om de 3 % är mer än du ska betala kan du begära tillbaka mellanskillnaden."
+        }
+       ],
+       "tag": {
+        "en": "File up to the date of sale",
+        "no": "Lever frem til salgsdatoen",
+        "sv": "Deklarera fram till försäljningsdagen"
+       }
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "coast-hills",
+     "h": 46
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "The calculation",
+      "no": "Beregningen",
+      "sv": "Beräkningen"
+     },
+     "num": "02",
+     "title": {
+      "en": "How your tax is worked out",
+      "no": "Slik beregnes skatten din",
+      "sv": "Så räknas din skatt ut"
+     },
+     "lead": {
+      "en": "If you do not rent out your home, the tax is based on its official value. You only need three numbers.",
+      "no": "Leier du ikke ut boligen, beregnes skatten ut fra den offisielle verdien. Du trenger bare tre tall.",
+      "sv": "Hyr du inte ut din fastighet utgår skatten från dess officiella värde. Du behöver bara tre siffror."
+     }
+    },
+    {
+     "type": "formula",
+     "boxes": [
+      {
+       "label": {
+        "en": "Value",
+        "no": "Verdi",
+        "sv": "Värde"
+       },
+       "value": {
+        "en": "Cadastral value",
+        "no": "Matrikkelverdi",
+        "sv": "Taxeringsvärde"
+       }
+      },
+      {
+       "label": {
+        "en": "Rate",
+        "no": "Sats",
+        "sv": "Andel"
+       },
+       "value": {
+        "en": "2% or 1.1%",
+        "no": "2 % eller 1,1 %",
+        "sv": "2 % eller 1,1 %"
+       }
+      },
+      {
+       "label": {
+        "en": "Tax",
+        "no": "Skatt",
+        "sv": "Skatt"
+       },
+       "value": {
+        "en": "19% or 24%",
+        "no": "19 % eller 24 %",
+        "sv": "19 % eller 24 %"
+       }
+      }
+     ],
+     "result": {
+      "label": {
+       "en": "Result",
+       "no": "Resultat",
+       "sv": "Resultat"
+      },
+      "value": {
+       "en": "Your tax",
+       "no": "Din skatt",
+       "sv": "Din skatt"
+      }
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Cadastral value",
+        "no": "Matrikkelverdi",
+        "sv": "Taxeringsvärde"
+       },
+       {
+        "en": "This is the official value of your property, the valor catastral. You will find it on the bill for your local property tax, the IBI.",
+        "no": "Dette er den offisielle verdien av eiendommen, valor catastral. Du finner den på regningen for den lokale eiendomsskatten, IBI.",
+        "sv": "Det här är fastighetens officiella värde, valor catastral. Du hittar det på räkningen för den lokala fastighetsskatten, IBI."
+       }
+      ],
+      [
+       {
+        "en": "2% or 1.1%",
+        "no": "2 % eller 1,1 %",
+        "sv": "2 % eller 1,1 %"
+       },
+       {
+        "en": "The 2% rate applies as a rule. It drops to 1.1% if your town has revised its cadastral values within the last 10 years.",
+        "no": "Som hovedregel gjelder 2 %. Satsen er 1,1 % hvis kommunen har revidert matrikkelverdiene de siste 10 årene.",
+        "sv": "Som huvudregel gäller 2 %. Andelen sjunker till 1,1 % om kommunen har reviderat sina taxeringsvärden under de senaste 10 åren."
+       }
+      ],
+      [
+       {
+        "en": "19% or 24%",
+        "no": "19 % eller 24 %",
+        "sv": "19 % eller 24 %"
+       },
+       {
+        "en": "Residents of the EU and EEA, including Norway, pay 19%. Everyone else pays 24%, which includes UK residents.",
+        "no": "Innbyggere i EU og EØS, inkludert Norge, betaler 19 %. Alle andre betaler 24 %, også innbyggere i Storbritannia.",
+        "sv": "Bosatta i EU och EES, däribland Sverige och Norge, betalar 19 %. Alla andra betalar 24 %, även bosatta i Storbritannien."
+       }
+      ],
+      [
+       {
+        "en": "Several owners",
+        "no": "Flere eiere",
+        "sv": "Flera ägare"
+       },
+       {
+        "en": "Each owner pays tax on their own share and files their own return. Two owners with half each pay half the tax each.",
+        "no": "Hver eier betaler skatt for sin egen andel og leverer sin egen selvangivelse. To eiere som eier halvparten hver, betaler halvparten av skatten hver.",
+        "sv": "Varje ägare betalar skatt på sin egen andel och lämnar sin egen deklaration. Två ägare som äger hälften var betalar hälften av skatten var."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "This national tax comes on top of your local IBI tax, which you keep paying to the town hall as usual.",
+      "no": "Denne nasjonale skatten kommer i tillegg til den lokale IBI-skatten, som du fortsatt betaler til kommunen som vanlig.",
+      "sv": "Den här nationella skatten kommer utöver din lokala IBI-skatt, som du fortsätter att betala till kommunen som vanligt."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "marina",
+   "num": "03",
+   "eyebrow": {
+    "en": "A worked example",
+    "no": "Et regneeksempel",
+    "sv": "Ett räkneexempel"
+   },
+   "title": {
+    "en": "What it looks like in practice",
+    "no": "Slik ser det ut i praksis",
+    "sv": "Så ser det ut i praktiken"
+   },
+   "lead": {
+    "en": "One owner who lives in Norway has a home that was not rented out. The town has not revised its values in the last 10 years.",
+    "no": "Én eier som bor i Norge har en bolig som ikke var utleid. Kommunen har ikke revidert verdiene de siste 10 årene.",
+    "sv": "En ägare som bor i Sverige har en fastighet som inte var uthyrd. Kommunen har inte reviderat sina värden de senaste 10 åren."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Cadastral value",
+      "no": "Matrikkelverdi",
+      "sv": "Taxeringsvärde"
+     },
+     "note": {
+      "en": "This comes from the IBI bill.",
+      "no": "Denne hentes fra IBI-regningen.",
+      "sv": "Det står på IBI-räkningen."
+     },
+     "value": {
+      "en": "€45,986.60",
+      "no": "€45 986,60",
+      "sv": "€45 986,60"
+     }
+    },
+    {
+     "label": {
+      "en": "Rate applied to the value",
+      "no": "Sats på verdien",
+      "sv": "Andel av värdet"
+     },
+     "note": {
+      "en": "There has been no recent revision.",
+      "no": "Det har ikke vært noen revisjon nylig.",
+      "sv": "Ingen revision har skett nyligen."
+     },
+     "value": {
+      "en": "2%",
+      "no": "2 %",
+      "sv": "2 %"
+     }
+    },
+    {
+     "label": {
+      "en": "Tax rate",
+      "no": "Skattesats",
+      "sv": "Skattesats"
+     },
+     "note": {
+      "en": "The owner lives in the EU/EEA.",
+      "no": "Eieren bor i EU/EØS.",
+      "sv": "Ägaren bor i EU/EES."
+     },
+     "value": {
+      "en": "19%",
+      "no": "19 %",
+      "sv": "19 %"
+     }
+    },
+    {
+     "label": {
+      "en": "Days owned",
+      "no": "Dager eid",
+      "sv": "Dagar ägd"
+     },
+     "note": {
+      "en": "The home was owned all year.",
+      "no": "Boligen var eid hele året.",
+      "sv": "Fastigheten ägdes hela året."
+     },
+     "value": {
+      "en": "365 of 365",
+      "no": "365 av 365",
+      "sv": "365 av 365"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Tax due for the year",
+     "no": "Skatt for året",
+     "sv": "Skatt för året"
+    },
+    "value": {
+     "en": "€174.75",
+     "no": "€174,75",
+     "sv": "€174,75"
+    }
+   },
+   "calc": {
+    "en": "€45,986.60 × 2% × 19% × 365/365 = €174.75",
+    "no": "€45 986,60 × 2 % × 19 % × 365/365 = €174,75",
+    "sv": "€45 986,60 × 2 % × 19 % × 365/365 = €174,75"
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Renting it out",
+      "no": "Utleie",
+      "sv": "Uthyrning"
+     },
+     "num": "04",
+     "title": {
+      "en": "Good to know if you rent out your home",
+      "no": "Verdt å vite hvis du leier ut boligen",
+      "sv": "Bra att veta om du hyr ut din fastighet"
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Rental platforms share your income",
+        "no": "Utleieplattformer deler inntektene dine",
+        "sv": "Uthyrningsplattformar delar dina intäkter"
+       },
+       "text": {
+        "en": "Airbnb, Vrbo and similar platforms report their hosts' rental income to the Spanish tax office every year. This includes lets arranged by a local agent through these platforms, so always declare this income.",
+        "no": "Airbnb, Vrbo og lignende plattformer rapporterer hvert år utleiernes leieinntekter til det spanske skattekontoret. Det gjelder også utleie som en lokal megler ordner via disse plattformene, så oppgi alltid disse inntektene.",
+        "sv": "Airbnb, Vrbo och liknande plattformar rapporterar varje år värdarnas hyresintäkter till den spanska skattemyndigheten. Det gäller även uthyrning som en lokal mäklare ordnar via plattformarna, så redovisa alltid de här intäkterna."
+       }
+      },
+      {
+       "title": {
+        "en": "VAT depends on the services you offer",
+        "no": "Momsen avhenger av tjenestene du tilbyr",
+        "sv": "Momsen beror på vilka tjänster du erbjuder"
+       },
+       "text": {
+        "en": "A holiday let with no extra services has been exempt from VAT. If you offer hotel-style services such as laundry, meals or regular cleaning, the rental carries 10% VAT. A decree approved on 29 September 2026 brings 10% VAT to tourist lets of up to 30 nights from 1 December 2026. Parliament still has to confirm it, so check the latest position before you let.",
+        "no": "Utleie av feriebolig uten ekstra tjenester har vært fritatt for moms. Tilbyr du hotellignende tjenester som klesvask, måltider eller jevnlig rengjøring, blir det 10 % moms på utleien. En lov vedtatt av regjeringen 29. september 2026 innfører 10 % moms på turistutleie på inntil 30 netter fra 1. desember 2026. Parlamentet må fortsatt bekrefte den, så sjekk hva som gjelder før du leier ut.",
+        "sv": "Uthyrning av semesterbostad utan extra tjänster har varit momsfri. Erbjuder du hotelliknande tjänster som tvätt, måltider eller städning blir det 10 % moms. Ett dekret från den 29 september 2026 inför 10 % moms på turistuthyrning på upp till 30 nätter från den 1 december 2026. Parlamentet måste bekräfta det, så kontrollera vad som gäller innan du hyr ut."
+       }
+      },
+      {
+       "title": {
+        "en": "Subletting changes the picture",
+        "no": "Framleie endrer bildet",
+        "sv": "Andrahandsuthyrning ändrar bilden"
+       },
+       "text": {
+        "en": "If an agent or platform can rent out your home without you under a sublease, the rental counts as commercial and carries 21% VAT. Many owners have guests pay them directly, so VAT only applies to the platform's fee.",
+        "no": "Kan en megler eller plattform leie ut boligen uten deg gjennom en framleieavtale, regnes utleien som kommersiell, og det blir 21 % moms. Mange eiere lar gjestene betale leien direkte til dem, slik at moms bare gjelder gebyret til plattformen.",
+        "sv": "Om en mäklare eller plattform kan hyra ut fastigheten utan dig genom ett andrahandsavtal räknas uthyrningen som kommersiell, och då blir det 21 % moms. Många ägare låter gästerna betala direkt till dem, så att moms bara gäller plattformens avgift."
+       }
+      },
+      {
+       "title": {
+        "en": "EU and EEA owners can deduct costs",
+        "no": "Innbyggere i EU og EØS kan trekke fra kostnader",
+        "sv": "Ägare i EU och EES kan göra avdrag för kostnader"
+       },
+       "text": {
+        "en": "EU and EEA residents can deduct costs directly linked to the rental, such as IBI, community fees, insurance and repairs, for the days it was let. They then pay 19% on the net amount. The costs are itemised on the return, so keep every invoice. Everyone else, including UK residents, pays 24% on the full rental income.",
+        "no": "Innbyggere i EU og EØS kan trekke fra kostnader som er direkte knyttet til utleien, som IBI, fellesutgifter, forsikring og reparasjoner, for dagene boligen var utleid. Deretter betaler de 19 % av nettobeløpet. Kostnadene spesifiseres i selvangivelsen, så ta vare på alle fakturaer. Alle andre, også innbyggere i Storbritannia, betaler 24 % av hele leieinntekten.",
+        "sv": "Bosatta i EU och EES kan dra av kostnader som hör direkt till uthyrningen, som IBI, samfällighetsavgifter, försäkring och reparationer, för de dagar fastigheten var uthyrd. De betalar sedan 19 % på nettobeloppet. Kostnaderna specificeras i deklarationen, så spara alla fakturor. Alla andra, även bosatta i Storbritannien, betalar 24 % på hela hyresintäkten."
+       }
+      },
+      {
+       "title": {
+        "en": "Check your home country too",
+        "no": "Husk skatten i Norge også",
+        "sv": "Kontrollera skatten i Sverige också"
+       },
+       "text": {
+        "en": "Your home country may also tax this income. Spanish tax you have paid can usually be credited, so keep your proof of payment.",
+        "no": "Leier du ut en fritidsbolig i Spania som du også bruker selv, skattlegges 85 % av leieinntektene over 15 000 kr per år i Norge. Skatt du har betalt i Spania kommer til fradrag.",
+        "sv": "Sverige kan också beskatta intäkten. Skatt som du har betalat i Spanien kan normalt räknas av, så spara ditt betalningsbevis."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Key dates",
+      "no": "Viktige datoer",
+      "sv": "Viktiga datum"
+     },
+     "num": "05",
+     "title": {
+      "en": "Three dates to keep in mind",
+      "no": "Tre datoer du bør huske",
+      "sv": "Tre datum att hålla koll på"
+     }
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "1 April",
+        "no": "1. april",
+        "sv": "1 april"
+       },
+       "text": {
+        "en": "From 2027, filing opens for last year's return on homes that are not rented out.",
+        "no": "Fra 2027 åpner leveringen av fjorårets selvangivelse for boliger som ikke leies ut.",
+        "sv": "Från 2027 öppnar deklarationen för förra året för fastigheter som inte hyrs ut."
+       }
+      },
+      {
+       "date": {
+        "en": "20 April",
+        "no": "20. april",
+        "sv": "20 april"
+       },
+       "text": {
+        "en": "Rental income from the previous year is reported and paid by this date. File by 15 April to pay by direct debit.",
+        "no": "Leieinntekter fra året før rapporteres og betales innen denne datoen. Lever innen 15. april hvis du vil betale med direkte debitering.",
+        "sv": "Hyresintäkt från föregående år redovisas och betalas senast detta datum. Deklarera senast 15 april om du vill betala via autogiro."
+       }
+      },
+      {
+       "date": {
+        "en": "31 December",
+        "no": "31. desember",
+        "sv": "31 december"
+       },
+       "text": {
+        "en": "The return for homes that are not rented out is due by this date. File by 23 December to pay by direct debit.",
+        "no": "Selvangivelsen for boliger som ikke leies ut skal leveres innen denne datoen. Lever innen 23. desember hvis du vil betale med direkte debitering.",
+        "sv": "Deklarationen för fastigheter som inte hyrs ut ska vara inlämnad senast detta datum. Deklarera senast 23 december om du vill betala via autogiro."
+       }
+      }
+     ]
+    },
+    {
+     "type": "rates",
+     "title": {
+      "en": "If a return is filed late",
+      "no": "Hvis selvangivelsen leveres for sent",
+      "sv": "Om deklarationen lämnas för sent"
+     },
+     "intro": {
+      "en": "Filing on time is the easiest route. If a return does slip, coming forward yourself always costs less, and paying in full when you file usually cuts the surcharge by 25%.",
+      "no": "Å levere i tide er det enkleste. Blir det likevel forsinket, koster det alltid mindre å melde fra selv, og betaler du alt når du leverer, blir tillegget vanligvis redusert med 25 %.",
+      "sv": "Att deklarera i tid är enklast. Om det ändå blir sent kostar det alltid mindre att själv höra av sig, och betalar du allt när du deklarerar sänks tillägget normalt med 25 %."
+     },
+     "rows": [
+      [
+       {
+        "en": "1% to 12%",
+        "no": "1 til 12 %",
+        "sv": "1 till 12 %"
+       },
+       {
+        "en": "If you file up to 12 months late of your own accord, a surcharge of 1% is added, plus 1% for each full month of delay.",
+        "no": "Leverer du inntil 12 måneder for sent på eget initiativ, kommer et tillegg på 1 %, pluss 1 % for hver hele måned forsinkelsen varer.",
+        "sv": "Deklarerar du upp till 12 månader för sent på eget initiativ tillkommer ett tillägg på 1 %, plus 1 % för varje hel månads försening."
+       }
+      ],
+      [
+       {
+        "en": "15%",
+        "no": "15 %",
+        "sv": "15 %"
+       },
+       {
+        "en": "If you file more than 12 months late of your own accord, a 15% surcharge is added, plus late-payment interest.",
+        "no": "Leverer du mer enn 12 måneder for sent på eget initiativ, kommer et tillegg på 15 %, pluss forsinkelsesrenter.",
+        "sv": "Deklarerar du mer än 12 månader för sent på eget initiativ tillkommer ett tillägg på 15 %, plus dröjsmålsränta."
+       }
+      ],
+      [
+       {
+        "en": "50% or more",
+        "no": "50 % eller mer",
+        "sv": "50 % eller mer"
+       },
+       {
+        "en": "If the tax office contacts you first, the penalty starts at 50% of the unpaid tax, on top of the original bill.",
+        "no": "Tar skattekontoret kontakt først, starter boten på 50 % av den ubetalte skatten, i tillegg til den opprinnelige skatten.",
+        "sv": "Hör skattemyndigheten av sig först börjar straffavgiften på 50 % av den obetalda skatten, utöver den ursprungliga skatten."
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "06",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno tax filing",
+    "no": "Innlevering med Bueno",
+    "sv": "Deklaration med Bueno"
+   },
+   "title": {
+    "en": "Would you rather hand it over?",
+    "no": "Vil du heller overlate det til oss?",
+    "sv": "Vill du hellre lämna över det till oss?"
+   },
+   "lead": {
+    "en": "Bueno is a registered partner of the Spanish tax office. We can file your Modelo 210 for you, in your language.",
+    "no": "Bueno er registrert partner hos det spanske skattekontoret. Vi kan levere din Modelo 210 for deg, og vi snakker norsk.",
+    "sv": "Bueno är registrerad partner hos den spanska skattemyndigheten. Vi kan lämna din Modelo 210 åt dig, och vi pratar svenska."
+   },
+   "steps": [
+    {
+     "en": "We work out the tax you owe.",
+     "no": "Vi beregner skatten du skal betale.",
+     "sv": "Vi räknar ut skatten du ska betala."
+    },
+    {
+     "en": "We file the return on your behalf.",
+     "no": "Vi leverer selvangivelsen på dine vegne.",
+     "sv": "Vi lämnar deklarationen åt dig."
+    },
+    {
+     "en": "The tax is paid from your IBAN account.",
+     "no": "Skatten belastes den spanske IBAN-kontoen din.",
+     "sv": "Skatten dras från ditt spanska IBAN-konto."
+    },
+    {
+     "en": "We keep your details, so next year is covered.",
+     "no": "Vi tar vare på opplysningene dine, så neste år er ordnet.",
+     "sv": "Vi sparar dina uppgifter, så att nästa år också är ordnat."
+    }
+   ],
+   "price": {
+    "en": "From €50",
+    "no": "Fra €50",
+    "sv": "Från €50"
+   },
+   "price_note": {
+    "en": "The price depends on the number of owners and properties.",
+    "no": "Prisen avhenger av antall eiere og eiendommer.",
+    "sv": "Priset beror på antalet ägare och fastigheter."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

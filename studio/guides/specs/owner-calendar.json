@@ -1,0 +1,812 @@
+{
+ "slug": "owner-calendar",
+ "file": "Your-Year-As-A-Spanish-Property-Owner",
+ "meta_title": {
+  "en": "Your year as a Spanish property owner: the 2027 calendar | Bueno",
+  "no": "Ditt år som boligeier i Spania: kalenderen for 2027 | Bueno",
+  "sv": "Ditt år som fastighetsägare i Spanien: kalendern för 2027 | Bueno"
+ },
+ "title": {
+  "en": "Your year as a Spanish property owner: the 2027 calendar",
+  "no": "Ditt år som boligeier i Spania: kalenderen for 2027",
+  "sv": "Ditt år som fastighetsägare i Spanien: kalendern för 2027"
+ },
+ "topics": {
+  "en": [
+   "What to check in winter, from IBI to direct debits",
+   "The new 2027 dates for your Modelo 210",
+   "The spring and summer jobs, from the community meeting to the cadastral value",
+   "How to renew or change your home insurance on time",
+   "The paperwork worth keeping in one place"
+  ],
+  "no": [
+   "Hva du bør sjekke om vinteren, fra IBI til trekk fra kontoen",
+   "De nye datoene for Modelo 210 i 2027",
+   "Vår- og sommeroppgavene, fra sameiemøtet til matrikkelverdien",
+   "Slik fornyer eller bytter du boligforsikring i tide",
+   "Papirene som er verdt å samle på ett sted"
+  ],
+  "sv": [
+   "Vad du bör kontrollera på vintern, från IBI till autogiro",
+   "De nya datumen för Modelo 210 under 2027",
+   "Vårens och sommarens uppgifter, från stämman till taxeringsvärdet",
+   "Så förnyar eller byter du hemförsäkring i tid",
+   "Papperen som är värda att samla på ett ställe"
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "sunset-couple",
+   "eyebrow": {
+    "en": "Your guide to the year ahead",
+    "no": "Din guide til året som kommer",
+    "sv": "Din guide till året som kommer"
+   },
+   "title": {
+    "en": "Your year as a Spanish property owner",
+    "no": "Ditt år som boligeier i Spania",
+    "sv": "Ditt år som fastighetsägare i Spanien"
+   },
+   "sub": {
+    "en": "The 2027 calendar: every filing, payment and good habit, season by season, so nothing about your home in Spain takes you by surprise.",
+    "no": "Kalenderen for 2027: alle innleveringer, betalinger og gode vaner, sesong for sesong, slik at ingenting ved boligen i Spania overrasker deg.",
+    "sv": "Kalendern för 2027: alla deklarationer, betalningar och goda vanor, säsong för säsong, så att inget kring din fastighet i Spanien överraskar dig."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "A calmer year with your Spanish home",
+      "no": "Et roligere år med boligen i Spania",
+      "sv": "Ett lugnare år med din fastighet i Spanien"
+     },
+     "lead": {
+      "en": "Owning a home in Spain comes with a handful of yearly tasks. None of them is difficult, but they are spread across the year and set by different offices. This guide puts them in one calendar, so you always know what comes next.",
+      "no": "Å eie bolig i Spania følger med en håndfull årlige oppgaver. Ingen av dem er vanskelige, men de er spredt utover året og fastsettes av ulike kontorer. Denne guiden samler dem i én kalender, slik at du alltid vet hva som kommer.",
+      "sv": "Att äga en fastighet i Spanien innebär en handfull årliga uppgifter. Ingen av dem är svår, men de är utspridda över året och bestäms av olika myndigheter. Den här guiden samlar dem i en kalender, så att du alltid vet vad som kommer härnäst."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "From 2027, the Modelo 210 for a home you do not let opens on 1 April instead of 1 January.",
+       "no": "Fra 2027 åpner Modelo 210 for en bolig du ikke leier ut 1. april i stedet for 1. januar.",
+       "sv": "Från 2027 öppnar Modelo 210 för en fastighet du inte hyr ut den 1 april i stället för den 1 januari."
+      },
+      {
+       "en": "Local taxes such as IBI and rubbish tax follow dates set by your own town hall.",
+       "no": "Lokale skatter som IBI og renovasjonsavgift følger datoer som kommunen din fastsetter.",
+       "sv": "Lokala skatter som IBI och sophämtningsavgift följer datum som din egen kommun bestämmer."
+      },
+      {
+       "en": "A funded account and a tidy folder of papers take care of most of the year.",
+       "no": "En konto med dekning og en ryddig mappe med papirer tar seg av det meste av året.",
+       "sv": "Ett konto med täckning och en ordnad pärm med papper tar hand om det mesta av året."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "coast-hills",
+     "h": 60
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "January to March",
+      "no": "Januar til mars",
+      "sv": "Januari till mars"
+     },
+     "num": "01",
+     "title": {
+      "en": "Winter: set up the year",
+      "no": "Vinter: legg til rette for året",
+      "sv": "Vinter: förbered året"
+     },
+     "lead": {
+      "en": "Very little has to be filed in winter. It is the best time to check that the payments for the year ahead are in place.",
+      "no": "Svært lite må leveres om vinteren. Det er den beste tiden for å sjekke at betalingene for året er på plass.",
+      "sv": "Väldigt lite måste deklareras på vintern. Det är den bästa tiden att kontrollera att betalningarna för året är på plats."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "IBI is fixed on 1 January",
+        "no": "IBI fastsettes 1. januar",
+        "sv": "IBI bestäms den 1 januari"
+       },
+       "paras": [
+        {
+         "en": "Whoever owns the home on 1 January is liable for the whole year's local property tax. Your town hall will tell you later in the year when it is collected.",
+         "no": "Den som eier boligen 1. januar, skal betale hele årets lokale eiendomsskatt. Kommunen gir beskjed senere i året om når den kreves inn.",
+         "sv": "Den som äger fastigheten den 1 januari betalar hela årets lokala fastighetsskatt. Kommunen meddelar senare under året när den tas ut."
+        }
+       ],
+       "tag": {
+        "en": "1 January",
+        "no": "1. januar",
+        "sv": "1 januari"
+       }
+      },
+      {
+       "title": {
+        "en": "Check every direct debit",
+        "no": "Sjekk alle trekk fra kontoen",
+        "sv": "Kontrollera alla autogiron"
+       },
+       "paras": [
+        {
+         "en": "Power, water, the community and the town hall can all change their amounts in the new year. Make sure the account they come from has room for them.",
+         "no": "Strøm, vann, sameiet og kommunen kan alle endre beløpene sine ved nyttår. Sørg for at kontoen de trekkes fra har dekning.",
+         "sv": "El, vatten, samfälligheten och kommunen kan alla ändra sina belopp vid årsskiftet. Se till att kontot de dras från har täckning."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Gather last year's paperwork",
+        "no": "Samle fjorårets papirer",
+        "sv": "Samla förra årets papper"
+       },
+       "paras": [
+        {
+         "en": "Put last year's IBI receipt, community statements and any rental invoices in one folder. You will need them for the spring returns.",
+         "no": "Legg fjorårets IBI-kvittering, oppgjør fra sameiet og eventuelle fakturaer fra utleie i én mappe. Du trenger dem til vårens selvangivelser.",
+         "sv": "Lägg förra årets IBI-kvitto, besked från samfälligheten och eventuella fakturor från uthyrning i en pärm. Du behöver dem till vårens deklarationer."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Letting short-term? Check your region",
+        "no": "Korttidsutleie? Sjekk regionen din",
+        "sv": "Korttidsuthyrning? Kontrollera din region"
+       },
+       "paras": [
+        {
+         "en": "Spain's Supreme Court annulled the national register for short-term lets in May 2026. Your region's tourist registration rules still apply, so check them before the season.",
+         "no": "Spanias høyesterett opphevet det nasjonale registeret for korttidsutleie i mai 2026. Regionens regler for turistregistrering gjelder fortsatt, så sjekk dem før sesongen.",
+         "sv": "Spaniens högsta domstol upphävde det nationella registret för korttidsuthyrning i maj 2026. Din regions regler för turistregistrering gäller fortfarande, så kontrollera dem före säsongen."
+        }
+       ],
+       "tag": {
+        "en": "Only if you let",
+        "no": "Bare ved utleie",
+        "sv": "Bara vid uthyrning"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "April to June",
+      "no": "April til juni",
+      "sv": "April till juni"
+     },
+     "num": "02",
+     "title": {
+      "en": "Spring: the tax returns",
+      "no": "Vår: selvangivelsene",
+      "sv": "Vår: deklarationerna"
+     },
+     "lead": {
+      "en": "New rules from the Spanish tax office move both Modelo 210 returns to start in April from 2027. There is one return a year for each, never a quarterly one.",
+      "no": "Nye regler fra det spanske skattekontoret gjør at begge Modelo 210-selvangivelsene starter i april fra 2027. Det er én selvangivelse i året for hver, aldri kvartalsvis.",
+      "sv": "Nya regler från den spanska skattemyndigheten gör att båda deklarationerna i Modelo 210 börjar i april från 2027. Det är en deklaration om året för var och en, aldrig kvartalsvis."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "If you let your home: 1 to 20 April",
+        "no": "Leier du ut boligen: 1. til 20. april",
+        "sv": "Hyr du ut fastigheten: 1 till 20 april"
+       },
+       "paras": [
+        {
+         "en": "Rental income from 2026 is reported in one return. To pay it by direct debit, file by 15 April.",
+         "no": "Leieinntekter fra 2026 rapporteres i én selvangivelse. Vil du betale med trekk fra kontoen, må du levere innen 15. april.",
+         "sv": "Hyresintäkter från 2026 redovisas i en deklaration. Vill du betala via autogiro ska du deklarera senast den 15 april."
+        }
+       ],
+       "tag": {
+        "en": "Direct debit by 15 April",
+        "no": "Trekk innen 15. april",
+        "sv": "Autogiro senast 15 april"
+       }
+      },
+      {
+       "title": {
+        "en": "If you do not let it: from 1 April",
+        "no": "Leier du ikke ut: fra 1. april",
+        "sv": "Hyr du inte ut: från 1 april"
+       },
+       "paras": [
+        {
+         "en": "The return for 2026 can be filed from 1 April to 31 December 2027. Filing in spring simply gets it out of the way.",
+         "no": "Selvangivelsen for 2026 kan leveres fra 1. april til 31. desember 2027. Leverer du om våren, er den rett og slett unnagjort.",
+         "sv": "Deklarationen för 2026 kan lämnas från 1 april till 31 december 2027. Lämnar du den på våren är den helt enkelt avklarad."
+        }
+       ],
+       "tag": {
+        "en": "New in 2027",
+        "no": "Nytt i 2027",
+        "sv": "Nytt 2027"
+       }
+      },
+      {
+       "title": {
+        "en": "Get the home ready for summer",
+        "no": "Gjør boligen klar for sommeren",
+        "sv": "Gör fastigheten redo för sommaren"
+       },
+       "paras": [
+        {
+         "en": "Service the air conditioning, check the pool and garden, and test the alarm before the busy months. Tradespeople are easier to book in spring.",
+         "no": "Få service på klimaanlegget, sjekk basseng og hage og test alarmen før de travle månedene. Håndverkere er lettere å få tak i om våren.",
+         "sv": "Serva luftkonditioneringen, kontrollera pool och trädgård och testa larmet före de intensiva månaderna. Hantverkare är lättare att boka på våren."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Wealth tax only concerns owners whose net assets in Spain are above €700,000, or whose assets in Spain are worth more than €2 million in total. Most owners never need to file it.",
+      "no": "Formuesskatt gjelder bare eiere med nettoformue i Spania over €700 000, eller med eiendeler i Spania verdt mer enn €2 millioner til sammen. De fleste eiere trenger aldri å levere den.",
+      "sv": "Förmögenhetsskatt gäller bara ägare med en nettoförmögenhet i Spanien över €700 000, eller med tillgångar i Spanien värda mer än €2 miljoner totalt. De flesta ägare behöver aldrig deklarera den."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "July to September",
+      "no": "Juli til september",
+      "sv": "Juli till september"
+     },
+     "num": "03",
+     "title": {
+      "en": "Summer: the local bills and the community",
+      "no": "Sommer: lokale regninger og sameiet",
+      "sv": "Sommar: lokala räkningar och samfälligheten"
+     },
+     "lead": {
+      "en": "Many town halls collect their local taxes in the second half of the year, and summer is when many owners are in Spain to deal with them.",
+      "no": "Mange kommuner krever inn de lokale skattene i andre halvår, og om sommeren er mange eiere i Spania og kan ta seg av dem.",
+      "sv": "Många kommuner tar ut sina lokala skatter under andra halvåret, och på sommaren är många ägare i Spanien och kan ta hand om dem."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "IBI, the local property tax",
+        "no": "IBI, den lokale eiendomsskatten",
+        "sv": "IBI, den lokala fastighetsskatten"
+       },
+       "text": {
+        "en": "Each town hall sets its own payment period. The dates are printed on your bill, the recibo, and a direct debit means it is paid even if the letter never reaches you.",
+        "no": "Hver kommune fastsetter sin egen betalingsperiode. Datoene står på regningen, recibo, og med trekk fra kontoen blir den betalt selv om brevet aldri når deg.",
+        "sv": "Varje kommun bestämmer sin egen betalningsperiod. Datumen står på räkningen, recibo, och med autogiro blir den betald även om brevet aldrig når dig."
+       }
+      },
+      {
+       "title": {
+        "en": "Rubbish tax, the basura",
+        "no": "Renovasjonsavgift, basura",
+        "sv": "Sophämtningsavgift, basura"
+       },
+       "text": {
+        "en": "This is also set locally. Some towns add it to the IBI bill and others send it on its own, so check which applies where you are.",
+        "no": "Også denne fastsettes lokalt. Noen kommuner legger den på IBI-regningen, andre sender den separat, så sjekk hva som gjelder der du bor.",
+        "sv": "Även den bestäms lokalt. Vissa kommuner lägger den på IBI-räkningen och andra skickar den separat, så kontrollera vad som gäller där du är."
+       }
+      },
+      {
+       "title": {
+        "en": "Community fees and the annual meeting",
+        "no": "Fellesutgifter og årsmøtet",
+        "sv": "Samfällighetsavgifter och årsstämman"
+       },
+       "text": {
+        "en": "By law the owners' meeting is held at least once a year to approve the budget and the accounts. If you cannot attend, you can give someone a written proxy to vote for you.",
+        "no": "Etter loven holdes sameiermøtet minst én gang i året for å godkjenne budsjettet og regnskapet. Kan du ikke delta, kan du gi noen en skriftlig fullmakt til å stemme for deg.",
+        "sv": "Enligt lag hålls ägarnas stämma minst en gång om året för att godkänna budget och räkenskaper. Kan du inte delta kan du ge någon en skriftlig fullmakt att rösta åt dig."
+       }
+      },
+      {
+       "title": {
+        "en": "Check your cadastral value",
+        "no": "Sjekk matrikkelverdien",
+        "sv": "Kontrollera taxeringsvärdet"
+       },
+       "text": {
+        "en": "The valor catastral is on your IBI bill and in the Catastro's online office. It is the figure behind both your IBI and your Modelo 210, so it is worth checking that the size and use of your home are recorded correctly.",
+        "no": "Valor catastral står på IBI-regningen og i Catastros nettjeneste. Det er tallet bak både IBI og Modelo 210, så det lønner seg å sjekke at størrelsen og bruken av boligen er registrert riktig.",
+        "sv": "Valor catastral står på IBI-räkningen och i Catastros e-tjänst. Det är siffran bakom både din IBI och din Modelo 210, så det lönar sig att kontrollera att fastighetens storlek och användning är rätt registrerade."
+       }
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "marina",
+     "h": 44
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "October to December",
+      "no": "Oktober til desember",
+      "sv": "Oktober till december"
+     },
+     "num": "04",
+     "title": {
+      "en": "Autumn: close the year well",
+      "no": "Høst: avslutt året godt",
+      "sv": "Höst: avsluta året väl"
+     },
+     "lead": {
+      "en": "The last months are about leaving the home safe for winter and making sure the year's return is filed.",
+      "no": "De siste månedene handler om å la boligen stå trygt gjennom vinteren og sørge for at årets selvangivelse er levert.",
+      "sv": "De sista månaderna handlar om att lämna fastigheten säker över vintern och se till att årets deklaration är inlämnad."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Look at your insurance before it renews",
+        "no": "Se på forsikringen før den fornyes",
+        "sv": "Titta på försäkringen innan den förnyas"
+       },
+       "paras": [
+        {
+         "en": "Spanish home insurance renews automatically. To cancel or change it, tell the insurer in writing at least one month before the renewal date.",
+         "no": "Spansk boligforsikring fornyes automatisk. Vil du si den opp eller bytte, må du gi forsikringsselskapet skriftlig beskjed minst én måned før fornyelsesdatoen.",
+         "sv": "Spansk hemförsäkring förnyas automatiskt. Vill du säga upp eller byta den ska du meddela försäkringsbolaget skriftligt minst en månad före förnyelsedagen."
+        }
+       ],
+       "tag": {
+        "en": "One month's notice",
+        "no": "Én måneds varsel",
+        "sv": "En månads varsel"
+       }
+      },
+      {
+       "title": {
+        "en": "Prepare the home for winter",
+        "no": "Gjør boligen klar for vinteren",
+        "sv": "Gör fastigheten redo för vintern"
+       },
+       "paras": [
+        {
+         "en": "Turn off the water, put out moisture absorbers and ask someone to look in while you are away. Our winter guide covers each step.",
+         "no": "Steng vannet, sett ut fuktsluk og be noen se innom mens du er borte. Vinterguiden vår går gjennom hvert steg.",
+         "sv": "Stäng av vattnet, ställ ut fuktslukare och be någon titta till fastigheten medan du är borta. Vår vinterguide går igenom varje steg."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "File the return for a home you do not let",
+        "no": "Lever selvangivelsen for en bolig du ikke leier ut",
+        "sv": "Lämna deklarationen för en fastighet du inte hyr ut"
+       },
+       "paras": [
+        {
+         "en": "The Modelo 210 for 2026 is due by 31 December 2027. To pay it by direct debit, file by 23 December.",
+         "no": "Modelo 210 for 2026 skal leveres innen 31. desember 2027. Vil du betale med trekk fra kontoen, må den leveres innen 23. desember.",
+         "sv": "Modelo 210 för 2026 ska vara inlämnad senast den 31 december 2027. Vill du betala via autogiro ska den lämnas senast den 23 december."
+        }
+       ],
+       "tag": {
+        "en": "By 31 December",
+        "no": "Innen 31. desember",
+        "sv": "Senast 31 december"
+       }
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Before 2027 begins: the return for 2025 still follows the old timetable and is due by 31 December 2026, or 23 December 2026 to pay by direct debit.",
+      "no": "Før 2027 starter: Selvangivelsen for 2025 følger fortsatt de gamle fristene og skal leveres innen 31. desember 2026, eller 23. desember 2026 ved trekk fra kontoen.",
+      "sv": "Innan 2027 börjar: Deklarationen för 2025 följer fortfarande de gamla tiderna och ska vara inlämnad senast den 31 december 2026, eller den 23 december 2026 vid autogiro."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Key dates",
+      "no": "Viktige datoer",
+      "sv": "Viktiga datum"
+     },
+     "num": "05",
+     "title": {
+      "en": "The 2027 dates to keep in mind",
+      "no": "Datoene for 2027 du bør huske",
+      "sv": "Datumen för 2027 att hålla koll på"
+     }
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "1 January",
+        "no": "1. januar",
+        "sv": "1 januari"
+       },
+       "text": {
+        "en": "IBI for 2027 is set on whoever owns the home on this day.",
+        "no": "IBI for 2027 legges på den som eier boligen denne dagen.",
+        "sv": "IBI för 2027 läggs på den som äger fastigheten denna dag."
+       }
+      },
+      {
+       "date": {
+        "en": "1 to 20 April",
+        "no": "1. til 20. april",
+        "sv": "1 till 20 april"
+       },
+       "text": {
+        "en": "Rental income from 2026 is reported. File by 15 April to pay by direct debit.",
+        "no": "Leieinntekter fra 2026 rapporteres. Lever innen 15. april for trekk fra kontoen.",
+        "sv": "Hyresintäkter från 2026 redovisas. Deklarera senast 15 april för autogiro."
+       }
+      },
+      {
+       "date": {
+        "en": "31 December",
+        "no": "31. desember",
+        "sv": "31 december"
+       },
+       "text": {
+        "en": "Last day for the 2026 return on a home you do not let. File by 23 December to pay by direct debit.",
+        "no": "Siste dag for selvangivelsen for 2026 for en bolig du ikke leier ut. Lever innen 23. desember for trekk fra kontoen.",
+        "sv": "Sista dagen för deklarationen för 2026 för en fastighet du inte hyr ut. Deklarera senast 23 december för autogiro."
+       }
+      }
+     ]
+    },
+    {
+     "type": "h2",
+     "text": {
+      "en": "Keep these papers in one place",
+      "no": "Ha disse papirene samlet",
+      "sv": "Ha de här papperen samlade"
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "NIE",
+        "no": "NIE",
+        "sv": "NIE"
+       },
+       {
+        "en": "Your foreigner's tax number. Every return, bill and contract in Spain asks for it.",
+        "no": "Ditt skattenummer som utlending. Alle selvangivelser, regninger og kontrakter i Spania spør etter det.",
+        "sv": "Ditt skattenummer som utlänning. Alla deklarationer, räkningar och avtal i Spanien kräver det."
+       }
+      ],
+      [
+       {
+        "en": "Deeds",
+        "no": "Skjøte",
+        "sv": "Köpebrev"
+       },
+       {
+        "en": "The escritura shows what you own and in what share, which matters when there are several owners.",
+        "no": "Escritura viser hva du eier og hvor stor andel, noe som betyr mye når det er flere eiere.",
+        "sv": "Escritura visar vad du äger och hur stor andel, vilket spelar roll när det finns flera ägare."
+       }
+      ],
+      [
+       {
+        "en": "Receipts",
+        "no": "Kvitteringer",
+        "sv": "Kvitton"
+       },
+       {
+        "en": "IBI, basura, community and insurance receipts prove that each bill was paid.",
+        "no": "Kvitteringer for IBI, basura, sameie og forsikring viser at hver regning er betalt.",
+        "sv": "Kvitton för IBI, basura, samfällighet och försäkring visar att varje räkning är betald."
+       }
+      ],
+      [
+       {
+        "en": "Tax returns",
+        "no": "Selvangivelser",
+        "sv": "Deklarationer"
+       },
+       {
+        "en": "Keep each Modelo 210 and its proof of payment. Your home country may ask to see them too.",
+        "no": "Ta vare på hver Modelo 210 og betalingsbeviset. Skatteetaten i Norge kan også be om å se dem.",
+        "sv": "Spara varje Modelo 210 och betalningsbeviset. Skatteverket i Sverige kan också vilja se dem."
+       }
+      ],
+      [
+       {
+        "en": "Invoices",
+        "no": "Fakturaer",
+        "sv": "Fakturor"
+       },
+       {
+        "en": "If you let your home, invoices for repairs and running costs support the deductions on your return.",
+        "no": "Leier du ut boligen, underbygger fakturaer for reparasjoner og driftskostnader fradragene i selvangivelsen.",
+        "sv": "Hyr du ut fastigheten styrker fakturor för reparationer och driftskostnader avdragen i deklarationen."
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "terrace",
+   "num": "06",
+   "eyebrow": {
+    "en": "An example year",
+    "no": "Et eksempelår",
+    "sv": "Ett exempelår"
+   },
+   "title": {
+    "en": "A year for one owner in Sweden",
+    "no": "Et år for en eier i Sverige",
+    "sv": "Ett år för en ägare i Sverige"
+   },
+   "lead": {
+    "en": "Anna lives in Sweden and does not let her apartment. Her town hall collects IBI in September and rubbish tax in October. Your own local dates will differ.",
+    "no": "Anna bor i Sverige og leier ikke ut leiligheten sin. Kommunen hennes krever inn IBI i september og renovasjonsavgift i oktober. Dine lokale datoer vil være annerledes.",
+    "sv": "Anna bor i Sverige och hyr inte ut sin lägenhet. Hennes kommun tar ut IBI i september och sophämtningsavgift i oktober. Dina egna lokala datum kommer att vara andra."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Direct debits checked",
+      "no": "Trekk fra kontoen sjekket",
+      "sv": "Autogiron kontrollerade"
+     },
+     "note": {
+      "en": "New amounts for the year confirmed.",
+      "no": "Nye beløp for året bekreftet.",
+      "sv": "Nya belopp för året bekräftade."
+     },
+     "value": {
+      "en": "January",
+      "no": "Januar",
+      "sv": "Januari"
+     }
+    },
+    {
+     "label": {
+      "en": "Modelo 210 for 2026",
+      "no": "Modelo 210 for 2026",
+      "sv": "Modelo 210 för 2026"
+     },
+     "note": {
+      "en": "Filed early, paid by direct debit.",
+      "no": "Levert tidlig, betalt med trekk.",
+      "sv": "Lämnad tidigt, betald via autogiro."
+     },
+     "value": {
+      "en": "April",
+      "no": "April",
+      "sv": "April"
+     }
+    },
+    {
+     "label": {
+      "en": "Community meeting",
+      "no": "Sameiermøtet",
+      "sv": "Stämman"
+     },
+     "note": {
+      "en": "Proxy sent to a neighbour.",
+      "no": "Fullmakt sendt til en nabo.",
+      "sv": "Fullmakt skickad till en granne."
+     },
+     "value": {
+      "en": "May",
+      "no": "Mai",
+      "sv": "Maj"
+     }
+    },
+    {
+     "label": {
+      "en": "Summer checks",
+      "no": "Sommersjekk",
+      "sv": "Sommarkontroll"
+     },
+     "note": {
+      "en": "Air conditioning serviced.",
+      "no": "Service på klimaanlegget.",
+      "sv": "Luftkonditioneringen servad."
+     },
+     "value": {
+      "en": "June",
+      "no": "Juni",
+      "sv": "Juni"
+     }
+    },
+    {
+     "label": {
+      "en": "IBI",
+      "no": "IBI",
+      "sv": "IBI"
+     },
+     "note": {
+      "en": "Paid by direct debit.",
+      "no": "Betalt med trekk.",
+      "sv": "Betald via autogiro."
+     },
+     "value": {
+      "en": "September",
+      "no": "September",
+      "sv": "September"
+     }
+    },
+    {
+     "label": {
+      "en": "Rubbish tax",
+      "no": "Renovasjonsavgift",
+      "sv": "Sophämtningsavgift"
+     },
+     "note": {
+      "en": "Paid by direct debit.",
+      "no": "Betalt med trekk.",
+      "sv": "Betald via autogiro."
+     },
+     "value": {
+      "en": "October",
+      "no": "Oktober",
+      "sv": "Oktober"
+     }
+    },
+    {
+     "label": {
+      "en": "Insurance and winter close-up",
+      "no": "Forsikring og vinterstenging",
+      "sv": "Försäkring och vinterstängning"
+     },
+     "note": {
+      "en": "Policy reviewed before it renews.",
+      "no": "Forsikringen gjennomgått før fornyelse.",
+      "sv": "Försäkringen sedd över före förnyelse."
+     },
+     "value": {
+      "en": "November",
+      "no": "November",
+      "sv": "November"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Things to remember in the year",
+     "no": "Ting å huske i løpet av året",
+     "sv": "Saker att komma ihåg under året"
+    },
+    "value": {
+     "en": "7",
+     "no": "7",
+     "sv": "7"
+    }
+   }
+  },
+  {
+   "type": "cta",
+   "num": "07",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno",
+    "no": "Bueno",
+    "sv": "Bueno"
+   },
+   "title": {
+    "en": "Let us take the admin off your hands",
+    "no": "La oss ta oss av papirarbeidet",
+    "sv": "Låt oss ta hand om pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings your Spanish home's year together in one place, so the calendar looks after itself.",
+    "no": "Bueno samler året for boligen i Spania på ett sted, slik at kalenderen ordner seg selv.",
+    "sv": "Bueno samlar året för din fastighet i Spanien på ett ställe, så att kalendern sköter sig själv."
+   },
+   "steps": [
+    {
+     "en": "IBI, community fees and utility bills are paid by direct debit from your Bueno Account.",
+     "no": "IBI, fellesutgifter og strøm og vann betales med trekk fra Bueno-kontoen.",
+     "sv": "IBI, samfällighetsavgifter och räkningar för el och vatten betalas via autogiro från ditt Bueno-konto."
+    },
+    {
+     "en": "We can file your Modelo 210 for you, on time.",
+     "no": "Vi kan levere din Modelo 210 for deg, i tide.",
+     "sv": "Vi kan lämna din Modelo 210 åt dig, i tid."
+    },
+    {
+     "en": "You see every payment in the app, wherever you are.",
+     "no": "Du ser alle betalinger i appen, uansett hvor du er.",
+     "sv": "Du ser alla betalningar i appen, var du än befinner dig."
+    },
+    {
+     "en": "Our multilingual team explains any letter your home receives.",
+     "no": "Det flerspråklige teamet vårt forklarer alle brev boligen mottar.",
+     "sv": "Vårt flerspråkiga team förklarar alla brev som din fastighet får."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "One annual subscription with no hidden fees. Tax filing is a separate service from €50.",
+    "no": "Ett årlig abonnement uten skjulte gebyrer. Skattemelding er en egen tjeneste fra €50.",
+    "sv": "Ett årsabonnemang utan dolda avgifter. Deklaration är en separat tjänst från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

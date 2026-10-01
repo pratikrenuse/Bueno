@@ -1,0 +1,932 @@
+{
+ "slug": "electricity-bills",
+ "file": "Electricity-Bills-In-Spain",
+ "meta_title": {
+  "en": "Your electricity bill in Spain, explained | Bueno",
+  "no": "Strømregningen i Spania, forklart | Bueno",
+  "sv": "Elräkningen i Spanien, förklarad | Bueno"
+ },
+ "title": {
+  "en": "Your electricity bill in Spain, explained",
+  "no": "Strømregningen i Spania, forklart",
+  "sv": "Elräkningen i Spanien, förklarad"
+ },
+ "topics": {
+  "en": [
+   "The five parts of every Spanish electricity bill",
+   "Peak, standard and off-peak hours on the 2.0TD tariff",
+   "The regulated PVPC tariff compared with free-market offers",
+   "How to size the contracted power of a holiday home",
+   "Reading the bill, switching supplier and paying by direct debit"
+  ],
+  "no": [
+   "De fem delene i hver spansk strømregning",
+   "Dyre, middels og billige timer på 2.0TD-tariffen",
+   "Den regulerte PVPC-tariffen sammenlignet med tilbud i det frie markedet",
+   "Slik tilpasser du effekten i avtalen til en feriebolig",
+   "Slik leser du regningen, bytter leverandør og betaler med trekk fra kontoen"
+  ],
+  "sv": [
+   "De fem delarna i varje spansk elräkning",
+   "Dyra, mellan och billiga timmar på 2.0TD-tariffen",
+   "Den reglerade PVPC-tariffen jämfört med erbjudanden på den fria marknaden",
+   "Så anpassar du den avtalade effekten för ett fritidshus",
+   "Så läser du räkningen, byter elhandlare och betalar via autogiro"
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "white-village",
+   "eyebrow": {
+    "en": "Your guide to the electricity bill",
+    "no": "Din guide til strømregningen",
+    "sv": "Din guide till elräkningen"
+   },
+   "title": {
+    "en": "Your electricity bill in Spain, explained",
+    "no": "Strømregningen i Spania, forklart",
+    "sv": "Elräkningen i Spanien, förklarad"
+   },
+   "sub": {
+    "en": "What every line means, why an empty home still has a bill and the simple changes that keep the cost of a holiday home under control.",
+    "no": "Hva hver linje betyr, hvorfor en tom bolig likevel får en regning, og de enkle endringene som holder kostnadene for en feriebolig under kontroll.",
+    "sv": "Vad varje rad betyder, varför en tom bostad ändå får en räkning och de enkla förändringarna som håller kostnaderna för ett fritidshus under kontroll."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "A bill that makes sense",
+      "no": "En regning som gir mening",
+      "sv": "En räkning som går att förstå"
+     },
+     "lead": {
+      "en": "A Spanish electricity bill can look complicated, especially in a language that is not your own. In fact it is built from a handful of parts that appear on every bill. Once you know them, you can check each one in a minute and see exactly where the money goes.",
+      "no": "En spansk strømregning kan se komplisert ut, særlig på et språk som ikke er ditt eget. Egentlig består den av noen få deler som står på hver eneste regning. Når du kjenner dem, kan du sjekke hver regning på et minutt og se nøyaktig hvor pengene går.",
+      "sv": "En spansk elräkning kan se krånglig ut, särskilt på ett språk som inte är ditt eget. I själva verket består den av några få delar som finns på varje räkning. När du känner till dem kan du kontrollera varje räkning på en minut och se exakt vart pengarna går."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "You pay for your contracted power every day, even when nobody is in the home.",
+       "no": "Du betaler for effekten i avtalen hver dag, også når ingen er i boligen.",
+       "sv": "Du betalar för den avtalade effekten varje dag, även när ingen är i bostaden."
+      },
+      {
+       "en": "Right-sizing that power is the simplest way to lower the fixed part of the bill.",
+       "no": "Å tilpasse effekten er den enkleste måten å senke den faste delen av regningen på.",
+       "sv": "Att anpassa effekten är det enklaste sättet att sänka den fasta delen av räkningen."
+      },
+      {
+       "en": "A direct debit from a funded Spanish account keeps the supply safe while you are away.",
+       "no": "Trekk fra en spansk konto med dekning holder strømmen trygg mens du er borte.",
+       "sv": "Autogiro från ett spanskt konto med täckning håller elen trygg medan du är borta."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "coast-hills",
+     "h": 60,
+     "pos": "center 40%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "The bill",
+      "no": "Regningen",
+      "sv": "Räkningen"
+     },
+     "num": "01",
+     "title": {
+      "en": "How your bill is built",
+      "no": "Slik er regningen bygget opp",
+      "sv": "Så är räkningen uppbyggd"
+     },
+     "lead": {
+      "en": "Every household bill in Spain has the same five parts. Two depend on your contract, and three are set by law.",
+      "no": "Hver strømregning for husholdninger i Spania har de samme fem delene. To avhenger av avtalen, og tre er fastsatt ved lov.",
+      "sv": "Varje elräkning för hushåll i Spanien har samma fem delar. Två beror på ditt avtal och tre bestäms i lag."
+     }
+    },
+    {
+     "type": "formula",
+     "ops": [
+      "+",
+      "+"
+     ],
+     "boxes": [
+      {
+       "label": {
+        "en": "Power",
+        "no": "Effekt",
+        "sv": "Effekt"
+       },
+       "value": {
+        "en": "Contracted kW",
+        "no": "Avtalt kW",
+        "sv": "Avtalad kW"
+       }
+      },
+      {
+       "label": {
+        "en": "Energy",
+        "no": "Energi",
+        "sv": "Energi"
+       },
+       "value": {
+        "en": "kWh used",
+        "no": "Brukte kWh",
+        "sv": "Använda kWh"
+       }
+      },
+      {
+       "label": {
+        "en": "Extras",
+        "no": "Tillegg",
+        "sv": "Tillägg"
+       },
+       "value": {
+        "en": "Tax, meter, VAT",
+        "no": "Avgift, måler, mva",
+        "sv": "Skatt, mätare, moms"
+       }
+      }
+     ],
+     "result": {
+      "label": {
+       "en": "Result",
+       "no": "Resultat",
+       "sv": "Resultat"
+      },
+      "value": {
+       "en": "Your bill",
+       "no": "Regningen",
+       "sv": "Din räkning"
+      }
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Power term",
+        "no": "Effektledd",
+        "sv": "Effektavgift"
+       },
+       {
+        "en": "The término de potencia is a fixed daily charge for your contracted kilowatts, however much you use.",
+        "no": "Término de potencia er et fast daglig beløp for kilowattene i avtalen, uansett forbruk.",
+        "sv": "Término de potencia är en fast daglig avgift för dina avtalade kilowatt, oavsett förbrukning."
+       }
+      ],
+      [
+       {
+        "en": "Energy term",
+        "no": "Energiledd",
+        "sv": "Energiavgift"
+       },
+       {
+        "en": "The término de energía is the kWh you used, multiplied by your price per kWh, which usually depends on the time of day.",
+        "no": "Término de energía er kWh du brukte, ganget med prisen per kWh, som som regel avhenger av tidspunktet på døgnet.",
+        "sv": "Término de energía är de kWh du använde, gånger ditt pris per kWh, som oftast beror på tiden på dygnet."
+       }
+      ],
+      [
+       {
+        "en": "Electricity tax",
+        "no": "Elavgift",
+        "sv": "Elskatt"
+       },
+       {
+        "en": "The impuesto especial sobre la electricidad is charged at about 5.11% on the power and energy terms.",
+        "no": "Impuesto especial sobre la electricidad beregnes med omtrent 5,11 % av effektleddet og energileddet.",
+        "sv": "Impuesto especial sobre la electricidad tas ut med ungefär 5,11 % på effektavgiften och energiavgiften."
+       }
+      ],
+      [
+       {
+        "en": "Meter rental",
+        "no": "Leie av måler",
+        "sv": "Mätarhyra"
+       },
+       {
+        "en": "About €0.81 a month to rent a standard smart meter.",
+        "no": "Omtrent €0,81 i måneden for leie av en vanlig smart måler.",
+        "sv": "Ungefär €0,81 i månaden i hyra för en vanlig smart mätare."
+       }
+      ],
+      [
+       {
+        "en": "VAT",
+        "no": "Merverdiavgift",
+        "sv": "Moms"
+       },
+       {
+        "en": "21% on the whole bill, including the tax and the meter.",
+        "no": "21 % på hele regningen, også elavgift og måler.",
+        "sv": "21 % på hela räkningen, även elskatt och mätare."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "For homes up to 10 kW, VAT can be cut to 10% and the tax to 0.5% for a time when prices rise sharply, as from March to May 2026.",
+      "no": "For boliger med inntil 10 kW kan mva senkes til 10 % og elavgiften til 0,5 % for en periode når prisene stiger kraftig, som fra mars til mai 2026.",
+      "sv": "För bostäder med upp till 10 kW kan momsen sänkas till 10 % och elskatten till 0,5 % en tid när priserna stiger kraftigt, som från mars till maj 2026."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Time bands",
+      "no": "Tidsperioder",
+      "sv": "Tidsperioder"
+     },
+     "num": "02",
+     "title": {
+      "en": "When you use power matters",
+      "no": "Når du bruker strøm, har betydning",
+      "sv": "När du använder el spelar roll"
+     },
+     "lead": {
+      "en": "Almost every home in Spain is on the 2.0TD access tariff, which covers contracts up to 15 kW. It splits energy into three price bands and power into two. The hours are the same on the mainland and in the Balearic Islands.",
+      "no": "Nesten alle boliger i Spania har nettariffen 2.0TD, som gjelder avtaler på inntil 15 kW. Den deler energien inn i tre prisperioder og effekten i to. Timene er de samme på fastlandet og på Balearene.",
+      "sv": "Nästan alla bostäder i Spanien har nättariffen 2.0TD, som gäller avtal på upp till 15 kW. Den delar in energin i tre prisperioder och effekten i två. Timmarna är desamma på fastlandet och på Balearerna."
+     }
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "Peak, punta",
+        "no": "Dyr, punta",
+        "sv": "Dyr, punta"
+       },
+       "text": {
+        "en": "10:00 to 14:00 and 18:00 to 22:00 on weekdays. These are the most expensive hours.",
+        "no": "10.00 til 14.00 og 18.00 til 22.00 på hverdager. Dette er de dyreste timene.",
+        "sv": "10.00 till 14.00 och 18.00 till 22.00 på vardagar. Det här är de dyraste timmarna."
+       }
+      },
+      {
+       "date": {
+        "en": "Standard, llano",
+        "no": "Middels, llano",
+        "sv": "Mellan, llano"
+       },
+       "text": {
+        "en": "8:00 to 10:00, 14:00 to 18:00 and 22:00 to midnight on weekdays.",
+        "no": "8.00 til 10.00, 14.00 til 18.00 og 22.00 til midnatt på hverdager.",
+        "sv": "8.00 till 10.00, 14.00 till 18.00 och 22.00 till midnatt på vardagar."
+       }
+      },
+      {
+       "date": {
+        "en": "Off-peak, valle",
+        "no": "Billig, valle",
+        "sv": "Billig, valle"
+       },
+       "text": {
+        "en": "Midnight to 8:00 on weekdays, plus every hour of weekends and national holidays.",
+        "no": "Midnatt til 8.00 på hverdager, pluss alle timer i helger og på nasjonale helligdager.",
+        "sv": "Midnatt till 8.00 på vardagar, plus alla timmar på helger och nationella helgdagar."
+       }
+      }
+     ]
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Two power periods",
+        "no": "To effektperioder",
+        "sv": "Två effektperioder"
+       },
+       "text": {
+        "en": "Power is priced in two periods, one covering peak and standard hours and one covering off-peak hours. Most homes contract the same number of kilowatts for both.",
+        "no": "Effekten prises i to perioder, én for dyre og middels timer og én for billige timer. De fleste boliger har samme antall kilowatt i begge.",
+        "sv": "Effekten prissätts i två perioder, en för dyra timmar och mellantimmar och en för billiga timmar. De flesta bostäder har samma antal kilowatt i båda."
+       }
+      },
+      {
+       "title": {
+        "en": "Single-price offers",
+        "no": "Tilbud med én pris",
+        "sv": "Erbjudanden med ett pris"
+       },
+       "text": {
+        "en": "Some suppliers offer one price for every hour of the day. It is simpler to follow, but it is not automatically cheaper, so compare it with your real pattern of use.",
+        "no": "Noen leverandører tilbyr én pris for alle timer i døgnet. Det er enklere å følge med på, men ikke automatisk billigere, så sammenlign med hvordan du faktisk bruker strøm.",
+        "sv": "Vissa elhandlare erbjuder ett pris för alla timmar på dygnet. Det är enklare att följa, men inte automatiskt billigare, så jämför med hur du faktiskt använder el."
+       }
+      },
+      {
+       "title": {
+        "en": "What it means for a holiday home",
+        "no": "Hva det betyr for en feriebolig",
+        "sv": "Vad det betyder för ett fritidshus"
+       },
+       "text": {
+        "en": "Appliances that run on their own, such as a water heater or a pool pump, can be moved to off-peak hours with a simple timer. Weekends are off-peak all day, which suits homes used mostly for short stays.",
+        "no": "Apparater som går av seg selv, som varmtvannsbereder eller bassengpumpe, kan flyttes til billige timer med en enkel tidsbryter. Helgene er billige hele døgnet, noe som passer boliger som mest brukes til korte opphold.",
+        "sv": "Apparater som går av sig själva, som varmvattenberedare eller poolpump, kan flyttas till billiga timmar med en enkel timer. Helgerna är billiga hela dygnet, vilket passar bostäder som mest används för korta vistelser."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Choosing a contract",
+      "no": "Velge avtale",
+      "sv": "Välja avtal"
+     },
+     "num": "03",
+     "title": {
+      "en": "Regulated tariff or free market",
+      "no": "Regulert tariff eller fritt marked",
+      "sv": "Reglerad tariff eller fri marknad"
+     },
+     "lead": {
+      "en": "You can buy electricity in two ways. Both use the same cables, the same meter and the same distribution company, so the supply itself is identical.",
+      "no": "Du kan kjøpe strøm på to måter. Begge bruker de samme kablene, den samme måleren og det samme nettselskapet, så selve leveransen er helt lik.",
+      "sv": "Du kan köpa el på två sätt. Båda använder samma ledningar, samma mätare och samma elnätsbolag, så själva leveransen är densamma."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "The regulated tariff, PVPC",
+        "no": "Den regulerte tariffen, PVPC",
+        "sv": "Den reglerade tariffen, PVPC"
+       },
+       "text": {
+        "en": "It is open to homes with up to 10 kW and sold only by the reference suppliers, the comercializadoras de referencia. The price changes every hour. Since 2026, 55% of the energy cost follows longer-term market prices and 45% follows the daily market, which makes it steadier than before.",
+        "no": "Den er åpen for boliger med inntil 10 kW og selges bare av referanseleverandørene, comercializadoras de referencia. Prisen endres hver time. Fra 2026 følger 55 % av energikostnaden langsiktige markedspriser og 45 % dagsmarkedet, noe som gjør den jevnere enn før.",
+        "sv": "Den är öppen för bostäder med upp till 10 kW och säljs bara av referenselhandlarna, comercializadoras de referencia. Priset ändras varje timme. Från 2026 följer 55 % av energikostnaden långsiktiga marknadspriser och 45 % dagsmarknaden, vilket gör den jämnare än tidigare."
+       }
+      },
+      {
+       "title": {
+        "en": "Free-market offers",
+        "no": "Tilbud i det frie markedet",
+        "sv": "Erbjudanden på den fria marknaden"
+       },
+       "text": {
+        "en": "Each supplier sets its own prices, often fixed per kWh for a year. They are easier to predict, but check the power price, the length of the contract and any extra services included.",
+        "no": "Hver leverandør setter sine egne priser, ofte med fast pris per kWh i et år. De er lettere å forutsi, men sjekk effektprisen, avtalens lengde og eventuelle ekstratjenester som er inkludert.",
+        "sv": "Varje elhandlare sätter sina egna priser, ofta med fast pris per kWh i ett år. De är lättare att förutse, men kontrollera effektpriset, avtalets längd och eventuella extratjänster som ingår."
+       }
+      },
+      {
+       "title": {
+        "en": "Switching supplier",
+        "no": "Bytte leverandør",
+        "sv": "Byta elhandlare"
+       },
+       "text": {
+        "en": "Switching is free for household contracts. You sign with the new supplier, which handles the change, and it must be done within 10 business days, or 15 if work on site is needed.",
+        "no": "Det er gratis å bytte for husholdningsavtaler. Du signerer med den nye leverandøren, som ordner byttet, og det skal være gjort innen 10 virkedager, eller 15 hvis det trengs arbeid på stedet.",
+        "sv": "Det är gratis att byta för hushållsavtal. Du skriver avtal med den nya elhandlaren, som sköter bytet, och det ska vara klart inom 10 arbetsdagar, eller 15 om arbete på plats behövs."
+       }
+      },
+      {
+       "title": {
+        "en": "What you need to switch",
+        "no": "Dette trenger du for å bytte",
+        "sv": "Det här behöver du för att byta"
+       },
+       "text": {
+        "en": "Have your current bill to hand for the CUPS code, the contract holder's details and the Spanish IBAN the new bill will be paid from.",
+        "no": "Ha den nåværende regningen for hånden for CUPS-koden, opplysningene om avtaleinnehaveren og det spanske IBAN-nummeret den nye regningen skal betales fra.",
+        "sv": "Ha din nuvarande räkning till hands för CUPS-koden, uppgifterna om avtalsinnehavaren och det spanska IBAN-numret som den nya räkningen ska betalas från."
+       }
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "The CNMC, the Spanish energy regulator, has a free online comparison tool that shows the PVPC alongside free-market offers for your own contracted power and use.",
+      "no": "CNMC, den spanske energiregulatoren, har et gratis sammenligningsverktøy på nett som viser PVPC ved siden av tilbud i det frie markedet for din egen effekt og ditt eget forbruk.",
+      "sv": "CNMC, den spanska energitillsynsmyndigheten, har ett gratis jämförelseverktyg på nätet som visar PVPC bredvid erbjudanden på den fria marknaden för din egen effekt och din egen förbrukning."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "beach-couple",
+   "num": "04",
+   "eyebrow": {
+    "en": "A worked example",
+    "no": "Et regneeksempel",
+    "sv": "Ett räkneexempel"
+   },
+   "title": {
+    "en": "A quiet month in a 3.3 kW holiday home",
+    "no": "En rolig måned i en feriebolig på 3,3 kW",
+    "sv": "En lugn månad i ett fritidshus på 3,3 kW"
+   },
+   "lead": {
+    "en": "The home is empty most of the month, with only the fridge and the router left on. The power term is the largest line, even though very little was used. Prices are examples, and the taxes are the rates in force in October 2026.",
+    "no": "Boligen står tom det meste av måneden, og bare kjøleskapet og ruteren står på. Effektleddet er den største linjen, selv om nesten ingenting ble brukt. Prisene er eksempler, og avgiftene er satsene som gjaldt i oktober 2026.",
+    "sv": "Bostaden står tom större delen av månaden, och bara kylskåpet och routern är på. Effektavgiften är den största raden, trots att nästan ingenting användes. Priserna är exempel, och skatterna är de satser som gällde i oktober 2026."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Power term",
+      "no": "Effektledd",
+      "sv": "Effektavgift"
+     },
+     "note": {
+      "en": "3.3 kW for 30 days at €0.10 per kW per day.",
+      "no": "3,3 kW i 30 dager til €0,10 per kW per dag.",
+      "sv": "3,3 kW i 30 dagar till €0,10 per kW och dag."
+     },
+     "value": {
+      "en": "€9.90",
+      "no": "€9,90",
+      "sv": "€9,90"
+     }
+    },
+    {
+     "label": {
+      "en": "Energy term",
+      "no": "Energiledd",
+      "sv": "Energiavgift"
+     },
+     "note": {
+      "en": "60 kWh at €0.14 per kWh.",
+      "no": "60 kWh til €0,14 per kWh.",
+      "sv": "60 kWh till €0,14 per kWh."
+     },
+     "value": {
+      "en": "€8.40",
+      "no": "€8,40",
+      "sv": "€8,40"
+     }
+    },
+    {
+     "label": {
+      "en": "Electricity tax",
+      "no": "Elavgift",
+      "sv": "Elskatt"
+     },
+     "note": {
+      "en": "5.11% of the power and energy terms.",
+      "no": "5,11 % av effektleddet og energileddet.",
+      "sv": "5,11 % av effektavgiften och energiavgiften."
+     },
+     "value": {
+      "en": "€0.94",
+      "no": "€0,94",
+      "sv": "€0,94"
+     }
+    },
+    {
+     "label": {
+      "en": "Meter rental",
+      "no": "Leie av måler",
+      "sv": "Mätarhyra"
+     },
+     "note": {
+      "en": "A standard smart meter for one month.",
+      "no": "En vanlig smart måler i én måned.",
+      "sv": "En vanlig smart mätare i en månad."
+     },
+     "value": {
+      "en": "€0.81",
+      "no": "€0,81",
+      "sv": "€0,81"
+     }
+    },
+    {
+     "label": {
+      "en": "VAT",
+      "no": "Merverdiavgift",
+      "sv": "Moms"
+     },
+     "note": {
+      "en": "21% of everything above.",
+      "no": "21 % av alt over.",
+      "sv": "21 % av allt ovan."
+     },
+     "value": {
+      "en": "€4.21",
+      "no": "€4,21",
+      "sv": "€4,21"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Total for the month",
+     "no": "Totalt for måneden",
+     "sv": "Totalt för månaden"
+    },
+    "value": {
+     "en": "€24.26",
+     "no": "€24,26",
+     "sv": "€24,26"
+    }
+   },
+   "calc": {
+    "en": "€9.90 + €8.40 + €0.94 + €0.81 = €20.05, plus 21% VAT = €24.26. Example prices only.",
+    "no": "€9,90 + €8,40 + €0,94 + €0,81 = €20,05, pluss 21 % mva = €24,26. Prisene er kun eksempler.",
+    "sv": "€9,90 + €8,40 + €0,94 + €0,81 = €20,05, plus 21 % moms = €24,26. Priserna är endast exempel."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Lowering the cost",
+      "no": "Lavere kostnader",
+      "sv": "Lägre kostnader"
+     },
+     "num": "05",
+     "title": {
+      "en": "Make the contract fit your home",
+      "no": "La avtalen passe til boligen",
+      "sv": "Låt avtalet passa din bostad"
+     },
+     "lead": {
+      "en": "A holiday home is often on a contract sized for a family living there all year. A few changes bring the fixed part of the bill down.",
+      "no": "En feriebolig har ofte en avtale tilpasset en familie som bor der hele året. Noen få endringer senker den faste delen av regningen.",
+      "sv": "Ett fritidshus har ofta ett avtal anpassat för en familj som bor där hela året. Några få ändringar sänker den fasta delen av räkningen."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Check how much power you really use",
+        "no": "Sjekk hvor mye effekt du faktisk bruker",
+        "sv": "Kontrollera hur mycket effekt du faktiskt använder"
+       },
+       "paras": [
+        {
+         "en": "Your supplier's or distribution company's online area can usually show the highest demand your smart meter has recorded. If it stays well below your contracted power, you are paying for capacity you do not use.",
+         "no": "Nettsiden til leverandøren eller nettselskapet kan som regel vise det høyeste effektuttaket måleren har registrert. Ligger det godt under avtalen, betaler du for kapasitet du ikke bruker.",
+         "sv": "Webbsidan hos elhandlaren eller elnätsbolaget kan oftast visa det högsta effektuttaget som mätaren har registrerat. Ligger det långt under avtalet betalar du för kapacitet du inte använder."
+        }
+       ],
+       "tag": {
+        "en": "Start here",
+        "no": "Start her",
+        "sv": "Börja här"
+       }
+      },
+      {
+       "title": {
+        "en": "Lower the contracted power if it fits",
+        "no": "Senk effekten i avtalen hvis det passer",
+        "sv": "Sänk den avtalade effekten om det passar"
+       },
+       "paras": [
+        {
+         "en": "Ask your supplier to make the change. The distribution company charges a fixed fee of about €9 plus VAT. If too much then runs at once, the smart meter cuts the power until you switch something off.",
+         "no": "Be leverandøren gjøre endringen. Nettselskapet tar et fast gebyr på omtrent €9 pluss mva. Går for mye samtidig, kobler måleren ut strømmen til du slår av noe.",
+         "sv": "Be elhandlaren göra ändringen. Elnätsbolaget tar en fast avgift på ungefär €9 plus moms. Går för mycket samtidigt bryter mätaren strömmen tills du stänger av något."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Think before raising it again",
+        "no": "Tenk deg om før du øker den igjen",
+        "sv": "Tänk efter innan du höjer den igen"
+       },
+       "paras": [
+        {
+         "en": "The distribution company only has to accept a new change after 12 months. Raising power costs around €46 plus VAT for one extra kilowatt.",
+         "no": "Nettselskapet må bare godta en ny endring etter 12 måneder. Å øke effekten koster rundt €46 pluss mva for én ekstra kilowatt.",
+         "sv": "Elnätsbolaget måste bara godta en ny ändring efter 12 månader. Att höja effekten kostar runt €46 plus moms för en extra kilowatt."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Switch off what runs while you are away",
+        "no": "Slå av det som går mens du er borte",
+        "sv": "Stäng av det som går medan du är borta"
+       },
+       "paras": [
+        {
+         "en": "A water heater, an old fridge, a pool pump and anything on standby keep using energy in an empty home. Switch them off at the board or put them on a timer before you leave.",
+         "no": "En varmtvannsbereder, et gammelt kjøleskap, en bassengpumpe og alt i hvilemodus bruker strøm i en tom bolig. Slå dem av i sikringsskapet eller sett dem på tidsbryter før du reiser.",
+         "sv": "En varmvattenberedare, ett gammalt kylskåp, en poolpump och allt i viloläge drar el i en tom bostad. Stäng av dem i elcentralen eller sätt dem på timer innan du åker."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Reading the bill",
+      "no": "Lese regningen",
+      "sv": "Läsa räkningen"
+     },
+     "num": "06",
+     "title": {
+      "en": "Where to find what matters",
+      "no": "Her finner du det som betyr noe",
+      "sv": "Här hittar du det som spelar roll"
+     },
+     "lead": {
+      "en": "Layouts differ from one supplier to the next, but every bill shows the same key details. These are the ones worth checking each time a bill arrives.",
+      "no": "Oppsettet varierer fra leverandør til leverandør, men hver regning viser de samme viktige opplysningene. Dette er de du bør sjekke hver gang en regning kommer.",
+      "sv": "Upplägget skiljer sig mellan elhandlare, men varje räkning visar samma viktiga uppgifter. Det här är de som är värda att kontrollera varje gång en räkning kommer."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "CUPS",
+        "no": "CUPS",
+        "sv": "CUPS"
+       },
+       {
+        "en": "The unique code of your supply point. It starts with ES and stays with the home whoever the supplier is. You need it to switch or to change your power.",
+        "no": "Den unike koden for målepunktet ditt. Den starter med ES og følger boligen uansett hvem som er leverandør. Du trenger den for å bytte eller endre effekten.",
+        "sv": "Den unika koden för din anläggning. Den börjar med ES och följer bostaden oavsett elhandlare. Du behöver den för att byta eller ändra effekten."
+       }
+      ],
+      [
+       {
+        "en": "Contracted power",
+        "no": "Avtalt effekt",
+        "sv": "Avtalad effekt"
+       },
+       {
+        "en": "The kilowatts for each of the two power periods. Compare them with what you actually use.",
+        "no": "Kilowattene for hver av de to effektperiodene. Sammenlign dem med det du faktisk bruker.",
+        "sv": "Kilowatten för var och en av de två effektperioderna. Jämför dem med vad du faktiskt använder."
+       }
+      ],
+      [
+       {
+        "en": "Meter readings",
+        "no": "Måleravlesninger",
+        "sv": "Mätarställningar"
+       },
+       {
+        "en": "The readings at the start and end of the period, and whether they are real or estimated. An estimate is corrected later, which can make one bill unusually high.",
+        "no": "Avlesningene ved starten og slutten av perioden, og om de er faktiske eller estimerte. Et estimat blir rettet opp senere, noe som kan gjøre én regning uvanlig høy.",
+        "sv": "Mätarställningarna i början och slutet av perioden, och om de är verkliga eller uppskattade. En uppskattning rättas senare, vilket kan göra en räkning ovanligt hög."
+       }
+      ],
+      [
+       {
+        "en": "Contract details",
+        "no": "Avtaleopplysninger",
+        "sv": "Avtalsuppgifter"
+       },
+       {
+        "en": "The supplier, the distribution company to call about a fault, the contract holder and the date your offer price ends.",
+        "no": "Leverandøren, nettselskapet du ringer ved feil, avtaleinnehaveren og datoen tilbudsprisen din utløper.",
+        "sv": "Elhandlaren, elnätsbolaget du ringer vid fel, avtalsinnehavaren och datumet då ditt erbjudandepris upphör."
+       }
+      ],
+      [
+       {
+        "en": "Payment",
+        "no": "Betaling",
+        "sv": "Betalning"
+       },
+       {
+        "en": "The amount due, the payment date and the IBAN the bill will be charged to.",
+        "no": "Beløpet som skal betales, betalingsdatoen og IBAN-nummeret regningen trekkes fra.",
+        "sv": "Beloppet att betala, betalningsdagen och det IBAN som räkningen dras från."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Check that the IBAN on the bill is still the account you use. A bill charged to a closed or empty account will be returned unpaid.",
+      "no": "Sjekk at IBAN-nummeret på regningen fortsatt er kontoen du bruker. En regning som trekkes fra en stengt eller tom konto, blir returnert ubetalt.",
+      "sv": "Kontrollera att IBAN på räkningen fortfarande är det konto du använder. En räkning som dras från ett avslutat eller tomt konto kommer tillbaka obetald."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Paying the bill",
+      "no": "Betale regningen",
+      "sv": "Betala räkningen"
+     },
+     "num": "07",
+     "title": {
+      "en": "Direct debit, and what happens if one is returned",
+      "no": "Trekk fra kontoen, og hva som skjer hvis et trekk avvises",
+      "sv": "Autogiro, och vad som händer om en dragning nekas"
+     },
+     "lead": {
+      "en": "Spanish suppliers usually collect the bill by direct debit, the domiciliación bancaria, from the account you give them. It is the simplest way to keep a home you are not living in fully paid up.",
+      "no": "Spanske leverandører krever som regel inn regningen med trekk fra kontoen, domiciliación bancaria, fra kontoen du oppgir. Det er den enkleste måten å holde en bolig du ikke bor i, ajour med betalingene.",
+      "sv": "Spanska elhandlare drar oftast räkningen via autogiro, domiciliación bancaria, från det konto du anger. Det är det enklaste sättet att hålla en bostad du inte bor i betald."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Keep the account funded",
+        "no": "Hold kontoen med dekning",
+        "sv": "Håll kontot med täckning"
+       },
+       "text": {
+        "en": "Bills often run higher in winter and summer, so leave a margin for the months you are away, and check the first bill after any switch is charged to the right IBAN.",
+        "no": "Regningene er ofte høyere vinter og sommer, så legg igjen en buffer for månedene du er borte, og sjekk at den første regningen etter et bytte trekkes fra riktig IBAN.",
+        "sv": "Räkningarna blir ofta högre vinter och sommar, så lämna en marginal för månaderna du är borta, och se till att första räkningen efter ett byte dras från rätt IBAN."
+       }
+      }
+     ]
+    },
+    {
+     "type": "rates",
+     "title": {
+      "en": "If a direct debit is returned",
+      "no": "Hvis et trekk blir avvist",
+      "sv": "Om en dragning nekas"
+     },
+     "intro": {
+      "en": "A returned payment does not cut the power on its own. For homes with up to 10 kW, the rules give you time to put it right.",
+      "no": "Et avvist trekk kobler ikke ut strømmen av seg selv. For boliger med inntil 10 kW gir reglene deg tid til å rette det opp.",
+      "sv": "En nekad dragning stänger inte av elen. För bostäder med upp till 10 kW ger reglerna dig tid att rätta till det."
+     },
+     "rows": [
+      [
+       {
+        "en": "Returned",
+        "no": "Avvist",
+        "sv": "Nekad"
+       },
+       {
+        "en": "The bill stays unpaid. Contact the supplier, pay it and find out why it failed, such as a low balance or an old IBAN.",
+        "no": "Regningen forblir ubetalt. Kontakt leverandøren, betal den og finn ut hvorfor trekket feilet, for eksempel lav saldo eller et gammelt IBAN.",
+        "sv": "Räkningen förblir obetald. Kontakta elhandlaren, betala och ta reda på varför, till exempel lågt saldo eller ett gammalt IBAN."
+       }
+      ],
+      [
+       {
+        "en": "Formal demand",
+        "no": "Formelt krav",
+        "sv": "Formellt krav"
+       },
+       {
+        "en": "If it is still unpaid, the supplier must send a formal demand for payment that can be proved to have reached you.",
+        "no": "Er den fortsatt ubetalt, må leverandøren sende et formelt betalingskrav som kan bevises å ha nådd deg.",
+        "sv": "Är den fortfarande obetald måste elhandlaren skicka ett formellt betalningskrav som bevisligen har nått dig."
+       }
+      ],
+      [
+       {
+        "en": "2 months",
+        "no": "2 måneder",
+        "sv": "2 månader"
+       },
+       {
+        "en": "Only when two months have passed since that demand can the supply be suspended. It cannot be cut on a holiday or the day before one.",
+        "no": "Først når det har gått to måneder siden kravet, kan leveransen stanses. Den kan ikke kobles ut på en helligdag eller dagen før.",
+        "sv": "Först när två månader har gått sedan kravet kan leveransen stängas av. Den får inte stängas av på en helgdag eller dagen före."
+       }
+      ],
+      [
+       {
+        "en": "24 hours",
+        "no": "24 timer",
+        "sv": "24 timmar"
+       },
+       {
+        "en": "Once the debt is paid, the power must be reconnected within 24 hours. A reconnection fee is added.",
+        "no": "Når gjelden er betalt, skal strømmen kobles til igjen innen 24 timer. Et gebyr for gjenoppkobling kommer i tillegg.",
+        "sv": "När skulden är betald ska elen kopplas in igen inom 24 timmar. En avgift för återinkoppling tillkommer."
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "08",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Energy",
+    "no": "Bueno Energy",
+    "sv": "Bueno Energy"
+   },
+   "title": {
+    "en": "Power sorted, bills paid",
+    "no": "Strømmen ordnet, regningene betalt",
+    "sv": "Elen ordnad, räkningarna betalda"
+   },
+   "lead": {
+    "en": "Bueno helps you choose the right electricity contract for your home and pays each bill from your Spanish IBAN, wherever you are.",
+    "no": "Bueno hjelper deg med å velge riktig strømavtale for boligen og betaler hver regning fra det spanske IBAN-nummeret ditt, uansett hvor du er.",
+    "sv": "Bueno hjälper dig att välja rätt elavtal för din bostad och betalar varje räkning från ditt spanska IBAN, var du än befinner dig."
+   },
+   "steps": [
+    {
+     "en": "Bueno Energy helps you compare offers and switch supplier.",
+     "no": "Bueno Energy hjelper deg med å sammenligne tilbud og bytte leverandør.",
+     "sv": "Bueno Energy hjälper dig att jämföra erbjudanden och byta elhandlare."
+    },
+    {
+     "en": "Your electricity bill is paid by direct debit from your Bueno Account.",
+     "no": "Strømregningen betales med trekk fra Bueno-kontoen din.",
+     "sv": "Elräkningen betalas via autogiro från ditt Bueno-konto."
+    },
+    {
+     "en": "You see every payment in the app, wherever you are.",
+     "no": "Du ser alle betalinger i appen, uansett hvor du er.",
+     "sv": "Du ser alla betalningar i appen, var du än befinner dig."
+    },
+    {
+     "en": "Our multilingual team explains any bill your home receives.",
+     "no": "Det flerspråklige teamet vårt forklarer alle regninger boligen mottar.",
+     "sv": "Vårt flerspråkiga team förklarar alla räkningar som din bostad får."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "One annual subscription with no hidden fees.",
+    "no": "Ett årlig abonnement uten skjulte gebyrer.",
+    "sv": "Ett årsabonnemang utan dolda avgifter."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

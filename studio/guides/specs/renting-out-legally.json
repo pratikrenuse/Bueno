@@ -1,0 +1,792 @@
+{
+ "slug": "renting-out-legally",
+ "file": "Renting-Out-Your-Spanish-Home-Legally",
+ "meta_title": {
+  "en": "Renting out your Spanish home legally | Bueno",
+  "no": "Slik leier du ut boligen i Spania lovlig | Bueno",
+  "sv": "Så hyr du ut din fastighet i Spanien lagligt | Bueno"
+ },
+ "title": {
+  "en": "Renting out your Spanish home legally",
+  "no": "Slik leier du ut boligen i Spania lovlig",
+  "sv": "Så hyr du ut din fastighet i Spanien lagligt"
+ },
+ "topics": {
+  "en": [
+   "The difference between tourist, seasonal and long-term lets",
+   "Your regional tourist licence and what happened to the national register",
+   "What your community of owners can decide, and how to register guests",
+   "How non-residents are taxed on rental income through the Modelo 210",
+   "The April filing dates and verified examples of fines"
+  ],
+  "no": [
+   "Forskjellen mellom turistutleie, sesongutleie og langtidsutleie",
+   "Den regionale turistlisensen og hva som skjedde med det nasjonale registeret",
+   "Hva sameiet kan bestemme, og hvordan du registrerer gjester",
+   "Hvordan ikke-residenter skattlegges for leieinntekter gjennom Modelo 210",
+   "Fristene i april og bekreftede eksempler på bøter"
+  ],
+  "sv": [
+   "Skillnaden mellan turistuthyrning, säsongsuthyrning och långtidsuthyrning",
+   "Ditt regionala turisttillstånd och vad som hände med det nationella registret",
+   "Vad samfälligheten kan besluta och hur du registrerar gäster",
+   "Hur icke-residenter beskattas för hyresintäkter via Modelo 210",
+   "Datumen i april och bekräftade exempel på böter"
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "bay-village",
+   "eyebrow": {
+    "en": "Your guide to letting",
+    "no": "Din guide til utleie",
+    "sv": "Din guide till uthyrning"
+   },
+   "title": {
+    "en": "Renting out your Spanish home legally",
+    "no": "Slik leier du ut boligen i Spania lovlig",
+    "sv": "Så hyr du ut din fastighet i Spanien lagligt"
+   },
+   "sub": {
+    "en": "The licence, your neighbours, your guests and the tax, explained in plain language so that every stay starts on solid ground.",
+    "no": "Lisensen, naboene, gjestene og skatten, forklart med enkle ord slik at hvert opphold starter på trygg grunn.",
+    "sv": "Tillståndet, grannarna, gästerna och skatten, förklarat med enkla ord så att varje vistelse börjar på stabil grund."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Thinking of letting your home?",
+      "no": "Vurderer du å leie ut boligen?",
+      "sv": "Funderar du på att hyra ut din fastighet?"
+     },
+     "lead": {
+      "en": "Letting a Spanish home can cover its running costs and more. The rules come from three places at once: your region, your community of owners and the national tax office. This guide takes them one at a time, as they stand in October 2026.",
+      "no": "Utleie av en bolig i Spania kan dekke driftskostnadene og vel så det. Reglene kommer fra tre steder samtidig: regionen, sameiet og det nasjonale skattekontoret. Denne guiden tar dem ett om gangen, slik de står i oktober 2026.",
+      "sv": "Att hyra ut en fastighet i Spanien kan täcka driftskostnaderna och mer därtill. Reglerna kommer från tre håll samtidigt: regionen, samfälligheten och den nationella skattemyndigheten. Den här guiden går igenom dem en i taget, så som de ser ut i oktober 2026."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Tourist, seasonal and long-term lets follow different rules, so start by naming the kind of let you offer.",
+       "no": "Turistutleie, sesongutleie og langtidsutleie følger ulike regler, så start med å slå fast hvilken type utleie du tilbyr.",
+       "sv": "Turistuthyrning, säsongsuthyrning och långtidsuthyrning följer olika regler, så börja med att slå fast vilken typ av uthyrning du erbjuder."
+      },
+      {
+       "en": "The national rental register was annulled in 2026, but your regional tourist licence still applies.",
+       "no": "Det nasjonale utleieregisteret ble opphevet i 2026, men den regionale turistlisensen gjelder fortsatt.",
+       "sv": "Det nationella uthyrningsregistret upphävdes 2026, men ditt regionala turisttillstånd gäller fortfarande."
+      },
+      {
+       "en": "Rental income is declared once a year on the Modelo 210, between 1 and 20 April.",
+       "no": "Leieinntekter oppgis én gang i året på Modelo 210, mellom 1. og 20. april.",
+       "sv": "Hyresintäkter deklareras en gång om året på Modelo 210, mellan den 1 och 20 april."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "couple-home",
+     "h": 60,
+     "pos": "center 30%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Types of let",
+      "no": "Typer utleie",
+      "sv": "Typer av uthyrning"
+     },
+     "num": "01",
+     "title": {
+      "en": "First, know which kind of let you offer",
+      "no": "Vit først hvilken type utleie du tilbyr",
+      "sv": "Vet först vilken typ av uthyrning du erbjuder"
+     },
+     "lead": {
+      "en": "Spanish law treats a summer holiday let, a few months for a visiting worker and a year-long tenancy as three different things. Each one comes with its own rules.",
+      "no": "Spansk lov behandler en sommerutleie til feriegjester, noen måneder for en tilreisende arbeidstaker og et leieforhold over flere år som tre ulike ting. Hver av dem har sine egne regler.",
+      "sv": "Spansk lag behandlar en semesteruthyrning på sommaren, några månader för en tillfällig arbetstagare och ett hyresförhållande över flera år som tre olika saker. Var och en har sina egna regler."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Tourist let",
+        "no": "Turistutleie",
+        "sv": "Turistuthyrning"
+       },
+       {
+        "en": "The whole home, furnished and ready to use, marketed through tourist channels such as booking platforms and let for profit. It sits outside the Urban Leases Act and is governed by the tourism law of your region.",
+        "no": "Hele boligen, møblert og klar til bruk, markedsført gjennom turistkanaler som bookingplattformer og leid ut mot betaling. Den faller utenfor den spanske husleieloven og reguleres av turistloven i regionen din.",
+        "sv": "Hela bostaden, möblerad och klar att använda, marknadsförd via turistkanaler som bokningsplattformar och uthyrd mot betalning. Den faller utanför den spanska hyreslagen och regleras av turismlagen i din region."
+       }
+      ],
+      [
+       {
+        "en": "Seasonal let",
+        "no": "Sesongutleie",
+        "sv": "Säsongsuthyrning"
+       },
+       {
+        "en": "A let for a temporary need, such as a work posting or a period of study. It falls under the Urban Leases Act as a let for a use other than a permanent home, and the regional tourist licence does not apply to it.",
+        "no": "Utleie for et midlertidig behov, for eksempel et arbeidsoppdrag eller en studieperiode. Den faller inn under husleieloven som utleie til annet enn fast bolig, og den regionale turistlisensen gjelder ikke.",
+        "sv": "Uthyrning för ett tillfälligt behov, till exempel ett arbetsuppdrag eller en studieperiod. Den omfattas av hyreslagen som uthyrning för annat än permanent bostad, och det regionala turisttillståndet gäller inte."
+       }
+      ],
+      [
+       {
+        "en": "Long-term let",
+        "no": "Langtidsutleie",
+        "sv": "Långtidsuthyrning"
+       },
+       {
+        "en": "A let where the tenant makes the home their permanent residence. If the agreed term is shorter, the tenant can extend it year by year up to five years when the landlord is a private individual.",
+        "no": "Utleie der leietakeren gjør boligen til sitt faste hjem. Er avtalt leietid kortere, kan leietakeren forlenge den år for år opp til fem år når utleieren er en privatperson.",
+        "sv": "Uthyrning där hyresgästen gör bostaden till sitt permanenta hem. Är den avtalade tiden kortare kan hyresgästen förlänga den år för år upp till fem år när hyresvärden är en privatperson."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "The name on the contract does not decide the category. What counts is how the home is marketed and how it is actually used.",
+      "no": "Navnet på kontrakten avgjør ikke kategorien. Det som teller, er hvordan boligen markedsføres og hvordan den faktisk brukes.",
+      "sv": "Namnet på avtalet avgör inte kategorin. Det som räknas är hur bostaden marknadsförs och hur den faktiskt används."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Licence and register",
+      "no": "Lisens og register",
+      "sv": "Tillstånd och register"
+     },
+     "num": "02",
+     "title": {
+      "en": "The tourist licence is regional",
+      "no": "Turistlisensen er regional",
+      "sv": "Turisttillståndet är regionalt"
+     },
+     "lead": {
+      "en": "Every autonomous community runs its own tourism register. That registration is what a tourist let depends on, and it still applies.",
+      "no": "Hver region har sitt eget turistregister. Det er denne registreringen turistutleie bygger på, og den gjelder fortsatt.",
+      "sv": "Varje region har sitt eget turistregister. Det är den registreringen som turistuthyrning bygger på, och den gäller fortfarande."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Register with your region before the first guest",
+        "no": "Registrer deg hos regionen før den første gjesten",
+        "sv": "Registrera dig hos regionen före den första gästen"
+       },
+       "paras": [
+        {
+         "en": "Registration usually starts with a declaration to the regional tourism authority, the declaración responsable, which gives you a registration number. In the Comunitat Valenciana, you first need a report from the town hall confirming that tourist use fits local planning, and the registration is valid for five years.",
+         "no": "Registreringen starter som regel med en erklæring til den regionale turistmyndigheten, declaración responsable, som gir deg et registreringsnummer. I Comunitat Valenciana trenger du først en uttalelse fra kommunen om at turistbruk passer med reguleringen, og registreringen gjelder i fem år.",
+         "sv": "Registreringen börjar oftast med en försäkran till den regionala turistmyndigheten, declaración responsable, som ger dig ett registreringsnummer. I Comunitat Valenciana behöver du först ett utlåtande från kommunen om att turistbruk stämmer med planeringen, och registreringen gäller i fem år."
+        }
+       ],
+       "tag": {
+        "en": "Do this first",
+        "no": "Gjør dette først",
+        "sv": "Gör detta först"
+       }
+      },
+      {
+       "title": {
+        "en": "Show your number in every advert",
+        "no": "Vis nummeret i hver annonse",
+        "sv": "Visa numret i varje annons"
+       },
+       "paras": [
+        {
+         "en": "Regions such as the Comunitat Valenciana require the registration number in every listing. The EU short-term rental regulation, which has applied since 20 May 2026, also makes platforms display it wherever a registration scheme exists.",
+         "no": "Regioner som Comunitat Valenciana krever registreringsnummeret i hver annonse. EUs forordning om korttidsutleie, som har gjeldt siden 20. mai 2026, pålegger også plattformene å vise det der det finnes en registreringsordning.",
+         "sv": "Regioner som Comunitat Valenciana kräver registreringsnumret i varje annons. EU:s förordning om korttidsuthyrning, som har gällt sedan den 20 maj 2026, kräver också att plattformarna visar det där det finns ett registreringssystem."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "The national register no longer applies",
+        "no": "Det nasjonale registeret gjelder ikke lenger",
+        "sv": "Det nationella registret gäller inte längre"
+       },
+       "paras": [
+        {
+         "en": "From 1 July 2025, platforms had to show a number from the national Single Rental Register, the Registro Único de Arrendamientos. In May and June 2026 the Supreme Court annulled the register, finding that the State lacked the power to create it. You no longer need that number or its annual return. Platforms still pass listing data to the authorities through the Digital Single Window.",
+         "no": "Fra 1. juli 2025 måtte plattformene vise et nummer fra det nasjonale utleieregisteret, Registro Único de Arrendamientos. I mai og juni 2026 opphevet Høyesterett registeret fordi staten ikke hadde myndighet til å opprette det. Du trenger ikke lenger det nummeret eller den årlige oversikten. Plattformene sender fortsatt annonsedata til myndighetene gjennom en felles digital portal.",
+         "sv": "Från den 1 juli 2025 måste plattformarna visa ett nummer från det nationella uthyrningsregistret, Registro Único de Arrendamientos. I maj och juni 2026 upphävde Högsta domstolen registret eftersom staten saknade befogenhet att inrätta det. Du behöver inte längre det numret eller den årliga redovisningen. Plattformarna skickar fortfarande annonsdata till myndigheterna via en gemensam digital portal."
+        }
+       ],
+       "tag": {
+        "en": "Changed in 2026",
+        "no": "Endret i 2026",
+        "sv": "Ändrat 2026"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Neighbours and guests",
+      "no": "Naboer og gjester",
+      "sv": "Grannar och gäster"
+     },
+     "num": "03",
+     "title": {
+      "en": "Your community and your guests",
+      "no": "Sameiet og gjestene dine",
+      "sv": "Samfälligheten och dina gäster"
+     },
+     "lead": {
+      "en": "Two more sets of rules sit alongside the licence: what your community of owners agrees, and what the authorities need to know about who stays in your home.",
+      "no": "To regelsett til kommer i tillegg til lisensen: hva sameiet vedtar, og hva myndighetene trenger å vite om hvem som bor i boligen din.",
+      "sv": "Två regelverk till gäller vid sidan av tillståndet: vad samfälligheten beslutar och vad myndigheterna behöver veta om vem som bor i din bostad."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "New tourist lets need the community's approval",
+        "no": "Ny turistutleie krever godkjenning fra sameiet",
+        "sv": "Ny turistuthyrning kräver samfällighetens godkännande"
+       },
+       "text": {
+        "en": "Since the reform of the Horizontal Property Law came into force on 3 April 2025, an owner in a shared building must obtain the express approval of the community before starting a tourist let.",
+        "no": "Siden endringen i loven om eierseksjoner trådte i kraft 3. april 2025, må en eier i et sameie ha uttrykkelig godkjenning fra sameiet før turistutleie starter.",
+        "sv": "Sedan ändringen i lagen om gemensamt ägande trädde i kraft den 3 april 2025 måste en ägare i en samfällighet ha samfällighetens uttryckliga godkännande innan turistuthyrning börjar."
+       }
+      },
+      {
+       "title": {
+        "en": "Three fifths decide",
+        "no": "Tre femtedeler avgjør",
+        "sv": "Tre femtedelar avgör"
+       },
+       "text": {
+        "en": "Approving, limiting, conditioning or prohibiting tourist lets needs the votes of three fifths of all owners, who must also hold three fifths of the participation quotas.",
+        "no": "Å godkjenne, begrense, sette vilkår for eller forby turistutleie krever stemmene til tre femtedeler av alle eierne, som også må ha tre femtedeler av eierbrøkene.",
+        "sv": "Att godkänna, begränsa, villkora eller förbjuda turistuthyrning kräver röster från tre femtedelar av alla ägare, som också ska ha tre femtedelar av andelstalen."
+       }
+      },
+      {
+       "title": {
+        "en": "Existing lets are protected",
+        "no": "Eksisterende utleie er beskyttet",
+        "sv": "Befintlig uthyrning är skyddad"
+       },
+       "text": {
+        "en": "Owners who were already letting legally under their region's tourism rules before 3 April 2025 can continue. Community agreements do not apply retroactively.",
+        "no": "Eiere som allerede leide ut lovlig etter regionens turistregler før 3. april 2025, kan fortsette. Vedtak i sameiet gjelder ikke med tilbakevirkende kraft.",
+        "sv": "Ägare som redan hyrde ut lagligt enligt regionens turismregler före den 3 april 2025 kan fortsätta. Samfällighetens beslut gäller inte retroaktivt."
+       }
+      },
+      {
+       "title": {
+        "en": "The community can charge more",
+        "no": "Sameiet kan kreve mer",
+        "sv": "Samfälligheten kan ta ut mer"
+       },
+       "text": {
+        "en": "A community can raise a tourist home's share of the common costs by up to 20%.",
+        "no": "Et sameie kan øke en turistbolig sin andel av felleskostnadene med inntil 20 %.",
+        "sv": "En samfällighet kan höja en turistbostads andel av de gemensamma kostnaderna med upp till 20 %."
+       }
+      },
+      {
+       "title": {
+        "en": "Register every guest",
+        "no": "Registrer hver gjest",
+        "sv": "Registrera varje gäst"
+       },
+       "text": {
+        "en": "Under Royal Decree 933/2021, whoever provides the accommodation sends each guest's details to the Interior Ministry through its SES.HOSPEDAJES service within 24 hours of the booking, the arrival or a cancellation, and keeps the records for three years.",
+        "no": "Etter kongelig resolusjon 933/2021 skal den som tilbyr overnattingen sende opplysninger om hver gjest til innenriksdepartementet gjennom tjenesten SES.HOSPEDAJES innen 24 timer etter bestilling, ankomst eller avbestilling, og ta vare på opplysningene i tre år.",
+        "sv": "Enligt kungligt dekret 933/2021 ska den som erbjuder boendet skicka uppgifter om varje gäst till inrikesministeriet via tjänsten SES.HOSPEDAJES inom 24 timmar efter bokning, ankomst eller avbokning, och spara uppgifterna i tre år."
+       }
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "terrace",
+     "h": 28,
+     "pos": "center 55%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Tax",
+      "no": "Skatt",
+      "sv": "Skatt"
+     },
+     "num": "04",
+     "title": {
+      "en": "How rental income is taxed",
+      "no": "Slik skattlegges leieinntekter",
+      "sv": "Så beskattas hyresintäkter"
+     },
+     "lead": {
+      "en": "Non-residents declare Spanish rental income on the Modelo 210. Where you live decides what you can deduct.",
+      "no": "Ikke-residenter oppgir leieinntekter fra Spania på Modelo 210. Hvor du bor, avgjør hva du kan trekke fra.",
+      "sv": "Icke-residenter deklarerar hyresintäkter från Spanien på Modelo 210. Var du bor avgör vad du får dra av."
+     }
+    },
+    {
+     "type": "formula",
+     "ops": [
+      "−",
+      "×"
+     ],
+     "boxes": [
+      {
+       "label": {
+        "en": "Income",
+        "no": "Inntekt",
+        "sv": "Intäkt"
+       },
+       "value": {
+        "en": "Rent received",
+        "no": "Mottatt leie",
+        "sv": "Mottagen hyra"
+       }
+      },
+      {
+       "label": {
+        "en": "Costs",
+        "no": "Kostnader",
+        "sv": "Kostnader"
+       },
+       "value": {
+        "en": "Costs, days let",
+        "no": "Kostnader, utleid",
+        "sv": "Kostnader, uthyrt"
+       }
+      },
+      {
+       "label": {
+        "en": "Rate",
+        "no": "Sats",
+        "sv": "Skattesats"
+       },
+       "value": {
+        "en": "19%",
+        "no": "19 %",
+        "sv": "19 %"
+       }
+      }
+     ],
+     "result": {
+      "label": {
+       "en": "Result",
+       "no": "Resultat",
+       "sv": "Resultat"
+      },
+      "value": {
+       "en": "Your tax",
+       "no": "Din skatt",
+       "sv": "Din skatt"
+      }
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Costs, days let",
+        "no": "Kostnader, utleid",
+        "sv": "Kostnader, uthyrt"
+       },
+       {
+        "en": "EU and EEA residents, including Norway, can deduct costs such as IBI, community fees, insurance, utilities and repairs, in proportion to the days the home was let.",
+        "no": "Bosatte i EU og EØS, også Norge, kan trekke fra IBI, fellesutgifter, forsikring, strøm, vann og reparasjoner, i forhold til antall utleiedager.",
+        "sv": "Bosatta i EU och EES, även Sverige, får dra av IBI, samfällighetsavgifter, försäkring, el, vatten och reparationer, i proportion till uthyrda dagar."
+       }
+      ],
+      [
+       {
+        "en": "19% or 24%",
+        "no": "19 % eller 24 %",
+        "sv": "19 % eller 24 %"
+       },
+       {
+        "en": "EU and EEA residents pay 19% on the net figure. Everyone else pays 24% on the full rent.",
+        "no": "Innbyggere i EU og EØS betaler 19 % av nettobeløpet. Alle andre betaler 24 % av hele leien.",
+        "sv": "Bosatta i EU och EES betalar 19 % på nettobeloppet. Alla andra betalar 24 % på hela hyran."
+       }
+      ],
+      [
+       {
+        "en": "Days not let",
+        "no": "Dager uten utleie",
+        "sv": "Dagar utan uthyrning"
+       },
+       {
+        "en": "For the rest of the year, the home produces imputed income, declared on a separate return.",
+        "no": "For resten av året gir boligen en beregnet inntekt, som oppgis i en egen selvangivelse.",
+        "sv": "Resten av året ger bostaden en schablonintäkt, som deklareras separat."
+       }
+      ],
+      [
+       {
+        "en": "Platforms report",
+        "no": "Plattformene rapporterer",
+        "sv": "Plattformarna rapporterar"
+       },
+       {
+        "en": "Booking platforms report what they paid you, for which property and for how many days, and the data is shared with your home country.",
+        "no": "Bookingplattformene rapporterer hva de har betalt deg, for hvilken eiendom og hvor mange dager, og dette deles med hjemlandet ditt.",
+        "sv": "Bokningsplattformarna rapporterar vad de har betalat dig, för vilken fastighet och hur många dagar, och det delas med ditt hemland."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "VAT: long-term lets of a home are exempt. In September 2026 the government approved a decree-law setting 10% VAT on tourist lets of up to 30 nights from 1 December 2026, not the 21% first proposed. Congress must confirm it.",
+      "no": "Merverdiavgift: langtidsutleie av bolig er fritatt. I september 2026 vedtok regjeringen en lovdekret om 10 % merverdiavgift på turistutleie på inntil 30 netter fra 1. desember 2026, ikke 21 % som først foreslått. Kongressen må bekrefte den.",
+      "sv": "Moms: långtidsuthyrning av bostad är momsfri. I september 2026 antog regeringen ett lagdekret om 10 % moms på turistuthyrning på upp till 30 nätter från den 1 december 2026, inte 21 % som först föreslogs. Kongressen måste godkänna det."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "coast-hills",
+   "num": "05",
+   "eyebrow": {
+    "en": "A worked example",
+    "no": "Et regneeksempel",
+    "sv": "Ett räkneexempel"
+   },
+   "title": {
+    "en": "Eight weeks of summer guests",
+    "no": "Åtte uker med sommergjester",
+    "sv": "Åtta veckor med sommargäster"
+   },
+   "lead": {
+    "en": "One owner who lives in Norway lets a holiday flat for 56 nights in 2026. The figures are illustrative round numbers chosen to show the method.",
+    "no": "Én eier som bor i Norge leier ut en ferieleilighet i 56 netter i 2026. Tallene er runde eksempeltall valgt for å vise metoden.",
+    "sv": "En ägare som bor i Sverige hyr ut en semesterlägenhet i 56 nätter under 2026. Siffrorna är avrundade exempel som visar metoden."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Rent received",
+      "no": "Mottatt leie",
+      "sv": "Mottagen hyra"
+     },
+     "note": {
+      "en": "56 nights let through a booking platform.",
+      "no": "56 netter utleid gjennom en bookingplattform.",
+      "sv": "56 nätter uthyrda via en bokningsplattform."
+     },
+     "value": {
+      "en": "€8,000",
+      "no": "€8 000",
+      "sv": "€8 000"
+     }
+    },
+    {
+     "label": {
+      "en": "Running costs for the year",
+      "no": "Driftskostnader for året",
+      "sv": "Driftskostnader för året"
+     },
+     "note": {
+      "en": "IBI, community fees, insurance and utilities.",
+      "no": "IBI, fellesutgifter, forsikring, strøm og vann.",
+      "sv": "IBI, samfällighetsavgifter, försäkring, el och vatten."
+     },
+     "value": {
+      "en": "€3,650",
+      "no": "€3 650",
+      "sv": "€3 650"
+     }
+    },
+    {
+     "label": {
+      "en": "Share for the days let",
+      "no": "Andel for utleiedagene",
+      "sv": "Andel för de uthyrda dagarna"
+     },
+     "note": {
+      "en": "56 of 365 days, which is €10 a day for 56 days.",
+      "no": "56 av 365 dager, som er €10 per dag i 56 dager.",
+      "sv": "56 av 365 dagar, vilket är €10 per dag i 56 dagar."
+     },
+     "value": {
+      "en": "€560",
+      "no": "€560",
+      "sv": "€560"
+     }
+    },
+    {
+     "label": {
+      "en": "Net rental income",
+      "no": "Netto leieinntekt",
+      "sv": "Nettohyresintäkt"
+     },
+     "note": {
+      "en": "Rent received minus the costs for the days let.",
+      "no": "Mottatt leie minus kostnadene for utleiedagene.",
+      "sv": "Mottagen hyra minus kostnaderna för de uthyrda dagarna."
+     },
+     "value": {
+      "en": "€7,440",
+      "no": "€7 440",
+      "sv": "€7 440"
+     }
+    },
+    {
+     "label": {
+      "en": "Tax rate",
+      "no": "Skattesats",
+      "sv": "Skattesats"
+     },
+     "note": {
+      "en": "The owner lives in the EU/EEA.",
+      "no": "Eieren bor i EU/EØS.",
+      "sv": "Ägaren bor i EU/EES."
+     },
+     "value": {
+      "en": "19%",
+      "no": "19 %",
+      "sv": "19 %"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Tax to declare in April 2027",
+     "no": "Skatt å oppgi i april 2027",
+     "sv": "Skatt att deklarera i april 2027"
+    },
+    "value": {
+     "en": "€1,413.60",
+     "no": "€1 413,60",
+     "sv": "€1 413,60"
+    }
+   },
+   "calc": {
+    "en": "(€8,000 − €3,650 × 56/365) × 19% = €1,413.60",
+    "no": "(€8 000 − €3 650 × 56/365) × 19 % = €1 413,60",
+    "sv": "(€8 000 − €3 650 × 56/365) × 19 % = €1 413,60"
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Dates and fines",
+      "no": "Frister og bøter",
+      "sv": "Datum och böter"
+     },
+     "num": "06",
+     "title": {
+      "en": "The dates that matter each year",
+      "no": "Fristene som gjelder hvert år",
+      "sv": "Datumen som gäller varje år"
+     }
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "1 to 15 April",
+        "no": "1. til 15. april",
+        "sv": "1 till 15 april"
+       },
+       "text": {
+        "en": "File the Modelo 210 for last year's rental income in this window to pay it by direct debit.",
+        "no": "Lever Modelo 210 for fjorårets leieinntekter i dette tidsrommet for å betale med trekk fra kontoen.",
+        "sv": "Lämna Modelo 210 för förra årets hyresintäkter under den här perioden för att betala via autogiro."
+       }
+      },
+      {
+       "date": {
+        "en": "20 April",
+        "no": "20. april",
+        "sv": "20 april"
+       },
+       "text": {
+        "en": "Last day to file the rental return for the previous year, whether you declare each let separately or all together.",
+        "no": "Siste dag for å levere leieoppgaven for fjoråret, enten du oppgir hver utleie for seg eller alt samlet.",
+        "sv": "Sista dagen att lämna hyresdeklarationen för föregående år, oavsett om du deklarerar varje uthyrning för sig eller allt samlat."
+       }
+      },
+      {
+       "date": {
+        "en": "1 April to 31 December",
+        "no": "1. april til 31. desember",
+        "sv": "1 april till 31 december"
+       },
+       "text": {
+        "en": "Window for the imputed income return that covers the days your home was not let.",
+        "no": "Tidsrommet for selvangivelsen med beregnet inntekt for dagene boligen ikke var utleid.",
+        "sv": "Perioden för deklarationen med schablonintäkt för de dagar bostaden inte var uthyrd."
+       }
+      }
+     ]
+    },
+    {
+     "type": "rates",
+     "title": {
+      "en": "If you let without registering",
+      "no": "Hvis du leier ut uten registrering",
+      "sv": "Om du hyr ut utan registrering"
+     },
+     "intro": {
+      "en": "Fines for tourist lets are set by each region. These are verified examples from the Comunitat Valenciana.",
+      "no": "Bøter for turistutleie fastsettes av hver region. Dette er bekreftede eksempler fra Comunitat Valenciana.",
+      "sv": "Böter för turistuthyrning bestäms av varje region. Det här är bekräftade exempel från Comunitat Valenciana."
+     },
+     "rows": [
+      [
+       {
+        "en": "€10,001 to €100,000",
+        "no": "€10 001 til €100 000",
+        "sv": "€10 001 till €100 000"
+       },
+       {
+        "en": "The fine range for a serious infraction under the Valencian tourism law, which includes advertising a tourist home without its registration number.",
+        "no": "Bøtespennet for et alvorlig brudd på turistloven i Valencia-regionen, som blant annet gjelder å annonsere en turistbolig uten registreringsnummer.",
+        "sv": "Bötesintervallet för en allvarlig överträdelse av turismlagen i Valenciaregionen, som bland annat gäller att annonsera en turistbostad utan registreringsnummer."
+       }
+      ],
+      [
+       {
+        "en": "138 fines",
+        "no": "138 bøter",
+        "sv": "138 böter"
+       },
+       {
+        "en": "Imposed by Valencia City Council on tourist homes that did not meet the legal requirements, worth more than €1.5 million over 18 months from March 2025.",
+        "no": "Ilagt av bystyret i Valencia mot turistboliger som ikke oppfylte lovkravene, til sammen over €1,5 millioner i løpet av 18 måneder fra mars 2025.",
+        "sv": "Utfärdade av Valencias kommun mot turistbostäder som inte uppfyllde lagkraven, till ett värde av över €1,5 miljoner under 18 månader från mars 2025."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "marina",
+     "h": 40,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "07",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Modelo 210 filing",
+    "no": "Levering av Modelo 210",
+    "sv": "Inlämning av Modelo 210"
+   },
+   "title": {
+    "en": "Enjoy the income, not the paperwork",
+    "no": "Nyt inntektene, ikke papirarbeidet",
+    "sv": "Njut av intäkterna, inte pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno is a registered partner of the Spanish tax office. We file your rental return for you, and the Bueno Account keeps the money side of your home in one place.",
+    "no": "Bueno er registrert samarbeidspartner hos det spanske skattekontoret. Vi leverer leieoppgaven for deg, og Bueno-kontoen samler økonomien rundt boligen på ett sted.",
+    "sv": "Bueno är registrerad samarbetspartner till den spanska skattemyndigheten. Vi lämnar din hyresdeklaration åt dig, och Bueno-kontot samlar ekonomin kring din fastighet på ett ställe."
+   },
+   "steps": [
+    {
+     "en": "We file your Modelo 210 for rental income between 1 and 20 April.",
+     "no": "Vi leverer din Modelo 210 for leieinntekter mellom 1. og 20. april.",
+     "sv": "Vi lämnar din Modelo 210 för hyresintäkter mellan den 1 och 20 april."
+    },
+    {
+     "en": "We can also file the return for the days your home was not let.",
+     "no": "Vi kan også levere selvangivelsen for dagene boligen ikke var utleid.",
+     "sv": "Vi kan också lämna deklarationen för de dagar fastigheten inte var uthyrd."
+    },
+    {
+     "en": "Rent arrives in your Bueno Account with a Spanish IBAN, and your bills are paid from it by direct debit.",
+     "no": "Leien kommer inn på Bueno-kontoen med spansk IBAN, og regningene betales derfra med trekk fra kontoen.",
+     "sv": "Hyran kommer in på ditt Bueno-konto med spanskt IBAN, och räkningarna betalas därifrån via autogiro."
+    },
+    {
+     "en": "Our multilingual team answers your questions in your language.",
+     "no": "Det flerspråklige teamet vårt svarer på spørsmålene dine på ditt språk.",
+     "sv": "Vårt flerspråkiga team svarar på dina frågor på ditt språk."
+    }
+   ],
+   "price": {
+    "en": "From €50",
+    "no": "Fra €50",
+    "sv": "Från €50"
+   },
+   "price_note": {
+    "en": "The price depends on the number of owners and properties. The Bueno Account is €99 a year.",
+    "no": "Prisen avhenger av antall eiere og eiendommer. Bueno-kontoen koster €99 per år.",
+    "sv": "Priset beror på antalet ägare och fastigheter. Bueno-kontot kostar €99 per år."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

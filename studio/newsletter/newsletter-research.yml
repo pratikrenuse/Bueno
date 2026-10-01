@@ -1,0 +1,42 @@
+# Fortnightly newsletter research and review email.
+#
+# NOT SWITCHED ON YET. This file is parked in studio/newsletter/ on purpose: GitHub only
+# runs workflows from .github/workflows/, so nothing can fire until it is moved there.
+# Once moved, it runs only when started by hand from the Actions tab
+# ("Run workflow"). To launch it, uncomment the schedule below and add two repository
+# secrets in GitHub (Settings, Secrets and variables, Actions):
+#   CRON_SECRET        the same value as CRON_SECRET in Vercel
+#   ANTHROPIC_API_KEY  the same value as ANTHROPIC_API_KEY in Vercel
+#
+# It runs every Friday morning, but only does anything on the Friday that is an issue's alert
+# day: it asks the site which issue is due and exits quietly otherwise. It lives in GitHub
+# rather than vercel.json because the Hobby plan allows two Vercel crons and LinkedIn
+# already uses both.
+
+name: newsletter-research
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Dry run: research and print, write nothing'
+        required: false
+        default: '1'
+  # schedule:
+  #   - cron: '0 6 * * 5'   # Fridays 06:00 UTC = 08:00 Barcelona in summer, 07:00 in winter
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Research the due issue and send the review email
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY: ${{ github.event.inputs.dry || '0' }}
+        run: node studio/newsletter/research.mjs
