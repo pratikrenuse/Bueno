@@ -8,17 +8,17 @@
 // file in this surface imports nothing but its own siblings.
 //
 // WHO GETS WHAT
-// One recipient, one copy. Himanshu publishes the post; Pratik is copied on every send so
+// One recipient, one copy. Poornima publishes the post; Pratik is copied on every send so
 // he has a record of exactly what left, without having to trust the deck's own display.
 
-// Himanshu reads two mailboxes, so both are on every send. Gmail local parts are case
-// insensitive, so these are stored lower case regardless of how they were written down.
+// Poornima took over publishing from Himanshu in October 2026. The address is stored lower
+// case, because Gmail local parts are case insensitive.
 import { TRANSLATION_LANGS, LANG_NAME, linkFor } from './_fb_content.js';
 
-const HIMANSHU = ['himanshu1997bisht@gmail.com', 'himanshubisht1407@gmail.com'];
+const POORNIMA = ['poornimanirwal@gmail.com'];
 const PRATIK = 'pratik.y.renuse@gmail.com';
 
-export const SEND_TO = HIMANSHU;
+export const SEND_TO = POORNIMA;
 export const SEND_CC = [PRATIK];
 export const REPLY_TO = PRATIK;
 
@@ -31,7 +31,7 @@ const esc = (s) => String(s ?? '')
 //
 // The fallback matters though. Resend's sandbox sender only delivers to the address that
 // owns the Resend account, so if RESEND_FROM were ever unset, a send would come back ok
-// from the API and Himanshu would never receive anything. The deck would say "Sent" and be
+// from the API and Poornima would never receive anything. The deck would say "Sent" and be
 // wrong, which is the worst possible failure for a queue like this. usingSandboxSender lets
 // the send path say so on the card instead.
 const SANDBOX_FROM = '24/7 Spain <onboarding@resend.dev>';
@@ -110,7 +110,7 @@ export function bodyFor(post) {
         24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;Facebook post</span>
       </div>
       <div style="padding:22px">
-        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi Himanshu,</p>
+        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi Poornima,</p>
         <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">
           Here is one post, written out in ${esc(String(available.length + 1))} languages. Same post, same image,
           one version per language. Post each version in groups that speak that language. Please use

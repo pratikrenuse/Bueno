@@ -1,7 +1,7 @@
 // The posts Pratik writes under his own name in Facebook groups, and their translations.
 //
 // WHAT THIS IS, AND WHAT IT IS EMPHATICALLY NOT
-// This is a personal surface. Pratik reviews and approves; Himanshu publishes. It has nothing
+// This is a personal surface. Pratik reviews and approves; Poornima publishes. It has nothing
 // to do with api/_lk_*.js, with linkedin_posts, or with the team deck at /internal-linkedin.
 // Those are reviewed by John and go out over the team's names. Nothing in this file may be
 // copied there and nothing from there may be copied here.

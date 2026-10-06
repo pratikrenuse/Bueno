@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 // WHAT THIS IS NOT
 // It is not /internal-linkedin. That deck belongs to the team, John reviews it, and its
 // posts go out over other people's names to five team members. This one is personal: Pratik
-// reviews, edits and approves, and each approval emails one post to Himanshu, who publishes
+// reviews, edits and approves, and each approval emails one post to Poornima, who publishes
 // it, with Pratik copied.
 //
 // The two surfaces share no table, no API route, no module and no style prefix, and a test
