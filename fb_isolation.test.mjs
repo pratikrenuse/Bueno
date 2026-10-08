@@ -216,6 +216,22 @@ for (const idea of BUENO_IDEAS) {
   ok('no two posts in a row share an image template', tpl.every((t, i) => i === 0 || t !== tpl[i - 1]), tpl.join(','));
 }
 
+// Educational, not promotional (Pratik, 8 October 2026): groups remove sales posts. No prices
+// or plan names in any post or image, no call to action on an image, and the Bueno logo on
+// exactly half of the images.
+{
+  const PROMO = /(€\s?\d|\d\s?€|\b(Select|Premium|Standard)\b|we file it for you|starting from|starts from)/i;
+  for (const idea of IDEAS) for (const lang of LANGS) {
+    const t = renderPost(idea, lang);
+    if (idea.tool === BUENO_TOOL) ok(`${idea.key}/${lang}: no price or plan in a Bueno post`, !PROMO.test(t), (t.match(PROMO) || [])[0] || '');
+  }
+  for (const lang of LANGS) {
+    const c2 = JSON.parse(read(`./studio/facebook/cards2/${lang}.json`) || '{}');
+    ok(`${lang}: no call to action on any image`, Object.values(c2).every(c => !c.cta));
+    ok(`${lang}: the Bueno logo is on exactly half the images`, Object.values(c2).filter(c => c.logo).length === 15);
+  }
+}
+
 // THE QUEUE. Every idea has exactly one place in it, and it opens by alternating a Bueno
 // post with a 24/7 Spain post, which is the mix Pratik asked for.
 ok('every idea is in the queue once', QUEUE_ORDER.length === IDEAS.length

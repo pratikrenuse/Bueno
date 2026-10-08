@@ -12,7 +12,8 @@
   "items": [
    "Du deklarerar hyran för veckorna det var uthyrt.",
    "För de tomma veckorna deklarerar du en inkomst som räknas fram ur taxeringsvärdet."
-  ]
+  ],
+  "logo": true
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -23,7 +24,8 @@
    "Ett hus du aldrig hyr ut",
    "kan ändå ge skatt."
   ],
-  "sub": "Den bygger på taxeringsvärdet på din IBI-avi, och ingenting får dras av."
+  "sub": "Den bygger på taxeringsvärdet på din IBI-avi, och ingenting får dras av.",
+  "logo": false
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -32,7 +34,8 @@
   "big_label": "Deklarera för 2025 senast",
   "big": "31 december",
   "headline": "Du deklarerar även om ingen hyrde.",
-  "sub": "Bueno lämnar in blankett 210 åt dig, från €50. Betalning via autogiro stänger tidigare, den 23 december."
+  "sub": "Betalning via autogiro stänger tidigare, den 23 december. Varje ägare deklarerar för sin egen andel.",
+  "logo": true
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -48,7 +51,7 @@
    "Från månad 13 blir det fast 15 %, plus ränta.",
    "Efter ett brev från skattemyndigheten gäller inte de här reglerna."
   ],
-  "cta": "Räkna ut din summa gratis på 247spain.es."
+  "logo": false
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -65,7 +68,7 @@
    "Blankett 210 är statlig, och ingen skickar en räkning.",
    "Den räknas fram ur taxeringsvärdet på IBI-avin."
   ],
-  "cta": "Vi lämnar in den åt dig, från €50."
+  "logo": true
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -79,7 +82,7 @@
    "Hyra från 1 oktober går in i en årsdeklaration.",
    "Nästa gång du deklarerar är i april 2027."
   ],
-  "cta": "Kolla din gratis på 247spain.es."
+  "logo": false
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -93,8 +96,9 @@
   "sub": "Varje ägare lämnar in sin egen blankett 210.",
   "items": [
    "Äger ni hälften var använder varje deklaration halva taxeringsvärdet.",
-   "Bueno lämnar in en blankett 210 för varje ägare, från €50."
-  ]
+   "Tre syskon som har ärvt en lägenhet lämnar in tre deklarationer."
+  ],
+  "logo": true
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -105,7 +109,8 @@
    "Samma bostad, samma hyra,",
    "en annan skatteräkning."
   ],
-  "sub": "I EU och EES drar du av kostnader och betalar 19 %. På andra håll är det 24 % på bruttohyran."
+  "sub": "I EU och EES drar du av kostnader och betalar 19 %. På andra håll är det 24 % på bruttohyran.",
+  "logo": false
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -114,7 +119,8 @@
   "big_label": "Reviderat värde ger för 2025",
   "big": "1,1 %",
   "headline": "Fyra uppgifter är hela din deklaration.",
-  "sub": "Vi behöver ditt taxeringsvärde, din andel och var du har din skattehemvist. Bueno lämnar in den från €50."
+  "sub": "Du behöver ditt taxeringsvärde, din andel och var du har din skattehemvist.",
+  "logo": true
  },
  "three-percent-retention": {
   "template": "split",
@@ -130,7 +136,7 @@
    "Din riktiga kapitalvinstskatt är 19 % av vinsten, för alla.",
    "Var 3 % mer än du är skyldig får du tillbaka mellanskillnaden."
   ],
-  "cta": "Räkna ut din återbetalning gratis på 247spain.es."
+  "logo": false
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
@@ -147,7 +153,7 @@
    "Efter det måste du betala skatten på annat sätt.",
    "Det hjälper att inte vänta till sista veckan."
   ],
-  "cta": "Vi lämnar in den åt dig, från €50."
+  "logo": true
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -161,22 +167,23 @@
    "Blev det ingen ökning finns det inget att betala.",
    "Du har trettio arbetsdagar från köpebrevet."
   ],
-  "cta": "Kolla din gratis på 247spain.es."
+  "logo": false
  },
  "bueno-why-from-fifty": {
   "template": "question",
   "photo": "g05.jpg",
   "brand": "bueno",
   "headline": [
-   "Varför deklarerar Bueno",
-   "från €50 när jag fått",
-   "offerter på några hundra?"
+   "Min blankett 210 landar på",
+   "noll i år. Måste jag",
+   "ändå lämna in den?"
   ],
-  "sub": "Väldigt lite ändras från ett år till nästa.",
+  "sub": "Ja. En nolldeklaration lämnas in 1 till 20 januari.",
   "items": [
-   "Vi sparar förra årets blankett och gör ett utkast av årets.",
-   "Priset beror på antalet ägare, så ett par blir två deklarationer."
-  ]
+   "Nollresultat betyder att inget ska betalas och inget kommer tillbaka.",
+   "En återbetalning kan lämnas in från 1 februari, med en gräns på fyra år."
+  ],
+  "logo": true
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -187,16 +194,18 @@
    "Det beror på tjänsterna,",
    "inte på vistelsens längd."
   ],
-  "sub": "Utan tjänster är semesteruthyrning undantagen. Hotelliknande tjänster under vistelsen ger 10 %."
+  "sub": "Utan tjänster är semesteruthyrning undantagen. Hotelliknande tjänster under vistelsen ger 10 %.",
+  "logo": false
  },
  "bueno-included-in-select": {
   "template": "date",
   "photo": "g02.jpg",
   "brand": "bueno",
-  "big_label": "Deklarera för 2025 senast",
-  "big": "31 december",
-  "headline": "Med Select ingår den redan.",
-  "sub": "Select kostar €199 per år och täcker upp till två ägare och två bostäder. Med Standard kostar deklarationen från €50."
+  "big_label": "Utan taxeringsvärde använder du",
+  "big": "1,1 %",
+  "headline": "Den gäller på halva underlaget.",
+  "sub": "Underlaget är det högsta av priset du betalade och värdet som skattemyndigheten har kontrollerat.",
+  "logo": true
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -212,7 +221,7 @@
    "Ingen enskild räkning får en förmiddag av någons tid.",
    "Samla hela året i en kolumn och jämför."
   ],
-  "cta": "Räkna ihop din gratis på 247spain.es."
+  "logo": false
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -229,7 +238,7 @@
    "Från månad 13 är det fast 15 % plus ränta.",
    "Tillägget ersätter en sanktionsavgift."
   ],
-  "cta": "Berätta vilka år, så ger vi en offert."
+  "logo": true
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -243,7 +252,7 @@
    "Vissa uppläggningsavgifter lades på låntagaren.",
    "En abogado avgör om ett anspråk fortfarande är i tid."
   ],
-  "cta": "Uppskatta ditt gratis på 247spain.es."
+  "logo": false
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -257,8 +266,9 @@
   "sub": "Den får nya fält och en senare period.",
   "items": [
    "Den frågar efter tillgängliga dagar och din ägarandel.",
-   "Deklarationen för 2026 öppnar 1 april 2027 och pågår till 31 december."
-  ]
+   "För en bostad du inte hyr ut öppnar deklarationen för 2026 den 1 april 2027."
+  ],
+  "logo": true
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -269,16 +279,18 @@
    "Din hemförsäkring kan",
    "betala din advokat."
   ],
-  "sub": "Leta efter defensa juridica. Du har rätt att välja din egen advokat."
+  "sub": "Leta efter defensa juridica. Du har rätt att välja din egen advokat.",
+  "logo": false
  },
  "ninety-days": {
   "template": "date",
   "photo": "g08.jpg",
   "brand": "247",
-  "big_label": "Du kan stanna i upp till",
+  "big_label": "Med ett icke-EU-pass får du stanna",
   "big": "90 dagar",
   "headline": "Det gäller inom rullande 180 dagar.",
-  "sub": "Dagen du landar och dagen du flyger hem räknas båda. En långhelg använder fyra dagar, inte två."
+  "sub": "Dagen du landar och dagen du flyger hem räknas båda. En långhelg använder fyra dagar, inte två.",
+  "logo": true
  },
  "consorcio-storm": {
   "template": "split",
@@ -294,7 +306,7 @@
    "Vinden räknas när byarna passerar 120 km/h under tre sekunder.",
    "Tillägget tas redan ut med din premie."
   ],
-  "cta": "Kolla din gratis på 247spain.es."
+  "logo": false
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -307,11 +319,11 @@
   ],
   "sub": "Du har tre månader, eller ett år om det strider mot lag.",
   "items": [
-   "Var du frånvarande startar klockan när du fick beskedet.",
+   "Var du frånvarande räknas tiden från när du delgavs beslutet.",
    "Spara kuvertet eller mejlet med datumet på.",
    "Oftast måste du vara i fas med avgifterna till samfälligheten."
   ],
-  "cta": "Kolla dina datum gratis på 247spain.es."
+  "logo": true
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -325,7 +337,7 @@
    "Den ska ange ett startdatum och ett slutdatum.",
    "Betalningarna ska följa arbetets etapper."
   ],
-  "cta": "Kolla den gratis på 247spain.es."
+  "logo": false
  },
  "leaving-it-empty": {
   "template": "question",
@@ -340,7 +352,8 @@
   "items": [
    "Hur länge du är borta och när på året du åker ändrar båda listan.",
    "Det gör också om någon tittar till stället medan du är borta."
-  ]
+  ],
+  "logo": true
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -351,16 +364,18 @@
    "Abonnemangen är fem jobb,",
    "och ordningen spelar roll."
   ],
-  "sub": "Börjar du med fel får du vänta. Ansökan om NIE görs på blankett EX-15, och avgiften är €9,84."
+  "sub": "Börjar du med fel får du vänta. Ansökan om NIE görs på blankett EX-15, och avgiften är €9,84.",
+  "logo": false
  },
  "tradesperson-in-your-language": {
   "template": "date",
   "photo": "couple_beach.jpg",
   "brand": "247",
-  "big_label": "Hantverkare på ditt språk i",
+  "big_label": "Katalogen täcker hantverkare i",
   "big": "660 orter",
   "headline": "Omdömen på ditt språk kommer först.",
-  "sub": "Rörmokare, elektriker, låssmeder och byggare rankas utifrån omdömen. Det är gratis, och ingen betalar för att hamna högre."
+  "sub": "Rörmokare, elektriker, låssmeder och byggare rankas utifrån omdömen.",
+  "logo": true
  },
  "who-does-what": {
   "template": "split",
@@ -376,7 +391,7 @@
    "En gestoría sköter inlämningar och pappersarbete, och går inte till domstol.",
    "En administrador de fincas driver samfälligheten."
   ],
-  "cta": "Se vem som gör vad gratis på 247spain.es."
+  "logo": false
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -393,7 +408,7 @@
    "De gör det vid olika tider på året.",
    "Vissa jobb måste göras medan du är borta."
   ],
-  "cta": "Få ditt schema gratis på 247spain.es."
+  "logo": true
  },
  "pests-by-property": {
   "template": "pills",
@@ -407,6 +422,6 @@
    "Värme, trädgårdar och tomma månader lockar olika skadedjur.",
    "Vissa är ett telefonsamtal, inte ett lördagsjobb."
   ],
-  "cta": "Se din plan gratis på 247spain.es."
+  "logo": false
  }
 }

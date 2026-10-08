@@ -12,7 +12,8 @@
   "items": [
    "U geeft de huur aan voor de verhuurde weken.",
    "Voor de lege weken geeft u een inkomen aan op basis van de kadastrale waarde."
-  ]
+  ],
+  "logo": true
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -23,7 +24,8 @@
    "U kunt belasting betalen",
    "zonder ooit te verhuren."
   ],
-  "sub": "Het is gebaseerd op de kadastrale waarde op uw IBI-aanslag, en er mag niets van worden afgetrokken."
+  "sub": "Het is gebaseerd op de kadastrale waarde op uw IBI-aanslag, en er mag niets van worden afgetrokken.",
+  "logo": false
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -32,7 +34,8 @@
   "big_label": "Uw aangifte 2025 kan tot en met",
   "big": "31 december",
   "headline": "U doet aangifte, ook zonder verhuur.",
-  "sub": "Bueno dient formulier 210 voor u in, vanaf €50. Betalen via incasso sluit eerder, op 23 december."
+  "sub": "Betalen via incasso sluit eerder, op 23 december. Iedere eigenaar doet aangifte voor zijn eigen aandeel.",
+  "logo": true
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -48,7 +51,7 @@
    "Vanaf maand 13 is het een vaste 15%, plus rente.",
    "Na een brief van de belastingdienst gelden deze regels niet meer."
   ],
-  "cta": "Reken het gratis uit op 247spain.es."
+  "logo": false
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -65,7 +68,7 @@
    "Formulier 210 is nationaal en u krijgt geen rekening.",
    "Hij wordt berekend op de kadastrale waarde van uw IBI."
   ],
-  "cta": "Wij doen het voor u, vanaf €50."
+  "logo": true
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -79,7 +82,7 @@
    "Huur vanaf 1 oktober gaat in één jaaraangifte.",
    "Uw volgende aangifte daarna is in april 2027."
   ],
-  "cta": "Bereken het gratis op 247spain.es."
+  "logo": false
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -93,8 +96,9 @@
   "sub": "Iedere eigenaar dient een eigen 210 in.",
   "items": [
    "Heeft u elk de helft, dan gebruikt elke aangifte de halve kadastrale waarde.",
-   "Bueno dient voor elke eigenaar een formulier 210 in, vanaf €50."
-  ]
+   "Drie broers en zussen die een appartement erfden, doen drie aangiftes."
+  ],
+  "logo": true
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -105,7 +109,8 @@
    "Zelfde flat, zelfde huur,",
    "een andere belasting."
   ],
-  "sub": "In de EU en EER trekt u kosten af en betaalt u 19%. Elders is het 24% over de brutohuur."
+  "sub": "In de EU en EER trekt u kosten af en betaalt u 19%. Elders is het 24% over de brutohuur.",
+  "logo": false
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -114,7 +119,8 @@
   "big_label": "Bij herziene waarden gebruikt 2025",
   "big": "1,1%",
   "headline": "Vier gegevens vormen uw aangifte.",
-  "sub": "We hebben uw kadastrale waarde, uw aandeel en uw fiscale woonplaats nodig. Bueno dient de aangifte in vanaf €50."
+  "sub": "U heeft uw kadastrale waarde, uw aandeel en uw fiscale woonplaats nodig.",
+  "logo": true
  },
  "three-percent-retention": {
   "template": "split",
@@ -130,7 +136,7 @@
    "Uw echte vermogenswinstbelasting is 19% van de winst, voor iedereen.",
    "Was de 3% meer dan u verschuldigd bent, dan krijgt u het verschil terug."
   ],
-  "cta": "Bereken uw teruggaaf gratis op 247spain.es."
+  "logo": false
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
@@ -147,7 +153,7 @@
    "Daarna moet u de belasting op een andere manier betalen.",
    "Het helpt om het niet tot de laatste week te laten."
   ],
-  "cta": "Wij doen het voor u, vanaf €50."
+  "logo": true
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -161,22 +167,23 @@
    "Was er geen stijging, dan valt er niets te betalen.",
    "U heeft dertig werkdagen vanaf de akte."
   ],
-  "cta": "Bereken het gratis op 247spain.es."
+  "logo": false
  },
  "bueno-why-from-fifty": {
   "template": "question",
   "photo": "g05.jpg",
   "brand": "bueno",
   "headline": [
-   "Waarom vanaf €50 bij Bueno",
-   "als ik een offerte kreeg",
-   "van een paar honderd euro?"
+   "Mijn formulier 210 komt",
+   "dit jaar uit op nul. Moet",
+   "ik het toch indienen?"
   ],
-  "sub": "Er verandert heel weinig van jaar tot jaar.",
+  "sub": "Ja. Een nulaangifte dient u in van 1 tot 20 januari.",
   "items": [
-   "We bewaren het formulier van vorig jaar als concept voor dit jaar.",
-   "De prijs hangt af van het aantal eigenaren, dus een stel is twee aangiftes."
-  ]
+   "Bij een nulresultaat is niets verschuldigd en komt niets terug.",
+   "Een teruggaaf kunt u vanaf 1 februari indienen, binnen vier jaar."
+  ],
+  "logo": true
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -187,16 +194,18 @@
    "Het hangt af van diensten,",
    "niet van de verblijfsduur."
   ],
-  "sub": "Zonder diensten is vakantieverhuur vrijgesteld. Hotelachtige diensten tijdens het verblijf maken het 10%."
+  "sub": "Zonder diensten is vakantieverhuur vrijgesteld. Hotelachtige diensten tijdens het verblijf maken het 10%.",
+  "logo": false
  },
  "bueno-included-in-select": {
   "template": "date",
   "photo": "g02.jpg",
   "brand": "bueno",
-  "big_label": "Uw aangifte 2025 kan tot en met",
-  "big": "31 december",
-  "headline": "Bij Select is die al inbegrepen.",
-  "sub": "Select kost €199 per jaar en dekt maximaal twee eigenaren en twee woningen. Bij Standard kan het vanaf €50."
+  "big_label": "Zonder kadastrale waarde gebruikt u",
+  "big": "1,1%",
+  "headline": "Het geldt over de helft van de basis.",
+  "sub": "De basis is het hoogste van de betaalde prijs of de waarde die de belastingdienst heeft vastgesteld.",
+  "logo": true
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -212,7 +221,7 @@
    "Geen enkele rekening krijgt een ochtend aandacht.",
    "Zet het hele jaar in één kolom en vergelijk het."
   ],
-  "cta": "Tel alles gratis op via 247spain.es."
+  "logo": false
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -229,7 +238,7 @@
    "Vanaf maand 13 is het een vaste 15% plus rente.",
    "De toeslag komt in de plaats van een boete."
   ],
-  "cta": "Noem de jaren, dan maken wij een offerte."
+  "logo": true
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -243,7 +252,7 @@
    "Sommige afsluitkosten werden bij de lener gelegd.",
    "Of een claim nog op tijd is, vraagt om een abogado."
   ],
-  "cta": "Schat het gratis in op 247spain.es."
+  "logo": false
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -257,8 +266,9 @@
   "sub": "Er komen nieuwe velden en een latere periode.",
   "items": [
    "Er wordt gevraagd naar de beschikbare dagen en uw eigendomspercentage.",
-   "De aangifte 2026 opent op 1 april 2027 en loopt tot 31 december."
-  ]
+   "Verhuurt u niet, dan opent de aangifte 2026 op 1 april 2027."
+  ],
+  "logo": true
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -269,16 +279,18 @@
    "Uw woonpolis betaalt",
    "misschien uw advocaat."
   ],
-  "sub": "Zoek naar defensa juridica. U heeft het recht uw eigen advocaat te kiezen."
+  "sub": "Zoek naar defensa juridica. U heeft het recht uw eigen advocaat te kiezen.",
+  "logo": false
  },
  "ninety-days": {
   "template": "date",
   "photo": "g08.jpg",
   "brand": "247",
-  "big_label": "U mag maximaal blijven",
+  "big_label": "Met een niet-EU-paspoort mag u blijven",
   "big": "90 dagen",
   "headline": "Dat geldt per schuivende 180 dagen.",
-  "sub": "De dag van aankomst en de dag van vertrek tellen allebei. Een lang weekend kost vier dagen, geen twee."
+  "sub": "De dag van aankomst en de dag van vertrek tellen allebei. Een lang weekend kost vier dagen, geen twee.",
+  "logo": true
  },
  "consorcio-storm": {
   "template": "split",
@@ -294,7 +306,7 @@
    "Wind telt bij stoten boven 120 km per uur, gedurende drie seconden.",
    "De opslag wordt al met uw premie geïnd."
   ],
-  "cta": "Bekijk het gratis op 247spain.es."
+  "logo": false
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -307,11 +319,11 @@
   ],
   "sub": "U heeft drie maanden, of een jaar als het de wet overtreedt.",
   "items": [
-   "Was u afwezig, dan start de termijn als u bent ingelicht.",
+   "Was u afwezig, dan start het als het u is meegedeeld.",
    "Bewaar de envelop of e-mail met de datum erop.",
    "Meestal moet u bij zijn met de VvE-bijdragen."
   ],
-  "cta": "Bereken uw data gratis op 247spain.es."
+  "logo": true
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -325,7 +337,7 @@
    "Er hoort een begin- en een einddatum in te staan.",
    "Betalingen horen de fases van het werk te volgen."
   ],
-  "cta": "Toets hem gratis op 247spain.es."
+  "logo": false
  },
  "leaving-it-empty": {
   "template": "question",
@@ -340,7 +352,8 @@
   "items": [
    "Hoe lang u weg bent en in welk seizoen u vertrekt, veranderen allebei de lijst.",
    "Ook of er iemand komt kijken, verandert de lijst."
-  ]
+  ],
+  "logo": true
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -351,16 +364,18 @@
    "Nutszaken zijn vijf klussen,",
    "en de volgorde telt."
   ],
-  "sub": "Begin met de verkeerde en u wacht. De NIE-aanvraag is formulier EX-15, en de leges zijn €9,84."
+  "sub": "Begin met de verkeerde en u wacht. De NIE-aanvraag is formulier EX-15, en de leges zijn €9,84.",
+  "logo": false
  },
  "tradesperson-in-your-language": {
   "template": "date",
   "photo": "couple_beach.jpg",
   "brand": "247",
-  "big_label": "Vind vakmensen in uw taal in",
+  "big_label": "De gids omvat vakmensen in",
   "big": "660 steden",
   "headline": "Reviews in uw taal staan bovenaan.",
-  "sub": "Loodgieters, elektriciens, slotenmakers en aannemers staan op volgorde van reviews. Het is gratis, en niemand betaalt om hoger te staan."
+  "sub": "Loodgieters, elektriciens, slotenmakers en aannemers staan op volgorde van reviews.",
+  "logo": true
  },
  "who-does-what": {
   "template": "split",
@@ -376,7 +391,7 @@
    "Een gestoría doet aangiftes en papierwerk, en gaat niet naar de rechter.",
    "Een administrador de fincas beheert de vereniging van eigenaren."
   ],
-  "cta": "Bekijk gratis wie wat doet op 247spain.es."
+  "logo": false
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -393,7 +408,7 @@
    "Dat doen ze op verschillende momenten in het jaar.",
    "Sommige klussen moeten gebeuren als u weg bent."
   ],
-  "cta": "Haal uw schema gratis op 247spain.es."
+  "logo": true
  },
  "pests-by-property": {
   "template": "pills",
@@ -407,6 +422,6 @@
    "Warmte, tuinen en lege maanden trekken ander ongedierte aan.",
    "Sommig ongedierte is een telefoontje, geen zaterdagklus."
   ],
-  "cta": "Bekijk uw plan gratis op 247spain.es."
+  "logo": false
  }
 }

@@ -141,19 +141,13 @@ def gradient(w, h, top, bottom):
 
 # ---------- shared bits ----------
 def brand_mark(img, d, c, lang, on_dark, x=None, y=50, anchor="rt"):
-    """Top corner mark. Bueno posts get the lockup; 24/7 Spain posts get the domain and
-    'Sponsored by Bueno' with the small lockup under it."""
+    """The Bueno lockup, only on cards with "logo": true (half the posts, by Pratik's rule of
+    8 October 2026). The other half carry no brand mark at all."""
+    if not c.get("logo"):
+        return
     col = (255, 255, 255) if on_dark else NAVY
     x = W - 64 if x is None else x
-    if c.get("brand", "bueno") == "bueno":
-        put_logo(img, col, 230, x, y, anchor)
-    else:
-        f = F("SemiBold", 24); s = "247spain.es"
-        fs = F("Regular", 18); sp = SPONSOR[lang]
-        def ax(width):
-            return x - width if anchor == "rt" else (x - width // 2 if anchor == "mt" else x)
-        d.text((ax(tw(s, f)), y), s, font=f, fill=col)
-        d.text((ax(tw(sp, fs)), y + 34), sp, font=fs, fill=col)
+    put_logo(img, col, 230, x, y, anchor)
 
 def disclaimer(d, lang, x, y, on_dark=False, anchor="l"):
     f = F("Regular", 17); s = DISCLAIMER[lang]
@@ -199,14 +193,15 @@ def t_duotone(c, lang):
         for l in lines: d.text((x + 64, ly), l, font=fi, fill=NAVY); ly += 36
         y = max(ly, y + 60) + 12
     d.line((x, y, W - x, y), fill=(190, 205, 220), width=2)
-    d.rectangle((0, H - 128, W, H), fill=NAVY)
+    if c.get("logo"):
+        d.rectangle((0, H - 128, W, H), fill=NAVY)
     if c.get("cta"):
         f = F("Medium", 27); d.text(((W - tw(c["cta"], f)) // 2, H - 112), c["cta"], font=f, fill=(255, 255, 255))
-    if c.get("brand", "bueno") == "bueno":
+    if c.get("logo"):
         put_logo(img, (255, 255, 255), 230, W // 2, H - 64, "mt")
     else:
         brand_mark(img, d, c, lang, True, x=W // 2, y=H - 66, anchor="mt")
-    disclaimer(d, lang, x, H - 160)
+    disclaimer(d, lang, x, H - 160 if c.get("logo") else H - 56)
     return img
 
 def t_pills(c, lang):
@@ -232,7 +227,7 @@ def t_pills(c, lang):
         cy = y + 8
         d.rounded_rectangle(((W - cw) // 2, cy, (W + cw) // 2, cy + 72), 36, fill=NAVY)
         d.text(((W - tw(c["cta"], f)) // 2, cy + 19), c["cta"], font=f, fill=(255, 255, 255))
-    if c.get("brand", "bueno") == "bueno":
+    if c.get("logo"):
         by = (cy + 100) if c.get("cta") else (y + 20)
         put_logo(img, NAVY, 240, W // 2, by, "mt")
     else:
@@ -287,7 +282,7 @@ def t_question(c, lang):
     m = Image.new("L", (r, r), 0); ImageDraw.Draw(m).ellipse((0, 0, r - 1, r - 1), fill=255)
     circ.putalpha(m)
     img.alpha_composite(circ, (W - r - 56, H - r - 150))
-    if c.get("brand", "bueno") == "bueno":
+    if c.get("logo"):
         put_logo(img, NAVY, 230, x, H - 100)
     else:
         brand_mark(img, d, c, lang, False, x=x, y=H - 110, anchor="lt")
@@ -311,7 +306,7 @@ def t_split(c, lang):
     if c.get("cta"):
         y = max(y, H - 250)
         para(d, c["cta"], x, y, mw, size=26, col=ACCENT, weight="Medium")
-    if c.get("brand", "bueno") == "bueno":
+    if c.get("logo"):
         put_logo(img, NAVY, 220, x, H - 110)
     else:
         brand_mark(img, d, c, lang, False, x=x, y=H - 120, anchor="lt")
@@ -322,7 +317,7 @@ def t_date(c, lang):
     img = gradient(W, H, (247, 252, 255), (198, 231, 248))
     d = ImageDraw.Draw(img)
     x = 70; y = 70
-    if c.get("brand", "bueno") == "bueno": put_logo(img, NAVY, 220, x, y)
+    if c.get("logo"): put_logo(img, NAVY, 220, x, y)
     else: brand_mark(img, d, c, lang, False, x=x, y=y, anchor="lt")
     y = 190
     y = eyebrow(d, c["big_label"], x, y)

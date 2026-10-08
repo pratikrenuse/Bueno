@@ -12,7 +12,8 @@
   "items": [
    "Du oppgir leien for ukene den var utleid.",
    "For de tomme ukene oppgir du en inntekt beregnet ut fra katastralverdien."
-  ]
+  ],
+  "logo": true
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -23,7 +24,8 @@
    "Du kan skylde skatt på",
    "en bolig du aldri leier."
   ],
-  "sub": "Den beregnes ut fra katastralverdien på IBI-regningen din, og ingenting kan trekkes fra."
+  "sub": "Den beregnes ut fra katastralverdien på IBI-regningen din, og ingenting kan trekkes fra.",
+  "logo": false
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -32,7 +34,8 @@
   "big_label": "Frist for 2025-meldingen er",
   "big": "31. desember",
   "headline": "Du leverer selv om ingen leide den.",
-  "sub": "Bueno leverer skjema 210 for deg, fra €50. Betaling med direkte belastning stenger tidligere, 23. desember."
+  "sub": "Betaling med direkte belastning stenger tidligere, 23. desember. Hver eier leverer for sin egen andel.",
+  "logo": true
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -48,7 +51,7 @@
    "Fra måned 13 blir det flate 15 % pluss renter.",
    "Etter et brev fra skattekontoret gjelder ikke disse reglene."
   ],
-  "cta": "Regn ut ditt gratis på 247spain.es."
+  "logo": false
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -65,7 +68,7 @@
    "Skjema 210 er nasjonal, og ingen sender deg regning.",
    "Den beregnes ut fra katastralverdien på IBI."
   ],
-  "cta": "Vi leverer den for deg, fra €50."
+  "logo": true
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -79,7 +82,7 @@
    "Leie fra 1. oktober går inn i én årlig melding.",
    "Neste levering etter denne er i april 2027."
   ],
-  "cta": "Sjekk gratis på 247spain.es."
+  "logo": false
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -93,8 +96,9 @@
   "sub": "Hver eier leverer sitt eget skjema 210.",
   "items": [
    "Eier dere halvparten hver, bruker hver melding halve katastralverdien.",
-   "Bueno leverer et skjema 210 for hver eier, fra €50."
-  ]
+   "Tre søsken som har arvet en leilighet, leverer tre meldinger."
+  ],
+  "logo": true
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -105,7 +109,8 @@
    "Samme bolig, samme leie,",
    "ulik skatteregning."
   ],
-  "sub": "I EU og EØS trekker du fra kostnader og betaler 19 %. Ellers er det 24 % av brutto leie."
+  "sub": "I EU og EØS trekker du fra kostnader og betaler 19 %. Ellers er det 24 % av brutto leie.",
+  "logo": false
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -114,7 +119,8 @@
   "big_label": "For reviderte verdier bruker 2025",
   "big": "1,1 %",
   "headline": "Meldingen består av fire opplysninger.",
-  "sub": "Vi trenger katastralverdien, andelen din og hvor du er skattemessig bosatt. Bueno leverer den fra €50."
+  "sub": "Du trenger katastralverdien, andelen din og hvor du er skattemessig bosatt.",
+  "logo": true
  },
  "three-percent-retention": {
   "template": "split",
@@ -130,7 +136,7 @@
    "Den faktiske gevinstskatten er 19 % av gevinsten, for alle.",
    "Var 3 % mer enn du skylder, får du differansen tilbake."
   ],
-  "cta": "Regn ut refusjonen gratis på 247spain.es."
+  "logo": false
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
@@ -147,7 +153,7 @@
    "Etter det må du betale skatten på en annen måte.",
    "Det hjelper å ikke vente til siste uke."
   ],
-  "cta": "Vi leverer den for deg, fra €50."
+  "logo": true
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -161,22 +167,23 @@
    "Var det ingen økning, er det ingenting å betale.",
    "Du har tretti virkedager fra skjøtet."
   ],
-  "cta": "Sjekk gratis på 247spain.es."
+  "logo": false
  },
  "bueno-why-from-fifty": {
   "template": "question",
   "photo": "g05.jpg",
   "brand": "bueno",
   "headline": [
-   "Hvorfor leverer Bueno min",
-   "melding fra €50, når jeg",
-   "fikk tilbud på noen hundre?"
+   "Skjema 210 mitt ender på",
+   "null i år. Må jeg",
+   "likevel levere det?"
   ],
-  "sub": "Svært lite endrer seg fra ett år til det neste.",
+  "sub": "Ja. En nullmelding leveres 1. til 20. januar.",
   "items": [
-   "Vi lagrer fjorårets skjema og bruker det som utkast til årets.",
-   "Prisen avhenger av antall eiere, så et par er to skattemeldinger."
-  ]
+   "Et nullresultat betyr at ingenting skyldes og ingenting kommer tilbake.",
+   "En tilbakebetaling kan leveres fra 1. februar, med en frist på fire år."
+  ],
+  "logo": true
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -187,16 +194,18 @@
    "Det avhenger av tjenester,",
    "ikke av hvor lenge de blir."
   ],
-  "sub": "Uten tjenester er ferieutleie fritatt. Hotellignende tjenester under oppholdet gir 10 %."
+  "sub": "Uten tjenester er ferieutleie fritatt. Hotellignende tjenester under oppholdet gir 10 %.",
+  "logo": false
  },
  "bueno-included-in-select": {
   "template": "date",
   "photo": "g02.jpg",
   "brand": "bueno",
-  "big_label": "Frist for 2025-meldingen er",
-  "big": "31. desember",
-  "headline": "Med Select er den allerede inkludert.",
-  "sub": "Select koster €199 i året og dekker opptil to eiere og to boliger. Med Standard starter leveringen fra €50."
+  "big_label": "Uten katastralverdi bruker du",
+  "big": "1,1 %",
+  "headline": "Det gjelder halvparten av grunnlaget.",
+  "sub": "Grunnlaget er det høyeste av prisen du betalte og verdien skattemyndighetene har verifisert.",
+  "logo": true
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -212,7 +221,7 @@
    "Ingen enkelt regning får en formiddag av noens tid.",
    "Sett hele året i én kolonne og sammenlign."
   ],
-  "cta": "Legg sammen dine gratis på 247spain.es."
+  "logo": false
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -229,7 +238,7 @@
    "Fra måned 13 er det flate 15 % pluss renter.",
    "Tillegget kommer i stedet for en bot."
   ],
-  "cta": "Fortell oss årene, så gir vi et tilbud."
+  "logo": true
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -243,7 +252,7 @@
    "Noen etableringsgebyrer ble lagt på låntakeren.",
    "Om et krav fortsatt er i tide, må en abogado vurdere."
   ],
-  "cta": "Anslå det gratis på 247spain.es."
+  "logo": false
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -257,8 +266,9 @@
   "sub": "Det får nye felt og et senere vindu.",
   "items": [
    "Det vil spørre om dager tilgjengelig og eierandelen din.",
-   "Meldingen for 2026 åpner 1. april 2027 og løper til 31. desember."
-  ]
+   "For en bolig du ikke leier ut, åpner meldingen for 2026 1. april 2027."
+  ],
+  "logo": true
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -269,16 +279,18 @@
    "Boligforsikringen kan",
    "betale advokaten din."
   ],
-  "sub": "Se etter defensa juridica. Du har rett til å velge din egen advokat."
+  "sub": "Se etter defensa juridica. Du har rett til å velge din egen advokat.",
+  "logo": false
  },
  "ninety-days": {
   "template": "date",
   "photo": "g08.jpg",
   "brand": "247",
-  "big_label": "Du kan bli i opptil",
+  "big_label": "Et pass fra utenfor EU lar deg bli i",
   "big": "90 dager",
   "headline": "Det gjelder i rullerende 180 dager.",
-  "sub": "Dagen du lander og dagen du flyr hjem teller begge. En langhelg bruker fire dager, ikke to."
+  "sub": "Dagen du lander og dagen du flyr hjem teller begge. En langhelg bruker fire dager, ikke to.",
+  "logo": true
  },
  "consorcio-storm": {
   "template": "split",
@@ -294,7 +306,7 @@
    "Vind teller når kastene passerer 120 km i timen over tre sekunder.",
    "Tillegget er allerede innkrevd sammen med premien."
   ],
-  "cta": "Sjekk gratis på 247spain.es."
+  "logo": false
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -311,7 +323,7 @@
    "Ta vare på konvolutten eller e-posten med datoen.",
    "Som regel må du være à jour med fellesutgiftene."
   ],
-  "cta": "Sjekk datoene dine gratis på 247spain.es."
+  "logo": true
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -325,7 +337,7 @@
    "Det bør ha en startdato og en sluttdato.",
    "Betalingene bør følge fasene i arbeidet."
   ],
-  "cta": "Sjekk det gratis på 247spain.es."
+  "logo": false
  },
  "leaving-it-empty": {
   "template": "question",
@@ -340,7 +352,8 @@
   "items": [
    "Hvor lenge du er borte og når du reiser, endrer begge listen.",
    "Det samme gjør om noen ser innom mens du er borte."
-  ]
+  ],
+  "logo": true
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -351,16 +364,18 @@
    "Strøm og vann er fem jobber,",
    "og rekkefølgen betyr noe."
   ],
-  "sub": "Starter du med feil jobb først, må du vente. NIE-søknaden er skjema EX-15, og gebyret er €9,84."
+  "sub": "Starter du med feil jobb først, må du vente. NIE-søknaden er skjema EX-15, og gebyret er €9,84.",
+  "logo": false
  },
  "tradesperson-in-your-language": {
   "template": "date",
   "photo": "couple_beach.jpg",
   "brand": "247",
-  "big_label": "Finn håndverkere på ditt språk i",
+  "big_label": "Katalogen dekker håndverkere i",
   "big": "660 byer",
   "headline": "Omtaler på ditt språk kommer først.",
-  "sub": "Rørleggere, elektrikere, låsesmeder og byggmestere rangeres ut fra omtaler. Det er gratis, og ingen betaler for å komme høyere."
+  "sub": "Rørleggere, elektrikere, låsesmeder og byggmestere rangeres ut fra omtaler.",
+  "logo": true
  },
  "who-does-what": {
   "template": "split",
@@ -376,7 +391,7 @@
    "En gestoría tar seg av innleveringer og papirarbeid, og går ikke i retten.",
    "En administrador de fincas driver sameiet."
   ],
-  "cta": "Se hvem som gjør hva gratis på 247spain.es."
+  "logo": false
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -393,7 +408,7 @@
    "De ødelegger dem på ulike tider av året.",
    "Noen jobber må skje mens du er borte."
   ],
-  "cta": "Få planen din gratis på 247spain.es."
+  "logo": true
  },
  "pests-by-property": {
   "template": "pills",
@@ -407,6 +422,6 @@
    "Varme, hager og tomme måneder tiltrekker ulike skadedyr.",
    "Noen skadedyr er en telefon, ikke en lørdagsjobb."
   ],
-  "cta": "Se planen din gratis på 247spain.es."
+  "logo": false
  }
 }

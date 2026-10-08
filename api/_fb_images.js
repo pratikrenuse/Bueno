@@ -23,7 +23,7 @@
 import { IDEAS, LANGS } from './_fb_content.js';
 
 const SITE = 'https://www.247spain.es';
-export const CARD_VERSION = '2';
+export const CARD_VERSION = '4';
 
 export const cardFor = (ideaKey, lang = 'en') =>
   `${SITE}/fb-cards/${ideaKey}/${LANGS.includes(lang) ? lang : 'en'}.jpg?v=${CARD_VERSION}`;
