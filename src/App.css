@@ -3889,3 +3889,9 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px
 @media (max-width: 720px) {
   .poa-routes, .aml-sign { grid-template-columns: 1fr; }
 }
+
+/* Approving several posts at once (8 October 2026). */
+.fbp-select { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 4px auto 12px; }
+.fbp-select label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 15px; }
+.fbp-select input, .fbp-tick { width: 20px; height: 20px; accent-color: #5B7FCC; cursor: pointer; }
+.fbp-tick { margin-right: 4px; }

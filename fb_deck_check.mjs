@@ -219,28 +219,34 @@ ok('every card says where its link goes',
   await page.waitForTimeout(300);
   ok('the note for the publisher is saved', DECISIONS.some(d => d.action === 'note' && d.note === 'Skip the Brits in Spain group'));
 
+  const before = await page.locator('.fbp-card').count();
+  const approvedText = await card.locator('.fbp-text').innerText();
   await card.locator('button', { hasText: 'Approve and queue' }).click();
   await page.waitForTimeout(500);
   ok('approving calls the API once', DECISIONS.filter(d => d.action === 'approved').length === 1);
-  ok('the card says where it is in the queue', /Number 1 in the queue/.test(await card.innerText()));
+  ok('the page says where it is in the queue', /number 1 of/.test(await page.locator('.fbp-ok').innerText()));
   ok('the page says one post goes out each day', /one post goes out each day/.test(await page.locator('.fbp-ok').innerText()));
-  ok('nothing claims to have been emailed yet', !/Emailed to/.test(await card.innerText()));
   ok('the waiting count moved', /1\s*approved and waiting to go out/.test(await page.locator('.fbp-stats').innerText()));
-  ok('and it offers to send today rather than approve twice',
-     (await card.locator('button', { hasText: 'Approve and queue' }).count()) === 0
-     && (await card.locator('button', { hasText: 'Send it today' }).count()) === 1);
-
-  await card.locator('button', { hasText: 'Send it today' }).click();
-  await page.waitForTimeout(500);
-  ok('sending today calls the API once', DECISIONS.filter(d => d.action === 'send_now').length === 1);
-  ok('the card names the publisher address and the day',
-     /poornimanirwal@gmail\.com/.test(await card.innerText()) && /as day 1/.test(await card.innerText()));
-  ok('a sent card offers to send again and nothing else',
-     (await card.locator('button', { hasText: 'Send it today' }).count()) === 0
-     && (await card.locator('button', { hasText: 'Send again' }).count()) === 1);
+  // Pratik, 8 October 2026: an approved post leaves To review at once, with no send-today button.
+  ok('the approved post leaves the To review tab', (await page.locator('.fbp-card').count()) === before - 1
+     && !(await page.locator('.fbp-text').allInnerTexts()).includes(approvedText));
+  ok('there is no send-today button anywhere', (await page.locator('button', { hasText: 'Send it today' }).count()) === 0);
 }
 {
-  const card = page.locator('.fbp-card').nth(3);
+  // Approving several at once: tick two, approve them together, both leave the tab.
+  const before = await page.locator('.fbp-card').count();
+  const ticks = page.locator('.fbp-card .fbp-tick');
+  await ticks.nth(0).check();
+  await ticks.nth(1).check();
+  ok('the bulk button counts the ticked posts', (await page.locator('button', { hasText: 'Approve selected (2)' }).count()) === 1);
+  await page.locator('button', { hasText: 'Approve selected (2)' }).click();
+  await page.waitForTimeout(800);
+  ok('approving two calls the API twice more', DECISIONS.filter(d => d.action === 'approved').length === 3);
+  ok('both leave the To review tab', (await page.locator('.fbp-card').count()) === before - 2);
+  ok('the page says how many were approved', /2 approved and moved to the Approved tab/.test(await page.locator('.fbp-ok').innerText()));
+}
+{
+  const card = page.locator('.fbp-card').nth(1);
   await card.locator('button', { hasText: 'Change image' }).click();
   await page.waitForSelector('.fbp-custom input');
   await page.locator('.fbp-custom input').fill('https://cdn.example.com/mine.png');

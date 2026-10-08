@@ -80,6 +80,7 @@ export default function InternalPratik() {
   const [customUrl, setCustomUrl] = useState('')
   const [showTr, setShowTr] = useState(null)
   const [cursor, setCursor] = useState(0)
+  const [selected, setSelected] = useState(() => new Set()) // ids ticked for approving together
   const cardRefs = useRef({})
 
   useEffect(() => { document.title = 'Posts for Poornima | 24/7 Spain' }, [])
@@ -125,23 +126,39 @@ export default function InternalPratik() {
 
   const replace = (post) => setPosts(ps => ps.map(x => (x.id === post.id ? { ...x, ...post } : x)))
 
+  // A post that no longer belongs in the tab you are looking at leaves it at once. Approving
+  // from To review moves the post to Approved; it does not stay behind with more buttons.
+  const leaveView = (id, newStatus) => {
+    if (status !== 'all' && status !== newStatus) setPosts(ps => ps.filter(x => x.id !== id))
+    setSelected(sel => { if (!sel.has(id)) return sel; const n = new Set(sel); n.delete(id); return n })
+  }
+
   // Approving queues the post. It reports what actually happened rather than assuming.
+  // approveOne does the work and returns the result; approve and approveSelected say so.
+  async function approveOne(p) {
+    const j = await patch(p.id, { action: 'approved' })
+    if (j.queued || j.reason === 'already sent') {
+      if (p.status !== 'approved') {
+        setCounts(c => ({
+          ...c,
+          [p.status]: Math.max(0, (c[p.status] || 0) - 1),
+          approved: (c.approved || 0) + 1,
+          queued: j.queued ? (j.queued_total != null ? j.queued_total : (c.queued || 0) + 1) : c.queued,
+        }))
+      }
+      if (j.post) replace({ ...j.post, queue_pos: j.queue_pos })
+      leaveView(p.id, 'approved')
+    }
+    return j
+  }
+
   async function approve(p) {
     setBusy(true); setErr(''); setFlash('')
     try {
-      const j = await patch(p.id, { action: 'approved' })
-      if (j.post) replace({ ...j.post, queue_pos: j.queue_pos })
+      const j = await approveOne(p)
       if (j.queued) {
-        if (p.status !== 'approved') {
-          setCounts(c => ({
-            ...c,
-            [p.status]: Math.max(0, (c[p.status] || 0) - 1),
-            approved: (c.approved || 0) + 1,
-            queued: j.queued_total != null ? j.queued_total : (c.queued || 0) + 1,
-          }))
-        }
         setFlash(
-          `Approved. It is number ${j.queue_pos || '?'} of ${j.queued_total || '?'} in the queue, and one post goes out each day.`
+          `Approved and moved to the Approved tab. It is number ${j.queue_pos || '?'} of ${j.queued_total || '?'} in the queue, and one post goes out each day.`
           + (j.retranslated ? ' The six translations were rebuilt from your version first.' : ''))
       }
       else if (j.reason === 'already sent') setFlash('Approved. It had already been emailed, so it was not queued again.')
@@ -150,23 +167,25 @@ export default function InternalPratik() {
     setBusy(false)
   }
 
-  // Sending one today, ahead of the queue. A choice, so it asks first.
-  async function sendNow(p) {
-    if (!confirm('Send this post to the publisher today, ahead of the queue?')) return
+  // Approve every ticked post, one after another, in the order they appear on the page so
+  // the queue keeps that order. A failure stops nothing else; it is reported at the end.
+  async function approveSelected() {
+    const list = shown.filter(p => selected.has(p.id))
+    if (!list.length) return
     setBusy(true); setErr(''); setFlash('')
-    try {
-      const j = await patch(p.id, { action: 'send_now' })
-      if (j.post) replace({ ...j.post, queue_pos: undefined })
-      // A warning is a send the API accepted that may not have reached anyone. It is shown
-      // as an error on purpose: a queue that says Sent when nothing arrived is worse than
-      // one that says it failed.
-      if (j.warning) setErr(j.warning)
-      else if (j.sent) {
-        setCounts(c => ({ ...c, queued: Math.max(0, (c.queued || 0) - 1), sent: (c.sent || 0) + 1 }))
-        setFlash(`Sent to ${j.post?.sent_to || 'the publisher'} as day ${j.day}, you are copied.`)
-      }
-      else setErr(`It did not go: ${j.error}`)
-    } catch (e) { setErr(String(e.message || e)) }
+    let done = 0, last = null
+    const failed = []
+    for (const p of list) {
+      try {
+        const j = await approveOne(p)
+        if (j.queued || j.reason === 'already sent') { done += 1; last = j }
+        else failed.push(j.error || 'not approved')
+      } catch (e) { failed.push(String(e.message || e)) }
+    }
+    setSelected(new Set())
+    if (done) setFlash(`${done} approved and moved to the Approved tab.`
+      + (last && last.queued_total ? ` ${last.queued_total} are now in the queue, and one post goes out each day.` : ''))
+    if (failed.length) setErr(`${failed.length} could not be approved: ${failed[0]}`)
     setBusy(false)
   }
 
@@ -348,7 +367,7 @@ export default function InternalPratik() {
         <div className="fbp-group" role="group" aria-label="Status">
           {STATUSES.map(st => (
             <button key={st.key} className={`fbp-chip${status === st.key ? ' current' : ''}`}
-              aria-pressed={status === st.key} onClick={() => { setStatus(st.key); setCursor(0) }}>
+              aria-pressed={status === st.key} onClick={() => { setStatus(st.key); setCursor(0); setSelected(new Set()) }}>
               {st.label} ({counts[st.key] != null ? counts[st.key] : 0})
             </button>
           ))}
@@ -392,6 +411,26 @@ export default function InternalPratik() {
         <p className="fbp-wide">Nothing in this view.</p>
       )}
 
+      {/* Tick several and approve them together. Only posts that can still be approved get a box. */}
+      {!busy && (() => {
+        const approvable = shown.filter(p => !p.sent_at && p.status !== 'approved')
+        if (!approvable.length) return null
+        const all = approvable.every(p => selected.has(p.id))
+        const n = approvable.filter(p => selected.has(p.id)).length
+        return (
+          <div className="fbp-select fbp-wide">
+            <label>
+              <input type="checkbox" checked={all}
+                onChange={() => setSelected(all ? new Set() : new Set(approvable.map(p => p.id)))} />
+              {' '}Select all {approvable.length}
+            </label>
+            <button className="fbp-primary" disabled={!n} onClick={approveSelected}>
+              Approve selected ({n})
+            </button>
+          </div>
+        )
+      })()}
+
       <main className="fbp-list">
         {shown.map((p, i) => {
           const pill = PILL[p.status] || PILL.pending
@@ -402,6 +441,11 @@ export default function InternalPratik() {
               className={`fbp-card${i === cursor ? ' cursor' : ''}`}
               onClick={() => setCursor(i)}>
               <div className="fbp-meta">
+                {!p.sent_at && p.status !== 'approved' && (
+                  <input type="checkbox" className="fbp-tick" aria-label="Select this post"
+                    checked={selected.has(p.id)} onClick={e => e.stopPropagation()}
+                    onChange={() => setSelected(sel => { const n = new Set(sel); n.has(p.id) ? n.delete(p.id) : n.add(p.id); return n })} />
+                )}
                 <span className="fbp-pill" style={{ background: pill.bg, color: pill.fg }}>{pill.label}</span>
                 <b>{p.kind === 'story' ? 'Personal story' : 'Straight useful'}</b>
                 <span className="fbp-tool">{p.tool_slug === 'bueno-tax' ? 'Links to getbueno.com' : `Links to 24/7 Spain, ${p.tool_slug}`}</span>
@@ -487,9 +531,6 @@ export default function InternalPratik() {
                   <button className="fbp-primary" onClick={() => approve(p)} disabled={busy}>
                     Approve and queue
                   </button>
-                )}
-                {!p.sent_at && p.status === 'approved' && (
-                  <button onClick={() => sendNow(p)} disabled={busy}>Send it today</button>
                 )}
                 {p.sent_at && <button onClick={() => resend(p)} disabled={busy}>Send again</button>}
                 {p.status !== 'posted' && <button onClick={() => markPosted(p)}>It is live</button>}
