@@ -3535,8 +3535,10 @@ body {
    sit above it in the group, not the subject of the card, and it is capped so a card stays
    scannable. The tinted ground means a photo that has not loaded yet reads as a pending
    image rather than as a hole in the layout. */
-.fbp-img { width: 100%; max-width: 100%; aspect-ratio: 40 / 21; max-height: 240px;
-  object-fit: cover; border-radius: 10px; display: block; margin-bottom: 12px;
+/* Square since 8 October 2026: the post images are 1080x1080 with text on them, so they are
+   shown whole, never cropped. */
+.fbp-img { width: 100%; max-width: 520px; aspect-ratio: 1 / 1; height: auto;
+  object-fit: contain; border-radius: 10px; display: block; margin-bottom: 12px;
   background: #DDE3EC; }
 
 .fbp-text { white-space: pre-wrap; word-break: break-word; margin: 0 0 10px;
@@ -3557,7 +3559,7 @@ body {
 .fbp-opt { position: relative; padding: 0; border: 2px solid transparent; border-radius: 9px;
   overflow: hidden; background: none; cursor: pointer; line-height: 0; }
 .fbp-opt.current { border-color: #5B7FCC; }
-.fbp-opt img { width: 100%; max-width: 100%; aspect-ratio: 40 / 21; object-fit: cover; display: block; background: #DDE3EC; }
+.fbp-opt img { width: 100%; max-width: 100%; aspect-ratio: 1 / 1; object-fit: contain; display: block; background: #DDE3EC; }
 .fbp-inuse { position: absolute; left: 6px; bottom: 6px; background: #5B7FCC; color: #fff;
   border-radius: 5px; padding: 2px 6px; font: 10px system-ui, sans-serif; line-height: 1.4; }
 
