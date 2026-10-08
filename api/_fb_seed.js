@@ -3,7 +3,7 @@
 // Writes the content module into the table. Safe to run repeatedly.
 //
 // ONE ROW PER IDEA, IN ENGLISH
-// Pratik reviews English and nothing else, so English is the row. The five translations ride
+// Pratik reviews English and nothing else, so English is the row. The six translations ride
 // along in a jsonb column, stamped with the hash of the English they were made from. A post
 // is one decision, not six.
 //
@@ -41,6 +41,9 @@ export default async function handler(req, res) {
     const written = {};
     for (const lang of TRANSLATION_LANGS) written[lang] = renderPost(idea, lang);
 
+    // Every row carries every key, with null where there is nothing, because a key that is
+    // undefined is dropped from the JSON and PostgREST then refuses the whole batch.
+    const kept = (k) => (prev && prev[k] != null ? prev[k] : null);
     const keptImage = prev && prev.image_url && options.includes(prev.image_url) ? prev.image_url : null;
 
     // Translations are only kept if they have actually been emailed. Anything else takes the
@@ -54,8 +57,10 @@ export default async function handler(req, res) {
     const keepTranslations = !!(prev && prev.sent_at && prev.translations_of
       && Object.keys(prev.translations || {}).length);
 
+    // No id in the row, on purpose. Some ideas already have a row and some are new, and
+    // PostgREST refuses a bulk upsert whose objects do not all carry the same keys. The
+    // conflict target (idea_key, language) finds the existing row without it.
     rows.push({
-      ...(prev ? { id: prev.id } : {}),
       idea_key: idea.key,
       language: 'en',
       tool_slug: idea.tool,
@@ -69,13 +74,13 @@ export default async function handler(req, res) {
       image_options: options,
       rule_ids: idea.rules || [],
       status: prev ? prev.status : 'pending',
-      note: prev ? prev.note : null,
-      posted_at: prev ? prev.posted_at : null,
-      edited_text: prev ? prev.edited_text : null,
-      reject_comment: prev ? prev.reject_comment : null,
-      sent_at: prev ? prev.sent_at : null,
-      sent_to: prev ? prev.sent_to : null,
-      send_error: prev ? prev.send_error : null,
+      note: kept('note'),
+      posted_at: kept('posted_at'),
+      edited_text: kept('edited_text'),
+      reject_comment: kept('reject_comment'),
+      sent_at: kept('sent_at'),
+      sent_to: kept('sent_to'),
+      send_error: kept('send_error'),
       updated_at: new Date().toISOString(),
     });
   }

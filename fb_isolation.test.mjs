@@ -15,7 +15,8 @@
 //      the wording the brand rules forbid.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
-import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor } from './api/_fb_content.js';
+import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor, SPONSOR, BUENO_TOOL, QUEUE_ORDER, queueIndex } from './api/_fb_content.js';
+import { GROUPS, ACCOUNT, groupsFor, perDay } from './api/_fb_groups.js';
 import { imageOptionsFor, imageFor, IMAGE_KEYS } from './api/_fb_images.js';
 
 let pass = 0, fail = 0;
@@ -55,7 +56,7 @@ const deck = code('./internal-pratik/index.jsx');
 const teamDeck = code('./internal-linkedin/index.jsx');
 ok('the personal deck calls no LinkedIn endpoint', !/api\/linkedin/.test(deck));
 ok('the deck asks for no language', !/action=posts[^`'"]*lang=/.test(deck));
-ok('the deck has no language switcher', !/setLang|Nederlands|Svenska|Norsk/.test(deck));
+ok('the deck has no language switcher', !/setLang|Nederlands|Svenska|Norsk\b/.test(deck));
 ok('the deck shows a dashboard', /fbp-progress/.test(deck) && /reviewed/.test(deck));
 ok('the personal deck names no LinkedIn table', !/linkedin_posts|studio_packages/.test(deck));
 ok('the team deck calls no Facebook endpoint', !/api\/fb\b|action=seed/.test(teamDeck));
@@ -92,17 +93,23 @@ const routed = FB.filter(f => !f.startsWith('_'));
 ok('the new surface costs one function slot', routed.length === 1, routed.join(', '));
 
 // 4. The content itself.
-const BANNED = /\b(Bueno|Sabadell|BBVA|CaixaBank|Santander|Unicaja|Iberdrola|Naturgy|Endesa|Revolut|Wise)\b/i;
+// Bueno came off this list in October 2026: every post now names it, on purpose. The rest
+// are the companies no post may ever name.
+const BANNED = /\b(Sabadell|BBVA|CaixaBank|Santander|Unicaja|Iberdrola|Naturgy|Endesa|Revolut|Wise)\b/i;
 const HYPE = /\b(revolutionary|disruptive|game.changing)\b/i;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/u;
 
-ok('twenty ideas', IDEAS.length === 20, String(IDEAS.length));
-ok('six languages', LANGS.length === 6);
-ok('five of them are translations', TRANSLATION_LANGS.length === 5 && !TRANSLATION_LANGS.includes('en'));
+const BUENO_IDEAS = IDEAS.filter(i => i.tool === BUENO_TOOL);
+const TOOL_IDEAS = IDEAS.filter(i => i.tool !== BUENO_TOOL);
+ok('thirty ideas', IDEAS.length === 30, String(IDEAS.length));
+ok('twenty point at a 24/7 Spain tool', TOOL_IDEAS.length === 20, String(TOOL_IDEAS.length));
+ok('ten are about the Bueno tax service', BUENO_IDEAS.length === 10, String(BUENO_IDEAS.length));
+ok('seven languages', LANGS.length === 7 && LANGS.includes('da'));
+ok('six of them are translations', TRANSLATION_LANGS.length === 6 && !TRANSLATION_LANGS.includes('en'));
 ok('every idea has images', IMAGE_KEYS.length === IDEAS.length && IDEAS.every(i => imageOptionsFor(i.key).length === 12));
 ok('every idea has a distinct lead image', new Set(IDEAS.map(i => imageFor(i.key))).size === IDEAS.length);
 
-const tools = new Set(IDEAS.map(i => i.tool));
+const tools = new Set(TOOL_IDEAS.map(i => i.tool));
 ok('every tool folder named by an idea exists', [...tools].every(t => existsSync(`./${t}/index.jsx`)),
    [...tools].filter(t => !existsSync(`./${t}/index.jsx`)).join(', '));
 
@@ -124,12 +131,22 @@ for (const idea of IDEAS) {
     ok(`${at}: links to no other locale`, wrong.length === 0, wrong.join(', '));
     ok(`${at}: no em or en dash`, !/[—–]/.test(t));
     ok(`${at}: no emoji`, !EMOJI.test(t));
-    ok(`${at}: names no brand`, !BANNED.test(t), (t.match(BANNED) || [])[0] || '');
+    ok(`${at}: names no other company`, !BANNED.test(t), (t.match(BANNED) || [])[0] || '');
+    ok(`${at}: names Bueno`, /\bBueno\b/.test(t));
+    ok(`${at}: never calls Bueno a bank`, !/Bueno[^.\n]*\bban(k|que|co)\b/i.test(t));
+    if (idea.tool === BUENO_TOOL) {
+      ok(`${at}: links to getbueno.com`, linkFor(idea.tool, lang).startsWith('https://getbueno.com/'));
+      ok(`${at}: a Bueno post carries no sponsor line`, !t.includes(SPONSOR[lang]));
+    } else {
+      ok(`${at}: ends with this language's sponsor line`, t.endsWith(SPONSOR[lang]));
+      ok(`${at}: links to 24/7 Spain`, linkFor(idea.tool, lang).startsWith('https://www.247spain.es/'));
+    }
     ok(`${at}: no hype words`, !HYPE.test(t));
     const words = t.split(/\s+/).length;
     // French and German run longer than English for the same content, which is a property of
     // the languages and not of the writing. The band is on the English; translations get room.
-    const cap = lang === 'en' ? 230 : 260;
+    // The sponsor line added in October 2026 is a dozen words, so the bands moved with it.
+    const cap = lang === 'en' ? 245 : 270;
     ok(`${at}: reads as a group post, not an essay`, words >= 90 && words <= cap, String(words));
   }
 }
@@ -146,6 +163,59 @@ for (const idea of IDEAS) {
     ok(`${idea.key}: rule ${id} is verified`, RULES[id] && RULES[id].status === 'verified',
        RULES[id] ? RULES[id].status : 'missing');
   }
+}
+
+// Danish. 24/7 Spain has no Danish pages, so a Danish tool post links to the English tool
+// and says so, and a Danish Bueno post links to Bueno's own Danish page.
+for (const idea of TOOL_IDEAS) {
+  ok(`${idea.key}/da: links to the English tool`, linkFor(idea.tool, 'da') === linkFor(idea.tool, 'en'));
+}
+ok('the Danish sponsor line says the tool is in English and gives the Danish Bueno address',
+   /engelsk/.test(SPONSOR.da) && /getbueno\.com\/dk/.test(SPONSOR.da));
+ok('a Danish Bueno post links to the Danish tax page', linkFor(BUENO_TOOL, 'da') === 'https://getbueno.com/dk/ejendomslosninger/ejendomsskat/');
+ok('each language has its own Bueno tax page', new Set(LANGS.map(l => linkFor(BUENO_TOOL, l))).size === LANGS.length);
+
+// The Bueno posts speak as the team. None of them may slip into one person's "I built".
+for (const idea of BUENO_IDEAS) {
+  const t = renderPost(idea, 'en');
+  ok(`${idea.key}: is not one person's "I built"`, !/\bI (built|made|wrote|got)\b/.test(t));
+  ok(`${idea.key}: no penalty flavoured urgency`, !/\b(fined|a fine of|penalt(y|ies) of|before it is too late|act now|last chance)\b/i.test(t));
+}
+{
+  const asWe = BUENO_IDEAS.filter(i => /\b(we|we're|we'll|our)\b/i.test(renderPost(i, 'en'))).length;
+  ok('the Bueno posts speak as we', asWe >= BUENO_IDEAS.length - 1, `${asWe} of ${BUENO_IDEAS.length}`);
+}
+
+// THE QUEUE. Every idea has exactly one place in it, and it opens by alternating a Bueno
+// post with a 24/7 Spain post, which is the mix Pratik asked for.
+ok('every idea is in the queue once', QUEUE_ORDER.length === IDEAS.length
+   && new Set(QUEUE_ORDER).size === IDEAS.length && IDEAS.every(i => QUEUE_ORDER.includes(i.key)));
+{
+  const toolOf = Object.fromEntries(IDEAS.map(i => [i.key, i.tool]));
+  const first20 = QUEUE_ORDER.slice(0, 20).map(k => toolOf[k] === BUENO_TOOL);
+  ok('the first twenty days alternate Bueno and 24/7 Spain', first20.every((b, i) => b === (i % 2 === 0)), first20.join(','));
+  ok('an unknown key sorts last', queueIndex('nope') === QUEUE_ORDER.length);
+}
+
+// THE GROUPS. Seven accounts, one per language, and a rotation that matches the workbook.
+ok('seven accounts, numbered 1 to 7', LANGS.every(l => ACCOUNT[l] >= 1 && ACCOUNT[l] <= 7)
+   && new Set(LANGS.map(l => ACCOUNT[l])).size === 7);
+for (const lang of LANGS) {
+  const list = GROUPS[lang] || [];
+  ok(`${lang}: has groups`, list.length >= 8, String(list.length));
+  ok(`${lang}: every group is a Facebook group link`, list.every(([n, u]) => n && /^https:\/\/www\.facebook\.com\/groups\/[^\s]+$/.test(u)));
+  ok(`${lang}: no group is listed twice`, new Set(list.map(g => g[1].toLowerCase().replace(/\/$/, ''))).size === list.length);
+  ok(`${lang}: three to five groups a day`, perDay(lang) >= 3 && perDay(lang) <= 5);
+  const d1 = groupsFor(lang, 1), d2 = groupsFor(lang, 2);
+  ok(`${lang}: a day never repeats a group`, new Set(d1.map(g => g.url)).size === d1.length);
+  ok(`${lang}: day 2 moves on from day 1`, d1[0].url !== d2[0].url);
+  const seen = new Set();
+  for (let d = 1; d <= Math.ceil(list.length / perDay(lang)); d += 1) for (const g of groupsFor(lang, d)) seen.add(g.url);
+  ok(`${lang}: one full turn reaches every group`, seen.size === list.length, `${seen.size} of ${list.length}`);
+}
+{
+  const all = LANGS.flatMap(l => (GROUPS[l] || []).map(g => g[1].toLowerCase().replace(/\/$/, '')));
+  ok('no group belongs to two accounts', new Set(all).size === all.length);
 }
 
 // THE VOICE. The first version of this content was correct and read like a reference note,

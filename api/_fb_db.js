@@ -3,6 +3,8 @@
 // TABLE is a constant rather than a parameter on purpose. A handler cannot be talked into
 // reading or writing linkedin_posts or studio_packages, because it never gets to choose.
 
+import { createHash } from 'node:crypto';
+
 export const TABLE = 'fb_posts';
 
 export function gate(req, res) {
@@ -16,6 +18,26 @@ export function gate(req, res) {
     return false;
   }
   return true;
+}
+
+// The daily send is started by a GitHub Actions schedule, because both of the Vercel cron
+// slots this plan allows are taken. That job has to prove who it is without anyone having to
+// add a new secret anywhere, so it sends the sha256 of the Supabase service key, which the
+// repository's Actions secrets and this function's environment both already hold. The key
+// itself never travels. CRON_SECRET and the deck's own password are accepted too.
+export const cronToken = () => (process.env.SUPABASE_SERVICE_KEY
+  ? createHash('sha256').update(process.env.SUPABASE_SERVICE_KEY, 'utf8').digest('hex')
+  : null);
+
+export function gateCron(req, res) {
+  const pass = req.headers['x-passcode'] || (req.query && req.query.pass);
+  if (process.env.INTERNAL_PASSCODE && pass === process.env.INTERNAL_PASSCODE) return true;
+  const auth = String(req.headers.authorization || '');
+  if (process.env.CRON_SECRET && auth === `Bearer ${process.env.CRON_SECRET}`) return true;
+  const token = cronToken();
+  if (token && auth === `Bearer ${token}`) return true;
+  res.status(401).json({ error: 'unauthorized' });
+  return false;
 }
 
 function creds(res) {

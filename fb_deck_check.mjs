@@ -1,5 +1,5 @@
 // Walks /internal-pratik in a real browser, against a stand-in API serving the rows the
-// seed handler actually builds. It proves the page behind the password gate: that all six
+// seed handler actually builds. It proves the page behind the password gate: that all seven
 // languages load, that the text shown is the text that will be copied, that the image
 // picker only ever offers this post's own options, and that the retired /internal route
 // still lands somewhere honest.
@@ -50,17 +50,26 @@ const srv = http.createServer((req, res) => {
         else if (b.action === 'image' || b.action === 'image_custom') patch.image_url = b.image;
         else if (b.action === 'note') patch.note = b.note;
         else if (b.action === 'rejected') { patch.status = 'rejected'; patch.reject_comment = b.comment ?? null; }
-        else if (b.action === 'approved') { patch.status = 'approved'; patch.sent_at = '2026-09-11T09:00:00Z'; patch.sent_to = 'poornimanirwal@gmail.com'; }
+        // Approving queues. Only "send it today" sends, the way the real handler behaves.
+        else if (b.action === 'approved') patch.status = 'approved';
+        else if (b.action === 'send_now') { patch.sent_at = '2026-10-07T03:30:00Z'; patch.sent_to = 'poornimanirwal@gmail.com'; patch.send_day = 1; }
         else if (b.action) patch.status = b.action;
         Object.assign(row, patch);
+        const queued = ROWS.filter(r => r.status === 'approved' && !r.sent_at).length;
         res.writeHead(200, { 'content-type': 'application/json' });
-        res.end(JSON.stringify({ ok: true, post: row, sent: b.action === 'approved' }));
+        res.end(JSON.stringify({
+          ok: true, post: row,
+          ...(b.action === 'approved' ? { queued: true, sent: false, queue_pos: queued, queued_total: queued } : {}),
+          ...(b.action === 'send_now' ? { sent: true, day: 1 } : {}),
+        }));
       });
     }
     const status = u.searchParams.get('status') || 'all';
     const rows = status === 'all' ? ROWS : ROWS.filter(r => r.status === status);
     const counts = { pending: 0, approved: 0, rejected: 0, posted: 0, all: ROWS.length };
     for (const r of ROWS) if (counts[r.status] != null) counts[r.status] += 1;
+    counts.queued = ROWS.filter(r => r.status === 'approved' && !r.sent_at).length;
+    counts.sent = ROWS.filter(r => r.sent_at).length;
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify({ posts: rows, counts, total: rows.length }));
   }
@@ -80,6 +89,8 @@ const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromi
 const page = await browser.newPage({ viewport: { width: 1000, height: 1500 } });
 const consoleErrors = [];
 page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
+// "Send it today" asks first. In this walk the answer is always yes.
+page.on('dialog', d => d.accept());
 
 // The gate.
 await page.goto(`http://127.0.0.1:${PORT}/internal-pratik`, { waitUntil: 'networkidle' });
@@ -103,7 +114,8 @@ ok('no em or en dash anywhere on the page', !/[\u2014\u2013]/.test(await page.lo
 // The dashboard.
 ok('the dashboard shows progress', (await page.locator('.fbp-progress').count()) === 1);
 ok('and how many are reviewed', /of \d+ reviewed|Everything reviewed/.test(await page.locator('.fbp-dash').innerText()));
-ok('and the three outcome counts', /approved and emailed/.test(await page.locator('.fbp-stats').innerText())
+ok('and the outcome counts', /approved and waiting to go out/.test(await page.locator('.fbp-stats').innerText())
+   && /sent to the publisher/.test(await page.locator('.fbp-stats').innerText())
    && /live/.test(await page.locator('.fbp-stats').innerText())
    && /parked/.test(await page.locator('.fbp-stats').innerText()));
 ok('the status filter carries counts', /To review \(\d+\)/.test(await page.locator('.fbp-bar').innerText()));
@@ -118,17 +130,21 @@ ok('the status filter carries counts', /To review \(\d+\)/.test(await page.locat
 {
   const card = page.locator('.fbp-card').first();
   ok('translations are hidden until asked for', (await page.locator('.fbp-trlist').count()) === 0);
-  await card.locator('button', { hasText: 'See the other five languages' }).click();
+  await card.locator('button', { hasText: 'See the other six languages' }).click();
   await page.waitForSelector('.fbp-trlist');
-  ok('all five are there', (await card.locator('.fbp-trlist details').count()) === 5);
+  ok('all six are there', (await card.locator('.fbp-trlist details').count()) === 6);
   const names = await card.locator('.fbp-trlist summary').allInnerTexts();
-  ok('each is named', ['Norwegian', 'Swedish', 'German', 'French', 'Dutch'].every(n => names.includes(n)), names.join(', '));
+  ok('each is named', ['Norwegian', 'Swedish', 'Danish', 'German', 'French', 'Dutch'].every(n => names.includes(n)), names.join(', '));
+  await card.locator('.fbp-trlist summary', { hasText: 'Danish' }).click();
+  await page.waitForTimeout(150);
+  const danish = await card.locator('.fbp-trlist details', { hasText: 'Danish' }).locator('pre').innerText();
+  ok('the Danish version is the Danish version', danish.trim() === renderPost(IDEAS[0], 'da').trim());
   await card.locator('.fbp-trlist summary', { hasText: 'German' }).click();
   await page.waitForTimeout(150);
   const german = await card.locator('.fbp-trlist details', { hasText: 'German' }).locator('pre').innerText();
   ok('the German version is the German version', german.trim() === renderPost(IDEAS[0], 'de').trim());
   ok('and links to the German page', german.includes(linkFor(IDEAS[0].tool, 'de')));
-  await card.locator('button', { hasText: 'Hide the other five languages' }).click();
+  await card.locator('button', { hasText: 'Hide the other six languages' }).click();
   await page.waitForTimeout(150);
   ok('and they fold away again', (await page.locator('.fbp-trlist').count()) === 0);
 }
@@ -154,10 +170,14 @@ ok('posts cite the rules behind them', (await page.locator('.fbp-rules').count()
 // The separation, as seen from the page itself.
 const html = await page.content();
 ok('the page never mentions the team deck', !/internal-linkedin|linkedin_posts/i.test(html));
-ok('the page names no brand', !/\b(Bueno|Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(await page.locator('.fbp-list').innerText()));
+ok('the page names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(await page.locator('.fbp-list').innerText()));
+ok('every post names Bueno', texts.every(t => /\bBueno\b/.test(t)));
+ok('every card says where its link goes',
+   (await page.locator('.fbp-tool').allInnerTexts()).every(t => /^Links to (getbueno\.com|24\/7 Spain, )/.test(t.trim())));
 
-// The review loop: edit, then park, then approve. Approve is the send, so the card has to
-// say so afterwards rather than leaving the reviewer guessing.
+// The review loop: edit, then park, then approve. Approving queues the post, so the card
+// has to say where it is in the queue, and nothing may claim to have been emailed until
+// it has been.
 {
   const card = page.locator('.fbp-card').first();
   await card.locator('button', { hasText: 'Edit' }).first().click();
@@ -186,18 +206,29 @@ ok('the page names no brand', !/\b(Bueno|Sabadell|BBVA|CaixaBank|Revolut|Wise)\b
 }
 {
   const card = page.locator('.fbp-card').nth(2);
-  await card.locator('input[placeholder^="Group name"]').fill('Brits in Spain');
+  await card.locator('input[placeholder^="Optional"]').fill('Skip the Brits in Spain group');
   await card.locator('.fbp-text').click();
   await page.waitForTimeout(300);
-  ok('the group instruction is saved', DECISIONS.some(d => d.action === 'note' && d.note === 'Brits in Spain'));
+  ok('the note for the publisher is saved', DECISIONS.some(d => d.action === 'note' && d.note === 'Skip the Brits in Spain group'));
 
-  await card.locator('button', { hasText: 'Approve and send' }).click();
+  await card.locator('button', { hasText: 'Approve and queue' }).click();
   await page.waitForTimeout(500);
   ok('approving calls the API once', DECISIONS.filter(d => d.action === 'approved').length === 1);
-  ok('the card names the publisher address',
-     /poornimanirwal@gmail\.com/.test(await card.innerText()));
-  ok('and offers to send again rather than approve twice',
-     (await card.locator('button', { hasText: 'Approve and send' }).count()) === 0
+  ok('the card says where it is in the queue', /Number 1 in the queue/.test(await card.innerText()));
+  ok('the page says one post goes out each day', /one post goes out each day/.test(await page.locator('.fbp-ok').innerText()));
+  ok('nothing claims to have been emailed yet', !/Emailed to/.test(await card.innerText()));
+  ok('the waiting count moved', /1\s*approved and waiting to go out/.test(await page.locator('.fbp-stats').innerText()));
+  ok('and it offers to send today rather than approve twice',
+     (await card.locator('button', { hasText: 'Approve and queue' }).count()) === 0
+     && (await card.locator('button', { hasText: 'Send it today' }).count()) === 1);
+
+  await card.locator('button', { hasText: 'Send it today' }).click();
+  await page.waitForTimeout(500);
+  ok('sending today calls the API once', DECISIONS.filter(d => d.action === 'send_now').length === 1);
+  ok('the card names the publisher address and the day',
+     /poornimanirwal@gmail\.com/.test(await card.innerText()) && /as day 1/.test(await card.innerText()));
+  ok('a sent card offers to send again and nothing else',
+     (await card.locator('button', { hasText: 'Send it today' }).count()) === 0
      && (await card.locator('button', { hasText: 'Send again' }).count()) === 1);
 }
 {

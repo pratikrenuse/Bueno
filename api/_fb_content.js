@@ -1,4 +1,4 @@
-// The posts Pratik writes under his own name in Facebook groups, and their translations.
+// The posts that go into Facebook groups for 24/7 Spain and Bueno, and their translations.
 //
 // WHAT THIS IS, AND WHAT IT IS EMPHATICALLY NOT
 // This is a personal surface. Pratik reviews and approves; Poornima publishes. It has nothing
@@ -20,32 +20,94 @@
 // WHAT DOES NOT BEND FOR THE SAKE OF VOICE
 //   - Every figure traces to a verified rule in ../rules. The `rules` array names the ids.
 //     Warmth is a matter of how a fact is said, never of which facts are allowed.
-//   - The first person is a builder, never an owner. Pratik does not own property in Spain,
+//   - In the tool posts the first person is a builder, never an owner. Pratik does not own property in Spain,
 //     so no post says or implies that he does. What he can honestly say is that this gets
 //     asked in these groups constantly, that he read the official page, and that he built
 //     something. He never invents a private conversation or a villa.
-//   - No brand name. These go into groups whose rules bar promotion.
 //   - No emoji, no em dash, no competitor named, no penalty-flavoured urgency.
 //
-// {link} is substituted at seed time with the localised tool URL, so a translated post can
-// never end up pointing at the English page.
+// WHAT CHANGED IN OCTOBER 2026
+// Pratik's decision on 6 October 2026: the goal of these posts is tax leads for Bueno, so
+// the old "no brand name" rule is gone and every post now names Bueno.
+//   - There are two kinds of post. The original twenty point at a free tool on 24/7 Spain
+//     and end with one line saying the site is sponsored by Bueno (SPONSOR below). Ten new
+//     ones are about Bueno's own tax filing service and point at getbueno.com. Those have
+//     tool 'bueno-tax', and they are written as "we", by the team, because that is who is
+//     speaking. The figures about the service were read from getbueno.com on 6 October 2026.
+//   - Danish is the seventh language. 24/7 Spain has no Danish pages, so a Danish tool post
+//     links to the English tool and says so, and its sponsor line carries getbueno.com/dk.
+//     A Danish Bueno post links to Bueno's own Danish tax page.
+//   - QUEUE_ORDER is the order posts go out in, one a day. It alternates a Bueno post with a
+//     24/7 Spain tax tool post for as long as both last, then runs through the rest.
+//
+// {link} is substituted at seed time with the localised URL, so a translated post can never
+// end up pointing at the wrong page. The sponsor line is added by renderPost, which means it
+// is part of the text Pratik reads and approves. Nothing is added after approval.
 
 export const SITE = 'https://www.247spain.es';
-export const LANGS = ['en', 'no', 'sv', 'de', 'fr', 'nl'];
+export const BUENO = 'https://getbueno.com';
+export const LANGS = ['en', 'no', 'sv', 'da', 'de', 'fr', 'nl'];
 export const TRANSLATION_LANGS = LANGS.filter(l => l !== 'en');
 export const LANG_NAME = {
-  en: 'English', no: 'Norwegian', sv: 'Swedish',
+  en: 'English', no: 'Norwegian', sv: 'Swedish', da: 'Danish',
   de: 'German', fr: 'French', nl: 'Dutch',
 };
 
+// The tool slug that marks a post about Bueno's own tax filing service. It is not a folder
+// in this repo; it is a destination on getbueno.com.
+export const BUENO_TOOL = 'bueno-tax';
+export const isBuenoPost = (tool) => tool === BUENO_TOOL;
+
+// Bueno's tax filing page in each language, as linked from the language switcher on
+// getbueno.com on 6 October 2026.
+const BUENO_TAX_PATH = {
+  en: '/products/non-resident-tax-return/',
+  no: '/no/eiendomslosninger/skatt/',
+  sv: '/se/fastighetslosningar/fastighetsskatt/',
+  da: '/dk/ejendomslosninger/ejendomsskat/',
+  de: '/de/immobilienlosungen/grundsteuer/',
+  fr: '/fr/solutions-immobilieres/taxe/',
+  nl: '/nl/eigendomoplossingen/belasting/',
+};
+
+// The line that closes every 24/7 Spain tool post. Written out per language rather than
+// translated at run time, so it is always the same sentence and always names Bueno.
+export const SPONSOR = {
+  en: '24/7 Spain is free to use and is sponsored by Bueno (getbueno.com).',
+  no: '24/7 Spain er gratis å bruke og er sponset av Bueno (getbueno.com/no).',
+  sv: '24/7 Spain är gratis att använda och sponsras av Bueno (getbueno.com/se).',
+  da: 'Værktøjet er på engelsk. 24/7 Spain er gratis at bruge og er sponsoreret af Bueno (getbueno.com/dk).',
+  de: '24/7 Spain ist kostenlos und wird von Bueno gesponsert (getbueno.com/de).',
+  fr: '24/7 Spain est gratuit et sponsorisé par Bueno (getbueno.com/fr).',
+  nl: '24/7 Spain is gratis te gebruiken en wordt gesponsord door Bueno (getbueno.com/nl).',
+};
+
 export function linkFor(tool, lang) {
-  return lang === 'en' ? `${SITE}/${tool}` : `${SITE}/${lang}/${tool}`;
+  if (isBuenoPost(tool)) return `${BUENO}${BUENO_TAX_PATH[lang] || BUENO_TAX_PATH.en}`;
+  // 24/7 Spain has no Danish pages, so Danish readers get the English tool.
+  return lang === 'en' || lang === 'da' ? `${SITE}/${tool}` : `${SITE}/${lang}/${tool}`;
 }
 
-export function renderPost(idea, lang) {
+// The body of a post with its link in place and nothing after it.
+export function renderBody(idea, lang) {
   const body = idea.text[lang];
   if (!body) return null;
   return body.replace(/\{link\}/g, linkFor(idea.tool, lang)).trim();
+}
+
+// The whole post as it is reviewed and published. A 24/7 Spain tool post closes with the
+// sponsor line. A Bueno post already says who is speaking, so it gets nothing extra.
+export function renderPost(idea, lang) {
+  const body = renderBody(idea, lang);
+  if (!body) return null;
+  return isBuenoPost(idea.tool) ? body : `${body}\n\n${SPONSOR[lang]}`;
+}
+
+// Take the sponsor line back off an English text, so that an edited post can be translated
+// as a body and have each language's own sponsor line put back on.
+export function splitSponsor(text) {
+  const t = String(text ?? '').trim();
+  return t.endsWith(SPONSOR.en) ? { body: t.slice(0, -SPONSOR.en.length).trim(), sponsored: true } : { body: t, sponsored: false };
 }
 
 export const IDEAS = [
@@ -94,6 +156,19 @@ Jag tröttnade på att räkna på baksidan av ett kuvert, så jag byggde en räk
 {link}
 
 Gratis, inget att registrera sig för. Och om den säger emot din egen räkning, hör av dig. Jag fixar hellre den än att du litar blint på den.`,
+    da: `Med få ugers mellemrum er der en i en gruppe som den her, der stiller det samme spørgsmål, og der kommer altid omkring fire forskellige svar.
+
+Er det 90 dage om året, eller 90 dage ud af 180?
+
+Det er 90 inden for enhver rullende periode på 180 dage. Ikke per kalenderår. Og her er det, folk falder i: Den dag du lander, tæller som en hel dag, og det gør den dag, du flyver hjem, også. Så en forlænget weekend er ikke to dage. Det er fire.
+
+Det rullende er det lumske. Du kan ligge langt under grænsen i marts og over den i maj uden at have bestilt en eneste ekstra tur, fordi oktober sidste år stadig ligger inde i vinduet og tæller med i det stille.
+
+Jeg blev træt af at regne det ud på bagsiden af en kuvert, så jeg byggede en tæller. Du taster de ture ind, du har været på, og dem, du allerede har bestilt, og så fortæller den dig, hvad du har tilbage, hvilken dato vinduet er ryddet, og præcis hvilken dag en planlagt tur ville sende dig over grænsen.
+
+{link}
+
+Den er gratis, og du skal ikke oprette dig nogen steder. Og hvis den er uenig med din egen optælling, så sig til. Jeg vil meget hellere rette den, end at du stoler blindt på den.`,
     de: `Alle paar Wochen stellt jemand in einer Gruppe wie dieser dieselbe Frage, und es kommen immer etwa vier verschiedene Antworten.
 
 Sind es 90 Tage im Jahr oder 90 Tage in 180?
@@ -184,6 +259,21 @@ Och ingenting dras av. Inte samfällighetsavgiften, inte försäkringen, inte en
 Skattesatsen är 19 procent om du bor i EU, Norge, Island eller Liechtenstein. 24 procent för alla andra.
 
 Jag lade hela saken på en sida, inklusive de år du kanske tyst har låtit bli att deklarera:
+
+{link}`,
+    da: `Det her er den, der får folk til at sætte kaffekoppen fra sig.
+
+Du kan skylde spansk skat af en bolig, du aldrig lejer ud, aldrig annoncerer og kun bruger tre uger om året. Det kaldes fiktiv indtægt. Spanien behandler en ekstra bolig, der står til din rådighed, som om den gav en indtægt, og beskatter så den indbildte indtægt.
+
+Der er to ting ved den, som ingen fortæller dig, før det er for sent.
+
+Grundlaget er ikke det, du betalte, og det er ikke det, boligen er værd i dag. Det er katasterværdien, altså det tal, der står trykt på din IBI-regning. Find den frem og kig på det, for det ligner som regel ingen af de to andre.
+
+Og der bliver ikke trukket noget fra. Ikke fællesudgifterne, ikke forsikringen, ikke engang selve IBI. Hvis du er vant til at trække dine udgifter fra derhjemme, så svier den.
+
+Satsen er 19 procent, hvis du bor i EU, Norge, Island eller Liechtenstein. Den er 24 procent for alle andre.
+
+Jeg har samlet det hele på én side, også de år, hvor du måske i al stilhed ikke har fået indberettet:
 
 {link}`,
     de: `Das ist die, bei der die Leute die Kaffeetasse abstellen.
@@ -278,6 +368,19 @@ Lägg in det i kalendern nu, medan du tänker på det. Vanor är det lättaste i
 Sidan jag byggde räknar ut vad som faktiskt ska betalas på hyresinkomst när du tagit de avdrag du har rätt till, oftast fler än folk tar upp:
 
 {link}`,
+    da: `Hvis du lejer en bolig ud i Spanien, er den rytme, du har vænnet dig til, ved at ændre sig, og det er den slags ændring, der rammer folk, netop fordi de har styr på tingene.
+
+Fire indberetninger om året, hvert eneste år, og så pludselig ikke længere.
+
+Q3 2026 er den sidste kvartalsvise indberetning af lejeindtægt. Den skal indsendes mellem 1. og 20. oktober 2026. Derefter får lejeindtægt fra 1. oktober og frem ikke sit eget kvartal. Den ryger ind i én årlig indberetning, som indsendes i de første 20 dage af april året efter.
+
+Så det næste, du indberetter efter oktober i år, ligger ikke i januar. Det er april 2027, og det dækker sidste kvartal af 2026.
+
+Skriv det i kalenderen nu, mens du tænker på det. Vaner er det nemmeste i verden at blive ved med, efter at de er holdt op med at passe.
+
+Den side, jeg har lavet, regner ud, hvad du rent faktisk skal betale af lejeindtægten, når du har taget de fradrag, du har ret til, og det er som regel flere, end folk bruger:
+
+{link}`,
     de: `Wenn Sie in Spanien vermieten, ändert sich gleich der Rhythmus, an den Sie sich gewöhnt haben, und es ist die Art Änderung, die gerade die Ordentlichen erwischt.
 
 Vier Erklärungen im Jahr, jedes Jahr, und dann plötzlich nicht mehr.
@@ -368,6 +471,21 @@ Har kravet väl landat är inget av det här kvar på bordet. Då är du någon 
 Sitter du på ett år du inte deklarerat är det alltså posten som är värd att kolla, inte kalkylatorn.
 
 Sedan frågar sidan vilken av de två du befinner dig i, räknar ut beloppet, och visar datumet din klocka faktiskt började löpa från:
+
+{link}`,
+    da: `Hvis en modelo 210 er forsinket, er der ét spørgsmål, det er værd at få svar på før alt andet, og det er ikke hvor meget.
+
+Det er, om skattekontoret har skrevet til dig endnu.
+
+De to situationer er ikke bare lidt forskellige. Det er to forskellige regelsæt, og afstanden mellem dem er enorm.
+
+Indsender du for sent på eget initiativ, før der kommer noget brev, er det et tillæg. En procent, plus en procent mere for hver hele måned, du er forsinket, op til tolv. Fra måned tretten bliver det til faste femten procent plus renter. Og her er den del, næsten ingen kender: Tillægget træder i stedet for den bøde, du ellers kunne have fået. Der er også en reduktion på femogtyve procent af det, hvis du betaler inden for den frivillige frist, når de har givet dig besked.
+
+Når kravet først er landet, er intet af det på bordet længere. Så er du et helt andet sted.
+
+Så hvis du sidder med et år, du ikke har indberettet, er det postkassen, du skal tjekke, ikke lommeregneren.
+
+Bagefter spørger siden, hvilken af de to situationer du er i, regner beløbet ud og viser dig den dato, hvor dit ur rent faktisk begyndte at tælle:
 
 {link}`,
     de: `Ist eine modelo 210 verspätet, gibt es eine Frage, die sich vor allem anderen lohnt, und es ist nicht die nach der Höhe.
@@ -474,6 +592,23 @@ Så jag gjorde listan till en sida. Du går igenom vad du faktiskt betalat, rad 
 {link}
 
 Värt tio minuter, tycker jag.`,
+    da: `Jeg læste det her tre gange, fordi jeg var sikker på, at jeg havde misforstået det. Så skarp er grænsen.
+
+To lejligheder. Samme bygning, samme etage, samme lejer, der betaler den samme leje i det samme år.
+
+Hvis du bor i et EU-land, eller i Norge, Island eller Liechtenstein, kan du trække dine udgifter fra. Administration, forsikring, reparationer, fællesudgifter, renter på boliglånet, afskrivning. Du bliver beskattet af det, der er tilbage, med 19 procent.
+
+Bor du et hvilket som helst andet sted, bliver du beskattet af bruttolejen. Ingen fradrag overhovedet. Med 24 procent.
+
+Samme lejlighed. Det eneste, der flyttede sig, var, hvor ejeren sover om natten.
+
+Og det, jeg bliver ved med at lægge mærke til, er, at selv folk, der helt klart er på fradragssiden, tager to eller tre af posterne med og stopper der. Ikke fordi de er forsigtige. Fordi ingen nogensinde har givet dem hele listen.
+
+Så jeg lavede listen om til en side. Du går igennem det, du rent faktisk har betalt, post for post, og så viser den dig forskellen mellem det og det, du har lov til at trække fra.
+
+{link}
+
+Jeg synes, det er ti minutter værd.`,
     de: `Ich habe das dreimal gelesen, weil ich sicher war, es falsch verstanden zu haben. So scharf ist die Grenze.
 
 Zwei Wohnungen. Gleiches Haus, gleiches Stockwerk, derselbe Mieter, dieselbe Miete, dasselbe Jahr.
@@ -578,6 +713,21 @@ Haken är fristen för att kräva det, och den är egendomlig. Den öppnar en m�
 Sidan räknar vinsten, skatten, innehållandet och återbetalningen, och gör varje frist till ett verkligt datum från din tillträdesdag:
 
 {link}`,
+    da: `Der er ikke noget ved et spansk boligsalg, der forvirrer ikke-residenter mere end de tre procent, og det skyldes ét ord, som ingen siger højt.
+
+Det er ikke en skat.
+
+Køberen skal holde tre procent af den aftalte pris tilbage og betale dem til skattekontoret på modelo 211 inden for en måned efter salget. Det er det hele. Det er et depositum mod din skat af avancen, betalt på dine vegne, på forskud.
+
+Din egentlige skat af avancen er 19 procent af avancen. Ikke af prisen. Af avancen. Og det er 19 procent for alle, uanset hvor du bor.
+
+Så du har tre procent af ét tal og 19 procent af et helt andet tal, og det kan falde ud til begge sider. Hvis de tre procent blev til mere, end du skylder, får du forskellen tilbage. Hvis din avance var lille, eller du solgte med tab, får du det meste tilbage.
+
+Hagen er fristen for at søge om det, og den er lidt sær. Den åbner en måned efter overdragelsen og lukker tre måneder efter det.
+
+Siden regner avancen, skatten, tilbageholdelsen og tilbagebetalingen ud og laver hver frist om til en rigtig dato ud fra din overdragelsesdag:
+
+{link}`,
     de: `Nichts an einem spanischen Verkauf verwirrt Nichtansässige mehr als die drei Prozent, und das liegt an einem Wort, das niemand ausspricht.
 
 Es ist keine Steuer.
@@ -670,6 +820,19 @@ Fristen är trettio arbetsdagar från datumet på handlingen. Arbetsdagar. Inte 
 En ärlig reservation, för jag säger den hellre än att du ska lita på mig: koefficienterna, skattesatsen och om din kommun vill ha anmälan eller självdeklaration varierar mellan kommuner. Den slutliga siffran måste komma från kommunhuset.
 
 {link}`,
+    da: `De fleste sælgere møder plusvalia for første gang ved notarens bord, cirka halvfems sekunder før de bliver bedt om at acceptere den. Det er ikke ideelt.
+
+Det er den kommunale skat på salget, og tre ting gør den en hel del mindre skræmmende, end den lyder, når nogen siger tallet højt.
+
+Den kan beregnes på to måder, og du må selv vælge. Den objektive metode tager grundens katasterværdi og ganger den med en koefficient for, hvor længe du har ejet stedet. Metoden med reel gevinst bruger den faktiske stigning mellem det, der står i de to skøder. Den, der giver det laveste beløb, er den, du kan vælge.
+
+Hvis der slet ikke var nogen stigning, er der ikke noget at betale. Du skal stadig anmelde salget og aflevere begge skøder, men der kommer ingen regning.
+
+Fristen er tredive arbejdsdage fra datoen på skødet. Arbejdsdage. Ikke tredive dage.
+
+Jeg har ét ærligt forbehold, for jeg vil hellere sige det, end at du stoler blindt på mig: Koefficienterne, satsen og om din kommune vil have en anmeldelse eller en selvberegning, varierer fra kommune til kommune. Det endelige tal skal komme fra rådhuset.
+
+{link}`,
     de: `Die meisten Verkäufer begegnen der plusvalia zum ersten Mal am Tisch des Notars, ungefähr neunzig Sekunden bevor sie sie akzeptieren sollen. Nicht ideal.
 
 Es ist die kommunale Steuer auf den Verkauf, und drei Dinge machen sie deutlich weniger bedrohlich, als sie klingt, wenn jemand die Zahl laut ausspricht.
@@ -754,6 +917,19 @@ Hotelliknande är uttrycket som bär hela tyngden, och det betyder tjänster und
 Sedan finns andra halvan, nämligen vem gästen faktiskt bokar genom. Det kan vända svaret igen.
 
 Tre frågor och ett rakt svar, här:
+
+{link}`,
+    da: `Spørg ti mennesker, om der er IVA på ferieudlejning, og du får at vide, at det kommer an på, hvor længe gæsten bliver. Det gør det ikke. Det er det forkerte spørgsmål, og det har været det forkerte spørgsmål i årevis.
+
+Det kommer an på, hvad du gør for dem, mens de er der.
+
+Lejer du boligen ud uden nogen tjenester, er det fritaget for IVA. Lægger du hotellignende tjenester oveni under opholdet, bliver det beskattet med 10 procent. Enogtyve procent er til det, der hverken er en fritaget boligudlejning eller en hotellignende tjeneste.
+
+"Hotellignende" er det udtryk, der bærer hele vægten, og det betyder tjenester under opholdet. Rengøring og rent sengetøj mellem to gæster er en helt anden sag end daglig rengøring, en reception eller morgenmad. To ejere i samme opgang, der lejer ud i samme uge til samme pris, kan reelt ende på hver sin side af den grænse.
+
+Så er der den anden halvdel, nemlig hvem gæsten rent faktisk booker igennem. Det kan vende svaret én gang til.
+
+Tre spørgsmål og et klart svar får du her:
 
 {link}`,
     de: `Fragen Sie zehn Leute, ob auf eine Ferienvermietung IVA anfällt, und man sagt Ihnen, es komme darauf an, wie lange der Gast bleibt. Tut es nicht. Das ist die falsche Frage, und sie ist seit Jahren die falsche.
@@ -842,6 +1018,19 @@ Så morgonen efter en storm är den användbara frågan inte vad din försäkrin
 Fyra frågor, sedan säger den det:
 
 {link}`,
+    da: `Den her lærte jeg ved at læse et afslag på en skadesanmeldelse, som var fuldstændig korrekt og alligevel efterlod ejeren med en forkert opfattelse.
+
+Ved visse typer skader i Spanien er det ikke dit forsikringsselskab, der betaler. Det er et offentligt organ, der hedder Consorcio de Compensacion de Seguros. Jordskælv, ekstraordinær oversvømmelse, vulkanudbrud, atypisk cyklonstorm og en kort liste med andre.
+
+Og den med vinden har et konkret tal, hvilket jeg ikke havde regnet med. Vindstød over 120 km i timen, målt som et vindstød på tre sekunder. Under det er stormskader dit eget forsikringsselskabs problem under stormdækningen i din police. Over det kan det være Consorcio, du skal have fat i i stedet.
+
+Her er det, der er værd at vide, før der sker noget: Det her er ikke noget, du køber. Hvis du har en almindelig police i en branche, der er omfattet, bliver tillægget allerede opkrævet sammen med din præmie, helt automatisk. Du har betalt for det, uanset om du nogensinde har hørt navnet eller ej.
+
+Så morgenen efter en storm er det nyttige spørgsmål ikke, hvad din police dækker. Det er, hvem af de to du skal ringe til.
+
+Fire spørgsmål, og så fortæller den dig det:
+
+{link}`,
     de: `Das habe ich beim Lesen einer Ablehnung gelernt, die völlig richtig war und den Eigentümer trotzdem mit der falschen Vorstellung zurückließ.
 
 Bei bestimmten Schadensarten in Spanien zahlt nicht Ihr Versicherer. Das tut eine öffentliche Stelle namens Consorcio de Compensacion de Seguros. Erdbeben, außergewöhnliche Überschwemmung, Vulkanausbruch, atypischer Zyklonsturm und eine kurze weitere Liste.
@@ -920,6 +1109,17 @@ Sedan kommer den del som verkligen förvånade mig. Du har rätt att välja din 
 Så innan någon betalar en advokat ur egen ficka är det värt en halvtimme med försäkringsbrevet och de spanska uttrycken att söka på. Hittar du dem vet du vad du har. Hittar du dem inte vet du vad du ska fråga om.
 
 Uttrycken, lagrummen och fristerna ligger alla på en sida:
+
+{link}`,
+    da: `Det her er den, jeg ikke havde regnet med at finde, og helt ærligt er den grunden til, at hele siden findes.
+
+Mange spanske husforsikringer har et kapitel om retshjælp gemt et sted. Defensa juridica. Det betaler din advokat, din procurador og sagsomkostningerne, når du rent faktisk står i en sag. Og i en kombineret husforsikring skal det stå som sit eget kapitel med sin egen præmielinje. Så hvis du leder og ikke finder en særskilt præmie for det, er det alene en opringning værd.
+
+Så er der den del, der virkelig overraskede mig. Du har ret til at vælge din egen advokat. Ikke en fra deres liste. Din egen. Og den advokat, du vælger, tager imod instrukser fra dig, ikke fra forsikringsselskabet. Den ret afhænger ikke af, at selskabet siger ja, og den afhænger ikke af, at der er en interessekonflikt. Policen skal skrive det med rene ord.
+
+Så før nogen betaler en advokat af egen lomme, er det en halv time værd at sidde med policen og de spanske udtryk, du skal søge efter. Finder du dem, ved du, hvad du har. Finder du dem ikke, ved du, hvad du skal spørge om.
+
+Udtrykkene, artiklerne og fristerne står alle sammen på én side:
 
 {link}`,
     de: `Das ist die Sache, mit der ich nicht gerechnet hatte, und ehrlich gesagt der Grund, warum es die Seite überhaupt gibt.
@@ -1002,6 +1202,19 @@ Ett villkor att kolla innan du planerar något, för det tar folk på sängen: f
 Fristerna, lagrummen de kommer från, och vad du bör samla in medan du ännu kan, allt här:
 
 {link}`,
+    da: `Hvis du ejer en bolig i en ejerforening og ikke var med til den seneste generalforsamling, er der én regel, der er mere værd for dig end alle de andre tilsammen.
+
+Du har tre måneder til at anfægte en beslutning, hvis din begrundelse er, at den skader ejerforeningen alvorligt eller rammer én ejer urimeligt. Du har et år, hvis begrundelsen er, at den strider mod loven eller vedtægterne.
+
+Og her kommer det, der er vigtigt for alle, der bor i udlandet: Var du ikke med til mødet, begynder din frist ikke at løbe ved mødet. Den begynder den dag, beslutningen blev meddelt dig.
+
+Det betyder, at kuverten er vigtig. Eller mailen. Gem den med datoen på, for den dato er din startlinje, og det er der ikke andet, der er. Folk smider den slags ud hele tiden og kan så ikke bevise, hvornår deres frist begyndte.
+
+Én betingelse skal du tjekke, før du planlægger noget, for den kommer bag på mange: For at anfægte en beslutning skal du som regel være ajour med fællesudgifterne eller først have deponeret det omstridte beløb hos retten.
+
+Fristerne, de artikler, de stammer fra, og hvad du bør samle sammen, mens du stadig kan, finder du her:
+
+{link}`,
     de: `Wenn Sie in einer Eigentümergemeinschaft besitzen und bei der letzten Versammlung nicht dabei waren, gibt es eine Regel, die für Sie mehr wert ist als alle anderen zusammen.
 
 Sie haben drei Monate, um einen Beschluss anzufechten, wenn Ihr Grund ist, dass er die Gemeinschaft schwer schädigt oder einen Eigentümer unbillig benachteiligt. Ein Jahr, wenn Ihr Grund ist, dass er gegen Gesetz oder Satzung verstößt.
@@ -1082,6 +1295,17 @@ Inget av det ser alarmerande ut för sig. Det är just poängen. Tillsammans är
 Så jag gjorde om det till tolv frågor du kan besvara utifrån pappret framför dig. Den räknar vad som saknas och ger dig den exakta formuleringen att skicka tillbaka, på engelska och på spanska, så du slipper översätta ett svårt samtal medan du har det.
 
 {link}`,
+    da: `Jeg brugte et stykke tid på at læse om byggeprojekter, der gik galt, og regnede med at finde dårlige håndværkere. For det meste fandt jeg dårlige tilbud.
+
+Og ikke forkerte tilbud. Mangelfulde. Problemet var næsten altid noget, papiret ikke sagde.
+
+Ingen startdato og ingen slutdato. Ingen betalingsplan knyttet til etaper, så pengene bliver betalt på ren tillid. Intet om, hvem der søger om tilladelsen. Intet om, hvad der sker med byggeaffaldet. Intet om færdigattesten eller dens dato, som er den dato, alle garantiperioder regnes fra, så du har mistet din startlinje, før du er begyndt. Og én samlet pris uden specifikation, hvilket betyder, at der ikke er noget at sammenligne med, når ekstraregningerne dukker op.
+
+Intet af det ser alarmerende ud hver for sig. Det er netop pointen. Tilsammen er det et tilbud, der har ladet alle de dyre spørgsmål stå åbne, og åbne spørgsmål bliver besvaret senere af den, der sidder på pengene.
+
+Så jeg lavede det om til tolv spørgsmål, du kan besvare ud fra det papir, du sidder med. Du får en optælling af, hvad der mangler, og den præcise formulering, du kan sende tilbage, på engelsk og på spansk, så du ikke skal oversætte en svær samtale, mens du fører den.
+
+{link}`,
     de: `Ich habe eine Weile schiefgegangene Bauvorhaben durchgelesen und erwartet, schlechte Handwerker zu finden. Gefunden habe ich vor allem schlechte Angebote.
 
 Und zwar nicht falsche. Unvollständige. Das Problem war fast immer etwas, das auf dem Blatt nicht stand.
@@ -1154,6 +1378,17 @@ Kostnaderna kommer en i taget, vid olika tidpunkter på året, ibland i olika va
 Så jag byggde en sida som lägger hela året i en kolumn. Du fyller i vad du faktiskt betalar, rad för rad, och den visar totalen, och var den totalen ligger bredvid vad samma sorts bostad brukar kosta.
 
 Den finns inte för att få någon att må dåligt över en siffra. Den finns för att du inte kan avgöra om en kostnad är värd att betala förrän du ser den stå bredvid de andra.
+
+{link}`,
+    da: `Spørg hvem som helst, hvad deres bolig i Spanien kostede at købe, og de kan svare på euroen. Spørg, hvad den koster at have, og næsten ingen kan svare uden at gå hen og kigge efter.
+
+Det er ikke sjusk. Det er et regnestykke, der med vilje er blevet spredt ud.
+
+Udgifterne kommer én ad gangen, på forskellige tidspunkter af året, nogle gange i forskellige valutaer, fra seks eller syv forskellige steder. Kontogebyrer. Det faste abonnement på strømmen, som løber, uanset om der er nogen i boligen eller ej. Vand. Forsikring. Fællesudgifterne. IBI. Gestoriaen. Hver for sig er ingen af dem en formiddags opmærksomhed værd, så ingen af dem får den. Og det er præcis sådan, nogle hundrede euro om året går ubemærket hen i ti år.
+
+Så jeg har bygget en side, der samler hele året i én kolonne. Du taster ind, hvad du faktisk betaler, post for post, og den viser dig totalen, og hvor den total ligger i forhold til, hvad samme slags bolig normalt koster.
+
+Den er der ikke for at give nogen dårlig samvittighed over et tal. Den er der, fordi du ikke kan afgøre, om en udgift er værd at betale, før du kan se den stå ved siden af de andre.
 
 {link}`,
     de: `Fragen Sie irgendwen, was die Immobilie in Spanien im Kauf gekostet hat, und Sie bekommen die Antwort auf den Euro genau. Fragen Sie, was sie im Unterhalt kostet, und fast niemand kann antworten, ohne erst nachzusehen.
@@ -1230,6 +1465,17 @@ Checklistan tar de tre svaren och ger dig en daterad lista för sista dagen, i s
 {link}
 
 Har du pool, gör det innan vattnet blir kallt. Lita på mig där.`,
+    da: `Hvert efterår dukker det samme spørgsmål op i de her grupper. Hvad skal jeg egentlig nå, inden jeg låser af for vinteren?
+
+Der er et langt svar og et kort, og det korte afhænger af tre ting, som næsten ingen bliver spurgt om. Hvor længe du er væk. Hvilken årstid det er. Og om der er nogen, der kigger forbi, mens du er væk. De tre ting ændrer listen langt mere, end boligens størrelse gør.
+
+Én ting er værd at sige ligeud, for den kommer op i hver eneste af de her samtaler, og som regel følger der en masse bekymring med: Efter spansk ret regnes en feriebolig eller en sæsonbolig faktisk som en morada, forudsat at de personer, der har ret til at være der, lever deres privatliv der, også selv om det kun er en gang imellem. Det er en væsentligt mere betryggende situation, end de fleste ejere i udlandet tror, de står i.
+
+Tjeklisten tager de tre svar og giver dig en dateret liste til den sidste dag, i stedet for en generel liste, du selv skal sidde og sortere i.
+
+{link}
+
+Har du pool, så gør det, inden vandet bliver koldt. Tro mig på det punkt.`,
     de: `Jeden Herbst taucht in diesen Gruppen dieselbe Frage auf. Was muss ich eigentlich tun, bevor ich für den Winter abschließe?
 
 Es gibt eine lange und eine kurze Antwort, und die kurze hängt an drei Dingen, nach denen fast niemand gefragt wird. Wie lange Sie weg sind. Welche Jahreszeit es ist. Und ob jemand nach dem Rechten sieht, während Sie fort sind. Diese drei verändern die Liste weit stärker als die Größe der Immobilie.
@@ -1302,6 +1548,17 @@ Ordningen är det som kostar folk veckor. Börja med fel, så väntar du, får v
 Två små saker som sparar mycket förvirring alldeles i början, för det är här folk blir hemskickade. NIE-ansökan är EX-15. EX-18 är registreringsbeviset för EU-medborgare och är en helt annan procedur, så att dyka upp med fel blankett är vanligt och kostar dig förmiddagen. Och avgiften för tilldelning av NIE är 9,84 euro, värt att veta innan någon uppger något annat.
 
 Sidan ställer sex frågor om din situation och ger dig ordningen de fem måste ske i, med dokumenten var och en behöver.
+
+{link}`,
+    da: `At få strøm og vand til at virke i en spansk bolig er ikke én opgave. Det er fem, og to af dem kan ikke gå i gang, før noget andet er afsluttet.
+
+El, vand, gas, internet og den kommunale afgift. Fem kontorer, fem formularer, fem lister over dokumenter, og ingen af dem fortæller dig om de fire andre.
+
+Det er rækkefølgen, der koster folk flere uger. Starter du med den forkerte, venter du, finder ud af, at den ikke kan komme videre, og begynder forfra.
+
+To små ting sparer en masse forvirring helt i starten, for det er her, folk bliver sendt hjem igen. Ansøgningen om NIE er EX-15. EX-18 er registreringsbeviset for EU-borgere og er en helt anden procedure, så det er almindeligt at møde op med den forkerte, og det koster dig formiddagen. Og gebyret for at få tildelt et NIE er 9,84 euro, hvilket er værd at vide, før nogen nævner en anden pris.
+
+Siden stiller seks spørgsmål om din situation og giver dig den rækkefølge, de fem ting skal ske i, sammen med de dokumenter, hver af dem kræver.
 
 {link}`,
     de: `Strom und Wasser in einer spanischen Immobilie anzumelden ist nicht eine Aufgabe. Es sind fünf, und zwei davon können nicht beginnen, bevor etwas anderes fertig ist.
@@ -1378,6 +1635,17 @@ Så jag byggde en katalog som sorterar på precis det. Rörmokare, elektriker, l
 Den är gratis, det finns ingen listningsavgift, och ingen betalar för att ligga högre. Ser din ort tunn ut, eller är något inaktuellt, säg till så går jag och tittar.
 
 {link}`,
+    da: `Her er et mønster, jeg bliver ved med at se i den her gruppe og i alle grupper, der ligner den.
+
+Nogen har brug for en VVS'er. Tyve personer svarer med et navn. Og ikke én af de tyve svarer på det, personen faktisk har brug for at vide, nemlig om man kan gøre sig forståelig i telefonen, når vandet løber ned gennem loftet.
+
+Anbefalinger er personlige, og de kan ikke bare flyttes fra den ene til den anden. Den VVS'er, der er fantastisk for en, der taler spansk, er ikke nødvendigvis den rigtige at ringe til for en, der ikke gør, og det finder man ud af på det værst tænkelige tidspunkt.
+
+Så jeg har bygget en oversigt, der sorterer efter præcis det. Den dækker VVS'er, elektriker, låsesmed, aircondition, poolservice og byggefirma i 660 spanske byer, rangeret ud fra Google-anmeldelser, og dem, der allerede er anmeldt på dit eget sprog, står øverst. Du vælger, hvilket sprog du har brug for hjælp på, og siden sorterer sig selv om.
+
+Den er gratis, det koster ikke noget at være med på listen, og ingen betaler for at ligge højere oppe. Hvis din by ser tynd ud, eller noget er forældet, så sig til, så kigger jeg på det.
+
+{link}`,
     de: `Hier ist ein Muster, das mir in dieser Gruppe und in jeder Gruppe wie ihr immer wieder begegnet.
 
 Jemand braucht einen Installateur. Zwanzig Leute antworten mit einem Namen. Und nicht einer der zwanzig beantwortet das, was die Person wirklich wissen muss, nämlich ob sie sich am Telefon verständlich machen kann, wenn Wasser durch die Decke läuft.
@@ -1450,6 +1718,17 @@ Det som faktiskt händer när du missar är det här. Du förklarar hela situati
 Det finns ett lager till. Mäklare, arkitekt, värderingsman, försäkringsmäklare, auktoriserad translator. Alla dyker upp i ett fastighetsproblem, och var och en gör något smalt och bestämt.
 
 Så sidan förklarar vad var och en faktiskt gör innan den visar dig ett enda namn. Sedan rankar den din ort, med dem som redan är omdömda på ditt språk först.
+
+{link}`,
+    da: `Der er fire spanske stillingsbetegnelser, som bliver brugt, som om de betød det samme. Det gør de ikke, og vælger du den forkerte, koster det dig som regel fjorten dage snarere end penge.
+
+En abogado er advokat og fører sagen. En gestoria tager sig af indberetninger og papirarbejde og går ikke i retten. En administrador de fincas driver ejerforeningen, dens regnskab og dens møder. En procurador repræsenterer dig processuelt over for retten, ved siden af din abogado.
+
+Det, der faktisk sker, når du vælger forkert, er det her. Du forklarer hele situationen til en, der aldrig var den rette person til den, vedkommende er høflig omkring det, og så forklarer du hele situationen én gang til for en anden en uge senere.
+
+Der er også et lag mere. Ejendomsmægler, arkitekt, vurderingsmand, forsikringsmægler, autoriseret translatør. De dukker alle sammen op, når der er et problem med en bolig, og hver af dem laver noget snævert og helt bestemt.
+
+Derfor forklarer siden, hvad hver af dem faktisk laver, før den viser dig et eneste navn. Derefter rangerer den din by, med dem, der allerede er anmeldt på dit sprog, øverst.
 
 {link}`,
     de: `Vier spanische Berufsbezeichnungen, die benutzt werden, als bedeuteten sie dasselbe. Tun sie nicht, und die falsche zu wählen kostet Sie meist zwei Wochen, nicht Geld.
@@ -1526,6 +1805,17 @@ Och det finns en andra halva om du inte är där större delen av året, vilket 
 Så jag byggde det som ett tolvmånadersschema i stället för en checklista. Fem frågor om fastigheten, och varje jobb kommer ut med vad det förebygger och vad som måste ske medan du är borta.
 
 {link}`,
+    da: `Det tog mig et stykke tid at få øje på det her, og da jeg først havde set det, kunne jeg ikke lade være med at se det.
+
+Vedligeholdelse af en spansk bolig er ikke en liste over opgaver. Det er en kalender.
+
+Sol, salt og en våd vinter ødelægger forskellige ting, og de gør det på forskellige tidspunkter af året. Laver du en opgave i den rigtige måned, forebygger den noget. Laver du præcis den samme opgave i den forkerte måned, er det bare arbejde, du har betalt for.
+
+Og der er en anden halvdel, hvis du ikke er der det meste af året, og det er de fleste, der læser det her, ikke. Nogle af opgaverne kan ejeren slet ikke selv lave, fordi de skal ske, mens ingen er i landet. At vide, hvilke det er, er forskellen på en liste og en plan, du faktisk kan give videre til nogen.
+
+Så jeg har bygget det som en plan over tolv måneder i stedet for en tjekliste. Du svarer på fem spørgsmål om boligen, og for hver opgave står der, hvad den forebygger, og hvad der skal ske, mens du er væk.
+
+{link}`,
     de: `Ich habe eine Weile gebraucht, um das zu sehen, und als ich es einmal gesehen hatte, ging es nicht mehr weg.
 
 Instandhaltung an einer spanischen Immobilie ist keine Liste von Arbeiten. Sie ist ein Kalender.
@@ -1598,6 +1888,17 @@ Det sista är det ägare utomlands underskattar, och jag förstår varför. Inge
 Sidan ställer fem frågor och ger dig de skadedjur som är mest sannolika för just din fastighet, tecknen att leta efter, vad som förebygger vart och ett, och vilka som ärligt talat inte är ett jobb för ägaren.
 
 Den sista delen betyder mer än den låter. Några av dem är ett telefonsamtal, inte en lördag.
+
+{link}`,
+    da: `Tre ting ved en spansk bolig tiltrækker hver især noget helt forskelligt, og de overlapper næsten ikke. Varmt vejr. En have. Lange perioder, hvor der ikke er nogen i huset.
+
+Det er derfor, de generelle råd aldrig rigtig passer til nogen. Det, der virker for en stuelejlighed med terrasse, er ikke rådet til en villa med fyrretræer og pool, og ingen af delene er rådet til et sted, der står tomt fra oktober til april.
+
+Det sidste er det, ejere i udlandet undervurderer, og jeg forstår godt hvorfor. Intet bliver forstyrret, intet bliver opdaget, og det første tegn på et problem er det, du ser, når du træder ind ad døren til påske. Og på det tidspunkt lå det rigtige øjeblik til at gøre noget ved det flere måneder tilbage.
+
+Siden stiller fem spørgsmål og giver dig de skadedyr, der er mest sandsynlige for netop din bolig, de tegn, du skal holde øje med, hvad der forebygger hvert af dem, og hvilke der helt ærligt ikke er en opgave for ejeren.
+
+Den sidste del betyder mere, end det lyder til. Nogle af dem kræver en opringning, ikke en lørdag.
 
 {link}`,
     de: `Drei Dinge an einer spanischen Immobilie ziehen jeweils etwas völlig Verschiedenes an, und sie überschneiden sich kaum. Warmes Wetter. Ein Garten. Lange Strecken, in denen niemand im Haus ist.
@@ -1674,6 +1975,17 @@ Och jag vill vara rak om vad en kalkylator kan och inte kan här. Den kan uppska
 Det sidan är bra på är att på två minuter ta reda på om det alls är värt att ställa frågan.
 
 {link}`,
+    da: `Hvis du optog et spansk boliglån et sted mellem 2000 og 2019, er det værd at finde mappen frem en aften og rent faktisk læse omkostningerne ved lånets oprettelse. De fleste skrev under på de sider uden at læse dem, hvilket er helt forståeligt, og det er også hele pointen.
+
+Tre ting går igen og igen i lån fra den periode. Stiftelsesomkostninger, som låntageren kom til at betale fuldt ud. Gulvklausuler, der forhindrede renten i at falde under et niveau, du aldrig sagde ja til at tænke over. Og forsikringer, der blev solgt sammen med lånet.
+
+Om noget af det gælder for dig, afhænger af dit lånedokument og dine vilkår. Det afhænger ikke af, hvad der skete for en anden med lån i samme bank, og det er ellers sådan, de fleste af de her samtaler begynder i grupper som denne.
+
+Og jeg vil gerne være ærlig om, hvad en beregner kan og ikke kan her. Den kan give et skøn over, hvad du blev opkrævet, og hvad et krav af den type normalt dækker. Den kan ikke fortælle dig, om et krav stadig er rettidigt, for det afhænger af kravets type og er reelt omstridt. Den del kræver en abogado, der sidder med dit lånedokument foran sig.
+
+Det, siden er god til, er at finde ud af på to minutter, om det overhovedet er værd at stille spørgsmålet.
+
+{link}`,
     de: `Wenn Sie irgendwann zwischen 2000 und 2019 ein spanisches Hypothekendarlehen aufgenommen haben, lohnt es sich, die Akte eines Abends herauszuholen und die Abschlusskosten wirklich zu lesen. Die meisten haben diese Seiten unterschrieben, ohne sie zu lesen, was völlig verständlich ist und zugleich der ganze Punkt.
 
 Drei Dinge tauchen bei Darlehen aus dieser Zeit immer wieder auf. Bearbeitungsgebühren, die komplett dem Darlehensnehmer auferlegt wurden. Zinsuntergrenzen, die verhinderten, dass der Satz unter ein Niveau fiel, über das Sie nie nachzudenken zugestimmt hatten. Und Versicherungen, die zusammen mit dem Darlehen verkauft wurden.
@@ -1709,4 +2021,965 @@ Waar de pagina goed voor is, is in twee minuten uitvinden of de vraag überhaupt
 {link}`,
   },
 },
+{
+  key: 'bueno-rented-part-of-the-year',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['deadline.rental.last_quarterly', 'deadline.rental.from_2026', 'irnr.rental.deductibility'],
+  text: {
+    en: `If you let your Spanish home for part of the year, you've really got two kinds of return, and it helps to know which is which.
+
+For the weeks it was rented, you declare the rental income. For the time it sat empty or you used it yourself, you declare the usual non-resident amount based on the cadastral value. Same form 210, different parts of the year.
+
+The calendar for the rental side is changing too. The last quarterly rental return covers July to September 2026 and is filed between 1 and 20 October. Rent earned from 1 October goes into one annual return, filed in the first 20 days of April 2027.
+
+Expenses are the fiddly part. Residents of the EU, Norway, Iceland and Liechtenstein can deduct them. Everyone else is taxed on the gross rent.
+
+At Bueno we file both kinds for owners who live abroad. The rental return has a fixed fee per owner, plus an hourly fee if there are expenses to work through and include. The details are here:
+
+{link}`,
+    no: `Leier du ut boligen din i Spania deler av året, har du egentlig to typer skattemelding, og det hjelper å vite hvilken som er hvilken.
+
+For ukene den var utleid, oppgir du leieinntekten. For tiden den sto tom eller du brukte den selv, oppgir du det vanlige beløpet for ikke-bosatte, basert på matrikkelverdien. Det er samme skjema 210, bare ulike deler av året.
+
+Kalenderen for utleiedelen endrer seg også. Den siste kvartalsvise skattemeldingen for utleie gjelder juli til september 2026 og leveres mellom 1. og 20. oktober. Leie som er opptjent fra 1. oktober, går inn i én årlig skattemelding, som leveres de første 20 dagene i april 2027.
+
+Utgiftene er den plundrete delen. Bor du i EU, Norge, Island eller Liechtenstein, kan du trekke dem fra. Alle andre skattlegges av brutto leie.
+
+Hos Bueno leverer vi begge typene for eiere som bor i utlandet. Skattemeldingen for utleie har en fast pris per eier, pluss en timepris hvis det er utgifter som må gjennomgås og tas med. Detaljene finner du her:
+
+{link}`,
+    sv: `Om du hyr ut din spanska bostad en del av året har du egentligen två sorters deklarationer, och det hjälper att veta vilken som är vilken.
+
+För de veckor bostaden var uthyrd deklarerar du hyresintäkten. För tiden den stod tom eller du använde den själv deklarerar du det vanliga beloppet för icke-bosatta, som bygger på taxeringsvärdet. Det är samma blankett 210, men olika delar av året.
+
+Kalendern för uthyrningsdelen ändras också. Den sista kvartalsdeklarationen för uthyrning gäller juli till september 2026 och lämnas in mellan 1 och 20 oktober. Hyra som tjänas in från 1 oktober går in i en enda årsdeklaration, som lämnas in under de första 20 dagarna i april 2027.
+
+Kostnaderna är den pilliga delen. Den som bor i EU, Norge, Island eller Liechtenstein får dra av dem. Alla andra beskattas på bruttohyran.
+
+Hos Bueno deklarerar vi båda sorterna åt ägare som bor utomlands. Hyresdeklarationen har en fast avgift per ägare, plus en timavgift om det finns kostnader att gå igenom och ta med. Detaljerna finns här:
+
+{link}`,
+    da: `Hvis du lejer din spanske bolig ud en del af året, har du i virkeligheden to slags selvangivelser, og det hjælper at vide, hvad der er hvad.
+
+For de uger, hvor den var lejet ud, angiver du lejeindtægten. For den tid, hvor den stod tom, eller du selv brugte den, angiver du det sædvanlige beløb for ikke-residenter, som beregnes ud fra katasterværdien. Det er den samme formular 210, bare for forskellige dele af året.
+
+Kalenderen for udlejningsdelen ændrer sig også. Den sidste kvartalsvise selvangivelse for udlejning dækker juli til september 2026 og indsendes mellem den 1. og 20. oktober. Leje, der er tjent fra den 1. oktober, kommer med i én årlig selvangivelse, som indsendes i de første 20 dage af april 2027.
+
+Udgifterne er den besværlige del. Bor du i EU, Norge, Island eller Liechtenstein, kan du trække dem fra. Alle andre beskattes af bruttolejen.
+
+Hos Bueno indsender vi begge slags for ejere, der bor i udlandet. Selvangivelsen for udlejning har et fast gebyr pr. ejer, plus et timegebyr, hvis der er udgifter, som skal gennemgås og tages med. Detaljerne står her:
+
+{link}`,
+    de: `Wenn Sie Ihr Haus in Spanien einen Teil des Jahres vermieten, haben Sie eigentlich zwei Arten von Steuererklärung, und es hilft zu wissen, welche welche ist.
+
+Für die Wochen, in denen vermietet war, erklären Sie die Mieteinnahmen. Für die Zeit, in der das Haus leer stand oder Sie es selbst genutzt haben, erklären Sie den üblichen Betrag für Nichtresidenten auf Basis des Katasterwerts. Es ist dasselbe Formular 210, nur für verschiedene Teile des Jahres.
+
+Auch der Kalender für die Vermietung ändert sich. Die letzte vierteljährliche Erklärung für Mieteinnahmen betrifft Juli bis September 2026 und wird zwischen dem 1. und dem 20. Oktober eingereicht. Mieten ab dem 1. Oktober kommen in eine einzige Jahreserklärung, die in den ersten 20 Tagen des April 2027 eingereicht wird.
+
+Die Ausgaben sind der knifflige Teil. Wer in der EU, in Norwegen, Island oder Liechtenstein ansässig ist, kann sie abziehen. Alle anderen zahlen Steuer auf die Bruttomiete.
+
+Bei Bueno reichen wir beide Arten für Eigentümer ein, die im Ausland leben. Für die Erklärung der Mieteinnahmen gibt es einen festen Preis pro Eigentümer, dazu kommt ein Stundensatz, wenn Ausgaben durchzugehen und einzurechnen sind. Die Einzelheiten stehen hier:
+
+{link}`,
+    fr: `Si vous louez votre logement en Espagne une partie de l'année, vous avez en réalité deux types de déclaration, et mieux vaut savoir laquelle est laquelle.
+
+Pour les semaines où il a été loué, vous déclarez les loyers. Pour les périodes où il est resté vide ou où vous l'avez occupé vous-même, vous déclarez le montant habituel des non-résidents, calculé sur la valeur cadastrale. C'est le même modèle 210, pour des périodes différentes de l'année.
+
+Le calendrier change aussi côté location. La dernière déclaration trimestrielle des loyers couvre juillet à septembre 2026 et se dépose entre le 1er et le 20 octobre. Les loyers perçus à partir du 1er octobre vont dans une seule déclaration annuelle, déposée dans les 20 premiers jours d'avril 2027.
+
+Les frais, c'est la partie délicate. Les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein peuvent les déduire. Tous les autres sont imposés sur le loyer brut.
+
+Chez Bueno, nous déposons les deux types de déclaration pour les propriétaires qui vivent à l'étranger. Pour la déclaration des loyers, le tarif est fixe par propriétaire, avec un tarif horaire en plus s'il y a des frais à examiner et à intégrer. Les détails sont ici :
+
+{link}`,
+    nl: `Verhuurt u uw Spaanse woning een deel van het jaar, dan heeft u eigenlijk twee soorten aangifte, en het helpt om te weten welke welke is.
+
+Over de weken dat de woning verhuurd was, geeft u de huurinkomsten aan. Over de tijd dat de woning leegstond of u er zelf gebruik van maakte, geeft u het gebruikelijke bedrag voor niet-residenten aan, op basis van de kadastrale waarde. Het is hetzelfde formulier 210, alleen voor andere delen van het jaar.
+
+Ook de kalender voor de verhuurkant verandert. De laatste kwartaalaangifte voor verhuur gaat over juli tot en met september 2026 en wordt ingediend tussen 1 en 20 oktober. Huur vanaf 1 oktober komt in één jaaraangifte, die wordt ingediend in de eerste 20 dagen van april 2027.
+
+De kosten zijn het lastige stuk. Inwoners van de EU, Noorwegen, IJsland en Liechtenstein mogen ze aftrekken. Alle anderen worden belast over de brutohuur.
+
+Bij Bueno dienen we beide soorten in voor eigenaren die in het buitenland wonen. Voor de verhuuraangifte geldt een vast tarief per eigenaar, plus een uurtarief als er kosten zijn die moeten worden uitgezocht en verwerkt. De details staan hier:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-year-end-return',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['deadline.imputed.upto_2025', 'irnr.rates', 'irnr.imputed.base'],
+  text: {
+    en: `If you own a home in Spain and live somewhere else, there's a return due for 2025 even if nobody rented the place for a single night. It's the non-resident return on form 210, and for 2025 it can be filed any time up to 31 December this year.
+
+Lots of owners only hear about it from a neighbour, usually in November. That's fine. There's still time, and it isn't a complicated return once someone has the numbers in front of them.
+
+This is what we do at Bueno. We prepare and file the return for you, starting from €50, and the price depends on how many owners there are, because each owner files for their own share.
+
+What we need from you is short: the cadastral value from your IBI receipt, your share of the property and where you're tax resident. The rate is 19 percent for residents of the EU, Norway, Iceland and Liechtenstein, and 24 percent for everyone else.
+
+If you'd like it off your list before December gets busy, this is the page:
+
+{link}`,
+    no: `Eier du en bolig i Spania og bor et annet sted, skal det leveres en skattemelding for 2025, selv om ingen har leid boligen en eneste natt. Det er skattemeldingen for ikke-bosatte på skjema 210, og for 2025 kan den leveres når som helst frem til 31. desember i år.
+
+Mange eiere får først høre om den fra en nabo, gjerne i november. Det går helt fint. Det er fortsatt tid, og det er ingen komplisert skattemelding når noen først har tallene foran seg.
+
+Det er dette vi gjør hos Bueno. Vi forbereder og leverer skattemeldingen for deg, fra €50, og prisen avhenger av hvor mange eiere det er, fordi hver eier leverer for sin egen andel.
+
+Det vi trenger fra deg, er ikke mye: matrikkelverdien fra IBI-kvitteringen, din andel av boligen og hvor du er skattemessig bosatt. Satsen er 19 prosent for bosatte i EU, Norge, Island og Liechtenstein, og 24 prosent for alle andre.
+
+Vil du ha det ut av verden før desember blir travel, er dette siden:
+
+{link}`,
+    sv: `Om du äger en bostad i Spanien och bor någon annanstans ska en deklaration lämnas in för 2025, även om ingen har hyrt bostaden en enda natt. Det är deklarationen för icke-bosatta på blankett 210, och för 2025 kan den lämnas in när som helst fram till 31 december i år.
+
+Många ägare får höra om den först av en granne, oftast i november. Det gör inget. Det finns fortfarande tid, och det är ingen krånglig deklaration när någon väl har siffrorna framför sig.
+
+Det är det här vi gör på Bueno. Vi förbereder och lämnar in deklarationen åt dig, från €50, och priset beror på hur många ägare det är, eftersom varje ägare deklarerar för sin egen andel.
+
+Det vi behöver från dig är kort: taxeringsvärdet från din IBI-avi, din andel av bostaden och var du har din skattehemvist. Skattesatsen är 19 procent för den som bor i EU, Norge, Island eller Liechtenstein, och 24 procent för alla andra.
+
+Vill du ha det avklarat innan december blir stressig är det här sidan:
+
+{link}`,
+    da: `Ejer du en bolig i Spanien og bor et andet sted, skal der indsendes en selvangivelse for 2025, også selvom ingen har lejet stedet en eneste nat. Det er selvangivelsen for ikke-residenter på formular 210, og for 2025 kan den indsendes når som helst frem til den 31. december i år.
+
+Mange ejere hører først om den fra en nabo, som regel i november. Det er helt fint. Der er stadig tid, og det er ikke en kompliceret selvangivelse, når først nogen har tallene foran sig.
+
+Det er det, vi laver hos Bueno. Vi udarbejder og indsender selvangivelsen for dig fra €50, og prisen afhænger af, hvor mange ejere der er, fordi hver ejer indsender for sin egen andel.
+
+Det, vi skal bruge fra dig, er ikke meget: katasterværdien fra din IBI-kvittering, din andel af boligen og hvor du er skattemæssigt hjemmehørende. Satsen er 19 procent for dem, der bor i EU, Norge, Island eller Liechtenstein, og 24 procent for alle andre.
+
+Vil du gerne have det ud af verden, inden december bliver travl, så er det denne side:
+
+{link}`,
+    de: `Wenn Sie ein Haus in Spanien besitzen und woanders leben, ist für 2025 eine Steuererklärung fällig, auch wenn dort niemand eine einzige Nacht zur Miete gewohnt hat. Es ist die Steuererklärung für Nichtresidenten auf dem Formular 210, und für 2025 kann sie jederzeit bis zum 31. Dezember dieses Jahres eingereicht werden.
+
+Viele Eigentümer erfahren davon erst von einem Nachbarn, meistens im November. Das ist in Ordnung. Es ist noch Zeit, und die Erklärung ist nicht kompliziert, sobald jemand die Zahlen vor sich hat.
+
+Genau das machen wir bei Bueno. Wir bereiten die Erklärung für Sie vor und reichen sie ein, ab €50. Der Preis hängt davon ab, wie viele Eigentümer es gibt, weil jeder Eigentümer für seinen eigenen Anteil erklärt.
+
+Was wir von Ihnen brauchen, ist kurz: den Katasterwert von Ihrem IBI-Bescheid, Ihren Anteil an der Immobilie und wo Sie steuerlich ansässig sind. Der Satz liegt bei 19 Prozent für Ansässige in der EU, Norwegen, Island und Liechtenstein und bei 24 Prozent für alle anderen.
+
+Wenn Sie das gern von der Liste hätten, bevor der Dezember voll wird, ist das hier die Seite:
+
+{link}`,
+    fr: `Si vous avez un logement en Espagne et que vous vivez ailleurs, il y a une déclaration à faire pour 2025, même si personne n'a loué le bien une seule nuit. C'est la déclaration des non-résidents, sur le modèle 210, et pour 2025 elle peut être déposée à tout moment jusqu'au 31 décembre de cette année.
+
+Beaucoup de propriétaires l'apprennent par un voisin, en général en novembre. Ce n'est pas grave. Il reste du temps, et ce n'est pas une déclaration compliquée une fois que quelqu'un a les chiffres sous les yeux.
+
+C'est ce que nous faisons chez Bueno. Nous préparons et déposons la déclaration pour vous, à partir de 50 €, et le prix dépend du nombre de propriétaires, parce que chacun déclare sa propre part.
+
+Ce qu'il nous faut de votre côté tient en peu de choses : la valeur cadastrale indiquée sur votre avis d'IBI, votre part du bien et votre pays de résidence fiscale. Le taux est de 19 pour cent pour les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein, et de 24 pour cent pour tous les autres.
+
+Si vous préférez régler ça avant que décembre ne se remplisse, voici la page :
+
+{link}`,
+    nl: `Heeft u een woning in Spanje en woont u ergens anders, dan moet er over 2025 een aangifte komen, ook als niemand de woning ook maar één nacht heeft gehuurd. Het gaat om de aangifte voor niet-residenten op formulier 210, en die over 2025 kan op elk moment tot en met 31 december van dit jaar worden ingediend.
+
+Veel eigenaren horen er pas over van een buurman, meestal in november. Dat geeft niet. Er is nog tijd, en het is geen ingewikkelde aangifte zodra iemand de cijfers voor zich heeft.
+
+Dit is wat we bij Bueno doen. We bereiden de aangifte voor en dienen die voor u in, vanaf €50. De prijs hangt af van het aantal eigenaren, omdat iedere eigenaar aangifte doet voor zijn eigen aandeel.
+
+Wat we van u nodig hebben is kort: de kadastrale waarde van uw IBI-aanslag, uw aandeel in de woning en het land waar u fiscaal inwoner bent. Het tarief is 19 procent voor inwoners van de EU, Noorwegen, IJsland en Liechtenstein, en 24 procent voor alle anderen.
+
+Wilt u het van uw lijstje hebben voordat december druk wordt, dan is dit de pagina:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-ibi-is-not-this',
+  tool: BUENO_TOOL,
+  kind: 'story',
+  rules: ['irnr.imputed.base'],
+  text: {
+    en: `"But I already pay my property tax in Spain." We hear that one a lot, and it's nearly always about IBI.
+
+IBI is the local tax. It goes to your town hall and most owners have it on direct debit, so it feels like the tax side is covered.
+
+The non-resident return is a separate thing. It's national, it goes to the Spanish tax office on form 210, and nobody sends you a bill for it. You have to declare it yourself every year, even if the home sat empty and earned nothing.
+
+The good news is that your IBI receipt already has what's needed. The return is worked out from the cadastral value printed on it, not from what you paid for the place or what it's worth today, and that value normally sits well below the market price.
+
+At Bueno we file this return for owners who live abroad. It starts from €50, and the price depends on how many owners there are. If you've only ever paid IBI, have a look at this:
+
+{link}`,
+    no: `"Men jeg betaler jo allerede eiendomsskatt i Spania." Den hører vi ofte, og det handler nesten alltid om IBI.
+
+IBI er den lokale skatten. Den går til kommunen, og de fleste eiere har den på automatisk trekk, så det føles som om skatten er tatt hånd om.
+
+Skattemeldingen for ikke-bosatte er noe helt annet. Den er nasjonal, den går til de spanske skattemyndighetene på skjema 210, og ingen sender deg en regning for den. Du må selv levere den hvert år, også når boligen har stått tom og ikke gitt noen inntekt.
+
+Den gode nyheten er at IBI-kvitteringen din allerede har det som trengs. Skattemeldingen regnes ut fra matrikkelverdien som står trykt på den, ikke fra det du betalte for boligen eller det den er verdt i dag, og den verdien ligger som regel godt under markedsprisen.
+
+Hos Bueno leverer vi denne skattemeldingen for eiere som bor i utlandet. Det starter fra €50, og prisen avhenger av hvor mange eiere det er. Har du bare betalt IBI til nå, kan du ta en titt på dette:
+
+{link}`,
+    sv: `”Men jag betalar ju redan fastighetsskatt i Spanien.” Det hör vi ofta, och det handlar nästan alltid om IBI.
+
+IBI är den lokala skatten. Den går till kommunen och de flesta ägare har den på autogiro, så det känns som att skattebiten är avklarad.
+
+Deklarationen för icke-bosatta är en annan sak. Den är statlig, den går till den spanska skattemyndigheten på blankett 210, och ingen skickar någon räkning på den. Du måste deklarera själv varje år, även om bostaden stod tom och inte gav några intäkter.
+
+Det goda är att din IBI-avi redan har det som behövs. Deklarationen räknas ut från taxeringsvärdet som står tryckt på den, inte från vad du betalade för bostaden eller vad den är värd i dag, och det värdet ligger normalt en bra bit under marknadspriset.
+
+Hos Bueno lämnar vi in den här deklarationen åt ägare som bor utomlands. Det kostar från €50, och priset beror på hur många ägare det är. Har du bara betalat IBI hittills kan du ta en titt här:
+
+{link}`,
+    da: `"Men jeg betaler jo allerede ejendomsskat i Spanien." Den hører vi tit, og næsten altid handler det om IBI.
+
+IBI er den lokale skat. Den går til din kommune, og de fleste ejere har den på automatisk træk, så det føles, som om der er styr på skatten.
+
+Selvangivelsen for ikke-residenter er noget andet. Den er national, den går til det spanske skattevæsen på formular 210, og ingen sender dig en regning for den. Du skal selv angive den hvert år, også selvom boligen stod tom og ikke gav nogen indtægt.
+
+Den gode nyhed er, at din IBI-kvittering allerede indeholder det, der skal bruges. Selvangivelsen beregnes ud fra den katasterværdi, der står trykt på den, ikke ud fra hvad du gav for stedet, eller hvad det er værd i dag, og den værdi ligger normalt et godt stykke under markedsprisen.
+
+Hos Bueno indsender vi denne selvangivelse for ejere, der bor i udlandet. Det starter fra €50, og prisen afhænger af, hvor mange ejere der er. Har du kun nogensinde betalt IBI, så kig på det her:
+
+{link}`,
+    de: `„Aber ich zahle meine Grundsteuer in Spanien doch schon.“ Das hören wir oft, und fast immer geht es dabei um die IBI.
+
+Die IBI ist die lokale Steuer. Sie geht an Ihre Gemeinde, und die meisten Eigentümer lassen sie per Lastschrift einziehen. So fühlt es sich an, als wäre das Thema Steuern erledigt.
+
+Die Steuererklärung für Nichtresidenten ist etwas anderes. Sie ist staatlich, geht auf dem Formular 210 an das spanische Finanzamt, und niemand schickt Ihnen dafür eine Rechnung. Sie müssen sie jedes Jahr selbst abgeben, auch wenn das Haus leer stand und nichts eingebracht hat.
+
+Die gute Nachricht ist, dass auf Ihrem IBI-Bescheid schon alles Nötige steht. Die Erklärung wird aus dem Katasterwert berechnet, der dort aufgedruckt ist, nicht aus dem Kaufpreis und nicht aus dem heutigen Wert. Dieser Wert liegt normalerweise deutlich unter dem Marktpreis.
+
+Bei Bueno reichen wir diese Erklärung für Eigentümer ein, die im Ausland leben. Es geht ab €50 los, und der Preis hängt davon ab, wie viele Eigentümer es gibt. Wenn Sie bisher immer nur die IBI gezahlt haben, schauen Sie sich das hier an:
+
+{link}`,
+    fr: `« Mais je paie déjà ma taxe foncière en Espagne. » Nous l'entendons souvent, et il s'agit presque toujours de l'IBI.
+
+L'IBI est l'impôt local. Il va à votre mairie, et la plupart des propriétaires le règlent par prélèvement automatique, d'où l'impression que le volet fiscal est couvert.
+
+La déclaration des non-résidents, c'est autre chose. Elle est nationale, elle va à l'administration fiscale espagnole sur le modèle 210, et personne ne vous envoie d'avis pour la payer. C'est à vous de la faire chaque année, même si le logement est resté vide et n'a rien rapporté.
+
+La bonne nouvelle, c'est que votre avis d'IBI contient déjà ce qu'il faut. La déclaration se calcule à partir de la valeur cadastrale qui y figure, pas à partir du prix d'achat ni de la valeur actuelle du bien, et cette valeur est normalement bien inférieure au prix du marché.
+
+Chez Bueno, nous déposons cette déclaration pour les propriétaires qui vivent à l'étranger. Le tarif démarre à 50 €, et le prix dépend du nombre de propriétaires. Si vous n'avez jamais payé que l'IBI, jetez un œil ici :
+
+{link}`,
+    nl: `"Maar ik betaal mijn onroerendgoedbelasting in Spanje toch al." Dat horen we vaak, en het gaat bijna altijd over de IBI.
+
+De IBI is de lokale belasting. Die gaat naar uw gemeente en de meeste eigenaren betalen haar via automatische incasso, dus het voelt alsof de belastingkant geregeld is.
+
+De aangifte voor niet-residenten is iets anders. Die is nationaal, gaat op formulier 210 naar de Spaanse belastingdienst, en niemand stuurt u er een rekening voor. U moet haar elk jaar zelf indienen, ook als de woning leegstond en niets opbracht.
+
+Het goede nieuws is dat op uw IBI-aanslag al staat wat nodig is. De aangifte wordt berekend op basis van de kadastrale waarde die erop staat, niet op wat u voor de woning betaalde of wat die vandaag waard is, en die waarde ligt normaal gesproken ruim onder de marktprijs.
+
+Bij Bueno dienen we deze aangifte in voor eigenaren die in het buitenland wonen. Dat kan vanaf €50, en de prijs hangt af van het aantal eigenaren. Heeft u altijd alleen IBI betaald, kijk dan hier eens naar:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-two-owners-two-returns',
+  tool: BUENO_TOOL,
+  kind: 'story',
+  rules: ['irnr.imputed.base'],
+  text: {
+    en: `A question that comes up a lot from couples: we own the place together, so that's one tax return, right?
+
+It's two. For the non-resident return in Spain, each owner declares their own share of the property. If you and your partner own half each, that's two forms, each one based on half of the cadastral value on the IBI receipt. Three siblings who inherited a flat means three.
+
+Nobody tells you this when you buy, and it's the reason quotes for filing can look confusing. The work is per owner, so the price usually is too.
+
+At Bueno that's exactly how we price it. Filing starts from €50, and what you pay depends on the number of owners. We prepare and file a form 210 for each of them.
+
+If you've been filing one return for a jointly owned home, or none at all, it's worth getting it straight. This is where to start:
+
+{link}`,
+    no: `Et spørsmål som ofte dukker opp fra par: Vi eier boligen sammen, så da blir det vel én skattemelding?
+
+Det blir to. I skattemeldingen for ikke-bosatte i Spania oppgir hver eier sin egen andel av boligen. Eier du og partneren din halvparten hver, blir det to skjemaer, hvert av dem basert på halvparten av matrikkelverdien på IBI-kvitteringen. Tre søsken som har arvet en leilighet, betyr tre.
+
+Ingen forteller deg dette når du kjøper, og det er grunnen til at pristilbud på levering kan virke forvirrende. Arbeidet er per eier, så prisen er som regel det også.
+
+Hos Bueno er det akkurat slik vi priser det. Levering starter fra €50, og hva du betaler, avhenger av antall eiere. Vi forbereder og leverer et skjema 210 for hver av dem.
+
+Har du levert én skattemelding for en bolig dere eier sammen, eller ingen i det hele tatt, er det verdt å få ryddet opp. Her kan du begynne:
+
+{link}`,
+    sv: `En fråga som ofta kommer från par: vi äger bostaden tillsammans, så då blir det väl en deklaration?
+
+Det blir två. I den spanska deklarationen för icke-bosatta deklarerar varje ägare sin egen andel av bostaden. Äger du och din partner hälften var blir det två blanketter, som var och en bygger på halva taxeringsvärdet på IBI-avin. Tre syskon som har ärvt en lägenhet betyder tre.
+
+Ingen berättar det här när man köper, och det är därför offerter på deklarationshjälp kan se förvirrande ut. Jobbet görs per ägare, så priset brukar också räknas per ägare.
+
+Hos Bueno prissätter vi precis så. Deklarationen kostar från €50, och vad du betalar beror på antalet ägare. Vi förbereder och lämnar in en blankett 210 för var och en av dem.
+
+Har du lämnat in en enda deklaration för en bostad som ägs gemensamt, eller ingen alls, är det värt att reda ut det. Här börjar du:
+
+{link}`,
+    da: `Et spørgsmål, der tit kommer fra par: Vi ejer stedet sammen, så det er vel én selvangivelse?
+
+Det er to. I selvangivelsen for ikke-residenter i Spanien angiver hver ejer sin egen andel af boligen. Ejer du og din partner halvdelen hver, er det to formularer, som hver er baseret på halvdelen af katasterværdien på IBI-kvitteringen. Tre søskende, der har arvet en lejlighed, betyder tre.
+
+Det er der ingen, der fortæller dig, når du køber, og det er grunden til, at tilbud på indsendelse kan se forvirrende ud. Arbejdet er pr. ejer, så det er prisen som regel også.
+
+Hos Bueno er det præcis sådan, vi sætter prisen. Indsendelse starter fra €50, og hvad du betaler, afhænger af antallet af ejere. Vi udarbejder og indsender en formular 210 for hver af dem.
+
+Har du indsendt én selvangivelse for en bolig, I ejer sammen, eller slet ingen, er det værd at få styr på. Her kan du starte:
+
+{link}`,
+    de: `Eine Frage, die oft von Paaren kommt: Uns gehört das Haus gemeinsam, also ist das eine Steuererklärung, oder?
+
+Es sind zwei. Bei der Steuererklärung für Nichtresidenten in Spanien erklärt jeder Eigentümer seinen eigenen Anteil an der Immobilie. Wenn Ihnen und Ihrem Partner je die Hälfte gehört, sind das zwei Formulare, jedes auf Basis des halben Katasterwerts vom IBI-Bescheid. Bei drei Geschwistern, die eine Wohnung geerbt haben, sind es drei.
+
+Das sagt einem beim Kauf niemand, und deshalb wirken Angebote für die Abgabe oft verwirrend. Die Arbeit fällt pro Eigentümer an, also ist es beim Preis meistens genauso.
+
+Genau so rechnen wir bei Bueno. Die Abgabe gibt es ab €50, und was Sie zahlen, hängt von der Zahl der Eigentümer ab. Wir bereiten für jeden von ihnen ein Formular 210 vor und reichen es ein.
+
+Wenn Sie für ein gemeinsames Haus bisher eine einzige Erklärung abgegeben haben, oder gar keine, lohnt es sich, das in Ordnung zu bringen. Hier fangen Sie an:
+
+{link}`,
+    fr: `Une question qui revient souvent chez les couples : nous possédons le bien ensemble, donc cela fait une seule déclaration, non ?
+
+Cela en fait deux. Pour la déclaration des non-résidents en Espagne, chaque propriétaire déclare sa propre part du bien. Si vous et votre conjoint en possédez chacun la moitié, cela fait deux formulaires, chacun basé sur la moitié de la valeur cadastrale indiquée sur l'avis d'IBI. Trois frères et sœurs qui ont hérité d'un appartement, cela en fait trois.
+
+Personne ne vous le dit au moment de l'achat, et c'est pour cela que les devis pour le dépôt peuvent sembler déroutants. Le travail se fait par propriétaire, donc le prix aussi, le plus souvent.
+
+Chez Bueno, c'est exactement ainsi que nous fixons nos tarifs. Le dépôt démarre à 50 €, et ce que vous payez dépend du nombre de propriétaires. Nous préparons et déposons un modèle 210 pour chacun d'eux.
+
+Si vous déposez une seule déclaration pour un bien détenu à plusieurs, ou aucune, cela vaut la peine de remettre les choses à plat. Voici par où commencer :
+
+{link}`,
+    nl: `Een vraag die we vaak van stellen krijgen: de woning is van ons samen, dus dat is één belastingaangifte, toch?
+
+Het zijn er twee. Bij de aangifte voor niet-residenten in Spanje geeft iedere eigenaar zijn eigen aandeel in de woning aan. Bezitten u en uw partner elk de helft, dan zijn dat twee formulieren, elk op basis van de helft van de kadastrale waarde op de IBI-aanslag. Drie broers en zussen die een appartement hebben geërfd, dienen er drie in.
+
+Niemand vertelt u dit bij de aankoop, en daardoor kunnen offertes voor de aangifte verwarrend lijken. Het werk is per eigenaar, dus de prijs meestal ook.
+
+Bij Bueno rekenen we precies zo. De aangifte kan vanaf €50, en wat u betaalt hangt af van het aantal eigenaren. Voor ieder van hen bereiden we een formulier 210 voor en dienen we het in.
+
+Heeft u voor een gezamenlijke woning steeds één aangifte ingediend, of helemaal geen, dan is het de moeite waard om dat recht te zetten. Hier kunt u beginnen:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-what-goes-into-it',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['irnr.imputed.base', 'irnr.imputed.rate_special_2023_2025', 'irnr.rates', 'irnr.imputed.no_deductions'],
+  text: {
+    en: `People often put off the Spanish non-resident return because they imagine a pile of paperwork. It's shorter than that. Here's what actually goes into it.
+
+One, the cadastral value of the property. It's printed on your IBI receipt.
+
+Two, whether that value was revised from 2012 onwards. If it was, the return for 2025 uses 1.1 percent of it as the taxable amount.
+
+Three, your share of the property.
+
+Four, where you're tax resident. The rate is 19 percent if that's the EU, Norway, Iceland or Liechtenstein, and 24 percent anywhere else.
+
+That's the return. No expenses come into it for a home that wasn't rented out.
+
+At Bueno we take those details once, file the form 210 for each owner, and keep last year's form so the next one starts as a draft and not as a blank page. Filing starts from €50.
+
+{link}`,
+    no: `Mange utsetter den spanske skattemeldingen for ikke-bosatte fordi de ser for seg en bunke papirer. Den er kortere enn som så. Her er det som faktisk skal med.
+
+Det første er matrikkelverdien på boligen. Den står trykt på IBI-kvitteringen din.
+
+Det andre er om den verdien ble revidert fra 2012 og senere. Ble den det, brukes 1,1 prosent av den som skattegrunnlag i skattemeldingen for 2025.
+
+Det tredje er din andel av boligen.
+
+Det fjerde er hvor du er skattemessig bosatt. Satsen er 19 prosent hvis det er EU, Norge, Island eller Liechtenstein, og 24 prosent alle andre steder.
+
+Det er hele skattemeldingen. Det kommer ingen utgifter inn i den for en bolig som ikke har vært leid ut.
+
+Hos Bueno tar vi imot disse opplysningene én gang, leverer skjema 210 for hver eier og tar vare på fjorårets skjema, slik at det neste starter som et utkast og ikke som et blankt ark. Levering starter fra €50.
+
+{link}`,
+    sv: `Många skjuter upp den spanska deklarationen för icke-bosatta för att de föreställer sig en hög med papper. Den är kortare än så. Det här är vad som faktiskt ingår.
+
+Ett är bostadens taxeringsvärde. Det står tryckt på din IBI-avi.
+
+Två är om det värdet har reviderats från 2012 och framåt. I så fall används 1,1 procent av det som beskattningsunderlag i deklarationen för 2025.
+
+Tre är din andel av bostaden.
+
+Fyra är var du har din skattehemvist. Skattesatsen är 19 procent om det är EU, Norge, Island eller Liechtenstein, och 24 procent överallt annars.
+
+Det är hela deklarationen. Inga kostnader räknas med för en bostad som inte har hyrts ut.
+
+Hos Bueno tar vi in de uppgifterna en gång, lämnar in blankett 210 för varje ägare och sparar förra årets blankett, så att nästa börjar som ett utkast och inte som ett tomt blad. Deklarationen kostar från €50.
+
+{link}`,
+    da: `Mange udskyder den spanske selvangivelse for ikke-residenter, fordi de forestiller sig en bunke papirarbejde. Den er kortere end som så. Her er det, der faktisk skal med.
+
+Det første er boligens katasterværdi. Den står trykt på din IBI-kvittering.
+
+Det andet er, om den værdi er blevet revideret fra 2012 og frem. Hvis den er det, er skattegrundlaget i selvangivelsen for 2025 på 1,1 procent af værdien.
+
+Det tredje er din andel af boligen.
+
+Det fjerde er, hvor du er skattemæssigt hjemmehørende. Satsen er 19 procent, hvis det er EU, Norge, Island eller Liechtenstein, og 24 procent alle andre steder.
+
+Det er hele selvangivelsen. Der indgår ingen udgifter for en bolig, som ikke har været lejet ud.
+
+Hos Bueno får vi de oplysninger én gang, indsender formular 210 for hver ejer og gemmer sidste års formular, så den næste starter som en kladde og ikke som en blank side. Indsendelse starter fra €50.
+
+{link}`,
+    de: `Viele schieben die spanische Steuererklärung für Nichtresidenten vor sich her, weil sie sich einen Berg Papier vorstellen. Sie ist kürzer. Das hier gehört wirklich hinein.
+
+Erstens gehört der Katasterwert der Immobilie hinein. Er steht auf Ihrem IBI-Bescheid.
+
+Zweitens kommt es darauf an, ob dieser Wert ab 2012 neu festgesetzt wurde. Wenn ja, setzt die Erklärung für 2025 davon 1,1 Prozent als steuerpflichtigen Betrag an.
+
+Drittens zählt Ihr Anteil an der Immobilie.
+
+Viertens zählt, wo Sie steuerlich ansässig sind. Der Satz liegt bei 19 Prozent, wenn das die EU, Norwegen, Island oder Liechtenstein ist, und bei 24 Prozent überall sonst.
+
+Das ist die Erklärung. Bei einem Haus, das nicht vermietet war, spielen Ausgaben keine Rolle.
+
+Bei Bueno nehmen wir diese Angaben einmal auf, reichen das Formular 210 für jeden Eigentümer ein und bewahren das Formular vom Vorjahr auf, damit das nächste als Entwurf beginnt und nicht als leeres Blatt. Die Abgabe gibt es ab €50.
+
+{link}`,
+    fr: `On repousse souvent la déclaration espagnole des non-résidents parce qu'on imagine une montagne de papiers. C'est plus court que ça. Voici ce qu'elle contient vraiment.
+
+Un, il faut la valeur cadastrale du bien. Elle figure sur votre avis d'IBI.
+
+Deux, il faut savoir si cette valeur a été révisée à partir de 2012. Si c'est le cas, la déclaration pour 2025 retient 1,1 pour cent de cette valeur comme base imposable.
+
+Trois, il faut votre part du bien.
+
+Quatre, il faut votre pays de résidence fiscale. Le taux est de 19 pour cent s'il s'agit de l'UE, de la Norvège, de l'Islande ou du Liechtenstein, et de 24 pour cent partout ailleurs.
+
+Voilà toute la déclaration. Aucun frais n'entre en compte pour un logement qui n'a pas été loué.
+
+Chez Bueno, nous prenons ces informations une seule fois, nous déposons le modèle 210 pour chaque propriétaire et nous conservons le formulaire de l'année précédente, pour que le suivant démarre comme un brouillon et non comme une page blanche. Le dépôt démarre à 50 €.
+
+{link}`,
+    nl: `Veel mensen stellen de Spaanse aangifte voor niet-residenten uit omdat ze zich een stapel papierwerk voorstellen. Het is minder dan dat. Dit is wat er echt in komt.
+
+Het eerste is de kadastrale waarde van de woning. Die staat op uw IBI-aanslag.
+
+Het tweede is of die waarde vanaf 2012 is herzien. Is dat zo, dan rekent de aangifte over 2025 met 1,1 procent ervan als belastbaar bedrag.
+
+Het derde is uw aandeel in de woning.
+
+Het vierde is het land waar u fiscaal inwoner bent. Het tarief is 19 procent als dat de EU, Noorwegen, IJsland of Liechtenstein is, en 24 procent in alle andere gevallen.
+
+Dat is de aangifte. Bij een woning die niet verhuurd is, spelen kosten geen rol.
+
+Bij Bueno nemen we die gegevens één keer op, dienen we voor iedere eigenaar het formulier 210 in en bewaren we het formulier van vorig jaar, zodat het volgende begint als concept en niet als lege pagina. De aangifte kan vanaf €50.
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-direct-debit-date',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['deadline.imputed.upto_2025'],
+  text: {
+    en: `Here's a date that isn't on most people's radar: 23 December.
+
+The non-resident return for 2025 can be filed until 31 December. But if you want the tax office to collect the payment by direct debit from your Spanish account, that option closes on 23 December. After that you can still file. You just have to pay another way, and that's where owners who live abroad tend to get stuck.
+
+It's an easy one to miss. You file on the 28th, assume the payment will be collected like last time, and it isn't, because the direct debit window had already shut.
+
+So the simple fix is to not leave it for the last week of the year.
+
+At Bueno we file the non-resident return for owners who live outside Spain. You send us the details once and we take it from there. It starts from €50, and the price depends on the number of owners.
+
+If you haven't sorted 2025 yet, you can get it started here:
+
+{link}`,
+    no: `Her er en dato de fleste ikke har på radaren: 23. desember.
+
+Skattemeldingen for ikke-bosatte for 2025 kan leveres frem til 31. desember. Men vil du at skattemyndighetene skal trekke betalingen direkte fra den spanske kontoen din, stenger den muligheten 23. desember. Etter det kan du fortsatt levere. Du må bare betale på en annen måte, og det er der eiere som bor i utlandet gjerne står fast.
+
+Den er lett å gå glipp av. Du leverer den 28., regner med at betalingen blir trukket som sist, og så blir den ikke det, fordi fristen for direktetrekk allerede var ute.
+
+Så den enkle løsningen er å ikke la det ligge til årets siste uke.
+
+Hos Bueno leverer vi skattemeldingen for ikke-bosatte for eiere som bor utenfor Spania. Du sender oss opplysningene én gang, så tar vi det derfra. Det starter fra €50, og prisen avhenger av antall eiere.
+
+Har du ikke ordnet 2025 ennå, kan du komme i gang her:
+
+{link}`,
+    sv: `Här är ett datum som de flesta inte har koll på: 23 december.
+
+Deklarationen för icke-bosatta för 2025 kan lämnas in till och med 31 december. Men om du vill att skattemyndigheten ska dra betalningen via autogiro från ditt spanska konto stänger den möjligheten 23 december. Efter det kan du fortfarande deklarera. Du måste bara betala på något annat sätt, och det är där ägare som bor utomlands brukar köra fast.
+
+Det är lätt att missa. Du deklarerar den 28:e, utgår från att betalningen dras som förra gången, och det gör den inte, eftersom fönstret för autogiro redan hade stängt.
+
+Så den enkla lösningen är att inte lämna det till årets sista vecka.
+
+Hos Bueno lämnar vi in deklarationen för icke-bosatta åt ägare som bor utanför Spanien. Du skickar uppgifterna till oss en gång, så tar vi det därifrån. Det kostar från €50, och priset beror på antalet ägare.
+
+Har du inte ordnat 2025 än kan du sätta igång här:
+
+{link}`,
+    da: `Her er en dato, de fleste ikke har på radaren: den 23. december.
+
+Selvangivelsen for ikke-residenter for 2025 kan indsendes frem til den 31. december. Men hvis du vil have, at skattevæsenet trækker betalingen automatisk fra din spanske konto, lukker den mulighed den 23. december. Derefter kan du stadig indsende. Du skal bare betale på en anden måde, og det er dér, ejere, der bor i udlandet, tit går i stå.
+
+Den er nem at overse. Du indsender den 28., regner med, at betalingen bliver trukket som sidste gang, og det gør den ikke, fordi fristen for automatisk træk allerede var udløbet.
+
+Så den enkle løsning er ikke at gemme det til årets sidste uge.
+
+Hos Bueno indsender vi selvangivelsen for ikke-residenter for ejere, der bor uden for Spanien. Du sender os oplysningerne én gang, og så tager vi den derfra. Det starter fra €50, og prisen afhænger af antallet af ejere.
+
+Har du ikke fået styr på 2025 endnu, kan du sætte det i gang her:
+
+{link}`,
+    de: `Hier ist ein Datum, das die wenigsten auf dem Schirm haben: der 23. Dezember.
+
+Die Steuererklärung für Nichtresidenten für 2025 kann bis zum 31. Dezember eingereicht werden. Wenn Sie aber möchten, dass das Finanzamt die Zahlung per Lastschrift von Ihrem spanischen Konto einzieht, endet diese Möglichkeit am 23. Dezember. Danach können Sie immer noch einreichen. Sie müssen nur auf anderem Weg zahlen, und genau da bleiben Eigentümer, die im Ausland leben, oft hängen.
+
+Das übersieht man leicht. Sie reichen am 28. ein, gehen davon aus, dass die Zahlung wie beim letzten Mal eingezogen wird, und das passiert nicht, weil die Frist für die Lastschrift schon abgelaufen war.
+
+Die einfache Lösung ist also, es nicht auf die letzte Woche des Jahres zu schieben.
+
+Bei Bueno reichen wir die Steuererklärung für Nichtresidenten für Eigentümer ein, die außerhalb Spaniens leben. Sie schicken uns die Angaben einmal, und wir kümmern uns um den Rest. Es geht ab €50 los, und der Preis hängt von der Zahl der Eigentümer ab.
+
+Wenn Sie 2025 noch nicht erledigt haben, können Sie hier damit anfangen:
+
+{link}`,
+    fr: `Voici une date que peu de gens ont en tête : le 23 décembre.
+
+La déclaration des non-résidents pour 2025 peut être déposée jusqu'au 31 décembre. Mais si vous voulez que l'administration fiscale encaisse le paiement par prélèvement automatique sur votre compte espagnol, cette option se ferme le 23 décembre. Après cette date, vous pouvez toujours déposer. Il faut simplement payer autrement, et c'est là que les propriétaires qui vivent à l'étranger ont tendance à rester bloqués.
+
+C'est facile à rater. Vous déposez le 28, vous pensez que le paiement sera prélevé comme la dernière fois, et ce n'est pas le cas, parce que la période du prélèvement était déjà close.
+
+La solution est donc simple : ne pas attendre la dernière semaine de l'année.
+
+Chez Bueno, nous déposons la déclaration des non-résidents pour les propriétaires qui vivent hors d'Espagne. Vous nous envoyez les informations une fois et nous nous occupons de la suite. Le tarif démarre à 50 €, et le prix dépend du nombre de propriétaires.
+
+Si vous n'avez pas encore réglé 2025, vous pouvez commencer ici :
+
+{link}`,
+    nl: `Er is een datum die bij de meeste mensen niet op de radar staat: 23 december.
+
+De aangifte voor niet-residenten over 2025 kan tot en met 31 december worden ingediend. Maar wilt u dat de belastingdienst het bedrag int via automatische incasso van uw Spaanse rekening, dan sluit die mogelijkheid op 23 december. Daarna kunt u nog steeds indienen. U moet alleen op een andere manier betalen, en juist daar lopen eigenaren die in het buitenland wonen vaak vast.
+
+Het is makkelijk over het hoofd te zien. U dient in op de 28e, gaat ervan uit dat het bedrag net als de vorige keer wordt afgeschreven, en dat gebeurt niet, omdat de termijn voor automatische incasso al gesloten was.
+
+De eenvoudige oplossing is dus om het niet te laten liggen tot de laatste week van het jaar.
+
+Bij Bueno dienen we de aangifte voor niet-residenten in voor eigenaren die buiten Spanje wonen. U stuurt ons de gegevens één keer en wij regelen de rest. Dat kan vanaf €50, en de prijs hangt af van het aantal eigenaren.
+
+Heeft u 2025 nog niet geregeld, dan kunt u hier beginnen:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-why-from-fifty',
+  tool: BUENO_TOOL,
+  kind: 'story',
+  rules: [],
+  text: {
+    en: `We get asked why Bueno files the Spanish non-resident return from €50 when some owners have been quoted a few hundred for the same form. It's a fair question, so here's the honest answer.
+
+The return itself doesn't change much from year to year. Same property, same owners, same cadastral value on the IBI receipt unless the town hall revises it. Most of the cost of filing is somebody typing the same details in again every twelve months.
+
+So we don't. We store last year's form and use it to fill in this year's as a draft. What's left is checking what changed, which is often very little.
+
+The price depends on the number of owners, because each owner files for their own share. A home owned by one person is the simplest case. A couple is two returns.
+
+If your situation is more involved and you'd like a quote first, register and tell us. Otherwise the details are here:
+
+{link}`,
+    no: `Vi får spørsmål om hvorfor Bueno leverer den spanske skattemeldingen for ikke-bosatte fra €50, når noen eiere har fått tilbud på noen hundre for det samme skjemaet. Det er et rimelig spørsmål, så her er det ærlige svaret.
+
+Selve skattemeldingen endrer seg lite fra år til år. Det er samme bolig, samme eiere og samme matrikkelverdi på IBI-kvitteringen, med mindre kommunen reviderer den. Det meste av kostnaden ved å levere er at noen taster inn de samme opplysningene på nytt hver tolvte måned.
+
+Så det gjør vi ikke. Vi lagrer fjorårets skjema og bruker det til å fylle ut årets som et utkast. Det som gjenstår, er å sjekke hva som har endret seg, og det er ofte veldig lite.
+
+Prisen avhenger av antall eiere, fordi hver eier leverer for sin egen andel. En bolig med én eier er det enkleste tilfellet. Et par betyr to skattemeldinger.
+
+Er situasjonen din mer sammensatt og du vil ha et pristilbud først, kan du registrere deg og si fra til oss. Ellers finner du detaljene her:
+
+{link}`,
+    sv: `Vi får ofta frågan varför Bueno gör den spanska deklarationen för icke-bosatta från €50 när en del ägare har fått offerter på några hundra för samma blankett. Det är en rimlig fråga, så här kommer det ärliga svaret.
+
+Själva deklarationen ändras inte mycket från år till år. Det är samma bostad, samma ägare och samma taxeringsvärde på IBI-avin, om inte kommunen reviderar det. Det mesta av kostnaden för att deklarera är att någon skriver in samma uppgifter igen var tolfte månad.
+
+Så det gör vi inte. Vi sparar förra årets blankett och använder den för att fylla i årets som ett utkast. Kvar blir att kontrollera vad som har ändrats, och det är ofta väldigt lite.
+
+Priset beror på antalet ägare, eftersom varje ägare deklarerar för sin egen andel. En bostad som ägs av en person är det enklaste fallet. Ett par blir två deklarationer.
+
+Om din situation är mer invecklad och du vill ha en offert först kan du registrera dig och berätta för oss. Annars finns detaljerna här:
+
+{link}`,
+    da: `Vi bliver spurgt, hvorfor Bueno indsender den spanske selvangivelse for ikke-residenter fra €50, når nogle ejere har fået tilbud på nogle hundrede for den samme formular. Det er et rimeligt spørgsmål, så her er det ærlige svar.
+
+Selve selvangivelsen ændrer sig ikke meget fra år til år. Det er den samme bolig, de samme ejere og den samme katasterværdi på IBI-kvitteringen, medmindre kommunen reviderer den. Det meste af det, en indsendelse koster, er, at nogen taster de samme oplysninger ind igen hver tolvte måned.
+
+Så det gør vi ikke. Vi gemmer sidste års formular og bruger den til at udfylde dette års som en kladde. Tilbage er at tjekke, hvad der har ændret sig, og det er ofte meget lidt.
+
+Prisen afhænger af antallet af ejere, fordi hver ejer indsender for sin egen andel. En bolig med én ejer er det enkleste tilfælde. Et par er to selvangivelser.
+
+Er din situation mere indviklet, og vil du gerne have et tilbud først, så registrer dig og fortæl os om den. Ellers står detaljerne her:
+
+{link}`,
+    de: `Wir werden gefragt, warum Bueno die spanische Steuererklärung für Nichtresidenten ab €50 einreicht, wenn manche Eigentümer für dasselbe Formular Angebote über ein paar Hundert bekommen haben. Die Frage ist berechtigt, also kommt hier die ehrliche Antwort.
+
+Die Erklärung selbst ändert sich von Jahr zu Jahr kaum. Es ist dieselbe Immobilie, es sind dieselben Eigentümer, und auf dem IBI-Bescheid steht derselbe Katasterwert, solange die Gemeinde ihn nicht neu festsetzt. Der größte Teil der Kosten entsteht dadurch, dass jemand alle zwölf Monate dieselben Angaben noch einmal eintippt.
+
+Das machen wir also nicht. Wir speichern das Formular vom Vorjahr und füllen damit das diesjährige als Entwurf aus. Übrig bleibt die Prüfung, was sich geändert hat, und das ist oft sehr wenig.
+
+Der Preis hängt von der Zahl der Eigentümer ab, weil jeder Eigentümer für seinen eigenen Anteil erklärt. Ein Haus mit einem einzigen Eigentümer ist der einfachste Fall. Bei einem Paar sind es zwei Erklärungen.
+
+Wenn Ihre Situation aufwendiger ist und Sie vorher ein Angebot möchten, registrieren Sie sich und sagen Sie uns Bescheid. Ansonsten stehen die Einzelheiten hier:
+
+{link}`,
+    fr: `On nous demande pourquoi Bueno dépose la déclaration espagnole des non-résidents à partir de 50 €, alors que certains propriétaires ont reçu des devis de quelques centaines d'euros pour le même formulaire. La question est légitime, alors voici la réponse honnête.
+
+La déclaration elle-même change peu d'une année à l'autre. C'est le même bien, les mêmes propriétaires, la même valeur cadastrale sur l'avis d'IBI, sauf si la mairie la révise. L'essentiel du coût, c'est quelqu'un qui ressaisit les mêmes informations tous les douze mois.
+
+Alors nous ne le faisons pas. Nous conservons le formulaire de l'année précédente et nous nous en servons pour préremplir celui de cette année sous forme de brouillon. Il reste à vérifier ce qui a changé, c'est-à-dire souvent très peu de choses.
+
+Le prix dépend du nombre de propriétaires, parce que chacun déclare sa propre part. Un logement détenu par une seule personne est le cas le plus simple. Un couple, cela fait deux déclarations.
+
+Si votre situation est plus complexe et que vous préférez un devis d'abord, inscrivez-vous et dites-le-nous. Sinon, les détails sont ici :
+
+{link}`,
+    nl: `We krijgen vaak de vraag waarom Bueno de Spaanse aangifte voor niet-residenten vanaf €50 indient, terwijl sommige eigenaren voor hetzelfde formulier een offerte van een paar honderd euro kregen. Dat is een terechte vraag, dus hier is het eerlijke antwoord.
+
+De aangifte zelf verandert van jaar tot jaar weinig. Het is dezelfde woning, met dezelfde eigenaren en dezelfde kadastrale waarde op de IBI-aanslag, tenzij de gemeente die herziet. Het grootste deel van de kosten zit in iemand die elke twaalf maanden dezelfde gegevens opnieuw intypt.
+
+Dat doen wij dus niet. We bewaren het formulier van vorig jaar en gebruiken het om dat van dit jaar als concept in te vullen. Wat overblijft is nakijken wat er veranderd is, en dat is vaak heel weinig.
+
+De prijs hangt af van het aantal eigenaren, omdat iedere eigenaar aangifte doet voor zijn eigen aandeel. Een woning van één persoon is het eenvoudigste geval. Een stel betekent twee aangiften.
+
+Is uw situatie ingewikkelder en wilt u eerst een offerte, registreer u dan en laat het ons weten. Anders vindt u de details hier:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-included-in-select',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['deadline.imputed.upto_2025'],
+  text: {
+    en: `A small thing that people who already use Bueno sometimes miss.
+
+If you're on the Select plan, the annual non-resident tax return is included, for up to two owners and two properties. You don't need to book it separately or find someone new each year. Select is €199 a year.
+
+If you rent the home out as well, Premium at €299 a year includes the rental tax return too, again for up to two owners.
+
+And if you're on Standard, or not with Bueno at all, you can still have the return filed on its own. That starts from €50 and depends on the number of owners.
+
+Why mention it now? Because the return for 2025 can be filed until 31 December, and October is a much nicer month to deal with it than the last week of the year.
+
+Everything about the tax service is on this page:
+
+{link}`,
+    no: `Her er en liten ting som de som allerede bruker Bueno, av og til går glipp av.
+
+Har du Select, er den årlige skattemeldingen for ikke-bosatte inkludert, for opptil to eiere og to boliger. Du trenger ikke bestille den separat eller finne noen ny hvert år. Select koster €199 i året.
+
+Leier du også ut boligen, inkluderer Premium til €299 i året skattemeldingen for utleie i tillegg, igjen for opptil to eiere.
+
+Og har du Standard, eller ikke er hos Bueno i det hele tatt, kan du fortsatt få levert skattemeldingen alene. Det starter fra €50 og avhenger av antall eiere.
+
+Hvorfor nevner vi det nå? Det er fordi skattemeldingen for 2025 kan leveres frem til 31. desember, og oktober er en mye hyggeligere måned å ordne det i enn årets siste uke.
+
+Alt om skattetjenesten står på denne siden:
+
+{link}`,
+    sv: `Här är en liten sak som de som redan använder Bueno ibland missar.
+
+Har du abonnemanget Select ingår den årliga deklarationen för icke-bosatta, för upp till två ägare och två bostäder. Du behöver inte boka den separat eller leta upp någon ny varje år. Select kostar €199 per år.
+
+Hyr du dessutom ut bostaden ingår även hyresdeklarationen i Premium för €299 per år, också där för upp till två ägare.
+
+Och har du Standard, eller inte är kund hos Bueno alls, kan du ändå få deklarationen gjord separat. Det kostar från €50 och beror på antalet ägare.
+
+Varför ta upp det nu? För att deklarationen för 2025 kan lämnas in till och med 31 december, och oktober är en betydligt trevligare månad att ta tag i den än årets sista vecka.
+
+Allt om skattetjänsten finns på den här sidan:
+
+{link}`,
+    da: `Her er en lille ting, som dem, der allerede bruger Bueno, nogle gange overser.
+
+Har du Select, er den årlige selvangivelse for ikke-residenter inkluderet, for op til to ejere og to boliger. Du behøver ikke bestille den separat eller finde en ny rådgiver hvert år. Select koster €199 om året.
+
+Lejer du også boligen ud, inkluderer Premium til €299 om året også selvangivelsen for udlejning, igen for op til to ejere.
+
+Og har du Standard, eller er du slet ikke hos Bueno, kan du stadig få selvangivelsen indsendt for sig. Det starter fra €50 og afhænger af antallet af ejere.
+
+Hvorfor nævne det nu? Det gør vi, fordi selvangivelsen for 2025 kan indsendes frem til den 31. december, og oktober er en meget rarere måned at ordne det i end årets sidste uge.
+
+Alt om skatteservicen står på denne side:
+
+{link}`,
+    de: `Hier ist eine Kleinigkeit, die manche übersehen, obwohl sie Bueno schon nutzen.
+
+Wenn Sie den Tarif Select haben, ist die jährliche Steuererklärung für Nichtresidenten enthalten, für bis zu zwei Eigentümer und zwei Immobilien. Sie müssen sie nicht extra buchen oder jedes Jahr jemand Neues suchen. Select kostet €199 im Jahr.
+
+Wenn Sie das Haus auch vermieten, ist bei Premium für €299 im Jahr auch die Steuererklärung für die Mieteinnahmen enthalten, ebenfalls für bis zu zwei Eigentümer.
+
+Und wenn Sie Standard haben oder gar nicht bei Bueno sind, können Sie die Erklärung trotzdem einzeln einreichen lassen. Das gibt es ab €50, und der Preis hängt von der Zahl der Eigentümer ab.
+
+Warum erwähnen wir das jetzt? Die Erklärung für 2025 kann bis zum 31. Dezember eingereicht werden, und der Oktober ist dafür ein deutlich angenehmerer Monat als die letzte Woche des Jahres.
+
+Alles zum Steuerservice steht auf dieser Seite:
+
+{link}`,
+    fr: `Voici un petit détail qui échappe parfois à ceux qui utilisent déjà Bueno.
+
+Si vous avez la formule Select, la déclaration annuelle des non-résidents est incluse, jusqu'à deux propriétaires et deux biens. Vous n'avez pas besoin de la commander à part ni de chercher quelqu'un de nouveau chaque année. Select coûte 199 € par an.
+
+Si vous louez aussi le logement, Premium, à 299 € par an, inclut également la déclaration des revenus locatifs, là encore jusqu'à deux propriétaires.
+
+Et si vous avez la formule Standard, ou si vous n'êtes pas du tout chez Bueno, vous pouvez quand même faire déposer la déclaration seule. Le tarif démarre à 50 € et dépend du nombre de propriétaires.
+
+Pourquoi en parler maintenant ? Parce que la déclaration pour 2025 peut être déposée jusqu'au 31 décembre, et qu'octobre est un mois bien plus agréable pour s'en occuper que la dernière semaine de l'année.
+
+Tout ce qui concerne le service fiscal se trouve sur cette page :
+
+{link}`,
+    nl: `Er is iets kleins dat mensen die Bueno al gebruiken soms over het hoofd zien.
+
+Heeft u het abonnement Select, dan is de jaarlijkse belastingaangifte voor niet-residenten inbegrepen, voor maximaal twee eigenaren en twee woningen. U hoeft die niet apart te boeken of elk jaar iemand nieuw te zoeken. Select kost €199 per jaar.
+
+Verhuurt u de woning ook, dan is bij Premium voor €299 per jaar ook de belastingaangifte voor verhuur inbegrepen, opnieuw voor maximaal twee eigenaren.
+
+En heeft u Standard, of bent u helemaal geen klant van Bueno, dan kunt u de aangifte nog steeds los laten indienen. Dat kan vanaf €50 en hangt af van het aantal eigenaren.
+
+Waarom noemen we dit nu? Dat doen we omdat de aangifte over 2025 tot en met 31 december kan worden ingediend, en oktober een veel prettigere maand is om het te regelen dan de laatste week van het jaar.
+
+Alles over de belastingservice staat op deze pagina:
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-never-filed',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['late.recargo.voluntary', 'late.recargo.excludes_penalty'],
+  text: {
+    en: `Some owners have had a place in Spain for years and have never filed the non-resident return. Usually nobody told them it existed. If that's you, here's the calm version of what it means.
+
+You can file late on your own initiative. When you do that before the tax office asks, the rule is a surcharge on the tax due: 1 percent, plus 1 percent for each full month of delay, for the first twelve months. After that it's a flat 15 percent plus interest. That surcharge takes the place of a penalty.
+
+So a year that's a few months late adds a few percent to the tax for that year. It's very much something you can put right.
+
+The harder part is doing it from abroad, in Spanish, with one form per owner for each year.
+
+At Bueno we file the non-resident return for owners who live outside Spain. If you have earlier years open, register, tell us which ones, and we'll come back to you with a quote.
+
+{link}`,
+    no: `Noen eiere har hatt bolig i Spania i årevis og aldri levert skattemeldingen for ikke-bosatte. Som regel har ingen fortalt dem at den finnes. Gjelder det deg, kommer den rolige versjonen av hva det betyr her.
+
+Du kan levere for sent på eget initiativ. Gjør du det før skattemyndighetene spør, er regelen et tillegg på skatten du skylder: 1 prosent, pluss 1 prosent for hver hele måned med forsinkelse, de første tolv månedene. Etter det er det flate 15 prosent pluss renter. Det tillegget kommer i stedet for en bot.
+
+Et år som er noen måneder forsinket, legger altså noen prosent på skatten for det året. Dette er absolutt noe du kan rette opp.
+
+Det vanskelige er å gjøre det fra utlandet, på spansk, med ett skjema per eier for hvert år.
+
+Hos Bueno leverer vi skattemeldingen for ikke-bosatte for eiere som bor utenfor Spania. Har du tidligere år som står åpne, kan du registrere deg og si hvilke, så kommer vi tilbake til deg med et pristilbud.
+
+{link}`,
+    sv: `En del ägare har haft en bostad i Spanien i åratal och aldrig lämnat in deklarationen för icke-bosatta. Oftast har ingen berättat att den finns. Om det gäller dig kommer här den lugna versionen av vad det innebär.
+
+Du kan deklarera i efterhand på eget initiativ. Gör du det innan skattemyndigheten hör av sig är regeln ett tillägg på skatten du ska betala: 1 procent, plus 1 procent för varje hel månads försening, under de första tolv månaderna. Därefter är det fasta 15 procent plus ränta. Det tillägget kommer i stället för böter.
+
+Ett år som är några månader försenat lägger alltså några procent på skatten för det året. Det går absolut att rätta till.
+
+Det svårare är att göra det från utlandet, på spanska, med en blankett per ägare för varje år.
+
+Hos Bueno lämnar vi in deklarationen för icke-bosatta åt ägare som bor utanför Spanien. Har du tidigare år som inte är deklarerade kan du registrera dig och berätta vilka, så återkommer vi med en offert.
+
+{link}`,
+    da: `Nogle ejere har haft et sted i Spanien i årevis og har aldrig indsendt selvangivelsen for ikke-residenter. Som regel har ingen fortalt dem, at den fandtes. Hvis det er dig, kommer her den rolige udgave af, hvad det betyder.
+
+Du kan indsende for sent på eget initiativ. Når du gør det, før skattevæsenet henvender sig, er reglen et tillæg til den skyldige skat: 1 procent, plus 1 procent for hver hele måneds forsinkelse, i de første tolv måneder. Derefter er det faste 15 procent plus renter. Det tillæg træder i stedet for en bøde.
+
+Så et år, der er nogle måneder forsinket, lægger nogle få procent oven i skatten for det år. Det er i høj grad noget, du kan rette op på.
+
+Det svære er at gøre det fra udlandet, på spansk, med én formular pr. ejer for hvert år.
+
+Hos Bueno indsender vi selvangivelsen for ikke-residenter for ejere, der bor uden for Spanien. Har du tidligere år, der står åbne, så registrer dig, fortæl os hvilke, og så vender vi tilbage med et tilbud.
+
+{link}`,
+    de: `Manche Eigentümer haben seit Jahren ein Haus in Spanien und haben die Steuererklärung für Nichtresidenten noch nie abgegeben. Meistens hat ihnen niemand gesagt, dass es sie gibt. Falls das auf Sie zutrifft, kommt hier in aller Ruhe, was das bedeutet.
+
+Sie können von sich aus verspätet einreichen. Wenn Sie das tun, bevor das Finanzamt nachfragt, gilt ein Zuschlag auf die fällige Steuer: 1 Prozent, plus 1 Prozent für jeden vollen Monat Verspätung, in den ersten zwölf Monaten. Danach sind es pauschal 15 Prozent plus Zinsen. Dieser Zuschlag tritt an die Stelle einer Strafe.
+
+Ein Jahr, das ein paar Monate zu spät kommt, erhöht die Steuer für dieses Jahr also um ein paar Prozent. Das lässt sich sehr gut in Ordnung bringen.
+
+Schwieriger ist es, das aus dem Ausland zu machen, auf Spanisch, mit einem Formular pro Eigentümer für jedes Jahr.
+
+Bei Bueno reichen wir die Steuererklärung für Nichtresidenten für Eigentümer ein, die außerhalb Spaniens leben. Wenn bei Ihnen frühere Jahre offen sind, registrieren Sie sich, sagen Sie uns, welche es sind, und wir melden uns mit einem Angebot bei Ihnen.
+
+{link}`,
+    fr: `Certains propriétaires ont un bien en Espagne depuis des années et n'ont jamais déposé la déclaration des non-résidents. En général, personne ne leur a dit qu'elle existait. Si c'est votre cas, voici, calmement, ce que cela signifie.
+
+Vous pouvez déposer en retard de votre propre initiative. Quand vous le faites avant que l'administration fiscale ne vous le demande, la règle est une majoration sur l'impôt dû : 1 pour cent, plus 1 pour cent par mois complet de retard, pendant les douze premiers mois. Au-delà, c'est un taux fixe de 15 pour cent, plus les intérêts. Cette majoration tient lieu de sanction.
+
+Une année en retard de quelques mois ajoute donc quelques pour cent à l'impôt de cette année-là. C'est tout à fait quelque chose que l'on peut régulariser.
+
+Le plus difficile, c'est de le faire depuis l'étranger, en espagnol, avec un formulaire par propriétaire pour chaque année.
+
+Chez Bueno, nous déposons la déclaration des non-résidents pour les propriétaires qui vivent hors d'Espagne. Si vous avez des années antérieures à régulariser, inscrivez-vous, dites-nous lesquelles, et nous reviendrons vers vous avec un devis.
+
+{link}`,
+    nl: `Sommige eigenaren hebben al jaren een woning in Spanje en hebben nog nooit de aangifte voor niet-residenten ingediend. Meestal heeft niemand hun verteld dat die bestond. Geldt dat voor u, dan is dit de rustige versie van wat het betekent.
+
+U kunt op eigen initiatief te laat indienen. Doet u dat voordat de belastingdienst erom vraagt, dan geldt een toeslag op de verschuldigde belasting: 1 procent, plus 1 procent voor elke volledige maand vertraging, gedurende de eerste twaalf maanden. Daarna is het een vaste 15 procent plus rente. Die toeslag komt in de plaats van een boete.
+
+Een jaar dat een paar maanden te laat is, voegt dus een paar procent toe aan de belasting over dat jaar. Het is echt iets wat u kunt rechtzetten.
+
+Het lastigere deel is om het vanuit het buitenland te doen, in het Spaans, met één formulier per eigenaar voor elk jaar.
+
+Bij Bueno dienen we de aangifte voor niet-residenten in voor eigenaren die buiten Spanje wonen. Heeft u eerdere jaren openstaan, registreer u dan, laat ons weten welke, en we komen bij u terug met een offerte.
+
+{link}`,
+  },
+},
+{
+  key: 'bueno-form-changes-2027',
+  tool: BUENO_TOOL,
+  kind: 'informative',
+  rules: ['deadline.210.new_fields_2027', 'deadline.imputed.from_2026'],
+  text: {
+    en: `One for anyone who files their own non-resident return in Spain and likes to know what's coming.
+
+From 1 January 2027, form 210 gets new annexes and fields. Among them are the days the property was available and your ownership percentage, and they apply to every return submitted from that date, whichever year it's for.
+
+The filing window is moving as well. The return for 2026 opens on 1 April 2027, not in January, and runs to 31 December.
+
+None of this is dramatic. It changes what you have to type in and when, which is exactly the kind of thing that turns a ten minute job into a whole evening.
+
+At Bueno we keep up with these changes so owners don't have to. We file the form 210 for people who live outside Spain, starting from €50, and we keep your details from one year to the next.
+
+If you'd rather hand it over before the form changes, this is the place:
+
+{link}`,
+    no: `Denne er til deg som leverer din egen skattemelding for ikke-bosatte i Spania og liker å vite hva som kommer.
+
+Fra 1. januar 2027 får skjema 210 nye vedlegg og felter. Blant dem er dagene boligen var tilgjengelig og eierandelen din i prosent, og de gjelder for alle skattemeldinger som sendes inn fra den datoen, uansett hvilket år de gjelder.
+
+Leveringsperioden flytter seg også. Skattemeldingen for 2026 åpner 1. april 2027, ikke i januar, og kan leveres til 31. desember.
+
+Ingenting av dette er dramatisk. Det endrer hva du må taste inn og når, og det er akkurat sånt som gjør en jobb på ti minutter til en hel kveld.
+
+Hos Bueno følger vi med på disse endringene, så eierne slipper. Vi leverer skjema 210 for folk som bor utenfor Spania, fra €50, og vi tar vare på opplysningene dine fra ett år til det neste.
+
+Vil du heller overlate det til oss før skjemaet endres, er dette stedet:
+
+{link}`,
+    sv: `Det här är för dig som gör din egen deklaration för icke-bosatta i Spanien och gärna vill veta vad som är på gång.
+
+Från 1 januari 2027 får blankett 210 nya bilagor och fält. Bland dem finns antalet dagar bostaden var tillgänglig och din ägarandel i procent, och de gäller varje deklaration som lämnas in från det datumet, oavsett vilket år den avser.
+
+Inlämningsperioden flyttas också. Deklarationen för 2026 öppnar 1 april 2027, inte i januari, och pågår till 31 december.
+
+Inget av det här är dramatiskt. Det ändrar vad du ska skriva in och när, och det är precis sådant som gör ett jobb på tio minuter till en hel kväll.
+
+Hos Bueno håller vi koll på de här ändringarna så att ägarna slipper. Vi lämnar in blankett 210 åt personer som bor utanför Spanien, från €50, och vi sparar dina uppgifter från ett år till nästa.
+
+Vill du hellre lämna över det innan blanketten ändras är det här rätt ställe:
+
+{link}`,
+    da: `Den her er til dig, der selv indsender din selvangivelse for ikke-residenter i Spanien og gerne vil vide, hvad der er på vej.
+
+Fra den 1. januar 2027 får formular 210 nye bilag og felter. Blandt dem er de dage, boligen har været til rådighed, og din ejerandel i procent, og de gælder for alle selvangivelser, der indsendes fra den dato, uanset hvilket år de vedrører.
+
+Indsendelsesperioden flytter sig også. Selvangivelsen for 2026 åbner den 1. april 2027, ikke i januar, og løber til den 31. december.
+
+Intet af det er dramatisk. Det ændrer, hvad du skal taste ind og hvornår, og det er præcis den slags, der gør en opgave på ti minutter til en hel aften.
+
+Hos Bueno følger vi med i de ændringer, så ejerne ikke behøver det. Vi indsender formular 210 for folk, der bor uden for Spanien, fra €50, og vi gemmer dine oplysninger fra det ene år til det næste.
+
+Vil du hellere give det fra dig, inden formularen ændrer sig, så er det her:
+
+{link}`,
+    de: `Das hier ist für alle, die ihre Steuererklärung für Nichtresidenten in Spanien selbst abgeben und gern wissen, was auf sie zukommt.
+
+Ab dem 1. Januar 2027 bekommt das Formular 210 neue Anhänge und Felder. Dazu gehören die Tage, an denen die Immobilie zur Verfügung stand, und Ihr Eigentumsanteil in Prozent. Sie gelten für jede Erklärung, die ab diesem Datum eingereicht wird, egal für welches Jahr.
+
+Auch der Zeitraum für die Abgabe verschiebt sich. Die Erklärung für 2026 kann ab dem 1. April 2027 eingereicht werden, nicht schon im Januar, und zwar bis zum 31. Dezember.
+
+Nichts davon ist dramatisch. Es ändert sich, was Sie eintippen müssen und wann, und genau so etwas macht aus einer Sache von zehn Minuten einen ganzen Abend.
+
+Bei Bueno bleiben wir bei diesen Änderungen auf dem Laufenden, damit Eigentümer das nicht selbst tun müssen. Wir reichen das Formular 210 für Menschen ein, die außerhalb Spaniens leben, ab €50, und wir behalten Ihre Angaben von einem Jahr zum nächsten.
+
+Wenn Sie das lieber abgeben möchten, bevor sich das Formular ändert, sind Sie hier richtig:
+
+{link}`,
+    fr: `Voici un message pour ceux qui déposent eux-mêmes leur déclaration des non-résidents en Espagne et qui aiment savoir ce qui arrive.
+
+À partir du 1er janvier 2027, le modèle 210 s'enrichit de nouvelles annexes et de nouveaux champs. On y trouve notamment les jours pendant lesquels le bien était disponible et votre pourcentage de propriété, et ils s'appliquent à toute déclaration déposée à partir de cette date, quelle que soit l'année concernée.
+
+La période de dépôt change aussi. La déclaration pour 2026 s'ouvre le 1er avril 2027, et non en janvier, et court jusqu'au 31 décembre.
+
+Rien de tout cela n'est dramatique. Cela change ce que vous devez saisir et à quel moment, et c'est exactement le genre de chose qui transforme une tâche de dix minutes en une soirée entière.
+
+Chez Bueno, nous suivons ces changements pour que les propriétaires n'aient pas à le faire. Nous déposons le modèle 210 pour les personnes qui vivent hors d'Espagne, à partir de 50 €, et nous conservons vos informations d'une année à l'autre.
+
+Si vous préférez nous confier tout cela avant que le formulaire ne change, c'est par ici :
+
+{link}`,
+    nl: `Dit is er een voor wie zijn eigen aangifte voor niet-residenten in Spanje indient en graag weet wat eraan komt.
+
+Vanaf 1 januari 2027 krijgt formulier 210 nieuwe bijlagen en velden. Daaronder vallen de dagen dat de woning beschikbaar was en uw eigendomspercentage, en ze gelden voor elke aangifte die vanaf die datum wordt ingediend, over welk jaar die ook gaat.
+
+Ook de indieningsperiode verschuift. De aangifte over 2026 opent op 1 april 2027, niet in januari, en loopt tot en met 31 december.
+
+Niets hiervan is dramatisch. Het verandert wat u moet intypen en wanneer, en dat is precies het soort ding dat van een klusje van tien minuten een hele avond maakt.
+
+Bij Bueno houden we deze wijzigingen bij, zodat eigenaren dat niet hoeven te doen. We dienen het formulier 210 in voor mensen die buiten Spanje wonen, vanaf €50, en we bewaren uw gegevens van jaar tot jaar.
+
+Draagt u het liever over voordat het formulier verandert, dan kan dat hier:
+
+{link}`,
+  },
+},
 ];
+
+// The order posts go out in, one a day. A Bueno post, then a 24/7 Spain tax or money tool
+// post, for twenty days, then the ten that are about the home itself. A post that is parked
+// or not yet approved is simply skipped, so the order never blocks a send.
+export const QUEUE_ORDER = [
+  'bueno-rented-part-of-the-year',
+  'imputed-income-empty-home',
+  'bueno-year-end-return',
+  'late-filing-two-regimes',
+  'bueno-ibi-is-not-this',
+  'quarterly-rental-filing-ends',
+  'bueno-two-owners-two-returns',
+  'eu-eea-deductions',
+  'bueno-what-goes-into-it',
+  'three-percent-retention',
+  'bueno-direct-debit-date',
+  'plusvalia-two-methods',
+  'bueno-why-from-fifty',
+  'iva-holiday-let',
+  'bueno-included-in-select',
+  'what-a-year-actually-costs',
+  'bueno-never-filed',
+  'pre-2019-mortgage-costs',
+  'bueno-form-changes-2027',
+  'legal-cover-you-already-pay-for',
+  'ninety-days',
+  'consorcio-storm',
+  'community-decision-clock',
+  'builder-quote-red-flags',
+  'leaving-it-empty',
+  'utilities-in-order',
+  'tradesperson-in-your-language',
+  'who-does-what',
+  'maintenance-is-a-year',
+  'pests-by-property',
+];
+
+export const queueIndex = (ideaKey) => {
+  const i = QUEUE_ORDER.indexOf(ideaKey);
+  return i === -1 ? QUEUE_ORDER.length : i;
+};

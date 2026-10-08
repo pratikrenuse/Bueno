@@ -1658,6 +1658,22 @@ body {
 
 .s247f-copy { white-space: nowrap; }
 
+/* The line that says who sponsors the site. Brighter than the legal text beside it, because
+   it is the one thing in the footer bar a reader is meant to notice, and big enough to tap. */
+.s247f-sponsor {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.78);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  padding: 8px 0;
+}
+.s247f-sponsor:hover { color: var(--white); }
+.home-footer-sponsor { display: inline-block; margin-top: 4px; }
+
 @media (max-width: 780px) {
   .s247f { padding: 40px 24px 28px; }
   .s247f-links { gap: 16px 20px; }

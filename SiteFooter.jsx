@@ -17,6 +17,21 @@ import { audienceLabels } from './audiences.js';
 // were never in App.css and its footer.* translation keys never existed. Do not revive
 // it, use this.
 
+// Since October 2026 the site says who pays for it. Bueno sponsors Spain 24/7, and the line
+// links to Bueno's own site in the reader's language where Bueno has one.
+const BUENO_HOME = { en: '', no: 'no/', sv: 'se/', de: 'de/', fr: 'fr/', nl: 'nl/' };
+export const buenoHome = (locale) => `https://getbueno.com/${BUENO_HOME[locale] || ''}`;
+
+export function SponsorLine({ className = 's247f-sponsor' }) {
+  const t = useT();
+  const { locale } = useLocale();
+  return (
+    <a className={className} href={buenoHome(locale)} target="_blank" rel="noopener">
+      {t('home.sponsored_by')}
+    </a>
+  );
+}
+
 export default function SiteFooter({ note }) {
   const t = useT();
   const aud = audienceLabels(useLocale().locale);
@@ -44,6 +59,7 @@ export default function SiteFooter({ note }) {
 
       <div className="s247f-bottom">
         <span>{note || t('home.footer_copy')}</span>
+        <SponsorLine />
         <span className="s247f-copy">&copy; {year} Spain 24/7</span>
       </div>
     </footer>

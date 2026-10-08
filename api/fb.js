@@ -15,7 +15,12 @@ const ROUTES = {
   posts:  () => import('./_fb_posts.js'),
   decide: () => import('./_fb_decide.js'),
   seed:   () => import('./_fb_seed.js'),
+  dispatch: () => import('./_fb_dispatch.js'),
 };
+
+// An edited post is translated into six languages on the way out, which takes longer than
+// the default allowance for a function. Sixty seconds is the most the Hobby plan gives.
+export const config = { maxDuration: 60 };
 
 export const ACTIONS = Object.keys(ROUTES);
 

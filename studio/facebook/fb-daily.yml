@@ -1,0 +1,47 @@
+name: Facebook daily post
+
+# Sends the next approved Facebook group post to the publisher, once a day.
+#
+# The clock lives here because Vercel's Hobby plan allows two cron jobs and the LinkedIn
+# programme uses both. All this job does is call the site; the work happens in
+# api/_fb_dispatch.js. If nothing is approved, nothing goes to the publisher and Pratik gets
+# a short email saying so.
+#
+# No new secret is needed. The call is signed with the sha256 of SUPABASE_SERVICE_KEY, which
+# this repository already holds for the studio workflows and which the site already has in
+# Vercel. The key itself is never sent.
+
+on:
+  schedule:
+    # 03:30 UTC is 09:00 in India, where the publisher works.
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "Type 1 to only report what would be sent, without sending"
+        default: ""
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send today's post
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DRY: ${{ github.event.inputs.dry }}
+        run: |
+          if [ -z "$SUPABASE_SERVICE_KEY" ]; then
+            echo "The repository secret SUPABASE_SERVICE_KEY is missing, so this job cannot sign its call."
+            exit 1
+          fi
+          TOKEN=$(printf %s "$SUPABASE_SERVICE_KEY" | sha256sum | cut -d' ' -f1)
+          URL="https://www.247spain.es/api/fb?action=dispatch"
+          if [ "$DRY" = "1" ]; then URL="$URL&dry=1"; fi
+          CODE=$(curl -sS -o response.json -w "%{http_code}" -X POST "$URL" \
+            -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{}')
+          cat response.json
+          echo
+          if [ "$CODE" != "200" ]; then
+            echo "The site answered $CODE, so today's post did not go out."
+            exit 1
+          fi

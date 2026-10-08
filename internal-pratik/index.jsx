@@ -5,17 +5,19 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 // WHAT THIS IS NOT
 // It is not /internal-linkedin. That deck belongs to the team, John reviews it, and its
 // posts go out over other people's names to five team members. This one is personal: Pratik
-// reviews, edits and approves, and each approval emails one post to Poornima, who publishes
-// it, with Pratik copied.
+// reviews, edits and approves. An approved post waits in a queue, and once a day the post at
+// the front is emailed to Poornima, who publishes it, with Pratik copied.
 //
 // The two surfaces share no table, no API route, no module and no style prefix, and a test
 // enforces that. If you are here to change something, change it here and nowhere else.
 //
 // THE REVIEW LOOP
-//   read  ->  edit if it needs it  ->  pick the image  ->  say which group  ->  approve
-// Approving is the send. There is no separate send button, because an approved post sitting
-// unsent is the failure mode this whole deck exists to avoid. The result of the send comes
-// straight back onto the card, so a failure is visible in the moment.
+//   read  ->  edit if it needs it  ->  pick the image  ->  approve
+// Approving puts the post in the daily queue. It used to send at once, when posts were
+// approved one at a time. Since October 2026 many are approved in one sitting and one goes
+// out a day, so each approved card shows its place in the queue, and an approved post is
+// never out of sight. The groups are no longer typed in here: the daily email works out each
+// language's account and groups for that day by itself.
 //
 // No meta.js in this folder on purpose: without one the tool never appears in the public
 // homepage grid and is never prerendered into a page a search engine can find.
@@ -26,11 +28,12 @@ const ACCENT = '#5B7FCC'
 const GOLD = '#C9A96E'
 const PAGE_BG = '#E7EAF0'
 
-// Pratik reviews English. The five translations travel with the post and are only ever
+// Pratik reviews English. The six translations travel with the post and are only ever
 // looked at, never chosen between, so there is no language switcher here on purpose.
 const TRANSLATIONS = [
   { key: 'no', label: 'Norwegian' },
   { key: 'sv', label: 'Swedish' },
+  { key: 'da', label: 'Danish' },
   { key: 'de', label: 'German' },
   { key: 'fr', label: 'French' },
   { key: 'nl', label: 'Dutch' },
@@ -118,21 +121,47 @@ export default function InternalPratik() {
 
   const replace = (post) => setPosts(ps => ps.map(x => (x.id === post.id ? { ...x, ...post } : x)))
 
-  // Approving is the send, so it reports what actually happened rather than assuming.
+  // Approving queues the post. It reports what actually happened rather than assuming.
   async function approve(p) {
     setBusy(true); setErr(''); setFlash('')
     try {
       const j = await patch(p.id, { action: 'approved' })
-      if (j.post) replace(j.post)
+      if (j.post) replace({ ...j.post, queue_pos: j.queue_pos })
+      if (j.queued) {
+        if (p.status !== 'approved') {
+          setCounts(c => ({
+            ...c,
+            [p.status]: Math.max(0, (c[p.status] || 0) - 1),
+            approved: (c.approved || 0) + 1,
+            queued: j.queued_total != null ? j.queued_total : (c.queued || 0) + 1,
+          }))
+        }
+        setFlash(
+          `Approved. It is number ${j.queue_pos || '?'} of ${j.queued_total || '?'} in the queue, and one post goes out each day.`
+          + (j.retranslated ? ' The six translations were rebuilt from your version first.' : ''))
+      }
+      else if (j.reason === 'already sent') setFlash('Approved. It had already been emailed, so it was not queued again.')
+      else setErr(`It was not approved: ${j.error}`)
+    } catch (e) { setErr(String(e.message || e)) }
+    setBusy(false)
+  }
+
+  // Sending one today, ahead of the queue. A choice, so it asks first.
+  async function sendNow(p) {
+    if (!confirm('Send this post to the publisher today, ahead of the queue?')) return
+    setBusy(true); setErr(''); setFlash('')
+    try {
+      const j = await patch(p.id, { action: 'send_now' })
+      if (j.post) replace({ ...j.post, queue_pos: undefined })
       // A warning is a send the API accepted that may not have reached anyone. It is shown
       // as an error on purpose: a queue that says Sent when nothing arrived is worse than
       // one that says it failed.
       if (j.warning) setErr(j.warning)
-      else if (j.sent) setFlash(
-        `Sent to ${j.post?.sent_to || 'the publisher'}, you are copied.`
-        + (j.retranslated ? ' The five translations were rebuilt from your version first.' : ''))
-      else if (j.reason === 'already sent') setFlash('Approved. It had already been emailed, so nothing was sent again.')
-      else setErr(`Approved, but nothing was sent: ${j.error}`)
+      else if (j.sent) {
+        setCounts(c => ({ ...c, queued: Math.max(0, (c.queued || 0) - 1), sent: (c.sent || 0) + 1 }))
+        setFlash(`Sent to ${j.post?.sent_to || 'the publisher'} as day ${j.day}, you are copied.`)
+      }
+      else setErr(`It did not go: ${j.error}`)
     } catch (e) { setErr(String(e.message || e)) }
     setBusy(false)
   }
@@ -216,7 +245,7 @@ export default function InternalPratik() {
       const cur = shown[cursor]
       if (e.key === 'j') setCursor(c => Math.min(c + 1, shown.length - 1))
       else if (e.key === 'k') setCursor(c => Math.max(c - 1, 0))
-      else if (e.key === 'a' && cur && !cur.sent_at) approve(cur)
+      else if (e.key === 'a' && cur && !cur.sent_at && cur.status !== 'approved') approve(cur)
       else if (e.key === 'r' && cur) setRejecting({ id: cur.id, comment: '' })
       else if (e.key === 'e' && cur) setEditing({ id: cur.id, text: textOf(cur) })
       else if (e.key === 'c' && cur) copy(cur)
@@ -266,7 +295,8 @@ export default function InternalPratik() {
           <div className="fbp-progress"><div className="fbp-progress-fill"
             style={{ width: `${pct}%`, background: counts.pending === 0 && counts.all > 0 ? '#2e7d32' : ACCENT }} /></div>
           <div className="fbp-stats">
-            <span><b>{counts.approved || 0}</b> approved and emailed</span>
+            <span><b>{counts.queued || 0}</b> approved and waiting to go out</span>
+            <span><b>{counts.sent || 0}</b> sent to the publisher</span>
             <span><b>{counts.posted || 0}</b> live</span>
             <span><b>{counts.rejected || 0}</b> parked</span>
           </div>
@@ -288,8 +318,9 @@ export default function InternalPratik() {
         </div>
 
         <p className="fbp-count">
-          You read the English. Approving translates it into five more languages and emails all
-          six to the person who publishes them, with you copied.
+          You read the English. Approving puts the post in the queue with its six translations.
+          One post goes out each day to the person who publishes them, with you copied, and the
+          email tells her which account and which groups each language goes into that day.
           <span className="fbp-keys"> j k to move, a approve, e edit, r park, c copy</span>
         </p>
       </div>
@@ -301,7 +332,7 @@ export default function InternalPratik() {
       {!busy && !counts.all && (
         <div className="fbp-empty">
           <h2>Nothing in the deck yet.</h2>
-          <p>Twenty posts, each one already written out in six languages. Safe to press twice, it
+          <p>Thirty posts, each one already written out in seven languages. Safe to press twice, it
             never overwrites a decision.</p>
           <button className="fbp-primary fbp-big" onClick={seed} disabled={busy}>Load the latest writing</button>
         </div>
@@ -310,7 +341,7 @@ export default function InternalPratik() {
       {!busy && counts.all > 0 && status === 'pending' && counts.pending === 0 && (
         <div className="fbp-empty">
           <h2>Nothing left to review.</h2>
-          <p>{counts.approved || 0} approved and emailed, {counts.posted || 0} live, {counts.rejected || 0} parked.</p>
+          <p>{counts.queued || 0} approved and waiting to go out, {counts.sent || 0} sent to the publisher, {counts.posted || 0} live, {counts.rejected || 0} parked.</p>
         </div>
       )}
 
@@ -330,12 +361,13 @@ export default function InternalPratik() {
               <div className="fbp-meta">
                 <span className="fbp-pill" style={{ background: pill.bg, color: pill.fg }}>{pill.label}</span>
                 <b>{p.kind === 'story' ? 'Personal story' : 'Straight useful'}</b>
-                <span className="fbp-tool">{p.tool_slug}</span>
+                <span className="fbp-tool">{p.tool_slug === 'bueno-tax' ? 'Links to getbueno.com' : `Links to 24/7 Spain, ${p.tool_slug}`}</span>
                 {p.edited_text && <span className="fbp-tag">Edited</span>}
+                {p.queue_pos && !p.sent_at && <span className="fbp-tag">Number {p.queue_pos} in the queue</span>}
               </div>
 
               {p.sent_at && (
-                <p className="fbp-sent">Emailed to {p.sent_to} on {fmt(p.sent_at)}, you were copied.</p>
+                <p className="fbp-sent">Emailed to {p.sent_to} on {fmt(p.sent_at)}{p.send_day ? ` as day ${p.send_day}` : ''}, you were copied.</p>
               )}
               {p.send_error && (
                 <p className="fbp-err fbp-inline">The email did not go: {p.send_error}</p>
@@ -374,7 +406,7 @@ export default function InternalPratik() {
               {!isEditing && (
                 <div className="fbp-tr">
                   <button className="fbp-trbtn" onClick={() => setShowTr(showTr === p.id ? null : p.id)}>
-                    {showTr === p.id ? 'Hide the other five languages' : 'See the other five languages'}
+                    {showTr === p.id ? 'Hide the other six languages' : 'See the other six languages'}
                   </button>
                   {p.edited_text && (
                     <span className="fbp-trnote">You edited this one, so the translations get rebuilt from your version when you approve.</span>
@@ -393,8 +425,8 @@ export default function InternalPratik() {
               )}
 
               <label className="fbp-note">
-                <span>Which groups should this go in? This line goes into the email.</span>
-                <input defaultValue={p.note || ''} placeholder="Group names, and anything the publisher needs to know"
+                <span>Anything the publisher should know about this post? The groups are added to the email for you.</span>
+                <input defaultValue={p.note || ''} placeholder="Optional. This line goes into the email as a note from you."
                   onBlur={e => saveNote(p, e.target.value)} />
               </label>
 
@@ -406,10 +438,13 @@ export default function InternalPratik() {
                 <button onClick={() => copy(p)}>{copied === p.id ? 'Copied' : 'Copy text'}</button>
                 <a href={p.tool_url} target="_blank" rel="noopener noreferrer">Open the page</a>
                 <span className="fbp-spacer" />
-                {!p.sent_at && (
+                {!p.sent_at && p.status !== 'approved' && (
                   <button className="fbp-primary" onClick={() => approve(p)} disabled={busy}>
-                    Approve and send
+                    Approve and queue
                   </button>
+                )}
+                {!p.sent_at && p.status === 'approved' && (
+                  <button onClick={() => sendNow(p)} disabled={busy}>Send it today</button>
                 )}
                 {p.sent_at && <button onClick={() => resend(p)} disabled={busy}>Send again</button>}
                 {p.status !== 'posted' && <button onClick={() => markPosted(p)}>It is live</button>}

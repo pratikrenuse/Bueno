@@ -4,26 +4,29 @@
 //   edit          save an edited version of the post, keeping the original beside it
 //   image         switch to one of this post's own options
 //   image_custom  switch to a URL Pratik pasted himself
-//   note          save the instruction that travels with the post
-//   approved      approve AND email it to the person who will publish it
+//   note          save an instruction that travels with the post
+//   approved      approve it, which puts it in the daily queue
+//   send_now      email it to the publisher today, ahead of the queue
 //   rejected      park it with a reason
 //   posted        record that it is live
 //   pending       undo
-//   resend        send it again, deliberately
+//   resend        send an already sent post again, deliberately
 //
-// WHY APPROVING SENDS
-// Because that is the decision. A separate send button means a post can sit approved and
-// unsent, which is exactly the state the LinkedIn program lost posts in. One click, one
-// consequence, and the result of the send comes straight back into the deck so a failure is
-// visible in the moment rather than discovered a week later.
+// WHY APPROVING NO LONGER SENDS
+// It used to, because one post was approved at a time and an approved post sitting unsent was
+// how the LinkedIn program lost posts. Since October 2026 Pratik approves many posts in one
+// sitting and exactly one goes out each day, so approving puts a post in the queue and
+// api/_fb_dispatch.js sends the one at the front. The deck shows each post's place in the
+// queue, so an approved post is never out of sight.
 //
-// WHAT CANNOT HAPPEN
+// WHAT STILL HOLDS
+// The translations are checked at the moment of approval, not at send time, so a problem
+// shows up while Pratik is looking at the post and not at nine the next morning.
 // A post is never emailed twice by accident: once sent_at is set, approving again does not
-// resend. Resending is its own action, so it is always something Pratik chose to do.
+// queue it again. Resending is its own action, so it is always something Pratik chose to do.
 // Nothing is ever appended to the text on the way out. What he approved is what is sent.
 import { gate, rest, readBody } from './_fb_db.js';
-import { sendPost, SEND_TO, finalText } from './_fb_email.js';
-import { isCurrent, translate } from './_fb_translate.js';
+import { nextDay, queueOf, save, withCurrentTranslations, deliver } from './_fb_queue.js';
 
 const DECISIONS = new Set(['pending', 'approved', 'rejected', 'posted']);
 const MAX_TEXT = 8000;
@@ -42,14 +45,6 @@ async function fetchOne(res, id) {
   return rows[0];
 }
 
-async function save(res, id, patch) {
-  return rest(res, `?id=eq.${encodeURIComponent(id)}`, {
-    method: 'PATCH',
-    headers: { Prefer: 'return=representation' },
-    body: JSON.stringify({ ...patch, updated_at: new Date().toISOString() }),
-  });
-}
-
 export default async function handler(req, res) {
   if (!gate(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
@@ -58,7 +53,7 @@ export default async function handler(req, res) {
   if (!id) return res.status(400).json({ error: 'id is required' });
 
   // Actions that need to see the row first.
-  if (action === 'image' || action === 'approved' || action === 'resend') {
+  if (action === 'image' || action === 'approved' || action === 'resend' || action === 'send_now') {
     const row = await fetchOne(res, id);
     if (!row) return;
 
@@ -72,54 +67,63 @@ export default async function handler(req, res) {
       return res.json({ ok: true, post: out[0] || null });
     }
 
-    // Approving an already sent post does not send it again.
     const alreadySent = !!row.sent_at;
+
+    // Approving an already sent post does not queue it again.
     if (action === 'approved' && alreadySent) {
       const out = await save(res, id, { status: 'approved', posted_at: null, send_error: null });
       if (out === null) return;
-      return res.json({ ok: true, post: out[0] || null, sent: false, reason: 'already sent' });
+      return res.json({ ok: true, post: out[0] || null, queued: false, sent: false, reason: 'already sent' });
+    }
+    if (action === 'resend' && !alreadySent) {
+      return res.status(400).json({ error: 'this post has not been sent yet, so there is nothing to send again' });
+    }
+    if (action === 'send_now' && alreadySent) {
+      return res.status(400).json({ error: 'this post has already been sent. Use send again if you mean to repeat it' });
     }
 
-    const english = finalText(row);
-    if (!english) return res.status(400).json({ error: 'there is no text to send' });
-
-    // The translations must be of the English that is about to be sent, not of whatever the
+    // The translations must be of the English that is about to go out, not of whatever the
     // English used to say. If Pratik edited the post, the stored set is stale and is rebuilt
-    // before anything leaves. If that rebuild fails, nothing is sent at all: five stale
-    // translations going out under an approval is worse than an approval that did not land.
-    let sendable = row;
-    let retranslated = false;
-    if (!isCurrent(row, english)) {
-      const t = await translate(english, row.tool_slug);
-      if (!t.ok) {
-        const out = await save(res, id, { status: 'pending', send_error: `Not sent. ${t.error}` });
-        if (out === null) return;
-        return res.json({
-          ok: true, post: out[0] || null, sent: false,
-          error: `The translations were out of date and could not be rebuilt, so nothing was sent. ${t.error}`,
-        });
-      }
-      sendable = { ...row, translations: t.translations, translations_of: t.hash };
-      retranslated = true;
+    // here. If that rebuild fails the post goes back to pending and nothing is queued or
+    // sent: stale translations going out under an approval is worse than an approval that
+    // did not land.
+    const ready = await withCurrentTranslations(row);
+    if (!ready.ok) {
+      const out = await save(res, id, { status: alreadySent ? row.status : 'pending', send_error: `Not sent. ${ready.error}` });
+      if (out === null) return;
+      return res.json({
+        ok: true, post: out[0] || null, queued: false, sent: false,
+        error: `The translations were out of date and could not be rebuilt, so nothing was ${action === 'approved' ? 'queued' : 'sent'}. ${ready.error}`,
+      });
     }
 
-    const result = await sendPost(sendable);
-    const translationPatch = retranslated
-      ? { translations: sendable.translations, translations_of: sendable.translations_of }
-      : {};
-    const patch = result.ok
-      ? { status: 'approved', sent_at: new Date().toISOString(), sent_to: SEND_TO.join(', '), send_error: null, posted_at: null, ...translationPatch }
-      : { status: 'approved', send_error: result.error, posted_at: null, ...translationPatch };
+    if (action === 'approved') {
+      const out = await save(res, id, { status: 'approved', posted_at: null, send_error: null, ...ready.patch });
+      if (out === null) return;
+      // Where it landed in the line, so the deck can say so on the card straight away.
+      const all = await rest(res, '?select=id,idea_key,status,sent_at');
+      if (all === null) return;
+      const queue = queueOf(all.map(r => (r.id === id ? { ...r, status: 'approved' } : r)));
+      const at = queue.findIndex(r => r.id === id);
+      return res.json({
+        ok: true, post: out[0] || null, queued: true, sent: false, retranslated: ready.retranslated,
+        queue_pos: at === -1 ? null : at + 1, queued_total: queue.length,
+      });
+    }
 
-    const out = await save(res, id, patch);
-    if (out === null) return;
+    // send_now takes the next day number. resend repeats the day the post originally had,
+    // so the publisher sees the same groups she was given the first time.
+    let day = Number(row.send_day) || 1;
+    if (action === 'send_now') {
+      const all = await rest(res, '?select=send_day');
+      if (all === null) return;
+      day = nextDay(all);
+    }
+    const r = await deliver(res, { ...ready.row, status: action === 'send_now' ? 'approved' : ready.row.status }, day, ready.patch);
+    if (!r.ok) return;
     return res.json({
-      ok: true,
-      post: out[0] || null,
-      sent: result.ok,
-      retranslated,
-      error: result.ok ? null : result.error,
-      warning: result.warning || null,
+      ok: true, post: r.post, sent: r.sent, day, retranslated: ready.retranslated,
+      error: r.error, warning: r.warning,
     });
   }
 

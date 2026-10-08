@@ -6,6 +6,7 @@ import SiteNav from '../SiteNav.jsx'
 import { LOCALITIES, REGIONS } from '../spain-directory/localities.js'
 import { CATEGORIES, PROFESSIONALS } from '../spain-directory/categories.js'
 import AudienceSwitch from '../AudienceSwitch.jsx'
+import { SponsorLine } from '../SiteFooter.jsx'
 import { isForAudience, audienceLabels } from '../audiences.js'
 
 // Auto-discovers all tool meta.js files — no changes needed when adding new tools
@@ -448,6 +449,7 @@ export default function Home() {
         <p className="home-footer-copy">
           {t('home.footer_copy')}
         </p>
+        <SponsorLine className="s247f-sponsor home-footer-sponsor" />
       </footer>
 
     </div>
