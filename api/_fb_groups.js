@@ -12,10 +12,6 @@
 // The publisher has seven Facebook accounts, numbered 1 to 7. Each one looks after one
 // language, so every account posts every day and a group only ever sees one account.
 //
-// HOW MANY GROUPS A DAY
-// English has the longest list and gets five. Norwegian, Swedish and Dutch get four. Danish,
-// German and French have short lists and get three, so that no group sees a post more often
-// than it has to.
 
 export const ACCOUNT = { en: 1, no: 2, sv: 3, da: 4, de: 5, fr: 6, nl: 7 };
 
@@ -188,9 +184,30 @@ export const GROUPS = {
   ],
 };
 
-export const perDay = (lang) => {
+// HOW MANY GROUPS A DAY
+// Never more than three per language, which is the most Pratik wants a single account to
+// post in on one day. And the start is gentle, so that new accounts are not flagged: the
+// first day's post goes into one group per language, the second into two, and from the third
+// day on into three.
+export const MAX_PER_DAY = 3;
+export const RAMP = [1, 2];
+
+// The first day a post goes out. 9 to 11 October 2026 are for joining the groups and getting
+// the accounts going, so the daily send does nothing before this date unless someone forces it.
+export const DAILY_START = '2026-10-12';
+
+export const perDay = (lang, day = MAX_PER_DAY + 1) => {
   const n = (GROUPS[lang] || []).length;
-  return n >= 40 ? 5 : n >= 16 ? 4 : 3;
+  const d = Math.max(1, Number(day) || 1);
+  const want = d <= RAMP.length ? RAMP[d - 1] : MAX_PER_DAY;
+  return Math.min(want, n);
+};
+
+// Where in the list a day starts: the sum of every earlier day's count.
+const offsetFor = (lang, day) => {
+  let o = 0;
+  for (let k = 1; k < day; k += 1) o += perDay(lang, k);
+  return o;
 };
 
 /**
@@ -201,11 +218,12 @@ export const perDay = (lang) => {
 export function groupsFor(lang, day) {
   const list = GROUPS[lang] || [];
   if (!list.length) return [];
-  const per = Math.min(perDay(lang), list.length);
   const d = Math.max(1, Number(day) || 1);
+  const per = perDay(lang, d);
+  const start = offsetFor(lang, d);
   const out = [];
   for (let s = 0; s < per; s += 1) {
-    const [name, url] = list[((d - 1) * per + s) % list.length];
+    const [name, url] = list[(start + s) % list.length];
     out.push({ name, url });
   }
   return out;

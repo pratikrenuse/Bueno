@@ -6,7 +6,7 @@
 // nothing has been lost and this page can be brought back by restoring this file from git.
 //
 // The route stays so that an old bookmark lands somewhere honest rather than on the site's
-// catch-all. Anyone arriving here wants the personal post deck, which is where this points.
+// catch-all. Anyone arriving here wants the Facebook post deck, which is where this points.
 
 export default function InternalRetired() {
   return (
@@ -24,11 +24,11 @@ export default function InternalRetired() {
         <p style={{ font: '14px/1.6 system-ui, sans-serif', color: 'rgba(255,255,255,.75)', margin: '0 0 22px' }}>
           Its packages are still in the database, untouched. Nothing was deleted.
         </p>
-        <a href="/internal-pratik" style={{
+        <a href="/internal-poornima" style={{
           display: 'inline-block', padding: '11px 18px', borderRadius: 9,
           background: '#5B7FCC', color: '#fff', textDecoration: 'none',
           font: '600 14px system-ui, sans-serif',
-        }}>Go to my Facebook post deck</a>
+        }}>Go to the Facebook post deck</a>
       </div>
     </div>
   )

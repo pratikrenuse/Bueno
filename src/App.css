@@ -3509,6 +3509,7 @@ body {
 .fbp-seed { margin-left: auto; padding: 8px 13px; border: 1px solid rgba(255,255,255,.3); border-radius: 8px;
   background: transparent; color: #fff; font: 13px system-ui, sans-serif; cursor: pointer; }
 .fbp-seed:disabled { opacity: .5; cursor: default; }
+.fbp-seed + .fbp-seed { margin-left: 8px; }
 
 .fbp-bar { max-width: 860px; margin: 0 auto; padding: 14px 16px 4px; }
 .fbp-filters { display: flex; flex-direction: column; gap: 8px; }

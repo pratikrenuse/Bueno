@@ -36,7 +36,7 @@ const clean = (name, s) => {
 const PRO_FOLDERS = ['for-agents', 'for-lawyers', 'deal-checklist', 'seller-pack', 'aml-file', 'poa-planner'];
 // New tools that also serve owners, so they appear on the owner grid on purpose.
 const SHARED_NEW = ['purchase-costs', 'inheritance-roadmap'];
-const INTERNAL = ['internal', 'internal-linkedin', 'internal-pratik'];
+const INTERNAL = ['internal', 'internal-linkedin', 'internal-pratik', 'internal-poornima'];
 const SKIP = new Set(['node_modules', 'dist', 'public', 'src', 'api', 'seo', 'studio', 'rules', 'answers']);
 
 const folders = readdirSync('.').filter(n => !n.startsWith('.') && !SKIP.has(n) && statSync(n).isDirectory());

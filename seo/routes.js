@@ -37,7 +37,7 @@ import {
 // set at all, which keeps them out of the sitemap and out of every hreflang block. The
 // prerenderer still writes a file for each, carrying a robots noindex, because a URL that
 // exists and says nothing is the one a crawler is most likely to guess at.
-export const NOINDEX_PATHS = ['/internal', '/internal-linkedin'];
+export const NOINDEX_PATHS = ['/internal', '/internal-linkedin', '/internal-poornima'];
 
 export const HUBS = {
   trades: { path: '/spain-directory', cats: CATEGORIES, ui: 'trades', pack: 'trades_hub', town: 'tradesHub' },

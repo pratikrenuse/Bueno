@@ -1,0 +1,412 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "template": "question",
+  "photo": "g09.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Je l'ai loué cet été et",
+   "il est resté vide ensuite.",
+   "Que dois-je déclarer ?"
+  ],
+  "sub": "Vous faites les deux, sur le même modèle 210.",
+  "items": [
+   "Vous déclarez les loyers des semaines louées.",
+   "Pour les semaines vides, vous déclarez un revenu calculé sur la valeur cadastrale."
+  ]
+ },
+ "imputed-income-empty-home": {
+  "template": "fullbleed",
+  "photo": "g04.jpg",
+  "brand": "247",
+  "eyebrow": "Revenu imputé",
+  "headline": [
+   "Un bien jamais loué",
+   "peut être imposé."
+  ],
+  "sub": "L'impôt se calcule sur la valeur cadastrale de votre avis d'IBI, et rien ne peut en être déduit."
+ },
+ "bueno-year-end-return": {
+  "template": "date",
+  "photo": "g03.jpg",
+  "brand": "bueno",
+  "big_label": "Pour 2025, déclarez jusqu'au",
+  "big": "31 décembre",
+  "headline": "Vous déclarez même sans location.",
+  "sub": "Bueno dépose le modèle 210 pour vous, dès 50 €. Le prélèvement automatique se ferme plus tôt, le 23 décembre."
+ },
+ "late-filing-two-regimes": {
+  "template": "split",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "eyebrow": "Modèle 210 en retard",
+  "headline": [
+   "Lisez le courrier",
+   "avant les calculs."
+  ],
+  "items": [
+   "Déposer de vous-même coûte 1 %, plus 1 % par mois complet de retard.",
+   "Dès le 13e mois, c'est 15 % forfaitaires plus intérêts.",
+   "Après une lettre du fisc, ces règles ne s'appliquent plus."
+  ],
+  "cta": "Calculez gratuitement sur 247spain.es."
+ },
+ "bueno-ibi-is-not-this": {
+  "template": "duotone",
+  "photo": "coast_bay.jpg",
+  "brand": "bueno",
+  "eyebrow": "IBI et modèle 210",
+  "headline": [
+   "Je paie déjà l'IBI.",
+   "Est-ce mon impôt espagnol ?"
+  ],
+  "sub": "Non. Le modèle 210 est distinct et national.",
+  "items": [
+   "L'IBI est l'impôt local payé à votre mairie.",
+   "Le modèle 210 est national et rien ne vous est facturé.",
+   "Il se calcule sur la valeur cadastrale de votre IBI."
+  ],
+  "cta": "Nous le déposons dès 50 €."
+ },
+ "quarterly-rental-filing-ends": {
+  "template": "pills",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "headline": [
+   "Le dernier dépôt trimestriel",
+   "est dû au 20 octobre."
+  ],
+  "items": [
+   "Dès le 1er octobre, le loyer est déclaré une fois par an.",
+   "Votre prochain dépôt après celui-ci est en avril 2027."
+  ],
+  "cta": "Vérifiez gratuitement sur 247spain.es."
+ },
+ "bueno-two-owners-two-returns": {
+  "template": "question",
+  "photo": "g06.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Le bien est à nous deux.",
+   "Est-ce une déclaration,",
+   "ou une chacun ?"
+  ],
+  "sub": "Chacun dépose son propre modèle 210.",
+  "items": [
+   "Avec une moitié chacun, chacun déclare la moitié de la valeur cadastrale.",
+   "Bueno dépose un modèle 210 pour chaque propriétaire, dès 50 €."
+  ]
+ },
+ "eu-eea-deductions": {
+  "template": "fullbleed",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "eyebrow": "Déductions locatives",
+  "headline": [
+   "Même bien, même loyer,",
+   "un impôt différent."
+  ],
+  "sub": "Dans l'UE et l'EEE, vous déduisez vos frais et payez 19 %. Ailleurs, c'est 24 % sur le loyer brut."
+ },
+ "bueno-what-goes-into-it": {
+  "template": "date",
+  "photo": "g10.jpg",
+  "brand": "bueno",
+  "big_label": "Pour 2025, une valeur révisée donne",
+  "big": "1,1 %",
+  "headline": "Il suffit de quatre informations.",
+  "sub": "Il nous faut votre valeur cadastrale, votre part et votre pays de résidence fiscale. Bueno la dépose dès 50 €."
+ },
+ "three-percent-retention": {
+  "template": "split",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "eyebrow": "Vendre en Espagne",
+  "headline": [
+   "Les 3 % retenus",
+   "ne sont pas l'impôt."
+  ],
+  "items": [
+   "L'acheteur retient 3 % du prix et les verse sur le modelo 211.",
+   "Votre vrai impôt sur la plus-value est de 19 % du gain, pour tous.",
+   "Si les 3 % dépassent ce que vous devez, la différence vous revient."
+  ],
+  "cta": "Calculez-le gratuitement sur 247spain.es."
+ },
+ "bueno-direct-debit-date": {
+  "template": "duotone",
+  "photo": "g01.jpg",
+  "brand": "bueno",
+  "eyebrow": "Payer la déclaration 2025",
+  "headline": [
+   "Le prélèvement s'arrête",
+   "le 23 décembre."
+  ],
+  "sub": "Le dépôt, lui, reste ouvert jusqu'au 31 décembre.",
+  "items": [
+   "Le prélèvement s'arrête huit jours avant le dépôt.",
+   "Ensuite, il faut payer l'impôt autrement.",
+   "Mieux vaut ne pas attendre la dernière semaine."
+  ],
+  "cta": "Nous la déposons dès 50 €."
+ },
+ "plusvalia-two-methods": {
+  "template": "pills",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "headline": [
+   "La plusvalia a deux méthodes,",
+   "et vous prenez la plus basse."
+  ],
+  "items": [
+   "Sans augmentation, il n'y a rien à payer.",
+   "Vous avez trente jours ouvrables après l'acte."
+  ],
+  "cta": "Vérifiez gratuitement sur 247spain.es."
+ },
+ "bueno-why-from-fifty": {
+  "template": "question",
+  "photo": "g05.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Pourquoi 50 € chez Bueno,",
+   "quand on m'a annoncé",
+   "quelques centaines d'euros ?"
+  ],
+  "sub": "Très peu de choses changent d'une année à l'autre.",
+  "items": [
+   "Nous gardons le formulaire de l'an dernier pour préparer celui-ci.",
+   "Le prix dépend du nombre de propriétaires, donc un couple fait deux déclarations."
+  ]
+ },
+ "iva-holiday-let": {
+  "template": "fullbleed",
+  "photo": "marina.jpg",
+  "brand": "247",
+  "eyebrow": "IVA sur les locations",
+  "headline": [
+   "Tout dépend des services,",
+   "pas de la durée du séjour."
+  ],
+  "sub": "Sans services, une location saisonnière est exonérée. Avec des services hôteliers pendant le séjour, c'est 10 %."
+ },
+ "bueno-included-in-select": {
+  "template": "date",
+  "photo": "g02.jpg",
+  "brand": "bueno",
+  "big_label": "Pour 2025, déclarez jusqu'au",
+  "big": "31 décembre",
+  "headline": "Avec Select, c'est déjà inclus.",
+  "sub": "Select coûte 199 € par an et couvre deux propriétaires et deux biens au maximum. Avec Standard, le dépôt démarre à 50 €."
+ },
+ "what-a-year-actually-costs": {
+  "template": "split",
+  "photo": "poolside.jpg",
+  "brand": "247",
+  "eyebrow": "Ce que coûte un bien",
+  "headline": [
+   "Que me coûte",
+   "mon bien par an ?"
+  ],
+  "items": [
+   "Les factures arrivent une à une, de six ou sept endroits.",
+   "Aucune facture ne reçoit à elle seule une matinée d'attention.",
+   "Mettez l'année entière dans une colonne et comparez."
+  ],
+  "cta": "Calculez gratuitement sur 247spain.es."
+ },
+ "bueno-never-filed": {
+  "template": "duotone",
+  "photo": "g00.jpg",
+  "brand": "bueno",
+  "eyebrow": "Jamais déclaré",
+  "headline": [
+   "Jamais déclaré ? Tout",
+   "peut se régulariser."
+  ],
+  "sub": "Déposer avant que le fisc ne le demande limite cela à une majoration.",
+  "items": [
+   "Elle démarre à 1 %, plus 1 % par mois complet.",
+   "Dès le 13e mois, c'est un forfait de 15 % plus intérêts.",
+   "La majoration remplace la sanction."
+  ],
+  "cta": "Indiquez-nous les années pour un devis."
+ },
+ "pre-2019-mortgage-costs": {
+  "template": "pills",
+  "photo": "g09.jpg",
+  "brand": "247",
+  "headline": [
+   "Prêt pris entre 2000 et 2019 ?",
+   "Les frais méritent une lecture."
+  ],
+  "items": [
+   "Certains frais de dossier incombaient à l'emprunteur.",
+   "Le délai d'une réclamation se vérifie avec un abogado."
+  ],
+  "cta": "Estimez gratuitement sur 247spain.es."
+ },
+ "bueno-form-changes-2027": {
+  "template": "question",
+  "photo": "g04.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Je dépose moi-même.",
+   "Que change le modèle 210",
+   "dès janvier 2027 ?"
+  ],
+  "sub": "Il a de nouveaux champs et ouvre plus tard.",
+  "items": [
+   "Il demandera les jours de disponibilité et votre pourcentage de propriété.",
+   "La déclaration 2026 ouvre le 1er avril 2027 et court jusqu'au 31 décembre."
+  ]
+ },
+ "legal-cover-you-already-pay-for": {
+  "template": "fullbleed",
+  "photo": "g03.jpg",
+  "brand": "247",
+  "eyebrow": "Protection juridique habitation",
+  "headline": [
+   "Votre assurance peut",
+   "payer votre avocat."
+  ],
+  "sub": "Cherchez defensa juridica. Vous avez le droit de choisir votre propre avocat."
+ },
+ "ninety-days": {
+  "template": "date",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "big_label": "Vous pouvez rester jusqu'à",
+  "big": "90 jours",
+  "headline": "C'est sur 180 jours glissants.",
+  "sub": "Le jour d'arrivée et le jour du retour comptent tous les deux. Un long week-end utilise quatre jours, pas deux."
+ },
+ "consorcio-storm": {
+  "template": "split",
+  "photo": "coast_bay.jpg",
+  "brand": "247",
+  "eyebrow": "Dégâts de tempête",
+  "headline": [
+   "Après une tempête,",
+   "qui appeler ?"
+  ],
+  "items": [
+   "Certains dégâts relèvent du Consorcio, pas de votre assureur.",
+   "Le vent compte dès que les rafales dépassent 120 km/h sur trois secondes.",
+   "La surprime est déjà perçue avec votre prime."
+  ],
+  "cta": "Vérifiez gratuitement sur 247spain.es."
+ },
+ "community-decision-clock": {
+  "template": "duotone",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "eyebrow": "Assemblée générale",
+  "headline": [
+   "J'ai manqué l'assemblée.",
+   "Combien de temps ai-je ?"
+  ],
+  "sub": "Vous avez trois mois, ou un an si la décision viole la loi.",
+  "items": [
+   "En votre absence, le délai court dès que vous êtes informé.",
+   "Gardez l'enveloppe ou l'e-mail avec sa date.",
+   "Il faut en général être à jour des charges de copropriété."
+  ],
+  "cta": "Vérifiez gratuitement sur 247spain.es."
+ },
+ "builder-quote-red-flags": {
+  "template": "pills",
+  "photo": "g06.jpg",
+  "brand": "247",
+  "headline": [
+   "Le maçon m'a fait un devis.",
+   "Que doit-il indiquer ?"
+  ],
+  "items": [
+   "Il doit indiquer une date de début et une date de fin.",
+   "Les paiements doivent suivre les étapes."
+  ],
+  "cta": "Vérifiez gratuitement sur 247spain.es."
+ },
+ "leaving-it-empty": {
+  "template": "question",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "headline": [
+   "Je ferme pour l'hiver.",
+   "Que dois-je faire",
+   "avant de partir ?"
+  ],
+  "sub": "Cela dépend de trois choses, pas de sa taille.",
+  "items": [
+   "La durée d'absence et la saison du départ changent toutes deux la liste.",
+   "Une visite pendant votre absence la change aussi."
+  ]
+ },
+ "utilities-in-order": {
+  "template": "fullbleed",
+  "photo": "g10.jpg",
+  "brand": "247",
+  "eyebrow": "Services et NIE",
+  "headline": [
+   "Il y a cinq démarches,",
+   "et l'ordre compte."
+  ],
+  "sub": "Commencer par la mauvaise fait attendre. Le NIE se demande sur le formulaire EX-15, et la taxe est de 9,84 €."
+ },
+ "tradesperson-in-your-language": {
+  "template": "date",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "big_label": "Des artisans dans votre langue, dans",
+  "big": "660 communes",
+  "headline": "Votre langue passe en premier.",
+  "sub": "Plombiers, électriciens, serruriers et maçons sont classés selon les avis. C'est gratuit, et personne ne paie pour être mieux placé."
+ },
+ "who-does-what": {
+  "template": "split",
+  "photo": "g01.jpg",
+  "brand": "247",
+  "eyebrow": "Qui fait quoi en Espagne",
+  "headline": [
+   "Quatre titres font",
+   "quatre métiers."
+  ],
+  "items": [
+   "Un abogado est avocat et mène votre dossier.",
+   "Une gestoría gère déclarations et paperasse, et ne va pas au tribunal.",
+   "Un administrador de fincas gère la communauté de propriétaires."
+  ],
+  "cta": "Voyez gratuitement qui fait quoi sur 247spain.es."
+ },
+ "maintenance-is-a-year": {
+  "template": "duotone",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "eyebrow": "Entretien",
+  "headline": [
+   "L'entretien est un calendrier,",
+   "pas une liste de travaux."
+  ],
+  "sub": "Le même travail au mauvais mois ne prévient rien.",
+  "items": [
+   "Soleil, sel et hiver abîment des choses différentes.",
+   "Ils les abîment à différents moments de l'année.",
+   "Certains travaux doivent se faire en votre absence."
+  ],
+  "cta": "Créez votre calendrier gratuit sur 247spain.es."
+ },
+ "pests-by-property": {
+  "template": "pills",
+  "photo": "g05.jpg",
+  "brand": "247",
+  "headline": [
+   "Quels nuisibles attendre",
+   "chez moi ?"
+  ],
+  "items": [
+   "Chaleur, jardin et mois vides attirent des nuisibles différents.",
+   "Certains demandent un appel, pas un samedi de travail."
+  ],
+  "cta": "Voyez votre plan gratuit sur 247spain.es."
+ }
+}

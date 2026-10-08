@@ -1,0 +1,1112 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "slug": "bueno-rented-part-of-the-year",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · MIETSTEUER",
+  "headline": [
+   "Wer zeitweise vermietet,",
+   "braucht zwei Erklärungen."
+  ],
+  "rows": [
+   {
+    "label": "Welche Erklärung?",
+    "fact": [
+     "Vermietete Wochen gelten",
+     "als Mieteinnahmen."
+    ],
+    "detail": "Leere Wochen werden über den Katasterwert versteuert."
+   },
+   {
+    "label": "Wann ist sie fällig?",
+    "fact": [
+     "Vom 1. bis 20. Oktober läuft",
+     "die letzte Quartalsmeldung."
+    ],
+    "detail": "Ab 2026 kommt die Miete in eine Erklärung im April."
+   },
+   {
+    "label": "Und die Kosten?",
+    "fact": [
+     "EU- und EWR-Ansässige",
+     "können Ausgaben abziehen."
+    ],
+    "detail": "Alle anderen zahlen Steuer auf die Bruttomiete."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "imputed-income-empty-home": {
+  "slug": "imputed-income-empty-home",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · FIKTIVES EINKOMMEN",
+  "headline": [
+   "Auch leere Häuser brauchen",
+   "eine Steuererklärung."
+  ],
+  "rows": [
+   {
+    "label": "Warum Steuer?",
+    "fact": [
+     "Spanien unterstellt einem",
+     "Zweitwohnsitz Einkommen."
+    ],
+    "detail": "Das gilt auch, wenn Sie nie vermieten."
+   },
+   {
+    "label": "Was ist die Basis?",
+    "fact": [
+     "Es ist der Katasterwert auf",
+     "Ihrem IBI-Bescheid."
+    ],
+    "detail": "Es ist nicht der Kaufpreis oder der heutige Wert."
+   },
+   {
+    "label": "Was kann ich abziehen?",
+    "fact": [
+     "Abziehen lässt sich nichts,",
+     "nicht einmal die IBI."
+    ],
+    "detail": "Der Satz ist 19 % in EU und EWR, sonst 24 %."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-year-end-return": {
+  "slug": "bueno-year-end-return",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · NICHTRESIDENTENSTEUER",
+  "headline": [
+   "Ihre Erklärung 2025 ist",
+   "bis 31. Dezember fällig."
+  ],
+  "rows": [
+   {
+    "label": "Wer muss abgeben?",
+    "fact": [
+     "Sie geben ab, auch wenn das",
+     "Haus nie vermietet war."
+    ],
+    "detail": "Es ist die Nichtresidenten-Erklärung auf Formular 210."
+   },
+   {
+    "label": "Wie hoch ist der Satz?",
+    "fact": [
+     "Er liegt bei 19 % in der EU",
+     "und bei 24 % für den Rest."
+    ],
+    "detail": "Norwegen, Island und Liechtenstein zahlen 19 %."
+   },
+   {
+    "label": "Was kostet es?",
+    "fact": [
+     "Bueno erledigt sie für Sie,",
+     "schon ab €50."
+    ],
+    "detail": "Der Preis hängt von der Zahl der Eigentümer ab."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "late-filing-two-regimes": {
+  "slug": "late-filing-two-regimes",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · VERSPÄTETE ABGABE",
+  "headline": [
+   "Formular 210 verpasst?",
+   "Prüfen Sie erst die Post."
+  ],
+  "rows": [
+   {
+    "label": "Selbst nachgereicht?",
+    "fact": [
+     "Es kostet 1 % plus 1 % je",
+     "vollen Monat Verspätung."
+    ],
+    "detail": "Ab Monat 13 sind es pauschal 15 % plus Zinsen."
+   },
+   {
+    "label": "Gibt es ein Bußgeld?",
+    "fact": [
+     "Nein. Der Zuschlag",
+     "ersetzt das Bußgeld."
+    ],
+    "detail": "Bei Zahlung in der Frist gibt es 25 % Nachlass."
+   },
+   {
+    "label": "Brief erhalten?",
+    "fact": [
+     "Nach einer Aufforderung",
+     "gelten diese Regeln nicht."
+    ],
+    "detail": "Dann gilt ein ganz anderes Verfahren."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-ibi-is-not-this": {
+  "slug": "bueno-ibi-is-not-this",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · ZWEI VERSCHIEDENE STEUERN",
+  "headline": [
+   "IBI ist nicht Ihre",
+   "Nichtresidentensteuer."
+  ],
+  "rows": [
+   {
+    "label": "Was ist IBI?",
+    "fact": [
+     "IBI ist die Grundsteuer,",
+     "die ans Rathaus geht."
+    ],
+    "detail": "Die meisten Eigentümer zahlen sie schon per Lastschrift."
+   },
+   {
+    "label": "Was ist Formular 210?",
+    "fact": [
+     "Formular 210 ist staatlich",
+     "und kommt ohne Rechnung."
+    ],
+    "detail": "Sie erklären es jedes Jahr, auch für ein leeres Haus."
+   },
+   {
+    "label": "Worauf basiert es?",
+    "fact": [
+     "Es nutzt den Katasterwert",
+     "auf Ihrem IBI-Bescheid."
+    ],
+    "detail": "Bueno reicht es für Eigentümer im Ausland ab €50 ein."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "quarterly-rental-filing-ends": {
+  "slug": "quarterly-rental-filing-ends",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · MIETEINNAHMEN",
+  "headline": [
+   "Die Quartalserklärungen",
+   "enden diesen Oktober."
+  ],
+  "rows": [
+   {
+    "label": "Welche ist die letzte?",
+    "fact": [
+     "Q3 2026 ist fällig vom",
+     "1. bis 20. Oktober 2026."
+    ],
+    "detail": "Es ist die letzte vierteljährliche Mieterklärung."
+   },
+   {
+    "label": "Was kommt danach?",
+    "fact": [
+     "Miete ab 1. Oktober kommt",
+     "in eine Jahreserklärung."
+    ],
+    "detail": "Diese wird in den ersten 20 Tagen im April abgegeben."
+   },
+   {
+    "label": "Wann ist die nächste?",
+    "fact": [
+     "Ihre nächste Abgabe ist im",
+     "April 2027, nicht im Januar."
+    ],
+    "detail": "Tragen Sie das am besten gleich in den Kalender ein."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-two-owners-two-returns": {
+  "slug": "bueno-two-owners-two-returns",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · GEMEINSAMES EIGENTUM",
+  "headline": [
+   "Zwei Eigentümer heißt",
+   "zwei Steuererklärungen."
+  ],
+  "rows": [
+   {
+    "label": "Wer reicht ein?",
+    "fact": [
+     "Jeder Eigentümer erklärt",
+     "seinen eigenen Anteil."
+    ],
+    "detail": "Bei halbe-halbe nutzt jede Erklärung den halben Wert."
+   },
+   {
+    "label": "Zu dritt geerbt?",
+    "fact": [
+     "Drei Geschwister, die erben,",
+     "geben drei Erklärungen ab."
+    ],
+    "detail": "Die Arbeit fällt pro Eigentümer an, der Preis auch."
+   },
+   {
+    "label": "Was kostet es?",
+    "fact": [
+     "Bueno reicht jede einzelne",
+     "ab €50 für Sie ein."
+    ],
+    "detail": "Wir erstellen für jeden Eigentümer ein Formular 210."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "eu-eea-deductions": {
+  "slug": "eu-eea-deductions",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · ABZÜGE BEI VERMIETUNG",
+  "headline": [
+   "Gleiche Wohnung, gleiche",
+   "Miete, ganz andere Steuer."
+  ],
+  "rows": [
+   {
+    "label": "Wohnen Sie in der EU?",
+    "fact": [
+     "Sie ziehen Kosten ab und",
+     "zahlen 19 % auf den Rest."
+    ],
+    "detail": "Norwegen, Island und Liechtenstein zählen auch."
+   },
+   {
+    "label": "Und sonst überall?",
+    "fact": [
+     "Sie zahlen 24 % auf die",
+     "Bruttomiete."
+    ],
+    "detail": "Abzüge sind dann gar nicht erlaubt."
+   },
+   {
+    "label": "Was zählt?",
+    "fact": [
+     "Gebühren, Policen, Reparatur",
+     "und Hypothekenzinsen zählen."
+    ],
+    "detail": "Viele Eigentümer machen nur wenige davon geltend."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-what-goes-into-it": {
+  "slug": "bueno-what-goes-into-it",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · FORMULAR 210, EINFACH",
+  "headline": [
+   "Drei Zahlen bestimmen",
+   "Ihre Erklärung."
+  ],
+  "rows": [
+   {
+    "label": "Was ist die Basis?",
+    "fact": [
+     "Es ist der Katasterwert auf",
+     "Ihrem IBI-Beleg."
+    ],
+    "detail": "Es ist nicht der Kaufpreis oder der Marktwert."
+   },
+   {
+    "label": "Welcher Prozentsatz?",
+    "fact": [
+     "Für 2025 gelten 1,1 %, wenn",
+     "die Werte revidiert wurden."
+    ],
+    "detail": "Das gilt für Revisionen ab 2012."
+   },
+   {
+    "label": "Welcher Steuersatz?",
+    "fact": [
+     "Er liegt bei 19 % in EU und",
+     "EWR, sonst bei 24 %."
+    ],
+    "detail": "Norwegen, Island und Liechtenstein zählen zum EWR."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "three-percent-retention": {
+  "slug": "three-percent-retention",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · VERKAUF",
+  "headline": [
+   "Die 3 % beim Verkauf",
+   "sind keine Steuer."
+  ],
+  "rows": [
+   {
+    "label": "Was ist das?",
+    "fact": [
+     "Der Käufer behält 3 % des",
+     "vereinbarten Preises ein."
+    ],
+    "detail": "Sie werden binnen eines Monats per modelo 211 gezahlt."
+   },
+   {
+    "label": "Und die echte Steuer?",
+    "fact": [
+     "Die Gewinnsteuer beträgt",
+     "19 % des Gewinns."
+    ],
+    "detail": "Das sind 19 % für alle, egal wo Sie wohnen."
+   },
+   {
+    "label": "Zu viel gezahlt?",
+    "fact": [
+     "Die Differenz bekommen",
+     "Sie zurück."
+    ],
+    "detail": "Der Antrag ist ab einem Monat nach dem Verkauf möglich."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-direct-debit-date": {
+  "slug": "bueno-direct-debit-date",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · EIN WICHTIGES DATUM",
+  "headline": [
+   "Die Lastschrift endet",
+   "am 23. Dezember."
+  ],
+  "rows": [
+   {
+    "label": "Abgabefrist?",
+    "fact": [
+     "Die Erklärung 2025 ist bis",
+     "zum 31. Dezember möglich."
+    ],
+    "detail": "Zahlung per Lastschrift endet acht Tage früher."
+   },
+   {
+    "label": "Was geht schief?",
+    "fact": [
+     "Späte Abgeber denken, die",
+     "Zahlung wird eingezogen."
+    ],
+    "detail": "Nach dem 23. Dezember müssen Sie anders zahlen."
+   },
+   {
+    "label": "Wie vermeide ich das?",
+    "fact": [
+     "Warten Sie nicht bis zur",
+     "letzten Woche des Jahres."
+    ],
+    "detail": "Bueno erledigt das für Eigentümer im Ausland ab €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "plusvalia-two-methods": {
+  "slug": "plusvalia-two-methods",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · PLUSVALIA",
+  "headline": [
+   "Für die Plusvalia gibt es",
+   "zwei Methoden zur Wahl."
+  ],
+  "rows": [
+   {
+    "label": "Welche Methode?",
+    "fact": [
+     "Der niedrigere Gewinn zählt:",
+     "objektiv oder tatsächlich."
+    ],
+    "detail": "Die objektive Methode nutzt Bodenwert und Besitzjahre."
+   },
+   {
+    "label": "Und ohne Gewinn?",
+    "fact": [
+     "Gab es keinen Wertzuwachs,",
+     "zahlen Sie nichts."
+    ],
+    "detail": "Den Verkauf erklären Sie trotzdem mit beiden Urkunden."
+   },
+   {
+    "label": "Welche Frist gilt?",
+    "fact": [
+     "Sie haben dreißig Werktage",
+     "ab dem Datum der Urkunde."
+    ],
+    "detail": "Sätze und Formulare variieren je nach Rathaus."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-why-from-fifty": {
+  "slug": "bueno-why-from-fifty",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · WARUM ES WENIGER KOSTET",
+  "headline": [
+   "Wir machen Ihre Erklärung",
+   "ab €50. Das ist der Grund."
+  ],
+  "rows": [
+   {
+    "label": "Was ändert sich?",
+    "fact": [
+     "Von Jahr zu Jahr ändert",
+     "sich sehr wenig."
+    ],
+    "detail": "Es bleiben Eigentümer, Haus und Katasterwert gleich."
+   },
+   {
+    "label": "Was speichern wir?",
+    "fact": [
+     "Wir speichern das Vorjahr",
+     "und füllen dieses vor."
+    ],
+    "detail": "Danach prüfen wir nur noch, was sich geändert hat."
+   },
+   {
+    "label": "Wie ist der Preis?",
+    "fact": [
+     "Der Preis hängt von der",
+     "Zahl der Eigentümer ab."
+    ],
+    "detail": "Ein Paar bedeutet zwei Erklärungen."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "iva-holiday-let": {
+  "slug": "iva-holiday-let",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · FERIENVERMIETUNG",
+  "headline": [
+   "IVA hängt an Leistungen,",
+   "nicht an der Mietdauer."
+  ],
+  "rows": [
+   {
+    "label": "Keine Leistungen?",
+    "fact": [
+     "Eine reine Ferienvermietung",
+     "ist von der IVA befreit."
+    ],
+    "detail": "Hotelartig heißt Leistungen während des Aufenthalts."
+   },
+   {
+    "label": "Hotelleistungen?",
+    "fact": [
+     "Hotelartige Leistungen",
+     "bedeuten 10 % IVA."
+    ],
+    "detail": "Gemeint sind tägliche Reinigung, Empfang oder Frühstück."
+   },
+   {
+    "label": "Wann sind es 21 %?",
+    "fact": [
+     "21 % gelten für alles, was",
+     "keins von beiden ist."
+    ],
+    "detail": "Auch der Buchungsweg des Gastes kann das ändern."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-included-in-select": {
+  "slug": "bueno-included-in-select",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · SCHON MITGLIED?",
+  "headline": [
+   "Ihre Steuererklärung ist",
+   "vielleicht schon dabei."
+  ],
+  "rows": [
+   {
+    "label": "Mit Select?",
+    "fact": [
+     "Select für €199 im Jahr",
+     "enthält die Steuererklärung."
+    ],
+    "detail": "Das gilt für bis zu zwei Eigentümer und zwei Häuser."
+   },
+   {
+    "label": "Sie vermieten?",
+    "fact": [
+     "Premium für €299 im Jahr",
+     "ergänzt die Mieterklärung."
+    ],
+    "detail": "Auch das gilt für bis zu zwei Eigentümer."
+   },
+   {
+    "label": "Mit Standard?",
+    "fact": [
+     "Sie können sie trotzdem",
+     "ab €50 einreichen lassen."
+    ],
+    "detail": "Die Erklärung 2025 ist bis 31. Dezember möglich."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "what-a-year-actually-costs": {
+  "slug": "what-a-year-actually-costs",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · KOSTEN DES EIGENTUMS",
+  "headline": [
+   "Wissen Sie, was Ihr Haus",
+   "im Jahr wirklich kostet?"
+  ],
+  "rows": [
+   {
+    "label": "Warum ist das schwer?",
+    "fact": [
+     "Rechnungen kommen einzeln",
+     "von sechs, sieben Stellen."
+    ],
+    "detail": "Keine davon bekommt einen Vormittag Ihrer Zeit."
+   },
+   {
+    "label": "Was summiert sich?",
+    "fact": [
+     "Grundgebühren, IBI, Policen",
+     "und Gebühren summieren sich."
+    ],
+    "detail": "Ein paar hundert Euro fallen oft jahrelang nicht auf."
+   },
+   {
+    "label": "Was hilft?",
+    "fact": [
+     "Schreiben Sie das ganze Jahr",
+     "in eine Spalte."
+    ],
+    "detail": "Vergleichen Sie es dann mit ähnlichen Häusern."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-never-filed": {
+  "slug": "bueno-never-filed",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · SPÄT, ABER LÖSBAR",
+  "headline": [
+   "Nie abgegeben? Das lässt",
+   "sich noch korrigieren."
+  ],
+  "rows": [
+   {
+    "label": "Was kostet es?",
+    "fact": [
+     "Der Zuschlag beginnt bei 1 %",
+     "plus 1 % je vollem Monat."
+    ],
+    "detail": "Das gilt, wenn Sie abgeben, bevor man Sie auffordert."
+   },
+   {
+    "label": "Nach einem Jahr?",
+    "fact": [
+     "Ab Monat 13 sind es pauschal",
+     "15 % plus Zinsen."
+    ],
+    "detail": "Der Zuschlag tritt an die Stelle eines Bußgelds."
+   },
+   {
+    "label": "Hilft Bueno?",
+    "fact": [
+     "Nennen Sie uns die offenen",
+     "Jahre für ein Angebot."
+    ],
+    "detail": "Wir reichen für Eigentümer im Ausland die Erklärung ein."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "pre-2019-mortgage-costs": {
+  "slug": "pre-2019-mortgage-costs",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · ÄLTERE HYPOTHEKEN",
+  "headline": [
+   "Hypothek 2000 bis 2019?",
+   "Prüfen Sie die Kosten."
+  ],
+  "rows": [
+   {
+    "label": "Abschlussgebühren?",
+    "fact": [
+     "Manche Gebühren trug",
+     "allein der Kreditnehmer."
+    ],
+    "detail": "Sie tauchen in diesem Zeitraum immer wieder auf."
+   },
+   {
+    "label": "Mindestzinsklausel?",
+    "fact": [
+     "Ein Mindestzins verhinderte,",
+     "dass Ihr Zins weiter fiel."
+    ],
+    "detail": "Der dritte Punkt sind mitverkaufte Versicherungen."
+   },
+   {
+    "label": "Noch rechtzeitig?",
+    "fact": [
+     "Das hängt vom Anspruch ab",
+     "und braucht einen abogado."
+    ],
+    "detail": "Die Seite zeigt, ob sich eine Anfrage überhaupt lohnt."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-form-changes-2027": {
+  "slug": "bueno-form-changes-2027",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · WAS SICH ÄNDERT",
+  "headline": [
+   "Formular 210 ändert sich",
+   "im Januar 2027."
+  ],
+  "rows": [
+   {
+    "label": "Was ist neu?",
+    "fact": [
+     "Neu abgefragt werden",
+     "verfügbare Tage und Anteil."
+    ],
+    "detail": "Sie gelten für jede Erklärung ab dem 1. Januar."
+   },
+   {
+    "label": "Wann kann ich abgeben?",
+    "fact": [
+     "Die Erklärung 2026 startet",
+     "am 1. April 2027."
+    ],
+    "detail": "Sie bleibt bis zum 31. Dezember 2027 offen."
+   },
+   {
+    "label": "Wer bleibt dran?",
+    "fact": [
+     "Bueno verfolgt Änderungen,",
+     "damit Sie es nicht müssen."
+    ],
+    "detail": "Wir reichen Formular 210 im Ausland ab €50 für Sie ein."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "legal-cover-you-already-pay-for": {
+  "slug": "legal-cover-you-already-pay-for",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · RECHTSSCHUTZ",
+  "headline": [
+   "Ihre Hauspolice zahlt",
+   "vielleicht Ihren Anwalt."
+  ],
+  "rows": [
+   {
+    "label": "Was ist das?",
+    "fact": [
+     "Defensa juridica zahlt",
+     "Anwalts- und Gerichtskosten."
+    ],
+    "detail": "Sie muss ein eigenes Kapitel mit eigener Prämie sein."
+   },
+   {
+    "label": "Welcher Anwalt?",
+    "fact": [
+     "Sie wählen Ihren Anwalt",
+     "frei, nicht der Versicherer."
+    ],
+    "detail": "Die Police muss dieses Recht klar nennen."
+   },
+   {
+    "label": "Was nun?",
+    "fact": [
+     "Prüfen Sie die Police, bevor",
+     "Sie einen Anwalt bezahlen."
+    ],
+    "detail": "Die spanischen Suchbegriffe dafür sind aufgelistet."
+   }
+  ],
+  "brand": "247"
+ },
+ "ninety-days": {
+  "slug": "ninety-days",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "24/7 SPAIN · DIE 90-TAGE-REGEL",
+  "headline": [
+   "Erlaubt sind 90 von je",
+   "180 rollierenden Tagen."
+  ],
+  "rows": [
+   {
+    "label": "Gilt das pro Jahr?",
+    "fact": [
+     "Nein. Das Fenster rollt und",
+     "ist kein Kalenderjahr."
+    ],
+    "detail": "Der letzte Oktober kann im Mai noch gegen Sie zählen."
+   },
+   {
+    "label": "Zählen Reisetage?",
+    "fact": [
+     "An- und Abreise zählen",
+     "jeweils als volle Tage."
+    ],
+    "detail": "Ein langes Wochenende kostet vier Tage, nicht zwei."
+   },
+   {
+    "label": "Wie prüfe ich das?",
+    "fact": [
+     "Frühere und gebuchte Reisen",
+     "zeigen, was übrig bleibt."
+    ],
+    "detail": "Es zeigt den Tag, an dem eine Reise zu viel wäre."
+   }
+  ],
+  "brand": "247"
+ },
+ "consorcio-storm": {
+  "slug": "consorcio-storm",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · STURMSCHÄDEN",
+  "headline": [
+   "Wen rufen Sie nach",
+   "einem Sturm an?"
+  ],
+  "rows": [
+   {
+    "label": "Wer zahlt?",
+    "fact": [
+     "Manche Schäden zahlt",
+     "stattdessen das Consorcio."
+    ],
+    "detail": "Dazu zählen Hochwasser, Erdbeben und atypische Stürme."
+   },
+   {
+    "label": "Welche Windstärke?",
+    "fact": [
+     "Böen über 120 km/h länger",
+     "als 3 Sekunden zählen."
+    ],
+    "detail": "Darunter ist Ihr eigener Versicherer zuständig."
+   },
+   {
+    "label": "Muss ich es kaufen?",
+    "fact": [
+     "Nein. Es wird schon mit",
+     "Ihrer Prämie erhoben."
+    ],
+    "detail": "Normale Policen in den betroffenen Sparten enthalten es."
+   }
+  ],
+  "brand": "247"
+ },
+ "community-decision-clock": {
+  "slug": "community-decision-clock",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "24/7 SPAIN · EIGENTÜMERVERSAMMLUNG",
+  "headline": [
+   "Versammlung verpasst?",
+   "Ihre Frist beginnt später."
+  ],
+  "rows": [
+   {
+    "label": "Wie lange habe ich?",
+    "fact": [
+     "Sie haben drei Monate, bei",
+     "Gesetzesverstoß ein Jahr."
+    ],
+    "detail": "Drei Monate gelten bei schwerem Schaden für Eigentümer."
+   },
+   {
+    "label": "Waren Sie abwesend?",
+    "fact": [
+     "Ihre Frist beginnt mit",
+     "der Mitteilung an Sie."
+    ],
+    "detail": "Bewahren Sie Umschlag oder E-Mail mit Datum auf."
+   },
+   {
+    "label": "Gibt es Bedingungen?",
+    "fact": [
+     "Ihre Hausgeldzahlungen",
+     "müssen aktuell sein."
+    ],
+    "detail": "Oder Sie hinterlegen den strittigen Betrag bei Gericht."
+   }
+  ],
+  "brand": "247"
+ },
+ "builder-quote-red-flags": {
+  "slug": "builder-quote-red-flags",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · HANDWERKERANGEBOTE",
+  "headline": [
+   "Schlechte Arbeit beginnt",
+   "mit Lücken im Angebot."
+  ],
+  "rows": [
+   {
+    "label": "Gibt es Termine?",
+    "fact": [
+     "Ein Angebot braucht einen",
+     "Start- und einen Endtermin."
+    ],
+    "detail": "Zahlungen sollten Bauphasen folgen, nicht Vertrauen."
+   },
+   {
+    "label": "Wer holt die Lizenz?",
+    "fact": [
+     "Es sollte stehen, wer die",
+     "Baugenehmigung beantragt."
+    ],
+    "detail": "Auch die Entsorgung des Bauschutts gehört hinein."
+   },
+   {
+    "label": "Gibt es Einzelposten?",
+    "fact": [
+     "Eine Gesamtsumme lässt",
+     "Extras ohne Vergleichsbasis."
+    ],
+    "detail": "Die Seite nennt zwölf Fragen, die Sie stellen sollten."
+   }
+  ],
+  "brand": "247"
+ },
+ "leaving-it-empty": {
+  "slug": "leaving-it-empty",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "24/7 SPAIN · HAUS SCHLIESSEN",
+  "headline": [
+   "Über Winter abschließen?",
+   "Drei Dinge sind wichtig."
+  ],
+  "rows": [
+   {
+    "label": "Wie lange weg?",
+    "fact": [
+     "Die Dauer Ihrer Abwesenheit",
+     "verändert die Liste."
+    ],
+    "detail": "Auch die Jahreszeit Ihrer Abreise ändert sie."
+   },
+   {
+    "label": "Schaut jemand vorbei?",
+    "fact": [
+     "Ob jemand nachschaut,",
+     "ändert sie ebenfalls."
+    ],
+    "detail": "Das zählt mehr als die Größe des Hauses."
+   },
+   {
+    "label": "Ist es noch ein Heim?",
+    "fact": [
+     "Ein Zweitwohnsitz gilt",
+     "rechtlich als morada."
+    ],
+    "detail": "Das gilt, wenn Sie es nutzen, auch nur gelegentlich."
+   }
+  ],
+  "brand": "247"
+ },
+ "utilities-in-order": {
+  "slug": "utilities-in-order",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · VERSORGUNG",
+  "headline": [
+   "Fünf Anschlüsse, und die",
+   "Reihenfolge ist wichtig."
+  ],
+  "rows": [
+   {
+    "label": "Welche fünf?",
+    "fact": [
+     "Strom, Wasser, Gas, Internet",
+     "und Gemeinde zählen dazu."
+    ],
+    "detail": "Jeder hat ein eigenes Büro und Formular."
+   },
+   {
+    "label": "Welches Formular?",
+    "fact": [
+     "Der NIE-Antrag ist",
+     "das Formular EX-15."
+    ],
+    "detail": "Das EX-18 ist ein anderes Verfahren."
+   },
+   {
+    "label": "Was kostet das?",
+    "fact": [
+     "Die Vergabe einer NIE",
+     "kostet 9,84 Euro."
+    ],
+    "detail": "Wissen Sie das, bevor Ihnen jemand mehr berechnet."
+   }
+  ],
+  "brand": "247"
+ },
+ "tradesperson-in-your-language": {
+  "slug": "tradesperson-in-your-language",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "24/7 SPAIN · HANDWERKERVERZEICHNIS",
+  "headline": [
+   "Finden Sie einen Klempner,",
+   "der Ihre Sprache spricht."
+  ],
+  "rows": [
+   {
+    "label": "Welche Gewerke?",
+    "fact": [
+     "Klempner, Elektriker, Maurer",
+     "und Schlosser sind dabei."
+    ],
+    "detail": "Auch Klimatechnik und Poolservice sind dabei."
+   },
+   {
+    "label": "Wo?",
+    "fact": [
+     "660 spanische Orte, sortiert",
+     "nach Google-Bewertungen."
+    ],
+    "detail": "Bewertungen in Ihrer Sprache stehen zuerst."
+   },
+   {
+    "label": "Was kostet es?",
+    "fact": [
+     "Es ist kostenlos, und keiner",
+     "zahlt für bessere Plätze."
+    ],
+    "detail": "Es gibt keine Gebühr für einen Eintrag."
+   }
+  ],
+  "brand": "247"
+ },
+ "who-does-what": {
+  "slug": "who-does-what",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · WER MACHT WAS",
+  "headline": [
+   "Vier spanische Titel, die",
+   "nicht dasselbe bedeuten."
+  ],
+  "rows": [
+   {
+    "label": "Abogado?",
+    "fact": [
+     "Das ist ein Anwalt, der",
+     "Ihren Fall führt."
+    ],
+    "detail": "Ein procurador steht ihm vor Gericht zur Seite."
+   },
+   {
+    "label": "Gestoria?",
+    "fact": [
+     "Sie erledigt Anträge und",
+     "Papierkram, nicht Gericht."
+    ],
+    "detail": "Die falsche Wahl kostet meist zwei Wochen."
+   },
+   {
+    "label": "Administrador?",
+    "fact": [
+     "Er verwaltet die",
+     "Eigentümergemeinschaft."
+    ],
+    "detail": "Dazu gehören ihre Konten und ihre Versammlungen."
+   }
+  ],
+  "brand": "247"
+ },
+ "maintenance-is-a-year": {
+  "slug": "maintenance-is-a-year",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "24/7 SPAIN · INSTANDHALTUNG",
+  "headline": [
+   "Instandhaltung ist ein",
+   "Kalender, keine Liste."
+  ],
+  "rows": [
+   {
+    "label": "Warum das Timing?",
+    "fact": [
+     "Sonne, Salz und Winter",
+     "beschädigen Verschiedenes."
+    ],
+    "detail": "Sie tun das zu verschiedenen Zeiten im Jahr."
+   },
+   {
+    "label": "Falscher Monat?",
+    "fact": [
+     "Im falschen Monat verhindert",
+     "dieselbe Arbeit nichts."
+    ],
+    "detail": "Im richtigen Monat verhindert sie ein Problem."
+   },
+   {
+    "label": "Oft weg?",
+    "fact": [
+     "Manche Arbeiten müssen in",
+     "Ihrer Abwesenheit passieren."
+    ],
+    "detail": "Der Plan zeigt, welche das sind."
+   }
+  ],
+  "brand": "247"
+ },
+ "pests-by-property": {
+  "slug": "pests-by-property",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · SCHÄDLINGE",
+  "headline": [
+   "Drei Dinge entscheiden,",
+   "welche Schädlinge kommen."
+  ],
+  "rows": [
+   {
+    "label": "Hitze oder Garten?",
+    "fact": [
+     "Beides zieht andere",
+     "Schädlinge an."
+    ],
+    "detail": "Sie überschneiden sich kaum."
+   },
+   {
+    "label": "Leer gelassen?",
+    "fact": [
+     "Leere Monate verbergen",
+     "Probleme bis Ostern."
+    ],
+    "detail": "Dann ist der richtige Moment schon vorbei."
+   },
+   {
+    "label": "Selbst oder Profi?",
+    "fact": [
+     "Manche Schädlinge sind ein",
+     "Anruf, kein Samstagsprojekt."
+    ],
+    "detail": "Der Plan zeigt, welche nichts für Eigentümer sind."
+   }
+  ],
+  "brand": "247"
+ }
+}

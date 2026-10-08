@@ -1,0 +1,1112 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "slug": "bueno-rented-part-of-the-year",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · RENTAL TAX",
+  "headline": [
+   "Part-year lets need",
+   "two kinds of return."
+  ],
+  "rows": [
+   {
+    "label": "Which return?",
+    "fact": [
+     "Rented weeks are",
+     "declared as rental income."
+    ],
+    "detail": "Empty weeks use the cadastral value instead."
+   },
+   {
+    "label": "When is it due?",
+    "fact": [
+     "The last quarterly return",
+     "is due 1 to 20 October."
+    ],
+    "detail": "From 2026, rent goes into one return in April."
+   },
+   {
+    "label": "What about costs?",
+    "fact": [
+     "EU and EEA residents",
+     "can deduct expenses."
+    ],
+    "detail": "Everyone else is taxed on the gross rent."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "imputed-income-empty-home": {
+  "slug": "imputed-income-empty-home",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · IMPUTED INCOME",
+  "headline": [
+   "An empty home still",
+   "needs a tax return."
+  ],
+  "rows": [
+   {
+    "label": "Why tax it?",
+    "fact": [
+     "Spain treats a second home",
+     "as if it earned income."
+    ],
+    "detail": "That applies even if you never rent it out."
+   },
+   {
+    "label": "What is the base?",
+    "fact": [
+     "It is the cadastral value",
+     "printed on your IBI bill."
+    ],
+    "detail": "It is not the price you paid or its worth today."
+   },
+   {
+    "label": "What can I deduct?",
+    "fact": [
+     "Nothing comes off it,",
+     "not even the IBI itself."
+    ],
+    "detail": "The rate is 19% in the EU and EEA, 24% elsewhere."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-year-end-return": {
+  "slug": "bueno-year-end-return",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · NON-RESIDENT TAX",
+  "headline": [
+   "Your 2025 return is due",
+   "by 31 December."
+  ],
+  "rows": [
+   {
+    "label": "Who has to file?",
+    "fact": [
+     "You file even if the",
+     "home was never rented."
+    ],
+    "detail": "It is the non-resident return on form 210."
+   },
+   {
+    "label": "What is the rate?",
+    "fact": [
+     "It is 19% in the EU",
+     "and 24% for the rest."
+    ],
+    "detail": "Norway, Iceland and Liechtenstein pay 19%."
+   },
+   {
+    "label": "What does it cost?",
+    "fact": [
+     "Bueno files it for you,",
+     "starting from €50."
+    ],
+    "detail": "The price depends on how many owners there are."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "late-filing-two-regimes": {
+  "slug": "late-filing-two-regimes",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · LATE FILING",
+  "headline": [
+   "Late with form 210?",
+   "Check the post first."
+  ],
+  "rows": [
+   {
+    "label": "Filed on your own?",
+    "fact": [
+     "It costs 1% plus 1% for",
+     "each full month late."
+    ],
+    "detail": "From month 13 it is a flat 15% plus interest."
+   },
+   {
+    "label": "Is there a penalty?",
+    "fact": [
+     "No. The surcharge",
+     "replaces the penalty."
+    ],
+    "detail": "A 25% cut applies if you pay within the window."
+   },
+   {
+    "label": "Had a letter?",
+    "fact": [
+     "After a demand, these",
+     "rules no longer apply."
+    ],
+    "detail": "That is a different regime altogether."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-ibi-is-not-this": {
+  "slug": "bueno-ibi-is-not-this",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · TWO DIFFERENT TAXES",
+  "headline": [
+   "IBI is not your",
+   "non-resident tax."
+  ],
+  "rows": [
+   {
+    "label": "What is IBI?",
+    "fact": [
+     "IBI is the local tax",
+     "paid to your town hall."
+    ],
+    "detail": "Most owners already pay it by direct debit."
+   },
+   {
+    "label": "What is form 210?",
+    "fact": [
+     "Form 210 is national,",
+     "and nobody bills you."
+    ],
+    "detail": "You declare it every year, even for an empty home."
+   },
+   {
+    "label": "What is it based on?",
+    "fact": [
+     "It uses the cadastral",
+     "value on your IBI bill."
+    ],
+    "detail": "Bueno files it for owners abroad from €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "quarterly-rental-filing-ends": {
+  "slug": "quarterly-rental-filing-ends",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · RENTAL INCOME",
+  "headline": [
+   "Quarterly rental returns",
+   "end this October."
+  ],
+  "rows": [
+   {
+    "label": "Which is the last?",
+    "fact": [
+     "Q3 2026 is due between",
+     "1 and 20 October 2026."
+    ],
+    "detail": "It is the last quarterly rental return."
+   },
+   {
+    "label": "What comes next?",
+    "fact": [
+     "Rent from 1 October goes",
+     "into one annual return."
+    ],
+    "detail": "That return is filed in the first 20 days of April."
+   },
+   {
+    "label": "When do I file next?",
+    "fact": [
+     "Your next filing is in",
+     "April 2027, not January."
+    ],
+    "detail": "It is worth putting in the calendar now."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-two-owners-two-returns": {
+  "slug": "bueno-two-owners-two-returns",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · SHARED OWNERSHIP",
+  "headline": [
+   "Two owners means",
+   "two tax returns."
+  ],
+  "rows": [
+   {
+    "label": "Who files?",
+    "fact": [
+     "Each owner declares",
+     "their own share."
+    ],
+    "detail": "Half each means each return uses half the value."
+   },
+   {
+    "label": "Inherited by three?",
+    "fact": [
+     "Three siblings who inherit",
+     "file three returns."
+    ],
+    "detail": "The work is per owner, so the price is too."
+   },
+   {
+    "label": "What does it cost?",
+    "fact": [
+     "Bueno files each one,",
+     "starting from €50."
+    ],
+    "detail": "We prepare and file a form 210 for every owner."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "eu-eea-deductions": {
+  "slug": "eu-eea-deductions",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · RENTAL DEDUCTIONS",
+  "headline": [
+   "Same flat, same rent,",
+   "a very different tax."
+  ],
+  "rows": [
+   {
+    "label": "Do you live in the EU?",
+    "fact": [
+     "You deduct your costs",
+     "and pay 19% on the rest."
+    ],
+    "detail": "Norway, Iceland and Liechtenstein count too."
+   },
+   {
+    "label": "Anywhere else?",
+    "fact": [
+     "You pay 24% on the",
+     "gross rent."
+    ],
+    "detail": "No deductions are allowed at all."
+   },
+   {
+    "label": "What counts?",
+    "fact": [
+     "Fees, insurance, repairs",
+     "and mortgage interest."
+    ],
+    "detail": "Many owners claim only a few of them."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-what-goes-into-it": {
+  "slug": "bueno-what-goes-into-it",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · FORM 210, SIMPLY",
+  "headline": [
+   "Three numbers decide",
+   "your return."
+  ],
+  "rows": [
+   {
+    "label": "What is the base?",
+    "fact": [
+     "It is the cadastral value",
+     "on your IBI receipt."
+    ],
+    "detail": "It is not the price you paid or the market value."
+   },
+   {
+    "label": "What percentage?",
+    "fact": [
+     "The 2025 return uses 1.1%",
+     "if values were revised."
+    ],
+    "detail": "That applies to revisions from 2012 onwards."
+   },
+   {
+    "label": "Which tax rate?",
+    "fact": [
+     "It is 19% in the EU and",
+     "the EEA, 24% elsewhere."
+    ],
+    "detail": "Norway, Iceland and Liechtenstein count as EEA."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "three-percent-retention": {
+  "slug": "three-percent-retention",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · SELLING",
+  "headline": [
+   "The 3% on a sale",
+   "is not a tax."
+  ],
+  "rows": [
+   {
+    "label": "What is it?",
+    "fact": [
+     "The buyer holds back 3%",
+     "of the agreed price."
+    ],
+    "detail": "It is paid on modelo 211 within one month."
+   },
+   {
+    "label": "What is the real tax?",
+    "fact": [
+     "Capital gains tax is",
+     "19% of the gain."
+    ],
+    "detail": "That is 19% for everyone, wherever you live."
+   },
+   {
+    "label": "Paid too much?",
+    "fact": [
+     "The difference comes",
+     "back to you."
+    ],
+    "detail": "The claim opens one month after completion."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-direct-debit-date": {
+  "slug": "bueno-direct-debit-date",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · ONE DATE TO KNOW",
+  "headline": [
+   "Direct debit closes",
+   "on 23 December."
+  ],
+  "rows": [
+   {
+    "label": "Filing deadline?",
+    "fact": [
+     "You can file the 2025",
+     "return until 31 December."
+    ],
+    "detail": "Paying by direct debit stops eight days earlier."
+   },
+   {
+    "label": "What goes wrong?",
+    "fact": [
+     "Late filers assume the",
+     "payment will be collected."
+    ],
+    "detail": "After 23 December you have to pay another way."
+   },
+   {
+    "label": "How to avoid it?",
+    "fact": [
+     "Do not leave it to",
+     "the last week of the year."
+    ],
+    "detail": "Bueno files the return for owners abroad from €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "plusvalia-two-methods": {
+  "slug": "plusvalia-two-methods",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · PLUSVALIA",
+  "headline": [
+   "Plusvalia has two",
+   "methods, and you pick."
+  ],
+  "rows": [
+   {
+    "label": "Which method?",
+    "fact": [
+     "The lower of objective",
+     "and real gain applies."
+    ],
+    "detail": "Objective uses land value and years owned."
+   },
+   {
+    "label": "What if no gain?",
+    "fact": [
+     "If there was no increase,",
+     "there is nothing to pay."
+    ],
+    "detail": "You still declare the sale with both deeds."
+   },
+   {
+    "label": "What is the deadline?",
+    "fact": [
+     "Thirty working days",
+     "from the date of the deed."
+    ],
+    "detail": "Rates and forms vary by town hall."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-why-from-fifty": {
+  "slug": "bueno-why-from-fifty",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · WHY IT COSTS LESS",
+  "headline": [
+   "We file your return",
+   "from €50. Here is why."
+  ],
+  "rows": [
+   {
+    "label": "What changes?",
+    "fact": [
+     "Very little changes",
+     "from one year to the next."
+    ],
+    "detail": "Same owners, same home, same cadastral value."
+   },
+   {
+    "label": "What do we keep?",
+    "fact": [
+     "We store last year's form",
+     "and pre-fill this one."
+    ],
+    "detail": "What is left is checking what changed."
+   },
+   {
+    "label": "How is it priced?",
+    "fact": [
+     "The price depends on",
+     "the number of owners."
+    ],
+    "detail": "A couple means two returns."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "iva-holiday-let": {
+  "slug": "iva-holiday-let",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · HOLIDAY LETS",
+  "headline": [
+   "IVA depends on services,",
+   "not the length of stay."
+  ],
+  "rows": [
+   {
+    "label": "No services?",
+    "fact": [
+     "A plain holiday let",
+     "is exempt from IVA."
+    ],
+    "detail": "Hotel type means services during the stay."
+   },
+   {
+    "label": "Hotel services?",
+    "fact": [
+     "Hotel type services",
+     "make it 10% IVA."
+    ],
+    "detail": "Think daily cleaning, reception or breakfast."
+   },
+   {
+    "label": "When is it 21%?",
+    "fact": [
+     "21% applies to what is",
+     "neither of the two."
+    ],
+    "detail": "Who the guest books through can change it."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-included-in-select": {
+  "slug": "bueno-included-in-select",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · ALREADY A MEMBER?",
+  "headline": [
+   "Your tax return may",
+   "already be included."
+  ],
+  "rows": [
+   {
+    "label": "On Select?",
+    "fact": [
+     "Select, at €199 a year,",
+     "includes the tax return."
+    ],
+    "detail": "That covers up to two owners and two homes."
+   },
+   {
+    "label": "Letting it out?",
+    "fact": [
+     "Premium, at €299 a year,",
+     "adds the rental return."
+    ],
+    "detail": "That is also for up to two owners."
+   },
+   {
+    "label": "On Standard?",
+    "fact": [
+     "You can still have it",
+     "filed from €50."
+    ],
+    "detail": "The 2025 return can be filed until 31 December."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "what-a-year-actually-costs": {
+  "slug": "what-a-year-actually-costs",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · COST OF OWNING",
+  "headline": [
+   "Do you know what your",
+   "home costs each year?"
+  ],
+  "rows": [
+   {
+    "label": "Why is it hard?",
+    "fact": [
+     "Bills arrive one by one",
+     "from six or seven places."
+    ],
+    "detail": "No single one gets a morning of your time."
+   },
+   {
+    "label": "What adds up?",
+    "fact": [
+     "Standing charges, IBI,",
+     "insurance and fees add up."
+    ],
+    "detail": "A few hundred euros can go unnoticed for years."
+   },
+   {
+    "label": "What helps?",
+    "fact": [
+     "Put the whole year",
+     "in one column."
+    ],
+    "detail": "Then compare it with similar homes."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-never-filed": {
+  "slug": "bueno-never-filed",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · LATE BUT FIXABLE",
+  "headline": [
+   "Never filed? It can",
+   "still be put right."
+  ],
+  "rows": [
+   {
+    "label": "What does it cost?",
+    "fact": [
+     "The surcharge starts at 1%",
+     "plus 1% per full month."
+    ],
+    "detail": "That applies when you file before being asked."
+   },
+   {
+    "label": "After a year?",
+    "fact": [
+     "From month 13 it is a flat",
+     "15% plus interest."
+    ],
+    "detail": "The surcharge takes the place of a penalty."
+   },
+   {
+    "label": "Can Bueno help?",
+    "fact": [
+     "Tell us which years are",
+     "open and we will quote."
+    ],
+    "detail": "We file the return for owners outside Spain."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "pre-2019-mortgage-costs": {
+  "slug": "pre-2019-mortgage-costs",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · OLDER MORTGAGES",
+  "headline": [
+   "Mortgage from 2000 to",
+   "2019? Read the costs."
+  ],
+  "rows": [
+   {
+    "label": "Set up fees?",
+    "fact": [
+     "Some fees were charged",
+     "entirely to the borrower."
+    ],
+    "detail": "These come up again and again in that period."
+   },
+   {
+    "label": "Floor clause?",
+    "fact": [
+     "A floor stopped your",
+     "rate falling further."
+    ],
+    "detail": "Insurance sold with the loan is the third one."
+   },
+   {
+    "label": "Still in time?",
+    "fact": [
+     "That depends on the claim",
+     "and needs an abogado."
+    ],
+    "detail": "The page shows if it is worth asking at all."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-form-changes-2027": {
+  "slug": "bueno-form-changes-2027",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · WHAT IS CHANGING",
+  "headline": [
+   "Form 210 changes",
+   "in January 2027."
+  ],
+  "rows": [
+   {
+    "label": "What is new?",
+    "fact": [
+     "New fields ask for days",
+     "available and your share."
+    ],
+    "detail": "They apply to every return filed from 1 January."
+   },
+   {
+    "label": "When can I file?",
+    "fact": [
+     "The 2026 return opens",
+     "on 1 April 2027."
+    ],
+    "detail": "It stays open until 31 December 2027."
+   },
+   {
+    "label": "Who keeps up?",
+    "fact": [
+     "Bueno tracks the changes",
+     "so you do not have to."
+    ],
+    "detail": "We file form 210 for owners abroad from €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "legal-cover-you-already-pay-for": {
+  "slug": "legal-cover-you-already-pay-for",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · LEGAL COVER",
+  "headline": [
+   "Your home policy may",
+   "pay for your lawyer."
+  ],
+  "rows": [
+   {
+    "label": "What is it?",
+    "fact": [
+     "Defensa juridica pays",
+     "lawyer and court costs."
+    ],
+    "detail": "It must be its own chapter with its own premium."
+   },
+   {
+    "label": "Whose lawyer?",
+    "fact": [
+     "You choose your own",
+     "lawyer, not theirs."
+    ],
+    "detail": "The policy has to state that right clearly."
+   },
+   {
+    "label": "What next?",
+    "fact": [
+     "Check the policy before",
+     "paying a lawyer yourself."
+    ],
+    "detail": "The Spanish phrases to search for are listed."
+   }
+  ],
+  "brand": "247"
+ },
+ "ninety-days": {
+  "slug": "ninety-days",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "24/7 SPAIN · THE 90 DAY RULE",
+  "headline": [
+   "It is 90 days in any",
+   "rolling 180."
+  ],
+  "rows": [
+   {
+    "label": "Is it per year?",
+    "fact": [
+     "No. The window rolls and",
+     "is not a calendar year."
+    ],
+    "detail": "Last October can still count against you in May."
+   },
+   {
+    "label": "Do travel days count?",
+    "fact": [
+     "Arrival and departure",
+     "both count as full days."
+    ],
+    "detail": "A long weekend uses four days, not two."
+   },
+   {
+    "label": "How do I check?",
+    "fact": [
+     "Add past and booked trips",
+     "to see what is left."
+    ],
+    "detail": "It shows the day a trip would tip you over."
+   }
+  ],
+  "brand": "247"
+ },
+ "consorcio-storm": {
+  "slug": "consorcio-storm",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · STORM DAMAGE",
+  "headline": [
+   "After a storm, who",
+   "do you phone?"
+  ],
+  "rows": [
+   {
+    "label": "Who pays?",
+    "fact": [
+     "Some damage is paid by",
+     "the Consorcio instead."
+    ],
+    "detail": "Floods, earthquakes and atypical storms count."
+   },
+   {
+    "label": "What wind speed?",
+    "fact": [
+     "Gusts above 120 km/h",
+     "over 3 seconds qualify."
+    ],
+    "detail": "Below that, your own insurer handles it."
+   },
+   {
+    "label": "Do I buy it?",
+    "fact": [
+     "No. It is collected with",
+     "your premium already."
+    ],
+    "detail": "Ordinary policies in qualifying lines include it."
+   }
+  ],
+  "brand": "247"
+ },
+ "community-decision-clock": {
+  "slug": "community-decision-clock",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "24/7 SPAIN · OWNERS MEETINGS",
+  "headline": [
+   "Missed the meeting?",
+   "Your clock starts later."
+  ],
+  "rows": [
+   {
+    "label": "How long do I have?",
+    "fact": [
+     "Three months, or a year",
+     "if it breaks the law."
+    ],
+    "detail": "Three months covers serious harm to owners."
+   },
+   {
+    "label": "Were you absent?",
+    "fact": [
+     "Your time starts when",
+     "you were told."
+    ],
+    "detail": "Keep the envelope or email with its date."
+   },
+   {
+    "label": "Any condition?",
+    "fact": [
+     "You must be up to date",
+     "with community fees."
+    ],
+    "detail": "Or pay the disputed amount into court."
+   }
+  ],
+  "brand": "247"
+ },
+ "builder-quote-red-flags": {
+  "slug": "builder-quote-red-flags",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · BUILDER QUOTES",
+  "headline": [
+   "Bad jobs start with",
+   "missing lines in quotes."
+  ],
+  "rows": [
+   {
+    "label": "Are there dates?",
+    "fact": [
+     "A quote needs a start",
+     "and a finish date."
+    ],
+    "detail": "Payments should follow stages, not trust."
+   },
+   {
+    "label": "Who gets the licence?",
+    "fact": [
+     "It should say who applies",
+     "for the licence."
+    ],
+    "detail": "It should also say what happens to rubble."
+   },
+   {
+    "label": "Is there a breakdown?",
+    "fact": [
+     "A single total gives",
+     "extras no baseline."
+    ],
+    "detail": "The page lists twelve questions to ask."
+   }
+  ],
+  "brand": "247"
+ },
+ "leaving-it-empty": {
+  "slug": "leaving-it-empty",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "24/7 SPAIN · CLOSING UP",
+  "headline": [
+   "Locking up for winter?",
+   "Three things matter."
+  ],
+  "rows": [
+   {
+    "label": "How long away?",
+    "fact": [
+     "How long you are away",
+     "changes the list."
+    ],
+    "detail": "So does the season you leave in."
+   },
+   {
+    "label": "Anyone visiting?",
+    "fact": [
+     "Someone looking in",
+     "changes it too."
+    ],
+    "detail": "It matters more than the size of the home."
+   },
+   {
+    "label": "Is it still a home?",
+    "fact": [
+     "A second home counts",
+     "as a morada in law."
+    ],
+    "detail": "That holds if you still use it, even occasionally."
+   }
+  ],
+  "brand": "247"
+ },
+ "utilities-in-order": {
+  "slug": "utilities-in-order",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · UTILITIES",
+  "headline": [
+   "Utilities are five jobs,",
+   "and order matters."
+  ],
+  "rows": [
+   {
+    "label": "Which five?",
+    "fact": [
+     "Electricity, water, gas,",
+     "internet and the council."
+    ],
+    "detail": "Each one has its own office and form."
+   },
+   {
+    "label": "Which form?",
+    "fact": [
+     "The NIE application",
+     "is form EX-15."
+    ],
+    "detail": "The EX-18 is a different procedure."
+   },
+   {
+    "label": "What is the fee?",
+    "fact": [
+     "Assigning a NIE costs",
+     "9.84 euros."
+    ],
+    "detail": "Know that before someone quotes you more."
+   }
+  ],
+  "brand": "247"
+ },
+ "tradesperson-in-your-language": {
+  "slug": "tradesperson-in-your-language",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "24/7 SPAIN · TRADES DIRECTORY",
+  "headline": [
+   "Find a plumber who",
+   "speaks your language."
+  ],
+  "rows": [
+   {
+    "label": "Which trades?",
+    "fact": [
+     "Plumbers, electricians,",
+     "locksmiths and builders."
+    ],
+    "detail": "Air conditioning and pool service are there too."
+   },
+   {
+    "label": "Where?",
+    "fact": [
+     "660 Spanish towns, ranked",
+     "from Google reviews."
+    ],
+    "detail": "Reviews in your language come first."
+   },
+   {
+    "label": "What does it cost?",
+    "fact": [
+     "It is free, and nobody",
+     "pays to rank higher."
+    ],
+    "detail": "There is no listing fee."
+   }
+  ],
+  "brand": "247"
+ },
+ "who-does-what": {
+  "slug": "who-does-what",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · WHO DOES WHAT",
+  "headline": [
+   "Four Spanish titles that",
+   "are not the same job."
+  ],
+  "rows": [
+   {
+    "label": "Abogado?",
+    "fact": [
+     "A lawyer who",
+     "runs your case."
+    ],
+    "detail": "A procurador stands beside them in court."
+   },
+   {
+    "label": "Gestoria?",
+    "fact": [
+     "It handles filings and",
+     "paperwork, not court."
+    ],
+    "detail": "Picking wrong usually costs a fortnight."
+   },
+   {
+    "label": "Administrador?",
+    "fact": [
+     "It runs the community",
+     "of owners."
+    ],
+    "detail": "That covers its accounts and its meetings."
+   }
+  ],
+  "brand": "247"
+ },
+ "maintenance-is-a-year": {
+  "slug": "maintenance-is-a-year",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "24/7 SPAIN · MAINTENANCE",
+  "headline": [
+   "Maintenance is a",
+   "calendar, not a list."
+  ],
+  "rows": [
+   {
+    "label": "Why timing?",
+    "fact": [
+     "Sun, salt and winter break",
+     "different things."
+    ],
+    "detail": "They break them at different times of year."
+   },
+   {
+    "label": "Wrong month?",
+    "fact": [
+     "The same job in the wrong",
+     "month prevents nothing."
+    ],
+    "detail": "In the right month it prevents a problem."
+   },
+   {
+    "label": "Away a lot?",
+    "fact": [
+     "Some jobs must happen",
+     "while you are away."
+    ],
+    "detail": "The schedule shows which ones those are."
+   }
+  ],
+  "brand": "247"
+ },
+ "pests-by-property": {
+  "slug": "pests-by-property",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · PESTS",
+  "headline": [
+   "Three things decide",
+   "which pests you get."
+  ],
+  "rows": [
+   {
+    "label": "Heat or garden?",
+    "fact": [
+     "Each one attracts",
+     "different pests."
+    ],
+    "detail": "They barely overlap at all."
+   },
+   {
+    "label": "Left empty?",
+    "fact": [
+     "Empty months hide",
+     "problems until Easter."
+    ],
+    "detail": "By then the useful moment has passed."
+   },
+   {
+    "label": "DIY or a call?",
+    "fact": [
+     "Some pests are a phone",
+     "call, not a Saturday."
+    ],
+    "detail": "The plan says which ones are not for owners."
+   }
+  ],
+  "brand": "247"
+ }
+}

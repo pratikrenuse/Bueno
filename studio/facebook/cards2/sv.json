@@ -1,0 +1,412 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "template": "question",
+  "photo": "g09.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Jag hyrde ut i somras och",
+   "sedan stod det tomt.",
+   "Vilken deklaration gäller?"
+  ],
+  "sub": "Du lämnar in båda sorterna, på samma blankett 210.",
+  "items": [
+   "Du deklarerar hyran för veckorna det var uthyrt.",
+   "För de tomma veckorna deklarerar du en inkomst som räknas fram ur taxeringsvärdet."
+  ]
+ },
+ "imputed-income-empty-home": {
+  "template": "fullbleed",
+  "photo": "g04.jpg",
+  "brand": "247",
+  "eyebrow": "Schablonintäkt",
+  "headline": [
+   "Ett hus du aldrig hyr ut",
+   "kan ändå ge skatt."
+  ],
+  "sub": "Den bygger på taxeringsvärdet på din IBI-avi, och ingenting får dras av."
+ },
+ "bueno-year-end-return": {
+  "template": "date",
+  "photo": "g03.jpg",
+  "brand": "bueno",
+  "big_label": "Deklarera för 2025 senast",
+  "big": "31 december",
+  "headline": "Du deklarerar även om ingen hyrde.",
+  "sub": "Bueno lämnar in blankett 210 åt dig, från €50. Betalning via autogiro stänger tidigare, den 23 december."
+ },
+ "late-filing-two-regimes": {
+  "template": "split",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "eyebrow": "Sen med blankett 210",
+  "headline": [
+   "Kolla posten",
+   "innan du räknar."
+  ],
+  "items": [
+   "Att lämna in själv kostar 1 %, plus 1 % per hel månad du är sen.",
+   "Från månad 13 blir det fast 15 %, plus ränta.",
+   "Efter ett brev från skattemyndigheten gäller inte de här reglerna."
+  ],
+  "cta": "Räkna ut din summa gratis på 247spain.es."
+ },
+ "bueno-ibi-is-not-this": {
+  "template": "duotone",
+  "photo": "coast_bay.jpg",
+  "brand": "bueno",
+  "eyebrow": "IBI och blankett 210",
+  "headline": [
+   "Jag betalar ju IBI.",
+   "Är det min spanska skatt?"
+  ],
+  "sub": "Nej. Blankett 210 är en separat deklaration.",
+  "items": [
+   "IBI är den lokala skatten som går till kommunen.",
+   "Blankett 210 är statlig, och ingen skickar en räkning.",
+   "Den räknas fram ur taxeringsvärdet på IBI-avin."
+  ],
+  "cta": "Vi lämnar in den åt dig, från €50."
+ },
+ "quarterly-rental-filing-ends": {
+  "template": "pills",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "headline": [
+   "Den sista kvartalsdeklarationen",
+   "ska in senast 20 oktober."
+  ],
+  "items": [
+   "Hyra från 1 oktober går in i en årsdeklaration.",
+   "Nästa gång du deklarerar är i april 2027."
+  ],
+  "cta": "Kolla din gratis på 247spain.es."
+ },
+ "bueno-two-owners-two-returns": {
+  "template": "question",
+  "photo": "g06.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Vi äger stället tillsammans.",
+   "Blir det en deklaration,",
+   "eller en var?"
+  ],
+  "sub": "Varje ägare lämnar in sin egen blankett 210.",
+  "items": [
+   "Äger ni hälften var använder varje deklaration halva taxeringsvärdet.",
+   "Bueno lämnar in en blankett 210 för varje ägare, från €50."
+  ]
+ },
+ "eu-eea-deductions": {
+  "template": "fullbleed",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "eyebrow": "Avdrag vid uthyrning",
+  "headline": [
+   "Samma bostad, samma hyra,",
+   "en annan skatteräkning."
+  ],
+  "sub": "I EU och EES drar du av kostnader och betalar 19 %. På andra håll är det 24 % på bruttohyran."
+ },
+ "bueno-what-goes-into-it": {
+  "template": "date",
+  "photo": "g10.jpg",
+  "brand": "bueno",
+  "big_label": "Reviderat värde ger för 2025",
+  "big": "1,1 %",
+  "headline": "Fyra uppgifter är hela din deklaration.",
+  "sub": "Vi behöver ditt taxeringsvärde, din andel och var du har din skattehemvist. Bueno lämnar in den från €50."
+ },
+ "three-percent-retention": {
+  "template": "split",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "eyebrow": "Att sälja i Spanien",
+  "headline": [
+   "De 3 procenten",
+   "är inte skatten."
+  ],
+  "items": [
+   "Köparen håller inne 3 % av priset och betalar in det på modelo 211.",
+   "Din riktiga kapitalvinstskatt är 19 % av vinsten, för alla.",
+   "Var 3 % mer än du är skyldig får du tillbaka mellanskillnaden."
+  ],
+  "cta": "Räkna ut din återbetalning gratis på 247spain.es."
+ },
+ "bueno-direct-debit-date": {
+  "template": "duotone",
+  "photo": "g01.jpg",
+  "brand": "bueno",
+  "eyebrow": "Betalning för 2025",
+  "headline": [
+   "Autogirot stänger",
+   "den 23 december."
+  ],
+  "sub": "Själva deklarationen är öppen till 31 december.",
+  "items": [
+   "Autogirot stänger åtta dagar före deklarationen.",
+   "Efter det måste du betala skatten på annat sätt.",
+   "Det hjälper att inte vänta till sista veckan."
+  ],
+  "cta": "Vi lämnar in den åt dig, från €50."
+ },
+ "plusvalia-two-methods": {
+  "template": "pills",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "headline": [
+   "Plusvalia har två metoder,",
+   "och du får välja den lägsta."
+  ],
+  "items": [
+   "Blev det ingen ökning finns det inget att betala.",
+   "Du har trettio arbetsdagar från köpebrevet."
+  ],
+  "cta": "Kolla din gratis på 247spain.es."
+ },
+ "bueno-why-from-fifty": {
+  "template": "question",
+  "photo": "g05.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Varför deklarerar Bueno",
+   "från €50 när jag fått",
+   "offerter på några hundra?"
+  ],
+  "sub": "Väldigt lite ändras från ett år till nästa.",
+  "items": [
+   "Vi sparar förra årets blankett och gör ett utkast av årets.",
+   "Priset beror på antalet ägare, så ett par blir två deklarationer."
+  ]
+ },
+ "iva-holiday-let": {
+  "template": "fullbleed",
+  "photo": "marina.jpg",
+  "brand": "247",
+  "eyebrow": "IVA och semesterhyra",
+  "headline": [
+   "Det beror på tjänsterna,",
+   "inte på vistelsens längd."
+  ],
+  "sub": "Utan tjänster är semesteruthyrning undantagen. Hotelliknande tjänster under vistelsen ger 10 %."
+ },
+ "bueno-included-in-select": {
+  "template": "date",
+  "photo": "g02.jpg",
+  "brand": "bueno",
+  "big_label": "Deklarera för 2025 senast",
+  "big": "31 december",
+  "headline": "Med Select ingår den redan.",
+  "sub": "Select kostar €199 per år och täcker upp till två ägare och två bostäder. Med Standard kostar deklarationen från €50."
+ },
+ "what-a-year-actually-costs": {
+  "template": "split",
+  "photo": "poolside.jpg",
+  "brand": "247",
+  "eyebrow": "Vad det kostar att behålla",
+  "headline": [
+   "Vad kostar min",
+   "bostad per år?"
+  ],
+  "items": [
+   "Räkningarna kommer en i taget, från sex eller sju håll.",
+   "Ingen enskild räkning får en förmiddag av någons tid.",
+   "Samla hela året i en kolumn och jämför."
+  ],
+  "cta": "Räkna ihop din gratis på 247spain.es."
+ },
+ "bueno-never-filed": {
+  "template": "duotone",
+  "photo": "g00.jpg",
+  "brand": "bueno",
+  "eyebrow": "Aldrig deklarerat",
+  "headline": [
+   "Aldrig deklarerat?",
+   "Det går att rätta till."
+  ],
+  "sub": "Deklarerar du före ett brev blir det bara ett tillägg.",
+  "items": [
+   "Det börjar på 1 % plus 1 % per hel månad.",
+   "Från månad 13 är det fast 15 % plus ränta.",
+   "Tillägget ersätter en sanktionsavgift."
+  ],
+  "cta": "Berätta vilka år, så ger vi en offert."
+ },
+ "pre-2019-mortgage-costs": {
+  "template": "pills",
+  "photo": "g09.jpg",
+  "brand": "247",
+  "headline": [
+   "Bolån från 2000 till 2019?",
+   "Kostnaderna är värda att läsa."
+  ],
+  "items": [
+   "Vissa uppläggningsavgifter lades på låntagaren.",
+   "En abogado avgör om ett anspråk fortfarande är i tid."
+  ],
+  "cta": "Uppskatta ditt gratis på 247spain.es."
+ },
+ "bueno-form-changes-2027": {
+  "template": "question",
+  "photo": "g04.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Jag deklarerar själv.",
+   "Vad ändras i blankett 210",
+   "från januari 2027?"
+  ],
+  "sub": "Den får nya fält och en senare period.",
+  "items": [
+   "Den frågar efter tillgängliga dagar och din ägarandel.",
+   "Deklarationen för 2026 öppnar 1 april 2027 och pågår till 31 december."
+  ]
+ },
+ "legal-cover-you-already-pay-for": {
+  "template": "fullbleed",
+  "photo": "g03.jpg",
+  "brand": "247",
+  "eyebrow": "Rättsskydd i försäkringen",
+  "headline": [
+   "Din hemförsäkring kan",
+   "betala din advokat."
+  ],
+  "sub": "Leta efter defensa juridica. Du har rätt att välja din egen advokat."
+ },
+ "ninety-days": {
+  "template": "date",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "big_label": "Du kan stanna i upp till",
+  "big": "90 dagar",
+  "headline": "Det gäller inom rullande 180 dagar.",
+  "sub": "Dagen du landar och dagen du flyger hem räknas båda. En långhelg använder fyra dagar, inte två."
+ },
+ "consorcio-storm": {
+  "template": "split",
+  "photo": "coast_bay.jpg",
+  "brand": "247",
+  "eyebrow": "Stormskador",
+  "headline": [
+   "Vem ringer jag",
+   "efter en storm?"
+  ],
+  "items": [
+   "Viss skada betalas av Consorcio, inte ditt försäkringsbolag.",
+   "Vinden räknas när byarna passerar 120 km/h under tre sekunder.",
+   "Tillägget tas redan ut med din premie."
+  ],
+  "cta": "Kolla din gratis på 247spain.es."
+ },
+ "community-decision-clock": {
+  "template": "duotone",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "eyebrow": "Ägarstämmor",
+  "headline": [
+   "Jag missade stämman.",
+   "Hur lång tid har jag?"
+  ],
+  "sub": "Du har tre månader, eller ett år om det strider mot lag.",
+  "items": [
+   "Var du frånvarande startar klockan när du fick beskedet.",
+   "Spara kuvertet eller mejlet med datumet på.",
+   "Oftast måste du vara i fas med avgifterna till samfälligheten."
+  ],
+  "cta": "Kolla dina datum gratis på 247spain.es."
+ },
+ "builder-quote-red-flags": {
+  "template": "pills",
+  "photo": "g06.jpg",
+  "brand": "247",
+  "headline": [
+   "Byggaren skickade en offert.",
+   "Vad ska den innehålla?"
+  ],
+  "items": [
+   "Den ska ange ett startdatum och ett slutdatum.",
+   "Betalningarna ska följa arbetets etapper."
+  ],
+  "cta": "Kolla den gratis på 247spain.es."
+ },
+ "leaving-it-empty": {
+  "template": "question",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "headline": [
+   "Jag låser för vintern.",
+   "Vad behöver jag göra",
+   "innan jag åker?"
+  ],
+  "sub": "Det beror på tre saker, inte på storleken.",
+  "items": [
+   "Hur länge du är borta och när på året du åker ändrar båda listan.",
+   "Det gör också om någon tittar till stället medan du är borta."
+  ]
+ },
+ "utilities-in-order": {
+  "template": "fullbleed",
+  "photo": "g10.jpg",
+  "brand": "247",
+  "eyebrow": "El, vatten och NIE",
+  "headline": [
+   "Abonnemangen är fem jobb,",
+   "och ordningen spelar roll."
+  ],
+  "sub": "Börjar du med fel får du vänta. Ansökan om NIE görs på blankett EX-15, och avgiften är €9,84."
+ },
+ "tradesperson-in-your-language": {
+  "template": "date",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "big_label": "Hantverkare på ditt språk i",
+  "big": "660 orter",
+  "headline": "Omdömen på ditt språk kommer först.",
+  "sub": "Rörmokare, elektriker, låssmeder och byggare rankas utifrån omdömen. Det är gratis, och ingen betalar för att hamna högre."
+ },
+ "who-does-what": {
+  "template": "split",
+  "photo": "g01.jpg",
+  "brand": "247",
+  "eyebrow": "Vem gör vad i Spanien",
+  "headline": [
+   "Fyra titlar som",
+   "inte är samma jobb."
+  ],
+  "items": [
+   "En abogado är advokat och driver ditt ärende.",
+   "En gestoría sköter inlämningar och pappersarbete, och går inte till domstol.",
+   "En administrador de fincas driver samfälligheten."
+  ],
+  "cta": "Se vem som gör vad gratis på 247spain.es."
+ },
+ "maintenance-is-a-year": {
+  "template": "duotone",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "eyebrow": "Underhåll",
+  "headline": [
+   "Underhåll är en kalender,",
+   "inte en lista med jobb."
+  ],
+  "sub": "Samma jobb i fel månad förebygger ingenting.",
+  "items": [
+   "Sol, salt och vinter förstör olika saker.",
+   "De gör det vid olika tider på året.",
+   "Vissa jobb måste göras medan du är borta."
+  ],
+  "cta": "Få ditt schema gratis på 247spain.es."
+ },
+ "pests-by-property": {
+  "template": "pills",
+  "photo": "g05.jpg",
+  "brand": "247",
+  "headline": [
+   "Vilka skadedjur",
+   "kan jag vänta mig här?"
+  ],
+  "items": [
+   "Värme, trädgårdar och tomma månader lockar olika skadedjur.",
+   "Vissa är ett telefonsamtal, inte ett lördagsjobb."
+  ],
+  "cta": "Se din plan gratis på 247spain.es."
+ }
+}

@@ -1,0 +1,412 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "template": "question",
+  "photo": "g09.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Jeg leide den ut i sommer,",
+   "og ellers sto den tom.",
+   "Hvilken skal jeg levere?"
+  ],
+  "sub": "Du leverer begge typer, på samme skjema 210.",
+  "items": [
+   "Du oppgir leien for ukene den var utleid.",
+   "For de tomme ukene oppgir du en inntekt beregnet ut fra katastralverdien."
+  ]
+ },
+ "imputed-income-empty-home": {
+  "template": "fullbleed",
+  "photo": "g04.jpg",
+  "brand": "247",
+  "eyebrow": "Imputert inntekt",
+  "headline": [
+   "Du kan skylde skatt på",
+   "en bolig du aldri leier."
+  ],
+  "sub": "Den beregnes ut fra katastralverdien på IBI-regningen din, og ingenting kan trekkes fra."
+ },
+ "bueno-year-end-return": {
+  "template": "date",
+  "photo": "g03.jpg",
+  "brand": "bueno",
+  "big_label": "Frist for 2025-meldingen er",
+  "big": "31. desember",
+  "headline": "Du leverer selv om ingen leide den.",
+  "sub": "Bueno leverer skjema 210 for deg, fra €50. Betaling med direkte belastning stenger tidligere, 23. desember."
+ },
+ "late-filing-two-regimes": {
+  "template": "split",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "eyebrow": "Forsinket skjema 210",
+  "headline": [
+   "Sjekk posten",
+   "før du regner."
+  ],
+  "items": [
+   "Leverer du selv, koster det 1 % pluss 1 % per hele måned.",
+   "Fra måned 13 blir det flate 15 % pluss renter.",
+   "Etter et brev fra skattekontoret gjelder ikke disse reglene."
+  ],
+  "cta": "Regn ut ditt gratis på 247spain.es."
+ },
+ "bueno-ibi-is-not-this": {
+  "template": "duotone",
+  "photo": "coast_bay.jpg",
+  "brand": "bueno",
+  "eyebrow": "IBI og skjema 210",
+  "headline": [
+   "Jeg betaler jo IBI.",
+   "Er det min spanske skatt?"
+  ],
+  "sub": "Nei. Skjema 210 er en egen nasjonal skattemelding.",
+  "items": [
+   "IBI er den lokale skatten som betales til kommunen.",
+   "Skjema 210 er nasjonal, og ingen sender deg regning.",
+   "Den beregnes ut fra katastralverdien på IBI."
+  ],
+  "cta": "Vi leverer den for deg, fra €50."
+ },
+ "quarterly-rental-filing-ends": {
+  "template": "pills",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "headline": [
+   "Den siste kvartalsmeldingen",
+   "har frist 20. oktober."
+  ],
+  "items": [
+   "Leie fra 1. oktober går inn i én årlig melding.",
+   "Neste levering etter denne er i april 2027."
+  ],
+  "cta": "Sjekk gratis på 247spain.es."
+ },
+ "bueno-two-owners-two-returns": {
+  "template": "question",
+  "photo": "g06.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Vi eier boligen sammen.",
+   "Er det én skattemelding,",
+   "eller én hver?"
+  ],
+  "sub": "Hver eier leverer sitt eget skjema 210.",
+  "items": [
+   "Eier dere halvparten hver, bruker hver melding halve katastralverdien.",
+   "Bueno leverer et skjema 210 for hver eier, fra €50."
+  ]
+ },
+ "eu-eea-deductions": {
+  "template": "fullbleed",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "eyebrow": "Fradrag ved utleie",
+  "headline": [
+   "Samme bolig, samme leie,",
+   "ulik skatteregning."
+  ],
+  "sub": "I EU og EØS trekker du fra kostnader og betaler 19 %. Ellers er det 24 % av brutto leie."
+ },
+ "bueno-what-goes-into-it": {
+  "template": "date",
+  "photo": "g10.jpg",
+  "brand": "bueno",
+  "big_label": "For reviderte verdier bruker 2025",
+  "big": "1,1 %",
+  "headline": "Meldingen består av fire opplysninger.",
+  "sub": "Vi trenger katastralverdien, andelen din og hvor du er skattemessig bosatt. Bueno leverer den fra €50."
+ },
+ "three-percent-retention": {
+  "template": "split",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "eyebrow": "Salg i Spania",
+  "headline": [
+   "De 3 % ved et salg",
+   "er ikke skatten."
+  ],
+  "items": [
+   "Kjøperen holder tilbake 3 % av prisen og betaler det på modelo 211.",
+   "Den faktiske gevinstskatten er 19 % av gevinsten, for alle.",
+   "Var 3 % mer enn du skylder, får du differansen tilbake."
+  ],
+  "cta": "Regn ut refusjonen gratis på 247spain.es."
+ },
+ "bueno-direct-debit-date": {
+  "template": "duotone",
+  "photo": "g01.jpg",
+  "brand": "bueno",
+  "eyebrow": "Betaling for 2025",
+  "headline": [
+   "Direkte belastning",
+   "stenger 23. desember."
+  ],
+  "sub": "Selve leveringen er åpen frem til 31. desember.",
+  "items": [
+   "Direkte belastning stenger åtte dager før leveringen.",
+   "Etter det må du betale skatten på en annen måte.",
+   "Det hjelper å ikke vente til siste uke."
+  ],
+  "cta": "Vi leverer den for deg, fra €50."
+ },
+ "plusvalia-two-methods": {
+  "template": "pills",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "headline": [
+   "Plusvalia har to metoder,",
+   "og du kan velge den laveste."
+  ],
+  "items": [
+   "Var det ingen økning, er det ingenting å betale.",
+   "Du har tretti virkedager fra skjøtet."
+  ],
+  "cta": "Sjekk gratis på 247spain.es."
+ },
+ "bueno-why-from-fifty": {
+  "template": "question",
+  "photo": "g05.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Hvorfor leverer Bueno min",
+   "melding fra €50, når jeg",
+   "fikk tilbud på noen hundre?"
+  ],
+  "sub": "Svært lite endrer seg fra ett år til det neste.",
+  "items": [
+   "Vi lagrer fjorårets skjema og bruker det som utkast til årets.",
+   "Prisen avhenger av antall eiere, så et par er to skattemeldinger."
+  ]
+ },
+ "iva-holiday-let": {
+  "template": "fullbleed",
+  "photo": "marina.jpg",
+  "brand": "247",
+  "eyebrow": "IVA på ferieutleie",
+  "headline": [
+   "Det avhenger av tjenester,",
+   "ikke av hvor lenge de blir."
+  ],
+  "sub": "Uten tjenester er ferieutleie fritatt. Hotellignende tjenester under oppholdet gir 10 %."
+ },
+ "bueno-included-in-select": {
+  "template": "date",
+  "photo": "g02.jpg",
+  "brand": "bueno",
+  "big_label": "Frist for 2025-meldingen er",
+  "big": "31. desember",
+  "headline": "Med Select er den allerede inkludert.",
+  "sub": "Select koster €199 i året og dekker opptil to eiere og to boliger. Med Standard starter leveringen fra €50."
+ },
+ "what-a-year-actually-costs": {
+  "template": "split",
+  "photo": "poolside.jpg",
+  "brand": "247",
+  "eyebrow": "Hva det koster å ha den",
+  "headline": [
+   "Hva koster boligen",
+   "min per år?"
+  ],
+  "items": [
+   "Regningene kommer én etter én, fra seks eller sju steder.",
+   "Ingen enkelt regning får en formiddag av noens tid.",
+   "Sett hele året i én kolonne og sammenlign."
+  ],
+  "cta": "Legg sammen dine gratis på 247spain.es."
+ },
+ "bueno-never-filed": {
+  "template": "duotone",
+  "photo": "g00.jpg",
+  "brand": "bueno",
+  "eyebrow": "Aldri levert meldingen",
+  "headline": [
+   "Aldri levert? Det kan",
+   "fortsatt rettes opp."
+  ],
+  "sub": "Leverer du før skattekontoret spør, blir det bare et tillegg.",
+  "items": [
+   "Det starter på 1 % pluss 1 % per hele måned.",
+   "Fra måned 13 er det flate 15 % pluss renter.",
+   "Tillegget kommer i stedet for en bot."
+  ],
+  "cta": "Fortell oss årene, så gir vi et tilbud."
+ },
+ "pre-2019-mortgage-costs": {
+  "template": "pills",
+  "photo": "g09.jpg",
+  "brand": "247",
+  "headline": [
+   "Boliglån fra 2000 til 2019?",
+   "Kostnadene er verdt en titt."
+  ],
+  "items": [
+   "Noen etableringsgebyrer ble lagt på låntakeren.",
+   "Om et krav fortsatt er i tide, må en abogado vurdere."
+  ],
+  "cta": "Anslå det gratis på 247spain.es."
+ },
+ "bueno-form-changes-2027": {
+  "template": "question",
+  "photo": "g04.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Jeg leverer selv.",
+   "Hva endres på skjema 210",
+   "fra januar 2027?"
+  ],
+  "sub": "Det får nye felt og et senere vindu.",
+  "items": [
+   "Det vil spørre om dager tilgjengelig og eierandelen din.",
+   "Meldingen for 2026 åpner 1. april 2027 og løper til 31. desember."
+  ]
+ },
+ "legal-cover-you-already-pay-for": {
+  "template": "fullbleed",
+  "photo": "g03.jpg",
+  "brand": "247",
+  "eyebrow": "Rettshjelp i forsikringen",
+  "headline": [
+   "Boligforsikringen kan",
+   "betale advokaten din."
+  ],
+  "sub": "Se etter defensa juridica. Du har rett til å velge din egen advokat."
+ },
+ "ninety-days": {
+  "template": "date",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "big_label": "Du kan bli i opptil",
+  "big": "90 dager",
+  "headline": "Det gjelder i rullerende 180 dager.",
+  "sub": "Dagen du lander og dagen du flyr hjem teller begge. En langhelg bruker fire dager, ikke to."
+ },
+ "consorcio-storm": {
+  "template": "split",
+  "photo": "coast_bay.jpg",
+  "brand": "247",
+  "eyebrow": "Stormskader",
+  "headline": [
+   "Etter en storm,",
+   "hvem ringer jeg?"
+  ],
+  "items": [
+   "Noen skader betales av Consorcio, ikke forsikringsselskapet.",
+   "Vind teller når kastene passerer 120 km i timen over tre sekunder.",
+   "Tillegget er allerede innkrevd sammen med premien."
+  ],
+  "cta": "Sjekk gratis på 247spain.es."
+ },
+ "community-decision-clock": {
+  "template": "duotone",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "eyebrow": "Sameiermøter",
+  "headline": [
+   "Jeg gikk glipp av møtet.",
+   "Hvor lang tid har jeg?"
+  ],
+  "sub": "Du har tre måneder, eller ett år hvis det bryter loven.",
+  "items": [
+   "Var du borte, starter fristen når du ble varslet.",
+   "Ta vare på konvolutten eller e-posten med datoen.",
+   "Som regel må du være à jour med fellesutgiftene."
+  ],
+  "cta": "Sjekk datoene dine gratis på 247spain.es."
+ },
+ "builder-quote-red-flags": {
+  "template": "pills",
+  "photo": "g06.jpg",
+  "brand": "247",
+  "headline": [
+   "Jeg fikk et byggetilbud.",
+   "Hva bør det si?"
+  ],
+  "items": [
+   "Det bør ha en startdato og en sluttdato.",
+   "Betalingene bør følge fasene i arbeidet."
+  ],
+  "cta": "Sjekk det gratis på 247spain.es."
+ },
+ "leaving-it-empty": {
+  "template": "question",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "headline": [
+   "Jeg låser for vinteren.",
+   "Hva må jeg gjøre",
+   "før jeg drar?"
+  ],
+  "sub": "Det avhenger av tre ting, ikke av størrelsen.",
+  "items": [
+   "Hvor lenge du er borte og når du reiser, endrer begge listen.",
+   "Det samme gjør om noen ser innom mens du er borte."
+  ]
+ },
+ "utilities-in-order": {
+  "template": "fullbleed",
+  "photo": "g10.jpg",
+  "brand": "247",
+  "eyebrow": "Strøm, vann og NIE",
+  "headline": [
+   "Strøm og vann er fem jobber,",
+   "og rekkefølgen betyr noe."
+  ],
+  "sub": "Starter du med feil jobb først, må du vente. NIE-søknaden er skjema EX-15, og gebyret er €9,84."
+ },
+ "tradesperson-in-your-language": {
+  "template": "date",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "big_label": "Finn håndverkere på ditt språk i",
+  "big": "660 byer",
+  "headline": "Omtaler på ditt språk kommer først.",
+  "sub": "Rørleggere, elektrikere, låsesmeder og byggmestere rangeres ut fra omtaler. Det er gratis, og ingen betaler for å komme høyere."
+ },
+ "who-does-what": {
+  "template": "split",
+  "photo": "g01.jpg",
+  "brand": "247",
+  "eyebrow": "Hvem gjør hva i Spania",
+  "headline": [
+   "Fire titler som",
+   "ikke er samme jobb."
+  ],
+  "items": [
+   "En abogado er advokat og fører saken din.",
+   "En gestoría tar seg av innleveringer og papirarbeid, og går ikke i retten.",
+   "En administrador de fincas driver sameiet."
+  ],
+  "cta": "Se hvem som gjør hva gratis på 247spain.es."
+ },
+ "maintenance-is-a-year": {
+  "template": "duotone",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "eyebrow": "Vedlikehold",
+  "headline": [
+   "Vedlikehold er en kalender,",
+   "ikke en jobbliste."
+  ],
+  "sub": "Samme jobb i feil måned forebygger ingenting.",
+  "items": [
+   "Sol, salt og vinter ødelegger ulike ting.",
+   "De ødelegger dem på ulike tider av året.",
+   "Noen jobber må skje mens du er borte."
+  ],
+  "cta": "Få planen din gratis på 247spain.es."
+ },
+ "pests-by-property": {
+  "template": "pills",
+  "photo": "g05.jpg",
+  "brand": "247",
+  "headline": [
+   "Hvilke skadedyr bør jeg",
+   "regne med i boligen?"
+  ],
+  "items": [
+   "Varme, hager og tomme måneder tiltrekker ulike skadedyr.",
+   "Noen skadedyr er en telefon, ikke en lørdagsjobb."
+  ],
+  "cta": "Se planen din gratis på 247spain.es."
+ }
+}

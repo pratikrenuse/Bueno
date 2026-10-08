@@ -1,0 +1,412 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "template": "question",
+  "photo": "g09.jpg",
+  "brand": "bueno",
+  "headline": [
+   "I rented it in summer and",
+   "it sat empty the rest.",
+   "Which return do I file?"
+  ],
+  "sub": "You file both kinds, on the same form 210.",
+  "items": [
+   "You declare the rent for the weeks it was let.",
+   "For the empty weeks, you declare an income worked out from the cadastral value."
+  ]
+ },
+ "imputed-income-empty-home": {
+  "template": "fullbleed",
+  "photo": "g04.jpg",
+  "brand": "247",
+  "eyebrow": "Imputed income",
+  "headline": [
+   "You can owe tax on a",
+   "home you never rent."
+  ],
+  "sub": "It's based on the cadastral value on your IBI bill, and nothing can be deducted from it."
+ },
+ "bueno-year-end-return": {
+  "template": "date",
+  "photo": "g03.jpg",
+  "brand": "bueno",
+  "big_label": "Your 2025 return is due by",
+  "big": "31 December",
+  "headline": "You file even if nobody rented it.",
+  "sub": "Bueno files form 210 for you, starting from €50. Direct debit payments close earlier, on 23 December."
+ },
+ "late-filing-two-regimes": {
+  "template": "split",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "eyebrow": "Late with form 210",
+  "headline": [
+   "Check the post",
+   "before the sums."
+  ],
+  "items": [
+   "Filing on your own costs 1%, plus 1% for each full month late.",
+   "From month 13 it becomes a flat 15%, plus interest.",
+   "After a letter from the tax office, these rules no longer apply."
+  ],
+  "cta": "Work out yours free at 247spain.es."
+ },
+ "bueno-ibi-is-not-this": {
+  "template": "duotone",
+  "photo": "coast_bay.jpg",
+  "brand": "bueno",
+  "eyebrow": "IBI and form 210",
+  "headline": [
+   "I already pay IBI.",
+   "Is that my Spanish tax?"
+  ],
+  "sub": "No. Form 210 is a separate national return.",
+  "items": [
+   "IBI is the local tax paid to your town hall.",
+   "Form 210 is national, and nobody sends you a bill.",
+   "It's worked out from the cadastral value on your IBI."
+  ],
+  "cta": "We file it for you, from €50."
+ },
+ "quarterly-rental-filing-ends": {
+  "template": "pills",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "headline": [
+   "The last quarterly return",
+   "is due by 20 October."
+  ],
+  "items": [
+   "Rent from 1 October goes into one yearly return.",
+   "Your next filing after this is in April 2027."
+  ],
+  "cta": "Check yours free at 247spain.es."
+ },
+ "bueno-two-owners-two-returns": {
+  "template": "question",
+  "photo": "g06.jpg",
+  "brand": "bueno",
+  "headline": [
+   "We own the place together.",
+   "So is that one return,",
+   "or one each?"
+  ],
+  "sub": "Each owner files their own form 210.",
+  "items": [
+   "If you own half each, each return uses half the cadastral value.",
+   "Bueno files a form 210 for every owner, starting from €50."
+  ]
+ },
+ "eu-eea-deductions": {
+  "template": "fullbleed",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "eyebrow": "Rental deductions",
+  "headline": [
+   "Same flat, same rent,",
+   "a different tax bill."
+  ],
+  "sub": "In the EU and EEA you deduct costs and pay 19%. Elsewhere it's 24% on the gross rent."
+ },
+ "bueno-what-goes-into-it": {
+  "template": "date",
+  "photo": "g10.jpg",
+  "brand": "bueno",
+  "big_label": "For revised values, 2025 uses",
+  "big": "1.1%",
+  "headline": "Four details make up your return.",
+  "sub": "We need your cadastral value, your share and where you're tax resident. Bueno files it from €50."
+ },
+ "three-percent-retention": {
+  "template": "split",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "eyebrow": "Selling in Spain",
+  "headline": [
+   "The 3% on a sale",
+   "is not the tax."
+  ],
+  "items": [
+   "The buyer holds back 3% of the price and pays it on modelo 211.",
+   "Your real capital gains tax is 19% of the gain, for everyone.",
+   "If the 3% was more than you owe, the difference comes back to you."
+  ],
+  "cta": "Work out your refund free at 247spain.es."
+ },
+ "bueno-direct-debit-date": {
+  "template": "duotone",
+  "photo": "g01.jpg",
+  "brand": "bueno",
+  "eyebrow": "Paying your 2025 return",
+  "headline": [
+   "Direct debit closes",
+   "on 23 December."
+  ],
+  "sub": "Filing itself stays open until 31 December.",
+  "items": [
+   "Direct debit stops eight days before filing does.",
+   "After that, you have to pay the tax another way.",
+   "It helps not to leave it for the last week."
+  ],
+  "cta": "We file it for you, from €50."
+ },
+ "plusvalia-two-methods": {
+  "template": "pills",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "headline": [
+   "Plusvalia has two methods,",
+   "and you can pick the lower."
+  ],
+  "items": [
+   "If there was no increase, there is nothing to pay.",
+   "You have thirty working days from the deed."
+  ],
+  "cta": "Check yours free at 247spain.es."
+ },
+ "bueno-why-from-fifty": {
+  "template": "question",
+  "photo": "g05.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Why does Bueno file my",
+   "return from €50 when I",
+   "was quoted a few hundred?"
+  ],
+  "sub": "Very little changes from one year to the next.",
+  "items": [
+   "We store last year's form and use it to draft this year's.",
+   "The price depends on the number of owners, so a couple is two returns."
+  ]
+ },
+ "iva-holiday-let": {
+  "template": "fullbleed",
+  "photo": "marina.jpg",
+  "brand": "247",
+  "eyebrow": "IVA on holiday lets",
+  "headline": [
+   "It depends on services,",
+   "not the length of stay."
+  ],
+  "sub": "With no services, a holiday let is exempt. Hotel type services during the stay make it 10%."
+ },
+ "bueno-included-in-select": {
+  "template": "date",
+  "photo": "g02.jpg",
+  "brand": "bueno",
+  "big_label": "Your 2025 return is due by",
+  "big": "31 December",
+  "headline": "On Select, it is already included.",
+  "sub": "Select is €199 a year and covers up to two owners and two properties. On Standard, filing starts from €50."
+ },
+ "what-a-year-actually-costs": {
+  "template": "split",
+  "photo": "poolside.jpg",
+  "brand": "247",
+  "eyebrow": "The cost of keeping it",
+  "headline": [
+   "What does my",
+   "home cost a year?"
+  ],
+  "items": [
+   "The bills arrive one by one, from six or seven places.",
+   "No single bill gets a morning of anyone's attention.",
+   "Put the whole year in one column and compare it."
+  ],
+  "cta": "Add yours up free at 247spain.es."
+ },
+ "bueno-never-filed": {
+  "template": "duotone",
+  "photo": "g00.jpg",
+  "brand": "bueno",
+  "eyebrow": "Never filed the return",
+  "headline": [
+   "Never filed? It can",
+   "still be put right."
+  ],
+  "sub": "Filing before the tax office asks keeps it to a surcharge.",
+  "items": [
+   "It starts at 1% plus 1% per full month.",
+   "From month 13, it is a flat 15% plus interest.",
+   "The surcharge takes the place of a penalty."
+  ],
+  "cta": "Tell us the years and we will quote."
+ },
+ "pre-2019-mortgage-costs": {
+  "template": "pills",
+  "photo": "g09.jpg",
+  "brand": "247",
+  "headline": [
+   "Mortgage from 2000 to 2019?",
+   "The costs are worth a read."
+  ],
+  "items": [
+   "Some set up fees were charged to the borrower.",
+   "Whether a claim is still in time needs an abogado."
+  ],
+  "cta": "Estimate it free at 247spain.es."
+ },
+ "bueno-form-changes-2027": {
+  "template": "question",
+  "photo": "g04.jpg",
+  "brand": "bueno",
+  "headline": [
+   "I file my own return.",
+   "What changes on form 210",
+   "from January 2027?"
+  ],
+  "sub": "It gets new fields and a later window.",
+  "items": [
+   "It will ask for the days available and your ownership percentage.",
+   "The 2026 return opens on 1 April 2027 and runs to 31 December."
+  ]
+ },
+ "legal-cover-you-already-pay-for": {
+  "template": "fullbleed",
+  "photo": "g03.jpg",
+  "brand": "247",
+  "eyebrow": "Legal cover on your policy",
+  "headline": [
+   "Your home policy may",
+   "pay for your lawyer."
+  ],
+  "sub": "Look for defensa juridica. You have the right to choose your own lawyer."
+ },
+ "ninety-days": {
+  "template": "date",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "big_label": "You can stay for up to",
+  "big": "90 days",
+  "headline": "That is in any rolling 180 days.",
+  "sub": "The day you land and the day you fly home both count. A long weekend uses four days, not two."
+ },
+ "consorcio-storm": {
+  "template": "split",
+  "photo": "coast_bay.jpg",
+  "brand": "247",
+  "eyebrow": "Storm damage",
+  "headline": [
+   "After a storm,",
+   "who do I phone?"
+  ],
+  "items": [
+   "Some damage is paid by the Consorcio, not your insurer.",
+   "Wind counts once gusts pass 120 km an hour over three seconds.",
+   "The surcharge is already collected with your premium."
+  ],
+  "cta": "Check yours free at 247spain.es."
+ },
+ "community-decision-clock": {
+  "template": "duotone",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "eyebrow": "Owners meetings",
+  "headline": [
+   "I missed the meeting.",
+   "How long do I have?"
+  ],
+  "sub": "You have three months, or a year if it breaks the law.",
+  "items": [
+   "If you were absent, the clock starts when you were told.",
+   "Keep the envelope or email with its date on it.",
+   "Usually you must be up to date with community payments."
+  ],
+  "cta": "Check your dates free at 247spain.es."
+ },
+ "builder-quote-red-flags": {
+  "template": "pills",
+  "photo": "g06.jpg",
+  "brand": "247",
+  "headline": [
+   "My builder sent a quote.",
+   "What should it say?"
+  ],
+  "items": [
+   "It should give a start date and a finish date.",
+   "Payments should follow stages of the work."
+  ],
+  "cta": "Check it free at 247spain.es."
+ },
+ "leaving-it-empty": {
+  "template": "question",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "headline": [
+   "I'm locking up for winter.",
+   "What do I need to do",
+   "before I leave?"
+  ],
+  "sub": "It depends on three things, not on its size.",
+  "items": [
+   "How long you're away and the season you leave in both change the list.",
+   "So does whether anyone will look in while you're gone."
+  ]
+ },
+ "utilities-in-order": {
+  "template": "fullbleed",
+  "photo": "g10.jpg",
+  "brand": "247",
+  "eyebrow": "Utilities and the NIE",
+  "headline": [
+   "Utilities are five jobs,",
+   "and the order matters."
+  ],
+  "sub": "Start the wrong one first and you wait. The NIE application is form EX-15, and the fee is €9.84."
+ },
+ "tradesperson-in-your-language": {
+  "template": "date",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "big_label": "Find trades in your language in",
+  "big": "660 towns",
+  "headline": "Reviews in your language lead.",
+  "sub": "Plumbers, electricians, locksmiths and builders are ranked from reviews. It is free, and nobody pays to rank higher."
+ },
+ "who-does-what": {
+  "template": "split",
+  "photo": "g01.jpg",
+  "brand": "247",
+  "eyebrow": "Who does what in Spain",
+  "headline": [
+   "Four titles that",
+   "are not one job."
+  ],
+  "items": [
+   "An abogado is a lawyer and runs your case.",
+   "A gestoría handles filings and paperwork, and does not go to court.",
+   "An administrador de fincas runs the community of owners."
+  ],
+  "cta": "See who does what free at 247spain.es."
+ },
+ "maintenance-is-a-year": {
+  "template": "duotone",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "eyebrow": "Maintenance",
+  "headline": [
+   "Maintenance is a calendar,",
+   "not a list of jobs."
+  ],
+  "sub": "The same job in the wrong month prevents nothing.",
+  "items": [
+   "Sun, salt and winter break different things.",
+   "They break them at different times of year.",
+   "Some jobs must happen while you are away."
+  ],
+  "cta": "Get your schedule free at 247spain.es."
+ },
+ "pests-by-property": {
+  "template": "pills",
+  "photo": "g05.jpg",
+  "brand": "247",
+  "headline": [
+   "Which pests should I",
+   "expect at my place?"
+  ],
+  "items": [
+   "Heat, gardens and empty months attract different pests.",
+   "Some pests are a phone call, not a Saturday job."
+  ],
+  "cta": "See your plan free at 247spain.es."
+ }
+}

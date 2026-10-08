@@ -16,8 +16,8 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor, SPONSOR, BUENO_TOOL, QUEUE_ORDER, queueIndex } from './api/_fb_content.js';
-import { GROUPS, ACCOUNT, groupsFor, perDay } from './api/_fb_groups.js';
-import { imageOptionsFor, imageFor, IMAGE_KEYS } from './api/_fb_images.js';
+import { GROUPS, ACCOUNT, groupsFor, perDay, MAX_PER_DAY, DAILY_START } from './api/_fb_groups.js';
+import { imageOptionsFor, imageFor, IMAGE_KEYS, cardFor } from './api/_fb_images.js';
 
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = '') => cond ? pass++ : (fail++, console.log('FAIL', name, extra));
@@ -52,7 +52,11 @@ for (const f of LK) {
   ok(`api/${f} imports nothing from the Facebook surface`, bad.length === 0, bad.join(', '));
 }
 
-const deck = code('./internal-pratik/index.jsx');
+const deck = code('./internal-poornima/index.jsx');
+const moved = code('./internal-pratik/index.jsx');
+ok('the old route only forwards to the new one', /\/internal-poornima/.test(moved) && !/api\/fb/.test(moved));
+ok('neither deck folder has a meta.js, so neither is on a grid or in a sitemap',
+   !existsSync('./internal-poornima/meta.js') && !existsSync('./internal-pratik/meta.js'));
 const teamDeck = code('./internal-linkedin/index.jsx');
 ok('the personal deck calls no LinkedIn endpoint', !/api\/linkedin/.test(deck));
 ok('the deck asks for no language', !/action=posts[^`'"]*lang=/.test(deck));
@@ -106,8 +110,27 @@ ok('twenty point at a 24/7 Spain tool', TOOL_IDEAS.length === 20, String(TOOL_ID
 ok('ten are about the Bueno tax service', BUENO_IDEAS.length === 10, String(BUENO_IDEAS.length));
 ok('seven languages', LANGS.length === 7 && LANGS.includes('da'));
 ok('six of them are translations', TRANSLATION_LANGS.length === 6 && !TRANSLATION_LANGS.includes('en'));
-ok('every idea has images', IMAGE_KEYS.length === IDEAS.length && IDEAS.every(i => imageOptionsFor(i.key).length === 12));
-ok('every idea has a distinct lead image', new Set(IDEAS.map(i => imageFor(i.key))).size === IDEAS.length);
+ok('every idea has an image', IMAGE_KEYS.length === IDEAS.length && IDEAS.every(i => imageOptionsFor(i.key).length === 1));
+ok('every idea has its own image', new Set(IDEAS.map(i => imageFor(i.key))).size === IDEAS.length);
+// One image per post per language, with the text on it in that language. The files must
+// exist in the repo, or the email would show a broken image.
+for (const idea of IDEAS) {
+  for (const lang of LANGS) {
+    const url = cardFor(idea.key, lang);
+    ok(`${idea.key}/${lang}: the image address is this language's`, url.includes(`/fb-cards/${idea.key}/${lang}.jpg`));
+    const file = `./public/fb-cards/${idea.key}/${lang}.jpg`;
+    ok(`${idea.key}/${lang}: the image file exists`, existsSync(file) && readFileSync(file).length > 20000, file);
+  }
+  ok(`${idea.key}: seven different images`, new Set(LANGS.map(l => cardFor(idea.key, l))).size === LANGS.length);
+}
+for (const lang of LANGS) {
+  // Since 8 October 2026 the images come from fb_cards2.py and studio/facebook/cards2.
+  const cards = JSON.parse(read(`./studio/facebook/cards2/${lang}.json`) || '{}');
+  ok(`${lang}: the image text exists for every post`, IDEAS.every(i => cards[i.key] && cards[i.key].template && cards[i.key].headline && cards[i.key].photo));
+  ok(`${lang}: every photo exists`, IDEAS.every(i => cards[i.key] && existsSync(`./studio/photos/${cards[i.key].photo}`)));
+  ok(`${lang}: the image text has no dash`, !/[\u2014\u2013]/.test(JSON.stringify(cards)));
+  ok(`${lang}: the image text never calls anything a bank`, !/\b(bank|banque|banco)/i.test(JSON.stringify(cards)));
+}
 
 const tools = new Set(TOOL_IDEAS.map(i => i.tool));
 ok('every tool folder named by an idea exists', [...tools].every(t => existsSync(`./${t}/index.jsx`)),
@@ -186,6 +209,13 @@ for (const idea of BUENO_IDEAS) {
   ok('the Bueno posts speak as we', asWe >= BUENO_IDEAS.length - 1, `${asWe} of ${BUENO_IDEAS.length}`);
 }
 
+// Neighbouring posts never share an image template (Pratik, 8 October 2026: the images all looked the same).
+{
+  const c2 = JSON.parse(read('./studio/facebook/cards2/en.json') || '{}');
+  const tpl = QUEUE_ORDER.map(k => c2[k] && c2[k].template);
+  ok('no two posts in a row share an image template', tpl.every((t, i) => i === 0 || t !== tpl[i - 1]), tpl.join(','));
+}
+
 // THE QUEUE. Every idea has exactly one place in it, and it opens by alternating a Bueno
 // post with a 24/7 Spain post, which is the mix Pratik asked for.
 ok('every idea is in the queue once', QUEUE_ORDER.length === IDEAS.length
@@ -198,6 +228,7 @@ ok('every idea is in the queue once', QUEUE_ORDER.length === IDEAS.length
 }
 
 // THE GROUPS. Seven accounts, one per language, and a rotation that matches the workbook.
+ok('posting starts on 12 October 2026, after three days of joining groups', DAILY_START === '2026-10-12');
 ok('seven accounts, numbered 1 to 7', LANGS.every(l => ACCOUNT[l] >= 1 && ACCOUNT[l] <= 7)
    && new Set(LANGS.map(l => ACCOUNT[l])).size === 7);
 for (const lang of LANGS) {
@@ -205,13 +236,24 @@ for (const lang of LANGS) {
   ok(`${lang}: has groups`, list.length >= 8, String(list.length));
   ok(`${lang}: every group is a Facebook group link`, list.every(([n, u]) => n && /^https:\/\/www\.facebook\.com\/groups\/[^\s]+$/.test(u)));
   ok(`${lang}: no group is listed twice`, new Set(list.map(g => g[1].toLowerCase().replace(/\/$/, ''))).size === list.length);
-  ok(`${lang}: three to five groups a day`, perDay(lang) >= 3 && perDay(lang) <= 5);
+  // Never more than three a day, and a gentle start: one group on day 1, two on day 2.
+  ok(`${lang}: day 1 is one group`, groupsFor(lang, 1).length === 1);
+  ok(`${lang}: day 2 is two groups`, groupsFor(lang, 2).length === 2);
+  ok(`${lang}: no day is ever more than three`, Array.from({ length: 60 }, (_, i) => groupsFor(lang, i + 1).length).every(n => n >= 1 && n <= MAX_PER_DAY));
+  ok(`${lang}: the cap is three`, MAX_PER_DAY === 3 && perDay(lang, 10) === 3);
+  for (let d = 1; d <= 30; d += 1) {
+    const g = groupsFor(lang, d);
+    if (new Set(g.map(x => x.url)).size !== g.length) ok(`${lang}: day ${d} never repeats a group`, false);
+  }
   const d1 = groupsFor(lang, 1), d2 = groupsFor(lang, 2);
-  ok(`${lang}: a day never repeats a group`, new Set(d1.map(g => g.url)).size === d1.length);
-  ok(`${lang}: day 2 moves on from day 1`, d1[0].url !== d2[0].url);
+  ok(`${lang}: day 2 moves on from day 1`, !d2.some(g => g.url === d1[0].url));
   const seen = new Set();
-  for (let d = 1; d <= Math.ceil(list.length / perDay(lang)); d += 1) for (const g of groupsFor(lang, d)) seen.add(g.url);
-  ok(`${lang}: one full turn reaches every group`, seen.size === list.length, `${seen.size} of ${list.length}`);
+  let d = 1;
+  while (seen.size < list.length && d < 200) { for (const g of groupsFor(lang, d)) seen.add(g.url); d += 1; }
+  ok(`${lang}: the rotation reaches every group`, seen.size === list.length, `${seen.size} of ${list.length}`);
+  // A group is not posted in again before every other group on the list has had its turn.
+  const firstRepeat = (() => { const s = new Set(); for (let k = 1; k < 200; k += 1) for (const g of groupsFor(lang, k)) { if (s.has(g.url)) return s.size; s.add(g.url); } return 0; })();
+  ok(`${lang}: no group comes round again early`, firstRepeat === list.length, `${firstRepeat} of ${list.length}`);
 }
 {
   const all = LANGS.flatMap(l => (GROUPS[l] || []).map(g => g[1].toLowerCase().replace(/\/$/, '')));

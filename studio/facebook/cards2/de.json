@@ -1,0 +1,412 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "template": "question",
+  "photo": "g09.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Ich habe im Sommer vermietet,",
+   "danach stand alles leer.",
+   "Was muss ich erklären?"
+  ],
+  "sub": "Sie geben beide auf Formular 210 ab.",
+  "items": [
+   "Für die vermieteten Wochen erklären Sie die Miete.",
+   "Für die leeren Wochen erklären Sie ein Einkommen aus dem Katasterwert."
+  ]
+ },
+ "imputed-income-empty-home": {
+  "template": "fullbleed",
+  "photo": "g04.jpg",
+  "brand": "247",
+  "eyebrow": "Fiktives Einkommen",
+  "headline": [
+   "Auch ohne Vermietung",
+   "kann Steuer anfallen."
+  ],
+  "sub": "Grundlage ist der Katasterwert auf Ihrem IBI-Bescheid, und abziehen lässt sich davon nichts."
+ },
+ "bueno-year-end-return": {
+  "template": "date",
+  "photo": "g03.jpg",
+  "brand": "bueno",
+  "big_label": "Abgabe für 2025 bis zum",
+  "big": "31. Dezember",
+  "headline": "Sie erklären, auch ohne Vermietung.",
+  "sub": "Bueno reicht Formular 210 für Sie ein, ab €50. Zahlungen per Lastschrift schließen früher, am 23. Dezember."
+ },
+ "late-filing-two-regimes": {
+  "template": "split",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "eyebrow": "Formular 210 verspätet",
+  "headline": [
+   "Erst die Post,",
+   "dann die Zahlen."
+  ],
+  "items": [
+   "Von sich aus kostet es 1 %, plus 1 % je vollem Monat Verspätung.",
+   "Ab Monat 13 sind es pauschal 15 %, plus Zinsen.",
+   "Nach einem Brief vom Finanzamt gelten diese Regeln nicht mehr."
+  ],
+  "cta": "Kostenlos rechnen auf 247spain.es."
+ },
+ "bueno-ibi-is-not-this": {
+  "template": "duotone",
+  "photo": "coast_bay.jpg",
+  "brand": "bueno",
+  "eyebrow": "IBI und Formular 210",
+  "headline": [
+   "Ich zahle schon IBI.",
+   "Reicht das für Spanien?"
+  ],
+  "sub": "Nein. Formular 210 ist national und separat.",
+  "items": [
+   "Die IBI ist die lokale Steuer an Ihr Rathaus.",
+   "Formular 210 ist national, und niemand schickt eine Rechnung.",
+   "Berechnet wird sie aus dem Katasterwert auf der IBI."
+  ],
+  "cta": "Wir erledigen das ab €50."
+ },
+ "quarterly-rental-filing-ends": {
+  "template": "pills",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "headline": [
+   "Die letzte Quartalserklärung",
+   "läuft bis zum 20. Oktober."
+  ],
+  "items": [
+   "Miete ab 1. Oktober geht in eine Jahreserklärung.",
+   "Ihre nächste Abgabe danach ist im April 2027."
+  ],
+  "cta": "Kostenlos prüfen auf 247spain.es."
+ },
+ "bueno-two-owners-two-returns": {
+  "template": "question",
+  "photo": "g06.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Die Wohnung gehört uns beiden.",
+   "Ist das eine Erklärung,",
+   "oder je eine?"
+  ],
+  "sub": "Jeder reicht ein eigenes Formular 210 ein.",
+  "items": [
+   "Gehört jedem die Hälfte, nutzt jede Erklärung den halben Katasterwert.",
+   "Bueno reicht für jeden Eigentümer ein Formular 210 ein, ab €50."
+  ]
+ },
+ "eu-eea-deductions": {
+  "template": "fullbleed",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "eyebrow": "Abzüge bei Vermietung",
+  "headline": [
+   "Gleiche Wohnung, gleiche",
+   "Miete, andere Steuer."
+  ],
+  "sub": "In EU und EWR setzen Sie Kosten ab und zahlen 19 %. Anderswo sind es 24 % auf die Bruttomiete."
+ },
+ "bueno-what-goes-into-it": {
+  "template": "date",
+  "photo": "g10.jpg",
+  "brand": "bueno",
+  "big_label": "Für revidierte Werte gilt 2025",
+  "big": "1,1 %",
+  "headline": "Vier Angaben ergeben Ihre Erklärung.",
+  "sub": "Wir brauchen Ihren Katasterwert, Ihren Anteil und Ihren steuerlichen Wohnsitz. Bueno reicht sie ab €50 ein."
+ },
+ "three-percent-retention": {
+  "template": "split",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "eyebrow": "Verkaufen in Spanien",
+  "headline": [
+   "3 % beim Verkauf",
+   "sind keine Steuer."
+  ],
+  "items": [
+   "Der Käufer behält 3 % des Preises ein und zahlt sie mit modelo 211.",
+   "Ihre echte Steuer beträgt 19 % des Gewinns, für alle.",
+   "Waren die 3 % mehr als Ihre Steuer, bekommen Sie die Differenz zurück."
+  ],
+  "cta": "Erstattung kostenlos berechnen auf 247spain.es."
+ },
+ "bueno-direct-debit-date": {
+  "template": "duotone",
+  "photo": "g01.jpg",
+  "brand": "bueno",
+  "eyebrow": "Zahlung der Erklärung 2025",
+  "headline": [
+   "Die Lastschrift endet",
+   "am 23. Dezember."
+  ],
+  "sub": "Die Abgabe selbst bleibt bis zum 31. Dezember offen.",
+  "items": [
+   "Die Lastschrift endet acht Tage vor der Abgabe.",
+   "Danach müssen Sie die Steuer anders zahlen.",
+   "Es hilft, nicht bis zur letzten Woche zu warten."
+  ],
+  "cta": "Wir erledigen das ab €50."
+ },
+ "plusvalia-two-methods": {
+  "template": "pills",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "headline": [
+   "Plusvalia hat zwei Methoden,",
+   "und Sie wählen die niedrigere."
+  ],
+  "items": [
+   "Gab es keinen Wertzuwachs, ist nichts zu zahlen.",
+   "Sie haben dreißig Arbeitstage ab der Urkunde."
+  ],
+  "cta": "Kostenlos prüfen auf 247spain.es."
+ },
+ "bueno-why-from-fifty": {
+  "template": "question",
+  "photo": "g05.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Warum ab €50 bei Bueno,",
+   "wenn mir für die Erklärung",
+   "Hunderte genannt wurden?"
+  ],
+  "sub": "Von Jahr zu Jahr ändert sich sehr wenig.",
+  "items": [
+   "Wir speichern das Formular vom Vorjahr und entwerfen damit das neue.",
+   "Der Preis hängt von den Eigentümern ab, ein Paar sind zwei Erklärungen."
+  ]
+ },
+ "iva-holiday-let": {
+  "template": "fullbleed",
+  "photo": "marina.jpg",
+  "brand": "247",
+  "eyebrow": "IVA bei Ferienmiete",
+  "headline": [
+   "Es kommt auf Leistungen an,",
+   "nicht auf die Dauer."
+  ],
+  "sub": "Ohne Leistungen ist eine Ferienvermietung befreit. Hotelähnliche Leistungen vor Ort bedeuten 10 %."
+ },
+ "bueno-included-in-select": {
+  "template": "date",
+  "photo": "g02.jpg",
+  "brand": "bueno",
+  "big_label": "Abgabe für 2025 bis zum",
+  "big": "31. Dezember",
+  "headline": "Bei Select ist sie schon enthalten.",
+  "sub": "Select kostet €199 im Jahr und deckt bis zu zwei Eigentümer und zwei Immobilien ab. Bei Standard beginnt die Abgabe bei €50."
+ },
+ "what-a-year-actually-costs": {
+  "template": "split",
+  "photo": "poolside.jpg",
+  "brand": "247",
+  "eyebrow": "Was der Unterhalt kostet",
+  "headline": [
+   "Was kostet mein",
+   "Haus im Jahr?"
+  ],
+  "items": [
+   "Die Rechnungen kommen einzeln, von sechs oder sieben Stellen.",
+   "Keine einzelne Rechnung bekommt einen Vormittag Aufmerksamkeit.",
+   "Stellen Sie das Jahr in eine Spalte und vergleichen Sie."
+  ],
+  "cta": "Kostenlos addieren auf 247spain.es."
+ },
+ "bueno-never-filed": {
+  "template": "duotone",
+  "photo": "g00.jpg",
+  "brand": "bueno",
+  "eyebrow": "Nie abgegeben",
+  "headline": [
+   "Nie erklärt? Das lässt",
+   "sich noch richten."
+  ],
+  "sub": "Wer abgibt, bevor das Finanzamt fragt, zahlt nur einen Zuschlag.",
+  "items": [
+   "Er beginnt bei 1 % plus 1 % je vollem Monat.",
+   "Ab Monat 13 sind es pauschal 15 % plus Zinsen.",
+   "Der Zuschlag tritt an die Stelle einer Sanktion."
+  ],
+  "cta": "Sie nennen die Jahre, wir das Angebot."
+ },
+ "pre-2019-mortgage-costs": {
+  "template": "pills",
+  "photo": "g09.jpg",
+  "brand": "247",
+  "headline": [
+   "Hypothek von 2000 bis 2019?",
+   "Die Kosten lohnen einen Blick."
+  ],
+  "items": [
+   "Manche Bearbeitungsgebühren trug der Kreditnehmer.",
+   "Ob ein Anspruch noch rechtzeitig ist, klärt ein abogado."
+  ],
+  "cta": "Kostenlos schätzen auf 247spain.es."
+ },
+ "bueno-form-changes-2027": {
+  "template": "question",
+  "photo": "g04.jpg",
+  "brand": "bueno",
+  "headline": [
+   "Ich erkläre selbst.",
+   "Was ist ab Januar 2027",
+   "neu am Formular 210?"
+  ],
+  "sub": "Es gibt neue Felder und ein späteres Fenster.",
+  "items": [
+   "Es fragt nach den verfügbaren Tagen und Ihrem Eigentumsanteil.",
+   "Die Erklärung 2026 öffnet am 1. April 2027 und läuft bis 31. Dezember."
+  ]
+ },
+ "legal-cover-you-already-pay-for": {
+  "template": "fullbleed",
+  "photo": "g03.jpg",
+  "brand": "247",
+  "eyebrow": "Rechtsschutz in Ihrer Police",
+  "headline": [
+   "Ihre Police zahlt",
+   "vielleicht Ihren Anwalt."
+  ],
+  "sub": "Suchen Sie nach defensa juridica. Sie haben das Recht, Ihren Anwalt selbst zu wählen."
+ },
+ "ninety-days": {
+  "template": "date",
+  "photo": "g08.jpg",
+  "brand": "247",
+  "big_label": "Sie können bleiben, bis zu",
+  "big": "90 Tage",
+  "headline": "Das gilt für je 180 rollierende Tage.",
+  "sub": "Ankunfts- und Rückflugtag zählen beide. Ein langes Wochenende verbraucht vier Tage, nicht zwei."
+ },
+ "consorcio-storm": {
+  "template": "split",
+  "photo": "coast_bay.jpg",
+  "brand": "247",
+  "eyebrow": "Sturmschäden",
+  "headline": [
+   "Nach einem Sturm,",
+   "wen rufe ich an?"
+  ],
+  "items": [
+   "Manche Schäden zahlt das Consorcio, nicht Ihr Versicherer.",
+   "Wind zählt ab Böen über 120 km/h, gemessen über drei Sekunden.",
+   "Der Zuschlag wird schon mit Ihrer Prämie eingezogen."
+  ],
+  "cta": "Kostenlos prüfen auf 247spain.es."
+ },
+ "community-decision-clock": {
+  "template": "duotone",
+  "photo": "g07.jpg",
+  "brand": "247",
+  "eyebrow": "Eigentümertreffen",
+  "headline": [
+   "Ich war nicht dabei.",
+   "Welche Frist habe ich?"
+  ],
+  "sub": "Sie haben drei Monate, oder ein Jahr bei einem Gesetzesverstoß.",
+  "items": [
+   "Waren Sie abwesend, läuft die Frist ab der Mitteilung.",
+   "Bewahren Sie Umschlag oder E-Mail mit Datum auf.",
+   "Meist müssen Ihre Zahlungen an die Gemeinschaft aktuell sein."
+  ],
+  "cta": "Fristen kostenlos prüfen auf 247spain.es."
+ },
+ "builder-quote-red-flags": {
+  "template": "pills",
+  "photo": "g06.jpg",
+  "brand": "247",
+  "headline": [
+   "Das Angebot ist da.",
+   "Was sollte drinstehen?"
+  ],
+  "items": [
+   "Es sollte ein Start- und ein Enddatum nennen.",
+   "Zahlungen sollten den Bauabschnitten folgen."
+  ],
+  "cta": "Kostenlos prüfen auf 247spain.es."
+ },
+ "leaving-it-empty": {
+  "template": "question",
+  "photo": "pool_dusk.jpg",
+  "brand": "247",
+  "headline": [
+   "Ich schließe für den Winter ab.",
+   "Was muss ich erledigen,",
+   "bevor ich fahre?"
+  ],
+  "sub": "Es hängt von drei Dingen ab, nicht von der Größe.",
+  "items": [
+   "Wie lange Sie weg sind und wann Sie abreisen, ändert die Liste.",
+   "Ebenso, ob jemand nach dem Rechten sieht, während Sie fort sind."
+  ]
+ },
+ "utilities-in-order": {
+  "template": "fullbleed",
+  "photo": "g10.jpg",
+  "brand": "247",
+  "eyebrow": "Versorger und die NIE",
+  "headline": [
+   "Es sind fünf Anschlüsse,",
+   "und die Reihenfolge zählt."
+  ],
+  "sub": "Wer mit dem falschen anfängt, wartet. Der NIE-Antrag ist das Formular EX-15, die Gebühr beträgt €9,84."
+ },
+ "tradesperson-in-your-language": {
+  "template": "date",
+  "photo": "couple_beach.jpg",
+  "brand": "247",
+  "big_label": "Handwerker in Ihrer Sprache in",
+  "big": "660 Orten",
+  "headline": "Bewertungen in Ihrer Sprache führen.",
+  "sub": "Klempner, Elektriker, Schlüsseldienste und Bauunternehmer stehen nach Bewertungen. Es ist kostenlos, und niemand kauft sich nach oben."
+ },
+ "who-does-what": {
+  "template": "split",
+  "photo": "g01.jpg",
+  "brand": "247",
+  "eyebrow": "Wer macht was in Spanien",
+  "headline": [
+   "Vier Titel, nicht",
+   "ein einziger Job."
+  ],
+  "items": [
+   "Ein abogado ist ein Anwalt und führt Ihren Fall.",
+   "Eine gestoría erledigt Anträge und Papierkram und geht nicht vor Gericht.",
+   "Ein administrador de fincas verwaltet die Eigentümergemeinschaft."
+  ],
+  "cta": "Kostenlos nachsehen auf 247spain.es."
+ },
+ "maintenance-is-a-year": {
+  "template": "duotone",
+  "photo": "cove_house.jpg",
+  "brand": "247",
+  "eyebrow": "Instandhaltung",
+  "headline": [
+   "Wartung ist ein Kalender,",
+   "keine Aufgabenliste."
+  ],
+  "sub": "Dieselbe Arbeit im falschen Monat verhindert nichts.",
+  "items": [
+   "Sonne, Salz und Winter machen Verschiedenes kaputt.",
+   "Sie tun es zu verschiedenen Zeiten im Jahr.",
+   "Manches muss passieren, während Sie fort sind."
+  ],
+  "cta": "Ihren Plan kostenlos holen auf 247spain.es."
+ },
+ "pests-by-property": {
+  "template": "pills",
+  "photo": "g05.jpg",
+  "brand": "247",
+  "headline": [
+   "Welche Schädlinge",
+   "erwarten mich dort?"
+  ],
+  "items": [
+   "Hitze, Gärten und leere Monate ziehen verschiedene Schädlinge an.",
+   "Manche Schädlinge sind ein Anruf, keine Samstagsarbeit."
+  ],
+  "cta": "Kostenlos ansehen auf 247spain.es."
+ }
+}

@@ -1,61 +1,40 @@
-// The photographs the deck offers for each post, and the alternates Pratik can switch to.
-// The first id in each row is the default; the rest are the grid.
+// The image that goes with each post, one per language.
 //
-// WHY THIS FILE DUPLICATES A SET THAT EXISTS ELSEWHERE
-// The team's LinkedIn deck has its own image module. This one deliberately does not import
-// it, and never will. The two surfaces are meant to share nothing at all, so that no edit
-// to one can reach the other. Photo ids are cheap; an accidental coupling is not.
+// WHAT CHANGED ON 8 OCTOBER 2026
+// Until then every language shared one stock photograph. Pratik asked for the format of the
+// 24/7 Spain infographics instead, with the text on the image, and for the text on the image
+// to be in the post's own language. So each post now has seven images: the English post gets
+// the English image, the Norwegian post the Norwegian one, and so on.
 //
-// Chosen for warmth and for Spain: coves, coasts at golden hour, whitewashed towns,
-// terraces and pools, bougainvillea streets, harbours, olive country, people in their
-// forties to seventies. Not literal illustrations of the subject. A post about a filing
-// deadline gets a Spanish evening, not a photograph of a form.
+// WHERE THEY COME FROM
+// studio/renderer/fb_cards.py renders them from studio/facebook/cards/<lang>.json, on top of
+// the approved simple3 editorial template. They are committed under public/fb-cards/ and
+// served by the site at https://www.247spain.es/fb-cards/<post>/<lang>.jpg. To change the
+// text on an image, edit the card JSON for that language and render again.
 //
-// The Pexels licence does not require a credit and nothing here renders one.
+// WHAT CHANGED LATER ON 8 OCTOBER 2026
+// Pratik: the logo sat in a white box and every image looked the same. The images are now
+// rendered by studio/renderer/fb_cards2.py from studio/facebook/cards2/<lang>.json: six
+// templates that differ in structure, a transparent logo, and sixteen licensed photos in
+// studio/photos. No two posts in a row share a template. Version 2.
+//
+// CARD_VERSION goes on the end of every address. Bump it after a re-render so that nobody,
+// email clients included, keeps showing an old copy.
+import { IDEAS, LANGS } from './_fb_content.js';
 
-const PNG = new Set([30616143,30681578,30736927,33691573,33691574]);
+const SITE = 'https://www.247spain.es';
+export const CARD_VERSION = '2';
 
-const OPTIONS = {
-  'ninety-days': [6076164,2289180,4819300,27993172,12633940,36532613,3532527,19805956,16946214,6007018,3157917,12633946],
-  'imputed-income-empty-home': [7587923,14205214,11829139,6295963,12256501,39257974,27397561,14234129,14786097,16549991,10135367,13717503],
-  'quarterly-rental-filing-ends': [12234423,28905960,16901575,8465249,36055015,8078628,6076164,28054849,33881205,16901576,9510821,8317006],
-  'late-filing-two-regimes': [14234129,23938784,29749216,16743486,36609883,17740863,19075385,11315557,30749703,18771947,24906297,22695684],
-  'eu-eea-deductions': [11829139,12633946,33844732,35808341,34396811,6585286,30179660,7631185,5929769,32200074,14965658,13869627],
-  'three-percent-retention': [9268088,13717503,16946211,12307498,16558109,19001400,31156673,12194064,29150124,27794396,5857921,5095086],
-  'plusvalia-two-methods': [17108467,8317006,33998589,7587923,13246483,33987126,18816779,9874531,38280889,33691574,8669175,14018340],
-  'iva-holiday-let': [20975726,22695684,22033617,19075389,11542659,11952455,30736927,1683916,29300400,4760721,11631647,12898239],
-  'consorcio-storm': [31156673,13869627,307008,38422363,9268088,7405768,10521312,33691573,6148878,1212611,38499007,17108467],
-  'legal-cover-you-already-pay-for': [36532613,5095086,19884454,31530645,12225957,30820125,12696255,5961887,2289180,4819300,27993172,12633940],
-  'community-decision-clock': [33844732,14018340,5470587,18816780,12113635,28586234,22798478,12234423,14205214,11829139,6295963,12256501],
-  'builder-quote-red-flags': [9874531,11631647,12898239,5079145,27556847,5663203,8972291,20975727,28905960,16901575,8465249,36055015],
-  'what-a-year-actually-costs': [8317006,17108467,14515702,13207675,33354159,4050933,19075383,11979943,23938784,29749216,16743486,36609883],
-  'leaving-it-empty': [28586234,12633940,36532613,3532527,19805956,16946214,6007018,3157917,12633946,33844732,35808341,34396811],
-  'utilities-in-order': [12696255,12256501,39257974,27397561,14234129,14786097,16549991,10135367,13717503,16946211,12307498,16558109],
-  'tradesperson-in-your-language': [35808341,36055015,8078628,6076164,28054849,33881205,16901576,9510821,8317006,33998589,7587923,13246483],
-  'who-does-what': [33691573,36609883,17740863,19075385,11315557,30749703,18771947,24906297,22695684,22033617,19075389,11542659],
-  'maintenance-is-a-year': [5663203,34396811,6585286,30179660,7631185,5929769,32200074,14965658,13869627,307008,38422363,9268088],
-  'pests-by-property': [22798478,16558109,19001400,31156673,12194064,29150124,27794396,5857921,5095086,19884454,31530645,12225957],
-  'pre-2019-mortgage-costs': [19805956,13246483,33987126,18816779,9874531,38280889,33691574,8669175,14018340,5470587,18816780,12113635],
-  // The ten Bueno tax posts, added October 2026. Same pool of photographs, no new ids.
-  'bueno-rented-part-of-the-year': [2289180,6076164,4819300,27993172,12633940,36532613,3532527,19805956,16946214,6007018,3157917,12633946],
-  'bueno-year-end-return': [12633940,19805956,16946214,6007018,3157917,12633946,7587923,14205214,11829139,6295963,12256501,39257974],
-  'bueno-ibi-is-not-this': [6007018,11829139,6295963,12256501,39257974,27397561,14234129,14786097,16549991,10135367,13717503,12234423],
-  'bueno-two-owners-two-returns': [14205214,16549991,10135367,13717503,12234423,28905960,16901575,8465249,36055015,8078628,28054849,33881205],
-  'bueno-what-goes-into-it': [39257974,36055015,8078628,28054849,33881205,16901576,9510821,8317006,23938784,29749216,16743486,36609883],
-  'bueno-direct-debit-date': [16549991,23938784,29749216,16743486,36609883,17740863,19075385,11315557,30749703,18771947,24906297,22695684],
-  'bueno-why-from-fifty': [28905960,30749703,18771947,24906297,22695684,33844732,35808341,34396811,6585286,30179660,7631185,5929769],
-  'bueno-included-in-select': [36055015,6585286,30179660,7631185,5929769,32200074,14965658,13869627,9268088,16946211,12307498,16558109],
-  'bueno-never-filed': [33881205,9268088,16946211,12307498,16558109,19001400,31156673,12194064,29150124,27794396,5857921,5095086],
-  'bueno-form-changes-2027': [23938784,29150124,27794396,5857921,5095086,17108467,33998589,13246483,33987126,18816779,9874531,38280889],
-};
+export const cardFor = (ideaKey, lang = 'en') =>
+  `${SITE}/fb-cards/${ideaKey}/${LANGS.includes(lang) ? lang : 'en'}.jpg?v=${CARD_VERSION}`;
 
-const RENDER = '?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
+// Every language's image for one post, in the order the email prints them.
+export const cardsFor = (ideaKey) => Object.fromEntries(LANGS.map(l => [l, cardFor(ideaKey, l)]));
 
-const urlFor = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.${PNG.has(id) ? 'png' : 'jpeg'}${RENDER}`;
-
+// The deck shows the English image. There is nothing to choose between any more, so the
+// only option offered is the post's own English image; a pasted address still works.
 export function imageOptionsFor(ideaKey) {
-  const ids = OPTIONS[ideaKey];
-  return ids ? ids.map(urlFor) : [];
+  return IDEAS.some(i => i.key === ideaKey) ? [cardFor(ideaKey, 'en')] : [];
 }
 
 export function imageFor(ideaKey, fallback = null) {
@@ -63,4 +42,8 @@ export function imageFor(ideaKey, fallback = null) {
   return opts.length ? opts[0] : (fallback ?? null);
 }
 
-export const IMAGE_KEYS = Object.keys(OPTIONS);
+// Is this address one of our own post images? A custom image pasted in the deck is not, and
+// then the email uses that one image for every language, because it is what Pratik chose.
+export const isCard = (url) => typeof url === 'string' && url.startsWith(`${SITE}/fb-cards/`);
+
+export const IMAGE_KEYS = IDEAS.map(i => i.key);

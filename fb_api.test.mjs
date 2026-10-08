@@ -11,11 +11,13 @@
 
 import { createHash } from 'node:crypto';
 import fbRouter, { resolveAction, ACTIONS } from './api/fb.js';
-import { finalText, subjectFor, bodyFor, groupsToday, SEND_TO, SEND_CC } from './api/_fb_email.js';
+import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO_SUBJECT, SEND_TO, SEND_CC } from './api/_fb_email.js';
+import { GROUPS } from './api/_fb_groups.js';
 import { hashOf, isCurrent, checkTranslation } from './api/_fb_translate.js';
 import { queueOf, nextDay, sentOn } from './api/_fb_queue.js';
 import { IDEAS, QUEUE_ORDER, SPONSOR, linkFor, BUENO_TOOL } from './api/_fb_content.js';
-import { groupsFor, ACCOUNT } from './api/_fb_groups.js';
+import { groupsFor, ACCOUNT, MAX_PER_DAY } from './api/_fb_groups.js';
+import { cardFor } from './api/_fb_images.js';
 
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = '') => cond ? pass++ : (fail++, console.log('FAIL', name, extra));
@@ -96,13 +98,13 @@ const samplePost = (over = {}) => ({
   tool_url: 'https://www.247spain.es/day-counter',
   post_text: ENGLISH,
   translations: trFor(), translations_of: hashOf(ENGLISH),
-  edited_text: null, note: 'Leave out the Brits in Spain group today', image_url: 'https://images.pexels.com/photos/1/a.jpeg',
-  image_options: ['https://images.pexels.com/photos/1/a.jpeg', 'https://images.pexels.com/photos/2/b.jpeg'],
+  edited_text: null, note: 'Leave out the Brits in Spain group today', image_url: cardFor('ninety-days', 'en'),
+  image_options: [cardFor('ninety-days', 'en'), 'https://images.pexels.com/photos/2/b.jpeg'],
   status: 'pending', sent_at: null, send_day: null, ...over,
 });
 
 // Routing
-ok('the router knows four actions', ACTIONS.length === 4 && ACTIONS.includes('seed') && ACTIONS.includes('dispatch'), ACTIONS.join(','));
+ok('the router knows six actions', ACTIONS.length === 6 && ['seed', 'dispatch', 'trial', 'intro'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
 ok('query form resolves', resolveAction(req('/api/fb?action=posts')) === 'posts');
 ok('path form resolves', resolveAction(req('/api/fb/decide')) === 'decide');
 ok('hyphen form resolves', resolveAction(req('/api/fb-seed')) === 'seed');
@@ -133,7 +135,7 @@ ok('a LinkedIn action is not routable here', resolveAction(req('/api/fb?action=r
   ok('seed only ever talked to fb_posts', calls.every(c => /\/rest\/v1\/fb_posts/.test(c.url)));
   const written = JSON.parse(calls.find(c => c.method === 'POST').body);
   ok('every written row carries its post text', written.every(r => r.post_text && r.post_text.length > 200));
-  ok('every written row carries twelve image options', written.every(r => r.image_options.length === 12));
+  ok('every written row offers its own English image', written.every(r => r.image_options.length === 1 && r.image_url === cardFor(r.idea_key, 'en')));
   ok('every written row starts as pending', written.every(r => r.status === 'pending'));
   ok('every row is English', written.every(r => r.language === 'en'));
   ok('every row carries the six translations',
@@ -156,7 +158,7 @@ ok('a LinkedIn action is not routable here', resolveAction(req('/api/fb?action=r
 // reseed must refresh the writing without throwing away what Pratik did with it. Twenty
 // rows already exist in production and ten are new, which is exactly this mix.
 {
-  const chosen = 'https://images.pexels.com/photos/6076164/pexels-photo-6076164.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
+  const chosen = cardFor('ninety-days', 'en');
   const existing = [
     { id: 'a', idea_key: 'ninety-days', language: 'en', status: 'posted', note: 'Costa Blanca group, 3 Sept', posted_at: '2026-09-03T10:00:00Z', image_url: chosen },
     { id: 'b', idea_key: 'imputed-income-empty-home', language: 'en', status: 'rejected', note: 'too long', posted_at: null, image_url: 'https://images.pexels.com/photos/999999/pexels-photo-999999.jpeg' },
@@ -289,7 +291,9 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email carries all six translations', OTHERS.every(l => html.includes(`Oversatt ${l}.`)));
   ok('and labels each language', ['English','Norwegian','Swedish','Danish','German','French','Dutch'].every(n => html.includes(n)));
   ok('each version carries its own link', OTHERS.every(l => html.includes(linkFor('day-counter', l))));
-  ok('the email carries the image', html.includes(p.image_url));
+  ok('the email carries one image per language, each with that language on it',
+     ['en', ...OTHERS].every(l => html.includes(cardFor('ninety-days', l))));
+  ok('no image is shared between two languages', new Set(['en', ...OTHERS].map(l => cardFor('ninety-days', l))).size === 7);
   ok('the email carries the tool link', html.includes(p.tool_url));
   ok('the email says which day it is', /day 3/i.test(html) && /^Day 3\. Facebook post to publish:/.test(subjectFor(p, 3)));
   ok('the email names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
@@ -604,9 +608,25 @@ ok('a Bueno translation must carry that language\'s Bueno page',
   ok('a translation that drops the name Bueno is refused', res.body.queued === false && /Bueno/.test(res.body.error));
 }
 
+{
+  // A pasted image of Pratik's own goes with every language, because it is what he chose.
+  const html = bodyFor(samplePost({ image_url: 'https://cdn.example.com/mine.png' }), 1);
+  ok('a pasted image is used for every language', (html.match(/cdn\.example\.com\/mine\.png/g) || []).length >= 7
+     && !html.includes('/fb-cards/'));
+}
+
 // ---------------------------------------------------------------------------
-// The queue and the daily send.
+// The queue and the daily send. The clock is fixed at 20 October 2026, after posting starts.
 // ---------------------------------------------------------------------------
+const RealDate = Date;
+const setNow = (iso) => {
+  const NOW = RealDate.parse(iso);
+  globalThis.Date = class extends RealDate {
+    constructor(...a) { super(...(a.length ? a : [NOW])); }
+    static now() { return NOW; }
+  };
+};
+setNow('2026-10-20T03:30:00Z');
 const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n], status: 'approved', note: null, ...over });
 
 {
@@ -654,7 +674,8 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   ok('a dry run names the post at the front', res.body.would_send.idea_key === QUEUE_ORDER[0]);
   ok('a dry run says what comes after it', res.body.then.join() === [QUEUE_ORDER[1], QUEUE_ORDER[3]].join());
   ok('a dry run lists every language with its account and groups', res.body.groups.length === 7
-     && res.body.groups.every(g => g.account >= 1 && g.account <= 7 && g.groups.length >= 3));
+     && res.body.groups.every(g => g.account >= 1 && g.account <= 7 && g.groups.length >= 1 && g.groups.length <= MAX_PER_DAY));
+  ok('the first day goes into one group per language', res.body.day === 1 && res.body.groups.every(g => g.groups.length === 1));
   ok('a dry run changes no row', table.every(r => !r.sent_at));
 }
 
@@ -729,6 +750,103 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   const res = makeRes();
   await fbRouter(post('/api/fb?action=dispatch', {}), res);
   ok('stale translations stop the daily send', res.code === 500 && mails(calls).length === 0);
+}
+
+// Before the first posting day nothing goes out, however much is approved.
+{
+  setNow('2026-10-10T03:30:00Z');
+  const calls = fakeSupabase([row(0), row(1)]);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=dispatch', {}), res);
+  ok('before 12 October the daily send sends nothing', res.body.sent === false && /2026-10-12/.test(res.body.reason) && mails(calls).length === 0);
+  const res2 = makeRes();
+  await fbRouter(post('/api/fb?action=dispatch', { force: true }), res2);
+  ok('unless someone forces it', res2.body.sent === true);
+  setNow('2026-10-12T03:30:00Z');
+  fakeSupabase([row(0), row(1)]);
+  const res3 = makeRes();
+  await fbRouter(post('/api/fb?action=dispatch', {}), res3);
+  ok('on 12 October it sends', res3.body.sent === true && res3.body.day === 1);
+  globalThis.Date = RealDate;
+}
+// Never more than three groups a language, in any email.
+for (const d of [1, 2, 3, 9, 20]) {
+  const html = bodyFor(samplePost(), d);
+  const counts = ['en', ...OTHERS].map(l => groupsFor(l, d).length);
+  ok(`day ${d}: no language gets more than three groups`, counts.every(n => n <= 3) && html.includes(`in these ${counts[0]} groups today`));
+}
+
+// ---------------------------------------------------------------------------
+// The instructions email, and the trial Pratik sends himself first.
+// ---------------------------------------------------------------------------
+{
+  const html = introBody();
+  ok('the instructions name all seven accounts and their languages',
+     ['English', 'Norwegian', 'Swedish', 'Danish', 'German', 'French', 'Dutch'].every(n => html.includes(n))
+     && [1, 2, 3, 4, 5, 6, 7].every(n => html.includes(`Account ${n}`)));
+  ok('the instructions list every group each account should join, as links',
+     Object.values(GROUPS).every(list => list.every(([, url]) => html.includes(`href="${url}"`))));
+  ok('the instructions explain the plan, the accounts, held posts and Reddit',
+     /day by day/i.test(html) && /Keeping the accounts healthy/.test(html) && /Waiting for admin/.test(html) && /Reddit/.test(html));
+  const plan = planDays();
+  ok('the plan runs from 9 to 31 October', plan[0].date === '2026-10-09' && plan[plan.length - 1].date === '2026-10-31' && plan.length === 23);
+  ok('the first three days are joining and warming up, with no posting', plan.slice(0, 3).every(p => !p.day && /No posting/.test(p.task)));
+  ok('days 1 and 2 of the plan are for joining every group', /join the first half/.test(plan[0].task) && /join the rest/.test(plan[1].task));
+  ok('posting starts on 12 October with one group, then two, then three',
+     plan[3].date === '2026-10-12' && /in 1 group/.test(plan[3].task) && /in 2 groups/.test(plan[4].task) && /in 3 groups/.test(plan[5].task));
+  ok('every day of the plan is in the email', plan.every(p => html.includes(p.label)));
+  ok('the instructions ask for no friend requests to strangers', /Please do not send friend requests to random strangers/.test(html));
+  ok('the instructions carry no dash and no emoji', !/[\u2014\u2013]/.test(html) && !/[\u{1F300}-\u{1FAFF}]/u.test(html));
+  ok('a real instructions email carries no trial banner', !/Trial copy/.test(html));
+  ok('a trial copy says so at the top', /Trial copy for Pratik/.test(introBody({ trial: true })));
+  ok('a trial post says so at the top, and a real one does not',
+     /Trial copy for Pratik/.test(bodyFor(samplePost(), 1, { trial: true })) && !/Trial copy/.test(bodyFor(samplePost(), 1)));
+}
+{
+  // Nothing approved yet: the trial shows the first post in the written order, as day 1.
+  const table = [row(0, { status: 'pending' })];
+  const calls = fakeSupabase(table);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=trial', {}), res);
+  const m = mails(calls).map(c => JSON.parse(c.body));
+  ok('a trial sends two emails', res.body.ok === true && m.length === 2, JSON.stringify(res.body));
+  ok('both go to Pratik alone, with nobody copied', m.every(x => x.to.join() === 'pratik.y.renuse@gmail.com' && !x.cc));
+  ok('Poornima is on neither', !JSON.stringify(m).includes('poornimanirwal'));
+  ok('the first is the instructions', m[0].subject === `Trial: ${INTRO_SUBJECT}`);
+  ok('the second is day 1 of the posts, with day 1 groups', /^Trial: Day 1\./.test(m[1].subject)
+     && groupsToday(1).every(x => x.groups.every(g => m[1].html.includes(`href="${g.url}"`))));
+  ok('the trial post is the first in the written order', res.body.idea_key === QUEUE_ORDER[0] && res.body.from_queue === false);
+  ok('the trial post carries all seven languages', ['English', 'Danish', 'Dutch'].every(n => m[1].html.includes(n)));
+  ok('a trial marks nothing as sent', table.every(r => !r.sent_at && !r.send_day) && !calls.some(c => c.method === 'PATCH'));
+}
+{
+  // Something approved: the trial shows what will really go next, as the next day.
+  const table = [row(0, { sent_at: '2026-10-07T03:30:00Z', send_day: 1 }), row(3), row(1)];
+  const calls = fakeSupabase(table);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=trial', {}), res);
+  ok('a trial shows the post at the front of the queue as the next day',
+     res.body.idea_key === QUEUE_ORDER[1] && res.body.day === 2 && res.body.from_queue === true);
+  ok('and still sends to nobody but Pratik', mails(calls).every(c => !c.body.includes('poornimanirwal')));
+}
+{
+  const calls = fakeSupabase([]);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=intro', {}), res);
+  ok('the real instructions need confirm: true', res.code === 400 && mails(calls).length === 0);
+  const res2 = makeRes();
+  await fbRouter(post('/api/fb?action=intro', { confirm: true }), res2);
+  const m = JSON.parse(mails(calls)[0].body);
+  ok('the real instructions go to Poornima with Pratik copied',
+     res2.body.ok === true && m.to.join() === 'poornimanirwal@gmail.com' && m.cc.join() === 'pratik.y.renuse@gmail.com'
+     && m.subject === INTRO_SUBJECT && !/Trial/.test(m.html));
+  const res3 = makeRes();
+  await fbRouter({ ...post('/api/fb?action=trial', {}), headers: { 'x-passcode': 'wrong' } }, res3);
+  ok('a trial needs the password', res3.code === 401);
+}
+{
+  // Everything that goes to Poornima is copied to Pratik.
+  ok('every send to the publisher copies Pratik', SEND_CC.join() === 'pratik.y.renuse@gmail.com');
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

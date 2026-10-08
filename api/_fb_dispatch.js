@@ -20,6 +20,7 @@
 import { gateCron, rest, readBody } from './_fb_db.js';
 import { queueOf, nextDay, sentOn, withCurrentTranslations, deliver, save } from './_fb_queue.js';
 import { groupsToday, sendQueueEmpty, finalText } from './_fb_email.js';
+import { DAILY_START } from './_fb_groups.js';
 
 const truthy = (v) => v === true || v === 1 || v === '1' || v === 'true';
 
@@ -30,6 +31,13 @@ export default async function handler(req, res) {
   const q = req.query || {};
   const dry = truthy(q.dry) || truthy(body.dry);
   const force = truthy(q.force) || truthy(body.force);
+
+  // Nothing goes out before the first posting day. The days before it are for joining the
+  // groups. A dry run still answers, so the setup can be checked in advance.
+  const today = new Date().toISOString().slice(0, 10);
+  if (today < DAILY_START && !force && !dry) {
+    return res.json({ ok: true, sent: false, reason: `posting starts on ${DAILY_START}`, today });
+  }
 
   const rows = await rest(res, '?select=*');
   if (rows === null) return;

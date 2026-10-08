@@ -1,4 +1,4 @@
-// Walks /internal-pratik in a real browser, against a stand-in API serving the rows the
+// Walks /internal-poornima in a real browser, against a stand-in API serving the rows the
 // seed handler actually builds. It proves the page behind the password gate: that all seven
 // languages load, that the text shown is the text that will be copied, that the image
 // picker only ever offers this post's own options, and that the retired /internal route
@@ -37,6 +37,11 @@ const srv = http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   if (u.pathname === '/api/fb') {
     const action = u.searchParams.get('action');
+    if (action === 'trial' || action === 'intro') {
+      DECISIONS.push({ action });
+      res.writeHead(200, { 'content-type': 'application/json' });
+      return res.end(JSON.stringify({ ok: true, to: action === 'trial' ? 'Pratik' : 'Poornima', day: 1 }));
+    }
     if (action === 'decide') {
       // Record what the deck asked for, and answer the way the real handler would.
       let body = '';
@@ -93,8 +98,9 @@ page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text())
 page.on('dialog', d => d.accept());
 
 // The gate.
-await page.goto(`http://127.0.0.1:${PORT}/internal-pratik`, { waitUntil: 'networkidle' });
+await page.goto(`http://127.0.0.1:${PORT}/internal-poornima`, { waitUntil: 'networkidle' });
 ok('the deck is behind a password', (await page.locator('input[type=password]').count()) === 1);
+ok('the deck says who the posts are for', /Posts for Poornima/.test(await page.locator('h1').innerText()));
 ok('nothing is shown before the password', (await page.locator('.fbp-card').count()) === 0);
 
 await page.fill('input[type=password]', 'anything');
@@ -143,6 +149,8 @@ ok('the status filter carries counts', /To review \(\d+\)/.test(await page.locat
   await page.waitForTimeout(150);
   const german = await card.locator('.fbp-trlist details', { hasText: 'German' }).locator('pre').innerText();
   ok('the German version is the German version', german.trim() === renderPost(IDEAS[0], 'de').trim());
+  const deImg = await card.locator('.fbp-trlist details', { hasText: 'German' }).locator('img').getAttribute('src');
+  ok('the German version shows the German image', deImg === `/fb-cards/${IDEAS[0].key}/de.jpg`);
   ok('and links to the German page', german.includes(linkFor(IDEAS[0].tool, 'de')));
   await card.locator('button', { hasText: 'Hide the other six languages' }).click();
   await page.waitForTimeout(150);
@@ -155,7 +163,7 @@ ok('no image grid until it is asked for', (await page.locator('.fbp-grid').count
 await first.locator('button', { hasText: 'Change image' }).click();
 await page.waitForSelector('.fbp-grid');
 const shown = await page.locator('.fbp-grid .fbp-opt img').evaluateAll(els => els.map(e => e.src));
-ok('the grid offers exactly this post options', shown.length === 12
+ok('the grid offers exactly this post options', shown.length === 1
    && shown.every(s => imageOptionsFor(IDEAS[0].key).includes(s)), String(shown.length));
 ok('the one in use is marked', (await page.locator('.fbp-grid .fbp-inuse').count()) === 1);
 await first.locator('button', { hasText: 'Change image' }).click();
@@ -242,6 +250,17 @@ ok('every card says where its link goes',
      DECISIONS.some(d => d.action === 'image_custom' && d.image === 'https://cdn.example.com/mine.png'));
 }
 
+// The trial and the real instructions are one press each, from the header.
+{
+  await page.locator('button', { hasText: 'Send me a trial' }).click();
+  await page.waitForTimeout(400);
+  ok('the trial button calls the trial', DECISIONS.some(d => d.action === 'trial'));
+  ok('and says Poornima received nothing', /Poornima received nothing/.test(await page.locator('.fbp-ok').innerText()));
+  await page.locator('button', { hasText: 'Send Poornima the instructions' }).click();
+  await page.waitForTimeout(400);
+  ok('the instructions button asks first and then sends', DECISIONS.some(d => d.action === 'intro'));
+}
+
 // Phone.
 await page.setViewportSize({ width: 390, height: 1400 });
 await page.waitForTimeout(300);
@@ -252,7 +271,13 @@ await page.setViewportSize({ width: 1000, height: 1000 });
 // The retired route.
 await page.goto(`http://127.0.0.1:${PORT}/internal`, { waitUntil: 'networkidle' });
 ok('the old Studio route says it is retired', /retired/i.test(await page.locator('h1').innerText()));
-ok('and points at the personal deck', (await page.locator('a').first().getAttribute('href')) === '/internal-pratik');
+ok('and points at the post deck', (await page.locator('a').first().getAttribute('href')) === '/internal-poornima');
+
+// The old deck address forwards to the new one.
+await page.goto(`http://127.0.0.1:${PORT}/internal-pratik`, { waitUntil: 'networkidle' });
+await page.waitForTimeout(400);
+ok('the old address lands on the new deck', new URL(page.url()).pathname === '/internal-poornima'
+   && (await page.locator('input[type=password]').count()) === 1);
 ok('the old deck is gone, not hidden', (await page.locator('.fbp-card, .studio-card').count()) === 0);
 
 // Pexels is blocked from this sandbox, which is a network fact and not a page fault.

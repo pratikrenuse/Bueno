@@ -1,0 +1,1112 @@
+{
+ "bueno-rented-part-of-the-year": {
+  "slug": "bueno-rented-part-of-the-year",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · UTLEIESKATT",
+  "headline": [
+   "Delvis utleie krever",
+   "to typer skattemelding."
+  ],
+  "rows": [
+   {
+    "label": "Hvilken melding?",
+    "fact": [
+     "Utleide uker oppgis",
+     "som leieinntekt."
+    ],
+    "detail": "Tomme uker beregnes ut fra katastralverdien."
+   },
+   {
+    "label": "Når er fristen?",
+    "fact": [
+     "Siste kvartalsmelding har",
+     "frist 1. til 20. oktober."
+    ],
+    "detail": "Fra 2026 samles leien i én melding i april."
+   },
+   {
+    "label": "Hva med kostnader?",
+    "fact": [
+     "Bosatte i EU og EØS",
+     "kan trekke fra utgifter."
+    ],
+    "detail": "Alle andre skattes av brutto leieinntekt."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "imputed-income-empty-home": {
+  "slug": "imputed-income-empty-home",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · BEREGNET INNTEKT",
+  "headline": [
+   "Et tomt hjem trenger",
+   "likevel en skattemelding."
+  ],
+  "rows": [
+   {
+    "label": "Hvorfor skatt?",
+    "fact": [
+     "Spania regner fritidsboligen",
+     "som om den ga inntekt."
+    ],
+    "detail": "Det gjelder selv om du aldri leier den ut."
+   },
+   {
+    "label": "Hva er grunnlaget?",
+    "fact": [
+     "Det er katastralverdien",
+     "på IBI-regningen din."
+    ],
+    "detail": "Det er ikke kjøpesummen eller dagens verdi."
+   },
+   {
+    "label": "Hva kan trekkes fra?",
+    "fact": [
+     "Ingenting trekkes fra,",
+     "ikke engang selve IBI."
+    ],
+    "detail": "Satsen er 19 % i EU og EØS, 24 % ellers."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-year-end-return": {
+  "slug": "bueno-year-end-return",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · SKATT FOR IKKE-BOSATTE",
+  "headline": [
+   "Skattemeldingen for 2025",
+   "har frist 31. desember."
+  ],
+  "rows": [
+   {
+    "label": "Hvem må levere?",
+    "fact": [
+     "Du leverer selv om boligen",
+     "aldri har vært leid ut."
+    ],
+    "detail": "Det er meldingen for ikke-bosatte, skjema 210."
+   },
+   {
+    "label": "Hva er satsen?",
+    "fact": [
+     "Den er 19 % i EU",
+     "og 24 % for resten."
+    ],
+    "detail": "Norge, Island og Liechtenstein betaler 19 %."
+   },
+   {
+    "label": "Hva koster det?",
+    "fact": [
+     "Bueno leverer den for deg,",
+     "fra bare €50."
+    ],
+    "detail": "Prisen avhenger av hvor mange eiere det er."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "late-filing-two-regimes": {
+  "slug": "late-filing-two-regimes",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · FORSINKET LEVERING",
+  "headline": [
+   "Sent ute med skjema 210?",
+   "Sjekk posten først."
+  ],
+  "rows": [
+   {
+    "label": "Levert på egen hånd?",
+    "fact": [
+     "Det koster 1 % pluss 1 %",
+     "per hele måned forsinket."
+    ],
+    "detail": "Fra måned 13 er det fast 15 % pluss renter."
+   },
+   {
+    "label": "Blir det bot?",
+    "fact": [
+     "Nei. Tillegget kommer",
+     "i stedet for boten."
+    ],
+    "detail": "Du får 25 % rabatt om du betaler innen fristen."
+   },
+   {
+    "label": "Fått et brev?",
+    "fact": [
+     "Etter et pålegg gjelder",
+     "ikke disse reglene lenger."
+    ],
+    "detail": "Da gjelder et helt annet regelverk."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-ibi-is-not-this": {
+  "slug": "bueno-ibi-is-not-this",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · TO ULIKE SKATTER",
+  "headline": [
+   "IBI er ikke skatten for",
+   "ikke-bosatte."
+  ],
+  "rows": [
+   {
+    "label": "Hva er IBI?",
+    "fact": [
+     "IBI er den lokale skatten",
+     "til kommunen din."
+    ],
+    "detail": "De fleste eiere betaler den allerede med fast trekk."
+   },
+   {
+    "label": "Hva er skjema 210?",
+    "fact": [
+     "Skjema 210 er statlig,",
+     "og ingen sender deg regning."
+    ],
+    "detail": "Du leverer det hvert år, også for et tomt hjem."
+   },
+   {
+    "label": "Hva er grunnlaget?",
+    "fact": [
+     "Det bruker katastralverdien",
+     "på IBI-regningen din."
+    ],
+    "detail": "Bueno leverer det for eiere i utlandet fra €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "quarterly-rental-filing-ends": {
+  "slug": "quarterly-rental-filing-ends",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · LEIEINNTEKT",
+  "headline": [
+   "Kvartalsvise leiemeldinger",
+   "tar slutt i oktober."
+  ],
+  "rows": [
+   {
+    "label": "Hvilken er den siste?",
+    "fact": [
+     "3. kvartal 2026 har frist",
+     "1. til 20. oktober 2026."
+    ],
+    "detail": "Det er den siste kvartalsvise leiemeldingen."
+   },
+   {
+    "label": "Hva skjer så?",
+    "fact": [
+     "Leie fra 1. oktober går",
+     "inn i én årlig melding."
+    ],
+    "detail": "Den leveres i løpet av de første 20 dagene i april."
+   },
+   {
+    "label": "Når leverer jeg neste?",
+    "fact": [
+     "Neste levering er i april",
+     "2027, ikke i januar."
+    ],
+    "detail": "Det lønner seg å skrive det i kalenderen nå."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-two-owners-two-returns": {
+  "slug": "bueno-two-owners-two-returns",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · DELT EIERSKAP",
+  "headline": [
+   "To eiere betyr",
+   "to skattemeldinger."
+  ],
+  "rows": [
+   {
+    "label": "Hvem leverer?",
+    "fact": [
+     "Hver eier oppgir",
+     "sin egen andel."
+    ],
+    "detail": "Eier dere halvdelen hver, får hver melding halv verdi."
+   },
+   {
+    "label": "Arvet av tre?",
+    "fact": [
+     "Tre søsken som arver,",
+     "leverer tre meldinger."
+    ],
+    "detail": "Arbeidet er per eier, og derfor også prisen."
+   },
+   {
+    "label": "Hva koster det?",
+    "fact": [
+     "Bueno leverer hver av dem,",
+     "fra bare €50."
+    ],
+    "detail": "Vi lager og leverer skjema 210 for hver eier."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "eu-eea-deductions": {
+  "slug": "eu-eea-deductions",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · FRADRAG VED UTLEIE",
+  "headline": [
+   "Samme leilighet og leie,",
+   "men helt ulik skatt."
+  ],
+  "rows": [
+   {
+    "label": "Bor du i EU?",
+    "fact": [
+     "Du trekker fra kostnadene",
+     "og betaler 19 % av resten."
+    ],
+    "detail": "Norge, Island og Liechtenstein teller også."
+   },
+   {
+    "label": "Bor du et annet sted?",
+    "fact": [
+     "Du betaler 24 % av",
+     "brutto leieinntekt."
+    ],
+    "detail": "Da er ingen fradrag tillatt i det hele tatt."
+   },
+   {
+    "label": "Hva teller?",
+    "fact": [
+     "Gebyrer, forsikring,",
+     "reparasjoner og lånerenter."
+    ],
+    "detail": "Mange eiere fører bare opp noen få av dem."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-what-goes-into-it": {
+  "slug": "bueno-what-goes-into-it",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · SKJEMA 210, ENKELT FORKLART",
+  "headline": [
+   "Tre tall avgjør",
+   "skattemeldingen din."
+  ],
+  "rows": [
+   {
+    "label": "Hva er grunnlaget?",
+    "fact": [
+     "Det er katastralverdien",
+     "på IBI-kvitteringen din."
+    ],
+    "detail": "Det er ikke kjøpesummen eller markedsverdien."
+   },
+   {
+    "label": "Hvilken prosent?",
+    "fact": [
+     "Meldingen for 2025 bruker",
+     "1,1 % ved reviderte verdier."
+    ],
+    "detail": "Det gjelder revisjoner fra 2012 og senere."
+   },
+   {
+    "label": "Hvilken skattesats?",
+    "fact": [
+     "Den er 19 % i EU og EØS",
+     "og 24 % ellers."
+    ],
+    "detail": "Norge, Island og Liechtenstein regnes som EØS."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "three-percent-retention": {
+  "slug": "three-percent-retention",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · SALG",
+  "headline": [
+   "De 3 % ved salg",
+   "er ikke en skatt."
+  ],
+  "rows": [
+   {
+    "label": "Hva er det?",
+    "fact": [
+     "Kjøperen holder tilbake 3 %",
+     "av avtalt pris."
+    ],
+    "detail": "Det betales på modelo 211 innen én måned."
+   },
+   {
+    "label": "Hva er selve skatten?",
+    "fact": [
+     "Gevinstskatten er",
+     "19 % av gevinsten."
+    ],
+    "detail": "Det er 19 % for alle, uansett hvor du bor."
+   },
+   {
+    "label": "Betalt for mye?",
+    "fact": [
+     "Mellomlegget får du",
+     "tilbake."
+    ],
+    "detail": "Kravet kan sendes én måned etter overtakelsen."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-direct-debit-date": {
+  "slug": "bueno-direct-debit-date",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "BUENO · ÉN DATO DU BØR KUNNE",
+  "headline": [
+   "Automatisk trekk stenger",
+   "23. desember."
+  ],
+  "rows": [
+   {
+    "label": "Leveringsfrist?",
+    "fact": [
+     "Du kan levere meldingen for",
+     "2025 til 31. desember."
+    ],
+    "detail": "Betaling med trekk stopper åtte dager tidligere."
+   },
+   {
+    "label": "Hva går galt?",
+    "fact": [
+     "De som leverer sent tror",
+     "at beløpet blir trukket."
+    ],
+    "detail": "Etter 23. desember må du betale på en annen måte."
+   },
+   {
+    "label": "Hvordan unngå det?",
+    "fact": [
+     "Ikke vent til",
+     "årets siste uke."
+    ],
+    "detail": "Bueno leverer meldingen for eiere i utlandet fra €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "plusvalia-two-methods": {
+  "slug": "plusvalia-two-methods",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · PLUSVALIA",
+  "headline": [
+   "Plusvalia har to metoder,",
+   "og du velger."
+  ],
+  "rows": [
+   {
+    "label": "Hvilken metode?",
+    "fact": [
+     "Den laveste av objektiv",
+     "og reell gevinst gjelder."
+    ],
+    "detail": "Objektiv bruker tomteverdi og antall år eid."
+   },
+   {
+    "label": "Hva om ingen gevinst?",
+    "fact": [
+     "Var det ingen økning,",
+     "er det ingenting å betale."
+    ],
+    "detail": "Du må likevel melde salget med begge skjøtene."
+   },
+   {
+    "label": "Hva er fristen?",
+    "fact": [
+     "Du har tretti virkedager",
+     "fra datoen på skjøtet."
+    ],
+    "detail": "Satser og skjemaer varierer fra kommune til kommune."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-why-from-fifty": {
+  "slug": "bueno-why-from-fifty",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "BUENO · DERFOR KOSTER DET MINDRE",
+  "headline": [
+   "Vi leverer meldingen din",
+   "fra €50. Her er hvorfor."
+  ],
+  "rows": [
+   {
+    "label": "Hva endrer seg?",
+    "fact": [
+     "Svært lite endrer seg",
+     "fra ett år til det neste."
+    ],
+    "detail": "Det er samme eiere, hjem og katastralverdi."
+   },
+   {
+    "label": "Hva tar vi vare på?",
+    "fact": [
+     "Vi lagrer fjorårets skjema",
+     "og forhåndsutfyller årets."
+    ],
+    "detail": "Det som gjenstår, er å sjekke hva som er endret."
+   },
+   {
+    "label": "Hvordan prises det?",
+    "fact": [
+     "Prisen avhenger av",
+     "antall eiere."
+    ],
+    "detail": "Et par betyr to skattemeldinger."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "iva-holiday-let": {
+  "slug": "iva-holiday-let",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · FERIEUTLEIE",
+  "headline": [
+   "IVA avhenger av tjenester,",
+   "ikke av hvor lenge de bor."
+  ],
+  "rows": [
+   {
+    "label": "Ingen tjenester?",
+    "fact": [
+     "Vanlig ferieutleie",
+     "er fritatt for IVA."
+    ],
+    "detail": "Hotellpreg betyr tjenester under oppholdet."
+   },
+   {
+    "label": "Hotelltjenester?",
+    "fact": [
+     "Tjenester som på hotell",
+     "gir 10 % IVA."
+    ],
+    "detail": "Tenk daglig rengjøring, resepsjon eller frokost."
+   },
+   {
+    "label": "Når er det 21 %?",
+    "fact": [
+     "21 % gjelder alt som",
+     "ikke er noen av de to."
+    ],
+    "detail": "Hvem gjesten booker gjennom, kan endre det."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-included-in-select": {
+  "slug": "bueno-included-in-select",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "BUENO · ALLEREDE MEDLEM?",
+  "headline": [
+   "Skattemeldingen kan",
+   "allerede være inkludert."
+  ],
+  "rows": [
+   {
+    "label": "Har du Select?",
+    "fact": [
+     "Select, til €199 i året,",
+     "inkluderer skattemeldingen."
+    ],
+    "detail": "Det dekker opptil to eiere og to boliger."
+   },
+   {
+    "label": "Leier du ut?",
+    "fact": [
+     "Premium, til €299 i året,",
+     "legger til leiemeldingen."
+    ],
+    "detail": "Det gjelder også for opptil to eiere."
+   },
+   {
+    "label": "Har du Standard?",
+    "fact": [
+     "Du kan fortsatt få den",
+     "levert fra €50."
+    ],
+    "detail": "Meldingen for 2025 kan leveres til 31. desember."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "what-a-year-actually-costs": {
+  "slug": "what-a-year-actually-costs",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · HVA BOLIGEN KOSTER",
+  "headline": [
+   "Vet du hva boligen din",
+   "koster hvert år?"
+  ],
+  "rows": [
+   {
+    "label": "Hvorfor så vanskelig?",
+    "fact": [
+     "Regningene kommer én og én",
+     "fra seks eller sju steder."
+    ],
+    "detail": "Ingen av dem får en hel morgen av tiden din."
+   },
+   {
+    "label": "Hva hoper seg opp?",
+    "fact": [
+     "Fastledd, IBI, forsikring",
+     "og gebyrer hoper seg opp."
+    ],
+    "detail": "Noen hundre euro kan gå ubemerket i årevis."
+   },
+   {
+    "label": "Hva hjelper?",
+    "fact": [
+     "Sett hele året",
+     "i én kolonne."
+    ],
+    "detail": "Sammenlign det så med lignende boliger."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-never-filed": {
+  "slug": "bueno-never-filed",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "BUENO · SENT, MEN KAN RETTES",
+  "headline": [
+   "Aldri levert? Det kan",
+   "fortsatt ordnes."
+  ],
+  "rows": [
+   {
+    "label": "Hva koster det?",
+    "fact": [
+     "Tillegget starter på 1 %",
+     "pluss 1 % per hele måned."
+    ],
+    "detail": "Det gjelder når du leverer før du blir bedt om det."
+   },
+   {
+    "label": "Etter ett år?",
+    "fact": [
+     "Fra måned 13 er det fast",
+     "15 % pluss renter."
+    ],
+    "detail": "Tillegget kommer i stedet for en bot."
+   },
+   {
+    "label": "Kan Bueno hjelpe?",
+    "fact": [
+     "Si hvilke år som er åpne,",
+     "så gir vi deg et pristilbud."
+    ],
+    "detail": "Vi leverer meldingen for eiere utenfor Spania."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "pre-2019-mortgage-costs": {
+  "slug": "pre-2019-mortgage-costs",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · ELDRE BOLIGLÅN",
+  "headline": [
+   "Boliglån fra 2000 til",
+   "2019? Les kostnadene."
+  ],
+  "rows": [
+   {
+    "label": "Etableringsgebyrer?",
+    "fact": [
+     "Noen gebyrer ble belastet",
+     "låntakeren alene."
+    ],
+    "detail": "Disse dukker opp igjen og igjen i den perioden."
+   },
+   {
+    "label": "Rentegulv?",
+    "fact": [
+     "Et rentegulv hindret renten",
+     "i å falle videre."
+    ],
+    "detail": "Forsikring solgt sammen med lånet er den tredje."
+   },
+   {
+    "label": "Fortsatt tid?",
+    "fact": [
+     "Det avhenger av kravet",
+     "og krever en abogado."
+    ],
+    "detail": "Siden viser om det i det hele tatt er verdt å spørre."
+   }
+  ],
+  "brand": "247"
+ },
+ "bueno-form-changes-2027": {
+  "slug": "bueno-form-changes-2027",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "BUENO · DETTE ENDRES",
+  "headline": [
+   "Skjema 210 endres",
+   "i januar 2027."
+  ],
+  "rows": [
+   {
+    "label": "Hva er nytt?",
+    "fact": [
+     "Nye felt spør om ledige",
+     "dager og din andel."
+    ],
+    "detail": "De gjelder alle meldinger levert fra 1. januar."
+   },
+   {
+    "label": "Når kan jeg levere?",
+    "fact": [
+     "Meldingen for 2026 åpner",
+     "1. april 2027."
+    ],
+    "detail": "Den er åpen til 31. desember 2027."
+   },
+   {
+    "label": "Hvem følger med?",
+    "fact": [
+     "Bueno følger endringene,",
+     "så du slipper."
+    ],
+    "detail": "Vi leverer skjema 210 for eiere i utlandet fra €50."
+   }
+  ],
+  "brand": "bueno"
+ },
+ "legal-cover-you-already-pay-for": {
+  "slug": "legal-cover-you-already-pay-for",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · RETTSHJELP",
+  "headline": [
+   "Boligforsikringen kan",
+   "betale advokaten din."
+  ],
+  "rows": [
+   {
+    "label": "Hva er det?",
+    "fact": [
+     "Defensa juridica dekker",
+     "advokat og rettskostnader."
+    ],
+    "detail": "Den må være et eget kapittel med egen premie."
+   },
+   {
+    "label": "Hvilken advokat?",
+    "fact": [
+     "Du velger din egen",
+     "advokat, ikke deres."
+    ],
+    "detail": "Polisen må tydelig angi denne retten."
+   },
+   {
+    "label": "Hva nå?",
+    "fact": [
+     "Sjekk polisen før du",
+     "betaler en advokat selv."
+    ],
+    "detail": "De spanske ordene du bør søke etter, står listet."
+   }
+  ],
+  "brand": "247"
+ },
+ "ninety-days": {
+  "slug": "ninety-days",
+  "layout": "rows",
+  "photo": "coast_bay.jpg",
+  "eyebrow": "24/7 SPAIN · 90-DAGERSREGELEN",
+  "headline": [
+   "Det er 90 dager i en",
+   "løpende periode på 180."
+  ],
+  "rows": [
+   {
+    "label": "Gjelder det per år?",
+    "fact": [
+     "Nei. Perioden ruller og",
+     "er ikke et kalenderår."
+    ],
+    "detail": "Fjorårets oktober kan fortsatt telle mot deg i mai."
+   },
+   {
+    "label": "Teller reisedager?",
+    "fact": [
+     "Ankomst og avreise teller",
+     "begge som hele dager."
+    ],
+    "detail": "En langhelg bruker fire dager, ikke to."
+   },
+   {
+    "label": "Hvordan sjekker jeg?",
+    "fact": [
+     "Før opp tidligere og",
+     "bookede turer, og se resten."
+    ],
+    "detail": "Den viser dagen en tur ville tippe deg over."
+   }
+  ],
+  "brand": "247"
+ },
+ "consorcio-storm": {
+  "slug": "consorcio-storm",
+  "layout": "flow",
+  "photo": "golden_coast.jpg",
+  "eyebrow": "24/7 SPAIN · STORMSKADE",
+  "headline": [
+   "Hvem ringer du",
+   "etter en storm?"
+  ],
+  "rows": [
+   {
+    "label": "Hvem betaler?",
+    "fact": [
+     "Noen skader betales i stedet",
+     "av Consorcio."
+    ],
+    "detail": "Flom, jordskjelv og uvanlige stormer teller."
+   },
+   {
+    "label": "Hvilken vindstyrke?",
+    "fact": [
+     "Vindkast over 120 km/h",
+     "i over 3 sekunder teller."
+    ],
+    "detail": "Under det tar ditt eget forsikringsselskap seg av det."
+   },
+   {
+    "label": "Må jeg kjøpe det?",
+    "fact": [
+     "Nei. Det kreves allerede",
+     "inn sammen med premien."
+    ],
+    "detail": "Vanlige poliser i aktuelle bransjer inkluderer det."
+   }
+  ],
+  "brand": "247"
+ },
+ "community-decision-clock": {
+  "slug": "community-decision-clock",
+  "layout": "hero",
+  "photo": "terrace_sunset.jpg",
+  "eyebrow": "24/7 SPAIN · SAMEIEMØTER",
+  "headline": [
+   "Gikk du glipp av møtet?",
+   "Fristen starter senere."
+  ],
+  "rows": [
+   {
+    "label": "Hvor lang tid har jeg?",
+    "fact": [
+     "Tre måneder, eller ett år",
+     "hvis det bryter loven."
+    ],
+    "detail": "Tre måneder gjelder alvorlig skade for eierne."
+   },
+   {
+    "label": "Var du fraværende?",
+    "fact": [
+     "Fristen din starter når",
+     "du ble varslet."
+    ],
+    "detail": "Ta vare på konvolutten eller e-posten med datoen."
+   },
+   {
+    "label": "Noen vilkår?",
+    "fact": [
+     "Du må ha betalt alle",
+     "fellesutgiftene dine."
+    ],
+    "detail": "Ellers må du betale det omstridte beløpet til retten."
+   }
+  ],
+  "brand": "247"
+ },
+ "builder-quote-red-flags": {
+  "slug": "builder-quote-red-flags",
+  "layout": "path",
+  "photo": "sunset_village.jpg",
+  "eyebrow": "24/7 SPAIN · BYGGETILBUD",
+  "headline": [
+   "Dårlige jobber starter",
+   "med hull i tilbudet."
+  ],
+  "rows": [
+   {
+    "label": "Står det datoer?",
+    "fact": [
+     "Et tilbud trenger både",
+     "start- og sluttdato."
+    ],
+    "detail": "Betalinger bør følge etapper, ikke tillit."
+   },
+   {
+    "label": "Hvem søker tillatelse?",
+    "fact": [
+     "Det bør stå hvem som søker",
+     "om tillatelsen."
+    ],
+    "detail": "Det bør også stå hva som skjer med byggeavfallet."
+   },
+   {
+    "label": "Er det spesifisert?",
+    "fact": [
+     "En samlet sum gir ingen",
+     "målestokk for tillegg."
+    ],
+    "detail": "Siden lister tolv spørsmål du bør stille."
+   }
+  ],
+  "brand": "247"
+ },
+ "leaving-it-empty": {
+  "slug": "leaving-it-empty",
+  "layout": "photo",
+  "photo": "pool_dusk.jpg",
+  "eyebrow": "24/7 SPAIN · STENGE BOLIGEN",
+  "headline": [
+   "Stenger du for vinteren?",
+   "Tre ting betyr noe."
+  ],
+  "rows": [
+   {
+    "label": "Hvor lenge borte?",
+    "fact": [
+     "Hvor lenge du er borte,",
+     "endrer listen."
+    ],
+    "detail": "Det gjør også årstiden du reiser i."
+   },
+   {
+    "label": "Kommer noen innom?",
+    "fact": [
+     "At noen ser til boligen,",
+     "endrer den også."
+    ],
+    "detail": "Det betyr mer enn hvor stor boligen er."
+   },
+   {
+    "label": "Fortsatt et hjem?",
+    "fact": [
+     "En fritidsbolig regnes",
+     "som morada etter loven."
+    ],
+    "detail": "Det gjelder om du fortsatt bruker den, selv av og til."
+   }
+  ],
+  "brand": "247"
+ },
+ "utilities-in-order": {
+  "slug": "utilities-in-order",
+  "layout": "rows",
+  "photo": "marina.jpg",
+  "eyebrow": "24/7 SPAIN · ABONNEMENTER",
+  "headline": [
+   "Tjenestene er fem jobber,",
+   "og rekkefølgen betyr noe."
+  ],
+  "rows": [
+   {
+    "label": "Hvilke fem?",
+    "fact": [
+     "Strøm, vann, gass, internett",
+     "og kommunen."
+    ],
+    "detail": "Hver av dem har eget kontor og eget skjema."
+   },
+   {
+    "label": "Hvilket skjema?",
+    "fact": [
+     "Søknaden om NIE",
+     "er skjema EX-15."
+    ],
+    "detail": "EX-18 er en helt annen prosedyre."
+   },
+   {
+    "label": "Hva er gebyret?",
+    "fact": [
+     "Å få tildelt NIE koster",
+     "9,84 euro."
+    ],
+    "detail": "Vit det før noen krever mer av deg."
+   }
+  ],
+  "brand": "247"
+ },
+ "tradesperson-in-your-language": {
+  "slug": "tradesperson-in-your-language",
+  "layout": "flow",
+  "photo": "cove_house.jpg",
+  "eyebrow": "24/7 SPAIN · HÅNDVERKERKATALOG",
+  "headline": [
+   "Finn en rørlegger som",
+   "snakker ditt språk."
+  ],
+  "rows": [
+   {
+    "label": "Hvilke fag?",
+    "fact": [
+     "Rørleggere, elektrikere,",
+     "låsesmeder og byggere."
+    ],
+    "detail": "Klimaanlegg og bassengservice er også med."
+   },
+   {
+    "label": "Hvor?",
+    "fact": [
+     "660 spanske byer, rangert",
+     "etter Google-anmeldelser."
+    ],
+    "detail": "Anmeldelser på ditt språk kommer først."
+   },
+   {
+    "label": "Hva koster det?",
+    "fact": [
+     "Det er gratis, og ingen",
+     "betaler for å havne høyere."
+    ],
+    "detail": "Det er ingen avgift for å bli oppført."
+   }
+  ],
+  "brand": "247"
+ },
+ "who-does-what": {
+  "slug": "who-does-what",
+  "layout": "hero",
+  "photo": "arch_terrace.jpg",
+  "eyebrow": "24/7 SPAIN · HVEM GJØR HVA",
+  "headline": [
+   "Fire spanske titler som",
+   "ikke er samme jobb."
+  ],
+  "rows": [
+   {
+    "label": "Abogado?",
+    "fact": [
+     "En advokat som",
+     "fører saken din."
+    ],
+    "detail": "En procurador står ved siden av i retten."
+   },
+   {
+    "label": "Gestoria?",
+    "fact": [
+     "Den ordner skjemaer og",
+     "papirer, ikke rettssaker."
+    ],
+    "detail": "Feil valg koster som regel to uker."
+   },
+   {
+    "label": "Administrador?",
+    "fact": [
+     "Den driver sameiet",
+     "for eierne."
+    ],
+    "detail": "Det omfatter regnskapet og møtene."
+   }
+  ],
+  "brand": "247"
+ },
+ "maintenance-is-a-year": {
+  "slug": "maintenance-is-a-year",
+  "layout": "path",
+  "photo": "couple_beach.jpg",
+  "eyebrow": "24/7 SPAIN · VEDLIKEHOLD",
+  "headline": [
+   "Vedlikehold er en kalender",
+   "og ikke en liste."
+  ],
+  "rows": [
+   {
+    "label": "Hvorfor timing?",
+    "fact": [
+     "Sol, salt og vinter skader",
+     "ulike ting."
+    ],
+    "detail": "De skader dem på ulike tider av året."
+   },
+   {
+    "label": "Feil måned?",
+    "fact": [
+     "Samme jobb i feil måned",
+     "forebygger ingenting."
+    ],
+    "detail": "I riktig måned forebygger den et problem."
+   },
+   {
+    "label": "Mye borte?",
+    "fact": [
+     "Noen jobber må gjøres",
+     "mens du er borte."
+    ],
+    "detail": "Planen viser hvilke det gjelder."
+   }
+  ],
+  "brand": "247"
+ },
+ "pests-by-property": {
+  "slug": "pests-by-property",
+  "layout": "photo",
+  "photo": "poolside.jpg",
+  "eyebrow": "24/7 SPAIN · SKADEDYR",
+  "headline": [
+   "Tre ting avgjør hvilke",
+   "skadedyr du får."
+  ],
+  "rows": [
+   {
+    "label": "Varme eller hage?",
+    "fact": [
+     "Hver av dem tiltrekker",
+     "ulike skadedyr."
+    ],
+    "detail": "De overlapper knapt i det hele tatt."
+   },
+   {
+    "label": "Står den tom?",
+    "fact": [
+     "Tomme måneder skjuler",
+     "problemer til påske."
+    ],
+    "detail": "Da er det beste tidspunktet passert."
+   },
+   {
+    "label": "Selv eller ringe?",
+    "fact": [
+     "Noen skadedyr krever en",
+     "telefon, ikke en lørdag."
+    ],
+    "detail": "Planen sier hvilke som ikke er for eiere."
+   }
+  ],
+  "brand": "247"
+ }
+}

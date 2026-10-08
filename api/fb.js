@@ -1,4 +1,4 @@
-// One serverless function for Pratik's own Facebook post deck at /internal-pratik.
+// One serverless function for the Facebook post deck at /internal-poornima.
 //
 // SEPARATION, WHICH IS THE WHOLE POINT OF THIS FILE EXISTING SEPARATELY
 // The team's LinkedIn surface is api/linkedin.js with its api/_lk_*.js handlers, reading
@@ -16,6 +16,8 @@ const ROUTES = {
   decide: () => import('./_fb_decide.js'),
   seed:   () => import('./_fb_seed.js'),
   dispatch: () => import('./_fb_dispatch.js'),
+  trial:    () => import('./_fb_trial.js'),
+  intro:    () => import('./_fb_trial.js'),
 };
 
 // An edited post is translated into six languages on the way out, which takes longer than
