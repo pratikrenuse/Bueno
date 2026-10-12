@@ -82,7 +82,7 @@ export default function InternalPratik() {
   const [showTr, setShowTr] = useState(null)
   const [cursor, setCursor] = useState(0)
   const [selected, setSelected] = useState(() => new Set()) // ids ticked for approving together
-  const [view, setView] = useState('dashboard') // 'dashboard' or 'review'
+  const [view, setView] = useState('review') // 'review' first; the dashboard is one click away
   const [dash, setDash] = useState(null)
   const cardRefs = useRef({})
 
@@ -204,33 +204,6 @@ export default function InternalPratik() {
       else setErr(`It did not go: ${j.error}`)
     } catch (e) { setErr(String(e.message || e)) }
     setBusy(false)
-  }
-
-  // Send one approved post to Poornima now, ahead of the queue. You are copied.
-  async function sendNowId(id) {
-    if (!confirm('Email this post to Poornima now? You will be copied.')) return
-    setBusy(true); setErr(''); setFlash('')
-    try {
-      const j = await patch(id, { action: 'send_now' })
-      if (j.warning) setErr(j.warning)
-      else if (j.sent) setFlash(`Sent to Poornima as day ${j.day}. You were copied.`)
-      else setErr(`It did not go: ${j.error}`)
-    } catch (e) { setErr(String(e.message || e)) }
-    setBusy(false)
-    await load(pass, status)
-  }
-
-  async function resendId(id) {
-    if (!confirm('Send this post to Poornima again? You will be copied.')) return
-    setBusy(true); setErr(''); setFlash('')
-    try {
-      const j = await patch(id, { action: 'resend' })
-      if (j.warning) setErr(j.warning)
-      else if (j.sent) setFlash('Sent again.')
-      else setErr(`It did not go: ${j.error}`)
-    } catch (e) { setErr(String(e.message || e)) }
-    setBusy(false)
-    await load(pass, status)
   }
 
   async function simple(p, body, optimistic) {
@@ -379,17 +352,17 @@ export default function InternalPratik() {
       </header>
 
       <nav className="fbp-views fbp-wide" aria-label="View">
-        <button className={`fbp-chip${view === 'dashboard' ? ' current' : ''}`} aria-pressed={view === 'dashboard'}
-          onClick={() => setView('dashboard')}>Dashboard</button>
         <button className={`fbp-chip${view === 'review' ? ' current' : ''}`} aria-pressed={view === 'review'}
           onClick={() => setView('review')}>Review posts ({counts.pending || 0} to review)</button>
+        <button className={`fbp-chip${view === 'dashboard' ? ' current' : ''}`} aria-pressed={view === 'dashboard'}
+          onClick={() => setView('dashboard')}>Dashboard</button>
       </nav>
 
       {view === 'dashboard' && (
         <>
           {err && <p className="fbp-err fbp-wide">{err}</p>}
           {flash && <p className="fbp-ok fbp-wide">{flash}</p>}
-          <Dashboard dash={dash} busy={busy} onSendNow={sendNowId} onResend={resendId}
+          <Dashboard dash={dash}
             onReview={(s) => { setStatus(s); setCursor(0); setSelected(new Set()); setView('review') }} />
         </>
       )}

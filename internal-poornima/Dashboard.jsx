@@ -35,7 +35,7 @@ function Groups({ groups }) {
   )
 }
 
-export default function Dashboard({ dash, busy, onSendNow, onResend, onReview }) {
+export default function Dashboard({ dash, onReview }) {
   const [allUpcoming, setAllUpcoming] = useState(false)
   if (!dash) return <p className="fbp-wide">Loading the dashboard...</p>
 
@@ -49,19 +49,16 @@ export default function Dashboard({ dash, busy, onSendNow, onResend, onReview })
         {todaySent
           ? <p><b>Today's email went</b> at {when(todaySent.sent_at)}: {todaySent.hook}</p>
           : t.queued
-            ? <p><b>Next email: {day(dash.next_send_date)}, around 09:00 India time.</b> {dash.upcoming[0].hook}</p>
+            ? (dash.next_send_date === dash.now.slice(0, 10) && dash.morning_passed
+              ? <p><b>Today's email goes out automatically between 15:00 and 16:00 India time.</b> {dash.upcoming[0].hook}</p>
+              : <p><b>Next email: {day(dash.next_send_date)}, goes out automatically around 07:00 India time.</b> {dash.upcoming[0].hook}</p>)
             : <p><b>Nothing is approved, so nothing will go out.</b> Approve posts to fill the queue.</p>}
-        {!todaySent && t.queued > 0 && (
-          <button className="fbp-primary" disabled={busy} onClick={() => onSendNow(dash.upcoming[0].id)}>
-            Send the next one now
-          </button>
-        )}
       </section>
 
       {t.queued > 0 && t.queued < 5 && (
         <section className="fbp-d-today warn">
           <p><b>Only {t.queued} approved {t.queued === 1 ? 'post is' : 'posts are'} left.</b> Approve more so the daily posts keep going. You also get an email reminder after each send while fewer than 5 are left.</p>
-          <button className="fbp-primary" onClick={() => onReview('pending')}>Review posts</button>
+          <button className="fbp-d-btn" onClick={() => onReview('pending')}>Review posts</button>
         </section>
       )}
 
@@ -96,7 +93,6 @@ export default function Dashboard({ dash, busy, onSendNow, onResend, onReview })
               <span className="fbp-d-meta">Links to {LINK[u.link]}{u.edited ? ', edited by you' : ''}</span>
               <Groups groups={u.groups} />
             </div>
-            <button className="fbp-d-btn" disabled={busy} onClick={() => onSendNow(u.id)}>Send it today</button>
           </div>
         ))}
         {dash.upcoming.length > 10 && (
@@ -120,7 +116,6 @@ export default function Dashboard({ dash, busy, onSendNow, onResend, onReview })
               </span>
               <Groups groups={s.groups} />
             </div>
-            <button className="fbp-d-btn" disabled={busy} onClick={() => onResend(s.id)}>Send again</button>
           </div>
         ))}
       </section>
@@ -151,7 +146,7 @@ export default function Dashboard({ dash, busy, onSendNow, onResend, onReview })
 
       <p className="fbp-d-foot">
         Shows the daily post emails. The trial and instructions emails are not listed.
-        Dates in the queue assume one email a day at about 09:00 India time.
+        Every email goes out by itself, one a day at about 07:00 India time, with a second run at 15:00 if the morning one did not go.
       </p>
     </div>
   )

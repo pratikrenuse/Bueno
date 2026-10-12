@@ -19,9 +19,13 @@ import { DAILY_START } from './_fb_groups.js';
 
 const STATUSES = ['pending', 'approved', 'rejected', 'posted', 'all'];
 
-// The Vercel cron fires at 03:30 UTC (09:00 India time) and on the Hobby plan may run any time
-// in that hour, so until 04:30 UTC today's send is still to come.
-const CRON_DONE_BY_UTC_MIN = 4 * 60 + 30;
+// Two Vercel crons call the daily send: 01:30 UTC (07:00 India time) and a catch-up at 09:30 UTC
+// (15:00 India time) for a day the morning run missed. The send only ever goes once a day.
+// On the Hobby plan each can run any time in its hour, so until 10:30 UTC a post not yet sent
+// today still goes today.
+const CRON_DONE_BY_UTC_MIN = 10 * 60 + 30;
+export const MORNING_UTC = '01:30';
+export const CATCHUP_UTC = '09:30';
 
 const addDays = (iso, n) => {
   const d = new Date(`${iso}T00:00:00Z`);
@@ -29,7 +33,7 @@ const addDays = (iso, n) => {
   return d.toISOString().slice(0, 10);
 };
 
-// The calendar date (UTC, which is also the India date at 09:00) the first queued post goes.
+// The calendar date (UTC, which is also the India date at 07:00) the first queued post goes.
 export function firstSendDate(rows, now = new Date()) {
   const today = now.toISOString().slice(0, 10);
   const mins = now.getUTCHours() * 60 + now.getUTCMinutes();
@@ -83,6 +87,7 @@ export function buildDashboard(all, now = new Date()) {
   return {
     now: now.toISOString(),
     sent_today: sentOn(all, now),
+    morning_passed: (now.getUTCHours() * 60 + now.getUTCMinutes()) >= 2 * 60 + 30,
     next_send_date: upcoming.length ? upcoming[0].date : null,
     runs_until: upcoming.length ? upcoming[upcoming.length - 1].date : null,
     days_since_start: today >= DAILY_START

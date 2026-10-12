@@ -13,7 +13,7 @@ written to published, and where each piece lives. Set up on 6 October 2026.
 2. **Pratik approves in `/internal-poornima`.** He reads the English, edits if it needs it and
    presses "Approve and queue". Approving does not send anything. The card then shows the
    post's place in the queue. He can approve as many as he likes in one sitting.
-3. **One post goes out each day.** At 09:00 India time the Vercel cron in `vercel.json`
+3. **One post goes out each day.** At 07:00 India time the Vercel cron in `vercel.json`
    calls `/api/fb?action=dispatch`, which emails the post at
    the front of the queue to Poornima with Pratik copied.
 4. **The email carries everything she needs.** Under each language is the account that posts
@@ -38,9 +38,11 @@ It asks first. The instructions list every group each account should join.
 
 ## The daily clock
 
-A Vercel cron in `vercel.json`, the same way the LinkedIn sends run: `/api/fb-dispatch` at
-03:30 UTC (09:00 India time) every day. Vercel signs the call with `CRON_SECRET`, which
-`gateCron` accepts. On the Hobby plan Vercel may fire it any time within that hour.
+Two Vercel crons in `vercel.json`, the same way the LinkedIn sends run: `/api/fb-dispatch` at
+01:30 UTC (07:00 India time) and a catch-up, `/api/fb/dispatch`, at 09:30 UTC (15:00 India
+time). The send goes once a day at most, so the catch-up only sends when the morning run did
+not. Vercel signs both with `CRON_SECRET`, which `gateCron` accepts. On the Hobby plan each
+may fire any time within its hour. Nothing is ever sent by a button: Pratik only approves.
 
 ## The order posts go out in
 
@@ -83,11 +85,11 @@ tax page.
 
 ## The dashboard
 
-`/internal-poornima` opens on a dashboard (`internal-poornima/Dashboard.jsx`, data from the
+`/internal-poornima` has a Dashboard tab (`internal-poornima/Dashboard.jsx`, data from the
 `dashboard` block of `/api/fb?action=posts`): whether today's email went, totals, every post
 email sent with its groups, the queue with the date each post should go, failed sends and
-parked posts. "Send the next one now" and "Send it today" there send a queued post ahead of
-the daily run, to Poornima with Pratik copied. Trial and instructions emails are not listed.
+parked posts. It has no send buttons. The deck opens on Review posts; the dashboard is the
+second tab. Trial and instructions emails are not listed.
 
 ## When something goes wrong
 
@@ -106,8 +108,8 @@ All under `/api/fb?action=...`, with the internal password in the `x-passcode` h
 
 - `dispatch&dry=1` says which post would go next and to which groups, and sends nothing.
 - `dispatch&force=1` sends the next post even though one already went out today.
-- On the dashboard, "Send it today" sends one approved post ahead of the queue, and "Send again"
-  repeats a post that has already gone, with the same groups it had the first time.
+- "Send again" on a sent card repeats a post that has already gone, with the same groups it
+  had the first time. There is no send-now button; the crons do all sending.
 - `seed` (the "Load the latest writing" button) writes the content into the table. It never
   overwrites a decision, an edit or the record of a send.
 

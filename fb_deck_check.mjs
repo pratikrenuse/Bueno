@@ -107,12 +107,16 @@ ok('nothing is shown before the password', (await page.locator('.fbp-card').coun
 await page.fill('input[type=password]', 'anything');
 await page.click('button[type=submit]');
 
-// It opens on the dashboard: totals, what is coming up, what went. Then on to review.
+// It opens on Review posts. The dashboard is one click away and carries no send buttons:
+// every email goes out by itself (Pratik, 12 October 2026).
+await page.waitForSelector('.fbp-card', { timeout: 8000 });
+ok('the deck opens on Review posts', (await page.locator('.fbp-d-tiles').count()) === 0);
+await page.click('text=Dashboard');
 await page.waitForSelector('.fbp-d-tiles', { timeout: 8000 });
-ok('the deck opens on the dashboard', (await page.locator('.fbp-d-tile').count()) === 6);
-ok('the dashboard has the coming up, sent and parked sections',
-   ['Coming up', 'Sent to Poornima', 'Parked'].every(async h => true) && (await page.locator('.fbp-d-sec h2').count()) >= 3);
+ok('the dashboard has its six totals', (await page.locator('.fbp-d-tile').count()) === 6);
+ok('the dashboard has the coming up, sent and parked sections', (await page.locator('.fbp-d-sec h2').count()) >= 3);
 ok('the dashboard says nothing is approved when nothing is', /Nothing is approved/.test(await page.locator('.fbp-d-today').first().innerText()));
+ok('the dashboard has no send button', (await page.locator('.fbp-d button', { hasText: /Send/ }).count()) === 0);
 await page.click('text=Review posts');
 await page.waitForSelector('.fbp-card', { timeout: 8000 });
 
