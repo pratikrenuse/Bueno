@@ -39,7 +39,7 @@ It asks first. The instructions list every group each account should join.
 ## The daily clock
 
 Two Vercel crons in `vercel.json`, the same way the LinkedIn sends run: `/api/fb-dispatch` at
-01:30 UTC (07:00 India time) and a catch-up, `/api/fb/dispatch`, at 09:30 UTC (15:00 India
+01:30 UTC (07:00 India time) and a catch-up, `/api/fb/dispatch`, at 12:00 UTC (17:30 India
 time). The send goes once a day at most, so the catch-up only sends when the morning run did
 not. Vercel signs both with `CRON_SECRET`, which `gateCron` accepts. On the Hobby plan each
 may fire any time within its hour. Nothing is ever sent by a button: Pratik only approves.

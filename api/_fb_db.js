@@ -33,7 +33,12 @@ export function gateCron(req, res) {
   const pass = req.headers['x-passcode'] || (req.query && req.query.pass);
   if (process.env.INTERNAL_PASSCODE && pass === process.env.INTERNAL_PASSCODE) return true;
   const auth = String(req.headers.authorization || '');
-  if (process.env.CRON_SECRET && auth === `Bearer ${process.env.CRON_SECRET}`) return true;
+  // Exactly the LinkedIn dispatcher's rule (api/_lk_dispatch.js), at Pratik's request on
+  // 12 Oct 2026: with CRON_SECRET set, Vercel's cron must carry it; without it, Vercel's own
+  // cron call is recognised by its header and user agent.
+  const isCron = !!req.headers['x-vercel-cron'] || String(req.headers['user-agent'] || '').startsWith('vercel-cron');
+  const cronOk = process.env.CRON_SECRET ? auth === `Bearer ${process.env.CRON_SECRET}` : isCron;
+  if (cronOk) return true;
   const token = cronToken();
   if (token && auth === `Bearer ${token}`) return true;
   res.status(401).json({ error: 'unauthorized' });

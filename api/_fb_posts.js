@@ -19,13 +19,13 @@ import { DAILY_START } from './_fb_groups.js';
 
 const STATUSES = ['pending', 'approved', 'rejected', 'posted', 'all'];
 
-// Two Vercel crons call the daily send: 01:30 UTC (07:00 India time) and a catch-up at 09:30 UTC
-// (15:00 India time) for a day the morning run missed. The send only ever goes once a day.
-// On the Hobby plan each can run any time in its hour, so until 10:30 UTC a post not yet sent
+// Two Vercel crons call the daily send: 01:30 UTC (07:00 India time) and a catch-up at 12:00 UTC
+// (17:30 India time) for a day the morning run missed. The send only ever goes once a day.
+// On the Hobby plan each can run any time in its hour, so until 13:00 UTC a post not yet sent
 // today still goes today.
-const CRON_DONE_BY_UTC_MIN = 10 * 60 + 30;
+const CRON_DONE_BY_UTC_MIN = 13 * 60;
 export const MORNING_UTC = '01:30';
-export const CATCHUP_UTC = '09:30';
+export const CATCHUP_UTC = '12:00';
 
 const addDays = (iso, n) => {
   const d = new Date(`${iso}T00:00:00Z`);

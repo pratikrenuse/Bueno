@@ -17,7 +17,7 @@
     },
     {
       "path": "/api/fb/dispatch",
-      "schedule": "30 9 * * *"
+      "schedule": "0 12 * * *"
     }
   ],
   "rewrites": [

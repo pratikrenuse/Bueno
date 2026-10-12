@@ -50,7 +50,7 @@ export default function Dashboard({ dash, onReview }) {
           ? <p><b>Today's email went</b> at {when(todaySent.sent_at)}: {todaySent.hook}</p>
           : t.queued
             ? (dash.next_send_date === dash.now.slice(0, 10) && dash.morning_passed
-              ? <p><b>Today's email goes out automatically between 15:00 and 16:00 India time.</b> {dash.upcoming[0].hook}</p>
+              ? <p><b>Today's email goes out automatically between 17:30 and 18:30 India time.</b> {dash.upcoming[0].hook}</p>
               : <p><b>Next email: {day(dash.next_send_date)}, goes out automatically around 07:00 India time.</b> {dash.upcoming[0].hook}</p>)
             : <p><b>Nothing is approved, so nothing will go out.</b> Approve posts to fill the queue.</p>}
       </section>
@@ -146,7 +146,7 @@ export default function Dashboard({ dash, onReview }) {
 
       <p className="fbp-d-foot">
         Shows the daily post emails. The trial and instructions emails are not listed.
-        Every email goes out by itself, one a day at about 07:00 India time, with a second run at 15:00 if the morning one did not go.
+        Every email goes out by itself, one a day at about 07:00 India time, with a second run at 17:30 if the morning one did not go.
       </p>
     </div>
   )

@@ -665,6 +665,14 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   const res5 = makeRes();
   await fbRouter(req('/api/fb?action=dispatch&dry=1'), res5);
   ok('and so does the deck password', res5.code === 200);
+  const res6 = makeRes();
+  await fbRouter({ ...req('/api/fb?action=dispatch&dry=1'), headers: { 'user-agent': 'vercel-cron/1.0' } }, res6);
+  ok('with no CRON_SECRET, Vercel cron gets in, as on LinkedIn', res6.code === 200, String(res6.code));
+  process.env.CRON_SECRET = 'cron-secret';
+  const res7 = makeRes();
+  await fbRouter({ ...req('/api/fb?action=dispatch&dry=1'), headers: { 'user-agent': 'vercel-cron/1.0' } }, res7);
+  ok('with CRON_SECRET set, the cron must carry it, as on LinkedIn', res7.code === 401, String(res7.code));
+  delete process.env.CRON_SECRET;
 }
 
 // A dry run says what would go and to which groups, and sends nothing.
