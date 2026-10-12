@@ -14,12 +14,14 @@
 //   - A send nobody approved. Only posts with status approved are ever in the queue.
 //   - A silent empty day. When the queue is empty Pratik gets a short email saying so, and
 //     nothing goes to the publisher.
+//   - Running dry without warning. After a send, if fewer than LOW_QUEUE_DAYS approved posts
+//     are left, Pratik gets a short reminder to approve more (him only, once a day).
 //
 //   dry=1    say what would be sent, and to which groups, without sending anything
 //   force=1  send even though something already went out today
 import { gateCron, rest, readBody } from './_fb_db.js';
 import { queueOf, nextDay, sentOn, withCurrentTranslations, deliver, save } from './_fb_queue.js';
-import { groupsToday, sendQueueEmpty, finalText } from './_fb_email.js';
+import { groupsToday, sendQueueEmpty, sendQueueLow, LOW_QUEUE_DAYS, finalText } from './_fb_email.js';
 import { DAILY_START } from './_fb_groups.js';
 
 const truthy = (v) => v === true || v === 1 || v === '1' || v === 'true';
@@ -81,8 +83,14 @@ export default async function handler(req, res) {
   if (!r.sent) {
     return res.status(500).json({ ok: false, sent: false, idea_key: next.idea_key, error: r.error });
   }
+  const left = queue.length - 1;
+  let lowWarned = false;
+  if (left < LOW_QUEUE_DAYS) {
+    const told = await sendQueueLow(left);
+    lowWarned = !!told.ok;
+  }
   res.json({
-    ok: true, sent: true, day, idea_key: next.idea_key, queued: queue.length - 1,
-    retranslated: ready.retranslated, warning: r.warning,
+    ok: true, sent: true, day, idea_key: next.idea_key, queued: left,
+    retranslated: ready.retranslated, warning: r.warning, low_queue_warned: lowWarned,
   });
 }

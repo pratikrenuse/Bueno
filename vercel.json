@@ -10,6 +10,10 @@
     {
       "path": "/api/linkedin-dispatch",
       "schedule": "0 6 * * 2,4"
+    },
+    {
+      "path": "/api/fb-dispatch",
+      "schedule": "30 3 * * *"
     }
   ],
   "rewrites": [

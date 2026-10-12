@@ -28,7 +28,8 @@ const remind = find('/api/linkedin-remind');
 const dispatch = find('/api/linkedin-dispatch');
 ok_('the reminder cron exists', !!remind);
 ok_('the dispatch cron exists', !!dispatch);
-eq('exactly two crons, which is what the plan allows', crons.length, 2);
+// The Facebook daily send (/api/fb-dispatch) has its own cron since 12 Oct 2026; it is not part of this rhythm.
+eq('exactly two LinkedIn crons', crons.filter(c => c.path.startsWith('/api/linkedin')).length, 2);
 
 const R = parse(remind.schedule);
 const D = parse(dispatch.schedule);

@@ -88,6 +88,9 @@ function fakeSupabase(table, mail = { ok: true }, translation = null) {
   return calls;
 }
 const mails = (calls) => calls.filter(c => /resend/.test(c.url));
+// Emails that carry a post to the publisher, leaving out Pratik's own reminders.
+const postMails = (calls) => mails(calls).filter(c => (JSON.parse(c.body).to || []).includes('poornimanirwal@gmail.com'));
+const lowMails = (calls) => mails(calls).filter(c => /left, approve more|queue is now empty/.test(JSON.parse(c.body).subject || ''));
 
 const ENGLISH = 'First line of the original.\n\nSecond paragraph with enough text in it.';
 const trFor = (langs = OTHERS) =>
@@ -686,9 +689,9 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   const res = makeRes();
   await fbRouter(post('/api/fb?action=dispatch', {}), res);
   ok('the daily send sends', res.body.sent === true && res.body.day === 1, JSON.stringify(res.body));
-  ok('exactly one email goes out', mails(calls).length === 1);
+  ok('exactly one post email goes out', postMails(calls).length === 1);
   ok('it is the post at the front of the queue', res.body.idea_key === QUEUE_ORDER[0]);
-  const sent = JSON.parse(mails(calls)[0].body);
+  const sent = JSON.parse(postMails(calls)[0].body);
   ok('to the publisher, with Pratik copied', sent.to.join() === 'poornimanirwal@gmail.com' && sent.cc.join() === 'pratik.y.renuse@gmail.com');
   ok('the email is day 1 and carries day 1 groups', /^Day 1\./.test(sent.subject)
      && groupsFor('en', 1).every(g => sent.html.includes(`href="${g.url}"`)));
@@ -699,13 +702,13 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   // A second call the same day does nothing.
   const res2 = makeRes();
   await fbRouter(post('/api/fb?action=dispatch', {}), res2);
-  ok('a second call the same day sends nothing', res2.body.sent === false && res2.body.reason === 'already sent today' && mails(calls).length === 1);
+  ok('a second call the same day sends nothing', res2.body.sent === false && res2.body.reason === 'already sent today' && postMails(calls).length === 1);
 
   // Forcing it is a person choosing to, and it takes the next post as day 2.
   const res3 = makeRes();
   await fbRouter(post('/api/fb?action=dispatch', { force: true }), res3);
   ok('force sends the next post as day 2', res3.body.sent === true && res3.body.day === 2 && res3.body.idea_key === QUEUE_ORDER[1]);
-  ok('day 2 carries day 2 groups', groupsFor('no', 2).every(g => JSON.parse(mails(calls)[1].body).html.includes(`href="${g.url}"`)));
+  ok('day 2 carries day 2 groups', groupsFor('no', 2).every(g => JSON.parse(postMails(calls)[1].body).html.includes(`href="${g.url}"`)));
 }
 
 // The next morning the next post goes, and a pending post is skipped, not waited for.
@@ -716,7 +719,26 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   const res = makeRes();
   await fbRouter(post('/api/fb?action=dispatch', {}), res);
   ok('the next day the next approved post goes', res.body.sent === true && res.body.day === 2 && res.body.idea_key === QUEUE_ORDER[2]);
-  ok('a post nobody approved is never sent', !table[1].sent_at && mails(calls).length === 1);
+  ok('a post nobody approved is never sent', !table[1].sent_at && postMails(calls).length === 1);
+}
+
+// Fewer than five days of content left after a send: Pratik gets a reminder, and only Pratik.
+{
+  const table = [row(0), row(1), row(2)];
+  const calls = fakeSupabase(table);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=dispatch', {}), res);
+  ok('a low queue still sends the post', res.body.sent === true && postMails(calls).length === 1);
+  const low = lowMails(calls).map(c => JSON.parse(c.body));
+  ok('a low queue reminds Pratik', res.body.low_queue_warned === true && low.length === 1 && /only 2 more days/.test(low[0].subject));
+  ok('the reminder goes to Pratik alone', low[0].to.join() === 'pratik.y.renuse@gmail.com' && !low[0].cc);
+}
+{
+  const table = QUEUE_ORDER.slice(0, 6).map((_, i) => row(i));
+  const calls = fakeSupabase(table);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=dispatch', {}), res);
+  ok('five or more left after a send means no reminder', res.body.sent === true && res.body.queued === 5 && lowMails(calls).length === 0 && res.body.low_queue_warned === false);
 }
 
 // Nothing approved: the publisher hears nothing and Pratik is told.

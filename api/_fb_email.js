@@ -228,6 +228,31 @@ export async function sendQueueEmpty(day) {
   });
 }
 
+/**
+ * The early warning. When fewer than LOW_QUEUE_DAYS approved posts are left after a send,
+ * Pratik gets a note so the queue never runs dry without notice. It goes to him alone, at
+ * most once a day, because the daily send is the only thing that calls it.
+ */
+export const LOW_QUEUE_DAYS = 5;
+
+export async function sendQueueLow(left) {
+  const days = left === 1 ? '1 more day' : `${left} more days`;
+  return sendMail({
+    to: SEND_CC,
+    subject: left === 0
+      ? 'Facebook posts: the queue is now empty, approve more'
+      : `Facebook posts: only ${days} of content left, approve more`,
+    html: `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221">
+      <p>Hi Pratik,</p>
+      <p>Today's Facebook post went to Poornima. ${left === 0
+        ? 'That was the last approved post, so nothing is lined up for tomorrow.'
+        : `There ${left === 1 ? 'is' : 'are'} only ${esc(String(left))} approved post${left === 1 ? '' : 's'} left, which covers ${esc(days)}.`}</p>
+      <p>Approve more in the deck so the daily posts keep going:
+      <a href="https://www.247spain.es/internal-poornima" style="color:#5B7FCC">https://www.247spain.es/internal-poornima</a></p>
+    </div>`,
+  });
+}
+
 // ---------------------------------------------------------------------------
 // The instructions email, and the trial copies Pratik sends himself first.
 // ---------------------------------------------------------------------------

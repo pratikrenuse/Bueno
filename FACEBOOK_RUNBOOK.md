@@ -13,8 +13,8 @@ written to published, and where each piece lives. Set up on 6 October 2026.
 2. **Pratik approves in `/internal-poornima`.** He reads the English, edits if it needs it and
    presses "Approve and queue". Approving does not send anything. The card then shows the
    post's place in the queue. He can approve as many as he likes in one sitting.
-3. **One post goes out each day.** At 09:00 India time the GitHub workflow
-   `.github/workflows/fb-daily.yml` calls `/api/fb?action=dispatch`, which emails the post at
+3. **One post goes out each day.** At 09:00 India time the Vercel cron in `vercel.json`
+   calls `/api/fb?action=dispatch`, which emails the post at
    the front of the queue to Poornima with Pratik copied.
 4. **The email carries everything she needs.** Under each language is the account that posts
    it (Account 1 to 7) and the three to five groups it goes into that day, as links.
@@ -36,12 +36,11 @@ with that day's groups. Both say "Trial" at the top. Nothing is marked as sent.
 "Send Poornima the instructions" sends the real instructions email to her, copied to Pratik.
 It asks first. The instructions list every group each account should join.
 
-## Switching the daily send on
+## The daily clock
 
-The workflow file is parked at `studio/facebook/fb-daily.yml`, because the tool that wrote
-it is not allowed to write into `.github/workflows/`. Move it to
-`.github/workflows/fb-daily.yml` and commit, and the daily send is on. Until then nothing
-goes out by itself, and "Send it today" in the deck is the way to send a post.
+A Vercel cron in `vercel.json`, the same way the LinkedIn sends run: `/api/fb-dispatch` at
+03:30 UTC (09:00 India time) every day. Vercel signs the call with `CRON_SECRET`, which
+`gateCron` accepts. On the Hobby plan Vercel may fire it any time within that hour.
 
 ## The order posts go out in
 
@@ -82,10 +81,20 @@ email carries the day-by-day plan from 9 to 31 October.
 and its sponsor line gives getbueno.com/dk. A Danish Bueno post links to Bueno's own Danish
 tax page.
 
+## The dashboard
+
+`/internal-poornima` opens on a dashboard (`internal-poornima/Dashboard.jsx`, data from the
+`dashboard` block of `/api/fb?action=posts`): whether today's email went, totals, every post
+email sent with its groups, the queue with the date each post should go, failed sends and
+parked posts. "Send the next one now" and "Send it today" there send a queued post ahead of
+the daily run, to Poornima with Pratik copied. Trial and instructions emails are not listed.
+
 ## When something goes wrong
 
+- **Fewer than five days left.** After each send, if fewer than 5 approved posts are left,
+  Pratik alone gets a reminder email to approve more.
 - **Nothing is approved.** The publisher gets nothing and Pratik gets a short email.
-- **The email could not be sent.** The site answers 500, the GitHub job fails and GitHub
+- **The email could not be sent.** The site answers 500 and the failed run shows in the
   emails the repository owner. The post stays at the front of the queue for the next day.
 - **A post was edited.** Its six translations are rebuilt from the edit when Pratik approves,
   so a problem shows while he is looking at it. If the rebuild fails the post goes back to
@@ -97,7 +106,7 @@ All under `/api/fb?action=...`, with the internal password in the `x-passcode` h
 
 - `dispatch&dry=1` says which post would go next and to which groups, and sends nothing.
 - `dispatch&force=1` sends the next post even though one already went out today.
-- In the deck, "Send it today" sends one approved post ahead of the queue, and "Send again"
+- On the dashboard, "Send it today" sends one approved post ahead of the queue, and "Send again"
   repeats a post that has already gone, with the same groups it had the first time.
 - `seed` (the "Load the latest writing" button) writes the content into the table. It never
   overwrites a decision, an edit or the record of a send.
@@ -113,12 +122,10 @@ All under `/api/fb?action=...`, with the internal password in the `x-passcode` h
 | Groups and accounts | `api/_fb_groups.js` |
 | Queue and daily send | `api/_fb_queue.js`, `api/_fb_dispatch.js` |
 | The email | `api/_fb_email.js` (the only file that holds an email address) |
-| Daily clock | `.github/workflows/fb-daily.yml` |
+| Daily clock | Vercel cron in `vercel.json` |
 | Table | `fb_posts` in Supabase. `send_day` was added on 6 October 2026 |
 | Tests | `node fb_isolation.test.mjs`, `node fb_api.test.mjs`, `node fb_deck_check.mjs` |
 
 ## What the daily job relies on
 
-The repository secret `SUPABASE_SERVICE_KEY`, which the studio workflows already use. The job
-sends its sha256 and the site compares it with the same key in Vercel. If that secret is
-missing the job says so and fails.
+`CRON_SECRET` in Vercel, already set for the LinkedIn crons.

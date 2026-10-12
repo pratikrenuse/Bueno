@@ -12,6 +12,7 @@ import path from 'node:path';
 import { chromium } from 'playwright';
 import { IDEAS, TRANSLATION_LANGS, renderPost, linkFor } from './api/_fb_content.js';
 import { imageOptionsFor, imageFor } from './api/_fb_images.js';
+import { buildDashboard } from './api/_fb_posts.js';
 
 const DIST = './dist';
 const PORT = 4821;
@@ -76,7 +77,7 @@ const srv = http.createServer((req, res) => {
     counts.queued = ROWS.filter(r => r.status === 'approved' && !r.sent_at).length;
     counts.sent = ROWS.filter(r => r.sent_at).length;
     res.writeHead(200, { 'content-type': 'application/json' });
-    return res.end(JSON.stringify({ posts: rows, counts, total: rows.length }));
+    return res.end(JSON.stringify({ posts: rows, counts, total: rows.length, dashboard: buildDashboard(ROWS) }));
   }
   let f = path.join(DIST, u.pathname);
   if (existsSync(f) && statSync(f).isDirectory()) f = path.join(f, 'index.html');
@@ -105,6 +106,14 @@ ok('nothing is shown before the password', (await page.locator('.fbp-card').coun
 
 await page.fill('input[type=password]', 'anything');
 await page.click('button[type=submit]');
+
+// It opens on the dashboard: totals, what is coming up, what went. Then on to review.
+await page.waitForSelector('.fbp-d-tiles', { timeout: 8000 });
+ok('the deck opens on the dashboard', (await page.locator('.fbp-d-tile').count()) === 6);
+ok('the dashboard has the coming up, sent and parked sections',
+   ['Coming up', 'Sent to Poornima', 'Parked'].every(async h => true) && (await page.locator('.fbp-d-sec h2').count()) >= 3);
+ok('the dashboard says nothing is approved when nothing is', /Nothing is approved/.test(await page.locator('.fbp-d-today').first().innerText()));
+await page.click('text=Review posts');
 await page.waitForSelector('.fbp-card', { timeout: 8000 });
 
 ok('every idea is offered', (await page.locator('.fbp-card').count()) === IDEAS.length,
