@@ -29,11 +29,11 @@ copies Pratik, and replies come back to him.
 
 ## Trying it first
 
-"Send me a trial" in the deck header sends Pratik two emails and nobody else: the
+The trial (`/api/fb?action=trial`, no longer a button since 12 Oct 2026) sends Pratik two emails and nobody else: the
 instructions email, and the post that is next in line, exactly as Poornima would get it,
 with that day's groups. Both say "Trial" at the top. Nothing is marked as sent.
 
-"Send Poornima the instructions" sends the real instructions email to her, copied to Pratik.
+The instructions (`/api/fb?action=intro`, no longer a button) send the real instructions email to her, copied to Pratik.
 It asks first. The instructions list every group each account should join.
 
 ## The daily clock

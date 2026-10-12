@@ -345,9 +345,6 @@ export default function InternalPratik() {
         <div className="fbp-head-in">
           <span className="fbp-brand">24<span style={{ color: GOLD }}>/</span>7 SPAIN</span>
           <span className="fbp-mine">Posts for Poornima</span>
-          <button className="fbp-seed" onClick={trial} disabled={busy}>Send me a trial</button>
-          <button className="fbp-seed" onClick={intro} disabled={busy}>Send Poornima the instructions</button>
-          <button className="fbp-seed" onClick={seed} disabled={busy}>Load the latest writing</button>
         </div>
       </header>
 

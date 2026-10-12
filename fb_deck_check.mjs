@@ -269,16 +269,9 @@ ok('every card says where its link goes',
      DECISIONS.some(d => d.action === 'image_custom' && d.image === 'https://cdn.example.com/mine.png'));
 }
 
-// The trial and the real instructions are one press each, from the header.
-{
-  await page.locator('button', { hasText: 'Send me a trial' }).click();
-  await page.waitForTimeout(400);
-  ok('the trial button calls the trial', DECISIONS.some(d => d.action === 'trial'));
-  ok('and says Poornima received nothing', /Poornima received nothing/.test(await page.locator('.fbp-ok').innerText()));
-  await page.locator('button', { hasText: 'Send Poornima the instructions' }).click();
-  await page.waitForTimeout(400);
-  ok('the instructions button asks first and then sends', DECISIONS.some(d => d.action === 'intro'));
-}
+// The setup buttons are gone from the header (Pratik, 12 October 2026): the trial, the
+// instructions email and loading the writing were for the first run only.
+ok('the header has no setup buttons', (await page.locator('.fbp-head button').count()) === 0);
 
 // Phone.
 await page.setViewportSize({ width: 390, height: 1400 });
