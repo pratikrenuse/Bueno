@@ -355,6 +355,27 @@ export default function InternalPratik() {
           onClick={() => setView('dashboard')}>Dashboard</button>
       </nav>
 
+      {/* TEMPORARY, 12 Oct 2026 only: one button to send today's missed post. Remove on the next commit. */}
+      {dash && !dash.sent_today && dash.upcoming && dash.upcoming.length > 0 && (
+        <div className="fbp-wide" style={{ marginTop: 12 }}>
+          <button className="fbp-primary" style={{ padding: '12px 18px', borderRadius: 9, border: 0, cursor: 'pointer', fontSize: 15 }}
+            disabled={busy}
+            onClick={async () => {
+              setBusy(true); setErr(''); setFlash('')
+              try {
+                const j = await patch(dash.upcoming[0].id, { action: 'send_now' })
+                if (j.warning) setErr(j.warning)
+                else if (j.sent) setFlash(`Sent to Poornima as day ${j.day}. You are in CC.`)
+                else setErr(`It did not go: ${j.error}`)
+              } catch (e) { setErr(String(e.message || e)) }
+              setBusy(false)
+              await load(pass, status)
+            }}>
+            Send today's post now
+          </button>
+        </div>
+      )}
+
       {view === 'dashboard' && (
         <>
           {err && <p className="fbp-err fbp-wide">{err}</p>}
