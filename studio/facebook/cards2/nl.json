@@ -13,7 +13,7 @@
    "U geeft de huur aan voor de verhuurde weken.",
    "Voor de lege weken geeft u een inkomen aan op basis van de kadastrale waarde."
   ],
-  "logo": false
+  "logo": true
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -25,7 +25,7 @@
    "zonder ooit te verhuren."
   ],
   "sub": "Het is gebaseerd op de kadastrale waarde op uw IBI-aanslag, en er mag niets van worden afgetrokken.",
-  "logo": false
+  "logo": true
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -35,7 +35,7 @@
   "big": "31 december",
   "headline": "U doet aangifte, ook zonder verhuur.",
   "sub": "Betalen via incasso sluit eerder, op 23 december. Iedere eigenaar doet aangifte voor zijn eigen aandeel.",
-  "logo": false
+  "logo": true
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -51,7 +51,7 @@
    "Vanaf maand 13 is het een vaste 15%, plus rente.",
    "Na een brief van de belastingdienst gelden deze regels niet meer."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -68,7 +68,7 @@
    "Formulier 210 is nationaal en u krijgt geen rekening.",
    "Hij wordt berekend op de kadastrale waarde van uw IBI."
   ],
-  "logo": false
+  "logo": true
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -82,7 +82,7 @@
    "Huur vanaf 1 oktober gaat in één jaaraangifte.",
    "Uw volgende aangifte daarna is in april 2027."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -98,7 +98,7 @@
    "Heeft u elk de helft, dan gebruikt elke aangifte de halve kadastrale waarde.",
    "Drie broers en zussen die een appartement erfden, doen drie aangiftes."
   ],
-  "logo": false
+  "logo": true
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -110,7 +110,7 @@
    "een andere belasting."
   ],
   "sub": "In de EU en EER trekt u kosten af en betaalt u 19%. Elders is het 24% over de brutohuur.",
-  "logo": false
+  "logo": true
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -120,7 +120,7 @@
   "big": "1,1%",
   "headline": "Vier gegevens vormen uw aangifte.",
   "sub": "U heeft uw kadastrale waarde, uw aandeel en uw fiscale woonplaats nodig.",
-  "logo": false
+  "logo": true
  },
  "three-percent-retention": {
   "template": "split",
@@ -136,7 +136,7 @@
    "Uw echte vermogenswinstbelasting is 19% van de winst, voor iedereen.",
    "Was de 3% meer dan u verschuldigd bent, dan krijgt u het verschil terug."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
@@ -153,7 +153,7 @@
    "Daarna moet u de belasting op een andere manier betalen.",
    "Het helpt om het niet tot de laatste week te laten."
   ],
-  "logo": false
+  "logo": true
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -167,7 +167,7 @@
    "Was er geen stijging, dan valt er niets te betalen.",
    "U heeft dertig werkdagen vanaf de akte."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-why-from-fifty": {
   "template": "question",
@@ -183,7 +183,7 @@
    "Bij een nulresultaat is niets verschuldigd en komt niets terug.",
    "Een teruggaaf kunt u vanaf 1 februari indienen, binnen vier jaar."
   ],
-  "logo": false
+  "logo": true
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -195,7 +195,7 @@
    "niet van de verblijfsduur."
   ],
   "sub": "Zonder diensten is vakantieverhuur vrijgesteld. Hotelachtige diensten tijdens het verblijf maken het 10%.",
-  "logo": false
+  "logo": true
  },
  "bueno-included-in-select": {
   "template": "date",
@@ -205,7 +205,7 @@
   "big": "1,1%",
   "headline": "Het geldt over de helft van de basis.",
   "sub": "De basis is het hoogste van de betaalde prijs of de waarde die de belastingdienst heeft vastgesteld.",
-  "logo": false
+  "logo": true
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -221,7 +221,7 @@
    "Geen enkele rekening krijgt een ochtend aandacht.",
    "Zet het hele jaar in één kolom en vergelijk het."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -238,7 +238,7 @@
    "Vanaf maand 13 is het een vaste 15% plus rente.",
    "De toeslag komt in de plaats van een boete."
   ],
-  "logo": false
+  "logo": true
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -252,7 +252,7 @@
    "Sommige afsluitkosten werden bij de lener gelegd.",
    "Of een claim nog op tijd is, vraagt om een abogado."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -268,7 +268,7 @@
    "Er wordt gevraagd naar de beschikbare dagen en uw eigendomspercentage.",
    "Verhuurt u niet, dan opent de aangifte 2026 op 1 april 2027."
   ],
-  "logo": false
+  "logo": true
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -280,7 +280,7 @@
    "misschien uw advocaat."
   ],
   "sub": "Zoek naar defensa juridica. U heeft het recht uw eigen advocaat te kiezen.",
-  "logo": false
+  "logo": true
  },
  "ninety-days": {
   "template": "date",
@@ -290,7 +290,7 @@
   "big": "90 dagen",
   "headline": "Dat geldt per schuivende 180 dagen.",
   "sub": "De dag van aankomst en de dag van vertrek tellen allebei. Een lang weekend kost vier dagen, geen twee.",
-  "logo": false
+  "logo": true
  },
  "consorcio-storm": {
   "template": "split",
@@ -306,7 +306,7 @@
    "Wind telt bij stoten boven 120 km per uur, gedurende drie seconden.",
    "De opslag wordt al met uw premie geïnd."
   ],
-  "logo": false
+  "logo": true
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -323,7 +323,7 @@
    "Bewaar de envelop of e-mail met de datum erop.",
    "Meestal moet u bij zijn met de VvE-bijdragen."
   ],
-  "logo": false
+  "logo": true
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -337,7 +337,7 @@
    "Er hoort een begin- en een einddatum in te staan.",
    "Betalingen horen de fases van het werk te volgen."
   ],
-  "logo": false
+  "logo": true
  },
  "leaving-it-empty": {
   "template": "question",
@@ -353,7 +353,7 @@
    "Hoe lang u weg bent en in welk seizoen u vertrekt, veranderen allebei de lijst.",
    "Ook of er iemand komt kijken, verandert de lijst."
   ],
-  "logo": false
+  "logo": true
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -365,7 +365,7 @@
    "en de volgorde telt."
   ],
   "sub": "Begin met de verkeerde en u wacht. De NIE-aanvraag is formulier EX-15, en de leges zijn €9,84.",
-  "logo": false
+  "logo": true
  },
  "tradesperson-in-your-language": {
   "template": "date",
@@ -375,7 +375,7 @@
   "big": "660 steden",
   "headline": "Reviews in uw taal staan bovenaan.",
   "sub": "Loodgieters, elektriciens, slotenmakers en aannemers staan op volgorde van reviews.",
-  "logo": false
+  "logo": true
  },
  "who-does-what": {
   "template": "split",
@@ -391,7 +391,7 @@
    "Een gestoría doet aangiftes en papierwerk, en gaat niet naar de rechter.",
    "Een administrador de fincas beheert de vereniging van eigenaren."
   ],
-  "logo": false
+  "logo": true
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -408,7 +408,7 @@
    "Dat doen ze op verschillende momenten in het jaar.",
    "Sommige klussen moeten gebeuren als u weg bent."
   ],
-  "logo": false
+  "logo": true
  },
  "pests-by-property": {
   "template": "pills",
@@ -422,6 +422,6 @@
    "Warmte, tuinen en lege maanden trekken ander ongedierte aan.",
    "Sommig ongedierte is een telefoontje, geen zaterdagklus."
   ],
-  "logo": false
+  "logo": true
  }
 }

@@ -8,7 +8,7 @@ written to published, and where each piece lives. Set up on 6 October 2026.
 
 1. **Posts are written ahead.** They live in `api/_fb_content.js`, each one in English,
    Norwegian, Swedish, Danish, German, French and Dutch. Since 15 October 2026 every post is
-   pure value: no link, no Bueno, no 24/7 Spain, no tool, and the images carry no logo, because
+   pure value: no link, no Bueno, no 24/7 Spain and no tool in the text (the images carry only the Bueno logo), because
    groups were removing anything promotional. The only invitation is a first comment that
    Poornima adds under her post (`COMMENT` in the same file), pointing at the WhatsApp
    community. Until `WHATSAPP_URL` is set there, the email tells her to skip the comment.
@@ -19,7 +19,7 @@ written to published, and where each piece lives. Set up on 6 October 2026.
    post's place in the queue. He can approve as many as he likes in one sitting.
 3. **One post goes out each day.** At 07:00 India time the Vercel cron in `vercel.json`
    calls `/api/fb?action=dispatch`, which emails the post at
-   the front of the queue to Poornima with Pratik copied.
+   the front of the queue: To Pratik, with Poornima and John in BCC.
 4. **The email carries everything she needs.** Under each language is the account that posts
    it (Account 1 to 7) and the three to five groups it goes into that day, as links.
 5. **She posts, adds the first comment if there is one, and records it** in her tracking
@@ -31,8 +31,11 @@ To switch on the first comment: create the WhatsApp community, put its invite li
 ## The deck's name, and who gets what
 
 The deck lives at `/internal-poornima` since 8 October 2026, so the name says who the posts
-are for. The old `/internal-pratik` address forwards there. Every email that goes to Poornima
-copies Pratik, and replies come back to him.
+are for. The old `/internal-pratik` address forwards there.
+
+Since 15 October 2026 every email for the publisher is addressed To Pratik, with Poornima and
+John (john@getbueno.com) in BCC, so both see Pratik's address and neither sees the other's.
+The email itself never names Poornima ("Hi,"). Replies come back to Pratik.
 
 ## Trying it first
 
@@ -40,7 +43,7 @@ The trial (`/api/fb?action=trial`, no longer a button since 12 Oct 2026) sends P
 instructions email, and the post that is next in line, exactly as Poornima would get it,
 with that day's groups. Both say "Trial" at the top. Nothing is marked as sent.
 
-The instructions (`/api/fb?action=intro`, no longer a button) send the real instructions email to her, copied to Pratik.
+The instructions (`/api/fb?action=intro`, no longer a button) send the real instructions email the same way: To Pratik, Poornima and John in BCC.
 It asks first. The instructions list every group each account should join.
 
 ## The daily clock
@@ -73,7 +76,7 @@ nothing to send does not make any group miss its turn.
 Every post has seven images, one per language, with the text on the image in that language.
 They are the 24/7 Spain infographic format (the approved simple3 template), rendered by
 `studio/renderer/fb_cards2.py` from `studio/facebook/cards2/<lang>.json` (six templates, transparent logo, photos in `studio/photos`) and committed under
-`public/fb-cards/<post>/<lang>.jpg`. Since 15 October 2026 no image carries a logo or a site name (`"logo": false` on every card). To change the text on an image, edit that language's card
+`public/fb-cards/<post>/<lang>.jpg`. Since 15 October 2026 every image carries the Bueno logo (`"logo": true` on every card) and no site name or sponsor line. To change the text on an image, edit that language's card
 file, run `python3 studio/renderer/fb_cards2.py all public/fb-cards`, and bump `CARD_VERSION`
 in `api/_fb_images.js`.
 

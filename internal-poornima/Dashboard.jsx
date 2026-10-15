@@ -107,7 +107,7 @@ export default function Dashboard({ dash, onReview }) {
             <div className="fbp-d-what">
               <p>{s.hook}</p>
               <span className="fbp-d-meta">
-                {TOPIC[s.link]}. To {s.sent_to}, you copied.
+                {TOPIC[s.link]}. Sent to {s.sent_to}.
                 {s.live ? ` Marked live${s.posted_at ? ` ${when(s.posted_at)}` : ''}.` : ''}
               </span>
               <Groups groups={s.groups} />

@@ -80,13 +80,17 @@ ok('only _fb_db.js builds a Supabase URL', handlersNameTable.length === 0, handl
 const email = code('./api/_fb_email.js');
 ok('the publisher address is there',
    /poornimanirwal@gmail\.com/.test(email));
-ok('Pratik is copied on every send', /export const SEND_CC = \[PRATIK\]/.test(email));
-ok('the copy list is not empty', !/export const SEND_CC = \[\]/.test(email));
+ok('every publisher email is To Pratik', /export const SEND_TO = \[PRATIK\]/.test(email));
+ok('the publisher and John are in BCC', /export const SEND_BCC = \[PUBLISHER, JOHN\]/.test(email) && /john@getbueno\.com/.test(email));
 for (const f of FB.filter(x => x !== '_fb_email.js')) {
   ok(`api/${f} names no email address`, !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(code(`./api/${f}`)));
 }
-ok('no team address appears anywhere in this surface',
-   !FB.some(f => /john@getbueno\.com|maria@getbueno\.com/i.test(code(`./api/${f}`))));
+// John is in BCC on the publisher emails since 15 October 2026 (Pratik's request), and only
+// in the email module. No other team address belongs here.
+ok('no other team address appears anywhere in this surface',
+   !FB.some(f => /maria@getbueno\.com/i.test(code(`./api/${f}`))));
+ok('John appears only in the email module',
+   FB.filter(f => /john@getbueno\.com/i.test(code(`./api/${f}`))).join() === '_fb_email.js');
 ok('the deck itself names no email address', !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(deck));
 
 // 2c. Nothing is added to a post on the way out. What was approved is what is sent.
@@ -216,7 +220,7 @@ ok('no comment is offered while the WhatsApp link is empty', WHATSAPP_URL ? true
   for (const lang of LANGS) {
     const c2 = JSON.parse(read(`./studio/facebook/cards2/${lang}.json`) || '{}');
     ok(`${lang}: no call to action on any image`, Object.values(c2).every(c => !c.cta));
-    ok(`${lang}: no image carries the Bueno logo (15 October 2026)`, Object.values(c2).every(c => !c.logo));
+    ok(`${lang}: every image carries the Bueno logo (Pratik, 15 October 2026)`, Object.values(c2).every(c => c.logo === true));
   }
 }
 

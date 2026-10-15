@@ -13,7 +13,7 @@
    "You declare the rent for the weeks it was let.",
    "For the empty weeks, you declare an income worked out from the cadastral value."
   ],
-  "logo": false
+  "logo": true
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -25,7 +25,7 @@
    "home you never rent."
   ],
   "sub": "It's based on the cadastral value on your IBI bill, and nothing can be deducted from it.",
-  "logo": false
+  "logo": true
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -35,7 +35,7 @@
   "big": "31 December",
   "headline": "You file even if nobody rented it.",
   "sub": "Direct debit payments close earlier, on 23 December. Each owner files for their own share.",
-  "logo": false
+  "logo": true
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -51,7 +51,7 @@
    "From month 13 it becomes a flat 15%, plus interest.",
    "After a letter from the tax office, these rules no longer apply."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -68,7 +68,7 @@
    "Form 210 is national, and nobody sends you a bill.",
    "It's worked out from the cadastral value on your IBI."
   ],
-  "logo": false
+  "logo": true
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -82,7 +82,7 @@
    "Rent from 1 October goes into one yearly return.",
    "Your next filing after this is in April 2027."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -98,7 +98,7 @@
    "If you own half each, each return uses half the cadastral value.",
    "Three siblings who inherited a flat file three returns."
   ],
-  "logo": false
+  "logo": true
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -110,7 +110,7 @@
    "a different tax bill."
   ],
   "sub": "In the EU and EEA you deduct costs and pay 19%. Elsewhere it's 24% on the gross rent.",
-  "logo": false
+  "logo": true
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -120,7 +120,7 @@
   "big": "1.1%",
   "headline": "Four details make up your return.",
   "sub": "You need your cadastral value, your share and where you're tax resident.",
-  "logo": false
+  "logo": true
  },
  "three-percent-retention": {
   "template": "split",
@@ -136,7 +136,7 @@
    "Your real capital gains tax is 19% of the gain, for everyone.",
    "If the 3% was more than you owe, the difference comes back to you."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
@@ -153,7 +153,7 @@
    "After that, you have to pay the tax another way.",
    "It helps not to leave it for the last week."
   ],
-  "logo": false
+  "logo": true
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -167,7 +167,7 @@
    "If there was no increase, there is nothing to pay.",
    "You have thirty working days from the deed."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-why-from-fifty": {
   "template": "question",
@@ -183,7 +183,7 @@
    "A nil result means nothing is owed and nothing comes back.",
    "A refund result can be filed from 1 February, with a four year limit."
   ],
-  "logo": false
+  "logo": true
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -195,7 +195,7 @@
    "not the length of stay."
   ],
   "sub": "With no services, a holiday let is exempt. Hotel type services during the stay make it 10%.",
-  "logo": false
+  "logo": true
  },
  "bueno-included-in-select": {
   "template": "date",
@@ -205,7 +205,7 @@
   "big": "1.1%",
   "headline": "It applies to half of the base.",
   "sub": "The base is the greater of the price you paid or the value verified by the tax administration.",
-  "logo": false
+  "logo": true
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -221,7 +221,7 @@
    "No single bill gets a morning of anyone's attention.",
    "Put the whole year in one column and compare it."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -238,7 +238,7 @@
    "From month 13, it is a flat 15% plus interest.",
    "The surcharge takes the place of a penalty."
   ],
-  "logo": false
+  "logo": true
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -252,7 +252,7 @@
    "Some set up fees were charged to the borrower.",
    "Whether a claim is still in time needs an abogado."
   ],
-  "logo": false
+  "logo": true
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -268,7 +268,7 @@
    "It will ask for the days available and your ownership percentage.",
    "For a home you don't let, the 2026 return opens on 1 April 2027."
   ],
-  "logo": false
+  "logo": true
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -280,7 +280,7 @@
    "pay for your lawyer."
   ],
   "sub": "Look for defensa juridica. You have the right to choose your own lawyer.",
-  "logo": false
+  "logo": true
  },
  "ninety-days": {
   "template": "date",
@@ -290,7 +290,7 @@
   "big": "90 days",
   "headline": "That is in any rolling 180 days.",
   "sub": "The day you land and the day you fly home both count. A long weekend uses four days, not two.",
-  "logo": false
+  "logo": true
  },
  "consorcio-storm": {
   "template": "split",
@@ -306,7 +306,7 @@
    "Wind counts once gusts pass 120 km an hour over three seconds.",
    "The surcharge is already collected with your premium."
   ],
-  "logo": false
+  "logo": true
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -323,7 +323,7 @@
    "Keep the envelope or email with its date on it.",
    "Usually you must be up to date with community payments."
   ],
-  "logo": false
+  "logo": true
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -337,7 +337,7 @@
    "It should give a start date and a finish date.",
    "Payments should follow stages of the work."
   ],
-  "logo": false
+  "logo": true
  },
  "leaving-it-empty": {
   "template": "question",
@@ -353,7 +353,7 @@
    "How long you're away and the season you leave in both change the list.",
    "So does whether anyone will look in while you're gone."
   ],
-  "logo": false
+  "logo": true
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -365,7 +365,7 @@
    "and the order matters."
   ],
   "sub": "Start the wrong one first and you wait. The NIE application is form EX-15, and the fee is €9.84.",
-  "logo": false
+  "logo": true
  },
  "tradesperson-in-your-language": {
   "template": "date",
@@ -375,7 +375,7 @@
   "big": "660 towns",
   "headline": "Reviews in your language lead.",
   "sub": "Plumbers, electricians, locksmiths and builders are ranked from reviews.",
-  "logo": false
+  "logo": true
  },
  "who-does-what": {
   "template": "split",
@@ -391,7 +391,7 @@
    "A gestoría handles filings and paperwork, and does not go to court.",
    "An administrador de fincas runs the community of owners."
   ],
-  "logo": false
+  "logo": true
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -408,7 +408,7 @@
    "They break them at different times of year.",
    "Some jobs must happen while you are away."
   ],
-  "logo": false
+  "logo": true
  },
  "pests-by-property": {
   "template": "pills",
@@ -422,6 +422,6 @@
    "Heat, gardens and empty months attract different pests.",
    "Some pests are a phone call, not a Saturday job."
   ],
-  "logo": false
+  "logo": true
  }
 }

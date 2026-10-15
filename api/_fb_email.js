@@ -7,9 +7,10 @@
 // plumbing it needs rather than importing any of it. The isolation test enforces that a
 // file in this surface imports nothing but its own siblings.
 //
-// WHO GETS WHAT
-// One recipient, one copy. Poornima publishes the post; Pratik is copied on every send so
-// he has a record of exactly what left, without having to trust the deck's own display.
+// WHO GETS WHAT (Pratik, 15 October 2026)
+// Every email that goes to the publisher is addressed To Pratik, with the publisher and John
+// in BCC. Both see Pratik's address, neither sees the other's, and the email never names the
+// publisher. Pratik keeps a record of exactly what left.
 //
 // WHAT ONE EMAIL IS
 // One post, on one day, in seven languages. Each language has its own Facebook account,
@@ -22,11 +23,17 @@ import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.j
 import { ACCOUNT, GROUPS, groupsFor, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
 
-const POORNIMA = ['poornimanirwal@gmail.com'];
+const PUBLISHER = 'poornimanirwal@gmail.com';
+const JOHN = 'john@getbueno.com';
 const PRATIK = 'pratik.y.renuse@gmail.com';
 
-export const SEND_TO = POORNIMA;
-export const SEND_CC = [PRATIK];
+// Visible recipient of every publisher email, and the hidden ones.
+export const SEND_TO = [PRATIK];
+export const SEND_BCC = [PUBLISHER, JOHN];
+// Pratik alone, for the notes that are only for him (queue empty, queue low, trials).
+export const PRATIK_ONLY = [PRATIK];
+// Who a sent post reached, as recorded on the row.
+export const RECIPIENTS = [PRATIK, ...SEND_BCC];
 export const REPLY_TO = PRATIK;
 
 const esc = (s) => String(s ?? '')
@@ -38,7 +45,7 @@ const esc = (s) => String(s ?? '')
 //
 // The fallback matters though. Resend's sandbox sender only delivers to the address that
 // owns the Resend account, so if RESEND_FROM were ever unset, a send would come back ok
-// from the API and Poornima would never receive anything. The deck would say "Sent" and be
+// from the API and the publisher would never receive anything. The deck would say "Sent" and be
 // wrong, which is the worst possible failure for a queue like this. usingSandboxSender lets
 // the send path say so on the card instead.
 const SANDBOX_FROM = '24/7 Spain <onboarding@resend.dev>';
@@ -46,7 +53,7 @@ const SANDBOX_FROM = '24/7 Spain <onboarding@resend.dev>';
 export const senderFrom = () => process.env.RESEND_FROM || SANDBOX_FROM;
 export const usingSandboxSender = () => !process.env.RESEND_FROM;
 
-export async function sendMail({ to, cc, subject, html }) {
+export async function sendMail({ to, cc, bcc, subject, html }) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return { ok: false, error: 'Missing env var: RESEND_API_KEY' };
   try {
@@ -57,6 +64,7 @@ export async function sendMail({ to, cc, subject, html }) {
         from: senderFrom(),
         to,
         ...(cc && cc.length ? { cc } : {}),
+        ...(bcc && bcc.length ? { bcc } : {}),
         reply_to: REPLY_TO,
         subject,
         html,
@@ -168,7 +176,7 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi Poornima,</p>
+        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi,</p>
         <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">
           This is the post for day ${esc(String(day))}. It is the same post written out in
           ${esc(String(available.length + 1))} languages, and each language has its own image with the
@@ -210,7 +218,7 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
 export async function sendPost(post, day = 1) {
   const result = await sendMail({
     to: SEND_TO,
-    cc: SEND_CC,
+    bcc: SEND_BCC,
     subject: subjectFor(post, day),
     html: bodyFor(post, day),
   });
@@ -219,7 +227,7 @@ export async function sendPost(post, day = 1) {
       ...result,
       warning: 'RESEND_FROM is not set in Vercel, so this went out from the Resend sandbox sender, '
         + 'which only delivers to the address that owns the Resend account. '
-        + `${SEND_TO.join(', ')} will not have received it.`,
+        + `${SEND_BCC.join(', ')} will not have received it.`,
     };
   }
   return result;
@@ -231,12 +239,12 @@ export async function sendPost(post, day = 1) {
  */
 export async function sendQueueEmpty(day) {
   return sendMail({
-    to: SEND_CC,
+    to: PRATIK_ONLY,
     subject: 'No Facebook post went out today: nothing is approved',
     html: `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221">
       <p>Hi Pratik,</p>
       <p>Today would have been day ${esc(String(day))} of the Facebook group posts, but there is no
-      approved post left in the queue, so nothing was sent to Poornima.</p>
+      approved post left in the queue, so nothing was sent.</p>
       <p>Approve a few more in the deck and tomorrow's send will pick up from there:
       <a href="https://www.247spain.es/internal-poornima" style="color:#5B7FCC">https://www.247spain.es/internal-poornima</a></p>
     </div>`,
@@ -253,13 +261,13 @@ export const LOW_QUEUE_DAYS = 5;
 export async function sendQueueLow(left) {
   const days = left === 1 ? '1 more day' : `${left} more days`;
   return sendMail({
-    to: SEND_CC,
+    to: PRATIK_ONLY,
     subject: left === 0
       ? 'Facebook posts: the queue is now empty, approve more'
       : `Facebook posts: only ${days} of content left, approve more`,
     html: `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221">
       <p>Hi Pratik,</p>
-      <p>Today's Facebook post went to Poornima. ${left === 0
+      <p>Today's Facebook post went out. ${left === 0
         ? 'That was the last approved post, so nothing is lined up for tomorrow.'
         : `There ${left === 1 ? 'is' : 'are'} only ${esc(String(left))} approved post${left === 1 ? '' : 's'} left, which covers ${esc(days)}.`}</p>
       <p>Approve more in the deck so the daily posts keep going:
@@ -275,8 +283,8 @@ export async function sendQueueLow(left) {
 const trialBanner = () => `
         <div style="background:#FBF5E7;border:1px solid #C9A96E;border-radius:10px;padding:12px 14px;margin:0 0 18px;
                     font-family:${SANS};font-size:13px;color:#010221">
-          <b>Trial copy for Pratik.</b> This is exactly what Poornima will receive. She has not been
-          sent this one, and nothing has been marked as sent.
+          <b>Trial copy for Pratik.</b> This is exactly what the publisher will receive. Nobody else
+          has been sent this one, and nothing has been marked as sent.
         </div>`;
 
 const P = (html) => `<p style="margin:0 0 14px;font-size:14px;line-height:1.6;color:#22263a;font-family:${SANS}">${html}</p>`;
@@ -350,7 +358,7 @@ export function introBody({ trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        ${P('Hi Poornima,')}
+        ${P('Hi,')}
         ${P('From now on you will be posting for 24/7 Spain and Bueno in Facebook groups. Before the first post reaches you, I want to explain how it works, step by step, so nothing in the daily emails is a surprise.')}
 
         ${H('How it works')}
@@ -388,11 +396,11 @@ export function introBody({ trial = false } = {}) {
   </div>`;
 }
 
-/** The instructions email, to Poornima with Pratik copied. */
+/** The instructions email: To Pratik, with the publisher and John in BCC. */
 export async function sendIntro() {
-  const result = await sendMail({ to: SEND_TO, cc: SEND_CC, subject: INTRO_SUBJECT, html: introBody() });
+  const result = await sendMail({ to: SEND_TO, bcc: SEND_BCC, subject: INTRO_SUBJECT, html: introBody() });
   if (result.ok && usingSandboxSender()) {
-    return { ...result, warning: `RESEND_FROM is not set in Vercel, so ${SEND_TO.join(', ')} will not have received the instructions.` };
+    return { ...result, warning: `RESEND_FROM is not set in Vercel, so ${SEND_BCC.join(', ')} will not have received the instructions.` };
   }
   return result;
 }
@@ -402,7 +410,7 @@ export async function sendIntro() {
  * as a trial at the top. Nothing is recorded anywhere.
  */
 export async function sendTrial(post, day) {
-  const to = SEND_CC;
+  const to = PRATIK_ONLY;
   const a = await sendMail({ to, subject: `Trial: ${INTRO_SUBJECT}`, html: introBody({ trial: true }) });
   if (!a.ok) return { ...a, to };
   const b = await sendMail({ to, subject: `Trial: ${subjectFor(post, day)}`, html: bodyFor(post, day, { trial: true }) });

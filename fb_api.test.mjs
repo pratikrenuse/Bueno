@@ -11,7 +11,7 @@
 
 import { createHash } from 'node:crypto';
 import fbRouter, { resolveAction, ACTIONS } from './api/fb.js';
-import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO_SUBJECT, SEND_TO, SEND_CC } from './api/_fb_email.js';
+import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO_SUBJECT, SEND_TO, SEND_BCC, RECIPIENTS } from './api/_fb_email.js';
 import { GROUPS } from './api/_fb_groups.js';
 import { hashOf, isCurrent, checkTranslation } from './api/_fb_translate.js';
 import { queueOf, nextDay, sentOn } from './api/_fb_queue.js';
@@ -89,7 +89,7 @@ function fakeSupabase(table, mail = { ok: true }, translation = null) {
 }
 const mails = (calls) => calls.filter(c => /resend/.test(c.url));
 // Emails that carry a post to the publisher, leaving out Pratik's own reminders.
-const postMails = (calls) => mails(calls).filter(c => (JSON.parse(c.body).to || []).includes('poornimanirwal@gmail.com'));
+const postMails = (calls) => mails(calls).filter(c => (JSON.parse(c.body).bcc || []).includes('poornimanirwal@gmail.com'));
 const lowMails = (calls) => mails(calls).filter(c => /left, approve more|queue is now empty/.test(JSON.parse(c.body).subject || ''));
 
 const ENGLISH = 'First line of the original.\n\nSecond paragraph with enough text in it.';
@@ -305,7 +305,8 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email says which day it is', /day 3/i.test(html) && /^Day 3\. Facebook post to publish:/.test(subjectFor(p, 3)));
   ok('the email names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
   ok('the subject is one post, not one language', !/\(German\)/.test(subjectFor(p, 3)));
-  ok('one publisher address, one copy', SEND_TO.length === 1 && SEND_CC.length === 1);
+  ok('To Pratik, with the publisher and John hidden in BCC', SEND_TO.join() === 'pratik.y.renuse@gmail.com' && SEND_BCC.join() === 'poornimanirwal@gmail.com,john@getbueno.com');
+  ok('the email never names the publisher', !/Poornima/.test(html));
 
   // The groups. Every language names its account and that day's groups, as links.
   for (const lang of ['en', ...OTHERS]) {
@@ -416,10 +417,9 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   await fbRouter(post('/api/fb?action=decide', { id: '1', action: 'send_now' }), res);
   ok('send now does send', res.body.sent === true && mails(calls).length === 1);
   ok('send now takes the next day number', res.body.day === 5 && res.body.post.send_day === 5);
-  ok('send now records when and to whom', !!res.body.post.sent_at && res.body.post.sent_to === SEND_TO.join(', '));
+  ok('send now records when and to whom', !!res.body.post.sent_at && res.body.post.sent_to === RECIPIENTS.join(', '));
   const sent = JSON.parse(mails(calls)[0].body);
-  ok('it went to the publisher address', sent.to.join(',') === 'poornimanirwal@gmail.com', sent.to.join(','));
-  ok('with Pratik copied', sent.cc.join() === 'pratik.y.renuse@gmail.com', String(sent.cc));
+  ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc), JSON.stringify({to: sent.to, bcc: sent.bcc}));
   ok('and a reply goes back to Pratik', sent.reply_to === 'pratik.y.renuse@gmail.com');
   ok('the subject carries the day', /^Day 5\./.test(sent.subject));
 }
@@ -684,11 +684,12 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   ok('exactly one post email goes out', postMails(calls).length === 1);
   ok('it is the post at the front of the queue', res.body.idea_key === QUEUE_ORDER[0]);
   const sent = JSON.parse(postMails(calls)[0].body);
-  ok('to the publisher, with Pratik copied', sent.to.join() === 'poornimanirwal@gmail.com' && sent.cc.join() === 'pratik.y.renuse@gmail.com');
+  ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc));
+  ok('the post email does not name the publisher', !/Poornima/.test(sent.html));
   ok('the email is day 1 and carries day 1 groups', /^Day 1\./.test(sent.subject)
      && groupsFor('en', 1).every(g => sent.html.includes(`href="${g.url}"`)));
   const first = table.find(r => r.idea_key === QUEUE_ORDER[0]);
-  ok('the row records the send and its day', !!first.sent_at && first.send_day === 1 && first.sent_to === SEND_TO.join(', '));
+  ok('the row records the send and its day', !!first.sent_at && first.send_day === 1 && first.sent_to === RECIPIENTS.join(', '));
   ok('it says how many are still waiting', res.body.queued === 2);
 
   // A second call the same day does nothing.
@@ -851,16 +852,16 @@ for (const d of [1, 2, 3, 9, 20]) {
   const res2 = makeRes();
   await fbRouter(post('/api/fb?action=intro', { confirm: true }), res2);
   const m = JSON.parse(mails(calls)[0].body);
-  ok('the real instructions go to Poornima with Pratik copied',
-     res2.body.ok === true && m.to.join() === 'poornimanirwal@gmail.com' && m.cc.join() === 'pratik.y.renuse@gmail.com'
+  ok('the real instructions go To Pratik, publisher and John in BCC',
+     res2.body.ok === true && m.to.join() === 'pratik.y.renuse@gmail.com' && (m.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !/Poornima/.test(m.html)
      && m.subject === INTRO_SUBJECT && !/Trial/.test(m.html));
   const res3 = makeRes();
   await fbRouter({ ...post('/api/fb?action=trial', {}), headers: { 'x-passcode': 'wrong' } }, res3);
   ok('a trial needs the password', res3.code === 401);
 }
 {
-  // Everything that goes to Poornima is copied to Pratik.
-  ok('every send to the publisher copies Pratik', SEND_CC.join() === 'pratik.y.renuse@gmail.com');
+  // Everything that goes to the publisher is addressed To Pratik.
+  ok('every send to the publisher is To Pratik', SEND_TO.join() === 'pratik.y.renuse@gmail.com');
 }
 
 // The deck keeps unsent, unedited rows in step with the written posts (15 October 2026),

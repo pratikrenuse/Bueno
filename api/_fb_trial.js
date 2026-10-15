@@ -17,7 +17,7 @@
 // the body, so it can only ever be a deliberate press of the button in the deck.
 import { gate, rest, readBody } from './_fb_db.js';
 import { queueOf, nextDay } from './_fb_queue.js';
-import { sendTrial, sendIntro, SEND_TO } from './_fb_email.js';
+import { sendTrial, sendIntro, SEND_BCC } from './_fb_email.js';
 import { IDEAS, QUEUE_ORDER, TRANSLATION_LANGS, renderPost, linkFor } from './_fb_content.js';
 import { imageFor } from './_fb_images.js';
 
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     if (confirm !== true) return res.status(400).json({ error: 'Sending the instructions to Poornima needs confirm: true.' });
     const r = await sendIntro();
     if (!r.ok) return res.status(500).json({ ok: false, error: r.error });
-    return res.json({ ok: true, to: SEND_TO.join(', '), warning: r.warning || null });
+    return res.json({ ok: true, to: SEND_BCC.join(', '), warning: r.warning || null });
   }
 
   const rows = await rest(res, '?select=*');

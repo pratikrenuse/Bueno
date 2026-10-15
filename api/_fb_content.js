@@ -10,7 +10,8 @@
 // PURE VALUE, SINCE 15 OCTOBER 2026
 // Many groups removed the earlier posts as promotional. Pratik's decision: the posts must be
 // so useful that admins let them stay. So a post now carries no link, no Bueno, no 24/7 Spain,
-// no tool and no "I built". It teaches one thing and ends on something the reader can do.
+// no tool and no "I built" in the text (the images carry only the Bueno logo, Pratik,
+// 15 October 2026). It teaches one thing and ends on something the reader can do.
 // The only invitation is a separate first comment (COMMENT below), posted by Poornima after
 // the post is up, pointing at the WhatsApp community once it exists.
 //

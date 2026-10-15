@@ -16,7 +16,7 @@
 // nothing to send does not make any group miss its turn.
 import { rest } from './_fb_db.js';
 import { queueIndex } from './_fb_content.js';
-import { sendPost, finalText, SEND_TO } from './_fb_email.js';
+import { sendPost, finalText, RECIPIENTS } from './_fb_email.js';
 import { isCurrent, translate } from './_fb_translate.js';
 
 export const queueOf = (rows) => rows
@@ -63,7 +63,7 @@ export async function deliver(res, row, day, extraPatch = {}) {
   const result = await sendPost(row, day);
   const patch = result.ok
     ? { ...extraPatch, status: row.status === 'posted' ? 'posted' : 'approved', sent_at: new Date().toISOString(),
-        sent_to: SEND_TO.join(', '), send_day: day, send_error: null }
+        sent_to: RECIPIENTS.join(', '), send_day: day, send_error: null }
     : { ...extraPatch, send_error: result.error };
   const out = await save(res, row.id, patch);
   if (out === null) return { ok: false };
