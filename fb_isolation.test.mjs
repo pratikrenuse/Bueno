@@ -209,8 +209,8 @@ ok('no comment is offered while the WhatsApp link is empty', WHATSAPP_URL ? true
 }
 
 // Educational, not promotional (Pratik, 8 October 2026): groups remove sales posts. No prices
-// or plan names in any post or image, no call to action on an image, and the Bueno logo on
-// exactly half of the images.
+// or plan names in any post or image, no call to action on an image, and (since 15 October
+// 2026) the Bueno logo on every English image and on no translated image.
 {
   const PROMO = /(€\s?\d|\d\s?€|\b(Select|Premium|Standard)\b|we file it for you|starting from|starts from)/i;
   for (const idea of IDEAS) for (const lang of LANGS) {
@@ -220,7 +220,13 @@ ok('no comment is offered while the WhatsApp link is empty', WHATSAPP_URL ? true
   for (const lang of LANGS) {
     const c2 = JSON.parse(read(`./studio/facebook/cards2/${lang}.json`) || '{}');
     ok(`${lang}: no call to action on any image`, Object.values(c2).every(c => !c.cta));
-    ok(`${lang}: every image carries the Bueno logo (Pratik, 15 October 2026)`, Object.values(c2).every(c => c.logo === true));
+    // Pratik, 15 October 2026: the Bueno logo on the English image only. Translations can carry
+    // a mistake, so the translated images carry no logo and never name Bueno.
+    if (lang === 'en') ok('en: every English image carries the Bueno logo', Object.values(c2).every(c => c.logo === true));
+    else {
+      ok(`${lang}: no translated image carries the Bueno logo`, Object.values(c2).every(c => c.logo === false));
+      ok(`${lang}: no translated image names Bueno or 24/7 Spain`, Object.values(c2).every(c => !/bueno|24\/7|247spain|property finance simplified/i.test(JSON.stringify({ ...c, brand: '' }))));
+    }
   }
 }
 

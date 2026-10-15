@@ -113,7 +113,8 @@ for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attor
   // rejected keep the site-relative file in public/posts they were decided on. Every
   // pending post has its own photograph frame in the public studio-assets bucket.
   // api/_email.js passes an absolute URL through untouched and prefixes a relative one.
-  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && FRAME_RE.test(u), String(u));
+  // Since 15 October 2026 a post can also open on its Bueno card in public/li-cards.
+  ok_(`${aud} ${day}: has an image`, typeof u === 'string' && (FRAME_RE.test(u) || /^\/li-cards\/[a-z0-9_]+\.jpg\?v=\d+$/.test(u)), String(u));
 }
 
 // Nothing anywhere credits a photographer. The Pexels licence does not ask for it and the
@@ -162,13 +163,18 @@ ok_('and refuses a URL that is not one of the post options',
 // reviewer can switch to. The frame has to BE in the list: _lk_refresh.js
 // rewrites image_url whenever the stored value is not one of the options, so a
 // frame outside the list would be swapped back to a Pexels photo on the next Sync.
+// Since 15 October 2026, fifty posts open on a Bueno card from public/li-cards instead,
+// with the frame second and the Pexels photographs after it (posts_images.test.mjs
+// covers those). Below, the card is set aside so the frame-and-grid rules still hold.
 const { imageOptionsFor } = await import('./api/_lk_images.js');
 for (const [aud, day] of [['owners', 1], ['owners', 60], ['agents', 30], ['attorneys', 15]]) {
-  const opts = imageOptionsFor(aud, day);
+  const all = imageOptionsFor(aud, day);
+  const hasCard = all[0].startsWith('/li-cards/');
+  ok_(`${aud} ${day}: the default is the first one`, imageFor(aud, day) === all[0]);
+  const opts = hasCard ? all.slice(1) : all;
   ok_(`${aud} ${day}: thirteen images to choose from`, opts.length === 13, String(opts.length));
   ok_(`${aud} ${day}: no duplicates in the grid`, new Set(opts).size === 13);
-  ok_(`${aud} ${day}: the default is the first one`, imageFor(aud, day) === opts[0]);
-  ok_(`${aud} ${day}: the default is the post's own Bueno frame`, FRAME_RE.test(opts[0]), opts[0]);
+  ok_(`${aud} ${day}: the frame leads the photographs`, FRAME_RE.test(opts[0]), opts[0]);
   ok_(`${aud} ${day}: every alternate is a real render URL`,
     opts.slice(1).every(u => /^https:\/\/images\.pexels\.com\/photos\/\d+\/pexels-photo-\d+\.(jpe?g|png)\?/.test(u)
                  && u.endsWith('w=1200&h=630&fit=crop')));

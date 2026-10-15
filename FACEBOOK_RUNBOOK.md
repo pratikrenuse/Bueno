@@ -8,7 +8,7 @@ written to published, and where each piece lives. Set up on 6 October 2026.
 
 1. **Posts are written ahead.** They live in `api/_fb_content.js`, each one in English,
    Norwegian, Swedish, Danish, German, French and Dutch. Since 15 October 2026 every post is
-   pure value: no link, no Bueno, no 24/7 Spain and no tool in the text (the images carry only the Bueno logo), because
+   pure value: no link, no Bueno, no 24/7 Spain and no tool in the text (only the English image carries the Bueno logo), because
    groups were removing anything promotional. The only invitation is a first comment that
    Poornima adds under her post (`COMMENT` in the same file), pointing at the WhatsApp
    community. Until `WHATSAPP_URL` is set there, the email tells her to skip the comment.
@@ -76,7 +76,7 @@ nothing to send does not make any group miss its turn.
 Every post has seven images, one per language, with the text on the image in that language.
 They are the 24/7 Spain infographic format (the approved simple3 template), rendered by
 `studio/renderer/fb_cards2.py` from `studio/facebook/cards2/<lang>.json` (six templates, transparent logo, photos in `studio/photos`) and committed under
-`public/fb-cards/<post>/<lang>.jpg`. Since 15 October 2026 every image carries the Bueno logo (`"logo": true` on every card) and no site name or sponsor line. To change the text on an image, edit that language's card
+`public/fb-cards/<post>/<lang>.jpg`. Since 15 October 2026 only the English image carries the Bueno logo. The six translated images carry no logo, no "Property Finance Simplified" and no mention of Bueno at all, because a translation can carry a mistake and that must never sit next to the Bueno name. `fb_cards2.py` enforces this whatever the card file says, and `fb_isolation.test.mjs` checks it. To change the text on an image, edit that language's card
 file, run `python3 studio/renderer/fb_cards2.py all public/fb-cards`, and bump `CARD_VERSION`
 in `api/_fb_images.js`.
 

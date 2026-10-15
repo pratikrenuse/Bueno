@@ -353,6 +353,52 @@ export const PHOTO_SOURCE = {
   at_partner_referral_logic: 10407749,
 };
 
+// Bueno cards, 15 October 2026. Pratik asked for half of the deck to carry the same
+// branded cards as the /internal-poornima Facebook posts instead of a stock photograph.
+// Every second unsent post in each stream now opens on its card: the Bueno logo, FS Siena,
+// a licensed photo and three lines taken from the post itself. The card is drawn by
+// studio/renderer/li_cards.py from studio/linkedin/cards/en.json and served from
+// public/li-cards. The post's photograph frame and the Pexels grid stay in its options,
+// so "Change image" in the deck can still switch back.
+//
+// Bump LI_CARD_VERSION after re-rendering, so no email client keeps an old copy.
+export const LI_CARD_VERSION = '2';
+export const CARD_SLUGS = new Set([
+  'irnr_who_pays', 'cash_rules', 'nota_simple', 'inheritance_foreign_law', 'rental_rule_changes',
+  'buying_fees', 'community_fees', 'escritura_notary', 'free_banking_myth', 'rural_property',
+  'property_insurance', 'extension_deeds', 'retirement_183_line', 'village_or_city_spain', 'october_ibi_month',
+  'alquiler_opcion_compra', 'holiday_home_running_cost', 'leasehold_freehold', 'landlord_tenant_issues', 'nie_to_dni',
+  'credit_card_fees', 'utilities_setup', 'direct_debit_switch', 'preventative_maintenance', 'seasonal_rental_roi',
+  'hidden_bank_fees', 'occupation_cover', 'ag_epc_advertising', 'ag_arras_window', 'ag_partner_week_after_keys',
+  'ag_seller_debt_certificate', 'ag_law5768_guarantee', 'ag_three_fifths_ruling', 'ag_rural_land_checks', 'ag_partner_aftersales_list',
+  'ag_true_buying_costs', 'ag_scam_red_flags', 'ag_market_calendar', 'ag_nie_timing', 'ag_partner_handover_service',
+  'ag_rental_registration_2025', 'ag_modelo210_answer', 'at_arras_window', 'at_nonresident_seller', 'at_partner_unbillable_email',
+  'at_succession_tax', 'at_rural_diligence', 'at_gift_tax', 'at_spanish_wills', 'at_partner_referral_logic',
+]);
+export const cardUrl = (slug) => `/li-cards/${slug}.jpg?v=${LI_CARD_VERSION}`;
+// The team posts in six languages, and every card is drawn in each of them:
+// public/li-cards/<slug>.jpg is English, public/li-cards/<lang>/<slug>.jpg the others.
+// The deck stores the English address; the member email swaps in the member's language.
+export const CARD_LANGS = ['en', 'nl', 'sv', 'no', 'es', 'fr'];
+const CARD_RE = /^\/li-cards\/([a-z0-9_]+)\.jpg(\?v=\d+)?$/;
+export const isCard = (url) => typeof url === 'string' && CARD_RE.test(url);
+export function cardInLanguage(url, lang) {
+  const m = typeof url === 'string' && url.match(CARD_RE);
+  if (!m || lang === 'en' || !CARD_LANGS.includes(lang)) return url;
+  return `/li-cards/${lang}/${m[1]}.jpg${m[2] || ''}`;
+}
+// The plain photograph frame with the Bueno lockup, offered in a translated email as the
+// image to use if the text on the translated card is wrong. It is the post's own frame
+// from its image options: neither a card nor a bare Pexels photograph.
+export function plainFrame(post) {
+  const opts = (post && post.image_options) || [];
+  return opts.find(u => typeof u === 'string' && !isCard(u) && !u.includes('images.pexels.com')) || null;
+}
+const cardFor = (audience, day) => {
+  const slug = FRAME[`${audience}:${day}`];
+  return slug && CARD_SLUGS.has(slug) ? cardUrl(slug) : null;
+};
+
 const frameFor = (audience, day) => {
   const slug = FRAME[`${audience}:${day}`];
   if (!slug) return null;
@@ -371,7 +417,8 @@ export function imageOptionsFor(audience, day) {
   const ids = OPTIONS[`${audience}:${day}`];
   const frame = frameFor(audience, day);
   const pexels = ids ? ids.map(urlFor) : [];
-  return frame ? [frame, ...pexels] : pexels;
+  const card = cardFor(audience, day);
+  return [card, frame, ...pexels].filter(Boolean);
 }
 
 // The default. A post with no entry keeps whatever it already had.

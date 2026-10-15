@@ -1,0 +1,714 @@
+{
+ "irnr_who_pays": {
+  "reuse": "imputed-income-empty-home",
+  "audience": "owners"
+ },
+ "cash_rules": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "owners",
+  "eyebrow": "Paiements en espèces",
+  "headline": [
+   "Payer l'artisan en liquide ?",
+   "Vérifiez d'abord le plafond."
+  ],
+  "sub": "Le plafond est de €1 000 avec un professionnel, ou €10 000 si vous n'êtes pas résident fiscal en Espagne.",
+  "items": [
+   "Le plafond porte sur tout le chantier, pas seulement sur le liquide.",
+   "L'amende vaut 25 % des espèces, et les deux parties sont responsables."
+  ]
+ },
+ "nota_simple": {
+  "template": "split",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "owners",
+  "eyebrow": "Avant de signer",
+  "headline": [
+   "Ce que la Nota",
+   "Simple ne montre pas."
+  ],
+  "items": [
+   "Les charges de copropriété impayées n'y figurent pas, faute d'inscription.",
+   "La taxe foncière IBI impayée n'y figure pas non plus, vérifiez en mairie.",
+   "Les valeurs cadastrale et de référence relèvent du Catastro."
+  ]
+ },
+ "inheritance_foreign_law": {
+  "template": "question",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": [
+   "Je vis en Norvège, j'ai",
+   "un bien en Espagne. Quelle",
+   "loi régit ma succession ?"
+  ],
+  "sub": "Sans choix dans votre testament, c'est la loi de votre lieu de résidence.",
+  "items": [
+   "Vous pouvez choisir plutôt la loi de votre nationalité.",
+   "Votre testament doit faire ce choix expressément."
+  ]
+ },
+ "rental_rule_changes": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "headline": [
+   "Le numéro national de",
+   "location ne vaut plus."
+  ],
+  "items": [
+   "La Cour suprême l'a annulé par trois arrêts en 2026.",
+   "Votre annonce doit toujours afficher le numéro touristique régional."
+  ]
+ },
+ "buying_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "owners",
+  "headline": "En Andalucía, la même revente paie €21 000 de droits de mutation.",
+  "sub": "L'impôt dépend de la région et du fait que le bien soit ancien ou neuf.",
+  "big_label": "Revente de €300 000 à Madrid",
+  "big": "€18 000"
+ },
+ "community_fees": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "owners",
+  "eyebrow": "Charges de copropriété",
+  "headline": [
+   "Vous achetez un logement ?",
+   "Demandez les charges dues."
+  ],
+  "sub": "Le logement répond des charges de cette année et des trois précédentes.",
+  "items": [
+   "Ces dettes n'apparaissent pas sur la Nota Simple.",
+   "Le certificat du secrétaire indique ce qui est dû.",
+   "Le secrétaire dispose de 7 jours calendaires pour le délivrer."
+  ]
+ },
+ "escritura_notary": {
+  "template": "split",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "owners",
+  "eyebrow": "Chez le notaire",
+  "headline": [
+   "Le notaire contrôle",
+   "l'acte, pas l'affaire."
+  ],
+  "items": [
+   "Le notaire conseille les deux parties et ne négocie pour aucune.",
+   "Vos propres vérifications se font avant le jour de la signature.",
+   "Les honoraires du notaire suivent un tarif officiel fixe."
+  ]
+ },
+ "free_banking_myth": {
+  "template": "question",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "owners",
+  "headline": [
+   "Pourquoi deux comptes",
+   "espagnols coûtent-ils",
+   "si différemment ?"
+  ],
+  "sub": "Chaque prestataire fixe ses frais, et le Banco de España ne les approuve pas.",
+  "items": [
+   "Avant de signer, le prestataire doit vous remettre son document sur les frais.",
+   "Comparer ces documents révèle le coût annuel probable."
+  ]
+ },
+ "rural_property": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "owners",
+  "headline": [
+   "Achat d'un terrain rural ?",
+   "Comparez trois sources."
+  ],
+  "items": [
+   "Vérifiez le registre foncier, le Catastro et ce qui existe sur la parcelle.",
+   "En Andalucía, on peut agir six ans contre la plupart des travaux sans permis."
+  ]
+ },
+ "property_insurance": {
+  "template": "date",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "owners",
+  "headline": "Le délai court dès que vous avez connaissance du dommage.",
+  "sub": "Un retard n'annule pas à lui seul la demande, mais l'assureur peut réclamer le préjudice causé.",
+  "big_label": "Déclarez un sinistre sous",
+  "big": "7 jours"
+ },
+ "extension_deeds": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "owners",
+  "eyebrow": "Piscines et extensions",
+  "headline": [
+   "Votre piscine figure-t-elle",
+   "dans l'acte ?"
+  ],
+  "sub": "Les travaux postérieurs à l'inscription peuvent manquer au registre foncier.",
+  "items": [
+   "Comparez la Nota Simple, le Catastro et ce qui est construit.",
+   "Une déclaration d'ouvrage nouveau met la description à jour.",
+   "Chaque région fixe le délai d'action de la mairie sur les travaux sans permis."
+  ]
+ },
+ "retirement_183_line": {
+  "template": "split",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "eyebrow": "Résidence fiscale",
+  "headline": [
+   "183 jours, ce n'est pas",
+   "le seul critère."
+  ],
+  "items": [
+   "Vous êtes résident si vous passez plus de 183 jours par an en Espagne.",
+   "Vous l'êtes aussi si vos principaux intérêts économiques sont en Espagne.",
+   "Votre certificat d'enregistrement ne décide pas de votre résidence fiscale."
+  ]
+ },
+ "village_or_city_spain": {
+  "template": "question",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "owners",
+  "headline": [
+   "Village, bourg ou ville.",
+   "Que dois-je vérifier",
+   "pour l'adresse ?"
+  ],
+  "sub": "La plupart des services locaux peuvent être vérifiés avant l'achat.",
+  "items": [
+   "Une commune a un seul fournisseur d'eau, demandez au vendeur sa facture.",
+   "Chaque mairie fixe son propre taux et ses dates de taxe foncière IBI."
+  ]
+ },
+ "october_ibi_month": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "owners",
+  "headline": [
+   "Deux impôts d'automne,",
+   "deux administrations."
+  ],
+  "items": [
+   "Votre mairie fixe les dates de la taxe foncière IBI sur son avis.",
+   "La déclaration du revenu imputé 2025 est due au plus tard le 31 décembre 2026."
+  ]
+ },
+ "alquiler_opcion_compra": {
+  "template": "date",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "owners",
+  "headline": "Si le propriétaire est non-résident, ces 3 % vont au fisc espagnol via le Modelo 211 sous un mois.",
+  "sub": "Les clauses d'option doivent préciser quelle part du loyer s'impute sur le prix.",
+  "big_label": "À l'acte, l'acheteur retient",
+  "big": "3 %"
+ },
+ "holiday_home_running_cost": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "cove_house.jpg",
+  "audience": "owners",
+  "eyebrow": "Résidence secondaire vide",
+  "headline": [
+   "Elle coûte de l'argent",
+   "même en votre absence."
+  ],
+  "sub": "La plupart des charges fixes relèvent de la loi ou de votre mairie.",
+  "items": [
+   "L'impôt sur le revenu imputé est dû si vous ne louez pas.",
+   "La taxe foncière IBI de l'année revient au propriétaire du 1er janvier.",
+   "Les charges de copropriété suivent le budget annuel et son fonds de réserve."
+  ]
+ },
+ "leasehold_freehold": {
+  "template": "split",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Droit de superficie",
+  "headline": [
+   "L'équivalent espagnol",
+   "du bail emphytéotique."
+  ],
+  "items": [
+   "Le droit de superficie permet de posséder un bâtiment sur le terrain d'autrui.",
+   "Il peut durer 99 ans au maximum.",
+   "Vérifiez combien d'années il reste avant de signer les arras."
+  ]
+ },
+ "landlord_tenant_issues": {
+  "template": "question",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "owners",
+  "headline": [
+   "Je veux louer à long",
+   "terme. Combien de temps",
+   "dure le bail du locataire ?"
+  ],
+  "sub": "Le locataire peut le prolonger d'année en année jusqu'à cinq ans.",
+  "items": [
+   "C'est sept ans quand le bailleur est une société.",
+   "Le dépôt de garantie d'un bail d'habitation est d'un mois de loyer."
+  ]
+ },
+ "nie_to_dni": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "owners",
+  "headline": [
+   "Du NIE au DNI",
+   "une fois devenu espagnol."
+  ],
+  "items": [
+   "Vous prêtez serment dans les 180 jours suivant la notification.",
+   "Votre numéro NIE vous suit à vie."
+  ]
+ },
+ "credit_card_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "headline": "Soit 13 jours ouvrables, et changer de compte en Espagne est gratuit.",
+  "sub": "Le nouveau prestataire transfère vos prélèvements et virements permanents à votre place.",
+  "big_label": "Changer de compte prend au plus",
+  "big": "13 jours"
+ },
+ "utilities_setup": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Contrats après l'achat",
+  "headline": [
+   "Demandez d'abord",
+   "quatre choses au vendeur."
+  ],
+  "sub": "Elles simplifient chaque transfert de contrat.",
+  "items": [
+   "Demandez le nom des fournisseurs d'électricité, de gaz et d'eau.",
+   "Demandez la dernière facture et le code CUPS de chaque contrat.",
+   "Demandez le certificat d'installation électrique, s'il l'a."
+  ]
+ },
+ "direct_debit_switch": {
+  "template": "question",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "owners",
+  "headline": [
+   "Je change de compte.",
+   "Qui transfère mes",
+   "prélèvements ?"
+  ],
+  "sub": "Votre nouveau prestataire s'en charge, en 13 jours ouvrables au plus.",
+  "items": [
+   "Tenez votre propre liste de factures et cochez chacune une fois transférée.",
+   "Un créancier ne peut exiger un compte en Espagne s'il est dans l'UE ou l'EEE."
+  ]
+ },
+ "preventative_maintenance": {
+  "reuse": "consorcio-storm",
+  "audience": "owners"
+ },
+ "seasonal_rental_roi": {
+  "template": "pills",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "owners",
+  "headline": [
+   "Même loyer, mais pas",
+   "le même impôt."
+  ],
+  "items": [
+   "Un résident de l'UE paie €1 520 sur €12 000 de loyer avec €4 000 de frais.",
+   "Un résident britannique paie €2 880, car les frais ne sont pas déductibles."
+  ]
+ },
+ "hidden_bank_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": "Il est ouvert à toute personne résidant légalement dans l'UE.",
+  "sub": "Comparez votre relevé annuel de frais avec le document reçu à l'ouverture du compte.",
+  "big_label": "Un compte de base coûte au plus",
+  "big": "€3 par mois"
+ },
+ "occupation_cover": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "eyebrow": "Assurance contre le squat",
+  "headline": [
+   "Que paie votre contrat",
+   "si le bien est squatté ?"
+  ],
+  "sub": "Tout dépend de la formulation, alors interrogez votre assureur par écrit.",
+  "items": [
+   "Demandez si le squat est inclus ou proposé en option.",
+   "Demandez s'il est couvert quand le logement est vide une partie de l'année.",
+   "Un bien détenu par une société n'a pas accès à la procédure express."
+  ]
+ },
+ "ag_epc_advertising": {
+  "template": "split",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "agents",
+  "eyebrow": "Publier une annonce",
+  "headline": [
+   "Pas de certificat,",
+   "pas d'annonce."
+  ],
+  "items": [
+   "Toute annonce de vente ou de location doit afficher la classe énergétique.",
+   "Les logements touristiques vendus ou loués en ont désormais besoin aussi.",
+   "Demandez le certificat enregistré dès la prise de mandat."
+  ]
+ },
+ "ag_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "agents",
+  "headline": [
+   "Mon acheteur veut",
+   "pouvoir se retirer.",
+   "Quelles arras prévoir ?"
+  ],
+  "sub": "Seules les arras penitenciales donnent ce droit, et le contrat doit le dire.",
+  "items": [
+   "Sans clause claire, les tribunaux qualifient les arras de confirmatorias.",
+   "Avec les penitenciales, l'acheteur perd l'acompte ou le vendeur rend le double."
+  ]
+ },
+ "ag_partner_week_after_keys": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "agents",
+  "eyebrow": "La semaine après la vente",
+  "headline": [
+   "Votre acheteur a les clés.",
+   "Place aux démarches."
+  ],
+  "sub": "Un court plan par thème fait gagner du temps à tous.",
+  "items": [
+   "Le code CUPS sur chaque facture est la référence de chaque contrat.",
+   "Le propriétaire au 1er janvier doit la taxe foncière IBI de l'année.",
+   "Donnez au syndic une adresse e-mail pour les convocations."
+  ]
+ },
+ "ag_seller_debt_certificate": {
+  "template": "date",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "agents",
+  "headline": "Soit les trois années précédentes, plus la part déjà échue de cette année.",
+  "sub": "Demandez le certificat du secrétaire pour chaque revente, avant la signature des arras.",
+  "big_label": "Les charges impayées remontent à",
+  "big": "3 ans"
+ },
+ "ag_law5768_guarantee": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "agents",
+  "headline": [
+   "Sur plan, une garantie",
+   "avant tout versement."
+  ],
+  "items": [
+   "Chaque versement échelonné doit être garanti par un assureur ou une banque.",
+   "L'argent va sur un compte spécial, tenu à part."
+  ]
+ },
+ "ag_three_fifths_ruling": {
+  "template": "split",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "agents",
+  "eyebrow": "Locations touristiques",
+  "headline": [
+   "Une nouvelle location",
+   "touristique se vote."
+  ],
+  "items": [
+   "Depuis le 3 avril 2025, la copropriété doit approuver toute nouvelle location.",
+   "Le vote exige les trois cinquièmes des propriétaires et des quotes-parts.",
+   "La copropriété peut relever de 20 % au plus la part de charges de ce logement."
+  ]
+ },
+ "ag_rural_land_checks": {
+  "template": "question",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "agents",
+  "headline": [
+   "Une construction est sur",
+   "le terrain, pas dans l'acte.",
+   "Peut-on l'inscrire ?"
+  ],
+  "sub": "Oui, une fois le délai régional de poursuite écoulé.",
+  "items": [
+   "En Andalucía, ce délai est de six ans, et aucun ne court en zone protégée.",
+   "En Comunitat Valenciana, c'est 15 ans pour les travaux après le 20 août 2014."
+  ]
+ },
+ "ag_partner_aftersales_list": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "agents",
+  "eyebrow": "Après la vente",
+  "headline": [
+   "La première année,",
+   "noir sur blanc."
+  ],
+  "sub": "Une liste écrite donne à chaque obligation une date et un responsable.",
+  "items": [
+   "L'impôt sur les loyers 2026 se déclare du 1er au 20 avril 2027.",
+   "Le propriétaire au 1er janvier paie la taxe foncière IBI de l'année.",
+   "L'assureur doit être prévenu d'un sinistre sous sept jours."
+  ]
+ },
+ "ag_true_buying_costs": {
+  "template": "date",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "agents",
+  "headline": "Ce sont les droits de mutation, calculés par tranches de valeur en Cataluña.",
+  "sub": "Sur une revente, ces droits de mutation sont de 6 % à Madrid et de 7 % en Andalucía.",
+  "big_label": "Revente de €700 000 en Cataluña",
+  "big": "€71 000"
+ },
+ "ag_scam_red_flags": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "agents",
+  "headline": [
+   "Deux signaux d'alerte",
+   "à évoquer tôt."
+  ],
+  "items": [
+   "Le vendeur n'est pas le propriétaire inscrit sur la Nota Simple.",
+   "Un promoteur demande des versements échelonnés sans garantie."
+  ]
+ },
+ "ag_market_calendar": {
+  "template": "split",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "agents",
+  "eyebrow": "Un vendeur non-résident",
+  "headline": [
+   "Trois échéances courent",
+   "à partir de la vente."
+  ],
+  "items": [
+   "L'acheteur verse les 3 % retenus au fisc espagnol sous un mois.",
+   "Le vendeur dépose la déclaration d'impôt Modelo 210 du 2e au 4e mois.",
+   "La taxe de plusvalía se déclare sous 30 jours ouvrables."
+  ]
+ },
+ "ag_nie_timing": {
+  "template": "question",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "agents",
+  "headline": [
+   "Combien de temps prend",
+   "le NIE de mon acheteur ?"
+  ],
+  "sub": "Il faut souvent quelques semaines, mais aucune date ne peut être promise.",
+  "items": [
+   "La demande se fait via le formulaire EX-15, avec €9,84 de frais en Espagne.",
+   "Lancez-la dès que la décision d'acheter est prise."
+  ]
+ },
+ "ag_partner_handover_service": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "agents",
+  "eyebrow": "Remise des clés",
+  "headline": [
+   "Une liste de contrôle",
+   "à remettre avec les clés."
+  ],
+  "sub": "Après la remise des clés, les démarches reviennent au nouveau propriétaire.",
+  "items": [
+   "Le titulaire et la puissance souscrite se changent séparément.",
+   "Sans police ordinaire, il n'y a pas de couverture du Consorcio.",
+   "L'impôt Modelo 210 peut être payé depuis un compte SEPA à l'étranger."
+  ]
+ },
+ "ag_rental_registration_2025": {
+  "template": "date",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "agents",
+  "headline": "Les annonces exigent désormais le numéro touristique régional.",
+  "sub": "La Cour suprême a annulé l'enregistrement national par trois arrêts.",
+  "big_label": "Le numéro national a pris fin en",
+  "big": "2026"
+ },
+ "ag_modelo210_answer": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "agents",
+  "headline": [
+   "Le Modelo 210 de votre",
+   "client, expliqué."
+  ],
+  "items": [
+   "Un logement vide est imposé sur 1,1 % ou 2 % de sa valeur cadastrale.",
+   "Le taux d'impôt est de 19 % pour les résidents UE et EEE, et de 24 % sinon."
+  ]
+ },
+ "at_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Des arras signées",
+   "valent-elles contrat ?"
+  ],
+  "sub": "Oui. Un contrat d'arras privé engage les parties sans notaire.",
+  "items": [
+   "Les arras sont confirmatorias, sauf si la clause dit clairement le contraire.",
+   "La restitution du double ne s'applique que si elle est prévue par écrit."
+  ]
+ },
+ "at_nonresident_seller": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Achat à un non-résident",
+  "headline": [
+   "Deux obligations fiscales",
+   "pèsent sur l'acheteur."
+  ],
+  "sub": "Les deux doivent figurer dans le décompte de la vente.",
+  "items": [
+   "L'acheteur retient 3 % et les verse via le Modelo 211 sous un mois.",
+   "L'acheteur paie aussi la plusvalía en tant que substitut du contribuable.",
+   "La plusvalía se déclare sous 30 jours ouvrables."
+  ]
+ },
+ "at_partner_unbillable_email": {
+  "template": "split",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Après la vente",
+  "headline": [
+   "Les questions",
+   "qui viennent ensuite."
+  ],
+  "items": [
+   "Le code CUPS reste le même quand le fournisseur ou le titulaire change.",
+   "Chaque commune a un seul fournisseur d'eau, il n'y a donc pas de choix.",
+   "L'impôt Modelo 210 peut être payé par prélèvement depuis l'étranger."
+  ]
+ },
+ "at_succession_tax": {
+  "template": "date",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "attorneys",
+  "headline": "Le Modelo 650 peut obtenir six mois de plus si vous le demandez dans les cinq premiers.",
+  "sub": "Les héritiers non-résidents peuvent opter pour les règles régionales, souvent plus avantageuses.",
+  "big_label": "Droits de succession à payer sous",
+  "big": "6 mois"
+ },
+ "at_rural_diligence": {
+  "template": "pills",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "En terrain rural, vérifiez",
+   "d'abord sa classification."
+  ],
+  "items": [
+   "Le délai de prescription dépend de la région et de la classe du terrain.",
+   "Sur certains terrains protégés d'Andalucía, aucun délai ne court."
+  ]
+ },
+ "at_gift_tax": {
+  "template": "question",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Un parent donne",
+   "l'appartement. Quel délai",
+   "pour déclarer ?"
+  ],
+  "sub": "La déclaration d'impôt sur la donation, Modelo 651, se fait sous 30 jours ouvrables.",
+  "items": [
+   "Une succession laisse six mois, le délai d'une donation est bien plus court.",
+   "La taxe de plusvalía sur la donation suit le même délai de 30 jours ouvrables."
+  ]
+ },
+ "at_spanish_wills": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Réserve héréditaire",
+  "headline": [
+   "Les quotités espagnoles",
+   "s'appliquent-elles ?"
+  ],
+  "sub": "Elles ne s'appliquent que si la loi espagnole régit la succession.",
+  "items": [
+   "Par défaut, la loi de la résidence habituelle au décès s'applique.",
+   "Un client peut choisir la loi d'une nationalité qu'il possède.",
+   "En droit commun espagnol, les deux tiers reviennent aux descendants."
+  ]
+ },
+ "at_partner_referral_logic": {
+  "template": "split",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "attorneys",
+  "eyebrow": "La note de passation",
+  "headline": [
+   "Une page pour",
+   "la première année."
+  ],
+  "items": [
+   "Le propriétaire au 1er janvier doit toute la taxe foncière IBI de l'année.",
+   "Un copropriétaire en retard de charges peut assister aux assemblées sans voter.",
+   "Une nouvelle location touristique exige l'accord exprès de la copropriété."
+  ]
+ }
+}

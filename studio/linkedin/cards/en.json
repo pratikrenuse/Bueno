@@ -1,0 +1,714 @@
+{
+ "irnr_who_pays": {
+  "reuse": "imputed-income-empty-home",
+  "audience": "owners"
+ },
+ "cash_rules": {
+  "template": "duotone",
+  "eyebrow": "Cash payments",
+  "headline": [
+   "Paying the builder in cash?",
+   "Check the limit first."
+  ],
+  "sub": "The limit is €1,000 when a business is involved, or €10,000 if you're not tax resident in Spain.",
+  "items": [
+   "The limit counts the whole job, not only the cash part.",
+   "The fine is 25% of the cash, and both sides are liable."
+  ],
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "owners"
+ },
+ "nota_simple": {
+  "template": "split",
+  "eyebrow": "Before you sign",
+  "headline": [
+   "What the Nota",
+   "Simple won't show."
+  ],
+  "items": [
+   "Unpaid community fees aren't on it, because they aren't registered.",
+   "Unpaid IBI property tax isn't on it either, so check with the council.",
+   "The cadastral and reference values sit with the Catastro."
+  ],
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "owners"
+ },
+ "inheritance_foreign_law": {
+  "template": "question",
+  "headline": [
+   "I live in Norway and own",
+   "in Spain. Whose law",
+   "decides my estate?"
+  ],
+  "sub": "Without a choice in your will, it's the law of where you live.",
+  "items": [
+   "You can choose the law of your nationality instead.",
+   "Your will has to make that choice expressly."
+  ],
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners"
+ },
+ "rental_rule_changes": {
+  "template": "pills",
+  "headline": [
+   "The national rental number",
+   "no longer applies."
+  ],
+  "items": [
+   "The Supreme Court annulled it in three rulings in 2026.",
+   "Your listing still needs the regional tourist number."
+  ],
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners"
+ },
+ "buying_fees": {
+  "template": "date",
+  "big_label": "A €300,000 Madrid resale pays",
+  "big": "€18,000",
+  "headline": "The same resale in Andalucía pays €21,000 in transfer tax.",
+  "sub": "The tax depends on the region and on whether the home is a resale or a new build.",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "owners"
+ },
+ "community_fees": {
+  "template": "duotone",
+  "eyebrow": "Community fees",
+  "headline": [
+   "Buying a flat?",
+   "Ask about the fees owed."
+  ],
+  "sub": "The flat stays liable for this year's fees due and the three years before.",
+  "items": [
+   "These debts don't appear on the Nota Simple.",
+   "The community secretary's certificate shows what is owed.",
+   "The secretary has 7 calendar days to issue it."
+  ],
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "owners"
+ },
+ "escritura_notary": {
+  "template": "split",
+  "eyebrow": "At the notary",
+  "headline": [
+   "The notary checks",
+   "the deed, not the deal."
+  ],
+  "items": [
+   "The notary advises both sides and negotiates for neither.",
+   "Your own checks belong before the signing day.",
+   "Notary fees follow a fixed government tariff."
+  ],
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "owners"
+ },
+ "free_banking_myth": {
+  "template": "question",
+  "headline": [
+   "Why do two Spanish",
+   "accounts cost so",
+   "differently?"
+  ],
+  "sub": "Each provider sets its own fees, and the Banco de España doesn't approve them.",
+  "items": [
+   "Before you sign, the provider must give you its fee document.",
+   "Comparing those documents shows the likely yearly cost."
+  ],
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "owners"
+ },
+ "rural_property": {
+  "template": "pills",
+  "headline": [
+   "Buying rural land?",
+   "Compare three records."
+  ],
+  "items": [
+   "Check the Land Registry, the Catastro and what stands on the plot.",
+   "In Andalucía, action on most unlicensed works is possible for six years."
+  ],
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "owners"
+ },
+ "property_insurance": {
+  "template": "date",
+  "big_label": "Report a loss within",
+  "big": "7 days",
+  "headline": "The days run from when you learn of the damage.",
+  "sub": "Notifying late doesn't cancel the claim by itself, but the insurer can claim for the harm the delay caused.",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "owners"
+ },
+ "extension_deeds": {
+  "template": "duotone",
+  "eyebrow": "Pools and extensions",
+  "headline": [
+   "Is your pool",
+   "on the deeds?"
+  ],
+  "sub": "Work built after registration may be missing from the Land Registry.",
+  "items": [
+   "Compare the Nota Simple, the Catastro and what is built.",
+   "A declaration of new work brings the description up to date.",
+   "Each region sets how long the council can act on unlicensed works."
+  ],
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "owners"
+ },
+ "retirement_183_line": {
+  "template": "split",
+  "eyebrow": "Tax residency",
+  "headline": [
+   "183 days isn't",
+   "the only test."
+  ],
+  "items": [
+   "You're resident if you spend more than 183 days in Spain in a year.",
+   "You're also resident if your main economic interests are in Spain.",
+   "Your registration certificate doesn't decide your tax residency."
+  ],
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners"
+ },
+ "village_or_city_spain": {
+  "template": "question",
+  "headline": [
+   "Village, town or city.",
+   "What should I check",
+   "for the address?"
+  ],
+  "sub": "Most local services can be checked before you buy.",
+  "items": [
+   "Each town has one water supplier, so ask the seller for the latest bill.",
+   "Each council sets its own IBI property tax rate and dates."
+  ],
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "owners"
+ },
+ "october_ibi_month": {
+  "template": "pills",
+  "headline": [
+   "Two autumn tax items,",
+   "from two authorities."
+  ],
+  "items": [
+   "Your council sets the IBI property tax dates on its notice.",
+   "The 2025 imputed income return is due by 31 December 2026."
+  ],
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "owners"
+ },
+ "alquiler_opcion_compra": {
+  "template": "date",
+  "big_label": "At completion, the buyer withholds",
+  "big": "3%",
+  "headline": "When the owner is a non-resident, that 3% goes to the tax office on Modelo 211 within a month.",
+  "sub": "The option clauses should say how much of the rent counts toward the price.",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "owners"
+ },
+ "holiday_home_running_cost": {
+  "template": "duotone",
+  "eyebrow": "An empty holiday home",
+  "headline": [
+   "It costs money",
+   "even when you're away."
+  ],
+  "sub": "Most of the fixed costs are set by law or by your council.",
+  "items": [
+   "Imputed income tax is due on a home you don't let.",
+   "The whole year's IBI property tax falls on the 1 January owner.",
+   "Community fees follow the yearly budget and its reserve fund."
+  ],
+  "logo": true,
+  "photo": "cove_house.jpg",
+  "audience": "owners"
+ },
+ "leasehold_freehold": {
+  "template": "split",
+  "eyebrow": "Surface rights",
+  "headline": [
+   "Spain's version",
+   "of a leasehold."
+  ],
+  "items": [
+   "A surface right lets you own a building on someone else's land.",
+   "It can last for a maximum of 99 years.",
+   "Check how many years remain before you sign the arras."
+  ],
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners"
+ },
+ "landlord_tenant_issues": {
+  "template": "question",
+  "headline": [
+   "I want to let it long",
+   "term. How long is",
+   "the tenant's lease?"
+  ],
+  "sub": "The tenant can extend it year by year up to five years.",
+  "items": [
+   "It's seven years when the landlord is a company.",
+   "The deposit for a housing let is one month's rent."
+  ],
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "owners"
+ },
+ "nie_to_dni": {
+  "template": "pills",
+  "headline": [
+   "From NIE to DNI",
+   "after you become Spanish."
+  ],
+  "items": [
+   "You take the oath within 180 days of being notified.",
+   "Your NIE number stays with you for life."
+  ],
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "owners"
+ },
+ "credit_card_fees": {
+  "template": "date",
+  "big_label": "A switch of provider takes at most",
+  "big": "13 days",
+  "headline": "That's 13 business days, and moving your account in Spain is free.",
+  "sub": "The new provider moves your direct debits and standing orders for you.",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners"
+ },
+ "utilities_setup": {
+  "template": "duotone",
+  "eyebrow": "Utilities after buying",
+  "headline": [
+   "Ask the seller for",
+   "four things first."
+  ],
+  "sub": "They make every supply transfer simpler.",
+  "items": [
+   "Ask for the electricity, gas and water suppliers' names.",
+   "Ask for the latest bill and the CUPS code for each supply.",
+   "Ask for the electrical installation certificate, if they have it."
+  ],
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners"
+ },
+ "direct_debit_switch": {
+  "template": "question",
+  "headline": [
+   "I'm switching accounts.",
+   "Who moves my",
+   "direct debits?"
+  ],
+  "sub": "Your new provider does, within 13 business days at most.",
+  "items": [
+   "Keep your own list of bills and tick each one off as it moves.",
+   "A biller can't insist your account is in Spain if it's in the EU or EEA."
+  ],
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "owners"
+ },
+ "preventative_maintenance": {
+  "reuse": "consorcio-storm",
+  "audience": "owners"
+ },
+ "seasonal_rental_roi": {
+  "template": "pills",
+  "headline": [
+   "Same rent, a different",
+   "tax on it."
+  ],
+  "items": [
+   "An EU resident pays €1,520 on €12,000 of rent with €4,000 of costs.",
+   "A UK resident pays €2,880, because the costs can't be deducted."
+  ],
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "owners"
+ },
+ "hidden_bank_fees": {
+  "template": "date",
+  "big_label": "A basic account costs at most",
+  "big": "€3 a month",
+  "headline": "It is open to anyone legally resident in the EU.",
+  "sub": "Compare your yearly fee statement with the fee document you got when you opened the account.",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners"
+ },
+ "occupation_cover": {
+  "template": "duotone",
+  "eyebrow": "Occupation insurance",
+  "headline": [
+   "What does your policy",
+   "pay if it's occupied?"
+  ],
+  "sub": "It depends on the wording, so ask your insurer in writing.",
+  "items": [
+   "Ask whether occupation is included or an extra.",
+   "Ask whether it applies while the home is empty part of the year.",
+   "A home held through a company can't use the express court route."
+  ],
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners"
+ },
+ "ag_epc_advertising": {
+  "template": "split",
+  "eyebrow": "Listing a home",
+  "headline": [
+   "No certificate,",
+   "no listing."
+  ],
+  "items": [
+   "Every advert for sale or rent must show the energy rating.",
+   "Holiday homes that are sold or let now need one too.",
+   "Ask for the registered certificate at instruction."
+  ],
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "agents"
+ },
+ "ag_arras_window": {
+  "template": "question",
+  "headline": [
+   "My buyer wants to be",
+   "able to walk away.",
+   "Which arras is that?"
+  ],
+  "sub": "Only arras penitenciales give that right, and the contract must say so.",
+  "items": [
+   "Without clear wording, the courts treat arras as confirmatorias.",
+   "Penitenciales cost the buyer the deposit, or the seller double."
+  ],
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "agents"
+ },
+ "ag_partner_week_after_keys": {
+  "template": "duotone",
+  "eyebrow": "The week after completion",
+  "headline": [
+   "Your buyer has the keys.",
+   "Now the admin starts."
+  ],
+  "sub": "A short plan by topic saves everyone time.",
+  "items": [
+   "The CUPS code on each bill is the reference for every supply.",
+   "The owner on 1 January owes that year's IBI property tax.",
+   "Give the administrator an email address for meeting notices."
+  ],
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "agents"
+ },
+ "ag_seller_debt_certificate": {
+  "template": "date",
+  "big_label": "Unpaid community fees reach back",
+  "big": "3 years",
+  "headline": "That's the three previous years, plus the part of this year already due.",
+  "sub": "Ask for the secretary's certificate on every resale, before the arras is signed.",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "agents"
+ },
+ "ag_law5768_guarantee": {
+  "template": "pills",
+  "headline": [
+   "Off-plan payments need",
+   "a guarantee first."
+  ],
+  "items": [
+   "Each staged payment must be guaranteed by an insurer or a bank.",
+   "The money goes into a special account kept apart."
+  ],
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "agents"
+ },
+ "ag_three_fifths_ruling": {
+  "template": "split",
+  "eyebrow": "Tourist lets",
+  "headline": [
+   "New tourist lets",
+   "need a vote."
+  ],
+  "items": [
+   "Since 3 April 2025, a new tourist let needs the community's approval.",
+   "The vote needs three fifths of the owners and of the quotas.",
+   "The community can raise that flat's share of costs by up to 20%."
+  ],
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "agents"
+ },
+ "ag_rural_land_checks": {
+  "template": "question",
+  "headline": [
+   "A building is on the plot",
+   "but not on the deeds.",
+   "Can it be registered?"
+  ],
+  "sub": "It can, once the regional enforcement period has run out.",
+  "items": [
+   "In Andalucía that period is six years, and none runs on protected land.",
+   "In the Comunitat Valenciana it's 15 years for works after 20 August 2014."
+  ],
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "agents"
+ },
+ "ag_partner_aftersales_list": {
+  "template": "duotone",
+  "eyebrow": "After completion",
+  "headline": [
+   "The first year,",
+   "written down."
+  ],
+  "sub": "A written list gives each obligation a date and an owner.",
+  "items": [
+   "Tax on 2026 rent is declared between 1 and 20 April 2027.",
+   "The owner on 1 January pays that year's IBI property tax.",
+   "Insurers should hear of a loss within seven days."
+  ],
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "agents"
+ },
+ "ag_true_buying_costs": {
+  "template": "date",
+  "big_label": "A €700,000 Cataluña resale pays",
+  "big": "€71,000",
+  "headline": "That is the transfer tax, charged by value band in Cataluña.",
+  "sub": "The same transfer tax on a resale is 6% in Madrid and 7% in Andalucía.",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "agents"
+ },
+ "ag_scam_red_flags": {
+  "template": "pills",
+  "headline": [
+   "Two red flags",
+   "worth naming early."
+  ],
+  "items": [
+   "The seller isn't the registered owner on the Nota Simple.",
+   "A developer asks for staged payments with no guarantee."
+  ],
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "agents"
+ },
+ "ag_market_calendar": {
+  "template": "split",
+  "eyebrow": "A non-resident seller",
+  "headline": [
+   "Three dates",
+   "run from completion."
+  ],
+  "items": [
+   "The buyer pays the 3% withheld to the tax office within one month.",
+   "The seller files the Modelo 210 tax return in months 2 to 4.",
+   "The plusvalía tax is declared within 30 business days."
+  ],
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "agents"
+ },
+ "ag_nie_timing": {
+  "template": "question",
+  "headline": [
+   "How long does my",
+   "buyer's NIE take?"
+  ],
+  "sub": "It commonly takes a few weeks, but no date can be promised.",
+  "items": [
+   "The application is form EX-15, and the fee in Spain is €9.84.",
+   "Start it as soon as the decision to buy is made."
+  ],
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "agents"
+ },
+ "ag_partner_handover_service": {
+  "template": "duotone",
+  "eyebrow": "Handover day",
+  "headline": [
+   "A checklist",
+   "to go with the keys."
+  ],
+  "sub": "Most of the admin after handover sits with the new owner.",
+  "items": [
+   "The holder and the contracted power are changed separately.",
+   "Without an ordinary policy, there's no Consorcio cover.",
+   "The Modelo 210 tax can be paid from a SEPA account abroad."
+  ],
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "agents"
+ },
+ "ag_rental_registration_2025": {
+  "template": "date",
+  "big_label": "The national rental number ended in",
+  "big": "2026",
+  "headline": "Listings now need the regional tourist number.",
+  "sub": "The Supreme Court annulled the state registration in three rulings.",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "agents"
+ },
+ "ag_modelo210_answer": {
+  "template": "pills",
+  "headline": [
+   "Your client's Modelo 210",
+   "question, answered."
+  ],
+  "items": [
+   "An empty home pays tax on 1.1% or 2% of its cadastral value.",
+   "The tax rate is 19% for EU and EEA residents, and 24% for others."
+  ],
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "agents"
+ },
+ "at_arras_window": {
+  "template": "question",
+  "headline": [
+   "Is a signed arras",
+   "already a contract?"
+  ],
+  "sub": "Yes. A private arras contract binds without a notary.",
+  "items": [
+   "Arras are read as confirmatorias unless the clause clearly says otherwise.",
+   "The double-repayment rule applies only where it is written in."
+  ],
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "attorneys"
+ },
+ "at_nonresident_seller": {
+  "template": "duotone",
+  "eyebrow": "Buying from a non-resident",
+  "headline": [
+   "Two tax duties",
+   "fall on the buyer."
+  ],
+  "sub": "Both belong in the completion figures.",
+  "items": [
+   "The buyer withholds 3% and pays it on Modelo 211 within a month.",
+   "The buyer also pays the plusvalía as substitute taxpayer.",
+   "The plusvalía is declared within 30 business days."
+  ],
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "attorneys"
+ },
+ "at_partner_unbillable_email": {
+  "template": "split",
+  "eyebrow": "After completion",
+  "headline": [
+   "The questions",
+   "that come later."
+  ],
+  "items": [
+   "The CUPS code stays the same when the supplier or holder changes.",
+   "Each town has one water supplier, so there's no choosing.",
+   "The Modelo 210 tax can be paid by direct debit from abroad."
+  ],
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "attorneys"
+ },
+ "at_succession_tax": {
+  "template": "date",
+  "big_label": "Inheritance tax is due within",
+  "big": "6 months",
+  "headline": "Modelo 650 can get six more months if you ask within the first five.",
+  "sub": "Non-resident heirs can opt for the regional rules, which often give larger reliefs.",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "attorneys"
+ },
+ "at_rural_diligence": {
+  "template": "pills",
+  "headline": [
+   "On rural land, check",
+   "the class of land first."
+  ],
+  "items": [
+   "The limitation period depends on the region and the class of land.",
+   "On some protected land in Andalucía, no period runs at all."
+  ],
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "attorneys"
+ },
+ "at_gift_tax": {
+  "template": "question",
+  "headline": [
+   "A parent is gifting",
+   "the flat. How long",
+   "is there to file?"
+  ],
+  "sub": "The gift tax return, Modelo 651, is due within 30 business days of the gift.",
+  "items": [
+   "An inheritance allows six months, so the gift deadline is far shorter.",
+   "The plusvalía tax on the gift has the same 30 business days."
+  ],
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "attorneys"
+ },
+ "at_spanish_wills": {
+  "template": "duotone",
+  "eyebrow": "Forced heirship",
+  "headline": [
+   "Do the Spanish",
+   "fractions apply?"
+  ],
+  "sub": "They apply only where Spanish law governs the estate.",
+  "items": [
+   "By default, the law of the habitual residence at death applies.",
+   "A client can choose the law of a nationality they hold.",
+   "Under Spanish common law, two thirds go to descendants."
+  ],
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "attorneys"
+ },
+ "at_partner_referral_logic": {
+  "template": "split",
+  "eyebrow": "The handover note",
+  "headline": [
+   "One page for",
+   "the first year."
+  ],
+  "items": [
+   "The 1 January owner owes the whole year's IBI property tax.",
+   "Owners behind on fees can attend meetings but can't vote.",
+   "New tourist lets in a community need its express approval."
+  ],
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "attorneys"
+ }
+}

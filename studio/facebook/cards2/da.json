@@ -6,14 +6,14 @@
   "headline": [
    "Jeg lejede den ud om sommeren,",
    "og resten stod den tom.",
-   "Hvad skal jeg indsende?"
+   "Hvilken angivelse gælder?"
   ],
   "sub": "Du indsender begge slags på den samme formular 210.",
   "items": [
    "Du angiver lejen for de uger, den var lejet ud.",
    "For de tomme uger angiver du en indtægt beregnet ud fra katasterværdien."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -25,23 +25,25 @@
    "bolig, du aldrig udlejer."
   ],
   "sub": "Den bygger på katasterværdien på din IBI-regning, og intet kan trækkes fra.",
-  "logo": true
+  "logo": false
  },
  "bueno-year-end-return": {
   "template": "date",
   "photo": "g03.jpg",
   "brand": "bueno",
-  "big_label": "Fristen for 2025 er den",
+  "big_label": "Angivelsen for 2025 skal ind senest",
   "big": "31. december",
-  "headline": "Du indsender, selvom ingen lejede den.",
+  "headline": [
+   "Du indsender angivelsen, også uden udlejning."
+  ],
   "sub": "Betaling via automatisk træk lukker tidligere, den 23. december. Hver ejer indsender for sin egen andel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
   "photo": "g08.jpg",
   "brand": "247",
-  "eyebrow": "Sen formular 210",
+  "eyebrow": "For sent med formular 210",
   "headline": [
    "Tjek posten,",
    "før du regner."
@@ -51,7 +53,7 @@
    "Fra måned 13 bliver det faste 15 % plus renter.",
    "Efter et brev fra skattevæsenet gælder de regler ikke længere."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -68,7 +70,7 @@
    "Formular 210 er national, og ingen sender dig en regning.",
    "Den regnes ud fra katasterværdien på din IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -82,7 +84,7 @@
    "Leje fra 1. oktober kommer med i én årlig selvangivelse.",
    "Din næste indsendelse efter denne er i april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -96,9 +98,9 @@
   "sub": "Hver ejer indsender sin egen formular 210.",
   "items": [
    "Ejer I halvdelen hver, bruger hver angivelse halvdelen af katasterværdien.",
-   "Tre søskende, der har arvet en lejlighed, indsender tre."
+   "Tre søskende, der har arvet en lejlighed, indsender tre angivelser."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -110,7 +112,7 @@
    "en anden skatteregning."
   ],
   "sub": "I EU og EØS trækker du udgifter fra og betaler 19 %. Andre steder er det 24 % af bruttolejen.",
-  "logo": true
+  "logo": false
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -120,7 +122,7 @@
   "big": "1,1 %",
   "headline": "Fire oplysninger er hele angivelsen.",
   "sub": "Du skal bruge din katasterværdi, din andel og hvor du er skattemæssigt hjemmehørende.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -136,13 +138,13 @@
    "Din egentlige avanceskat er 19 % af gevinsten, for alle.",
    "Var de 3 % mere, end du skylder, får du forskellen tilbage."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
   "photo": "g01.jpg",
   "brand": "bueno",
-  "eyebrow": "Betaling for 2025",
+  "eyebrow": "Betaling af angivelsen for 2025",
   "headline": [
    "Automatisk træk lukker",
    "den 23. december."
@@ -151,9 +153,9 @@
   "items": [
    "Automatisk træk stopper otte dage før indsendelsen.",
    "Derefter skal du betale skatten på en anden måde.",
-   "Det hjælper ikke at vente til den sidste uge."
+   "Det er klogt ikke at vente til den sidste uge."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -167,7 +169,7 @@
    "Var der ingen stigning, er der intet at betale.",
    "Du har tredive arbejdsdage fra skødet."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-why-from-fifty": {
   "template": "question",
@@ -183,7 +185,7 @@
    "Et nulresultat betyder, at intet skal betales, og intet kommer tilbage.",
    "En tilbagebetaling kan indsendes fra 1. februar, med en frist på fire år."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -195,7 +197,7 @@
    "ikke af opholdets længde."
   ],
   "sub": "Uden ydelser er ferieudlejning fritaget. Hotellignende ydelser under opholdet giver 10 %.",
-  "logo": true
+  "logo": false
  },
  "bueno-included-in-select": {
   "template": "date",
@@ -205,7 +207,7 @@
   "big": "1,1%",
   "headline": "Den gælder for halvdelen af grundlaget.",
   "sub": "Grundlaget er det højeste af den pris, du betalte, og den værdi, skattemyndighederne har fastsat.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -221,13 +223,13 @@
    "Ingen enkelt regning får en formiddags opmærksomhed.",
    "Saml hele året i én kolonne, og sammenlign det."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-never-filed": {
   "template": "duotone",
   "photo": "g00.jpg",
   "brand": "bueno",
-  "eyebrow": "Aldrig indsendt",
+  "eyebrow": "Angivelsen aldrig indsendt",
   "headline": [
    "Aldrig indsendt? Så",
    "kan det stadig rettes."
@@ -238,7 +240,7 @@
    "Fra måned 13 er det faste 15 % plus renter.",
    "Tillægget træder i stedet for en bøde."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -250,9 +252,9 @@
   ],
   "items": [
    "Nogle etableringsgebyrer blev lagt på låntageren.",
-   "Om et krav stadig er rettidigt, kræver en abogado."
+   "Om et krav stadig er rettidigt, skal en abogado vurdere."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -268,7 +270,7 @@
    "Den spørger om dage til rådighed og din ejerandel i procent.",
    "For en bolig, du ikke lejer ud, åbner selvangivelsen for 2026 1. april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -280,7 +282,7 @@
    "betale din advokat."
   ],
   "sub": "Kig efter defensa juridica. Du har ret til at vælge din egen advokat.",
-  "logo": true
+  "logo": false
  },
  "ninety-days": {
   "template": "date",
@@ -290,7 +292,7 @@
   "big": "90 dage",
   "headline": "Det er inden for 180 rullende dage.",
   "sub": "Den dag, du lander, og den dag, du flyver hjem, tæller begge. En forlænget weekend bruger fire dage, ikke to.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -306,7 +308,7 @@
    "Vind tæller, når vindstød over tre sekunder passerer 120 km i timen.",
    "Tillægget opkræves allerede sammen med din præmie."
   ],
-  "logo": true
+  "logo": false
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -323,21 +325,21 @@
    "Gem kuverten eller mailen med datoen på.",
    "Som regel skal du være ajour med fællesudgifterne."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
   "photo": "g06.jpg",
   "brand": "247",
   "headline": [
-   "Jeg har fået et tilbud.",
+   "Håndværkeren sendte et tilbud.",
    "Hvad bør der stå i det?"
   ],
   "items": [
    "Der skal stå en startdato og en slutdato.",
    "Betalingerne bør følge arbejdets etaper."
   ],
-  "logo": true
+  "logo": false
  },
  "leaving-it-empty": {
   "template": "question",
@@ -353,7 +355,7 @@
    "Hvor længe du er væk, og årstiden du rejser i, ændrer begge listen.",
    "Det gør det også, om nogen kigger forbi, mens du er væk."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -365,7 +367,7 @@
    "og rækkefølgen tæller."
   ],
   "sub": "Starter du med den forkerte, venter du. Ansøgningen om NIE er formular EX-15, og gebyret er €9,84.",
-  "logo": true
+  "logo": false
  },
  "tradesperson-in-your-language": {
   "template": "date",
@@ -375,7 +377,7 @@
   "big": "660 byer",
   "headline": "Anmeldelser på dit sprog står først.",
   "sub": "VVS'ere, elektrikere, låsesmede og byggefolk rangeres ud fra anmeldelser.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -391,7 +393,7 @@
    "En gestoría klarer indberetninger og papirarbejde og går ikke i retten.",
    "En administrador de fincas driver ejerforeningen."
   ],
-  "logo": true
+  "logo": false
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -408,7 +410,7 @@
    "De gør det på forskellige tidspunkter af året.",
    "Nogle opgaver skal ske, mens du er væk."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",
@@ -422,6 +424,6 @@
    "Varme, haver og tomme måneder tiltrækker forskellige skadedyr.",
    "Nogle skadedyr kræver et opkald, ikke en lørdag."
   ],
-  "logo": true
+  "logo": false
  }
 }

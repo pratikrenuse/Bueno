@@ -9,6 +9,7 @@
 // kind of thing somebody reads once and then trusts.
 import { syncTranslations, hashText } from './_translate.js';
 import { TEAM_CC, esc, sendMail, COPY, STREAM_LABEL, imageSrc } from './_email.js';
+import { isCard, cardInLanguage, plainFrame } from './_lk_images.js';
 
 export async function sendPostToTeam({ url, headers, post, members, anthropicKey }) {
   const stream = post.audience || 'owners';
@@ -121,9 +122,19 @@ export function memberEmail({ member, post, text, lang, stream, upcoming, transl
     warn = `<p style="margin:0 0 14px;font-size:13px;color:#7a611c;background:#FBF3DF;border-radius:8px;padding:10px 12px">The English original was edited after this version was translated, so give it a quick read before posting.</p>`;
   }
 
-  const img = post.image_url
+  // A Bueno card goes out in the member's own language. Nobody can correct the text on a
+  // translated card from the deck, so a translated email also offers the post's plain
+  // photograph frame with the Bueno logo, to use if anything on the card is wrong.
+  const card = isCard(post.image_url);
+  const mainImage = card ? cardInLanguage(post.image_url, lang) : post.image_url;
+  const backup = card && lang !== 'en' ? plainFrame(post) : null;
+  const img = mainImage
     ? `<p style="margin:18px 0 6px;font-size:13px;color:#5a5f73">${esc(c.imageLabel)}</p>
-       <img src="${imageSrc(post.image_url)}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
+       <img src="${imageSrc(mainImage)}" alt="" style="width:100%;max-width:520px;border-radius:10px;display:block" />`
+      + (backup
+        ? `<p style="margin:16px 0 6px;font-size:13px;color:#5a5f73">${esc(c.fallbackLabel || COPY.en.fallbackLabel)}</p>
+       <img src="${imageSrc(backup)}" alt="" style="width:100%;max-width:260px;border-radius:10px;display:block" />`
+        : '')
     : '';
 
   const next = (upcoming && upcoming.length)

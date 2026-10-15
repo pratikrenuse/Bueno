@@ -1,0 +1,714 @@
+{
+ "irnr_who_pays": {
+  "reuse": "imputed-income-empty-home",
+  "audience": "owners"
+ },
+ "cash_rules": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "owners",
+  "eyebrow": "Contante betalingen",
+  "headline": [
+   "Betaalt u de aannemer cash?",
+   "Controleer eerst de limiet."
+  ],
+  "sub": "De limiet is €1.000 met een bedrijf als partij, of €10.000 als u niet fiscaal in Spanje woont.",
+  "items": [
+   "De limiet geldt voor de hele klus, niet alleen voor het contante deel.",
+   "De boete is 25% van het contante bedrag, en beide partijen zijn aansprakelijk."
+  ]
+ },
+ "nota_simple": {
+  "template": "split",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "owners",
+  "eyebrow": "Voordat u tekent",
+  "headline": [
+   "Wat de Nota Simple",
+   "u niet laat zien."
+  ],
+  "items": [
+   "Onbetaalde gemeenschapskosten staan er niet op, want ze zijn niet ingeschreven.",
+   "Ook onbetaalde IBI-belasting staat er niet op, dus vraag het de gemeente.",
+   "De kadastrale waarde en de referentiewaarde liggen bij het Catastro."
+  ]
+ },
+ "inheritance_foreign_law": {
+  "template": "question",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": [
+   "Ik woon in Noorwegen en",
+   "heb een huis in Spanje.",
+   "Welk erfrecht geldt dan?"
+  ],
+  "sub": "Zonder keuze in uw testament geldt het recht van het land waar u woont.",
+  "items": [
+   "U kunt in plaats daarvan het recht van uw nationaliteit kiezen.",
+   "Die keuze moet uitdrukkelijk in uw testament staan."
+  ]
+ },
+ "rental_rule_changes": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "headline": [
+   "Het nationale verhuurnummer",
+   "geldt niet meer."
+  ],
+  "items": [
+   "Het Hooggerechtshof vernietigde het in 2026 in drie uitspraken.",
+   "Uw advertentie heeft nog wel het regionale toeristische nummer nodig."
+  ]
+ },
+ "buying_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "owners",
+  "headline": "Dezelfde doorverkoop in Andalucía betaalt €21.000 aan overdrachtsbelasting.",
+  "sub": "De belasting hangt af van de regio en of het om doorverkoop of nieuwbouw gaat.",
+  "big_label": "Doorverkoop van €300.000, Madrid",
+  "big": "€18.000"
+ },
+ "community_fees": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "owners",
+  "eyebrow": "Gemeenschapskosten",
+  "headline": [
+   "Koopt u een appartement?",
+   "Vraag naar achterstanden."
+  ],
+  "sub": "Het appartement blijft aansprakelijk voor dit jaar en de drie jaren ervoor.",
+  "items": [
+   "Deze schulden staan niet op de Nota Simple.",
+   "Het certificaat van de secretaris toont wat er openstaat.",
+   "De secretaris heeft 7 kalenderdagen om het af te geven."
+  ]
+ },
+ "escritura_notary": {
+  "template": "split",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "owners",
+  "eyebrow": "Bij de notaris",
+  "headline": [
+   "De notaris controleert",
+   "de akte, niet de deal."
+  ],
+  "items": [
+   "De notaris adviseert beide partijen en onderhandelt voor geen van beide.",
+   "Uw eigen controles horen vóór de dag van ondertekening.",
+   "Notariskosten volgen een vast tarief van de overheid."
+  ]
+ },
+ "free_banking_myth": {
+  "template": "question",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "owners",
+  "headline": [
+   "Waarom kosten twee",
+   "Spaanse rekeningen zo",
+   "verschillend veel?"
+  ],
+  "sub": "Elke aanbieder bepaalt zijn eigen kosten, en de Banco de España keurt ze niet goed.",
+  "items": [
+   "Voordat u tekent, moet de aanbieder u zijn kostendocument geven.",
+   "Wie die documenten vergelijkt, ziet de waarschijnlijke kosten per jaar."
+  ]
+ },
+ "rural_property": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "owners",
+  "headline": [
+   "Koopt u landelijke grond?",
+   "Vergelijk drie bronnen."
+  ],
+  "items": [
+   "Controleer het eigendomsregister, het Catastro en wat er op het perceel staat.",
+   "In Andalucía kan de meeste bouw zonder vergunning zes jaar worden aangepakt."
+  ]
+ },
+ "property_insurance": {
+  "template": "date",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "owners",
+  "headline": "De dagen tellen vanaf het moment dat u de schade ontdekt.",
+  "sub": "Te laat melden schrapt de claim niet vanzelf, maar de verzekeraar kan de schade door de vertraging verhalen.",
+  "big_label": "Meld schade binnen",
+  "big": "7 dagen"
+ },
+ "extension_deeds": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "owners",
+  "eyebrow": "Zwembaden en uitbouwen",
+  "headline": [
+   "Staat uw zwembad",
+   "in de akte?"
+  ],
+  "sub": "Wat na de inschrijving is gebouwd, kan in het eigendomsregister ontbreken.",
+  "items": [
+   "Vergelijk de Nota Simple, het Catastro en wat er is gebouwd.",
+   "Een verklaring van nieuwbouw werkt de beschrijving bij.",
+   "Elke regio bepaalt hoe lang de gemeente bouw zonder vergunning kan aanpakken."
+  ]
+ },
+ "retirement_183_line": {
+  "template": "split",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "eyebrow": "Fiscale woonplaats",
+  "headline": [
+   "183 dagen is niet",
+   "de enige toets."
+  ],
+  "items": [
+   "U bent fiscaal inwoner als u meer dan 183 dagen per jaar in Spanje bent.",
+   "U bent ook inwoner als uw belangrijkste economische belangen in Spanje liggen.",
+   "Uw inschrijvingscertificaat bepaalt niet uw fiscale woonplaats."
+  ]
+ },
+ "village_or_city_spain": {
+  "template": "question",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "owners",
+  "headline": [
+   "Dorp, stadje of stad.",
+   "Wat controleer ik",
+   "voor het adres?"
+  ],
+  "sub": "De meeste lokale voorzieningen kunt u vóór de koop controleren.",
+  "items": [
+   "Elke plaats heeft één waterbedrijf, dus vraag de verkoper de laatste rekening.",
+   "Elke gemeente bepaalt zelf het tarief en de data van de IBI-belasting."
+  ]
+ },
+ "october_ibi_month": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "owners",
+  "headline": [
+   "Twee herfstbelastingen,",
+   "van twee instanties."
+  ],
+  "items": [
+   "Uw gemeente zet de data van de IBI-belasting op haar aanslag.",
+   "De aangifte over fictief inkomen 2025 doet u uiterlijk 31 december 2026."
+  ]
+ },
+ "alquiler_opcion_compra": {
+  "template": "date",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "owners",
+  "headline": "Is de eigenaar niet-resident, dan gaat die 3% binnen een maand naar de Spaanse fiscus.",
+  "sub": "De optieclausules moeten vermelden welk deel van de huur meetelt voor de prijs.",
+  "big_label": "Bij overdracht houdt de koper in",
+  "big": "3%"
+ },
+ "holiday_home_running_cost": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "cove_house.jpg",
+  "audience": "owners",
+  "eyebrow": "Een leeg vakantiehuis",
+  "headline": [
+   "Het kost geld, ook",
+   "als u er niet bent."
+  ],
+  "sub": "De meeste vaste kosten worden bepaald door de wet of door uw gemeente.",
+  "items": [
+   "Over een woning die u niet verhuurt, betaalt u belasting op fictief inkomen.",
+   "De IBI-belasting van het hele jaar is voor de eigenaar op 1 januari.",
+   "Gemeenschapskosten volgen de jaarbegroting en het reservefonds."
+  ]
+ },
+ "leasehold_freehold": {
+  "template": "split",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Opstalrecht",
+  "headline": [
+   "De Spaanse versie",
+   "van erfpacht."
+  ],
+  "items": [
+   "Met een opstalrecht bezit u een gebouw op grond van iemand anders.",
+   "Het kan maximaal 99 jaar duren.",
+   "Controleer hoeveel jaren er nog over zijn voordat u de arras tekent."
+  ]
+ },
+ "landlord_tenant_issues": {
+  "template": "question",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "owners",
+  "headline": [
+   "Ik wil langdurig",
+   "verhuren. Hoe lang loopt",
+   "het huurcontract?"
+  ],
+  "sub": "De huurder kan het jaar voor jaar verlengen tot vijf jaar.",
+  "items": [
+   "Het is zeven jaar als de verhuurder een bedrijf is.",
+   "De borg voor woningverhuur is één maand huur."
+  ]
+ },
+ "nie_to_dni": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "owners",
+  "headline": [
+   "Van NIE naar DNI",
+   "als u Spanjaard wordt."
+  ],
+  "items": [
+   "U legt de eed af binnen 180 dagen na de kennisgeving.",
+   "Uw NIE-nummer blijft uw hele leven bij u."
+  ]
+ },
+ "credit_card_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "headline": "Dat zijn 13 werkdagen, en uw rekening in Spanje overzetten is gratis.",
+  "sub": "De nieuwe aanbieder zet uw automatische incasso's en vaste opdrachten voor u over.",
+  "big_label": "Een overstap duurt maximaal",
+  "big": "13 dagen"
+ },
+ "utilities_setup": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Nutsvoorzieningen na koop",
+  "headline": [
+   "Vraag de verkoper eerst",
+   "om vier dingen."
+  ],
+  "sub": "Daarmee wordt elke overdracht van een aansluiting eenvoudiger.",
+  "items": [
+   "Vraag de namen van de leveranciers van elektriciteit, gas en water.",
+   "Vraag de laatste rekening en de CUPS-code van elke aansluiting.",
+   "Vraag het certificaat van de elektrische installatie, als ze dat hebben."
+  ]
+ },
+ "direct_debit_switch": {
+  "template": "question",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "owners",
+  "headline": [
+   "Ik stap over van rekening.",
+   "Wie zet mijn incasso's",
+   "dan voor mij over?"
+  ],
+  "sub": "Uw nieuwe aanbieder doet dat, binnen maximaal 13 werkdagen.",
+  "items": [
+   "Houd zelf een lijst van uw vaste lasten bij en vink elke post af na de overstap.",
+   "Een incassant mag geen Spaanse rekening eisen als de uwe in de EU of EER is."
+  ]
+ },
+ "preventative_maintenance": {
+  "reuse": "consorcio-storm",
+  "audience": "owners"
+ },
+ "seasonal_rental_roi": {
+  "template": "pills",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "owners",
+  "headline": [
+   "Dezelfde huur, een andere",
+   "belasting erover."
+  ],
+  "items": [
+   "Een EU-inwoner betaalt €1.520 op €12.000 huur met €4.000 aan kosten.",
+   "Een inwoner van het VK betaalt €2.880, omdat de kosten niet aftrekbaar zijn."
+  ]
+ },
+ "hidden_bank_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": "Iedereen die legaal in de EU verblijft, kan er een openen.",
+  "sub": "Vergelijk uw jaarlijkse kostenoverzicht met het kostendocument dat u bij de opening kreeg.",
+  "big_label": "Een basisrekening kost maximaal",
+  "big": "€3 per maand"
+ },
+ "occupation_cover": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "eyebrow": "Verzekering tegen kraken",
+  "headline": [
+   "Wat betaalt uw polis",
+   "als uw huis gekraakt is?"
+  ],
+  "sub": "Dat hangt af van de polis, dus vraag het uw verzekeraar schriftelijk.",
+  "items": [
+   "Vraag of kraken is inbegrepen of een extra dekking is.",
+   "Vraag of het geldt als de woning een deel van het jaar leegstaat.",
+   "Een woning op naam van een bedrijf heeft geen snelle rechtsgang."
+  ]
+ },
+ "ag_epc_advertising": {
+  "template": "split",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "agents",
+  "eyebrow": "Een woning aanbieden",
+  "headline": [
+   "Geen certificaat,",
+   "geen advertentie."
+  ],
+  "items": [
+   "Elke advertentie voor verkoop of verhuur moet het energielabel tonen.",
+   "Vakantiewoningen die worden verkocht of verhuurd, hebben er nu ook een nodig.",
+   "Vraag bij de opdracht om het geregistreerde certificaat."
+  ]
+ },
+ "ag_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "agents",
+  "headline": [
+   "Mijn koper wil zich",
+   "kunnen terugtrekken.",
+   "Welke arras is dat?"
+  ],
+  "sub": "Alleen arras penitenciales geven dat recht, en het contract moet dat vermelden.",
+  "items": [
+   "Zonder duidelijke tekst behandelen rechters arras als confirmatorias.",
+   "Penitenciales kosten de koper de aanbetaling, of de verkoper het dubbele."
+  ]
+ },
+ "ag_partner_week_after_keys": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "agents",
+  "eyebrow": "De week na de overdracht",
+  "headline": [
+   "Uw koper heeft de sleutels.",
+   "Nu begint het papierwerk."
+  ],
+  "sub": "Een kort plan per onderwerp bespaart iedereen tijd.",
+  "items": [
+   "De CUPS-code op elke rekening is de referentie voor elke aansluiting.",
+   "De eigenaar op 1 januari betaalt de IBI-belasting van dat jaar.",
+   "Geef de beheerder een e-mailadres voor uitnodigingen voor vergaderingen."
+  ]
+ },
+ "ag_seller_debt_certificate": {
+  "template": "date",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "agents",
+  "headline": "Dat zijn de drie voorgaande jaren, plus het deel van dit jaar dat al verschuldigd is.",
+  "sub": "Vraag bij elke doorverkoop om het certificaat van de secretaris, vóór de arras wordt getekend.",
+  "big_label": "Onbetaalde gemeenschapskosten tot",
+  "big": "3 jaar terug"
+ },
+ "ag_law5768_guarantee": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "agents",
+  "headline": [
+   "Betalen op tekening vraagt",
+   "eerst om een garantie."
+  ],
+  "items": [
+   "Elke termijnbetaling moet gegarandeerd zijn door een verzekeraar of een bank.",
+   "Het geld gaat naar een speciale rekening die apart wordt gehouden."
+  ]
+ },
+ "ag_three_fifths_ruling": {
+  "template": "split",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "agents",
+  "eyebrow": "Toeristische verhuur",
+  "headline": [
+   "Nieuwe vakantieverhuur",
+   "vraagt om een stemming."
+  ],
+  "items": [
+   "Sinds 3 april 2025 moet de gemeenschap nieuwe vakantieverhuur goedkeuren.",
+   "Er is drie vijfde nodig van de eigenaars en van de breukdelen.",
+   "De gemeenschap kan het kostenaandeel van die woning met tot 20% verhogen."
+  ]
+ },
+ "ag_rural_land_checks": {
+  "template": "question",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "agents",
+  "headline": [
+   "Een gebouw staat op de grond",
+   "maar niet in de akte.",
+   "Kan het ingeschreven worden?"
+  ],
+  "sub": "Dat kan, zodra de regionale handhavingstermijn is verstreken.",
+  "items": [
+   "In Andalucía is die termijn zes jaar, en op beschermde grond loopt er geen.",
+   "In de Comunitat Valenciana is het 15 jaar voor werken na 20 augustus 2014."
+  ]
+ },
+ "ag_partner_aftersales_list": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "agents",
+  "eyebrow": "Na de overdracht",
+  "headline": [
+   "Het eerste jaar,",
+   "op papier."
+  ],
+  "sub": "Een lijst geeft elke verplichting een datum en een eigenaar.",
+  "items": [
+   "Belasting over huur van 2026 geeft u aan van 1 tot 20 april 2027.",
+   "De eigenaar op 1 januari betaalt de IBI-belasting van dat jaar.",
+   "Schade hoort binnen zeven dagen bij de verzekeraar gemeld te worden."
+  ]
+ },
+ "ag_true_buying_costs": {
+  "template": "date",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "agents",
+  "headline": "Dat is de overdrachtsbelasting, in Cataluña berekend per waardeschijf.",
+  "sub": "Dezelfde overdrachtsbelasting op een doorverkoop is 6% in Madrid en 7% in Andalucía.",
+  "big_label": "Doorverkoop van €700.000, Cataluña",
+  "big": "€71.000"
+ },
+ "ag_scam_red_flags": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "agents",
+  "headline": [
+   "Twee waarschuwingssignalen",
+   "om vroeg te benoemen."
+  ],
+  "items": [
+   "De verkoper is niet de ingeschreven eigenaar op de Nota Simple.",
+   "Een ontwikkelaar vraagt termijnbetalingen zonder garantie."
+  ]
+ },
+ "ag_market_calendar": {
+  "template": "split",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "agents",
+  "eyebrow": "Een niet-residente verkoper",
+  "headline": [
+   "Drie termijnen lopen",
+   "vanaf de overdracht."
+  ],
+  "items": [
+   "De koper stort de ingehouden 3% binnen een maand bij de Spaanse belastingdienst.",
+   "De verkoper doet in maand 2 tot 4 de belastingaangifte Modelo 210.",
+   "De plusvalía-belasting wordt binnen 30 werkdagen aangegeven."
+  ]
+ },
+ "ag_nie_timing": {
+  "template": "question",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "agents",
+  "headline": [
+   "Hoe lang duurt de NIE",
+   "van mijn koper?"
+  ],
+  "sub": "Meestal duurt het een paar weken, maar een datum is niet te beloven.",
+  "items": [
+   "De aanvraag gaat via formulier EX-15, en de leges in Spanje zijn €9,84.",
+   "Begin ermee zodra het besluit tot kopen is genomen."
+  ]
+ },
+ "ag_partner_handover_service": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "agents",
+  "eyebrow": "Overdrachtsdag",
+  "headline": [
+   "Een checklist",
+   "bij de sleutels."
+  ],
+  "sub": "Het meeste papierwerk na de overdracht ligt bij de nieuwe eigenaar.",
+  "items": [
+   "De contracthouder en het vermogen worden apart gewijzigd.",
+   "Zonder gewone polis is er geen dekking door het Consorcio.",
+   "De Modelo 210-belasting kan vanaf een SEPA-rekening in het buitenland."
+  ]
+ },
+ "ag_rental_registration_2025": {
+  "template": "date",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "agents",
+  "headline": "Advertenties hebben nu het regionale toeristische nummer nodig.",
+  "sub": "Het Hooggerechtshof vernietigde de nationale registratie in drie uitspraken.",
+  "big_label": "Nationaal verhuurnummer verviel in",
+  "big": "2026"
+ },
+ "ag_modelo210_answer": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "agents",
+  "headline": [
+   "De Modelo 210-vraag van",
+   "uw klant, beantwoord."
+  ],
+  "items": [
+   "Een lege woning betaalt belasting over 1,1% of 2% van de kadastrale waarde.",
+   "Het belastingtarief is 19% voor inwoners van EU en EER, en 24% voor anderen."
+  ]
+ },
+ "at_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Is een getekende arras",
+   "al een contract?"
+  ],
+  "sub": "Ja. Een onderhandse arras-overeenkomst bindt ook zonder notaris.",
+  "items": [
+   "Arras gelden als confirmatorias, tenzij de clausule duidelijk iets anders zegt.",
+   "De regel van dubbele terugbetaling geldt alleen als die is opgenomen."
+  ]
+ },
+ "at_nonresident_seller": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Kopen van een niet-resident",
+  "headline": [
+   "Twee belastingplichten",
+   "liggen bij de koper."
+  ],
+  "sub": "Beide horen in de afrekening bij de overdracht.",
+  "items": [
+   "De koper houdt 3% in en betaalt die binnen een maand via Modelo 211.",
+   "De koper betaalt ook de plusvalía als vervangende belastingplichtige.",
+   "De plusvalía wordt binnen 30 werkdagen aangegeven."
+  ]
+ },
+ "at_partner_unbillable_email": {
+  "template": "split",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Na de overdracht",
+  "headline": [
+   "De vragen die",
+   "later komen."
+  ],
+  "items": [
+   "De CUPS-code blijft gelijk als de leverancier of contracthouder wisselt.",
+   "Elke plaats heeft één waterbedrijf, dus er valt niets te kiezen.",
+   "De Modelo 210-belasting kan per incasso vanuit het buitenland worden betaald."
+  ]
+ },
+ "at_succession_tax": {
+  "template": "date",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "attorneys",
+  "headline": "Voor Modelo 650 krijgt u zes maanden extra als u dat binnen de eerste vijf aanvraagt.",
+  "sub": "Niet-residente erfgenamen kunnen kiezen voor de regionale regels, die vaak meer korting geven.",
+  "big_label": "Erfbelasting betaalt u binnen",
+  "big": "6 maanden"
+ },
+ "at_rural_diligence": {
+  "template": "pills",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Controleer bij landelijke",
+   "grond eerst de categorie."
+  ],
+  "items": [
+   "De verjaringstermijn hangt af van de regio en de categorie grond.",
+   "Op sommige beschermde grond in Andalucía loopt helemaal geen termijn."
+  ]
+ },
+ "at_gift_tax": {
+  "template": "question",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Een ouder schenkt het",
+   "appartement. Hoeveel tijd",
+   "is er voor de aangifte?"
+  ],
+  "sub": "De aangifte schenkbelasting, Modelo 651, doet u binnen 30 werkdagen.",
+  "items": [
+   "Een erfenis geeft zes maanden, dus de termijn voor een schenking is veel korter.",
+   "Voor de plusvalía-belasting op de schenking gelden dezelfde 30 werkdagen."
+  ]
+ },
+ "at_spanish_wills": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Wettelijk erfdeel",
+  "headline": [
+   "Gelden de Spaanse",
+   "erfdelen?"
+  ],
+  "sub": "Ze gelden alleen als het Spaanse recht de nalatenschap beheerst.",
+  "items": [
+   "Standaard geldt het recht van de gewone verblijfplaats bij overlijden.",
+   "Een cliënt kan kiezen voor het recht van een nationaliteit die hij heeft.",
+   "Onder het gemene Spaanse recht gaat twee derde naar de nakomelingen."
+  ]
+ },
+ "at_partner_referral_logic": {
+  "template": "split",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "attorneys",
+  "eyebrow": "De overdrachtsnotitie",
+  "headline": [
+   "Eén pagina voor",
+   "het eerste jaar."
+  ],
+  "items": [
+   "De eigenaar op 1 januari betaalt de IBI-belasting voor het hele jaar.",
+   "Eigenaars met een achterstand mogen vergaderingen bijwonen, maar niet stemmen.",
+   "Nieuwe vakantieverhuur vraagt de uitdrukkelijke goedkeuring van de gemeenschap."
+  ]
+ }
+}

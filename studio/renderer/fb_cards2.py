@@ -52,12 +52,6 @@ DISCLAIMER = {
     "fr": "Information générale, pas un conseil fiscal.",
     "nl": "Algemene informatie, geen belastingadvies.",
 }
-SPONSOR = {
-    "en": "Sponsored by Bueno", "no": "Sponset av Bueno", "sv": "Sponsras av Bueno",
-    "da": "Sponsoreret af Bueno", "de": "Gesponsert von Bueno", "fr": "Sponsorisé par Bueno",
-    "nl": "Gesponsord door Bueno",
-}
-
 _fc = {}
 def F(weight, size):
     k = (weight, size)
@@ -141,8 +135,8 @@ def gradient(w, h, top, bottom):
 
 # ---------- shared bits ----------
 def brand_mark(img, d, c, lang, on_dark, x=None, y=50, anchor="rt"):
-    """The Bueno lockup, only on cards with "logo": true (half the posts, by Pratik's rule of
-    8 October 2026). The other half carry no brand mark at all."""
+    """The Bueno lockup, only on cards with "logo": true. Since 15 October 2026 that is every
+    English card and no translated card (see render())."""
     if not c.get("logo"):
         return
     col = (255, 255, 255) if on_dark else NAVY
@@ -344,6 +338,11 @@ def normalise(card):
 
 def render(card, lang, out):
     card = normalise(card)
+    # Pratik, 15 October 2026: the Bueno logo goes on the English image only. A translation can
+    # carry a mistake, and that must never sit next to the Bueno name, so the translated images
+    # carry no logo, no "Property Finance Simplified" and no mention of Bueno at all. Enforced
+    # here as well as in the card files, so a stray "logo": true can never put it back.
+    card["logo"] = (lang == "en")
     img = TEMPLATES[card["template"]](card, lang).convert("RGB")
     img.save(out, "JPEG", quality=88, optimize=True, progressive=True)
     return out

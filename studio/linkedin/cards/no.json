@@ -1,0 +1,714 @@
+{
+ "irnr_who_pays": {
+  "reuse": "imputed-income-empty-home",
+  "audience": "owners"
+ },
+ "cash_rules": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "owners",
+  "eyebrow": "Kontantbetaling",
+  "headline": [
+   "Betaler du håndverkeren",
+   "kontant? Sjekk grensen."
+  ],
+  "sub": "Grensen er €1 000 når en bedrift er involvert, eller €10 000 hvis du ikke er skattemessig bosatt i Spania.",
+  "items": [
+   "Grensen gjelder hele jobben, ikke bare kontantdelen.",
+   "Boten er 25 % av kontantbeløpet, og begge parter er ansvarlige."
+  ]
+ },
+ "nota_simple": {
+  "template": "split",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "owners",
+  "eyebrow": "Før du signerer",
+  "headline": [
+   "Det Nota Simple",
+   "ikke viser deg."
+  ],
+  "items": [
+   "Ubetalte fellesutgifter står ikke der, fordi de ikke er registrert.",
+   "Ubetalt IBI-eiendomsskatt står heller ikke der, så sjekk med kommunen.",
+   "Ligningsverdien og referanseverdien finnes hos Catastro."
+  ]
+ },
+ "inheritance_foreign_law": {
+  "template": "question",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": [
+   "Jeg bor i Norge og eier",
+   "i Spania. Hvilken lov",
+   "gjelder for arven min?"
+  ],
+  "sub": "Uten et valg i testamentet ditt gjelder loven der du bor.",
+  "items": [
+   "Du kan i stedet velge loven i landet du er statsborger av.",
+   "Testamentet ditt må gjøre det valget uttrykkelig."
+  ]
+ },
+ "rental_rule_changes": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "headline": [
+   "Det statlige utleienummeret",
+   "gjelder ikke lenger."
+  ],
+  "items": [
+   "Høyesterett opphevet det i tre dommer i 2026.",
+   "Annonsen din trenger fortsatt det regionale turistnummeret."
+  ]
+ },
+ "buying_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "owners",
+  "headline": "Den samme bruktboligen i Andalucía betaler €21 000 i overføringsskatt.",
+  "sub": "Skatten avhenger av regionen og av om boligen er brukt eller nybygd.",
+  "big_label": "Bruktbolig i Madrid, €300 000:",
+  "big": "€18 000"
+ },
+ "community_fees": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "owners",
+  "eyebrow": "Fellesutgifter",
+  "headline": [
+   "Kjøper du leilighet?",
+   "Spør om utestående gjeld."
+  ],
+  "sub": "Leiligheten hefter for årets forfalte fellesutgifter og for de tre årene før.",
+  "items": [
+   "Denne gjelden vises ikke i Nota Simple.",
+   "Attesten fra sameiets sekretær viser hva som skyldes.",
+   "Sekretæren har 7 kalenderdager på å utstede den."
+  ]
+ },
+ "escritura_notary": {
+  "template": "split",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "owners",
+  "eyebrow": "Hos notarius",
+  "headline": [
+   "Notarius sjekker",
+   "skjøtet, ikke avtalen."
+  ],
+  "items": [
+   "Notarius gir råd til begge parter og forhandler for ingen.",
+   "Dine egne undersøkelser hører hjemme før signeringsdagen.",
+   "Notariusgebyrene følger en fast statlig takst."
+  ]
+ },
+ "free_banking_myth": {
+  "template": "question",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "owners",
+  "headline": [
+   "Hvorfor koster to",
+   "spanske kontoer så",
+   "forskjellig?"
+  ],
+  "sub": "Hver tilbyder setter sine egne gebyrer, og Banco de España godkjenner dem ikke.",
+  "items": [
+   "Før du signerer, må tilbyderen gi deg gebyroversikten sin.",
+   "Sammenligner du oversiktene, ser du den sannsynlige årlige kostnaden."
+  ]
+ },
+ "rural_property": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "owners",
+  "headline": [
+   "Kjøper du tomt på landet?",
+   "Sammenlign tre registre."
+  ],
+  "items": [
+   "Sjekk grunnboken, Catastro og hva som faktisk står på tomten.",
+   "I Andalucía kan de fleste arbeider uten tillatelse forfølges i seks år."
+  ]
+ },
+ "property_insurance": {
+  "template": "date",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "owners",
+  "headline": "Dagene regnes fra du får vite om skaden.",
+  "sub": "Sen melding stryker ikke kravet i seg selv, men selskapet kan kreve dekket det forsinkelsen kostet.",
+  "big_label": "Meld en skade innen",
+  "big": "7 dager"
+ },
+ "extension_deeds": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "owners",
+  "eyebrow": "Basseng og tilbygg",
+  "headline": [
+   "Står bassenget ditt",
+   "i skjøtet?"
+  ],
+  "sub": "Det som er bygget etter registreringen, kan mangle i grunnboken.",
+  "items": [
+   "Sammenlign Nota Simple, Catastro og det som faktisk er bygget.",
+   "En erklæring om nybygg oppdaterer beskrivelsen.",
+   "Hver region avgjør hvor lenge kommunen kan reagere på arbeider uten tillatelse."
+  ]
+ },
+ "retirement_183_line": {
+  "template": "split",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "eyebrow": "Skattemessig bosted",
+  "headline": [
+   "183 dager er ikke",
+   "den eneste testen."
+  ],
+  "items": [
+   "Du er bosatt hvis du er mer enn 183 dager i Spania i løpet av et år.",
+   "Du er også bosatt hvis dine viktigste økonomiske interesser er i Spania.",
+   "Registreringsbeviset ditt avgjør ikke hvor du er skattemessig bosatt."
+  ]
+ },
+ "village_or_city_spain": {
+  "template": "question",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "owners",
+  "headline": [
+   "Landsby, by eller storby.",
+   "Hva bør jeg sjekke",
+   "ved adressen?"
+  ],
+  "sub": "De fleste lokale tjenester kan sjekkes før du kjøper.",
+  "items": [
+   "Hver kommune har én vannleverandør, så be selgeren om siste regning.",
+   "Hver kommune fastsetter egen sats og egne datoer for IBI-eiendomsskatten."
+  ]
+ },
+ "october_ibi_month": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "owners",
+  "headline": [
+   "To skattesaker om høsten,",
+   "fra to myndigheter."
+  ],
+  "items": [
+   "Kommunen setter datoene for IBI-eiendomsskatten i varselet sitt.",
+   "Skattemeldingen for imputert inntekt for 2025 leveres innen 31. desember 2026."
+  ]
+ },
+ "alquiler_opcion_compra": {
+  "template": "date",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "owners",
+  "headline": "Er eieren ikke-resident, går de 3 % til den spanske skatteetaten innen en måned.",
+  "sub": "Opsjonsklausulene bør si hvor mye av leien som regnes med i kjøpesummen.",
+  "big_label": "Ved overtakelse trekker kjøperen",
+  "big": "3 %"
+ },
+ "holiday_home_running_cost": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "cove_house.jpg",
+  "audience": "owners",
+  "eyebrow": "En tom feriebolig",
+  "headline": [
+   "Den koster penger",
+   "selv når du er borte."
+  ],
+  "sub": "De fleste faste kostnadene er fastsatt ved lov eller av kommunen din.",
+  "items": [
+   "Du betaler skatt på imputert inntekt for en bolig du ikke leier ut.",
+   "Hele årets IBI-eiendomsskatt faller på den som eier boligen 1. januar.",
+   "Fellesutgiftene følger årsbudsjettet og reservefondet."
+  ]
+ },
+ "leasehold_freehold": {
+  "template": "split",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Overflaterett",
+  "headline": [
+   "Spanias versjon",
+   "av festerett."
+  ],
+  "items": [
+   "En overflaterett lar deg eie en bygning på andres grunn.",
+   "Den kan vare i maksimalt 99 år.",
+   "Sjekk hvor mange år som gjenstår før du signerer arras."
+  ]
+ },
+ "landlord_tenant_issues": {
+  "template": "question",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "owners",
+  "headline": [
+   "Jeg vil leie ut på lang",
+   "sikt. Hvor lang er",
+   "leietakerens kontrakt?"
+  ],
+  "sub": "Leietakeren kan forlenge den år for år i opptil fem år.",
+  "items": [
+   "Det er sju år når utleieren er et selskap.",
+   "Depositumet ved utleie av bolig er én måneds leie."
+  ]
+ },
+ "nie_to_dni": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "owners",
+  "headline": [
+   "Fra NIE til DNI",
+   "når du blir spansk borger."
+  ],
+  "items": [
+   "Du avlegger eden innen 180 dager etter at du er varslet.",
+   "NIE-nummeret ditt følger deg hele livet."
+  ]
+ },
+ "credit_card_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "owners",
+  "headline": "Det er 13 virkedager, og det er gratis å flytte kontoen din i Spania.",
+  "sub": "Den nye tilbyderen flytter avtalegiroer og faste betalinger for deg.",
+  "big_label": "Bytte av tilbyder tar maksimalt",
+  "big": "13 dager"
+ },
+ "utilities_setup": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "owners",
+  "eyebrow": "Strøm og vann etter kjøp",
+  "headline": [
+   "Be selgeren om",
+   "fire ting først."
+  ],
+  "sub": "Da blir hver overføring av abonnement enklere.",
+  "items": [
+   "Be om navnene på leverandørene av strøm, gass og vann.",
+   "Be om siste regning og CUPS-koden for hver forsyning.",
+   "Be om sertifikatet for elanlegget, hvis de har det."
+  ]
+ },
+ "direct_debit_switch": {
+  "template": "question",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "owners",
+  "headline": [
+   "Jeg bytter konto.",
+   "Hvem flytter",
+   "avtalegiroene mine?"
+  ],
+  "sub": "Det gjør den nye tilbyderen, innen maksimalt 13 virkedager.",
+  "items": [
+   "Ha din egen liste over regninger, og kryss av hver når den er flyttet.",
+   "En fakturautsteder kan ikke kreve spansk konto hvis din er i EU eller EØS."
+  ]
+ },
+ "preventative_maintenance": {
+  "reuse": "consorcio-storm",
+  "audience": "owners"
+ },
+ "seasonal_rental_roi": {
+  "template": "pills",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "owners",
+  "headline": [
+   "Samme leie, en annen",
+   "skatt på den."
+  ],
+  "items": [
+   "En som bor i EU, betaler €1 520 av €12 000 i leie med €4 000 i kostnader.",
+   "En som bor i Storbritannia, betaler €2 880, fordi kostnadene ikke gir fradrag."
+  ]
+ },
+ "hidden_bank_fees": {
+  "template": "date",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "owners",
+  "headline": "Den er åpen for alle som har lovlig opphold i EU.",
+  "sub": "Sammenlign den årlige gebyroversikten med gebyrdokumentet du fikk da du åpnet kontoen.",
+  "big_label": "En basiskonto koster maksimalt",
+  "big": "€3 i måneden"
+ },
+ "occupation_cover": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "owners",
+  "eyebrow": "Forsikring mot okkupasjon",
+  "headline": [
+   "Hva betaler forsikringen",
+   "hvis boligen okkuperes?"
+  ],
+  "sub": "Det avhenger av vilkårene, så spør forsikringsselskapet skriftlig.",
+  "items": [
+   "Spør om okkupasjon er inkludert eller et tillegg.",
+   "Spør om den gjelder mens boligen står tom deler av året.",
+   "En bolig som eies gjennom et selskap, kan ikke bruke den raske rettsveien."
+  ]
+ },
+ "ag_epc_advertising": {
+  "template": "split",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "agents",
+  "eyebrow": "Annonsere en bolig",
+  "headline": [
+   "Uten energiattest,",
+   "ingen annonse."
+  ],
+  "items": [
+   "Hver annonse for salg eller utleie må vise energimerket.",
+   "Ferieboliger som selges eller leies ut, trenger nå også en.",
+   "Be om den registrerte attesten når du får oppdraget."
+  ]
+ },
+ "ag_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "agents",
+  "headline": [
+   "Kjøperen min vil kunne",
+   "trekke seg. Hvilken",
+   "arras er det?"
+  ],
+  "sub": "Bare arras penitenciales gir den retten, og kontrakten må si det.",
+  "items": [
+   "Uten tydelig ordlyd behandler domstolene arras som confirmatorias.",
+   "Med penitenciales taper kjøperen depositumet, eller selgeren betaler dobbelt."
+  ]
+ },
+ "ag_partner_week_after_keys": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g09.jpg",
+  "audience": "agents",
+  "eyebrow": "Uken etter overtakelsen",
+  "headline": [
+   "Kjøperen din har nøklene.",
+   "Nå starter papirarbeidet."
+  ],
+  "sub": "En kort plan per tema sparer alle for tid.",
+  "items": [
+   "CUPS-koden på hver regning er referansen for hver forsyning.",
+   "Den som eier boligen 1. januar, skylder årets IBI-eiendomsskatt.",
+   "Gi forvalteren en e-postadresse for møteinnkallinger."
+  ]
+ },
+ "ag_seller_debt_certificate": {
+  "template": "date",
+  "logo": true,
+  "photo": "golden_coast.jpg",
+  "audience": "agents",
+  "headline": "Det gjelder de tre foregående årene, pluss den delen av i år som har forfalt.",
+  "sub": "Be om sekretærens attest ved hvert bruktsalg, før arras signeres.",
+  "big_label": "Ubetalte fellesutgifter går",
+  "big": "3 år tilbake"
+ },
+ "ag_law5768_guarantee": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g01.jpg",
+  "audience": "agents",
+  "headline": [
+   "Forskudd på nybygg krever",
+   "en garanti først."
+  ],
+  "items": [
+   "Hver delbetaling må garanteres av et forsikringsselskap eller en bank.",
+   "Pengene settes inn på en egen, atskilt konto."
+  ]
+ },
+ "ag_three_fifths_ruling": {
+  "template": "split",
+  "logo": true,
+  "photo": "sunset_village.jpg",
+  "audience": "agents",
+  "eyebrow": "Turistutleie",
+  "headline": [
+   "Ny turistutleie",
+   "krever en avstemning."
+  ],
+  "items": [
+   "Siden 3. april 2025 krever ny turistutleie sameiets godkjenning.",
+   "Vedtaket krever tre femtedeler av eierne og av eierandelene.",
+   "Sameiet kan øke leilighetens andel av kostnadene med opptil 20 %."
+  ]
+ },
+ "ag_rural_land_checks": {
+  "template": "question",
+  "logo": true,
+  "photo": "g08.jpg",
+  "audience": "agents",
+  "headline": [
+   "Et bygg står på tomten,",
+   "men ikke i skjøtet.",
+   "Kan det registreres?"
+  ],
+  "sub": "Ja, når den regionale fristen for håndhevelse har løpt ut.",
+  "items": [
+   "I Andalucía er fristen seks år, og ingen frist løper på vernet grunn.",
+   "I Comunitat Valenciana er den 15 år for arbeider etter 20. august 2014."
+  ]
+ },
+ "ag_partner_aftersales_list": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "marina.jpg",
+  "audience": "agents",
+  "eyebrow": "Etter overtakelsen",
+  "headline": [
+   "Det første året,",
+   "skrevet ned."
+  ],
+  "sub": "En skriftlig liste gir hver forpliktelse en dato og en ansvarlig.",
+  "items": [
+   "Skatt på leie for 2026 meldes mellom 1. og 20. april 2027.",
+   "Den som eier boligen 1. januar, betaler årets IBI-eiendomsskatt.",
+   "Forsikringsselskapet bør få melding om en skade innen sju dager."
+  ]
+ },
+ "ag_true_buying_costs": {
+  "template": "date",
+  "logo": true,
+  "photo": "g02.jpg",
+  "audience": "agents",
+  "headline": "Det er overføringsskatten, som i Cataluña beregnes etter verditrinn.",
+  "sub": "Den samme overføringsskatten på bruktbolig er 6 % i Madrid og 7 % i Andalucía.",
+  "big_label": "Bruktbolig i Cataluña, €700 000:",
+  "big": "€71 000"
+ },
+ "ag_scam_red_flags": {
+  "template": "pills",
+  "logo": true,
+  "photo": "couple_beach.jpg",
+  "audience": "agents",
+  "headline": [
+   "To varselsignaler",
+   "verdt å nevne tidlig."
+  ],
+  "items": [
+   "Selgeren er ikke den registrerte eieren i Nota Simple.",
+   "En utbygger ber om delbetalinger uten garanti."
+  ]
+ },
+ "ag_market_calendar": {
+  "template": "split",
+  "logo": true,
+  "photo": "g10.jpg",
+  "audience": "agents",
+  "eyebrow": "En ikke-resident selger",
+  "headline": [
+   "Tre frister",
+   "løper fra overtakelsen."
+  ],
+  "items": [
+   "Kjøperen betaler de trukne 3 % til den spanske skatteetaten innen en måned.",
+   "Selgeren leverer skattemeldingen Modelo 210 i måned 2 til 4.",
+   "Plusvalía-skatten meldes innen 30 virkedager."
+  ]
+ },
+ "ag_nie_timing": {
+  "template": "question",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "agents",
+  "headline": [
+   "Hvor lang tid tar NIE",
+   "for kjøperen min?"
+  ],
+  "sub": "Det tar ofte noen uker, men ingen dato kan loves.",
+  "items": [
+   "Søknaden gjøres på skjema EX-15, og gebyret i Spania er €9,84.",
+   "Start så snart beslutningen om å kjøpe er tatt."
+  ]
+ },
+ "ag_partner_handover_service": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "g04.jpg",
+  "audience": "agents",
+  "eyebrow": "Overtakelsesdagen",
+  "headline": [
+   "En sjekkliste",
+   "som følger nøklene."
+  ],
+  "sub": "Det meste av papirarbeidet etter overtakelsen ligger hos den nye eieren.",
+  "items": [
+   "Abonnenten og den avtalte effekten endres hver for seg.",
+   "Uten en ordinær forsikring er det ingen dekning fra Consorcio.",
+   "Modelo 210-skatten kan betales fra en SEPA-konto i utlandet."
+  ]
+ },
+ "ag_rental_registration_2025": {
+  "template": "date",
+  "logo": true,
+  "photo": "arch_terrace.jpg",
+  "audience": "agents",
+  "headline": "Annonser trenger nå det regionale turistnummeret.",
+  "sub": "Høyesterett opphevet den statlige registreringen i tre dommer.",
+  "big_label": "Statlig utleienummer opphørte i",
+  "big": "2026"
+ },
+ "ag_modelo210_answer": {
+  "template": "pills",
+  "logo": true,
+  "photo": "g06.jpg",
+  "audience": "agents",
+  "headline": [
+   "Kundens spørsmål om",
+   "Modelo 210, besvart."
+  ],
+  "items": [
+   "En tom bolig skattlegges av 1,1 % eller 2 % av ligningsverdien.",
+   "Skattesatsen er 19 % for bosatte i EU og EØS, og 24 % for andre."
+  ]
+ },
+ "at_arras_window": {
+  "template": "question",
+  "logo": true,
+  "photo": "poolside.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "Er en signert arras",
+   "allerede en kontrakt?"
+  ],
+  "sub": "Ja. En privat arras-kontrakt er bindende uten notarius.",
+  "items": [
+   "Arras tolkes som confirmatorias med mindre klausulen tydelig sier noe annet.",
+   "Regelen om dobbel tilbakebetaling gjelder bare der den er skrevet inn."
+  ]
+ },
+ "at_nonresident_seller": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "pool_dusk.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Kjøp fra en ikke-resident",
+  "headline": [
+   "To skatteplikter",
+   "faller på kjøperen."
+  ],
+  "sub": "Begge hører hjemme i oppgjøret ved overtakelsen.",
+  "items": [
+   "Kjøperen trekker 3 % og betaler dem med Modelo 211 innen en måned.",
+   "Kjøperen betaler også plusvalía som stedfortredende skattyter.",
+   "Plusvalía meldes innen 30 virkedager."
+  ]
+ },
+ "at_partner_unbillable_email": {
+  "template": "split",
+  "logo": true,
+  "photo": "g00.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Etter overtakelsen",
+  "headline": [
+   "Spørsmålene",
+   "som kommer senere."
+  ],
+  "items": [
+   "CUPS-koden er den samme når leverandør eller abonnent endres.",
+   "Hver kommune har én vannleverandør, så det er ingenting å velge.",
+   "Modelo 210-skatten kan betales med avtalegiro fra utlandet."
+  ]
+ },
+ "at_succession_tax": {
+  "template": "date",
+  "logo": true,
+  "photo": "g07.jpg",
+  "audience": "attorneys",
+  "headline": "Modelo 650 kan få seks måneder til hvis du ber om det innen de første fem.",
+  "sub": "Ikke-residente arvinger kan velge de regionale reglene, som ofte gir større lettelser.",
+  "big_label": "Arveavgiften skal betales innen",
+  "big": "6 måneder"
+ },
+ "at_rural_diligence": {
+  "template": "pills",
+  "logo": true,
+  "photo": "coast_bay.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "På landet bør du først",
+   "sjekke arealkategorien."
+  ],
+  "items": [
+   "Foreldelsesfristen avhenger av regionen og arealkategorien.",
+   "På noe vernet grunn i Andalucía løper det ingen frist i det hele tatt."
+  ]
+ },
+ "at_gift_tax": {
+  "template": "question",
+  "logo": true,
+  "photo": "g03.jpg",
+  "audience": "attorneys",
+  "headline": [
+   "En forelder gir bort",
+   "leiligheten. Hvor lang",
+   "er fristen for å melde?"
+  ],
+  "sub": "Gaveskattemeldingen, Modelo 651, skal leveres innen 30 virkedager etter gaven.",
+  "items": [
+   "Ved arv har du seks måneder, så fristen for gaver er langt kortere.",
+   "Plusvalía-skatten på gaven har de samme 30 virkedagene."
+  ]
+ },
+ "at_spanish_wills": {
+  "template": "duotone",
+  "logo": true,
+  "photo": "terrace_sunset.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Pliktdelsarv",
+  "headline": [
+   "Gjelder de spanske",
+   "arvebrøkene?"
+  ],
+  "sub": "De gjelder bare der spansk lov styrer arven.",
+  "items": [
+   "Som utgangspunkt gjelder loven der avdøde hadde vanlig bosted.",
+   "Klienten kan velge loven i et land klienten er statsborger av.",
+   "Etter spansk fellesrett går to tredjedeler til etterkommerne."
+  ]
+ },
+ "at_partner_referral_logic": {
+  "template": "split",
+  "logo": true,
+  "photo": "g05.jpg",
+  "audience": "attorneys",
+  "eyebrow": "Overleveringsnotatet",
+  "headline": [
+   "Én side for",
+   "det første året."
+  ],
+  "items": [
+   "Den som eier boligen 1. januar, skylder hele årets IBI-eiendomsskatt.",
+   "Eiere som skylder fellesutgifter, kan delta i møter, men ikke stemme.",
+   "Ny turistutleie i et sameie krever uttrykkelig godkjenning fra sameiet."
+  ]
+ }
+}

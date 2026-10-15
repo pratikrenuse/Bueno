@@ -6,14 +6,14 @@
   "headline": [
    "Jeg leide den ut i sommer,",
    "og ellers sto den tom.",
-   "Hvilken skal jeg levere?"
+   "Hvilken skattemelding gjelder?"
   ],
-  "sub": "Du leverer begge typer, på samme skjema 210.",
+  "sub": "Du leverer begge på samme skjema 210.",
   "items": [
    "Du oppgir leien for ukene den var utleid.",
    "For de tomme ukene oppgir du en inntekt beregnet ut fra katastralverdien."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -25,7 +25,7 @@
    "en bolig du aldri leier."
   ],
   "sub": "Den beregnes ut fra katastralverdien på IBI-regningen din, og ingenting kan trekkes fra.",
-  "logo": true
+  "logo": false
  },
  "bueno-year-end-return": {
   "template": "date",
@@ -33,9 +33,11 @@
   "brand": "bueno",
   "big_label": "Frist for 2025-meldingen er",
   "big": "31. desember",
-  "headline": "Du leverer selv om ingen leide den.",
+  "headline": [
+   "Du leverer skattemelding også uten utleie."
+  ],
   "sub": "Betaling med direkte belastning stenger tidligere, 23. desember. Hver eier leverer for sin egen andel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -47,11 +49,11 @@
    "før du regner."
   ],
   "items": [
-   "Leverer du selv, koster det 1 % pluss 1 % per hele måned.",
+   "Leverer du selv, koster det 1 % pluss 1 % per hele måned for sent.",
    "Fra måned 13 blir det flate 15 % pluss renter.",
    "Etter et brev fra skattekontoret gjelder ikke disse reglene."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-ibi-is-not-this": {
   "template": "duotone",
@@ -68,7 +70,7 @@
    "Skjema 210 er nasjonal, og ingen sender deg regning.",
    "Den beregnes ut fra katastralverdien på IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -82,7 +84,7 @@
    "Leie fra 1. oktober går inn i én årlig melding.",
    "Neste levering etter denne er i april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-two-owners-two-returns": {
   "template": "question",
@@ -98,7 +100,7 @@
    "Eier dere halvparten hver, bruker hver melding halve katastralverdien.",
    "Tre søsken som har arvet en leilighet, leverer tre meldinger."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -110,7 +112,7 @@
    "ulik skatteregning."
   ],
   "sub": "I EU og EØS trekker du fra kostnader og betaler 19 %. Ellers er det 24 % av brutto leie.",
-  "logo": true
+  "logo": false
  },
  "bueno-what-goes-into-it": {
   "template": "date",
@@ -120,7 +122,7 @@
   "big": "1,1 %",
   "headline": "Meldingen består av fire opplysninger.",
   "sub": "Du trenger katastralverdien, andelen din og hvor du er skattemessig bosatt.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -136,13 +138,13 @@
    "Den faktiske gevinstskatten er 19 % av gevinsten, for alle.",
    "Var 3 % mer enn du skylder, får du differansen tilbake."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-direct-debit-date": {
   "template": "duotone",
   "photo": "g01.jpg",
   "brand": "bueno",
-  "eyebrow": "Betaling for 2025",
+  "eyebrow": "Betaling av skattemeldingen for 2025",
   "headline": [
    "Direkte belastning",
    "stenger 23. desember."
@@ -153,7 +155,7 @@
    "Etter det må du betale skatten på en annen måte.",
    "Det hjelper å ikke vente til siste uke."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -167,7 +169,7 @@
    "Var det ingen økning, er det ingenting å betale.",
    "Du har tretti virkedager fra skjøtet."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-why-from-fifty": {
   "template": "question",
@@ -183,7 +185,7 @@
    "Et nullresultat betyr at ingenting skyldes og ingenting kommer tilbake.",
    "En tilbakebetaling kan leveres fra 1. februar, med en frist på fire år."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -195,7 +197,7 @@
    "ikke av hvor lenge de blir."
   ],
   "sub": "Uten tjenester er ferieutleie fritatt. Hotellignende tjenester under oppholdet gir 10 %.",
-  "logo": true
+  "logo": false
  },
  "bueno-included-in-select": {
   "template": "date",
@@ -205,7 +207,7 @@
   "big": "1,1 %",
   "headline": "Det gjelder halvparten av grunnlaget.",
   "sub": "Grunnlaget er det høyeste av prisen du betalte og verdien skattemyndighetene har verifisert.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -221,7 +223,7 @@
    "Ingen enkelt regning får en formiddag av noens tid.",
    "Sett hele året i én kolonne og sammenlign."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-never-filed": {
   "template": "duotone",
@@ -238,7 +240,7 @@
    "Fra måned 13 er det flate 15 % pluss renter.",
    "Tillegget kommer i stedet for en bot."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -252,7 +254,7 @@
    "Noen etableringsgebyrer ble lagt på låntakeren.",
    "Om et krav fortsatt er i tide, må en abogado vurdere."
   ],
-  "logo": true
+  "logo": false
  },
  "bueno-form-changes-2027": {
   "template": "question",
@@ -268,7 +270,7 @@
    "Det vil spørre om dager tilgjengelig og eierandelen din.",
    "For en bolig du ikke leier ut, åpner meldingen for 2026 1. april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -280,7 +282,7 @@
    "betale advokaten din."
   ],
   "sub": "Se etter defensa juridica. Du har rett til å velge din egen advokat.",
-  "logo": true
+  "logo": false
  },
  "ninety-days": {
   "template": "date",
@@ -290,7 +292,7 @@
   "big": "90 dager",
   "headline": "Det gjelder i rullerende 180 dager.",
   "sub": "Dagen du lander og dagen du flyr hjem teller begge. En langhelg bruker fire dager, ikke to.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -306,7 +308,7 @@
    "Vind teller når kastene passerer 120 km i timen over tre sekunder.",
    "Tillegget er allerede innkrevd sammen med premien."
   ],
-  "logo": true
+  "logo": false
  },
  "community-decision-clock": {
   "template": "duotone",
@@ -321,9 +323,9 @@
   "items": [
    "Var du borte, starter fristen når du ble varslet.",
    "Ta vare på konvolutten eller e-posten med datoen.",
-   "Som regel må du være à jour med fellesutgiftene."
+   "Som regel må du ha betalt fellesutgiftene dine."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -337,7 +339,7 @@
    "Det bør ha en startdato og en sluttdato.",
    "Betalingene bør følge fasene i arbeidet."
   ],
-  "logo": true
+  "logo": false
  },
  "leaving-it-empty": {
   "template": "question",
@@ -353,7 +355,7 @@
    "Hvor lenge du er borte og når du reiser, endrer begge listen.",
    "Det samme gjør om noen ser innom mens du er borte."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -365,7 +367,7 @@
    "og rekkefølgen betyr noe."
   ],
   "sub": "Starter du med feil jobb først, må du vente. NIE-søknaden er skjema EX-15, og gebyret er €9,84.",
-  "logo": true
+  "logo": false
  },
  "tradesperson-in-your-language": {
   "template": "date",
@@ -375,7 +377,7 @@
   "big": "660 byer",
   "headline": "Omtaler på ditt språk kommer først.",
   "sub": "Rørleggere, elektrikere, låsesmeder og byggmestere rangeres ut fra omtaler.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -391,7 +393,7 @@
    "En gestoría tar seg av innleveringer og papirarbeid, og går ikke i retten.",
    "En administrador de fincas driver sameiet."
   ],
-  "logo": true
+  "logo": false
  },
  "maintenance-is-a-year": {
   "template": "duotone",
@@ -408,7 +410,7 @@
    "De ødelegger dem på ulike tider av året.",
    "Noen jobber må skje mens du er borte."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",
@@ -422,6 +424,6 @@
    "Varme, hager og tomme måneder tiltrekker ulike skadedyr.",
    "Noen skadedyr er en telefon, ikke en lørdagsjobb."
   ],
-  "logo": true
+  "logo": false
  }
 }

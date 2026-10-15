@@ -18,12 +18,19 @@
 // templates that differ in structure, a transparent logo, and sixteen licensed photos in
 // studio/photos. No two posts in a row share a template. Version 2.
 //
+// 15 OCTOBER 2026
+// Pratik: the Bueno logo goes on the English image only. The six translated images carry no
+// logo, no "Property Finance Simplified" and no mention of Bueno, because a translation can
+// carry a mistake and that must never sit next to the Bueno name. fb_cards2.py enforces it.
+// The translated image text was also checked against the English, and lines that had lost
+// their key word (tax, return, builder, reviews) were put right. Version 7.
+//
 // CARD_VERSION goes on the end of every address. Bump it after a re-render so that nobody,
 // email clients included, keeps showing an old copy.
 import { IDEAS, LANGS } from './_fb_content.js';
 
 const SITE = 'https://www.247spain.es';
-export const CARD_VERSION = '6';
+export const CARD_VERSION = '7';
 
 export const cardFor = (ideaKey, lang = 'en') =>
   `${SITE}/fb-cards/${ideaKey}/${LANGS.includes(lang) ? lang : 'en'}.jpg?v=${CARD_VERSION}`;
