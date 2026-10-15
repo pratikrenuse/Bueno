@@ -39,6 +39,7 @@ import { fitProfile } from './_fit.js';
 import { LOCALITY_BY_SLUG } from '../spain-directory/localities.js';
 import { ANY_CATEGORY_BY_SLUG } from '../spain-directory/categories.js';
 import { leadsHandler } from './_leads.js';
+import { venuesHandler } from './_venues.js';
 
 const BUCKET = 'directory-cache';
 // Bump when the shape of a stored cell changes. Cached objects live for 30 days, so
@@ -336,6 +337,9 @@ export default async function handler(req, res) {
 
     // Internal B2B lead sourcing (estate agents). Passcode gated, see api/_leads.js.
     if (req.query.leads) return leadsHandler(req, res, { url, key, google });
+
+    // Bueno Club partner sourcing (restaurants and shops). Passcode gated, see api/_venues.js.
+    if (req.query.venues) return venuesHandler(req, res, { url, key, google });
 
     // Diagnostics. Read-only, spends no Google credit, answers "is this wired up".
     if (req.query.health === '1') {
