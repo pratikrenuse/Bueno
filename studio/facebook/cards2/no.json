@@ -13,7 +13,7 @@
    "Du oppgir leien for ukene den var utleid.",
    "For de tomme ukene oppgir du en inntekt beregnet ut fra katastralverdien."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31. desember",
   "headline": "Du leverer selv om ingen leide den.",
   "sub": "Betaling med direkte belastning stenger tidligere, 23. desember. Hver eier leverer for sin egen andel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Skjema 210 er nasjonal, og ingen sender deg regning.",
    "Den beregnes ut fra katastralverdien på IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Eier dere halvparten hver, bruker hver melding halve katastralverdien.",
    "Tre søsken som har arvet en leilighet, leverer tre meldinger."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1 %",
   "headline": "Meldingen består av fire opplysninger.",
   "sub": "Du trenger katastralverdien, andelen din og hvor du er skattemessig bosatt.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Etter det må du betale skatten på en annen måte.",
    "Det hjelper å ikke vente til siste uke."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Et nullresultat betyr at ingenting skyldes og ingenting kommer tilbake.",
    "En tilbakebetaling kan leveres fra 1. februar, med en frist på fire år."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1 %",
   "headline": "Det gjelder halvparten av grunnlaget.",
   "sub": "Grunnlaget er det høyeste av prisen du betalte og verdien skattemyndighetene har verifisert.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Fra måned 13 er det flate 15 % pluss renter.",
    "Tillegget kommer i stedet for en bot."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Det vil spørre om dager tilgjengelig og eierandelen din.",
    "For en bolig du ikke leier ut, åpner meldingen for 2026 1. april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 dager",
   "headline": "Det gjelder i rullerende 180 dager.",
   "sub": "Dagen du lander og dagen du flyr hjem teller begge. En langhelg bruker fire dager, ikke to.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Ta vare på konvolutten eller e-posten med datoen.",
    "Som regel må du være à jour med fellesutgiftene."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "Hvor lenge du er borte og når du reiser, endrer begge listen.",
    "Det samme gjør om noen ser innom mens du er borte."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 byer",
   "headline": "Omtaler på ditt språk kommer først.",
   "sub": "Rørleggere, elektrikere, låsesmeder og byggmestere rangeres ut fra omtaler.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "De ødelegger dem på ulike tider av året.",
    "Noen jobber må skje mens du er borte."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

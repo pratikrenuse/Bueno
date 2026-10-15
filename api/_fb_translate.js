@@ -14,7 +14,7 @@
 // That module belongs to the LinkedIn programme and carries its per-member copy and its
 // call to action; this surface shares nothing with it.
 import { createHash } from 'node:crypto';
-import { TRANSLATION_LANGS, LANG_NAME, linkFor, SPONSOR, splitSponsor, isBuenoPost } from './_fb_content.js';
+import { TRANSLATION_LANGS, LANG_NAME } from './_fb_content.js';
 
 export const hashOf = (text) => createHash('sha1').update(String(text ?? ''), 'utf8').digest('hex');
 
@@ -27,40 +27,34 @@ export const isCurrent = (row, finalText) =>
 // for in the prompt. A translation that breaks one is rejected and the stored one is kept,
 // because a correct old sentence beats a wrong new one.
 //
-// Bueno is no longer on this list. Since October 2026 every post names Bueno on purpose. The
-// names that stay banned are the other companies a translation must never bring in.
-const BANNED = /\b(Sabadell|BBVA|CaixaBank|Santander|Unicaja|Iberdrola|Naturgy|Endesa|Revolut|Wise)\b/i;
+// Since 15 October 2026 a post names no company at all, Bueno and 24/7 Spain included, and
+// carries no link, so groups that remove promotion let it stay.
+const BANNED = /\b(Bueno|Sabadell|BBVA|CaixaBank|Santander|Unicaja|Iberdrola|Naturgy|Endesa|Revolut|Wise)\b|24\/7|247spain/i;
+const URL_RE = /https?:\/\/|www\./i;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/u;
 
-export function checkTranslation(text, lang, tool) {
+export function checkTranslation(text) {
   if (!text || !text.trim()) return 'empty';
   if (/[—–]/.test(text)) return 'contains an em or en dash';
   if (EMOJI.test(text)) return 'contains an emoji';
   if (BANNED.test(text)) return `names ${(text.match(BANNED) || [])[0]}`;
-  if (!text.includes(linkFor(tool, lang))) return 'does not carry the localised link';
+  if (URL_RE.test(text)) return 'contains a link';
   return null;
 }
 
-const PROMPT = (english, tool) => `You are translating one Facebook post for property owners in Spain.
+const PROMPT = (english) => `You are translating one Facebook post for property owners in Spain.
 
-${isBuenoPost(tool)
-    ? 'It is written by the team at Bueno, as "we", to be read in a Facebook group.'
-    : 'It is written by one person, in the first person, to be read in a Facebook group.'} It is
+It is written to be read in a Facebook group, and it is
 deliberately conversational: short uneven sentences, contractions, an aside or two. Translate
 the voice, not only the words. A stiff, official sounding translation is a failed translation.
 
 Rules you must not break:
 - Keep every figure, price, period, article reference and Spanish legal term exactly as it is.
 - No em dashes, no en dashes, no emoji.
-- Keep the name Bueno exactly as written wherever it appears. Do not name any other company
-  or any bank, and never describe Bueno as a bank.
-- Replace the URL with the localised one given below for that language. Nothing else changes.
+- Do not name any company, website or bank, and add no link. The post is pure information.
 - Keep the paragraph breaks where they are.
 - Norwegian, Swedish and Danish address the reader as "du". German uses "Sie", French "vous",
   Dutch "u".
-
-The URLs to use:
-${TRANSLATION_LANGS.map(l => `  ${l} (${LANG_NAME[l]}): ${linkFor(tool, l)}`).join('\n')}
 
 The English post:
 ---
@@ -72,15 +66,10 @@ Return only a JSON object, no other text, shaped exactly:
 
 /**
  * Translate one post into the six other languages.
- *
- * A 24/7 Spain tool post ends with the sponsor line. That line is taken off before the body
- * is translated and each language's own written sponsor line is put back, so the one
- * sentence that names Bueno is never left to a model to reword.
  * Returns { ok: true, translations, hash } or { ok: false, error }.
  */
-export async function translate(english, tool) {
-  const { body, sponsored } = splitSponsor(english);
-  const needsBueno = /\bBueno\b/.test(body);
+export async function translate(english) {
+  const body = String(english ?? '').trim();
   const apiKey = process.env.ANTHROPIC_API_KEY || process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_KEY;
   if (!apiKey) return { ok: false, error: 'Missing env var: ANTHROPIC_API_KEY' };
 
@@ -96,7 +85,7 @@ export async function translate(english, tool) {
       body: JSON.stringify({
         model: process.env.TRANSLATE_MODEL || 'claude-sonnet-5',
         max_tokens: 12000,
-        messages: [{ role: 'user', content: PROMPT(body, tool) }],
+        messages: [{ role: 'user', content: PROMPT(body) }],
       }),
     });
     const j = await r.json().catch(() => ({}));
@@ -117,10 +106,8 @@ export async function translate(english, tool) {
   const out = {};
   const problems = [];
   for (const lang of TRANSLATION_LANGS) {
-    let text = String(parsed[lang] ?? '').trim();
-    if (text && needsBueno && !/\bBueno\b/.test(text)) { problems.push(`${lang}: dropped the name Bueno`); continue; }
-    if (text && sponsored) text = `${text}\n\n${SPONSOR[lang]}`;
-    const problem = checkTranslation(text, lang, tool);
+    const text = String(parsed[lang] ?? '').trim();
+    const problem = checkTranslation(text);
     if (problem) { problems.push(`${lang}: ${problem}`); continue; }
     out[lang] = text;
   }

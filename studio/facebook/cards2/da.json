@@ -13,7 +13,7 @@
    "Du angiver lejen for de uger, den var lejet ud.",
    "For de tomme uger angiver du en indtægt beregnet ud fra katasterværdien."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31. december",
   "headline": "Du indsender, selvom ingen lejede den.",
   "sub": "Betaling via automatisk træk lukker tidligere, den 23. december. Hver ejer indsender for sin egen andel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Formular 210 er national, og ingen sender dig en regning.",
    "Den regnes ud fra katasterværdien på din IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Ejer I halvdelen hver, bruger hver angivelse halvdelen af katasterværdien.",
    "Tre søskende, der har arvet en lejlighed, indsender tre."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1 %",
   "headline": "Fire oplysninger er hele angivelsen.",
   "sub": "Du skal bruge din katasterværdi, din andel og hvor du er skattemæssigt hjemmehørende.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Derefter skal du betale skatten på en anden måde.",
    "Det hjælper ikke at vente til den sidste uge."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Et nulresultat betyder, at intet skal betales, og intet kommer tilbage.",
    "En tilbagebetaling kan indsendes fra 1. februar, med en frist på fire år."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1%",
   "headline": "Den gælder for halvdelen af grundlaget.",
   "sub": "Grundlaget er det højeste af den pris, du betalte, og den værdi, skattemyndighederne har fastsat.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Fra måned 13 er det faste 15 % plus renter.",
    "Tillægget træder i stedet for en bøde."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Den spørger om dage til rådighed og din ejerandel i procent.",
    "For en bolig, du ikke lejer ud, åbner selvangivelsen for 2026 1. april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 dage",
   "headline": "Det er inden for 180 rullende dage.",
   "sub": "Den dag, du lander, og den dag, du flyver hjem, tæller begge. En forlænget weekend bruger fire dage, ikke to.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Gem kuverten eller mailen med datoen på.",
    "Som regel skal du være ajour med fællesudgifterne."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "Hvor længe du er væk, og årstiden du rejser i, ændrer begge listen.",
    "Det gør det også, om nogen kigger forbi, mens du er væk."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 byer",
   "headline": "Anmeldelser på dit sprog står først.",
   "sub": "VVS'ere, elektrikere, låsesmede og byggefolk rangeres ud fra anmeldelser.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "De gør det på forskellige tidspunkter af året.",
    "Nogle opgaver skal ske, mens du er væk."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

@@ -15,7 +15,7 @@
 //      the wording the brand rules forbid.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
-import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor, SPONSOR, BUENO_TOOL, QUEUE_ORDER, queueIndex } from './api/_fb_content.js';
+import { IDEAS, LANGS, TRANSLATION_LANGS, renderPost, linkFor, BUENO_TOOL, QUEUE_ORDER, queueIndex, COMMENT, WHATSAPP_URL, commentFor } from './api/_fb_content.js';
 import { GROUPS, ACCOUNT, groupsFor, perDay, MAX_PER_DAY, DAILY_START } from './api/_fb_groups.js';
 import { imageOptionsFor, imageFor, IMAGE_KEYS, cardFor } from './api/_fb_images.js';
 
@@ -147,28 +147,18 @@ for (const idea of IDEAS) {
     const at = `${idea.key}/${lang}`;
     ok(`${at}: written`, !!t);
     if (!t) continue;
-    ok(`${at}: the link placeholder is resolved`, !t.includes('{link}'));
-    ok(`${at}: links to this locale's page`, t.includes(linkFor(idea.tool, lang)));
-    const wrong = LANGS.filter(l => l !== lang).map(l => linkFor(idea.tool, l))
-      .filter(u => u !== linkFor(idea.tool, lang) && t.includes(u));
-    ok(`${at}: links to no other locale`, wrong.length === 0, wrong.join(', '));
+    // Pure value since 15 October 2026 (Pratik): groups remove anything promotional, so a post
+    // carries no link and names neither Bueno nor 24/7 Spain, in any language.
+    ok(`${at}: carries no link`, !/\{link\}|https?:\/\/|www\.|getbueno|247spain/i.test(t));
+    ok(`${at}: names neither Bueno nor 24/7 Spain`, !/\bBueno\b|24\/7/.test(t));
+    ok(`${at}: mentions no tool, calculator or page of ours`, !/\b(I built|I made|free (tool|calculator|page|checklist|counter|directory)|we're Bueno|at Bueno)\b/i.test(t));
     ok(`${at}: no em or en dash`, !/[—–]/.test(t));
     ok(`${at}: no emoji`, !EMOJI.test(t));
     ok(`${at}: names no other company`, !BANNED.test(t), (t.match(BANNED) || [])[0] || '');
-    ok(`${at}: names Bueno`, /\bBueno\b/.test(t));
-    ok(`${at}: never calls Bueno a bank`, !/Bueno[^.\n]*\bban(k|que|co)\b/i.test(t));
-    if (idea.tool === BUENO_TOOL) {
-      ok(`${at}: links to getbueno.com`, linkFor(idea.tool, lang).startsWith('https://getbueno.com/'));
-      ok(`${at}: a Bueno post carries no sponsor line`, !t.includes(SPONSOR[lang]));
-    } else {
-      ok(`${at}: ends with this language's sponsor line`, t.endsWith(SPONSOR[lang]));
-      ok(`${at}: links to 24/7 Spain`, linkFor(idea.tool, lang).startsWith('https://www.247spain.es/'));
-    }
     ok(`${at}: no hype words`, !HYPE.test(t));
     const words = t.split(/\s+/).length;
     // French and German run longer than English for the same content, which is a property of
     // the languages and not of the writing. The band is on the English; translations get room.
-    // The sponsor line added in October 2026 is a dozen words, so the bands moved with it.
     const cap = lang === 'en' ? 245 : 270;
     ok(`${at}: reads as a group post, not an essay`, words >= 90 && words <= cap, String(words));
   }
@@ -188,26 +178,24 @@ for (const idea of IDEAS) {
   }
 }
 
-// Danish. 24/7 Spain has no Danish pages, so a Danish tool post links to the English tool
-// and says so, and a Danish Bueno post links to Bueno's own Danish page.
-for (const idea of TOOL_IDEAS) {
-  ok(`${idea.key}/da: links to the English tool`, linkFor(idea.tool, 'da') === linkFor(idea.tool, 'en'));
-}
-ok('the Danish sponsor line says the tool is in English and gives the Danish Bueno address',
-   /engelsk/.test(SPONSOR.da) && /getbueno\.com\/dk/.test(SPONSOR.da));
-ok('a Danish Bueno post links to the Danish tax page', linkFor(BUENO_TOOL, 'da') === 'https://getbueno.com/dk/ejendomslosninger/ejendomsskat/');
-ok('each language has its own Bueno tax page', new Set(LANGS.map(l => linkFor(BUENO_TOOL, l))).size === LANGS.length);
+// The reference link in the deck still opens the right page for each topic (Pratik only).
+ok('a Bueno topic opens the Danish tax page in Danish', linkFor(BUENO_TOOL, 'da') === 'https://getbueno.com/dk/ejendomslosninger/ejendomsskat/');
 
-// The Bueno posts speak as the team. None of them may slip into one person's "I built".
-for (const idea of BUENO_IDEAS) {
+// No post speaks as a company or as someone who built something.
+for (const idea of IDEAS) {
   const t = renderPost(idea, 'en');
-  ok(`${idea.key}: is not one person's "I built"`, !/\bI (built|made|wrote|got)\b/.test(t));
+  ok(`${idea.key}: is not "I built"`, !/\bI (built|made|wrote)\b/.test(t));
   ok(`${idea.key}: no penalty flavoured urgency`, !/\b(fined|a fine of|penalt(y|ies) of|before it is too late|act now|last chance)\b/i.test(t));
 }
-{
-  const asWe = BUENO_IDEAS.filter(i => /\b(we|we're|we'll|our)\b/i.test(renderPost(i, 'en'))).length;
-  ok('the Bueno posts speak as we', asWe >= BUENO_IDEAS.length - 1, `${asWe} of ${BUENO_IDEAS.length}`);
+
+// The first comment, the only invitation: every language, no company named, and nothing
+// to post until the WhatsApp link exists.
+for (const lang of LANGS) {
+  ok(`${lang}: has a first comment`, !!COMMENT[lang] && COMMENT[lang].includes('{whatsapp}'));
+  ok(`${lang}: the first comment names no company`, !/Bueno|24\/7/.test(COMMENT[lang]));
+  ok(`${lang}: the first comment has no dash`, !/[—–]/.test(COMMENT[lang]));
 }
+ok('no comment is offered while the WhatsApp link is empty', WHATSAPP_URL ? true : commentFor('en') === null);
 
 // Neighbouring posts never share an image template (Pratik, 8 October 2026: the images all looked the same).
 {
@@ -223,12 +211,12 @@ for (const idea of BUENO_IDEAS) {
   const PROMO = /(€\s?\d|\d\s?€|\b(Select|Premium|Standard)\b|we file it for you|starting from|starts from)/i;
   for (const idea of IDEAS) for (const lang of LANGS) {
     const t = renderPost(idea, lang);
-    if (idea.tool === BUENO_TOOL) ok(`${idea.key}/${lang}: no price or plan in a Bueno post`, !PROMO.test(t), (t.match(PROMO) || [])[0] || '');
+    if (idea.tool === BUENO_TOOL) ok(`${idea.key}/${lang}: no price or plan in a tax post`, !PROMO.test(t), (t.match(PROMO) || [])[0] || '');
   }
   for (const lang of LANGS) {
     const c2 = JSON.parse(read(`./studio/facebook/cards2/${lang}.json`) || '{}');
     ok(`${lang}: no call to action on any image`, Object.values(c2).every(c => !c.cta));
-    ok(`${lang}: the Bueno logo is on exactly half the images`, Object.values(c2).filter(c => c.logo).length === 15);
+    ok(`${lang}: no image carries the Bueno logo (15 October 2026)`, Object.values(c2).every(c => !c.logo));
   }
 }
 

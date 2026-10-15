@@ -126,8 +126,8 @@ ok('every idea is offered', (await page.locator('.fbp-card').count()) === IDEAS.
 const texts = await page.locator('.fbp-text').allInnerTexts();
 ok('the text shown is the English that will be sent',
    texts.every((t, i) => t.trim() === renderPost(IDEAS[i], 'en').trim()));
-ok('every post carries its English link',
-   texts.every((t, i) => t.includes(linkFor(IDEAS[i].tool, 'en'))));
+ok('no post carries a link (pure value since 15 October 2026)',
+   texts.every(t => !/https?:\/\/|www\./.test(t)));
 ok('no em or en dash anywhere on the page', !/[\u2014\u2013]/.test(await page.locator('.fbp-list').innerText()));
 
 // The dashboard.
@@ -164,7 +164,7 @@ ok('the status filter carries counts', /To review \(\d+\)/.test(await page.locat
   ok('the German version is the German version', german.trim() === renderPost(IDEAS[0], 'de').trim());
   const deImg = await card.locator('.fbp-trlist details', { hasText: 'German' }).locator('img').getAttribute('src');
   ok('the German version shows the German image', deImg === `/fb-cards/${IDEAS[0].key}/de.jpg`);
-  ok('and links to the German page', german.includes(linkFor(IDEAS[0].tool, 'de')));
+  ok('and carries no link', !/https?:\/\//.test(german));
   await card.locator('button', { hasText: 'Hide the other six languages' }).click();
   await page.waitForTimeout(150);
   ok('and they fold away again', (await page.locator('.fbp-trlist').count()) === 0);
@@ -192,9 +192,8 @@ ok('posts cite the rules behind them', (await page.locator('.fbp-rules').count()
 const html = await page.content();
 ok('the page never mentions the team deck', !/internal-linkedin|linkedin_posts/i.test(html));
 ok('the page names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(await page.locator('.fbp-list').innerText()));
-ok('every post names Bueno', texts.every(t => /\bBueno\b/.test(t)));
-ok('every card says where its link goes',
-   (await page.locator('.fbp-tool').allInnerTexts()).every(t => /^Links to (getbueno\.com|24\/7 Spain, )/.test(t.trim())));
+ok('no post names Bueno or 24/7 Spain', texts.every(t => !/\bBueno\b|24\/7/.test(t)));
+ok('every card says its topic', (await page.locator('.fbp-tool').allInnerTexts()).every(t => /^Topic: /.test(t.trim())));
 
 // The review loop: edit, then park, then approve. Approving queues the post, so the card
 // has to say where it is in the queue, and nothing may claim to have been emailed until

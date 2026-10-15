@@ -13,7 +13,7 @@
    "Für die vermieteten Wochen erklären Sie die Miete.",
    "Für die leeren Wochen erklären Sie ein Einkommen aus dem Katasterwert."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31. Dezember",
   "headline": "Sie erklären, auch ohne Vermietung.",
   "sub": "Lastschriften schließen früher, am 23. Dezember. Jeder Eigentümer erklärt seinen Anteil.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Formular 210 ist national, und niemand schickt eine Rechnung.",
    "Berechnet wird sie aus dem Katasterwert auf der IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Gehört jedem die Hälfte, nutzt jede Erklärung den halben Katasterwert.",
    "Drei Geschwister mit einer geerbten Wohnung erklären dreimal."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1 %",
   "headline": "Vier Angaben ergeben Ihre Erklärung.",
   "sub": "Sie brauchen Ihren Katasterwert, Ihren Anteil und Ihren steuerlichen Wohnsitz.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Danach müssen Sie die Steuer anders zahlen.",
    "Es hilft, nicht bis zur letzten Woche zu warten."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Null heißt, es ist nichts zu zahlen und nichts kommt zurück.",
    "Mit Erstattung reichen Sie ab 1. Februar ein, mit vier Jahren Frist."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1 %",
   "headline": "Er gilt für die Hälfte der Basis.",
   "sub": "Basis ist der höhere Wert aus gezahltem Preis und dem von der Steuerverwaltung geprüften Wert.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Ab Monat 13 sind es pauschal 15 % plus Zinsen.",
    "Der Zuschlag tritt an die Stelle einer Sanktion."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Es fragt nach den verfügbaren Tagen und Ihrem Eigentumsanteil.",
    "Vermieten Sie nicht, öffnet die Erklärung 2026 am 1. April 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 Tage",
   "headline": "Das gilt für je 180 rollierende Tage.",
   "sub": "Ankunfts- und Rückflugtag zählen beide. Ein langes Wochenende verbraucht vier Tage, nicht zwei.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Bewahren Sie Umschlag oder E-Mail mit Datum auf.",
    "Meist müssen Ihre Zahlungen an die Gemeinschaft aktuell sein."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "Wie lange Sie weg sind und wann Sie abreisen, ändert die Liste.",
    "Ebenso, ob jemand nach dem Rechten sieht, während Sie fort sind."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 Orten",
   "headline": "Bewertungen in Ihrer Sprache führen.",
   "sub": "Klempner, Elektriker, Schlüsseldienste und Bauunternehmer sind nach Bewertungen geordnet.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "Sie tun es zu verschiedenen Zeiten im Jahr.",
    "Manches muss passieren, während Sie fort sind."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

@@ -15,7 +15,7 @@ import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO
 import { GROUPS } from './api/_fb_groups.js';
 import { hashOf, isCurrent, checkTranslation } from './api/_fb_translate.js';
 import { queueOf, nextDay, sentOn } from './api/_fb_queue.js';
-import { IDEAS, QUEUE_ORDER, SPONSOR, linkFor, BUENO_TOOL } from './api/_fb_content.js';
+import { IDEAS, QUEUE_ORDER, linkFor, BUENO_TOOL, COMMENT } from './api/_fb_content.js';
 import { groupsFor, ACCOUNT, MAX_PER_DAY } from './api/_fb_groups.js';
 import { cardFor } from './api/_fb_images.js';
 
@@ -58,7 +58,7 @@ function fakeSupabase(table, mail = { ok: true }, translation = null) {
       if (translation && translation.fail) return { ok: false, status: 500, json: async () => ({ error: 'model down' }) };
       const body = translation && translation.out
         ? translation.out
-        : Object.fromEntries(OTHERS.map(l => [l, `Oversatt ${l}. ${linkFor('day-counter', l)}`]));
+        : Object.fromEntries(OTHERS.map(l => [l, `Oversatt ${l}. Ingen lenke.`]));
       return { ok: true, status: 200, json: async () => ({ content: [{ type: 'text', text: JSON.stringify(body) }] }) };
     }
     if (/api\.resend\.com/.test(u)) {
@@ -94,7 +94,7 @@ const lowMails = (calls) => mails(calls).filter(c => /left, approve more|queue i
 
 const ENGLISH = 'First line of the original.\n\nSecond paragraph with enough text in it.';
 const trFor = (langs = OTHERS) =>
-  Object.fromEntries(langs.map(l => [l, `Oversatt ${l}. ${linkFor('day-counter', l)}`]));
+  Object.fromEntries(langs.map(l => [l, `Oversatt ${l}. Ingen lenke.`]));
 
 const samplePost = (over = {}) => ({
   id: '1', idea_key: 'ninety-days', language: 'en', tool_slug: 'day-counter',
@@ -149,8 +149,11 @@ ok('a LinkedIn action is not routable here', resolveAction(req('/api/fb?action=r
      .every(r => r.tool_url === `https://www.247spain.es/${r.tool_slug}`));
   ok('a Bueno row links to the Bueno tax page', written.filter(r => r.tool_slug === BUENO_TOOL).length === 10
      && written.filter(r => r.tool_slug === BUENO_TOOL).every(r => r.tool_url === 'https://getbueno.com/products/non-resident-tax-return/'));
-  ok('every row names Bueno in the text Pratik reviews', written.every(r => /\bBueno\b/.test(r.post_text)));
-  ok('a tool row ends with the sponsor line', written.filter(r => r.tool_slug !== BUENO_TOOL).every(r => r.post_text.endsWith(SPONSOR.en)));
+  // Since 15 October 2026 posts are pure value: no company named, no link, in any language.
+  ok('no row names Bueno or 24/7 Spain', written.every(r => !/Bueno|24\/7|247spain/i.test(r.post_text)
+     && Object.values(r.translations).every(t => !/Bueno|24\/7|247spain/i.test(t))));
+  ok('no row carries a link', written.every(r => !/https?:\/\/|www\.|\{link\}/.test(r.post_text)
+     && Object.values(r.translations).every(t => !/https?:\/\/|www\.|\{link\}/.test(t))));
   ok('the hook is the first line of the post', written.every(r => r.post_text.startsWith(r.hook)));
   // PostgREST refuses a bulk upsert whose objects carry different keys (PGRST102).
   const keys = (r) => Object.keys(r).sort().join(',');
@@ -293,11 +296,12 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email carries a note from Pratik when there is one', html.includes('Leave out the Brits in Spain group today'));
   ok('the email carries all six translations', OTHERS.every(l => html.includes(`Oversatt ${l}.`)));
   ok('and labels each language', ['English','Norwegian','Swedish','Danish','German','French','Dutch'].every(n => html.includes(n)));
-  ok('each version carries its own link', OTHERS.every(l => html.includes(linkFor('day-counter', l))));
+  ok('no version carries a link to a page', !html.includes('247spain.es/day-counter') && !html.includes('247spain.es/no/day-counter'));
+  ok('until the WhatsApp link exists, the email says to skip the comment', /No comment for now/.test(html));
   ok('the email carries one image per language, each with that language on it',
      ['en', ...OTHERS].every(l => html.includes(cardFor('ninety-days', l))));
   ok('no image is shared between two languages', new Set(['en', ...OTHERS].map(l => cardFor('ninety-days', l))).size === 7);
-  ok('the email carries the tool link', html.includes(p.tool_url));
+  ok('the email does not carry the reference link', !html.includes(p.tool_url));
   ok('the email says which day it is', /day 3/i.test(html) && /^Day 3\. Facebook post to publish:/.test(subjectFor(p, 3)));
   ok('the email names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
   ok('the subject is one post, not one language', !/\(German\)/.test(subjectFor(p, 3)));
@@ -525,22 +529,14 @@ ok('a set written before Danish existed is stale',
 ok('an empty language makes them stale',
    !isCurrent(samplePost({ translations: { ...trFor(), de: '   ' } }), ENGLISH));
 
-ok('a translation with a dash is rejected',
-   checkTranslation('hei — der https://www.247spain.es/no/day-counter', 'no', 'day-counter') !== null);
-ok('a translation missing its link is rejected',
-   checkTranslation('hei der', 'no', 'day-counter') !== null);
-ok('a translation naming another company is rejected',
-   checkTranslation('hei Sabadell https://www.247spain.es/no/day-counter', 'no', 'day-counter') !== null);
-ok('a translation naming Bueno is fine',
-   checkTranslation('hei Bueno https://www.247spain.es/no/day-counter', 'no', 'day-counter') === null);
-ok('a good translation passes',
-   checkTranslation('hei der https://www.247spain.es/no/day-counter', 'no', 'day-counter') === null);
-ok('a Danish tool translation must carry the English tool link',
-   checkTranslation('hej https://www.247spain.es/day-counter', 'da', 'day-counter') === null
-   && checkTranslation('hej https://www.247spain.es/da/day-counter', 'da', 'day-counter') !== null);
-ok('a Bueno translation must carry that language\'s Bueno page',
-   checkTranslation(`hej ${linkFor(BUENO_TOOL, 'da')}`, 'da', BUENO_TOOL) === null
-   && checkTranslation('hej https://getbueno.com/', 'da', BUENO_TOOL) !== null);
+ok('a translation with a dash is rejected', checkTranslation('hei — der') !== null);
+ok('a translation carrying a link is rejected', checkTranslation('hei der https://www.247spain.es/no/day-counter') !== null);
+ok('a translation naming Bueno is rejected', checkTranslation('hei Bueno') !== null);
+ok('a translation naming 24/7 Spain is rejected', checkTranslation('hei 24/7 Spain') !== null);
+ok('a translation naming another company is rejected', checkTranslation('hei Sabadell') !== null);
+ok('a good translation passes', checkTranslation('hei der, alt i orden') === null);
+ok('the first comment exists in every language and names no company',
+   ['en', ...OTHERS].every(l => COMMENT[l] && COMMENT[l].includes('{whatsapp}') && !/Bueno|24\/7/.test(COMMENT[l])));
 
 // Approving an unedited post uses what is stored and calls nothing.
 {
@@ -569,18 +565,6 @@ ok('a Bueno translation must carry that language\'s Bueno page',
   ok('and still nothing is emailed', mails(calls).length === 0);
 }
 
-// An edit that keeps the sponsor line: the body is translated, and each language gets its
-// own written sponsor line back, so the sentence naming Bueno is never left to the model.
-{
-  const edit = `My own version of it.\n\nhttps://www.247spain.es/day-counter\n\n${SPONSOR.en}`;
-  const calls = fakeSupabase([samplePost({ edited_text: edit })]);
-  const res = makeRes();
-  await fbRouter(post('/api/fb?action=decide', { id: '1', action: 'approved' }), res);
-  const asked = JSON.parse(calls.find(c => /anthropic/.test(c.url)).body).messages[0].content;
-  ok('the sponsor line is not sent to the model', !asked.includes(SPONSOR.en));
-  ok('each language gets its own sponsor line back', OTHERS.every(l => res.body.post.translations[l].endsWith(SPONSOR[l])));
-}
-
 // If the rebuild fails, nothing is queued. Stale translations under an approval would be worse.
 {
   const calls = fakeSupabase([samplePost({ edited_text: 'An edit that cannot be translated.' })], { ok: true }, { fail: true });
@@ -594,7 +578,7 @@ ok('a Bueno translation must carry that language\'s Bueno page',
 
 // A translation that comes back breaking a house rule is refused, and nothing is queued.
 {
-  const bad = { out: { no: 'hei — der https://www.247spain.es/no/day-counter', sv: 'x', da: 'x', de: 'x', fr: 'x', nl: 'x' } };
+  const bad = { out: { no: 'hei — der', sv: 'x', da: 'x', de: 'x', fr: 'x', nl: 'x' } };
   const calls = fakeSupabase([samplePost({ edited_text: 'Another edit entirely here.' })], { ok: true }, bad);
   const res = makeRes();
   await fbRouter(post('/api/fb?action=decide', { id: '1', action: 'approved' }), res);
@@ -603,12 +587,12 @@ ok('a Bueno translation must carry that language\'s Bueno page',
   ok('and the reason names the rule', /dash|link/i.test(res.body.error));
 }
 {
-  // An edit that names Bueno, and a model that quietly drops the name.
-  const out = Object.fromEntries(OTHERS.map(l => [l, `Uten navnet. ${linkFor('day-counter', l)}`]));
-  fakeSupabase([samplePost({ edited_text: 'At Bueno we do this.\n\nhttps://www.247spain.es/day-counter' })], { ok: true }, { out });
+  // A model that slips a link back in is refused, so a post never goes out with one.
+  const out = Object.fromEntries(OTHERS.map(l => [l, `Med lenke https://www.247spain.es/${l}/day-counter`]));
+  fakeSupabase([samplePost({ edited_text: 'An edit with no link.' })], { ok: true }, { out });
   const res = makeRes();
   await fbRouter(post('/api/fb?action=decide', { id: '1', action: 'approved' }), res);
-  ok('a translation that drops the name Bueno is refused', res.body.queued === false && /Bueno/.test(res.body.error));
+  ok('a translation that adds a link is refused', res.body.queued === false && /link|247spain/.test(res.body.error));
 }
 
 {
@@ -877,6 +861,22 @@ for (const d of [1, 2, 3, 9, 20]) {
 {
   // Everything that goes to Poornima is copied to Pratik.
   ok('every send to the publisher copies Pratik', SEND_CC.join() === 'pratik.y.renuse@gmail.com');
+}
+
+// The deck keeps unsent, unedited rows in step with the written posts (15 October 2026),
+// and never touches a row that was emailed or that Pratik edited.
+{
+  const { staleRows } = await import('./api/_fb_posts.js');
+  const rows = [
+    samplePost({ id: 'a' }),
+    samplePost({ id: 'b', sent_at: '2026-10-12T05:00:00Z' }),
+    samplePost({ id: 'c', edited_text: 'Mine.' }),
+  ];
+  const st = staleRows(rows);
+  ok('a stale unsent row is refreshed', st.length === 1 && st[0].id === 'a');
+  ok('the refreshed text carries no link', !/https?:\/\//.test(st[0].patch.post_text) && Object.values(st[0].patch.translations).every(t => !/https?:\/\//.test(t)));
+  ok('the status and note are left alone', !('status' in st[0].patch) && !('note' in st[0].patch));
+  ok('once refreshed, nothing more to do', staleRows([{ ...rows[0], ...st[0].patch }]).length === 0);
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

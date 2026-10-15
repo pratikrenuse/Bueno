@@ -13,7 +13,7 @@
    "Du deklarerar hyran för veckorna det var uthyrt.",
    "För de tomma veckorna deklarerar du en inkomst som räknas fram ur taxeringsvärdet."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31 december",
   "headline": "Du deklarerar även om ingen hyrde.",
   "sub": "Betalning via autogiro stänger tidigare, den 23 december. Varje ägare deklarerar för sin egen andel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Blankett 210 är statlig, och ingen skickar en räkning.",
    "Den räknas fram ur taxeringsvärdet på IBI-avin."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Äger ni hälften var använder varje deklaration halva taxeringsvärdet.",
    "Tre syskon som har ärvt en lägenhet lämnar in tre deklarationer."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1 %",
   "headline": "Fyra uppgifter är hela din deklaration.",
   "sub": "Du behöver ditt taxeringsvärde, din andel och var du har din skattehemvist.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Efter det måste du betala skatten på annat sätt.",
    "Det hjälper att inte vänta till sista veckan."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Nollresultat betyder att inget ska betalas och inget kommer tillbaka.",
    "En återbetalning kan lämnas in från 1 februari, med en gräns på fyra år."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1 %",
   "headline": "Den gäller på halva underlaget.",
   "sub": "Underlaget är det högsta av priset du betalade och värdet som skattemyndigheten har kontrollerat.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Från månad 13 är det fast 15 % plus ränta.",
    "Tillägget ersätter en sanktionsavgift."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Den frågar efter tillgängliga dagar och din ägarandel.",
    "För en bostad du inte hyr ut öppnar deklarationen för 2026 den 1 april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 dagar",
   "headline": "Det gäller inom rullande 180 dagar.",
   "sub": "Dagen du landar och dagen du flyger hem räknas båda. En långhelg använder fyra dagar, inte två.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Spara kuvertet eller mejlet med datumet på.",
    "Oftast måste du vara i fas med avgifterna till samfälligheten."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "Hur länge du är borta och när på året du åker ändrar båda listan.",
    "Det gör också om någon tittar till stället medan du är borta."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 orter",
   "headline": "Omdömen på ditt språk kommer först.",
   "sub": "Rörmokare, elektriker, låssmeder och byggare rankas utifrån omdömen.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "De gör det vid olika tider på året.",
    "Vissa jobb måste göras medan du är borta."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

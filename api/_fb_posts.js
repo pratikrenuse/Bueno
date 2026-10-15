@@ -13,6 +13,9 @@
 // parked posts and the totals. It is worked out from fb_posts and the group rotation, the
 // same two things the daily email uses, so the dashboard and the inbox always agree.
 import { gate, rest } from './_fb_db.js';
+import { IDEAS, TRANSLATION_LANGS, renderPost } from './_fb_content.js';
+import { hashOf } from './_fb_translate.js';
+import { imageFor, imageOptionsFor } from './_fb_images.js';
 import { queueOf, nextDay, sentOn } from './_fb_queue.js';
 import { groupsToday, finalText } from './_fb_email.js';
 import { DAILY_START } from './_fb_groups.js';
@@ -113,13 +116,51 @@ export function buildDashboard(all, now = new Date()) {
   };
 }
 
+// Keep the table in step with the written posts, so a content change needs no button.
+// Only rows that have not been emailed and that Pratik has not edited are refreshed; his
+// status, note and the record of anything sent are never touched. Runs when the deck loads,
+// and does nothing once the rows match.
+export function staleRows(all) {
+  const byKey = new Map(IDEAS.map(i => [i.key, i]));
+  const out = [];
+  for (const r of all) {
+    const idea = byKey.get(r.idea_key);
+    if (!idea || r.sent_at || (r.edited_text && r.edited_text.trim())) continue;
+    const english = renderPost(idea, 'en');
+    if (r.post_text === english && r.translations_of === hashOf(english)) continue;
+    out.push({ id: r.id, patch: {
+      post_text: english,
+      hook: (english.split('\n').find(l => l.trim()) || '').trim(),
+      translations: Object.fromEntries(TRANSLATION_LANGS.map(l => [l, renderPost(idea, l)])),
+      translations_of: hashOf(english),
+      image_url: imageFor(idea.key),
+      image_options: imageOptionsFor(idea.key),
+    } });
+  }
+  return out;
+}
+
 export default async function handler(req, res) {
   if (!gate(req, res)) return;
 
   const status = STATUSES.includes(req.query.status) ? req.query.status : 'all';
 
-  const all = await rest(res, '?order=idea_key.asc&select=*');
+  let all = await rest(res, '?order=idea_key.asc&select=*');
   if (all === null) return;
+
+  const stale = staleRows(all);
+  if (stale.length) {
+    for (const s of stale) {
+      const out = await rest(res, `?id=eq.${encodeURIComponent(s.id)}`, {
+        method: 'PATCH',
+        headers: { Prefer: 'return=minimal' },
+        body: JSON.stringify({ ...s.patch, updated_at: new Date().toISOString() }),
+      });
+      if (out === null) return;
+    }
+    all = await rest(res, '?order=idea_key.asc&select=*');
+    if (all === null) return;
+  }
 
   const queue = queueOf(all);
   const place = new Map(queue.map((r, i) => [r.id, i + 1]));

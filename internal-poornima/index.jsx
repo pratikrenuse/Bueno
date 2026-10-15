@@ -355,27 +355,6 @@ export default function InternalPratik() {
           onClick={() => setView('dashboard')}>Dashboard</button>
       </nav>
 
-      {/* TEMPORARY, 12 Oct 2026 only: one button to send today's missed post. Remove on the next commit. */}
-      {dash && !dash.sent_today && dash.upcoming && dash.upcoming.length > 0 && (
-        <div className="fbp-wide" style={{ marginTop: 12 }}>
-          <button className="fbp-primary" style={{ padding: '12px 18px', borderRadius: 9, border: 0, cursor: 'pointer', fontSize: 15 }}
-            disabled={busy}
-            onClick={async () => {
-              setBusy(true); setErr(''); setFlash('')
-              try {
-                const j = await patch(dash.upcoming[0].id, { action: 'send_now' })
-                if (j.warning) setErr(j.warning)
-                else if (j.sent) setFlash(`Sent to Poornima as day ${j.day}. You are in CC.`)
-                else setErr(`It did not go: ${j.error}`)
-              } catch (e) { setErr(String(e.message || e)) }
-              setBusy(false)
-              await load(pass, status)
-            }}>
-            Send today's post now
-          </button>
-        </div>
-      )}
-
       {view === 'dashboard' && (
         <>
           {err && <p className="fbp-err fbp-wide">{err}</p>}
@@ -421,7 +400,8 @@ export default function InternalPratik() {
         <p className="fbp-count">
           You read the English. Approving puts the post in the queue with its six translations.
           One post goes out each day to the person who publishes them, with you copied, and the
-          email tells her which account and which groups each language goes into that day.
+          email tells her which account and which groups each language goes into that day. Posts
+          carry no link and name no company, so groups let them stay.
           <span className="fbp-keys"> j k to move, a approve, e edit, r park, c copy</span>
         </p>
       </div>
@@ -487,7 +467,7 @@ export default function InternalPratik() {
                 )}
                 <span className="fbp-pill" style={{ background: pill.bg, color: pill.fg }}>{pill.label}</span>
                 <b>{p.kind === 'story' ? 'Personal story' : 'Straight useful'}</b>
-                <span className="fbp-tool">{p.tool_slug === 'bueno-tax' ? 'Links to getbueno.com' : `Links to 24/7 Spain, ${p.tool_slug}`}</span>
+                <span className="fbp-tool">{p.tool_slug === 'bueno-tax' ? 'Topic: the non-resident return' : `Topic: ${p.tool_slug.replace(/-/g, ' ')}`}</span>
                 {p.edited_text && <span className="fbp-tag">Edited</span>}
                 {p.queue_pos && !p.sent_at && <span className="fbp-tag">Number {p.queue_pos} in the queue</span>}
               </div>
@@ -564,7 +544,7 @@ export default function InternalPratik() {
                 </button>
                 <button onClick={() => setPicking(picking === p.id ? null : p.id)}>Change image</button>
                 <button onClick={() => copy(p)}>{copied === p.id ? 'Copied' : 'Copy text'}</button>
-                <a href={p.tool_url} target="_blank" rel="noopener noreferrer">Open the page</a>
+                <a href={p.tool_url} target="_blank" rel="noopener noreferrer" title="For you only. The post itself carries no link.">Reference page</a>
                 <span className="fbp-spacer" />
                 {!p.sent_at && p.status !== 'approved' && (
                   <button className="fbp-primary" onClick={() => approve(p)} disabled={busy}>

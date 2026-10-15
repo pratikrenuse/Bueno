@@ -13,7 +13,7 @@
    "U geeft de huur aan voor de verhuurde weken.",
    "Voor de lege weken geeft u een inkomen aan op basis van de kadastrale waarde."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31 december",
   "headline": "U doet aangifte, ook zonder verhuur.",
   "sub": "Betalen via incasso sluit eerder, op 23 december. Iedere eigenaar doet aangifte voor zijn eigen aandeel.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Formulier 210 is nationaal en u krijgt geen rekening.",
    "Hij wordt berekend op de kadastrale waarde van uw IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Heeft u elk de helft, dan gebruikt elke aangifte de halve kadastrale waarde.",
    "Drie broers en zussen die een appartement erfden, doen drie aangiftes."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1%",
   "headline": "Vier gegevens vormen uw aangifte.",
   "sub": "U heeft uw kadastrale waarde, uw aandeel en uw fiscale woonplaats nodig.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Daarna moet u de belasting op een andere manier betalen.",
    "Het helpt om het niet tot de laatste week te laten."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Bij een nulresultaat is niets verschuldigd en komt niets terug.",
    "Een teruggaaf kunt u vanaf 1 februari indienen, binnen vier jaar."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1%",
   "headline": "Het geldt over de helft van de basis.",
   "sub": "De basis is het hoogste van de betaalde prijs of de waarde die de belastingdienst heeft vastgesteld.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Vanaf maand 13 is het een vaste 15% plus rente.",
    "De toeslag komt in de plaats van een boete."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Er wordt gevraagd naar de beschikbare dagen en uw eigendomspercentage.",
    "Verhuurt u niet, dan opent de aangifte 2026 op 1 april 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 dagen",
   "headline": "Dat geldt per schuivende 180 dagen.",
   "sub": "De dag van aankomst en de dag van vertrek tellen allebei. Een lang weekend kost vier dagen, geen twee.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Bewaar de envelop of e-mail met de datum erop.",
    "Meestal moet u bij zijn met de VvE-bijdragen."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "Hoe lang u weg bent en in welk seizoen u vertrekt, veranderen allebei de lijst.",
    "Ook of er iemand komt kijken, verandert de lijst."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 steden",
   "headline": "Reviews in uw taal staan bovenaan.",
   "sub": "Loodgieters, elektriciens, slotenmakers en aannemers staan op volgorde van reviews.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "Dat doen ze op verschillende momenten in het jaar.",
    "Sommige klussen moeten gebeuren als u weg bent."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

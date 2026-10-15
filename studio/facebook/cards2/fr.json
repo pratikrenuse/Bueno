@@ -13,7 +13,7 @@
    "Vous déclarez les loyers des semaines louées.",
    "Pour les semaines vides, vous déclarez un revenu calculé sur la valeur cadastrale."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31 décembre",
   "headline": "Vous déclarez même sans location.",
   "sub": "Le prélèvement automatique se ferme plus tôt, le 23 décembre. Chaque propriétaire déclare sa propre part.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Le modèle 210 est national et rien ne vous est facturé.",
    "Il se calcule sur la valeur cadastrale de votre IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "Avec une moitié chacun, chacun déclare la moitié de la valeur cadastrale.",
    "Trois frères et sœurs qui ont hérité d'un appartement déposent trois déclarations."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1,1 %",
   "headline": "Il suffit de quatre informations.",
   "sub": "Il vous faut votre valeur cadastrale, votre part et votre pays de résidence fiscale.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "Ensuite, il faut payer l'impôt autrement.",
    "Mieux vaut ne pas attendre la dernière semaine."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "Un résultat nul signifie que rien n'est dû et rien n'est remboursé.",
    "Un résultat remboursable se dépose dès le 1er février, dans un délai de quatre ans."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1,1 %",
   "headline": "Il s'applique à la moitié de la base.",
   "sub": "La base est le plus élevé entre le prix payé et la valeur vérifiée par l'administration fiscale.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "Dès le 13e mois, c'est un forfait de 15 % plus intérêts.",
    "La majoration remplace la sanction."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "Il demandera les jours de disponibilité et votre pourcentage de propriété.",
    "Pour un logement non loué, la déclaration 2026 ouvre le 1er avril 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 jours",
   "headline": "C'est sur 180 jours glissants.",
   "sub": "Le jour d'arrivée et le jour du retour comptent tous les deux. Un long week-end utilise quatre jours, pas deux.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Gardez l'enveloppe ou l'e-mail avec sa date.",
    "Il faut en général être à jour des charges de copropriété."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "La durée d'absence et la saison du départ changent toutes deux la liste.",
    "Une visite pendant votre absence la change aussi."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 communes",
   "headline": "Votre langue passe en premier.",
   "sub": "Plombiers, électriciens, serruriers et maçons sont classés selon les avis.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "Ils les abîment à différents moments de l'année.",
    "Certains travaux doivent se faire en votre absence."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

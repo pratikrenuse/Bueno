@@ -7,9 +7,13 @@ written to published, and where each piece lives. Set up on 6 October 2026.
 ## The flow
 
 1. **Posts are written ahead.** They live in `api/_fb_content.js`, each one in English,
-   Norwegian, Swedish, Danish, German, French and Dutch. There are two kinds. Twenty point at
-   a free tool on 24/7 Spain and close with one line saying the site is sponsored by Bueno.
-   Ten are about Bueno's own tax filing service and link to getbueno.com.
+   Norwegian, Swedish, Danish, German, French and Dutch. Since 15 October 2026 every post is
+   pure value: no link, no Bueno, no 24/7 Spain, no tool, and the images carry no logo, because
+   groups were removing anything promotional. The only invitation is a first comment that
+   Poornima adds under her post (`COMMENT` in the same file), pointing at the WhatsApp
+   community. Until `WHATSAPP_URL` is set there, the email tells her to skip the comment.
+   When the deck opens, any post not yet emailed and not edited by Pratik is brought in line
+   with the file automatically, so no "load" button is needed.
 2. **Pratik approves in `/internal-poornima`.** He reads the English, edits if it needs it and
    presses "Approve and queue". Approving does not send anything. The card then shows the
    post's place in the queue. He can approve as many as he likes in one sitting.
@@ -18,8 +22,11 @@ written to published, and where each piece lives. Set up on 6 October 2026.
    the front of the queue to Poornima with Pratik copied.
 4. **The email carries everything she needs.** Under each language is the account that posts
    it (Account 1 to 7) and the three to five groups it goes into that day, as links.
-5. **She posts and records it** in the "Daily plan" sheet of
-   `Claude outputs/247Spain_Facebook_Groups_and_Daily_Plan.xlsx`.
+5. **She posts, adds the first comment if there is one, and records it** in her tracking
+   sheet: the link to each post and whether it stayed up.
+
+To switch on the first comment: create the WhatsApp community, put its invite link in
+`WHATSAPP_URL` in `api/_fb_content.js`, commit and push.
 
 ## The deck's name, and who gets what
 
@@ -66,8 +73,7 @@ nothing to send does not make any group miss its turn.
 Every post has seven images, one per language, with the text on the image in that language.
 They are the 24/7 Spain infographic format (the approved simple3 template), rendered by
 `studio/renderer/fb_cards2.py` from `studio/facebook/cards2/<lang>.json` (six templates, transparent logo, photos in `studio/photos`) and committed under
-`public/fb-cards/<post>/<lang>.jpg`. Tool posts carry "247spain.es" and "Sponsored by Bueno";
-Bueno posts carry the Bueno lockup. To change the text on an image, edit that language's card
+`public/fb-cards/<post>/<lang>.jpg`. Since 15 October 2026 no image carries a logo or a site name (`"logo": false` on every card). To change the text on an image, edit that language's card
 file, run `python3 studio/renderer/fb_cards2.py all public/fb-cards`, and bump `CARD_VERSION`
 in `api/_fb_images.js`.
 
@@ -79,9 +85,8 @@ email carries the day-by-day plan from 9 to 31 October.
 
 ## Danish
 
-24/7 Spain has no Danish pages. A Danish tool post links to the English tool and says so,
-and its sponsor line gives getbueno.com/dk. A Danish Bueno post links to Bueno's own Danish
-tax page.
+Danish posts are written in full like the others. Since posts carry no link, nothing in
+them depends on 24/7 Spain having Danish pages.
 
 ## The dashboard
 

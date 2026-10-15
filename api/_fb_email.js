@@ -18,7 +18,7 @@
 
 // Poornima took over publishing from Himanshu in October 2026. The address is stored lower
 // case, because Gmail local parts are case insensitive.
-import { TRANSLATION_LANGS, LANG_NAME, LANGS, linkFor } from './_fb_content.js';
+import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.js';
 import { ACCOUNT, GROUPS, groupsFor, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
 
@@ -119,17 +119,31 @@ const imageTag = (src, lang) => (src ? `
           <a href="${esc(src)}" style="color:#5B7FCC">Direct link</a>
         </p>` : '');
 
-const block = (n, lang, text, link, day, image) => `
+// Since 15 October 2026 a post carries no link and names no company, so groups that remove
+// promotion let it stay. The only invitation is the first comment, posted after the post is up.
+// Until the WhatsApp community exists (WHATSAPP_URL empty) the email says to skip it.
+const label = (t) => `<p style="margin:12px 0 6px;font-size:12px;font-weight:bold;color:#010221;font-family:${SANS}">${t}</p>`;
+const commentBlock = (lang) => {
+  const c = commentFor(lang);
+  if (!c) {
+    return `${label('Then: first comment')}
+        <p style="margin:0;font-size:12.5px;color:#7a8194;font-family:${SANS}">No comment for now. The WhatsApp community link is not ready yet. Pratik will tell you when it is.</p>`;
+  }
+  return `${label('Then add this as the first comment under your post')}
+        <div style="background:#FFFFFF;border:1px dashed #5B7FCC;border-radius:10px;padding:12px 14px;
+                    font-family:${SANS};font-size:13.5px;line-height:1.55;color:#111;white-space:pre-wrap">${esc(c)}</div>
+        <p style="margin:6px 0 0;font-size:11.5px;color:#7a8194;font-family:${SANS}">Skip the comment in any group whose rules say no links, even in comments.</p>`;
+};
+
+const block = (n, lang, text, day, image) => `
         <p style="margin:30px 0 8px;font-size:12px;color:#7a8194;font-family:${SANS};
                   text-transform:uppercase;letter-spacing:.06em">${esc(String(n))}. ${esc(LANG_NAME[lang])}, Account ${esc(String(ACCOUNT[lang]))}</p>
         ${imageTag(image, lang)}
+        ${label('Post this')}
         <div style="background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:16px;
                     font-family:${SANS};font-size:14px;
                     line-height:1.55;color:#111;white-space:pre-wrap">${esc(text)}</div>
-        <p style="margin:6px 0 0;font-size:11.5px;color:#7a8194;font-family:${SANS}">
-          The link in this version goes to
-          <a href="${esc(link)}" style="color:#5B7FCC">${esc(link)}</a>
-        </p>${groupList(lang, day)}`;
+        ${commentBlock(lang)}${groupList(lang, day)}`;
 
 /**
  * The whole envelope: the English post and its six translations, one image, and under each
@@ -159,8 +173,8 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
           This is the post for day ${esc(String(day))}. It is the same post written out in
           ${esc(String(available.length + 1))} languages, and each language has its own image with the
           text in that language. Under each one you will find its account and its groups for today.
-          Please paste the text exactly as it is and add that language's image. Do not add hashtags
-          or emojis and do not change the links, because each language links to its own page.
+          Please paste the text exactly as it is and add that language's image. Do not add hashtags,
+          emojis or links to the post itself.
         </p>
 
         ${instruction ? `
@@ -169,16 +183,17 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
           <b>From Pratik</b><br>${esc(instruction)}
         </div>` : ''}
 
-        ${block(1, 'en', english, post.tool_url, day, imageFor(post, 'en'))}
+        ${block(1, 'en', english, day, imageFor(post, 'en'))}
         ${available.map((lang, i) =>
-          block(i + 2, lang, String(translations[lang]).trim(), linkFor(post.tool_slug, lang), day, imageFor(post, lang))
+          block(i + 2, lang, String(translations[lang]).trim(), day, imageFor(post, lang))
         ).join('')}
 
         <p style="margin:24px 0 0;font-size:12px;color:#7a8194;font-family:${SANS}">
           Before you post, spend about ten minutes on each account using Facebook normally: reply
           to comments and messages, and like or comment on a few posts in the groups. Keep asking
           to join any group that has not accepted you yet. When you have posted, fill in the rows
-          for day ${esc(String(day))} in the Daily plan sheet and paste the link to each post. If a
+          for day ${esc(String(day))} in the Daily plan sheet, paste the link to each post, and note
+          whether it stayed up. If a
           group holds the post for approval, write "Waiting for admin" and move on. If a post is
           removed or an admin writes to you, do not post there again and tell Pratik. Any question
           at all, just reply to this email.
@@ -357,7 +372,7 @@ export function introBody({ trial = false } = {}) {
 
         ${H('Each posting day')}
         ${P('1. Open the day\'s email.<br>2. For each language, log in to the account named for it.<br>3. Open each group link, paste the text exactly as it is, and add that language\'s image.<br>4. Note what happened in the Excel sheet I am sharing with you, and paste the link to each post.')}
-        ${P('Please do not change the wording or the link, and do not add hashtags or emojis. Each language links to its own page, so the links have to stay as they are.')}
+        ${P('Please do not change the wording, and do not add hashtags, emojis or links to the post itself.')}
         ${P('If a group holds the post for an admin to approve, write "Waiting for admin" and move on. If a post is removed, or an admin writes to you, do not post in that group again and let me know. If someone asks a question under a post, send it to me and I will give you the reply.')}
 
         ${H('Reddit and forums')}

@@ -13,7 +13,7 @@
    "You declare the rent for the weeks it was let.",
    "For the empty weeks, you declare an income worked out from the cadastral value."
   ],
-  "logo": true
+  "logo": false
  },
  "imputed-income-empty-home": {
   "template": "fullbleed",
@@ -35,7 +35,7 @@
   "big": "31 December",
   "headline": "You file even if nobody rented it.",
   "sub": "Direct debit payments close earlier, on 23 December. Each owner files for their own share.",
-  "logo": true
+  "logo": false
  },
  "late-filing-two-regimes": {
   "template": "split",
@@ -68,7 +68,7 @@
    "Form 210 is national, and nobody sends you a bill.",
    "It's worked out from the cadastral value on your IBI."
   ],
-  "logo": true
+  "logo": false
  },
  "quarterly-rental-filing-ends": {
   "template": "pills",
@@ -98,7 +98,7 @@
    "If you own half each, each return uses half the cadastral value.",
    "Three siblings who inherited a flat file three returns."
   ],
-  "logo": true
+  "logo": false
  },
  "eu-eea-deductions": {
   "template": "fullbleed",
@@ -120,7 +120,7 @@
   "big": "1.1%",
   "headline": "Four details make up your return.",
   "sub": "You need your cadastral value, your share and where you're tax resident.",
-  "logo": true
+  "logo": false
  },
  "three-percent-retention": {
   "template": "split",
@@ -153,7 +153,7 @@
    "After that, you have to pay the tax another way.",
    "It helps not to leave it for the last week."
   ],
-  "logo": true
+  "logo": false
  },
  "plusvalia-two-methods": {
   "template": "pills",
@@ -183,7 +183,7 @@
    "A nil result means nothing is owed and nothing comes back.",
    "A refund result can be filed from 1 February, with a four year limit."
   ],
-  "logo": true
+  "logo": false
  },
  "iva-holiday-let": {
   "template": "fullbleed",
@@ -205,7 +205,7 @@
   "big": "1.1%",
   "headline": "It applies to half of the base.",
   "sub": "The base is the greater of the price you paid or the value verified by the tax administration.",
-  "logo": true
+  "logo": false
  },
  "what-a-year-actually-costs": {
   "template": "split",
@@ -238,7 +238,7 @@
    "From month 13, it is a flat 15% plus interest.",
    "The surcharge takes the place of a penalty."
   ],
-  "logo": true
+  "logo": false
  },
  "pre-2019-mortgage-costs": {
   "template": "pills",
@@ -268,7 +268,7 @@
    "It will ask for the days available and your ownership percentage.",
    "For a home you don't let, the 2026 return opens on 1 April 2027."
   ],
-  "logo": true
+  "logo": false
  },
  "legal-cover-you-already-pay-for": {
   "template": "fullbleed",
@@ -290,7 +290,7 @@
   "big": "90 days",
   "headline": "That is in any rolling 180 days.",
   "sub": "The day you land and the day you fly home both count. A long weekend uses four days, not two.",
-  "logo": true
+  "logo": false
  },
  "consorcio-storm": {
   "template": "split",
@@ -323,7 +323,7 @@
    "Keep the envelope or email with its date on it.",
    "Usually you must be up to date with community payments."
   ],
-  "logo": true
+  "logo": false
  },
  "builder-quote-red-flags": {
   "template": "pills",
@@ -353,7 +353,7 @@
    "How long you're away and the season you leave in both change the list.",
    "So does whether anyone will look in while you're gone."
   ],
-  "logo": true
+  "logo": false
  },
  "utilities-in-order": {
   "template": "fullbleed",
@@ -375,7 +375,7 @@
   "big": "660 towns",
   "headline": "Reviews in your language lead.",
   "sub": "Plumbers, electricians, locksmiths and builders are ranked from reviews.",
-  "logo": true
+  "logo": false
  },
  "who-does-what": {
   "template": "split",
@@ -408,7 +408,7 @@
    "They break them at different times of year.",
    "Some jobs must happen while you are away."
   ],
-  "logo": true
+  "logo": false
  },
  "pests-by-property": {
   "template": "pills",

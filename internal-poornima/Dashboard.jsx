@@ -5,7 +5,7 @@ import { useState } from 'react'
 // `dashboard` block that /api/fb?action=posts returns, so it is the same data the daily
 // email is built from. Not a route of its own: the folder's index.jsx renders it.
 
-const LINK = { bueno: 'getbueno.com', spain247: '24/7 Spain' }
+const TOPIC = { bueno: 'Tax return', spain247: 'Owning a home in Spain' }
 
 const day = (iso) => {
   if (!iso) return ''
@@ -75,10 +75,6 @@ export default function Dashboard({ dash, onReview }) {
         <p><b>{t.group_posts_sent}</b> group posts sent so far, across 7 accounts and 7 languages.</p>
         <p><b>{t.group_posts_queued}</b> more group posts are lined up in the queue.</p>
         <p>The queue lasts until <b>{dash.runs_until ? day(dash.runs_until) : 'nothing queued'}</b>.</p>
-        <p>
-          Sent so far: <b>{dash.split.sent.bueno || 0}</b> to getbueno.com and <b>{dash.split.sent.spain247 || 0}</b> to 24/7 Spain.
-          Waiting: <b>{dash.split.queued.bueno || 0}</b> and <b>{dash.split.queued.spain247 || 0}</b>.
-        </p>
         <p>Daily posting started on <b>{day(dash.daily_start)}</b>. Today is day <b>{dash.days_since_start}</b>.</p>
       </section>
 
@@ -90,7 +86,7 @@ export default function Dashboard({ dash, onReview }) {
             <div className="fbp-d-when"><b>{day(u.date)}</b><span>Day {u.day}, number {u.pos}</span></div>
             <div className="fbp-d-what">
               <p>{u.hook}</p>
-              <span className="fbp-d-meta">Links to {LINK[u.link]}{u.edited ? ', edited by you' : ''}</span>
+              <span className="fbp-d-meta">{TOPIC[u.link]}{u.edited ? ', edited by you' : ''}</span>
               <Groups groups={u.groups} />
             </div>
           </div>
@@ -111,7 +107,7 @@ export default function Dashboard({ dash, onReview }) {
             <div className="fbp-d-what">
               <p>{s.hook}</p>
               <span className="fbp-d-meta">
-                Links to {LINK[s.link]}. To {s.sent_to}, you copied.
+                {TOPIC[s.link]}. To {s.sent_to}, you copied.
                 {s.live ? ` Marked live${s.posted_at ? ` ${when(s.posted_at)}` : ''}.` : ''}
               </span>
               <Groups groups={s.groups} />
@@ -138,7 +134,7 @@ export default function Dashboard({ dash, onReview }) {
           <div key={p.id} className="fbp-d-row">
             <div className="fbp-d-what">
               <p>{p.hook}</p>
-              <span className="fbp-d-meta">Links to {LINK[p.link]}.{p.reason ? ` Why: ${p.reason}` : ''}</span>
+              <span className="fbp-d-meta">{TOPIC[p.link]}.{p.reason ? ` Why: ${p.reason}` : ''}</span>
             </div>
           </div>
         ))}
