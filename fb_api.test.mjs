@@ -201,8 +201,8 @@ ok('a LinkedIn action is not routable here', resolveAction(req('/api/fb?action=r
 // Posts
 {
   const rows = [
-    { id: '1', idea_key: 'k', language: 'en', status: 'pending' },
-    { id: '2', idea_key: 'k2', language: 'en', status: 'posted' },
+    { id: '1', idea_key: QUEUE_ORDER[10], language: 'en', status: 'pending' },
+    { id: '2', idea_key: QUEUE_ORDER[11], language: 'en', status: 'posted' },
     { id: '3', idea_key: QUEUE_ORDER[4], language: 'en', status: 'approved', sent_at: null },
     { id: '4', idea_key: QUEUE_ORDER[1], language: 'en', status: 'approved', sent_at: null },
     { id: '5', idea_key: QUEUE_ORDER[0], language: 'en', status: 'approved', sent_at: '2026-10-07T03:30:00Z', send_day: 1 },
@@ -223,7 +223,7 @@ ok('a LinkedIn action is not routable here', resolveAction(req('/api/fb?action=r
   ok('a status view shows only that status', res2.body.total === 3 && res2.body.counts.all === 5);
 }
 {
-  fakeSupabase([{ id: '1', idea_key: 'k', status: 'pending' }]);
+  fakeSupabase([{ id: '1', idea_key: QUEUE_ORDER[0], status: 'pending' }]);
   const res = makeRes();
   await fbRouter(req('/api/fb?action=posts&status=nonsense'), res);
   ok('a nonsense status is treated as everything', res.body.total === 1);
@@ -878,6 +878,44 @@ for (const d of [1, 2, 3, 9, 20]) {
   ok('the refreshed text carries no link', !/https?:\/\//.test(st[0].patch.post_text) && Object.values(st[0].patch.translations).every(t => !/https?:\/\//.test(t)));
   ok('the status and note are left alone', !('status' in st[0].patch) && !('note' in st[0].patch));
   ok('once refreshed, nothing more to do', staleRows([{ ...rows[0], ...st[0].patch }]).length === 0);
+}
+
+
+// SYNC (15 Oct 2026). New posts reach the deck on load and through the Sync button; a post
+// taken out of the writing is hidden and never queued unless it already went out.
+{
+  const rows = [
+    { id: 'a', idea_key: QUEUE_ORDER[0], language: 'en', status: 'pending' },
+    { id: 'old1', idea_key: 'retired-post', language: 'en', status: 'approved', sent_at: null },
+    { id: 'old2', idea_key: 'retired-sent', language: 'en', status: 'approved', sent_at: '2026-10-12T02:00:00Z', send_day: 1 },
+  ];
+  const calls = fakeSupabase(rows);
+  const res = makeRes();
+  await fbRouter(req('/api/fb?action=posts&status=all'), res);
+  const ins = calls.find(c => c.method === 'POST' && /on_conflict=idea_key,language/.test(c.url));
+  ok('loading the deck adds every post that has no row yet', !!ins && JSON.parse(ins.body).length === 29,
+     ins ? String(JSON.parse(ins.body).length) : 'no insert');
+  ok('the load only adds, it never rewrites a post that has a row', ins && !JSON.parse(ins.body).some(r => r.idea_key === QUEUE_ORDER[0]));
+  ok('a retired post that never went out is hidden', !res.body.posts.some(p => p.id === 'old1'));
+  ok('a retired post that never went out is not queued', res.body.counts.queued === 0);
+  ok('a retired post that went out stays as a record', res.body.posts.some(p => p.id === 'old2'));
+}
+{
+  fakeSupabase([{ id: 'a', idea_key: QUEUE_ORDER[0], language: 'en', status: 'approved', post_text: 'old' },
+                { id: 'old1', idea_key: 'retired-post', language: 'en', status: 'pending' }]);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=seed', {}), res);
+  ok('sync says how many posts were new', res.body.added === 29, String(res.body.added));
+  ok('sync says how many were brought up to date', res.body.updated === 1, String(res.body.updated));
+  ok('sync says how many were retired', res.body.retired === 1, String(res.body.retired));
+}
+{
+  fakeSupabase([]);
+  const res = makeRes();
+  await fbRouter(post('/api/fb?action=seed', {}), res);
+  ok('the dispatch queue skips retired posts', queueOf([
+    { id: 'x', idea_key: 'retired-post', status: 'approved' },
+    { id: 'y', idea_key: QUEUE_ORDER[0], status: 'approved' }]).map(r => r.id).join() === 'y');
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

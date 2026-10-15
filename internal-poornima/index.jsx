@@ -255,9 +255,15 @@ export default function InternalPratik() {
         headers: { 'Content-Type': 'application/json', 'x-passcode': pass },
         body: '{}',
       })
-      const j = await r.json()
+      const raw = await r.text()
+      let j
+      try { j = JSON.parse(raw) } catch { throw new Error(`Server error ${r.status}: ${raw.slice(0, 200)}`) }
       if (j.error) throw new Error(j.error)
-      setFlash(`${j.written} posts written, ${j.ideas} ideas in ${j.languages} languages. ${j.kept_decisions} decisions kept.`)
+      const parts = []
+      parts.push(j.added ? `${j.added} new ${j.added === 1 ? 'post' : 'posts'} added` : 'No new posts')
+      if (j.updated) parts.push(`${j.updated} brought up to date`)
+      if (j.retired) parts.push(`${j.retired} old ${j.retired === 1 ? 'post' : 'posts'} no longer in the writing, now hidden`)
+      setFlash(`Synced. ${parts.join(', ')}. Your decisions, edits and sends were kept.`)
       await load(pass, status)
     } catch (e) { setErr(String(e.message || e)) }
     setBusy(false)
@@ -353,6 +359,9 @@ export default function InternalPratik() {
           onClick={() => setView('review')}>Review posts ({counts.pending || 0} to review)</button>
         <button className={`fbp-chip${view === 'dashboard' ? ' current' : ''}`} aria-pressed={view === 'dashboard'}
           onClick={() => setView('dashboard')}>Dashboard</button>
+        <button className="fbp-chip" style={{ marginLeft: 'auto' }} onClick={seed} disabled={busy}
+          title="Pulls in any new or rewritten posts. Never overwrites a decision, an edit or a send.">
+          {busy ? 'Syncing...' : 'Sync posts'}</button>
       </nav>
 
       {view === 'dashboard' && (

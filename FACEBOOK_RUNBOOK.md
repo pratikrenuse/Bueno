@@ -12,8 +12,13 @@ written to published, and where each piece lives. Set up on 6 October 2026.
    groups were removing anything promotional. The only invitation is a first comment that
    Poornima adds under her post (`COMMENT` in the same file), pointing at the WhatsApp
    community. Until `WHATSAPP_URL` is set there, the email tells her to skip the comment.
-   When the deck opens, any post not yet emailed and not edited by Pratik is brought in line
-   with the file automatically, so no "load" button is needed.
+   When the deck opens, any post written since the last sync is added, and any post not yet
+   emailed and not edited by Pratik is brought in line with the file. The **Sync posts** button
+   (top right of the deck, added 15 October 2026) does the same on demand and says how many
+   posts were new, how many were brought up to date and how many were retired. A post taken
+   out of the writing is hidden and never queued, unless it already went out, in which case it
+   stays on the dashboard as a record. Nothing is ever deleted and no decision, edit or send
+   is overwritten.
 2. **Pratik approves in `/internal-poornima`.** He reads the English, edits if it needs it and
    presses "Approve and queue". Approving does not send anything. The card then shows the
    post's place in the queue. He can approve as many as he likes in one sitting.
@@ -118,7 +123,7 @@ All under `/api/fb?action=...`, with the internal password in the `x-passcode` h
 - `dispatch&force=1` sends the next post even though one already went out today.
 - "Send again" on a sent card repeats a post that has already gone, with the same groups it
   had the first time. There is no send-now button; the crons do all sending.
-- `seed` (the "Load the latest writing" button) writes the content into the table. It never
+- `seed` (the "Sync posts" button) writes the content into the table. It never
   overwrites a decision, an edit or the record of a send.
 
 ## Where everything is

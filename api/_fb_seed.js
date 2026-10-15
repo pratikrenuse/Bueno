@@ -19,19 +19,12 @@ import { hashOf } from './_fb_translate.js';
 
 const firstLine = (t) => (t.split('\n').find(l => l.trim()) || '').trim();
 
-export default async function handler(req, res) {
-  if (!gate(req, res)) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
-
-  const { dry } = readBody(req);
-
-  const existing = await rest(res, '?select=id,idea_key,status,note,posted_at,image_url,edited_text,'
-    + 'reject_comment,sent_at,sent_to,send_error,translations,translations_of');
-  if (existing === null) return;
+// The rows a sync writes, one per idea, built from what is already in the table. Exported so
+// the deck's own load can add a post that has no row yet without anyone pressing anything.
+export function seedRows(existing, ideas = IDEAS) {
   const byKey = new Map(existing.map(r => [r.idea_key, r]));
-
   const rows = [];
-  for (const idea of IDEAS) {
+  for (const idea of ideas) {
     const options = imageOptionsFor(idea.key);
     const english = renderPost(idea, 'en');
     const prev = byKey.get(idea.key);
@@ -85,7 +78,33 @@ export default async function handler(req, res) {
     });
   }
 
-  if (dry) return res.json({ ok: true, dry: true, would_write: rows.length, existing: existing.length });
+  return rows;
+}
+
+export const SEED_SELECT = '?select=id,idea_key,status,note,posted_at,image_url,edited_text,'
+  + 'reject_comment,sent_at,sent_to,send_error,translations,translations_of,post_text';
+
+export default async function handler(req, res) {
+  if (!gate(req, res)) return;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
+
+  const { dry } = readBody(req);
+
+  const existing = await rest(res, SEED_SELECT);
+  if (existing === null) return;
+  const have = new Set(existing.map(r => r.idea_key));
+  const known = new Set(IDEAS.map(i => i.key));
+  const rows = seedRows(existing);
+  const added = IDEAS.filter(i => !have.has(i.key)).map(i => i.key);
+  const updated = rows.filter(r => {
+    const prev = existing.find(e => e.idea_key === r.idea_key);
+    return prev && !prev.sent_at && prev.post_text !== r.post_text;
+  }).length;
+  // Rows whose post was taken out of the writing. Nothing is deleted: one that went out stays
+  // as a record, and one that never went is simply no longer shown or queued.
+  const retired = existing.filter(r => !known.has(r.idea_key)).length;
+
+  if (dry) return res.json({ ok: true, dry: true, would_write: rows.length, existing: existing.length, would_add: added.length });
 
   const out = await rest(res, '?on_conflict=idea_key,language', {
     method: 'POST',
@@ -96,6 +115,10 @@ export default async function handler(req, res) {
 
   res.json({
     ok: true,
+    added: added.length,
+    added_keys: added,
+    updated,
+    retired,
     written: Array.isArray(out) ? out.length : rows.length,
     ideas: IDEAS.length,
     languages: TRANSLATION_LANGS.length + 1,

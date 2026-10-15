@@ -16,7 +16,9 @@ import { gate, rest } from './_fb_db.js';
 import { IDEAS, TRANSLATION_LANGS, renderPost } from './_fb_content.js';
 import { hashOf } from './_fb_translate.js';
 import { imageFor, imageOptionsFor } from './_fb_images.js';
-import { queueOf, nextDay, sentOn } from './_fb_queue.js';
+import { queueOf, nextDay, sentOn, isRetired } from './_fb_queue.js';
+import { seedRows, SEED_SELECT } from './_fb_seed.js';
+import { isCard } from './_fb_images.js';
 import { groupsToday, finalText } from './_fb_email.js';
 import { DAILY_START } from './_fb_groups.js';
 
@@ -127,7 +129,14 @@ export function staleRows(all) {
     const idea = byKey.get(r.idea_key);
     if (!idea || r.sent_at || (r.edited_text && r.edited_text.trim())) continue;
     const english = renderPost(idea, 'en');
-    if (r.post_text === english && r.translations_of === hashOf(english)) continue;
+    if (r.post_text === english && r.translations_of === hashOf(english)) {
+      // The writing matches, but the image may have been re-rendered since (CARD_VERSION).
+      const img = imageFor(idea.key);
+      if ((!r.image_url || isCard(r.image_url)) && r.image_url !== img) {
+        out.push({ id: r.id, patch: { image_url: img, image_options: imageOptionsFor(idea.key) } });
+      }
+      continue;
+    }
     out.push({ id: r.id, patch: {
       post_text: english,
       hook: (english.split('\n').find(l => l.trim()) || '').trim(),
@@ -148,6 +157,24 @@ export default async function handler(req, res) {
   let all = await rest(res, '?order=idea_key.asc&select=*');
   if (all === null) return;
 
+  // A post written since the last sync has no row yet. Add it here, so it shows without a
+  // button. The Sync button in the deck does the same thing on demand.
+  const have = new Set(all.map(r => r.idea_key));
+  const missing = IDEAS.filter(i => !have.has(i.key));
+  if (missing.length) {
+    const existing = await rest(res, SEED_SELECT);
+    if (existing === null) return;
+    const rows = seedRows(existing, missing);
+    const out = await rest(res, '?on_conflict=idea_key,language', {
+      method: 'POST',
+      headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
+      body: JSON.stringify(rows),
+    });
+    if (out === null) return;
+    all = await rest(res, '?order=idea_key.asc&select=*');
+    if (all === null) return;
+  }
+
   const stale = staleRows(all);
   if (stale.length) {
     for (const s of stale) {
@@ -161,6 +188,10 @@ export default async function handler(req, res) {
     all = await rest(res, '?order=idea_key.asc&select=*');
     if (all === null) return;
   }
+
+  // A post taken out of the writing is not shown, unless it already went out (then it is a
+  // record and stays on the dashboard).
+  all = all.filter(r => !isRetired(r) || r.sent_at);
 
   const queue = queueOf(all);
   const place = new Map(queue.map((r, i) => [r.id, i + 1]));

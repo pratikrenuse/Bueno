@@ -15,12 +15,17 @@
 // day 2. The groups each language posts in are worked out from that number, so a day with
 // nothing to send does not make any group miss its turn.
 import { rest } from './_fb_db.js';
-import { queueIndex } from './_fb_content.js';
+import { queueIndex, IDEAS } from './_fb_content.js';
 import { sendPost, finalText, RECIPIENTS } from './_fb_email.js';
 import { isCurrent, translate } from './_fb_translate.js';
 
+// A post taken out of the writing (its key is no longer in IDEAS) never goes out, even if it
+// was approved before it was replaced.
+const LIVE_KEYS = new Set(IDEAS.map(i => i.key));
+export const isRetired = (r) => !LIVE_KEYS.has(r.idea_key);
+
 export const queueOf = (rows) => rows
-  .filter(r => r.status === 'approved' && !r.sent_at)
+  .filter(r => r.status === 'approved' && !r.sent_at && !isRetired(r))
   .sort((a, b) => queueIndex(a.idea_key) - queueIndex(b.idea_key) || String(a.idea_key).localeCompare(String(b.idea_key)));
 
 export const nextDay = (rows) => rows.reduce((m, r) => Math.max(m, Number(r.send_day) || 0), 0) + 1;
