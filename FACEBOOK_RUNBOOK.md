@@ -35,7 +35,7 @@ are for. The old `/internal-pratik` address forwards there.
 
 Since 15 October 2026 every email for the publisher is addressed To Pratik, with Poornima and
 John (john@getbueno.com) in BCC, so both see Pratik's address and neither sees the other's.
-The email itself never names Poornima ("Hi,"). Replies come back to Pratik.
+The email itself never names Poornima ("Hi P,"). Replies come back to Pratik.
 
 ## Trying it first
 

@@ -176,7 +176,7 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi,</p>
+        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi P,</p>
         <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">
           This is the post for day ${esc(String(day))}. It is the same post written out in
           ${esc(String(available.length + 1))} languages, and each language has its own image with the
@@ -358,7 +358,7 @@ export function introBody({ trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        ${P('Hi,')}
+        ${P('Hi P,')}
         ${P('From now on you will be posting for 24/7 Spain and Bueno in Facebook groups. Before the first post reaches you, I want to explain how it works, step by step, so nothing in the daily emails is a surprise.')}
 
         ${H('How it works')}
