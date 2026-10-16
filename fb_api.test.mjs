@@ -297,12 +297,12 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email carries all six translations', OTHERS.every(l => html.includes(`Oversatt ${l}.`)));
   ok('and labels each language', ['English','Norwegian','Swedish','Danish','German','French','Dutch'].every(n => html.includes(n)));
   ok('no version carries a link to a page', !html.includes('247spain.es/day-counter') && !html.includes('247spain.es/no/day-counter'));
-  ok('until the WhatsApp link exists, the email says to skip the comment', /No comment for now/.test(html));
+  ok('until the WhatsApp link exists, the email says to skip the comment', /Skip this step for now/.test(html));
   ok('the email carries one image per language, each with that language on it',
      ['en', ...OTHERS].every(l => html.includes(cardFor('ninety-days', l))));
   ok('no image is shared between two languages', new Set(['en', ...OTHERS].map(l => cardFor('ninety-days', l))).size === 7);
   ok('the email does not carry the reference link', !html.includes(p.tool_url));
-  ok('the email says which day it is', /day 3/i.test(html) && /^Day 3\. Facebook post to publish:/.test(subjectFor(p, 3)));
+  ok('the email says which day it is', /day 3/i.test(html) && /^Day 3 task\. Publish this Facebook post:/.test(subjectFor(p, 3)));
   ok('the email names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
   ok('the subject is one post, not one language', !/\(German\)/.test(subjectFor(p, 3)));
   ok('To Pratik, with the publisher and John hidden in BCC', SEND_TO.join() === 'pratik.y.renuse@gmail.com' && SEND_BCC.join() === 'poornimanirwal@gmail.com,john@getbueno.com');
@@ -311,7 +311,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   // The groups. Every language names its account and that day's groups, as links.
   for (const lang of ['en', ...OTHERS]) {
     const groups = groupsFor(lang, 3);
-    ok(`${lang}: the email names Account ${ACCOUNT[lang]}`, html.includes(`Post it from Account ${ACCOUNT[lang]} in these ${groups.length} groups today`));
+    ok(`${lang}: the email names Account ${ACCOUNT[lang]}`, html.includes(`Account ${ACCOUNT[lang]}. Post in these ${groups.length} groups today, and no others`));
     ok(`${lang}: the email links every one of today's groups`, groups.every(g => html.includes(`href="${g.url}"`)));
   }
   ok('the accounts are called 1 to 7 and nothing else', [1,2,3,4,5,6,7].every(n => html.includes(`Account ${n}`)) && !/Account [089]/.test(html));
@@ -421,7 +421,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   const sent = JSON.parse(mails(calls)[0].body);
   ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc), JSON.stringify({to: sent.to, bcc: sent.bcc}));
   ok('and a reply goes back to Pratik', sent.reply_to === 'pratik.y.renuse@gmail.com');
-  ok('the subject carries the day', /^Day 5\./.test(sent.subject));
+  ok('the subject carries the day', /^Day 5 task\./.test(sent.subject));
 }
 {
   const calls = fakeSupabase([samplePost({ status: 'approved', sent_at: '2026-10-07T03:30:00Z', send_day: 4 })]);
@@ -432,7 +432,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   await fbRouter(post('/api/fb?action=decide', { id: '1', action: 'resend' }), res2);
   ok('resending is deliberate and does send', res2.body.sent === true && mails(calls).length === 1);
   ok('a resend repeats the day the post first had, so the groups are the same', res2.body.day === 4
-     && /^Day 4\./.test(JSON.parse(mails(calls)[0].body).subject));
+     && /^Day 4 task\./.test(JSON.parse(mails(calls)[0].body).subject));
 }
 {
   const calls = fakeSupabase([samplePost({ status: 'approved' })]);
@@ -686,7 +686,7 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   const sent = JSON.parse(postMails(calls)[0].body);
   ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc));
   ok('the post email does not name the publisher', !/Poornima/.test(sent.html));
-  ok('the email is day 1 and carries day 1 groups', /^Day 1\./.test(sent.subject)
+  ok('the email is day 1 and carries day 1 groups', /^Day 1 task\./.test(sent.subject)
      && groupsFor('en', 1).every(g => sent.html.includes(`href="${g.url}"`)));
   const first = table.find(r => r.idea_key === QUEUE_ORDER[0]);
   ok('the row records the send and its day', !!first.sent_at && first.send_day === 1 && first.sent_to === RECIPIENTS.join(', '));
@@ -784,11 +784,21 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   ok('on 12 October it sends', res3.body.sent === true && res3.body.day === 1);
   globalThis.Date = RealDate;
 }
-// Never more than three groups a language, in any email.
-for (const d of [1, 2, 3, 9, 20]) {
+// Group counts (16 Oct 2026): 1, 2, then 3 on days 3 to 5 as they went out, then one more
+// a day up to ten, never more than a language has groups, and the email prints the count.
+for (const d of [1, 2, 3, 5, 6, 7, 9, 12, 20]) {
   const html = bodyFor(samplePost(), d);
-  const counts = ['en', ...OTHERS].map(l => groupsFor(l, d).length);
-  ok(`day ${d}: no language gets more than three groups`, counts.every(n => n <= 3) && html.includes(`in these ${counts[0]} groups today`));
+  const want = d <= 2 ? d : d <= 5 ? 3 : Math.min(10, 3 + (d - 5));
+  for (const l of ['en', ...OTHERS]) {
+    const n = groupsFor(l, d).length;
+    ok(`day ${d}, ${l}: ${Math.min(want, GROUPS[l].length)} groups`, n === Math.min(want, GROUPS[l].length), String(n));
+  }
+  ok(`day ${d}: the email prints the count`, html.includes(`Post in these ${groupsFor('en', d).length} groups today`));
+}
+{
+  const html = bodyFor(samplePost(), 6);
+  ok('the email reads as a task brief addressed to the agent', /Hi Agent,/.test(html) && /Task for day 6/.test(html) && !/Hi P\b/.test(html)
+     && /When every language is posted/.test(html) && /Reply to this email with one line saying the task is done/.test(html));
 }
 
 // ---------------------------------------------------------------------------
@@ -828,7 +838,7 @@ for (const d of [1, 2, 3, 9, 20]) {
   ok('both go to Pratik alone, with nobody copied', m.every(x => x.to.join() === 'pratik.y.renuse@gmail.com' && !x.cc));
   ok('Poornima is on neither', !JSON.stringify(m).includes('poornimanirwal'));
   ok('the first is the instructions', m[0].subject === `Trial: ${INTRO_SUBJECT}`);
-  ok('the second is day 1 of the posts, with day 1 groups', /^Trial: Day 1\./.test(m[1].subject)
+  ok('the second is day 1 of the posts, with day 1 groups', /^Trial: Day 1 task\./.test(m[1].subject)
      && groupsToday(1).every(x => x.groups.every(g => m[1].html.includes(`href="${g.url}"`))));
   ok('the trial post is the first in the written order', res.body.idea_key === QUEUE_ORDER[0] && res.body.from_queue === false);
   ok('the trial post carries all seven languages', ['English', 'Danish', 'Dutch'].every(n => m[1].html.includes(n)));

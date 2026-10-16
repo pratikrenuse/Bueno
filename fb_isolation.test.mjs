@@ -250,11 +250,13 @@ for (const lang of LANGS) {
   ok(`${lang}: has groups`, list.length >= 8, String(list.length));
   ok(`${lang}: every group is a Facebook group link`, list.every(([n, u]) => n && /^https:\/\/www\.facebook\.com\/groups\/[^\s]+$/.test(u)));
   ok(`${lang}: no group is listed twice`, new Set(list.map(g => g[1].toLowerCase().replace(/\/$/, ''))).size === list.length);
-  // Never more than three a day, and a gentle start: one group on day 1, two on day 2.
+  // A gentle start: one group on day 1, two on day 2, then up by one a day to ten (16 Oct 2026).
   ok(`${lang}: day 1 is one group`, groupsFor(lang, 1).length === 1);
   ok(`${lang}: day 2 is two groups`, groupsFor(lang, 2).length === 2);
-  ok(`${lang}: no day is ever more than three`, Array.from({ length: 60 }, (_, i) => groupsFor(lang, i + 1).length).every(n => n >= 1 && n <= MAX_PER_DAY));
-  ok(`${lang}: the cap is three`, MAX_PER_DAY === 3 && perDay(lang, 10) === 3);
+  ok(`${lang}: no day is ever more than the cap`, Array.from({ length: 60 }, (_, i) => groupsFor(lang, i + 1).length).every(n => n >= 1 && n <= MAX_PER_DAY));
+  ok(`${lang}: the cap is ten (16 Oct 2026)`, MAX_PER_DAY === 10 && perDay(lang, 40) === Math.min(10, list.length));
+  ok(`${lang}: days 3 to 5 stay at three, as they went out`, [3, 4, 5].every(d => perDay(lang, d) === 3));
+  ok(`${lang}: from day 6 one more group a day`, perDay(lang, 6) === 4 && perDay(lang, 7) === 5);
   for (let d = 1; d <= 30; d += 1) {
     const g = groupsFor(lang, d);
     if (new Set(g.map(x => x.url)).size !== g.length) ok(`${lang}: day ${d} never repeats a group`, false);

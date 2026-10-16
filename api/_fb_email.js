@@ -20,7 +20,7 @@
 // Poornima took over publishing from Himanshu in October 2026. The address is stored lower
 // case, because Gmail local parts are case insensitive.
 import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.js';
-import { ACCOUNT, GROUPS, groupsFor, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
+import { ACCOUNT, GROUPS, groupsFor, perDay, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
 
 const PUBLISHER = 'poornimanirwal@gmail.com';
@@ -90,7 +90,7 @@ export const finalText = (post) => (post.edited_text && post.edited_text.trim())
 export function subjectFor(post, day) {
   const hook = (finalText(post).split('\n').find(l => l.trim()) || '').trim();
   const short = hook.length > 60 ? `${hook.slice(0, 60).trimEnd()}...` : hook;
-  return `${day ? `Day ${day}. ` : ''}Facebook post to publish: ${short}`;
+  return `${day ? `Day ${day} task. ` : 'Task. '}Publish this Facebook post: ${short}`;
 }
 
 // Every language's groups for one day, in the order the email prints them. The dispatcher
@@ -109,7 +109,7 @@ const groupList = (lang, day) => {
   return `
         <div style="background:#CBEFFF;border-radius:10px;padding:13px 15px;margin:8px 0 0;
                     font-family:${SANS};font-size:13px;line-height:1.6;color:#010221">
-          <b>Post it from Account ${esc(String(ACCOUNT[lang]))} in these ${esc(String(groups.length))} groups today:</b><br>
+          <b>Account ${esc(String(ACCOUNT[lang]))}. Post in these ${esc(String(groups.length))} groups today, and no others:</b><br>
           ${groups.map((g, i) => `${i + 1}. <a href="${esc(g.url)}" style="color:#010221">${esc(g.name)}</a>`).join('<br>')}
         </div>`;
 };
@@ -123,7 +123,7 @@ const imageFor = (post, lang) => (post.idea_key && (!post.image_url || isCard(po
 const imageTag = (src, lang) => (src ? `
         <img src="${esc(src)}" alt="" width="576" style="width:100%;max-width:576px;border-radius:10px;display:block;margin:0 0 8px">
         <p style="margin:0 0 8px;font-size:11.5px;color:#7a8194;font-family:${SANS}">
-          The ${esc(LANG_NAME[lang])} image. Tap and hold, or right click, to save it.
+          Attach this image to the ${esc(LANG_NAME[lang])} post. Tap and hold, or right click, to save it.
           <a href="${esc(src)}" style="color:#5B7FCC">Direct link</a>
         </p>` : '');
 
@@ -135,7 +135,7 @@ const commentBlock = (lang) => {
   const c = commentFor(lang);
   if (!c) {
     return `${label('Then: first comment')}
-        <p style="margin:0;font-size:12.5px;color:#7a8194;font-family:${SANS}">No comment for now. The WhatsApp community link is not ready yet. Pratik will tell you when it is.</p>`;
+        <p style="margin:0;font-size:12.5px;color:#7a8194;font-family:${SANS}">Skip this step for now. The WhatsApp community link is not ready yet, and a later task will say when it is.</p>`;
   }
   return `${label('Then add this as the first comment under your post')}
         <div style="background:#FFFFFF;border:1px dashed #5B7FCC;border-radius:10px;padding:12px 14px;
@@ -147,7 +147,7 @@ const block = (n, lang, text, day, image) => `
         <p style="margin:30px 0 8px;font-size:12px;color:#7a8194;font-family:${SANS};
                   text-transform:uppercase;letter-spacing:.06em">${esc(String(n))}. ${esc(LANG_NAME[lang])}, Account ${esc(String(ACCOUNT[lang]))}</p>
         ${imageTag(image, lang)}
-        ${label('Post this')}
+        ${label('Post this text exactly as written')}
         <div style="background:#F8F7F4;border:1px solid #E0DFDC;border-radius:10px;padding:16px;
                     font-family:${SANS};font-size:14px;
                     line-height:1.55;color:#111;white-space:pre-wrap">${esc(text)}</div>
@@ -176,14 +176,15 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        <p style="margin:0 0 4px;font-size:15px;color:#010221">Hi P,</p>
-        <p style="margin:0 0 16px;font-size:14px;color:#3a3f52">
-          This is the post for day ${esc(String(day))}. It is the same post written out in
-          ${esc(String(available.length + 1))} languages, and each language has its own image with the
-          text in that language. Under each one you will find its account and its groups for today.
-          Please paste the text exactly as it is and add that language's image. Do not add hashtags,
-          emojis or links to the post itself.
-        </p>
+        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi Agent,</p>
+        <p style="margin:0 0 10px;font-size:15px;font-weight:bold;color:#010221">Task for day ${esc(String(day))}: publish one post in ${esc(String(available.length + 1))} languages</p>
+        <ol style="margin:0 0 16px;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
+          <li>Before posting, spend about ten minutes on each account using Facebook normally. Reply to comments and messages, and like or comment on a few posts in the groups.</li>
+          <li>For each language below, log in to the account shown for that language and use no other account.</li>
+          <li>Post the text exactly as written, with that language's image attached. Do not add, remove or change any words, and do not add hashtags, emojis or links.</li>
+          <li>Post it in every group listed under that language, and in no other group.</li>
+          <li>Keep asking to join any group that has not accepted the account yet.</li>
+        </ol>
 
         ${instruction ? `
         <div style="background:#FBF5E7;border-radius:10px;padding:13px 15px;margin:0 0 16px;
@@ -196,16 +197,13 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
           block(i + 2, lang, String(translations[lang]).trim(), day, imageFor(post, lang))
         ).join('')}
 
-        <p style="margin:24px 0 0;font-size:12px;color:#7a8194;font-family:${SANS}">
-          Before you post, spend about ten minutes on each account using Facebook normally: reply
-          to comments and messages, and like or comment on a few posts in the groups. Keep asking
-          to join any group that has not accepted you yet. When you have posted, fill in the rows
-          for day ${esc(String(day))} in the Daily plan sheet, paste the link to each post, and note
-          whether it stayed up. If a
-          group holds the post for approval, write "Waiting for admin" and move on. If a post is
-          removed or an admin writes to you, do not post there again and tell Pratik. Any question
-          at all, just reply to this email.
-        </p>
+        <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When every language is posted</p>
+        <ol style="margin:0;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
+          <li>Fill in the rows for day ${esc(String(day))} in the Daily plan sheet, with the link to each post.</li>
+          <li>Set each row's status to Live, Waiting for admin or Removed. If a group holds the post for approval, write Waiting for admin and move on to the next group.</li>
+          <li>If a post is removed or an admin writes to the account, do not post in that group again, and report it in your reply.</li>
+          <li>Reply to this email with one line saying the task is done, and list anything that failed. Send any question as a reply to this email too.</li>
+        </ol>
       </div>
     </div>
   </div>`;
@@ -294,7 +292,7 @@ export const INTRO_SUBJECT = 'How the daily Facebook group posts will work';
 
 // The day-by-day plan in the instructions, from 9 to 31 October 2026. The first three days
 // are for joining groups and getting the accounts going; posting starts on DAILY_START with
-// one group per language, then two, then three. Worked out from DAILY_START, so moving that
+// one group per language, then two, then three, then one more a day up to ten. Worked out from DAILY_START, so moving that
 // date moves the plan with it.
 const PLAN_FROM = '2026-10-09';
 const PLAN_TO = '2026-10-31';
@@ -314,7 +312,9 @@ export function planDays() {
     else if (n === -1) task = 'No posting today. On each account, ask to join the rest of its groups, and answer any questions the groups ask. Spend ten minutes on each account using Facebook normally.';
     else if (n === 0) task = 'No posting today. Check which groups have accepted each account and ask again where they have not. Spend ten minutes on each account reading, liking and commenting in the groups.';
     else {
-      const groups = n <= RAMP_TEXT.length ? RAMP_TEXT[n - 1] : `${MAX_PER_DAY} groups`;
+      const counts = LANGS.map(l => perDay(l, n));
+      const top = Math.max(...counts);
+      const groups = `${counts.every(c => c === top) ? '' : 'up to '}${top} group${top === 1 ? '' : 's'}`;
       task = `The day ${n} email arrives. Post each language from its own account in ${groups}, as the email lists. Spend ten minutes on each account first, and keep asking to join any group that has not accepted you.`;
       if (d.getUTCDay() === 0) task += ' As it is Sunday, please also send me a short note on the week: what went up, what is waiting for an admin, and anything that was removed.';
     }
@@ -322,7 +322,6 @@ export function planDays() {
   }
   return out;
 }
-const RAMP_TEXT = ['1 group', '2 groups'];
 
 const planTable = () => `<table style="border-collapse:collapse;font-family:${SANS};font-size:13px;line-height:1.5;color:#22263a;margin:0 0 6px;width:100%">
           ${planDays().map(p => `<tr>
@@ -363,7 +362,7 @@ export function introBody({ trial = false } = {}) {
 
         ${H('How it works')}
         ${P('Every morning, from Monday 12 October, you will get one email from me. It holds one post, written out in seven languages: English, Norwegian, Swedish, Danish, German, French and Dutch. Each language has its own image with the text in that language.')}
-        ${P(`Under each language you will see which account to post it from and the groups it goes into that day, as links. The first day is one group per language, the second day is two, and from then on it is never more than ${esc(String(MAX_PER_DAY))}.`)}
+        ${P(`Under each language you will see which account to post it from and the groups it goes into that day, as links. The first day is one group per language, the second day is two, then three. From the sixth day it grows by one group a day, up to ${esc(String(MAX_PER_DAY))} per language.`)}
 
         ${H('Your seven accounts')}
         ${P('Each of your seven Facebook accounts looks after one language, and only posts in that language. They are called Account 1 to Account 7.')}

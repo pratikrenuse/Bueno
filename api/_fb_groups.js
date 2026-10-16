@@ -185,21 +185,25 @@ export const GROUPS = {
 };
 
 // HOW MANY GROUPS A DAY
-// Never more than three per language, which is the most Pratik wants a single account to
-// post in on one day. And the start is gentle, so that new accounts are not flagged: the
-// first day's post goes into one group per language, the second into two, and from the third
-// day on into three.
-export const MAX_PER_DAY = 3;
-export const RAMP = [1, 2];
+// The start was gentle so that new accounts were not flagged: one group per language on
+// day 1, two on day 2, and three on days 3 to 5 (12 to 16 October 2026, already sent and left
+// exactly as they went). On 16 October 2026 Pratik said three is too low: from day 6 the count
+// grows by one group a day (4, 5, 6 ...) until it reaches ten. A language with fewer groups
+// than that day's count posts in all of its groups and no more, so no group gets the post
+// twice on one day.
+export const MAX_PER_DAY = 10;
+export const RAMP = [1, 2, 3, 3, 3];
 
 // The first day a post goes out. 9 to 11 October 2026 are for joining the groups and getting
 // the accounts going, so the daily send does nothing before this date unless someone forces it.
 export const DAILY_START = '2026-10-12';
 
-export const perDay = (lang, day = MAX_PER_DAY + 1) => {
+export const perDay = (lang, day = 99) => {
   const n = (GROUPS[lang] || []).length;
   const d = Math.max(1, Number(day) || 1);
-  const want = d <= RAMP.length ? RAMP[d - 1] : MAX_PER_DAY;
+  const want = d <= RAMP.length
+    ? RAMP[d - 1]
+    : Math.min(MAX_PER_DAY, RAMP[RAMP.length - 1] + (d - RAMP.length));
   return Math.min(want, n);
 };
 

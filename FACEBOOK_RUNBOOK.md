@@ -26,7 +26,8 @@ written to published, and where each piece lives. Set up on 6 October 2026.
    calls `/api/fb?action=dispatch`, which emails the post at
    the front of the queue: To Pratik, with Poornima and John in BCC.
 4. **The email carries everything she needs.** Under each language is the account that posts
-   it (Account 1 to 7) and the three to five groups it goes into that day, as links.
+   it (Account 1 to 7) and the groups it goes into that day, as links. Since 16 October 2026
+   the email is written as a task brief for an agent: numbered steps, no greeting.
 5. **She posts, adds the first comment if there is one, and records it** in her tracking
    sheet: the link to each post and whether it stayed up.
 
@@ -70,8 +71,9 @@ itself. A post that is not approved is skipped, so the queue never waits for one
 One account per language: 1 English, 2 Norwegian, 3 Swedish, 4 Danish, 5 German, 6 French,
 7 Dutch. The groups are in `api/_fb_groups.js`, in the same order as the "Active groups"
 sheet of the workbook, and both use the same rotation, so the email and the sheet agree.
-Each language goes into one group on day 1, two on day 2, and three every day after that.
-Three is the most a single account posts in on one day. To add or drop a group, change the module and the workbook together.
+Each language goes into one group on day 1, two on day 2 and three on days 3 to 5. From day 6
+(16 October 2026) it grows by one group a day up to ten; a language with fewer groups posts in
+all of them. `RAMP` and `MAX_PER_DAY` in `api/_fb_groups.js`.
 
 The day number counts sends, not dates. Day 1 is the first post ever sent. A day with
 nothing to send does not make any group miss its turn.
