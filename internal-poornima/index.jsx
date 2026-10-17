@@ -130,34 +130,41 @@ export default function InternalPratik() {
 
   const replace = (post) => setPosts(ps => ps.map(x => (x.id === post.id ? { ...x, ...post } : x)))
 
-  // A post that no longer belongs in the tab you are looking at leaves it at once. Approving
-  // from To review moves the post to Approved; it does not stay behind with more buttons.
-  const leaveView = (id, newStatus) => {
-    if (status !== 'all' && status !== newStatus) setPosts(ps => ps.filter(x => x.id !== id))
-    setSelected(sel => { if (!sel.has(id)) return sel; const n = new Set(sel); n.delete(id); return n })
+
+  // Approving moves the card at once (17 Oct 2026). Pratik clicked Approve and the card sat
+  // in To review for the few seconds the server took, so it looked as if nothing happened.
+  // Now the card leaves To review the moment he clicks and the counts change with it; the
+  // server call runs behind. If the server says no, the deck reloads from the server, so it
+  // never shows a post as approved that is not, and the reason is shown in red.
+  const moveToApproved = (list) => {
+    const ids = new Set(list.map(p => p.id))
+    const from = {}
+    for (const p of list) if (p.status !== 'approved') from[p.status] = (from[p.status] || 0) + 1
+    const moved = Object.values(from).reduce((a, b) => a + b, 0)
+    setCounts(c => {
+      const n = { ...c, approved: (c.approved || 0) + moved, queued: (c.queued || 0) + list.filter(p => !p.sent_at).length }
+      for (const [k, v] of Object.entries(from)) n[k] = Math.max(0, (n[k] || 0) - v)
+      return n
+    })
+    if (status !== 'all' && status !== 'approved') setPosts(ps => ps.filter(x => !ids.has(x.id)))
+    else setPosts(ps => ps.map(x => (ids.has(x.id) ? { ...x, status: 'approved' } : x)))
+    setSelected(sel => { const n = new Set(sel); ids.forEach(id => n.delete(id)); return n })
   }
 
-  // Approving queues the post. It reports what actually happened rather than assuming.
-  // approveOne does the work and returns the result; approve and approveSelected say so.
+  // The server side of one approval. Returns the server's answer; never touches the list.
   async function approveOne(p) {
     const j = await patch(p.id, { action: 'approved' })
     if (j.queued || j.reason === 'already sent') {
-      if (p.status !== 'approved') {
-        setCounts(c => ({
-          ...c,
-          [p.status]: Math.max(0, (c[p.status] || 0) - 1),
-          approved: (c.approved || 0) + 1,
-          queued: j.queued ? (j.queued_total != null ? j.queued_total : (c.queued || 0) + 1) : c.queued,
-        }))
-      }
       if (j.post) replace({ ...j.post, queue_pos: j.queue_pos })
-      leaveView(p.id, 'approved')
+      if (j.queued_total != null) setCounts(c => ({ ...c, queued: j.queued_total }))
     }
     return j
   }
 
   async function approve(p) {
-    setBusy(true); setErr(''); setFlash('')
+    setErr('')
+    moveToApproved([p])
+    setFlash('Approved and moved to the Approved tab.')
     try {
       const j = await approveOne(p)
       if (j.queued) {
@@ -166,31 +173,35 @@ export default function InternalPratik() {
           + (j.retranslated ? ' The six translations were rebuilt from your version first.' : ''))
       }
       else if (j.reason === 'already sent') setFlash('Approved. It had already been emailed, so it was not queued again.')
-      else setErr(`It was not approved: ${j.error}`)
-    } catch (e) { setErr(String(e.message || e)) }
-    setBusy(false)
+      else { setFlash(''); setErr(`It was not approved: ${j.error}`); await load(pass, status) }
+    } catch (e) { setFlash(''); setErr(`It was not approved: ${String(e.message || e)}`); await load(pass, status) }
   }
 
-  // Approve every ticked post, one after another, in the order they appear on the page so
-  // the queue keeps that order. A failure stops nothing else; it is reported at the end.
+  // Approve every ticked post. They all leave To review at once; the server calls run three at
+  // a time behind. The queue order comes from the writing, not from the order of approval.
   async function approveSelected() {
     const list = shown.filter(p => selected.has(p.id))
     if (!list.length) return
-    setBusy(true); setErr(''); setFlash('')
+    setErr('')
+    moveToApproved(list)
+    setFlash(`${list.length} approved and moved to the Approved tab. Saving...`)
     let done = 0, last = null
     const failed = []
-    for (const p of list) {
-      try {
-        const j = await approveOne(p)
-        if (j.queued || j.reason === 'already sent') { done += 1; last = j }
-        else failed.push(j.error || 'not approved')
-      } catch (e) { failed.push(String(e.message || e)) }
+    const todo = [...list]
+    const worker = async () => {
+      while (todo.length) {
+        const p = todo.shift()
+        try {
+          const j = await approveOne(p)
+          if (j.queued || j.reason === 'already sent') { done += 1; last = j }
+          else failed.push(j.error || 'not approved')
+        } catch (e) { failed.push(String(e.message || e)) }
+      }
     }
-    setSelected(new Set())
-    if (done) setFlash(`${done} approved and moved to the Approved tab.`
-      + (last && last.queued_total ? ` ${last.queued_total} are now in the queue, and one post goes out each day.` : ''))
-    if (failed.length) setErr(`${failed.length} could not be approved: ${failed[0]}`)
-    setBusy(false)
+    await Promise.all([worker(), worker(), worker()])
+    setFlash(done ? `${done} approved and moved to the Approved tab.`
+      + (last && last.queued_total ? ` ${last.queued_total} are now in the queue, and one post goes out each day.` : '') : '')
+    if (failed.length) { setErr(`${failed.length} could not be approved: ${failed[0]}`); await load(pass, status) }
   }
 
   async function resend(p) {
