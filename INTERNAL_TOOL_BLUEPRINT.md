@@ -55,6 +55,20 @@ log looks green while the site keeps serving the previous version. Symptoms look
 
 ## 4. Supabase rules learned the hard way
 
+**Every new table needs an explicit GRANT in the same SQL that creates it** (Supabase change,
+from 30 October 2026). Without it the API returns `permission denied` even for the service key.
+Server-side tools (RLS on, no policies, service key only):
+
+```sql
+grant select, insert, update, delete on public.your_table to service_role;
+```
+
+Public form tables that take inserts from the browser (like `tax_calculator_leads`) also need
+`grant insert on public.your_table to anon;` next to their anon insert policy. Never grant anon
+`select` on a table holding leads or internal content. Backup tables made with
+`create table ... as select` need the grant too if anything reads them through the API.
+
+
 **Every row in a bulk insert must have an identical key set**, or PostgREST returns
 `PGRST102: All object keys must match`. Never build rows by spreading source objects and
 stripping fields, because the next new field breaks it again. Build each row explicitly:

@@ -60,3 +60,9 @@ create table if not exists linkedin_emails (
   resend_id text,
   sent_at timestamptz not null default now()
 );
+
+-- Supabase change, 30 Oct 2026: new tables in "public" no longer get Data API access
+-- automatically. Grant it explicitly. All access goes through the service key.
+grant select, insert, update, delete on public.linkedin_posts  to service_role;
+grant select, insert, update, delete on public.team_members    to service_role;
+grant select, insert, update, delete on public.linkedin_emails to service_role;

@@ -28,3 +28,8 @@ create table if not exists public.newsletter_issues (
 );
 alter table public.newsletter_issues enable row level security;
 -- No policies on purpose: only the service key used by api/newsletter.js can read or write.
+
+-- Supabase change, 30 Oct 2026: new tables in "public" no longer get Data API access
+-- automatically. Grant it explicitly. Service key only, matching the RLS setup above.
+grant select, insert, update, delete on public.newsletter_issues to service_role;
+grant usage, select on sequence public.newsletter_issues_id_seq to service_role;

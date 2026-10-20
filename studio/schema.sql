@@ -16,3 +16,7 @@ create table if not exists studio_packages (
 );
 -- RLS on, no policies: only the service key (server-side) can touch it.
 alter table studio_packages enable row level security;
+
+-- Supabase change, 30 Oct 2026: new tables in "public" no longer get Data API access
+-- automatically. Grant it explicitly. Server-side only, so service_role is enough.
+grant select, insert, update, delete on public.studio_packages to service_role;
