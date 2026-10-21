@@ -3230,7 +3230,8 @@ body {
 
 .areas-page {
   background: var(--white);
-  padding: 40px 24px 72px;
+  /* The header is fixed, so the page starts below it rather than under it. */
+  padding: 120px 24px 72px;
 }
 .areas-wrap { max-width: 1080px; margin: 0 auto; }
 
@@ -3371,7 +3372,7 @@ body {
 .areas-door:hover { background: var(--accent); }
 
 @media (max-width: 560px) {
-  .areas-page { padding: 28px 16px 56px; }
+  .areas-page { padding: 96px 16px 56px; }
   .areas-town { flex-direction: column; align-items: flex-start; }
   .areas-town-links a { flex: 1 1 auto; justify-content: center; }
 }
@@ -3971,11 +3972,11 @@ button.fbp-d-tile:hover { border-color: #5B7FCC; }
 .static-page h3 { margin: 28px 0 8px; font-size: 1.125rem; color: var(--navy); }
 .static-page p { margin: 0 0 14px; font-size: 1.0625rem; line-height: 1.65; color: var(--navy); }
 .static-page > p:first-of-type { font-size: 1.1875rem; }
-.static-page ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.static-page li a {
+.static-page > ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.static-page > ul li a {
   display: block; padding: 14px 18px; border-radius: 10px; background: var(--light-blue);
   color: var(--navy); text-decoration: none; line-height: 1.4;
 }
-.static-page li a:hover { background: var(--navy); color: var(--white); }
-.static-page li span { display: block; margin-top: 4px; font-size: 0.875rem; color: var(--text-muted); }
+.static-page > ul li a:hover { background: var(--navy); color: var(--white); }
+.static-page > ul li span { display: block; margin-top: 4px; font-size: 0.875rem; color: var(--text-muted); }
 .static-page .s247-checked { font-size: 0.875rem; color: var(--text-muted); }

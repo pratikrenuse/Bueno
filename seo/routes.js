@@ -101,6 +101,14 @@ const TOPIC_UI = {
   fr: { tax: 'Impôts et délais de déclaration', selling: 'Vendre', buying: 'Acheter', letting: 'Louer', community: 'Votre copropriété', insurance: 'Assurance', 'legal-claims': 'Recours, délais et squatteurs', inheritance: 'Succession', residency: 'Résidence et séjour en Espagne' },
   nl: { tax: 'Belasting en aangiftetermijnen', selling: 'Verkopen', buying: 'Kopen', letting: 'Verhuren', community: 'Uw VvE', insurance: 'Verzekering', 'legal-claims': 'Claims, termijnen en krakers', inheritance: 'Erven', residency: 'Verblijf en tijd in Spanje' },
 };
+const ABOUT_SUFFIX = {
+  en: 'who runs it and how every figure is checked',
+  no: 'hvem driver det og hvordan tall kontrolleres',
+  sv: 'vem som driver den och hur siffrorna kontrolleras',
+  de: 'wer dahintersteht und wie jede Zahl geprüft wird',
+  fr: 'qui le publie et comment tout est vérifié',
+  nl: 'wie het maakt en hoe cijfers worden getoetst',
+};
 const ANSWER_EXTRA = {
   en: { checked: d => `Checked against the official source on ${d}.`, related: 'Related questions' },
   no: { checked: d => `Kontrollert mot den offisielle kilden ${d}.`, related: 'Relaterte spørsmål' },
@@ -470,7 +478,8 @@ export function buildRoutes({ tools } = {}) {
     const path = lp(locale, '/about');
     add({
       path, locale, kind: 'about', group: 'about',
-      title: ab.title,
+      // The h1 names the page; the title adds what it is for, so the two differ as check_seo asks.
+      title: `${ab.h1}: ${ABOUT_SUFFIX[locale]}`,
       description: ab.description,
       h1: ab.h1,
       intro: ab.p,
