@@ -4,6 +4,21 @@ import LangSwitcher from './LangSwitcher.jsx';
 import SiteFooter from './SiteFooter.jsx';
 import SiteNav from './SiteNav.jsx';
 
+// The few words the shared frame prints itself, in every site language. Tools pass their own
+// button labels; these are the fallbacks and the counters.
+const CHROME = {
+  en: { q: (n, m) => `Question ${n} of ${m}`, back: 'Back', next: 'Continue', restart: 'Start again', done: (a, b) => `${a} of ${b} done`, print: 'Print this list' },
+  no: { q: (n, m) => `Spørsmål ${n} av ${m}`, back: 'Tilbake', next: 'Fortsett', restart: 'Start på nytt', done: (a, b) => `${a} av ${b} ferdig`, print: 'Skriv ut listen' },
+  sv: { q: (n, m) => `Fråga ${n} av ${m}`, back: 'Tillbaka', next: 'Fortsätt', restart: 'Börja om', done: (a, b) => `${a} av ${b} klara`, print: 'Skriv ut listan' },
+  de: { q: (n, m) => `Frage ${n} von ${m}`, back: 'Zurück', next: 'Weiter', restart: 'Neu beginnen', done: (a, b) => `${a} von ${b} erledigt`, print: 'Liste drucken' },
+  fr: { q: (n, m) => `Question ${n} sur ${m}`, back: 'Retour', next: 'Continuer', restart: 'Recommencer', done: (a, b) => `${a} sur ${b} faits`, print: 'Imprimer la liste' },
+  nl: { q: (n, m) => `Vraag ${n} van ${m}`, back: 'Terug', next: 'Verder', restart: 'Opnieuw beginnen', done: (a, b) => `${a} van ${b} klaar`, print: 'Lijst afdrukken' },
+};
+function useChrome() {
+  const { locale } = useLocale();
+  return CHROME[locale] || CHROME.en;
+}
+
 // Shared frame for every tool built after the first five.
 //
 // The original calculators each carried their own header, progress bar, step chrome and
@@ -91,17 +106,18 @@ export function Intro({ eyebrow, headline, body, points, cta, onStart, minutes }
 // One question, one screen. `hint` is where the reassurance goes, and it is not optional
 // on any question a reader might not know the answer to.
 export function Step({ n, of, question, hint, children, onBack, onNext, nextLabel, nextDisabled }) {
+  const ch = useChrome();
   return (
     <div className="step-inner">
-      <div className="tk-step-meta">{of ? `Question ${n} of ${of}` : ''}</div>
+      <div className="tk-step-meta">{of ? ch.q(n, of) : ''}</div>
       <h2 className="step-question">{question}</h2>
       {hint && <p className="tk-hint">{hint}</p>}
       <div className="tk-step-body">{children}</div>
       <div className="tk-step-nav">
-        {onBack && <button className="btn-back" onClick={onBack}>Back</button>}
+        {onBack && <button className="btn-back" onClick={onBack}>{ch.back}</button>}
         {onNext && (
           <button className="btn-primary" onClick={onNext} disabled={nextDisabled}>
-            {nextLabel || 'Continue'}
+            {nextLabel || ch.next}
           </button>
         )}
       </div>
@@ -174,6 +190,7 @@ export function DateField({ label, value, onChange, hint, max, min }) {
 // `tone` drives the accent only, never the meaning, because colour alone must not carry
 // information.
 export function Result({ headline, sub, tone = 'neutral', children, onRestart, restartLabel }) {
+  const ch = useChrome();
   return (
     <div className="step-inner tk-result">
       <div className={`tk-verdict tk-verdict-${tone}`}>
@@ -183,7 +200,7 @@ export function Result({ headline, sub, tone = 'neutral', children, onRestart, r
       {children}
       {onRestart && (
         <div className="tk-step-nav tk-restart">
-          <button className="btn-back" onClick={onRestart}>{restartLabel || 'Start again'}</button>
+          <button className="btn-back" onClick={onRestart}>{restartLabel || ch.restart}</button>
         </div>
       )}
     </div>
@@ -219,12 +236,13 @@ export function Checklist({ groups, storageKey }) {
   const toggle = k => setDone(d => ({ ...d, [k]: !d[k] }));
   const total = groups.reduce((n, g) => n + g.items.length, 0);
   const ticked = Object.values(done).filter(Boolean).length;
+  const ch = useChrome();
 
   return (
     <div className="tk-checklist">
       <div className="tk-checklist-head">
-        <span className="tk-checklist-count">{ticked} of {total} done</span>
-        <button className="tk-print" onClick={() => window.print()}>Print this list</button>
+        <span className="tk-checklist-count">{ch.done(ticked, total)}</span>
+        <button className="tk-print" onClick={() => window.print()}>{ch.print}</button>
       </div>
       {groups.map((g, gi) => (
         <section className="tk-cl-group" key={gi}>
