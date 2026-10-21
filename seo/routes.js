@@ -76,6 +76,7 @@ const cap = s => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 // question per language. They exist because a calculator cannot be quoted: an answer engine
 // needs a sentence, an article and a date, and these carry all three.
 import { ANSWERS } from '../answers/answers.js';
+import { ABOUT } from '../answers/about.js';
 import { sourceLine, lastCheckedOf, citationsOf } from '../answers/sources.js';
 
 const ANSWERS_PATH = '/answers';
@@ -87,6 +88,26 @@ const ANSWERS_UI = {
   de: { hub: 'Fragen und Antworten', lead: 'Klare Antworten rund um Immobilienbesitz in Spanien, jede aus dem Artikel entnommen, aus dem sie stammt, und mit dem Tag der Prüfung datiert.', source: 'Woher das stammt', tool: 'Für die eigene Immobilie ausrechnen' },
   fr: { hub: 'Questions et réponses', lead: "Des réponses nettes sur la propriété en Espagne, chacune tirée de l'article dont elle provient et datée du jour de sa vérification.", source: "D'où cela vient", tool: 'Calculez-le pour votre propre bien' },
   nl: { hub: 'Vragen en antwoorden', lead: 'Rechte antwoorden over woningbezit in Spanje, elk ontleend aan het artikel waar het vandaan komt en gedateerd op de dag van controle.', source: 'Waar dit vandaan komt', tool: 'Reken het uit voor uw eigen woning' },
+};
+
+// Topic headings for the answers hub, and the two lines every answer page adds under the
+// answer. A long flat list of questions reads as a dump; grouped, it reads as a reference.
+const TOPICS = ['tax', 'selling', 'buying', 'letting', 'community', 'insurance', 'legal-claims', 'inheritance', 'residency'];
+const TOPIC_UI = {
+  en: { tax: 'Tax and filing deadlines', selling: 'Selling', buying: 'Buying', letting: 'Letting', community: 'Your community of owners', insurance: 'Insurance', 'legal-claims': 'Claims, time limits and squatters', inheritance: 'Inheritance', residency: 'Residency and time in Spain' },
+  no: { tax: 'Skatt og frister', selling: 'Salg', buying: 'Kjøp', letting: 'Utleie', community: 'Sameiet', insurance: 'Forsikring', 'legal-claims': 'Krav, frister og okkupanter', inheritance: 'Arv', residency: 'Bosted og tid i Spania' },
+  sv: { tax: 'Skatt och deklarationsfrister', selling: 'Försäljning', buying: 'Köp', letting: 'Uthyrning', community: 'Samfälligheten', insurance: 'Försäkring', 'legal-claims': 'Krav, frister och ockupanter', inheritance: 'Arv', residency: 'Bosättning och tid i Spanien' },
+  de: { tax: 'Steuern und Fristen', selling: 'Verkaufen', buying: 'Kaufen', letting: 'Vermieten', community: 'Ihre Eigentümergemeinschaft', insurance: 'Versicherung', 'legal-claims': 'Ansprüche, Fristen und Hausbesetzer', inheritance: 'Erben', residency: 'Wohnsitz und Aufenthalt in Spanien' },
+  fr: { tax: 'Impôts et délais de déclaration', selling: 'Vendre', buying: 'Acheter', letting: 'Louer', community: 'Votre copropriété', insurance: 'Assurance', 'legal-claims': 'Recours, délais et squatteurs', inheritance: 'Succession', residency: 'Résidence et séjour en Espagne' },
+  nl: { tax: 'Belasting en aangiftetermijnen', selling: 'Verkopen', buying: 'Kopen', letting: 'Verhuren', community: 'Uw VvE', insurance: 'Verzekering', 'legal-claims': 'Claims, termijnen en krakers', inheritance: 'Erven', residency: 'Verblijf en tijd in Spanje' },
+};
+const ANSWER_EXTRA = {
+  en: { checked: d => `Checked against the official source on ${d}.`, related: 'Related questions' },
+  no: { checked: d => `Kontrollert mot den offisielle kilden ${d}.`, related: 'Relaterte spørsmål' },
+  sv: { checked: d => `Kontrollerat mot den officiella källan ${d}.`, related: 'Relaterade frågor' },
+  de: { checked: d => `Am ${d} mit der amtlichen Quelle abgeglichen.`, related: 'Verwandte Fragen' },
+  fr: { checked: d => `Vérifié auprès de la source officielle le ${d}.`, related: 'Questions liées' },
+  nl: { checked: d => `Gecontroleerd aan de officiële bron op ${d}.`, related: 'Gerelateerde vragen' },
 };
 
 export function buildRoutes({ tools } = {}) {
@@ -368,21 +389,6 @@ export function buildRoutes({ tools } = {}) {
     }
   }
 
-  // --- hreflang groups ------------------------------------------------------------------------
-  // A locale only gets an alternate where the URL genuinely exists. English only town pages
-  // sit alone in their group, so they emit no hreflang at all and no other page claims them.
-  // The featured towns have all six, so they carry a full set.
-  const byGroup = new Map();
-  for (const r of routes) {
-    if (!byGroup.has(r.group)) byGroup.set(r.group, []);
-    byGroup.get(r.group).push(r);
-  }
-  for (const r of routes) {
-    const family = byGroup.get(r.group);
-    r.alternates = {};
-    for (const s of family) r.alternates[s.locale] = absolute(s.path);
-  }
-
   // --- the answers layer -------------------------------------------------------------------
   // A hub per locale, then one page per question per locale. These are static pages like the
   // town pages: prerendered, indexable, and quotable without JavaScript running at all.
@@ -399,7 +405,12 @@ export function buildRoutes({ tools } = {}) {
       breadcrumbs: [{ name: ui.home, path: lp(locale, '/') }, { name: a.hub, path }],
       changefreq: CHANGEFREQ.tool,
       priority: 0.8,
-      links: ANSWERS.map(x => ({ href: lp(locale, `${ANSWERS_PATH}/${x.slug}`), label: x.q[locale] })),
+      links: [],
+      sections: TOPICS.map(topic => ({
+        h2: TOPIC_UI[locale][topic],
+        links: ANSWERS.filter(x => x.topic === topic)
+          .map(x => ({ href: lp(locale, `${ANSWERS_PATH}/${x.slug}`), label: x.q[locale] })),
+      })).filter(sec => sec.links.length),
       alternates: {},
       faq: ANSWERS.map(x => ({ q: x.q[locale], a: x.a[locale] })),
     });
@@ -418,7 +429,11 @@ export function buildRoutes({ tools } = {}) {
         h1: x.q[locale],
         // The answer first, then where it comes from. An answer engine takes the first
         // paragraph, so the first paragraph has to be the whole answer.
-        intro: [x.a[locale], `${a.source}: ${x.rules.map(id => sourceLine(id)).filter(Boolean).join('; ')}.`],
+        intro: [
+          x.a[locale],
+          `${a.source}: ${x.rules.map(id => sourceLine(id)).filter(Boolean).join('; ')}.`,
+          ...(lastCheckedOf(x.rules) ? [ANSWER_EXTRA[locale].checked(lastCheckedOf(x.rules))] : []),
+        ],
         breadcrumbs: [
           { name: ui.home, path: lp(locale, '/') },
           { name: a.hub, path },
@@ -429,8 +444,12 @@ export function buildRoutes({ tools } = {}) {
         links: [
           { href: lp(locale, tool ? tool.path : '/'), label: `${a.tool}: ${toolLabel}` },
           { href: path, label: a.hub },
-          ...ANSWERS.filter(o => o.slug !== x.slug && o.tool === x.tool)
-            .slice(0, 4).map(o => ({ href: lp(locale, `${ANSWERS_PATH}/${o.slug}`), label: o.q[locale] })),
+          // Same tool first, then the same topic. Every answer links to several others, so
+          // a crawler that lands on one finds the rest, and so does a reader.
+          ...[...ANSWERS.filter(o => o.slug !== x.slug && o.tool === x.tool),
+              ...ANSWERS.filter(o => o.slug !== x.slug && o.tool !== x.tool && o.topic === x.topic)]
+            .slice(0, 8).map(o => ({ href: lp(locale, `${ANSWERS_PATH}/${o.slug}`), label: o.q[locale] })),
+          { href: lp(locale, '/about'), label: ABOUT[locale].h1 },
         ],
         alternates: {},
         faq: [{ q: x.q[locale], a: x.a[locale] }],
@@ -440,6 +459,45 @@ export function buildRoutes({ tools } = {}) {
         toolSlug: x.tool,
       });
     }
+  }
+
+  // --- about -------------------------------------------------------------------------------
+  // Who runs the site and how a figure gets onto it. An answer engine weighs whether it can
+  // tell who is speaking; this is the page that says.
+  for (const locale of LOCALES) {
+    const ui = UI[locale];
+    const ab = ABOUT[locale];
+    const path = lp(locale, '/about');
+    add({
+      path, locale, kind: 'about', group: 'about',
+      title: ab.title,
+      description: ab.description,
+      h1: ab.h1,
+      intro: ab.p,
+      breadcrumbs: [{ name: ui.home, path: lp(locale, '/') }, { name: ab.h1, path }],
+      changefreq: CHANGEFREQ.tool,
+      priority: 0.5,
+      links: [
+        { href: lp(locale, ANSWERS_PATH), label: ANSWERS_UI[locale].hub },
+        { href: lp(locale, '/'), label: ui.home },
+      ],
+      alternates: {},
+    });
+  }
+
+  // --- hreflang groups ------------------------------------------------------------------------
+  // A locale only gets an alternate where the URL genuinely exists. English only town pages
+  // sit alone in their group, so they emit no hreflang at all and no other page claims them.
+  // The featured towns have all six, so they carry a full set.
+  const byGroup = new Map();
+  for (const r of routes) {
+    if (!byGroup.has(r.group)) byGroup.set(r.group, []);
+    byGroup.get(r.group).push(r);
+  }
+  for (const r of routes) {
+    const family = byGroup.get(r.group);
+    r.alternates = {};
+    for (const s of family) r.alternates[s.locale] = absolute(s.path);
   }
 
   return routes;

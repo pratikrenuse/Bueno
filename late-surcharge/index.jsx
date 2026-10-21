@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ToolShell, { Intro, Step, Options, Result, Panel, Rows, NumberField, useCopy } from '../ToolShell.jsx';
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
-import { LLink } from '../i18n.jsx';
+import { LLink, useLocale } from '../i18n.jsx';
 import copyDict from './copy.js';
 import {
   deadlineRuleId, deadlineDate, directDebitGapDays, RENTAL_ANNUAL_FROM,
@@ -36,20 +36,40 @@ const LAST_QUARTERLY = rule('deadline.rental.last_quarterly');
 
 const STEPS = ['return', 'year', 'amount', 'letter'];
 
-const fmt = n => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
-const fmtPrecise = n => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(n || 0);
-const longDate = iso => {
-  if (!iso) return '';
-  const d = new Date(`${iso}T00:00:00`);
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-};
+// Number and date formatting follow the page language. The euro sign and the arithmetic
+// are the same everywhere; only the separators and month names change.
+const INTL = { en: 'en-GB', no: 'nb-NO', sv: 'sv-SE', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+
+// Copy carries two light markers: **bold** and [label](/path) for a link to another tool.
+// Anything else is plain text, so a translation cannot inject markup.
+function Rich({ text }) {
+  const parts = String(text).split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((p, i) => {
+    const b = /^\*\*([^*]+)\*\*$/.exec(p);
+    if (b) return <strong key={i}>{b[1]}</strong>;
+    const l = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(p);
+    if (l) return <LLink key={i} to={l[2]}>{l[1]}</LLink>;
+    return p;
+  });
+}
 
 // The rate we hold covers its own year and, on that rule's own note, the year before it.
 const RATE_KNOWN_FROM = `${INTEREST.value.year - 1}-01-01`;
 
 export default function LateSurcharge() {
   const c = useCopy(copyDict);
+  const { locale } = useLocale();
+  const intl = INTL[locale] || INTL.en;
+  // Copy lookup with {placeholder} substitution.
+  const f = (k, vars = {}) => String(c(k)).replace(/\{(\w+)\}/g, (m, n) => (n in vars ? vars[n] : m));
+  const fmt = n => new Intl.NumberFormat(intl, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n || 0);
+  const fmtPrecise = n => new Intl.NumberFormat(intl, { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(n || 0);
+  const longDate = iso => {
+    if (!iso) return '';
+    const d = new Date(`${iso}T00:00:00`);
+    if (Number.isNaN(d.getTime())) return iso;
+    return d.toLocaleDateString(intl, { day: 'numeric', month: 'long', year: 'numeric' });
+  };
   const [step, setStep] = useState('intro');
   const [a, setA] = useState({ return: '', year: '', amount: '', letter: '' });
 
@@ -102,31 +122,33 @@ export default function LateSurcharge() {
     : month === 0 ? 'notlate'
     : 'surcharge';
 
-  const returnName = kind === 'imputed' ? 'Imputed income, modelo 210' : 'Rental income, modelo 210';
+  const returnName = kind === 'imputed' ? c('return_name_imputed') : c('return_name_rental');
 
   const headline = {
     penalty: c('result_penalty'),
     unknown: c('result_unknown'),
-    notlate: `${c('result_notlate')}. This one is due ${longDate(deadlineISO)}`,
+    notlate: `${c('result_notlate')}. ${f('head_notlate_due', { date: longDate(deadlineISO) })}`,
     surcharge: tax > 0
-      ? `${fmt(surcharge + interestAmount)} on top of the tax, ${fmt(total)} in total`
-      : `A ${band.percent} percent surcharge${band.interestApplies ? ', plus interest' : ''}`,
+      ? f('head_amount', { extra: fmt(surcharge + interestAmount), total: fmt(total) })
+      : f(band.interestApplies ? 'head_pct_interest' : 'head_pct', { pct: band.percent }),
   }[branch];
 
-  const sub = {
-    penalty: 'Once the tax office has named this return, the surcharge for filing late of your own accord is no longer available. What follows is a sanction procedure, and it is a heavier regime. We are not going to put a percentage on it, and the reason is below.',
-    unknown: 'Rental income for that year sat in the old quarterly regime, and we do not hold a confirmed filing window for it. We would rather tell you that than date your deadline by guesswork and build a surcharge on top of it.',
-    notlate: 'Nothing is owed as a surcharge, because the window has not closed. There is one date below that is earlier than the one you were expecting, and it is worth reading.',
-    surcharge: 'This is a recargo por declaracion extemporanea sin requerimiento previo: the surcharge for coming forward on your own. It is not a fine, and no penalty may be added on top of it.',
-  }[branch];
+  const sub = c(`sub_${branch}`);
 
   const tone = branch === 'penalty' ? 'warn' : branch === 'notlate' ? 'good' : branch === 'unknown' ? 'neutral' : 'warn';
 
   const opt = (k, n) => ({ value: k, label: c(`${n}_${k}`), desc: c(`${n}_${k}_d`) === `${n}_${k}_d` ? null : c(`${n}_${k}_d`) });
 
+  // Shared placeholder sets for the ladder paragraphs.
+  const ladder = {
+    base: RECARGO.value.base, per_month: RECARGO.value.per_month, max: RECARGO.value.max_within_12m,
+    from_month: RECARGO.value.interest_from_month, flat: RECARGO.value.after_12m, pct: REDUCTION.value,
+  };
+  const src = c('source');
+
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Guidance for property owners in Spain. Not tax advice.">
+      note={c('note')}>
 
       {step === 'intro' && (
         <Intro eyebrow={c('eyebrow')} headline={c('headline')} body={c('body')}
@@ -144,14 +166,14 @@ export default function LateSurcharge() {
       {step === 'year' && (
         <Step n={2} of={STEPS.length} question={c('q_year')} hint={c('q_year_hint')} onBack={back}>
           <Options columns={2}
-            items={years.map(y => ({ value: y, label: `${y}`, desc: `Filed during ${y + 1}` }))}
+            items={years.map(y => ({ value: y, label: `${y}`, desc: f('year_filed', { year: y + 1 }) }))}
             value={a.year} onChange={v => advance('year', v)} />
         </Step>
       )}
 
       {step === 'amount' && (
         <Step n={3} of={STEPS.length} question={c('q_amount')} hint={c('q_amount_hint')} onBack={back}
-          onNext={() => setStep('letter')} nextLabel="Continue">
+          onNext={() => setStep('letter')} nextLabel={c('next')}>
           <NumberField label={c('amount_label')} prefix="EUR" min={0}
             placeholder="0"
             hint={c('amount_skip')}
@@ -174,81 +196,55 @@ export default function LateSurcharge() {
           ------------------------------------------------------------------ */}
           {branch === 'surcharge' && (
             <>
-              <Panel title="What you owe" kind="key">
+              <Panel title={c('owe_title')} kind="key">
                 <Rows items={[
-                  { label: 'Return', value: returnName },
-                  { label: 'Tax year', value: `${a.year}` },
-                  { label: 'The deadline the clock ran from', value: longDate(deadlineISO) },
-                  { label: 'Month of delay you are in', value: `Month ${month}` },
-                  { label: 'Surcharge', value: `${band.percent} percent${band.flat ? ', flat' : ''}`, strong: true },
-                  tax > 0 && { label: 'Tax owed on the return', value: fmt(tax) },
-                  tax > 0 && { label: 'Surcharge', value: fmtPrecise(surcharge) },
-                  tax > 0 && interest && interest.pricedDays > 0 && { label: 'Late-payment interest', value: fmtPrecise(interestAmount) },
-                  tax > 0 && { label: 'Total payable', value: fmtPrecise(total), strong: true },
+                  { label: c('row_return'), value: returnName },
+                  { label: c('row_year'), value: `${a.year}` },
+                  { label: c('row_deadline'), value: longDate(deadlineISO) },
+                  { label: c('row_month'), value: f('row_month_value', { n: month }) },
+                  { label: c('row_surcharge'), value: f(band.flat ? 'row_pct_flat' : 'row_pct', { pct: band.percent }), strong: true },
+                  tax > 0 && { label: c('row_tax'), value: fmt(tax) },
+                  tax > 0 && { label: c('row_surcharge'), value: fmtPrecise(surcharge) },
+                  tax > 0 && interest && interest.pricedDays > 0 && { label: c('row_interest'), value: fmtPrecise(interestAmount) },
+                  tax > 0 && { label: c('row_total'), value: fmtPrecise(total), strong: true },
                 ]} />
-                {tax === 0 && (
-                  <p className="tk-para">
-                    You did not give us the tax figure, so the percentage is as far as we can take
-                    it. Put the amount from the return into this tool and it will do the rest.
-                  </p>
-                )}
-                <SourceNote ids={['late.recargo.voluntary', dlId]} />
+                {tax === 0 && <p className="tk-para">{c('owe_no_tax')}</p>}
+                <SourceNote ids={['late.recargo.voluntary', dlId]} label={src} />
               </Panel>
 
-              <Panel title="The name of the procedure, so you can say it out loud" kind="plain">
-                <p className="tk-para">
-                  You are filing a <strong>declaracion extemporanea sin requerimiento previo</strong>,
-                  a late self-assessment made without a prior demand, and what you pay on top is a
-                  <strong> recargo</strong>, a surcharge, under art. 27 of the Ley General
-                  Tributaria. It is not a sancion and it is not a multa. If anyone tells you that
-                  filing late of your own accord means a fine, that is the wrong word for this.
-                </p>
-                <p className="tk-para">
-                  The surcharge starts at {RECARGO.value.base} percent and adds another
-                  {' '}{RECARGO.value.per_month} percent for each complete month, to a maximum of
-                  {' '}{RECARGO.value.max_within_12m} percent at twelve months. From month
-                  {' '}{RECARGO.value.interest_from_month} it stops climbing and becomes a flat
-                  {' '}{RECARGO.value.after_12m} percent, with late-payment interest running from
-                  the day after the twelfth month.
-                </p>
-                <SourceNote ids="late.recargo.voluntary" />
+              <Panel title={c('name_title')} kind="plain">
+                <p className="tk-para"><Rich text={c('name_p1')} /></p>
+                <p className="tk-para">{f('name_p2', ladder)}</p>
+                <SourceNote ids="late.recargo.voluntary" label={src} />
               </Panel>
 
-              <Panel title={`Pay on time and this drops by ${REDUCTION.value} percent`} kind="key">
-                <p className="tk-para">
-                  When the tax office notifies you of the surcharge it opens a payment window.
-                  Pay the surcharge in full inside that window, with the tax debt itself settled,
-                  and the surcharge is reduced by {REDUCTION.value} percent. It is the cheapest
-                  {' '}{REDUCTION.value} percent available to you and it is lost by doing nothing.
-                </p>
+              <Panel title={f('reduce_title', { pct: REDUCTION.value })} kind="key">
+                <p className="tk-para">{f('reduce_p', { pct: REDUCTION.value })}</p>
                 {tax > 0 && (
                   <Rows items={[
-                    { label: 'Surcharge as assessed', value: fmtPrecise(surcharge) },
-                    { label: `Reduced by ${REDUCTION.value} percent`, value: fmtPrecise(reducedSurcharge), strong: true },
-                    { label: 'Total if you pay inside the window', value: fmtPrecise(totalReduced), strong: true },
+                    { label: c('row_assessed'), value: fmtPrecise(surcharge) },
+                    { label: f('row_reduced', { pct: REDUCTION.value }), value: fmtPrecise(reducedSurcharge), strong: true },
+                    { label: c('row_total_window'), value: fmtPrecise(totalReduced), strong: true },
                   ]} />
                 )}
-                <SourceNote ids={['late.recargo.reduction', 'late.recargo.excludes_penalty']} />
+                <SourceNote ids={['late.recargo.reduction', 'late.recargo.excludes_penalty']} label={src} />
               </Panel>
 
               {band.interestApplies && (
-                <Panel title="Interest, and how far we can price it">
+                <Panel title={c('interest_title')}>
                   <p className="tk-para">
-                    Past twelve months the surcharge goes flat and late-payment interest starts
-                    running from the day after the twelfth month, which for you was
-                    {' '}{longDate(interestStart(deadlineISO, RECARGO.value))}. The rate we hold is
-                    {' '}{INTEREST.value.demora} percent for {INTEREST.value.year}, and the same
-                    rate applied the year before.
+                    {f('interest_p1', {
+                      date: longDate(interestStart(deadlineISO, RECARGO.value)),
+                      rate: INTEREST.value.demora,
+                      year: INTEREST.value.year,
+                    })}
                   </p>
                   {interest && interest.unpricedDays > 0 && (
                     <p className="tk-para">
-                      Your delay reaches back further than the rate we hold. We have priced
-                      {' '}{interest.pricedDays} days and left {interest.unpricedDays} days
-                      unpriced rather than apply a rate to a period it did not cover, so treat the
-                      interest line as understated by that stretch.
+                      {f('interest_p2', { priced: interest.pricedDays, unpriced: interest.unpricedDays })}
                     </p>
                   )}
-                  <SourceNote ids="late.interest" />
+                  <SourceNote ids="late.interest" label={src} />
                 </Panel>
               )}
             </>
@@ -260,45 +256,19 @@ export default function LateSurcharge() {
           ------------------------------------------------------------------ */}
           {branch === 'penalty' && (
             <>
-              <Panel title="What has changed" kind="dark">
-                <p className="tk-para">
-                  The surcharge in art. 27 is the price of coming forward first. It is available
-                  only where you file before the tax office asks. Once a demand naming this return
-                  has gone out, that door is shut. What you are in now is a sanction procedure:
-                  the conduct is treated as a tax infraction, and the charge is a proportional
-                  fine on the amount left unpaid, together with late-payment interest.
-                </p>
-                <p className="tk-para">
-                  It is a materially heavier regime than the surcharge, and the
-                  {' '}{REDUCTION.value} percent reduction that goes with the surcharge is not part
-                  of it.
-                </p>
+              <Panel title={c('changed_title')} kind="dark">
+                <p className="tk-para">{c('changed_p1')}</p>
+                <p className="tk-para">{f('changed_p2', { pct: REDUCTION.value })}</p>
               </Panel>
 
-              <Panel title="Why there is no number here" kind="quiet">
-                <p className="tk-para">
-                  We could not read the governing article of the Ley General Tributaria in full
-                  from the official consolidated text, which truncates it. We hold an unconfirmed
-                  minimum figure and we are not going to print it as though it were settled, as a
-                  percentage in a headline is exactly how an unconfirmed figure becomes something
-                  an owner repeats to their gestor. Take the letter to a professional and have the
-                  proposed amount checked against the article itself.
-                </p>
-                <SourceNote ids="late.sancion.after_requerimiento" />
+              <Panel title={c('nonumber_title')} kind="quiet">
+                <p className="tk-para">{c('nonumber_p')}</p>
+                <SourceNote ids="late.sancion.after_requerimiento" label={src} />
               </Panel>
 
-              <Panel title="What to do this week" kind="key">
+              <Panel title={c('week_title')} kind="key">
                 <ol className="tk-ol">
-                  <li>Read the deadline printed in the letter. That is now the date that governs
-                      everything, and it is usually shorter than people assume.</li>
-                  <li>Get the return itself filed and the tax paid if it is still outstanding. The
-                      unpaid amount is what the fine is proportional to, so it is not a neutral
-                      thing to leave sitting.</li>
-                  <li>Take the letter to a gestor before you reply to it. A proposal is a proposal,
-                      and the response window is where any argument about it belongs.</li>
-                  <li>If the letter turns out not to be about this return or this year, come back
-                      and answer that question differently. The two routes have nothing in common
-                      and we will not show you both at once.</li>
+                  {c('week_steps').map((t, i) => <li key={i}>{t}</li>)}
                 </ol>
               </Panel>
             </>
@@ -309,24 +279,19 @@ export default function LateSurcharge() {
           ------------------------------------------------------------------ */}
           {branch === 'notlate' && (
             <>
-              <Panel title="Your window" kind="key">
+              <Panel title={c('window_title')} kind="key">
                 <Rows items={[
-                  { label: 'Return', value: returnName },
-                  { label: 'Tax year', value: `${a.year}` },
-                  opensISO && { label: 'Filing opens', value: longDate(opensISO) },
-                  { label: 'Filing closes', value: longDate(deadlineISO), strong: true },
-                  debitISO && { label: 'Direct debit closes', value: longDate(debitISO), strong: true },
+                  { label: c('row_return'), value: returnName },
+                  { label: c('row_year'), value: `${a.year}` },
+                  opensISO && { label: c('row_opens'), value: longDate(opensISO) },
+                  { label: c('row_closes'), value: longDate(deadlineISO), strong: true },
+                  debitISO && { label: c('row_debit'), value: longDate(debitISO), strong: true },
                 ]} />
-                <SourceNote ids={dlId} />
+                <SourceNote ids={dlId} label={src} />
               </Panel>
-              <Panel title="Nothing is owed yet">
-                <p className="tk-para">
-                  The surcharge only starts once the filing window has closed. From the day after
-                  it does, it begins at {RECARGO.value.base} percent and climbs
-                  {' '}{RECARGO.value.per_month} percent a month. Filing early costs nothing and
-                  removes the whole question.
-                </p>
-                <SourceNote ids="late.recargo.voluntary" />
+              <Panel title={c('nothing_title')}>
+                <p className="tk-para">{f('nothing_p', ladder)}</p>
+                <SourceNote ids="late.recargo.voluntary" label={src} />
               </Panel>
             </>
           )}
@@ -336,29 +301,13 @@ export default function LateSurcharge() {
           ------------------------------------------------------------------ */}
           {branch === 'unknown' && (
             <>
-              <Panel title="What we can tell you" kind="quiet">
-                <p className="tk-para">
-                  The surcharge ladder itself does not depend on the year. It starts at
-                  {' '}{RECARGO.value.base} percent, adds {RECARGO.value.per_month} percent for each
-                  complete month, caps at {RECARGO.value.max_within_12m} percent at twelve months,
-                  and from month {RECARGO.value.interest_from_month} becomes a flat
-                  {' '}{RECARGO.value.after_12m} percent with interest. The
-                  {' '}{REDUCTION.value} percent reduction for paying inside the window applies the
-                  same way.
-                </p>
-                <p className="tk-para">
-                  What we cannot do is place your return on that ladder, because that needs the
-                  filing deadline for a year we do not hold a verified window for. Ask your gestor
-                  for the exact date the window closed, count the complete months from it, and the
-                  ladder above gives you the rest.
-                </p>
-                <SourceNote ids={['late.recargo.voluntary', 'late.recargo.reduction']} />
+              <Panel title={c('cantell_title')} kind="quiet">
+                <p className="tk-para">{f('cantell_p1', ladder)}</p>
+                <p className="tk-para">{c('cantell_p2')}</p>
+                <SourceNote ids={['late.recargo.voluntary', 'late.recargo.reduction']} label={src} />
               </Panel>
-              <Panel title="If you also have a more recent year">
-                <p className="tk-para">
-                  Start again and pick {RENTAL_ANNUAL_FROM} or later. Those windows are in the
-                  rules base and the tool will date them for you.
-                </p>
+              <Panel title={c('recent_title')}>
+                <p className="tk-para">{f('recent_p', { year: RENTAL_ANNUAL_FROM })}</p>
               </Panel>
             </>
           )}
@@ -368,54 +317,37 @@ export default function LateSurcharge() {
               deadline, because it is the thing owners do not know.
           ------------------------------------------------------------------ */}
           {dlRule && gapDays != null && gapDays > 0 && (
-            <Panel title="The gap almost nobody is told about" kind="dark">
+            <Panel title={c('gap_title')} kind="dark">
               <p className="tk-para">
-                Filing and paying by direct debit close on different days. For this return the
-                filing window runs to {longDate(deadlineISO)}, but if you want the tax collected
-                by direct debit the return has to be in by {longDate(debitISO)}. That is
-                {' '}{gapDays} days earlier.
+                {f('gap_p1', { deadline: longDate(deadlineISO), debit: longDate(debitISO), days: gapDays })}
               </p>
-              <p className="tk-para">
-                Submit inside those last {gapDays} days and the return is on time, but the direct
-                debit option has gone. Owners who assumed the money would be taken automatically
-                discover months later that it never was, and the return that was filed on time
-                becomes a debt that was paid late. If you are anywhere near the end of the window,
-                pay by card or transfer and take the confirmation.
-              </p>
-              <SourceNote ids={dlId} />
+              <p className="tk-para">{f('gap_p2', { days: gapDays })}</p>
+              <SourceNote ids={dlId} label={src} />
             </Panel>
           )}
 
           {/* The one deadline in the rules base that is live right now. */}
           {kind === 'rental' && (
-            <Panel title="One last quarterly return, and then it changes">
+            <Panel title={c('quarterly_title')}>
               <p className="tk-para">
-                Rental filing moved off the quarterly cycle. The final quarterly return covers
-                {' '}{LAST_QUARTERLY.value.quarter} and is filed between
-                {' '}{longDate(LAST_QUARTERLY.value.file_from)} and
-                {' '}{longDate(LAST_QUARTERLY.value.file_to)}. Rent accrued after that goes into
-                the annual April window instead. If you have been filing quarterly out of habit,
-                this is the last one, and the next date you need is in April.
+                {f('quarterly_p', {
+                  quarter: LAST_QUARTERLY.value.quarter,
+                  from: longDate(LAST_QUARTERLY.value.file_from),
+                  to: longDate(LAST_QUARTERLY.value.file_to),
+                })}
               </p>
-              <SourceNote ids={['deadline.rental.last_quarterly', 'deadline.rental.from_2026']} />
+              <SourceNote ids={['deadline.rental.last_quarterly', 'deadline.rental.from_2026']} label={src} />
             </Panel>
           )}
 
-          <Panel title="Two regimes, and we have shown you one" kind="quiet">
+          <Panel title={c('regimes_title')} kind="quiet">
             <p className="tk-para">
-              {branch === 'penalty'
-                ? 'Everything above is the demanded route. The voluntary surcharge, the ladder and the reduction that goes with it are a different regime and none of it applies once a letter has arrived, so we have not shown you those figures here.'
-                : 'Everything above is the voluntary route, which is the one you are on because no letter has arrived. If one does arrive before you file, none of these figures apply and the answer changes shape entirely. That is a reason to file first rather than a reason to worry.'}
+              {branch === 'penalty' ? c('regimes_penalty') : c('regimes_voluntary')}
             </p>
-            <p className="tk-para">
-              The tax itself is a separate question from what being late costs. If you are still
-              working out what the return should have said, our{' '}
-              <LLink to="/rental-tax">rental income tax calculator</LLink> and our{' '}
-              <LLink to="/tax-calculator">non-resident tax calculator</LLink> handle that side.
-            </p>
+            <p className="tk-para"><Rich text={c('regimes_links')} /></p>
           </Panel>
 
-          <ToolDisclaimer />
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

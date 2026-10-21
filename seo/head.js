@@ -81,6 +81,10 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
     name: SITE_NAME,
     url: SITE_ORIGIN + '/',
     description: 'Free tools and sourced answers for people who own property in Spain and live somewhere else.',
+    // Who pays for it and who edits it, said in the same place the about page says it.
+    sponsor: { '@type': 'Organization', name: 'Bueno', url: 'https://getbueno.com/' },
+    founder: { '@id': `${SITE_ORIGIN}/about#editor` },
+    knowsAbout: ['Spanish non-resident income tax', 'Modelo 210', 'Property ownership in Spain', 'Spanish inheritance law', 'Tourist letting in Spain'],
   };
   blocks.push({ '@context': 'https://schema.org', ...publisher });
 
@@ -127,6 +131,28 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
     });
   }
 
+  const editor = {
+    '@type': 'Person',
+    '@id': `${SITE_ORIGIN}/about#editor`,
+    name: 'Pratik Renuse',
+    url: `${SITE_ORIGIN}/about`,
+    jobTitle: 'Editor',
+    worksFor: { '@id': `${SITE_ORIGIN}/#organization` },
+  };
+
+  if (route.kind === 'about') {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: route.h1,
+      url,
+      inLanguage: HREFLANG[route.locale],
+      description: route.description,
+      about: { '@id': `${SITE_ORIGIN}/#organization` },
+      mainEntity: editor,
+    });
+  }
+
   if (route.kind === 'answer') {
     const article = {
       '@context': 'https://schema.org',
@@ -136,6 +162,8 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
       inLanguage: HREFLANG[route.locale],
       description: route.description,
       publisher: { '@id': `${SITE_ORIGIN}/#organization` },
+      author: { '@id': `${SITE_ORIGIN}/#organization` },
+      editor,
       isAccessibleForFree: true,
       // The one sentence worth reading aloud is the answer itself.
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.seo-static h1', '.seo-static p'] },
