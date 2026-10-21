@@ -1,4 +1,15 @@
 import { rule } from './rules/index.js';
+import { useLocale } from './i18n.jsx';
+
+const DATE_LOCALE = { en: 'en-GB', no: 'nb-NO', sv: 'sv-SE', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+const WORDS = {
+  en: { source: 'Source', checked: 'Checked', caveat: 'One caveat.' },
+  no: { source: 'Kilde', checked: 'Kontrollert', caveat: 'Ett forbehold.' },
+  sv: { source: 'Källa', checked: 'Kontrollerad', caveat: 'En reservation.' },
+  de: { source: 'Quelle', checked: 'Geprüft am', caveat: 'Ein Vorbehalt.' },
+  fr: { source: 'Source', checked: 'Vérifié le', caveat: 'Une réserve.' },
+  nl: { source: 'Bron', checked: 'Gecontroleerd op', caveat: 'Eén kanttekening.' },
+};
 
 // The mandatory source line. Every figure a tool displays shows where it came from and
 // when it was checked, next to the number, not in a footnote.
@@ -10,14 +21,16 @@ import { rule } from './rules/index.js';
 // because a partial rule is one where something could not be confirmed and the reader
 // is entitled to know which part.
 
-function fmtDate(iso) {
+function fmtDate(iso, locale = 'en') {
   if (!iso) return '';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  return d.toLocaleDateString(DATE_LOCALE[locale] || 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
 export default function SourceNote({ ids, label }) {
+  const { locale } = useLocale();
+  const w = WORDS[locale] || WORDS.en;
   const list = (Array.isArray(ids) ? ids : [ids]).filter(Boolean);
   if (!list.length) return null;
 
@@ -26,18 +39,18 @@ export default function SourceNote({ ids, label }) {
 
   return (
     <div className="tk-source">
-      <span className="tk-source-label">{label || 'Source'}</span>
+      <span className="tk-source-label">{label || w.source}</span>
       <ul className="tk-source-list">
         {rules.map(r => (
           <li key={r.id}>
             <a href={r.source.url} target="_blank" rel="noopener noreferrer">{r.source.ref}</a>
-            <span className="tk-source-meta">{r.source.name}. Checked {fmtDate(r.source.read_on)}.</span>
+            <span className="tk-source-meta">{r.source.name}. {w.checked} {fmtDate(r.source.read_on, locale)}.</span>
           </li>
         ))}
       </ul>
       {caveats.length > 0 && (
         <p className="tk-source-caveat">
-          <strong>One caveat.</strong> {caveats.map(c => c.notes).join(' ')}
+          <strong>{w.caveat}</strong> {caveats.map(c => c.notes).join(' ')}
         </p>
       )}
     </div>

@@ -21,6 +21,7 @@ for (const a of ANSWERS) {
   ok(`${a.slug}: the slug is unique`, !slugs.has(a.slug));
   slugs.add(a.slug);
   ok(`${a.slug}: the slug is a clean url`, /^[a-z0-9-]+$/.test(a.slug));
+  ok(`${a.slug}: it sits under a topic on the hub`, ['tax','selling','buying','letting','community','insurance','legal-claims','inheritance','residency'].includes(a.topic), String(a.topic));
   ok(`${a.slug}: it points at a tool that exists`, existsSync(`./${a.tool}/index.jsx`), a.tool);
 
   // The whole promise of the layer.
@@ -64,7 +65,7 @@ if (existsSync('./dist/answers/index.html')) {
       const types = jsonLd(html).map(b => b['@type']);
 
       ok(`${a.slug}/${l}: the title is the question`,
-         (html.match(/<title>(.*?)<\/title>/s) || [])[1] === a.q[l].replace(/&/g, '&amp;'));
+         (html.match(/<title>(.*?)<\/title>/s) || [])[1] === a.q[l].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'));
       ok(`${a.slug}/${l}: the answer is in the static html`, html.includes(a.a[l].slice(0, 60).replace(/&/g, '&amp;')));
       ok(`${a.slug}/${l}: it carries FAQPage schema`, types.includes('FAQPage'), types.join(','));
       ok(`${a.slug}/${l}: it carries a dated Article`, types.includes('Article'));

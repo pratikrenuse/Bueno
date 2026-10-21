@@ -46,13 +46,14 @@ export default function ContractorCheck() {
       }))
     : [];
 
-  const r = step === 'result' ? assess(a) : null;
+  const r = step === 'result' ? assess(a, c) : null;
   const tone = r && (r.verdict === 'clear' ? 'good' : r.verdict === 'stop' || r.verdict === 'rework' ? 'warn' : 'neutral');
-  const countLine = r && `${r.counts.red} red ${r.counts.red === 1 ? 'flag' : 'flags'}, ${r.counts.amber} unconfirmed, out of ${r.counts.total} questions.`;
+  const countLine = r && c(r.counts.red === 1 ? 'count_line_one' : 'count_line_many')
+    .replace('{red}', r.counts.red).replace('{amber}', r.counts.amber).replace('{total}', r.counts.total);
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Practical guidance for property owners in Spain. Not legal advice.">
+      note={c('shell_note')}>
 
       {step === 'intro' && (
         <Intro
@@ -83,72 +84,25 @@ export default function ContractorCheck() {
               { label: c('score_clear'), value: `${r.counts.clear}` },
               { label: c('score_total'), value: `${r.counts.total}` },
             ]} />
-            <p className="tk-para">
-              A red flag is not proof of anything. It is something missing from the quote, and
-              every one of them has a question that resolves it. What matters is how the
-              contractor answers, not that you asked.
-            </p>
+            <p className="tk-para">{c('score_para')}</p>
           </Panel>
 
           <Checklist groups={buildGroups(r, c)} />
 
-          <Panel title="If this turns out to be obra mayor rather than obra menor">
-            <p className="tk-para">
-              Spanish building work splits into two kinds, and which one you are doing changes
-              who has to be involved before anyone lifts a tool. Obra menor is work that leaves
-              the structure, the footprint and the use of the property alone: painting,
-              retiling, replacing a window in the same opening at the same size, built in
-              furniture, repairing a facade or a fence. Obra mayor is work that changes the
-              structure, the volume, the layout or the use: new rooms or floors, extending the
-              living space, adding a garage, enclosing a porch or veranda, digging out a
-              basement, reinforcing beams or a roof. A swimming pool counts as an extension.
-            </p>
-            <p className="tk-para">
-              Your ayuntamiento decides which category your job falls into, and municipalities
-              draw the line in different places. Ask them, or have a technical architect ask,
-              before you accept anybody else's view of it. A contractor who tells you no licence
-              is needed is giving you an answer that was never his to give.
-            </p>
-            <p className="tk-para">What changes if it is obra mayor:</p>
+          <Panel title={c('obra_title')}>
+            <p className="tk-para">{c('obra_p1')}</p>
+            <p className="tk-para">{c('obra_p2')}</p>
+            <p className="tk-para">{c('obra_lead')}</p>
             <ol className="tk-ol">
-              <li>A technical project is required, drawn by an architect or a technical
-                  architect (arquitecto tecnico), and proof of their registration goes into the
-                  licence file. Your builder cannot draw it.</li>
-              <li>The licence has to be granted before work starts. Processing time varies by
-                  region and runs longer where the project is complex or a neighbour objects.</li>
-              <li>The ayuntamiento charges fees and a construction tax on the licence. Both are
-                  set municipally, so ask the town hall for the figures for your address rather
-                  than working from a number you read somewhere.</li>
-              <li>If the property is in a community of owners, or the work touches anything
-                  communal, you need the community authorisation as well. It is issued as a
-                  certificate and signed before a notary, and it may mean waiting for a meeting.</li>
-              <li>At the end the architect issues the certificate of completion, the certificado
-                  final de obra.</li>
-              <li>If the work changed the built area, it then has to be declared before a notary
-                  and entered in the land registry, so that the deeds describe the building that
-                  is actually there.</li>
+              {c('obra_steps').map((t, i) => <li key={i}>{t}</li>)}
             </ol>
           </Panel>
 
-          <Panel title="Why the deeds part matters later" kind="quiet">
-            <p className="tk-para">
-              Unlicensed work is usually invisible until you sell. At that point the notary and
-              the buyer both want the extension to appear on the deeds, and a buyer's lawyer who
-              finds built space that is not registered will either hold the price or hold the
-              sale. There is a retrospective route through an antiquity certificate, but whether
-              you qualify depends on how long ago the work was finished, the qualifying period
-              differs by region and by when the work was done, and an architect has to attend to
-              certify the age. It is slower and less certain than applying first, which is the
-              entire argument for doing it in the right order.
-            </p>
+          <Panel title={c('deeds_title')} kind="quiet">
+            <p className="tk-para">{c('deeds_p')}</p>
           </Panel>
 
-          <ToolDisclaimer>
-            This is practical guidance, not legal advice. It checks the quote in front of you,
-            which is not the same as checking the contractor. Whether your particular job needs
-            a licence, and which kind, is decided by your ayuntamiento, and for anything
-            structural that answer should come from a technical architect before you sign.
-          </ToolDisclaimer>
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

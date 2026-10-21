@@ -40,7 +40,7 @@ export default function ClosingUp() {
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Practical guidance for property owners in Spain. Not legal advice.">
+      note={c('note')}>
 
       {step === 'intro' && (
         <Intro
@@ -73,7 +73,7 @@ export default function ClosingUp() {
 
       {step === 'extras' && (
         <Step n={4} of={5} question={c('q_extras')} hint={c('q_extras_hint')} onBack={back}
-          onNext={() => setStep('checker')} nextDisabled={a.extras.length === 0}>
+          onNext={() => setStep('checker')} nextDisabled={a.extras.length === 0} nextLabel={c('continue')}>
           <div className="tk-options">
             {['pool', 'garden', 'aircon', 'none'].map(k => {
               const on = a.extras.includes(k);
@@ -106,11 +106,7 @@ export default function ClosingUp() {
           onRestart={() => { setA({ away: '', season: '', type: '', extras: [], checker: '' }); setStep('intro'); }}
           restartLabel={c('restart')}>
           <Checklist groups={buildList(a, c)} />
-          <ToolDisclaimer>
-            This is practical guidance, not legal advice. If the property is already occupied
-            by someone who should not be there, that is a legal matter and time matters, so
-            speak to a Spanish lawyer rather than working from a checklist.
-          </ToolDisclaimer>
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

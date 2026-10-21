@@ -3,7 +3,7 @@ import ToolShell, { Intro, Step, Options, Result, Panel, Rows, Checklist, useCop
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
 import copyDict from './copy.js';
-import { buildSteps, buildGates, CONTACTS } from './steps.js';
+import { buildSteps, buildGates, buildContacts } from './steps.js';
 
 // Getting the utilities on at a Spanish property.
 //
@@ -39,14 +39,14 @@ export default function UtilitySetup() {
 
   const opt = (k, n) => ({ value: k, label: c(`${n}_${k}`), desc: c(`${n}_${k}_d`) === `${n}_${k}_d` ? null : c(`${n}_${k}_d`) });
 
-  const gates = step === 'result' ? buildGates(a) : null;
+  const gates = step === 'result' ? buildGates(a, c) : null;
   const headline = gates && c(`result_${gates.verdict}`);
   const sub = gates && c(`result_${gates.verdict}_sub`);
   const tone = gates && (gates.verdict === 'clear' ? 'good' : gates.verdict === 'nie' ? 'warn' : 'neutral');
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Practical guidance for property owners in Spain. Not legal advice.">
+      note={c('shell_note')}>
 
       {step === 'intro' && (
         <Intro
@@ -105,49 +105,27 @@ export default function UtilitySetup() {
 
           <Panel title={c('gates_title')} kind="key">
             <Rows items={gates.rows} />
-            <p className="tk-para">
-              These four are not independent. The NIE has to exist before anything goes into
-              your name, the account has to exist before a direct debit can be attached to it,
-              and on a property that has been off supply the installation certificate has to
-              exist before anyone will turn the power back on. Doing them in another order is
-              what turns a week into a season.
-            </p>
+            <p className="tk-para">{c('gates_para')}</p>
           </Panel>
 
           <Panel title={c('who_title')} kind="quiet">
-            <Rows items={CONTACTS} />
+            <Rows items={buildContacts(c)} />
           </Panel>
 
           <Checklist groups={buildSteps(a, c)} />
 
-          <Panel title="If you will sell this property, or let it to a new tenant">
+          <Panel title={c('epc_title')}>
+            <p className="tk-para">{c('epc_p1')}</p>
             <p className="tk-para">
-              A registered energy performance certificate is required to sell, and to let to a
-              new tenant. It is not part of getting the supplies on, and it is not something a
-              supplier issues. A certified technician visits, rates the property and registers
-              the certificate with your region.
+              {c('epc_p2')
+                .replace('{default_years}', EPC_VALIDITY.value.default_years)
+                .replace('{g_years}', EPC_VALIDITY.value.rating_g_years)}
             </p>
-            <p className="tk-para">
-              Maximum validity is {EPC_VALIDITY.value.default_years} years, except where the
-              rating is G, in which case it is {EPC_VALIDITY.value.rating_g_years}. A large part
-              of the older coastal stock is rated E, F or G, so if the property came with a
-              certificate, find the letter as well as the date before you assume how long you
-              have. Renewing a tenancy with the same tenant does not itself trigger the
-              obligation. A new tenant does.
-            </p>
-            <SourceNote ids={['epc.requirement', 'epc.validity']} />
-            <p className="tk-para">
-              Breaches are sanctioned, and enforcement is devolved to the regions. We have not
-              been able to source the penalty bands from the primary text, so we do not print a
-              figure for them here.
-            </p>
+            <SourceNote ids={['epc.requirement', 'epc.validity']} label={c('source_label')} />
+            <p className="tk-para">{c('epc_p3')}</p>
           </Panel>
 
-          <ToolDisclaimer>
-            This is practical guidance, not legal advice. Municipal practice genuinely differs
-            between town halls, so where this list says to ask your ayuntamiento, that is
-            because the answer is theirs to give and not ours.
-          </ToolDisclaimer>
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

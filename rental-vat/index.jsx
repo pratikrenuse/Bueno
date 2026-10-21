@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ToolShell, { Intro, Step, Options, Result, Panel, Rows, useCopy } from '../ToolShell.jsx';
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule, ruleStatus } from '../rules/index.js';
-import { LLink } from '../i18n.jsx';
+import { LLink, useLocale } from '../i18n.jsx';
 import registryFile from '../rules/rental-registry.json';
 import copyDict from './copy.js';
 
@@ -41,25 +41,30 @@ const ANNULMENT = (registryFile.rules || []).find(r => r.id === 'registry.annull
 
 const STEPS = ['services', 'sublease', 'stay'];
 
-function fmtDate(iso) {
+const DATE_LOCALES = { en: 'en-GB', no: 'nb-NO', sv: 'sv-SE', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+
+// Fills {name} placeholders in a copy string.
+const fill = (s, vars = {}) => String(s).replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? vars[k] : m));
+
+function fmtDate(iso, locale) {
   if (!iso) return '';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  return d.toLocaleDateString(DATE_LOCALES[locale] || 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
 // Same markup as SourceNote, rendered by hand because the rule behind it is annulled and
 // must not be fetched through rule(). Kept visually identical so the reader sees no
 // difference between a source we can quote and one we have to explain.
-function AnnulledSource({ r, label }) {
+function AnnulledSource({ r, label, checked, locale }) {
   if (!r) return null;
   return (
     <div className="tk-source">
-      <span className="tk-source-label">{label || 'Source'}</span>
+      <span className="tk-source-label">{label}</span>
       <ul className="tk-source-list">
         <li>
           <a href={r.source.url} target="_blank" rel="noopener noreferrer">{r.source.ref}</a>
-          <span className="tk-source-meta">{r.source.name}. Checked {fmtDate(r.source.read_on)}.</span>
+          <span className="tk-source-meta">{fill(checked, { name: r.source.name, date: fmtDate(r.source.read_on, locale) })}</span>
         </li>
       </ul>
     </div>
@@ -68,6 +73,8 @@ function AnnulledSource({ r, label }) {
 
 export default function RentalVat() {
   const c = useCopy(copyDict);
+  const { locale } = useLocale();
+  const f = (k, vars) => fill(c(k), vars);
   const [step, setStep] = useState('intro');
   const [a, setA] = useState({ services: '', sublease: '', stay: '' });
 
@@ -104,8 +111,8 @@ export default function RentalVat() {
   }[verdict];
 
   const bandLabel = verdict === 'exempt' || verdict === 'exempt_check'
-    ? `Exempt, ${RATE.value.exempt} percent`
-    : `${bandPercent} percent`;
+    ? f('band_exempt', { rate: RATE.value.exempt })
+    : f('band_rate', { rate: bandPercent });
 
   const headline = {
     exempt: c('result_exempt'),
@@ -116,16 +123,15 @@ export default function RentalVat() {
 
   const tone = verdict === 'twentyone' ? 'warn' : verdict === 'ten' ? 'neutral' : 'good';
 
-  const sub = {
-    exempt: 'A residential let is exempt from IVA. You do not add it to the rent, you do not file for it, and you cannot recover the IVA on what you spend on the property.',
-    exempt_check: 'On what you have told us the let is exempt. The one thing that would change that is the agreement you are unsure about, so it is worth reading before you file anything.',
-    ten: 'What you are supplying is accommodation with services, not a bare letting. That is the same treatment a guest house gets, and it is what the services during the stay create.',
-    twentyone: 'Your customer is the company, not the guest. That supply is neither an exempt residential let nor an accommodation service, so it falls to the general rate.',
-  }[verdict];
+  const sub = c(`sub_${verdict}`);
+
+  const src = c('source_label');
+  const hotel = RATE.value.with_hotel_services;
+  const other = RATE.value.other;
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Guidance for property owners in Spain. Not tax advice.">
+      note={c('note')}>
 
       {step === 'intro' && (
         <Intro eyebrow={c('eyebrow')} headline={c('headline')} body={c('body')}
@@ -157,181 +163,91 @@ export default function RentalVat() {
       {step === 'result' && (
         <Result headline={headline} sub={sub} tone={tone} onRestart={restart} restartLabel={c('restart')}>
 
-          <Panel title="Your band" kind="key">
+          <Panel title={c('panel_band')} kind="key">
             <Rows items={[
-              { label: 'IVA on what you charge', value: bandLabel, strong: true },
-              { label: 'What decided it', value: verdict === 'twentyone' ? 'Who your customer is' : verdict === 'ten' ? 'Services during the stay' : 'A bare letting, no services during the stay' },
+              { label: c('row_iva'), value: bandLabel, strong: true },
+              { label: c('row_decided'), value: verdict === 'twentyone' ? c('decided_twentyone') : verdict === 'ten' ? c('decided_ten') : c('decided_exempt') },
             ]} />
-            <SourceNote ids="vat.letting" />
+            <SourceNote ids="vat.letting" label={src} />
           </Panel>
 
-          <Panel title="Why" kind="plain">
-            {verdict === 'exempt' && (
-              <p className="tk-para">
-                Letting a dwelling is exempt from IVA. The exemption is lost when you start
-                supplying the things a hotel supplies: a reception, cleaning while the guests
-                are in the property, changing the linen mid-stay, meals, laundry. Cleaning the
-                property between one booking and the next is not one of those. It is how you
-                get the property ready to let, not a service you give the guest during the
-                stay, and it does not move you out of the exemption on its own.
-              </p>
-            )}
-            {verdict === 'exempt_check' && (
-              <p className="tk-para">
-                Letting a dwelling is exempt. What would take you out of that exemption is not
-                the cleaning or the bookings, it is a contract in which you let the property to
-                a company so that the company can let it on again. Find the agreement and look
-                at who the guest is contracting with. If the guest contracts with you, the
-                exemption holds.
-              </p>
-            )}
-            {verdict === 'ten' && (
-              <p className="tk-para">
-                You told us somebody goes into the property while guests are staying there.
-                That is what the law means by hotel-type complementary services, and it turns
-                a letting into an accommodation service. The rate is the reduced one, the same
-                band hotels and guest houses sit in. Note the direction of travel: it is the
-                service during the stay that does this, not the changeover clean and not the
-                length of the booking.
-              </p>
-            )}
-            {verdict === 'twentyone' && (
-              <p className="tk-para">
-                When you let the property to a company that then lets it out itself, the
-                exemption for residential letting does not reach you, because your tenant is
-                not living there. Nor are you supplying accommodation to a guest. What is left
-                is the general rate. This catches owners on full-management arrangements who
-                never realised the contract they signed was a sublease.
-              </p>
-            )}
+          <Panel title={c('panel_why')} kind="plain">
+            <p className="tk-para">{c(`why_${verdict}`)}</p>
           </Panel>
 
-          <Panel title="What would move you into the next band">
+          <Panel title={c('panel_next')}>
             <ul className="tk-ol">
               {verdict !== 'ten' && verdict !== 'twentyone' && (
                 <li>
-                  <strong>Into {RATE.value.with_hotel_services} percent:</strong> starting to
-                  supply something during the stay. A mid-week clean, a linen change halfway
-                  through, breakfast, a laundry service, a staffed reception. One of them is
-                  enough to change the question.
+                  <strong>{f('next_ten_lead', { rate: hotel })}</strong> {f('next_ten_body', { rate: hotel })}
                 </li>
               )}
               {verdict !== 'twentyone' && (
                 <li>
-                  <strong>Into {RATE.value.other} percent:</strong> signing the property over to
-                  a company that re-lets it in its own name. Read any full-management contract
-                  with that in mind before you sign it.
+                  <strong>{f('next_21_lead', { rate: other })}</strong> {f('next_21_body', { rate: other })}
                 </li>
               )}
               {verdict === 'ten' && (
                 <li>
-                  <strong>Back to exempt:</strong> stopping the services during the stay. A
-                  changeover clean between bookings on its own does not keep you at
-                  {' '}{RATE.value.with_hotel_services} percent.
+                  <strong>{f('next_back_lead', { rate: hotel })}</strong> {f('next_back_body', { rate: hotel })}
                 </li>
               )}
               {verdict === 'twentyone' && (
                 <li>
-                  <strong>Out of {RATE.value.other} percent:</strong> letting to the guest
-                  directly rather than through a company that re-lets. Where you go from there
-                  depends on whether you supply services during the stay.
+                  <strong>{f('next_out_lead', { rate: other })}</strong> {f('next_out_body', { rate: other })}
                 </li>
               )}
             </ul>
-            <SourceNote ids="vat.letting" />
+            <SourceNote ids="vat.letting" label={src} />
           </Panel>
 
-          <Panel title="What the length of the stay actually decides" kind="quiet">
+          <Panel title={c('panel_length')} kind="quiet">
             <p className="tk-para">
-              Nothing in the two articles behind this answer turns on how long a guest stays.
-              The bands turn on what you supply and on who your customer is, and that is why
-              this tool asked about the stay length last and then did not use it. You told us
-              guests stay {c(`stay_${a.stay}`).toLowerCase()}.
+              {c('length_p1')} {c(`length_told.${a.stay}`) === `length_told.${a.stay}` ? '' : c(`length_told.${a.stay}`)}
             </p>
-            <p className="tk-para">
-              Where the length does matter is elsewhere. It helps decide whether you are letting
-              by season, which sits under the rental law, or letting to tourists, which sits
-              outside it and under your region's tourism rules. That boundary is drawn by
-              regional law and by how the property is marketed, not by a number of nights
-              written into national law. We do not hold a verified national definition of a
-              short-term let, so this tool does not give you one.
-            </p>
-            <SourceNote ids={['lau.seasonal_basis', 'lau.tourist_excluded']} />
+            <p className="tk-para">{c('length_p2')}</p>
+            <SourceNote ids={['lau.seasonal_basis', 'lau.tourist_excluded']} label={src} />
           </Panel>
 
-          <Panel title="About the 21 percent you may have read about">
-            <p className="tk-para">
-              There has been a great deal written about IVA on tourist lets going to
-              {' '}{RATE.value.other} percent. It is a proposal. Nothing has been enacted, and no
-              change to the IVA treatment of short-term letting has taken effect. If you have
-              read that the rate is rising and you should prepare for it, that article is ahead
-              of the law. The bands above are the ones in force on the date shown.
-            </p>
-            <p className="tk-para">
-              The one route into {RATE.value.other} percent that is real today is the one in this
-              tool: letting the property to somebody who re-lets it.
-            </p>
-            <SourceNote ids="vat.letting" />
+          <Panel title={f('panel_21', { rate: other })}>
+            <p className="tk-para">{f('p21_1', { rate: other })}</p>
+            <p className="tk-para">{f('p21_2', { rate: other })}</p>
+            <SourceNote ids="vat.letting" label={src} />
           </Panel>
 
           {REGISTRY_STATUS === 'annulled' ? (
-            <Panel title="The national registration number is no longer a state requirement" kind="dark">
+            <Panel title={c('panel_annulled')} kind="dark">
               <p className="tk-para">
-                {ANNULMENT ? ANNULMENT.statement : ''} The Tribunal Supremo struck down the
-                procedure on the ground that the State had no competence to create it, and the
-                consolidated decree on the official gazette was updated to reflect that.
+                {ANNULMENT ? c('annulled_statement') : ''} {c('annulled_p1')}
               </p>
-              <p className="tk-para">
-                What still binds you is the regional licence or registration for tourist
-                letting. That was untouched by the judgments and remains fully in force. It
-                varies by region and increasingly by municipality, so the register to check is
-                your region's, not a national one. Two honest cautions. Platforms may still be
-                asking you for a national number in practice, and the ministry's own pages had
-                not been updated when we read them. The digital single window and the duties on
-                platforms to share data survive the annulments, so the reporting side of this
-                has not gone away.
-              </p>
-              <AnnulledSource r={ANNULMENT} label="Why we can say this" />
-              <SourceNote ids={['registry.regional_unaffected', 'registry.survives']} label="What still applies" />
+              <p className="tk-para">{c('annulled_p2')}</p>
+              <AnnulledSource r={ANNULMENT} label={c('annulled_why_label')} checked={c('checked')} locale={locale} />
+              <SourceNote ids={['registry.regional_unaffected', 'registry.survives']} label={c('still_applies_label')} />
             </Panel>
           ) : (
-            <Panel title="The national registration number" kind="dark">
-              <p className="tk-para">
-                The position on the national registration procedure has changed since this tool
-                was written. Check the source below before acting on anything you have read
-                about it.
-              </p>
-              <SourceNote ids={['registry.regional_unaffected', 'registry.survives']} />
+            <Panel title={c('panel_registry_changed')} kind="dark">
+              <p className="tk-para">{c('registry_changed_p')}</p>
+              <SourceNote ids={['registry.regional_unaffected', 'registry.survives']} label={src} />
             </Panel>
           )}
 
-          <Panel title="Three separate questions, and this tool answered one" kind="quiet">
-            <p className="tk-para">
-              IVA, income tax and your licence are decided by three different sets of rules,
-              and an answer to one tells you nothing about the other two. Being exempt from IVA
-              does not mean there is no tax to pay. Holding a regional licence does not put you
-              in a different IVA band.
-            </p>
+          <Panel title={c('panel_three')} kind="quiet">
+            <p className="tk-para">{c('three_intro')}</p>
             <ol className="tk-ol">
               <li>
-                <strong>IVA.</strong> Answered above. It is about what you supply and who your
-                customer is.
+                <strong>{c('three_iva_lead')}</strong> {c('three_iva_body')}
               </li>
               <li>
-                <strong>Income tax.</strong> Rent received by a non-resident owner is taxed
-                separately, on a return of its own, with its own deadline. Our{' '}
-                <LLink to="/rental-tax">rental income tax calculator</LLink> works that out.
+                <strong>{c('three_income_lead')}</strong> {c('three_income_pre')}{' '}
+                <LLink to="/rental-tax">{c('three_income_link')}</LLink> {c('three_income_post')}
               </li>
               <li>
-                <strong>The licence.</strong> Regional, and increasingly municipal. There is no
-                national tool to point you at because there is no longer a national requirement.
-                Start with your region's tourist register, then check the town hall, and check
-                your community of owners as well.
+                <strong>{c('three_licence_lead')}</strong> {c('three_licence_body')}
               </li>
             </ol>
           </Panel>
 
-          <ToolDisclaimer />
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

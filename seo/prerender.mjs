@@ -60,6 +60,12 @@ export function staticBlock(route) {
     }).join('') + '</ul>');
   }
 
+  for (const sec of route.sections || []) {
+    parts.push(`<h2>${escapeHtml(sec.h2)}</h2>`);
+    parts.push('<ul>' + sec.links.map(l =>
+      `<li><a href="${escapeHtml(l.href)}">${escapeHtml(l.label)}</a></li>`).join('') + '</ul>');
+  }
+
   if (route.mentions && route.mentions.length) {
     parts.push(`<h2>${escapeHtml(b.also)}</h2>`);
     parts.push(`<p>${escapeHtml(route.mentions.join(', '))}.</p>`);
