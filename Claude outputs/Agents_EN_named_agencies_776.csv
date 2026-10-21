@@ -1,0 +1,777 @@
+email,first_name,last_name,job_title,company_name,town,region,website,source_url
+dawn@marenamurrayproperty.com,Dawn,,Assistant Managing Director,Marena Murray Property,,,marenamurrayproperty.com,https://www.marenamurrayproperty.com/meet-our-team/
+juan@spanishpropertychoice.com,Juan Jose,Blanca Iborra,Sales & Listing Consultant,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+andrea@spanishpropertychoice.com,Andrea,Diolosa Ortiga,Sales & Listing Consultant,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+robert@spanishpropertychoice.com,Robert,Findlay,Sales Consultant,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+emma@spanishpropertychoice.com,Emma,Fowler,Regional Manager,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+matthew@spanishpropertychoice.com,Matthew,Fowler,Senior Sales Executive,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+stephen@spanishpropertychoice.com,Stephen,Garner,Managing Director,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+thegarners@spanishpropertychoice.com,Sharon,Garner,Sales Director,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+shaun@spanishpropertychoice.com,Shaun,Garner,Spanish & Sales Division Manager,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+kim@spanishpropertychoice.com,Kim,Robinson,Property Take-on Coordinator,Spanish Property Choice,Mojacar,Almeria,spanishpropertychoice.com,https://www.spanishpropertychoice.com/contact-us
+holly.lock@fineandcountry.com,Holly,Lock,Office Manager,Fine & Country Mallorca,Mallorca,Balearics,https://www.fineandcountry.es,https://www.fineandcountry.es/en/team/holly-lock
+philip.analitis@engelvoelkers.com,Philip,Analitis,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+sonia.espadale@engelvoelkers.com,Sonia,Espadale,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+anna.flotats@engelvoelkers.com,Anna,Flotats,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+beatriz.hidalgodecisneros@engelvoelkers.com,Beatriz De,Hidalgo Cisneros,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+maricarmen.navarro@engelvoelkers.com,Mari Carmen,Navarro,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+oriol.roca@engelvoelkers.com,Oriol,Roca,Private Office Advisor,Engel & Völkers Sitges Barcelona,Sitges Barcelona,Barcelona,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges,https://www.engelvoelkers.com/es/en/shops/barcelona-sitges/team
+marion@happyexpat.es,Marion,,Founder,Happy Expat,Sitges,Barcelona,happyexpat.es,https://www.happyexpat.es/about/
+rossana@happyexpat.es,Rossana,,Property Matchmaker,Happy Expat,Sitges,Barcelona,happyexpat.es,https://www.happyexpat.es/about/
+tania@happyexpat.es,Tania,,Property Matchmaker,Happy Expat,Sitges,Barcelona,happyexpat.es,https://www.happyexpat.es/about/
+juanma@arreguivillas.com,Juan Manuel,Arregui,General Manager,Arregui Villas,Denia,Costa Blanca,arreguivillas.com,https://www.arreguivillas.com/en/get-to-know-us/
+irene@arreguivillas.com,Irene,Estravis,Coordinator,Arregui Villas,Denia,Costa Blanca,arreguivillas.com,https://www.arreguivillas.com/en/get-to-know-us/
+ignacio@arreguivillas.com,Ignacio,Estravis,Real Estate Consultant,Arregui Villas,Denia,Costa Blanca,arreguivillas.com,https://www.arreguivillas.com/en/get-to-know-us/
+duncan@barcelorealestate.com,Duncan,Desmet,Sales Department,Barceló Real Estate,Ciudad Quesada,Costa Blanca,barcelorealestate.com,https://barcelorealestate.com/about-us/
+joseantonio@grupobarcelo.net,José Antonio,González,Manager,Barceló Real Estate,Ciudad Quesada,Costa Blanca,barcelorealestate.com,https://barcelorealestate.com/about-us/
+nicola@barcelorealestate.com,Nicola Jane,Kemp,Sales Department,Barceló Real Estate,Ciudad Quesada,Costa Blanca,barcelorealestate.com,https://barcelorealestate.com/about-us/
+janthys@barcelorealestate.com,Jan,Thys,Sales Department,Barceló Real Estate,Ciudad Quesada,Costa Blanca,barcelorealestate.com,https://barcelorealestate.com/about-us/
+bruno@costablancainvestments.com,Bruno,Felipe,Co-founder,Costa Blanca Investments,Alicante,Costa Blanca,costablancainvestments.com,https://www.costablancainvestments.com/about-us/
+darcy@costablancainvestments.com,Darcy,Maxim,Co-founder,Costa Blanca Investments,Alicante,Costa Blanca,costablancainvestments.com,https://www.costablancainvestments.com/about-us/
+sofia@costablancainvestments.com,Sofia,Moya Gibson,Commercial Director,Costa Blanca Investments,Alicante,Costa Blanca,costablancainvestments.com,https://www.costablancainvestments.com/about-us/
+janis.fedorovskis@engelvoelkers.com,Janis,Fedorovskis,Director,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+natalia.fernandez@engelvoelkers.com,Natalia,Fernandez,Team Assistant,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+marisa.lopez@engelvoelkers.com,Marisa,Lopez,Property Consultant,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+maria.lopezruiz@engelvoelkers.com,Maria,Lopez Ruiz,Property Consultant,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+damian.navarro@engelvoelkers.com,Damian,Navarro,Licensee,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+olga.obukhova@engelvoelkers.com,Olga,Obukhova,Property Consultant,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+christelle.save@engelvoelkers.com,Christelle,Save,Property Consultant,Engel & Völkers Benidorm,Benidorm,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/benidorm,https://www.engelvoelkers.com/es/en/shops/benidorm/team
+sonia.gimenocortell@engelvoelkers.com,Sonia,Gimeno Cortell,Private Office Agent,Engel & Völkers Jávea,Jávea,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/valencia-javea,https://www.engelvoelkers.com/es/en/shops/valencia-javea/team
+oscar.campelloavila@engelvoelkers.com,Oscar,Campello Avila,Real estate agent,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+tirban.cristina@engelvoelkers.com,Tirban,Cristina,Real Estate Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+lilia.gatenadze@engelvoelkers.com,Lilia,Gatenadze,Sales Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+ausra.navikaite@engelvoelkers.com,Ausra,Navikaite,Real Estate Rental Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+olga.novasevskaja@engelvoelkers.com,Olga,Novasevskaja,Real Estate Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+luisa.portellano@engelvoelkers.com,Luisa,Portellano,Team Assistant,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+diana.shevelieva@engelvoelkers.com,Diana,Shevelieva,Real Estate Sales Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+tatiana.troinina@engelvoelkers.com,Tatiana,Troinina,Sales Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+artem.vakar@engelvoelkers.com,Artem,Vakar,Real Estate Advisor,Engel & Völkers Torrevieja,Torrevieja,Costa Blanca,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela,https://www.engelvoelkers.com/es/en/shops/torrevieja-orihuela/team
+jacqueline.hara@fineandcountry.com,Jacqueline,Hara,Marketing Director (speaks English),Fine & Country Costa Blanca North,Dénia / Jávea,Costa Blanca,https://www.fineandcountry.es,https://www.fineandcountry.es/en/team/jacqueline-hara
+martijn@altea-moraira-villas.com,Martijn,Rietveld,Area Manager Altea & Property Advisor,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+francine@morairainvest.com,Francine,Spelthuis,Administration,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+mandy@morairainvest.com,Mandy,Spiegels,Property Advisor,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+boi@morairainvest.com,Boi,Versluijs,Property Advisor,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+zino@morairainvest.com,Zino,Vreysen,General Manager & Marketing,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+arie@morairainvest.com,Arie,van Staalduinen,Founder & CEO,Moraira Invest Group,Moraira,Costa Blanca,morairainvest.com,https://www.morairainvest.com/about-us/
+robert@nelemans.es,Robert,Andringa,Real Estate Agent,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+britta@nelemans.es,Britta,Gerber,Office Manager,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+esther@nelemans.es,Esther,Klarenbeek,Real Estate Agent,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+pascal@nelemans.es,Pascal Raymond,Nelemans,CEO,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+richelle@nelemans.es,Richelle,Schippers,Real Estate Agent,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+leon@nelemans.es,Leon,de Kogel,Real Estate Agent,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+jasper@nelemans.es,Jasper,van der Schilt,Real Estate Agent,Nelemans,Costa Blanca,Costa Blanca,nelemans.es,https://nelemans.es/de-visie/
+marco@oceanhome.es,Marco,Elsinger,Co-Founder & Property Advisor,OceanHome,Torrevieja,Costa Blanca,oceanhome.es,https://www.oceanhome.es/about/
+maya@oceanhome.es,Maya,Kallio,Founder & CEO,OceanHome,Torrevieja,Costa Blanca,oceanhome.es,https://www.oceanhome.es/about/
+aino@oceanhome.es,Aino-Kaisa,Lonka,Property Advisor & Office Manager,OceanHome,Torrevieja,Costa Blanca,oceanhome.es,https://www.oceanhome.es/about/
+nea@oceanhome.es,Nea,Randelin,Exclusives & Listings Responsible,OceanHome,Torrevieja,Costa Blanca,oceanhome.es,https://www.oceanhome.es/about/
+dannylanfermeijer@orangevillas.com,Danny,Lanfermeijer,Property Broker,Orange Villas,Moraira,Costa Blanca,orangevillas.com,https://orangevillas.com/about-us/
+jonasoliveto@orangevillas.com,Jonas,Oliveto,Property Broker,Orange Villas,Moraira,Costa Blanca,orangevillas.com,https://orangevillas.com/about-us/
+peperibes@orangevillas.com,Pepe,Ribes,Sales Manager,Orange Villas,Moraira,Costa Blanca,orangevillas.com,https://orangevillas.com/about-us/
+feliperibes@orangevillas.com,Felipe,Ribes Ivars,Office Manager,Orange Villas,Moraira,Costa Blanca,orangevillas.com,https://orangevillas.com/about-us/
+cesar@sixsecondsproperties.com,César,,CEO,Six Seconds Properties,Alicante,Costa Blanca,sixsecondsproperties.com,https://sixsecondsproperties.com/en/about-us/
+patricia@sixsecondsproperties.com,Patricia,,Product Area,Six Seconds Properties,Alicante,Costa Blanca,sixsecondsproperties.com,https://sixsecondsproperties.com/en/about-us/
+eve@sixsecondsproperties.com,Eve,,Sales Agent,Six Seconds Properties,Alicante,Costa Blanca,sixsecondsproperties.com,https://sixsecondsproperties.com/en/about-us/
+oliver@sixsecondsproperties.com,Oliver,,Sales Agent,Six Seconds Properties,Alicante,Costa Blanca,sixsecondsproperties.com,https://sixsecondsproperties.com/en/about-us/
+mattias@sixsecondsproperties.com,Mattias,,Sales Agent,Six Seconds Properties,Alicante,Costa Blanca,sixsecondsproperties.com,https://sixsecondsproperties.com/en/about-us/
+samantha@uniquehomesspain.com,Samantha,Kennedy,Executive Director,Unique Homes Spain,Moraira,Costa Blanca,uniquehomesmoraira.com,https://www.uniquehomesmoraira.com/about-us/
+marvin@uniquehomesspain.com,Marvin,Liebenow,CEO,Unique Homes Spain,Moraira,Costa Blanca,uniquehomesmoraira.com,https://www.uniquehomesmoraira.com/about-us/
+carlos@alteainvest.com,Carlos,Barreras,Founder and Director,Altea Invest,Altea,Costa Blanca North,alteainvest.com,https://www.alteainvest.com/
+pedro@bindleyproperties.com,Pedro,Buigues,Team member,Bindley Properties,Moraira,Costa Blanca North,https://www.bindleyproperties.com/,https://www.bindleyproperties.com/about-us/
+david@bindleyproperties.com,David,Buigues,Team member,Bindley Properties,Moraira,Costa Blanca North,https://www.bindleyproperties.com/,https://www.bindleyproperties.com/about-us/
+reyes@bindleyproperties.com,Reyes,Martinez,Sales agent,Bindley Properties,Moraira,Costa Blanca North,https://www.bindleyproperties.com/,https://www.bindleyproperties.com/about-us/
+sandra@bindleyproperties.com,Sandra,Sieland,First point of contact,Bindley Properties,Moraira,Costa Blanca North,https://www.bindleyproperties.com/,https://www.bindleyproperties.com/about-us/
+judith@bindleyproperties.com,Judith,Velders,Real estate agent,Bindley Properties,Moraira,Costa Blanca North,https://www.bindleyproperties.com/,https://www.bindleyproperties.com/about-us/
+brianna@costablancainvestments.com,Brianna,Evans,Community Manager,Costa Blanca Investments,Albir,Costa Blanca North,costablancainvestments.com,https://www.costablancainvestments.com/about-us/
+rosa@moorishhomes.com,Rosa Mª,Alhambra Gómez,Owner (Titular),Moorish Homes,Villajoyosa,Costa Blanca North,moorishhomes.com,https://www.moorishhomes.com
+tove@solalbir.com,Tove,Hyldahl-Iversen,Agent,Solalbir Inmobiliaria & Real Estate,Albir,Costa Blanca North,solalbir.com,https://solalbir.com/about-us/
+walter@solalbir.com,Walter,Matthijssen,Sales Manager,Solalbir Inmobiliaria & Real Estate,Albir,Costa Blanca North,solalbir.com,https://solalbir.com/about-us/
+yolanda@solalbir.com,Yolanda,Pickett Fdez.,Agent,Solalbir Inmobiliaria & Real Estate,Albir,Costa Blanca North,solalbir.com,https://solalbir.com/about-us/
+sol@solalbir.com,Ragnhild (Sol),Stenbo,Manager & Agent,Solalbir Inmobiliaria & Real Estate,Albir,Costa Blanca North,solalbir.com,https://solalbir.com/about-us/
+tanja@stella-consult.com,Tanja,Schaich,Director,Stella Inmo Consulting,Dénia,Costa Blanca North,https://stella-consult.co.uk/,https://stella-consult.co.uk/our-team/
+jose@tabairarealestate.com,Jose Antonio,Grimalt,Office manager,Tabaira Real Estate,Moraira,Costa Blanca North,tabairarealestate.com,https://tabairarealestate.com/estate-agents-in-moraira-spain.html
+stuart@tabairarealestate.com,Stuart,Peters,Customer relations agent,Tabaira Real Estate,Moraira,Costa Blanca North,tabairarealestate.com,https://tabairarealestate.com/estate-agents-in-moraira-spain.html
+renato@alegria-realestate.com,Renato,Aitatus,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+daria@alegria-realestate.com,Daria,Anfinogenova,Department Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+roman@alegria-realestate.com,Roman,Antonov,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+natasha@alegria-realestate.com,Natalya,Banna,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+elena@alegria-realestate.com,Elena,Bekisheva,Chief Business Development Director,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+vlad@alegria-realestate.com,Vladislav,Beloshein,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+ariana@alegria-realestate.com,Ariana,Bereznaja,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+hbertsold@alegria-realestate.com,Hanna,Bertosld,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+boiko.dmytro@alegria-realestate.com,Dmytro,Boiko,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+pavel@alegria-realestate.com,Pavel,Bondar,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+tetyana.b@alegria-realestate.com,Tetyana,Boreyko,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+fidan@alegria-realestate.com,Fidan,Bulahova,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+evgeniy@alegria-realestate.com,Evgeniy,Burlachenko,Head Of Office In Alicante,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+andrey.burlachenko@alegria-realestate.com,Andrej,Burlachenko,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+maria.but@alegria-realestate.com,Maria,But,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+daniel@alegria-realestate.com,Daniel,Candela Tomas,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+juan.carlos@alegria-realestate.com,Juan,Carlos Perez Aniorte,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+mitch@alegria-realestate.com,Mitch,Cornelius,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+e.danilov@alegria-realestate.com,Evgeniy,Danilov,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+veronika@alegria-realestate.com,Veronika,Davidenko,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+mariia@alegria-realestate.com,Mariia,Didenko,Department Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+d.ksenia@alegria-realestate.com,Ksenia,Dolhoshenko,Consulting Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+kris@alegria-realestate.com,Krystyna,Dragobiecka,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+tetiana.filei@alegria-realestate.com,Tetiana,Filei,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+alejandra@alegria-realestate.com,Alejandra,García Moya,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+karina@alegria-realestate.com,Karina,Ginosyan,Consulting Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+miguel@alegria-realestate.com,Miguel,Gonzalez,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+eytan@alegria-realestate.com,Eytan,Gudauskas,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+sarah.bertit@alegria-realestate.com,Sarah,Hadj Mokhtar,Office Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+tatiana.g@alegria-realestate.com,Tetiana,Holovatiuk,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+ida@alegria-realestate.com,Ida,Ilomaki,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+denisa@alegria-realestate.com,Denisa,Jeslikova,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+polina@alegria-realestate.com,Polina,Kalugina,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+kaspars@alegria-realestate.com,Kaspars,Kivlenieks,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+alex@alegria-realestate.com,Alexander,Kolybin,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+pawelpl@alegria-realestate.com,Pawel,Korchak,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+kristina.valencia@alegria-realestate.com,Krsitina,Kostina,Sales Manager (Valencia),Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+yegor@alegria-realestate.com,Yegor,Kryzhanovskyi,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+alia@alegria-realestate.com,Alia,Kurtyakova,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+lakavskiy@alegria-realestate.com,Aleksey,Lakavsky,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+olga@alegria-realestate.com,Olha,Lashkevych,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+meryeme@alegria-realestate.com,Meryeme,Lazibi,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+vadim@alegria-realestate.com,Vadim,Leshuk,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+nataly.litvinova@alegria-realestate.com,Natalyiya,Litvinova,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+tatiana.l@alegria-realestate.com,Tatiana,Lubeznaya,Department Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+kristina@alegria-realestate.com,Kristina,Luneva,Executive Director,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+lucia@alegria-realestate.com,Lucia,Matyash,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+jessica.m@alegria-realestate.com,Jessica,Menacho Martin,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+jessica@alegria-realestate.com,Jessica,Navarro Torres,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+ekaterina@alegria-realestate.com,Ekaterina,Ostrovska,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+daniel.polo@alegria-realestate.com,Daniel,Polo,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+naty@alegria-realestate.com,Naty,Pugach,Office Administrator/Real Estate Agent,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+david.r@alegria-realestate.com,David,Ramos Calvo,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+sarai@alegria-realestate.com,Sarai,Rebaque Martinez,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+andrey@alegria-realestate.com,Andrej,Samylin,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+anna.samylina@alegria-realestate.com,Anna,Samylina,Consulting Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+ross@alegriainternational.com,Ross,Skinner,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+marcus@alegria-realestate.com,Marcus,Stefan Gustavsson,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+s.yaroslav@alegria-realestate.com,Yaroslav,Sviatynchuk,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+s.katerina@alegria-realestate.com,Ekaterina,Sviatynchuk,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+maya@alegria-realestate.com,Maya,Swiderska,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+modestas@alegria-realestate.com,Modestas,Tamulionis,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+ksenia.tokareva@alegria-realestate.com,Ksenia,Tokareva,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+yevhenii.tsvietkov@alegria-realestate.com,Evgeniy,Tsvetkov,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+camelia@alegria-realestate.com,Camelia,Udroiu,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+yan@alegria-realestate.com,Yan,Vaynruch,"General Director, CEO",Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+jelle@alegria-realestate.com,Jelle,Vijverstra,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+constanza@alegria-realestate.com,Constanza,Vodanovic,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+kerstin@alegria-realestate.com,Kerstin,Wiese,Office Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+yuliya.y@alegria-realestate.com,Yulia,Yemelyanova,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+anna.z@alegria-realestate.com,Anna,Zaharenko,Office Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+artemzaharov@alegria-realestate.com,Artem,Zakharov,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+marlena@alegria-realestate.com,Marlena,Zalewska,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+andrei@alegria-realestate.com,Andrei,Zbirenka,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+andreyzh@alegria-realestate.com,Andrey,Zhuravskiy,Sales Manager,Alegria Real Estate,Torrevieja,Costa Blanca South,https://alegria-realestate.com/,https://alegria-realestate.com/en/our-team
+anna@casasymar.es,Anna,Chernakauskene,Sales,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+jose@casasymar.es,José R.,Crespán,Listings,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+antonio@casasymar.es,Antonio,Gallego,Managing Director,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+josejoaquin@casasymar.es,José J.,Martínez,Sales,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+mariano@casasymar.es,Mariano,Rubio,CEO,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+jonatan@casasymar.es,Jonatan,Teruel,Listings / Sales,Casas y Mar Servicios Inmobiliarios,Torrevieja,Costa Blanca South,https://casasymar.com/,https://casasymar.com/en/about-us/
+kate@coolcasas.net,Kate,Kearney,Real estate agent,Cool Casas,Torrevieja,Costa Blanca South,coolcasas.net,https://www.coolcasas.net/about-us/
+juancarlos@esphouses.com,Juan Carlos,Bencomo,Real estate expert,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+tracy@esphouses.com,Tracy,Carrasco Cuellar,Real estate expert (Altea),Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+florin@esphouses.com,Florin,Gamana,Commercial Director,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+rita@esphouses.com,Rita,Klemonskyte,Real estate expert,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+anna@esphouses.com,Anna,Krivobokova,Real estate expert,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+alexis@esphouses.com,Alexis,Martínez Merchante,Sales executive (Alicante),Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+rony@esphouses.com,Rony,Schepens,Real estate expert,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+marius@esphouses.com,Marius,Vasilevicius,Real estate expert,Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+olga@esphouses.com,Olga,Yegorova,Sales executive (Finestrat),Esphouses Real Estate,Guardamar del Segura,Costa Blanca South,https://www.esphouses.co.uk/,https://www.esphouses.co.uk/real-estate-agency-online/staff-team/
+marina@estrellasproperties.com,Marina,Calero Naranjo,Attorney - Real Estate Agent,Estrellas Properties,Torrevieja,Costa Blanca South,estrellasproperties.com,https://www.estrellasproperties.com/en/about-us/
+marcel@inmoinvestments.com,Marcel,Braun,Sales Consultant,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+isabell@inmoinvestments.com,Isabell,Daniel,Office Coordinator,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+hanna@inmoinvestments.com,Hanna,Gaga,Sales Consultant,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+charlotte@inmoinvestments.com,Charlotte,Kramer,Sales Consultant,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+eleanor@inmoinvestments.com,Eleanor,Schofield,Sales Assistant,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+shelley@inmoinvestments.com,Shelley,Starkey,Office Manager,Inmo Investments,La Zenia,Costa Blanca South,https://inmoinvestments.com/,https://inmoinvestments.com/team/
+kerry@keystonepropertyspain.com,Kerry,O'Rourke,Co-owner,Keystone Property Spain,"Villamartin, Orihuela Costa",Costa Blanca South,https://www.keystonepropertyspain.com,https://www.keystonepropertyspain.com/about-us
+alex@keystonepropertyspain.com,Alex,O'Rourke,Co-owner,Keystone Property Spain,"Villamartin, Orihuela Costa",Costa Blanca South,https://www.keystonepropertyspain.com,https://www.keystonepropertyspain.com/about-us
+javier@koalaproperties.es,Javier,Cazallas,Agent,Koala Properties,San Miguel de Salinas,Costa Blanca South,https://koalaproperties.es/,https://koalaproperties.es/sobre-nosotros/
+inma@koalaproperties.es,Inma,Díaz,Agent,Koala Properties,San Miguel de Salinas,Costa Blanca South,https://koalaproperties.es/,https://koalaproperties.es/sobre-nosotros/
+charlotte@koalaproperties.es,Charlotte,Jones,Coordinator,Koala Properties,San Miguel de Salinas,Costa Blanca South,https://koalaproperties.es/,https://koalaproperties.es/sobre-nosotros/
+klaudia@lexington-realty.com,Klaudia,Grucela,Property Consultant,Lexington Realty,Gran Alacant,Costa Blanca South,https://www.lexington-realty.com/,https://www.lexington-realty.com/en/our-team/
+manuel@lexington-realty.com,Manuel,Mallebrera,Property Consultant,Lexington Realty,Gran Alacant,Costa Blanca South,https://www.lexington-realty.com/,https://www.lexington-realty.com/en/our-team/
+peter.thuesen@lexington-realty.com,Peter,Thuesen,Director and Partner,Lexington Realty,Gran Alacant,Costa Blanca South,https://www.lexington-realty.com/,https://www.lexington-realty.com/en/our-team/
+melanie@mediter.com,Melanie,Bonte,Partner,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+yuliya@mediter.com,Yuliya,Butskikh,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+jeroen@mediter.com,Jeroen,Caudron,Agent,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+gabriella@mediter.com,Gabriella,Eriksson,"Real Estate Consultant, Mallorca",Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+amelia@mediter.com,Amelia,Froggatt,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+toon@mediter.com,Toon,Honings,Agent,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+bjorn@mediter.com,Bjørn,Husted,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+alisa@mediter.com,Alisa,Liubbe,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+soufia@mediter.com,Soufia,Mouâtassim,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+nicki@mediter.com,Nicki,Price,CEO,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+paul@mediter.com,Paul,Price,Club Mediter / Rentals Manager,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+luna@mediter.com,Luna,Renodeyn,Listing Agent,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+zino@mediter.com,Zino,Steurs,Real Estate Consultant / Sales Rental,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+daniel@mediter.com,Daniel,Szatan,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+denys@mediter.com,Denys,Teteriev,Sales Agent / Listing Agent,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+petula@mediter.com,Petula,Van Wallendael,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+igor@mediter.com,Igor,Vieira,Real Estate Consultant,Mediter Real Estate,Ciudad Quesada,Costa Blanca South,https://mediter.com,https://mediter.com/team/
+luis@rosamh.com,Luis,,Company Director,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+sergio@rosamh.com,Sergio,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+marianne@rosamh.com,Marianne,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+mark@rosamh.com,Mark,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+stephane@rosamh.com,Stéphane,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+raischa@rosamh.com,Raischa,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+luisag@rosamh.com,Luis,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+clara@rosamh.com,Clara,,Estate Agent,Rosa Mediterranean Houses,Orihuela Costa,Costa Blanca South,https://www.rosamh.com/,https://www.rosamh.com/en/our-team/4/5350/
+danielle@solmarestates.com,Danielle,Barnes-Sayers,Agent,Solmar Estates,Ciudad Quesada,Costa Blanca South,solmarestates.com,https://solmarestates.com/about-us/
+zoe@spainpropertyspecialists.com,Zoe,Doran,Business Owner,Spain Property Specialists,Orihuela Costa,Costa Blanca South,https://www.spainpropertyspecialists.com,https://www.spainpropertyspecialists.com/en/about-us
+ollie@villasfox.com,Ollie,Fox,Team member (role not stated),Villas Fox,Orihuela Costa,Costa Blanca South,villasfox.com,https://www.villasfox.com/
+emnir@viveesp.com,Emnir,Altun,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+johan@viveesp.com,Johan,Chabo,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+roberto@viveesp.com,Roberto,Gonzalez,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+gabriel@viveesp.com,Gabriel,Izgi,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+lutz@viveesp.com,Lutz,Kreienbring,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+abbe@viveesp.com,Abbe,Sabrisson,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+magda@viveesp.com,Magdalena,Stec,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+anna@viveesp.com,Anna,Tyurina,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+dora@viveesp.com,Dora,Vazquez,Agent,Vivee Real Estate,Orihuela Costa,Costa Blanca South,https://viveesp.com/,https://viveesp.com/about-us/
+chris.hara@fineandcountry.com,Chris,Hara,CEO Fine & Country Spain,Fine & Country Costa Blanca North,Costa Blanca North,"Costa Blanca, Alicante",https://www.fineandcountry.es/en/costa-blanca-north-estate-agents,https://www.fineandcountry.es/en/team/chris-hara
+cristian.hara@fineandcountry.com,Cristian,Hara,Director & Business Development,Fine & Country Costa Blanca North,Costa Blanca North,"Costa Blanca, Alicante",https://www.fineandcountry.es/en/costa-blanca-north-estate-agents,https://www.fineandcountry.es/en/team/cristian-hara
+lola@nardia.es,Lola,Gallego,Co-founder & Team Lead,Nardia,Altea,"Costa Blanca, Alicante",https://www.nardia.es,https://www.nardia.es/meet-the-team
+joerg@nardia.es,Jörg,Melzer,Sales Advisor,Nardia,Altea,"Costa Blanca, Alicante",https://www.nardia.es,https://www.nardia.es/meet-the-team
+stefan@nardia.es,Stefan,Noben,Sales Advisor,Nardia,Altea,"Costa Blanca, Alicante",https://www.nardia.es,https://www.nardia.es/meet-the-team
+joris@nardia.es,Joris,van Boekel,Sales Advisor,Nardia,Altea,"Costa Blanca, Alicante",https://www.nardia.es,https://www.nardia.es/meet-the-team
+imma.martinez@engelvoelkers.com,Imma,Martínez,Team Assistant,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+petra.mueller@engelvoelkers.com,Petra,Müller,Real estate advisor,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+marc.paris@engelvoelkers.com,Marc,Paris,Real estate advisor,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+francesc.prats@engelvoelkers.com,Francesc,Prats,Managing Director,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+johanna.reichardt@engelvoelkers.com,Johanna,Reichardt,Real estate advisor,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+fabiola.vera@engelvoelkers.com,Fabiola,Vera,Sales assistant,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+nadine.wendt@engelvoelkers.com,Nadine,Wendt,Managing Director,Engel & Völkers Cadaqués,Cadaqués,Costa Brava,https://www.engelvoelkers.com/es/en/shops/cadaques,https://www.engelvoelkers.com/es/en/shops/cadaques/team
+xavier.buixo@engelvoelkers.com,Xavier,Buixo,Agent,Engel & Völkers Empuriabrava,Empuriabrava,Costa Brava,https://www.engelvoelkers.com/es/en/shops/empuriabrava,https://www.engelvoelkers.com/es/en/shops/empuriabrava/team
+silvia.garcia1@engelvoelkers.com,Silvia,Garcia,Team Assistant,Engel & Völkers Empuriabrava,Empuriabrava,Costa Brava,https://www.engelvoelkers.com/es/en/shops/empuriabrava,https://www.engelvoelkers.com/es/en/shops/empuriabrava/team
+marsal.martorell@engelvoelkers.com,Marsal,Martorell,Director,Engel & Völkers Girona,Girona,Costa Brava,https://www.engelvoelkers.com/es/en/shops/girona,https://www.engelvoelkers.com/es/en/shops/girona/team
+natalia.dardercortes@engelvoelkers.com,Natàlia,Darder Cortes,Sales assistant,Engel & Völkers Llançà,Llançà,Costa Brava,https://www.engelvoelkers.com/es/en/shops/llanca,https://www.engelvoelkers.com/es/en/shops/llanca/team
+pascale.casellas@engelvoelkers.com,Pascale,Casellas,Real estate advisor,Engel & Völkers Peralada (Girona),Peralada (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/peralada,https://www.engelvoelkers.com/es/en/shops/peralada/team
+jimena.martigani@engelvoelkers.com,Jimena,Martigani,Real Estate Advisor,Engel & Völkers Peralada (Girona),Peralada (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/peralada,https://www.engelvoelkers.com/es/en/shops/peralada/team
+lala.osman@engelvoelkers.com,Lala,Osman,Real Estate Advisor,Engel & Völkers Peralada (Girona),Peralada (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/peralada,https://www.engelvoelkers.com/es/en/shops/peralada/team
+juli.sanchez@engelvoelkers.com,Juli,Sánchez,Real Estate Advisor,Engel & Völkers Peralada (Girona),Peralada (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/peralada,https://www.engelvoelkers.com/es/en/shops/peralada/team
+dimitri.elbaz@engelvoelkers.com,Dimitri,Elbaz,Real estate advisor,Engel & Völkers Roses (Girona),Roses (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/roses,https://www.engelvoelkers.com/es/en/shops/roses/team
+liane.prause@engelvoelkers.com,Liane,Prause,Real estate advisor,Engel & Völkers Roses (Girona),Roses (Girona),Costa Brava,https://www.engelvoelkers.com/es/en/shops/roses,https://www.engelvoelkers.com/es/en/shops/roses/team
+wim@porfinca.com,Wim,Verhoef,Marketing,Porfinca,Calonge,Costa Brava,porfincacostabrava.com,https://www.porfincacostabrava.com/en/about
+enzo@porfinca.com,Enzo,Verhoef Droge,Managing Director,Porfinca,Calonge,Costa Brava,porfincacostabrava.com,https://www.porfincacostabrava.com/en/about
+ricardo.castro@engelvoelkers.com,Ricardo,Castro,Real Estate Advisor,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+roser.dalmau@engelvoelkers.com,Roser,Dalmau,Real estate advisor,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+gilbert.muth@engelvoelkers.com,Gilbert,Muth,Real Estate Advisor,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+miguel.osuna@engelvoelkers.com,Miguel,Osuna,Director General,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+emilio.osuna@engelvoelkers.com,Emilio,Osuna,Chief Financial Officer,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+melinda.redai@engelvoelkers.com,Melinda,Redai,Real estate advisor,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+natalia.souza@engelvoelkers.com,Natalia,Souza,Sales assistant,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+mariadelmar.vallverdu@engelvoelkers.com,Maria del Mar,Vallverdu,Real Estate Advisor,Engel & Völkers Cambrils,Cambrils,Costa Dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada,https://www.engelvoelkers.com/es/en/shops/costa-dorada/team
+lourdes@bmsotogrande.com,Lourdes,Bellis,,BM Sotogrande,Sotogrande,Costa del Sol,bmsotogrande.com,https://www.bmsotogrande.com/about/team/lourdes-bellis
+paula@bmsotogrande.com,Paula,Correa Rodriguez,,BM Sotogrande,Sotogrande,Costa del Sol,bmsotogrande.com,https://www.bmsotogrande.com/about/team/paula-correa-rodriguez
+bradley@bmsotogrande.com,Bradley,Falconer,Founder,BM Sotogrande,Sotogrande,Costa del Sol,bmsotogrande.com,https://www.bmsotogrande.com/about/team/bradley-falconer
+kaye@bmsotogrande.com,Kaye,Falconer,,BM Sotogrande,Sotogrande,Costa del Sol,bmsotogrande.com,https://www.bmsotogrande.com/about/team/kaye-falconer
+sabina@bmsotogrande.com,Sabina,Falconer,,BM Sotogrande,Sotogrande,Costa del Sol,bmsotogrande.com,https://www.bmsotogrande.com/about/team/sabina-falconer
+callum@callumswan.com,Callum,Swan,Founder,Callum Swan Realty,Marbella,Costa del Sol,https://www.callumswanrealty.com,https://www.callumswanrealty.com
+w.schlesier@casamarbella.es,Wolfgang,Schlesier,CEO & Owner,Casa Marbella,Elviria,Costa del Sol,https://www.casamarbella.es,https://www.casamarbella.es/about
+elena@cosmopolitan-properties.com,Elena,Zolotareva,Head of Benalmádena office,Cosmopolitan Properties,Marbella,Costa del Sol,https://www.cosmopolitan-properties.com,https://www.cosmopolitan-properties.com/sobre-nosotros
+ralph@drumelia.com,Ralph,Beuselinck,Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/ralph-beuselinck
+robin@drumelia.com,Robin,Feraud,Associate to Senior Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/robin-feraud
+joaquin@drumelia.com,Joaquin,Jimenez,Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/joaquin-jimenez
+karla@drumelia.com,Bruna Karla,Krüger,Partner & Senior Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/bruna-karla-kruger
+artur@drumelia.com,Artur,Loginov,CEO & Owner,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/artur-loginov
+gasper@drumelia.com,Gašper,Plahutnik,Property Consultant,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/gasper-plahutnik
+ines@drumelia.com,Inés,Ponferrada,Sales Manager,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/ines-fernandez-ponferrada
+sergey@drumelia.com,Sergey,Sinichkin,Founder & Senior Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/sergey-sinichkin
+dexter@drumelia.com,Dexter,Sylmé,Junior Property Consultant,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/dexter-sylme
+cinthia@drumelia.com,Cinthia,Tavarez,Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/cinthia-tavarez
+olga@drumelia.com,Olga,Tolkunova,Senior Property Advisor,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/olga-tolkunova
+ismael@drumelia.com,Ismael,Viñeglas,Property Consultant,Drumelia Real Estate,Marbella,Costa del Sol,drumelia.com,https://www.drumelia.com/team/ismael-vineglas
+milada.gudkova@engelvoelkers.com,Milada,Gudkova,Affiliate Real Estate Advisor,Engel & Völkers Benalmádena,Benalmádena (Málaga),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/benalmadena/team
+javier.justicia@engelvoelkers.com,Javier,Justicia,Managing Director,Engel & Völkers Benalmádena,Benalmádena (Málaga),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/benalmadena/team
+elena.kulisenko@engelvoelkers.com,Elena,Kulisenko,Team Assistant,Engel & Völkers Benalmádena,Benalmádena (Málaga),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/benalmadena/team
+kasia.piskorska@engelvoelkers.com,Kasia,Piskorska,Director of Operations & People,Engel & Völkers Benalmádena,Benalmádena (Málaga),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/benalmadena/team
+lavinia.tremmel@engelvoelkers.com,Lavinia,Tremmel,Affiliate Real Estate Advisor,Engel & Völkers Benalmádena,Benalmádena (Málaga),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/benalmadena/team
+josevi.artacho@engelvoelkers.com,Josevi,Artacho,Sales Director Golden Mile,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/josevi-artacho
+anke.borchert@engelvoelkers.com,Anke,Borchert,Sales Director Marbella West,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/anke-borchert
+bernd.dellwig@engelvoelkers.com,Bernd,Dellwig,General Sales Director,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/bernd-dellwig
+inna.gerasimova@engelvoelkers.com,Inna,Gerasimova,New Developments Sales Coordinator,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/inna-gerasimova
+smadar.kahana@engelvoelkers.com,Smadar,Kahana,Managing Director,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/smadar-kahana
+julie.konig@engelvoelkers.com,Julie,König,Sales Manager Marbella East,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/julie-konig
+neil.mailer@engelvoelkers.com,Neil,Mailer,New Development Manager,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/neil-mailer
+ibi.mohacsy@engelvoelkers.com,Ibolya,Mohacsy,Rentals Manager,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/ibolya-mohacsy
+anastasia.psh@engelvoelkers.com,Anastasia,Pshebyshevskyya,Rentals Executive,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/anastasia-pshebyshevskyya
+nuno.silva@engelvoelkers.com,Nuno,Silva,Sales Director Puerto Banús,Engel & Völkers Marbella,Marbella,Costa del Sol,marbella-ev.com,https://www.marbella-ev.com/about-us/team/nuno-silva
+olivia.blanc@engelvoelkers.com,Olivia,Blanc,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+federico.braje@engelvoelkers.com,Federico,Braje,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+maite.brigaut@engelvoelkers.com,Maite,Brigaut,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+katalyn.bugyi@engelvoelkers.com,Katalyn,Bugyi,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+camila.disabato@engelvoelkers.com,Camila,Di Sabato,Head of Marketing & Content,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+kai.eerola@engelvoelkers.com,Kai,Eerola,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+sabrina.frenzel@engelvoelkers.com,Sabrina,Frenzel,Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+hans.granlund@engelvoelkers.com,Hans,Granlund,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+joakim.jigerius@engelvoelkers.com,Joakim,Jigerius,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+roy.manso@engelvoelkers.com,Roy,Manso,Affiliated real estate consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+barbara.mutel@engelvoelkers.com,Barbara,Mutel,Team assistant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+luciano.robledo@engelvoelkers.com,Luciano,Robledo,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+irina.seregina@engelvoelkers.com,Irina,Seregina,Team Assistant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+mariana.treiber@engelvoelkers.com,Mariana,Treiber,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+chema.velasco@engelvoelkers.com,Chema,Velasco,Mijas Office Manager,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+sonia.zambrana@engelvoelkers.com,Sonia,Zambrana,Affiliated Real Estate Consultant,Engel & Völkers Mijas (Málaga),Mijas (Málaga),Costa del Sol,https://www.engelvoelkers.com/es/en/shops/mijas-west,https://www.engelvoelkers.com/es/en/shops/mijas-west/team
+carolina.barrionuevo@engelvoelkers.com,Carolina,Barrionuevo,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+virginia.castro@engelvoelkers.com,Virginia,Castro,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+paola.cotilla@engelvoelkers.com,Paola,Cotilla,Team Assistant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+sabine.klostermann@engelvoelkers.com,Sabine,Klostermann,Senior real estate consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+martina.lazzati@engelvoelkers.com,Martina,Lazzati,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+susana.lopez@engelvoelkers.com,Susana,Lopez,Team Assistant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+maria.lyoussi@engelvoelkers.com,María,Lyoussi,Senior real estate consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+maria.makhloufi@engelvoelkers.com,María,Makhloufi,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+emilia.perezromero@engelvoelkers.com,Emilia,Pérez Romero,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+ricardo.ubeda@engelvoelkers.com,Ricardo,Úbeda,Real Estate Consultant,Engel & Völkers Málaga,Málaga,Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/malaga/team
+thomas.ajtony@engelvoelkers.com,Thomas,Ajtony,Independent Real Estate Advisor Collaborating with E&V | Private Office Marbella,Engel & Völkers Puerto Banús,"Puerto Banús, Marbella",Costa del Sol,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus/team
+katia.bein@engelvoelkers.com,Katia,Bein,Independent Senior Property Advisor Collaborating with E&V | Private Office Marbella,Engel & Völkers Puerto Banús,"Puerto Banús, Marbella",Costa del Sol,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus/team
+denisse.laracaceres@engelvoelkers.com,Denisse,Lara Cáceres,Team Assistant,Engel & Völkers Puerto Banús,"Puerto Banús, Marbella",Costa del Sol,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus/team
+linda.turesson@engelvoelkers.com,Linda,Turesson,Independent Property Advisor Collaborating with E&V | Private Office Marbella,Engel & Völkers Puerto Banús,"Puerto Banús, Marbella",Costa del Sol,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus,https://www.engelvoelkers.com/es/en/shops/marbella-puerto-banus/team
+wouter.deraedt@engelvoelkers.com,Wouter,Deraedt,Sales Manager,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+lucia.larratea@engelvoelkers.com,Lucia,Larratea,Senior Real Estate Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+silvia.mateo@engelvoelkers.com,Silvia,Mateo,Sales Assistant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+meri.peltonen@engelvoelkers.com,Meri,Peltonen,Senior Real Estate Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+sven.roofthooft@engelvoelkers.com,Sven,Roofthooft,Real Estate Agent,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+raquel.rus@engelvoelkers.com,Raquel,Rus,Senior Property Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+antonia.sanchez@engelvoelkers.com,Antonia,Sanchez,Senior Property Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+jessica.schwier@engelvoelkers.com,Jessica,Schwier,Real Estate Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+corinne.thierstein@engelvoelkers.com,Corinne,Thierstein,Senior Property Consultant,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+elena.tocino@engelvoelkers.com,Elena,Tocino,Private Office Advisor,Engel & Völkers Sotogrande,Sotogrande (Cadiz),Costa del Sol,https://www.engelvoelkers.com,https://www.engelvoelkers.com/es/en/shops/sotogrande/team
+ida@homenetspain.com,Ida,Bengtsson,Sales Agent,Homenetspain,Fuengirola,Costa del Sol,homenetspain.com,https://www.homenetspain.com/en/fuengirola
+moa@homenetspain.com,Moa,Kvist,Sales Agent,Homenetspain,Fuengirola,Costa del Sol,homenetspain.com,https://www.homenetspain.com/en/fuengirola
+katja@homenetspain.com,Katja,Rise Carlqvist,CEO & Founder,Homenetspain,Fuengirola,Costa del Sol,homenetspain.com,https://www.homenetspain.com/en/fuengirola
+jenny@homenetspain.com,Jenny,Utterberg,Sales Agent,Homenetspain,Fuengirola,Costa del Sol,homenetspain.com,https://www.homenetspain.com/en/fuengirola
+lab@livingstone-estates.com,Luis,Aguado,Sales Support Executive,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+dgo@livingstone-estates.com,David,Gonzalez,Affiliate Sales Agent,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+lka@livingstone-estates.com,Liudmila,Karyakina,Sales Agent,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+plo@livingstone-estates.com,Princess,Lopez-Pinlac,General Director,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+ima@livingstone-estates.com,Isabel,Mateos,Services Coordinator,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+amo@livingstone-estates.com,Antonio,Moya,Managing Director and CEO,Livingstone Estates,Estepona,Costa del Sol,livingstone-estates.com,https://www.livingstone-estates.com/about-us
+maria@mpdunne.com,Maria José,Borges Montenegro,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/maria-jose
+julieann@mpdunne.com,Julie Ann,Davies,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/julie-ann
+irene@mpdunne.com,Irene,De la Rosa del Rio,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/irene-de-la-rosa
+mary@mpdunne.com,Mary,Dunne,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/mary-dunne
+victoria@mpdunne.com,Victoria,Guerrero,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/victoria-guerrero
+trevor@mpdunne.com,Trevor,Kerr,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/trevor-kerr
+oscar@mpdunne.com,Oscar,Lindahl,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/oscar-lindahl
+melinda@mpdunne.com,Melinda,Rendina,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/melinda-rendina
+alexis@mpdunne.com,Alexis,Santafe Ortiz,,MPDunne Properties,Marbella,Costa del Sol,mpdunne.com,https://www.mpdunne.com/team/alexis-santafe-ortiz
+frederic@marbella-hills-homes.com,Frédéric,Bentz,Founder,Marbella Hills Homes,Marbella,Costa del Sol,https://www.marbella-hills-homes.com,https://www.marbella-hills-homes.com/about-us/the-team/frederic-bentz
+jean-christophe@marbella-hills-homes.com,Jean-Christophe,Guérin,,Marbella Hills Homes,Marbella,Costa del Sol,https://www.marbella-hills-homes.com,https://www.marbella-hills-homes.com/about-us/the-team/jean-christophe-guerin
+arie@marbella-hills-homes.com,Arie,Van Winkelhof,Property Advisor,Marbella Hills Homes,Marbella,Costa del Sol,https://www.marbella-hills-homes.com,https://www.marbella-hills-homes.com/about-us/the-team/arie-van-winkelhof
+ziad@marbella-hills-homes.com,Ziad,el Nakib,Property Advisor,Marbella Hills Homes,Marbella,Costa del Sol,https://www.marbella-hills-homes.com,https://www.marbella-hills-homes.com/about-us/the-team/ziad-el-nakib
+stephanie@noll-sotogrande.com,Stephanie,Noll,Co-owner,Noll Sotogrande,Sotogrande,Costa del Sol,noll-sotogrande.com,https://www.noll-sotogrande.com/agents
+charles.gubbins@noll-sotogrande.com,Charles,Gubbins,Co-owner / Real Estate Expert,Noll Sotogrande Real Estate,Sotogrande,Costa del Sol,https://www.noll-sotogrande.com,https://www.noll-sotogrande.com/agents/charles-gubbins
+jorge.marti@noll-sotogrande.com,Jorge,Martí Martí,Real Estate Agent,Noll Sotogrande Real Estate,Sotogrande,Costa del Sol,https://www.noll-sotogrande.com,https://www.noll-sotogrande.com/agents/jorge-marti-marti
+hilary@realista.com,Hilary,Penney,,Realista,Marbella / Estepona,Costa del Sol,https://www.realista.com,https://www.realista.com/
+jacqueline@realista.com,Jacqueline,den Uil,,Realista,Marbella / Estepona,Costa del Sol,https://www.realista.com,https://www.realista.com/
+stefan@realista.com,Stefan,van Beeten,,Realista,Marbella / Estepona,Costa del Sol,https://www.realista.com,https://www.realista.com/
+georgia@roccabox.com,Georgia,Honeybooth,Senior Property Consultant,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+mat@roccabox.com,Matty,Katerzabek,Property Consultant,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+nikki@roccabox.com,Nikki,Maddrell,Rentals Consultant,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+amellia@roccabox.com,Amellia,Mckay,Rentals Manager,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+julie@roccabox.com,Julie,Montague,Senior Property Consultant,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+dajana@roccabox.com,Dajana,Petrovic,Rentals Consultant,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+dan@roccabox.com,Dan,Roc,Co-Founder & CEO,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+claire@roccabox.com,Claire,Roc,Growth & Operations Manager,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+sara@roccabox.com,Sara,Ryskeldina,General Manager,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+shahd@roccabox.com,Shahd,Sherif,Sales Manager,Roccabox,Marbella,Costa del Sol,roccabox.com,https://www.roccabox.com/about-us/
+ali.amin@skandiamaklarna.com,Ali,Amin,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+sarah.bjorkqvist@skandiamaklarna.com,Sarah,Björkqvist,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+rickard.engstrom@skandiamaklarna.com,Rickard,Engström,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+robin.hage@skandiamaklarna.com,Robin,Hage,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+giang.nguyen@skandiamaklarna.com,Giang,Nguyen,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+liz.wallin@skandiamaklarna.com,Liz,Wallin,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+sandra.yakoub@skandiamaklarna.com,Sandra,Yakoub,Broker,SkandiaMäklarna Fuengirola,Fuengirola,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/fuengirola
+malin.billback@skandiamaklarna.com,Malin,Billbäck,Broker,SkandiaMäklarna Nerja,Nerja,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/Nerja/
+wilfredo.cabrera@skandiamaklarna.com,Wilfredo,Cabrera,Broker,SkandiaMäklarna Nerja,Nerja,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/Nerja/
+emma.martensson@skandiamaklarna.com,Emma,Mårtensson,Broker,SkandiaMäklarna Nerja,Nerja,Costa del Sol,skandiamaklarna.com,https://www.skandiamaklarna.com/en/find-a-broker/Nerja/
+david@agent.solvilla.es,David,Abgaryan,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/david-abgaryan/
+ruslan@agent.solvilla.es,Ruslan,Babenko,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/ruslan-babenko/
+pablo@agent.solvilla.es,Pablo,Dabrio,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/pablo-dabrio/
+willy@solvilla.es,Willy,Dahl,Partner,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/management/willy-dahl/
+dennitsa@agent.solvilla.es,Dennitsa,Dimitrova,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/dennitsa-dimitrova/
+hazel@solvilla.es,Hazel,Gilsenan,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/hazel-gilsenan/
+sebastian@agent.solvilla.es,Sebastian,Jimenez,Senior Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/sebastian-jimenez/
+luciano@solvilla.es,Luciano,Morelli,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/luciano-morelli/
+linus@agent.solvilla.es,Linus,Nyberg,Partner & Senior Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/linus-nyberg/
+alex@agent.solvilla.es,Alex,Petrov,Partner & Senior Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/alex-petrov/
+georges@agent.solvilla.es,Georges,Rabbat,Partner & Senior Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/georges-rabbat/
+rs@agent.solvilla.es,Rimvy,Sileikis,Property Advisor,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/agent/rimvy-sileikis/
+dt@solvilla.es,Daniel,Tienda,COO & Managing Director,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/management/daniel-tienda/
+stacy@solvilla.es,Stacy,Welch,CEO & Partner,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/management/stacy-welch/
+torgeir@solvilla.es,Torgeir,Wemmestad Haaland,Founder & Chairman,Solvilla,Marbella,Costa del Sol,https://www.solvilla.es,https://www.solvilla.es/about/team/management/torgeir-wemmestad-haaland/
+thijmen@sparklinghomesmarbella.es,Thijmen,Breijer,Real Estate Agent,Sparkling Homes Marbella,Marbella,Costa del Sol,sparklinghomesmarbella.com,https://sparklinghomesmarbella.com/meet-the-team/
+margot@sparklinghomesmarbella.es,Margot,Van Arum,Founder / Managing Director,Sparkling Homes Marbella,Marbella,Costa del Sol,sparklinghomesmarbella.com,https://sparklinghomesmarbella.com/meet-the-team/
+maureen@sparklinghomesmarbella.es,Maureen,Zumpolle,Sales,Sparkling Homes Marbella,Marbella,Costa del Sol,sparklinghomesmarbella.com,https://sparklinghomesmarbella.com/meet-the-team/
+eric@sparklinghomesmarbella.es,Eric,van de Rijdt,Property and Renovation Consultant,Sparkling Homes Marbella,Marbella,Costa del Sol,sparklinghomesmarbella.com,https://sparklinghomesmarbella.com/meet-the-team/
+zaid@strand.es,Zaid,Al-Gafari,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+mauro@strand.es,Mauro,Balaguer,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+isabel.brennan@strand.es,Isabel,Brennan,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+owen@strand.es,Owen,Burke,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+yulia@strand.es,Yulia,Butuzova,Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+sandra@strand.es,Sandra,Castillo,Sales Support,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+natalia@strand.es,Natalia,Coles,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+sarah@strand.es,Sarah,Conroy,Independent Property Advisor,Strand Properties,Marbella,Costa del Sol,https://strandproperties.com,https://strandproperties.com/marbella-office/
+flavia@strand.es,Flavia,Davio,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+carolina@strand.es,Carolina,Flores,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+mirela@strand.es,Mirela,Fuentes,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+gema@strand.es,Gema,Garcia Latorre,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+adela@strand.es,Adela,Giráldez Garcia,Property Adviser,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+jorge@strand.es,Jorge,Gonzalez Valiente,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+sandra.gordillo@strand.es,Sandra,Gordillo,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+kyla@strand.es,Kyla,Gutiérrez Newlands,Office Assistant,Strand Properties,Marbella,Costa del Sol,strandproperties.com,https://strandproperties.com/back-office-team/
+anna@strand.es,Anna,Gvozdeva,Senior Advisor,Strand Properties,Marbella,Costa del Sol,https://strandproperties.com,https://strandproperties.com/marbella-office/
+andres@strand.es,Andrés,Gómez,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+emma@strand.es,Emma,Harris,Independent Junior Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+maarit@strand.es,Maarit,Häkkinen,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+pernilla@strand.es,Pernilla,Johansson,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+anne.kero@strand.es,Anne,Kero,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+anssi@strand.es,Anssi,Kiviranta,Co-founder,Strand Properties,Marbella,Costa del Sol,strandproperties.com,https://strandproperties.com/back-office-team/
+sirena@strand.es,Sirena,Kiviranta,Co-founder,Strand Properties,Marbella,Costa del Sol,strandproperties.com,https://strandproperties.com/back-office-team/
+mikael@strand.es,Mikael,Kjellsson,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+hanna@strand.es,Hanna,Kytölä-Lundström,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+joonas@strand.es,Joonas,Laitinen,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+marie@strand.es,Marie,Lambert,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+carolina.levrero@strand.es,Carolina,Levrero,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+fanny@strand.es,Fanny,Lindgren,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+pablo.lorenzo@strand.es,Pablo,Lorenzo,Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+emiliano@strand.es,Emiliano,Luis Lopez,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+marlo@strand.es,Marló,López,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+ian@strand.es,Ian,Moguel,Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+angel.molero@strand.es,Angel,Molero,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+elena@strand.es,Elena,Mäkinen,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+mary@strand.es,Mary,Nela Dias,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+elaine@strand.es,Elaine,Newlands,Regional Director,Strand Properties,Marbella,Costa del Sol,strandproperties.com,https://strandproperties.com/back-office-team/
+katariina.okkonen@strand.es,Katariina,Okkonen,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+karen@strand.es,Karen,Oxlade,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+tuomas@strand.es,Tuomas,Paajonen,"Brand Partner, Property Advisor",Strand Properties,Marbella,Costa del Sol,https://strandproperties.com,https://strandproperties.com/marbella-office/
+nicolas@strand.es,Nicolas,Papaleo,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+macarena@strand.es,Macarena,Paton,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+arturo@strand.es,Arturo,Perea Bigwood,Sales Support,Strand Properties,Marbella,Costa del Sol,strandproperties.com,https://strandproperties.com/back-office-team/
+oleksandra@strand.es,Oleksandra,Pereginska,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+paul@strand.es,Paul,Radcliffe,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+elina@strand.es,Elina,Rajamäki,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+roberto.rodrigues@strand.es,Roberto,Rodrigues,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+manuel@strand.es,Manuel,Rodriguez,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+tomas@strand.es,Tomas,Rogers,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+karina@strand.es,Karina,Rojas,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+javier@strand.es,Javier,Rosado,Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+arto@strand.es,Arto,Ryynanen,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+katariina@strand.es,Katariina,Salmelin,"Brand Partner, Property Advisor",Strand Properties,Marbella,Costa del Sol,https://strandproperties.com,https://strandproperties.com/marbella-office/
+rafa@strand.es,Rafa,Segorbe,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+cynthia@strand.es,Cynthia,Stiers,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+miriam@strand.es,Miriam,Stopiakova,Sales Support,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+caroline@strand.es,Caroline,Sylfvander,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+dora@strand.es,Dora,Szerenyi,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+beatriz@strand.es,Beatriz,Vaca Jiménez,Independent Property Advisor,Strand Properties,Malaga,Costa del Sol,strandproperties.com,https://strandproperties.com/malaga-office/
+natasha@strand.es,Natasha,Valtonen,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+eloy@strand.es,Eloy,Vilaplana Muñoz,Independent Property Advisor,Strand Properties,Fuengirola,Costa del Sol,strandproperties.com,https://strandproperties.com/fuengirola-office/
+sandra@terrameridiana.com,Sandra,El Kholti,New Development Specialist,Terra Meridiana,Marbella,Costa del Sol,https://www.terrameridiana.com,https://www.terrameridiana.com
+alex@terrameridiana.com,Alex,Salazar,Property Consultant / Rental Specialist,Terra Meridiana,Marbella,Costa del Sol,https://www.terrameridiana.com,https://www.terrameridiana.com
+laura.garcia@teseoestate.com,Laura,Garcia,,Teseo Estates,Sotogrande,Costa del Sol,teseoestate.com,https://www.teseoestate.com/team
+inma.gavira@teseoestate.com,Inma,Gavira,,Teseo Estates,Sotogrande,Costa del Sol,teseoestate.com,https://www.teseoestate.com/team
+nacho.mier@teseoestate.com,Nacho,Mier,,Teseo Estates,Sotogrande,Costa del Sol,teseoestate.com,https://www.teseoestate.com/team
+javier.mier@teseoestate.com,Javier,Mier,,Teseo Estates,Sotogrande,Costa del Sol,teseoestate.com,https://www.teseoestate.com/team
+vanessa.davila@thespanishestateagent.com,Vanessa,Davila,Sales Manager,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+gary.edwards@thespanishestateagent.com,Gary,Edwards,Property Consultant,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+louie.gray@thespanishestateagent.com,Louie,Gray,Office Manager,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+wynne.harcombe@thespanishestateagent.com,Wynne,Harcombe,Property Consultant,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+ella.kinnear@thespanishestateagent.com,Ella Grace,Kinnear,Property Consultant,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+peter.lundie@thespanishestateagent.com,Peter,Lundie,Property Consultant (Inland Property Specialist),The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+shirin.sharifi@thespanishestateagent.com,Shirin,Sharifi,Sales Director,The Spanish Estate Agent,Costa del Sol,Costa del Sol,thespanishestateagent.com,https://www.thespanishestateagent.com/en/team
+chris@yourpropertyconcept.com,Chris,Antoszkiewicz,Co-Founder,Your Property Concept,Marbella,Costa del Sol,https://yourpropertyconcept.com,https://yourpropertyconcept.com/about-us/
+victoria@yourpropertyconcept.com,Victoria,Atkins,Office and Customer Service Manager,Your Property Concept,Marbella,Costa del Sol,https://yourpropertyconcept.com,https://yourpropertyconcept.com/about-us/
+hannah@yourpropertyconcept.com,Hannah,Highfield,Marketing Director,Your Property Concept,Marbella,Costa del Sol,https://yourpropertyconcept.com,https://yourpropertyconcept.com/about-us/
+katy@yourpropertyconcept.com,Katy,Mazen,Co-Founder,Your Property Concept,Marbella,Costa del Sol,https://yourpropertyconcept.com,https://yourpropertyconcept.com/about-us/
+mia.pearlman@fineandcountry.com,Mia,Pearlman,Managing Director,"Fine & Country Marbella, Costa del Sol",Marbella,Costa del Sol,https://www.fineandcountry.es/en/marbella-costa-del-sol-estate-agents,https://www.fineandcountry.es/en/team/mia-pearlman
+james.vizetelly@fineandcountry.com,James,Vizetelly,Marketing Director,"Fine & Country Marbella, Costa del Sol",Marbella,Costa del Sol,https://www.fineandcountry.es/en/marbella-costa-del-sol-estate-agents,https://www.fineandcountry.es/en/team/james-vizetelly
+alexandra@nvoga.com,Alexandra,Chalhoub,Sales Executive,Nvoga Marbella Realty,Marbella,Costa del Sol,https://www.nvoga.com,https://www.nvoga.com/about
+josecarlos@nvoga.com,José Carlos,León,Founder & Managing Director,Nvoga Marbella Realty,Marbella,Costa del Sol,https://www.nvoga.com,https://www.nvoga.com/about
+alla@nvoga.com,Alla,Morozova,"Sales Director, NVOGA Developments",Nvoga Marbella Realty,Marbella,Costa del Sol,https://www.nvoga.com,https://www.nvoga.com/about
+ana@nvoga.com,Ana,Petkovic,Sales Executive,Nvoga Marbella Realty,Marbella,Costa del Sol,https://www.nvoga.com,https://www.nvoga.com/about
+theodora@terrameridiana.com,Theodora,Delville,Director,Terra Meridiana,Marbella,Costa del Sol,https://www.terrameridiana.com,https://www.terrameridiana.com/about/
+adam@terrameridiana.com,Adam,Neale,Director,Terra Meridiana,Marbella,Costa del Sol,https://www.terrameridiana.com,https://www.terrameridiana.com/about/
+carla.bote@engelvoelkers.com,Carla,Bote,Team Assistant,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+leticia.hernandez@engelvoelkers.com,Leticia,Hernandez,Associate Consultant,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+karin.kelder@engelvoelkers.com,Karin,Kelder,Real estate advisor,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+jose.nunez@engelvoelkers.com,José,Núñez,Director of Engel & Völkers Gran Canaria,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+ivonne.ortizarteaga@engelvoelkers.com,Ivonne,Ortiz Arteaga,Real Estate Consultant,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+jenifer.perez@engelvoelkers.com,Jenifer,Perez,Associate Consultant,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+alfonso.rincon@engelvoelkers.com,Alfonso,Rincon,Agent,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+fabian.rubio@engelvoelkers.com,Fabian,Rubio,Real Estate Consultant,Engel & Völkers Las Palmas de Gran Canaria,Las Palmas de Gran Canaria,Gran Canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria,https://www.engelvoelkers.com/es/en/shops/gran-canaria/team
+riccardo.bigi@engelvoelkers.com,Riccardo,Bigi,Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+maria.calle@engelvoelkers.com,Maria,Calle,Senior Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+melanie.condie@engelvoelkers.com,Melanie,Condie,Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+nathalie.conzen@engelvoelkers.com,Nathalie,Conzen,Senior Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+sarah.panarace@engelvoelkers.com,Sarah,Panarace,Senior Sales Agent,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+miguel.pliego@engelvoelkers.com,Miguel,Pliego,Rental Agent,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+begona.romero@engelvoelkers.com,Begoña,Romero,Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+josepha.stemkens@engelvoelkers.com,Josepha,Stemkens,Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+lea.winkler@engelvoelkers.com,Lea,Winkler,Sales Advisor,Engel & Völkers Ibiza,Ibiza,Ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza,https://www.engelvoelkers.com/es/en/shops/ibiza/team
+elina.baller@engelvoelkers.com,Elina,Baller,Sales Advisor,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+leonard.bruns@engelvoelkers.com,Leonard,Bruns,Director Santa Eulalia,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+marina.bunzl@engelvoelkers.com,Marina,Bunzl,Sales Advisor,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+jasmin.feller@engelvoelkers.com,Jasmin,Feller,Office Administrator,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+esmeralda.fernandez@engelvoelkers.com,Esmeralda,Fernández,Customer Relations Specialist,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+anouska.lagrand@engelvoelkers.com,Anouska,Lagrand,Office Administrator,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+alice.loddi@engelvoelkers.com,Alice,Loddi,Marketing specialist,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+barbara.martinez@engelvoelkers.com,Barbara,Martinez,Sales Advisor,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+uta.reineke@engelvoelkers.com,Uta,Reineke,Director,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+manuel.thuering@engelvoelkers.com,Manuel,Thüring,Sales Advisor,Engel & Völkers Santa Eulalia,Santa Eulalia,Ibiza,https://www.engelvoelkers.com/es/en/shops/santa-eulalia,https://www.engelvoelkers.com/es/en/shops/santa-eulalia/team
+m.abicht@lanzaroteinvestments.com,Melanie,Abicht,Branch Coordinator Costa Teguise,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+peggi.a@lanzaroteinvestments.com,Peggi,Asztalos,Branch Coordinator Playa Blanca,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+n.beista@lanzaroteinvestments.com,Naomi,Beista,Senior Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+a.betancor@lanzaroteinvestments.com,Alba,Betancor,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+g.deleon@lanzaroteinvestments.com,Goretti,De León Guillén,Notary & Sales Progression,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+c.durando@lanzaroteinvestments.com,Caterina,Durando,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+sophia@lanzaroteinvestments.com,Sophia,Hmouyi,Accounting & Sales Support,Lanzarote Investments,Playa Blanca,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/
+b.howard@lanzaroteinvestments.com,Barney,Howard,Branch Manager Costa Teguise,Lanzarote Investments,Playa Blanca,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/
+m.jonas@lanzaroteinvestments.com,Mirco-Alexander,Jonas,Senior Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+john.killeen@lanzaroteinvestments.com,John,Killeen,Director,Lanzarote Investments,Playa Blanca,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/
+michaela.k@lanzaroteinvestments.com,Michaela,Kvasnicova,Branch Coordinator Puerto del Carmen,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+n.lemes@lanzaroteinvestments.com,Natacha,Lemes Machín,Administration and Accounts,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+m.melodia@lanzaroteinvestments.com,Madeleine,Melodía,Notary & Sales Progression,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+a.meyer@lanzaroteinvestments.com,Anthony,Meyer,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+a.mulloy@lanzaroteinvestments.com,Abbie,Mulloy,Senior Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+e.rodriguez@lanzaroteinvestments.com,Elena,Rodriguez,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+t.stage@lanzaroteinvestments.com,Tiia,Stage-Sø,Notary & Sales Progression,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+d.stonier@lanzaroteinvestments.com,Des,Stonier,"Branch Manager, Puerto del Carmen",Lanzarote Investments,Puerto del Carmen,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/
+p.vandenbergh@lanzaroteinvestments.com,Pascal,Vandenbergh,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+adam.k@lanzaroteinvestments.com,Adam,Wakinshaw,Senior Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+d.wakinshaw@lanzaroteinvestments.com,Dylan,Wakinshaw,Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+a.whitthorn@lanzaroteinvestments.com,Alex,Whitthorn,Senior Sales Consultant,Lanzarote Investments,,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/our-team
+c.wilson@lanzaroteinvestments.com,Craig,Wilson,Branch Manager Playa Blanca,Lanzarote Investments,Playa Blanca,Lanzarote,lanzaroteinvestments.com,https://lanzaroteinvestments.com/
+rupert.campbell@es.knightfrank.com,Rupert,Campbell,Premium Properties,Knight Frank Spain,Madrid,Madrid,https://www.knightfrank.es,https://publications.knightfrank.com/thespanishcollection/2024-25-en/contact-us
+armida.ortiz@es.knightfrank.com,Armida,Ortiz,Premium Properties,Knight Frank Spain,Madrid,Madrid,https://www.knightfrank.es,https://publications.knightfrank.com/thespanishcollection/2024-25-en/contact-us
+ana.white@es.knightfrank.com,Ana,White,Premium Properties,Knight Frank Spain,Madrid,Madrid,https://www.knightfrank.es,https://publications.knightfrank.com/thespanishcollection/2024-25-en/contact-us
+carlos.zamora@es.knightfrank.com,Carlos,Zamora,"Partner, Residential Director",Knight Frank Spain,Madrid,Madrid,https://www.knightfrank.es,https://publications.knightfrank.com/thespanishcollection/2024-25-en/contact-us
+amanda@ajbutlerproperty.com,Amanda J,Butler,Wellness Real Estate Expert (owner),AJ Butler Property,Palma,Mallorca,ajbutlerproperty.com,https://ajbutlerproperty.com/
+magda@bonninsanso.com,Magdalena,Bosch,Sales Advisor,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+pimms@bonninsanso.com,Pimms,Chetwynd-Talbot,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+emma@bonninsanso.com,Emma,Conquest,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+jessica@bonninsanso.com,Jessica,Elter,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+elisabet@bonninsanso.com,Elisabet,Gonzalez,Sales Advisor,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+lina@bonninsanso.com,Lina,Mascaró,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+lola@bonninsanso.com,Lola,Niño,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+jesus@bonninsanso.com,Jesús,Oleo,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+jose@bonninsanso.com,Jose,Pons,CEO,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/management-team/
+neus@bonninsanso.com,Neus,Preto,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+julia@bonninsanso.com,Julia,Thielebein,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+rupert@bonninsanso.com,Rupert,Thomas,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+sinead@bonninsanso.com,Sinead,Turnbull,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+juliette@bonninsanso.com,Juliette,Vautherot,Sales team,Bonnin Sansó,Palma,Mallorca,bonninsanso.com,https://www.bonninsanso.com/en/company/sales-team/
+agnes.bobela@engelvoelkers.com,Agnes,Bobela,Real Estate Consultant,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+ramona.bortolotti@engelvoelkers.com,Ramona,Bortolotti,Real Estate Agent,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+sandra.heinekind@engelvoelkers.com,Sandra,Heinekind,Team Assistant,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+jana.roth@engelvoelkers.com,Jana,Roth,Real Estate Agent,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+laura.schneider@engelvoelkers.com,Laura,Schneider,Marketing Specialist,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+katharina.slabik@engelvoelkers.com,Katharina,Slabik,Real Estate Agent,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+katharina.starlay@engelvoelkers.com,Katharina,Starlay,Real Estate Agent,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+daniela.wurm@engelvoelkers.com,Daniela,Wurm,Management Assistance,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+renate.zischka@engelvoelkers.com,Renate,Zischka,Real Estate Agent,Engel & Völkers Artà,Artà,Mallorca,https://www.engelvoelkers.com/es/en/shops/arta,https://www.engelvoelkers.com/es/en/shops/arta/team
+paula.bonnin@engelvoelkers.com,Paula,Bonnin,Sales Assistant,Engel & Völkers Deià,Deià,Mallorca,https://www.engelvoelkers.com/es/en/shops/deia,https://www.engelvoelkers.com/es/en/shops/deia/team
+elvira.gomezballester@engelvoelkers.com,Elvira,Gómez Ballester,Management Assistance,Engel & Völkers Deià,Deià,Mallorca,https://www.engelvoelkers.com/es/en/shops/deia,https://www.engelvoelkers.com/es/en/shops/deia/team
+teresa.maurer@engelvoelkers.com,Teresa,Maurer,Sales Assistant,Engel & Völkers Deià,Deià,Mallorca,https://www.engelvoelkers.com/es/en/shops/deia,https://www.engelvoelkers.com/es/en/shops/deia/team
+anke.vosgerau@engelvoelkers.com,Anke,Vosgerau,Private Office Advisor,Engel & Völkers Deià,Deià,Mallorca,https://www.engelvoelkers.com/es/en/shops/deia,https://www.engelvoelkers.com/es/en/shops/deia/team
+christina.deutsch@engelvoelkers.com,Christina,Deutsch,"Managing Partner, Mallorca Central & South",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+nils.haase@engelvoelkers.com,Nils,Haase,"Managing Partner, Mallorca Southeast",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+mathias.handschumacher@engelvoelkers.com,Mathias,Handschumacher,"Managing Partner, Mallorca Northeast",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+gary.hobson@engelvoelkers.com,Gary,Hobson,"Managing Director, Mallorca North",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+nicola.wynnejankola@engelvoelkers.com,Nicola-Wynne,Jankola,"Managing Director, Mallorca West",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+hans.lenz@engelvoelkers.com,Hans,Lenz,"Managing Director, Mallorca Southwest",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+alberto.luengo@engelvoelkers.com,Alberto,Luengo,"Director, Mallorca Commercial",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+gabriela.munoz@engelvoelkers.com,Gabriela,Muñoz,"Managing Partner, Palma Surroundings & Son Vida",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+terence.panton@engelvoelkers.com,Terence,Panton,"Managing Partner, Palma Centre & East",Engel & Völkers Mallorca,Palma,Mallorca,engelvoelkers.com,https://www.engelvoelkers.com/es/en/mallorca/balearic-islands/team
+alissa.battezzato@engelvoelkers.com,Alissa,Battezzato,Real Estate Advisor,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-southwest,https://www.engelvoelkers.com/es/en/shops/palma-southwest/team
+alexandra.bauregger@engelvoelkers.com,Alexandra,Bauregger,Real Estate Agent,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-centre,https://www.engelvoelkers.com/es/en/shops/palma-centre/team
+emilio.bernal@engelvoelkers.com,Emilio,Bernal,Real Estate Advisor,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-southwest,https://www.engelvoelkers.com/es/en/shops/palma-southwest/team
+julia.campos@engelvoelkers.com,Julia,Campos,Senior Real Estate Consultant,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-centre,https://www.engelvoelkers.com/es/en/shops/palma-centre/team
+fan.chengwu@engelvoelkers.com,Fan,Cheng Wu,Real Estate Consultant,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-centre,https://www.engelvoelkers.com/es/en/shops/palma-centre/team
+paula.darder@engelvoelkers.com,Paula,Darder,Real Estate Advisor,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-southwest,https://www.engelvoelkers.com/es/en/shops/palma-southwest/team
+natalie.kubik@engelvoelkers.com,Natalie,Kubik,Office Manager,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-southwest,https://www.engelvoelkers.com/es/en/shops/palma-southwest/team
+kristian.lundgren@engelvoelkers.com,Kristian,Lundgren,Sales Advisor,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-centre,https://www.engelvoelkers.com/es/en/shops/palma-centre/team
+adrian.orejuela@engelvoelkers.com,Adrian,Orejuela,Real Estate Advisor,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-southwest,https://www.engelvoelkers.com/es/en/shops/palma-southwest/team
+anja.reuter@engelvoelkers.com,Anja,Reuter,Rentals Real Estate Agent,Engel & Völkers Palma,Palma,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-centre,https://www.engelvoelkers.com/es/en/shops/palma-centre/team
+luisa.dasilva@engelvoelkers.com,Luisa,Da Silva,Office Manager,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-beach,https://www.engelvoelkers.com/es/en/shops/palma-beach/team
+beatrice.david@engelvoelkers.com,Beatrice,David,Real Estate Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+cathrin.faulhaber1@engelvoelkers.com,Cathrin,Faulhaber,Real Estate Agent,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-beach,https://www.engelvoelkers.com/es/en/shops/palma-beach/team
+alessia.giovanoli@engelvoelkers.com,Alessia,Giovanoli,Sales Consultant,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-beach,https://www.engelvoelkers.com/es/en/shops/palma-beach/team
+janna.grunewald@engelvoelkers.com,Janna,Grunewald,Marketing Specialist,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+marco.jaske@engelvoelkers.com,Marco,Jaske,Real Estate Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+henrydavid.lea@engelvoelkers.com,Henry David,Lea,Real Estate Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+clara.mayer@engelvoelkers.com,Clara,Mayer,Team Assistant,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+carolynne.millington@engelvoelkers.com,Carolynne,Millington,Director - Private Office Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+cleo.mlinaric@engelvoelkers.com,Cleo,Mlinaric,Team Assistant,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+barbara.moriggl@engelvoelkers.com,Barbara,Moriggl,Property Manager,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/palma-beach,https://www.engelvoelkers.com/es/en/shops/palma-beach/team
+christine.moeller@engelvoelkers.com,Christine,Möller,Real Estate Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+samantha.towers@engelvoelkers.com,Samantha,Towers,Real Estate Advisor,Engel & Völkers Palma de Mallorca,Palma de Mallorca,Mallorca,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings,https://www.engelvoelkers.com/es/en/shops/son-vida-palma-surroundings/team
+aina.alberti@engelvoelkers.com,Aina,Alberti,Executive Rental Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+louis.bellstedt@engelvoelkers.com,Louis,Bellstedt,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+aldana.dalicandro@engelvoelkers.com,Aldana,D'alicandro,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+sara.deen@engelvoelkers.com,Sara,Deen,Head of Business Performance,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+lindsey.donovan@engelvoelkers.com,Lindsey,Donovan,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+bettina.freitag@engelvoelkers.com,Bettina,Freitag,Real Estate Agent / Private Office Advisor,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+alexa.gibson@engelvoelkers.com,Alexa,Gibson,Sales Assistant,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+vanessa.joorse@engelvoelkers.com,Vanessa,Joorse,Rental Executive,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+susana.lopezsimarro@engelvoelkers.com,Susana,López Simarro,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+karolina.maciejowska@engelvoelkers.com,Karolina,Maciejowska,Marketing/PR Manager,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+karen.martens-czarnetzki@engelvoelkers.com,Karen,Martens-Czarnetzki,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+selina.moerschbach@engelvoelkers.com,Selina,Mörschbach,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+mario.niemuth@engelvoelkers.com,Mario,Niemuth,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+tonina.rotger@engelvoelkers.com,Tonina,Rotger,Team Assistant,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+julian.schwarz@engelvoelkers.com,Julian,Schwarz,Real Estate Agent,Engel & Völkers Pollensa,Pollensa,Mallorca,https://www.engelvoelkers.com/es/en/shops/pollensa,https://www.engelvoelkers.com/es/en/shops/pollensa/team
+kolja.chmiel@engelvoelkers.com,Kolja,Chmiel,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+anna.ihl@engelvoelkers.com,Anna,Ihl,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+olga.keshawarzian@engelvoelkers.com,Olga,Keshawarzian,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+ratko.kucan@engelvoelkers.com,Ratko,Kucan,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+marc.mertens@engelvoelkers.com,Marc,Mertens,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+sigrid.nestmann@engelvoelkers.com,Sigrid,Nestmann,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+jens.warmbier@engelvoelkers.com,Jens,Warmbier,Real Estate Advisor,Engel & Völkers Port Andratx,Port Andratx,Mallorca,https://www.engelvoelkers.com/es/en/shops/puerto-andratx,https://www.engelvoelkers.com/es/en/shops/puerto-andratx/team
+sandra.bullmann@engelvoelkers.com,Sandra,Bullmann,Sales Assistant,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+caroline.debatty@engelvoelkers.com,Caroline,Debatty,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+carolina.grozav@engelvoelkers.com,Carolina,Grozav,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+kate.hands@engelvoelkers.com,Kate,Hands,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+anna.konysheva@engelvoelkers.com,Anna,Konysheva,Holiday Rentals Coordinator,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+thomas.pohlmann@engelvoelkers.com,Thomas,Pohlmann,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+natalie.rodriguez@engelvoelkers.com,Natalie,Rodriguez,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+corinna.schmid@engelvoelkers.com,Corinna,Schmid,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+nathalie.steinauer@engelvoelkers.com,Nathalie,Steinauer,Real Estate Advisor,Engel & Völkers Puerto Portals,Puerto Portals,Mallorca,https://www.engelvoelkers.com/es/en/shops/portals,https://www.engelvoelkers.com/es/en/shops/portals/team
+maya.deutsch@engelvoelkers.com,Maya,Deutsch,Marketing director,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+silke.eisermann@engelvoelkers.com,Silke,Eisermann,Senior real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+zoe.fischer@engelvoelkers.com,Zoe,Fischer,Rental Advisor,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+daniela.gawert@engelvoelkers.com,Daniela,Gawert,Director Santa María and Alaró,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+francisco.gene@engelvoelkers.com,Francisco,Gene,Real Estate Agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+daniel.jean@engelvoelkers.com,Daniel,Jean,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+helga.karbowski@engelvoelkers.com,Helga,Karbowski,Team assistant,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+nicole.manzke@engelvoelkers.com,Nicole,Manzke,Real Estate Agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+olivia.mcgann@engelvoelkers.com,Olivia,Mcgann,Team & Marketing Assistant,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+stephanie.mueller@engelvoelkers.com,Stephanie,Müller,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+nicole.neumann@engelvoelkers.com,Nicole,Neumann,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+torsten.paersch@engelvoelkers.com,Torsten,Paersch,Senior real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+eva.pellicer@engelvoelkers.com,Eva,Pellicer,Team assistant,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+cassian.persch@engelvoelkers.com,Cassian,Persch,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+corinna.schmidt@engelvoelkers.com,Corinna,Schmidt,Rentals director,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+caroline.schmidt@engelvoelkers.com,Caroline,Schmidt,Management assistance,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+lisa.schreiber@engelvoelkers.com,Lisa,Schreiber,Managing director,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+mans.tehrani@engelvoelkers.com,Mans,Tehrani,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+christine.turban@engelvoelkers.com,Christine,Turban,Real estate agent,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+sabrina.voelkle@engelvoelkers.com,Sabrina,Voelkle,Sales Support,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+tanja.vonbusse@engelvoelkers.com,Tanja,von Busse,Director,Engel & Völkers Santa Maria,Santa Maria,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-maria,https://www.engelvoelkers.com/es/en/shops/santa-maria/team
+francesca.bertorelli@engelvoelkers.com,Francesca,Bertorelli,Team Assistant,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+ingridluisa.borsani@engelvoelkers.com,Ingrid Luisa,Borsani,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+luca.borsani@engelvoelkers.com,Luca,Borsani,Director,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+anastasiia.fedorova@engelvoelkers.com,Anastasiia,Fedorova,Office Manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+lara.hilgefort@engelvoelkers.com,Lara,Hilgefort,Team Assistant,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+sassan.keshawarzian@engelvoelkers.com,Sassan,Keshawarzian,Director,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+julia.klahre@engelvoelkers.com,Julia,Klahre,Director Development Services,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+karen.lauhus@engelvoelkers.com,Karen,Lauhus,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+simone.manganaro@engelvoelkers.com,Simone,Manganaro,Office Manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+andrea-charlotte.martin@engelvoelkers.com,Andrea-Charlotte,Martin,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+bruno.meyer@engelvoelkers.com,Bruno,Meyer,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+sissy.mogyorosi@engelvoelkers.com,Sissy,Mogyorosi,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+iris.mueller@engelvoelkers.com,Iris,Müller,Digital Process Manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+beate.mueller@engelvoelkers.com,Beate,Müller,Office Manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+niki.petrik@engelvoelkers.com,Niki,Petrik,Office manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+larissa.psiorz@engelvoelkers.com,Larissa,Psiorz,Team Assistant,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+margarita.rempel@engelvoelkers.com,Margarita,Rempel,Real Estate Top Advisor 2023 & 2024,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+lena.seynstahl@engelvoelkers.com,Lena,Seynstahl,Real Estate Advisor,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+birgit.suessmilch@engelvoelkers.com,Birgit,Süßmilch,Director,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+constanze.tremba@engelvoelkers.com,Constanze,Tremba,Office Manager,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+peter.voneicken@engelvoelkers.com,Peter,Von Eicken,Manager Development Services,Engel & Völkers Santa Ponsa,Santa Ponsa,Mallorca,https://www.engelvoelkers.com/es/en/shops/santa-ponsa,https://www.engelvoelkers.com/es/en/shops/santa-ponsa/team
+luca.ahlers@engelvoelkers.com,Luca,Ahlers,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+marc.arendt@engelvoelkers.com,Marc,Arendt,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+javier.arriola@engelvoelkers.com,Javier,Arriola,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+leon.bircks@engelvoelkers.com,Leon,Bircks,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+bjoern.leidl@engelvoelkers.com,Björn,Leidl,Director,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+kerstin.madsen@engelvoelkers.com,Kerstin,Madsen,Real Estate Agent,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+lynn.neu@engelvoelkers.com,Lynn,Neu,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+marco.wiese@engelvoelkers.com,Marco,Wiese,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+helga.vandeijzen@engelvoelkers.com,Helga,van Deijzen,Real Estate Advisor,Engel & Völkers Santanyi,Santanyi,Mallorca,https://www.engelvoelkers.com/es/en/shops/santanyi,https://www.engelvoelkers.com/es/en/shops/santanyi/team
+jade.allen@pollentiaproperties.com,Jade,Allen,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+javier.devesa@pollentiaproperties.com,Javier,Devesa,Senior Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+nicole.engesser@pollentiaproperties.com,Nicole,Engesser,Senior Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+ben.hofmann@pollentiaproperties.com,Ben,Hofmann,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+michael.lisiecki@pollentiaproperties.com,Michael,Lisiecki,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+jose.martin@pollentiaproperties.com,Jose,Martín Morillo,Founder & Managing Director,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+joan.martin@pollentiaproperties.com,Joan,Martín Morillo,Senior Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+sean.otero@pollentiaproperties.com,Sean,Otero,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+irene.ramos@pollentiaproperties.com,Irene,Ramos Cuadrado,Management Assistant & Marketing,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+natalia.suchowolak@pollentiaproperties.com,Natalia,Suchowolak,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+samuel.wagner@pollentiaproperties.com,Samuel,Wagner,Property Advisor,Pollentia Properties,Pollença,Mallorca,pollentiaproperties.com,https://www.pollentiaproperties.com/real-estate-mallorca
+lina@privatepropertymallorca.com,Lina,Färber,Personal Assistant,Private Property Mallorca,,Mallorca,privatepropertymallorca.com,https://www.privatepropertymallorca.com/en/company/meet-the-team/
+bruno@strand.es,Bruno,Baldassari,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+judith@strand.es,Judith,Diakhaté,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+sebastien@strand.es,Sébastien,Huet,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+linda@strand.es,Linda,Linné Asker,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+leonardo@strand.es,Leonardo,Mulas,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+guglielmo@strand.es,Guglielmo,Nacci,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+teija@strand.es,Teija,Nyppeli,Independent Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+amber@strand.es,Amber,Rathbone,Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+elena.rolskaya@strand.es,Elena,Rolskaya,Property Advisor,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+susana@strand.es,Susana,Silva Ollet,Sales Support,Strand Properties,Palma,Mallorca,strandproperties.com,https://strandproperties.com/mallorca-office/
+anna.cillikova@theagencyre.com,Anna,Cillikova,"Real Estate Agent, North Mallorca Specialist",The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+alby.euesden@theagencyre.com,Alby,Euesden,Managing Partner,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+leo.ferri@theagencyre.com,Leo,Ferri,Licensed Real Estate Agent,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+seth.forrester@theagencyre.com,Seth,Forrester,Licensed Real Estate Agent,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+laura.hodyjas@theagencyre.com,Laura,Hodyjas,Licensed Real Estate Agent,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+indra.huntenburg@theagencyre.com,Indra,Huntenburg,"Real Estate Agent, Central Island Specialist",The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+vanessa.kruse@theagencyre.com,Vanessa,Kruse,Agent Support / Office Manager,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+bryann.mayaut@theagencyre.com,Bryann,Mayaut,"Licensed Real Estate Agent, Southeast Specialist",The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+christian.resas@theagencyre.com,Christian,Resas,"Real Estate Agent, Rental Specialist",The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+dustin.shanks@theagencyre.com,Dustin,Shanks,Licensed Real Estate Agent,The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+matt.west@theagencyre.com,Matt,West,"Licensed Real Estate Agent, Southeast Specialist",The Agency Mallorca,Palma,Mallorca,theagencyre-mallorca.com,https://theagencyre-mallorca.com/luxury-real-estate-agents-in-mallorca/
+tony.lock@fineandcountry.com,Tony,Lock,Managing Director,Fine & Country Mallorca,Cala Murada,"Mallorca, Balearic Islands",https://www.fineandcountry.es/en/mallorca-estate-agents,https://www.fineandcountry.es/en/team/tony-lock
+francisco.arnaulopez@engelvoelkers.com,Francisco,Arnau Lopez,Sales Director,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+gracia.arnaumascaro@engelvoelkers.com,Gracia,Arnau Mascaro,Real Estate Consultant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+josephine.chaton@engelvoelkers.com,Josephine,Chaton,Real Estate Consultant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+marta.curylo@engelvoelkers.com,Marta,Curylo,Executive Rental Agent,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+marion.nataf@engelvoelkers.com,Marion,Nataf,Real Estate Consultant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+emmanuelle.ortuno@engelvoelkers.com,Emmanuelle,Ortuno,Sales & Marketing Assistant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+sabrina.rodriguez@engelvoelkers.com,Sabrina,Rodriguez,Real Estate Consultant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+sandra.destefani@engelvoelkers.com,Sandra,de Stefani,Sales & Rentals Assistant,Engel & Völkers Ciutadella de Menorca,Ciutadella de Menorca,Menorca,https://www.engelvoelkers.com/es/en/shops/ciutadella,https://www.engelvoelkers.com/es/en/shops/ciutadella/team
+roy@movemenorca.com,Roy,Sturgeon,Owner,Move Menorca,Mahon,"Menorca, Balearic Islands",https://movemenorca.com,https://movemenorca.com/about-us/
+jorge@casas-houses.com,Jorge,Flores,Agent,Casas & Houses,La Manga,Murcia,casas-houses.com,https://www.casas-houses.com/agents/
+sean@casas-houses.com,Sean,Leitch,Agent,Casas & Houses,La Manga,Murcia,casas-houses.com,https://www.casas-houses.com/agents/
+marena@marenamurrayproperty.com,Marena,Murray,Founder & Owner,Marena Murray Property,La Manga Club,Murcia,https://www.marenamurrayproperty.com,https://murciatoday.com/marena-murray-property-real-estate-agents-for-la-manga-club-murcia_2304-std.html
+hugh@murciavillas.com,Hugh,James,Founding Director,Murcia Villas,La Manga,Murcia,murciavillas.com,https://www.murciavillas.com/en/our-agents
+john@murciavillas.com,John,King,"Manager, La Torre and Sucina offices",Murcia Villas,La Manga,Murcia,murciavillas.com,https://www.murciavillas.com/en/our-agents
+janice.scott@murciavillas.com,Janice,Scott,,Murcia Villas,La Manga,Murcia,murciavillas.com,https://www.murciavillas.com/en/our-agents
+chris@murciavillas.com,Chris,Whent,Director,Murcia Villas,La Manga,Murcia,murciavillas.com,https://www.murciavillas.com/en/our-agents
+ramon@casas-houses.com,Ramón,Martínez,Agent,Casas & Houses,La Manga del Mar Menor,Murcia / Almeria,casas-houses.com,https://www.casas-houses.com/agents/ramon-es/
+ana@chic-estates.com,Ana,Rits,Founder & Owner,Chic Estates,Los Alcázares,Murcia / Almeria,chic-estates.com,https://chic-estates.com/meet-our-consultants/
+julian@chic-estates.com,Julian,Ryckeboer,Foreign Property Consultant Spain,Chic Estates,Los Alcázares,Murcia / Almeria,chic-estates.com,https://chic-estates.com/meet-our-consultants/
+peter@chic-estates.com,Peter,Van Wijnsberge,Sales Manager,Chic Estates,Los Alcázares,Murcia / Almeria,chic-estates.com,https://chic-estates.com/meet-our-consultants/
+jackie@elysiumproperties.com,Jackie,Mycroft,Property consultant,Elysium Properties,La Manga Club,Murcia / Almeria,elysiumproperties.com,https://www.elysiumproperties.com/
+celine@elysiumproperties.com,Céline,Roche,Property consultant,Elysium Properties,La Manga Club,Murcia / Almeria,elysiumproperties.com,https://www.elysiumproperties.com/
+ronald@gogoestates.com,Ronald,Goosen,Managing Director,Gogo Estates,Mazarrón / Camposol,Murcia / Almeria,gogoestates.com,https://gogoestates.com/about
+mariateresamultiservices@gmail.com,María Teresa,,Manager,Multiservices Mar Menor (Maria Teresa Realty),Los Alcázares,Murcia / Almeria,multiservicesmarmenor.com,https://multiservicesmarmenor.com/about-us/
+alberto.grovas@engelvoelkers.com,Alberto,Grovas,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+jillelen.goebel@engelvoelkers.com,Jill Elen,Göbel,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+sarah.haines@engelvoelkers.com,Sarah,Haines,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+nathalie.hill@engelvoelkers.com,Nathalie,Hill,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+reka.kalmar@engelvoelkers.com,Reka,Kalmar,Team Assistant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+martina.kirsch@engelvoelkers.com,Martina,Kirsch,Licence Partner - Front Office Manager,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+desiree.kotteck@engelvoelkers.com,Désirée,Kotteck,Licence Partner - Back Office Manager,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+gustavo.martin@engelvoelkers.com,Gustavo,Martín,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+oksana.nazarenko@engelvoelkers.com,Oksana,Nazarenko,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+harald.peschigg@engelvoelkers.com,Harald,Peschigg,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+julia.soddemann@engelvoelkers.com,Julia,Soddemann,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+daniel.vonheyden@engelvoelkers.com,Daniel,von Heyden,Real Estate Consultant,Engel & Völkers Costa Adeje,Costa Adeje,Tenerife,https://www.engelvoelkers.com/es/en/shops/costa-adeje,https://www.engelvoelkers.com/es/en/shops/costa-adeje/team
+richard.jarai@engelvoelkers.com,Richard,Jarai,Real estate agent,Engel & Völkers Puerto de la Cruz,Puerto de la Cruz,Tenerife,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz/team
+manel.moreno@engelvoelkers.com,Manel,Moreno,Real estate consultant,Engel & Völkers Puerto de la Cruz,Puerto de la Cruz,Tenerife,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz/team
+chantal.rosenboom@engelvoelkers.com,Chantal,Rosenboom,Real estate agent,Engel & Völkers Puerto de la Cruz,Puerto de la Cruz,Tenerife,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz,https://www.engelvoelkers.com/es/en/shops/puerto-de-la-cruz/team
+jonathan.chhugani@engelvoelkers.com,Jonathan,Chhugani,Real estate consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+natalia.diaz@engelvoelkers.com,Natalia,Diaz,Real estate consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+carlota.duenas@engelvoelkers.com,Carlota,Dueñas,Real Estate Consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+maren.harder@engelvoelkers.com,Maren,Harder,Licensee,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+belen.luis@engelvoelkers.com,Belén,Luis,Real Estate Consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+abel.medina@engelvoelkers.com,Abel,Medina,Real Estate Consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+dalia.pereira@engelvoelkers.com,Dalia,Pereira,Real estate consultant,Engel & Völkers Santa Cruz de Tenerife,Santa Cruz de Tenerife,Tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife,https://www.engelvoelkers.com/es/en/shops/santa-cruz-de-tenerife/team
+jjvv@verdestenerife.com,José Juan,Verde Villar,Managing director,Verde's Tenerife,Los Gigantes,Tenerife,verdestenerife.com,https://verdestenerife.com/en/
+belen@verdestenerife.com,Luz Belén,Verde Villar,Sales and After-Sales Service Manager,Verde's Tenerife,Los Gigantes,Tenerife,verdestenerife.com,https://verdestenerife.com/en/
+sarah@verdestenerife.com,Sarah Lucía,Verde Villar,Head of Communication and Marketing,Verde's Tenerife,Los Gigantes,Tenerife,verdestenerife.com,https://verdestenerife.com/en/

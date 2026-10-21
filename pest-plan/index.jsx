@@ -58,9 +58,11 @@ export default function PestPlan() {
   const p = step === 'result' ? buildProfile(a, c) : null;
 
   // "Cockroaches, rats and mosquitoes." The answer, before any of the method.
+  // German keeps its capital nouns, so lower_names is false there.
+  const and = c('and');
   const verdict = () => {
-    const names = p.top.map(x => x.name.toLowerCase());
-    const joined = `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+    const names = p.top.map(x => (c('lower_names') ? x.name.toLowerCase() : x.name));
+    const joined = `${names.slice(0, -1).join(', ')} ${and} ${names[names.length - 1]}`;
     return joined.charAt(0).toUpperCase() + joined.slice(1);
   };
 
@@ -71,7 +73,7 @@ export default function PestPlan() {
     const around = a.around.filter(x => x !== 'none');
     if (around.length) {
       const parts = around.map(k => c(`s_around_${k}`));
-      const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
+      const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} ${and} ${parts[parts.length - 1]}`;
       bits[0] = `${bits[0]} ${c('s_with')} ${list}`;
     }
     bits.push(c(`s_region_${a.region.replace(/-/g, '_')}`));
@@ -82,7 +84,7 @@ export default function PestPlan() {
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Practical guidance for property owners in Spain. Not legal advice.">
+      note={c('shell_note')}>
 
       {step === 'intro' && (
         <Intro
@@ -210,12 +212,7 @@ export default function PestPlan() {
             <p className="tk-para">{p.coverage.body}</p>
           </Panel>
 
-          <ToolDisclaimer>
-            This is prevention guidance drawn from a published guide to pests in Spanish
-            homes, not a survey of your property. It names no product and no treatment
-            beyond what that guide names. Anything already established, and anything
-            involving rodents, is a job for a licensed pest control company who can see it.
-          </ToolDisclaimer>
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

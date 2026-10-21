@@ -1,7 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import Areas from '../seo/Areas.jsx'
-import { LocaleProvider } from '../i18n.jsx'
+import { LocaleProvider, SUPPORTED_LOCALES, DEFAULT_LOCALE } from '../i18n.jsx'
+import StaticPage from '../seo/StaticPage.jsx'
+
+// The locale prefixes, spelled out. A bare /:lang param also matched /answers, /about and any
+// mistyped URL, and drew the home page at all of them.
+const LANGS = SUPPORTED_LOCALES.filter(l => l !== DEFAULT_LOCALE)
 
 // Auto-discovers every tool folder that has an index.jsx at the repo root.
 // To add a new tool: create a new folder with index.jsx + meta.js. Nothing else needed.
@@ -40,17 +45,23 @@ export default function App() {
           <Route path="/coast" element={<Areas />} />
 
           {/* Locale-prefixed (e.g. /no, /sv) */}
-          <Route path="/:lang" element={<Home />} />
-          {toolRoutes.map(({ slug, Component }) => (
-            <Route key={`l-${slug}`} path={`/:lang/${slug}`} element={<Component />} />
-          ))}
-          {toolRoutes.map(({ slug, Component }) => (
-            <Route key={`ls-${slug}`} path={`/:lang/${slug}/*`} element={<Component />} />
-          ))}
-          <Route path="/:lang/areas" element={<Areas />} />
-          <Route path="/:lang/areas/:province" element={<Areas />} />
-          <Route path="/:lang/coast/:coast" element={<Areas />} />
-          <Route path="/:lang/coast" element={<Areas />} />
+          {LANGS.map(lang => [
+            <Route key={`h-${lang}`} path={`/${lang}`} element={<Home />} />,
+            ...toolRoutes.map(({ slug, Component }) => (
+              <Route key={`l-${lang}-${slug}`} path={`/${lang}/${slug}`} element={<Component />} />
+            )),
+            ...toolRoutes.map(({ slug, Component }) => (
+              <Route key={`ls-${lang}-${slug}`} path={`/${lang}/${slug}/*`} element={<Component />} />
+            )),
+            <Route key={`a-${lang}`} path={`/${lang}/areas`} element={<Areas />} />,
+            <Route key={`ap-${lang}`} path={`/${lang}/areas/:province`} element={<Areas />} />,
+            <Route key={`cc-${lang}`} path={`/${lang}/coast/:coast`} element={<Areas />} />,
+            <Route key={`c-${lang}`} path={`/${lang}/coast`} element={<Areas />} />,
+          ])}
+
+          {/* Everything else: a prerendered page with no component of its own (answers,
+              about), or a real not-found that tells crawlers not to index it. */}
+          <Route path="*" element={<StaticPage />} />
         </Routes>
       </LocaleProvider>
     </BrowserRouter>

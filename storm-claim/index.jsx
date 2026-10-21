@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ToolShell, { Intro, Step, Options, Result, Panel, Rows, DateField, useCopy } from '../ToolShell.jsx';
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
+import { useLocale } from '../i18n.jsx';
 import copyDict from './copy.js';
 import { daysSince, isFutureDate, todayISO } from './calc.js';
 
@@ -25,8 +26,15 @@ const NOTIFY = rule('consorcio.notification');
 
 const CONSORCIO_CAUSES = ['flood', 'quake', 'volcano'];
 
+const DATE_LOCALES = { en: 'en-GB', no: 'nb-NO', sv: 'sv-SE', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+
+// Fills {name} placeholders in a copy string.
+const fill = (s, vars = {}) => String(s).replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? vars[k] : m));
+
 export default function StormClaim() {
   const c = useCopy(copyDict);
+  const { locale } = useLocale();
+  const src = c('source_label');
   const [step, setStep] = useState('intro');
   const [a, setA] = useState({ cause: '', wind: '', policy: '', when: '' });
 
@@ -75,7 +83,7 @@ export default function StormClaim() {
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Guidance for property owners in Spain. Not insurance advice.">
+      note={c('note')}>
 
       {step === 'intro' && (
         <Intro eyebrow={c('eyebrow')} headline={c('headline')} body={c('body')}
@@ -97,7 +105,7 @@ export default function StormClaim() {
             { value: 'under', label: c('wind_under') },
             { value: 'unknown', label: c('wind_unknown') },
           ]} value={a.wind} onChange={v => advance('wind', v)} />
-          <SourceNote ids="consorcio.wind_threshold" label="Where 120 comes from" />
+          <SourceNote ids="consorcio.wind_threshold" label={fill(c('wind_source_label'), { n: WIND.value })} />
         </Step>
       )}
 
@@ -113,105 +121,74 @@ export default function StormClaim() {
 
       {step === 'when' && (
         <Step n={order.length} of={order.length} question={c('q_when')} hint={c('q_when_hint')} onBack={back}
-          onNext={() => setStep('result')} nextDisabled={!a.when || whenIsFuture} nextLabel="See the answer">
-          <DateField label="The day you found out" value={a.when} onChange={v => setA(p => ({ ...p, when: v }))}
+          onNext={() => setStep('result')} nextDisabled={!a.when || whenIsFuture} nextLabel={c('next_label')}>
+          <DateField label={c('date_label')} value={a.when} onChange={v => setA(p => ({ ...p, when: v }))}
             max={today}
-            hint={whenIsFuture ? 'That date is still to come. The clock starts on the day you found out, so it cannot be later than today.' : null} />
+            hint={whenIsFuture ? c('date_future_hint') : null} />
         </Step>
       )}
 
       {step === 'result' && (
         <Result headline={headline} tone={tone} onRestart={restart} restartLabel={c('restart')}
-          sub={
-            verdict === 'consorcio' ? 'You claim from the Consorcio de Compensacion de Seguros, a state body, not from the company that sold you the policy. Your insurer is not the one who decides this.'
-            : verdict === 'insurer' ? 'This is ordinary damage under your own policy. The Consorcio only handles the specific extraordinary events listed in the law, and this is not one of them.'
-            : verdict === 'uninsured' ? 'Consorcio cover is not standalone. It only exists on top of an ordinary policy, so with no policy in force there is nothing behind it.'
-            : 'The law draws the line at a gust speed, so the answer is a matter of record rather than judgement. Here is how to settle it.'
-          }>
+          sub={c(`sub_${verdict}`)}>
 
           {verdict === 'consorcio' && (
             <>
-              <Panel title="What to do" kind="key">
+              <Panel title={c('panel_todo')} kind="key">
                 <ol className="tk-ol">
-                  <li>Contact the Consorcio directly, or ask your insurer or broker to file it for you. Both routes are valid.</li>
-                  <li>Photograph everything before you clear up, and keep receipts for anything urgent you have to fix immediately.</li>
-                  <li>Have your policy number ready. The Consorcio pays against the cover in that policy, so it needs to see it.</li>
+                  {c('todo').map((t, i) => <li key={i}>{t}</li>)}
                 </ol>
               </Panel>
-              <Panel title="The part that catches owners out">
-                <p className="tk-para">
-                  The Consorcio pays up to the sums insured in your ordinary policy, not up to the
-                  value of the damage. If the building is insured for less than it would cost to
-                  rebuild, the shortfall carries straight through to this claim in the same
-                  proportion. It is worth checking that figure now rather than at the point of a
-                  loss.
-                </p>
+              <Panel title={c('panel_catch')}>
+                <p className="tk-para">{c('catch_p')}</p>
               </Panel>
-              <SourceNote ids={['consorcio.perils', 'consorcio.precondition', 'consorcio.wind_threshold']} />
+              <SourceNote ids={['consorcio.perils', 'consorcio.precondition', 'consorcio.wind_threshold']} label={src} />
             </>
           )}
 
           {verdict === 'insurer' && (
             <>
-              <Panel title="Why this one is not a Consorcio matter" kind="quiet">
-                <p className="tk-para">
-                  The Consorcio covers a closed list: earthquake and seaquake, extraordinary
-                  flooding, volcanic eruption, atypical cyclonic storm, and falling meteorites,
-                  plus terrorism and civil disorder. Everything else, including ordinary rain,
-                  hail, wind below the threshold and any water coming from inside the building,
-                  is the private insurer's. A burst pipe is never a Consorcio claim.
-                </p>
+              <Panel title={c('panel_not_consorcio')} kind="quiet">
+                <p className="tk-para">{c('not_consorcio_p')}</p>
               </Panel>
-              <SourceNote ids={['consorcio.perils', 'consorcio.exclusions']} />
+              <SourceNote ids={['consorcio.perils', 'consorcio.exclusions']} label={src} />
             </>
           )}
 
           {verdict === 'uninsured' && (
-            <Panel title="What this means" kind="quiet">
-              <p className="tk-para">
-                The surcharge that funds the Consorcio is collected automatically inside an
-                ordinary home insurance premium. There is nothing separate to buy, and equally
-                nothing to fall back on when there is no policy. Note also that a new policy
-                carries a waiting period, so cover does not start on the day you sign.
-              </p>
+            <Panel title={c('panel_means')} kind="quiet">
+              <p className="tk-para">{c('means_p')}</p>
             </Panel>
           )}
 
           {verdict === 'unknown' && (
             <>
-              <Panel title="How to settle it" kind="key">
+              <Panel title={c('panel_settle')} kind="key">
                 <ol className="tk-ol">
-                  <li>Find the official gust record for that date and location. AEMET, the Spanish
-                      met office, publishes it. Local press reporting an average wind speed is not
-                      the same measurement and is not what the law uses.</li>
-                  <li>The test is a gust <strong>exceeding {WIND.value} km/h</strong>, measured over
-                      three seconds. Above that it is a Consorcio claim. At or below it, it is your
-                      insurer's.</li>
-                  <li>If it is close, file with both. They will sort out between them which one
-                      pays, and filing with the wrong one first costs you time you may not have.</li>
+                  <li>{c('settle_1')}</li>
+                  <li>{c('settle_2_pre')} <strong>{fill(c('settle_2_strong'), { n: WIND.value })}</strong>{c('settle_2_post')}</li>
+                  <li>{c('settle_3')}</li>
                 </ol>
               </Panel>
-              <SourceNote ids="consorcio.wind_threshold" />
+              <SourceNote ids="consorcio.wind_threshold" label={src} />
             </>
           )}
 
           {verdict !== 'uninsured' && (
-            <Panel title="Your deadline" kind={lateWarning ? 'dark' : 'quiet'}>
+            <Panel title={c('panel_deadline')} kind={lateWarning ? 'dark' : 'quiet'}>
               <Rows items={[
-                { label: 'You found out', value: days == null ? 'not given' : new Date(a.when + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) },
-                { label: 'Days since', value: days == null ? 'unknown' : `${days}` },
-                { label: 'Notification window', value: `${NOTIFY.value} days from finding out`, strong: true },
+                { label: c('row_found'), value: days == null ? c('not_given') : new Date(a.when + 'T00:00:00').toLocaleDateString(DATE_LOCALES[locale] || 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) },
+                { label: c('row_days'), value: days == null ? c('unknown') : `${days}` },
+                { label: c('row_window'), value: fill(c('window_value'), { n: NOTIFY.value }), strong: true },
               ]} />
               <p className="tk-para">
-                {lateWarning
-                  ? 'You are past the standard window, which is a reason to file today rather than a reason not to file. The clock runs from when you knew, not from the date of the storm, and for an owner who was abroad those are rarely the same day. Say clearly in the claim when and how you found out.'
-                  : 'The clock runs from when you found out, not from the date of the storm. For an owner abroad those are rarely the same day, and it is worth saying so explicitly when you file.'}
+                {lateWarning ? c('late_p') : c('ontime_p')}
               </p>
-              <SourceNote ids="consorcio.notification" />
+              <SourceNote ids="consorcio.notification" label={src} />
             </Panel>
           )}
 
-          <ToolDisclaimer />
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

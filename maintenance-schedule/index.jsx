@@ -48,7 +48,7 @@ export default function MaintenanceSchedule() {
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Practical guidance for property owners in Spain. Not legal advice.">
+      note={c('shell_note')}>
 
       {step === 'intro' && (
         <Intro
@@ -121,11 +121,7 @@ export default function MaintenanceSchedule() {
             <p className="tk-para">{c('limit_body')}</p>
           </Panel>
 
-          <ToolDisclaimer>
-            This is practical maintenance guidance, not legal, tax or insurance advice. What
-            your policy covers is whatever your policy says, and the only dates that bind you
-            are the ones your ayuntamiento, your community and your tax office publish.
-          </ToolDisclaimer>
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>

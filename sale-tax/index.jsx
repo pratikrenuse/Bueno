@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ToolShell, { Intro, Step, Options, Result, Panel, Rows, NumberField, DateField, useCopy } from '../ToolShell.jsx';
 import SourceNote, { ToolDisclaimer } from '../SourceNote.jsx';
 import { rule } from '../rules/index.js';
+import { useLocale } from '../i18n.jsx';
 import copyDict from './copy.js';
 import { computeSale } from './calc.js';
 
@@ -50,22 +51,30 @@ const PLUSVALIA_DAYS = PLUSVALIA_DUE.value.sale_working_days;
 
 const STEPS = ['country', 'bought', 'sold', 'completion'];
 
-function euro(n) {
-  if (!Number.isFinite(n)) return '';
-  const abs = Math.abs(n);
-  const s = abs.toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-  return `${n < 0 ? 'minus ' : ''}${s} euros`;
-}
-
-function fmt(iso) {
-  if (!iso) return '';
-  const d = new Date(`${iso}T00:00:00Z`);
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-}
+// Number and date formatting follow the page language.
+const INTL = { en: 'en-GB', no: 'nb-NO', sv: 'sv-SE', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
 
 export default function SaleTax() {
   const c = useCopy(copyDict);
+  const { locale } = useLocale();
+  const intl = INTL[locale] || INTL.en;
+  // Copy lookup with {placeholder} substitution.
+  const f = (k, vars = {}) => String(c(k)).replace(/\{(\w+)\}/g, (m, n) => (n in vars ? vars[n] : m));
+
+  function euro(n) {
+    if (!Number.isFinite(n)) return '';
+    const abs = Math.abs(n);
+    const s = abs.toLocaleString(intl, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    return f(n < 0 ? 'euro_neg' : 'euro', { n: s });
+  }
+
+  function fmt(iso) {
+    if (!iso) return '';
+    const d = new Date(`${iso}T00:00:00Z`);
+    if (Number.isNaN(d.getTime())) return iso;
+    return d.toLocaleDateString(intl, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  }
+
   const [step, setStep] = useState('intro');
   const [a, setA] = useState({
     country: '', boughtPrice: '', boughtCosts: '', soldPrice: '', agentPct: '', completion: '',
@@ -98,24 +107,26 @@ export default function SaleTax() {
   });
 
   const euEea = a.country === 'eu' || a.country === 'eea';
+  const rate = { rate: RETENTION_RATE };
+  const src = c('source');
 
   const headline = r.outcome === 'refund'
-    ? `You are owed about ${euro(r.refund)} back`
+    ? f('head_refund', { amount: euro(r.refund) })
     : r.outcome === 'balance'
-      ? `You have about ${euro(r.balanceDue)} still to pay`
-      : `The retention covers the tax exactly`;
+      ? f('head_balance', { amount: euro(r.balanceDue) })
+      : c('head_square');
 
   const sub = r.isLoss
-    ? `You are selling at a loss, so there is no capital gains tax. The buyer still has to hold back ${RETENTION_RATE} percent of the price and pay it to the tax office, and you only get it back by filing for it.`
+    ? f('sub_loss', rate)
     : r.outcome === 'refund'
-      ? `The ${RETENTION_RATE} percent the buyer holds back is more than the tax on your gain. The difference is not refunded automatically. You have to claim it.`
-      : `The ${RETENTION_RATE} percent the buyer holds back is a payment on account, not the tax itself. Your gain is larger than it covers, so the balance falls due with your own return.`;
+      ? f('sub_refund', rate)
+      : f('sub_balance', rate);
 
   const tone = r.outcome === 'refund' ? 'good' : 'neutral';
 
   return (
     <ToolShell title={c('headline')} progress={step === 'intro' ? null : progress}
-      note="Guidance for property owners in Spain. Not tax advice.">
+      note={c('note')}>
 
       {step === 'intro' && (
         <Intro eyebrow={c('eyebrow')} headline={c('headline')} body={c('body')}
@@ -135,23 +146,23 @@ export default function SaleTax() {
 
       {step === 'bought' && (
         <Step n={2} of={4} question={c('q_bought')} hint={c('q_bought_hint')} onBack={back}
-          onNext={() => setStep('sold')} nextDisabled={!(Number(a.boughtPrice) > 0)}>
+          onNext={() => setStep('sold')} nextDisabled={!(Number(a.boughtPrice) > 0)} nextLabel={c('next')}>
           <NumberField label={c('bought_price')} value={a.boughtPrice} prefix="EUR" min={0}
             onChange={v => set('boughtPrice', v)} />
           <NumberField label={c('bought_costs')} value={a.boughtCosts} prefix="EUR" min={0}
             hint={c('bought_costs_hint')} onChange={v => set('boughtCosts', v)} />
-          <SourceNote ids="irnr.sale.gain_base" label="What counts as the acquisition value" />
+          <SourceNote ids="irnr.sale.gain_base" label={c('src_acquisition')} />
         </Step>
       )}
 
       {step === 'sold' && (
         <Step n={3} of={4} question={c('q_sold')} hint={c('q_sold_hint')} onBack={back}
-          onNext={() => setStep('completion')} nextDisabled={!(Number(a.soldPrice) > 0)}>
+          onNext={() => setStep('completion')} nextDisabled={!(Number(a.soldPrice) > 0)} nextLabel={c('next')}>
           <NumberField label={c('sold_price')} value={a.soldPrice} prefix="EUR" min={0}
             onChange={v => set('soldPrice', v)} />
           <NumberField label={c('sold_agent')} value={a.agentPct} suffix="%" min={0} max={20}
             hint={c('sold_agent_hint')} onChange={v => set('agentPct', v)} />
-          <SourceNote ids="irnr.sale.gain_base" label="What comes off the transfer value" />
+          <SourceNote ids="irnr.sale.gain_base" label={c('src_transfer')} />
         </Step>
       )}
 
@@ -166,149 +177,99 @@ export default function SaleTax() {
       {step === 'result' && (
         <Result headline={headline} sub={sub} tone={tone} onRestart={restart} restartLabel={c('restart')}>
 
-          <Panel title="The gain, and the tax on it" kind="key">
+          <Panel title={c('gain_title')} kind="key">
             <Rows items={[
-              { label: 'Sale price', value: euro(Number(a.soldPrice) || 0) },
-              { label: 'Less agent commission', value: euro(-r.agentFee) },
-              { label: 'Transfer value', value: euro(r.transferValue) },
-              { label: 'Purchase price', value: euro(Number(a.boughtPrice) || 0) },
-              { label: 'Plus costs of buying', value: euro(Number(a.boughtCosts) || 0) },
-              { label: 'Acquisition value', value: euro(r.acquisitionValue) },
-              { label: r.isLoss ? 'Loss on the sale' : 'Gain on the sale', value: euro(r.gain), strong: true },
-              { label: `Capital gains tax at ${CGT_RATE} percent`, value: euro(r.taxDue), strong: true },
+              { label: c('row_sale'), value: euro(Number(a.soldPrice) || 0) },
+              { label: c('row_less_agent'), value: euro(-r.agentFee) },
+              { label: c('row_transfer'), value: euro(r.transferValue) },
+              { label: c('row_purchase'), value: euro(Number(a.boughtPrice) || 0) },
+              { label: c('row_plus_costs'), value: euro(Number(a.boughtCosts) || 0) },
+              { label: c('row_acquisition'), value: euro(r.acquisitionValue) },
+              { label: r.isLoss ? c('row_loss') : c('row_gain'), value: euro(r.gain), strong: true },
+              { label: f('row_cgt', { rate: CGT_RATE }), value: euro(r.taxDue), strong: true },
             ]} />
             <p className="tk-para">
-              The {CGT_RATE} percent is the same wherever you are tax resident. Being resident in
-              an EU or EEA state changes the rate on rental and imputed income, and it changes
-              whether letting costs are deductible, but it does not change this one. Several
-              guides split gains {RATES.value.imputed.eu_eea} and {RATES.value.imputed.other} the
-              way rental income is split. That is the wrong rate on the wrong income.
+              {f('gain_p', { rate: CGT_RATE, eu: RATES.value.imputed.eu_eea, other: RATES.value.imputed.other })}
             </p>
-            <SourceNote ids={['irnr.rates', 'irnr.sale.gain_base']} />
+            <SourceNote ids={['irnr.rates', 'irnr.sale.gain_base']} label={src} />
           </Panel>
 
-          <Panel title={`The ${RETENTION_RATE} percent the buyer holds back`}>
+          <Panel title={f('ret_title', rate)}>
             <Rows items={[
-              { label: `${RETENTION_RATE} percent of the sale price`, value: euro(r.retention), strong: true },
-              { label: 'Tax on your gain', value: euro(r.taxDue) },
+              { label: f('row_ret', rate), value: euro(r.retention), strong: true },
+              { label: c('row_tax_gain'), value: euro(r.taxDue) },
               r.outcome === 'refund'
-                ? { label: 'Refund you can claim', value: euro(r.refund), strong: true }
+                ? { label: c('row_refund'), value: euro(r.refund), strong: true }
                 : r.outcome === 'balance'
-                  ? { label: 'Balance still to pay', value: euro(r.balanceDue), strong: true }
-                  : { label: 'Difference', value: euro(0) },
+                  ? { label: c('row_balance'), value: euro(r.balanceDue), strong: true }
+                  : { label: c('row_diff'), value: euro(0) },
             ]} />
             <p className="tk-para">
-              It is {RETENTION_RATE} percent of the agreed price, not of the gain. That is why it
-              is charged in full on a sale at a loss. The buyer pays it over on modelo{' '}
-              {RETENTION_MODEL} within {RETENTION_MONTHS === 1 ? 'one month' : `${RETENTION_MONTHS} months`} of
-              the transfer, and gives you the stamped copy. Ask for that copy at the notary. You
-              cannot claim anything back without it.
+              {f('ret_p', {
+                rate: RETENTION_RATE,
+                model: RETENTION_MODEL,
+                within: RETENTION_MONTHS === 1 ? c('within_one') : f('within_n', { n: RETENTION_MONTHS }),
+              })}
             </p>
-            {r.outcome === 'refund' && (
-              <p className="tk-para">
-                Nothing repays this on its own. The refund exists only once you file your own
-                return inside the window below, and it is paid to a bank account in your name.
-              </p>
-            )}
-            <SourceNote ids="irnr.sale.retention" />
+            {r.outcome === 'refund' && <p className="tk-para">{c('ret_refund_p')}</p>}
+            <SourceNote ids="irnr.sale.retention" label={src} />
           </Panel>
 
-          <Panel title="What actually reaches you on the day">
+          <Panel title={c('day_title')}>
             <Rows items={[
-              { label: 'Sale price', value: euro(Number(a.soldPrice) || 0) },
-              { label: 'Less agent commission', value: euro(-r.agentFee) },
-              { label: `Less the ${RETENTION_RATE} percent retention`, value: euro(-r.retention) },
-              { label: 'Less the estimated plusvalia', value: 'not known here' },
-              { label: 'Before plusvalia and your own costs', value: euro(r.netBeforePlusvalia), strong: true },
+              { label: c('row_sale'), value: euro(Number(a.soldPrice) || 0) },
+              { label: c('row_less_agent'), value: euro(-r.agentFee) },
+              { label: f('row_less_ret', rate), value: euro(-r.retention) },
+              { label: c('row_less_plusvalia'), value: c('not_known') },
+              { label: c('row_before'), value: euro(r.netBeforePlusvalia), strong: true },
             ]} />
             <p className="tk-para">
-              That figure is before the municipal tax below, and before your own legal costs and
-              anything still owed on a mortgage.
+              {c('day_p')}
               {r.outcome === 'refund'
-                ? ` The ${euro(r.refund)} you are owed does not come back on the day. It arrives separately, and only once you have filed for it.`
+                ? ` ${f('day_p_refund', { amount: euro(r.refund) })}`
                 : r.outcome === 'balance'
-                  ? ` The balance of ${euro(r.balanceDue)} falls due with your own return, so keep it aside rather than moving it all home.`
+                  ? ` ${f('day_p_balance', { amount: euro(r.balanceDue) })}`
                   : ''}
             </p>
-            <SourceNote ids="irnr.sale.retention" />
+            <SourceNote ids="irnr.sale.retention" label={src} />
           </Panel>
 
-          <Panel title="Plusvalia, the one nobody budgets for" kind="dark">
-            <p className="tk-para">
-              Plusvalia municipal is a separate tax, charged by the town hall on the increase in
-              the value of the land. Where the seller is non-resident the buyer becomes sustituto
-              del contribuyente, meaning the council can pursue the buyer for it.
-            </p>
-            <p className="tk-para">
-              What follows from that is market practice rather than a rule of law, and it is the
-              part that catches sellers out. Because the buyer carries the risk, buyers and their
-              lawyers routinely retain an estimate of the plusvalia out of the price at
-              completion, on top of the {RETENTION_RATE} percent. Expect both deductions at the
-              notary and ask for the figure in writing before the day.
-            </p>
-            <p className="tk-para">
-              This tool does not put a number on it, and you should distrust any that does
-              without asking your postcode. The coefficients, the rate, and whether the town hall
-              works by declaration or self-assessment are all set by local ordinance. The base is
-              the cadastral value of the LAND only, not the total cadastral value on your IBI
-              receipt. Ring the ayuntamiento for the property, or ask your gestor to, and get the
-              estimate before you sign.
-            </p>
-            <p className="tk-para">
-              Two things worth knowing. Where there was no increase in value there is no
-              liability, but the transfer still has to be declared with both deeds attached. And
-              where the actual increase is lower than the objective calculation, you can ask for
-              the lower figure, with evidence of what you paid and what you sold for.
-            </p>
-            <SourceNote ids={['plusvalia.non_resident_seller', 'plusvalia.municipal_variation', 'plusvalia.no_gain']} />
+          <Panel title={c('plus_title')} kind="dark">
+            <p className="tk-para">{c('plus_p1')}</p>
+            <p className="tk-para">{f('plus_p2', rate)}</p>
+            <p className="tk-para">{c('plus_p3')}</p>
+            <p className="tk-para">{c('plus_p4')}</p>
+            <SourceNote ids={['plusvalia.non_resident_seller', 'plusvalia.municipal_variation', 'plusvalia.no_gain']} label={src} />
           </Panel>
 
           {r.dates && (
-            <Panel title="Your dates" kind="quiet">
+            <Panel title={c('dates_title')} kind="quiet">
               <Rows items={[
-                { label: 'Completion', value: fmt(r.dates.completion) },
-                { label: `Buyer files modelo ${RETENTION_MODEL} by`, value: fmt(r.dates.buyer211Due) },
-                { label: 'Plusvalia, at the earliest', value: fmt(r.dates.plusvaliaEarliest) },
-                { label: 'Your own return opens', value: fmt(r.dates.sellerWindowOpens) },
-                { label: 'Your own return closes', value: fmt(r.dates.sellerWindowCloses), strong: true },
+                { label: c('row_completion'), value: fmt(r.dates.completion) },
+                { label: f('row_buyer_files', { model: RETENTION_MODEL }), value: fmt(r.dates.buyer211Due) },
+                { label: c('row_plusvalia_earliest'), value: fmt(r.dates.plusvaliaEarliest) },
+                { label: c('row_opens'), value: fmt(r.dates.sellerWindowOpens) },
+                { label: c('row_closes'), value: fmt(r.dates.sellerWindowCloses), strong: true },
               ]} />
               <p className="tk-para">
-                Your window opens {OPENS_MONTHS === 1 ? 'one month' : `${OPENS_MONTHS} months`} after
-                the transfer and closes {OPENS_MONTHS + WINDOW_MONTHS} months after it. You cannot
-                file early, which surprises sellers who want it finished before they fly home, and
-                the whole of the first month is dead time. Put the closing date in a calendar now.
+                {f('dates_p1', {
+                  opens: OPENS_MONTHS === 1 ? c('months_one') : f('months_n', { n: OPENS_MONTHS }),
+                  closes: OPENS_MONTHS + WINDOW_MONTHS,
+                })}
               </p>
-              <p className="tk-para">
-                The plusvalia date is {PLUSVALIA_DAYS} working days from the deed. Saturdays and
-                Sundays do not count, and August does count for this tax. The date above excludes
-                weekends only, so national, regional and local holidays push it later. Treat it as
-                the earliest it can fall, and confirm the real one with the ayuntamiento.
-              </p>
-              <SourceNote ids={['deadline.210.sale', 'irnr.sale.retention', 'plusvalia.deadlines']} />
+              <p className="tk-para">{f('dates_p2', { days: PLUSVALIA_DAYS })}</p>
+              <SourceNote ids={['deadline.210.sale', 'irnr.sale.retention', 'plusvalia.deadlines']} label={src} />
             </Panel>
           )}
 
-          <Panel title="What this figure does not include" kind="quiet">
-            <p className="tk-para">
-              If the property was ever let, the depreciation you deducted against that rental
-              income comes off the acquisition value, which raises the gain. This tool cannot know
-              that figure, so the gain above is the version before that adjustment. Take your
-              filed returns to your gestor rather than guessing at it.
-            </p>
-            <p className="tk-para">
-              Properties bought before the end of 1994 have a transitional regime that can reduce
-              the gain, and this tool does not apply it. Improvements you paid for, as opposed to
-              repairs, also add to the acquisition value and are not in the figures above.
-            </p>
-            <p className="tk-para">
-              {euEea
-                ? 'One more thing for the same year. Being resident in an EU or EEA state means your letting costs were deductible against rental income and your rate on that income was the lower one. Neither affects the gain above, but both affect the final return you file for the year you sell.'
-                : 'One more thing for the same year. Outside the EU and EEA, rental income is taxed on the gross rent with no deduction for costs, at the higher of the two rates. That does not change the gain above, but it does change the final return you file for the year you sell.'}
-            </p>
-            <SourceNote ids={['irnr.sale.gain_base', 'irnr.rates', 'irnr.rental.deductibility']} />
+          <Panel title={c('notinc_title')} kind="quiet">
+            <p className="tk-para">{c('notinc_p1')}</p>
+            <p className="tk-para">{c('notinc_p2')}</p>
+            <p className="tk-para">{euEea ? c('notinc_eu') : c('notinc_other')}</p>
+            <SourceNote ids={['irnr.sale.gain_base', 'irnr.rates', 'irnr.rental.deductibility']} label={src} />
           </Panel>
 
-          <ToolDisclaimer />
+          <ToolDisclaimer>{c('disclaimer')}</ToolDisclaimer>
         </Result>
       )}
     </ToolShell>
