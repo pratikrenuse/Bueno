@@ -103,6 +103,16 @@ const TOPIC_UI = {
   nl: { home: 'Onderhoud van de woning', tax: 'Belasting en aangiftetermijnen', selling: 'Verkopen', buying: 'Kopen', letting: 'Verhuren', community: 'Uw VvE', insurance: 'Verzekering', 'legal-claims': 'Claims, termijnen en krakers', inheritance: 'Erven', residency: 'Verblijf en tijd in Spanje' },
 };
 const GUIDES_PATH = '/guides';
+// One entry per official page, however many rules were read on it.
+function uniqueSources(ids) {
+  const seen = new Map();
+  for (const c of citationsOf(ids)) {
+    if (!c.url) continue;
+    const text = sourceLine(c.id) || [c.ref, c.name].filter(Boolean).join(', ');
+    if (!seen.has(c.url)) seen.set(c.url, { text, url: c.url });
+  }
+  return [...seen.values()];
+}
 // Only a guide written in all six languages is published; a half translated one waits.
 const GUIDES = ALL_GUIDES.filter(g => ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => g.i18n && g.i18n[l]));
 const GUIDES_UI = {
@@ -213,6 +223,11 @@ export function buildRoutes({ tools } = {}) {
         ],
         alternates: {},
         toolSlug: t.slug,
+        // The questions this tool settles, each with its verified short answer, so the page
+        // itself carries quotable facts in its HTML (AI crawlers do not run JavaScript, and
+        // the tool is JavaScript). SiteFooter shows the same block to visitors.
+        faq: ANSWERS.filter(x => x.tool === t.slug).slice(0, 3)
+          .map(x => ({ q: x.q[locale], a: x.a[locale], href: lp(locale, `${ANSWERS_PATH}/${x.slug}`) })),
       });
     }
   }
@@ -478,6 +493,8 @@ export function buildRoutes({ tools } = {}) {
         alternates: {},
         faq: [{ q: x.q[locale], a: x.a[locale] }],
         answerRules: x.rules,
+        sourceLinks: uniqueSources(x.rules),
+        sourceLinksLabel: a.source,
         citations: citationsOf(x.rules),
         lastChecked: lastCheckedOf(x.rules),
         toolSlug: x.tool,
@@ -523,9 +540,11 @@ export function buildRoutes({ tools } = {}) {
         h1: c.h1,
         intro: [c.lead],
         body: c.sections,
+        // Each source is a link to the official page it was read on: an answer engine weighs a
+        // claim that points at its primary source, and so does a reader.
         sources: [
-          ...x.rules.map(id => sourceLine(id)).filter(Boolean),
-          ...(checked ? [g.checked(checked)] : []),
+          ...uniqueSources(x.rules),
+          ...(checked ? [{ text: g.checked(checked) }] : []),
         ],
         sourcesLabel: g.sources,
         breadcrumbs: [

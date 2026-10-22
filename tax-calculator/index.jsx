@@ -194,6 +194,7 @@ export default function TaxCalculator() {
           <SiteNav active="tools" /><LangSwitcher />
         </div>
       </header>
+      <main className="calc-main">
 
       {!['intro','loading','results'].includes(step) && (
         <div className="progress-wrap">
@@ -495,6 +496,8 @@ export default function TaxCalculator() {
           </div>
         </div></div>
       )}
+
+      </main>
 
       <SiteFooter note={tt('footer')} />
 

@@ -35,6 +35,7 @@ const ORIGIN = `https://${HOST}`;
 // The endpoint. api.indexnow.org fans the submission out to every participating engine, so
 // one call reaches Bing, Yandex, Seznam and Naver rather than four calls reaching four.
 const INDEXNOW = 'https://api.indexnow.org/indexnow';
+export const GSC_PROPERTY = 'sc-domain:247spain.es';
 const MAX_PER_POST = 10000;
 
 /** The key is whichever <hex>.txt sits in public/. One file, so there is one answer. */
@@ -120,20 +121,27 @@ export async function resubmitGoogleSitemap({ dryRun = false } = {}) {
   try {
     const token = await googleAccessToken(creds, 'https://www.googleapis.com/auth/webmasters');
     if (!token) return { ok: false, error: 'could not get a Google access token' };
-    const site = encodeURIComponent(`${ORIGIN}/`);
+    // The property in Search Console is a DOMAIN property, sc-domain:247spain.es. Addressing it
+    // as https://www.247spain.es/ is a different (url prefix) property and Google refuses the
+    // call with 403. Domain first, the url prefix form only as a fallback.
     const feed = encodeURIComponent(`${ORIGIN}/sitemap.xml`);
-    const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${site}/sitemaps/${feed}`, {
-      method: 'PUT',
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    return { ok: r.status === 204 || r.ok, status: r.status };
+    const tried = [];
+    for (const property of [GSC_PROPERTY, `${ORIGIN}/`]) {
+      const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(property)}/sitemaps/${feed}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      tried.push(`${property}: ${r.status}`);
+      if (r.status === 204 || r.ok) return { ok: true, property, status: r.status };
+    }
+    return { ok: false, error: `Search Console refused the sitemap (${tried.join(', ')}). The service account must be added as an Owner of the property.` };
   } catch (e) {
     return { ok: false, error: String(e.message || e) };
   }
 }
 
 /** A service account JWT, signed locally, exchanged for an access token. No dependencies. */
-async function googleAccessToken(creds, scope) {
+export async function googleAccessToken(creds, scope) {
   const { createSign } = await import('node:crypto');
   const now = Math.floor(Date.now() / 1000);
   const b64 = (o) => Buffer.from(JSON.stringify(o)).toString('base64url');

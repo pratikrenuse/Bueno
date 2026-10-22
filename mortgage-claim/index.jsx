@@ -106,6 +106,7 @@ export default function MortgageClaim() {
           <SiteNav active="tools" /><LangSwitcher />
         </div>
       </header>
+      <main className="calc-main">
 
       {/* Progress */}
       {!['intro', 'loading', 'results', 'ineligible'].includes(step) && (
@@ -337,6 +338,8 @@ export default function MortgageClaim() {
           <button className="btn-skip" onClick={restart}>{tt('restart')}</button>
         </div></div>
       )}
+
+      </main>
 
       {/* Footer */}
       <SiteFooter note={tt('footer')} />

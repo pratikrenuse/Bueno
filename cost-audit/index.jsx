@@ -72,6 +72,7 @@ export default function CostAudit() {
           <SiteNav active="tools" /><LangSwitcher />
         </div>
       </header>
+      <main className="calc-main">
 
       {/* Progress bar */}
       {!['intro', 'results'].includes(step) && (
@@ -340,6 +341,8 @@ export default function CostAudit() {
           </div>
         </div>
       )}
+
+      </main>
 
       {/* Footer */}
       <SiteFooter note={tt('footer')} />

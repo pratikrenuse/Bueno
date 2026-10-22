@@ -1,5 +1,7 @@
 import { useT, useLocale, LLink } from './i18n.jsx';
 import { audienceLabels } from './audiences.js';
+import { useLocation } from 'react-router-dom';
+import { toolFaqFor } from './seo/toolFaq.js';
 
 // The site's one real footer, used by every tool page.
 //
@@ -49,7 +51,11 @@ export default function SiteFooter({ note }) {
   const extra = EXTRA[useLocale().locale] || EXTRA.en;
   const year = new Date().getFullYear();
 
+  const faq = toolFaqFor(useLocation().pathname);
+
   return (
+    <>
+    {faq && <section className="tool-faq-visible" aria-label={extra.answers} dangerouslySetInnerHTML={{ __html: faq }} />}
     <footer className="s247f">
       <div className="s247f-top">
         <div className="s247f-brand">
@@ -78,5 +84,6 @@ export default function SiteFooter({ note }) {
         <span className="s247f-copy">&copy; {year} Spain 24/7</span>
       </div>
     </footer>
+    </>
   );
 }

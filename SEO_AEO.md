@@ -19,7 +19,11 @@ and verifies it. No hand-off plans, no "you do this" lists, no multi-month timel
 | IndexNow | `seo/submit.mjs` runs last in `npm run build` and submits changed URLs (Bing, Yandex, Seznam, Naver). Key file `public/9800fa3e03e5c162747e4e89ec8d351a.txt`. |
 | Sitemap | `seo/sitemap.mjs`, index of 4 files, about 22,100 URLs. `lastmod` comes from the content-hash ledger `seo/lastmod.json`. |
 | llms.txt | `seo/llms.mjs` writes `llms.txt` and `llms-full.txt`. Google does not use them; other assistants may. |
-| robots.txt | `public/robots.txt`. Everything open except `/api/` and `/internal*`. AI search crawlers named explicitly. |
+| robots.txt | `public/robots.txt`. Everything open except `/api/` and `/internal*`. AI search crawlers named explicitly. `Content-Signal: search=yes, ai-input=yes, ai-train=yes`. |
+| Google sitemap ping | `seo/submit.mjs` resubmits the sitemap to Search Console through the API on every production build (`sitemaps.submit`, property `sc-domain:247spain.es`, falls back to the URL-prefix property). Needs env var `GOOGLE_SERVICE_ACCOUNT_JSON` in Vercel and the service account added as an Owner in Search Console. Google has no indexing push for ordinary pages; this is the most it accepts. |
+| Weekly GSC report | `seo/gsc_report.mjs`, run by `.github/workflows/gsc-report.yml` (source copy in `seo/workflows/`, since remote tools cannot write `.github`) every Monday 06:00 UTC (and on demand). Top queries, top pages, page-two pages (positions 8 to 20) and question queries no answer covers yet. Uploaded as a workflow artifact, nothing committed. Needs GitHub secret `GOOGLE_SERVICE_ACCOUNT_JSON`. Use its "not covered" list to pick the next answers. |
+| Markdown copies | Every answer, guide, both hubs and the about page also exist as `<url>.md` (frontmatter: title, canonical_url, language, last_checked). Each HTML page links its copy with `<link rel="alternate" type="text/markdown">`; llms.txt says so. |
+| Clickable sources | Answers and guides link each official source (BOE, AEAT, Catastro and so on) by URL, from the rules' `source.url`. Statistics plus primary-source links are what the GEO research found raises citation. |
 
 Do not check indexing with a web search `site:` query. The search tool is not Google and it
 returned zero on 21 Oct 2026 while Google had 11.5K pages indexed.
@@ -127,8 +131,24 @@ unknown URL is `noindex`.
 - Perplexity and AI answers in general cite Reddit, YouTube, LinkedIn and Wikipedia most.
   Off-site brand mentions are the strongest predictor of AI Overview visibility (Ahrefs, 75K brands).
 
+## Checked against the "11 AEO optimizations" post (22 Oct 2026)
+
+- Accessibility tree: axe-core on home, hubs, answers, guides and all 25 tools in a real browser.
+  No unnamed buttons, links or form fields, no images without alt. Missing `<main>` on the home page
+  and four calculators was fixed (`.calc-main`). OpenAI says ChatGPT Atlas reads ARIA, so keep it clean.
+- Raw HTML: AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Meta) do not run JavaScript. Tool pages
+  now carry their top 3 verified answers in the prerendered HTML (`faq` on tool routes,
+  `.tool-faq` in the static block) and show the same text to visitors above the footer
+  (`SiteFooter.jsx` via `seo/toolFaq.js`). Question as the H2, short answer under it.
+- robots.txt names `meta-webindexer` (Meta AI search citations) and `meta-externalagent`.
+- Internal links: zero broken across 23,075 pages, except `/favicon.png`, which every page
+  references and does not exist. Needs a Spain 24/7 icon (brand decision, not made yet).
+
 ## Open items
 
+0. One-time Search Console API setup (needs Pratik's Google login): service account with the
+   Search Console API enabled, added as Owner of `sc-domain:247spain.es`, key JSON in Vercel env
+   and GitHub secret `GOOGLE_SERVICE_ACCOUNT_JSON`. Until then the ping and the report skip quietly.
 1. Off-site mentions: Reddit answers, LinkedIn articles, press, a getbueno.com link to the tools.
 2. Bing Webmaster Tools: import the site from Search Console.
 3. Native-speaker review of the AI translations.

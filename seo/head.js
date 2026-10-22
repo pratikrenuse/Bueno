@@ -38,6 +38,10 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
     ? '<meta name="robots" content="noindex, nofollow" />'
     : '<meta name="robots" content="index, follow, max-image-preview:large" />');
   out.push(`<link rel="canonical" href="${escapeHtml(url)}" />`);
+  // The plain text copy of this page, for AI agents (written by seo/prerender.mjs).
+  if (['answer', 'guide', 'answers-hub', 'guides-hub', 'about'].includes(route.kind)) {
+    out.push(`<link rel="alternate" type="text/markdown" href="${escapeHtml(url)}.md" />`);
+  }
 
   // One locale in the family means there is nothing to alternate with. Emitting a lone
   // self referencing hreflang would be noise, and emitting the other five would be a lie.

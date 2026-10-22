@@ -52,6 +52,12 @@ export function staticBlock(route) {
   parts.push(`<h1>${escapeHtml(route.h1)}</h1>`);
   for (const p of route.intro || []) parts.push(`<p>${escapeHtml(p)}</p>`);
 
+  // An answer's official sources, as links to the pages they were read on.
+  if (Array.isArray(route.sourceLinks) && route.sourceLinks.length) {
+    parts.push('<div class="source-links"><ul>' + route.sourceLinks.map(l =>
+      `<li><a href="${escapeHtml(l.url)}" rel="noopener">${escapeHtml(l.text)}</a></li>`).join('') + '</ul></div>');
+  }
+
   // A guide's body: real headed sections of prose, then the sources it rests on.
   if (Array.isArray(route.body) && route.body.length) {
     parts.push('<section class="guide-body">');
@@ -61,9 +67,21 @@ export function staticBlock(route) {
     }
     if (route.sources && route.sources.length) {
       parts.push(`<h2>${escapeHtml(route.sourcesLabel || 'Sources')}</h2>`);
-      for (const line of route.sources) parts.push(`<p class="guide-source">${escapeHtml(line)}</p>`);
+      for (const src of route.sources) {
+        const t = escapeHtml(typeof src === 'string' ? src : src.text);
+        parts.push(src.url
+          ? `<p class="guide-source"><a href="${escapeHtml(src.url)}" rel="noopener">${t}</a></p>`
+          : `<p class="guide-source">${t}</p>`);
+      }
     }
     parts.push('</section>');
+  }
+
+  // A tool page's questions: the reader's question as a heading, the verified short answer
+  // right under it, and a link to the full answer and its sources.
+  if (Array.isArray(route.faq) && route.faq.length) {
+    parts.push('<section class="tool-faq">' + route.faq.map(f =>
+      `<h2>${escapeHtml(f.q)}</h2><p>${escapeHtml(f.a)}</p><p><a href="${escapeHtml(f.href)}">${escapeHtml(b.more)}</a></p>`).join('') + '</section>');
   }
 
   if (route.links && route.links.length) {
@@ -103,6 +121,46 @@ function extractAssets(template) {
   return tags.map(t => '    ' + t).join('\n');
 }
 
+// Markdown copies of the pages written to be read and quoted: answers, guides, their hubs and
+// the about page. An AI agent fetching /answers/<slug>.md gets the same words as the HTML page,
+// without navigation or scripts, plus the canonical URL and the date the facts were checked.
+// Each HTML page points at its copy with <link rel="alternate" type="text/markdown">.
+export const MARKDOWN_KINDS = new Set(['answer', 'guide', 'answers-hub', 'guides-hub', 'about']);
+const mdPath = p => (p === '/' ? '/index' : p) + '.md';
+export { mdPath };
+
+function toMarkdown(route) {
+  const url = `https://www.247spain.es${route.path}`;
+  const fm = ['---', `title: ${JSON.stringify(route.title)}`, `canonical_url: ${url}`, `language: ${route.locale}`];
+  if (route.lastChecked) fm.push(`last_checked: ${route.lastChecked}`);
+  if (route.description) fm.push(`description: ${JSON.stringify(route.description)}`);
+  fm.push('---', '');
+  const out = [...fm, `# ${route.h1}`, ''];
+  for (const p of route.intro || []) out.push(p, '');
+  for (const l of route.sourceLinks || []) out.push(`- [${l.text}](${l.url})`);
+  if ((route.sourceLinks || []).length) out.push('');
+  for (const sec of route.body || []) {
+    out.push(`## ${sec.h2}`, '');
+    for (const p of sec.paras || []) out.push(p, '');
+  }
+  if ((route.sources || []).length) {
+    out.push(`## ${route.sourcesLabel || 'Sources'}`, '');
+    for (const src of route.sources) out.push(src.url ? `- [${src.text}](${src.url})` : `- ${src.text || src}`);
+    out.push('');
+  }
+  for (const sec of route.sections || []) {
+    out.push(`## ${sec.h2}`, '');
+    for (const l of sec.links) out.push(`- [${l.label}](https://www.247spain.es${l.href})`);
+    out.push('');
+  }
+  if ((route.links || []).length) {
+    out.push('## Related', '');
+    for (const l of route.links) out.push(`- [${l.label}](https://www.247spain.es${l.href})`);
+    out.push('');
+  }
+  return out.join('\n');
+}
+
 function writePage(path, html) {
   const target = path === '/' ? join(DIST, 'index.html') : join(DIST, path, 'index.html');
   mkdirSync(dirname(target), { recursive: true });
@@ -127,13 +185,17 @@ async function main() {
   const groupBySlug = Object.fromEntries(tools.map(t => [t.slug, t.group]));
   const routes = buildRoutes({ tools });
 
-  let written = 0;
+  let written = 0, markdown = 0;
   for (const route of routes) {
     const headHtml = buildHead(route, { assets, group: groupBySlug[route.toolSlug] || '' });
     const bodyHtml = staticBlock(route);
     const html = render(template, { assets, headHtml, bodyHtml, lang: HREFLANG[route.locale] });
     assertClean(html.replace(/<script[\s\S]*?<\/script>/gi, ''), route.path);
     writePage(route.path, html);
+    if (MARKDOWN_KINDS.has(route.kind)) {
+      writeFileSync(join(DIST, mdPath(route.path)), toMarkdown(route));
+      markdown++;
+    }
     written++;
   }
 
@@ -155,7 +217,7 @@ async function main() {
 
   const byKind = {};
   for (const r of routes) byKind[r.kind] = (byKind[r.kind] || 0) + 1;
-  console.log(`prerender: ${written} files written to dist`);
+  console.log(`prerender: ${written} files written to dist, plus ${markdown} markdown copies`);
   for (const [k, n] of Object.entries(byKind).sort()) console.log(`  ${k.padEnd(14)} ${n}`);
   console.log(`  ${'noindex'.padEnd(14)} ${NOINDEX_PATHS.length}`);
 }

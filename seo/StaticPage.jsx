@@ -4,6 +4,7 @@ import { useLocale, useT } from '../i18n.jsx';
 import SiteNav from '../SiteNav.jsx';
 import SiteFooter from '../SiteFooter.jsx';
 import LangSwitcher from '../LangSwitcher.jsx';
+import { setToolFaq } from './toolFaq.js';
 
 // The catch-all route.
 //
@@ -44,6 +45,8 @@ export function captureStaticBlock() {
   try { owner = canon ? strip(new URL(canon.href).pathname) : null; } catch { owner = null; }
   const el = document.querySelector('#root .seo-static');
   INITIAL = { path: window.location.pathname, html: el && owner === here ? el.innerHTML : '' };
+  const faq = el && owner === here ? el.querySelector('.tool-faq') : null;
+  setToolFaq(window.location.pathname, faq ? faq.innerHTML : '');
 }
 
 function setNoindex(on) {

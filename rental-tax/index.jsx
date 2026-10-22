@@ -209,6 +209,7 @@ export default function RentalTaxCalculator() {
           <LangSwitcher />
         </div>
       </header>
+      <main className="calc-main">
 
       {/* Progress */}
       {!['intro', 'results'].includes(step) && (
@@ -578,6 +579,8 @@ export default function RentalTaxCalculator() {
           </div>
         </div>
       )}
+
+      </main>
 
       <SiteFooter note={tt('footer')} />
 

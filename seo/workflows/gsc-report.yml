@@ -1,0 +1,27 @@
+name: Search Console report
+
+# Every Monday: pull the last 28 days from Search Console and keep the report as a downloadable
+# artifact (nothing is committed to the repo). Needs the GOOGLE_SERVICE_ACCOUNT_JSON secret, the
+# same service account the Vercel build uses to resubmit the sitemap. See SEO_AEO.md.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Pull Search Console data
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: node seo/gsc_report.mjs gsc-report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gsc-report
+          path: gsc-report/
+          retention-days: 90

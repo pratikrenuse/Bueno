@@ -45,6 +45,9 @@ const index = `# Spain 24/7
 Nothing here is legal or tax advice. The tools do arithmetic and the answers quote the law.
 All of it is free, with no account and no sign up.
 
+Every answer and guide also exists as plain markdown: add .md to its URL, for example
+${abs('/answers/tax-on-a-spanish-property-you-do-not-rent-out.md')}.
+
 The site is published in English, Norwegian, Swedish, German, French and Dutch. Add the
 language code to the path for a translated page, for example ${abs('/de/answers')}.
 

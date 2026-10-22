@@ -1607,10 +1607,10 @@ export const HUB_UI = {
 // Labels for the two headings the static block adds. Short, and the same words the app
 // uses for the same idea.
 export const BLOCK = {
-  en: { links: 'Pages from here', also: 'Also covered in the town menu', crumb: 'Breadcrumb' },
-  no: { links: 'Sider herfra', also: 'Dekkes også i bymenyen', crumb: 'Brødsmulesti' },
-  sv: { links: 'Sidor härifrån', also: 'Täcks också i ortmenyn', crumb: 'Brödsmulor' },
-  de: { links: 'Seiten von hier', also: 'Ebenfalls im Ortsmenü', crumb: 'Brotkrumenpfad' },
-  fr: { links: "Pages accessibles d'ici", also: 'Également dans le menu des communes', crumb: "Fil d'Ariane" },
-  nl: { links: 'Pagina’s vanaf hier', also: 'Ook in het plaatsmenu', crumb: 'Kruimelpad' },
+  en: { links: 'Pages from here', also: 'Also covered in the town menu', crumb: 'Breadcrumb', more: 'The full answer with its official sources' },
+  no: { links: 'Sider herfra', also: 'Dekkes også i bymenyen', crumb: 'Brødsmulesti', more: 'Hele svaret med de offisielle kildene' },
+  sv: { links: 'Sidor härifrån', also: 'Täcks också i ortmenyn', crumb: 'Brödsmulor', more: 'Hela svaret med de officiella källorna' },
+  de: { links: 'Seiten von hier', also: 'Ebenfalls im Ortsmenü', crumb: 'Brotkrumenpfad', more: 'Die vollständige Antwort mit den amtlichen Quellen' },
+  fr: { links: "Pages accessibles d'ici", also: 'Également dans le menu des communes', crumb: "Fil d'Ariane", more: 'La réponse complète avec ses sources officielles' },
+  nl: { links: 'Pagina’s vanaf hier', also: 'Ook in het plaatsmenu', crumb: 'Kruimelpad', more: 'Het volledige antwoord met de officiële bronnen' },
 };

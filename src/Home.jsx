@@ -341,6 +341,7 @@ export default function Home() {
           </a>
         </div>
       </nav>
+      <main>
 
       {/* HERO */}
       <section className="home-hero">
@@ -430,6 +431,8 @@ export default function Home() {
           {t('home.band_cta')} &#8594;
         </a>
       </section>
+
+      </main>
 
       {/* FOOTER */}
       <footer className="home-footer">
