@@ -3980,3 +3980,12 @@ button.fbp-d-tile:hover { border-color: #5B7FCC; }
 .static-page > ul li a:hover { background: var(--navy); color: var(--white); }
 .static-page > ul li span { display: block; margin-top: 4px; font-size: 0.875rem; color: var(--text-muted); }
 .static-page .s247-checked { font-size: 0.875rem; color: var(--text-muted); }
+
+/* Guides: long form prose inside a static page. */
+.static-page .guide-body { margin-top: 8px; }
+.static-page .guide-body h2 {
+  margin: 40px 0 12px; font-family: var(--font-serif, Georgia, serif); font-size: 1.5rem; font-weight: 400;
+  letter-spacing: 0; text-transform: none; color: var(--navy);
+}
+.static-page .guide-body p { font-size: 1.0625rem; line-height: 1.7; }
+.static-page .guide-body .guide-source { font-size: 0.875rem; line-height: 1.5; color: var(--text-muted); margin-bottom: 6px; }

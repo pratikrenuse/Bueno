@@ -1,0 +1,472 @@
+{
+  "slug": "ibi-and-local-taxes-on-spanish-property",
+  "topic": "tax",
+  "tool": "cost-audit",
+  "rules": [
+    "own.ibi.taxable_rights",
+    "own.ibi.taxpayer",
+    "own.ibi.pass_on",
+    "own.ibi.property_answers",
+    "own.ibi.base",
+    "own.ibi.urban_rates",
+    "own.ibi.town_hall_manages",
+    "own.ibi.empty_surcharge",
+    "own.ibi.empty_surcharge_higher",
+    "own.ibi.empty_justified",
+    "own.ibi.empty_procedure",
+    "own.waste.fee_required",
+    "own.catastro.cadastral_value",
+    "own.catastro.reference_value",
+    "own.catastro.reference_value_no_ibi",
+    "own.catastro.reference_value_challenge",
+    "own.catastro.value_challenge",
+    "own.catastro.new_values_timing",
+    "own.catastro.declare_changes",
+    "own.catastro.purchase_exempt",
+    "own.catastro.failure_to_declare",
+    "irnr.imputed.base",
+    "irnr.rates"
+  ],
+  "answers": [
+    "tax-on-a-spanish-property-you-do-not-rent-out",
+    "imputed-income-when-there-is-no-cadastral-value",
+    "imputed-income-tax-deadline-for-2025",
+    "who-sets-the-plusvalia-rate-in-spain",
+    "plusvalia-when-selling-in-spain",
+    "spanish-wealth-tax-for-non-residents"
+  ],
+  "i18n": {
+    "en": {
+      "title": "IBI Tax in Spain: Rates, Bills and Empty Homes",
+      "description": "How IBI, the local property tax in Spain, is worked out from the cadastral value, who sets the rate, and what an owner abroad should check each year.",
+      "h1": "IBI and the other local taxes on a Spanish property",
+      "lead": "IBI is the yearly property tax charged by the town hall where your Spanish home sits. It is worked out from the cadastral value, not the price you paid, at a rate each town sets between 0.4 percent and 1.10 percent for urban property. The owner pays it whether or not the home is lived in or let.",
+      "sections": [
+        {
+          "h2": "What is IBI, and do I have to pay it if I am never there?",
+          "paras": [
+            "Yes. IBI (impuesto sobre bienes inmuebles) is charged on holding a property, not on using it. The law lists four rights that trigger it: an administrative concession, a surface right, a usufruct, or ownership. For an ordinary owner that simply means you, because the taxpayer is whoever holds the right.",
+            "Think of it as a local property tax, set by the town and paid by the owner. The Spanish version does not care whether you spend two weeks a year in the flat or rent it out all summer. It comes every year either way."
+          ]
+        },
+        {
+          "h2": "How is my IBI bill worked out?",
+          "paras": [
+            "The base is the cadastral value (valor catastral) of the property. It is an administrative value fixed for each property from the valuation study for its area, and by law it may not exceed market value. That is why it usually sits well below what you paid. Your purchase price and the market value play no part in the bill.",
+            "Each town hall then applies its own rate, set in its tax ordinance. For urban property the rate is at least 0.4 percent, which is also the default, and at most 1.10 percent. Rustic land runs from 0.3 to 0.9 percent. So a flat with a cadastral value of 100,000 euros pays 400 euros in a town at the minimum rate and 1,100 euros in a town at the maximum.",
+            "The ordinance of your own town is the final word on the rate, and on any local reliefs. Two similar flats a few kilometres apart can receive quite different bills, simply because they sit in different municipalities. If you want to know the rate before the receipt arrives, ask the town hall which ordinance applies."
+          ]
+        },
+        {
+          "h2": "Will the new valor de referencia push up my IBI?",
+          "paras": [
+            "No. The valor de referencia is a separate figure the Catastro sets from the prices in sales signed before a notary. It serves as the minimum base for transfer tax and for inheritance and gift tax, unless the declared price is higher. It has no effect on IBI or on any other tax that uses the cadastral value.",
+            "Owners often see a higher reference value and brace for a bigger IBI bill. It does not follow. If you think the reference value is wrong, you cannot appeal it to the Catastro directly. You challenge it only when it has a tax effect, by asking for the tax return to be corrected or by appealing the assessment of the body that manages that tax."
+          ]
+        },
+        {
+          "h2": "Who do I ask about my bill, the town hall or the Catastro?",
+          "paras": [
+            "It depends on the question. The town hall manages, assesses and collects IBI, sets the rate and decides the reliefs. The Catastro only supplies the cadastral value. A question about the amount, the payment date or a missing receipt goes to the town hall or the collection body it uses. A question about the value or the description of the property goes to the Catastro.",
+            "When a collective revaluation gives your property a new cadastral value, you have one month from the day after notification to challenge it, either with an optional appeal for reconsideration to the Catastro office or a claim before the regional economic administrative court. Each property is challenged separately. The new value reaches your IBI bill in the year after it is notified, so there is time to check it before it costs you anything."
+          ]
+        },
+        {
+          "h2": "Does an empty holiday home pay extra IBI?",
+          "paras": [
+            "For most foreign owners, no. A town hall may add a surcharge of up to 50 percent on a home that is permanently unoccupied, meaning empty continuously and without good reason for more than two years, but only where the owner holds four or more residential properties. It can rise to 100 percent after three years, with up to 50 further points where the same owner has two or more empty homes in the same town.",
+            "Even then, the law accepts several good reasons for a home to stand empty. A second residence is covered for up to four years of continuous non occupation, and so are works, a pending lawsuit, a sale at market conditions for up to a year, or a let on offer for up to six months. The surcharge only exists where the town hall has adopted it in its ordinance, and before charging it the town hall must hear the owner and show evidence, such as the municipal register and utility consumption."
+          ]
+        },
+        {
+          "h2": "Can I end up paying the previous owner's IBI?",
+          "paras": [
+            "You can. When a property changes hands for any reason, the property itself stays liable for the full unpaid IBI charge. The town hall can pursue the home, and with it the new owner, for a debt the seller left behind. Notaries must ask about and warn of pending IBI debts on the property being transferred, which is a good moment to ask for the last receipts.",
+            "A seller and buyer may agree how to split the year's IBI in the purchase contract, and a landlord can pass the cost to a tenant in a lease. Those are private agreements between the two of you. They do not change who the town hall bills, which is still the taxpayer."
+          ]
+        },
+        {
+          "h2": "What else does the town hall charge?",
+          "paras": [
+            "The most common one is the rubbish fee. Every local authority must have a specific, separate charge for household waste, either a tasa or a non tax public charge, and the law says it should move towards charging by the amount of waste generated. The amount is set by each town hall or its waste consortium, so it varies from town to town.",
+            "There is also the Catastro itself. Owners must declare new buildings, extensions, renovations, demolitions, splits and merges, and changes of use within two months from the day after the event. A purchase signed before a notary is passed on for you, but the pool or the closed terrace is not. If a change is never declared, the Catastro can add it through a regularisation procedure with a fee of 60 euros per property, and a penalty is possible too."
+          ]
+        },
+        {
+          "h2": "Is IBI the same as non-resident income tax?",
+          "paras": [
+            "No, they are two separate taxes, but they share a number. IBI is local and goes to the town hall. Non-resident income tax goes to the national tax agency, and if you do not let the home it is charged on imputed income, a percentage of the cadastral value shown on your IBI receipt.",
+            "That is one more reason to keep each year's receipt (the recibo del IBI) somewhere you can find it. The rate on that imputed income is 19 percent for residents of the EU, Iceland, Norway and Liechtenstein and 24 percent for other non-residents, and the linked answers below walk through the calculation."
+          ]
+        },
+        {
+          "h2": "How do I keep on top of IBI from abroad?",
+          "paras": [
+            "Ask your town hall, or the collection body it uses, when its payment period runs and how it sends the receipt, because both are set locally. Then arrange to pay in a way that does not depend on a letter reaching an empty flat. Keep every receipt, and check that the cadastral reference and the description of the property match what you actually own.",
+            "If something looks wrong, a local gestor can help you work out whether it is a question for the town hall or the Catastro, and draft the request in Spanish. Once that is set up, IBI is one of the calmer parts of owning a home in Spain, and you can get back to enjoying it."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "IBI i Spania: satser, regninger og tomme boliger",
+      "description": "Slik beregnes IBI, den lokale eiendomsskatten i Spania, ut fra matrikkelverdien, hvem som fastsetter satsen og hva en eier i utlandet bør sjekke hvert år.",
+      "h1": "IBI og de andre lokale skattene på en eiendom i Spania",
+      "lead": "IBI er den årlige eiendomsskatten som kommunen der boligen din i Spania ligger krever inn. Den beregnes ut fra matrikkelverdien, ikke prisen du betalte, med en sats hver kommune fastsetter mellom 0,4 prosent og 1,10 prosent for bebygd eiendom. Eieren betaler den uansett om boligen er bebodd eller utleid.",
+      "sections": [
+        {
+          "h2": "Hva er IBI, og må jeg betale den selv om jeg aldri er der?",
+          "paras": [
+            "Ja. IBI (impuesto sobre bienes inmuebles) kreves for å inneha en eiendom, ikke for å bruke den. Loven nevner fire rettigheter som utløser den: en administrativ konsesjon, en overflaterett, en bruksrett (usufructo) eller eiendomsrett. For en vanlig eier betyr det rett og slett deg, fordi skattyteren er den som har rettigheten.",
+            "Tenk på den som en lokal eiendomsskatt, fastsatt av kommunen og betalt av eieren. Den spanske varianten bryr seg ikke om du tilbringer to uker i året i leiligheten eller leier den ut hele sommeren. Den kommer hvert år uansett."
+          ]
+        },
+        {
+          "h2": "Hvordan beregnes IBI-regningen min?",
+          "paras": [
+            "Grunnlaget er eiendommens matrikkelverdi (valor catastral). Det er en administrativ verdi som fastsettes for hver eiendom ut fra verdsettelsesstudien for området, og etter loven kan den ikke overstige markedsverdien. Det er derfor den som regel ligger godt under det du betalte. Kjøpesummen og markedsverdien spiller ingen rolle for regningen.",
+            "Hver kommune bruker deretter sin egen sats, fastsatt i den kommunale skatteforskriften. For bebygd eiendom er satsen minst 0,4 prosent, som også er standardsatsen, og høyst 1,10 prosent. For landbrukseiendom går den fra 0,3 til 0,9 prosent. En leilighet med matrikkelverdi på 100 000 euro betaler altså 400 euro i en kommune med minstesatsen og 1 100 euro i en kommune med høyeste sats.",
+            "Forskriften i din egen kommune har siste ord om satsen og om eventuelle lokale lettelser. To like leiligheter noen kilometer fra hverandre kan få ganske ulike regninger, rett og slett fordi de ligger i ulike kommuner. Vil du vite satsen før regningen kommer, spør kommunen hvilken forskrift som gjelder."
+          ]
+        },
+        {
+          "h2": "Vil den nye valor de referencia gi meg høyere IBI?",
+          "paras": [
+            "Nei. Valor de referencia er et eget tall som Catastro fastsetter ut fra prisene i salg signert hos notar. Den brukes som minstegrunnlag for dokumentavgift og for arve- og gaveavgift, med mindre den oppgitte prisen er høyere. Den har ingen virkning på IBI eller på noen annen skatt som bruker matrikkelverdien.",
+            "Eiere ser ofte en høyere referanseverdi og forbereder seg på en større IBI-regning. Det følger ikke av det. Mener du at referanseverdien er feil, kan du ikke klage på den direkte til Catastro. Du angriper den bare når den får en skattemessig virkning, ved å be om at skatteoppgaven rettes eller ved å klage på fastsettelsen fra organet som forvalter den skatten."
+          ]
+        },
+        {
+          "h2": "Hvem spør jeg om regningen, kommunen eller Catastro?",
+          "paras": [
+            "Det kommer an på spørsmålet. Kommunen forvalter, fastsetter og krever inn IBI, bestemmer satsen og avgjør lettelsene. Catastro leverer bare matrikkelverdien. Et spørsmål om beløpet, betalingsdatoen eller en manglende regning går til kommunen eller innkrevingsorganet den bruker. Et spørsmål om verdien eller beskrivelsen av eiendommen går til Catastro.",
+            "Når en kollektiv omtaksering gir eiendommen din en ny matrikkelverdi, har du én måned fra dagen etter meddelelsen til å angripe den, enten med en valgfri klage om ny vurdering til Catastro-kontoret eller med en klage til den regionale økonomisk-administrative domstolen. Hver eiendom angripes for seg. Den nye verdien slår inn på IBI-regningen året etter at den er meddelt, så du har tid til å sjekke den før den koster deg noe."
+          ]
+        },
+        {
+          "h2": "Betaler en tom feriebolig ekstra IBI?",
+          "paras": [
+            "For de fleste utenlandske eiere, nei. En kommune kan legge et tillegg på inntil 50 prosent på en bolig som står varig ubebodd, det vil si sammenhengende tom uten god grunn i mer enn to år, men bare der eieren har fire eller flere boligeiendommer. Det kan stige til 100 prosent etter tre år, med inntil 50 prosentpoeng til der samme eier har to eller flere tomme boliger i samme kommune.",
+            "Selv da godtar loven flere gode grunner til at en bolig står tom. En sekundærbolig er dekket i inntil fire år med sammenhengende ikke-bruk, og det samme gjelder arbeider, en verserende rettssak, salg på markedsvilkår i inntil ett år eller utleie som tilbys i inntil seks måneder. Tillegget finnes bare der kommunen har innført det i forskriften sin, og før det kreves, må kommunen høre eieren og legge fram dokumentasjon, som folkeregisteret og forbruk av strøm og vann."
+          ]
+        },
+        {
+          "h2": "Kan jeg ende opp med å betale forrige eiers IBI?",
+          "paras": [
+            "Ja. Når en eiendom skifter eier av en eller annen grunn, hefter eiendommen selv fortsatt for hele det ubetalte IBI-kravet. Kommunen kan gå etter boligen, og dermed den nye eieren, for en gjeld selgeren etterlot seg. Notarer må spørre om og advare mot ubetalt IBI på eiendommen som overdras, og det er et godt tidspunkt å be om de siste kvitteringene.",
+            "Selger og kjøper kan avtale hvordan årets IBI skal fordeles i kjøpekontrakten, og en utleier kan legge kostnaden over på en leietaker i en leiekontrakt. Det er private avtaler mellom dere. De endrer ikke hvem kommunen sender regningen til, som fortsatt er skattyteren."
+          ]
+        },
+        {
+          "h2": "Hva annet krever kommunen inn?",
+          "paras": [
+            "Den vanligste er renovasjonsavgiften. Hver kommune må ha en egen, særskilt avgift for husholdningsavfall, enten en tasa eller en offentlig avgift som ikke er skatt, og loven sier at den skal bevege seg mot betaling etter mengden avfall. Beløpet fastsettes av hver kommune eller dens avfallskonsortium, så det varierer fra kommune til kommune.",
+            "Så er det Catastro selv. Eiere må melde nybygg, påbygg, renoveringer, rivinger, deling og sammenslåing og bruksendringer innen to måneder fra dagen etter at det skjedde. Et kjøp signert hos notar meldes videre for deg, men bassenget eller den innebygde terrassen gjør ikke det. Blir en endring aldri meldt, kan Catastro legge den inn gjennom en regulariseringsprosess med et gebyr på 60 euro per eiendom, og en bot er også mulig."
+          ]
+        },
+        {
+          "h2": "Er IBI det samme som inntektsskatt for ikke-bosatte?",
+          "paras": [
+            "Nei, det er to separate skatter, men de deler et tall. IBI er lokal og går til kommunen. Inntektsskatten for ikke-bosatte går til det nasjonale skattekontoret, og leier du ikke ut boligen, beregnes den av imputert inntekt, en prosentandel av matrikkelverdien som står på IBI-regningen din.",
+            "Det er enda en grunn til å ta vare på hvert års regning (recibo del IBI) et sted der du finner den. Satsen på den imputerte inntekten er 19 prosent for bosatte i EU, Island, Norge og Liechtenstein og 24 prosent for andre ikke-bosatte, og svarene det lenkes til nedenfor går gjennom beregningen."
+          ]
+        },
+        {
+          "h2": "Hvordan holder jeg kontroll på IBI fra utlandet?",
+          "paras": [
+            "Spør kommunen, eller innkrevingsorganet den bruker, når betalingsperioden er og hvordan regningen sendes, fordi begge deler fastsettes lokalt. Ordne deretter betalingen slik at den ikke avhenger av at et brev når en tom leilighet. Ta vare på hver kvittering, og sjekk at matrikkelreferansen og beskrivelsen av eiendommen stemmer med det du faktisk eier.",
+            "Ser noe feil ut, kan en lokal gestor hjelpe deg å finne ut om det er et spørsmål for kommunen eller Catastro, og skrive henvendelsen på spansk. Når det er på plass, er IBI en av de roligere delene av å eie en bolig i Spania, og du kan vende tilbake til å nyte den."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "IBI i Spanien: skattesats, avi och tomma bostäder",
+      "description": "Så räknas IBI, den lokala fastighetsskatten i Spanien, fram från taxeringsvärdet, vem som sätter satsen och vad en ägare utomlands bör kolla varje år.",
+      "h1": "IBI och de andra lokala skatterna på en spansk fastighet",
+      "lead": "IBI är den årliga fastighetsskatt som tas ut av kommunen där din spanska bostad ligger. Den räknas fram från taxeringsvärdet, inte priset du betalade, med en sats som varje kommun bestämmer mellan 0,4 procent och 1,10 procent för fastigheter i tätort. Ägaren betalar den oavsett om bostaden bebos eller hyrs ut.",
+      "sections": [
+        {
+          "h2": "Vad är IBI, och måste jag betala den om jag aldrig är där?",
+          "paras": [
+            "Ja. IBI (impuesto sobre bienes inmuebles) tas ut för att inneha en fastighet, inte för att använda den. Lagen räknar upp fyra rättigheter som utlöser den: en förvaltningskoncession, en tomträtt, en nyttjanderätt (usufructo) eller äganderätt. För en vanlig ägare betyder det helt enkelt du, eftersom den skattskyldige är den som innehar rättigheten.",
+            "Se den som en lokal fastighetsskatt, som kommunen bestämmer och ägaren betalar. Den spanska varianten bryr sig inte om du tillbringar två veckor om året i lägenheten eller hyr ut den hela sommaren. Den kommer varje år i vilket fall som helst."
+          ]
+        },
+        {
+          "h2": "Hur räknas min IBI-avi fram?",
+          "paras": [
+            "Underlaget är fastighetens taxeringsvärde (valor catastral). Det är ett administrativt värde som fastställs för varje fastighet utifrån värderingsstudien för området, och enligt lag får det inte överstiga marknadsvärdet. Därför ligger det oftast långt under vad du betalade. Ditt köpepris och marknadsvärdet spelar ingen roll för avin.",
+            "Varje kommun tillämpar sedan sin egen sats, som bestäms i dess skatteförordning. För fastigheter i tätort är satsen minst 0,4 procent, vilket också är standardsatsen, och högst 1,10 procent. Jordbruksmark ligger mellan 0,3 och 0,9 procent. En lägenhet med ett taxeringsvärde på 100 000 euro betalar alltså 400 euro i en kommun med lägsta sats och 1 100 euro i en kommun med högsta sats.",
+            "Förordningen i din egen kommun har sista ordet om satsen och om eventuella lokala lättnader. Två likadana lägenheter några kilometer ifrån varandra kan få helt olika avier, bara för att de ligger i olika kommuner. Vill du veta satsen innan avin kommer, fråga kommunen vilken förordning som gäller."
+          ]
+        },
+        {
+          "h2": "Höjer det nya valor de referencia min IBI?",
+          "paras": [
+            "Nej. Valor de referencia är ett separat värde som Catastro fastställer utifrån priserna i försäljningar som skrivits under hos notarie. Det fungerar som lägsta underlag för överlåtelseskatt och för arvs- och gåvoskatt, om inte det angivna priset är högre. Det påverkar inte IBI eller någon annan skatt som använder taxeringsvärdet.",
+            "Ägare ser ofta ett högre referensvärde och förbereder sig på en större IBI-avi. Det följer inte. Tycker du att referensvärdet är fel kan du inte överklaga det direkt till Catastro. Du ifrågasätter det bara när det får en skatteeffekt, genom att begära rättelse av deklarationen eller genom att överklaga beslutet från det organ som förvaltar den skatten."
+          ]
+        },
+        {
+          "h2": "Vem frågar jag om min avi, kommunen eller Catastro?",
+          "paras": [
+            "Det beror på frågan. Kommunen förvaltar, fastställer och tar ut IBI, bestämmer satsen och beslutar om lättnader. Catastro tillhandahåller bara taxeringsvärdet. En fråga om beloppet, betalningsdatumet eller en avi som saknas går till kommunen eller det uppbördsorgan den använder. En fråga om värdet eller beskrivningen av fastigheten går till Catastro.",
+            "När en samlad omvärdering ger din fastighet ett nytt taxeringsvärde har du en månad från dagen efter delgivningen på dig att ifrågasätta det, antingen med en frivillig begäran om omprövning hos Catastros kontor eller med ett klagomål till den regionala ekonomisk-administrativa domstolen. Varje fastighet ifrågasätts för sig. Det nya värdet slår igenom på din IBI-avi året efter att det delgivits, så det finns tid att kontrollera det innan det kostar dig något."
+          ]
+        },
+        {
+          "h2": "Betalar ett tomt fritidshus extra IBI?",
+          "paras": [
+            "För de flesta utländska ägare, nej. En kommun får lägga på ett tillägg på upp till 50 procent på en bostad som är varaktigt obebodd, det vill säga tom utan avbrott och utan godtagbart skäl i mer än två år, men bara när ägaren har fyra eller fler bostadsfastigheter. Det kan stiga till 100 procent efter tre år, med upp till 50 ytterligare procentenheter när samma ägare har två eller fler tomma bostäder i samma kommun.",
+            "Även då godtar lagen flera skäl för att en bostad står tom. En andrabostad omfattas i upp till fyra år av sammanhängande obebodd tid, och detsamma gäller ombyggnad, en pågående rättsprocess, en försäljning på marknadsmässiga villkor i upp till ett år, eller en uthyrning som erbjuds i upp till sex månader. Tillägget finns bara där kommunen har infört det i sin förordning, och innan det tas ut måste kommunen höra ägaren och visa bevis, som folkbokföringen och förbrukningen av el och vatten."
+          ]
+        },
+        {
+          "h2": "Kan jag få betala förra ägarens IBI?",
+          "paras": [
+            "Det kan du. När en fastighet byter ägare av vilket skäl som helst förblir fastigheten själv ansvarig för hela den obetalda IBI-avgiften. Kommunen kan gå på bostaden, och därmed den nya ägaren, för en skuld som säljaren lämnade efter sig. Notarier måste fråga om och varna för obetalda IBI-skulder på den fastighet som överlåts, vilket är ett bra tillfälle att be om de senaste avierna.",
+            "Säljare och köpare kan komma överens om hur årets IBI ska delas i köpeavtalet, och en hyresvärd kan föra över kostnaden på en hyresgäst i ett hyresavtal. Det är privata överenskommelser mellan er två. De ändrar inte vem kommunen skickar avin till, vilket fortfarande är den skattskyldige."
+          ]
+        },
+        {
+          "h2": "Vad mer tar kommunen ut?",
+          "paras": [
+            "Den vanligaste är sophämtningsavgiften. Varje kommun måste ha en specifik och separat avgift för hushållsavfall, antingen en tasa eller en offentlig avgift som inte är skatt, och lagen säger att den ska gå mot att ta betalt efter mängden avfall. Beloppet bestäms av varje kommun eller dess avfallskonsortium, så det varierar från kommun till kommun.",
+            "Sedan finns Catastro självt. Ägare måste anmäla nybyggnader, tillbyggnader, renoveringar, rivningar, delningar och sammanslagningar samt ändrad användning inom två månader från dagen efter händelsen. Ett köp som skrivs under hos notarie förs vidare åt dig, men poolen eller den inglasade terrassen gör det inte. Anmäls en ändring aldrig kan Catastro lägga till den genom ett regulariseringsförfarande med en avgift på 60 euro per fastighet, och en sanktionsavgift kan också komma i fråga."
+          ]
+        },
+        {
+          "h2": "Är IBI samma sak som inkomstskatt för icke-bosatta?",
+          "paras": [
+            "Nej, det är två separata skatter, men de delar en siffra. IBI är lokal och går till kommunen. Inkomstskatt för icke-bosatta går till den nationella skattemyndigheten, och hyr du inte ut bostaden tas den ut på schablonintäkt, en procentsats av taxeringsvärdet som står på din IBI-avi.",
+            "Det är ytterligare ett skäl att spara varje års avi (recibo del IBI) där du hittar den. Skattesatsen på den schablonintäkten är 19 procent för boende i EU, Island, Norge och Liechtenstein och 24 procent för andra icke-bosatta, och svaren som länkas nedan går igenom beräkningen."
+          ]
+        },
+        {
+          "h2": "Hur håller jag koll på IBI från utlandet?",
+          "paras": [
+            "Fråga kommunen, eller det uppbördsorgan den använder, när betalningsperioden löper och hur avin skickas, eftersom båda bestäms lokalt. Ordna sedan betalningen på ett sätt som inte hänger på att ett brev når en tom lägenhet. Spara varje avi, och kontrollera att fastighetsbeteckningen och beskrivningen av fastigheten stämmer med det du faktiskt äger.",
+            "Ser något fel ut kan en lokal gestor hjälpa dig att reda ut om det är en fråga för kommunen eller Catastro, och skriva begäran på spanska. När det väl är ordnat är IBI en av de lugnare delarna av att äga en bostad i Spanien, och du kan återgå till att njuta av den."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "IBI in Spanien: Steuersätze, Bescheide und leere Wohnungen",
+      "description": "Wie die IBI, die örtliche Grundsteuer in Spanien, aus dem Katasterwert berechnet wird, wer den Satz festlegt und was Eigentümer im Ausland prüfen sollten.",
+      "h1": "Die IBI und die anderen örtlichen Steuern auf eine spanische Immobilie",
+      "lead": "Die IBI ist die jährliche Grundsteuer, die das Rathaus erhebt, in dessen Gemeinde Ihre spanische Immobilie liegt. Sie wird aus dem Katasterwert berechnet, nicht aus dem Kaufpreis, zu einem Satz, den jede Gemeinde für städtische Immobilien zwischen 0,4 Prozent und 1,10 Prozent festlegt. Der Eigentümer zahlt sie, ob die Immobilie bewohnt oder vermietet wird oder nicht.",
+      "sections": [
+        {
+          "h2": "Was ist die IBI, und muss ich sie zahlen, wenn ich nie dort bin?",
+          "paras": [
+            "Ja. Die IBI (impuesto sobre bienes inmuebles) wird auf das Innehaben einer Immobilie erhoben, nicht auf ihre Nutzung. Das Gesetz nennt vier Rechte, die sie auslösen: eine Verwaltungskonzession, ein Erbbaurecht, einen Nießbrauch oder das Eigentum. Für einen gewöhnlichen Eigentümer heißt das einfach: Sie, denn steuerpflichtig ist, wer das Recht innehat.",
+            "Stellen Sie sie sich als örtliche Grundsteuer vor, von der Gemeinde festgelegt und vom Eigentümer gezahlt. Der spanischen Version ist es gleich, ob Sie zwei Wochen im Jahr in der Wohnung verbringen oder sie den ganzen Sommer vermieten. Sie kommt so oder so jedes Jahr."
+          ]
+        },
+        {
+          "h2": "Wie wird mein IBI-Bescheid berechnet?",
+          "paras": [
+            "Bemessungsgrundlage ist der Katasterwert (valor catastral) der Immobilie. Er ist ein Verwaltungswert, der für jede Immobilie anhand der Bewertungsstudie für ihr Gebiet festgelegt wird und gesetzlich den Marktwert nicht übersteigen darf. Deshalb liegt er meist deutlich unter dem, was Sie gezahlt haben. Kaufpreis und Marktwert spielen für den Bescheid keine Rolle.",
+            "Jedes Rathaus wendet dann seinen eigenen Satz an, festgelegt in seiner Steuersatzung. Für städtische Immobilien beträgt der Satz mindestens 0,4 Prozent, was zugleich der Regelsatz ist, und höchstens 1,10 Prozent. Für ländliche Grundstücke liegt er zwischen 0,3 und 0,9 Prozent. Eine Wohnung mit einem Katasterwert von 100.000 Euro zahlt also in einer Gemeinde mit dem Mindestsatz 400 Euro und in einer mit dem Höchstsatz 1.100 Euro.",
+            "Das letzte Wort über den Satz und etwaige örtliche Vergünstigungen hat die Satzung Ihrer eigenen Gemeinde. Zwei ähnliche Wohnungen wenige Kilometer voneinander entfernt können recht unterschiedliche Bescheide erhalten, einfach weil sie in verschiedenen Gemeinden liegen. Wenn Sie den Satz kennen möchten, bevor der Bescheid kommt, fragen Sie das Rathaus, welche Satzung gilt."
+          ]
+        },
+        {
+          "h2": "Erhöht der neue valor de referencia meine IBI?",
+          "paras": [
+            "Nein. Der valor de referencia ist ein eigener Wert, den das Catastro aus den Preisen notariell beurkundeter Verkäufe ermittelt. Er dient als Mindestbemessungsgrundlage für die Grunderwerbsteuer sowie für die Erbschaft- und Schenkungsteuer, sofern der erklärte Preis nicht höher ist. Auf die IBI oder andere Steuern, die den Katasterwert verwenden, hat er keine Auswirkung.",
+            "Eigentümer sehen oft einen höheren Referenzwert und stellen sich auf einen höheren IBI-Bescheid ein. Das folgt daraus nicht. Halten Sie den Referenzwert für falsch, können Sie ihn nicht direkt beim Catastro anfechten. Sie fechten ihn nur an, wenn er sich steuerlich auswirkt, indem Sie die Berichtigung der Steuererklärung beantragen oder gegen den Bescheid der Stelle vorgehen, die diese Steuer verwaltet."
+          ]
+        },
+        {
+          "h2": "Wen frage ich zu meinem Bescheid, das Rathaus oder das Catastro?",
+          "paras": [
+            "Das hängt von der Frage ab. Das Rathaus verwaltet, setzt fest und zieht die IBI ein, legt den Satz fest und entscheidet über Vergünstigungen. Das Catastro liefert nur den Katasterwert. Eine Frage zum Betrag, zum Zahlungstermin oder zu einem fehlenden Bescheid geht an das Rathaus oder die Einzugsstelle, die es nutzt. Eine Frage zum Wert oder zur Beschreibung der Immobilie geht an das Catastro.",
+            "Wenn eine allgemeine Neubewertung Ihrer Immobilie einen neuen Katasterwert gibt, haben Sie ab dem Tag nach der Zustellung einen Monat Zeit, ihn anzufechten, entweder mit einem freiwilligen Widerspruch beim Katasteramt oder mit einer Beschwerde beim regionalen Wirtschaftsverwaltungsgericht. Jede Immobilie wird gesondert angefochten. Der neue Wert wirkt sich im Jahr nach der Zustellung auf Ihren IBI-Bescheid aus, es bleibt also Zeit, ihn zu prüfen, bevor er Sie etwas kostet."
+          ]
+        },
+        {
+          "h2": "Zahlt eine leerstehende Ferienwohnung mehr IBI?",
+          "paras": [
+            "Für die meisten ausländischen Eigentümer nicht. Ein Rathaus kann einen Zuschlag von bis zu 50 Prozent auf eine dauerhaft unbewohnte Wohnung erheben, also eine, die ohne triftigen Grund länger als zwei Jahre ununterbrochen leer steht, aber nur, wenn der Eigentümer vier oder mehr Wohnimmobilien besitzt. Nach drei Jahren kann er auf 100 Prozent steigen, mit bis zu 50 weiteren Punkten, wenn derselbe Eigentümer zwei oder mehr leere Wohnungen in derselben Gemeinde hat.",
+            "Selbst dann erkennt das Gesetz mehrere triftige Gründe für einen Leerstand an. Ein Zweitwohnsitz ist bis zu vier Jahre ununterbrochener Nichtnutzung abgedeckt, ebenso Bauarbeiten, ein anhängiger Rechtsstreit, ein Verkauf zu Marktbedingungen für bis zu ein Jahr oder eine angebotene Vermietung für bis zu sechs Monate. Den Zuschlag gibt es nur, wo das Rathaus ihn in seiner Satzung beschlossen hat, und bevor es ihn erhebt, muss es den Eigentümer anhören und Nachweise vorlegen, etwa das Einwohnerregister und den Verbrauch von Strom und Wasser."
+          ]
+        },
+        {
+          "h2": "Kann ich am Ende die IBI des Vorbesitzers zahlen?",
+          "paras": [
+            "Ja. Wenn eine Immobilie aus welchem Grund auch immer den Eigentümer wechselt, haftet die Immobilie selbst weiter für die volle unbezahlte IBI. Das Rathaus kann sich an die Immobilie halten und damit an den neuen Eigentümer, für eine Schuld, die der Verkäufer hinterlassen hat. Notare müssen nach offenen IBI-Schulden auf der übertragenen Immobilie fragen und darauf hinweisen. Ein guter Moment, um die letzten Bescheide zu verlangen.",
+            "Verkäufer und Käufer können im Kaufvertrag vereinbaren, wie die IBI des Jahres aufgeteilt wird, und ein Vermieter kann die Kosten im Mietvertrag an einen Mieter weitergeben. Das sind private Vereinbarungen zwischen Ihnen beiden. Sie ändern nichts daran, wem das Rathaus den Bescheid schickt, nämlich weiterhin dem Steuerpflichtigen."
+          ]
+        },
+        {
+          "h2": "Was erhebt das Rathaus noch?",
+          "paras": [
+            "Am häufigsten die Müllgebühr. Jede Kommune muss eine eigene, gesonderte Abgabe für Haushaltsabfälle haben, entweder eine tasa oder eine nichtsteuerliche öffentliche Abgabe, und das Gesetz sieht vor, dass sie sich zu einer Abrechnung nach der erzeugten Abfallmenge hin entwickelt. Den Betrag legt jedes Rathaus oder sein Abfallzweckverband fest, er ist also von Ort zu Ort verschieden.",
+            "Dann ist da noch das Catastro selbst. Eigentümer müssen Neubauten, Erweiterungen, Renovierungen, Abrisse, Teilungen und Zusammenlegungen sowie Nutzungsänderungen innerhalb von zwei Monaten ab dem Tag nach dem Ereignis melden. Ein notariell beurkundeter Kauf wird für Sie weitergeleitet, der Pool oder die geschlossene Terrasse aber nicht. Wird eine Änderung nie gemeldet, kann das Catastro sie über ein Regularisierungsverfahren mit einer Gebühr von 60 Euro pro Immobilie erfassen, und auch eine Strafe ist möglich."
+          ]
+        },
+        {
+          "h2": "Ist die IBI dasselbe wie die Einkommensteuer für Nichtansässige?",
+          "paras": [
+            "Nein, es sind zwei getrennte Steuern, aber sie teilen sich eine Zahl. Die IBI ist örtlich und geht an das Rathaus. Die Einkommensteuer für Nichtansässige geht an die staatliche Steuerbehörde, und wenn Sie nicht vermieten, wird sie auf fiktive Einkünfte erhoben, einen Prozentsatz des Katasterwerts auf Ihrem IBI-Bescheid.",
+            "Ein Grund mehr, den Bescheid jedes Jahres (den recibo del IBI) so aufzubewahren, dass Sie ihn wiederfinden. Der Satz auf diese fiktiven Einkünfte beträgt 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins und 24 Prozent für andere Nichtansässige, und die unten verlinkten Antworten gehen die Berechnung Schritt für Schritt durch."
+          ]
+        },
+        {
+          "h2": "Wie behalte ich die IBI vom Ausland aus im Griff?",
+          "paras": [
+            "Fragen Sie Ihr Rathaus oder die Einzugsstelle, die es nutzt, wann der Zahlungszeitraum läuft und wie der Bescheid verschickt wird, denn beides wird vor Ort festgelegt. Richten Sie die Zahlung dann so ein, dass sie nicht davon abhängt, dass ein Brief eine leere Wohnung erreicht. Bewahren Sie jeden Bescheid auf und prüfen Sie, ob die Katasterreferenz und die Beschreibung der Immobilie mit dem übereinstimmen, was Ihnen tatsächlich gehört.",
+            "Wenn etwas nicht stimmt, kann ein örtlicher gestor Ihnen helfen herauszufinden, ob die Frage an das Rathaus oder an das Catastro gehört, und den Antrag auf Spanisch aufsetzen. Ist das einmal eingerichtet, gehört die IBI zu den ruhigeren Seiten des Immobilienbesitzes in Spanien, und Sie können sich wieder dem Genießen widmen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "L'IBI en Espagne : taux, avis d'imposition et logements vides",
+      "description": "Comment l'IBI, l'impôt foncier local en Espagne, se calcule à partir de la valeur cadastrale, qui fixe le taux et ce qu'il faut vérifier chaque année.",
+      "h1": "L'IBI et les autres impôts locaux sur un bien en Espagne",
+      "lead": "L'IBI est l'impôt foncier annuel perçu par la mairie de la commune où se trouve votre logement en Espagne. Il se calcule à partir de la valeur cadastrale, et non du prix que vous avez payé, à un taux que chaque commune fixe entre 0,4 pour cent et 1,10 pour cent pour les biens urbains. Le propriétaire le paie, que le logement soit habité ou loué ou non.",
+      "sections": [
+        {
+          "h2": "Qu'est-ce que l'IBI, et dois-je le payer si je n'y suis jamais ?",
+          "paras": [
+            "Oui. L'IBI (impuesto sobre bienes inmuebles) frappe le fait de détenir un bien, pas de l'utiliser. La loi énumère quatre droits qui le déclenchent : une concession administrative, un droit de superficie, un usufruit ou la propriété. Pour un propriétaire ordinaire, cela veut tout simplement dire vous, car le contribuable est celui qui détient le droit.",
+            "Voyez-le comme une taxe foncière locale, fixée par la commune et payée par le propriétaire. La version espagnole ne se soucie pas de savoir si vous passez deux semaines par an dans l'appartement ou si vous le louez tout l'été. Elle arrive chaque année dans tous les cas."
+          ]
+        },
+        {
+          "h2": "Comment le montant de mon IBI est-il calculé ?",
+          "paras": [
+            "La base est la valeur cadastrale (valor catastral) du bien. C'est une valeur administrative fixée pour chaque bien à partir de l'étude d'évaluation de sa zone, et la loi lui interdit de dépasser la valeur de marché. C'est pourquoi elle est généralement bien inférieure à ce que vous avez payé. Votre prix d'achat et la valeur de marché ne jouent aucun rôle dans le montant.",
+            "Chaque mairie applique ensuite son propre taux, fixé dans son ordonnance fiscale. Pour les biens urbains, le taux est d'au moins 0,4 pour cent, qui est aussi le taux par défaut, et d'au plus 1,10 pour cent. Les terrains rustiques vont de 0,3 à 0,9 pour cent. Un appartement d'une valeur cadastrale de 100 000 euros paie donc 400 euros dans une commune au taux minimum et 1 100 euros dans une commune au taux maximum.",
+            "L'ordonnance de votre propre commune a le dernier mot sur le taux et sur les éventuels allègements locaux. Deux appartements semblables situés à quelques kilomètres l'un de l'autre peuvent recevoir des avis très différents, simplement parce qu'ils se trouvent dans des communes différentes. Si vous voulez connaître le taux avant l'arrivée de l'avis, demandez à la mairie quelle ordonnance s'applique."
+          ]
+        },
+        {
+          "h2": "Le nouveau valor de referencia va-t-il faire augmenter mon IBI ?",
+          "paras": [
+            "Non. Le valor de referencia est un chiffre distinct que le Catastro fixe à partir des prix des ventes signées devant notaire. Il sert de base minimale pour l'impôt sur les mutations et pour l'impôt sur les successions et donations, sauf si le prix déclaré est plus élevé. Il n'a aucun effet sur l'IBI ni sur aucun autre impôt qui utilise la valeur cadastrale.",
+            "Les propriétaires voient souvent une valeur de référence plus élevée et s'attendent à un IBI plus lourd. Ce n'est pas le cas. Si vous estimez que la valeur de référence est erronée, vous ne pouvez pas la contester directement auprès du Catastro. Vous ne la contestez que lorsqu'elle a un effet fiscal, en demandant la rectification de la déclaration ou en contestant la liquidation de l'organisme qui gère cet impôt."
+          ]
+        },
+        {
+          "h2": "À qui m'adresser pour mon avis d'IBI, la mairie ou le Catastro ?",
+          "paras": [
+            "Cela dépend de la question. La mairie gère, liquide et perçoit l'IBI, fixe le taux et décide des allègements. Le Catastro ne fournit que la valeur cadastrale. Une question sur le montant, la date de paiement ou un avis manquant s'adresse à la mairie ou à l'organisme de recouvrement qu'elle utilise. Une question sur la valeur ou la description du bien s'adresse au Catastro.",
+            "Lorsqu'une révision collective attribue une nouvelle valeur cadastrale à votre bien, vous disposez d'un mois à compter du lendemain de la notification pour la contester, soit par un recours gracieux facultatif auprès du bureau du Catastro, soit par une réclamation devant le tribunal économico-administratif régional. Chaque bien se conteste séparément. La nouvelle valeur se répercute sur votre IBI l'année qui suit sa notification : vous avez donc le temps de la vérifier avant qu'elle ne vous coûte quoi que ce soit."
+          ]
+        },
+        {
+          "h2": "Un logement de vacances vide paie-t-il un IBI majoré ?",
+          "paras": [
+            "Pour la plupart des propriétaires étrangers, non. Une mairie peut appliquer une majoration allant jusqu'à 50 pour cent sur un logement inoccupé de façon permanente, c'est-à-dire vide en continu et sans motif valable depuis plus de deux ans, mais seulement lorsque le propriétaire détient quatre logements ou plus. Elle peut monter à 100 pour cent après trois ans, avec jusqu'à 50 points supplémentaires lorsque le même propriétaire a deux logements vides ou plus dans la même commune.",
+            "Même dans ce cas, la loi admet plusieurs motifs valables pour qu'un logement reste vide. Une résidence secondaire est couverte jusqu'à quatre ans d'inoccupation continue, tout comme des travaux, un litige en cours, une mise en vente aux conditions du marché pendant un an au plus, ou une offre de location pendant six mois au plus. La majoration n'existe que si la mairie l'a adoptée dans son ordonnance, et avant de l'appliquer, la mairie doit entendre le propriétaire et apporter des preuves, comme le registre municipal et la consommation d'eau ou d'électricité."
+          ]
+        },
+        {
+          "h2": "Puis-je finir par payer l'IBI de l'ancien propriétaire ?",
+          "paras": [
+            "Oui. Lorsqu'un bien change de mains pour quelque raison que ce soit, le bien lui-même reste tenu de la totalité de l'IBI impayé. La mairie peut poursuivre le logement, et avec lui le nouveau propriétaire, pour une dette laissée par le vendeur. Les notaires doivent s'informer des dettes d'IBI en suspens sur le bien transmis et en avertir, ce qui est un bon moment pour demander les derniers avis.",
+            "Un vendeur et un acheteur peuvent convenir dans le contrat d'achat de la répartition de l'IBI de l'année, et un bailleur peut répercuter ce coût sur un locataire dans un bail. Ce sont des accords privés entre vous. Ils ne changent pas la personne à qui la mairie adresse l'avis, qui reste le contribuable."
+          ]
+        },
+        {
+          "h2": "Que perçoit encore la mairie ?",
+          "paras": [
+            "La plus courante est la taxe sur les ordures. Chaque collectivité locale doit avoir une redevance spécifique et distincte pour les déchets ménagers, soit une tasa, soit une redevance publique non fiscale, et la loi prévoit qu'elle évolue vers une facturation selon la quantité de déchets produite. Le montant est fixé par chaque mairie ou par son consortium des déchets : il varie donc d'une commune à l'autre.",
+            "Il y a aussi le Catastro lui-même. Les propriétaires doivent déclarer les constructions neuves, extensions, rénovations, démolitions, divisions et regroupements, ainsi que les changements d'usage, dans les deux mois à compter du lendemain de l'événement. Un achat signé devant notaire est transmis pour vous, mais pas la piscine ni la terrasse fermée. Si un changement n'est jamais déclaré, le Catastro peut l'intégrer par une procédure de régularisation avec une redevance de 60 euros par bien, et une sanction est également possible."
+          ]
+        },
+        {
+          "h2": "L'IBI est-il la même chose que l'impôt sur le revenu des non-résidents ?",
+          "paras": [
+            "Non, ce sont deux impôts distincts, mais ils partagent un chiffre. L'IBI est local et va à la mairie. L'impôt sur le revenu des non-résidents va à l'administration fiscale nationale et, si vous ne louez pas le logement, il porte sur un revenu imputé, un pourcentage de la valeur cadastrale figurant sur votre avis d'IBI.",
+            "C'est une raison de plus de ranger l'avis de chaque année (le recibo del IBI) là où vous pourrez le retrouver. Le taux applicable à ce revenu imputé est de 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein et de 24 pour cent pour les autres non-résidents, et les réponses liées ci-dessous détaillent le calcul."
+          ]
+        },
+        {
+          "h2": "Comment garder l'IBI sous contrôle depuis l'étranger ?",
+          "paras": [
+            "Demandez à votre mairie, ou à l'organisme de recouvrement qu'elle utilise, quand court sa période de paiement et comment elle envoie l'avis, car les deux sont fixés localement. Organisez ensuite un paiement qui ne dépend pas d'une lettre arrivant dans un appartement vide. Gardez chaque avis, et vérifiez que la référence cadastrale et la description du bien correspondent à ce que vous possédez réellement.",
+            "Si quelque chose vous paraît anormal, un gestor local peut vous aider à déterminer si la question relève de la mairie ou du Catastro, et rédiger la demande en espagnol. Une fois cela en place, l'IBI devient l'un des aspects les plus tranquilles de la propriété d'un logement en Espagne, et vous pouvez recommencer à en profiter."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "IBI in Spanje: tarieven, aanslagen en lege woningen",
+      "description": "Hoe de IBI, de lokale onroerendgoedbelasting in Spanje, uit de kadastrale waarde wordt berekend en wat u als eigenaar in het buitenland controleert.",
+      "h1": "De IBI en de andere lokale belastingen op een Spaanse woning",
+      "lead": "De IBI is de jaarlijkse onroerendgoedbelasting die de gemeente heft waar uw Spaanse woning staat. Ze wordt berekend op basis van de kadastrale waarde, niet de prijs die u betaalde, tegen een tarief dat elke gemeente voor stedelijk vastgoed vaststelt tussen 0,4 procent en 1,10 procent. De eigenaar betaalt haar, of de woning nu bewoond of verhuurd wordt of niet.",
+      "sections": [
+        {
+          "h2": "Wat is de IBI, en moet ik die betalen als ik er nooit ben?",
+          "paras": [
+            "Ja. De IBI (impuesto sobre bienes inmuebles) wordt geheven over het bezit van een woning, niet over het gebruik ervan. De wet noemt vier rechten die haar doen ontstaan: een administratieve concessie, een opstalrecht, een vruchtgebruik of eigendom. Voor een gewone eigenaar betekent dat gewoon u, omdat de belastingplichtige degene is die het recht heeft.",
+            "Zie het als een lokale onroerendgoedbelasting, vastgesteld door de gemeente en betaald door de eigenaar. De Spaanse variant maakt het niet uit of u twee weken per jaar in het appartement doorbrengt of het de hele zomer verhuurt. Ze komt hoe dan ook elk jaar."
+          ]
+        },
+        {
+          "h2": "Hoe wordt mijn IBI-aanslag berekend?",
+          "paras": [
+            "De grondslag is de kadastrale waarde (valor catastral) van de woning. Dat is een administratieve waarde die voor elke woning wordt vastgesteld op basis van het taxatieonderzoek voor het gebied, en die volgens de wet niet hoger mag zijn dan de marktwaarde. Daarom ligt ze meestal ruim onder wat u betaalde. Uw koopprijs en de marktwaarde spelen geen rol in de aanslag.",
+            "Elke gemeente past daarna haar eigen tarief toe, vastgelegd in haar belastingverordening. Voor stedelijk vastgoed is het tarief minimaal 0,4 procent, wat ook het standaardtarief is, en maximaal 1,10 procent. Voor landelijke grond loopt het van 0,3 tot 0,9 procent. Een appartement met een kadastrale waarde van 100.000 euro betaalt dus 400 euro in een gemeente met het minimumtarief en 1.100 euro in een gemeente met het maximumtarief.",
+            "De verordening van uw eigen gemeente heeft het laatste woord over het tarief en over eventuele lokale kortingen. Twee vergelijkbare appartementen op een paar kilometer van elkaar kunnen heel verschillende aanslagen krijgen, alleen omdat ze in verschillende gemeenten liggen. Wilt u het tarief kennen voordat de aanslag binnenkomt, vraag de gemeente dan welke verordening geldt."
+          ]
+        },
+        {
+          "h2": "Gaat mijn IBI omhoog door de nieuwe valor de referencia?",
+          "paras": [
+            "Nee. De valor de referencia is een apart bedrag dat het Catastro vaststelt op basis van de prijzen in verkopen die voor een notaris zijn getekend. Het dient als minimumgrondslag voor de overdrachtsbelasting en voor de erf- en schenkbelasting, tenzij de opgegeven prijs hoger is. Het heeft geen invloed op de IBI of op een andere belasting die de kadastrale waarde gebruikt.",
+            "Eigenaren zien vaak een hogere referentiewaarde en zetten zich schrap voor een hogere IBI-aanslag. Dat volgt er niet uit. Vindt u de referentiewaarde onjuist, dan kunt u daartegen niet rechtstreeks bij het Catastro in bezwaar. U vecht haar alleen aan wanneer ze een fiscaal gevolg heeft, door om correctie van de belastingaangifte te vragen of door bezwaar te maken tegen de aanslag van de instantie die die belasting beheert."
+          ]
+        },
+        {
+          "h2": "Bij wie moet ik zijn met vragen over mijn aanslag, de gemeente of het Catastro?",
+          "paras": [
+            "Dat hangt af van de vraag. De gemeente beheert, berekent en int de IBI, stelt het tarief vast en beslist over kortingen. Het Catastro levert alleen de kadastrale waarde. Een vraag over het bedrag, de betaaldatum of een ontbrekende aanslag gaat naar de gemeente of de inningsinstantie die zij gebruikt. Een vraag over de waarde of de omschrijving van de woning gaat naar het Catastro.",
+            "Krijgt uw woning bij een collectieve herwaardering een nieuwe kadastrale waarde, dan heeft u één maand vanaf de dag na de kennisgeving om die aan te vechten, met een facultatief bezwaar bij het kantoor van het Catastro of met een vordering bij het regionale economisch-administratieve gerecht. Elke woning wordt afzonderlijk aangevochten. De nieuwe waarde komt in uw IBI-aanslag terecht in het jaar na de kennisgeving, dus er is tijd om die te controleren voordat ze u iets kost."
+          ]
+        },
+        {
+          "h2": "Betaalt een lege vakantiewoning extra IBI?",
+          "paras": [
+            "Voor de meeste buitenlandse eigenaren niet. Een gemeente mag een toeslag van maximaal 50 procent heffen op een woning die permanent leegstaat, dat wil zeggen langer dan twee jaar onafgebroken en zonder goede reden, maar alleen als de eigenaar vier of meer woningen heeft. Na drie jaar kan dat oplopen tot 100 procent, met maximaal 50 extra procentpunten als dezelfde eigenaar twee of meer lege woningen in dezelfde gemeente heeft.",
+            "Ook dan aanvaardt de wet verschillende goede redenen voor leegstand. Een tweede woning valt erbuiten tot vier jaar onafgebroken leegstand, en hetzelfde geldt voor verbouwingen, een lopende rechtszaak, een verkoop tegen marktvoorwaarden tot een jaar, of een woning die tot zes maanden te huur staat. De toeslag bestaat alleen als de gemeente die in haar verordening heeft opgenomen, en voordat ze die heft, moet de gemeente de eigenaar horen en bewijs leveren, zoals de gemeentelijke inschrijving en het verbruik van nutsvoorzieningen."
+          ]
+        },
+        {
+          "h2": "Kan ik opdraaien voor de IBI van de vorige eigenaar?",
+          "paras": [
+            "Ja. Wanneer een woning om welke reden ook van eigenaar wisselt, blijft de woning zelf aansprakelijk voor de volledige onbetaalde IBI. De gemeente kan de woning, en daarmee de nieuwe eigenaar, aanspreken voor een schuld die de verkoper heeft achtergelaten. Notarissen moeten naar openstaande IBI-schulden op de over te dragen woning vragen en ervoor waarschuwen, en dat is een goed moment om om de laatste aanslagen te vragen.",
+            "Verkoper en koper kunnen in het koopcontract afspreken hoe de IBI van het jaar wordt verdeeld, en een verhuurder kan de kosten in een huurcontract aan een huurder doorberekenen. Dat zijn privéafspraken tussen u beiden. Ze veranderen niets aan wie de gemeente aanslaat, en dat blijft de belastingplichtige."
+          ]
+        },
+        {
+          "h2": "Wat rekent de gemeente nog meer aan?",
+          "paras": [
+            "De bekendste is de afvalheffing. Elke lokale overheid moet een specifieke, aparte heffing voor huishoudelijk afval hebben, ofwel een tasa ofwel een niet-fiscale publieke heffing, en volgens de wet moet die toegroeien naar een heffing op basis van de hoeveelheid afval die wordt geproduceerd. Het bedrag wordt vastgesteld door elke gemeente of haar afvalconsortium, dus het verschilt per gemeente.",
+            "Dan is er nog het Catastro zelf. Eigenaren moeten nieuwbouw, uitbreidingen, renovaties, sloop, splitsingen en samenvoegingen en wijzigingen van gebruik melden binnen twee maanden vanaf de dag na de gebeurtenis. Een aankoop die voor een notaris is getekend, wordt voor u doorgegeven, maar het zwembad of het dichtgemaakte terras niet. Wordt een wijziging nooit gemeld, dan kan het Catastro die toevoegen via een regularisatieprocedure met een vergoeding van 60 euro per woning, en ook een boete is mogelijk."
+          ]
+        },
+        {
+          "h2": "Is de IBI hetzelfde als de inkomstenbelasting voor niet-inwoners?",
+          "paras": [
+            "Nee, het zijn twee aparte belastingen, maar ze delen een getal. De IBI is lokaal en gaat naar de gemeente. De inkomstenbelasting voor niet-inwoners gaat naar de landelijke belastingdienst, en als u de woning niet verhuurt, wordt die geheven over fictief inkomen, een percentage van de kadastrale waarde op uw IBI-aanslag.",
+            "Dat is nog een reden om de aanslag van elk jaar (de recibo del IBI) te bewaren op een plek waar u die terugvindt. Het tarief op dat fictieve inkomen is 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein en 24 procent voor andere niet-inwoners, en de gekoppelde antwoorden hieronder lopen de berekening stap voor stap door."
+          ]
+        },
+        {
+          "h2": "Hoe houd ik vanuit het buitenland de IBI bij?",
+          "paras": [
+            "Vraag uw gemeente, of de inningsinstantie die zij gebruikt, wanneer de betaalperiode loopt en hoe de aanslag wordt verstuurd, want beide worden lokaal bepaald. Regel daarna een betaalwijze die niet afhangt van een brief die in een leeg appartement belandt. Bewaar elke aanslag, en controleer of de kadastrale referentie en de omschrijving van de woning overeenkomen met wat u werkelijk bezit.",
+            "Lijkt er iets niet te kloppen, dan kan een lokale gestor u helpen uitzoeken of het een vraag is voor de gemeente of voor het Catastro, en het verzoek in het Spaans opstellen. Is dat eenmaal geregeld, dan is de IBI een van de rustigere kanten van een woning in Spanje, en kunt u er weer van genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

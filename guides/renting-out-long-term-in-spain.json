@@ -1,0 +1,491 @@
+{
+  "slug": "renting-out-long-term-in-spain",
+  "topic": "letting",
+  "tool": "rental-tax",
+  "rules": [
+    "let.lau.minimum_term",
+    "let.lau.own_use_recovery",
+    "let.lau.own_use_not_occupied",
+    "let.lau.deposit",
+    "let.lau.deposit_not_updated",
+    "let.lau.additional_guarantee_cap",
+    "let.lau.deposit_return",
+    "let.lau.agency_fees_landlord",
+    "lau.seasonal_basis",
+    "lau.tourist_excluded",
+    "epc.requirement",
+    "irnr.rates",
+    "irnr.rental.deductibility",
+    "deadline.rental.from_2026",
+    "deadline.rental.last_quarterly",
+    "vat.letting",
+    "limit.rent.arrears",
+    "let.lau.tacit_extension_current"
+  ],
+  "answers": [
+    "deduct-costs-from-spanish-rental-income",
+    "when-to-file-spanish-rental-income-from-2026",
+    "how-far-back-can-i-claim-unpaid-rent-spain",
+    "energy-certificate-for-a-spanish-property",
+    "seasonal-let-versus-tourist-let-spain",
+    "filing-a-spanish-tax-return-late"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Renting Out Long Term in Spain: A Guide for Owners",
+      "description": "How a long-term let works in Spain when you live abroad: the five-year minimum, taking the home back, deposits, agency fees and tax on the rent.",
+      "h1": "Renting out your Spanish home long term while you live abroad",
+      "lead": "A long-term let of a home in Spain is a residential lease, and the tenant can stay for at least five years if you let as a private individual, or seven if the landlord is a company. You hold one month of rent as a cash deposit, you pay the agency and contract costs, and you declare the rent in Spain on modelo 210. The rules on renewal, early exit and rent updates are being changed by decree-laws that still await confirmation, so check them with an abogado before you sign.",
+      "sections": [
+        {
+          "h2": "Is a long-term let the right kind of let for my home?",
+          "paras": [
+            "A long-term let is the lease you sign when the flat or house becomes the tenant's own home. Spanish law, the Ley de Arrendamientos Urbanos (LAU), treats it very differently from a summer let or a holiday let, and the protections in this guide apply only to this kind of lease.",
+            "A let by the season, summer or otherwise, is a lease for a use other than housing. It is governed mostly by what the two sides agree. A whole furnished home marketed through tourist channels falls outside the LAU altogether and comes under the region's tourism rules instead. So how you advertise matters as much as the contract.",
+            "Many owners abroad choose a long-term tenant for one reason: they would rather have one steady tenant than a calendar of arrivals and cleaners. The trade is that the tenant gets real security, and you give up the use of the home for years, not weeks."
+          ]
+        },
+        {
+          "h2": "How long can my tenant stay?",
+          "paras": [
+            "At least five years if you let as a private individual, and seven if the landlord is a company. You can agree a shorter term, say one year, but it then extends automatically year by year until the five or seven years are reached.",
+            "The extension binds only you. The tenant can stop it by giving at least thirty days notice before the end of the term or of any annual extension. In practice, a one-year contract signed with a family in Valencia is a five-year commitment on your side and a one-year commitment on theirs.",
+            "It is easy to underestimate this when you sign in spring and picture a free August. Plan as if the home will not be free for your own holidays for the whole minimum term, because legally it will not be, and tell the family before anyone books flights."
+          ]
+        },
+        {
+          "h2": "Can I take the house back if I want to move in?",
+          "paras": [
+            "Only if you planned for it when you signed. A landlord who is a private individual can recover the home after the first year, before the minimum term ends, to live in it permanently, or for a first degree relative, or for a spouse after a final separation, divorce or annulment judgment. The need must be stated expressly in the contract, and you must give at least two months notice. Without that clause you cannot rely on it, however real the need, and a company landlord cannot use it at all.",
+            "The law also checks that you meant it. If you or the relative have not moved in within three months of the end of the contract or the eviction, the tenant may, within thirty days, choose to return for a new period of up to five years with their moving costs reimbursed, or to receive one month of rent for each year left until five years."
+          ]
+        },
+        {
+          "h2": "What happens when the lease ends, or the tenant wants to leave early?",
+          "paras": [
+            "The rules on what happens once the minimum term has passed, on how and when a tenant can leave early and what is owed, on how the rent is updated each year, on which taxes and building costs can be passed to a tenant, and on temporary leases are being changed by two decree-laws issued in autumn 2026 (Real Decreto-ley 28/2026 and 29/2026), which still await confirmation by Congress. Until that is settled we do not state those terms here, and an owner should check the current position with an abogado before signing a new lease or renewing an existing one.",
+            "Two habits help whatever the outcome. Keep a note of the contract's start date and each anniversary, because most deadlines run from them. And send any notice that matters in a form that proves receipt, such as a burofax, the certified notice that Spaniards send when a date may later be argued about."
+          ]
+        },
+        {
+          "h2": "How much deposit can I ask for?",
+          "paras": [
+            "A cash deposit (fianza) of one month of rent is compulsory on a residential lease. For any other use, including a seasonal let, it is two months. Some regions require the landlord to lodge the deposit with a regional body, so check what applies where your property is.",
+            "On top of the deposit you may agree an additional guarantee, but on a residential lease of up to five years, or seven with a company landlord, it cannot exceed two months of rent. So the most you can hold on a standard five-year lease is three months in total. The deposit is not updated during those first five or seven years.",
+            "When the tenant hands back the keys, you return the balance, keeping what is needed for unpaid rent or damage. If the balance is not returned within one month of the handover, it accrues legal interest. An inventory with dated photos, signed by both of you on the first day, makes that conversation much shorter (and much friendlier)."
+          ]
+        },
+        {
+          "h2": "Who pays the agency and contract costs?",
+          "paras": [
+            "You do. On a residential lease the landlord pays the estate agency's management fees and the cost of drawing up the contract, and they cannot be passed on to the tenant, directly or indirectly. An agent may charge the tenant only for optional extra services the tenant asked for in writing, after being told they are optional and what they cost.",
+            "You also need an energy certificate. When a home is let to a new tenant, the energy label is attached to the contract and the certificate's recommendations are handed over. Arrange it early so it does not hold up the signing."
+          ]
+        },
+        {
+          "h2": "I live in Norway. How is the rent taxed in Spain?",
+          "paras": [
+            "The rent is taxed in Spain under non-resident income tax and declared on modelo 210, whatever your home country also does with it. The rate is 19 percent for residents of the EU, Iceland, Norway and Liechtenstein, who may deduct the costs linked to the let, and 24 percent on the gross rent for everyone else, including residents of the United Kingdom.",
+            "The filing calendar changed in 2026. The last quarterly rental return is the one for July to September 2026, due 1 to 20 October 2026. Rent earned from 1 October 2026 goes into an annual return filed in the first 20 days of April 2027, and every year after that follows the same April window.",
+            "A residential let is exempt from VAT (IVA), so there is no VAT to add to a long-term rent. The rental tax calculator on this site works out the Spanish figure for you, with the deductions your country of residence allows."
+          ]
+        },
+        {
+          "h2": "What if the tenant stops paying?",
+          "paras": [
+            "Act early and in writing. Sometimes late rent is a forgotten transfer that a polite message solves within days. When it is not, send a formal demand that proves receipt and speak to an abogado, because the right next step depends on the contract and the facts.",
+            "You do not lose the money by waiting a little, but you do not have forever. A claim for unpaid rent runs out after five years, and each month counts separately from the day that month's rent fell due. Keep every account statement and receipt that shows what was paid and when."
+          ]
+        },
+        {
+          "h2": "How do I run a long-term let from abroad?",
+          "paras": [
+            "Have someone local who holds a set of keys and can let a plumber in. A long-term tenant calls far less often than a holiday guest, but when the boiler fails in January the call still comes, and it goes better when the answer is twenty minutes away, not a flight away.",
+            "Sign the contract in Spanish with an English or home-language version alongside, so both of you understand the same thing. Write down who pays which bills, and keep the contract, the inventory, the energy certificate and the tax returns in one folder.",
+            "Set it up carefully once, and a long-term let is one of the calmer ways to own a home in Spain. The rent arrives, the house is lived in, and you can enjoy the place on your next visit as a guest of your own good planning."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Langtidsutleie i Spania: en veiledning for eiere",
+      "description": "Slik fungerer langtidsutleie i Spania når du bor i utlandet: minstetiden på fem år, å ta boligen tilbake, depositum, meglerhonorar og skatt på leien.",
+      "h1": "Slik leier du ut boligen din i Spania langsiktig mens du bor i utlandet",
+      "lead": "Langtidsutleie av en bolig i Spania er en boligleiekontrakt, og leietakeren kan bli i minst fem år hvis du leier ut som privatperson, eller sju hvis utleieren er et selskap. Du holder én måneds leie som kontant depositum, du betaler megler og kontraktskostnader, og du oppgir leien i Spania på modelo 210. Reglene om fornyelse, tidlig fraflytting og regulering av leien endres gjennom lovdekreter som fortsatt venter på bekreftelse, så sjekk dem med en abogado før du signerer.",
+      "sections": [
+        {
+          "h2": "Er langtidsutleie riktig type utleie for boligen min?",
+          "paras": [
+            "Langtidsutleie er kontrakten du signerer når leiligheten eller huset blir leietakerens eget hjem. Spansk rett, Ley de Arrendamientos Urbanos (LAU), behandler den svært annerledes enn sommerutleie eller ferieutleie, og vernet i denne veiledningen gjelder bare for denne typen kontrakt.",
+            "Utleie for en sesong, sommer eller annen, er en kontrakt for annen bruk enn bolig. Den styres i hovedsak av det partene avtaler. En hel møblert bolig som markedsføres gjennom turistkanaler faller helt utenfor LAU og kommer i stedet inn under regionens turistregler. Hvordan du annonserer betyr derfor like mye som kontrakten.",
+            "Mange eiere i utlandet velger en langtidsleietaker av én grunn: de vil heller ha én stabil leietaker enn en kalender full av ankomster og renholdere. Prisen er at leietakeren får reell trygghet, og at du gir fra deg bruken av boligen i år, ikke uker."
+          ]
+        },
+        {
+          "h2": "Hvor lenge kan leietakeren min bli?",
+          "paras": [
+            "Minst fem år hvis du leier ut som privatperson, og sju hvis utleieren er et selskap. Du kan avtale en kortere periode, for eksempel ett år, men da forlenges den automatisk år for år til de fem eller sju årene er nådd.",
+            "Forlengelsen binder bare deg. Leietakeren kan stanse den ved å si fra minst tretti dager før utløpet av perioden eller av en årlig forlengelse. I praksis er en ettårskontrakt med en familie i Valencia en forpliktelse på fem år fra din side og ett år fra deres.",
+            "Det er lett å undervurdere dette når du signerer om våren og ser for deg en ledig august. Planlegg som om boligen ikke er ledig for dine egne ferier i hele minstetiden, fordi den rettslig sett ikke er det, og si det til familien før noen bestiller fly."
+          ]
+        },
+        {
+          "h2": "Kan jeg ta huset tilbake hvis jeg vil flytte inn selv?",
+          "paras": [
+            "Bare hvis du planla for det da du signerte. En utleier som er privatperson kan ta tilbake boligen etter det første året, før minstetiden er ute, for å bo der fast selv, eller for en slektning i første ledd, eller for en ektefelle etter en endelig dom om separasjon, skilsmisse eller ugyldighet. Behovet må stå uttrykkelig i kontrakten, og du må varsle minst to måneder i forveien. Uten den klausulen kan du ikke påberope deg det, uansett hvor reelt behovet er, og en utleier som er et selskap kan ikke bruke den i det hele tatt.",
+            "Loven sjekker også at du mente det. Har du eller slektningen ikke flyttet inn innen tre måneder etter at kontrakten tok slutt eller utkastelsen, kan leietakeren innen tretti dager velge å flytte tilbake for en ny periode på inntil fem år med flyttekostnadene dekket, eller å få én måneds leie for hvert år som gjensto til fem år."
+          ]
+        },
+        {
+          "h2": "Hva skjer når kontrakten løper ut, eller leietakeren vil flytte tidlig?",
+          "paras": [
+            "Reglene om hva som skjer når minstetiden er over, om hvordan og når en leietaker kan flytte tidlig og hva som da skyldes, om hvordan leien reguleres hvert år, om hvilke skatter og byggkostnader som kan legges over på en leietaker, og om midlertidige kontrakter endres gjennom to lovdekreter utstedt høsten 2026 (Real Decreto-ley 28/2026 og 29/2026), som fortsatt venter på bekreftelse i Kongressen. Inntil det er avklart, oppgir vi ikke de vilkårene her, og en eier bør sjekke gjeldende stilling med en abogado før en ny kontrakt signeres eller en eksisterende fornyes.",
+            "To vaner hjelper uansett utfall. Noter kontraktens startdato og hver årsdag, fordi de fleste frister løper fra dem. Og send ethvert viktig varsel i en form som beviser mottak, som en burofax, det rekommanderte varselet spanjoler sender når en dato senere kan bli omstridt."
+          ]
+        },
+        {
+          "h2": "Hvor mye depositum kan jeg be om?",
+          "paras": [
+            "Et kontant depositum (fianza) på én måneds leie er obligatorisk i en boligleiekontrakt. For all annen bruk, også sesongutleie, er det to måneder. Enkelte regioner krever at utleieren deponerer depositumet hos et regionalt organ, så sjekk hva som gjelder der eiendommen din ligger.",
+            "I tillegg til depositumet kan du avtale en ekstra garanti, men i en boligleiekontrakt på inntil fem år, eller sju med et selskap som utleier, kan den ikke overstige to måneders leie. Det meste du kan holde i en vanlig femårskontrakt er altså tre måneder til sammen. Depositumet reguleres ikke i løpet av de første fem eller sju årene.",
+            "Når leietakeren leverer tilbake nøklene, betaler du tilbake resten, og holder igjen det som trengs for ubetalt leie eller skader. Blir resten ikke tilbakebetalt innen én måned etter overleveringen, påløper lovbestemt rente. En inventarliste med daterte bilder, signert av dere begge første dag, gjør den samtalen mye kortere (og mye hyggeligere)."
+          ]
+        },
+        {
+          "h2": "Hvem betaler megler og kontraktskostnader?",
+          "paras": [
+            "Det gjør du. I en boligleiekontrakt betaler utleieren eiendomsmeglerens forvaltningshonorar og kostnaden ved å sette opp kontrakten, og de kan ikke legges over på leietakeren, verken direkte eller indirekte. En megler kan bare ta betalt av leietakeren for valgfrie tilleggstjenester leietakeren har bedt om skriftlig, etter å ha fått vite at de er valgfrie og hva de koster.",
+            "Du trenger også en energiattest. Når en bolig leies ut til en ny leietaker, legges energimerket ved kontrakten, og attestens anbefalinger overleveres. Ordne den tidlig, så den ikke holder opp signeringen."
+          ]
+        },
+        {
+          "h2": "Jeg bor i Norge. Hvordan skattlegges leien i Spania?",
+          "paras": [
+            "Leien skattlegges i Spania etter inntektsskatten for ikke-bosatte og oppgis på modelo 210, uansett hva hjemlandet ditt i tillegg gjør med den. Satsen er 19 prosent for bosatte i EU, Island, Norge og Liechtenstein, som kan trekke fra kostnadene knyttet til utleien, og 24 prosent av brutto leie for alle andre, også bosatte i Storbritannia.",
+            "Leveringskalenderen ble endret i 2026. Den siste kvartalsvise leieoppgaven er den for juli til september 2026, med frist 1. til 20. oktober 2026. Leie opptjent fra 1. oktober 2026 går inn i en årsoppgave som leveres i de første 20 dagene av april 2027, og hvert år etter det følger det samme aprilvinduet.",
+            "Boligutleie er fritatt for merverdiavgift (IVA), så det skal ikke legges merverdiavgift på en langtidsleie. Kalkulatoren for leieskatt på dette nettstedet regner ut det spanske tallet for deg, med fradragene bostedslandet ditt gir rett til."
+          ]
+        },
+        {
+          "h2": "Hva om leietakeren slutter å betale?",
+          "paras": [
+            "Handle tidlig og skriftlig. Noen ganger er forsinket leie en glemt overføring som en høflig melding løser på noen dager. Er det ikke det, send et formelt krav som beviser mottak og snakk med en abogado, fordi det riktige neste steget avhenger av kontrakten og fakta.",
+            "Du mister ikke pengene ved å vente litt, men du har ikke evig tid. Et krav på ubetalt leie foreldes etter fem år, og hver måned regnes for seg fra dagen den månedens leie forfalt. Ta vare på hver kontoutskrift og kvittering som viser hva som ble betalt og når."
+          ]
+        },
+        {
+          "h2": "Hvordan driver jeg langtidsutleie fra utlandet?",
+          "paras": [
+            "Ha noen lokalt som har et sett nøkler og kan slippe inn en rørlegger. En langtidsleietaker ringer langt sjeldnere enn en feriegjest, men når varmtvannsberederen svikter i januar, kommer samtalen likevel, og det går bedre når svaret er tjue minutter unna, ikke en flytur unna.",
+            "Signer kontrakten på spansk med en engelsk versjon eller en versjon på ditt eget språk ved siden av, så dere begge forstår det samme. Skriv ned hvem som betaler hvilke regninger, og ha kontrakten, inventarlisten, energiattesten og skatteoppgavene i én mappe.",
+            "Sett det opp grundig én gang, så er langtidsutleie en av de roligere måtene å eie bolig i Spania på. Leien kommer inn, huset blir bodd i, og du kan nyte stedet ved neste besøk som gjest av din egen gode planlegging."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Hyra ut långtid i Spanien: en guide för ägare",
+      "description": "Så fungerar långtidsuthyrning i Spanien när du bor utomlands: minst fem år, att ta tillbaka bostaden, deposition, mäklararvode och skatt på hyran.",
+      "h1": "Hyra ut din spanska bostad långtid medan du bor utomlands",
+      "lead": "En långtidsuthyrning av en bostad i Spanien är ett bostadshyresavtal, och hyresgästen kan bo kvar i minst fem år om du hyr ut som privatperson, eller sju om hyresvärden är ett företag. Du tar en månadshyra i kontant deposition, du betalar mäklarens och avtalets kostnader, och du deklarerar hyran i Spanien på modelo 210. Reglerna om förlängning, förtida avflyttning och hyresjusteringar håller på att ändras genom lagdekret som ännu väntar på bekräftelse, så kontrollera dem med en abogado innan du skriver under.",
+      "sections": [
+        {
+          "h2": "Är långtidsuthyrning rätt sorts uthyrning för min bostad?",
+          "paras": [
+            "En långtidsuthyrning är det hyresavtal du skriver när lägenheten eller huset blir hyresgästens eget hem. Spansk lag, Ley de Arrendamientos Urbanos (LAU), behandlar den helt annorlunda än en sommaruthyrning eller en semesteruthyrning, och skyddet i den här guiden gäller bara den här sortens avtal.",
+            "En uthyrning per säsong, sommar eller annan, är ett hyresavtal för annat ändamål än bostad. Den styrs mest av vad parterna kommer överens om. En hel möblerad bostad som marknadsförs via turistkanaler faller helt utanför LAU och omfattas i stället av regionens turistregler. Hur du annonserar spelar alltså lika stor roll som avtalet.",
+            "Många ägare utomlands väljer en långtidshyresgäst av ett skäl: de vill hellre ha en stadig hyresgäst än en kalender full av ankomster och städare. Priset är att hyresgästen får verklig trygghet, och du avstår från att använda bostaden i år, inte veckor."
+          ]
+        },
+        {
+          "h2": "Hur länge får min hyresgäst bo kvar?",
+          "paras": [
+            "Minst fem år om du hyr ut som privatperson, och sju om hyresvärden är ett företag. Ni kan avtala en kortare tid, säg ett år, men avtalet förlängs då automatiskt år för år tills de fem eller sju åren är nådda.",
+            "Förlängningen binder bara dig. Hyresgästen kan stoppa den genom att säga upp avtalet minst trettio dagar före slutet av avtalstiden eller av en årlig förlängning. I praktiken är ett ettårsavtal med en familj i Valencia ett femårigt åtagande från din sida och ett ettårigt från deras.",
+            "Det är lätt att underskatta det här när du skriver under på våren och ser framför dig en ledig augusti. Planera som om bostaden inte kommer att vara ledig för dina egna semestrar under hela minimitiden, eftersom den rättsligt inte kommer att vara det, och berätta det för familjen innan någon bokar flyg."
+          ]
+        },
+        {
+          "h2": "Kan jag ta tillbaka huset om jag vill flytta in?",
+          "paras": [
+            "Bara om du planerade för det när du skrev under. En hyresvärd som är privatperson kan återta bostaden efter det första året, innan minimitiden löper ut, för att bo där permanent, eller för en släkting i första led, eller för en make eller maka efter en slutlig dom om separation, skilsmässa eller ogiltigförklaring. Behovet måste anges uttryckligen i avtalet, och du måste ge minst två månaders varsel. Utan den klausulen kan du inte åberopa det, hur verkligt behovet än är, och en hyresvärd som är ett företag kan inte använda det alls.",
+            "Lagen kontrollerar också att du menade allvar. Har du eller släktingen inte flyttat in inom tre månader från avtalets slut eller avhysningen, får hyresgästen inom trettio dagar välja att flytta tillbaka för en ny period på upp till fem år med flyttkostnaderna ersatta, eller att få en månadshyra för varje år som återstod upp till fem år."
+          ]
+        },
+        {
+          "h2": "Vad händer när avtalet löper ut, eller hyresgästen vill flytta tidigare?",
+          "paras": [
+            "Reglerna om vad som händer när minimitiden har passerat, om hur och när en hyresgäst kan flytta tidigare och vad som då ska betalas, om hur hyran justeras varje år, om vilka skatter och fastighetskostnader som kan föras över på en hyresgäst och om tillfälliga hyresavtal håller på att ändras genom två lagdekret som utfärdades hösten 2026 (Real Decreto-ley 28/2026 och 29/2026), och som ännu väntar på att bekräftas av kongressen. Till dess det är avgjort anger vi inte de villkoren här, och en ägare bör kontrollera det aktuella läget med en abogado innan ett nytt avtal skrivs eller ett befintligt förnyas.",
+            "Två vanor hjälper oavsett utfall. Anteckna avtalets startdatum och varje årsdag, eftersom de flesta frister räknas från dem. Och skicka varje viktigt meddelande på ett sätt som bevisar mottagandet, som en burofax, det rekommenderade meddelande som spanjorer skickar när ett datum senare kan bli omtvistat."
+          ]
+        },
+        {
+          "h2": "Hur stor deposition får jag begära?",
+          "paras": [
+            "En kontant deposition (fianza) på en månadshyra är obligatorisk vid ett bostadshyresavtal. För alla andra ändamål, inklusive säsongsuthyrning, är den två månader. Vissa regioner kräver att hyresvärden deponerar beloppet hos ett regionalt organ, så kontrollera vad som gäller där din fastighet ligger.",
+            "Utöver depositionen får ni avtala en ytterligare säkerhet, men vid ett bostadshyresavtal på upp till fem år, eller sju med en hyresvärd som är ett företag, får den inte överstiga två månadshyror. Det mesta du kan hålla vid ett vanligt femårsavtal är alltså tre månader totalt. Depositionen justeras inte under de första fem eller sju åren.",
+            "När hyresgästen lämnar tillbaka nycklarna betalar du tillbaka det som återstår, efter att ha behållit det som behövs för obetald hyra eller skador. Betalas återstoden inte tillbaka inom en månad från överlämnandet löper lagstadgad ränta på den. En inventarieförteckning med daterade foton, undertecknad av er båda den första dagen, gör det samtalet mycket kortare (och mycket vänligare)."
+          ]
+        },
+        {
+          "h2": "Vem betalar mäklarens och avtalets kostnader?",
+          "paras": [
+            "Det gör du. Vid ett bostadshyresavtal betalar hyresvärden mäklarens förmedlingsarvode och kostnaden för att upprätta avtalet, och de får inte föras över på hyresgästen, varken direkt eller indirekt. En mäklare får bara ta betalt av hyresgästen för frivilliga extratjänster som hyresgästen har begärt skriftligt, efter att ha fått veta att de är frivilliga och vad de kostar.",
+            "Du behöver också en energideklaration. När en bostad hyrs ut till en ny hyresgäst bifogas energimärkningen till avtalet och deklarationens rekommendationer lämnas över. Ordna den i god tid så att den inte försenar undertecknandet."
+          ]
+        },
+        {
+          "h2": "Jag bor i Norge. Hur beskattas hyran i Spanien?",
+          "paras": [
+            "Hyran beskattas i Spanien enligt inkomstskatten för icke-bosatta och deklareras på modelo 210, oavsett vad ditt hemland också gör med den. Skattesatsen är 19 procent för boende i EU, Island, Norge och Liechtenstein, som får dra av kostnaderna kopplade till uthyrningen, och 24 procent på bruttohyran för alla andra, inklusive boende i Storbritannien.",
+            "Deklarationskalendern ändrades 2026. Den sista kvartalsvisa hyresdeklarationen är den för juli till september 2026, som ska lämnas 1 till 20 oktober 2026. Hyra som tjänas in från 1 oktober 2026 går in i en årsdeklaration som lämnas under de första 20 dagarna i april 2027, och varje år därefter följer samma aprilperiod.",
+            "Bostadsuthyrning är undantagen från moms (IVA), så det finns ingen moms att lägga på en långtidshyra. Guiden för hyresskatt på den här webbplatsen räknar fram den spanska siffran åt dig, med de avdrag som ditt bosättningsland ger rätt till."
+          ]
+        },
+        {
+          "h2": "Vad händer om hyresgästen slutar betala?",
+          "paras": [
+            "Agera tidigt och skriftligt. Ibland är en sen hyra en bortglömd överföring som ett vänligt meddelande löser inom några dagar. När den inte är det, skicka ett formellt krav som bevisar mottagandet och prata med en abogado, eftersom rätt nästa steg beror på avtalet och omständigheterna.",
+            "Du förlorar inte pengarna genom att vänta lite, men du har inte hur lång tid som helst. Ett krav på obetald hyra preskriberas efter fem år, och varje månad räknas för sig från den dag den månadens hyra förföll. Spara varje kontoutdrag och kvitto som visar vad som betalades och när."
+          ]
+        },
+        {
+          "h2": "Hur sköter jag en långtidsuthyrning från utlandet?",
+          "paras": [
+            "Ha någon på plats som har en uppsättning nycklar och kan släppa in en rörmokare. En långtidshyresgäst ringer mycket mer sällan än en semestergäst, men när varmvattenberedaren går sönder i januari kommer samtalet ändå, och det går bättre när svaret finns tjugo minuter bort och inte ett flyg bort.",
+            "Skriv avtalet på spanska med en version på engelska eller ditt eget språk bredvid, så att ni båda förstår samma sak. Skriv ner vem som betalar vilka räkningar, och förvara avtalet, inventarieförteckningen, energideklarationen och deklarationerna i en och samma mapp.",
+            "Gör det ordentligt en gång, så är långtidsuthyrning ett av de lugnare sätten att äga en bostad i Spanien. Hyran kommer in, huset blir bebott, och du kan njuta av stället vid nästa besök som gäst hos din egen goda planering."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Langzeitvermietung in Spanien: Ratgeber für Eigentümer",
+      "description": "So funktioniert eine Langzeitvermietung in Spanien, wenn Sie im Ausland leben: fünf Jahre Mindestdauer, Eigenbedarf, Kaution, Maklerkosten und Steuer.",
+      "h1": "Ihre spanische Immobilie langfristig vermieten, während Sie im Ausland leben",
+      "lead": "Eine Langzeitvermietung einer Wohnung in Spanien ist ein Wohnraummietvertrag, und der Mieter kann mindestens fünf Jahre bleiben, wenn Sie als Privatperson vermieten, oder sieben, wenn der Vermieter ein Unternehmen ist. Sie erhalten eine Monatsmiete als Barkaution, tragen die Makler- und Vertragskosten und erklären die Miete in Spanien mit modelo 210. Die Regeln zu Verlängerung, vorzeitigem Auszug und Mietanpassung werden durch Gesetzesdekrete geändert, die noch auf Bestätigung warten. Prüfen Sie sie daher vor der Unterschrift mit einem abogado.",
+      "sections": [
+        {
+          "h2": "Ist eine Langzeitvermietung die richtige Art der Vermietung für mein Haus?",
+          "paras": [
+            "Eine Langzeitvermietung ist der Vertrag, den Sie unterschreiben, wenn die Wohnung oder das Haus zum eigenen Zuhause des Mieters wird. Das spanische Gesetz, die Ley de Arrendamientos Urbanos (LAU), behandelt sie ganz anders als eine Sommer- oder Ferienvermietung, und die Schutzregeln in diesem Ratgeber gelten nur für diese Art von Vertrag.",
+            "Eine Vermietung für eine Saison, ob Sommer oder eine andere, ist ein Mietvertrag zu einem anderen Zweck als dem Wohnen. Sie richtet sich überwiegend nach dem, was beide Seiten vereinbaren. Eine ganze möblierte Wohnung, die über touristische Kanäle vermarktet wird, fällt ganz aus der LAU heraus und unterliegt stattdessen den Tourismusvorschriften der Region. Wie Sie inserieren, zählt also genauso viel wie der Vertrag.",
+            "Viele Eigentümer im Ausland entscheiden sich aus einem Grund für einen Langzeitmieter: Sie haben lieber einen beständigen Mieter als einen Kalender voller Anreisen und Reinigungskräfte. Der Preis dafür ist, dass der Mieter echte Sicherheit bekommt und Sie die Nutzung des Hauses für Jahre aufgeben, nicht für Wochen."
+          ]
+        },
+        {
+          "h2": "Wie lange darf mein Mieter bleiben?",
+          "paras": [
+            "Mindestens fünf Jahre, wenn Sie als Privatperson vermieten, und sieben, wenn der Vermieter ein Unternehmen ist. Sie können eine kürzere Laufzeit vereinbaren, etwa ein Jahr, aber der Vertrag verlängert sich dann automatisch Jahr für Jahr, bis die fünf oder sieben Jahre erreicht sind.",
+            "Die Verlängerung bindet nur Sie. Der Mieter kann sie beenden, indem er mindestens dreißig Tage vor Ende der Laufzeit oder einer jährlichen Verlängerung kündigt. In der Praxis ist ein Einjahresvertrag mit einer Familie in Valencia also auf Ihrer Seite eine Bindung für fünf Jahre und auf ihrer Seite für ein Jahr.",
+            "Das unterschätzt man leicht, wenn man im Frühjahr unterschreibt und sich einen freien August vorstellt. Planen Sie so, als stünde Ihnen das Haus die gesamte Mindestlaufzeit nicht für den eigenen Urlaub zur Verfügung, denn rechtlich tut es das nicht, und sagen Sie es der Familie, bevor jemand Flüge bucht."
+          ]
+        },
+        {
+          "h2": "Kann ich das Haus zurückbekommen, wenn ich selbst einziehen will?",
+          "paras": [
+            "Nur wenn Sie es bei der Unterschrift eingeplant haben. Ein Vermieter, der Privatperson ist, kann die Wohnung nach dem ersten Jahr, vor Ende der Mindestlaufzeit, zurückverlangen, um dauerhaft selbst darin zu wohnen, oder für einen Verwandten ersten Grades oder für den Ehepartner nach rechtskräftiger Trennung, Scheidung oder Nichtigkeitserklärung. Der Bedarf muss ausdrücklich im Vertrag stehen, und Sie müssen mindestens zwei Monate vorher Bescheid geben. Ohne diese Klausel können Sie sich nicht darauf berufen, so echt der Bedarf auch ist, und ein Vermieter, der ein Unternehmen ist, kann sie gar nicht nutzen.",
+            "Das Gesetz prüft auch, ob Sie es ernst gemeint haben. Sind Sie oder der Verwandte nicht innerhalb von drei Monaten nach Vertragsende oder Räumung eingezogen, kann der Mieter innerhalb von dreißig Tagen wählen, ob er für einen neuen Zeitraum von bis zu fünf Jahren zurückkehrt und seine Umzugskosten erstattet bekommt, oder ob er für jedes bis zu fünf Jahren verbleibende Jahr eine Monatsmiete erhält."
+          ]
+        },
+        {
+          "h2": "Was passiert, wenn der Vertrag endet oder der Mieter früher ausziehen will?",
+          "paras": [
+            "Die Regeln dazu, was nach Ablauf der Mindestlaufzeit geschieht, wie und wann ein Mieter vorzeitig ausziehen kann und was dann geschuldet ist, wie die Miete jährlich angepasst wird, welche Steuern und Gebäudekosten an einen Mieter weitergegeben werden dürfen und wie befristete Mietverträge geregelt sind, werden durch zwei im Herbst 2026 erlassene Gesetzesdekrete (Real Decreto-ley 28/2026 und 29/2026) geändert, die noch auf Bestätigung durch den Kongress warten. Bis das geklärt ist, nennen wir diese Bedingungen hier nicht, und ein Eigentümer sollte den aktuellen Stand mit einem abogado prüfen, bevor er einen neuen Vertrag unterschreibt oder einen bestehenden verlängert.",
+            "Zwei Gewohnheiten helfen, wie es auch ausgeht. Notieren Sie das Anfangsdatum des Vertrags und jeden Jahrestag, denn die meisten Fristen laufen ab diesen Daten. Und schicken Sie jede wichtige Mitteilung in einer Form, die den Zugang nachweist, etwa per burofax, der beglaubigten Mitteilung, die man in Spanien verschickt, wenn über ein Datum später gestritten werden könnte."
+          ]
+        },
+        {
+          "h2": "Wie hoch darf die Kaution sein?",
+          "paras": [
+            "Eine Barkaution (fianza) von einer Monatsmiete ist bei einem Wohnraummietvertrag Pflicht. Für jede andere Nutzung, auch eine Saisonvermietung, sind es zwei Monatsmieten. Manche Regionen verlangen, dass der Vermieter die Kaution bei einer regionalen Stelle hinterlegt, prüfen Sie also, was dort gilt, wo Ihre Immobilie liegt.",
+            "Zusätzlich zur Kaution können Sie eine weitere Sicherheit vereinbaren, bei einem Wohnraummietvertrag bis zu fünf Jahren, oder sieben bei einem Unternehmen als Vermieter, darf sie aber zwei Monatsmieten nicht übersteigen. Bei einem üblichen Fünfjahresvertrag können Sie also höchstens drei Monatsmieten insgesamt halten. Die Kaution wird in diesen ersten fünf oder sieben Jahren nicht angepasst.",
+            "Wenn der Mieter die Schlüssel zurückgibt, zahlen Sie den Restbetrag zurück und behalten ein, was für unbezahlte Miete oder Schäden nötig ist. Wird der Restbetrag nicht innerhalb eines Monats nach der Übergabe zurückgezahlt, fallen gesetzliche Zinsen an. Ein Inventar mit datierten Fotos, am ersten Tag von Ihnen beiden unterschrieben, macht dieses Gespräch deutlich kürzer (und deutlich freundlicher)."
+          ]
+        },
+        {
+          "h2": "Wer zahlt die Makler- und Vertragskosten?",
+          "paras": [
+            "Sie. Bei einem Wohnraummietvertrag trägt der Vermieter die Verwaltungsgebühren des Maklers und die Kosten für die Erstellung des Vertrags, und sie dürfen weder direkt noch indirekt an den Mieter weitergegeben werden. Ein Makler darf dem Mieter nur zusätzliche freiwillige Leistungen berechnen, die der Mieter schriftlich angefordert hat, nachdem er darüber informiert wurde, dass sie freiwillig sind und was sie kosten.",
+            "Sie brauchen außerdem einen Energieausweis. Wird eine Wohnung an einen neuen Mieter vermietet, wird das Energielabel dem Vertrag beigefügt und die Empfehlungen des Ausweises werden übergeben. Kümmern Sie sich früh darum, damit er die Unterschrift nicht aufhält."
+          ]
+        },
+        {
+          "h2": "Ich lebe in Norwegen. Wie wird die Miete in Spanien besteuert?",
+          "paras": [
+            "Die Miete wird in Spanien über die Einkommensteuer für Nichtansässige besteuert und mit modelo 210 erklärt, ganz gleich, was Ihr Heimatland zusätzlich damit macht. Der Satz beträgt 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins, die die mit der Vermietung verbundenen Kosten abziehen dürfen, und 24 Prozent auf die Bruttomiete für alle anderen, auch für Ansässige im Vereinigten Königreich.",
+            "Der Abgabekalender hat sich 2026 geändert. Die letzte vierteljährliche Mieterklärung ist die für Juli bis September 2026, fällig vom 1. bis 20. Oktober 2026. Mieteinkünfte ab dem 1. Oktober 2026 kommen in eine Jahreserklärung, die in den ersten 20 Tagen im April 2027 abgegeben wird, und jedes folgende Jahr folgt demselben Zeitraum im April.",
+            "Eine Wohnraumvermietung ist von der Mehrwertsteuer (IVA) befreit, auf eine Langzeitmiete kommt also keine Mehrwertsteuer. Der Rechner für Mietsteuer auf dieser Website ermittelt den spanischen Betrag für Sie, mit den Abzügen, die Ihr Wohnsitzland erlaubt."
+          ]
+        },
+        {
+          "h2": "Was, wenn der Mieter nicht mehr zahlt?",
+          "paras": [
+            "Handeln Sie früh und schriftlich. Manchmal ist eine verspätete Miete eine vergessene Überweisung, die sich mit einer höflichen Nachricht in wenigen Tagen klärt. Wenn nicht, schicken Sie eine förmliche Aufforderung, die den Zugang nachweist, und sprechen Sie mit einem abogado, denn der richtige nächste Schritt hängt vom Vertrag und den Umständen ab.",
+            "Sie verlieren das Geld nicht, wenn Sie ein wenig warten, aber Sie haben nicht ewig Zeit. Ein Anspruch auf unbezahlte Miete verjährt nach fünf Jahren, und jeder Monat zählt gesondert ab dem Tag, an dem die Miete für diesen Monat fällig wurde. Bewahren Sie jeden Kontoauszug und jeden Beleg auf, der zeigt, was wann bezahlt wurde."
+          ]
+        },
+        {
+          "h2": "Wie organisiere ich eine Langzeitvermietung vom Ausland aus?",
+          "paras": [
+            "Sorgen Sie für jemanden vor Ort, der einen Schlüssel hat und einen Klempner hereinlassen kann. Ein Langzeitmieter ruft weit seltener an als ein Feriengast, aber wenn im Januar die Heizung ausfällt, kommt der Anruf trotzdem, und es läuft besser, wenn die Hilfe zwanzig Minuten entfernt ist und nicht einen Flug.",
+            "Unterschreiben Sie den Vertrag auf Spanisch, mit einer englischen oder muttersprachlichen Fassung daneben, damit Sie beide dasselbe verstehen. Halten Sie fest, wer welche Rechnungen zahlt, und bewahren Sie Vertrag, Inventar, Energieausweis und Steuererklärungen in einem Ordner auf.",
+            "Einmal sorgfältig eingerichtet, ist eine Langzeitvermietung eine der ruhigeren Arten, ein Haus in Spanien zu besitzen. Die Miete kommt, das Haus wird bewohnt, und beim nächsten Besuch genießen Sie den Ort als Gast Ihrer eigenen guten Planung."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Location longue durée en Espagne : le guide du propriétaire",
+      "description": "Comment fonctionne une location longue durée en Espagne quand vous vivez à l'étranger : durée minimale, reprise, dépôt, frais d'agence et impôt.",
+      "h1": "Louer votre logement espagnol à long terme quand vous vivez à l'étranger",
+      "lead": "Une location longue durée d'un logement en Espagne est un bail d'habitation, et le locataire peut rester au moins cinq ans si vous louez en tant que particulier, ou sept si le bailleur est une société. Vous conservez un mois de loyer comme dépôt de garantie en espèces, vous payez les frais d'agence et de rédaction du contrat, et vous déclarez le loyer en Espagne sur le modelo 210. Les règles sur la reconduction, le départ anticipé et la révision du loyer sont en cours de modification par des décrets-lois qui attendent encore leur validation : vérifiez-les avec un abogado avant de signer.",
+      "sections": [
+        {
+          "h2": "La location longue durée est-elle le bon type de location pour mon logement ?",
+          "paras": [
+            "Une location longue durée est le bail que vous signez lorsque l'appartement ou la maison devient le logement du locataire. Le droit espagnol, la Ley de Arrendamientos Urbanos (LAU), la traite très différemment d'une location d'été ou d'une location de vacances, et les protections décrites dans ce guide ne s'appliquent qu'à ce type de bail.",
+            "Une location à la saison, l'été ou à un autre moment, est un bail à usage autre que l'habitation. Elle est régie principalement par ce que les deux parties conviennent. Un logement entier meublé commercialisé par des canaux touristiques sort entièrement de la LAU et relève plutôt des règles touristiques de la région. La façon dont vous faites votre annonce compte donc autant que le contrat.",
+            "Beaucoup de propriétaires vivant à l'étranger choisissent un locataire de longue durée pour une raison : ils préfèrent un locataire stable à un calendrier d'arrivées et de ménages. La contrepartie, c'est que le locataire obtient une vraie sécurité, et que vous renoncez à l'usage du logement pendant des années, et non des semaines."
+          ]
+        },
+        {
+          "h2": "Combien de temps mon locataire peut-il rester ?",
+          "paras": [
+            "Au moins cinq ans si vous louez en tant que particulier, et sept si le bailleur est une société. Vous pouvez convenir d'une durée plus courte, un an par exemple, mais le bail est alors prolongé automatiquement d'année en année jusqu'à atteindre les cinq ou sept ans.",
+            "La prolongation n'engage que vous. Le locataire peut y mettre fin en donnant un préavis d'au moins trente jours avant la fin de la durée ou de toute prolongation annuelle. En pratique, un contrat d'un an signé avec une famille à Valence est un engagement de cinq ans de votre côté et d'un an du leur.",
+            "C'est facile à sous-estimer quand vous signez au printemps en imaginant un mois d'août libre. Organisez-vous comme si le logement n'allait pas être disponible pour vos propres vacances pendant toute la durée minimale, car juridiquement il ne le sera pas, et prévenez la famille avant que quiconque ne réserve ses billets d'avion."
+          ]
+        },
+        {
+          "h2": "Puis-je reprendre la maison si je veux m'y installer ?",
+          "paras": [
+            "Seulement si vous l'avez prévu à la signature. Un bailleur particulier peut reprendre le logement après la première année, avant la fin de la durée minimale, pour y habiter de façon permanente, ou pour un parent au premier degré, ou pour un conjoint après un jugement définitif de séparation, de divorce ou d'annulation. Ce besoin doit être expressément mentionné dans le contrat, et vous devez donner un préavis d'au moins deux mois. Sans cette clause, vous ne pouvez pas vous en prévaloir, aussi réel que soit le besoin, et un bailleur personne morale ne peut pas du tout l'utiliser.",
+            "La loi vérifie aussi que vous étiez sincère. Si ni vous ni le parent ne vous êtes installé dans les trois mois suivant la fin du contrat ou l'expulsion, le locataire peut, dans un délai de trente jours, choisir de revenir pour une nouvelle période pouvant aller jusqu'à cinq ans avec remboursement de ses frais de déménagement, ou de recevoir un mois de loyer pour chaque année restant à courir jusqu'aux cinq ans."
+          ]
+        },
+        {
+          "h2": "Que se passe-t-il à la fin du bail, ou si le locataire veut partir plus tôt ?",
+          "paras": [
+            "Les règles sur ce qui se passe une fois la durée minimale écoulée, sur la façon et le moment où un locataire peut partir plus tôt et ce qui est dû, sur la révision annuelle du loyer, sur les impôts et charges de l'immeuble qui peuvent être répercutés sur un locataire, et sur les baux temporaires sont en cours de modification par deux décrets-lois publiés à l'automne 2026 (Real Decreto-ley 28/2026 et 29/2026), qui attendent encore leur validation par le Congrès. Tant que la question n'est pas tranchée, nous n'indiquons pas ces conditions ici, et un propriétaire doit vérifier la situation en vigueur avec un abogado avant de signer un nouveau bail ou d'en renouveler un.",
+            "Deux habitudes aident, quelle que soit l'issue. Notez la date de début du contrat et chaque date anniversaire, car la plupart des délais en partent. Et envoyez tout avis important sous une forme qui prouve la réception, comme un burofax, l'envoi certifié que les Espagnols utilisent lorsqu'une date pourrait être contestée plus tard."
+          ]
+        },
+        {
+          "h2": "Quel dépôt de garantie puis-je demander ?",
+          "paras": [
+            "Un dépôt de garantie en espèces (fianza) d'un mois de loyer est obligatoire pour un bail d'habitation. Pour tout autre usage, y compris une location saisonnière, il est de deux mois. Certaines régions obligent le bailleur à déposer le dépôt auprès d'un organisme régional : vérifiez donc ce qui s'applique là où se trouve votre bien.",
+            "En plus du dépôt, vous pouvez convenir d'une garantie complémentaire, mais pour un bail d'habitation d'une durée allant jusqu'à cinq ans, ou sept avec un bailleur personne morale, elle ne peut pas dépasser deux mois de loyer. Le maximum que vous pouvez détenir sur un bail standard de cinq ans est donc de trois mois au total. Le dépôt n'est pas révisé pendant ces cinq ou sept premières années.",
+            "Lorsque le locataire rend les clés, vous restituez le solde, en gardant ce qui est nécessaire pour des loyers impayés ou des dégâts. Si le solde n'est pas restitué dans le mois qui suit la remise des clés, il produit des intérêts au taux légal. Un état des lieux avec des photos datées, signé par vous deux le premier jour, rend cette conversation bien plus courte (et bien plus cordiale)."
+          ]
+        },
+        {
+          "h2": "Qui paie les frais d'agence et de contrat ?",
+          "paras": [
+            "Vous. Pour un bail d'habitation, le bailleur paie les honoraires de gestion de l'agence immobilière et le coût de rédaction du contrat, et ils ne peuvent pas être répercutés sur le locataire, ni directement ni indirectement. Un agent ne peut facturer au locataire que des services supplémentaires facultatifs que celui-ci a demandés par écrit, après avoir été informé qu'ils sont facultatifs et de leur prix.",
+            "Il vous faut aussi un certificat énergétique. Lorsqu'un logement est loué à un nouveau locataire, l'étiquette énergétique est jointe au contrat et les recommandations du certificat lui sont remises. Prévoyez-le tôt pour qu'il ne retarde pas la signature."
+          ]
+        },
+        {
+          "h2": "Je vis en Norvège. Comment le loyer est-il imposé en Espagne ?",
+          "paras": [
+            "Le loyer est imposé en Espagne au titre de l'impôt sur le revenu des non-résidents et déclaré sur le modelo 210, quoi qu'en fasse par ailleurs votre pays d'origine. Le taux est de 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein, qui peuvent déduire les frais liés à la location, et de 24 pour cent sur le loyer brut pour tous les autres, y compris les résidents du Royaume-Uni.",
+            "Le calendrier de déclaration a changé en 2026. La dernière déclaration trimestrielle des loyers est celle de juillet à septembre 2026, due du 1er au 20 octobre 2026. Les loyers perçus à partir du 1er octobre 2026 vont dans une déclaration annuelle déposée dans les 20 premiers jours d'avril 2027, et chaque année suivante suit la même période d'avril.",
+            "Une location d'habitation est exonérée de TVA (IVA) : il n'y a donc pas de TVA à ajouter à un loyer de longue durée. Le calculateur d'impôt sur les loyers de ce site calcule pour vous le montant espagnol, avec les déductions que votre pays de résidence permet."
+          ]
+        },
+        {
+          "h2": "Et si le locataire cesse de payer ?",
+          "paras": [
+            "Agissez tôt et par écrit. Parfois, un loyer en retard n'est qu'un virement oublié qu'un message poli règle en quelques jours. Quand ce n'est pas le cas, envoyez une mise en demeure formelle qui prouve la réception et parlez-en à un abogado, car la bonne étape suivante dépend du contrat et des faits.",
+            "Vous ne perdez pas l'argent en attendant un peu, mais vous n'avez pas l'éternité. Une action en paiement de loyers impayés se prescrit par cinq ans, et chaque mois se compte séparément à partir du jour où le loyer de ce mois était dû. Gardez chaque relevé de compte et chaque reçu qui montre ce qui a été payé et quand."
+          ]
+        },
+        {
+          "h2": "Comment gérer une location longue durée depuis l'étranger ?",
+          "paras": [
+            "Ayez quelqu'un sur place qui détient un jeu de clés et peut ouvrir à un plombier. Un locataire de longue durée appelle bien moins souvent qu'un vacancier, mais quand la chaudière tombe en panne en janvier, l'appel arrive quand même, et tout se passe mieux quand la solution est à vingt minutes, et non à un vol d'avion.",
+            "Signez le contrat en espagnol avec une version en anglais ou dans votre langue en regard, pour que vous compreniez tous les deux la même chose. Notez qui paie quelles factures, et gardez le contrat, l'état des lieux, le certificat énergétique et les déclarations fiscales dans un même dossier.",
+            "Mettez tout en place soigneusement une fois, et une location longue durée devient l'une des façons les plus sereines de posséder un logement en Espagne. Le loyer arrive, la maison est habitée, et vous pouvez profiter des lieux lors de votre prochaine visite en invité de votre propre bonne organisation."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Langdurig verhuren in Spanje: een gids voor eigenaren",
+      "description": "Hoe langdurige verhuur in Spanje werkt als u in het buitenland woont, van de minimumtermijn van vijf jaar tot borg, makelaarskosten en belasting.",
+      "h1": "Uw Spaanse woning langdurig verhuren terwijl u in het buitenland woont",
+      "lead": "Langdurige verhuur van een woning in Spanje is een huurovereenkomst voor woonruimte, en de huurder mag minstens vijf jaar blijven als u als particulier verhuurt, of zeven als de verhuurder een bedrijf is. U houdt één maand huur als borg in contanten aan, u betaalt de makelaars- en contractkosten, en u geeft de huur in Spanje aan met modelo 210. De regels over verlenging, vroegtijdig vertrek en huuraanpassingen worden gewijzigd door wetsbesluiten die nog op bekrachtiging wachten, dus controleer ze met een abogado voordat u tekent.",
+      "sections": [
+        {
+          "h2": "Is langdurige verhuur de juiste vorm van verhuur voor mijn woning?",
+          "paras": [
+            "Langdurige verhuur is de huurovereenkomst die u tekent wanneer het appartement of huis de eigen woning van de huurder wordt. De Spaanse wet, de Ley de Arrendamientos Urbanos (LAU), behandelt die heel anders dan zomerverhuur of vakantieverhuur, en de bescherming in deze gids geldt alleen voor dit soort huurovereenkomst.",
+            "Verhuur per seizoen, in de zomer of daarbuiten, is een huurovereenkomst voor een ander gebruik dan bewoning. Die wordt grotendeels bepaald door wat beide partijen afspreken. Een volledig gemeubileerde woning die via toeristische kanalen wordt aangeboden, valt helemaal buiten de LAU en komt in plaats daarvan onder de toerismeregels van de regio. Hoe u adverteert, telt dus even zwaar als het contract.",
+            "Veel eigenaren in het buitenland kiezen om één reden voor een langdurige huurder: ze hebben liever één vaste huurder dan een agenda vol aankomsten en schoonmakers. De keerzijde is dat de huurder echte zekerheid krijgt, en dat u het gebruik van de woning voor jaren opgeeft, niet voor weken."
+          ]
+        },
+        {
+          "h2": "Hoe lang mag mijn huurder blijven?",
+          "paras": [
+            "Minstens vijf jaar als u als particulier verhuurt, en zeven als de verhuurder een bedrijf is. U kunt een kortere termijn afspreken, bijvoorbeeld een jaar, maar die wordt dan automatisch jaar na jaar verlengd tot de vijf of zeven jaar zijn bereikt.",
+            "De verlenging bindt alleen u. De huurder kan die stoppen door minstens dertig dagen voor het einde van de termijn of van een jaarlijkse verlenging op te zeggen. In de praktijk is een eenjarig contract met een gezin in Valencia een verplichting van vijf jaar aan uw kant en van een jaar aan hun kant.",
+            "Dat onderschat u makkelijk als u in het voorjaar tekent en al een vrije augustus voor u ziet. Plan alsof de woning gedurende de hele minimumtermijn niet vrij is voor uw eigen vakanties, want juridisch is dat ook zo, en laat het de familie weten voordat iemand vliegtickets boekt."
+          ]
+        },
+        {
+          "h2": "Kan ik het huis terugnemen als ik er zelf wil gaan wonen?",
+          "paras": [
+            "Alleen als u daar bij het tekenen rekening mee hield. Een verhuurder die particulier is, kan de woning na het eerste jaar terugnemen, voordat de minimumtermijn afloopt, om er zelf permanent te gaan wonen, of voor een familielid in de eerste graad, of voor een echtgenoot na een definitieve uitspraak over scheiding van tafel en bed, echtscheiding of nietigverklaring. Die behoefte moet uitdrukkelijk in het contract staan, en u moet minstens twee maanden van tevoren opzeggen. Zonder die clausule kunt u er geen beroep op doen, hoe echt de behoefte ook is, en een verhuurder die een bedrijf is, kan er helemaal geen gebruik van maken.",
+            "De wet controleert ook of u het meende. Bent u of het familielid er niet binnen drie maanden na het einde van het contract of de ontruiming gaan wonen, dan kan de huurder binnen dertig dagen kiezen om terug te keren voor een nieuwe periode van maximaal vijf jaar met vergoeding van de verhuiskosten, of om één maand huur te ontvangen voor elk jaar dat nog resteerde tot vijf jaar."
+          ]
+        },
+        {
+          "h2": "Wat gebeurt er als de huur afloopt, of als de huurder eerder wil vertrekken?",
+          "paras": [
+            "De regels over wat er gebeurt nadat de minimumtermijn is verstreken, over hoe en wanneer een huurder eerder kan vertrekken en wat er dan verschuldigd is, over hoe de huur jaarlijks wordt aangepast, over welke belastingen en gebouwkosten aan een huurder mogen worden doorberekend, en over tijdelijke huurovereenkomsten worden gewijzigd door twee wetsbesluiten uit het najaar van 2026 (Real Decreto-ley 28/2026 en 29/2026), die nog op bekrachtiging door het Congreso wachten. Tot dat is uitgekristalliseerd, noemen we die voorwaarden hier niet, en een eigenaar doet er goed aan de actuele stand met een abogado te controleren voordat hij een nieuw huurcontract tekent of een bestaand verlengt.",
+            "Twee gewoonten helpen, wat de uitkomst ook is. Noteer de ingangsdatum van het contract en elke verjaardag ervan, want de meeste termijnen lopen vanaf die data. En verstuur elke kennisgeving die ertoe doet in een vorm die de ontvangst bewijst, zoals een burofax, de aangetekende kennisgeving die Spanjaarden versturen wanneer er later over een datum kan worden getwist."
+          ]
+        },
+        {
+          "h2": "Hoeveel borg mag ik vragen?",
+          "paras": [
+            "Een borg in contanten (fianza) van één maand huur is verplicht bij een huurovereenkomst voor woonruimte. Voor elk ander gebruik, ook seizoensverhuur, is dat twee maanden. Sommige regio's verplichten de verhuurder de borg bij een regionale instantie te deponeren, dus controleer wat er geldt waar uw woning staat.",
+            "Bovenop de borg kunt u een aanvullende zekerheid afspreken, maar bij een huurovereenkomst voor woonruimte van maximaal vijf jaar, of zeven met een verhuurder die een bedrijf is, mag die niet hoger zijn dan twee maanden huur. Bij een standaardcontract van vijf jaar kunt u dus in totaal hooguit drie maanden aanhouden. De borg wordt in die eerste vijf of zeven jaar niet aangepast.",
+            "Levert de huurder de sleutels in, dan betaalt u het saldo terug en houdt u in wat nodig is voor onbetaalde huur of schade. Wordt het saldo niet binnen een maand na de overdracht terugbetaald, dan gaat er wettelijke rente over lopen. Een inventarislijst met gedateerde foto's, op de eerste dag door u beiden ondertekend, maakt dat gesprek veel korter (en veel vriendelijker)."
+          ]
+        },
+        {
+          "h2": "Wie betaalt de makelaars- en contractkosten?",
+          "paras": [
+            "Dat doet u. Bij een huurovereenkomst voor woonruimte betaalt de verhuurder de bemiddelingskosten van de makelaar en de kosten van het opstellen van het contract, en die mogen niet direct of indirect aan de huurder worden doorberekend. Een makelaar mag de huurder alleen kosten in rekening brengen voor optionele extra diensten waar de huurder schriftelijk om heeft gevraagd, nadat hem is verteld dat ze optioneel zijn en wat ze kosten.",
+            "U heeft ook een energiecertificaat nodig. Wordt een woning aan een nieuwe huurder verhuurd, dan wordt het energielabel bij het contract gevoegd en worden de aanbevelingen uit het certificaat overhandigd. Regel het tijdig, zodat het de ondertekening niet ophoudt."
+          ]
+        },
+        {
+          "h2": "Ik woon in Noorwegen. Hoe wordt de huur in Spanje belast?",
+          "paras": [
+            "De huur wordt in Spanje belast via de inkomstenbelasting voor niet-inwoners en aangegeven met modelo 210, wat uw eigen land er ook mee doet. Het tarief is 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein, die de kosten van de verhuur mogen aftrekken, en 24 procent over de bruto huur voor alle anderen, ook voor inwoners van het Verenigd Koninkrijk.",
+            "De aangiftekalender is in 2026 veranderd. De laatste kwartaalaangifte voor huur is die over juli tot en met september 2026, in te dienen van 1 tot en met 20 oktober 2026. Huur die vanaf 1 oktober 2026 wordt ontvangen, gaat in een jaaraangifte die wordt ingediend in de eerste 20 dagen van april 2027, en elk jaar daarna volgt dezelfde periode in april.",
+            "Verhuur van woonruimte is vrijgesteld van btw (IVA), dus er komt geen btw bij een langdurige huur. De rekentool voor huurbelasting op deze site berekent het Spaanse bedrag voor u, met de aftrek die uw woonland toestaat."
+          ]
+        },
+        {
+          "h2": "Wat als de huurder niet meer betaalt?",
+          "paras": [
+            "Kom vroeg en schriftelijk in actie. Soms is te late huur een vergeten overschrijving die een vriendelijk bericht binnen een paar dagen oplost. Is dat niet zo, stuur dan een formele aanmaning die de ontvangst bewijst en neem contact op met een abogado, want de juiste volgende stap hangt af van het contract en de feiten.",
+            "U verliest het geld niet als u even wacht, maar u heeft ook niet eindeloos de tijd. Een vordering wegens onbetaalde huur verjaart na vijf jaar, en elke maand telt apart vanaf de dag waarop de huur van die maand verschuldigd was. Bewaar elk rekeningafschrift en elk betaalbewijs dat laat zien wat er wanneer is betaald."
+          ]
+        },
+        {
+          "h2": "Hoe regel ik langdurige verhuur vanuit het buitenland?",
+          "paras": [
+            "Zorg voor iemand ter plaatse die een set sleutels heeft en een loodgieter kan binnenlaten. Een langdurige huurder belt veel minder vaak dan een vakantiegast, maar als de cv-ketel in januari uitvalt, komt het telefoontje toch, en het gaat beter als het antwoord twintig minuten verderop zit en niet een vlucht verderop.",
+            "Teken het contract in het Spaans met een Engelse versie of een versie in uw eigen taal ernaast, zodat u allebei hetzelfde begrijpt. Leg vast wie welke rekeningen betaalt, en bewaar het contract, de inventarislijst, het energiecertificaat en de belastingaangiften in één map.",
+            "Regel het één keer zorgvuldig, en langdurige verhuur is een van de rustigere manieren om een woning in Spanje te bezitten. De huur komt binnen, het huis wordt bewoond, en bij uw volgende bezoek geniet u van de plek als gast van uw eigen goede planning."
+          ]
+        }
+      ]
+    }
+  }
+}

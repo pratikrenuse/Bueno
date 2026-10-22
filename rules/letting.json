@@ -1,0 +1,572 @@
+{
+  "domain": "Letting a Spanish property: long-term residential leases under the LAU, regional tourist letting registers, and what platforms report to the tax office. The 2026 decree-laws on leases were still awaiting convalidation when read.",
+  "rules": [
+    {
+      "id": "let.lau.minimum_term",
+      "statement": "A long-term residential lease runs for at least five years if the landlord is a private individual and seven years if the landlord is a company. A shorter agreed term is extended automatically year by year until that minimum is reached, unless the tenant gives at least thirty days notice before the end of the term or of any annual extension.",
+      "value": {
+        "individual_landlord_years": 5,
+        "company_landlord_years": 7,
+        "tenant_notice_days": 30
+      },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1 Ley 29/1994 (LAU), wording of Real Decreto-ley 7/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The extension is mandatory for the landlord only. The tenant can stop it. Applies to habitual residence leases, not to seasonal or tourist lets."
+    },
+    {
+      "id": "let.lau.own_use_recovery",
+      "statement": "A landlord who is a private individual can take the home back after the first year, before the minimum term ends, to live in it permanently or for a first degree relative or a spouse after a final separation, divorce or annulment judgment. This works only if the need was stated expressly in the contract when it was signed, and the landlord must give at least two months notice.",
+      "value": {
+        "after_years": 1,
+        "notice_months": 2
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.3 Ley 29/1994 (LAU)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Companies cannot use this. Without the clause in the original contract the landlord cannot rely on it, however real the need."
+    },
+    {
+      "id": "let.lau.own_use_not_occupied",
+      "statement": "If the landlord or the relative has not moved in within three months of the end of the contract or the eviction, the tenant may, within thirty days, choose to return to the home for a new period of up to five years with the costs of moving out reimbursed, or to receive one month of rent for each year left until five years.",
+      "value": {
+        "occupy_within_months": 3,
+        "tenant_choice_days": 30
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.3 Ley 29/1994 (LAU)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Force majeure as defined in the article excludes this."
+    },
+    {
+      "id": "let.lau.tacit_extension_current",
+      "statement": "Under the rules in force until 14 November 2026, once the five or seven year minimum has passed and neither side has given notice, the lease extends by annual periods for up to three more years. The landlord must give at least four months notice and the tenant at least two months; during the extension the tenant can leave with one month of notice before any annual period ends.",
+      "value": {
+        "extra_years_max": 3,
+        "landlord_notice_months": 4,
+        "tenant_notice_months": 2
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.1 Ley 29/1994 (LAU), version in force before 15 November 2026",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "Real Decreto-ley 28/2026 replaces art. 10 from 15 November 2026. See let.lau.extension_from_nov_2026. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.extension_from_nov_2026",
+      "statement": "From 15 November 2026, once the minimum term has passed the lease extends tacitly for successive periods of five years, or seven if the landlord is a company, unless one side gives notice. The landlord must give at least six months notice and the tenant at least two months. It applies to existing contracts for expiries after that date.",
+      "value": {
+        "landlord_notice_months": 6,
+        "tenant_notice_months": 2,
+        "period_individual_years": 5,
+        "period_company_years": 7
+      },
+      "unit": "months",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Real Decreto-ley 28/2026, de 6 de octubre, articulo unico and disposicion transitoria unica",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20822",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: depends on a decree-law awaiting convalidation. Contracts already in an extension continue under the old rules until it ends. If fewer than six months remain on 15 November 2026 the landlord may give at least four months notice. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.nonrenewal_compensation",
+      "statement": "From 15 November 2026 a landlord who ends a lease by non-renewal must pay the tenant the greater of twelve months of rent or one month of rent per year of residence, calculated on the upper value of the state rental reference index, paid on handover of the keys.",
+      "value": {
+        "min_months_rent": 12,
+        "per_year_months": 1
+      },
+      "unit": "months",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Real Decreto-ley 28/2026, de 6 de octubre, articulo unico and disposicion transitoria unica",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20822",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: depends on a decree-law awaiting convalidation. No compensation is due where the individual landlord needs the home for own use or relatives up to the second degree, the tenant has been absent more than six of the last twelve months, the tenant has another suitable home in the municipality, the parties sign a new lease, or the tenant refuses a formal offer of a new five year lease. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.extraordinary_extension",
+      "statement": "A tenant can ask for an extraordinary extension beyond the end of the lease: up to one year where the tenant proves social and economic vulnerability, which a large landlord must accept, and up to three years by annual periods where the home is in a declared stressed residential market area, which the landlord must accept unless a listed exception applies.",
+      "value": {
+        "vulnerability_years": 1,
+        "stressed_area_years": 3
+      },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.2 and 10.3 Ley 29/1994 (LAU), as amended by Ley 12/2023",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "Stressed areas are declared by the regional authority, area by area. Whether a given town is declared must be checked locally. Real Decreto-ley 28/2026 keeps both extensions."
+    },
+    {
+      "id": "let.lau.tenant_withdrawal",
+      "statement": "A tenant on a long-term residential lease can leave once at least six months have passed, giving at least thirty days notice.",
+      "value": {
+        "after_months": 6,
+        "notice_days": 30
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 11 Ley 29/1994 (LAU)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The six months and thirty days are the same in the 2013 wording and in the wording in force from 8 October 2026. What changed is compensation, see let.lau.withdrawal_compensation."
+    },
+    {
+      "id": "let.lau.withdrawal_compensation",
+      "statement": "Since 8 October 2026 a tenant who leaves early under art. 11 owes the landlord no compensation. Before that date the contract could provide for one month of rent for each year left, pro rata for part years.",
+      "value": {
+        "old_rule_months_per_year": 1
+      },
+      "unit": "months",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 11 Ley 29/1994 (LAU), wording of Real Decreto-ley 29/2026; previous wording of Ley 4/2013",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: the removal of agreed compensation comes from a decree-law awaiting convalidation. The 2013 wording allowing it was read on BOE-A-2013-5941. Which wording governs contracts signed before 8 October 2026 was not checked. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.deposit",
+      "statement": "A cash deposit is compulsory: one month of rent for a residential lease and two months for any other use, including seasonal lets.",
+      "value": {
+        "housing_months": 1,
+        "other_use_months": 2
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE",
+        "ref": "art. 36.1 Ley 29/1994 (LAU), wording of Real Decreto-ley 7/2019",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-3108",
+        "source_dated": "2019-03-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Regions may require landlords to lodge the deposit with a regional body. Seasonal lets are use other than housing under art. 3 LAU, so two months applies to them."
+    },
+    {
+      "id": "let.lau.deposit_not_updated",
+      "statement": "During the first five years of a residential lease, or seven if the landlord is a company, the deposit is not updated. At each extension after that it may be adjusted up or down to match one month of the current rent.",
+      "value": {
+        "individual_years": 5,
+        "company_years": 7
+      },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "BOE",
+        "ref": "art. 36.2 Ley 29/1994 (LAU), wording of Real Decreto-ley 7/2019",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-3108",
+        "source_dated": "2019-03-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "let.lau.additional_guarantee_cap",
+      "statement": "On top of the deposit, the parties may agree an additional guarantee, but for a residential lease of up to five years, or seven with a company landlord, it cannot exceed two months of rent.",
+      "value": 2,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE",
+        "ref": "art. 36.5 Ley 29/1994 (LAU), wording of Real Decreto-ley 7/2019",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-3108",
+        "source_dated": "2019-03-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "So the most a landlord can hold on a standard five year lease is one month of deposit plus two months of additional guarantee. The cap is stated for contracts up to five or seven years."
+    },
+    {
+      "id": "let.lau.deposit_return",
+      "statement": "The landlord must return the deposit balance after the tenant hands back the keys. If it is not returned within one month of the handover, the balance accrues legal interest.",
+      "value": 1,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE",
+        "ref": "art. 36.4 Ley 29/1994 (LAU), wording of Real Decreto-ley 7/2019",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2019-3108",
+        "source_dated": "2019-03-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The landlord may keep what is needed to cover unpaid rent or damage, which is why the law speaks of the balance."
+    },
+    {
+      "id": "let.lau.rent_update_needs_clause",
+      "statement": "Rent on a residential lease can only be updated on the anniversary of the contract and only if the contract expressly provides for it. Without an express clause there is no annual update at all.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18 Ley 29/1994 (LAU)",
+        "url": "https://www.boe.es/buscar/pdf/1994/BOE-A-1994-26003-consolidado.pdf",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "The updated rent is due from the month after written notice stating the percentage. A note on the previous rent receipt counts as notice."
+    },
+    {
+      "id": "let.lau.rent_update_irav",
+      "statement": "Where the update clause does not name an index, the annual change in the rental reference index (IRAV) applies, and any update is capped at that change.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 18 Ley 29/1994 (LAU), consolidated to 7 October 2026",
+        "url": "https://www.boe.es/buscar/pdf/1994/BOE-A-1994-26003-consolidado.pdf",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: read in the consolidated text, but which law introduced the cap was not visible, and Real Decreto-ley 29/2026 also deals with IRAV caps. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.rent_increase_limit_2027",
+      "statement": "Until 31 December 2027, a residential lease rent that already exceeds the reference price cap cannot be increased, and otherwise the annual increase follows the parties' agreement or, without agreement, is capped at 2 percent.",
+      "value": 2,
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "disposicion final sexta Real Decreto-ley 29/2026",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: read in summary form only and depends on a decree-law awaiting convalidation. Do not publish as settled. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.agency_fees_landlord",
+      "statement": "The landlord pays the estate agency management fees and the costs of drawing up a residential lease. They cannot be passed on to the tenant, directly or indirectly.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 20 Ley 29/1994 (LAU), as amended by disposicion final primera Ley 12/2023",
+        "url": "https://www.boe.es/buscar/pdf/1994/BOE-A-1994-26003-consolidado.pdf",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Ley 12/2023 (in BOE 25 May 2023, BOE-A-2023-12203) states in its preamble that management and formalisation costs are to be paid by the landlord. The consolidated art. 20 read on 22 October 2026 says they cannot be passed on to the tenant directly or indirectly. Optional extra services may be charged only if the tenant asked for them in writing after being told they are optional and their cost."
+    },
+    {
+      "id": "let.lau.taxes_not_on_tenant",
+      "statement": "Taxes tied to the dwelling cannot be imposed on a residential tenant unless the tenant is the taxpayer, and general building costs can be passed on only by written agreement stating the annual amount.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 20.1 Ley 29/1994 (LAU), consolidated to 7 October 2026",
+        "url": "https://www.boe.es/buscar/pdf/1994/BOE-A-1994-26003-consolidado.pdf",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: read in the consolidated text, which reflects Real Decreto-ley 29/2026. The modifying law for this wording was not visible. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.lau.temporary_housing",
+      "statement": "A temporary housing lease needs a real and provable reason for the tenant to be away from their usual home, must run more than 31 days and as a general rule no more than twelve months. Running beyond twelve months without justification, or more than two back to back contracts between the same parties for the same home, turns it into a standard residential lease from the first contract.",
+      "value": {
+        "min_days_exclusive": 31,
+        "max_months_general": 12
+      },
+      "unit": "days",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9 bis Ley 29/1994 (LAU), added by Real Decreto-ley 29/2026",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: added by a decree-law awaiting convalidation, in force from 8 October 2026. The tenant on a temporary housing lease may leave after one month with ten days notice. Regional rules on temporary and room lets still apply. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.rdl29.short_stay_vat",
+      "statement": "From 1 December 2026, letting a furnished dwelling to the same guest for 30 nights or fewer is subject to VAT at the reduced 10 percent rate, except where it is the landlord's own habitual home.",
+      "value": 10,
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Real Decreto-ley 29/2026, VAT provisions",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: read in summary form only, article number not seen, and depends on a decree-law awaiting convalidation. Do not publish. It would change vat.letting. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.rdl29.ibi_tourist_surcharge",
+      "statement": "Municipalities in stressed residential market areas may levy a property tax surcharge of up to 50 percent on homes used for tourist accommodation, rising for owners of several such homes.",
+      "value": 50,
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Real Decreto-ley 29/2026, IBI provisions",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-11-30",
+      "notes": "PARTIAL: read in summary form only, article number not seen, and depends on a decree-law awaiting convalidation. The summary gave up to 100 percent for owners of two or more and 150 percent for four or more. Real Decreto-ley 28/2026 and Real Decreto-ley 29/2026 were both approved on 6 October 2026 and sent to Congress for convalidation. The two decree-laws they replaced (26/2026 and 27/2026) were not validated and were left without effect. Convalidation of 28/2026 and 29/2026 had not been confirmed when read. Re-check before publishing."
+    },
+    {
+      "id": "let.tourist.valencia",
+      "statement": "In the Comunitat Valenciana a tourist dwelling needs a responsible declaration and entry in the regional tourism register, backed by a favourable municipal report of urban planning compatibility for tourist use. Registration lasts five years and is renewed with a new declaration and an updated municipal report filed in the month before it expires.",
+      "value": {
+        "validity_years": 5
+      },
+      "unit": "years",
+      "status": "verified",
+      "source": {
+        "name": "DOGV, as reproduced on BOE",
+        "ref": "Decreto-ley 9/2024, de 2 de agosto, del Consell, arts. 65.1, 65.4, 77.5; in force 8 August 2024",
+        "url": "https://www.boe.es/buscar/doc.php?id=DOGV-r-2024-90168",
+        "source_dated": "2024-08-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "Registrations that existed on 8 August 2024 keep their validity for five years from that date. Councils may cap numbers per building, sector or zone. Whether a given town has suspended new registrations is municipal and must be checked locally. Later amendments to the decree-law were not checked."
+    },
+    {
+      "id": "let.tourist.valencia_conditions",
+      "statement": "In the Comunitat Valenciana a tourist dwelling is let as a whole for stays of ten days or less to the same guest, letting by rooms is expressly prohibited, and every advert must show the registration number.",
+      "value": {
+        "max_stay_days": 10
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "DOGV, as reproduced on BOE",
+        "ref": "Decreto-ley 9/2024, arts. 65.1, 65.3, 33.2, 92.16, 93.6",
+        "url": "https://www.boe.es/buscar/doc.php?id=DOGV-r-2024-90168",
+        "source_dated": "2024-08-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "A stay of eleven days or more falls outside the tourist dwelling concept. Omitting the number from an advert is a serious infraction; letting rooms in a registered dwelling is a very serious one."
+    },
+    {
+      "id": "let.tourist.andalucia",
+      "statement": "In Andalucia a tourist dwelling needs a responsible declaration filed electronically before the service starts, and it may be advertised as a tourist dwelling only from that moment. It is then entered in the Registro de Turismo de Andalucia, whose code must appear on the contract and the receipt.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Junta de Andalucia, consolidated text",
+        "ref": "Decreto 28/2016 as amended by Decreto 31/2024, arts. 9.1, 7.1, 6.2.e",
+        "url": "https://www.juntadeandalucia.es/sites/default/files/inline-files/2024/07/Decreto 28-2016 de 2 de febrero%2C de las viviendas de uso turistico.pdf",
+        "source_dated": "2024-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "A dwelling in a building whose community statutes expressly prohibit tourist accommodation cannot be a tourist dwelling. Councils may limit numbers per building, sector, area or zone. The BOJA page for Decreto 31/2024 could not be fetched; the consolidated text was read on the Junta's own site."
+    },
+    {
+      "id": "let.tourist.andalucia_capacity",
+      "statement": "In Andalucia a tourist dwelling let as a whole can take at most fifteen guests, and one let by rooms at most six.",
+      "value": {
+        "whole_dwelling": 15,
+        "by_rooms": 6
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Junta de Andalucia, consolidated text",
+        "ref": "art. 5.4 Decreto 28/2016 as amended",
+        "url": "https://www.juntadeandalucia.es/sites/default/files/inline-files/2024/07/Decreto 28-2016 de 2 de febrero%2C de las viviendas de uso turistico.pdf",
+        "source_dated": "2024-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": null
+    },
+    {
+      "id": "let.tourist.balears",
+      "statement": "In the Illes Balears, advertising or marketing tourist stays in a dwelling without having filed the declaration of start of tourist activity (DRIAT) is illegal offer, and every advert must show the dwelling's tourist registration number.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 28.1 and 28.3 Ley 8/2012 del Turismo de las Illes Balears",
+        "url": "https://www.boe.es/buscar/pdf/2012/BOE-A-2012-10610-consolidado.pdf",
+        "source_dated": "2026-06-13",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "Both the owner of the advertising medium and whoever places the advert are responsible. New tourist places for dwellings are rationed and conditions for flats in residential buildings were not read; do not state them."
+    },
+    {
+      "id": "let.tourist.canarias",
+      "statement": "In Canarias tourist use of a dwelling keeps the responsible declaration regime with entry in the Registro General Turistico, needs prior express authorisation of the use by municipal planning, and the declaration lasts five years, ten in El Hierro, La Gomera and La Palma, renewable.",
+      "value": {
+        "validity_years": 5,
+        "validity_years_small_islands": 10
+      },
+      "unit": "years",
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Ley 6/2025, de 10 de diciembre, de Ordenacion Sostenible del Uso Turistico de Viviendas (Canarias)",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-26358",
+        "source_dated": "2025-12-23",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-12-31",
+      "notes": "PARTIAL: read in the law's preamble, which describes arts. 5 to 10; the operative articles, transitional regime for existing holiday homes and entry into force were not reached. Do not code detail."
+    },
+    {
+      "id": "let.tourist.catalunya",
+      "statement": "In the 262 Catalan municipalities listed in Decreto-ley 3/2023, turning a dwelling to tourist use needs a prior municipal urban planning licence, licences last five years, no more than ten tourist dwellings per 100 inhabitants may be licensed, and existing tourist dwellings there must obtain the licence within five years of 9 November 2023 or stop.",
+      "value": {
+        "municipalities": 262,
+        "licence_years": 5,
+        "cap_per_100_inhabitants": 10
+      },
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE",
+        "ref": "Decreto-ley 3/2023, de 7 de noviembre (Catalunya), arts. 1 and 2, disposiciones transitorias 1 and 2",
+        "url": "https://boe.es/boe/dias/2024/01/05/pdfs/BOE-A-2024-281.pdf",
+        "source_dated": "2024-01-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2026-12-31",
+      "notes": "PARTIAL: the decree-law text was read on BOE. It was challenged before the Constitutional Court (STC 64/2025 of 13 March 2025, BOE-A-2025-7430) and the ruling's operative part was not reached, so whether any provision was struck down is unconfirmed. An existing dwelling may request one extension of up to five more years. Generalitat sites are blocked to automated fetching."
+    },
+    {
+      "id": "let.tourist.murcia",
+      "statement": "In the Region de Murcia a tourist dwelling needs a responsible declaration filed before the service starts. Once a complete declaration is filed the activity can begin and the dwelling is entered in the Registro de Empresas y Actividades Turisticas, and every advert must carry the registration number.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BORM",
+        "ref": "Decreto 256/2019, de 10 de octubre, arts. 6.1, 6.6, 28.1, 28.3 (BORM 242 of 19 October 2019)",
+        "url": "https://www.borm.es/services/boletin/ano/2019/numero/242/pdf",
+        "source_dated": "2019-10-19",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "Murcia allows letting the whole dwelling or by bedrooms. The decree itself does not require community authorisation, but community statutes and the horizontal property law still apply; see lph.17_12.majority. Read as published in 2019; later amendments were not checked."
+    },
+    {
+      "id": "let.eu.str_regulation",
+      "statement": "EU Regulation 2024/1028 of 11 April 2024 sets common rules on registration numbers and data sharing between short-term rental platforms and public authorities, and applies from 20 May 2026.",
+      "value": "2026-05-20",
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "EUR-Lex",
+        "ref": "Regulation (EU) 2024/1028 of 11 April 2024 on data collection and sharing relating to short-term accommodation rental services",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1028/oj",
+        "source_dated": "2024-04-11",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "PARTIAL: title, date and the 20 May 2026 date were read in EUR-Lex metadata only; the article text could not be fetched. In Spain the national registration number procedure was annulled, see registry.annulled."
+    },
+    {
+      "id": "let.tax.modelo179",
+      "statement": "Intermediaries in the letting of dwellings for tourist purposes, expressly including online platforms, must report each let to the tax office on modelo 179 once a year, between 1 and 31 January for the previous calendar year. The owner does not file it.",
+      "value": {
+        "window": "1 to 31 January"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Orden HAC/612/2021, arts. 1 and 4, as amended by Orden HFP/188/2023",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-10163",
+        "source_dated": "2023-02-28",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The return includes the owner, the guests, the address and cadastral reference, the days of tourist use and the amount the owner received. It was quarterly before Orden HFP/188/2023. LAU lets and regulated tourist accommodation are excluded, except a whole furnished dwelling marketed through tourist channels."
+    },
+    {
+      "id": "let.tax.dac7",
+      "statement": "Digital platforms report hosts who let property through them to the Spanish tax office on modelo 238, including name, address, tax number, the property's address and cadastral reference, the days rented and the amounts paid per quarter, and the information is passed to the tax office of the host's country of residence.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 238, DAC 7 informacion para los vendedores",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/declaraciones-informativas/modelo-238-decl_____informacion-parte-operadores-plataformas/preguntas-frecuentes/dac-7-informacion-vendedores.html",
+        "source_dated": "2026-09-08",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The host does not file modelo 238; the platform does, and must tell the host beforehand that the data will be reported. The AEAT page cites DAC 7, not Ley 13/2023 by number."
+    }
+  ]
+}

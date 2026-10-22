@@ -52,6 +52,20 @@ export function staticBlock(route) {
   parts.push(`<h1>${escapeHtml(route.h1)}</h1>`);
   for (const p of route.intro || []) parts.push(`<p>${escapeHtml(p)}</p>`);
 
+  // A guide's body: real headed sections of prose, then the sources it rests on.
+  if (Array.isArray(route.body) && route.body.length) {
+    parts.push('<section class="guide-body">');
+    for (const sec of route.body) {
+      parts.push(`<h2>${escapeHtml(sec.h2)}</h2>`);
+      for (const para of sec.paras || []) parts.push(`<p>${escapeHtml(para)}</p>`);
+    }
+    if (route.sources && route.sources.length) {
+      parts.push(`<h2>${escapeHtml(route.sourcesLabel || 'Sources')}</h2>`);
+      for (const line of route.sources) parts.push(`<p class="guide-source">${escapeHtml(line)}</p>`);
+    }
+    parts.push('</section>');
+  }
+
   if (route.links && route.links.length) {
     parts.push(`<h2>${escapeHtml(b.links)}</h2>`);
     parts.push('<ul>' + route.links.map(l => {

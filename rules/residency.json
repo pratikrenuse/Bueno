@@ -1,0 +1,568 @@
+{
+  "domain": "Residency, visas, tax residence and moving to Spain",
+  "rules": [
+    {
+      "id": "res.tax.183_days",
+      "statement": "A person is tax resident in Spain for a calendar year if they spend more than 183 days in Spanish territory during that year. Sporadic absences count towards the 183 days unless the person proves tax residence in another country.",
+      "value": 183,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9 Ley 35/2006 (LIRPF)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a9",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Any one of the tests is enough. Owning a home in Spain is not itself a test. The count is per calendar year, not any rolling 12 months. For tax havens the authorities may require proof of 183 days of presence there. See residency.day_counting for how the days are aggregated."
+    },
+    {
+      "id": "res.tax.economic_interests",
+      "statement": "A person is also tax resident in Spain if the main nucleus or base of their activities or economic interests is in Spain, directly or indirectly, even with fewer than 183 days.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9 Ley 35/2006 (LIRPF)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a9",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This second test stands on its own. A person who spends little time in Spain but whose main business or income base is here can still be resident."
+    },
+    {
+      "id": "res.tax.family_presumption",
+      "statement": "Unless proved otherwise, a person is presumed tax resident in Spain when their spouse, not legally separated, and the dependent minor children reside habitually in Spain.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9 Ley 35/2006 (LIRPF)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a9",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is a rebuttable presumption, not a separate automatic test. The person can prove the contrary, for example with a tax residence certificate from another country."
+    },
+    {
+      "id": "res.tax.worldwide_income",
+      "statement": "A Spanish tax resident pays personal income tax on their total income, regardless of where it was produced and of the residence of the payer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2 Ley 35/2006 (LIRPF)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a2",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is the main practical change on becoming resident: income from the home country, pensions and investments come into the Spanish return, subject to any double tax treaty."
+    },
+    {
+      "id": "res.tax.calendar_year",
+      "statement": "The personal income tax period is the calendar year and the tax accrues on 31 December.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 12 Ley 35/2006 (LIRPF)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a12",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Residence is decided for the whole calendar year. There is no general split year in the domestic rule."
+    },
+    {
+      "id": "res.special_regime.eligibility",
+      "statement": "A worker, professional, entrepreneur or investor who moves to Spain can opt for the special regime of art. 93 LIRPF if they were not resident in Spain during the five tax periods before the move.",
+      "value": 5,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 149, instrucciones de cumplimentacion (art. 93 LIRPF)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-personas-fisicas/modelo-149-irpf-comunicacion-opcion-exclusion_/instrucciones-cumplimentar-comunicacion.html",
+        "source_dated": "2026-06-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The move must stem from an employment contract, a directorship, an entrepreneurial activity, or highly qualified work for startups, training or research. Professional athletes are excluded. Since 2023 certain relatives can be included. The option is not available simply for retiring or buying a home."
+    },
+    {
+      "id": "res.special_regime.duration",
+      "statement": "The special regime applies in the tax period in which the person becomes Spanish tax resident and in the following five tax periods.",
+      "value": {
+        "first_period": "year residence is acquired",
+        "following_periods": 5
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 149, instrucciones de cumplimentacion (art. 93 LIRPF)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-personas-fisicas/modelo-149-irpf-comunicacion-opcion-exclusion_/instrucciones-cumplimentar-comunicacion.html",
+        "source_dated": "2026-06-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The first period is the year in which the stay in Spain first exceeds 183 days."
+    },
+    {
+      "id": "res.special_regime.option_deadline",
+      "statement": "The option for the special regime is communicated on modelo 149 within six months from the start date of the activity shown in the Spanish Social Security registration or equivalent documentation.",
+      "value": 6,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 149, instrucciones de cumplimentacion (art. 93 LIRPF)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-personas-fisicas/modelo-149-irpf-comunicacion-opcion-exclusion_/instrucciones-cumplimentar-comunicacion.html",
+        "source_dated": "2026-06-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Associated family members have a different window. The person needs a NIF and must be on the tax census before filing."
+    },
+    {
+      "id": "res.special_regime.rates",
+      "statement": "Under the special regime, general income is taxed at 24 percent up to 600,000 euros and 47 percent above. Savings income is taxed from 19 to 30 percent from 2025. The return is modelo 151.",
+      "value": {
+        "general": [
+          {
+            "up_to": 600000,
+            "rate": 24
+          },
+          {
+            "above": 600000,
+            "rate": 47
+          }
+        ],
+        "savings_2025": [
+          {
+            "up_to": 6000,
+            "rate": 19
+          },
+          {
+            "up_to": 50000,
+            "rate": 21
+          },
+          {
+            "up_to": 200000,
+            "rate": 23
+          },
+          {
+            "up_to": 300000,
+            "rate": 27
+          },
+          {
+            "above": 300000,
+            "rate": 30
+          }
+        ]
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 151, instrucciones ejercicio 2023 y siguientes (art. 93 LIRPF)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/eu_es/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-personas-fisicas/modelo-151-decla_____los-trabajadores-desplazados-espanol_/instrucciones-cumplimentacion-ejercicio-2023-siguientes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The tax debt is determined under the non-resident income tax rules, income is aggregated per calendar year with no offsetting. Savings top rate was 28 percent for 2023 and 2024."
+    },
+    {
+      "id": "res.special_regime.no_720",
+      "statement": "A person taxed under the special regime of art. 93 LIRPF is not obliged to file modelo 720, although family members who are Spanish tax residents may be.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 720, preguntas frecuentes: contribuyentes obligados a declarar",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/declaraciones-informativas/modelo-720-decla_____sobre-bienes-derechos-extranjero_/preguntas-frecuentes/contribuyentes-obligados-declarar.html",
+        "source_dated": "2026-09-08",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "res.nlv.means",
+      "statement": "For the non-lucrative residence authorisation, the applicant must show monthly means of 400 percent of IPREM for themselves and 100 percent of IPREM for each family member, enough to live without working.",
+      "value": {
+        "applicant": 400,
+        "per_family_member": 100
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Hoja informativa 6, arts. 60 to 63 RD 1155/2024 and arts. 30 bis and 31 LO 4/2000",
+        "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa",
+        "source_dated": "2025-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "IPREM is a public index set each year, so the euro figure changes. Check the IPREM in force when applying. Only the rules in force on the application date apply."
+    },
+    {
+      "id": "res.nlv.health_insurance",
+      "statement": "The non-lucrative applicant must hold public or private health insurance with an insurer authorised to operate in Spain.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Hoja informativa 6, arts. 60 to 63 RD 1155/2024 and arts. 30 bis and 31 LO 4/2000",
+        "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa",
+        "source_dated": "2025-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The information sheet does not address copayments. Do not state a rule on them."
+    },
+    {
+      "id": "res.nlv.no_work",
+      "statement": "The non-lucrative residence authorisation allows living in Spain without carrying out employment or professional activities.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Hoja informativa 6, arts. 60 to 63 RD 1155/2024 and arts. 30 bis and 31 LO 4/2000",
+        "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa",
+        "source_dated": "2025-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "res.nlv.duration",
+      "statement": "The initial non-lucrative residence authorisation lasts one year from the date of entry into Spain, and entry must happen within the visa validity, which is never more than three months.",
+      "value": {
+        "initial_years": 1,
+        "visa_max_months": 3
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Hoja informativa 6, arts. 60 to 63 RD 1155/2024 and arts. 30 bis and 31 LO 4/2000",
+        "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa",
+        "source_dated": "2025-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Renewal terms were not read in this session."
+    },
+    {
+      "id": "res.nlv.application",
+      "statement": "The non-lucrative visa is applied for in person at the Spanish consulate for the applicant's place of residence, with a criminal record certificate covering the countries of residence in the last five years.",
+      "value": 5,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Hoja informativa 6, arts. 60 to 63 RD 1155/2024 and arts. 30 bis and 31 LO 4/2000",
+        "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa",
+        "source_dated": "2025-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "An external service provider or another designated consulate may be used where the ministry allows."
+    },
+    {
+      "id": "res.telework.means",
+      "statement": "The international teleworking route requires monthly gross means of 200 percent of the SMI for the applicant, 75 percent of the SMI for a second household member and 25 percent of the SMI for each additional member.",
+      "value": {
+        "applicant": 200,
+        "second_member": 75,
+        "each_additional": 25
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones, Unidad de Grandes Empresas",
+        "ref": "Informacion y documentacion titulares, teletrabajadores de caracter internacional (Ley 14/2013)",
+        "url": "https://www.inclusion.gob.es/documents/d/unidadgrandesempresas/informacion-documentacion-titulares",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The SMI (minimum wage) changes, so the euro amount changes. Check the SMI in force when applying."
+    },
+    {
+      "id": "res.telework.relationship",
+      "statement": "The teleworker must have a relationship of at least three months with the foreign employer or client before applying, and the foreign company must have at least one year of real and continuous activity.",
+      "value": {
+        "relationship_months": 3,
+        "company_years": 1
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones, Unidad de Grandes Empresas",
+        "ref": "Informacion y documentacion titulares, teletrabajadores de caracter internacional (Ley 14/2013)",
+        "url": "https://www.inclusion.gob.es/documents/d/unidadgrandesempresas/informacion-documentacion-titulares",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The applicant also needs a recognised degree or postgraduate qualification, or at least three years of experience in similar functions. Regulated professions require Spanish homologation of the qualification or a notarised declaration that the profession will not be practised in Spain."
+    },
+    {
+      "id": "res.telework.spanish_clients",
+      "statement": "A self-employed international teleworker may also work for Spanish companies, provided that work is not more than 20 percent of their total professional activity.",
+      "value": 20,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones, Unidad de Grandes Empresas",
+        "ref": "Nomadas digitales, preguntas frecuentes (Ley 14/2013)",
+        "url": "https://bibliovirtual.inclusion.gob.es/documents/d/unidadgrandesempresas/nomadas-digitales-faqs-espanol",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "res.telework.visa",
+      "statement": "The international teleworking visa allows the holder to live and work in Spain for one year. To stay longer, the residence authorisation can be requested in the 60 days before the visa expires, while it is still valid.",
+      "value": {
+        "visa_years": 1,
+        "apply_days_before_expiry": 60
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones, Unidad de Grandes Empresas",
+        "ref": "Nomadas digitales, preguntas frecuentes (Ley 14/2013)",
+        "url": "https://bibliovirtual.inclusion.gob.es/documents/d/unidadgrandesempresas/nomadas-digitales-faqs-espanol",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The visa is requested at a Spanish consulate."
+    },
+    {
+      "id": "res.tie.required",
+      "statement": "A third-country national authorised to stay in Spain for more than six months, for example on a non-lucrative residence, must apply for a Tarjeta de Identidad de Extranjero (TIE) within one month of entering Spain.",
+      "value": {
+        "stay_over_days": 180,
+        "deadline_months": 1
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Asuntos Exteriores, consular page",
+        "ref": "Tarjeta de Identidad de Extranjero (TIE)",
+        "url": "https://www.exteriores.gob.es/Embajadas/ottawa/es/ServiciosConsulares/Paginas/Tarjeta-de-Identidad-de-Extranjero-%28TIE%29.aspx",
+        "source_dated": "2024-12-15",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The application is made at the Oficina de Extranjeria or police station in the province that handled the authorisation. Appointments can take several weeks, so book early. For stays up to 180 days the visa itself covers the stay. EU citizens follow a different registration, see eu.registration_over_three_months."
+    },
+    {
+      "id": "res.uk.withdrawal_agreement",
+      "statement": "UK nationals who were residing in Spain before the end of the transition period on 31 December 2020, and their family members, keep Withdrawal Agreement rights and are documented with a TIE that names art. 50 TUE.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Brexit, residentes en Espana a 31 de diciembre de 2020 (Acuerdo de Retirada)",
+        "url": "https://www.inclusion.gob.es/brexit/residencia/en-espana-a-31-12-2020",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Those who held the old registration certificate exchange it for the TIE at police offices. Those who never documented their status can still prove residence before that date with any valid evidence and should apply as soon as possible. Only the TIE art. 50 TUE, not the old certificate, exempts holders from the new EU border checks."
+    },
+    {
+      "id": "res.uk.new_arrivals",
+      "statement": "UK nationals who arrived in Spain from 1 January 2021, or who are not covered by the Withdrawal Agreement, fall under the general immigration regime for third-country nationals.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Inclusion, Seguridad Social y Migraciones",
+        "ref": "Brexit, residentes en Espana a 31 de diciembre de 2020 (Acuerdo de Retirada)",
+        "url": "https://www.inclusion.gob.es/brexit/residencia/en-espana-a-31-12-2020",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "So they need a visa route such as the non-lucrative residence to live in Spain, and the 90 in 180 days rule applies to visits. See schengen.short_stay. Owning a home in Spain does not change this."
+    },
+    {
+      "id": "res.nationality.periods",
+      "statement": "Spanish nationality by residence requires ten years of residence in general, five years for refugees, two years for nationals of origin of Ibero-American countries, Andorra, the Philippines, Equatorial Guinea or Portugal and for Sephardic Jews, and one year in specific cases such as being married to a Spanish national for a year.",
+      "value": {
+        "general": 10,
+        "refugees": 5,
+        "listed_countries": 2,
+        "special_cases": 1
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 22 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a22",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Other one-year cases: born in Spain, widow or widower of a Spaniard, born abroad to a parent or grandparent originally Spanish. Most European property owners fall in the ten-year general rule."
+    },
+    {
+      "id": "res.nationality.conditions",
+      "statement": "Residence for nationality must be legal, continuous and immediately before the application, and the applicant must show good civic conduct and sufficient integration into Spanish society.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 22 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a22",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Time spent as a visitor or a non-resident owner does not count, because the residence must be legal residence."
+    },
+    {
+      "id": "res.nationality.renunciation",
+      "statement": "To acquire Spanish nationality by residence, the applicant must swear or promise allegiance to the King and obedience to the Constitution and laws, declare that they renounce their previous nationality, and register the acquisition in the Spanish Civil Registry.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 23 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763#a23",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Nationals of the countries listed in art. 24.1 Codigo Civil and Sephardic Jews are exempt from the renunciation. That list was not read in this session, so do not name the countries from this rule."
+    },
+    {
+      "id": "res.m720.residents_only",
+      "statement": "Modelo 720, the return on assets held abroad, is filed by individuals resident in Spanish territory, not by non-residents.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 720, preguntas frecuentes: contribuyentes obligados a declarar",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/declaraciones-informativas/modelo-720-decla_____sobre-bienes-derechos-extranjero_/preguntas-frecuentes/contribuyentes-obligados-declarar.html",
+        "source_dated": "2026-09-08",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "It also covers people abroad who remain IRPF taxpayers under art. 10 LIRPF, such as diplomatic staff. People under the art. 93 special regime are not obliged. A non-resident owner of a Spanish home does not file it."
+    },
+    {
+      "id": "res.m720.threshold",
+      "statement": "There is no obligation to report a type of asset abroad on modelo 720 when its joint value does not exceed 50,000 euros.",
+      "value": 50000,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 720, preguntas frecuentes: forma de calcular el limite que obliga a declarar",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/declaraciones-informativas/modelo-720-decla_____sobre-bienes-derechos-extranjero_/preguntas-frecuentes/forma-calcular-limite-que-obliga-declarar.html",
+        "source_dated": "2026-09-08",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The limit is tested per type of asset: accounts (positive and negative balances netted), securities and funds (31 December value), and real estate (combined value)."
+    },
+    {
+      "id": "res.m720.refiling",
+      "statement": "After a first modelo 720, a new one is required only when the joint value of a block of information increases by more than 20,000 euros compared with the last declaration, or when another cause such as a transfer requires it.",
+      "value": 20000,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Modelo 720, preguntas frecuentes: frecuencia en la presentacion",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/declaraciones-informativas/modelo-720-decla_____sobre-bienes-derechos-extranjero_/preguntas-frecuentes/frecuencia-presentacion-declaracion.html",
+        "source_dated": "2026-09-08",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The filing window was not confirmed in this session. Do not state a deadline from this rule."
+    },
+    {
+      "id": "res.licence.eu",
+      "statement": "A driving licence issued in an EU or EEA country is valid for driving in Spain while it remains in force, and exchanging it for a Spanish licence is optional.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "DGT",
+        "ref": "Trasladarte a Espana desde un pais de la Union Europea",
+        "url": "https://www.dgt.es/nuestros-servicios/permisos-de-conducir/cambio-de-domicilio/vienes-a-vivir-a-espana/trasladarte-a-espana-desde-un-pais-de-la-union-europea/",
+        "source_dated": "2020-12-28",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "res.licence.eu_renewal",
+      "statement": "An EU or EEA licence with no expiry date or with long validity, more than 15 years for car and motorcycle categories or more than 5 years for bus and truck categories, must be renewed in Spain after two years of normal residence.",
+      "value": {
+        "after_years_residence": 2,
+        "car_validity_over_years": 15,
+        "heavy_validity_over_years": 5
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "DGT",
+        "ref": "Trasladarte a Espana desde un pais de la Union Europea",
+        "url": "https://www.dgt.es/nuestros-servicios/permisos-de-conducir/cambio-de-domicilio/vienes-a-vivir-a-espana/trasladarte-a-espana-desde-un-pais-de-la-union-europea/",
+        "source_dated": "2020-12-28",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Licences with a normal expiry are renewed in Spain when they expire, once the holder lives here."
+    },
+    {
+      "id": "res.licence.uk",
+      "statement": "A UK licence holder who becomes resident in Spain may drive with the UK licence for six months from entry or from obtaining residence, and can exchange it at the DGT, with residence shown by the TIE, a medical fitness report and a fee of 28.87 euros.",
+      "value": {
+        "months": 6,
+        "fee": 28.87
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "DGT sede electronica",
+        "ref": "Canje de permisos de paises extracomunitarios: Reino Unido",
+        "url": "https://sede.dgt.gob.es/es/permisos-de-conducir/canjes-de-permisos/canjes-de-permisos-extranjeros/extracomunitarios/canje-paises-G1-SL-SP-UK/?pais=gb",
+        "source_dated": null,
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "The exchange rules applied from 16 March 2023. A test is generally needed only where C or D categories are included. The applicant must show they were not resident in Spain when the UK licence was obtained. The fee changes yearly."
+    }
+  ]
+}

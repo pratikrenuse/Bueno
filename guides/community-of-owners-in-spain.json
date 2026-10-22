@@ -1,0 +1,478 @@
+{
+  "slug": "community-of-owners-in-spain",
+  "topic": "community",
+  "tool": "cost-audit",
+  "rules": [
+    "own.lph.contribute",
+    "own.lph.reserve_fund",
+    "own.lph.president",
+    "own.lph.administrator",
+    "own.lph.administrator_duties",
+    "own.lph.annual_meeting",
+    "own.lph.notice",
+    "own.lph.proxy",
+    "own.lph.arrears_no_vote",
+    "own.lph.minutes",
+    "own.lph.domicile_in_spain",
+    "own.lph.absent_votes",
+    "own.lph.mandatory_works",
+    "own.lph.mandatory_works_cost",
+    "own.lph.majority_accessibility",
+    "own.lph.majority_one_third",
+    "own.lph.majority_services",
+    "own.lph.majority_other",
+    "own.lph.unanimity",
+    "own.lph.ev_charger",
+    "own.lph.own_unit_changes",
+    "own.lph.terrace_closure",
+    "own.lph.improvements_dissenter",
+    "own.lph.unpaid_monitorio",
+    "own.lph.unpaid_costs",
+    "own.lph.unpaid_interest",
+    "own.lph.unpaid_attachment",
+    "own.lph.seller_declaration",
+    "own.lph.change_of_owner",
+    "lph.17_12.majority",
+    "lph.17_12.effective_date",
+    "limit.community.challenge",
+    "limit.community.challenge.absent",
+    "limit.community.challenge.standing",
+    "limit.community.buyer_liability"
+  ],
+  "answers": [
+    "challenge-a-spanish-community-of-owners-decision",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "tourist-letting-and-the-community-of-owners",
+    "community-approval-for-a-new-tourist-let-spain",
+    "community-surcharge-on-a-tourist-flat-spain",
+    "does-a-community-tourist-let-ban-cover-seasonal-lets"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Community of Owners in Spain: Fees, Votes, Rights",
+      "description": "How a Spanish community of owners works for an owner abroad: what you pay, how meetings and votes run, and what to do when you disagree with a decision.",
+      "h1": "The community of owners, explained for owners who live abroad",
+      "lead": "If your Spanish home shares a building, a pool or a garden, you belong to a community of owners (comunidad de propietarios) under the Ley de Propiedad Horizontal. You pay a share of the common costs fixed in the deeds, and decisions are taken at an owners meeting held at least once a year. An owner who is not there is still bound by what it decides.",
+      "sections": [
+        {
+          "h2": "Do I have to pay community fees if I hardly use the pool?",
+          "paras": [
+            "Yes. Every owner contributes to the general costs of the building according to the participation share (cuota de participación) fixed in the title deed or the statutes. Not using a service does not exempt you from paying for it, so unless the statutes say otherwise, the ground floor flat pays its share of the lift and the winter-only owner pays for the pool.",
+            "There is no national figure for the fees. They come from the budget the owners approve each year, and they depend on what the community runs and maintains. Before you buy, ask for the last approved budget and the minutes of recent meetings. They tell you more about the building than the listing does."
+          ]
+        },
+        {
+          "h2": "What is the reserve fund, and why does it matter?",
+          "paras": [
+            "Every community must keep a reserve fund of at least 10 percent of its last ordinary budget. It pays for conservation, repair and renovation works, and certain accessibility and energy efficiency works, and it can also pay for building insurance or a permanent maintenance contract. Older guides still say 5 percent, which is out of date.",
+            "The fund does not always cover a big job. Works needed to keep the building safe, habitable and accessible are compulsory and need no prior vote. All owners pay for them, and the meeting only decides how the cost is split and paid. That is how an extra charge (derrama) can appear on top of your normal fees."
+          ]
+        },
+        {
+          "h2": "Who runs the community?",
+          "paras": [
+            "Three roles do the work. The president is chosen from among the owners, by election or, failing that, by rotation or lottery. The post is compulsory, though an owner can ask a judge to be released within one month of taking it up. The president represents the community in and out of court and calls the meetings.",
+            "The administrator looks after the building and its services, prepares the spending plan for the meeting, carries out agreed works and handles payments and collections. It can be any owner or a professionally qualified person or firm (an administrador de fincas, for example). Unless the statutes or the meeting decide otherwise, the president also acts as secretary and administrator, and each post lasts one year."
+          ]
+        },
+        {
+          "h2": "How do meetings work, and can I vote from abroad?",
+          "paras": [
+            "The owners meeting must be held at least once a year to approve the budget and accounts. The ordinary meeting is called at least six days in advance. If there is no quorum at the first call, a second call can follow half an hour later, or within eight days with at least three days notice. A quarter of the owners, or owners holding 25 percent of the shares, can require an extra meeting.",
+            "You do not have to fly in. Anyone can represent you who holds a document you have signed, and no notary is needed for that proxy. One condition applies: an owner behind on overdue community debts may attend and speak but may not vote, unless the debt has been challenged in court or deposited. Decisions go into minutes signed by the president and secretary, and they can be enforced once the minutes are closed."
+          ]
+        },
+        {
+          "h2": "I live abroad. How will I hear about decisions?",
+          "paras": [
+            "Give the community secretary an address in Spain for notices. Without one, notices go to the flat itself, and if they cannot be delivered there they are posted on the community notice board and take effect after three calendar days. That is how an owner in Oslo or Hamburg can miss a meeting entirely and still be bound by it.",
+            "Silence also counts as a vote. An owner who was properly called but did not attend is treated as voting in favour, unless they tell the secretary they disagree within 30 calendar days of being informed, by a method that proves receipt. Keep proof that your message arrived, and read the minutes as soon as they reach you, because the 30 days start from when you are informed."
+          ]
+        },
+        {
+          "h2": "What majority does each decision need?",
+          "paras": [
+            "It depends on the decision. Ordinary matters need a majority of all owners who also hold a majority of the shares. A lift or works to remove barriers for people with disabilities need the same majority. Telecommunications or renewable energy installations need only one third of owners and shares. A porter, concierge or surveillance service needs three fifths of owners and shares. Changing the rules in the title deed or statutes needs unanimity, unless another majority covers that change.",
+            "Since 3 April 2025, three fifths of owners holding three fifths of the shares are needed to approve, limit, condition or prohibit tourist letting in the building. Many guides still describe this only as a ban, but the same majority now decides whether a new tourist let may start at all. An electric car charger is different again: it only needs prior notice to the community, and the owner installing it pays."
+          ]
+        },
+        {
+          "h2": "Can I change my own flat or close in the terrace?",
+          "paras": [
+            "You may alter the inside of your own home, but you must tell the community representative first and must not harm the safety of the building, its structure, its configuration or its exterior. The facade is protected, so changing it is not a private decision.",
+            "Closing a terrace, adding floors, any other change to the structure or fabric of the building, and splitting or merging flats need three fifths of all owners who also hold three fifths of the shares. On the other side, if three fifths approve an improvement that is not needed for conservation, safety or accessibility, and each owner's share of the installation exceeds three ordinary monthly payments, an owner who voted against does not have to pay. If that owner later wants to use it, they pay their share with legal interest."
+          ]
+        },
+        {
+          "h2": "What if I disagree with a decision?",
+          "paras": [
+            "You can challenge it in court. The window is three months if the decision seriously harms the community or unfairly harms one owner, and one year if it breaks the law or the statutes. If you were not at the meeting, the window runs from the day the decision was communicated to you, not from the day of the meeting.",
+            "To bring the challenge you must be up to date with community payments, or pay the disputed amount into court first, unless the challenge is about the shares themselves. An abogado can tell you which window applies to your case. Where an ordinary decision fails to reach its majority, a judge can decide it in equity on a request made within one month of the second meeting."
+          ]
+        },
+        {
+          "h2": "What happens if fees go unpaid, or I buy a flat with debts?",
+          "paras": [
+            "The community can claim unpaid charges, including the reserve fund, through a fast payment procedure for communities, using a certificate of the debt approved by the meeting. The debtor pays the costs of the claim, interest runs from the date payment was due, and if the debtor opposes, the court must allow a preventive seizure of their assets without the community giving security.",
+            "When you buy, the seller must declare in the deed that they are up to date with community charges or provide a certificate of what they owe. Ask for it. A buyer takes on the seller's unpaid charges for the part of the year already gone plus the three previous calendar years, and the property answers for them. When you sell, tell the secretary, or you stay jointly liable for charges that fall due afterwards. With that settled, the community mostly runs in the background, and you can enjoy the pool."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Sameie i Spania: fellesutgifter, stemmer og rettigheter",
+      "description": "Slik fungerer et spansk sameie for en eier i utlandet: hva du betaler, hvordan møter og avstemninger foregår og hva du gjør når du er uenig i et vedtak.",
+      "h1": "Sameiet forklart for eiere som bor i utlandet",
+      "lead": "Deler boligen din i Spania bygg, basseng eller hage med andre, er du med i et sameie (comunidad de propietarios) etter Ley de Propiedad Horizontal. Du betaler en andel av felleskostnadene som er fastsatt i skjøtene, og vedtak fattes på et sameiermøte som holdes minst én gang i året. En eier som ikke er til stede er likevel bundet av det møtet bestemmer.",
+      "sections": [
+        {
+          "h2": "Må jeg betale fellesutgifter selv om jeg nesten ikke bruker bassenget?",
+          "paras": [
+            "Ja. Hver eier bidrar til byggets felleskostnader etter eierbrøken (cuota de participación) som er fastsatt i skjøtet eller vedtektene. At du ikke bruker en tjeneste fritar deg ikke fra å betale for den, så med mindre vedtektene sier noe annet, betaler leiligheten i første etasje sin del av heisen og vintereieren betaler for bassenget.",
+            "Det finnes ikke noe nasjonalt tall for fellesutgiftene. De kommer fra budsjettet eierne godkjenner hvert år, og avhenger av hva sameiet driver og vedlikeholder. Før du kjøper, be om siste godkjente budsjett og protokollene fra de siste møtene. De forteller deg mer om bygget enn annonsen gjør."
+          ]
+        },
+        {
+          "h2": "Hva er reservefondet, og hvorfor er det viktig?",
+          "paras": [
+            "Hvert sameie må ha et reservefond på minst 10 prosent av sitt siste ordinære budsjett. Det dekker vedlikehold, reparasjoner og renovering, og visse arbeider for tilgjengelighet og energieffektivitet, og det kan også betale bygningsforsikring eller en fast vedlikeholdsavtale. Eldre veiledninger sier fortsatt 5 prosent, noe som er utdatert.",
+            "Fondet dekker ikke alltid en stor jobb. Arbeider som trengs for å holde bygget trygt, beboelig og tilgjengelig er obligatoriske og krever ingen forutgående avstemning. Alle eiere betaler for dem, og møtet bestemmer bare hvordan kostnaden fordeles og betales. Det er slik en ekstra innbetaling (derrama) kan dukke opp i tillegg til de vanlige fellesutgiftene."
+          ]
+        },
+        {
+          "h2": "Hvem styrer sameiet?",
+          "paras": [
+            "Tre roller gjør jobben. Lederen velges blant eierne, ved valg eller, om det ikke lykkes, etter tur eller ved loddtrekning. Vervet er obligatorisk, men en eier kan be en dommer om å bli fritatt innen én måned etter at vervet ble tatt. Lederen representerer sameiet i og utenfor retten og kaller inn til møtene.",
+            "Forvalteren tar seg av bygget og tjenestene, utarbeider utgiftsplanen til møtet, gjennomfører vedtatte arbeider og håndterer betalinger og innkreving. Det kan være en hvilken som helst eier eller en faglig kvalifisert person eller et firma (for eksempel en administrador de fincas). Med mindre vedtektene eller møtet bestemmer noe annet, er lederen også sekretær og forvalter, og hvert verv varer ett år."
+          ]
+        },
+        {
+          "h2": "Hvordan foregår møtene, og kan jeg stemme fra utlandet?",
+          "paras": [
+            "Sameiermøtet må holdes minst én gang i året for å godkjenne budsjett og regnskap. Det ordinære møtet kalles inn minst seks dager i forveien. Er møtet ikke beslutningsdyktig ved første innkalling, kan andre innkalling følge en halv time senere, eller innen åtte dager med minst tre dagers varsel. En fjerdedel av eierne, eller eiere med 25 prosent av eierbrøkene, kan kreve et ekstra møte.",
+            "Du trenger ikke fly ned. Hvem som helst kan representere deg hvis de har et dokument du har signert, og det trengs ingen notar for den fullmakten. Ett vilkår gjelder: en eier som skylder forfalte fellesutgifter kan møte og ta ordet, men ikke stemme, med mindre gjelden er bestridt i retten eller deponert. Vedtak føres i en protokoll som signeres av lederen og sekretæren, og de kan håndheves når protokollen er avsluttet."
+          ]
+        },
+        {
+          "h2": "Jeg bor i utlandet. Hvordan får jeg vite om vedtak?",
+          "paras": [
+            "Gi sameiets sekretær en adresse i Spania for varsler. Uten en slik adresse går varslene til selve leiligheten, og kan de ikke leveres der, slås de opp på sameiets oppslagstavle og får virkning etter tre kalenderdager. Det er slik en eier i Oslo eller Hamburg kan gå glipp av et møte helt og likevel være bundet av det.",
+            "Taushet teller også som en stemme. En eier som ble riktig innkalt, men ikke møtte, regnes som å ha stemt for, med mindre vedkommende gir sekretæren beskjed om at han eller hun er uenig innen 30 kalenderdager etter å ha blitt informert, på en måte som beviser mottak. Ta vare på bevis for at meldingen din kom fram, og les protokollen så snart den når deg, fordi de 30 dagene løper fra du blir informert."
+          ]
+        },
+        {
+          "h2": "Hvilket flertall krever hvert vedtak?",
+          "paras": [
+            "Det kommer an på vedtaket. Ordinære saker krever et flertall av alle eiere som også har et flertall av eierbrøkene. En heis eller arbeider for å fjerne hindringer for personer med funksjonsnedsettelser krever samme flertall. Installasjoner for telekommunikasjon eller fornybar energi krever bare en tredjedel av eierne og eierbrøkene. En portner, vaktmester eller vakttjeneste krever tre femtedeler av eierne og eierbrøkene. Å endre reglene i skjøtet eller vedtektene krever enstemmighet, med mindre et annet flertall dekker den endringen.",
+            "Siden 3. april 2025 kreves tre femtedeler av eierne med tre femtedeler av eierbrøkene for å godkjenne, begrense, sette vilkår for eller forby turistutleie i bygget. Mange veiledninger beskriver fortsatt dette bare som et forbud, men det samme flertallet avgjør nå om en ny turistutleie i det hele tatt kan starte. En lader for elbil er noe annet igjen: den krever bare forhåndsvarsel til sameiet, og eieren som installerer den betaler."
+          ]
+        },
+        {
+          "h2": "Kan jeg endre min egen leilighet eller bygge inn terrassen?",
+          "paras": [
+            "Du kan endre innsiden av din egen bolig, men du må gi sameiets representant beskjed først og må ikke skade byggets sikkerhet, konstruksjon, utforming eller eksteriør. Fasaden er vernet, så å endre den er ikke en privat beslutning.",
+            "Å bygge inn en terrasse, bygge på etasjer, enhver annen endring i byggets konstruksjon eller bygningsmasse, og å dele eller slå sammen leiligheter krever tre femtedeler av alle eiere som også har tre femtedeler av eierbrøkene. På den andre siden gjelder at hvis tre femtedeler godkjenner en forbedring som ikke trengs for vedlikehold, sikkerhet eller tilgjengelighet, og hver eiers andel av installasjonen overstiger tre ordinære månedlige innbetalinger, trenger ikke en eier som stemte imot å betale. Vil den eieren senere bruke den, betaler vedkommende sin andel med lovbestemt rente."
+          ]
+        },
+        {
+          "h2": "Hva om jeg er uenig i et vedtak?",
+          "paras": [
+            "Du kan angripe det i retten. Fristen er tre måneder hvis vedtaket skader sameiet alvorlig eller rammer én eier urimelig, og ett år hvis det bryter loven eller vedtektene. Var du ikke på møtet, løper fristen fra dagen vedtaket ble meddelt deg, ikke fra møtedagen.",
+            "For å angripe vedtaket må du være à jour med innbetalingene til sameiet, eller først betale det omtvistede beløpet inn til retten, med mindre saken gjelder selve eierbrøkene. En abogado kan fortelle deg hvilken frist som gjelder i din sak. Der et ordinært vedtak ikke oppnår flertall, kan en dommer avgjøre det etter rimelighet på en anmodning fremmet innen én måned etter det andre møtet."
+          ]
+        },
+        {
+          "h2": "Hva skjer hvis fellesutgifter ikke blir betalt, eller jeg kjøper en leilighet med gjeld?",
+          "paras": [
+            "Sameiet kan kreve inn ubetalte utgifter, også til reservefondet, gjennom en hurtigprosess for betaling beregnet på sameier, med en gjeldsattest godkjent av møtet. Skyldneren betaler kostnadene ved kravet, renter løper fra forfallsdatoen, og protesterer skyldneren, må retten tillate en forebyggende arrest i vedkommendes eiendeler uten at sameiet stiller sikkerhet.",
+            "Når du kjøper, må selgeren erklære i skjøtet at han eller hun er à jour med fellesutgiftene, eller legge fram en attest om hva som skyldes. Be om den. En kjøper overtar selgerens ubetalte fellesutgifter for den delen av året som har gått pluss de tre foregående kalenderårene, og eiendommen hefter for dem. Når du selger, gi sekretæren beskjed, ellers blir du solidarisk ansvarlig for utgifter som forfaller etterpå. Når det er ordnet, går sameiet stort sett i bakgrunnen, og du kan nyte bassenget."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Samfällighet i Spanien: avgifter, röster och rättigheter",
+      "description": "Så fungerar en spansk samfällighet för en ägare utomlands: vad du betalar, hur stämmor och omröstningar går till och vad du gör när du inte håller med.",
+      "h1": "Samfälligheten, förklarad för ägare som bor utomlands",
+      "lead": "Delar din spanska bostad hus, pool eller trädgård med andra ingår du i en samfällighet (comunidad de propietarios) enligt Ley de Propiedad Horizontal. Du betalar en andel av de gemensamma kostnaderna enligt handlingarna, och beslut fattas på en ägarstämma som hålls minst en gång om året. En ägare som inte är där är ändå bunden av det stämman beslutar.",
+      "sections": [
+        {
+          "h2": "Måste jag betala samfällighetsavgift om jag knappt använder poolen?",
+          "paras": [
+            "Ja. Varje ägare bidrar till husets gemensamma kostnader enligt det andelstal (cuota de participación) som fastställts i lagfartshandlingen eller stadgarna. Att inte använda en tjänst befriar dig inte från att betala för den, så om inte stadgarna säger något annat betalar bottenvåningslägenheten sin andel av hissen och vinterägaren betalar för poolen.",
+            "Det finns ingen nationell siffra för avgifterna. De kommer från den budget som ägarna godkänner varje år, och de beror på vad samfälligheten driver och underhåller. Be om den senast godkända budgeten och protokollen från de senaste stämmorna innan du köper. De säger mer om huset än annonsen gör."
+          ]
+        },
+        {
+          "h2": "Vad är reservfonden, och varför spelar den roll?",
+          "paras": [
+            "Varje samfällighet måste ha en reservfond på minst 10 procent av sin senaste ordinarie budget. Den betalar för underhåll, reparationer och renoveringar, och för vissa åtgärder för tillgänglighet och energieffektivitet, och den kan också betala för byggnadsförsäkring eller ett löpande underhållsavtal. Äldre guider säger fortfarande 5 procent, vilket är inaktuellt.",
+            "Fonden räcker inte alltid till ett stort jobb. Arbeten som behövs för att hålla huset säkert, beboeligt och tillgängligt är obligatoriska och kräver ingen föregående omröstning. Alla ägare betalar för dem, och stämman bestämmer bara hur kostnaden fördelas och betalas. Det är så en extra uttaxering (derrama) kan dyka upp utöver dina vanliga avgifter."
+          ]
+        },
+        {
+          "h2": "Vem leder samfälligheten?",
+          "paras": [
+            "Tre roller gör jobbet. Ordföranden väljs bland ägarna, genom val eller, om det inte går, genom turordning eller lottning. Uppdraget är obligatoriskt, men en ägare kan be en domare om att bli befriad inom en månad från att ha tillträtt. Ordföranden företräder samfälligheten inom och utom domstol och kallar till stämmorna.",
+            "Förvaltaren sköter huset och dess tjänster, tar fram utgiftsplanen inför stämman, genomför beslutade arbeten och hanterar betalningar och indrivning. Det kan vara vilken ägare som helst eller en yrkeskvalificerad person eller firma (en administrador de fincas, till exempel). Om inte stadgarna eller stämman beslutar annat är ordföranden också sekreterare och förvaltare, och varje uppdrag gäller ett år."
+          ]
+        },
+        {
+          "h2": "Hur går stämmorna till, och kan jag rösta från utlandet?",
+          "paras": [
+            "Ägarstämman måste hållas minst en gång om året för att godkänna budget och räkenskaper. Den ordinarie stämman kallas till minst sex dagar i förväg. Är stämman inte beslutför vid första kallelsen kan en andra kallelse följa en halvtimme senare, eller inom åtta dagar med minst tre dagars varsel. En fjärdedel av ägarna, eller ägare med 25 procent av andelarna, kan kräva en extra stämma.",
+            "Du behöver inte flyga dit. Vem som helst kan företräda dig som har en handling du har skrivit under, och ingen notarie behövs för den fullmakten. Ett villkor gäller: en ägare som ligger efter med förfallna skulder till samfälligheten får närvara och yttra sig men inte rösta, om inte skulden har bestridits i domstol eller deponerats. Besluten förs in i ett protokoll som undertecknas av ordföranden och sekreteraren, och de kan verkställas när protokollet har justerats."
+          ]
+        },
+        {
+          "h2": "Jag bor utomlands. Hur får jag veta vad som beslutas?",
+          "paras": [
+            "Ge samfällighetens sekreterare en adress i Spanien för meddelanden. Utan en sådan skickas meddelanden till själva lägenheten, och kan de inte delas ut där sätts de upp på samfällighetens anslagstavla och får verkan efter tre kalenderdagar. Det är så en ägare i Oslo eller Hamburg kan missa en stämma helt och ändå vara bunden av den.",
+            "Tystnad räknas också som en röst. En ägare som kallats korrekt men inte deltog räknas som att ha röstat för, om hen inte meddelar sekreteraren att hen inte håller med inom 30 kalenderdagar från att ha informerats, på ett sätt som bevisar mottagandet. Spara bevis på att ditt meddelande kom fram, och läs protokollet så snart det når dig, eftersom de 30 dagarna räknas från när du informeras."
+          ]
+        },
+        {
+          "h2": "Vilken majoritet kräver varje beslut?",
+          "paras": [
+            "Det beror på beslutet. Vanliga frågor kräver en majoritet av alla ägare som också representerar en majoritet av andelarna. En hiss eller arbeten för att ta bort hinder för personer med funktionsnedsättning kräver samma majoritet. Installationer för telekommunikation eller förnybar energi kräver bara en tredjedel av ägare och andelar. En portvakt, concierge eller bevakningstjänst kräver tre femtedelar av ägare och andelar. Att ändra reglerna i lagfartshandlingen eller stadgarna kräver enhällighet, om inte en annan majoritet gäller för just den ändringen.",
+            "Sedan 3 april 2025 krävs tre femtedelar av ägarna som representerar tre femtedelar av andelarna för att godkänna, begränsa, villkora eller förbjuda turistuthyrning i huset. Många guider beskriver fortfarande detta bara som ett förbud, men samma majoritet avgör nu om en ny turistuthyrning alls får starta. En laddare för elbil är något annat igen: den kräver bara ett förhandsbesked till samfälligheten, och ägaren som installerar den betalar."
+          ]
+        },
+        {
+          "h2": "Kan jag ändra i min egen lägenhet eller glasa in terrassen?",
+          "paras": [
+            "Du får ändra insidan av din egen bostad, men du måste först meddela samfällighetens företrädare och får inte skada husets säkerhet, konstruktion, utformning eller exteriör. Fasaden är skyddad, så att ändra den är inte ett privat beslut.",
+            "Att glasa in en terrass, bygga på våningar, göra andra ändringar i husets konstruktion eller stomme, och att dela eller slå ihop lägenheter kräver tre femtedelar av alla ägare som också representerar tre femtedelar av andelarna. Å andra sidan, om tre femtedelar godkänner en förbättring som inte behövs för underhåll, säkerhet eller tillgänglighet, och varje ägares andel av installationen överstiger tre ordinarie månadsavgifter, behöver en ägare som röstade emot inte betala. Vill den ägaren senare använda den betalar hen sin andel med lagstadgad ränta."
+          ]
+        },
+        {
+          "h2": "Vad gör jag om jag inte håller med om ett beslut?",
+          "paras": [
+            "Du kan klandra det i domstol. Fristen är tre månader om beslutet allvarligt skadar samfälligheten eller drabbar en ägare oskäligt, och ett år om det strider mot lag eller stadgar. Var du inte på stämman löper fristen från den dag beslutet meddelades dig, inte från stämmodagen.",
+            "För att klandra måste du vara i fas med betalningarna till samfälligheten, eller först deponera det omtvistade beloppet i domstol, om inte klandret gäller själva andelstalen. En abogado kan tala om vilken frist som gäller i ditt fall. När ett vanligt beslut inte når sin majoritet kan en domare avgöra det efter skälighet på en begäran som görs inom en månad från den andra stämman."
+          ]
+        },
+        {
+          "h2": "Vad händer om avgifter inte betalas, eller om jag köper en lägenhet med skulder?",
+          "paras": [
+            "Samfälligheten kan kräva in obetalda avgifter, även till reservfonden, genom ett snabbt betalningsförfarande för samfälligheter, med ett skuldintyg som godkänts av stämman. Gäldenären betalar kostnaderna för kravet, ränta löper från den dag betalningen förföll, och bestrider gäldenären måste domstolen tillåta en säkerhetsåtgärd i gäldenärens tillgångar utan att samfälligheten ställer säkerhet.",
+            "När du köper måste säljaren intyga i handlingen att hen har betalat samfällighetsavgifterna eller lämna ett intyg om vad hen är skyldig. Be om det. En köpare övertar säljarens obetalda avgifter för den del av året som redan gått plus de tre föregående kalenderåren, och fastigheten svarar för dem. När du säljer, meddela sekreteraren, annars förblir du solidariskt ansvarig för avgifter som förfaller därefter. När det är ordnat sköter sig samfälligheten mest i bakgrunden, och du kan njuta av poolen."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Eigentümergemeinschaft in Spanien: Kosten, Stimmen, Rechte",
+      "description": "So funktioniert eine spanische Eigentümergemeinschaft für Eigentümer im Ausland: was Sie zahlen, wie Versammlungen ablaufen und was bei Streit hilft.",
+      "h1": "Die Eigentümergemeinschaft, erklärt für Eigentümer, die im Ausland leben",
+      "lead": "Wenn Ihre spanische Immobilie sich ein Gebäude, einen Pool oder einen Garten mit anderen teilt, gehören Sie einer Eigentümergemeinschaft (comunidad de propietarios) nach der Ley de Propiedad Horizontal an. Sie zahlen einen in den Urkunden festgelegten Anteil an den gemeinsamen Kosten, und Entscheidungen fallen in einer Eigentümerversammlung, die mindestens einmal im Jahr stattfindet. Wer nicht dabei ist, ist trotzdem an ihre Beschlüsse gebunden.",
+      "sections": [
+        {
+          "h2": "Muss ich Gemeinschaftskosten zahlen, wenn ich den Pool kaum nutze?",
+          "paras": [
+            "Ja. Jeder Eigentümer trägt zu den allgemeinen Kosten des Gebäudes bei, entsprechend dem Miteigentumsanteil (cuota de participación), der in der Eigentumsurkunde oder der Satzung festgelegt ist. Wer eine Leistung nicht nutzt, ist deshalb nicht von der Zahlung befreit. Sofern die Satzung nichts anderes sagt, zahlt die Wohnung im Erdgeschoss also ihren Anteil am Aufzug und der Eigentümer, der nur im Winter kommt, für den Pool.",
+            "Es gibt keine landesweite Zahl für die Beiträge. Sie ergeben sich aus dem Haushalt, den die Eigentümer jedes Jahr beschließen, und hängen davon ab, was die Gemeinschaft betreibt und instand hält. Fragen Sie vor dem Kauf nach dem zuletzt beschlossenen Haushalt und den Protokollen der letzten Versammlungen. Sie verraten mehr über das Gebäude als das Inserat."
+          ]
+        },
+        {
+          "h2": "Was ist die Rücklage, und warum ist sie wichtig?",
+          "paras": [
+            "Jede Gemeinschaft muss eine Rücklage von mindestens 10 Prozent ihres letzten ordentlichen Haushalts bilden. Aus ihr werden Erhaltungs-, Reparatur- und Renovierungsarbeiten sowie bestimmte Arbeiten zur Barrierefreiheit und Energieeffizienz bezahlt, und sie kann auch die Gebäudeversicherung oder einen dauerhaften Wartungsvertrag abdecken. Ältere Ratgeber nennen noch 5 Prozent, das ist veraltet.",
+            "Für eine große Maßnahme reicht die Rücklage nicht immer. Arbeiten, die nötig sind, um das Gebäude sicher, bewohnbar und barrierefrei zu halten, sind Pflicht und brauchen keine vorherige Abstimmung. Alle Eigentümer zahlen dafür, und die Versammlung entscheidet nur, wie die Kosten aufgeteilt und bezahlt werden. So kann zusätzlich zu Ihren normalen Beiträgen eine Sonderumlage (derrama) entstehen."
+          ]
+        },
+        {
+          "h2": "Wer leitet die Gemeinschaft?",
+          "paras": [
+            "Drei Funktionen erledigen die Arbeit. Der Präsident wird aus dem Kreis der Eigentümer bestimmt, durch Wahl oder, falls das nicht gelingt, im Wechsel oder per Los. Das Amt ist Pflicht, ein Eigentümer kann aber innerhalb eines Monats nach Amtsantritt bei Gericht die Befreiung beantragen. Der Präsident vertritt die Gemeinschaft gerichtlich und außergerichtlich und beruft die Versammlungen ein.",
+            "Der Verwalter kümmert sich um das Gebäude und seine Einrichtungen, bereitet den Ausgabenplan für die Versammlung vor, führt beschlossene Arbeiten aus und erledigt Zahlungen und Einzüge. Das kann jeder Eigentümer sein oder eine fachlich qualifizierte Person oder Firma (zum Beispiel ein administrador de fincas). Sofern Satzung oder Versammlung nichts anderes bestimmen, ist der Präsident zugleich Sekretär und Verwalter, und jedes Amt dauert ein Jahr."
+          ]
+        },
+        {
+          "h2": "Wie laufen Versammlungen ab, und kann ich vom Ausland aus abstimmen?",
+          "paras": [
+            "Die Eigentümerversammlung muss mindestens einmal im Jahr stattfinden, um Haushalt und Abrechnung zu genehmigen. Zur ordentlichen Versammlung wird mindestens sechs Tage vorher eingeladen. Ist bei der ersten Einberufung keine Beschlussfähigkeit gegeben, kann eine zweite Einberufung eine halbe Stunde später folgen oder innerhalb von acht Tagen mit mindestens drei Tagen Vorlauf. Ein Viertel der Eigentümer oder Eigentümer mit 25 Prozent der Anteile können eine außerordentliche Versammlung verlangen.",
+            "Sie müssen nicht anreisen. Vertreten kann Sie jeder, der ein von Ihnen unterschriebenes Dokument vorlegt, und für diese Vollmacht ist kein Notar nötig. Eine Bedingung gilt: Ein Eigentümer mit fälligen Rückständen bei der Gemeinschaft darf teilnehmen und sprechen, aber nicht abstimmen, es sei denn, die Schuld wurde gerichtlich angefochten oder hinterlegt. Beschlüsse kommen in ein vom Präsidenten und Sekretär unterschriebenes Protokoll und können vollstreckt werden, sobald das Protokoll abgeschlossen ist."
+          ]
+        },
+        {
+          "h2": "Ich lebe im Ausland. Wie erfahre ich von Beschlüssen?",
+          "paras": [
+            "Geben Sie dem Sekretär der Gemeinschaft eine Adresse in Spanien für Mitteilungen. Ohne eine solche gehen Mitteilungen an die Wohnung selbst, und wenn sie dort nicht zugestellt werden können, werden sie am Aushang der Gemeinschaft angeschlagen und gelten nach drei Kalendertagen als zugestellt. So kann ein Eigentümer in Oslo oder Hamburg eine Versammlung komplett verpassen und trotzdem an sie gebunden sein.",
+            "Auch Schweigen zählt als Stimme. Ein ordnungsgemäß eingeladener Eigentümer, der nicht teilgenommen hat, gilt als zustimmend, es sei denn, er teilt dem Sekretär innerhalb von 30 Kalendertagen nach Kenntnisnahme seinen Widerspruch mit, auf einem Weg, der den Zugang nachweist. Bewahren Sie den Nachweis auf, dass Ihre Nachricht angekommen ist, und lesen Sie das Protokoll, sobald es Sie erreicht, denn die 30 Tage laufen ab dem Zeitpunkt, an dem Sie informiert werden."
+          ]
+        },
+        {
+          "h2": "Welche Mehrheit braucht welcher Beschluss?",
+          "paras": [
+            "Das hängt vom Beschluss ab. Gewöhnliche Angelegenheiten brauchen die Mehrheit aller Eigentümer, die zugleich die Mehrheit der Anteile halten. Ein Aufzug oder Arbeiten zum Abbau von Barrieren für Menschen mit Behinderung brauchen dieselbe Mehrheit. Telekommunikations- oder Anlagen für erneuerbare Energie brauchen nur ein Drittel der Eigentümer und Anteile. Ein Hausmeister-, Concierge- oder Überwachungsdienst braucht drei Fünftel der Eigentümer und Anteile. Eine Änderung der Regeln in der Eigentumsurkunde oder Satzung braucht Einstimmigkeit, es sei denn, eine andere Mehrheit deckt diese Änderung ab.",
+            "Seit dem 3. April 2025 sind drei Fünftel der Eigentümer mit drei Fünfteln der Anteile nötig, um Ferienvermietung im Gebäude zu genehmigen, zu begrenzen, an Bedingungen zu knüpfen oder zu verbieten. Viele Ratgeber beschreiben das noch nur als Verbot, aber dieselbe Mehrheit entscheidet nun, ob eine neue Ferienvermietung überhaupt beginnen darf. Eine Ladestation für ein Elektroauto ist wieder etwas anderes: Sie braucht nur eine vorherige Mitteilung an die Gemeinschaft, und der Eigentümer, der sie installiert, zahlt."
+          ]
+        },
+        {
+          "h2": "Darf ich meine Wohnung umbauen oder die Terrasse schließen?",
+          "paras": [
+            "Das Innere Ihrer eigenen Wohnung dürfen Sie verändern, müssen aber vorher den Vertreter der Gemeinschaft informieren und dürfen die Sicherheit des Gebäudes, seine Struktur, seine Gestaltung oder sein Äußeres nicht beeinträchtigen. Die Fassade ist geschützt, eine Änderung daran ist also keine private Entscheidung.",
+            "Das Schließen einer Terrasse, das Aufstocken, jede andere Änderung an Struktur oder Bausubstanz des Gebäudes sowie das Teilen oder Zusammenlegen von Wohnungen brauchen drei Fünftel aller Eigentümer, die zugleich drei Fünftel der Anteile halten. Umgekehrt gilt: Beschließen drei Fünftel eine Verbesserung, die für Erhaltung, Sicherheit oder Barrierefreiheit nicht nötig ist, und übersteigt der Anteil jedes Eigentümers an der Anlage drei ordentliche Monatsbeiträge, muss ein Eigentümer, der dagegen gestimmt hat, nicht zahlen. Will er sie später nutzen, zahlt er seinen Anteil mit gesetzlichen Zinsen."
+          ]
+        },
+        {
+          "h2": "Was, wenn ich mit einem Beschluss nicht einverstanden bin?",
+          "paras": [
+            "Sie können ihn gerichtlich anfechten. Die Frist beträgt drei Monate, wenn der Beschluss der Gemeinschaft schwer schadet oder einen Eigentümer unbillig benachteiligt, und ein Jahr, wenn er gegen das Gesetz oder die Satzung verstößt. Waren Sie nicht bei der Versammlung, läuft die Frist ab dem Tag, an dem Ihnen der Beschluss mitgeteilt wurde, nicht ab dem Tag der Versammlung.",
+            "Um anzufechten, müssen Sie mit Ihren Zahlungen an die Gemeinschaft auf dem aktuellen Stand sein oder den strittigen Betrag zuerst bei Gericht hinterlegen, es sei denn, die Anfechtung betrifft die Anteile selbst. Ein abogado kann Ihnen sagen, welche Frist in Ihrem Fall gilt. Verfehlt ein gewöhnlicher Beschluss seine Mehrheit, kann ein Richter nach billigem Ermessen entscheiden, auf Antrag innerhalb eines Monats nach der zweiten Versammlung."
+          ]
+        },
+        {
+          "h2": "Was passiert, wenn Beiträge offen bleiben oder ich eine Wohnung mit Schulden kaufe?",
+          "paras": [
+            "Die Gemeinschaft kann unbezahlte Beiträge, einschließlich der Rücklage, über ein beschleunigtes Mahnverfahren für Gemeinschaften einfordern, mit einer von der Versammlung genehmigten Bescheinigung über die Schuld. Der Schuldner trägt die Kosten des Verfahrens, Zinsen laufen ab dem Fälligkeitstag, und widerspricht der Schuldner, muss das Gericht eine vorsorgliche Pfändung seines Vermögens zulassen, ohne dass die Gemeinschaft eine Sicherheit leistet.",
+            "Beim Kauf muss der Verkäufer in der Urkunde erklären, dass er mit den Gemeinschaftskosten auf dem aktuellen Stand ist, oder eine Bescheinigung über seine Schulden vorlegen. Verlangen Sie sie. Ein Käufer übernimmt die unbezahlten Beiträge des Verkäufers für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre, und die Immobilie haftet dafür. Wenn Sie verkaufen, informieren Sie den Sekretär, sonst haften Sie gesamtschuldnerisch für Beiträge, die danach fällig werden. Ist das geregelt, läuft die Gemeinschaft meist im Hintergrund, und Sie können den Pool genießen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Copropriété en Espagne : charges, votes et droits",
+      "description": "Comment fonctionne une copropriété espagnole pour un propriétaire à l'étranger : charges, assemblées, votes et recours en cas de désaccord.",
+      "h1": "La copropriété en Espagne, expliquée aux propriétaires qui vivent à l'étranger",
+      "lead": "Si votre logement en Espagne partage un immeuble, une piscine ou un jardin, vous faites partie d'une copropriété (comunidad de propietarios) régie par la Ley de Propiedad Horizontal. Vous payez une part des charges communes fixée dans les actes, et les décisions sont prises lors d'une assemblée des copropriétaires tenue au moins une fois par an. Un copropriétaire absent reste lié par ce qu'elle décide.",
+      "sections": [
+        {
+          "h2": "Dois-je payer les charges de copropriété si j'utilise à peine la piscine ?",
+          "paras": [
+            "Oui. Chaque copropriétaire contribue aux dépenses générales de l'immeuble selon la quote-part (cuota de participación) fixée dans le titre constitutif ou les statuts. Ne pas utiliser un service ne dispense pas de le payer : sauf disposition contraire des statuts, l'appartement du rez-de-chaussée paie sa part de l'ascenseur et le propriétaire qui ne vient qu'en hiver paie la piscine.",
+            "Il n'existe pas de montant national pour les charges. Elles découlent du budget que les copropriétaires approuvent chaque année, et dépendent de ce que la copropriété gère et entretient. Avant d'acheter, demandez le dernier budget approuvé et les procès-verbaux des assemblées récentes. Ils vous en disent plus sur l'immeuble que l'annonce."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce que le fonds de réserve, et pourquoi compte-t-il ?",
+          "paras": [
+            "Chaque copropriété doit constituer un fonds de réserve d'au moins 10 pour cent de son dernier budget ordinaire. Il finance les travaux de conservation, de réparation et de rénovation, ainsi que certains travaux d'accessibilité et d'efficacité énergétique, et il peut aussi payer l'assurance de l'immeuble ou un contrat d'entretien permanent. D'anciens guides parlent encore de 5 pour cent, ce qui est dépassé.",
+            "Le fonds ne couvre pas toujours un gros chantier. Les travaux nécessaires pour que l'immeuble reste sûr, habitable et accessible sont obligatoires et ne nécessitent aucun vote préalable. Tous les copropriétaires les paient, et l'assemblée décide seulement de la répartition et du mode de paiement. C'est ainsi qu'un appel de fonds exceptionnel (derrama) peut s'ajouter à vos charges habituelles."
+          ]
+        },
+        {
+          "h2": "Qui gère la copropriété ?",
+          "paras": [
+            "Trois fonctions font le travail. Le président est choisi parmi les copropriétaires, par élection ou, à défaut, par roulement ou tirage au sort. La fonction est obligatoire, mais un copropriétaire peut demander à un juge d'en être dispensé dans le mois qui suit sa prise de fonction. Le président représente la copropriété en justice et en dehors, et convoque les assemblées.",
+            "L'administrateur veille sur l'immeuble et ses services, prépare le plan de dépenses pour l'assemblée, exécute les travaux décidés et gère les paiements et les encaissements. Ce peut être n'importe quel copropriétaire ou une personne ou une société professionnellement qualifiée (un administrador de fincas, par exemple). Sauf décision contraire des statuts ou de l'assemblée, le président fait aussi office de secrétaire et d'administrateur, et chaque fonction dure un an."
+          ]
+        },
+        {
+          "h2": "Comment se déroulent les assemblées, et puis-je voter depuis l'étranger ?",
+          "paras": [
+            "L'assemblée des copropriétaires doit se réunir au moins une fois par an pour approuver le budget et les comptes. L'assemblée ordinaire est convoquée au moins six jours à l'avance. Si le quorum n'est pas atteint en première convocation, une seconde convocation peut suivre une demi-heure plus tard, ou dans les huit jours avec un préavis d'au moins trois jours. Un quart des copropriétaires, ou des copropriétaires détenant 25 pour cent des quotes-parts, peuvent exiger une assemblée supplémentaire.",
+            "Vous n'avez pas besoin de prendre l'avion. Toute personne munie d'un document que vous avez signé peut vous représenter, et aucun notaire n'est nécessaire pour cette procuration. Une condition s'applique : un copropriétaire en retard sur des dettes de copropriété échues peut assister et prendre la parole mais pas voter, sauf si la dette a été contestée en justice ou consignée. Les décisions sont consignées dans un procès-verbal signé par le président et le secrétaire, et elles sont exécutoires dès la clôture du procès-verbal."
+          ]
+        },
+        {
+          "h2": "Je vis à l'étranger. Comment serai-je informé des décisions ?",
+          "paras": [
+            "Donnez au secrétaire de la copropriété une adresse en Espagne pour les convocations et avis. Sans elle, les avis sont envoyés à l'appartement lui-même et, s'ils ne peuvent pas y être remis, ils sont affichés sur le tableau d'affichage de la copropriété et produisent leurs effets au bout de trois jours calendaires. C'est ainsi qu'un propriétaire vivant à Oslo ou à Hambourg peut manquer complètement une assemblée et rester lié par ses décisions.",
+            "Le silence compte aussi comme un vote. Un copropriétaire régulièrement convoqué mais absent est considéré comme ayant voté pour, sauf s'il informe le secrétaire de son désaccord dans les 30 jours calendaires suivant la notification, par un moyen qui prouve la réception. Gardez la preuve que votre message est arrivé, et lisez le procès-verbal dès qu'il vous parvient, car les 30 jours courent à partir du moment où vous êtes informé."
+          ]
+        },
+        {
+          "h2": "Quelle majorité faut-il pour chaque décision ?",
+          "paras": [
+            "Cela dépend de la décision. Les questions ordinaires exigent la majorité de l'ensemble des copropriétaires détenant aussi la majorité des quotes-parts. Un ascenseur ou des travaux de suppression des obstacles pour les personnes handicapées exigent la même majorité. Les installations de télécommunications ou d'énergie renouvelable n'exigent qu'un tiers des copropriétaires et des quotes-parts. Un service de gardiennage, de conciergerie ou de surveillance exige les trois cinquièmes des copropriétaires et des quotes-parts. Modifier les règles du titre constitutif ou des statuts exige l'unanimité, sauf si une autre majorité couvre ce changement.",
+            "Depuis le 3 avril 2025, il faut les trois cinquièmes des copropriétaires détenant les trois cinquièmes des quotes-parts pour approuver, limiter, conditionner ou interdire la location touristique dans l'immeuble. Beaucoup de guides ne décrivent encore cela que comme une interdiction, mais la même majorité décide désormais si une nouvelle location touristique peut tout simplement démarrer. Une borne de recharge pour voiture électrique, c'est encore autre chose : il suffit d'en informer préalablement la copropriété, et le copropriétaire qui l'installe la paie."
+          ]
+        },
+        {
+          "h2": "Puis-je modifier mon appartement ou fermer la terrasse ?",
+          "paras": [
+            "Vous pouvez modifier l'intérieur de votre propre logement, mais vous devez d'abord en informer le représentant de la copropriété et ne pas porter atteinte à la sécurité de l'immeuble, à sa structure, à sa configuration ni à son aspect extérieur. La façade est protégée : la modifier n'est donc pas une décision privée.",
+            "Fermer une terrasse, ajouter des étages, toute autre modification de la structure ou du gros œuvre de l'immeuble, ainsi que la division ou la réunion d'appartements exigent les trois cinquièmes de l'ensemble des copropriétaires détenant aussi les trois cinquièmes des quotes-parts. À l'inverse, si les trois cinquièmes approuvent une amélioration qui n'est pas nécessaire à la conservation, à la sécurité ou à l'accessibilité, et que la part de chaque copropriétaire dans l'installation dépasse trois mensualités ordinaires, un copropriétaire qui a voté contre n'est pas tenu de payer. S'il souhaite l'utiliser plus tard, il paie sa part avec l'intérêt légal."
+          ]
+        },
+        {
+          "h2": "Et si je ne suis pas d'accord avec une décision ?",
+          "paras": [
+            "Vous pouvez la contester en justice. Le délai est de trois mois si la décision nuit gravement à la copropriété ou lèse injustement un copropriétaire, et d'un an si elle enfreint la loi ou les statuts. Si vous n'étiez pas à l'assemblée, le délai court à partir du jour où la décision vous a été communiquée, et non du jour de l'assemblée.",
+            "Pour agir, vous devez être à jour de vos paiements à la copropriété, ou consigner d'abord le montant contesté auprès du tribunal, sauf si la contestation porte sur les quotes-parts elles-mêmes. Un abogado peut vous dire quel délai s'applique à votre cas. Lorsqu'une décision ordinaire n'atteint pas sa majorité, un juge peut trancher en équité sur une demande formée dans le mois qui suit la seconde assemblée."
+          ]
+        },
+        {
+          "h2": "Que se passe-t-il si les charges ne sont pas payées, ou si j'achète un appartement avec des dettes ?",
+          "paras": [
+            "La copropriété peut réclamer les charges impayées, fonds de réserve compris, par une procédure accélérée de recouvrement propre aux copropriétés, à l'aide d'un certificat de la dette approuvé par l'assemblée. Le débiteur paie les frais de la procédure, des intérêts courent à partir de la date d'exigibilité, et si le débiteur s'y oppose, le tribunal doit autoriser une saisie conservatoire de ses biens sans que la copropriété ait à fournir de garantie.",
+            "Lors d'un achat, le vendeur doit déclarer dans l'acte qu'il est à jour de ses charges de copropriété ou fournir un certificat de ce qu'il doit. Demandez-le. Un acheteur reprend les charges impayées du vendeur pour la partie de l'année déjà écoulée plus les trois années civiles précédentes, et le bien en répond. Lorsque vous vendez, informez le secrétaire, sinon vous restez solidairement responsable des charges échues après la vente. Une fois cela réglé, la copropriété fonctionne surtout en arrière-plan, et vous pouvez profiter de la piscine."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "VvE in Spanje: bijdragen, stemmingen en rechten",
+      "description": "Hoe een Spaanse VvE werkt voor een eigenaar in het buitenland: wat u betaalt, hoe vergaderingen en stemmingen verlopen en wat u doet bij onenigheid.",
+      "h1": "De vereniging van eigenaren, uitgelegd voor eigenaren die in het buitenland wonen",
+      "lead": "Deelt uw Spaanse woning een gebouw, een zwembad of een tuin, dan bent u lid van een vereniging van eigenaren (comunidad de propietarios) onder de Ley de Propiedad Horizontal. U betaalt een deel van de gemeenschappelijke kosten zoals vastgelegd in de aktes, en besluiten worden genomen op een vergadering van eigenaren die minstens één keer per jaar wordt gehouden. Een eigenaar die er niet bij is, is toch gebonden aan wat er wordt besloten.",
+      "sections": [
+        {
+          "h2": "Moet ik VvE-bijdrage betalen als ik het zwembad nauwelijks gebruik?",
+          "paras": [
+            "Ja. Elke eigenaar draagt bij aan de algemene kosten van het gebouw naar rato van het aandeel (cuota de participación) dat in de akte of de statuten is vastgelegd. Wie een voorziening niet gebruikt, is daarmee niet vrijgesteld van betalen, dus tenzij de statuten iets anders zeggen, betaalt het appartement op de begane grond zijn deel van de lift en betaalt de eigenaar die alleen in de winter komt mee aan het zwembad.",
+            "Er is geen landelijk bedrag voor de bijdragen. Ze volgen uit de begroting die de eigenaren elk jaar goedkeuren, en hangen af van wat de VvE beheert en onderhoudt. Vraag vóór de aankoop om de laatst goedgekeurde begroting en de notulen van recente vergaderingen. Die vertellen u meer over het gebouw dan de advertentie."
+          ]
+        },
+        {
+          "h2": "Wat is het reservefonds, en waarom doet het ertoe?",
+          "paras": [
+            "Elke VvE moet een reservefonds aanhouden van minstens 10 procent van haar laatste gewone begroting. Daaruit worden instandhoudings-, reparatie- en renovatiewerken betaald, en bepaalde werken voor toegankelijkheid en energie-efficiëntie, en het kan ook de opstalverzekering of een vast onderhoudscontract betalen. Oudere gidsen noemen nog 5 procent, en dat is achterhaald.",
+            "Het fonds dekt niet altijd een grote klus. Werken die nodig zijn om het gebouw veilig, bewoonbaar en toegankelijk te houden, zijn verplicht en vragen geen voorafgaande stemming. Alle eigenaren betalen ervoor, en de vergadering beslist alleen hoe de kosten worden verdeeld en betaald. Zo kan er bovenop uw gewone bijdragen een extra heffing (derrama) verschijnen."
+          ]
+        },
+        {
+          "h2": "Wie bestuurt de VvE?",
+          "paras": [
+            "Drie functies doen het werk. De voorzitter wordt uit de eigenaren gekozen, via een verkiezing of, als dat niet lukt, via een beurtrol of loting. De functie is verplicht, al kan een eigenaar een rechter vragen om ontheffing binnen een maand nadat hij de functie heeft aanvaard. De voorzitter vertegenwoordigt de VvE in en buiten rechte en roept de vergaderingen bijeen.",
+            "De beheerder zorgt voor het gebouw en de voorzieningen, stelt het uitgavenplan voor de vergadering op, voert overeengekomen werken uit en regelt betalingen en inningen. Dat kan elke eigenaar zijn of een beroepsmatig gekwalificeerde persoon of firma (een administrador de fincas, bijvoorbeeld). Tenzij de statuten of de vergadering anders beslissen, is de voorzitter ook secretaris en beheerder, en elke functie duurt een jaar."
+          ]
+        },
+        {
+          "h2": "Hoe werken de vergaderingen, en kan ik vanuit het buitenland stemmen?",
+          "paras": [
+            "De vergadering van eigenaren moet minstens één keer per jaar worden gehouden om de begroting en de rekeningen goed te keuren. De gewone vergadering wordt minstens zes dagen van tevoren bijeengeroepen. Is er bij de eerste oproep geen quorum, dan kan een tweede oproep een half uur later volgen, of binnen acht dagen met een oproeptermijn van minstens drie dagen. Een kwart van de eigenaren, of eigenaren met samen 25 procent van de aandelen, kan een extra vergadering eisen.",
+            "U hoeft er niet voor over te vliegen. Iedereen die een door u ondertekend document heeft, kan u vertegenwoordigen, en voor die volmacht is geen notaris nodig. Er geldt één voorwaarde: een eigenaar met achterstallige schulden aan de VvE mag aanwezig zijn en het woord voeren, maar niet stemmen, tenzij de schuld bij de rechter is aangevochten of in consignatie is gegeven. Besluiten worden vastgelegd in notulen die de voorzitter en de secretaris ondertekenen, en ze zijn uitvoerbaar zodra de notulen zijn afgesloten."
+          ]
+        },
+        {
+          "h2": "Ik woon in het buitenland. Hoe hoor ik van besluiten?",
+          "paras": [
+            "Geef de secretaris van de VvE een adres in Spanje voor kennisgevingen. Zonder dat adres gaan kennisgevingen naar het appartement zelf, en als ze daar niet kunnen worden bezorgd, worden ze op het mededelingenbord van de VvE gehangen en gaan ze na drie kalenderdagen in. Zo kan een eigenaar in Oslo of Hamburg een vergadering volledig missen en er toch aan gebonden zijn.",
+            "Ook zwijgen telt als stem. Een eigenaar die correct is opgeroepen maar niet aanwezig was, wordt geacht vóór te hebben gestemd, tenzij hij de secretaris binnen 30 kalenderdagen nadat hij is geïnformeerd laat weten het niet eens te zijn, op een manier die de ontvangst bewijst. Bewaar het bewijs dat uw bericht is aangekomen, en lees de notulen zodra ze u bereiken, want de 30 dagen beginnen te lopen vanaf het moment dat u bent geïnformeerd."
+          ]
+        },
+        {
+          "h2": "Welke meerderheid is voor elk besluit nodig?",
+          "paras": [
+            "Dat hangt van het besluit af. Gewone zaken vragen een meerderheid van alle eigenaren die ook een meerderheid van de aandelen hebben. Een lift of werken om drempels voor mensen met een beperking weg te nemen, vragen dezelfde meerderheid. Installaties voor telecommunicatie of hernieuwbare energie vragen slechts een derde van de eigenaren en de aandelen. Een portier, conciërge of bewakingsdienst vraagt drie vijfde van de eigenaren en de aandelen. Het wijzigen van de regels in de akte of de statuten vraagt unanimiteit, tenzij een andere meerderheid die wijziging dekt.",
+            "Sinds 3 april 2025 is drie vijfde van de eigenaren met drie vijfde van de aandelen nodig om toeristische verhuur in het gebouw goed te keuren, te beperken, aan voorwaarden te binden of te verbieden. Veel gidsen beschrijven dit nog alleen als een verbod, maar dezelfde meerderheid beslist nu of nieuwe toeristische verhuur überhaupt mag beginnen. Een laadpunt voor een elektrische auto is weer anders: daarvoor volstaat een voorafgaande melding aan de VvE, en de eigenaar die het installeert, betaalt."
+          ]
+        },
+        {
+          "h2": "Mag ik mijn eigen appartement verbouwen of het terras dichtmaken?",
+          "paras": [
+            "U mag de binnenkant van uw eigen woning aanpassen, maar u moet de vertegenwoordiger van de VvE eerst inlichten en u mag de veiligheid van het gebouw, de constructie, de indeling of de buitenkant niet aantasten. De gevel is beschermd, dus die veranderen is geen privébeslissing.",
+            "Het dichtmaken van een terras, het toevoegen van verdiepingen, elke andere wijziging aan de constructie of het casco van het gebouw, en het splitsen of samenvoegen van appartementen vragen drie vijfde van alle eigenaren die ook drie vijfde van de aandelen hebben. Omgekeerd geldt: keurt drie vijfde een verbetering goed die niet nodig is voor instandhouding, veiligheid of toegankelijkheid, en is het aandeel van elke eigenaar in de installatie hoger dan drie gewone maandbijdragen, dan hoeft een eigenaar die tegen stemde niet te betalen. Wil die eigenaar er later toch gebruik van maken, dan betaalt hij zijn deel met wettelijke rente."
+          ]
+        },
+        {
+          "h2": "Wat als ik het niet eens ben met een besluit?",
+          "paras": [
+            "U kunt het bij de rechter aanvechten. De termijn is drie maanden als het besluit de VvE ernstig schaadt of één eigenaar onterecht benadeelt, en een jaar als het in strijd is met de wet of de statuten. Was u niet bij de vergadering, dan loopt de termijn vanaf de dag waarop het besluit aan u is meegedeeld, niet vanaf de dag van de vergadering.",
+            "Om het besluit aan te vechten, moet u bij zijn met uw VvE-bijdragen, of het betwiste bedrag eerst bij de rechtbank storten, tenzij het geschil over de aandelen zelf gaat. Een abogado kan u vertellen welke termijn in uw geval geldt. Haalt een gewoon besluit de vereiste meerderheid niet, dan kan een rechter er naar billijkheid over beslissen op een verzoek dat binnen een maand na de tweede vergadering wordt ingediend."
+          ]
+        },
+        {
+          "h2": "Wat gebeurt er als bijdragen onbetaald blijven, of als ik een appartement met schulden koop?",
+          "paras": [
+            "De VvE kan onbetaalde bijdragen, inclusief het reservefonds, vorderen via een snelle betalingsprocedure voor verenigingen van eigenaren, met een door de vergadering goedgekeurde verklaring van de schuld. De schuldenaar betaalt de kosten van de vordering, er loopt rente vanaf de datum waarop betaald had moeten worden, en als de schuldenaar zich verzet, moet de rechter conservatoir beslag op zijn bezittingen toestaan zonder dat de VvE zekerheid hoeft te stellen.",
+            "Bij aankoop moet de verkoper in de akte verklaren dat hij bij is met de VvE-bijdragen, of een verklaring overleggen van wat hij verschuldigd is. Vraag daarom. Een koper neemt de onbetaalde bijdragen van de verkoper over voor het al verstreken deel van het jaar plus de drie voorgaande kalenderjaren, en de woning staat ervoor in. Verkoopt u, laat het de secretaris dan weten, anders blijft u hoofdelijk aansprakelijk voor bijdragen die daarna vervallen. Is dat geregeld, dan draait de VvE grotendeels op de achtergrond, en kunt u genieten van het zwembad."
+          ]
+        }
+      ]
+    }
+  }
+}

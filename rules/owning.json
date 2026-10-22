@@ -1,0 +1,943 @@
+{
+  "domain": "Costs of owning a property in Spain and life in a community of owners: IBI, the waste fee, cadastral and reference values, what must be declared to the Catastro, and the rules of the community of owners under Ley 49/1960.",
+  "rules": [
+    {
+      "id": "own.ibi.taxable_rights",
+      "statement": "IBI is charged on holding one of four rights over a property: an administrative concession, a surface right, a usufruct, or ownership.",
+      "value": [
+        "concession",
+        "surface_right",
+        "usufruct",
+        "ownership"
+      ],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 61.1 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.ibi.taxpayer",
+      "statement": "The IBI taxpayer is the person or entity holding the right that triggers the tax, which for an ordinary owner means the owner.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 63.1 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.ibi.pass_on",
+      "statement": "The taxpayer may pass the IBI burden on to someone else under ordinary civil law, for example to a buyer in the purchase contract or to a tenant in a lease, but the town hall still charges the taxpayer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 63.2 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Any split between seller and buyer is a private agreement between them. It does not change who the town hall bills."
+    },
+    {
+      "id": "own.ibi.property_answers",
+      "statement": "When ownership changes for any reason, the property itself stays liable for the full unpaid IBI charge, as secondary liability under the General Tax Law. Notaries must ask for and warn about pending IBI debts on the property being transferred.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 64.1 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "A buyer who does not check can end up paying the seller's unpaid IBI because the town hall can pursue the property."
+    },
+    {
+      "id": "own.ibi.base",
+      "statement": "The IBI base is the cadastral value of the property, which is set, notified and challenged under the Catastro rules.",
+      "value": "cadastral_value",
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 65 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Not the purchase price, not the market value and not the valor de referencia."
+    },
+    {
+      "id": "own.ibi.urban_rates",
+      "statement": "For urban property the IBI rate is at least 0.4 percent, which also applies by default, and at most 1.10 percent. Each town hall sets its own rate within that range in its tax ordinance.",
+      "value": {
+        "min": 0.4,
+        "max": 1.1,
+        "default": 0.4
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 72.1, with Catastro FAQ on tipos de gravamen RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Rustic land runs from 0.3 to 0.9 percent according to the Catastro FAQ. Article 72 has further paragraphs not covered by this rule, so the town's own ordinance is the final word on the rate."
+    },
+    {
+      "id": "own.ibi.town_hall_manages",
+      "statement": "The town hall manages, assesses and collects IBI and sets the rates and reliefs. The Catastro only supplies the cadastral value that forms the base.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, Impuesto sobre Bienes Inmuebles",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Questions about the bill go to the town hall or its collection body. Questions about the value or the description of the property go to the Catastro."
+    },
+    {
+      "id": "own.ibi.empty_surcharge",
+      "statement": "A town hall may add a surcharge of up to 50 percent of the IBI charge on a residential property that is permanently unoccupied, meaning empty continuously and without good reason for more than two years, where the owner holds four or more residential properties.",
+      "value": {
+        "max_surcharge": 50,
+        "min_years_empty": 2,
+        "min_properties_owned": 4
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 72.4 as amended by Ley 12/2023 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Only applies if the town hall has adopted it in its tax ordinance. An owner of one holiday home is outside this first rule."
+    },
+    {
+      "id": "own.ibi.empty_surcharge_higher",
+      "statement": "The surcharge can reach 100 percent where the property has been empty for more than three years, and a town hall may add up to 50 further percentage points where the owner has two or more residential properties empty in the same municipality.",
+      "value": {
+        "max_after_three_years": 100,
+        "extra_points_two_or_more_empty_same_town": 50
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 72.4 as amended by Ley 12/2023 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.ibi.empty_justified",
+      "statement": "The law treats several situations as good reason for a home to be empty, including a second residence for up to four years of continuous non occupation, works or renovation, a pending lawsuit, and a property offered for sale at market conditions for up to one year or for rent for up to six months.",
+      "value": {
+        "second_home_max_years": 4,
+        "for_sale_max_years": 1,
+        "for_rent_max_months": 6
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 72.4 as amended by Ley 12/2023 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The four year second home allowance is the point most foreign owners miss."
+    },
+    {
+      "id": "own.ibi.empty_procedure",
+      "statement": "The empty home surcharge accrues on 31 December and is assessed yearly, and the town hall must first hear the owner and show evidence of non occupation, which can include the municipal register and utility consumption.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro, normativa (text of RDLeg 2/2004)",
+        "ref": "art. 72.4 as amended by Ley 12/2023 RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.catastro.hacienda.gob.es/documentos/normativa/trl_000204_0503.pdf",
+        "source_dated": "Incorporates the amendment of art. 72.4 by Ley 12/2023 (note 46); no consolidation date shown",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.ibi.accrual",
+      "statement": "IBI accrues on the first day of the tax period, which is the calendar year, so it is due from whoever holds the property on 1 January.",
+      "value": {
+        "accrual": "01-01",
+        "period": "calendar_year"
+      },
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Defensor del Pueblo",
+        "ref": "art. 75 TRLRHL as quoted in resolution on queja 17002903",
+        "url": "https://www.defensordelpueblo.es/resoluciones/devengo-en-el-impuesto-sobre-bienes-inmuebles",
+        "source_dated": "2018-01-30",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: art. 75 TRLRHL is quoted verbatim by the Defensor del Pueblo, but the consolidated BOE text is too long to load to that article in this session. Confirm on BOE before relying on it."
+    },
+    {
+      "id": "own.waste.fee_required",
+      "statement": "Local authorities must have a specific, separate fee for household waste, either a tasa or a non tax public charge, and the law says it should move towards charging by the amount of waste generated.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Preamble, section V, Ley 7/2022 de residuos y suelos contaminados (art. 11.3)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5809",
+        "source_dated": "2025-04-02",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Read in the preamble, which summarises art. 11.3. The amount is set by each town hall or its waste consortium, so it varies by town."
+    },
+    {
+      "id": "own.waste.local_tasa",
+      "statement": "Collection, treatment and disposal of urban solid waste is one of the services for which a town hall may charge a tasa under the local finance law.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Ministerio de Hacienda, DocLeyes",
+        "ref": "art. 20.4.s RDLeg 2/2004 (TRLRHL)",
+        "url": "https://www.hacienda.gob.es/DocLeyes/onlinelt/C16.01.2004.03.05.rdleg.2.haciendas.locales_te_6495.htm",
+        "source_dated": "No update date shown; appears to be the 2004 text",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: read on a ministry copy with no consolidation date. Confirm the current wording on BOE."
+    },
+    {
+      "id": "own.catastro.cadastral_value",
+      "statement": "The cadastral value is an administrative value fixed objectively for each property from the area's valuation study, and it may not exceed market value. A reference to market coefficient of 0.5 applies.",
+      "value": {
+        "market_reference_coefficient": 0.5
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, valor catastral",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.catastro.reference_value",
+      "statement": "The valor de referencia is set by the Catastro from the analysis of prices in all sales before a notary, it may not exceed market value, and it serves as the minimum base for transfer tax and inheritance and gift tax unless the declared price is higher.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, valor de referencia",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "It can affect wealth tax only for properties acquired from 1 January 2022."
+    },
+    {
+      "id": "own.catastro.reference_value_no_ibi",
+      "statement": "The valor de referencia has no effect on IBI or on other taxes that use the cadastral value.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, valor de referencia",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Owners often fear a higher IBI bill after seeing the valor de referencia. IBI still uses the cadastral value."
+    },
+    {
+      "id": "own.catastro.reference_value_challenge",
+      "statement": "The valor de referencia can only be challenged when it has a tax effect, by asking for rectification of the tax return or appealing the tax assessment of the body that manages the tax, not by appealing to the Catastro directly.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, valor de referencia",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The owner can still file a Catastro declaration if the physical description of the property is wrong."
+    },
+    {
+      "id": "own.catastro.value_challenge",
+      "statement": "A new cadastral value from a collective valuation can be challenged within one month from the day after notification, by an optional appeal for reconsideration to the Catastro office or a claim before the regional economic administrative court, each property separately.",
+      "value": {
+        "months": 1
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, procedimiento de valoracion colectiva",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.catastro.new_values_timing",
+      "statement": "New cadastral values from a collective valuation take effect in the IBI roll for the year after they are notified.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, procedimiento de valoracion colectiva",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.catastro.declare_changes",
+      "statement": "Owners must declare to the Catastro new buildings, extensions, renovations and reforms, demolitions, splits and merges of properties, changes of use, and changes of ownership, within two months from the day after the event.",
+      "value": {
+        "months": 2
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Procedimientos y tramites, declaraciones catastrales",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/procedimientos_tramites.html",
+        "source_dated": "Undated page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Building work on the property is declared by the owner even when the purchase itself was passed on by the notary."
+    },
+    {
+      "id": "own.catastro.purchase_exempt",
+      "statement": "A purchase need not be declared to the Catastro by the owner where it is made in a public deed or put on the Land Registry and the cadastral reference is provided, because notaries and registrars pass the information on.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Procedimientos y tramites, declaraciones catastrales",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/procedimientos_tramites.html",
+        "source_dated": "Undated page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The exemption covers the change of ownership only. Building work still has to be declared by the owner."
+    },
+    {
+      "id": "own.catastro.failure_to_declare",
+      "statement": "Failing to declare a change is a minor tax infringement that can be penalised, and the Catastro can add the change itself through a regularisation procedure that carries a fee of 60 euros per property.",
+      "value": {
+        "regularisation_fee": 60
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, regularizacion catastral",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "The 60 euro fee is paid by the IBI taxpayer for the year the procedure starts."
+    },
+    {
+      "id": "own.catastro.effect_date",
+      "statement": "Changes recorded in the Catastro take effect from the day after the event, whenever they are notified.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Direccion General del Catastro",
+        "ref": "Preguntas frecuentes, efectos de las alteraciones",
+        "url": "https://www.catastro.hacienda.gob.es/es-ES/faqs.html",
+        "source_dated": "Undated page; latest dated items October 2025",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.contribute",
+      "statement": "Every owner must contribute to the general costs of the building according to the participation share fixed in the title deed or statutes.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.e Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Not using a service does not exempt an owner from paying for it (art. 9.2)."
+    },
+    {
+      "id": "own.lph.reserve_fund",
+      "statement": "The community must keep a reserve fund of at least 10 percent of its last ordinary budget, used for conservation, repair and renovation works and certain accessibility and energy efficiency works.",
+      "value": {
+        "min_percent_of_budget": 10
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.f Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The fund can also pay for building insurance or a permanent maintenance contract. Older guides still say 5 percent, which is out of date."
+    },
+    {
+      "id": "own.lph.seller_declaration",
+      "statement": "A seller must declare in the deed that they are up to date with community charges or provide a certificate of what they owe.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.e, third paragraph Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.domicile_in_spain",
+      "statement": "Each owner must give the community secretary an address in Spain for notices. Without one, notices go to the flat itself, and if they cannot be delivered there they are posted on the community notice board and take effect after three calendar days.",
+      "value": {
+        "notice_board_days": 3
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.h Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is why an owner living abroad can miss a meeting and still be bound by it."
+    },
+    {
+      "id": "own.lph.change_of_owner",
+      "statement": "An owner who sells must tell the community secretary about the change of ownership. If they do not, they stay jointly liable with the buyer for community debts that fall due after the sale.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 9.1.i Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.mandatory_works",
+      "statement": "Works needed to maintain the building and meet basic safety, habitability and universal accessibility requirements are compulsory and need no prior vote of the owners meeting.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.1.a Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.accessibility_works",
+      "statement": "Accessibility works, such as ramps or a lift, requested by an owner in whose home a person with a disability or over seventy lives or works are compulsory where the yearly cost passed to owners, after public aid, does not exceed twelve ordinary monthly community payments.",
+      "value": {
+        "cap_monthly_payments": 12,
+        "age": 70
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.1.b Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "The consolidated page shows a new wording of art. 10.1.b by Ley 4/2026 taking effect on 23 October 2026. The twelve payment cap appears in the text read. Recheck after that date."
+    },
+    {
+      "id": "own.lph.mandatory_works_cost",
+      "statement": "Compulsory works are paid by all the owners. The meeting only decides how the cost is split and paid, and each flat answers for its share as it does for general charges.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.2 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.own_unit_changes",
+      "statement": "An owner may alter their own flat but must not harm the safety of the building, its structure, its configuration or its exterior, and must tell the community representative first.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 7.1 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The exterior of the building, including the facade, is protected. Changing it is not a private decision."
+    },
+    {
+      "id": "own.lph.terrace_closure",
+      "statement": "Closing a terrace, building new floors, any other change to the structure or fabric of the building, and splitting or merging flats need a vote of three fifths of all owners who also hold three fifths of the participation shares.",
+      "value": {
+        "owners": 0.6,
+        "shares": 0.6
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.4, second paragraph Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Article 12 of the law, which older guides cite for facade changes, is repealed. These changes are now covered by art. 17.4."
+    },
+    {
+      "id": "own.lph.improvements_dissenter",
+      "statement": "Where three fifths approve an improvement that is not needed for conservation, safety or accessibility and the installation share exceeds three ordinary monthly payments, an owner who voted against does not have to pay.",
+      "value": {
+        "monthly_payments": 3
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.4, first paragraph Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "If that owner later wants to use the improvement, they must pay their share updated with legal interest."
+    },
+    {
+      "id": "own.lph.majority_accessibility",
+      "statement": "Works to remove barriers for people with disabilities and the installation of a lift need a majority of owners who also hold a majority of shares. Energy efficiency works certified by an energy certificate need a simple majority of owners and shares, if the yearly cost passed on stays within twelve monthly payments.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.2 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Once accessibility works are validly approved the community must pay even above twelve monthly payments, and an owner who voted against energy efficiency works still pays."
+    },
+    {
+      "id": "own.lph.majority_one_third",
+      "statement": "Installing common telecommunications infrastructure or renewable energy and energy supply systems can be approved by one third of owners who also hold one third of shares.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.1 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.majority_services",
+      "statement": "Decisions on a porter, concierge or surveillance service need three fifths of all owners who also hold three fifths of shares.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.3 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.ev_charger",
+      "statement": "Installing an electric vehicle charging point only requires prior notice to the community, and the person installing it pays for it.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.5 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.unanimity",
+      "statement": "Decisions that change the rules in the title deed or statutes and are not covered by another majority need unanimity of all owners and shares.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.6 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.majority_other",
+      "statement": "Any other decision needs a majority of all owners who also hold a majority of shares. If that is not reached, a judge can decide in equity on a request made within one month of the second meeting.",
+      "value": {
+        "months": 1
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.7 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.absent_votes",
+      "statement": "An owner who was properly called but did not attend counts as voting in favour unless they tell the secretary they disagree within 30 calendar days of being informed of the decision, by a method that proves receipt.",
+      "value": {
+        "days": 30
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 17.8 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Does not apply where the cost cannot be charged to owners who did not vote in favour, or where the change is for private use."
+    },
+    {
+      "id": "own.lph.president",
+      "statement": "The president is chosen from among the owners by election or, failing that, by rotation or lottery. The post is compulsory, but the owner can ask a judge to be released within one month of taking it up. The president represents the community in and out of court.",
+      "value": {
+        "release_request_months": 1
+      },
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 13 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.administrator",
+      "statement": "The administrator can be any owner or a professionally qualified person or firm. Unless the statutes or the meeting decide otherwise, the president also acts as secretary and administrator. Posts last one year unless the statutes say otherwise.",
+      "value": {
+        "term_years": 1
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 13 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.administrator_duties",
+      "statement": "The administrator looks after the building, its installations and services, prepares the expected spending plan for the meeting, carries out agreed works and makes payments and collections.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 20 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.annual_meeting",
+      "statement": "The owners meeting must be held at least once a year to approve budgets and accounts. The president calls it, and a quarter of owners or owners holding 25 percent of shares can require an extra meeting.",
+      "value": {
+        "min_per_year": 1,
+        "extraordinary_threshold_percent": 25
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 14 and 16 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.notice",
+      "statement": "The ordinary yearly meeting must be called at least six days in advance, an extraordinary one with as much notice as possible. If there is no quorum at first call, a second call can be held without quorum half an hour later or within eight calendar days with at least three days notice.",
+      "value": {
+        "ordinary_notice_days": 6,
+        "second_call_within_days": 8,
+        "second_call_notice_days": 3
+      },
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 16 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.proxy",
+      "statement": "An owner can be represented at the meeting by anyone holding a document signed by the owner.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 15.1 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Useful for owners abroad. No notary is needed for the proxy."
+    },
+    {
+      "id": "own.lph.arrears_no_vote",
+      "statement": "An owner who is not up to date with all overdue debts to the community may attend and speak at the meeting but may not vote, unless they have challenged the debt in court or deposited the amount with a court or notary.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 15.2 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.minutes",
+      "statement": "Decisions are recorded in minutes signed by the president and secretary, they can be enforced from the moment the minutes are closed, and the minutes are sent to owners.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 19 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.unpaid_monitorio",
+      "statement": "The community can claim all unpaid charges, ordinary or extraordinary, including the reserve fund, through the special fast payment procedure for communities, attaching a certificate of the meeting's debt settlement with the amount and breakdown, plus proof the debtor was notified.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21.2 and 21.3 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Notice can also be given on the community notice board for at least three days. The registered owner can be sued so the property itself can be seized."
+    },
+    {
+      "id": "own.lph.unpaid_costs",
+      "statement": "The costs of claiming the debt fall on the debtor, and where a lawyer or court representative is used for the claim the debtor pays their fees within the legal limits, even if they pay as soon as they are asked.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21.3 and 21.5 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.unpaid_interest",
+      "statement": "Debts owed to the community bear interest from the date payment was due, and the meeting can agree deterrents such as higher interest or temporary loss of use of services, provided they are not abusive, not retroactive and do not affect habitability.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21.1 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.unpaid_attachment",
+      "statement": "If the debtor opposes the claim, the community can ask for a preventive seizure of the debtor's assets and the court must grant it without the community giving security.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21.4 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "own.lph.unpaid_mediation",
+      "statement": "Disputes about community charges and the reserve fund can also go to mediation and conciliation or arbitration.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 21.6 Ley 49/1960 (LPH)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
+        "source_dated": "2026-10-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    }
+  ]
+}

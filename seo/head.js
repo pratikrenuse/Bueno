@@ -153,7 +153,7 @@ export function buildHead(route, { assets = '', group = '' } = {}) {
     });
   }
 
-  if (route.kind === 'answer') {
+  if (route.kind === 'answer' || route.kind === 'guide') {
     const article = {
       '@context': 'https://schema.org',
       '@type': 'Article',

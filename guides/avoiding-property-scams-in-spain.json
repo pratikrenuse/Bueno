@@ -1,0 +1,460 @@
+{
+  "slug": "avoiding-property-scams-in-spain",
+  "topic": "buying",
+  "tool": "deal-checklist",
+  "rules": [
+    "buy.registry.presumption",
+    "buy.registry.good_faith_buyer",
+    "buy.registry.nota_simple_fee",
+    "buy.deed.tax_ids",
+    "buy.deed.payment_means",
+    "buy.cash.limit",
+    "buy.cash.border_spain",
+    "aml.obliged_agents",
+    "aml.identification",
+    "registry.regional_unaffected",
+    "lph.17_12.majority",
+    "lph.17_12.effective_date",
+    "lph.17_12.retroactivity",
+    "own.ibi.town_hall_manages",
+    "own.lph.unpaid_monitorio",
+    "limit.community.buyer_liability",
+    "limit.contract.annulment"
+  ],
+  "answers": [
+    "why-spanish-estate-agents-ask-for-id",
+    "community-approval-for-a-new-tourist-let-spain",
+    "tourist-letting-and-the-community-of-owners",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake"
+  ],
+  "i18n": {
+    "en": {
+      "title": "How to Avoid Property Scams in Spain",
+      "description": "The property scams that target foreign buyers and owners in Spain, and the plain checks that stop them: the registry, the payment trail and the licence.",
+      "h1": "Avoiding property scams in Spain: the checks that protect a buyer from abroad",
+      "lead": "Most property scams in Spain depend on distance and hurry: a payment made before anyone has checked who owns the property, or a changed bank account sent by email. Three checks stop most of them. Read the nota simple to see who the land registry shows as owner, pay only by traceable transfer to an account you have confirmed by phone, and verify any tourist licence with the region yourself.",
+      "sections": [
+        {
+          "h2": "Why are foreign buyers such an easy target?",
+          "paras": [
+            "Because most of the deal happens at a distance. You find the property online, talk to the agent by email, sign documents you read in translation and send money from a home account. Each of those steps is a place where someone can step in, and a buyer in Bergen or Bremen has no easy way to walk round the corner and ask.",
+            "The other ingredient is hurry. Almost every scam comes with a reason why you must pay today: another buyer, a closing window, a seller who is leaving the country. Spanish purchases can move quickly, but nothing legitimate needs money before you have checked who owns the property and who you are paying."
+          ]
+        },
+        {
+          "h2": "They want a reservation fee before I have seen the place. Is that normal?",
+          "paras": [
+            "Paying before a viewing is the classic sign of a listing that is not what it seems. The photos may be copied from a real advert, the price set just low enough to make you act, and the seller always slightly unavailable. If no one can show you the property, in person or through someone you trust, do not pay to hold it.",
+            "Ask for the address and order a nota simple, the land registry extract, before any money moves. The registrar's fee is 3.005061 euros per property, plus whatever an online service charges. If the agent will not give you enough detail to order one, that tells you most of what you need to know."
+          ]
+        },
+        {
+          "h2": "How do I know the seller really owns it?",
+          "paras": [
+            "Compare the name on the nota simple with the person selling to you. Rights recorded in the land registry are presumed to exist and to belong to the holder shown in the entry, so the registry is your starting point. A buyer who acquires in good faith, and for value, from the person the registry shows as entitled to sell keeps the purchase once it is registered.",
+            "That protection is strong, but it only works if the seller is the registered owner and you register promptly. At the deed, every party shows the notary their tax identification number, which ties the people in the room to the people on paper. A seller who keeps avoiding the notary, or wants to sell through a private document only, is a reason to stop."
+          ]
+        },
+        {
+          "h2": "The bank details have changed by email. What should I do?",
+          "paras": [
+            "Do nothing until you have spoken to someone. Payment diversion is a costly scam because it can catch a careful buyer at the very end: an email that looks exactly like your agent's or lawyer's, sent at the right moment, with a new account number and a polite reason for the change.",
+            "Phone the person you know, on a number you already had before the email arrived, and confirm the account holder's name and number aloud. Pay only by bank transfer to an account in the name you expect, usually the seller's or a named client account. When you sign the deed, the notary must record how the price was paid and by what means, so a clean transfer trail is what you want anyway."
+          ]
+        },
+        {
+          "h2": "The seller suggests paying part of the price in cash. Is that a problem?",
+          "paras": [
+            "Yes, for you more than anyone. Where one side acts as a business or professional, cash payments are limited to 1,000 euros, or 10,000 euros for a private individual whose tax domicile is outside Spain. Carrying 10,000 euros or more into or out of Spain must be declared.",
+            "The deed must also state how the price was paid. If a party will not say, the notary records that and notifies the notarial body, which passes information on unidentified payments to the tax administration. An undeclared cash part leaves you with a deed that understates what you paid and money you cannot trace if the deal fails."
+          ]
+        },
+        {
+          "h2": "It comes with a tourist licence. How can I be sure?",
+          "paras": [
+            "Check it yourself with the region. Tourist licences and registration are regional, and they remain fully in force even after the courts annulled the national registration procedure. Ask the seller for the registration number and look it up in the regional tourism register, or ask an abogado or gestor to do it.",
+            "Then check the building. Since 3 April 2025 a three-fifths majority of owners, who also hold three-fifths of the participation quotas, is needed to approve, limit or prohibit tourist letting in a community. A let already running is protected only where its licence or declaración responsable was obtained before that date. Ask for the recent minutes of the owners' meetings, not a verbal assurance."
+          ]
+        },
+        {
+          "h2": "A letter says I owe community fees or tax. Should I pay it?",
+          "paras": [
+            "Not from the letter alone. Demands that look official, with an urgent deadline and an unfamiliar account, are an old trick on owners abroad. Check with the body that would really be owed: the community's administrator for community charges, and the town hall or its collection office for IBI, because the town hall manages and collects that tax.",
+            "When a community uses the special fast procedure to claim unpaid charges, it must attach a certificate of the debt settled at the owners' meeting and proof that the owner was notified. If you are buying, remember that a buyer takes on the seller's unpaid community charges for the current year so far and the three previous calendar years, so ask the administrator directly before completion."
+          ]
+        },
+        {
+          "h2": "Why does a genuine agent ask for my passport?",
+          "paras": [
+            "Because the law requires it. Estate agents who act in property sales are obliged subjects under the anti-money-laundering law and must identify you with reliable documents before the deal goes ahead. So a request for ID is normal from a professional you have checked. The care is in who you send it to.",
+            "Send copies of your passport only once you have confirmed the agency is real: an office you can visit or call, a website that matches, a person whose name appears on documents you can verify. Scammers ask for documents too, and a stolen passport copy is useful to them later."
+          ]
+        },
+        {
+          "h2": "What if something has already gone wrong?",
+          "paras": [
+            "Call your bank first, the same day, and ask them to try to stop or recall the transfer. Then report it to the police and keep every email, message and receipt in one place. Speed matters more than anything else at this stage.",
+            "If a purchase was made on the strength of deceit, an abogado can tell you whether the contract can be set aside. The window to annul a contract for mistake or deceit is four years, counted from completion of the contract. Most buyers never need any of this, and a few careful checks at the start are what let you get on with enjoying the place."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Slik unngår du boligsvindel i Spania",
+      "description": "Svindelen som rammer utenlandske kjøpere og eiere i Spania, og de enkle kontrollene som stopper den: registeret, betalingssporet og lisensen.",
+      "h1": "Unngå boligsvindel i Spania: kontrollene som beskytter en kjøper fra utlandet",
+      "lead": "Det meste av boligsvindel i Spania bygger på avstand og hastverk: en betaling gjort før noen har sjekket hvem som eier eiendommen, eller et nytt kontonummer sendt på e-post. Tre kontroller stopper det meste. Les nota simple for å se hvem eiendomsregisteret viser som eier, betal bare med sporbar overføring til en konto du har bekreftet på telefon, og sjekk en eventuell turistlisens med regionen selv.",
+      "sections": [
+        {
+          "h2": "Hvorfor er utenlandske kjøpere et så lett mål?",
+          "paras": [
+            "Fordi det meste av handelen skjer på avstand. Du finner eiendommen på nettet, snakker med megleren på e-post, signerer dokumenter du leser i oversettelse og sender penger fra en konto hjemme. Hvert av de stegene er et sted der noen kan komme inn, og en kjøper i Bergen eller Bremen har ingen enkel måte å stikke innom og spørre på.",
+            "Den andre ingrediensen er hastverk. Nesten all svindel kommer med en grunn til at du må betale i dag: en annen kjøper, en frist som går ut, en selger som skal forlate landet. Spanske kjøp kan gå raskt, men ingenting legitimt krever penger før du har sjekket hvem som eier eiendommen og hvem du betaler."
+          ]
+        },
+        {
+          "h2": "De vil ha et reservasjonsgebyr før jeg har sett stedet. Er det normalt?",
+          "paras": [
+            "Å betale før en visning er det klassiske tegnet på en annonse som ikke er det den ser ut som. Bildene kan være kopiert fra en ekte annonse, prisen satt akkurat lavt nok til at du handler, og selgeren alltid litt utilgjengelig. Kan ingen vise deg eiendommen, personlig eller gjennom noen du stoler på, ikke betal for å holde av den.",
+            "Be om adressen og bestill en nota simple, utdraget fra eiendomsregisteret, før noen penger flyttes. Registerførerens gebyr er 3,005061 euro per eiendom, pluss det en nettjeneste tar. Vil ikke megleren gi deg nok opplysninger til å bestille en, forteller det deg det meste av det du trenger å vite."
+          ]
+        },
+        {
+          "h2": "Hvordan vet jeg at selgeren virkelig eier den?",
+          "paras": [
+            "Sammenlign navnet på nota simple med personen som selger til deg. Rettigheter som er registrert i eiendomsregisteret, antas å eksistere og å tilhøre innehaveren som står i oppføringen, så registeret er utgangspunktet ditt. En kjøper som i god tro og mot vederlag kjøper fra den registeret viser som berettiget til å selge, beholder kjøpet når det er registrert.",
+            "Det vernet er sterkt, men det virker bare hvis selgeren er registrert eier og du registrerer raskt. Ved skjøtet viser hver part notaren sitt skatteidentifikasjonsnummer, noe som knytter personene i rommet til personene på papiret. En selger som stadig unngår notaren, eller vil selge bare gjennom et privat dokument, er en grunn til å stoppe."
+          ]
+        },
+        {
+          "h2": "Kontoopplysningene er endret på e-post. Hva bør jeg gjøre?",
+          "paras": [
+            "Ingenting før du har snakket med noen. Omdirigering av betalinger er en kostbar svindel fordi den kan ramme en forsiktig kjøper helt på slutten: en e-post som ser nøyaktig ut som meglerens eller advokatens, sendt i riktig øyeblikk, med et nytt kontonummer og en høflig grunn til endringen.",
+            "Ring personen du kjenner, på et nummer du hadde før e-posten kom, og bekreft kontoinnehaverens navn og kontonummeret muntlig. Betal bare med bankoverføring til en konto i det navnet du forventer, vanligvis selgerens eller en navngitt klientkonto. Når du signerer skjøtet, må notaren registrere hvordan prisen ble betalt og med hvilket betalingsmiddel, så et rent overføringsspor er uansett det du vil ha."
+          ]
+        },
+        {
+          "h2": "Selgeren foreslår å betale deler av prisen kontant. Er det et problem?",
+          "paras": [
+            "Ja, for deg mer enn for noen annen. Når en av partene opptrer som næringsdrivende eller profesjonell, er kontantbetalinger begrenset til 1 000 euro, eller 10 000 euro for en privatperson med skattemessig bopel utenfor Spania. Å ta med 10 000 euro eller mer inn i eller ut av Spania må deklareres.",
+            "Skjøtet må også angi hvordan prisen ble betalt. Vil en part ikke si det, fører notaren det inn og varsler notarorganet, som gir skattemyndighetene informasjon om uidentifiserte betalinger. En kontantdel som ikke oppgis, gir deg et skjøte som viser mindre enn du betalte, og penger du ikke kan spore hvis handelen går i vasken."
+          ]
+        },
+        {
+          "h2": "Den kommer med turistlisens. Hvordan kan jeg være sikker?",
+          "paras": [
+            "Sjekk det selv med regionen. Turistlisenser og registrering er regionale, og de gjelder fullt ut også etter at domstolene opphevet den nasjonale registreringsprosedyren. Be selgeren om registreringsnummeret og slå det opp i regionens turistregister, eller be en abogado eller gestor gjøre det.",
+            "Sjekk deretter bygget. Siden 3. april 2025 kreves et flertall på tre femtedeler av eierne, som også har tre femtedeler av eierandelene, for å godkjenne, begrense eller forby turistutleie i et sameie. En utleie som allerede er i gang, er bare vernet når lisensen eller declaración responsable ble innhentet før den datoen. Be om de siste protokollene fra sameiemøtene, ikke en muntlig forsikring."
+          ]
+        },
+        {
+          "h2": "Et brev sier at jeg skylder fellesutgifter eller skatt. Bør jeg betale?",
+          "paras": [
+            "Ikke ut fra brevet alene. Krav som ser offisielle ut, med en hastefrist og en ukjent konto, er et gammelt triks overfor eiere i utlandet. Sjekk med den instansen du faktisk ville skyldt penger: sameiets forvalter for fellesutgifter, og kommunen eller innkrevingskontoret dens for IBI, fordi kommunen forvalter og krever inn den skatten.",
+            "Når et sameie bruker den særskilte hurtigprosedyren for å kreve inn ubetalte fellesutgifter, må det legge ved en attest på gjelden som er fastsatt på sameiemøtet, og bevis på at eieren ble varslet. Kjøper du, husk at en kjøper overtar selgerens ubetalte fellesutgifter for inneværende år så langt og de tre foregående kalenderårene, så spør forvalteren direkte før overtakelsen."
+          ]
+        },
+        {
+          "h2": "Hvorfor ber en ekte megler om passet mitt?",
+          "paras": [
+            "Fordi loven krever det. Eiendomsmeglere som medvirker ved boligsalg, er rapporteringspliktige etter hvitvaskingsloven og må identifisere deg med pålitelige dokumenter før handelen går videre. En forespørsel om legitimasjon er derfor normal fra en profesjonell du har sjekket. Forsiktigheten ligger i hvem du sender den til.",
+            "Send kopier av passet ditt først når du har bekreftet at meglerforetaket er ekte: et kontor du kan besøke eller ringe, et nettsted som stemmer, en person hvis navn står på dokumenter du kan kontrollere. Svindlere ber også om dokumenter, og en stjålet passkopi er nyttig for dem senere."
+          ]
+        },
+        {
+          "h2": "Hva om noe allerede har gått galt?",
+          "paras": [
+            "Ring banken din først, samme dag, og be dem prøve å stoppe eller tilbakekalle overføringen. Anmeld det deretter til politiet, og samle alle e-poster, meldinger og kvitteringer på ett sted. Tempo betyr mer enn noe annet på dette stadiet.",
+            "Ble et kjøp gjort på grunnlag av svik, kan en abogado fortelle deg om kontrakten kan oppheves. Fristen for å få en kontrakt kjent ugyldig på grunn av villfarelse eller svik er fire år, regnet fra kontrakten ble gjennomført. De fleste kjøpere trenger aldri noe av dette, og noen få grundige kontroller i starten er det som lar deg komme i gang med å nyte stedet."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Så undviker du bedrägerier vid bostadsköp i Spanien",
+      "description": "Bostadsbedrägerierna som riktar sig mot utländska köpare i Spanien, och de enkla kontrollerna som stoppar dem: registret, betalningen och licensen.",
+      "h1": "Undvik bostadsbedrägerier i Spanien: kontrollerna som skyddar en köpare från utlandet",
+      "lead": "De flesta bostadsbedrägerier i Spanien bygger på avstånd och brådska: en betalning som görs innan någon har kontrollerat vem som äger bostaden, eller ett ändrat bankkonto som skickas via e-post. Tre kontroller stoppar de flesta. Läs nota simple för att se vem fastighetsregistret anger som ägare, betala bara med spårbar överföring till ett konto du har bekräftat per telefon, och kontrollera själv en eventuell turistlicens hos regionen.",
+      "sections": [
+        {
+          "h2": "Varför är utländska köpare ett så lätt mål?",
+          "paras": [
+            "För att det mesta av affären sker på avstånd. Du hittar bostaden på nätet, pratar med mäklaren via e-post, skriver på handlingar som du läser i översättning och skickar pengar från ett konto hemma. Varje sådant steg är ett ställe där någon kan kliva in, och en köpare i Bergen eller Bremen kan inte enkelt gå runt hörnet och fråga.",
+            "Den andra ingrediensen är brådska. Nästan varje bedrägeri kommer med ett skäl till varför du måste betala i dag: en annan köpare, ett fönster som stängs, en säljare som ska lämna landet. Spanska köp kan gå fort, men inget seriöst kräver pengar innan du har kontrollerat vem som äger bostaden och vem du betalar."
+          ]
+        },
+        {
+          "h2": "De vill ha en reservationsavgift innan jag har sett stället. Är det normalt?",
+          "paras": [
+            "Att betala före en visning är det klassiska tecknet på en annons som inte är vad den ser ut att vara. Bilderna kan vara kopierade från en riktig annons, priset satt precis lågt nog för att få dig att agera, och säljaren alltid lite otillgänglig. Om ingen kan visa dig bostaden, personligen eller via någon du litar på, betala inte för att hålla den.",
+            "Be om adressen och beställ en nota simple, utdraget ur fastighetsregistret, innan några pengar flyttas. Registratorns avgift är 3,005061 euro per fastighet, plus vad en tjänst på nätet tar betalt. Om mäklaren inte vill ge dig tillräckligt med uppgifter för att beställa en, säger det det mesta du behöver veta."
+          ]
+        },
+        {
+          "h2": "Hur vet jag att säljaren verkligen äger den?",
+          "paras": [
+            "Jämför namnet i nota simple med den person som säljer till dig. Rättigheter som är inskrivna i fastighetsregistret presumeras finnas och tillhöra den innehavare som anges i anteckningen, så registret är din utgångspunkt. En köpare som i god tro och mot vederlag förvärvar från den person som registret visar som behörig att sälja behåller köpet när det väl är registrerat.",
+            "Det skyddet är starkt, men det fungerar bara om säljaren är registrerad ägare och du registrerar snabbt. Vid köpebrevet visar varje part notarien sitt skatteregistreringsnummer, vilket kopplar personerna i rummet till personerna på papperet. En säljare som hela tiden undviker notarien, eller bara vill sälja genom en privat handling, är ett skäl att stanna."
+          ]
+        },
+        {
+          "h2": "Bankuppgifterna har ändrats via e-post. Vad ska jag göra?",
+          "paras": [
+            "Gör ingenting förrän du har pratat med någon. Omdirigering av betalningar är ett kostsamt bedrägeri eftersom det kan fånga en noggrann köpare i allra sista stund: ett e-postmeddelande som ser exakt ut som din mäklares eller advokats, skickat i rätt ögonblick, med ett nytt kontonummer och ett artigt skäl till ändringen.",
+            "Ring den person du känner, på ett nummer du redan hade innan e-postmeddelandet kom, och bekräfta kontoinnehavarens namn och nummer muntligt. Betala bara med banköverföring till ett konto i det namn du väntar dig, oftast säljarens eller ett namngivet klientmedelskonto. När du skriver på köpebrevet måste notarien anteckna hur köpeskillingen betalades och på vilket sätt, så en ren överföringskedja är det du vill ha ändå."
+          ]
+        },
+        {
+          "h2": "Säljaren föreslår att en del av priset betalas kontant. Är det ett problem?",
+          "paras": [
+            "Ja, för dig mer än för någon annan. När en av parterna agerar som företag eller yrkesutövare är kontantbetalningar begränsade till 1 000 euro, eller 10 000 euro för en privatperson med skatterättslig hemvist utanför Spanien. Att föra in eller ut 10 000 euro eller mer till eller från Spanien måste deklareras.",
+            "Köpebrevet måste också ange hur köpeskillingen betalades. Om en part inte vill säga det antecknar notarien det och underrättar notariatsorganet, som för vidare information om oidentifierade betalningar till skatteförvaltningen. En odeklarerad kontant del lämnar dig med ett köpebrev som anger för lite av vad du betalade och pengar du inte kan spåra om affären går i stöpet."
+          ]
+        },
+        {
+          "h2": "Den säljs med turistlicens. Hur kan jag vara säker?",
+          "paras": [
+            "Kontrollera den själv hos regionen. Turistlicenser och registrering är regionala, och de gäller fullt ut även efter att domstolarna ogiltigförklarade det nationella registreringsförfarandet. Be säljaren om registreringsnumret och slå upp det i regionens turistregister, eller be en abogado eller gestor göra det.",
+            "Kontrollera sedan byggnaden. Sedan 3 april 2025 krävs en majoritet på tre femtedelar av ägarna, som också innehar tre femtedelar av andelstalen, för att godkänna, begränsa eller förbjuda turistuthyrning i en samfällighet. En uthyrning som redan pågår är bara skyddad om dess licens eller declaración responsable erhölls före det datumet. Be om de senaste protokollen från ägarmötena, inte en muntlig försäkran."
+          ]
+        },
+        {
+          "h2": "Ett brev säger att jag är skyldig samfällighetsavgifter eller skatt. Ska jag betala?",
+          "paras": [
+            "Inte enbart utifrån brevet. Krav som ser officiella ut, med en brådskande tidsfrist och ett okänt konto, är ett gammalt trick mot ägare utomlands. Kontrollera med det organ som verkligen skulle ha fordran: samfällighetens förvaltare för samfällighetsavgifter, och kommunen eller dess uppbördskontor för IBI, eftersom det är kommunen som förvaltar och tar ut den skatten.",
+            "När en samfällighet använder det särskilda snabbförfarandet för att kräva in obetalda avgifter måste den bifoga ett intyg om skulden som fastställts på ägarmötet och bevis på att ägaren har underrättats. Om du köper, kom ihåg att en köpare tar över säljarens obetalda samfällighetsavgifter för innevarande år hittills och de tre föregående kalenderåren, så fråga förvaltaren direkt före tillträdet."
+          ]
+        },
+        {
+          "h2": "Varför ber en seriös mäklare om mitt pass?",
+          "paras": [
+            "För att lagen kräver det. Fastighetsmäklare som medverkar vid bostadsförsäljningar är rapporteringsskyldiga enligt penningtvättslagen och måste identifiera dig med tillförlitliga handlingar innan affären går vidare. En begäran om legitimation är alltså normal från en yrkesperson du har kontrollerat. Försiktigheten handlar om vem du skickar den till.",
+            "Skicka kopior av ditt pass först när du har bekräftat att byrån är verklig: ett kontor du kan besöka eller ringa, en webbplats som stämmer, en person vars namn finns på handlingar du kan kontrollera. Bedragare ber också om handlingar, och en stulen passkopia är användbar för dem senare."
+          ]
+        },
+        {
+          "h2": "Vad gör jag om något redan har gått fel?",
+          "paras": [
+            "Ring din bank först, samma dag, och be dem försöka stoppa eller återkalla överföringen. Polisanmäl sedan och samla alla e-postmeddelanden, meddelanden och kvitton på ett ställe. Snabbhet betyder mer än något annat i det här läget.",
+            "Om ett köp gjordes på grund av svek kan en abogado tala om för dig om avtalet kan hävas. Fristen för att ogiltigförklara ett avtal på grund av misstag eller svek är fyra år, räknat från att avtalet fullgjordes. De flesta köpare behöver aldrig något av detta, och några noggranna kontroller i början är det som låter dig gå vidare och njuta av stället."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Immobilienbetrug in Spanien vermeiden: die wichtigen Prüfungen",
+      "description": "Die Betrugsmaschen gegen ausländische Käufer und Eigentümer in Spanien und die einfachen Prüfungen dagegen: Grundbuch, Zahlungsspur und Lizenz.",
+      "h1": "Immobilienbetrug in Spanien vermeiden: die Prüfungen, die Käufer aus dem Ausland schützen",
+      "lead": "Die meisten Immobilienbetrügereien in Spanien setzen auf Entfernung und Eile: eine Zahlung, bevor jemand geprüft hat, wem die Immobilie gehört, oder eine geänderte Bankverbindung per E-Mail. Drei Prüfungen verhindern die meisten davon. Lesen Sie die nota simple, um zu sehen, wen das Grundbuch als Eigentümer ausweist, zahlen Sie nur per nachvollziehbarer Überweisung auf ein Konto, das Sie telefonisch bestätigt haben, und prüfen Sie jede Ferienvermietungslizenz selbst bei der Region.",
+      "sections": [
+        {
+          "h2": "Warum sind ausländische Käufer ein so leichtes Ziel?",
+          "paras": [
+            "Weil der größte Teil des Geschäfts aus der Ferne abläuft. Sie finden die Immobilie online, sprechen mit dem Makler per E-Mail, unterschreiben Dokumente, die Sie in Übersetzung lesen, und senden Geld von einem Konto in der Heimat. Jeder dieser Schritte ist eine Stelle, an der sich jemand dazwischenschalten kann, und ein Käufer in Bergen oder Bremen kann nicht einfach um die Ecke gehen und nachfragen.",
+            "Die andere Zutat ist Eile. Fast jeder Betrug kommt mit einem Grund, warum Sie heute zahlen müssen: ein anderer Käufer, ein Zeitfenster, das sich schließt, ein Verkäufer, der das Land verlässt. Käufe in Spanien können schnell gehen, aber nichts Seriöses braucht Geld, bevor Sie geprüft haben, wem die Immobilie gehört und an wen Sie zahlen."
+          ]
+        },
+        {
+          "h2": "Man verlangt eine Reservierungsgebühr, bevor ich die Immobilie gesehen habe. Ist das normal?",
+          "paras": [
+            "Zahlen vor einer Besichtigung ist das klassische Zeichen für ein Angebot, das nicht ist, was es scheint. Die Fotos sind vielleicht aus einer echten Anzeige kopiert, der Preis gerade niedrig genug, um Sie zum Handeln zu bewegen, und der Verkäufer ist immer etwas unerreichbar. Wenn Ihnen niemand die Immobilie zeigen kann, persönlich oder über jemanden, dem Sie vertrauen, zahlen Sie nicht, um sie zu reservieren.",
+            "Fragen Sie nach der Adresse und bestellen Sie eine nota simple, den Auszug aus dem Grundbuch, bevor Geld fließt. Die Gebühr des Registerführers beträgt 3,005061 Euro pro Immobilie, zuzüglich dessen, was ein Online-Dienst berechnet. Wenn der Makler Ihnen nicht genug Angaben gibt, um eine zu bestellen, sagt Ihnen das schon das meiste, was Sie wissen müssen."
+          ]
+        },
+        {
+          "h2": "Woher weiß ich, dass der Verkäufer wirklich der Eigentümer ist?",
+          "paras": [
+            "Vergleichen Sie den Namen in der nota simple mit der Person, die an Sie verkauft. Im Grundbuch eingetragene Rechte gelten als bestehend und als dem im Eintrag genannten Inhaber zustehend, das Grundbuch ist also Ihr Ausgangspunkt. Ein Käufer, der gutgläubig und entgeltlich von der Person erwirbt, die das Grundbuch als verkaufsberechtigt ausweist, behält den Kauf, sobald er eingetragen ist.",
+            "Dieser Schutz ist stark, aber er wirkt nur, wenn der Verkäufer der eingetragene Eigentümer ist und Sie zügig eintragen lassen. Bei der Urkunde legt jede Partei dem Notar ihre Steueridentifikationsnummer vor, was die Personen im Raum mit den Personen auf dem Papier verbindet. Ein Verkäufer, der dem Notar immer wieder ausweicht oder nur über ein privates Dokument verkaufen will, ist ein Grund aufzuhören."
+          ]
+        },
+        {
+          "h2": "Die Bankverbindung hat sich per E-Mail geändert. Was soll ich tun?",
+          "paras": [
+            "Nichts, bis Sie mit jemandem gesprochen haben. Zahlungsumleitung ist ein kostspieliger Betrug, weil er selbst einen sorgfältigen Käufer ganz am Ende erwischen kann: eine E-Mail, die genau wie die Ihres Maklers oder Anwalts aussieht, im richtigen Moment geschickt, mit einer neuen Kontonummer und einer höflichen Begründung für die Änderung.",
+            "Rufen Sie die Person an, die Sie kennen, unter einer Nummer, die Sie schon vor der E-Mail hatten, und bestätigen Sie Namen des Kontoinhabers und Kontonummer mündlich. Zahlen Sie nur per Banküberweisung auf ein Konto auf den Namen, den Sie erwarten, in der Regel das des Verkäufers oder ein benanntes Mandantenkonto. Wenn Sie die Urkunde unterschreiben, muss der Notar festhalten, wie und womit der Preis gezahlt wurde, eine saubere Überweisungsspur ist also ohnehin das, was Sie wollen."
+          ]
+        },
+        {
+          "h2": "Der Verkäufer schlägt vor, einen Teil des Preises bar zu zahlen. Ist das ein Problem?",
+          "paras": [
+            "Ja, für Sie mehr als für jeden anderen. Wenn eine Seite als Unternehmer oder Freiberufler handelt, sind Barzahlungen auf 1.000 Euro begrenzt, oder auf 10.000 Euro für eine Privatperson mit steuerlichem Wohnsitz außerhalb Spaniens. Wer 10.000 Euro oder mehr nach Spanien bringt oder aus Spanien mitnimmt, muss das anmelden.",
+            "Die Urkunde muss außerdem angeben, wie der Preis gezahlt wurde. Will eine Partei das nicht sagen, vermerkt der Notar das und meldet es der Notarkammer, die Informationen über nicht nachgewiesene Zahlungen an die Steuerverwaltung weitergibt. Ein nicht angegebener Barteil hinterlässt Ihnen eine Urkunde, die zu wenig ausweist, und Geld, das Sie nicht nachverfolgen können, wenn das Geschäft scheitert."
+          ]
+        },
+        {
+          "h2": "Die Immobilie hat angeblich eine Ferienvermietungslizenz. Wie kann ich sicher sein?",
+          "paras": [
+            "Prüfen Sie es selbst bei der Region. Lizenzen und Registrierungen für Ferienvermietung sind Sache der Regionen, und sie bleiben voll in Kraft, auch nachdem die Gerichte das nationale Registrierungsverfahren aufgehoben haben. Bitten Sie den Verkäufer um die Registrierungsnummer und schlagen Sie sie im regionalen Tourismusregister nach, oder bitten Sie einen abogado oder gestor darum.",
+            "Prüfen Sie dann das Gebäude. Seit dem 3. April 2025 ist eine Mehrheit von drei Fünfteln der Eigentümer, die zugleich drei Fünftel der Miteigentumsanteile halten, nötig, um die Ferienvermietung in einer Gemeinschaft zu genehmigen, zu beschränken oder zu verbieten. Eine bereits laufende Vermietung ist nur geschützt, wenn ihre Lizenz oder declaración responsable vor diesem Datum erlangt wurde. Verlangen Sie die aktuellen Protokolle der Eigentümerversammlungen, keine mündliche Zusicherung."
+          ]
+        },
+        {
+          "h2": "In einem Brief steht, ich schulde Gemeinschaftsbeiträge oder Steuern. Soll ich zahlen?",
+          "paras": [
+            "Nicht allein aufgrund des Briefs. Forderungen, die amtlich aussehen, mit einer dringenden Frist und einem unbekannten Konto, sind ein alter Trick gegenüber Eigentümern im Ausland. Fragen Sie bei der Stelle nach, der wirklich etwas geschuldet würde: beim Verwalter der Gemeinschaft für Gemeinschaftsbeiträge und beim Rathaus oder seiner Einzugsstelle für die IBI, denn das Rathaus verwaltet und erhebt diese Steuer.",
+            "Nutzt eine Gemeinschaft das besondere Schnellverfahren, um unbezahlte Beiträge einzufordern, muss sie eine Bescheinigung über die in der Eigentümerversammlung festgestellte Schuld und einen Nachweis beifügen, dass der Eigentümer benachrichtigt wurde. Wenn Sie kaufen, denken Sie daran, dass ein Käufer die unbezahlten Gemeinschaftsbeiträge des Verkäufers für das laufende Jahr bis dahin und die drei vorangegangenen Kalenderjahre übernimmt, fragen Sie also vor dem Abschluss direkt beim Verwalter nach."
+          ]
+        },
+        {
+          "h2": "Warum fragt ein seriöser Makler nach meinem Reisepass?",
+          "paras": [
+            "Weil das Gesetz es verlangt. Immobilienmakler, die bei Verkäufen tätig sind, sind nach dem Geldwäschegesetz Verpflichtete und müssen Sie anhand verlässlicher Dokumente identifizieren, bevor das Geschäft weitergeht. Eine Bitte um einen Ausweis ist also normal, wenn sie von einem Fachmann kommt, den Sie überprüft haben. Die Sorgfalt liegt darin, wem Sie ihn schicken.",
+            "Schicken Sie Kopien Ihres Reisepasses erst, wenn Sie bestätigt haben, dass die Agentur echt ist: ein Büro, das Sie besuchen oder anrufen können, eine Website, die passt, eine Person, deren Name auf Dokumenten steht, die Sie überprüfen können. Betrüger fragen auch nach Dokumenten, und eine gestohlene Passkopie ist für sie später nützlich."
+          ]
+        },
+        {
+          "h2": "Was, wenn schon etwas schiefgegangen ist?",
+          "paras": [
+            "Rufen Sie zuerst Ihre Bank an, noch am selben Tag, und bitten Sie sie, die Überweisung zu stoppen oder zurückzurufen. Erstatten Sie dann Anzeige bei der Polizei und bewahren Sie jede E-Mail, jede Nachricht und jeden Beleg an einem Ort auf. In dieser Phase zählt Schnelligkeit mehr als alles andere.",
+            "Wurde ein Kauf aufgrund einer Täuschung abgeschlossen, kann Ihnen ein abogado sagen, ob der Vertrag angefochten werden kann. Die Frist, einen Vertrag wegen Irrtums oder Täuschung anzufechten, beträgt vier Jahre, gerechnet ab dem Vollzug des Vertrags. Die meisten Käufer brauchen nichts davon, und ein paar sorgfältige Prüfungen am Anfang sind genau das, was Ihnen erlaubt, Ihr Zuhause einfach zu genießen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Comment éviter les arnaques immobilières en Espagne",
+      "description": "Les arnaques immobilières qui visent les acheteurs étrangers en Espagne, et les vérifications simples qui les déjouent : registre, paiements et licence.",
+      "h1": "Éviter les arnaques immobilières en Espagne : les vérifications qui protègent un acheteur à distance",
+      "lead": "La plupart des arnaques immobilières en Espagne reposent sur la distance et la précipitation : un paiement effectué avant que quiconque ait vérifié qui possède le bien, ou un changement de compte bancaire envoyé par e-mail. Trois vérifications en déjouent la plupart. Lisez la nota simple pour voir qui le registre foncier désigne comme propriétaire, payez uniquement par virement traçable sur un compte que vous avez confirmé par téléphone, et vérifiez vous-même toute licence touristique auprès de la région.",
+      "sections": [
+        {
+          "h2": "Pourquoi les acheteurs étrangers sont-ils une cible si facile ?",
+          "paras": [
+            "Parce que l'essentiel de l'affaire se déroule à distance. Vous trouvez le bien en ligne, échangez avec l'agent par e-mail, signez des documents lus en traduction et envoyez de l'argent depuis un compte dans votre pays. Chacune de ces étapes est un endroit où quelqu'un peut s'interposer, et un acheteur à Bergen ou à Brême ne peut pas simplement passer au coin de la rue pour demander.",
+            "L'autre ingrédient est la précipitation. Presque toutes les arnaques viennent avec une raison pour laquelle vous devez payer aujourd'hui : un autre acheteur, une occasion qui se referme, un vendeur qui quitte le pays. Les achats en Espagne peuvent aller vite, mais rien de légitime n'exige de l'argent avant que vous ayez vérifié qui possède le bien et qui vous payez."
+          ]
+        },
+        {
+          "h2": "On me demande des frais de réservation avant même la visite. Est-ce normal ?",
+          "paras": [
+            "Payer avant une visite est le signe classique d'une annonce qui n'est pas ce qu'elle paraît. Les photos peuvent être copiées d'une vraie annonce, le prix fixé juste assez bas pour vous pousser à agir, et le vendeur toujours un peu indisponible. Si personne ne peut vous montrer le bien, en personne ou par l'intermédiaire d'une personne de confiance, ne payez pas pour le réserver.",
+            "Demandez l'adresse et commandez une nota simple, l'extrait du registre foncier, avant tout mouvement d'argent. Les honoraires du registrateur sont de 3,005061 euros par bien, plus ce que facture un service en ligne. Si l'agent refuse de vous donner assez de détails pour la commander, cela vous dit l'essentiel de ce que vous devez savoir."
+          ]
+        },
+        {
+          "h2": "Comment savoir si le vendeur est vraiment propriétaire ?",
+          "paras": [
+            "Comparez le nom figurant sur la nota simple avec la personne qui vous vend. Les droits inscrits au registre foncier sont présumés exister et appartenir au titulaire indiqué dans l'inscription : le registre est donc votre point de départ. L'acheteur qui acquiert de bonne foi, et à titre onéreux, auprès de la personne que le registre désigne comme habilitée à vendre conserve l'achat une fois qu'il est inscrit.",
+            "Cette protection est solide, mais elle ne fonctionne que si le vendeur est le propriétaire inscrit et que vous faites inscrire l'achat rapidement. Lors de l'acte, chaque partie présente au notaire son numéro d'identification fiscale, ce qui relie les personnes présentes à celles qui figurent sur les documents. Un vendeur qui évite sans cesse le notaire, ou qui veut vendre uniquement par document privé, est une raison de s'arrêter."
+          ]
+        },
+        {
+          "h2": "Les coordonnées bancaires ont changé par e-mail. Que dois-je faire ?",
+          "paras": [
+            "Ne faites rien avant d'avoir parlé à quelqu'un. Le détournement de paiement est une arnaque coûteuse, car elle peut piéger un acheteur prudent tout à la fin : un e-mail qui ressemble exactement à celui de votre agent ou de votre avocat, envoyé au bon moment, avec un nouveau numéro de compte et une raison polie pour le changement.",
+            "Appelez la personne que vous connaissez, à un numéro que vous aviez déjà avant l'arrivée de l'e-mail, et confirmez à voix haute le nom du titulaire et le numéro du compte. Payez uniquement par virement bancaire sur un compte au nom attendu, en général celui du vendeur ou un compte client nominatif. Lors de la signature de l'acte, le notaire doit consigner comment et par quel moyen le prix a été payé : une trace de virement nette est de toute façon ce que vous voulez."
+          ]
+        },
+        {
+          "h2": "Le vendeur propose de payer une partie du prix en espèces. Est-ce un problème ?",
+          "paras": [
+            "Oui, pour vous plus que pour quiconque. Lorsqu'une partie agit en tant qu'entreprise ou professionnel, les paiements en espèces sont limités à 1 000 euros, ou à 10 000 euros pour un particulier dont le domicile fiscal est hors d'Espagne. Transporter 10 000 euros ou plus à l'entrée ou à la sortie de l'Espagne doit être déclaré.",
+            "L'acte doit aussi indiquer comment le prix a été payé. Si une partie refuse de le dire, le notaire le consigne et en informe l'organe notarial, qui transmet à l'administration fiscale les informations sur les paiements non identifiés. Une part en espèces non déclarée vous laisse avec un acte qui sous-estime ce que vous avez payé et de l'argent impossible à retracer si l'affaire échoue."
+          ]
+        },
+        {
+          "h2": "Le bien est vendu avec une licence touristique. Comment en être sûr ?",
+          "paras": [
+            "Vérifiez-le vous-même auprès de la région. Les licences et l'enregistrement touristiques relèvent des régions, et ils restent pleinement en vigueur même après l'annulation par les tribunaux de la procédure nationale d'enregistrement. Demandez au vendeur le numéro d'enregistrement et consultez le registre régional du tourisme, ou demandez à un abogado ou à un gestor de le faire.",
+            "Vérifiez ensuite l'immeuble. Depuis le 3 avril 2025, une majorité des trois cinquièmes des propriétaires, représentant aussi les trois cinquièmes des quotes-parts, est nécessaire pour approuver, limiter ou interdire la location touristique dans une copropriété. Une location déjà en cours n'est protégée que si sa licence ou sa declaración responsable a été obtenue avant cette date. Demandez les procès-verbaux récents des assemblées de copropriétaires, pas une assurance verbale."
+          ]
+        },
+        {
+          "h2": "Une lettre dit que je dois des charges de copropriété ou un impôt. Dois-je payer ?",
+          "paras": [
+            "Pas sur la seule foi de la lettre. Les demandes d'apparence officielle, avec une échéance urgente et un compte inconnu, sont une vieille ruse visant les propriétaires à l'étranger. Vérifiez auprès de l'organisme réellement créancier : l'administrateur de la copropriété pour les charges, et la mairie ou son service de recouvrement pour l'IBI, car c'est la mairie qui gère et perçoit cet impôt.",
+            "Lorsqu'une copropriété utilise la procédure accélérée spéciale pour réclamer des charges impayées, elle doit joindre un certificat de la dette arrêtée en assemblée de copropriétaires et la preuve que le propriétaire a été notifié. Si vous achetez, rappelez-vous que l'acheteur reprend les charges de copropriété impayées du vendeur pour l'année en cours jusqu'à présent et les trois années civiles précédentes : interrogez donc directement l'administrateur avant la signature."
+          ]
+        },
+        {
+          "h2": "Pourquoi un vrai agent demande-t-il mon passeport ?",
+          "paras": [
+            "Parce que la loi l'exige. Les agents immobiliers qui interviennent dans des ventes sont des sujets obligés au titre de la loi contre le blanchiment de capitaux et doivent vous identifier à l'aide de documents fiables avant que l'affaire ne se poursuive. Une demande de pièce d'identité est donc normale de la part d'un professionnel que vous avez vérifié. La prudence porte sur la personne à qui vous l'envoyez.",
+            "N'envoyez de copies de votre passeport qu'après avoir confirmé que l'agence existe vraiment : un bureau que vous pouvez visiter ou appeler, un site web cohérent, une personne dont le nom figure sur des documents que vous pouvez vérifier. Les escrocs demandent aussi des documents, et une copie de passeport volée peut leur servir plus tard."
+          ]
+        },
+        {
+          "h2": "Et si quelque chose a déjà mal tourné ?",
+          "paras": [
+            "Appelez d'abord votre banque, le jour même, et demandez-lui d'essayer d'arrêter ou de rappeler le virement. Portez ensuite plainte auprès de la police et rassemblez au même endroit chaque e-mail, message et justificatif. À ce stade, la rapidité compte plus que tout.",
+            "Si un achat a été conclu sur la base d'une tromperie, un abogado peut vous dire si le contrat peut être annulé. Le délai pour annuler un contrat pour erreur ou dol est de quatre ans, à compter de la conclusion du contrat. La plupart des acheteurs n'ont jamais besoin de tout cela, et quelques vérifications soigneuses au départ sont ce qui vous permet de profiter des lieux en toute tranquillité."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Vastgoedfraude in Spanje voorkomen: zo herkent u oplichting",
+      "description": "De vastgoedfraude die buitenlandse kopers en eigenaren in Spanje treft, en de eenvoudige controles die haar stoppen: register, betaalspoor en vergunning.",
+      "h1": "Oplichting met woningen in Spanje voorkomen: de controles die een koper uit het buitenland beschermen",
+      "lead": "De meeste vastgoedfraude in Spanje draait om afstand en haast: een betaling voordat iemand heeft gecontroleerd wie eigenaar is van de woning, of een gewijzigd rekeningnummer dat per e-mail binnenkomt. Drie controles houden het meeste tegen. Lees de nota simple om te zien wie het eigendomsregister als eigenaar noemt, betaal alleen per traceerbare overschrijving naar een rekening die u telefonisch heeft bevestigd, en controleer een toeristische vergunning zelf bij de regio.",
+      "sections": [
+        {
+          "h2": "Waarom zijn buitenlandse kopers zo'n makkelijk doelwit?",
+          "paras": [
+            "Omdat het grootste deel van de deal op afstand gebeurt. U vindt de woning online, mailt met de makelaar, tekent documenten die u in vertaling leest en maakt geld over vanaf een rekening thuis. Bij elk van die stappen kan iemand tussenbeide komen, en een koper in Bergen of Bremen kan niet even de hoek om lopen om het na te vragen.",
+            "Het andere ingrediënt is haast. Bijna elke oplichting komt met een reden waarom u vandaag moet betalen: een andere koper, een termijn die afloopt, een verkoper die het land verlaat. Spaanse aankopen kunnen snel gaan, maar niets wat in orde is, vraagt om geld voordat u heeft gecontroleerd wie eigenaar is van de woning en wie u betaalt."
+          ]
+        },
+        {
+          "h2": "Ze willen reserveringsgeld voordat ik de woning heb gezien. Is dat normaal?",
+          "paras": [
+            "Betalen vóór een bezichtiging is het klassieke teken van een advertentie die niet is wat ze lijkt. De foto's kunnen uit een echte advertentie zijn gekopieerd, de prijs net laag genoeg om u in actie te laten komen, en de verkoper is altijd net niet bereikbaar. Kan niemand u de woning laten zien, persoonlijk of via iemand die u vertrouwt, betaal dan niet om haar vast te houden.",
+            "Vraag naar het adres en vraag een nota simple op, het uittreksel uit het eigendomsregister, voordat er geld wordt overgemaakt. Het tarief van de registrator is 3,005061 euro per woning, plus wat een onlinedienst rekent. Wil de makelaar u niet genoeg gegevens geven om er een op te vragen, dan weet u eigenlijk al genoeg."
+          ]
+        },
+        {
+          "h2": "Hoe weet ik dat de verkoper echt de eigenaar is?",
+          "paras": [
+            "Vergelijk de naam op de nota simple met de persoon die aan u verkoopt. Voor rechten die in het eigendomsregister staan, geldt het vermoeden dat ze bestaan en toebehoren aan de houder die in de inschrijving staat, dus het register is uw vertrekpunt. Een koper die te goeder trouw en onder bezwarende titel koopt van de persoon die volgens het register mag verkopen, behoudt de aankoop zodra die is ingeschreven.",
+            "Die bescherming is sterk, maar ze werkt alleen als de verkoper de ingeschreven eigenaar is en u snel laat inschrijven. Bij de akte toont elke partij de notaris haar fiscaal identificatienummer, wat de mensen in de kamer koppelt aan de mensen op papier. Een verkoper die de notaris blijft ontwijken, of alleen via een onderhands document wil verkopen, is een reden om te stoppen."
+          ]
+        },
+        {
+          "h2": "De bankgegevens zijn per e-mail gewijzigd. Wat moet ik doen?",
+          "paras": [
+            "Niets, totdat u iemand heeft gesproken. Het omleiden van betalingen is een kostbare vorm van oplichting, omdat het ook een zorgvuldige koper helemaal aan het eind kan treffen: een e-mail die er precies uitziet als die van uw makelaar of advocaat, verstuurd op het juiste moment, met een nieuw rekeningnummer en een beleefde reden voor de wijziging.",
+            "Bel de persoon die u kent, op een nummer dat u al had voordat de e-mail binnenkwam, en bevestig de naam van de rekeninghouder en het nummer hardop. Betaal alleen per bankoverschrijving naar een rekening op de naam die u verwacht, meestal die van de verkoper of een derdengeldrekening op naam. Als u de akte tekent, moet de notaris vastleggen hoe en waarmee de prijs is betaald, dus een helder spoor van overschrijvingen is sowieso wat u wilt."
+          ]
+        },
+        {
+          "h2": "De verkoper stelt voor een deel van de prijs contant te betalen. Is dat een probleem?",
+          "paras": [
+            "Ja, vooral voor u. Als een van de partijen optreedt als onderneming of beroepsbeoefenaar, zijn contante betalingen beperkt tot 1.000 euro, of tot 10.000 euro voor een particulier met een fiscale woonplaats buiten Spanje. Wie 10.000 euro of meer Spanje in of uit brengt, moet dat melden.",
+            "In de akte moet ook staan hoe de prijs is betaald. Wil een partij dat niet zeggen, dan legt de notaris dat vast en meldt hij het aan de notariële organisatie, die informatie over niet-geïdentificeerde betalingen doorgeeft aan de belastingdienst. Een niet-opgegeven contant deel laat u achter met een akte waarin minder staat dan u betaalde en met geld dat u niet kunt traceren als de deal niet doorgaat."
+          ]
+        },
+        {
+          "h2": "Er hoort een toeristische vergunning bij. Hoe weet ik dat die klopt?",
+          "paras": [
+            "Controleer het zelf bij de regio. Toeristische vergunningen en registraties zijn regionaal geregeld, en ze blijven volledig van kracht, ook nadat de rechter de landelijke registratieprocedure heeft vernietigd. Vraag de verkoper om het registratienummer en zoek het op in het regionale toerismeregister, of vraag een abogado of gestor dat te doen.",
+            "Controleer daarna het gebouw. Sinds 3 april 2025 is een meerderheid van drie vijfde van de eigenaars, die samen ook drie vijfde van de aandelen in de gemeenschap vertegenwoordigen, nodig om toeristische verhuur binnen een vereniging van eigenaars goed te keuren, te beperken of te verbieden. Een verhuur die al loopt, is alleen beschermd als de vergunning of de declaración responsable vóór die datum is verkregen. Vraag om de recente notulen van de vergaderingen van eigenaars, niet om een mondelinge toezegging."
+          ]
+        },
+        {
+          "h2": "Een brief zegt dat ik VvE-bijdragen of belasting verschuldigd ben. Moet ik betalen?",
+          "paras": [
+            "Niet op basis van alleen de brief. Officieel ogende aanmaningen, met een dringende deadline en een onbekende rekening, zijn een oude truc bij eigenaren in het buitenland. Controleer het bij de instantie die het geld echt zou krijgen: de beheerder van de vereniging van eigenaars voor de bijdragen, en de gemeente of haar inningskantoor voor de IBI, want de gemeente beheert en int die belasting.",
+            "Als een vereniging van eigenaars de bijzondere snelle procedure gebruikt om onbetaalde bijdragen te vorderen, moet zij een verklaring bijvoegen van de schuld zoals vastgesteld in de vergadering van eigenaars en het bewijs dat de eigenaar daarvan op de hoogte is gesteld. Koopt u een woning, houd er dan rekening mee dat een koper de onbetaalde bijdragen van de verkoper overneemt voor het lopende jaar tot nu toe en de drie voorgaande kalenderjaren, dus vraag het vóór de overdracht rechtstreeks aan de beheerder."
+          ]
+        },
+        {
+          "h2": "Waarom vraagt een echte makelaar om mijn paspoort?",
+          "paras": [
+            "Omdat de wet dat verplicht. Makelaars die bij woningverkopen optreden, vallen onder de antiwitwaswet en moeten u aan de hand van betrouwbare documenten identificeren voordat de deal doorgaat. Een verzoek om een identiteitsbewijs is dus normaal van een professional die u heeft gecontroleerd. De zorg zit in aan wie u het stuurt.",
+            "Stuur kopieën van uw paspoort pas als u heeft bevestigd dat het kantoor echt bestaat: een kantoor dat u kunt bezoeken of bellen, een website die klopt, een persoon wiens naam op documenten staat die u kunt controleren. Oplichters vragen ook om documenten, en een gestolen kopie van een paspoort komt hun later goed van pas."
+          ]
+        },
+        {
+          "h2": "Wat als er al iets is misgegaan?",
+          "paras": [
+            "Bel eerst uw bank, dezelfde dag nog, en vraag of zij de overschrijving kunnen tegenhouden of terughalen. Doe daarna aangifte bij de politie en bewaar elke e-mail, elk bericht en elk betalingsbewijs op één plek. In deze fase telt snelheid meer dan wat ook.",
+            "Is een aankoop gedaan op basis van bedrog, dan kan een abogado u vertellen of het contract kan worden vernietigd. De termijn om een contract te vernietigen wegens dwaling of bedrog is vier jaar, gerekend vanaf de uitvoering van het contract. De meeste kopers hebben hier nooit iets van nodig, en een paar zorgvuldige controles aan het begin zijn wat u in staat stelt om gewoon van de plek te genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

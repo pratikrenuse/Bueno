@@ -1,0 +1,415 @@
+{
+  "slug": "renovating-a-property-in-spain",
+  "topic": "home",
+  "tool": "contractor-check",
+  "rules": [
+    "own.catastro.declare_changes",
+    "own.catastro.purchase_exempt",
+    "own.catastro.failure_to_declare",
+    "own.catastro.effect_date",
+    "own.ibi.base",
+    "own.lph.own_unit_changes",
+    "own.lph.terrace_closure",
+    "own.lph.majority_one_third",
+    "own.lph.ev_charger",
+    "buy.cash.limit",
+    "irnr.sale.gain_base",
+    "limit.contract.general",
+    "limit.interruption",
+    "limit.extracontractual",
+    "epc.requirement"
+  ],
+  "answers": [
+    "limitation-period-for-a-contract-claim-spain",
+    "time-limit-to-claim-damage-from-a-neighbour-spain",
+    "capital-gains-tax-calculation-non-resident-sale-spain",
+    "challenge-a-spanish-community-of-owners-decision",
+    "energy-certificate-for-a-spanish-property"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Renovating a Property in Spain: Permits, Builders, Catastro",
+      "description": "What to sort out before renovating a Spanish home from abroad: the town hall permit, the community, the Catastro and a builder quote you can trust.",
+      "h1": "Renovating a property in Spain: what to sort out before the builders start",
+      "lead": "Before any renovation in Spain, ask the ayuntamiento whether the job needs a licence or a declaration, and get a written, itemised quote from a builder you have checked. If you own a flat, tell the community first, because changes to the structure or the exterior need a vote. When the work is done, you must declare renovations and extensions to the Catastro within two months.",
+      "sections": [
+        {
+          "h2": "Do I need the town hall's permission to renovate?",
+          "paras": [
+            "Ask before you assume not. The ayuntamiento is the place to ask whether a job needs a licence, a declaration (declaración responsable) or nothing at all, and that includes work that feels minor. The answer depends on the job and on the town, and so do any fees. We have not checked those rules town by town, so get the answer for your own address, in writing if you can, before a builder starts.",
+            "You will hear builders talk about obra menor and obra mayor. Broadly, the first is used for lighter work such as retiling, repainting or a new kitchen, and the second for work that touches the structure, the volume or the use of the house, such as a new room or a pool. Where your job falls is for the town hall to say, not the builder."
+          ]
+        },
+        {
+          "h2": "What changes when the job is obra mayor?",
+          "paras": [
+            "For larger jobs, the town hall may ask for a technical project signed by an architect or a technical architect (arquitecto técnico) before it allows the work, and for a certificate once it is finished. Ask at the start what your town needs and how long it usually takes. Do not let the builder start on a permission that has been applied for but not yet given.",
+            "If the work added built area, ask a notary or an abogado whether the deeds and the land registry entry should be updated, so they describe the house that is actually standing. Work that is not on the paperwork tends to surface when you sell, when the buyer's lawyer compares the deeds with the house. Putting it right after the event is usually slower and less certain than asking first."
+          ]
+        },
+        {
+          "h2": "Do I have to tell the Catastro about the work?",
+          "paras": [
+            "Yes. Owners must declare new buildings, extensions, renovations and reforms, demolitions, changes of use and splits or merges of properties to the Catastro, within two months from the day after the event. The change takes effect from the day after the event, whenever it is notified. This is easy to miss, because when you bought, the notary passed the change of ownership on for you. That exemption covers the purchase only, never building work.",
+            "If you do not declare, it is a minor tax infringement that can be penalised, and the Catastro can add the change itself through a regularisation procedure that carries a fee of 60 euros per property. The Catastro record matters beyond the fee. The cadastral value it holds is the base for your IBI, the local property tax, so the record should describe the house you actually have."
+          ]
+        },
+        {
+          "h2": "I own a flat. What does the community get a say in?",
+          "paras": [
+            "You may alter your own flat, but you must not harm the safety of the building, its structure, its configuration or its exterior, and you must tell the community representative before you start. A new bathroom is your business. The facade is not, even the part outside your window.",
+            "Closing a terrace, any other change to the structure or fabric of the building, and splitting or merging flats need a vote of three fifths of all owners who also hold three fifths of the participation shares. Installing renewable energy systems, such as shared solar, can be approved by one third of owners holding one third of the shares. An electric vehicle charging point only needs prior notice to the community, and whoever installs it pays for it."
+          ]
+        },
+        {
+          "h2": "How do I know a builder's quote is sound?",
+          "paras": [
+            "Ask for a written presupuesto on company paper with the trading name, address and CIF, the company tax number. It should be broken down by partidas, the line items, with materials and labour separate. It should say whether IVA is included, and whether the price is closed (precio cerrado) or an estimate that can move, and for what reasons.",
+            "Ask to see the builder's third party liability policy (responsabilidad civil) with its dates of cover, and a certificate that the business is up to date with Hacienda and the Seguridad Social. Asking is not an accusation, and a good builder will not take it as one. Then ask the question that works best of all: can I see a job you finished nearby, and speak to that owner? If anything feels off, get a second quote for the same written specification."
+          ]
+        },
+        {
+          "h2": "How should I pay a builder from abroad?",
+          "paras": [
+            "Tie payments to stages you can see finished, with an invoice for each one. A deposit for materials is a common request. Most of the price before anything starts is a different matter, because money paid before work exists has nothing behind it. Put every change agreed on site in writing too, since verbal extras are the usual reason a final bill does not match the quote.",
+            "Pay by bank transfer, never sin factura, without an invoice. Spain limits cash payments where one side is a business: 1,000 euros in general, or 10,000 euros for a private individual whose tax domicile is outside Spain. Before any transfer, confirm the account number by phone on a number you already had. Criminals do intercept email and change account details, usually with a reason to hurry."
+          ]
+        },
+        {
+          "h2": "Why should I keep every invoice?",
+          "paras": [
+            "Because they count when you sell. For a non-resident's capital gains tax, the acquisition value is the price you paid plus the cost of investments and improvements, plus the costs and taxes of buying. A renovation you can prove with invoices raises that figure and lowers the taxable gain. Work paid in cash with no invoice is very hard to prove years later.",
+            "The contract and invoices also matter if the work goes wrong. A claim under a contract with no special period of its own runs out after five years from when performance could be demanded. Whether a special period applies to your job is a question for an abogado. If a neighbour's works damage your home instead, you have one year from finding out. In both cases a written demand stops and restarts the clock."
+          ]
+        },
+        {
+          "h2": "Is it worth adding solar or insulation while the builders are in?",
+          "paras": [
+            "Often, because the scaffolding and the disruption are already paid for. Before solar goes on, have an installer look at the roof, its orientation and its condition. In a block of flats, a shared installation for the building is the one third vote mentioned above. Panels for your own flat on a communal roof are a question for the administrador de fincas before anyone climbs up. Ask your insurer in writing whether the policy covers the panels, rather than assuming it does.",
+            "If you plan to sell or let to a new tenant afterwards, you will need a registered energy certificate anyway, so commission it once the works are finished and the certificate describes the improved house. Then lock the folder of permits, invoices and certificates away somewhere you can reach from home, and go and enjoy the rooms you paid for."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Pusse opp bolig i Spania: tillatelser, håndverkere, Catastro",
+      "description": "Dette bør du ordne før du pusser opp en bolig i Spania fra utlandet: tillatelse fra rådhuset, sameiet, Catastro og et pristilbud du kan stole på.",
+      "h1": "Oppussing av bolig i Spania: dette må være på plass før håndverkerne begynner",
+      "lead": "Før enhver oppussing i Spania bør du spørre ditt ayuntamiento om jobben krever en lisens eller en erklæring, og få et skriftlig, spesifisert pristilbud fra en byggmester du har sjekket. Eier du en leilighet, gi sameiet beskjed først, fordi endringer i konstruksjonen eller fasaden krever en avstemning. Når arbeidet er ferdig, må du melde oppussinger og tilbygg til Catastro innen to måneder.",
+      "sections": [
+        {
+          "h2": "Trenger jeg tillatelse fra rådhuset for å pusse opp?",
+          "paras": [
+            "Spør før du antar at du ikke gjør det. Ditt ayuntamiento er stedet å spørre om en jobb krever en lisens, en erklæring (declaración responsable) eller ingenting, og det gjelder også arbeid som føles lite. Svaret avhenger av jobben og av kommunen, og det gjør eventuelle gebyrer også. Vi har ikke sjekket de reglene kommune for kommune, så få svaret for din egen adresse, skriftlig hvis du kan, før en byggmester begynner.",
+            "Du vil høre håndverkere snakke om obra menor og obra mayor. Grovt sagt brukes det første om lettere arbeid som nye fliser, ommaling eller et nytt kjøkken, og det andre om arbeid som berører konstruksjonen, volumet eller bruken av huset, som et nytt rom eller et basseng. Hvor jobben din havner, er det rådhuset som avgjør, ikke byggmesteren."
+          ]
+        },
+        {
+          "h2": "Hva endres når jobben er obra mayor?",
+          "paras": [
+            "For større jobber kan rådhuset be om et teknisk prosjekt signert av en arkitekt eller en byggingeniør (arquitecto técnico) før det tillater arbeidet, og om en attest når det er ferdig. Spør i starten hva kommunen din krever og hvor lang tid det vanligvis tar. Ikke la byggmesteren begynne på en tillatelse som er søkt om, men ennå ikke gitt.",
+            "Har arbeidet økt det bebygde arealet, spør en notar eller en abogado om skjøtet og innføringen i eiendomsregisteret bør oppdateres, slik at de beskriver huset som faktisk står der. Arbeid som ikke står i papirene, har en tendens til å dukke opp når du selger, når kjøperens advokat sammenligner skjøtet med huset. Å rette det opp i ettertid er som regel tregere og mer usikkert enn å spørre først."
+          ]
+        },
+        {
+          "h2": "Må jeg melde arbeidet til Catastro?",
+          "paras": [
+            "Ja. Eiere må melde nybygg, tilbygg, oppussinger og ombygginger, rivinger, bruksendringer og deling eller sammenslåing av eiendommer til Catastro, innen to måneder fra dagen etter hendelsen. Endringen får virkning fra dagen etter hendelsen, uansett når den meldes. Dette er lett å overse, fordi da du kjøpte, sendte notaren eierskiftet videre for deg. Det unntaket gjelder bare kjøpet, aldri byggearbeid.",
+            "Melder du ikke, er det et mindre skattebrudd som kan straffes, og Catastro kan legge inn endringen selv gjennom en regulariseringsprosedyre som koster et gebyr på 60 euro per eiendom. Registreringen i Catastro betyr mer enn gebyret. Matrikkelverdien som står der, er grunnlaget for IBI, den lokale eiendomsskatten, så registreringen bør beskrive huset du faktisk har."
+          ]
+        },
+        {
+          "h2": "Jeg eier en leilighet. Hva har sameiet å si?",
+          "paras": [
+            "Du kan endre din egen leilighet, men du må ikke skade bygningens sikkerhet, konstruksjon, utforming eller fasade, og du må gi sameiets representant beskjed før du begynner. Et nytt bad er din sak. Fasaden er det ikke, heller ikke delen utenfor vinduet ditt.",
+            "Å lukke en terrasse, enhver annen endring i bygningens konstruksjon eller struktur, og å dele eller slå sammen leiligheter krever en avstemning med tre femtedeler av alle eierne som også har tre femtedeler av eierandelene. Installasjon av fornybare energianlegg, som felles solcelleanlegg, kan vedtas av en tredjedel av eierne med en tredjedel av andelene. En ladestasjon for elbil krever bare forhåndsvarsel til sameiet, og den som installerer den, betaler for den."
+          ]
+        },
+        {
+          "h2": "Hvordan vet jeg at et pristilbud fra en byggmester holder?",
+          "paras": [
+            "Be om et skriftlig presupuesto på firmapapir med firmanavn, adresse og CIF, selskapets skattenummer. Det bør være delt opp i partidas, postene, med materialer og arbeid hver for seg. Det bør stå om IVA er inkludert, og om prisen er fast (precio cerrado) eller et overslag som kan endre seg, og av hvilke grunner.",
+            "Be om å se byggmesterens ansvarsforsikring (responsabilidad civil) med dekningsdatoene, og en attest på at firmaet er à jour med Hacienda og Seguridad Social. Å spørre er ingen anklage, og en god byggmester tar det ikke som en. Still så spørsmålet som virker best av alle: kan jeg se en jobb du har fullført i nærheten, og snakke med den eieren? Føles noe feil, hent et nytt pristilbud på den samme skriftlige beskrivelsen."
+          ]
+        },
+        {
+          "h2": "Hvordan bør jeg betale en byggmester fra utlandet?",
+          "paras": [
+            "Knytt betalingene til trinn du kan se er ferdige, med en faktura for hvert. Et forskudd til materialer er en vanlig forespørsel. Det meste av prisen før noe har startet, er noe annet, fordi penger betalt før arbeidet finnes, ikke har noe bak seg. Få også hver endring som avtales på stedet skriftlig, siden muntlige tillegg er den vanlige grunnen til at sluttregningen ikke stemmer med tilbudet.",
+            "Betal med bankoverføring, aldri sin factura, uten faktura. Spania begrenser kontantbetalinger der den ene parten er en virksomhet: 1 000 euro som hovedregel, eller 10 000 euro for en privatperson med skattemessig bosted utenfor Spania. Før enhver overføring, bekreft kontonummeret på telefon, på et nummer du allerede hadde. Kriminelle avskjærer e-post og endrer kontoopplysninger, som regel med en grunn til at det haster."
+          ]
+        },
+        {
+          "h2": "Hvorfor bør jeg ta vare på alle fakturaer?",
+          "paras": [
+            "Fordi de teller når du selger. For gevinstskatten for ikke-bosatte er anskaffelsesverdien prisen du betalte pluss kostnaden ved investeringer og forbedringer, pluss kostnadene og skattene ved kjøpet. En oppussing du kan dokumentere med fakturaer, øker det tallet og senker den skattepliktige gevinsten. Arbeid betalt kontant uten faktura er svært vanskelig å dokumentere mange år senere.",
+            "Kontrakten og fakturaene betyr også noe hvis arbeidet går galt. Et krav etter en kontrakt uten egen særskilt frist foreldes fem år etter at oppfyllelse kunne kreves. Om en særskilt frist gjelder for jobben din, er et spørsmål for en abogado. Skader i stedet arbeid hos en nabo boligen din, har du ett år fra du fikk vite om det. I begge tilfeller stopper et skriftlig krav fristen og starter den på nytt."
+          ]
+        },
+        {
+          "h2": "Lønner det seg å legge inn solceller eller isolasjon mens håndverkerne er der?",
+          "paras": [
+            "Ofte, fordi stillaset og forstyrrelsen allerede er betalt. Før solcellene settes opp, la en installatør se på taket, retningen og tilstanden. I en boligblokk er et felles anlegg for bygningen den avstemningen med en tredjedel som er nevnt over. Paneler til din egen leilighet på et felles tak er et spørsmål for administrador de fincas før noen klatrer opp. Spør forsikringsselskapet skriftlig om polisen dekker panelene, i stedet for å anta at den gjør det.",
+            "Planlegger du å selge eller leie ut til en ny leietaker etterpå, trenger du uansett en registrert energiattest, så bestill den når arbeidet er ferdig, slik at attesten beskriver det forbedrede huset. Lås så mappen med tillatelser, fakturaer og attester inn et sted du kan nå hjemmefra, og gå og nyt rommene du har betalt for."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Renovera i Spanien: bygglov, hantverkare och Catastro",
+      "description": "Det här ska du reda ut innan du renoverar en bostad i Spanien från utlandet: kommunens tillstånd, samfälligheten, Catastro och en offert du kan lita på.",
+      "h1": "Att renovera en fastighet i Spanien: det här ska vara klart innan hantverkarna börjar",
+      "lead": "Innan du renoverar något i Spanien, fråga ayuntamiento om jobbet kräver ett tillstånd eller en anmälan, och skaffa en skriftlig, specificerad offert från en hantverkare som du har kontrollerat. Äger du en lägenhet, informera samfälligheten först, eftersom ändringar av stommen eller exteriören kräver en omröstning. När arbetet är klart måste du anmäla renoveringar och tillbyggnader till Catastro inom två månader.",
+      "sections": [
+        {
+          "h2": "Behöver jag kommunens tillstånd för att renovera?",
+          "paras": [
+            "Fråga innan du utgår från att du inte gör det. Ayuntamiento är stället att fråga om ett jobb kräver tillstånd, en anmälan (declaración responsable) eller ingenting alls, och det gäller även arbeten som känns små. Svaret beror på jobbet och på orten, och det gör även eventuella avgifter. Vi har inte kontrollerat de reglerna ort för ort, så få svaret för just din adress, skriftligt om du kan, innan en hantverkare börjar.",
+            "Du kommer att höra hantverkare tala om obra menor och obra mayor. Grovt sett används det första för lättare arbeten som nytt kakel, ommålning eller ett nytt kök, och det andra för arbeten som berör stommen, volymen eller användningen av huset, som ett nytt rum eller en pool. Var ditt jobb hamnar är det kommunen som avgör, inte hantverkaren."
+          ]
+        },
+        {
+          "h2": "Vad ändras när jobbet är obra mayor?",
+          "paras": [
+            "För större jobb kan kommunen begära ett tekniskt projekt undertecknat av en arkitekt eller en byggnadsingenjör (arquitecto técnico) innan den tillåter arbetet, och ett intyg när det är klart. Fråga från början vad din kommun kräver och hur lång tid det brukar ta. Låt inte hantverkaren börja på ett tillstånd som är sökt men ännu inte beviljat.",
+            "Har arbetet ökat den bebyggda ytan, fråga en notarie eller en abogado om köpehandlingarna och uppgifterna i fastighetsregistret bör uppdateras, så att de beskriver det hus som faktiskt står där. Arbeten som inte finns på papperet brukar dyka upp när du säljer, när köparens jurist jämför köpehandlingarna med huset. Att rätta till det i efterhand är oftast långsammare och osäkrare än att fråga först."
+          ]
+        },
+        {
+          "h2": "Måste jag anmäla arbetet till Catastro?",
+          "paras": [
+            "Ja. Ägare måste anmäla nybyggnader, tillbyggnader, renoveringar och ombyggnader, rivningar, ändrad användning samt delning eller sammanslagning av fastigheter till Catastro, inom två månader från dagen efter händelsen. Ändringen får verkan från dagen efter händelsen, oavsett när den anmäls. Det här är lätt att missa, eftersom notarien förde vidare ägarbytet åt dig när du köpte. Det undantaget gäller bara köpet, aldrig byggarbeten.",
+            "Anmäler du inte är det en lindrig skatteöverträdelse som kan leda till sanktion, och Catastro kan själv föra in ändringen genom ett regleringsförfarande som kostar en avgift på 60 euro per fastighet. Uppgifterna i Catastro betyder mer än avgiften. Taxeringsvärdet som finns där är underlaget för din IBI, den lokala fastighetsskatten, så uppgifterna bör beskriva det hus du faktiskt har."
+          ]
+        },
+        {
+          "h2": "Jag äger en lägenhet. Vad har samfälligheten att säga till om?",
+          "paras": [
+            "Du får ändra i din egen lägenhet, men du får inte skada byggnadens säkerhet, stomme, utformning eller exteriör, och du måste informera samfällighetens företrädare innan du börjar. Ett nytt badrum är din sak. Fasaden är det inte, inte ens delen utanför ditt fönster.",
+            "Att glasa in en terrass, varje annan ändring av byggnadens stomme eller byggnadsdelar samt att dela eller slå ihop lägenheter kräver att tre femtedelar av alla ägare röstar ja och att de också har tre femtedelar av andelarna. Installation av förnybar energi, till exempel gemensamma solpaneler, kan godkännas av en tredjedel av ägarna med en tredjedel av andelarna. En laddpunkt för elbil kräver bara att samfälligheten får besked i förväg, och den som installerar den betalar för den."
+          ]
+        },
+        {
+          "h2": "Hur vet jag att en hantverkares offert håller?",
+          "paras": [
+            "Be om en skriftlig presupuesto på företagets brevpapper med firmanamn, adress och CIF, företagets skattenummer. Den ska vara uppdelad i partidas, de enskilda posterna, med material och arbete för sig. Den ska ange om IVA ingår, och om priset är fast (precio cerrado) eller en uppskattning som kan ändras, och av vilka skäl.",
+            "Be att få se hantverkarens ansvarsförsäkring (responsabilidad civil) med datum för när den gäller, och ett intyg om att företaget har sina mellanhavanden med Hacienda och Seguridad Social i ordning. Att fråga är ingen anklagelse, och en bra hantverkare tar det inte som en. Ställ sedan den fråga som fungerar bäst av alla: kan jag se ett jobb du har gjort klart i närheten och prata med den ägaren? Känns något fel, ta in en andra offert på samma skriftliga specifikation."
+          ]
+        },
+        {
+          "h2": "Hur ska jag betala en hantverkare från utlandet?",
+          "paras": [
+            "Knyt betalningarna till etapper som du kan se är färdiga, med en faktura för varje. En handpenning för material är en vanlig begäran. Större delen av priset innan något har börjat är en annan sak, eftersom pengar som betalas innan arbetet finns inte har något bakom sig. Skriv också ner varje ändring som avtalas på plats, eftersom muntliga tillägg är den vanliga orsaken till att slutfakturan inte stämmer med offerten.",
+            "Betala med banköverföring, aldrig sin factura, utan faktura. Spanien begränsar kontantbetalningar där ena parten är ett företag: 1 000 euro i allmänhet, eller 10 000 euro för en privatperson med skatterättslig hemvist utanför Spanien. Före varje överföring, bekräfta kontonumret per telefon på ett nummer du redan hade. Bedragare snappar faktiskt upp mejl och ändrar kontouppgifter, oftast med ett skäl till att det är bråttom."
+          ]
+        },
+        {
+          "h2": "Varför ska jag spara varje faktura?",
+          "paras": [
+            "För att de räknas när du säljer. För en icke-bosatts skatt på kapitalvinst är anskaffningsvärdet det pris du betalade plus kostnaden för investeringar och förbättringar, plus kostnaderna och skatterna vid köpet. En renovering som du kan styrka med fakturor höjer den siffran och sänker den skattepliktiga vinsten. Arbete som betalats kontant utan faktura är mycket svårt att styrka flera år senare.",
+            "Avtalet och fakturorna spelar också roll om arbetet blir fel. Ett anspråk enligt ett avtal utan egen särskild frist preskriberas efter fem år från när fullgörelse kunde krävas. Om en särskild frist gäller för ditt jobb är en fråga för en abogado. Skadar i stället en grannes arbeten din bostad har du ett år från att du fick kännedom om det. I båda fallen stoppar ett skriftligt krav klockan och startar den om."
+          ]
+        },
+        {
+          "h2": "Är det värt att lägga till solpaneler eller isolering medan hantverkarna är där?",
+          "paras": [
+            "Ofta, eftersom ställningen och störningen redan är betalda. Innan solpanelerna sätts upp, låt en installatör titta på taket, dess läge mot väderstrecken och dess skick. I ett flerbostadshus är en gemensam anläggning för byggnaden den omröstning med en tredjedel som nämns ovan. Paneler för din egen lägenhet på ett gemensamt tak är en fråga för administrador de fincas innan någon klättrar upp. Fråga ditt försäkringsbolag skriftligen om försäkringen täcker panelerna, i stället för att utgå från att den gör det.",
+            "Planerar du att sälja eller hyra ut till en ny hyresgäst efteråt behöver du ändå ett registrerat energicertifikat, så beställ det när arbetena är klara så att certifikatet beskriver det förbättrade huset. Lås sedan in mappen med tillstånd, fakturor och intyg någonstans där du når den hemifrån, och åk och njut av rummen du har betalat för."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Renovierung in Spanien: Genehmigung, Handwerker, Catastro",
+      "description": "Was Sie klären sollten, bevor Sie ein Haus in Spanien aus dem Ausland renovieren: die Genehmigung, die Gemeinschaft, das Catastro und ein solides Angebot.",
+      "h1": "Eine Immobilie in Spanien renovieren: was vor Baubeginn zu klären ist",
+      "lead": "Fragen Sie vor jeder Renovierung in Spanien beim ayuntamiento nach, ob die Arbeit eine Genehmigung oder eine Erklärung braucht, und holen Sie ein schriftliches, aufgeschlüsseltes Angebot von einem Handwerker ein, den Sie überprüft haben. Wenn Ihnen eine Wohnung gehört, informieren Sie zuerst die Eigentümergemeinschaft, denn Änderungen an der Struktur oder am Äußeren brauchen einen Beschluss. Wenn die Arbeit fertig ist, müssen Sie Renovierungen und Erweiterungen innerhalb von zwei Monaten beim Catastro anmelden.",
+      "sections": [
+        {
+          "h2": "Brauche ich für eine Renovierung die Erlaubnis des Rathauses?",
+          "paras": [
+            "Fragen Sie nach, bevor Sie davon ausgehen, dass nicht. Beim ayuntamiento erfahren Sie, ob eine Arbeit eine Genehmigung, eine Erklärung (declaración responsable) oder gar nichts braucht, und das gilt auch für Arbeiten, die sich klein anfühlen. Die Antwort hängt von der Arbeit und vom Ort ab, ebenso wie etwaige Gebühren. Wir haben diese Regeln nicht Ort für Ort geprüft. Holen Sie sich die Antwort also für Ihre eigene Adresse ein, möglichst schriftlich, bevor ein Handwerker anfängt.",
+            "Sie werden Handwerker von obra menor und obra mayor sprechen hören. Grob gesagt wird Ersteres für leichtere Arbeiten verwendet, etwa neue Fliesen, einen neuen Anstrich oder eine neue Küche, und Letzteres für Arbeiten, die die Struktur, das Volumen oder die Nutzung des Hauses betreffen, etwa ein neues Zimmer oder einen Pool. Wo Ihre Arbeit einzuordnen ist, entscheidet das Rathaus, nicht der Handwerker."
+          ]
+        },
+        {
+          "h2": "Was ändert sich, wenn die Arbeit obra mayor ist?",
+          "paras": [
+            "Bei größeren Arbeiten kann das Rathaus ein technisches Projekt verlangen, unterschrieben von einem Architekten oder einem Bauingenieur (arquitecto técnico), bevor es die Arbeit erlaubt, und eine Bescheinigung, wenn sie fertig ist. Fragen Sie am Anfang, was Ihr Ort verlangt und wie lange es in der Regel dauert. Lassen Sie den Handwerker nicht auf Grundlage einer Genehmigung anfangen, die beantragt, aber noch nicht erteilt ist.",
+            "Wenn durch die Arbeit Wohnfläche hinzugekommen ist, fragen Sie einen Notar oder einen abogado, ob die Urkunden und der Grundbucheintrag aktualisiert werden sollten, damit sie das Haus beschreiben, das tatsächlich dasteht. Arbeiten, die nicht in den Papieren stehen, tauchen meist beim Verkauf auf, wenn der Anwalt des Käufers die Urkunden mit dem Haus vergleicht. Das im Nachhinein zu korrigieren ist meist langsamer und unsicherer, als vorher zu fragen."
+          ]
+        },
+        {
+          "h2": "Muss ich die Arbeiten beim Catastro melden?",
+          "paras": [
+            "Ja. Eigentümer müssen Neubauten, Erweiterungen, Renovierungen und Umbauten, Abrisse, Nutzungsänderungen sowie Teilungen oder Zusammenlegungen von Immobilien beim Catastro anmelden, innerhalb von zwei Monaten ab dem Tag nach dem Ereignis. Die Änderung wirkt ab dem Tag nach dem Ereignis, egal wann sie gemeldet wird. Das wird leicht übersehen, denn beim Kauf hat der Notar den Eigentümerwechsel für Sie weitergeleitet. Diese Befreiung gilt nur für den Kauf, nie für Bauarbeiten.",
+            "Wenn Sie nicht anmelden, ist das eine leichte Steuerordnungswidrigkeit, die geahndet werden kann, und das Catastro kann die Änderung selbst über ein Regularisierungsverfahren aufnehmen, das eine Gebühr von 60 Euro pro Immobilie kostet. Der Eintrag im Catastro ist über die Gebühr hinaus wichtig. Der Katasterwert, der dort steht, ist die Grundlage für Ihre IBI, die örtliche Grundsteuer, der Eintrag sollte also das Haus beschreiben, das Sie tatsächlich haben."
+          ]
+        },
+        {
+          "h2": "Mir gehört eine Wohnung. Wobei hat die Eigentümergemeinschaft mitzureden?",
+          "paras": [
+            "Sie dürfen Ihre eigene Wohnung verändern, aber Sie dürfen weder die Sicherheit des Gebäudes noch seine Struktur, seine Gestaltung oder sein Äußeres beeinträchtigen, und Sie müssen den Vertreter der Gemeinschaft informieren, bevor Sie beginnen. Ein neues Bad ist Ihre Sache. Die Fassade ist es nicht, auch nicht der Teil vor Ihrem Fenster.",
+            "Das Schließen einer Terrasse, jede andere Änderung an der Struktur oder Bausubstanz des Gebäudes sowie das Teilen oder Zusammenlegen von Wohnungen brauchen eine Mehrheit von drei Fünfteln aller Eigentümer, die zugleich drei Fünftel der Miteigentumsanteile halten. Anlagen für erneuerbare Energie, etwa eine gemeinsame Solaranlage, können von einem Drittel der Eigentümer mit einem Drittel der Anteile beschlossen werden. Eine Ladestation für ein Elektroauto braucht nur eine vorherige Mitteilung an die Gemeinschaft, und wer sie installiert, bezahlt sie."
+          ]
+        },
+        {
+          "h2": "Woran erkenne ich, dass das Angebot eines Handwerkers solide ist?",
+          "paras": [
+            "Verlangen Sie ein schriftliches presupuesto auf Firmenpapier mit Firmenname, Anschrift und CIF, der Steuernummer des Unternehmens. Es sollte nach partidas aufgeschlüsselt sein, den einzelnen Positionen, mit Material und Arbeit getrennt. Es sollte angeben, ob die IVA enthalten ist und ob der Preis fest ist (precio cerrado) oder eine Schätzung, die sich ändern kann, und aus welchen Gründen.",
+            "Lassen Sie sich die Betriebshaftpflichtversicherung des Handwerkers (responsabilidad civil) mit ihren Deckungsdaten zeigen und eine Bescheinigung, dass der Betrieb mit Hacienda und der Seguridad Social auf dem Laufenden ist. Nachzufragen ist kein Vorwurf, und ein guter Handwerker versteht es auch nicht so. Dann stellen Sie die Frage, die am besten funktioniert: Kann ich eine Arbeit sehen, die Sie hier in der Nähe abgeschlossen haben, und mit diesem Eigentümer sprechen? Wenn sich etwas falsch anfühlt, holen Sie für dieselbe schriftliche Leistungsbeschreibung ein zweites Angebot ein."
+          ]
+        },
+        {
+          "h2": "Wie bezahle ich einen Handwerker aus dem Ausland?",
+          "paras": [
+            "Knüpfen Sie Zahlungen an Bauabschnitte, die Sie fertig sehen können, mit einer Rechnung für jeden. Eine Anzahlung für Material ist eine übliche Bitte. Den Großteil des Preises vor Beginn zu zahlen ist etwas anderes, denn Geld, das gezahlt wird, bevor es eine Arbeit gibt, ist durch nichts gedeckt. Halten Sie auch jede vor Ort vereinbarte Änderung schriftlich fest, denn mündliche Extras sind der übliche Grund, warum eine Schlussrechnung nicht zum Angebot passt.",
+            "Zahlen Sie per Überweisung, nie sin factura, ohne Rechnung. Spanien begrenzt Barzahlungen, wenn eine Seite ein Unternehmen ist: im Allgemeinen auf 1.000 Euro, oder 10.000 Euro für eine Privatperson mit steuerlichem Wohnsitz außerhalb Spaniens. Bestätigen Sie vor jeder Überweisung die Kontonummer telefonisch, unter einer Nummer, die Sie schon vorher hatten. Kriminelle fangen E-Mails ab und ändern Kontodaten, meist mit einem Grund zur Eile."
+          ]
+        },
+        {
+          "h2": "Warum sollte ich jede Rechnung aufbewahren?",
+          "paras": [
+            "Weil sie beim Verkauf zählen. Für die Steuer eines Nichtansässigen auf den Veräußerungsgewinn ist der Anschaffungswert der gezahlte Preis plus die Kosten für Investitionen und Verbesserungen plus die Kosten und Steuern des Kaufs. Eine Renovierung, die Sie mit Rechnungen belegen können, erhöht diese Zahl und senkt den steuerpflichtigen Gewinn. Bar bezahlte Arbeit ohne Rechnung ist Jahre später sehr schwer nachzuweisen.",
+            "Vertrag und Rechnungen sind auch wichtig, wenn die Arbeit schiefgeht. Ein vertraglicher Anspruch ohne eigene Sonderfrist verjährt fünf Jahre nach dem Zeitpunkt, ab dem die Leistung verlangt werden konnte. Ob für Ihre Arbeit eine Sonderfrist gilt, ist eine Frage für einen abogado. Beschädigen dagegen die Bauarbeiten eines Nachbarn Ihr Haus, haben Sie ein Jahr ab dem Zeitpunkt, an dem Sie davon erfahren. In beiden Fällen hält eine schriftliche Aufforderung die Frist an und lässt sie neu beginnen."
+          ]
+        },
+        {
+          "h2": "Lohnt es sich, Solar oder Dämmung gleich mitzumachen?",
+          "paras": [
+            "Oft ja, denn Gerüst und Unruhe sind schon bezahlt. Bevor Solarmodule aufs Dach kommen, lassen Sie einen Installateur das Dach, seine Ausrichtung und seinen Zustand prüfen. In einem Mehrfamilienhaus ist eine gemeinsame Anlage für das Gebäude die oben erwähnte Abstimmung mit einem Drittel. Module für Ihre eigene Wohnung auf einem Gemeinschaftsdach sind eine Frage für den administrador de fincas, bevor jemand hinaufsteigt. Fragen Sie Ihren Versicherer schriftlich, ob die Police die Module abdeckt, statt davon auszugehen.",
+            "Wenn Sie danach verkaufen oder an einen neuen Mieter vermieten wollen, brauchen Sie ohnehin einen registrierten Energieausweis. Beauftragen Sie ihn also, wenn die Arbeiten fertig sind, damit der Ausweis das verbesserte Haus beschreibt. Legen Sie dann den Ordner mit Genehmigungen, Rechnungen und Bescheinigungen an einem sicheren Ort ab, auf den Sie von zu Hause zugreifen können, und genießen Sie die Räume, für die Sie bezahlt haben."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Rénover un bien en Espagne : permis, artisans et Catastro",
+      "description": "Ce qu'il faut régler avant de rénover un logement en Espagne depuis l'étranger : permis de la mairie, copropriété, Catastro et devis fiable.",
+      "h1": "Rénover un bien en Espagne : ce qu'il faut régler avant l'arrivée des artisans",
+      "lead": "Avant toute rénovation en Espagne, demandez à l'ayuntamiento si les travaux nécessitent une licence ou une déclaration, et obtenez un devis écrit et détaillé d'une entreprise que vous avez vérifiée. Si vous possédez un appartement, prévenez d'abord la copropriété, car les modifications de la structure ou de l'extérieur nécessitent un vote. Une fois les travaux terminés, vous devez déclarer les rénovations et agrandissements au Catastro dans un délai de deux mois.",
+      "sections": [
+        {
+          "h2": "Ai-je besoin de l'autorisation de la mairie pour rénover ?",
+          "paras": [
+            "Posez la question avant de supposer que non. C'est à l'ayuntamiento qu'il faut demander si des travaux nécessitent une licence, une déclaration (declaración responsable) ou rien du tout, y compris pour des travaux qui semblent mineurs. La réponse dépend des travaux et de la commune, tout comme les éventuels frais. Nous n'avons pas vérifié ces règles commune par commune, obtenez donc la réponse pour votre propre adresse, par écrit si possible, avant qu'une entreprise ne commence.",
+            "Vous entendrez les artisans parler d'obra menor et d'obra mayor. En gros, la première désigne des travaux plus légers comme refaire le carrelage, repeindre ou installer une nouvelle cuisine, et la seconde des travaux qui touchent à la structure, au volume ou à l'usage de la maison, comme une nouvelle pièce ou une piscine. C'est à la mairie, pas à l'entreprise, de dire dans quelle catégorie tombent vos travaux."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui change quand les travaux sont une obra mayor ?",
+          "paras": [
+            "Pour des travaux plus importants, la mairie peut demander un projet technique signé par un architecte ou un architecte technique (arquitecto técnico) avant d'autoriser les travaux, et un certificat une fois qu'ils sont terminés. Demandez dès le départ ce que votre commune exige et combien de temps cela prend habituellement. Ne laissez pas l'entreprise commencer sur la base d'une autorisation demandée mais pas encore accordée.",
+            "Si les travaux ont ajouté de la surface construite, demandez à un notaire ou à un abogado si l'acte de propriété et l'inscription au registre foncier doivent être mis à jour, pour qu'ils décrivent la maison telle qu'elle existe réellement. Des travaux qui ne figurent pas dans les papiers ont tendance à refaire surface au moment de la vente, quand l'avocat de l'acheteur compare l'acte avec la maison. Régulariser après coup est généralement plus lent et plus incertain que de demander d'abord."
+          ]
+        },
+        {
+          "h2": "Dois-je déclarer les travaux au Catastro ?",
+          "paras": [
+            "Oui. Les propriétaires doivent déclarer au Catastro les constructions neuves, les agrandissements, les rénovations et réformes, les démolitions, les changements d'usage et les divisions ou réunions de biens, dans un délai de deux mois à compter du lendemain de l'événement. Le changement prend effet le lendemain de l'événement, quelle que soit la date de la déclaration. C'est facile à oublier, car lors de votre achat, le notaire a transmis le changement de propriétaire à votre place. Cette dispense ne couvre que l'achat, jamais les travaux.",
+            "Si vous ne déclarez pas, c'est une infraction fiscale mineure qui peut être sanctionnée, et le Catastro peut inscrire lui-même le changement par une procédure de régularisation qui entraîne des frais de 60 euros par bien. L'inscription au Catastro compte au-delà de ces frais. La valeur cadastrale qu'il enregistre sert de base à votre IBI, l'impôt foncier local, l'inscription doit donc décrire la maison que vous avez réellement."
+          ]
+        },
+        {
+          "h2": "Je possède un appartement. Sur quoi la copropriété a-t-elle son mot à dire ?",
+          "paras": [
+            "Vous pouvez modifier votre propre appartement, mais vous ne devez pas porter atteinte à la sécurité du bâtiment, à sa structure, à sa configuration ou à son extérieur, et vous devez prévenir le représentant de la copropriété avant de commencer. Une nouvelle salle de bains vous regarde. La façade, non, même la partie qui se trouve sous votre fenêtre.",
+            "Fermer une terrasse, toute autre modification de la structure ou du gros œuvre du bâtiment, et diviser ou réunir des appartements nécessitent un vote des trois cinquièmes de l'ensemble des propriétaires représentant aussi les trois cinquièmes des quotes-parts. L'installation de systèmes d'énergie renouvelable, comme le solaire partagé, peut être approuvée par un tiers des propriétaires représentant un tiers des quotes-parts. Une borne de recharge pour véhicule électrique nécessite seulement d'en informer préalablement la copropriété, et celui qui l'installe la paie."
+          ]
+        },
+        {
+          "h2": "Comment savoir si le devis d'une entreprise est sérieux ?",
+          "paras": [
+            "Demandez un presupuesto écrit sur papier à en-tête avec la raison sociale, l'adresse et le CIF, le numéro fiscal de l'entreprise. Il doit être détaillé par partidas, les postes, avec les matériaux et la main-d'œuvre séparés. Il doit préciser si l'IVA est inclus, et si le prix est ferme (precio cerrado) ou une estimation susceptible d'évoluer, et pour quelles raisons.",
+            "Demandez à voir l'assurance responsabilité civile (responsabilidad civil) de l'entreprise avec ses dates de couverture, et un certificat attestant qu'elle est à jour auprès de Hacienda et de la Seguridad Social. Demander n'est pas une accusation, et un bon artisan ne le prendra pas ainsi. Posez ensuite la question qui fonctionne le mieux : puis-je voir un chantier que vous avez terminé près d'ici, et parler à ce propriétaire ? Si quelque chose vous semble anormal, demandez un second devis pour le même cahier des charges écrit."
+          ]
+        },
+        {
+          "h2": "Comment payer une entreprise depuis l'étranger ?",
+          "paras": [
+            "Liez les paiements à des étapes dont vous pouvez constater l'achèvement, avec une facture pour chacune. Un acompte pour les matériaux est une demande courante. Payer l'essentiel du prix avant que quoi que ce soit ne commence est une autre affaire, car l'argent versé avant que le travail n'existe ne repose sur rien. Mettez aussi par écrit chaque modification convenue sur le chantier, car les suppléments verbaux sont la raison habituelle pour laquelle une facture finale ne correspond pas au devis.",
+            "Payez par virement bancaire, jamais sin factura, sans facture. L'Espagne limite les paiements en espèces lorsque l'une des parties est une entreprise : 1 000 euros en général, ou 10 000 euros pour un particulier dont le domicile fiscal est hors d'Espagne. Avant tout virement, confirmez le numéro de compte par téléphone, à un numéro que vous aviez déjà. Des escrocs interceptent bel et bien des e-mails et modifient les coordonnées bancaires, généralement avec une raison de se dépêcher."
+          ]
+        },
+        {
+          "h2": "Pourquoi garder chaque facture ?",
+          "paras": [
+            "Parce qu'elles comptent quand vous vendez. Pour l'impôt sur la plus-value d'un non-résident, la valeur d'acquisition correspond au prix payé plus le coût des investissements et améliorations, plus les frais et impôts liés à l'achat. Une rénovation que vous pouvez prouver par des factures augmente ce montant et réduit la plus-value imposable. Des travaux payés en espèces sans facture sont très difficiles à prouver des années plus tard.",
+            "Le contrat et les factures comptent aussi si les travaux tournent mal. Une action fondée sur un contrat sans délai particulier se prescrit au bout de cinq ans à compter du moment où l'exécution pouvait être exigée. Savoir si un délai particulier s'applique à vos travaux est une question pour un abogado. Si ce sont au contraire les travaux d'un voisin qui endommagent votre logement, vous avez un an à compter du moment où vous l'apprenez. Dans les deux cas, une mise en demeure écrite arrête le délai et le fait repartir."
+          ]
+        },
+        {
+          "h2": "Vaut-il la peine d'ajouter du solaire ou de l'isolation pendant les travaux ?",
+          "paras": [
+            "Souvent, car l'échafaudage et les désagréments sont déjà payés. Avant de poser du solaire, faites examiner par un installateur le toit, son orientation et son état. Dans un immeuble, une installation partagée pour le bâtiment relève du vote à un tiers mentionné plus haut. Des panneaux pour votre propre appartement sur un toit commun sont une question à poser à l'administrador de fincas avant que quiconque ne monte. Demandez par écrit à votre assureur si le contrat couvre les panneaux, plutôt que de le supposer.",
+            "Si vous prévoyez de vendre ou de louer à un nouveau locataire ensuite, vous aurez de toute façon besoin d'un certificat énergétique enregistré, commandez-le donc une fois les travaux terminés, pour qu'il décrive la maison améliorée. Rangez ensuite le dossier des autorisations, factures et certificats dans un endroit accessible depuis chez vous, et allez profiter des pièces que vous avez payées."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Verbouwen in Spanje: vergunningen, aannemers en Catastro",
+      "description": "Wat u regelt voordat u een Spaanse woning vanuit het buitenland verbouwt: de vergunning, de VvE, het Catastro en een betrouwbare offerte van de aannemer.",
+      "h1": "Een woning in Spanje verbouwen: wat u regelt voordat de aannemer begint",
+      "lead": "Vraag vóór elke verbouwing in Spanje bij het ayuntamiento na of de klus een vergunning of een melding nodig heeft, en vraag een schriftelijke, gespecificeerde offerte van een aannemer die u heeft nagetrokken. Heeft u een appartement, meld het dan eerst bij de VvE, want wijzigingen aan de constructie of de buitenkant vereisen een stemming. Als het werk klaar is, moet u verbouwingen en uitbreidingen binnen twee maanden bij het Catastro aangeven.",
+      "sections": [
+        {
+          "h2": "Heb ik toestemming van de gemeente nodig om te verbouwen?",
+          "paras": [
+            "Vraag het na voordat u ervan uitgaat dat het niet hoeft. Bij het ayuntamiento kunt u vragen of een klus een vergunning, een melding (declaración responsable) of helemaal niets nodig heeft, en dat geldt ook voor werk dat klein aanvoelt. Het antwoord hangt af van de klus en van de gemeente, net als eventuele kosten. Wij hebben die regels niet per gemeente gecontroleerd, dus vraag het antwoord voor uw eigen adres, liefst schriftelijk, voordat een aannemer begint.",
+            "U zult aannemers horen praten over obra menor en obra mayor. Grofweg wordt het eerste gebruikt voor lichter werk, zoals opnieuw betegelen, schilderen of een nieuwe keuken, en het tweede voor werk dat raakt aan de constructie, het volume of het gebruik van het huis, zoals een nieuwe kamer of een zwembad. Waar uw klus onder valt, bepaalt de gemeente, niet de aannemer."
+          ]
+        },
+        {
+          "h2": "Wat verandert er als het om obra mayor gaat?",
+          "paras": [
+            "Bij grotere klussen kan de gemeente een technisch project vragen dat is ondertekend door een architect of een bouwkundig architect (arquitecto técnico) voordat ze het werk toestaat, en een certificaat als het klaar is. Vraag aan het begin wat uw gemeente nodig heeft en hoe lang het meestal duurt. Laat de aannemer niet beginnen op een vergunning die is aangevraagd maar nog niet verleend.",
+            "Heeft het werk bebouwde oppervlakte toegevoegd, vraag dan een notaris of een abogado of de akte en de inschrijving in het eigendomsregister moeten worden bijgewerkt, zodat ze het huis beschrijven dat er werkelijk staat. Werk dat niet op papier staat, komt meestal boven bij verkoop, als de advocaat van de koper de akte met het huis vergelijkt. Het achteraf rechtzetten is meestal trager en onzekerder dan vooraf vragen."
+          ]
+        },
+        {
+          "h2": "Moet ik het werk bij het Catastro melden?",
+          "paras": [
+            "Ja. Eigenaren moeten nieuwbouw, uitbreidingen, renovaties en verbouwingen, sloop, wijzigingen van gebruik en het splitsen of samenvoegen van percelen bij het Catastro aangeven, binnen twee maanden vanaf de dag na de gebeurtenis. De wijziging geldt vanaf de dag na de gebeurtenis, wanneer die ook wordt gemeld. Dit wordt makkelijk vergeten, omdat de notaris bij uw aankoop de eigendomswijziging voor u doorgaf. Die vrijstelling geldt alleen voor de aankoop, nooit voor bouwwerkzaamheden.",
+            "Geeft u het niet aan, dan is dat een lichte belastingovertreding die kan worden beboet, en het Catastro kan de wijziging zelf opnemen via een regularisatieprocedure, waarvoor 60 euro per perceel in rekening wordt gebracht. De registratie bij het Catastro doet er meer toe dan die kosten. De kadastrale waarde die erin staat, is de basis voor uw IBI, de lokale onroerendgoedbelasting, dus de registratie moet het huis beschrijven dat u werkelijk heeft."
+          ]
+        },
+        {
+          "h2": "Ik heb een appartement. Waarover heeft de VvE iets te zeggen?",
+          "paras": [
+            "U mag uw eigen appartement aanpassen, maar u mag de veiligheid van het gebouw, de constructie, de indeling of de buitenkant niet aantasten, en u moet de vertegenwoordiger van de VvE inlichten voordat u begint. Een nieuwe badkamer is uw zaak. De gevel niet, ook niet het deel buiten uw raam.",
+            "Een terras dichtmaken, elke andere wijziging aan de constructie of het casco van het gebouw, en het splitsen of samenvoegen van appartementen vereisen een stemming van drie vijfde van alle eigenaren die samen ook drie vijfde van de aandelen hebben. De installatie van systemen voor hernieuwbare energie, zoals gedeelde zonnepanelen, kan worden goedgekeurd door een derde van de eigenaren met een derde van de aandelen. Een laadpunt voor een elektrische auto vereist alleen een voorafgaande melding aan de VvE, en wie het laat installeren, betaalt het."
+          ]
+        },
+        {
+          "h2": "Hoe weet ik of de offerte van een aannemer klopt?",
+          "paras": [
+            "Vraag om een schriftelijke presupuesto op briefpapier van het bedrijf, met de handelsnaam, het adres en het CIF, het fiscale nummer van het bedrijf. Die moet zijn uitgesplitst in partidas, de posten, met materiaal en arbeid apart. Er moet in staan of de IVA is inbegrepen, en of de prijs vast is (precio cerrado) of een schatting die kan veranderen, en om welke redenen.",
+            "Vraag de aansprakelijkheidsverzekering van de aannemer (responsabilidad civil) te zien, met de looptijd van de dekking, en een verklaring dat het bedrijf bij is met Hacienda en de Seguridad Social. Vragen is geen beschuldiging, en een goede aannemer zal het ook niet zo opvatten. Stel daarna de vraag die het allerbest werkt: mag ik een klus zien die u in de buurt heeft afgerond, en die eigenaar spreken? Voelt er iets niet goed, vraag dan een tweede offerte voor dezelfde schriftelijke omschrijving."
+          ]
+        },
+        {
+          "h2": "Hoe betaal ik een aannemer vanuit het buitenland?",
+          "paras": [
+            "Koppel betalingen aan fases die u afgerond kunt zien, met een factuur voor elke fase. Een aanbetaling voor materiaal is een gebruikelijk verzoek. Het grootste deel van de prijs vooraf, voordat er iets begint, is een ander verhaal, want geld dat is betaald voordat er werk bestaat, heeft niets achter zich. Leg ook elke wijziging die ter plekke wordt afgesproken schriftelijk vast, want mondelinge extra's zijn de gebruikelijke reden dat een eindrekening niet met de offerte overeenkomt.",
+            "Betaal per bankoverschrijving, nooit sin factura, zonder factuur. Spanje beperkt contante betalingen als een van beide partijen een bedrijf is: 1.000 euro in het algemeen, of 10.000 euro voor een particulier met een fiscale woonplaats buiten Spanje. Bevestig vóór elke overschrijving het rekeningnummer telefonisch, op een nummer dat u al had. Criminelen onderscheppen wel degelijk e-mails en veranderen rekeninggegevens, meestal met een reden om haast te maken."
+          ]
+        },
+        {
+          "h2": "Waarom moet ik elke factuur bewaren?",
+          "paras": [
+            "Omdat ze tellen als u verkoopt. Voor de vermogenswinstbelasting van een niet-inwoner is de aanschafwaarde de prijs die u betaalde, plus de kosten van investeringen en verbeteringen, plus de kosten en belastingen van de aankoop. Een verbouwing die u met facturen kunt aantonen, verhoogt dat bedrag en verlaagt de belaste winst. Werk dat contant en zonder factuur is betaald, is jaren later heel moeilijk aan te tonen.",
+            "Het contract en de facturen zijn ook belangrijk als het werk misgaat. Een vordering uit een contract zonder eigen bijzondere termijn verjaart na vijf jaar vanaf het moment dat nakoming kon worden geëist. Of er voor uw klus een bijzondere termijn geldt, is een vraag voor een abogado. Beschadigen werkzaamheden van een buurman juist uw woning, dan heeft u één jaar vanaf het moment dat u het ontdekte. In beide gevallen zet een schriftelijke eis de klok stil en laat hem opnieuw lopen."
+          ]
+        },
+        {
+          "h2": "Is het de moeite waard om zonnepanelen of isolatie toe te voegen nu de aannemer er toch is?",
+          "paras": [
+            "Vaak wel, omdat de steigers en de overlast al betaald zijn. Laat een installateur, voordat er zonnepanelen op gaan, naar het dak kijken, naar de ligging en naar de staat ervan. In een appartementengebouw valt een gedeelde installatie voor het gebouw onder de stemming van een derde die hierboven is genoemd. Panelen voor uw eigen appartement op een gemeenschappelijk dak zijn een vraag voor de administrador de fincas voordat er iemand naar boven klimt. Vraag uw verzekeraar schriftelijk of de polis de panelen dekt, in plaats van ervan uit te gaan.",
+            "Bent u van plan daarna te verkopen of aan een nieuwe huurder te verhuren, dan heeft u sowieso een geregistreerd energielabel nodig, dus laat het opstellen zodra de werkzaamheden klaar zijn, zodat het label het verbeterde huis beschrijft. Berg daarna de map met vergunningen, facturen en certificaten op een plek op die u ook van thuis kunt bereiken, en ga genieten van de kamers waarvoor u heeft betaald."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "slug": "selling-property-in-spain-as-a-non-resident",
+  "topic": "selling",
+  "tool": "sale-tax",
+  "rules": [
+    "irnr.rates",
+    "irnr.sale.gain_base",
+    "irnr.sale.retention",
+    "deadline.210.sale",
+    "plusvalia.methods",
+    "plusvalia.no_gain",
+    "plusvalia.deadlines",
+    "plusvalia.municipal_variation",
+    "epc.requirement",
+    "epc.validity",
+    "limit.community.buyer_liability",
+    "limit.hidden_defects",
+    "aml.identification",
+    "poa.apostille_parties",
+    "deadline.210.refund",
+    "aml.obliged_agents"
+  ],
+  "answers": [
+    "three-percent-withheld-when-selling-spanish-property",
+    "capital-gains-tax-calculation-non-resident-sale-spain",
+    "plusvalia-when-selling-in-spain",
+    "who-sets-the-plusvalia-rate-in-spain",
+    "energy-certificate-for-a-spanish-property",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "hidden-defects-after-buying-a-spanish-property",
+    "apostille-for-a-power-of-attorney-used-in-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Selling Property in Spain as a Non-Resident: Tax and Steps",
+      "description": "Selling a Spanish home from abroad means a 3 percent withholding, 19 percent tax on the gain and the plusvalia. How each works, and when to file.",
+      "h1": "Selling your Spanish property when you live in another country",
+      "lead": "When a non-resident sells a property in Spain, the buyer withholds 3 percent of the agreed price and pays it to the tax office. The seller then pays 19 percent on the actual gain, whatever their country of residence, on a return filed between one and four months after completion. The town hall also charges the plusvalia on the increase in land value, which has its own 30 working day deadline.",
+      "sections": [
+        {
+          "h2": "What taxes come with selling my Spanish home from abroad?",
+          "paras": [
+            "Two taxes, and one withholding that people often mistake for a third. The first tax is on your gain, under non-resident income tax, at 19 percent for every non-resident, whether you live in Norway, Germany or the UK. The second is the plusvalia, a municipal tax on the increase in the value of the land, collected by the town hall.",
+            "The withholding is the 3 percent the buyer keeps back from the price at the notary. It is not an extra tax on top of the 19 percent. Understanding how those three pieces fit together is most of the work, and it makes the figures on the completion statement far less alarming when you see them for the first time."
+          ]
+        },
+        {
+          "h2": "Why does the buyer keep 3 percent of my price?",
+          "paras": [
+            "Because the law tells them to. When the seller is a non-resident, the buyer must withhold 3 percent of the agreed price and pay it to the tax office on modelo 211 within one month of the sale. It applies whether the buyer lives in Spain or not, and it is 3 percent of the price, not of your gain.",
+            "The withheld amount counts towards the tax on your gain. If 19 percent of your real gain is more than the 3 percent, you pay the difference with your sale return. If it is less, or you sold at a loss, you can claim the difference back on a modelo 210 with a refund result, which may be filed from 1 February. The tax office keeps a list of cases where no withholding applies, so your abogado should confirm it for your sale."
+          ]
+        },
+        {
+          "h2": "How is the gain on my sale calculated?",
+          "paras": [
+            "The gain is the transfer value minus the acquisition value. The transfer value is the sale price less the costs and taxes of selling that you pay, such as agent commission and the notary, registry and legal costs. The acquisition value is what you paid, plus improvements, plus the taxes and costs of buying, less any amortisation you deducted while letting.",
+            "Say you bought for 200,000 euros and paid 20,000 euros in purchase tax, notary and registry costs. Your acquisition value is 220,000 euros. You sell for 300,000 euros and pay 15,000 euros in commission and sale costs, so the transfer value is 285,000 euros. The gain is 65,000 euros, and the tax at 19 percent is 12,350 euros.",
+            "In that example the buyer withholds 9,000 euros, 3 percent of 300,000, and you pay the remaining 3,350 euros with the sale return. This is why the original completion file matters years later (the purchase tax receipt alone can move the result by thousands). Properties bought before 31 December 1994 have a transitional regime, which is one for a tax adviser."
+          ]
+        },
+        {
+          "h2": "When do I file the return on the gain?",
+          "paras": [
+            "The return is filed within three months, once one month has passed since the date of the sale. In practice, the window opens one month after completion and closes four months after it. If you complete on 15 March, you file between 15 April and 15 July.",
+            "This window did not change when the filing dates for imputed and rental income moved to April. Keep the two apart in your head: the April dates are for owning and letting, the sale has its own clock that starts at the notary. If you let the property in the year you sell, the rental return still follows the rental dates."
+          ]
+        },
+        {
+          "h2": "How does the plusvalia fit in?",
+          "paras": [
+            "The plusvalia is a municipal tax on the increase in value of the land. There are two ways to calculate it. The objective method multiplies the cadastral value of the land by a coefficient for how long you owned it. The real gain method uses the actual increase between your purchase and sale deeds. You may choose whichever is lower.",
+            "If there was no increase in value, there is nothing to pay, but the sale must still be declared with both deeds attached. On a sale the deadline is 30 working days from the date of the deed. Coefficients, the rate and whether the town works by declaration or self-assessment are all set by each town hall, so ask your abogado how it will be handled at completion."
+          ]
+        },
+        {
+          "h2": "What paperwork should I have ready before I list?",
+          "paras": [
+            "An energy performance certificate. On a sale, a copy of the registered certificate and its energy label are annexed to the contract. A certificate lasts up to ten years, or five where the rating is G, so check the date on yours before the first viewing rather than in the week before completion.",
+            "Your community fee position. A buyer takes on the seller's unpaid community charges for the part of the year already gone plus the three previous calendar years, and the property itself answers for them, so a careful buyer's lawyer will want proof that yours are paid. Ask the administrador de fincas for it early.",
+            "Your own identity documents and the purchase file. Estate agents in Spain must identify everyone taking part in a sale, using reliable documents, before the operation goes ahead. Have your passport, your NIE and your original purchase deed ready, along with the receipts for any improvements you plan to add to the acquisition value."
+          ]
+        },
+        {
+          "h2": "Can I sell without flying to Spain?",
+          "paras": [
+            "Yes, many sellers sign through a power of attorney. Norway, Sweden, Germany, France, the Netherlands, the United Kingdom and Spain are all parties to the Hague Apostille Convention, so a public document issued at home is accepted in Spain with an apostille instead of consular legalisation.",
+            "Before you sign anything at home, send the draft to the Spanish notary who will use it and to your abogado. They will tell you whether a translation is needed and whether the powers are wide enough for the sale, the receipt of the money and the tax returns that follow. Signing a second power because the first missed a word is an avoidable delay."
+          ]
+        },
+        {
+          "h2": "Is anything left to deal with after completion?",
+          "paras": [
+            "A few things. The buyer pays over the 3 percent within a month, your plusvalia deadline runs out 30 working days after the deed, and your own sale return is due between one and four months after completion. Write all three dates down on the day you sign, because they come from different offices and nobody sends one reminder for all of them.",
+            "A buyer's claim against the seller for hidden defects ends six months after the property is handed over. A plain, honest description of the house in the contract helps everyone. And if you are planning dates, remember that much of Spain slows down in August, while the plusvalia deadline does not, because August counts as working days for that tax. Then hand over the keys and enjoy the next chapter."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Selge bolig i Spania som ikke-bosatt: skatt og steg",
+      "description": "Selger du en spansk bolig fra utlandet, gjelder 3 prosent tilbakeholdt, 19 prosent skatt på gevinsten og plusvalia, og her ser du hvordan og når.",
+      "h1": "Slik selger du boligen din i Spania når du bor i et annet land",
+      "lead": "Når en ikke-bosatt selger en eiendom i Spania, holder kjøperen tilbake 3 prosent av avtalt pris og betaler det til skattekontoret. Selgeren betaler deretter 19 prosent av den faktiske gevinsten, uansett hvilket land vedkommende bor i, på en oppgave som leveres mellom én og fire måneder etter overdragelsen. Kommunen krever i tillegg plusvalia på verdiøkningen på grunnen, med sin egen frist på 30 virkedager.",
+      "sections": [
+        {
+          "h2": "Hvilke skatter følger med når jeg selger boligen min i Spania fra utlandet?",
+          "paras": [
+            "To skatter, og ett tilbakehold som folk ofte forveksler med en tredje. Den første skatten er på gevinsten din, etter inntektsskatten for ikke-bosatte, med 19 prosent for alle ikke-bosatte, enten du bor i Norge, Tyskland eller Storbritannia. Den andre er plusvalia, en kommunal skatt på verdiøkningen på grunnen, som kommunen krever inn.",
+            "Tilbakeholdet er de 3 prosentene kjøperen holder igjen av prisen hos notaren. Det er ikke en ekstra skatt i tillegg til de 19 prosentene. Å forstå hvordan de tre delene henger sammen er det meste av jobben, og det gjør tallene på oppgjøret langt mindre skremmende når du ser dem for første gang."
+          ]
+        },
+        {
+          "h2": "Hvorfor holder kjøperen tilbake 3 prosent av prisen min?",
+          "paras": [
+            "Fordi loven sier det. Når selgeren er ikke-bosatt, må kjøperen holde tilbake 3 prosent av avtalt pris og betale det til skattekontoret på modelo 211 innen én måned etter salget. Det gjelder enten kjøperen bor i Spania eller ikke, og det er 3 prosent av prisen, ikke av gevinsten din.",
+            "Det tilbakeholdte beløpet regnes med i skatten på gevinsten din. Er 19 prosent av den reelle gevinsten mer enn de 3 prosentene, betaler du mellomlegget med salgsoppgaven. Er det mindre, eller solgte du med tap, kan du kreve differansen tilbake på en modelo 210 med tilbakebetaling, som kan leveres fra 1. februar. Skattekontoret har en liste over tilfeller der det ikke skal holdes tilbake noe, så abogado bør bekrefte det for ditt salg."
+          ]
+        },
+        {
+          "h2": "Hvordan beregnes gevinsten ved salget?",
+          "paras": [
+            "Gevinsten er overdragelsesverdien minus anskaffelsesverdien. Overdragelsesverdien er salgsprisen fratrukket kostnadene og skattene ved salget som du betaler, som meglerprovisjon og kostnader til notar, register og advokat. Anskaffelsesverdien er det du betalte, pluss påkostninger, pluss skatter og kostnader ved kjøpet, minus eventuell avskrivning du trakk fra mens du leide ut.",
+            "Si at du kjøpte for 200 000 euro og betalte 20 000 euro i kjøpsskatt og kostnader til notar og register. Anskaffelsesverdien din er 220 000 euro. Du selger for 300 000 euro og betaler 15 000 euro i provisjon og salgskostnader, så overdragelsesverdien er 285 000 euro. Gevinsten er 65 000 euro, og skatten med 19 prosent er 12 350 euro.",
+            "I det eksempelet holder kjøperen tilbake 9 000 euro, 3 prosent av 300 000, og du betaler de resterende 3 350 euro med salgsoppgaven. Det er derfor den opprinnelige kjøpsmappen betyr noe mange år senere (kvitteringen for kjøpsskatten alene kan flytte resultatet med tusenvis). Eiendommer kjøpt før 31. desember 1994 har en overgangsordning, og den er noe for en skatterådgiver."
+          ]
+        },
+        {
+          "h2": "Når leverer jeg oppgaven for gevinsten?",
+          "paras": [
+            "Oppgaven leveres innen tre måneder, etter at det har gått én måned siden salgsdatoen. I praksis åpner vinduet én måned etter overdragelsen og stenger fire måneder etter. Er overdragelsen 15. mars, leverer du mellom 15. april og 15. juli.",
+            "Dette vinduet ble ikke endret da leveringsdatoene for imputert inntekt og leieinntekt flyttet til april. Hold de to adskilt i hodet: aprildatoene gjelder for å eie og leie ut, mens salget har sin egen klokke som starter hos notaren. Leier du ut eiendommen i det året du selger, følger leieoppgaven fortsatt datoene for leie."
+          ]
+        },
+        {
+          "h2": "Hvordan passer plusvalia inn?",
+          "paras": [
+            "Plusvalia er en kommunal skatt på verdiøkningen på grunnen. Den kan beregnes på to måter. Den objektive metoden ganger matrikkelverdien på grunnen med en koeffisient for hvor lenge du eide den. Metoden med reell gevinst bruker den faktiske økningen mellom kjøpsskjøtet og salgsskjøtet ditt. Du kan velge den som gir lavest beløp.",
+            "Var det ingen verdiøkning, er det ingenting å betale, men salget må fortsatt meldes med begge skjøtene vedlagt. Ved salg er fristen 30 virkedager fra datoen på skjøtet. Koeffisienter, sats og om kommunen bruker melding eller egenberegning fastsettes av hver kommune, så spør abogado hvordan det håndteres ved overdragelsen."
+          ]
+        },
+        {
+          "h2": "Hvilke papirer bør jeg ha klare før jeg legger boligen ut for salg?",
+          "paras": [
+            "En energiattest. Ved salg legges en kopi av den registrerte attesten og energimerket ved kontrakten. En attest varer i opptil ti år, eller fem der karakteren er G, så sjekk datoen på din før første visning, ikke uken før overdragelsen.",
+            "Status for fellesutgiftene dine. En kjøper overtar selgerens ubetalte fellesutgifter for den delen av året som har gått pluss de tre foregående kalenderårene, og eiendommen selv hefter for dem, så en grundig advokat for kjøperen vil ha bevis på at dine er betalt. Be administrador de fincas om det i god tid.",
+            "Dine egne legitimasjonsdokumenter og kjøpsmappen. Eiendomsmeglere i Spania må identifisere alle som deltar i et salg, med pålitelige dokumenter, før transaksjonen gjennomføres. Ha passet, NIE-nummeret og det originale kjøpsskjøtet klart, sammen med kvitteringene for påkostninger du vil legge til anskaffelsesverdien."
+          ]
+        },
+        {
+          "h2": "Kan jeg selge uten å fly til Spania?",
+          "paras": [
+            "Ja, mange selgere signerer gjennom en fullmakt. Norge, Sverige, Tyskland, Frankrike, Nederland, Storbritannia og Spania er alle parter i Haag-konvensjonen om apostille, så et offentlig dokument utstedt hjemme godtas i Spania med en apostille i stedet for konsulær legalisering.",
+            "Før du signerer noe hjemme, send utkastet til den spanske notaren som skal bruke det og til abogado. De sier fra om det trengs en oversettelse, og om fullmakten er vid nok for salget, mottak av pengene og skatteoppgavene som følger. Å signere en ny fullmakt fordi den første manglet ett ord er en forsinkelse som kan unngås."
+          ]
+        },
+        {
+          "h2": "Er det noe igjen å ta seg av etter overdragelsen?",
+          "paras": [
+            "Noen ting. Kjøperen betaler inn de 3 prosentene innen en måned, plusvalia-fristen din løper ut 30 virkedager etter skjøtet, og din egen salgsoppgave skal leveres mellom én og fire måneder etter overdragelsen. Skriv ned alle tre datoene samme dag som du signerer, fordi de kommer fra ulike kontorer og ingen sender én felles påminnelse.",
+            "Kjøperens krav mot selgeren for skjulte mangler opphører seks måneder etter at eiendommen er overlevert. En enkel og ærlig beskrivelse av huset i kontrakten hjelper alle. Og planlegger du datoer, husk at store deler av Spania roer ned i august, mens plusvalia-fristen ikke gjør det, fordi august regnes som virkedager for den skatten. Overlever så nøklene og nyt neste kapittel."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Sälja fastighet i Spanien som icke-bosatt: skatt och steg",
+      "description": "Att sälja en spansk bostad från utlandet innebär 3 procent innehållen skatt, 19 procent på vinsten och plusvalia, och här ser du hur allt fungerar.",
+      "h1": "Sälja din spanska fastighet när du bor i ett annat land",
+      "lead": "När en icke-bosatt säljer en fastighet i Spanien håller köparen inne 3 procent av det avtalade priset och betalar in det till skattemyndigheten. Säljaren betalar sedan 19 procent på den faktiska vinsten, oavsett bosättningsland, i en deklaration som lämnas mellan en och fyra månader efter tillträdet. Kommunen tar dessutom ut plusvalia på värdeökningen på marken, med en egen frist på 30 arbetsdagar.",
+      "sections": [
+        {
+          "h2": "Vilka skatter blir det när jag säljer min spanska bostad från utlandet?",
+          "paras": [
+            "Två skatter, och ett skatteavdrag som folk ofta tar för en tredje. Den första skatten tas ut på din vinst, enligt inkomstskatten för icke-bosatta, med 19 procent för alla icke-bosatta, oavsett om du bor i Norge, Tyskland eller Storbritannien. Den andra är plusvalia, en kommunal skatt på värdeökningen på marken, som kommunen tar ut.",
+            "Skatteavdraget är de 3 procent som köparen håller inne av priset hos notarien. Det är inte en extra skatt ovanpå de 19 procenten. Att förstå hur de tre delarna hänger ihop är det mesta av jobbet, och det gör siffrorna på likvidavräkningen mycket mindre skrämmande när du ser dem första gången."
+          ]
+        },
+        {
+          "h2": "Varför håller köparen inne 3 procent av mitt pris?",
+          "paras": [
+            "Därför att lagen säger det. När säljaren är icke-bosatt måste köparen hålla inne 3 procent av det avtalade priset och betala in det till skattemyndigheten på modelo 211 inom en månad från försäljningen. Det gäller oavsett om köparen bor i Spanien eller inte, och det är 3 procent av priset, inte av din vinst.",
+            "Det innehållna beloppet räknas av mot skatten på din vinst. Är 19 procent av din verkliga vinst mer än de 3 procenten betalar du mellanskillnaden med din försäljningsdeklaration. Är det mindre, eller sålde du med förlust, kan du begära tillbaka skillnaden på en modelo 210 med återbetalningsresultat, som får lämnas från 1 februari. Skattemyndigheten har en lista över fall där inget skatteavdrag görs, så din abogado bör bekräfta vad som gäller för din försäljning."
+          ]
+        },
+        {
+          "h2": "Hur räknas vinsten på min försäljning fram?",
+          "paras": [
+            "Vinsten är överlåtelsevärdet minus anskaffningsvärdet. Överlåtelsevärdet är försäljningspriset minus de kostnader och skatter för försäljningen som du betalar, som mäklararvode och kostnader för notarie, inskrivning och juridisk hjälp. Anskaffningsvärdet är vad du betalade, plus förbättringar, plus skatter och kostnader vid köpet, minus eventuell avskrivning du dragit av under uthyrningen.",
+            "Säg att du köpte för 200 000 euro och betalade 20 000 euro i köpskatt och kostnader för notarie och inskrivning. Ditt anskaffningsvärde är 220 000 euro. Du säljer för 300 000 euro och betalar 15 000 euro i arvode och försäljningskostnader, så överlåtelsevärdet är 285 000 euro. Vinsten är 65 000 euro, och skatten med 19 procent är 12 350 euro.",
+            "I det exemplet håller köparen inne 9 000 euro, 3 procent av 300 000, och du betalar de återstående 3 350 euro med försäljningsdeklarationen. Det är därför den ursprungliga köpdokumentationen spelar roll många år senare (enbart kvittot på köpskatten kan flytta resultatet med tusentals euro). Fastigheter köpta före 31 december 1994 har en övergångsregel, och den är en fråga för en skatterådgivare."
+          ]
+        },
+        {
+          "h2": "När lämnar jag deklarationen för vinsten?",
+          "paras": [
+            "Deklarationen lämnas inom tre månader, när en månad har gått sedan försäljningsdagen. I praktiken öppnar perioden en månad efter tillträdet och stänger fyra månader efter det. Är tillträdet den 15 mars deklarerar du mellan 15 april och 15 juli.",
+            "Den här perioden ändrades inte när deklarationsdatumen för schablonintäkt och hyresinkomst flyttades till april. Håll isär de två i huvudet: aprildatumen gäller ägande och uthyrning, försäljningen har en egen klocka som startar hos notarien. Hyr du ut fastigheten det år du säljer följer hyresdeklarationen fortfarande hyresdatumen."
+          ]
+        },
+        {
+          "h2": "Hur passar plusvalia in?",
+          "paras": [
+            "Plusvalia är en kommunal skatt på värdeökningen på marken. Den kan räknas på två sätt. Den objektiva metoden multiplicerar markens taxeringsvärde med en koefficient för hur länge du ägt den. Metoden med verklig vinst använder den faktiska ökningen mellan köpehandlingen och försäljningshandlingen. Du får välja det som blir lägst.",
+            "Uppstod ingen värdeökning finns inget att betala, men försäljningen måste ändå anmälas med båda handlingarna bifogade. Vid försäljning är fristen 30 arbetsdagar från datumet på handlingen. Koefficienter, skattesats och om kommunen arbetar med anmälan eller självdeklaration bestäms av varje kommun, så fråga din abogado hur det ska skötas vid tillträdet."
+          ]
+        },
+        {
+          "h2": "Vilka papper ska jag ha klara innan jag lägger ut bostaden?",
+          "paras": [
+            "En energideklaration. Vid försäljning bifogas en kopia av den registrerade deklarationen och dess energimärkning till avtalet. En deklaration gäller i upp till tio år, eller fem om betyget är G, så kontrollera datumet på din före den första visningen i stället för veckan före tillträdet.",
+            "Din ställning när det gäller samfällighetsavgifter. En köpare tar över säljarens obetalda samfällighetsavgifter för den del av året som redan gått plus de tre föregående kalenderåren, och fastigheten själv svarar för dem, så en noggrann advokat på köparsidan vill se bevis på att dina är betalda. Be administrador de fincas om det i god tid.",
+            "Dina egna id-handlingar och köpdokumentationen. Fastighetsmäklare i Spanien måste identifiera alla som deltar i en försäljning, med tillförlitliga handlingar, innan affären går vidare. Ha pass, NIE och den ursprungliga köpehandlingen redo, tillsammans med kvittona för de förbättringar du tänker lägga till anskaffningsvärdet."
+          ]
+        },
+        {
+          "h2": "Kan jag sälja utan att flyga till Spanien?",
+          "paras": [
+            "Ja, många säljare skriver under genom en fullmakt. Norge, Sverige, Tyskland, Frankrike, Nederländerna, Storbritannien och Spanien är alla anslutna till Haagkonventionen om apostille, så en offentlig handling som utfärdats hemma godtas i Spanien med en apostille i stället för konsulär legalisering.",
+            "Innan du skriver under något hemma, skicka utkastet till den spanska notarie som ska använda det och till din abogado. De talar om för dig om en översättning behövs och om befogenheterna räcker för försäljningen, mottagandet av pengarna och de deklarationer som följer. Att skriva under en andra fullmakt för att den första missade ett ord är en försening som går att undvika."
+          ]
+        },
+        {
+          "h2": "Finns det något kvar att ta hand om efter tillträdet?",
+          "paras": [
+            "Några saker. Köparen betalar in de 3 procenten inom en månad, din frist för plusvalia löper ut 30 arbetsdagar efter handlingen, och din egen försäljningsdeklaration ska lämnas mellan en och fyra månader efter tillträdet. Skriv ner alla tre datumen samma dag som du skriver under, eftersom de kommer från olika kontor och ingen skickar en gemensam påminnelse för dem.",
+            "En köpares krav mot säljaren för dolda fel upphör sex månader efter att fastigheten överlämnats. En enkel och ärlig beskrivning av huset i avtalet hjälper alla. Och planerar du datum, kom ihåg att mycket av Spanien saktar ner i augusti, medan fristen för plusvalia inte gör det, eftersom augusti räknas som arbetsdagar för den skatten. Lämna sedan över nycklarna och njut av nästa kapitel."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Immobilie in Spanien verkaufen als Nichtansässiger: Steuern",
+      "description": "Wer vom Ausland aus in Spanien verkauft, hat 3 Prozent Einbehalt, 19 Prozent Steuer auf den Gewinn und die plusvalia. So funktioniert jedes, mit Fristen.",
+      "h1": "Ihre spanische Immobilie verkaufen, wenn Sie in einem anderen Land leben",
+      "lead": "Wenn ein Nichtansässiger eine Immobilie in Spanien verkauft, behält der Käufer 3 Prozent des vereinbarten Preises ein und zahlt sie an das Finanzamt. Der Verkäufer zahlt dann 19 Prozent auf den tatsächlichen Gewinn, unabhängig von seinem Wohnsitzland, mit einer Erklärung, die zwischen einem und vier Monaten nach dem Notartermin abgegeben wird. Das Rathaus erhebt außerdem die plusvalia auf den Wertzuwachs des Bodens, mit eigener Frist von 30 Werktagen.",
+      "sections": [
+        {
+          "h2": "Welche Steuern fallen an, wenn ich mein Haus in Spanien vom Ausland aus verkaufe?",
+          "paras": [
+            "Zwei Steuern und ein Einbehalt, der oft für eine dritte gehalten wird. Die erste Steuer betrifft Ihren Gewinn, über die Einkommensteuer für Nichtansässige, mit 19 Prozent für alle Nichtansässigen, ob Sie in Norwegen, Deutschland oder im Vereinigten Königreich leben. Die zweite ist die plusvalia, eine Gemeindesteuer auf den Wertzuwachs des Bodens, die das Rathaus erhebt.",
+            "Der Einbehalt sind die 3 Prozent, die der Käufer beim Notar vom Preis zurückhält. Er ist keine zusätzliche Steuer neben den 19 Prozent. Wer versteht, wie diese drei Teile zusammenpassen, hat den größten Teil der Arbeit erledigt, und die Zahlen in der Abrechnung zum Notartermin wirken beim ersten Lesen weit weniger beunruhigend."
+          ]
+        },
+        {
+          "h2": "Warum behält der Käufer 3 Prozent meines Preises ein?",
+          "paras": [
+            "Weil das Gesetz es vorschreibt. Ist der Verkäufer nicht ansässig, muss der Käufer 3 Prozent des vereinbarten Preises einbehalten und innerhalb eines Monats nach dem Verkauf mit modelo 211 an das Finanzamt abführen. Das gilt, ob der Käufer in Spanien lebt oder nicht, und es sind 3 Prozent des Preises, nicht Ihres Gewinns.",
+            "Der einbehaltene Betrag wird auf die Steuer auf Ihren Gewinn angerechnet. Sind 19 Prozent Ihres tatsächlichen Gewinns mehr als die 3 Prozent, zahlen Sie die Differenz mit Ihrer Verkaufserklärung. Ist es weniger oder haben Sie mit Verlust verkauft, können Sie die Differenz mit einem modelo 210 mit Erstattungsergebnis zurückfordern, das ab dem 1. Februar abgegeben werden kann. Das Finanzamt führt eine Liste von Fällen, in denen kein Einbehalt gilt, Ihr abogado sollte das also für Ihren Verkauf bestätigen."
+          ]
+        },
+        {
+          "h2": "Wie wird der Gewinn aus meinem Verkauf berechnet?",
+          "paras": [
+            "Der Gewinn ist der Veräußerungswert minus der Anschaffungswert. Der Veräußerungswert ist der Verkaufspreis abzüglich der Kosten und Steuern des Verkaufs, die Sie tragen, etwa Maklerprovision sowie Notar-, Register- und Anwaltskosten. Der Anschaffungswert ist das, was Sie gezahlt haben, plus Verbesserungen, plus die Steuern und Kosten des Kaufs, abzüglich aller Abschreibungen, die Sie während der Vermietung abgezogen haben.",
+            "Angenommen, Sie haben für 200.000 Euro gekauft und 20.000 Euro an Grunderwerbsteuer, Notar- und Registerkosten gezahlt. Ihr Anschaffungswert beträgt 220.000 Euro. Sie verkaufen für 300.000 Euro und zahlen 15.000 Euro an Provision und Verkaufskosten, der Veräußerungswert beträgt also 285.000 Euro. Der Gewinn liegt bei 65.000 Euro, und die Steuer zu 19 Prozent beträgt 12.350 Euro.",
+            "In diesem Beispiel behält der Käufer 9.000 Euro ein, 3 Prozent von 300.000, und Sie zahlen die restlichen 3.350 Euro mit der Verkaufserklärung. Deshalb zählen die ursprünglichen Kaufunterlagen noch Jahre später (allein der Beleg über die Grunderwerbsteuer kann das Ergebnis um Tausende verschieben). Für Immobilien, die vor dem 31. Dezember 1994 gekauft wurden, gilt eine Übergangsregelung, das ist ein Fall für einen Steuerberater."
+          ]
+        },
+        {
+          "h2": "Wann gebe ich die Erklärung zum Gewinn ab?",
+          "paras": [
+            "Die Erklärung wird innerhalb von drei Monaten abgegeben, nachdem seit dem Verkaufsdatum ein Monat vergangen ist. In der Praxis öffnet sich der Zeitraum einen Monat nach dem Notartermin und schließt vier Monate danach. Ist der Notartermin am 15. März, geben Sie zwischen dem 15. April und dem 15. Juli ab.",
+            "Dieser Zeitraum hat sich nicht geändert, als die Fristen für fiktive Einkünfte und Mieteinkünfte in den April verlegt wurden. Halten Sie beides auseinander: Die Fristen im April gelten für Besitz und Vermietung, der Verkauf hat seine eigene Uhr, die beim Notar zu laufen beginnt. Vermieten Sie die Immobilie im Verkaufsjahr, folgt die Erklärung zur Miete weiterhin den Fristen für Mieteinkünfte."
+          ]
+        },
+        {
+          "h2": "Wie passt die plusvalia dazu?",
+          "paras": [
+            "Die plusvalia ist eine Gemeindesteuer auf den Wertzuwachs des Bodens. Es gibt zwei Berechnungsarten. Die objektive Methode multipliziert den Katasterwert des Bodens mit einem Koeffizienten für die Besitzdauer. Die Methode des tatsächlichen Gewinns verwendet den tatsächlichen Wertzuwachs zwischen Ihrer Kauf- und Ihrer Verkaufsurkunde. Sie dürfen die günstigere wählen.",
+            "Gab es keinen Wertzuwachs, ist nichts zu zahlen, der Verkauf muss aber trotzdem mit beiden Urkunden im Anhang erklärt werden. Beim Verkauf beträgt die Frist 30 Werktage ab dem Datum der Urkunde. Koeffizienten, Steuersatz und ob die Gemeinde mit Erklärung oder Selbstveranlagung arbeitet, legt jedes Rathaus selbst fest. Fragen Sie also Ihren abogado, wie es beim Notartermin gehandhabt wird."
+          ]
+        },
+        {
+          "h2": "Welche Unterlagen sollte ich vor dem Inserieren bereithalten?",
+          "paras": [
+            "Einen Energieausweis. Beim Verkauf werden eine Kopie des registrierten Ausweises und sein Energielabel dem Vertrag beigefügt. Ein Ausweis gilt bis zu zehn Jahre, bei der Einstufung G fünf Jahre. Prüfen Sie das Datum auf Ihrem also vor der ersten Besichtigung, nicht erst in der Woche vor dem Notartermin.",
+            "Den Stand Ihrer Gemeinschaftsbeiträge. Ein Käufer übernimmt die unbezahlten Gemeinschaftskosten des Verkäufers für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre, und die Immobilie selbst haftet dafür. Ein sorgfältiger Anwalt des Käufers wird also einen Nachweis verlangen, dass Ihre bezahlt sind. Fragen Sie den administrador de fincas frühzeitig danach.",
+            "Ihre eigenen Ausweisdokumente und die Kaufunterlagen. Immobilienmakler in Spanien müssen alle Beteiligten eines Verkaufs anhand verlässlicher Dokumente identifizieren, bevor das Geschäft zustande kommt. Halten Sie Reisepass, NIE und Ihre ursprüngliche Kaufurkunde bereit, zusammen mit den Belegen für alle Verbesserungen, die Sie dem Anschaffungswert hinzurechnen wollen."
+          ]
+        },
+        {
+          "h2": "Kann ich verkaufen, ohne nach Spanien zu fliegen?",
+          "paras": [
+            "Ja, viele Verkäufer unterschreiben über eine Vollmacht. Norwegen, Schweden, Deutschland, Frankreich, die Niederlande, das Vereinigte Königreich und Spanien sind alle Vertragsstaaten des Haager Apostille-Übereinkommens. Eine im Heimatland ausgestellte öffentliche Urkunde wird in Spanien also mit Apostille statt mit konsularischer Legalisation anerkannt.",
+            "Bevor Sie zu Hause etwas unterschreiben, schicken Sie den Entwurf an den spanischen Notar, der ihn verwenden wird, und an Ihren abogado. Sie sagen Ihnen, ob eine Übersetzung nötig ist und ob die Vollmacht weit genug reicht für den Verkauf, den Empfang des Geldes und die anschließenden Steuererklärungen. Eine zweite Vollmacht zu unterschreiben, weil in der ersten ein Wort fehlte, ist eine vermeidbare Verzögerung."
+          ]
+        },
+        {
+          "h2": "Bleibt nach dem Notartermin noch etwas zu erledigen?",
+          "paras": [
+            "Ein paar Dinge. Der Käufer führt die 3 Prozent innerhalb eines Monats ab, Ihre Frist für die plusvalia endet 30 Werktage nach der Urkunde, und Ihre eigene Verkaufserklärung ist zwischen einem und vier Monaten nach dem Notartermin fällig. Notieren Sie alle drei Daten am Tag der Unterschrift, denn sie kommen von verschiedenen Stellen, und niemand schickt eine gemeinsame Erinnerung.",
+            "Der Anspruch eines Käufers gegen den Verkäufer wegen versteckter Mängel endet sechs Monate nach der Übergabe der Immobilie. Eine schlichte, ehrliche Beschreibung des Hauses im Vertrag hilft allen. Und wenn Sie Termine planen: Im August geht in Spanien vieles langsamer, die Frist für die plusvalia aber nicht, denn der August zählt bei dieser Steuer als Werktage. Dann übergeben Sie die Schlüssel und genießen das nächste Kapitel."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Vendre un bien en Espagne en non-résident : impôts et étapes",
+      "description": "Vendre un logement espagnol depuis l'étranger implique une retenue de 3 pour cent, 19 pour cent sur la plus-value et la plusvalia. Fonctionnement et dates.",
+      "h1": "Vendre votre bien en Espagne quand vous vivez dans un autre pays",
+      "lead": "Lorsqu'un non-résident vend un bien en Espagne, l'acheteur retient 3 pour cent du prix convenu et les verse à l'administration fiscale. Le vendeur paie ensuite 19 pour cent sur la plus-value réelle, quel que soit son pays de résidence, au moyen d'une déclaration déposée entre un et quatre mois après la vente. La mairie perçoit aussi la plusvalia sur la hausse de valeur du terrain, qui a sa propre échéance de 30 jours ouvrables.",
+      "sections": [
+        {
+          "h2": "Quels impôts dois-je payer en vendant mon logement espagnol depuis l'étranger ?",
+          "paras": [
+            "Deux impôts, et une retenue que l'on prend souvent pour un troisième. Le premier impôt porte sur votre plus-value, au titre de l'impôt sur le revenu des non-résidents, à 19 pour cent pour tous les non-résidents, que vous viviez en Norvège, en Allemagne ou au Royaume-Uni. Le second est la plusvalia, un impôt municipal sur la hausse de valeur du terrain, perçu par la mairie.",
+            "La retenue, ce sont les 3 pour cent que l'acheteur garde sur le prix chez le notaire. Ce n'est pas un impôt supplémentaire qui s'ajoute aux 19 pour cent. Comprendre comment ces trois éléments s'articulent représente l'essentiel du travail, et les chiffres du décompte de vente paraissent bien moins inquiétants la première fois que vous les voyez."
+          ]
+        },
+        {
+          "h2": "Pourquoi l'acheteur garde-t-il 3 pour cent de mon prix ?",
+          "paras": [
+            "Parce que la loi l'y oblige. Lorsque le vendeur est non-résident, l'acheteur doit retenir 3 pour cent du prix convenu et les verser à l'administration fiscale sur le modelo 211 dans le mois qui suit la vente. Cela s'applique que l'acheteur vive en Espagne ou non, et il s'agit de 3 pour cent du prix, pas de votre plus-value.",
+            "Le montant retenu s'impute sur l'impôt dû sur votre plus-value. Si 19 pour cent de votre plus-value réelle dépassent les 3 pour cent, vous payez la différence avec votre déclaration de vente. Si c'est moins, ou si vous avez vendu à perte, vous pouvez récupérer la différence au moyen d'un modelo 210 avec un résultat de remboursement, qui peut être déposé à partir du 1er février. L'administration fiscale tient une liste des cas où aucune retenue ne s'applique : votre abogado doit donc le vérifier pour votre vente."
+          ]
+        },
+        {
+          "h2": "Comment la plus-value de ma vente est-elle calculée ?",
+          "paras": [
+            "La plus-value est la valeur de transmission moins la valeur d'acquisition. La valeur de transmission est le prix de vente diminué des frais et impôts de la vente que vous payez, comme la commission de l'agent et les frais de notaire, de registre et d'avocat. La valeur d'acquisition est ce que vous avez payé, plus les améliorations, plus les impôts et frais d'achat, moins l'amortissement éventuellement déduit pendant la location.",
+            "Imaginons que vous ayez acheté pour 200 000 euros et payé 20 000 euros d'impôt d'achat, de frais de notaire et de registre. Votre valeur d'acquisition est de 220 000 euros. Vous vendez pour 300 000 euros et payez 15 000 euros de commission et de frais de vente : la valeur de transmission est donc de 285 000 euros. La plus-value est de 65 000 euros, et l'impôt à 19 pour cent est de 12 350 euros.",
+            "Dans cet exemple, l'acheteur retient 9 000 euros, soit 3 pour cent de 300 000, et vous payez les 3 350 euros restants avec la déclaration de vente. C'est pourquoi le dossier d'achat d'origine compte encore des années plus tard (le seul justificatif de l'impôt d'achat peut faire varier le résultat de plusieurs milliers d'euros). Les biens achetés avant le 31 décembre 1994 relèvent d'un régime transitoire, une question à poser à un conseiller fiscal."
+          ]
+        },
+        {
+          "h2": "Quand dois-je déclarer la plus-value ?",
+          "paras": [
+            "La déclaration se dépose dans un délai de trois mois, une fois qu'un mois s'est écoulé depuis la date de la vente. En pratique, la période s'ouvre un mois après la vente et se ferme quatre mois après. Si vous signez le 15 mars, vous déposez entre le 15 avril et le 15 juillet.",
+            "Cette période n'a pas changé lorsque les dates de déclaration du revenu imputé et des revenus locatifs sont passées en avril. Gardez les deux bien séparés dans votre tête : les dates d'avril concernent la détention et la location, la vente a sa propre horloge qui démarre chez le notaire. Si vous louez le bien l'année où vous vendez, la déclaration des loyers suit toujours les dates des loyers."
+          ]
+        },
+        {
+          "h2": "Quelle est la place de la plusvalia ?",
+          "paras": [
+            "La plusvalia est un impôt municipal sur la hausse de valeur du terrain. Il existe deux façons de la calculer. La méthode objective multiplie la valeur cadastrale du terrain par un coefficient correspondant à la durée de détention. La méthode de la plus-value réelle utilise la hausse effective entre vos actes d'achat et de vente. Vous pouvez choisir la plus basse des deux.",
+            "S'il n'y a eu aucune hausse de valeur, il n'y a rien à payer, mais la vente doit tout de même être déclarée avec les deux actes joints. En cas de vente, le délai est de 30 jours ouvrables à compter de la date de l'acte. Les coefficients, le taux et le fait que la commune fonctionne par déclaration ou par auto-liquidation sont fixés par chaque mairie : demandez donc à votre abogado comment cela sera traité lors de la signature."
+          ]
+        },
+        {
+          "h2": "Quels documents préparer avant de mettre en vente ?",
+          "paras": [
+            "Un certificat de performance énergétique. En cas de vente, une copie du certificat enregistré et son étiquette énergétique sont annexées au contrat. Un certificat est valable jusqu'à dix ans, ou cinq ans si la note est G : vérifiez donc la date du vôtre avant la première visite, plutôt que la semaine précédant la vente.",
+            "La situation de vos charges de copropriété. Un acheteur reprend les charges de copropriété impayées du vendeur pour la partie de l'année déjà écoulée plus les trois années civiles précédentes, et le bien lui-même en répond : l'avocat d'un acheteur prudent voudra donc la preuve que les vôtres sont payées. Demandez-la tôt à l'administrador de fincas.",
+            "Vos propres pièces d'identité et le dossier d'achat. En Espagne, les agents immobiliers doivent identifier toutes les personnes qui prennent part à une vente, au moyen de documents fiables, avant que l'opération n'aille plus loin. Ayez prêts votre passeport, votre NIE et votre acte d'achat original, ainsi que les justificatifs des améliorations que vous comptez ajouter à la valeur d'acquisition."
+          ]
+        },
+        {
+          "h2": "Puis-je vendre sans prendre l'avion pour l'Espagne ?",
+          "paras": [
+            "Oui, beaucoup de vendeurs signent par procuration. La Norvège, la Suède, l'Allemagne, la France, les Pays-Bas, le Royaume-Uni et l'Espagne sont tous parties à la Convention de La Haye sur l'apostille : un acte public établi chez vous est donc accepté en Espagne avec une apostille, sans légalisation consulaire.",
+            "Avant de signer quoi que ce soit chez vous, envoyez le projet au notaire espagnol qui l'utilisera et à votre abogado. Ils vous diront si une traduction est nécessaire et si les pouvoirs sont assez larges pour la vente, la réception des fonds et les déclarations fiscales qui suivent. Signer une seconde procuration parce qu'il manquait un mot à la première est un retard évitable."
+          ]
+        },
+        {
+          "h2": "Reste-t-il quelque chose à régler après la vente ?",
+          "paras": [
+            "Quelques points. L'acheteur verse les 3 pour cent dans le mois, votre délai pour la plusvalia expire 30 jours ouvrables après l'acte, et votre propre déclaration de vente est due entre un et quatre mois après la vente. Notez ces trois dates le jour même de la signature, car elles viennent de services différents et personne ne vous envoie un rappel unique pour toutes.",
+            "L'action d'un acheteur contre le vendeur pour vices cachés s'éteint six mois après la remise du bien. Une description simple et honnête de la maison dans le contrat aide tout le monde. Et si vous planifiez des dates, souvenez-vous qu'une grande partie de l'Espagne tourne au ralenti en août, alors que le délai de la plusvalia, lui, continue, car août compte en jours ouvrables pour cet impôt. Remettez ensuite les clés et profitez du chapitre suivant."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Woning in Spanje verkopen als niet-inwoner: belasting en stappen",
+      "description": "Wie vanuit het buitenland een Spaanse woning verkoopt, krijgt te maken met 3 procent inhouding, 19 procent winstbelasting en de plusvalia.",
+      "h1": "Uw Spaanse woning verkopen als u in een ander land woont",
+      "lead": "Verkoopt een niet-inwoner een woning in Spanje, dan houdt de koper 3 procent van de overeengekomen prijs in en draagt dat af aan de belastingdienst. De verkoper betaalt daarna 19 procent over de werkelijke winst, ongeacht het woonland, via een aangifte die tussen één en vier maanden na de overdracht wordt ingediend. De gemeente heft daarnaast de plusvalia over de waardestijging van de grond, met een eigen termijn van 30 werkdagen.",
+      "sections": [
+        {
+          "h2": "Welke belastingen komen kijken bij het verkopen van mijn Spaanse woning vanuit het buitenland?",
+          "paras": [
+            "Twee belastingen, en één inhouding die mensen vaak voor een derde aanzien. De eerste belasting gaat over uw winst, via de inkomstenbelasting voor niet-inwoners, tegen 19 procent voor elke niet-inwoner, of u nu in Noorwegen, Duitsland of het Verenigd Koninkrijk woont. De tweede is de plusvalia, een gemeentelijke belasting over de waardestijging van de grond, die de gemeente int.",
+            "De inhouding is de 3 procent die de koper bij de notaris van de prijs achterhoudt. Dat is geen extra belasting bovenop de 19 procent. Begrijpen hoe die drie onderdelen in elkaar passen, is het grootste deel van het werk, en het maakt de bedragen op de afrekening veel minder schrikbarend wanneer u ze voor het eerst ziet."
+          ]
+        },
+        {
+          "h2": "Waarom houdt de koper 3 procent van mijn verkoopprijs in?",
+          "paras": [
+            "Omdat de wet dat voorschrijft. Is de verkoper een niet-inwoner, dan moet de koper 3 procent van de overeengekomen prijs inhouden en die binnen een maand na de verkoop met modelo 211 aan de belastingdienst betalen. Dat geldt of de koper nu in Spanje woont of niet, en het gaat om 3 procent van de prijs, niet van uw winst.",
+            "Het ingehouden bedrag telt mee voor de belasting over uw winst. Is 19 procent van uw werkelijke winst meer dan de 3 procent, dan betaalt u het verschil met uw verkoopaangifte. Is het minder, of heeft u met verlies verkocht, dan kunt u het verschil terugvragen met een modelo 210 met een teruggave, die vanaf 1 februari kan worden ingediend. De belastingdienst houdt een lijst bij van gevallen waarin geen inhouding geldt, dus laat uw abogado dat voor uw verkoop bevestigen."
+          ]
+        },
+        {
+          "h2": "Hoe wordt de winst op mijn verkoop berekend?",
+          "paras": [
+            "De winst is de overdrachtswaarde min de aanschafwaarde. De overdrachtswaarde is de verkoopprijs min de kosten en belastingen van de verkoop die u betaalt, zoals makelaarscommissie en notaris-, register- en juridische kosten. De aanschafwaarde is wat u betaalde, plus verbeteringen, plus de belastingen en kosten van de aankoop, min eventuele afschrijving die u tijdens de verhuur heeft afgetrokken.",
+            "Stel dat u kocht voor 200.000 euro en 20.000 euro betaalde aan overdrachtsbelasting, notaris- en registerkosten. Uw aanschafwaarde is dan 220.000 euro. U verkoopt voor 300.000 euro en betaalt 15.000 euro aan commissie en verkoopkosten, dus de overdrachtswaarde is 285.000 euro. De winst is 65.000 euro, en de belasting tegen 19 procent is 12.350 euro.",
+            "In dat voorbeeld houdt de koper 9.000 euro in, 3 procent van 300.000, en betaalt u de resterende 3.350 euro met de verkoopaangifte. Daarom doet het oorspronkelijke aankoopdossier er jaren later nog toe (alleen al het betaalbewijs van de overdrachtsbelasting kan de uitkomst met duizenden euro's veranderen). Voor woningen die vóór 31 december 1994 zijn gekocht, geldt een overgangsregeling, en dat is iets voor een belastingadviseur."
+          ]
+        },
+        {
+          "h2": "Wanneer dien ik de aangifte over de winst in?",
+          "paras": [
+            "De aangifte wordt ingediend binnen drie maanden, nadat er een maand is verstreken sinds de datum van de verkoop. In de praktijk opent de periode een maand na de overdracht en sluit die vier maanden erna. Draagt u over op 15 maart, dan dient u in tussen 15 april en 15 juli.",
+            "Deze periode is niet veranderd toen de aangiftedata voor fictief inkomen en huurinkomsten naar april verschoven. Houd de twee in uw hoofd gescheiden: de data in april zijn voor bezit en verhuur, de verkoop heeft een eigen klok die bij de notaris begint te lopen. Verhuurt u de woning in het jaar van verkoop, dan volgt de huuraangifte nog steeds de data voor huur."
+          ]
+        },
+        {
+          "h2": "Hoe past de plusvalia in het geheel?",
+          "paras": [
+            "De plusvalia is een gemeentelijke belasting over de waardestijging van de grond. Er zijn twee manieren om die te berekenen. De objectieve methode vermenigvuldigt de kadastrale waarde van de grond met een coëfficiënt voor hoe lang u de woning bezat. De methode van de werkelijke winst gebruikt de daadwerkelijke stijging tussen uw aankoop- en verkoopakte. U mag de laagste kiezen.",
+            "Is er geen waardestijging, dan valt er niets te betalen, maar de verkoop moet wel worden aangegeven met beide aktes als bijlage. Bij verkoop is de termijn 30 werkdagen vanaf de datum van de akte. De coëfficiënten, het tarief en of de gemeente werkt met aangifte of met zelfberekening worden allemaal door elke gemeente zelf bepaald, dus vraag uw abogado hoe het bij de overdracht wordt afgehandeld."
+          ]
+        },
+        {
+          "h2": "Welke papieren moet ik klaar hebben voordat ik de woning te koop zet?",
+          "paras": [
+            "Een energiecertificaat. Bij verkoop worden een kopie van het geregistreerde certificaat en het bijbehorende energielabel als bijlage bij het contract gevoegd. Een certificaat is maximaal tien jaar geldig, of vijf jaar bij label G, dus controleer de datum op het uwe vóór de eerste bezichtiging en niet in de week voor de overdracht.",
+            "De stand van uw VvE-bijdragen. Een koper neemt de onbetaalde VvE-bijdragen van de verkoper over voor het al verstreken deel van het jaar plus de drie voorgaande kalenderjaren, en de woning zelf staat ervoor in, dus een zorgvuldige advocaat van de koper wil bewijs dat de uwe betaald zijn. Vraag dat tijdig aan de administrador de fincas.",
+            "Uw eigen identiteitsdocumenten en het aankoopdossier. Makelaars in Spanje moeten iedereen die aan een verkoop deelneemt identificeren met betrouwbare documenten, voordat de transactie doorgaat. Houd uw paspoort, uw NIE en uw originele aankoopakte klaar, samen met de betaalbewijzen van verbeteringen die u bij de aanschafwaarde wilt optellen."
+          ]
+        },
+        {
+          "h2": "Kan ik verkopen zonder naar Spanje te vliegen?",
+          "paras": [
+            "Ja, veel verkopers tekenen via een volmacht. Noorwegen, Zweden, Duitsland, Frankrijk, Nederland, het Verenigd Koninkrijk en Spanje zijn allemaal partij bij het Apostilleverdrag van Den Haag, dus een openbaar document dat in uw eigen land is opgesteld, wordt in Spanje aanvaard met een apostille in plaats van consulaire legalisatie.",
+            "Stuur het concept, voordat u thuis iets tekent, naar de Spaanse notaris die het gaat gebruiken en naar uw abogado. Zij vertellen u of een vertaling nodig is en of de bevoegdheden ruim genoeg zijn voor de verkoop, de ontvangst van het geld en de belastingaangiften die volgen. Een tweede volmacht tekenen omdat er in de eerste een woord ontbrak, is een vermijdbare vertraging."
+          ]
+        },
+        {
+          "h2": "Moet er na de overdracht nog iets geregeld worden?",
+          "paras": [
+            "Een paar dingen. De koper draagt de 3 procent binnen een maand af, uw termijn voor de plusvalia loopt af 30 werkdagen na de akte, en uw eigen verkoopaangifte moet tussen één en vier maanden na de overdracht binnen zijn. Schrijf alle drie de data op de dag van ondertekening op, want ze komen van verschillende instanties en niemand stuurt één herinnering voor alles.",
+            "Een vordering van de koper tegen de verkoper wegens verborgen gebreken vervalt zes maanden nadat de woning is overgedragen. Een eenvoudige, eerlijke beschrijving van het huis in het contract helpt iedereen. En plant u data, bedenk dan dat een groot deel van Spanje in augustus op een lager pitje staat, terwijl de termijn voor de plusvalia gewoon doorloopt, omdat augustus voor die belasting als werkdagen telt. Geef daarna de sleutels over en geniet van het volgende hoofdstuk."
+          ]
+        }
+      ]
+    }
+  }
+}

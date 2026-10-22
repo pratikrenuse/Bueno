@@ -1,0 +1,465 @@
+{
+  "slug": "inheritance-and-wills-for-spanish-property",
+  "topic": "inheritance",
+  "tool": "inheritance-roadmap",
+  "rules": [
+    "inh.will.forms",
+    "inh.will.no_joint",
+    "inh.will.form_law",
+    "inh.registry.notaries_report",
+    "inh.registry.certificate_shows",
+    "inh.legitima.forced_heirs",
+    "inh.legitima.descendants",
+    "inh.legitima.ascendants",
+    "inh.legitima.base",
+    "succession.spouse_usufruct",
+    "succession.gananciales_first",
+    "succession.eu_election",
+    "succession.foral",
+    "inh.intestate.order",
+    "inh.declaration.notary",
+    "inh.isd.who_files",
+    "inh.isd.nif",
+    "inh.isd.representative",
+    "isd.state_scale",
+    "isd.nonresident_option",
+    "isd.nonresident_which_region",
+    "own.catastro.reference_value",
+    "inh.gift.deadline"
+  ],
+  "answers": [
+    "choose-your-national-law-for-inheritance-of-spanish-property",
+    "what-a-surviving-spouse-inherits-in-spain",
+    "regions-with-their-own-inheritance-law-spain",
+    "spanish-inheritance-tax-rates-state-scale",
+    "inheritance-tax-regional-rules-for-non-resident-heirs"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Wills and Inheritance for Spanish Property Owners",
+      "description": "How Spanish forced heirship works, why a will matters for a foreign owner, how to choose your own national law and what changes in the foral regions.",
+      "h1": "Planning who inherits your home in Spain: wills, forced shares and your own law",
+      "lead": "Spain's common Civil Code reserves part of an estate for children, parents and the surviving spouse, so you cannot always leave a Spanish home to whoever you like. A foreign owner can choose the law of their nationality instead, but only by saying so in a will. A short open will before a Spanish notary, with that choice written in, is the simplest way to make your wishes stick.",
+      "sections": [
+        {
+          "h2": "I already have a will at home. Do I need a Spanish one?",
+          "paras": [
+            "Not for the will to be valid. A will is valid in form if it follows the law of the country where it was signed, the law that governs its content, or your personal law. So a will made correctly in Oslo, Stockholm or Hamburg is not void in Spain because of how it was drawn up.",
+            "There are still practical reasons to sign one in Spain. A Spanish notary must report every will they authorise to the register of last wills (Registro General de Actos de Ultima Voluntad). After a death, the certificate from that register tells your heirs whether there is a will and which notary holds it, and without that step nothing else in the succession can move."
+          ]
+        },
+        {
+          "h2": "What kinds of will are there in Spain?",
+          "paras": [
+            "Under the common Civil Code there are three ordinary forms. The open will (testamento abierto) is the usual one: a notary drafts it and keeps it in the notarial records. The closed will, handed sealed to a notary who does not know its content, is now rarely used. The holographic will, written, signed and dated by hand, is uncommon.",
+            "Couples from Germany often ask about a joint will, the Berliner Testament they know from home. The common Civil Code does not allow two people to make a will in one document, and it does not allow a succession pact either. So in most of Spain each spouse makes a separate will (one each, even if the wording is almost identical). Some foral regions do allow joint wills, which is one more reason to check where you stand."
+          ]
+        },
+        {
+          "h2": "Can I leave my Spanish home to whoever I want?",
+          "paras": [
+            "Under Spanish common law, not entirely. Part of the estate, the legitima, is reserved for the forced heirs: children and descendants, failing them parents and ascendants, and the widowed spouse in the form the law provides. For children the legitima is two thirds of the estate. One of those thirds (the mejora) can be used to favour particular children or grandchildren, and the last third is yours to leave freely.",
+            "With no children, the parents' share is one half of the estate, or one third where they inherit together with a surviving spouse. The spouse's share is a usufruct, the right to use the asset or take its income, not ownership. Alongside children it is the usufruct of the mejora third; with only parents it is the usufruct of one half; with neither, two thirds."
+          ]
+        },
+        {
+          "h2": "We own the house together. Does my spouse get half first?",
+          "paras": [
+            "That depends on your matrimonial property regime, and it is a separate question from the forced shares. The regime decides what belongs to the estate at all. Under the Spanish community of property (sociedad de gananciales), the community is wound up first, and only the deceased's half plus their private property forms the estate. The legitima is then worked out on that.",
+            "Mixing the two up is a common mistake. Applying two thirds for the children to the full value of a jointly held home overstates their share by roughly half. The estate for these purposes is what was left at death, less debts and charges, plus the value of gifts the deceased made during their life. Lifetime gifts count."
+          ]
+        },
+        {
+          "h2": "Can I choose the law of my own country?",
+          "paras": [
+            "Yes, and for most foreign owners this is the single most useful fact. Under EU Regulation 650/2012, which applies to deaths from 17 August 2015, you may choose the law of a state whose nationality you hold. The choice must be made expressly in a will, or be clear from its terms. A Norwegian, Swedish, German, British or French owner can use it to set the Spanish legitima aside entirely.",
+            "Without a choice, the default is the law of the country where you were habitually resident when you died. That matters most for people who retire here: once Spain is home, Spanish rules apply unless your will says otherwise. The Regulation does not bind Denmark or Ireland, and the United Kingdom never opted in, so a British choice of English law works from the Spanish side but not in reverse."
+          ]
+        },
+        {
+          "h2": "What if the property is in Mallorca, Catalonia or the Basque Country?",
+          "paras": [
+            "Six autonomous communities have their own succession law that displaces the Civil Code: Aragon, Catalonia, the Balearic Islands, Navarre, the Basque Country and Galicia. The differences are large. Navarre, and the Ayala valley in Alava, allow near-total freedom to leave your estate as you wish, while in Catalonia the legitima is one quarter, owed as a credit rather than a share of the assets.",
+            "Which of these laws applies depends on the deceased's vecindad civil, a Spanish civil status, not on where the property sits. A villa in Mallorca does not by itself bring in Balearic law. How this interacts with a choice of national law is a question for an abogado who works with foreign estates, ideally before you sign."
+          ]
+        },
+        {
+          "h2": "What happens if I die without a will?",
+          "paras": [
+            "Under the common Civil Code the law calls the heirs in a fixed order: descendants first, then ascendants, then the spouse who was not separated, then relatives up to the fourth degree such as first cousins, and finally the State. Where ascendants inherit, the spouse takes a usufruct rather than ownership. Foral regions have their own order.",
+            "The surprise for many families is that the spouse comes after the parents. With no will and no children, your parents inherit before your husband or wife. Your heirs will also need a declaration of heirs from a notary before they can do anything with the house, which adds one more step to an already slow process. Only if the heirs, the assets or the division are disputed does it need to go to court."
+          ]
+        },
+        {
+          "h2": "How much inheritance tax will my heirs pay?",
+          "paras": [
+            "Each heir is taxed on their own share and files their own return; the estate does not pay as a whole. The state scale runs from 7.65 percent on the first bracket to a top marginal rate of 34 percent above 797,555.08 euros. Multipliers for the relationship and existing wealth go up to 2.4 for the most distant group, so an unmarried partner or a friend can pay well above 34 percent.",
+            "The state scale is the fallback, not the usual outcome. Non-resident heirs may choose a region's rules instead, and most regions give large reductions to spouses and children. Where the deceased lived in Spain, the choice is the region where they lived; where they did not, it is the region holding the greatest value of their Spanish assets. The Catastro's valor de referencia serves as the minimum value of the home for this tax, unless the declared value is higher."
+          ]
+        },
+        {
+          "h2": "What can I do now to make it easier for my family?",
+          "paras": [
+            "Sign an open will before a Spanish notary, and if you want your own country's law to apply, have the choice written in plainly. If you are married, find out which matrimonial regime you are under, because it decides what is in your estate. Keep a copy at home with your other papers and tell your heirs it exists.",
+            "Then think about the people who will deal with it. Every heir needs a Spanish tax number (NIF), which a non-resident can request at a Spanish consulate or with modelo 030. An heir living outside the EU and EEA, including in the United Kingdom, must appoint a representative resident in Spain. If you would rather give the house away during your life, the gift tax return must be filed within thirty working days, counted from the day after the gift. With that settled, you can go back to enjoying the house for what it is."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Testament og arv for deg som eier bolig i Spania",
+      "description": "Slik fungerer spansk pliktdelsarv, hvorfor et testament betyr noe, hvordan du velger ditt eget lands lov og hva som gjelder i foral-regionene.",
+      "h1": "Hvem skal arve boligen din i Spania: testament, pliktdeler og din egen lov",
+      "lead": "Den alminnelige spanske sivilloven reserverer en del av dødsboet til barn, foreldre og gjenlevende ektefelle, så du kan ikke alltid etterlate en spansk bolig til hvem du vil. En utenlandsk eier kan i stedet velge loven i landet der de er statsborger, men bare ved å si det i et testament. Et kort åpent testament hos en spansk notar, der det valget står skrevet, er den enkleste måten å sikre at ønskene dine blir fulgt.",
+      "sections": [
+        {
+          "h2": "Jeg har allerede et testament hjemme. Trenger jeg et spansk?",
+          "paras": [
+            "Ikke for at testamentet skal være gyldig. Et testament er formelt gyldig hvis det følger loven i landet der det ble signert, loven som styrer innholdet, eller din personlige lov. Så et testament som er riktig opprettet i Oslo, Stockholm eller Hamburg, er ikke ugyldig i Spania på grunn av måten det ble satt opp på.",
+            "Det finnes likevel praktiske grunner til å signere et i Spania. En spansk notar må melde hvert testament de bekrefter til registeret over siste viljeserklæringer (Registro General de Actos de Ultima Voluntad). Etter et dødsfall forteller attesten fra det registeret arvingene dine om det finnes et testament og hvilken notar som har det, og uten det steget kan ingenting annet i arveoppgjøret gå videre."
+          ]
+        },
+        {
+          "h2": "Hvilke typer testament finnes i Spania?",
+          "paras": [
+            "Etter den alminnelige sivilloven finnes det tre ordinære former. Det åpne testamentet (testamento abierto) er det vanlige: en notar skriver det og oppbevarer det i notarens arkiv. Det lukkede testamentet, som leveres forseglet til en notar som ikke kjenner innholdet, brukes nå sjelden. Det håndskrevne testamentet, skrevet, signert og datert for hånd, er uvanlig.",
+            "Par fra Tyskland spør ofte om et felles testament, det Berliner Testament de kjenner hjemmefra. Den alminnelige sivilloven tillater ikke at to personer oppretter testament i ett dokument, og den tillater heller ikke arvepakter. I det meste av Spania oppretter derfor hver ektefelle et eget testament (ett hver, selv om ordlyden er nesten lik). Noen foral-regioner tillater felles testament, noe som er enda en grunn til å sjekke hvor du står."
+          ]
+        },
+        {
+          "h2": "Kan jeg etterlate den spanske boligen min til hvem jeg vil?",
+          "paras": [
+            "Etter alminnelig spansk rett, ikke helt. En del av dødsboet, legitima, er reservert for pliktdelsarvingene: barn og etterkommere, i mangel av dem foreldre og forfedre, og den gjenlevende ektefellen i den formen loven bestemmer. For barn er legitima to tredjedeler av dødsboet. En av de tredjedelene (mejora) kan brukes til å tilgodese bestemte barn eller barnebarn, og den siste tredjedelen kan du fritt disponere over.",
+            "Uten barn er foreldrenes andel halvparten av dødsboet, eller en tredjedel der de arver sammen med en gjenlevende ektefelle. Ektefellens andel er en bruksrett, retten til å bruke eiendelen eller ta avkastningen av den, ikke eierskap. Sammen med barn er det bruksrett til mejora-tredjedelen; med bare foreldre er det bruksrett til halvparten; uten noen av dem, to tredjedeler."
+          ]
+        },
+        {
+          "h2": "Vi eier huset sammen. Får ektefellen min halvparten først?",
+          "paras": [
+            "Det avhenger av formuesordningen i ekteskapet deres, og det er et annet spørsmål enn pliktdelene. Formuesordningen avgjør hva som i det hele tatt hører til dødsboet. Under det spanske felleseiet (sociedad de gananciales) gjøres felleseiet opp først, og bare avdødes halvpart pluss særeiet deres utgjør dødsboet. Legitima beregnes deretter ut fra det.",
+            "Å blande de to sammen er en vanlig feil. Bruker du to tredjedeler til barna på hele verdien av en felleseid bolig, blir andelen deres omtrent halvparten for høy. Dødsboet i denne sammenhengen er det som var igjen ved dødsfallet, minus gjeld og heftelser, pluss verdien av gaver avdøde ga mens de levde. Gaver i levende live teller med."
+          ]
+        },
+        {
+          "h2": "Kan jeg velge loven i mitt eget land?",
+          "paras": [
+            "Ja, og for de fleste utenlandske eiere er dette det enkeltfaktumet som er mest nyttig. Etter EU-forordning 650/2012, som gjelder dødsfall fra 17. august 2015, kan du velge loven i en stat der du er statsborger. Valget må gjøres uttrykkelig i et testament, eller gå klart fram av innholdet. En norsk, svensk, tysk, britisk eller fransk eier kan bruke det til å sette den spanske legitima helt til side.",
+            "Uten et valg er utgangspunktet loven i landet der du hadde ditt vanlige bosted da du døde. Det betyr mest for dem som går av med pensjon her: når Spania er hjemme, gjelder spanske regler med mindre testamentet ditt sier noe annet. Forordningen binder ikke Danmark eller Irland, og Storbritannia sluttet seg aldri til den, så et britisk valg av engelsk lov virker fra spansk side, men ikke motsatt vei."
+          ]
+        },
+        {
+          "h2": "Hva om boligen ligger på Mallorca, i Catalonia eller i Baskerland?",
+          "paras": [
+            "Seks autonome regioner har egen arvelov som erstatter sivilloven: Aragón, Catalonia, Balearene, Navarra, Baskerland og Galicia. Forskjellene er store. Navarra, og Ayala-dalen i Álava, gir nesten full frihet til å etterlate dødsboet som du vil, mens legitima i Catalonia er en fjerdedel, som skyldes som et pengekrav og ikke som en andel av eiendelene.",
+            "Hvilken av disse lovene som gjelder, avhenger av avdødes vecindad civil, en spansk sivilrettslig tilknytning, ikke av hvor eiendommen ligger. En villa på Mallorca bringer ikke i seg selv inn balearisk lov. Hvordan dette spiller sammen med et valg av nasjonal lov, er et spørsmål for en abogado som jobber med utenlandske dødsbo, helst før du signerer."
+          ]
+        },
+        {
+          "h2": "Hva skjer hvis jeg dør uten testament?",
+          "paras": [
+            "Etter den alminnelige sivilloven kaller loven arvingene inn i en fast rekkefølge: etterkommere først, deretter forfedre, deretter ektefellen som ikke var separert, deretter slektninger opp til fjerde ledd, som søskenbarn, og til slutt staten. Der forfedre arver, får ektefellen en bruksrett i stedet for eierskap. Foral-regionene har sin egen rekkefølge.",
+            "Overraskelsen for mange familier er at ektefellen kommer etter foreldrene. Uten testament og uten barn arver foreldrene dine før mannen eller kona di. Arvingene dine trenger også en arvingserklæring fra en notar før de kan gjøre noe med huset, noe som legger til enda et steg i en prosess som allerede er treg. Bare hvis arvingene, eiendelene eller fordelingen er omstridt, må saken til retten."
+          ]
+        },
+        {
+          "h2": "Hvor mye arveavgift må arvingene mine betale?",
+          "paras": [
+            "Hver arving skattlegges for sin egen andel og leverer sin egen oppgave; dødsboet betaler ikke samlet. Den statlige skalaen går fra 7,65 prosent på det første trinnet til en øverste marginalsats på 34 prosent over 797 555,08 euro. Multiplikatorer for slektskap og eksisterende formue går opp til 2,4 for den fjerneste gruppen, så en ugift samboer eller en venn kan betale godt over 34 prosent.",
+            "Den statlige skalaen er reserveløsningen, ikke det vanlige utfallet. Ikke-bosatte arvinger kan i stedet velge en regions regler, og de fleste regioner gir store reduksjoner til ektefeller og barn. Der avdøde bodde i Spania, er valget regionen der de bodde; der de ikke gjorde det, er det regionen med den største verdien av de spanske eiendelene deres. Catastros valor de referencia gjelder som minsteverdi for boligen for denne skatten, med mindre den oppgitte verdien er høyere."
+          ]
+        },
+        {
+          "h2": "Hva kan jeg gjøre nå for å gjøre det enklere for familien min?",
+          "paras": [
+            "Signer et åpent testament hos en spansk notar, og vil du at ditt eget lands lov skal gjelde, få valget skrevet inn tydelig. Er du gift, finn ut hvilken formuesordning dere har, fordi den avgjør hva som er i dødsboet ditt. Oppbevar en kopi hjemme sammen med de andre papirene dine, og fortell arvingene at det finnes.",
+            "Tenk så på dem som skal ta seg av det. Hver arving trenger et spansk skattenummer (NIF), som en ikke-bosatt kan be om ved et spansk konsulat eller med modelo 030. En arving som bor utenfor EU og EØS, også i Storbritannia, må utnevne en representant som er bosatt i Spania. Vil du heller gi bort huset mens du lever, må oppgaven for gaveavgift leveres innen tretti virkedager, regnet fra dagen etter gaven. Med det på plass kan du gå tilbake til å nyte huset for det det er."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Testamente och arv för dig som äger bostad i Spanien",
+      "description": "Så fungerar spanska laglotter, varför testamentet är viktigt för utländska ägare, hur du väljer ditt lands lag och vad som skiljer i forala regioner.",
+      "h1": "Planera vem som ärver din bostad i Spanien: testamente, laglotter och ditt eget lands lag",
+      "lead": "Spaniens allmänna civillag (Código Civil) reserverar en del av kvarlåtenskapen för barn, föräldrar och efterlevande make eller maka, så du kan inte alltid testamentera en spansk bostad till vem du vill. En utländsk ägare kan i stället välja lagen i det land där hen är medborgare, men bara genom att skriva det i ett testamente. Ett kort öppet testamente inför en spansk notarie, med det valet inskrivet, är det enklaste sättet att se till att din vilja gäller.",
+      "sections": [
+        {
+          "h2": "Jag har redan ett testamente hemma. Behöver jag ett spanskt?",
+          "paras": [
+            "Inte för att testamentet ska vara giltigt. Ett testamente är formellt giltigt om det följer lagen i det land där det skrevs under, den lag som styr innehållet eller din personliga lag. Ett testamente som är korrekt upprättat i Oslo, Stockholm eller Hamburg blir alltså inte ogiltigt i Spanien på grund av hur det skrevs.",
+            "Det finns ändå praktiska skäl att skriva under ett i Spanien. En spansk notarie måste anmäla varje testamente hen bestyrker till registret över sista viljor (Registro General de Actos de Ultima Voluntad). Efter ett dödsfall visar intyget från det registret dina arvingar om det finns ett testamente och vilken notarie som har det, och utan det steget kan inget annat i arvskiftet gå vidare."
+          ]
+        },
+        {
+          "h2": "Vilka typer av testamente finns det i Spanien?",
+          "paras": [
+            "Enligt den allmänna civillagen finns tre vanliga former. Det öppna testamentet (testamento abierto) är det vanliga: en notarie upprättar det och förvarar det i notariatets arkiv. Det slutna testamentet, som lämnas förseglat till en notarie som inte känner till innehållet, används numera sällan. Det egenhändiga testamentet, skrivet, undertecknat och daterat för hand, är ovanligt.",
+            "Par från Tyskland frågar ofta om ett gemensamt testamente, det Berliner Testament de känner igen hemifrån. Den allmänna civillagen tillåter inte att två personer upprättar ett testamente i en och samma handling, och den tillåter inte heller arvsavtal. I större delen av Spanien upprättar därför varje make ett eget testamente (ett var, även om formuleringen är nästan identisk). Vissa forala regioner tillåter gemensamma testamenten, vilket är ytterligare ett skäl att ta reda på vad som gäller för dig."
+          ]
+        },
+        {
+          "h2": "Kan jag testamentera min spanska bostad till vem jag vill?",
+          "paras": [
+            "Enligt den allmänna spanska civilrätten, inte helt. En del av kvarlåtenskapen, legitima, är reserverad för de lagstadgade arvingarna: barn och barnbarn, i andra hand föräldrar och andra släktingar i rakt uppstigande led, och den efterlevande maken eller makan i den form lagen anger. För barn är legitima två tredjedelar av kvarlåtenskapen. En av dessa tredjedelar (mejora) kan användas för att gynna vissa barn eller barnbarn, och den sista tredjedelen får du testamentera fritt.",
+            "Finns inga barn är föräldrarnas andel hälften av kvarlåtenskapen, eller en tredjedel när de ärver tillsammans med en efterlevande make eller maka. Makens andel är en nyttjanderätt (usufructo), rätten att använda tillgången eller ta del av dess avkastning, inte äganderätt. Tillsammans med barn är det nyttjanderätten till mejora-tredjedelen; med enbart föräldrar nyttjanderätten till hälften; utan någon av dem två tredjedelar."
+          ]
+        },
+        {
+          "h2": "Vi äger huset tillsammans. Får min make eller maka hälften först?",
+          "paras": [
+            "Det beror på er förmögenhetsordning i äktenskapet, och det är en annan fråga än laglotterna. Förmögenhetsordningen avgör över huvud taget vad som ingår i kvarlåtenskapen. Med den spanska ordningen för gemensam egendom (sociedad de gananciales) avvecklas den gemensamma egendomen först, och bara den avlidnes hälft plus hens enskilda egendom utgör kvarlåtenskapen. Legitima räknas sedan fram på den.",
+            "Att blanda ihop de två är ett vanligt misstag. Att tillämpa två tredjedelar för barnen på hela värdet av en gemensamt ägd bostad överskattar deras andel med ungefär hälften. Kvarlåtenskapen i det här sammanhanget är det som fanns vid dödsfallet, minus skulder och belastningar, plus värdet av gåvor som den avlidne gav under sin livstid. Gåvor under livstiden räknas."
+          ]
+        },
+        {
+          "h2": "Kan jag välja mitt eget lands lag?",
+          "paras": [
+            "Ja, och för de flesta utländska ägare är detta det enskilt mest användbara att veta. Enligt EU-förordning 650/2012, som gäller för dödsfall från och med 17 augusti 2015, får du välja lagen i en stat där du är medborgare. Valet måste göras uttryckligen i ett testamente, eller tydligt framgå av dess villkor. En norsk, svensk, tysk, brittisk eller fransk ägare kan använda det för att helt sätta den spanska legitima ur spel.",
+            "Utan ett val gäller lagen i det land där du hade din hemvist vid dödsfallet. Det spelar störst roll för den som går i pension här: när Spanien väl är hemma gäller spanska regler om inte ditt testamente säger något annat. Förordningen binder inte Danmark eller Irland, och Storbritannien anslöt sig aldrig, så ett brittiskt val av engelsk lag fungerar från spansk sida men inte tvärtom."
+          ]
+        },
+        {
+          "h2": "Vad gäller om fastigheten ligger på Mallorca, i Katalonien eller i Baskien?",
+          "paras": [
+            "Sex autonoma regioner har egen arvsrätt som ersätter civillagen: Aragonien, Katalonien, Balearerna, Navarra, Baskien och Galicien. Skillnaderna är stora. Navarra, och Ayaladalen i Álava, ger nästan full frihet att testamentera din kvarlåtenskap som du vill, medan legitima i Katalonien är en fjärdedel och utgår som en fordran snarare än en andel av tillgångarna.",
+            "Vilken av dessa lagar som gäller beror på den avlidnes vecindad civil, en spansk civilrättslig status, inte på var fastigheten ligger. En villa på Mallorca gör inte i sig att balearisk lag blir tillämplig. Hur detta samspelar med ett val av nationell lag är en fråga för en abogado som arbetar med utländska dödsbon, helst innan du skriver under."
+          ]
+        },
+        {
+          "h2": "Vad händer om jag dör utan testamente?",
+          "paras": [
+            "Enligt den allmänna civillagen kallar lagen arvingarna i en fast ordning: först barn och barnbarn, sedan släktingar i rakt uppstigande led, sedan den make eller maka som inte var separerad, sedan släktingar upp till fjärde led som kusiner, och till sist staten. När släktingar i uppstigande led ärver får maken eller makan en nyttjanderätt i stället för äganderätt. Forala regioner har sin egen ordning.",
+            "Överraskningen för många familjer är att maken eller makan kommer efter föräldrarna. Utan testamente och utan barn ärver dina föräldrar före din man eller fru. Dina arvingar behöver också en förklaring om arvingar (declaración de herederos) från en notarie innan de kan göra något med huset, vilket lägger till ännu ett steg i en redan långsam process. Bara om arvingarna, tillgångarna eller fördelningen är omtvistade behöver det gå till domstol."
+          ]
+        },
+        {
+          "h2": "Hur mycket arvsskatt kommer mina arvingar att betala?",
+          "paras": [
+            "Varje arvinge beskattas för sin egen andel och lämnar sin egen deklaration; dödsboet betalar inte som helhet. Den statliga skalan går från 7,65 procent på det första skiktet till en högsta marginalskatt på 34 procent över 797 555,08 euro. Multiplikatorer för släktskap och befintlig förmögenhet går upp till 2,4 för den mest avlägsna gruppen, så en sambo som man inte är gift med eller en vän kan betala långt över 34 procent.",
+            "Den statliga skalan är reservalternativet, inte det vanliga utfallet. Icke-bosatta arvingar kan välja en regions regler i stället, och de flesta regioner ger stora reduktioner till make eller maka och barn. Bodde den avlidne i Spanien är valet den region där hen bodde; bodde hen inte där är det den region som har det högsta värdet av hens spanska tillgångar. Catastros valor de referencia fungerar som bostadens lägsta värde för denna skatt, om inte det deklarerade värdet är högre."
+          ]
+        },
+        {
+          "h2": "Vad kan jag göra nu för att göra det lättare för min familj?",
+          "paras": [
+            "Skriv under ett öppet testamente inför en spansk notarie, och vill du att ditt eget lands lag ska gälla, se till att valet skrivs in tydligt. Är du gift, ta reda på vilken förmögenhetsordning ni har, eftersom den avgör vad som ingår i din kvarlåtenskap. Ha en kopia hemma med dina andra papper och berätta för dina arvingar att den finns.",
+            "Tänk sedan på de personer som ska hantera det. Varje arvinge behöver ett spanskt skattenummer (NIF), som en icke-bosatt kan begära på ett spanskt konsulat eller med modelo 030. En arvinge som bor utanför EU och EES, även i Storbritannien, måste utse ett ombud som är bosatt i Spanien. Vill du hellre ge bort huset under din livstid måste gåvoskattedeklarationen lämnas inom trettio arbetsdagar, räknat från dagen efter gåvan. När det är ordnat kan du gå tillbaka till att njuta av huset för vad det är."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Testament und Erbrecht für Immobilien in Spanien",
+      "description": "Wie das spanische Pflichtteilsrecht funktioniert, warum ein Testament für ausländische Eigentümer wichtig ist und wie Sie Ihr eigenes Recht wählen.",
+      "h1": "Wer Ihr Haus in Spanien erbt: Testament, Pflichtteil und Ihr eigenes Recht",
+      "lead": "Das gemeinspanische Zivilgesetzbuch behält einen Teil des Nachlasses Kindern, Eltern und dem überlebenden Ehepartner vor, Sie können ein spanisches Haus also nicht immer hinterlassen, wem Sie wollen. Ein ausländischer Eigentümer kann stattdessen das Recht seiner Staatsangehörigkeit wählen, aber nur, wenn er das in einem Testament sagt. Ein kurzes offenes Testament vor einem spanischen Notar, in dem diese Wahl steht, ist der einfachste Weg, damit Ihr Wille gilt.",
+      "sections": [
+        {
+          "h2": "Ich habe schon ein Testament zu Hause. Brauche ich ein spanisches?",
+          "paras": [
+            "Nicht damit das Testament gültig ist. Ein Testament ist formgültig, wenn es dem Recht des Landes folgt, in dem es unterschrieben wurde, dem Recht, das seinen Inhalt regelt, oder Ihrem Personalstatut. Ein Testament, das in Oslo, Stockholm oder Hamburg korrekt errichtet wurde, ist in Spanien also nicht wegen seiner Form unwirksam.",
+            "Es gibt trotzdem praktische Gründe, eines in Spanien zu unterschreiben. Ein spanischer Notar muss jedes Testament, das er beurkundet, an das Register der letztwilligen Verfügungen (Registro General de Actos de Ultima Voluntad) melden. Nach einem Todesfall sagt die Bescheinigung dieses Registers Ihren Erben, ob es ein Testament gibt und welcher Notar es verwahrt, und ohne diesen Schritt kann sich in der Erbfolge nichts anderes bewegen."
+          ]
+        },
+        {
+          "h2": "Welche Arten von Testament gibt es in Spanien?",
+          "paras": [
+            "Nach dem gemeinspanischen Zivilgesetzbuch gibt es drei ordentliche Formen. Das offene Testament (testamento abierto) ist die übliche: Ein Notar entwirft es und bewahrt es in den notariellen Akten auf. Das geschlossene Testament, das einem Notar versiegelt übergeben wird, der seinen Inhalt nicht kennt, wird heute selten genutzt. Das eigenhändige Testament, von Hand geschrieben, unterschrieben und datiert, ist unüblich.",
+            "Paare aus Deutschland fragen oft nach einem gemeinschaftlichen Testament, dem Berliner Testament, das sie von zu Hause kennen. Das gemeinspanische Zivilgesetzbuch erlaubt nicht, dass zwei Personen in einer Urkunde testieren, und es erlaubt auch keinen Erbvertrag. In den meisten Teilen Spaniens macht also jeder Ehepartner ein eigenes Testament (eines pro Person, auch wenn der Wortlaut fast gleich ist). Manche Foralregionen erlauben gemeinschaftliche Testamente, ein Grund mehr zu prüfen, wo Sie stehen."
+          ]
+        },
+        {
+          "h2": "Kann ich mein Haus in Spanien vererben, wem ich will?",
+          "paras": [
+            "Nach gemeinspanischem Recht nicht ganz. Ein Teil des Nachlasses, die legitima, ist den Pflichtteilsberechtigten vorbehalten: Kindern und Abkömmlingen, ersatzweise Eltern und Vorfahren, und dem verwitweten Ehepartner in der Form, die das Gesetz vorsieht. Für Kinder beträgt die legitima zwei Drittel des Nachlasses. Eines dieser Drittel (die mejora) kann genutzt werden, um bestimmte Kinder oder Enkel zu begünstigen, und über das letzte Drittel können Sie frei verfügen.",
+            "Ohne Kinder beträgt der Anteil der Eltern die Hälfte des Nachlasses, oder ein Drittel, wenn sie zusammen mit einem überlebenden Ehepartner erben. Der Anteil des Ehepartners ist ein Nießbrauch, das Recht, den Vermögenswert zu nutzen oder seine Erträge zu ziehen, kein Eigentum. Neben Kindern ist es der Nießbrauch am Drittel der mejora, nur neben Eltern der Nießbrauch an der Hälfte, ohne beide an zwei Dritteln."
+          ]
+        },
+        {
+          "h2": "Das Haus gehört uns gemeinsam. Bekommt mein Ehepartner zuerst die Hälfte?",
+          "paras": [
+            "Das hängt von Ihrem ehelichen Güterstand ab, und es ist eine andere Frage als die Pflichtteile. Der Güterstand entscheidet, was überhaupt zum Nachlass gehört. In der spanischen Errungenschaftsgemeinschaft (sociedad de gananciales) wird zuerst die Gemeinschaft aufgelöst, und nur die Hälfte des Verstorbenen plus sein Eigengut bildet den Nachlass. Darauf wird dann die legitima berechnet.",
+            "Beides zu vermischen ist ein häufiger Fehler. Wer zwei Drittel für die Kinder auf den vollen Wert eines gemeinsam gehaltenen Hauses anwendet, setzt ihren Anteil um etwa die Hälfte zu hoch an. Der Nachlass ist in diesem Sinn das, was beim Tod vorhanden war, abzüglich Schulden und Lasten, zuzüglich des Werts der Schenkungen, die der Verstorbene zu Lebzeiten gemacht hat. Schenkungen zu Lebzeiten zählen mit."
+          ]
+        },
+        {
+          "h2": "Kann ich das Recht meines eigenen Landes wählen?",
+          "paras": [
+            "Ja, und für die meisten ausländischen Eigentümer ist das die nützlichste Tatsache überhaupt. Nach der EU-Verordnung 650/2012, die für Todesfälle ab dem 17. August 2015 gilt, können Sie das Recht eines Staates wählen, dessen Staatsangehörigkeit Sie besitzen. Die Wahl muss ausdrücklich in einem Testament getroffen werden oder sich klar aus seinem Inhalt ergeben. Ein norwegischer, schwedischer, deutscher, britischer oder französischer Eigentümer kann damit die spanische legitima ganz ausschließen.",
+            "Ohne Wahl gilt das Recht des Landes, in dem Sie zum Zeitpunkt Ihres Todes Ihren gewöhnlichen Aufenthalt hatten. Das betrifft vor allem Menschen, die hier ihren Ruhestand verbringen: Sobald Spanien Ihr Zuhause ist, gelten spanische Regeln, wenn Ihr Testament nichts anderes sagt. Die Verordnung bindet Dänemark und Irland nicht, und das Vereinigte Königreich hat sich nie angeschlossen. Eine britische Wahl des englischen Rechts wirkt also von spanischer Seite, aber nicht umgekehrt."
+          ]
+        },
+        {
+          "h2": "Was ist, wenn die Immobilie auf Mallorca, in Katalonien oder im Baskenland liegt?",
+          "paras": [
+            "Sechs autonome Gemeinschaften haben ein eigenes Erbrecht, das das Zivilgesetzbuch verdrängt: Aragonien, Katalonien, die Balearen, Navarra, das Baskenland und Galicien. Die Unterschiede sind groß. Navarra und das Ayala-Tal in Álava erlauben fast völlige Freiheit, den Nachlass zu hinterlassen, wie Sie wollen, während in Katalonien die legitima ein Viertel beträgt und als Geldforderung geschuldet wird, nicht als Anteil an den Vermögenswerten.",
+            "Welches dieser Rechte gilt, hängt von der vecindad civil des Verstorbenen ab, einem spanischen zivilrechtlichen Status, nicht davon, wo die Immobilie liegt. Eine Villa auf Mallorca bringt für sich allein noch kein balearisches Recht ins Spiel. Wie das mit einer Wahl des Heimatrechts zusammenwirkt, ist eine Frage für einen abogado, der mit ausländischen Nachlässen arbeitet, am besten bevor Sie unterschreiben."
+          ]
+        },
+        {
+          "h2": "Was passiert, wenn ich ohne Testament sterbe?",
+          "paras": [
+            "Nach dem gemeinspanischen Zivilgesetzbuch beruft das Gesetz die Erben in einer festen Reihenfolge: zuerst Abkömmlinge, dann Vorfahren, dann den nicht getrennt lebenden Ehepartner, dann Verwandte bis zum vierten Grad wie Cousins und Cousinen ersten Grades und schließlich den Staat. Wenn Vorfahren erben, erhält der Ehepartner einen Nießbrauch statt Eigentum. Foralregionen haben ihre eigene Reihenfolge.",
+            "Die Überraschung für viele Familien ist, dass der Ehepartner nach den Eltern kommt. Ohne Testament und ohne Kinder erben Ihre Eltern vor Ihrem Mann oder Ihrer Frau. Ihre Erben brauchen außerdem eine Erbenfeststellung durch einen Notar, bevor sie irgendetwas mit dem Haus tun können, was einem ohnehin langsamen Verfahren einen weiteren Schritt hinzufügt. Nur wenn die Erben, die Vermögenswerte oder die Teilung strittig sind, muss es vor Gericht."
+          ]
+        },
+        {
+          "h2": "Wie viel Erbschaftsteuer zahlen meine Erben?",
+          "paras": [
+            "Jeder Erbe wird auf seinen eigenen Anteil besteuert und reicht seine eigene Erklärung ein, der Nachlass zahlt nicht als Ganzes. Der staatliche Tarif reicht von 7,65 Prozent auf die erste Stufe bis zu einem Spitzengrenzsteuersatz von 34 Prozent über 797.555,08 Euro. Multiplikatoren für das Verwandtschaftsverhältnis und das vorhandene Vermögen reichen bis 2,4 für die entfernteste Gruppe, ein unverheirateter Partner oder ein Freund kann also deutlich mehr als 34 Prozent zahlen.",
+            "Der staatliche Tarif ist die Rückfallregel, nicht das übliche Ergebnis. Nichtansässige Erben können stattdessen die Regeln einer Region wählen, und die meisten Regionen gewähren Ehepartnern und Kindern große Ermäßigungen. Lebte der Verstorbene in Spanien, ist die Wahl die Region, in der er lebte. Lebte er nicht dort, ist es die Region mit dem höchsten Wert seines spanischen Vermögens. Der valor de referencia des Catastro dient als Mindestwert des Hauses für diese Steuer, sofern der erklärte Wert nicht höher ist."
+          ]
+        },
+        {
+          "h2": "Was kann ich jetzt tun, um es meiner Familie leichter zu machen?",
+          "paras": [
+            "Unterschreiben Sie ein offenes Testament vor einem spanischen Notar, und wenn das Recht Ihres eigenen Landes gelten soll, lassen Sie die Wahl klar hineinschreiben. Wenn Sie verheiratet sind, finden Sie heraus, in welchem Güterstand Sie leben, denn er entscheidet, was zu Ihrem Nachlass gehört. Bewahren Sie eine Kopie zu Hause bei Ihren anderen Unterlagen auf und sagen Sie Ihren Erben, dass es sie gibt.",
+            "Denken Sie dann an die Menschen, die sich darum kümmern werden. Jeder Erbe braucht eine spanische Steuernummer (NIF), die ein Nichtansässiger bei einem spanischen Konsulat oder mit dem modelo 030 beantragen kann. Ein Erbe, der außerhalb der EU und des EWR lebt, auch im Vereinigten Königreich, muss einen in Spanien ansässigen Vertreter bestellen. Wenn Sie das Haus lieber zu Lebzeiten verschenken, muss die Schenkungsteuererklärung innerhalb von dreißig Werktagen abgegeben werden, gerechnet ab dem Tag nach der Schenkung. Ist das geregelt, können Sie das Haus wieder als das genießen, was es ist."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Testament et succession pour un bien immobilier en Espagne",
+      "description": "La réserve héréditaire espagnole, l'utilité d'un testament pour un propriétaire étranger, le choix de sa loi nationale et les règles des régions forales.",
+      "h1": "Prévoir qui héritera de votre logement en Espagne : testament, réserve et loi nationale",
+      "lead": "Le Code civil espagnol commun réserve une partie de la succession aux enfants, aux parents et au conjoint survivant, vous ne pouvez donc pas toujours léguer un logement espagnol à qui vous voulez. Un propriétaire étranger peut choisir à la place la loi de sa nationalité, mais seulement en le précisant dans un testament. Un court testament authentique devant un notaire espagnol, avec ce choix écrit noir sur blanc, est le moyen le plus simple de faire respecter vos volontés.",
+      "sections": [
+        {
+          "h2": "J'ai déjà un testament dans mon pays. Ai-je besoin d'un testament espagnol ?",
+          "paras": [
+            "Pas pour que le testament soit valable. Un testament est valable en la forme s'il respecte la loi du pays où il a été signé, la loi qui régit son contenu ou votre loi personnelle. Un testament établi correctement à Oslo, Stockholm ou Hambourg n'est donc pas nul en Espagne en raison de la façon dont il a été rédigé.",
+            "Il existe tout de même des raisons pratiques d'en signer un en Espagne. Un notaire espagnol doit déclarer chaque testament qu'il reçoit au registre des dernières volontés (Registro General de Actos de Ultima Voluntad). Après un décès, le certificat de ce registre indique à vos héritiers s'il existe un testament et quel notaire le détient, et sans cette étape rien d'autre ne peut avancer dans la succession."
+          ]
+        },
+        {
+          "h2": "Quels types de testament existe-t-il en Espagne ?",
+          "paras": [
+            "Selon le Code civil commun, il existe trois formes ordinaires. Le testament ouvert (testamento abierto) est la forme habituelle : un notaire le rédige et le conserve dans ses archives notariales. Le testament fermé, remis scellé à un notaire qui n'en connaît pas le contenu, est aujourd'hui rarement utilisé. Le testament olographe, écrit, signé et daté à la main, est peu courant.",
+            "Les couples allemands demandent souvent un testament conjoint, le Berliner Testament qu'ils connaissent chez eux. Le Code civil commun ne permet pas à deux personnes de tester dans un même acte, ni de conclure un pacte successoral. Dans la plus grande partie de l'Espagne, chaque époux fait donc un testament séparé (un chacun, même si la rédaction est presque identique). Certaines régions forales autorisent les testaments conjoints, raison de plus pour vérifier votre situation."
+          ]
+        },
+        {
+          "h2": "Puis-je léguer mon logement espagnol à qui je veux ?",
+          "paras": [
+            "En droit commun espagnol, pas entièrement. Une partie de la succession, la legitima, est réservée aux héritiers réservataires : les enfants et descendants, à défaut les parents et ascendants, et le conjoint survivant sous la forme prévue par la loi. Pour les enfants, la legitima représente deux tiers de la succession. L'un de ces tiers (la mejora) peut servir à avantager certains enfants ou petits-enfants, et le dernier tiers est à vous, librement transmissible.",
+            "Sans enfants, la part des parents est de la moitié de la succession, ou d'un tiers lorsqu'ils héritent avec un conjoint survivant. La part du conjoint est un usufruit, le droit d'utiliser le bien ou d'en percevoir les revenus, pas la propriété. Avec des enfants, c'est l'usufruit du tiers de la mejora ; avec seulement les parents, l'usufruit de la moitié ; sans les uns ni les autres, des deux tiers."
+          ]
+        },
+        {
+          "h2": "Nous possédons la maison ensemble. Mon conjoint reçoit-il d'abord la moitié ?",
+          "paras": [
+            "Cela dépend de votre régime matrimonial, et c'est une question distincte de la réserve. Le régime détermine ce qui fait partie de la succession. Sous le régime espagnol de communauté de biens (sociedad de gananciales), la communauté est d'abord liquidée, et seule la moitié du défunt plus ses biens propres forment la succession. La legitima se calcule ensuite sur cette base.",
+            "Confondre les deux est une erreur fréquente. Appliquer les deux tiers des enfants à la valeur totale d'un logement détenu en commun surestime leur part d'environ la moitié. La succession, à ces fins, correspond à ce qui restait au décès, moins les dettes et charges, plus la valeur des donations faites par le défunt de son vivant. Les donations du vivant comptent."
+          ]
+        },
+        {
+          "h2": "Puis-je choisir la loi de mon propre pays ?",
+          "paras": [
+            "Oui, et pour la plupart des propriétaires étrangers c'est l'information la plus utile. Selon le règlement européen 650/2012, qui s'applique aux décès survenus à partir du 17 août 2015, vous pouvez choisir la loi d'un État dont vous avez la nationalité. Le choix doit être fait expressément dans un testament, ou résulter clairement de ses termes. Un propriétaire norvégien, suédois, allemand, britannique ou français peut s'en servir pour écarter entièrement la legitima espagnole.",
+            "Sans choix, la loi applicable par défaut est celle du pays où vous aviez votre résidence habituelle au moment du décès. Cela compte surtout pour ceux qui prennent leur retraite ici : une fois que l'Espagne est votre foyer, les règles espagnoles s'appliquent, sauf si votre testament en dispose autrement. Le règlement ne lie ni le Danemark ni l'Irlande, et le Royaume-Uni n'y a jamais adhéré, un choix britannique du droit anglais fonctionne donc côté espagnol, mais pas dans l'autre sens."
+          ]
+        },
+        {
+          "h2": "Et si le bien se trouve à Majorque, en Catalogne ou au Pays basque ?",
+          "paras": [
+            "Six communautés autonomes ont leur propre droit successoral qui écarte le Code civil : l'Aragon, la Catalogne, les îles Baléares, la Navarre, le Pays basque et la Galice. Les différences sont importantes. La Navarre, et la vallée d'Ayala en Alava, permettent une liberté presque totale de transmettre vos biens comme vous le souhaitez, tandis qu'en Catalogne la legitima est d'un quart, due sous forme de créance plutôt que de part des biens.",
+            "Laquelle de ces lois s'applique dépend de la vecindad civil du défunt, un statut civil espagnol, et non de l'endroit où se trouve le bien. Une villa à Majorque ne fait pas, à elle seule, entrer en jeu le droit des Baléares. La manière dont cela s'articule avec un choix de loi nationale est une question pour un abogado qui travaille sur des successions internationales, idéalement avant que vous ne signiez."
+          ]
+        },
+        {
+          "h2": "Que se passe-t-il si je meurs sans testament ?",
+          "paras": [
+            "Selon le Code civil commun, la loi appelle les héritiers dans un ordre fixe : d'abord les descendants, puis les ascendants, puis le conjoint non séparé, puis les parents jusqu'au quatrième degré comme les cousins germains, et enfin l'État. Lorsque des ascendants héritent, le conjoint reçoit un usufruit plutôt que la propriété. Les régions forales ont leur propre ordre.",
+            "La surprise pour beaucoup de familles est que le conjoint passe après les parents. Sans testament ni enfants, vos parents héritent avant votre mari ou votre femme. Vos héritiers auront aussi besoin d'un acte de notoriété (declaración de herederos) établi par un notaire avant de pouvoir faire quoi que ce soit de la maison, ce qui ajoute une étape à une procédure déjà lente. Ce n'est que si les héritiers, les biens ou le partage sont contestés qu'il faut passer par le tribunal."
+          ]
+        },
+        {
+          "h2": "Combien de droits de succession mes héritiers paieront-ils ?",
+          "paras": [
+            "Chaque héritier est imposé sur sa propre part et dépose sa propre déclaration ; la succession ne paie pas comme un tout. Le barème de l'État va de 7,65 pour cent sur la première tranche à un taux marginal maximal de 34 pour cent au-delà de 797 555,08 euros. Des coefficients liés au lien de parenté et au patrimoine préexistant vont jusqu'à 2,4 pour le groupe le plus éloigné, un partenaire non marié ou un ami peut donc payer bien au-delà de 34 pour cent.",
+            "Le barème de l'État est la solution par défaut, pas le cas habituel. Les héritiers non-résidents peuvent choisir à la place les règles d'une région, et la plupart des régions accordent d'importantes réductions aux conjoints et aux enfants. Lorsque le défunt vivait en Espagne, le choix porte sur la région où il vivait ; sinon, sur la région où se trouve la plus grande valeur de ses biens espagnols. Le valor de referencia du Catastro sert de valeur minimale du logement pour cet impôt, sauf si la valeur déclarée est plus élevée."
+          ]
+        },
+        {
+          "h2": "Que puis-je faire dès maintenant pour faciliter les choses à ma famille ?",
+          "paras": [
+            "Signez un testament ouvert devant un notaire espagnol et, si vous voulez que la loi de votre pays s'applique, faites-y inscrire ce choix clairement. Si vous êtes marié, renseignez-vous sur votre régime matrimonial, car c'est lui qui détermine ce qui fait partie de votre succession. Gardez une copie chez vous avec vos autres papiers et dites à vos héritiers qu'elle existe.",
+            "Pensez ensuite aux personnes qui s'en occuperont. Chaque héritier a besoin d'un numéro fiscal espagnol (NIF), qu'un non-résident peut demander dans un consulat d'Espagne ou avec le modelo 030. Un héritier qui vit hors de l'UE et de l'EEE, y compris au Royaume-Uni, doit désigner un représentant résidant en Espagne. Si vous préférez donner la maison de votre vivant, la déclaration de droits de donation doit être déposée dans les trente jours ouvrables, comptés à partir du lendemain de la donation. Une fois cela réglé, vous pouvez revenir au plaisir de profiter de la maison pour ce qu'elle est."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Testament en erfenis voor eigenaren van een Spaanse woning",
+      "description": "Hoe het Spaanse wettelijk erfdeel werkt, waarom een testament telt, hoe u als buitenlander uw eigen recht kiest en wat er anders is in de forale regio's.",
+      "h1": "Regelen wie uw woning in Spanje erft: testament, wettelijk erfdeel en uw eigen recht",
+      "lead": "Het gemeenschappelijke Spaanse Burgerlijk Wetboek (Código Civil) reserveert een deel van de nalatenschap voor kinderen, ouders en de langstlevende echtgenoot, dus u kunt een Spaanse woning niet altijd nalaten aan wie u maar wilt. Een buitenlandse eigenaar kan in plaats daarvan het recht van zijn nationaliteit kiezen, maar alleen door dat in een testament te zeggen. Een kort openbaar testament bij een Spaanse notaris, met die keuze erin opgenomen, is de eenvoudigste manier om ervoor te zorgen dat uw wensen standhouden.",
+      "sections": [
+        {
+          "h2": "Ik heb thuis al een testament. Heb ik ook een Spaans testament nodig?",
+          "paras": [
+            "Niet om het testament geldig te maken. Een testament is naar de vorm geldig als het voldoet aan het recht van het land waar het is ondertekend, aan het recht dat de inhoud beheerst, of aan uw persoonlijke recht. Een testament dat correct is opgesteld in Oslo, Stockholm of Hamburg is in Spanje dus niet nietig vanwege de manier waarop het is opgemaakt.",
+            "Er zijn wel praktische redenen om er een in Spanje te tekenen. Een Spaanse notaris moet elk testament dat hij verlijdt melden aan het register van uiterste wilsbeschikkingen (Registro General de Actos de Ultima Voluntad). Na een overlijden vertelt het certificaat uit dat register uw erfgenamen of er een testament is en welke notaris het bewaart, en zonder die stap kan er verder niets in de nalatenschap gebeuren."
+          ]
+        },
+        {
+          "h2": "Welke soorten testamenten zijn er in Spanje?",
+          "paras": [
+            "Onder het gemeenschappelijke Burgerlijk Wetboek zijn er drie gewone vormen. Het openbare testament (testamento abierto) is het gebruikelijke: een notaris stelt het op en bewaart het in het notariële archief. Het gesloten testament, verzegeld overhandigd aan een notaris die de inhoud niet kent, wordt nu nog maar zelden gebruikt. Het eigenhandige testament, met de hand geschreven, ondertekend en gedateerd, is ongebruikelijk.",
+            "Stellen uit Duitsland vragen vaak naar een gezamenlijk testament, het Berliner Testament dat ze van thuis kennen. Het gemeenschappelijke Burgerlijk Wetboek staat niet toe dat twee mensen in één document een testament maken, en staat ook geen erfovereenkomst toe. In het grootste deel van Spanje maakt elke echtgenoot dus een apart testament (ieder één, ook als de tekst bijna gelijk is). Sommige forale regio's staan gezamenlijke testamenten wel toe, nog een reden om na te gaan waar u staat."
+          ]
+        },
+        {
+          "h2": "Kan ik mijn Spaanse woning nalaten aan wie ik wil?",
+          "paras": [
+            "Onder het gemeenschappelijke Spaanse recht niet helemaal. Een deel van de nalatenschap, de legitima, is gereserveerd voor de wettelijke erfgenamen: kinderen en afstammelingen, bij gebreke daarvan ouders en voorouders, en de langstlevende echtgenoot in de vorm die de wet voorschrijft. Voor kinderen is de legitima twee derde van de nalatenschap. Eén van die derden (de mejora) kan worden gebruikt om bepaalde kinderen of kleinkinderen te bevoordelen, en het laatste derde mag u vrij nalaten.",
+            "Zijn er geen kinderen, dan is het deel van de ouders de helft van de nalatenschap, of een derde als zij samen met een langstlevende echtgenoot erven. Het deel van de echtgenoot is een vruchtgebruik, het recht om het goed te gebruiken of de opbrengst ervan te ontvangen, geen eigendom. Naast kinderen is het het vruchtgebruik van het mejora-derde; met alleen ouders het vruchtgebruik van de helft; zonder kinderen en ouders twee derde."
+          ]
+        },
+        {
+          "h2": "We bezitten het huis samen. Krijgt mijn echtgenoot eerst de helft?",
+          "paras": [
+            "Dat hangt af van uw huwelijksgoederenregime, en het is een andere vraag dan die van het wettelijk erfdeel. Het regime bepaalt wat überhaupt tot de nalatenschap behoort. Onder de Spaanse gemeenschap van goederen (sociedad de gananciales) wordt eerst de gemeenschap verdeeld, en alleen de helft van de overledene plus zijn of haar eigen vermogen vormt de nalatenschap. De legitima wordt daarover berekend.",
+            "Die twee door elkaar halen is een veelgemaakte fout. Wie twee derde voor de kinderen toepast op de volle waarde van een gezamenlijk bezeten woning, overschat hun deel met ongeveer de helft. De nalatenschap is hier wat er bij overlijden overbleef, min schulden en lasten, plus de waarde van schenkingen die de overledene tijdens zijn of haar leven deed. Schenkingen tijdens het leven tellen mee."
+          ]
+        },
+        {
+          "h2": "Kan ik het recht van mijn eigen land kiezen?",
+          "paras": [
+            "Ja, en voor de meeste buitenlandse eigenaren is dit het allernuttigste feit. Onder EU-Verordening 650/2012, die geldt voor overlijdens vanaf 17 augustus 2015, mag u het recht kiezen van een staat waarvan u de nationaliteit heeft. De keuze moet uitdrukkelijk in een testament worden gemaakt, of duidelijk blijken uit de bepalingen ervan. Een Noorse, Zweedse, Duitse, Britse of Franse eigenaar kan er de Spaanse legitima volledig mee opzijzetten.",
+            "Zonder keuze geldt het recht van het land waar u bij uw overlijden uw gewone verblijfplaats had. Dat is vooral belangrijk voor wie hier met pensioen gaat: zodra Spanje uw thuis is, gelden de Spaanse regels, tenzij uw testament iets anders zegt. De Verordening bindt Denemarken en Ierland niet, en het Verenigd Koninkrijk heeft er nooit voor gekozen, dus een Britse keuze voor Engels recht werkt vanaf Spaanse kant, maar niet andersom."
+          ]
+        },
+        {
+          "h2": "Wat als de woning op Mallorca, in Catalonië of in Baskenland staat?",
+          "paras": [
+            "Zes autonome regio's hebben hun eigen erfrecht dat het Burgerlijk Wetboek opzijzet: Aragón, Catalonië, de Balearen, Navarra, Baskenland en Galicië. De verschillen zijn groot. Navarra, en de Ayala-vallei in Álava, laten bijna volledige vrijheid om uw nalatenschap naar eigen wens na te laten, terwijl in Catalonië de legitima een kwart is, verschuldigd als vordering in plaats van als deel van de goederen.",
+            "Welk van deze rechten geldt, hangt af van de vecindad civil van de overledene, een Spaanse burgerrechtelijke status, niet van de plaats waar de woning staat. Een villa op Mallorca brengt op zichzelf niet het Balearische recht mee. Hoe dit samenhangt met een keuze voor het nationale recht, is een vraag voor een abogado die met buitenlandse nalatenschappen werkt, het liefst voordat u tekent."
+          ]
+        },
+        {
+          "h2": "Wat gebeurt er als ik zonder testament overlijd?",
+          "paras": [
+            "Onder het gemeenschappelijke Burgerlijk Wetboek roept de wet de erfgenamen in een vaste volgorde: eerst afstammelingen, dan voorouders, dan de echtgenoot van wie de overledene niet gescheiden leefde, dan verwanten tot in de vierde graad, zoals neven en nichten in de eerste graad, en ten slotte de Staat. Als voorouders erven, krijgt de echtgenoot een vruchtgebruik in plaats van eigendom. Forale regio's hebben hun eigen volgorde.",
+            "De verrassing voor veel families is dat de echtgenoot na de ouders komt. Zonder testament en zonder kinderen erven uw ouders vóór uw man of vrouw. Uw erfgenamen hebben ook een verklaring van erfrecht van een notaris nodig voordat ze iets met het huis kunnen doen, wat nog een stap toevoegt aan een toch al traag proces. Alleen als de erfgenamen, de goederen of de verdeling worden betwist, moet het naar de rechter."
+          ]
+        },
+        {
+          "h2": "Hoeveel erfbelasting betalen mijn erfgenamen?",
+          "paras": [
+            "Elke erfgenaam wordt belast over zijn eigen deel en dient zijn eigen aangifte in; de nalatenschap betaalt niet als geheel. De landelijke schaal loopt van 7,65 procent op de eerste schijf tot een hoogste marginaal tarief van 34 procent boven 797.555,08 euro. Vermenigvuldigers voor de verwantschap en het bestaande vermogen lopen op tot 2,4 voor de verst verwante groep, dus een ongehuwde partner of een vriend kan ruim boven de 34 procent betalen.",
+            "De landelijke schaal is het vangnet, niet de gebruikelijke uitkomst. Erfgenamen die geen inwoner zijn, mogen in plaats daarvan voor de regels van een regio kiezen, en de meeste regio's geven grote kortingen aan echtgenoten en kinderen. Woonde de overledene in Spanje, dan is de keuze de regio waar hij of zij woonde; zo niet, dan de regio waar de grootste waarde van de Spaanse bezittingen ligt. De valor de referencia van het Catastro geldt voor deze belasting als minimumwaarde van de woning, tenzij de aangegeven waarde hoger is."
+          ]
+        },
+        {
+          "h2": "Wat kan ik nu doen om het mijn familie makkelijker te maken?",
+          "paras": [
+            "Teken een openbaar testament bij een Spaanse notaris, en wilt u dat het recht van uw eigen land geldt, laat de keuze er dan duidelijk in opnemen. Bent u getrouwd, zoek dan uit onder welk huwelijksgoederenregime u valt, want dat bepaalt wat er in uw nalatenschap zit. Bewaar thuis een kopie bij uw andere papieren en vertel uw erfgenamen dat het bestaat.",
+            "Denk daarna aan de mensen die het moeten afhandelen. Elke erfgenaam heeft een Spaans fiscaal nummer (NIF) nodig, dat iemand die geen inwoner is kan aanvragen bij een Spaans consulaat of met modelo 030. Een erfgenaam die buiten de EU en de EER woont, ook in het Verenigd Koninkrijk, moet een vertegenwoordiger aanwijzen die in Spanje woont. Geeft u het huis liever tijdens uw leven weg, dan moet de aangifte schenkbelasting binnen dertig werkdagen worden ingediend, gerekend vanaf de dag na de schenking. Is dat geregeld, dan kunt u weer gewoon genieten van het huis zoals het is."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "slug": "filing-spanish-tax-late",
+  "topic": "tax",
+  "tool": "late-surcharge",
+  "rules": [
+    "late.recargo.voluntary",
+    "late.recargo.excludes_penalty",
+    "late.recargo.reduction",
+    "late.interest",
+    "irnr.imputed.base",
+    "irnr.rates",
+    "deadline.imputed.upto_2025",
+    "deadline.imputed.from_2026",
+    "deadline.rental.from_2026",
+    "deadline.210.zero_result",
+    "deadline.210.refund",
+    "deadline.210.sale",
+    "plusvalia.deadlines",
+    "irnr.imputed.rate_special_2023_2025"
+  ],
+  "answers": [
+    "filing-a-spanish-tax-return-late",
+    "late-payment-interest-rate-spanish-tax-2026",
+    "imputed-income-tax-deadline-for-2025",
+    "when-to-file-spanish-rental-income-from-2026",
+    "modelo-210-nil-result-or-refund-deadline",
+    "three-percent-withheld-when-selling-spanish-property",
+    "plusvalia-when-selling-in-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Filing Spanish Tax Late: Surcharges for Non-Residents",
+      "description": "Missed a modelo 210 deadline? What filing late on your own costs in Spain, when interest starts, and why it matters whether the tax office wrote first.",
+      "h1": "What happens when you file a Spanish tax return late",
+      "lead": "If you file a Spanish tax return late on your own initiative, before the tax office has written to you, you pay a surcharge rather than a penalty: 1 percent plus 1 percent for each complete month of delay, up to 12 months. From month 13 it becomes a flat 15 percent plus late-payment interest. Once the tax office has issued a demand, that surcharge route is no longer open.",
+      "sections": [
+        {
+          "h2": "I have missed a Spanish tax deadline. How bad is it?",
+          "paras": [
+            "Usually much less bad than people fear, as long as you act before the tax office does. The single thing that decides what a late return costs is whether the Agencia Tributaria has already written to you about it. If it has not, you are in the surcharge system, which is a fixed, predictable cost that grows slowly month by month.",
+            "Owners abroad miss deadlines for ordinary reasons. The imputed income return is filed rather than billed, the dates moved twice in recent years, and a letter sent to a Spanish address can sit unopened on the doormat until the summer. None of that changes what is owed, but it does mean you are far from the only one putting a missed year right."
+          ]
+        },
+        {
+          "h2": "How much is the surcharge if I file on my own?",
+          "paras": [
+            "Filing late without a prior demand carries a surcharge of 1 percent, plus a further 1 percent for each complete month of delay, up to 12 months. So a return filed two complete months late costs 3 percent on top of the tax, and one filed eleven complete months late costs 12 percent. No interest is charged during those first 12 months.",
+            "From month 13 the surcharge becomes a flat 15 percent, and late-payment interest is added, running from the day after month 12 ends. That surcharge replaces any penalty that could otherwise have been imposed for the same late return, so you are not paying both.",
+            "The surcharge can be reduced by 25 percent where the conditions in the law are met. In essence, that means paying in full within the payment period that opens when the surcharge is notified to you. When the notification arrives, pay it promptly and in full."
+          ]
+        },
+        {
+          "h2": "What does that look like with real numbers?",
+          "paras": [
+            "Take a Swedish owner whose IBI receipt shows a cadastral value of 100,000 euros, in a town where the values were revised with effect from 2012 or later. The imputed income for 2024 is 1.1 percent of that, 1,100 euros, and the tax at 19 percent is 209 euros. That return was due by 31 December 2025.",
+            "Suppose it is filed on 10 April 2026, three complete months late. The surcharge is 1 percent plus 3 percent, so 4 percent of 209 euros, which is 8.36 euros. If the conditions for the 25 percent reduction are met, it falls to 6.27 euros. No interest is due, because the delay is under 12 months.",
+            "Leave the same return until after December 2026 and the picture changes. The surcharge jumps to 15 percent, about 31 euros on this example, and interest starts running on top. On a single holiday flat the sums stay modest, but across several years, several co-owners, or a sale, they add up quickly."
+          ]
+        },
+        {
+          "h2": "What changes once the tax office has written to me?",
+          "paras": [
+            "The surcharge system only applies to returns filed late without a prior demand (sin requerimiento previo). Once the tax office has issued a demand about that tax and that period, the voluntary route is closed, and the matter is handled under a different set of rules.",
+            "If a letter from the Agencia Tributaria arrives, read the date on it and the period it refers to before doing anything else. Then talk to a gestor or an asesor fiscal who handles non-resident returns, and do it quickly. Do not file a fresh return for the same period without their advice, because the answer now depends on what the letter says."
+          ]
+        },
+        {
+          "h2": "Which interest rate applies?",
+          "paras": [
+            "For 2026 the late-payment interest rate (interés de demora) is 4.0625 percent a year, and the legal interest rate is 3.25 percent. The same figures applied in 2025. These rates are set each year, so check the current figure before you calculate anything that runs into 2027.",
+            "Interest only enters the picture after the first 12 months of delay. For a return filed within a year of its deadline, the surcharge is the whole cost, which is one more reason to file a late return as soon as you notice it rather than waiting for a convenient moment."
+          ]
+        },
+        {
+          "h2": "Which deadlines do owners abroad miss most often?",
+          "paras": [
+            "The imputed income return on a home you do not let is the big one. For 2025 and earlier years it can be filed until 31 December of the following year, but direct debit closes on 23 December. From the 2026 tax year the window runs from 1 April to 31 December of the following year, again with direct debit closing on 23 December.",
+            "Rent earned from 2026 is filed in the first 20 days of April of the following year. A return with a nil result is filed from 1 to 20 January. When you sell, the return on the gain is filed within three months once one month has passed since completion. And the plusvalia goes to the town hall within 30 working days of the deed of sale."
+          ]
+        },
+        {
+          "h2": "What if Spain owes me money instead?",
+          "paras": [
+            "Late does not always mean owing. If tax was withheld from your Spanish income and the amount withheld turns out to be more than you owe, a modelo 210 with a refund result can be filed from 1 February, within four years of the end of the filing period for the withheld amount.",
+            "Four years is longer than most people expect, so an old overpayment is not necessarily lost. Put the end date in your diary as soon as you know there is a refund to claim, and keep the paperwork that shows what was withheld and when it was paid over to the tax office."
+          ]
+        },
+        {
+          "h2": "How do I put it right?",
+          "paras": [
+            "Start by listing every year you have owned the property and, for each one, whether you let it and whether a return was filed. Collect the IBI receipts for those years, because the cadastral value on each one is the starting point for the imputed income. Then file the missing returns and pay each one in full, keeping a note of the date you filed.",
+            "Make sure the tax office has an address where letters actually reach you, and keep a copy of every return and payment receipt in one folder. If there are several missing years, rental income, or a sale involved, hand the job to a gestor or asesor fiscal. Once it is done, it stays done, and the house goes back to being a place you look forward to."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Levere spansk skatt for sent: tillegg for ikke-bosatte",
+      "description": "Gått glipp av en frist for modelo 210? Se hva det koster å levere for sent selv, når renter starter og hvorfor det betyr noe om skattekontoret skrev først.",
+      "h1": "Hva skjer når du leverer en spansk skatteoppgave for sent",
+      "lead": "Leverer du en spansk skatteoppgave for sent på eget initiativ, før skattekontoret har skrevet til deg, betaler du et tillegg og ikke en bot: 1 prosent pluss 1 prosent for hver hele måned forsinkelse, opp til 12 måneder. Fra måned 13 blir det flate 15 prosent pluss forsinkelsesrenter. Når skattekontoret først har sendt et krav, er ikke den veien med tillegg lenger åpen.",
+      "sections": [
+        {
+          "h2": "Jeg har gått glipp av en spansk skattefrist. Hvor ille er det?",
+          "paras": [
+            "Som regel langt mindre ille enn folk frykter, så lenge du handler før skattekontoret gjør det. Det eneste som avgjør hva en for sen oppgave koster, er om Agencia Tributaria allerede har skrevet til deg om den. Har det ikke det, er du i tilleggsordningen, som er en fast og forutsigbar kostnad som vokser sakte måned for måned.",
+            "Eiere i utlandet går glipp av frister av helt vanlige grunner. Oppgaven for imputert inntekt må leveres og blir ikke fakturert, datoene har flyttet seg to ganger de siste årene, og et brev sendt til en spansk adresse kan ligge uåpnet på dørmatten til sommeren. Ikke noe av det endrer hva som skyldes, men det betyr at du langt fra er den eneste som rydder opp i et glemt år."
+          ]
+        },
+        {
+          "h2": "Hvor stort er tillegget hvis jeg leverer selv?",
+          "paras": [
+            "Levering for sent uten forutgående krav gir et tillegg på 1 prosent, pluss ytterligere 1 prosent for hver hele måned forsinkelse, opp til 12 måneder. En oppgave som leveres to hele måneder for sent koster altså 3 prosent i tillegg til skatten, og en som leveres elleve hele måneder for sent koster 12 prosent. Det beregnes ingen renter i løpet av de første 12 månedene.",
+            "Fra måned 13 blir tillegget flate 15 prosent, og forsinkelsesrenter kommer i tillegg, regnet fra dagen etter at måned 12 er over. Tillegget erstatter enhver bot som ellers kunne blitt ilagt for den samme forsinkede oppgaven, så du betaler ikke begge deler.",
+            "Tillegget kan reduseres med 25 prosent når vilkårene i loven er oppfylt. I hovedsak betyr det å betale alt innen betalingsfristen som åpner når tillegget blir meddelt deg. Når meldingen kommer, betal raskt og i sin helhet."
+          ]
+        },
+        {
+          "h2": "Hvordan ser det ut med virkelige tall?",
+          "paras": [
+            "Ta en svensk eier med en IBI-regning som viser en matrikkelverdi på 100 000 euro, i en kommune der verdiene ble revidert med virkning fra 2012 eller senere. Den imputerte inntekten for 2024 er 1,1 prosent av det, 1 100 euro, og skatten med 19 prosent er 209 euro. Den oppgaven hadde frist 31. desember 2025.",
+            "Si at den leveres 10. april 2026, tre hele måneder for sent. Tillegget er 1 prosent pluss 3 prosent, altså 4 prosent av 209 euro, som er 8,36 euro. Er vilkårene for reduksjonen på 25 prosent oppfylt, faller det til 6,27 euro. Det skal ikke betales renter, fordi forsinkelsen er under 12 måneder.",
+            "Lar du den samme oppgaven ligge til etter desember 2026, endrer bildet seg. Tillegget hopper til 15 prosent, rundt 31 euro i dette eksempelet, og renter begynner å løpe i tillegg. På én enkelt ferieleilighet holder beløpene seg beskjedne, men over flere år, flere medeiere eller et salg vokser de fort."
+          ]
+        },
+        {
+          "h2": "Hva endrer seg når skattekontoret har skrevet til meg?",
+          "paras": [
+            "Tilleggsordningen gjelder bare for oppgaver som leveres for sent uten forutgående krav (sin requerimiento previo). Når skattekontoret har sendt et krav om den skatten og den perioden, er den frivillige veien stengt, og saken behandles etter et annet sett regler.",
+            "Kommer det et brev fra Agencia Tributaria, les datoen og perioden det gjelder før du gjør noe annet. Snakk så med en gestor eller en asesor fiscal som håndterer oppgaver for ikke-bosatte, og gjør det raskt. Ikke lever en ny oppgave for den samme perioden uten deres råd, fordi svaret nå avhenger av hva brevet sier."
+          ]
+        },
+        {
+          "h2": "Hvilken rentesats gjelder?",
+          "paras": [
+            "For 2026 er forsinkelsesrenten (interés de demora) 4,0625 prosent per år, og den lovbestemte renten er 3,25 prosent. De samme satsene gjaldt i 2025. Satsene fastsettes hvert år, så sjekk gjeldende sats før du regner på noe som strekker seg inn i 2027.",
+            "Renter kommer bare inn i bildet etter de første 12 månedene med forsinkelse. For en oppgave som leveres innen ett år etter fristen, er tillegget hele kostnaden, og det er enda en grunn til å levere en for sen oppgave så snart du oppdager den, i stedet for å vente på et passende tidspunkt."
+          ]
+        },
+        {
+          "h2": "Hvilke frister går eiere i utlandet oftest glipp av?",
+          "paras": [
+            "Oppgaven for imputert inntekt på en bolig du ikke leier ut er den store. For 2025 og tidligere år kan den leveres til 31. desember året etter, men avtalegiro stenger 23. desember. Fra inntektsåret 2026 går vinduet fra 1. april til 31. desember året etter, igjen med avtalegiro som stenger 23. desember.",
+            "Leie opptjent fra 2026 leveres i de første 20 dagene av april året etter. En oppgave med nullresultat leveres fra 1. til 20. januar. Når du selger, leveres oppgaven for gevinsten innen tre måneder etter at det har gått én måned siden overdragelsen. Og plusvalia skal til kommunen innen 30 virkedager fra salgsskjøtet."
+          ]
+        },
+        {
+          "h2": "Hva om Spania skylder meg penger i stedet?",
+          "paras": [
+            "For sent betyr ikke alltid at du skylder noe. Ble det holdt tilbake skatt av den spanske inntekten din, og viser det tilbakeholdte beløpet seg å være mer enn du skylder, kan en modelo 210 med tilbakebetaling leveres fra 1. februar, innen fire år etter slutten av leveringsperioden for det tilbakeholdte beløpet.",
+            "Fire år er lengre enn de fleste tror, så en gammel overbetaling er ikke nødvendigvis tapt. Før sluttdatoen inn i kalenderen så snart du vet at det er noe å kreve tilbake, og ta vare på papirene som viser hva som ble holdt tilbake og når det ble betalt inn til skattekontoret."
+          ]
+        },
+        {
+          "h2": "Hvordan rydder jeg opp?",
+          "paras": [
+            "Begynn med å liste opp hvert år du har eid eiendommen, og for hvert av dem, om du leide den ut og om det ble levert en oppgave. Samle IBI-regningene for de årene, fordi matrikkelverdien på hver av dem er utgangspunktet for den imputerte inntekten. Lever så de manglende oppgavene og betal hver av dem fullt ut, og noter datoen du leverte.",
+            "Sørg for at skattekontoret har en adresse der brev faktisk når deg, og ha en kopi av hver oppgave og hver betalingskvittering i én mappe. Er det flere manglende år, leieinntekt eller et salg involvert, overlat jobben til en gestor eller asesor fiscal. Når det er gjort, er det gjort, og huset blir igjen et sted du gleder deg til."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Spansk deklaration för sent: tillägg för icke-bosatta",
+      "description": "Missat en frist för modelo 210? Så mycket kostar det att deklarera sent själv, när räntan börjar och varför det spelar roll vem som skrev först.",
+      "h1": "Vad händer när du lämnar en spansk deklaration för sent",
+      "lead": "Lämnar du en spansk deklaration för sent på eget initiativ, innan skattemyndigheten har skrivit till dig, betalar du ett tillägg i stället för en sanktionsavgift: 1 procent plus 1 procent för varje hel månads dröjsmål, upp till 12 månader. Från månad 13 blir det platta 15 procent plus dröjsmålsränta. När skattemyndigheten väl har skickat ett krav är den vägen med tillägg inte längre öppen.",
+      "sections": [
+        {
+          "h2": "Jag har missat en spansk skattefrist. Hur illa är det?",
+          "paras": [
+            "Oftast mycket mindre illa än folk fruktar, så länge du agerar före skattemyndigheten. Det enda som avgör vad en sen deklaration kostar är om Agencia Tributaria redan har skrivit till dig om den. Har den inte det befinner du dig i systemet med tillägg, som är en fast och förutsägbar kostnad som växer långsamt månad för månad.",
+            "Ägare utomlands missar frister av vanliga skäl. Deklarationen för schablonintäkt lämnas av dig i stället för att faktureras, datumen har flyttats två gånger de senaste åren, och ett brev till en spansk adress kan ligga oöppnat på dörrmattan till sommaren. Inget av det ändrar vad som ska betalas, men det betyder att du är långt ifrån den enda som rättar till ett missat år."
+          ]
+        },
+        {
+          "h2": "Hur stort är tillägget om jag deklarerar på eget initiativ?",
+          "paras": [
+            "Att deklarera sent utan föregående krav ger ett tillägg på 1 procent, plus ytterligare 1 procent för varje hel månads dröjsmål, upp till 12 månader. En deklaration som lämnas två hela månader för sent kostar alltså 3 procent utöver skatten, och en som lämnas elva hela månader för sent kostar 12 procent. Ingen ränta tas ut under de första 12 månaderna.",
+            "Från månad 13 blir tillägget platta 15 procent, och dröjsmålsränta läggs till, räknad från dagen efter att månad 12 tar slut. Tillägget ersätter den sanktionsavgift som annars kunnat påföras för samma sena deklaration, så du betalar inte båda.",
+            "Tillägget kan sättas ned med 25 procent när villkoren i lagen är uppfyllda. I grunden betyder det att betala allt inom den betalningsperiod som öppnar när tillägget meddelas dig. När beskedet kommer, betala snabbt och i sin helhet."
+          ]
+        },
+        {
+          "h2": "Hur ser det ut med riktiga siffror?",
+          "paras": [
+            "Ta en svensk ägare vars IBI-avi visar ett taxeringsvärde på 100 000 euro, i en kommun där värdena omprövades med verkan från 2012 eller senare. Schablonintäkten för 2024 är 1,1 procent av det, 1 100 euro, och skatten med 19 procent är 209 euro. Den deklarationen skulle lämnas senast 31 december 2025.",
+            "Anta att den lämnas den 10 april 2026, tre hela månader för sent. Tillägget är 1 procent plus 3 procent, alltså 4 procent av 209 euro, vilket blir 8,36 euro. Är villkoren för nedsättningen på 25 procent uppfyllda sjunker det till 6,27 euro. Ingen ränta ska betalas, eftersom dröjsmålet är kortare än 12 månader.",
+            "Väntar du med samma deklaration till efter december 2026 ändras bilden. Tillägget hoppar till 15 procent, omkring 31 euro i det här exemplet, och ränta börjar löpa ovanpå. På en enda semesterlägenhet förblir summorna måttliga, men över flera år, flera delägare eller en försäljning växer de snabbt."
+          ]
+        },
+        {
+          "h2": "Vad ändras när skattemyndigheten har skrivit till mig?",
+          "paras": [
+            "Systemet med tillägg gäller bara deklarationer som lämnas sent utan föregående krav (sin requerimiento previo). När skattemyndigheten väl har skickat ett krav om den skatten och den perioden är den frivilliga vägen stängd, och ärendet hanteras enligt andra regler.",
+            "Kommer ett brev från Agencia Tributaria, läs datumet på det och vilken period det gäller innan du gör något annat. Prata sedan med en gestor eller en asesor fiscal som hanterar deklarationer för icke-bosatta, och gör det snabbt. Lämna inte en ny deklaration för samma period utan deras råd, eftersom svaret nu beror på vad brevet säger."
+          ]
+        },
+        {
+          "h2": "Vilken räntesats gäller?",
+          "paras": [
+            "För 2026 är dröjsmålsräntan (interés de demora) 4,0625 procent per år, och den lagstadgade räntan 3,25 procent. Samma siffror gällde 2025. Satserna fastställs varje år, så kontrollera den aktuella siffran innan du räknar på något som löper in i 2027.",
+            "Ränta kommer bara in i bilden efter de första 12 månadernas dröjsmål. För en deklaration som lämnas inom ett år från fristen är tillägget hela kostnaden, vilket är ytterligare ett skäl att lämna en sen deklaration så snart du upptäcker den i stället för att vänta på ett lämpligt tillfälle."
+          ]
+        },
+        {
+          "h2": "Vilka frister missar ägare utomlands oftast?",
+          "paras": [
+            "Deklarationen för schablonintäkt på en bostad du inte hyr ut är den stora. För 2025 och tidigare år kan den lämnas till och med 31 december året därpå, men autogiro stänger den 23 december. Från inkomståret 2026 löper perioden från 1 april till 31 december året därpå, även då med autogiro som stänger den 23 december.",
+            "Hyra som tjänas in från 2026 deklareras under de första 20 dagarna i april året därpå. En deklaration med nollresultat lämnas från 1 till 20 januari. När du säljer lämnas deklarationen för vinsten inom tre månader när en månad har gått sedan tillträdet. Och plusvalia går till kommunen inom 30 arbetsdagar från köpehandlingen."
+          ]
+        },
+        {
+          "h2": "Vad händer om det i stället är Spanien som är skyldig mig pengar?",
+          "paras": [
+            "Sent betyder inte alltid att du är skyldig något. Har skatt hållits inne från din spanska inkomst och det innehållna beloppet visar sig vara mer än du ska betala, kan en modelo 210 med återbetalningsresultat lämnas från 1 februari, inom fyra år från slutet av deklarationsperioden för det innehållna beloppet.",
+            "Fyra år är längre än de flesta tror, så en gammal överbetalning är inte nödvändigtvis förlorad. Skriv in slutdatumet i kalendern så snart du vet att det finns en återbetalning att kräva, och spara de papper som visar vad som hölls inne och när det betalades in till skattemyndigheten."
+          ]
+        },
+        {
+          "h2": "Hur rättar jag till det?",
+          "paras": [
+            "Börja med att lista varje år du har ägt fastigheten och, för vart och ett, om du hyrde ut den och om en deklaration lämnades. Samla IBI-avierna för de åren, eftersom taxeringsvärdet på var och en är utgångspunkten för schablonintäkten. Lämna sedan de saknade deklarationerna och betala var och en i sin helhet, och anteckna datumet du lämnade dem.",
+            "Se till att skattemyndigheten har en adress där brev faktiskt når dig, och spara en kopia av varje deklaration och betalningskvitto i en och samma mapp. Är det flera saknade år, hyresinkomst eller en försäljning inblandad, lämna över jobbet till en gestor eller asesor fiscal. När det väl är gjort förblir det gjort, och huset blir åter en plats du ser fram emot."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Spanische Steuererklärung verspätet: Zuschläge und Zinsen",
+      "description": "Frist für modelo 210 verpasst? Was eine freiwillige verspätete Abgabe in Spanien kostet, wann Zinsen anfallen und warum ein Schreiben des Finanzamts zählt.",
+      "h1": "Was passiert, wenn Sie eine spanische Steuererklärung zu spät abgeben",
+      "lead": "Wenn Sie eine spanische Steuererklärung aus eigenem Antrieb verspätet abgeben, bevor das Finanzamt Ihnen geschrieben hat, zahlen Sie einen Zuschlag statt einer Strafe: 1 Prozent plus 1 Prozent für jeden vollen Monat Verzug, bis zu 12 Monaten. Ab dem 13. Monat werden daraus pauschal 15 Prozent plus Verzugszinsen. Hat das Finanzamt bereits eine Aufforderung verschickt, steht der Weg über den Zuschlag nicht mehr offen.",
+      "sections": [
+        {
+          "h2": "Ich habe eine spanische Steuerfrist verpasst. Wie schlimm ist das?",
+          "paras": [
+            "Meist viel weniger schlimm, als befürchtet, solange Sie handeln, bevor das Finanzamt es tut. Was eine verspätete Erklärung kostet, hängt vor allem davon ab, ob die Agencia Tributaria Ihnen deswegen bereits geschrieben hat. Wenn nicht, gilt für Sie das Zuschlagssystem, also feste, planbare Kosten, die Monat für Monat langsam steigen.",
+            "Eigentümer im Ausland verpassen Fristen aus ganz gewöhnlichen Gründen. Die Erklärung zu den fiktiven Einkünften muss man selbst abgeben, sie kommt nicht als Rechnung, die Fristen haben sich in den letzten Jahren zweimal verschoben, und ein Brief an eine spanische Adresse kann bis zum Sommer ungeöffnet auf der Fußmatte liegen. Am geschuldeten Betrag ändert das nichts, aber Sie sind damit bei Weitem nicht der Einzige, der ein versäumtes Jahr nachholt."
+          ]
+        },
+        {
+          "h2": "Wie hoch ist der Zuschlag, wenn ich selbst abgebe?",
+          "paras": [
+            "Eine verspätete Abgabe ohne vorherige Aufforderung kostet einen Zuschlag von 1 Prozent plus weitere 1 Prozent für jeden vollen Monat Verzug, bis zu 12 Monaten. Eine Erklärung, die zwei volle Monate zu spät kommt, kostet also 3 Prozent zusätzlich zur Steuer, eine, die elf volle Monate zu spät kommt, 12 Prozent. In diesen ersten 12 Monaten fallen keine Zinsen an.",
+            "Ab dem 13. Monat beträgt der Zuschlag pauschal 15 Prozent, und es kommen Verzugszinsen hinzu, ab dem Tag nach Ende des 12. Monats. Dieser Zuschlag tritt an die Stelle jeder Strafe, die sonst für dieselbe verspätete Erklärung hätte verhängt werden können, Sie zahlen also nicht beides.",
+            "Der Zuschlag kann um 25 Prozent ermäßigt werden, wenn die gesetzlichen Voraussetzungen erfüllt sind. Im Kern heißt das, vollständig innerhalb der Zahlungsfrist zu zahlen, die mit der Mitteilung des Zuschlags beginnt. Wenn die Mitteilung kommt, zahlen Sie zügig und vollständig."
+          ]
+        },
+        {
+          "h2": "Wie sieht das mit echten Zahlen aus?",
+          "paras": [
+            "Nehmen wir eine Eigentümerin aus Schweden, deren IBI-Bescheid einen Katasterwert von 100.000 Euro ausweist, in einer Gemeinde, deren Werte mit Wirkung ab 2012 oder später revidiert wurden. Die fiktiven Einkünfte für 2024 betragen 1,1 Prozent davon, also 1.100 Euro, und die Steuer zu 19 Prozent 209 Euro. Diese Erklärung war bis zum 31. Dezember 2025 fällig.",
+            "Angenommen, sie wird am 10. April 2026 abgegeben, drei volle Monate zu spät. Der Zuschlag beträgt 1 Prozent plus 3 Prozent, also 4 Prozent von 209 Euro, das sind 8,36 Euro. Sind die Voraussetzungen für die Ermäßigung um 25 Prozent erfüllt, sinkt er auf 6,27 Euro. Zinsen fallen nicht an, weil der Verzug unter 12 Monaten liegt.",
+            "Bleibt dieselbe Erklärung bis nach Dezember 2026 liegen, sieht es anders aus. Der Zuschlag springt auf 15 Prozent, in diesem Beispiel rund 31 Euro, und zusätzlich laufen Zinsen. Bei einer einzelnen Ferienwohnung bleiben die Beträge überschaubar, doch über mehrere Jahre, mehrere Miteigentümer oder einen Verkauf summieren sie sich schnell."
+          ]
+        },
+        {
+          "h2": "Was ändert sich, wenn das Finanzamt mir geschrieben hat?",
+          "paras": [
+            "Das Zuschlagssystem gilt nur für Erklärungen, die ohne vorherige Aufforderung (sin requerimiento previo) verspätet abgegeben werden. Sobald das Finanzamt zu dieser Steuer und diesem Zeitraum eine Aufforderung verschickt hat, ist der freiwillige Weg verschlossen, und der Fall wird nach anderen Regeln behandelt.",
+            "Wenn ein Brief der Agencia Tributaria eintrifft, lesen Sie zuerst das Datum und den Zeitraum, auf den er sich bezieht. Sprechen Sie dann mit einem gestor oder einem asesor fiscal, der Erklärungen für Nichtansässige betreut, und zwar zügig. Geben Sie ohne deren Rat keine neue Erklärung für denselben Zeitraum ab, denn die Antwort hängt jetzt davon ab, was in dem Brief steht."
+          ]
+        },
+        {
+          "h2": "Welcher Zinssatz gilt?",
+          "paras": [
+            "Für 2026 beträgt der Verzugszinssatz (interés de demora) 4,0625 Prozent pro Jahr und der gesetzliche Zinssatz 3,25 Prozent. Dieselben Werte galten 2025. Diese Sätze werden jedes Jahr neu festgelegt, prüfen Sie also den aktuellen Wert, bevor Sie etwas berechnen, das bis 2027 reicht.",
+            "Zinsen spielen erst nach den ersten 12 Monaten Verzug eine Rolle. Bei einer Erklärung, die innerhalb eines Jahres nach Fristende abgegeben wird, ist der Zuschlag die gesamten Kosten. Ein Grund mehr, eine versäumte Erklärung abzugeben, sobald Sie es bemerken, statt auf einen günstigen Moment zu warten."
+          ]
+        },
+        {
+          "h2": "Welche Fristen verpassen Eigentümer im Ausland am häufigsten?",
+          "paras": [
+            "Die wichtigste ist die Erklärung zu den fiktiven Einkünften für eine nicht vermietete Immobilie. Für 2025 und frühere Jahre kann sie bis zum 31. Dezember des Folgejahres abgegeben werden, die Lastschrift endet aber am 23. Dezember. Ab dem Steuerjahr 2026 läuft der Zeitraum vom 1. April bis zum 31. Dezember des Folgejahres, auch hier endet die Lastschrift am 23. Dezember.",
+            "Mieteinkünfte ab 2026 werden in den ersten 20 Tagen im April des Folgejahres erklärt. Eine Erklärung mit Nullergebnis wird vom 1. bis 20. Januar abgegeben. Beim Verkauf wird die Erklärung zum Gewinn innerhalb von drei Monaten abgegeben, nachdem seit dem Notartermin ein Monat vergangen ist. Und die plusvalia geht innerhalb von 30 Werktagen nach der Kaufurkunde an das Rathaus."
+          ]
+        },
+        {
+          "h2": "Was, wenn Spanien mir Geld schuldet?",
+          "paras": [
+            "Verspätet heißt nicht immer, dass Sie etwas schulden. Wurde von Ihren spanischen Einkünften Steuer einbehalten und ist der einbehaltene Betrag höher als das, was Sie schulden, kann ein modelo 210 mit Erstattungsergebnis ab dem 1. Februar abgegeben werden, innerhalb von vier Jahren nach Ende der Abgabefrist für den einbehaltenen Betrag.",
+            "Vier Jahre sind länger, als die meisten erwarten, eine alte Überzahlung ist also nicht unbedingt verloren. Tragen Sie das Enddatum in Ihren Kalender ein, sobald Sie wissen, dass eine Erstattung zu beantragen ist, und bewahren Sie die Unterlagen auf, die zeigen, was einbehalten und wann es an das Finanzamt abgeführt wurde."
+          ]
+        },
+        {
+          "h2": "Wie bringe ich das wieder in Ordnung?",
+          "paras": [
+            "Listen Sie zuerst jedes Jahr auf, in dem Ihnen die Immobilie gehört hat, und notieren Sie für jedes, ob Sie vermietet haben und ob eine Erklärung abgegeben wurde. Sammeln Sie die IBI-Bescheide dieser Jahre, denn der Katasterwert auf jedem ist der Ausgangspunkt für die fiktiven Einkünfte. Geben Sie dann die fehlenden Erklärungen ab, zahlen Sie jede vollständig und notieren Sie das Abgabedatum.",
+            "Sorgen Sie dafür, dass das Finanzamt eine Adresse hat, unter der Briefe Sie tatsächlich erreichen, und bewahren Sie eine Kopie jeder Erklärung und jedes Zahlungsbelegs in einem Ordner auf. Geht es um mehrere fehlende Jahre, Mieteinkünfte oder einen Verkauf, übergeben Sie die Aufgabe einem gestor oder asesor fiscal. Ist es einmal erledigt, bleibt es erledigt, und das Haus wird wieder ein Ort, auf den Sie sich freuen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Déclaration fiscale en retard en Espagne : les majorations",
+      "description": "Échéance du modelo 210 manquée ? Ce que coûte un dépôt tardif spontané en Espagne, quand les intérêts courent et pourquoi le premier courrier compte.",
+      "h1": "Ce qui se passe quand vous déposez une déclaration fiscale espagnole en retard",
+      "lead": "Si vous déposez une déclaration fiscale espagnole en retard de votre propre initiative, avant que l'administration fiscale ne vous ait écrit, vous payez une majoration plutôt qu'une sanction : 1 pour cent plus 1 pour cent par mois complet de retard, jusqu'à 12 mois. À partir du 13e mois, elle devient un taux fixe de 15 pour cent plus des intérêts de retard. Une fois que l'administration fiscale a émis une mise en demeure, cette voie de la majoration n'est plus ouverte.",
+      "sections": [
+        {
+          "h2": "J'ai manqué une échéance fiscale en Espagne. Est-ce grave ?",
+          "paras": [
+            "Généralement bien moins que ce que l'on craint, à condition d'agir avant l'administration fiscale. Le seul élément qui détermine le coût d'une déclaration tardive est de savoir si l'Agencia Tributaria vous a déjà écrit à ce sujet. Si ce n'est pas le cas, vous relevez du système des majorations, un coût fixe et prévisible qui augmente lentement mois après mois.",
+            "Les propriétaires vivant à l'étranger manquent des échéances pour des raisons ordinaires. La déclaration du revenu imputé doit être déposée plutôt qu'elle n'est facturée, les dates ont changé deux fois ces dernières années, et une lettre envoyée à une adresse espagnole peut rester fermée sur le paillasson jusqu'à l'été. Rien de cela ne change ce qui est dû, mais vous êtes loin d'être le seul à régulariser une année oubliée."
+          ]
+        },
+        {
+          "h2": "Quel est le montant de la majoration si je régularise de moi-même ?",
+          "paras": [
+            "Déposer en retard sans mise en demeure préalable entraîne une majoration de 1 pour cent, plus 1 pour cent supplémentaire par mois complet de retard, jusqu'à 12 mois. Une déclaration déposée avec deux mois complets de retard coûte donc 3 pour cent en plus de l'impôt, et une déclaration déposée avec onze mois complets de retard coûte 12 pour cent. Aucun intérêt n'est dû pendant ces 12 premiers mois.",
+            "À partir du 13e mois, la majoration devient un taux fixe de 15 pour cent, et des intérêts de retard s'ajoutent, courant à partir du lendemain de la fin du 12e mois. Cette majoration remplace toute sanction qui aurait pu être infligée pour la même déclaration tardive : vous ne payez donc pas les deux.",
+            "La majoration peut être réduite de 25 pour cent lorsque les conditions prévues par la loi sont remplies. En substance, il s'agit de payer l'intégralité dans le délai de paiement qui s'ouvre lorsque la majoration vous est notifiée. Quand la notification arrive, payez rapidement et en totalité."
+          ]
+        },
+        {
+          "h2": "À quoi cela ressemble-t-il avec des chiffres réels ?",
+          "paras": [
+            "Prenons un propriétaire suédois dont l'avis d'IBI indique une valeur cadastrale de 100 000 euros, dans une commune où les valeurs ont été révisées avec effet en 2012 ou après. Le revenu imputé pour 2024 est de 1,1 pour cent de ce montant, soit 1 100 euros, et l'impôt à 19 pour cent est de 209 euros. Cette déclaration était due au plus tard le 31 décembre 2025.",
+            "Supposons qu'elle soit déposée le 10 avril 2026, avec trois mois complets de retard. La majoration est de 1 pour cent plus 3 pour cent, soit 4 pour cent de 209 euros, ce qui fait 8,36 euros. Si les conditions de la réduction de 25 pour cent sont remplies, elle tombe à 6,27 euros. Aucun intérêt n'est dû, car le retard est inférieur à 12 mois.",
+            "Laissez la même déclaration jusqu'après décembre 2026 et le tableau change. La majoration passe à 15 pour cent, environ 31 euros dans cet exemple, et des intérêts commencent à courir en plus. Sur un seul appartement de vacances, les sommes restent modestes, mais sur plusieurs années, avec plusieurs copropriétaires ou lors d'une vente, elles s'accumulent vite."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui change une fois que l'administration fiscale m'a écrit ?",
+          "paras": [
+            "Le système des majorations ne s'applique qu'aux déclarations déposées en retard sans mise en demeure préalable (sin requerimiento previo). Dès que l'administration fiscale a émis une mise en demeure concernant cet impôt et cette période, la voie spontanée est fermée, et le dossier est traité selon d'autres règles.",
+            "Si une lettre de l'Agencia Tributaria arrive, lisez la date qui y figure et la période qu'elle concerne avant de faire quoi que ce soit d'autre. Parlez-en ensuite à un gestor ou à un asesor fiscal qui traite les déclarations de non-résidents, et faites-le vite. Ne déposez pas de nouvelle déclaration pour la même période sans son avis, car la réponse dépend désormais de ce que dit la lettre."
+          ]
+        },
+        {
+          "h2": "Quel taux d'intérêt s'applique ?",
+          "paras": [
+            "Pour 2026, le taux d'intérêt de retard (interés de demora) est de 4,0625 pour cent par an, et le taux d'intérêt légal est de 3,25 pour cent. Les mêmes chiffres s'appliquaient en 2025. Ces taux sont fixés chaque année : vérifiez donc le chiffre en vigueur avant de calculer quoi que ce soit qui court jusqu'en 2027.",
+            "Les intérêts n'entrent en jeu qu'après les 12 premiers mois de retard. Pour une déclaration déposée moins d'un an après son échéance, la majoration représente tout le coût, ce qui est une raison de plus de déposer une déclaration en retard dès que vous vous en apercevez plutôt que d'attendre un moment plus commode."
+          ]
+        },
+        {
+          "h2": "Quelles échéances les propriétaires vivant à l'étranger manquent-ils le plus souvent ?",
+          "paras": [
+            "La déclaration du revenu imputé sur un logement que vous ne louez pas est la principale. Pour 2025 et les années antérieures, elle peut être déposée jusqu'au 31 décembre de l'année suivante, mais le prélèvement ferme le 23 décembre. À partir de l'année fiscale 2026, la période va du 1er avril au 31 décembre de l'année suivante, le prélèvement fermant là aussi le 23 décembre.",
+            "Les loyers perçus à partir de 2026 se déclarent dans les 20 premiers jours d'avril de l'année suivante. Une déclaration dont le résultat est nul se dépose du 1er au 20 janvier. Lorsque vous vendez, la déclaration de la plus-value se dépose dans les trois mois qui suivent l'écoulement d'un mois après la vente. Et la plusvalia se déclare à la mairie dans les 30 jours ouvrables suivant l'acte de vente."
+          ]
+        },
+        {
+          "h2": "Et si c'est l'Espagne qui me doit de l'argent ?",
+          "paras": [
+            "Retard ne veut pas toujours dire dette. Si un impôt a été retenu sur vos revenus espagnols et que le montant retenu s'avère supérieur à ce que vous devez, un modelo 210 avec un résultat de remboursement peut être déposé à partir du 1er février, dans les quatre ans suivant la fin de la période de déclaration du montant retenu.",
+            "Quatre ans, c'est plus long que ce que la plupart des gens imaginent : un ancien trop-perçu n'est donc pas forcément perdu. Notez la date limite dans votre agenda dès que vous savez qu'il y a un remboursement à demander, et conservez les documents qui montrent ce qui a été retenu et quand cela a été reversé à l'administration fiscale."
+          ]
+        },
+        {
+          "h2": "Comment régulariser la situation ?",
+          "paras": [
+            "Commencez par lister chaque année où vous avez possédé le bien et, pour chacune, si vous l'avez loué et si une déclaration a été déposée. Rassemblez les avis d'IBI de ces années, car la valeur cadastrale de chacun est le point de départ du revenu imputé. Déposez ensuite les déclarations manquantes et payez chacune en totalité, en notant la date de dépôt.",
+            "Assurez-vous que l'administration fiscale dispose d'une adresse où les lettres vous parviennent réellement, et conservez une copie de chaque déclaration et de chaque justificatif de paiement dans un même dossier. S'il y a plusieurs années manquantes, des revenus locatifs ou une vente en jeu, confiez le travail à un gestor ou à un asesor fiscal. Une fois que c'est fait, c'est fait, et la maison redevient un endroit où vous avez hâte d'aller."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Spaanse belastingaangifte te laat indienen: toeslagen",
+      "description": "Een termijn voor modelo 210 gemist? Wat te laat indienen in Spanje kost, wanneer rente begint te lopen en waarom een brief van de fiscus ertoe doet.",
+      "h1": "Wat er gebeurt als u een Spaanse belastingaangifte te laat indient",
+      "lead": "Dient u een Spaanse belastingaangifte uit eigen beweging te laat in, voordat de belastingdienst u heeft aangeschreven, dan betaalt u een toeslag in plaats van een boete: 1 procent plus 1 procent voor elke volle maand vertraging, tot 12 maanden. Vanaf maand 13 wordt dat een vlakke 15 procent plus rente wegens te late betaling. Zodra de belastingdienst een aanmaning heeft gestuurd, staat die route via de toeslag niet meer open.",
+      "sections": [
+        {
+          "h2": "Ik heb een Spaanse belastingtermijn gemist. Hoe erg is dat?",
+          "paras": [
+            "Meestal veel minder erg dan mensen vrezen, zolang u in actie komt voordat de belastingdienst dat doet. Het enige wat bepaalt wat een te late aangifte kost, is of de Agencia Tributaria u er al over heeft aangeschreven. Is dat niet zo, dan valt u onder het toeslagsysteem, een vaste en voorspelbare kostenpost die maand na maand langzaam oploopt.",
+            "Eigenaren in het buitenland missen termijnen om heel gewone redenen. De aangifte fictief inkomen moet u zelf indienen in plaats van dat u een aanslag krijgt, de data zijn de afgelopen jaren twee keer verschoven, en een brief naar een Spaans adres kan tot de zomer ongeopend op de deurmat liggen. Niets daarvan verandert wat er verschuldigd is, maar het betekent wel dat u lang niet de enige bent die een gemist jaar rechtzet."
+          ]
+        },
+        {
+          "h2": "Hoe hoog is de toeslag als ik uit eigen beweging indien?",
+          "paras": [
+            "Te laat indienen zonder voorafgaande aanmaning kost een toeslag van 1 procent, plus nog eens 1 procent voor elke volle maand vertraging, tot 12 maanden. Een aangifte die twee volle maanden te laat is, kost dus 3 procent bovenop de belasting, en een aangifte die elf volle maanden te laat is, kost 12 procent. In die eerste 12 maanden wordt geen rente berekend.",
+            "Vanaf maand 13 wordt de toeslag een vlakke 15 procent, en komt er rente wegens te late betaling bij, te rekenen vanaf de dag na het einde van maand 12. Die toeslag komt in plaats van een boete die anders voor dezelfde te late aangifte had kunnen worden opgelegd, dus u betaalt niet allebei.",
+            "De toeslag kan met 25 procent worden verminderd als aan de voorwaarden in de wet is voldaan. In de kern betekent dat volledig betalen binnen de betaaltermijn die begint wanneer de toeslag aan u wordt bekendgemaakt. Komt de kennisgeving binnen, betaal dan snel en volledig."
+          ]
+        },
+        {
+          "h2": "Hoe ziet dat eruit met echte bedragen?",
+          "paras": [
+            "Neem een Zweedse eigenaar wiens IBI-aanslag een kadastrale waarde van 100.000 euro vermeldt, in een gemeente waar de waarden zijn herzien met ingang van 2012 of later. Het fictieve inkomen over 2024 is 1,1 procent daarvan, 1.100 euro, en de belasting tegen 19 procent is 209 euro. Die aangifte moest uiterlijk 31 december 2025 binnen zijn.",
+            "Stel dat de aangifte op 10 april 2026 wordt ingediend, drie volle maanden te laat. De toeslag is 1 procent plus 3 procent, dus 4 procent van 209 euro, en dat is 8,36 euro. Wordt voldaan aan de voorwaarden voor de vermindering van 25 procent, dan daalt dat naar 6,27 euro. Er is geen rente verschuldigd, omdat de vertraging minder dan 12 maanden is.",
+            "Laat u dezelfde aangifte liggen tot na december 2026, dan verandert het beeld. De toeslag springt naar 15 procent, in dit voorbeeld zo'n 31 euro, en daarbovenop gaat rente lopen. Bij één vakantieappartement blijven de bedragen bescheiden, maar over meerdere jaren, meerdere mede-eigenaren of een verkoop lopen ze snel op."
+          ]
+        },
+        {
+          "h2": "Wat verandert er zodra de belastingdienst mij heeft aangeschreven?",
+          "paras": [
+            "Het toeslagsysteem geldt alleen voor aangiften die te laat zijn ingediend zonder voorafgaande aanmaning (sin requerimiento previo). Zodra de belastingdienst een aanmaning heeft gestuurd over die belasting en die periode, is de vrijwillige route gesloten, en wordt de zaak volgens andere regels afgehandeld.",
+            "Krijgt u een brief van de Agencia Tributaria, kijk dan eerst naar de datum en de periode waarop die betrekking heeft, voordat u iets anders doet. Neem daarna contact op met een gestor of een asesor fiscal die aangiften voor niet-inwoners verzorgt, en doe dat snel. Dien zonder hun advies geen nieuwe aangifte in over dezelfde periode, want het antwoord hangt nu af van wat er in de brief staat."
+          ]
+        },
+        {
+          "h2": "Welk rentepercentage geldt?",
+          "paras": [
+            "Voor 2026 is de rente wegens te late betaling (interés de demora) 4,0625 procent per jaar, en de wettelijke rente 3,25 procent. Dezelfde cijfers golden in 2025. Deze percentages worden elk jaar vastgesteld, dus controleer het actuele cijfer voordat u iets berekent wat doorloopt tot in 2027.",
+            "Rente speelt pas een rol na de eerste 12 maanden vertraging. Bij een aangifte die binnen een jaar na de termijn wordt ingediend, is de toeslag de volledige kostenpost, nog een reden om een te late aangifte in te dienen zodra u het merkt, in plaats van te wachten op een geschikt moment."
+          ]
+        },
+        {
+          "h2": "Welke termijnen missen eigenaren in het buitenland het vaakst?",
+          "paras": [
+            "De aangifte fictief inkomen op een woning die u niet verhuurt, is de belangrijkste. Voor 2025 en eerdere jaren kan die worden ingediend tot en met 31 december van het volgende jaar, maar automatische incasso sluit op 23 december. Vanaf belastingjaar 2026 loopt de periode van 1 april tot en met 31 december van het volgende jaar, opnieuw met automatische incasso tot 23 december.",
+            "Huur die vanaf 2026 wordt ontvangen, wordt aangegeven in de eerste 20 dagen van april van het volgende jaar. Een aangifte met een nulresultaat wordt ingediend van 1 tot en met 20 januari. Verkoopt u, dan wordt de aangifte over de winst ingediend binnen drie maanden, nadat er een maand is verstreken sinds de overdracht. En de plusvalia gaat naar de gemeente binnen 30 werkdagen na de verkoopakte."
+          ]
+        },
+        {
+          "h2": "En als Spanje mij juist geld verschuldigd is?",
+          "paras": [
+            "Te laat betekent niet altijd dat u moet betalen. Is er belasting ingehouden op uw Spaanse inkomen en blijkt de ingehouden som hoger dan wat u verschuldigd bent, dan kan een modelo 210 met een teruggave worden ingediend vanaf 1 februari, binnen vier jaar na het einde van de aangifteperiode voor het ingehouden bedrag.",
+            "Vier jaar is langer dan de meeste mensen verwachten, dus een oude te veel betaalde som is niet per se verloren. Zet de einddatum in uw agenda zodra u weet dat er een teruggave te halen is, en bewaar de papieren die laten zien wat er is ingehouden en wanneer het aan de belastingdienst is afgedragen."
+          ]
+        },
+        {
+          "h2": "Hoe zet ik het recht?",
+          "paras": [
+            "Maak eerst een lijst van elk jaar dat u de woning bezit, en noteer per jaar of u verhuurde en of er aangifte is gedaan. Verzamel de IBI-aanslagen van die jaren, want de kadastrale waarde op elke aanslag is het vertrekpunt voor het fictieve inkomen. Dien daarna de ontbrekende aangiften in en betaal ze elk volledig, met een notitie van de datum waarop u indiende.",
+            "Zorg dat de belastingdienst een adres heeft waar brieven u echt bereiken, en bewaar een kopie van elke aangifte en elk betaalbewijs in één map. Gaat het om meerdere ontbrekende jaren, huurinkomsten of een verkoop, laat het werk dan over aan een gestor of asesor fiscal. Is het eenmaal geregeld, dan blijft het geregeld, en wordt het huis weer een plek waar u naar uitkijkt."
+          ]
+        }
+      ]
+    }
+  }
+}

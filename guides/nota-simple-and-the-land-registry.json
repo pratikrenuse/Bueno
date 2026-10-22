@@ -1,0 +1,466 @@
+{
+  "slug": "nota-simple-and-the-land-registry",
+  "topic": "buying",
+  "tool": "deal-checklist",
+  "rules": [
+    "buy.registry.purpose",
+    "buy.registry.presumption",
+    "buy.registry.unregistered_titles",
+    "buy.registry.good_faith_buyer",
+    "buy.registry.nota_simple_fee",
+    "buy.registry.fee_scale",
+    "buy.registry.who_pays",
+    "own.ibi.taxable_rights",
+    "own.ibi.property_answers",
+    "own.ibi.base",
+    "limit.community.buyer_liability",
+    "own.catastro.cadastral_value",
+    "own.catastro.reference_value",
+    "own.catastro.declare_changes",
+    "own.catastro.purchase_exempt",
+    "own.catastro.failure_to_declare",
+    "limit.absent_owner.usucapion"
+  ],
+  "answers": [
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "can-someone-acquire-my-spanish-property-by-possession",
+    "hidden-defects-after-buying-a-spanish-property",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake",
+    "imputed-income-when-there-is-no-cadastral-value",
+    "nie-number-form-and-fee"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Nota Simple and the Spanish Land Registry",
+      "description": "What a nota simple shows, what the Spanish land registry protects, what the registrar charges, and how the Catastro differs from the registry.",
+      "h1": "The nota simple and the land registry: what a buyer in Spain should know",
+      "lead": "A nota simple is a short extract from the Spanish land registry showing who the registry says owns a property and which rights and charges are recorded against it. The registrar's fee is 3.005061 euros per property, and it is the first document to read before you pay a deposit. The registry protects a buyer who relies on it, but only once the buyer's own purchase is registered.",
+      "sections": [
+        {
+          "h2": "OK, so what is a nota simple?",
+          "paras": [
+            "It is an information extract from the land registry (Registro de la Propiedad) for one property. The registry exists to record acts and contracts about ownership and the other rights in rem over property, such as a mortgage or a usufruct. The nota simple tells you what the registry holds today, in a page or two.",
+            "It is not the title deed, and it is not a valuation. It tells you who the registry shows as owner, what the property is according to the registry, and what is recorded against it. Read it before you sign anything that puts your money at stake, and order a fresh one shortly before completion as well."
+          ]
+        },
+        {
+          "h2": "Why does the land registry matter so much in Spain?",
+          "paras": [
+            "Because Spanish law leans on it. Rights recorded in the registry are presumed, for all legal purposes, to exist and to belong to the holder in the form the entry shows. A title of ownership or other right that is not registered does not prejudice third parties, which means a buyer who relied on the register cannot be met with an unregistered sale or charge.",
+            "And a buyer who acquires in good faith, and for value, from the person the registry shows as entitled to sell keeps that purchase once it is registered. The protection depends on registering. A buyer who signs the deed and stops there has not yet got it, which is why registering promptly is part of the purchase, not an afterthought."
+          ]
+        },
+        {
+          "h2": "What should I look for on the nota simple?",
+          "paras": [
+            "Start with the owner. The name on the registry should be the person selling to you, or every co-owner if there are several. If the seller is an heir, or the seller's name differs from the registry, ask how and when that will be put right before completion. A seller who is not on the register is the most important thing a nota simple can tell you.",
+            "Next, check the type of right. Most buyers acquire full ownership, but the registry can also show a more limited right, such as a usufruct, a surface right or an administrative concession, which are all different things to own. Then read the charges (cargas), such as a mortgage or an embargo, which is an attachment for an unpaid debt. Each one needs an answer from the seller before you pay.",
+            "Last, check the description. Compare the size, the number of rooms and any annexes with what you saw on the viewing. A pool or extra floor that is missing from the registry is a question for your abogado, not a detail."
+          ]
+        },
+        {
+          "h2": "What does the nota simple not show?",
+          "paras": [
+            "It does not show every debt. A buyer takes on the seller's unpaid community charges for the elapsed part of the year of purchase plus the three previous calendar years, and the property answers for them. Unpaid IBI, the local property tax, also stays attached to the property when it changes hands. Ask about both separately rather than assuming the nota simple covers them.",
+            "So pair the nota simple with the latest IBI receipt and a written statement from the community's administrator that the charges are paid. Notaries must ask about pending IBI and warn the parties, but you want to know long before you are sitting at the notary's table with the pen in your hand."
+          ]
+        },
+        {
+          "h2": "How do I get one, and what does it cost?",
+          "paras": [
+            "Your abogado or agent can order it for you, or you can request it yourself from the registrars, including online. The official registrar's fee is 3.005061 euros per property, however many entries the property's page holds. Online request services and intermediaries add their own charges, so the price you pay can be higher.",
+            "In July 2026 a public consultation proposed new fee rules for online notas simples. It was a proposal, not law, when we last read it, so check the current price at the moment you order rather than relying on a figure you saw online."
+          ]
+        },
+        {
+          "h2": "Is the Catastro the same as the land registry?",
+          "paras": [
+            "No, and the difference confuses almost everyone (the two names do not help). The land registry records rights: who owns what, and what is charged on it. The Catastro is an administrative record that describes the property for tax purposes and gives it a cadastral value, which is the base for IBI.",
+            "The cadastral value is an administrative figure that may not exceed market value. The Catastro also sets a valor de referencia from the prices declared in sales before notaries, and that figure is the minimum base for transfer tax and for inheritance and gift tax, unless the declared price is higher. Neither is what the property is worth to you."
+          ]
+        },
+        {
+          "h2": "What if the house on the ground does not match the paperwork?",
+          "paras": [
+            "It happens, especially with older houses that have grown over the years. Owners must declare new buildings, extensions, renovations, demolitions, splits and changes of use to the Catastro within two months from the day after the event. Failing to do so is a minor tax infringement, and the Catastro can add the change itself through a procedure that carries a fee of 60 euros per property.",
+            "Before you buy, compare three things: what you saw, what the Catastro describes and what the registry shows. If they differ, ask the seller to bring the paperwork up to date before completion, and ask your abogado and an arquitecto técnico what the gap means. A buyer should not inherit an unregistered extension as a surprise."
+          ]
+        },
+        {
+          "h2": "When does my name go on the register, and who pays?",
+          "paras": [
+            "After the deed is signed, it is presented at the registry for the property, usually by the notary, the gestor or your lawyer. Registry fees are paid by the person in whose favour the right is registered, which on a purchase is normally the buyer. You do not need to declare the purchase to the Catastro yourself where it was made in a public deed with the cadastral reference, because notaries and registrars pass it on.",
+            "The fee for registering the purchase follows an official scale: 24.040484 euros up to 6,010.12 euros of value, then falling rates per thousand on each slice above, with a 5 percent reduction. That item can never exceed 2,181.673939 euros. It is not the whole bill, because other items of the scale price other entries."
+          ]
+        },
+        {
+          "h2": "Once the property is mine, does the registry still matter?",
+          "paras": [
+            "Yes, quietly, for as long as you own it. For the purposes of someone acquiring your property by long possession, an owner who lives abroad counts as absent, which doubles the ordinary period from ten years to twenty. A registered title, an up to date Catastro entry and paid IBI receipts are the plain paperwork that keeps the picture clear.",
+            "Keep a copy of the nota simple from your purchase with the deed, and order a new one every few years, or whenever something changes. If anything looks wrong, ask an abogado to read it with you. Then enjoy the place, knowing that the register says what you think it says."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Nota simple og det spanske eiendomsregisteret",
+      "description": "Hva en nota simple viser, hva det spanske eiendomsregisteret beskytter, hva registerføreren tar, og hvordan Catastro skiller seg fra registeret.",
+      "h1": "Nota simple og eiendomsregisteret: dette bør en kjøper i Spania vite",
+      "lead": "En nota simple er et kort utdrag fra det spanske eiendomsregisteret som viser hvem registeret oppgir som eier av en eiendom, og hvilke rettigheter og heftelser som er registrert på den. Registerførerens gebyr er 3,005061 euro per eiendom, og det er det første dokumentet du bør lese før du betaler depositum. Registeret beskytter en kjøper som stoler på det, men bare når kjøperens eget kjøp er registrert.",
+      "sections": [
+        {
+          "h2": "OK, så hva er en nota simple?",
+          "paras": [
+            "Det er et informasjonsutdrag fra eiendomsregisteret (Registro de la Propiedad) for én eiendom. Registeret finnes for å registrere handlinger og avtaler om eierskap og de andre tinglige rettighetene over eiendom, som et pantelån eller en bruksrett (usufructo). Nota simple forteller deg hva registeret inneholder i dag, på en side eller to.",
+            "Det er ikke skjøtet, og det er ikke en verdivurdering. Det forteller deg hvem registeret viser som eier, hva eiendommen er ifølge registeret, og hva som er registrert på den. Les den før du signerer noe som setter pengene dine på spill, og bestill også en ny kort tid før overtakelsen."
+          ]
+        },
+        {
+          "h2": "Hvorfor betyr eiendomsregisteret så mye i Spania?",
+          "paras": [
+            "Fordi spansk lov bygger på det. Rettigheter som er registrert i registeret, antas i alle rettslige sammenhenger å eksistere og å tilhøre innehaveren slik oppføringen viser. En eiendomshjemmel eller annen rettighet som ikke er registrert, kan ikke gjøres gjeldende mot tredjeparter, noe som betyr at en kjøper som stolte på registeret, ikke kan møtes med et uregistrert salg eller en uregistrert heftelse.",
+            "Og en kjøper som i god tro og mot vederlag kjøper fra den registeret viser som berettiget til å selge, beholder kjøpet når det er registrert. Vernet avhenger av registrering. En kjøper som signerer skjøtet og stopper der, har det ikke ennå, og derfor er rask registrering en del av kjøpet, ikke en ettertanke."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg se etter på nota simple?",
+          "paras": [
+            "Start med eieren. Navnet i registeret bør være personen som selger til deg, eller alle medeiere hvis det er flere. Er selgeren en arving, eller avviker selgerens navn fra registeret, spør hvordan og når det blir rettet opp før overtakelsen. En selger som ikke står i registeret, er det viktigste en nota simple kan fortelle deg.",
+            "Sjekk deretter typen rettighet. De fleste kjøpere får full eiendomsrett, men registeret kan også vise en mer begrenset rettighet, som en bruksrett, en festerett eller en offentlig konsesjon, som alle er ulike ting å eie. Les så heftelsene (cargas), som et pantelån eller en embargo, som er et utlegg for en ubetalt gjeld. Hver av dem krever et svar fra selgeren før du betaler.",
+            "Sjekk til slutt beskrivelsen. Sammenlign størrelsen, antall rom og eventuelle tilleggsrom med det du så på visningen. Et basseng eller en ekstra etasje som mangler i registeret, er et spørsmål for abogado, ikke en detalj."
+          ]
+        },
+        {
+          "h2": "Hva viser ikke nota simple?",
+          "paras": [
+            "Den viser ikke all gjeld. En kjøper overtar selgerens ubetalte fellesutgifter for den delen av kjøpsåret som har gått, pluss de tre foregående kalenderårene, og eiendommen hefter for dem. Ubetalt IBI, den kommunale eiendomsskatten, følger også eiendommen når den skifter eier. Spør om begge deler separat i stedet for å anta at nota simple dekker dem.",
+            "Kombiner derfor nota simple med den siste IBI-kvitteringen og en skriftlig erklæring fra sameiets forvalter om at fellesutgiftene er betalt. Notarer må spørre om utestående IBI og advare partene, men du vil vite det lenge før du sitter ved notarens bord med pennen i hånden."
+          ]
+        },
+        {
+          "h2": "Hvordan får jeg en, og hva koster den?",
+          "paras": [
+            "Abogado eller megleren kan bestille den for deg, eller du kan be om den selv fra registerførerne, også på nett. Registerførerens offisielle gebyr er 3,005061 euro per eiendom, uansett hvor mange oppføringer eiendommens side har. Nettjenester og mellommenn som bestiller den legger på egne gebyrer, så prisen du betaler kan bli høyere.",
+            "I juli 2026 foreslo en offentlig høring nye gebyrregler for nota simple bestilt på nett. Det var et forslag, ikke lov, da vi sist leste det, så sjekk gjeldende pris i det øyeblikket du bestiller, i stedet for å stole på et tall du har sett på nettet."
+          ]
+        },
+        {
+          "h2": "Er Catastro det samme som eiendomsregisteret?",
+          "paras": [
+            "Nei, og forskjellen forvirrer nesten alle (de to navnene hjelper ikke). Eiendomsregisteret registrerer rettigheter: hvem som eier hva, og hva som hefter på det. Catastro er et administrativt register som beskriver eiendommen for skatteformål og gir den en matrikkelverdi, som er grunnlaget for IBI.",
+            "Matrikkelverdien er et administrativt tall som ikke kan overstige markedsverdien. Catastro fastsetter også en valor de referencia ut fra prisene oppgitt i salg hos notarer, og det tallet er minimumsgrunnlaget for overdragelsesskatt og for arve- og gaveavgift, med mindre den oppgitte prisen er høyere. Ingen av dem er det eiendommen er verdt for deg."
+          ]
+        },
+        {
+          "h2": "Hva om huset i virkeligheten ikke stemmer med papirene?",
+          "paras": [
+            "Det skjer, særlig med eldre hus som har vokst med årene. Eiere må melde nybygg, tilbygg, renoveringer, rivinger, delinger og bruksendringer til Catastro innen to måneder fra dagen etter at det skjedde. Å la være er en mindre skatteovertredelse, og Catastro kan føre inn endringen selv gjennom en prosedyre som koster et gebyr på 60 euro per eiendom.",
+            "Før du kjøper, sammenlign tre ting: det du så, det Catastro beskriver, og det registeret viser. Avviker de, be selgeren oppdatere papirene før overtakelsen, og spør abogado og en arquitecto técnico hva avviket betyr. En kjøper bør ikke arve et uregistrert tilbygg som en overraskelse."
+          ]
+        },
+        {
+          "h2": "Når kommer navnet mitt inn i registeret, og hvem betaler?",
+          "paras": [
+            "Etter at skjøtet er signert, leveres det til registeret for eiendommen, vanligvis av notaren, gestor eller advokaten din. Registergebyrene betales av den som rettigheten registreres til fordel for, og ved et kjøp er det normalt kjøperen. Du trenger ikke selv melde kjøpet til Catastro når det er gjort i et offentlig skjøte med matrikkelreferansen, fordi notarer og registerførere sender det videre.",
+            "Gebyret for å registrere kjøpet følger en offisiell skala: 24,040484 euro opp til 6 010,12 euro i verdi, deretter fallende promillesatser på hvert trinn over det, med en reduksjon på 5 prosent. Den posten kan aldri overstige 2 181,673939 euro. Det er ikke hele regningen, fordi andre poster i skalaen priser andre oppføringer."
+          ]
+        },
+        {
+          "h2": "Når eiendommen er min, betyr registeret fortsatt noe?",
+          "paras": [
+            "Ja, i det stille, så lenge du eier den. Når det gjelder at noen kan erverve eiendommen din ved hevd, regnes en eier som bor i utlandet som fraværende, noe som dobler den ordinære perioden fra ti til tjue år. En registrert hjemmel, en oppdatert oppføring i Catastro og betalte IBI-kvitteringer er det enkle papirarbeidet som holder bildet klart.",
+            "Oppbevar en kopi av nota simple fra kjøpet sammen med skjøtet, og bestill en ny med noen års mellomrom, eller når noe endrer seg. Ser noe feil ut, be en abogado lese den sammen med deg. Nyt så stedet, med visshet om at registeret sier det du tror det sier."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Nota simple och det spanska fastighetsregistret",
+      "description": "Vad en nota simple visar, vad det spanska fastighetsregistret skyddar, vad registratorn tar betalt och hur Catastro skiljer sig från registret.",
+      "h1": "Nota simple och fastighetsregistret: det här bör en köpare i Spanien veta",
+      "lead": "En nota simple är ett kort utdrag ur det spanska fastighetsregistret som visar vem registret anger som ägare till en fastighet och vilka rättigheter och belastningar som är inskrivna mot den. Registratorns avgift är 3,005061 euro per fastighet, och det är den första handlingen du ska läsa innan du betalar en handpenning. Registret skyddar en köpare som förlitar sig på det, men först när köparens eget köp är registrerat.",
+      "sections": [
+        {
+          "h2": "Okej, vad är en nota simple?",
+          "paras": [
+            "Det är ett informationsutdrag ur fastighetsregistret (Registro de la Propiedad) för en fastighet. Registret finns till för att anteckna handlingar och avtal om äganderätt och andra sakrätter i fastigheter, till exempel ett hypotek eller en nyttjanderätt (usufructo). En nota simple visar vad registret innehåller i dag, på en eller två sidor.",
+            "Det är inte lagfarten, och det är ingen värdering. Den visar vem registret anger som ägare, vad fastigheten är enligt registret och vad som är inskrivet mot den. Läs den innan du skriver på något som sätter dina pengar på spel, och beställ också en ny kort före tillträdet."
+          ]
+        },
+        {
+          "h2": "Varför betyder fastighetsregistret så mycket i Spanien?",
+          "paras": [
+            "För att spansk lag lutar sig mot det. Rättigheter som är inskrivna i registret presumeras i alla rättsliga avseenden finnas och tillhöra innehavaren i den form som anteckningen visar. En äganderätt eller annan rättighet som inte är registrerad påverkar inte tredje man, vilket betyder att en köpare som förlitade sig på registret inte kan mötas av en oregistrerad försäljning eller belastning.",
+            "Och en köpare som i god tro och mot vederlag förvärvar från den person som registret visar som behörig att sälja behåller köpet när det väl är registrerat. Skyddet bygger på registreringen. En köpare som skriver på köpebrevet och stannar där har inte fått det ännu, och därför är snabb registrering en del av köpet, inte en eftertanke."
+          ]
+        },
+        {
+          "h2": "Vad ska jag titta efter i en nota simple?",
+          "paras": [
+            "Börja med ägaren. Namnet i registret ska vara den person som säljer till dig, eller varje delägare om de är flera. Om säljaren är arvinge, eller om säljarens namn skiljer sig från registret, fråga hur och när det ska rättas före tillträdet. En säljare som inte finns i registret är det viktigaste en nota simple kan berätta för dig.",
+            "Kontrollera sedan vilken typ av rättighet det gäller. De flesta köpare förvärvar full äganderätt, men registret kan också visa en mer begränsad rättighet, till exempel nyttjanderätt, tomträtt (derecho de superficie) eller en förvaltningskoncession, vilket är helt olika saker att äga. Läs sedan belastningarna (cargas), till exempel ett hypotek eller en embargo, som är en utmätning för en obetald skuld. Varje belastning kräver ett svar från säljaren innan du betalar.",
+            "Kontrollera till sist beskrivningen. Jämför storleken, antalet rum och eventuella biutrymmen med det du såg på visningen. En pool eller en extra våning som saknas i registret är en fråga för din abogado, inte en detalj."
+          ]
+        },
+        {
+          "h2": "Vad visar en nota simple inte?",
+          "paras": [
+            "Den visar inte alla skulder. En köpare tar över säljarens obetalda samfällighetsavgifter för den del av köpåret som har gått plus de tre föregående kalenderåren, och fastigheten svarar för dem. Obetald IBI, den lokala fastighetsskatten, är också fortsatt knuten till fastigheten när den byter ägare. Fråga om båda separat i stället för att anta att nota simple täcker dem.",
+            "Kombinera därför nota simple med den senaste IBI-avin och ett skriftligt intyg från samfällighetens förvaltare om att avgifterna är betalda. Notarier måste fråga om utestående IBI och varna parterna, men du vill veta det långt innan du sitter vid notariens bord med pennan i handen."
+          ]
+        },
+        {
+          "h2": "Hur får jag en, och vad kostar den?",
+          "paras": [
+            "Din abogado eller mäklare kan beställa den åt dig, eller så begär du den själv från registratorerna, även på nätet. Registratorns officiella avgift är 3,005061 euro per fastighet, oavsett hur många anteckningar fastighetens blad innehåller. Beställningstjänster på nätet och mellanhänder lägger på egna avgifter, så priset du betalar kan bli högre.",
+            "I juli 2026 föreslogs nya avgiftsregler för nota simple på nätet i ett offentligt remissförfarande. Det var ett förslag, inte lag, när vi senast läste det, så kontrollera det aktuella priset när du beställer i stället för att förlita dig på en siffra du har sett på nätet."
+          ]
+        },
+        {
+          "h2": "Är Catastro samma sak som fastighetsregistret?",
+          "paras": [
+            "Nej, och skillnaden förvirrar nästan alla (de två namnen hjälper inte till). Fastighetsregistret antecknar rättigheter: vem som äger vad, och vad som belastar det. Catastro är ett administrativt register som beskriver fastigheten i skattesyfte och ger den ett taxeringsvärde, som är underlaget för IBI.",
+            "Taxeringsvärdet är en administrativ siffra som inte får överstiga marknadsvärdet. Catastro fastställer också ett valor de referencia utifrån de priser som anges vid försäljningar hos notarie, och den siffran är det lägsta underlaget för överlåtelseskatt och för arvs- och gåvoskatt, om inte det angivna priset är högre. Ingen av dem är vad fastigheten är värd för dig."
+          ]
+        },
+        {
+          "h2": "Vad händer om huset på plats inte stämmer med handlingarna?",
+          "paras": [
+            "Det händer, särskilt med äldre hus som har vuxit genom åren. Ägare måste anmäla nybyggnader, tillbyggnader, renoveringar, rivningar, delningar och ändrad användning till Catastro inom två månader från dagen efter händelsen. Att inte göra det är en mindre skatteöverträdelse, och Catastro kan själv föra in ändringen genom ett förfarande som kostar en avgift på 60 euro per fastighet.",
+            "Innan du köper, jämför tre saker: det du såg, det Catastro beskriver och det registret visar. Om de skiljer sig åt, be säljaren uppdatera handlingarna före tillträdet, och fråga din abogado och en arquitecto técnico vad skillnaden innebär. En köpare ska inte ärva en oregistrerad tillbyggnad som en överraskning."
+          ]
+        },
+        {
+          "h2": "När kommer mitt namn in i registret, och vem betalar?",
+          "paras": [
+            "När köpebrevet har undertecknats lämnas det in till registret för fastigheten, oftast av notarien, gestor eller din advokat. Registreringsavgifterna betalas av den person till vars förmån rättigheten registreras, vilket vid ett köp normalt är köparen. Du behöver inte själv anmäla köpet till Catastro när det gjordes i ett offentligt köpebrev med fastighetsbeteckningen, eftersom notarier och registratorer för vidare uppgiften.",
+            "Avgiften för att registrera köpet följer en officiell taxa: 24,040484 euro upp till ett värde på 6 010,12 euro, därefter sjunkande promillesatser på varje skikt ovanför, med en nedsättning på 5 procent. Den posten kan aldrig överstiga 2 181,673939 euro. Det är inte hela fakturan, eftersom andra poster i taxan prissätter andra anteckningar."
+          ]
+        },
+        {
+          "h2": "När bostaden väl är min, spelar registret fortfarande roll?",
+          "paras": [
+            "Ja, i det tysta, så länge du äger den. När någon annan försöker förvärva din fastighet genom långvarigt innehav räknas en ägare som bor utomlands som frånvarande, vilket fördubblar den ordinarie tiden från tio år till tjugo. En registrerad lagfart, en uppdaterad uppgift hos Catastro och betalda IBI-avier är det enkla pappersarbete som håller bilden klar.",
+            "Spara en kopia av nota simple från ditt köp tillsammans med köpebrevet, och beställ en ny med några års mellanrum, eller när något ändras. Om något ser fel ut, be en abogado läsa den tillsammans med dig. Njut sedan av stället, i vetskap om att registret säger det du tror att det säger."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Nota simple und das spanische Grundbuch erklärt",
+      "description": "Was eine nota simple zeigt, was das spanische Grundbuch schützt, was der Registerführer berechnet und wie sich der Catastro vom Grundbuch unterscheidet.",
+      "h1": "Die nota simple und das Grundbuch: was Käufer in Spanien wissen sollten",
+      "lead": "Eine nota simple ist ein kurzer Auszug aus dem spanischen Grundbuch, der zeigt, wen das Grundbuch als Eigentümer einer Immobilie nennt und welche Rechte und Belastungen darauf eingetragen sind. Die Gebühr des Registerführers beträgt 3,005061 Euro pro Immobilie, und sie ist das erste Dokument, das Sie lesen sollten, bevor Sie eine Anzahlung leisten. Das Grundbuch schützt einen Käufer, der sich darauf verlässt, aber erst, wenn sein eigener Kauf eingetragen ist.",
+      "sections": [
+        {
+          "h2": "Gut, und was ist eine nota simple genau?",
+          "paras": [
+            "Es ist ein Informationsauszug aus dem Grundbuch (Registro de la Propiedad) für eine Immobilie. Das Grundbuch hält Rechtsakte und Verträge über das Eigentum und die anderen dinglichen Rechte an Immobilien fest, etwa eine Hypothek oder einen Nießbrauch. Die nota simple sagt Ihnen auf ein oder zwei Seiten, was das Grundbuch heute enthält.",
+            "Sie ist weder die Eigentumsurkunde noch eine Bewertung. Sie sagt Ihnen, wen das Grundbuch als Eigentümer ausweist, was die Immobilie laut Grundbuch ist und was darauf eingetragen ist. Lesen Sie sie, bevor Sie etwas unterschreiben, bei dem Ihr Geld auf dem Spiel steht, und bestellen Sie kurz vor dem Abschluss auch eine aktuelle."
+          ]
+        },
+        {
+          "h2": "Warum ist das Grundbuch in Spanien so wichtig?",
+          "paras": [
+            "Weil das spanische Recht sich darauf stützt. Im Grundbuch eingetragene Rechte gelten für alle rechtlichen Zwecke als bestehend und als dem Inhaber in der Form zustehend, die der Eintrag zeigt. Ein nicht eingetragener Eigentumstitel oder ein anderes nicht eingetragenes Recht geht nicht zulasten Dritter, einem Käufer, der sich auf das Grundbuch verlassen hat, kann also kein nicht eingetragener Verkauf und keine nicht eingetragene Belastung entgegengehalten werden.",
+            "Und ein Käufer, der gutgläubig und entgeltlich von der Person erwirbt, die das Grundbuch als verkaufsberechtigt ausweist, behält diesen Kauf, sobald er eingetragen ist. Der Schutz hängt von der Eintragung ab. Ein Käufer, der die Urkunde unterschreibt und dann aufhört, hat ihn noch nicht, deshalb gehört die zügige Eintragung zum Kauf dazu und ist kein Nachgedanke."
+          ]
+        },
+        {
+          "h2": "Worauf sollte ich in der nota simple achten?",
+          "paras": [
+            "Beginnen Sie mit dem Eigentümer. Der Name im Grundbuch sollte der Person gehören, die an Sie verkauft, oder bei mehreren Miteigentümern allen. Ist der Verkäufer ein Erbe oder weicht sein Name vom Grundbuch ab, fragen Sie, wie und wann das vor dem Abschluss bereinigt wird. Ein Verkäufer, der nicht im Grundbuch steht, ist das Wichtigste, was eine nota simple Ihnen verraten kann.",
+            "Prüfen Sie als Nächstes die Art des Rechts. Die meisten Käufer erwerben volles Eigentum, aber das Grundbuch kann auch ein eingeschränkteres Recht zeigen, etwa einen Nießbrauch, ein Erbbaurecht oder eine Verwaltungskonzession, und das sind jeweils ganz andere Dinge, die man besitzt. Lesen Sie dann die Belastungen (cargas), etwa eine Hypothek oder ein embargo, also eine Pfändung wegen einer unbezahlten Schuld. Für jede brauchen Sie eine Antwort des Verkäufers, bevor Sie zahlen.",
+            "Prüfen Sie zuletzt die Beschreibung. Vergleichen Sie Größe, Zimmerzahl und Nebengebäude mit dem, was Sie bei der Besichtigung gesehen haben. Ein Pool oder ein zusätzliches Stockwerk, das im Grundbuch fehlt, ist eine Frage für Ihren abogado, kein Detail."
+          ]
+        },
+        {
+          "h2": "Was zeigt die nota simple nicht?",
+          "paras": [
+            "Sie zeigt nicht jede Schuld. Ein Käufer übernimmt die unbezahlten Gemeinschaftsbeiträge des Verkäufers für den bereits verstrichenen Teil des Kaufjahres plus die drei vorangegangenen Kalenderjahre, und die Immobilie haftet dafür. Auch unbezahlte IBI, die örtliche Grundsteuer, bleibt beim Eigentümerwechsel an der Immobilie hängen. Fragen Sie nach beidem gesondert, statt davon auszugehen, dass die nota simple es abdeckt.",
+            "Legen Sie neben die nota simple also den letzten IBI-Beleg und eine schriftliche Erklärung des Verwalters der Gemeinschaft, dass die Beiträge bezahlt sind. Notare müssen nach offener IBI fragen und die Parteien darauf hinweisen, aber Sie möchten es lange vorher wissen, nicht erst, wenn Sie am Tisch des Notars mit dem Stift in der Hand sitzen."
+          ]
+        },
+        {
+          "h2": "Wie bekomme ich eine nota simple, und was kostet sie?",
+          "paras": [
+            "Ihr abogado oder Makler kann sie für Sie bestellen, oder Sie beantragen sie selbst bei den Registerführern, auch online. Die amtliche Gebühr des Registerführers beträgt 3,005061 Euro pro Immobilie, unabhängig davon, wie viele Einträge das Grundbuchblatt der Immobilie enthält. Online-Bestelldienste und Vermittler schlagen eigene Gebühren auf, der Preis, den Sie zahlen, kann also höher sein.",
+            "Im Juli 2026 wurden in einer öffentlichen Konsultation neue Gebührenregeln für online bestellte notas simples vorgeschlagen. Als wir zuletzt nachgesehen haben, war das ein Vorschlag und kein Gesetz, prüfen Sie also den aktuellen Preis zum Zeitpunkt Ihrer Bestellung, statt sich auf eine Zahl zu verlassen, die Sie online gesehen haben."
+          ]
+        },
+        {
+          "h2": "Ist der Catastro dasselbe wie das Grundbuch?",
+          "paras": [
+            "Nein, und der Unterschied verwirrt fast jeden (die beiden Namen helfen nicht). Das Grundbuch hält Rechte fest: wem was gehört und was darauf lastet. Der Catastro ist ein Verwaltungsregister, das die Immobilie für steuerliche Zwecke beschreibt und ihr einen Katasterwert zuweist, der die Grundlage der IBI ist.",
+            "Der Katasterwert ist eine Verwaltungsgröße, die den Marktwert nicht übersteigen darf. Der Catastro legt außerdem einen valor de referencia aus den Preisen fest, die bei Verkäufen vor Notaren angegeben werden, und dieser Wert ist die Mindestgrundlage für die Grunderwerbsteuer sowie die Erbschaft- und Schenkungsteuer, es sei denn, der angegebene Preis ist höher. Keiner der beiden Werte ist das, was die Immobilie Ihnen wert ist."
+          ]
+        },
+        {
+          "h2": "Was, wenn das Haus vor Ort nicht zu den Unterlagen passt?",
+          "paras": [
+            "Das kommt vor, besonders bei älteren Häusern, die über die Jahre gewachsen sind. Eigentümer müssen Neubauten, Erweiterungen, Renovierungen, Abrisse, Teilungen und Nutzungsänderungen innerhalb von zwei Monaten ab dem Tag nach dem Ereignis dem Catastro melden. Wer das unterlässt, begeht eine leichte Steuerordnungswidrigkeit, und der Catastro kann die Änderung selbst über ein Verfahren aufnehmen, das eine Gebühr von 60 Euro pro Immobilie kostet.",
+            "Vergleichen Sie vor dem Kauf drei Dinge: was Sie gesehen haben, was der Catastro beschreibt und was das Grundbuch zeigt. Weichen sie voneinander ab, bitten Sie den Verkäufer, die Unterlagen vor dem Abschluss zu aktualisieren, und fragen Sie Ihren abogado und einen arquitecto técnico, was die Abweichung bedeutet. Ein Käufer sollte eine nicht eingetragene Erweiterung nicht als Überraschung erben."
+          ]
+        },
+        {
+          "h2": "Wann komme ich ins Grundbuch, und wer zahlt dafür?",
+          "paras": [
+            "Nach der Unterzeichnung wird die Urkunde beim Grundbuch der Immobilie eingereicht, in der Regel durch den Notar, den gestor oder Ihren Anwalt. Grundbuchgebühren zahlt die Person, zu deren Gunsten das Recht eingetragen wird, und das ist bei einem Kauf normalerweise der Käufer. Den Kauf müssen Sie dem Catastro nicht selbst melden, wenn er in einer öffentlichen Urkunde mit der Katasterreferenz erfolgt ist, denn Notare und Registerführer leiten ihn weiter.",
+            "Die Gebühr für die Eintragung des Kaufs folgt einem amtlichen Tarif: 24,040484 Euro bis zu einem Wert von 6.010,12 Euro, danach sinkende Promillesätze auf jede darüber liegende Stufe, mit einer Ermäßigung von 5 Prozent. Diese Position kann nie mehr als 2.181,673939 Euro betragen. Das ist nicht die ganze Rechnung, denn andere Positionen des Tarifs bepreisen weitere Einträge."
+          ]
+        },
+        {
+          "h2": "Spielt das Grundbuch noch eine Rolle, wenn die Immobilie mir gehört?",
+          "paras": [
+            "Ja, still im Hintergrund, solange sie Ihnen gehört. Für den Fall, dass jemand Ihre Immobilie durch langen Besitz ersitzen will, gilt ein Eigentümer, der im Ausland lebt, als abwesend, wodurch sich die normale Frist von zehn auf zwanzig Jahre verdoppelt. Ein eingetragener Titel, ein aktueller Eintrag im Catastro und bezahlte IBI-Belege sind die schlichten Unterlagen, die das Bild klar halten.",
+            "Bewahren Sie eine Kopie der nota simple von Ihrem Kauf zusammen mit der Urkunde auf, und bestellen Sie alle paar Jahre eine neue, oder immer dann, wenn sich etwas ändert. Wenn etwas nicht stimmt, bitten Sie einen abogado, sie mit Ihnen durchzugehen. Dann genießen Sie Ihr Zuhause in dem Wissen, dass das Grundbuch sagt, was Sie glauben, dass es sagt."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nota simple et registre foncier espagnol : ce qu'il faut savoir",
+      "description": "Ce que montre une nota simple, ce que protège le registre foncier espagnol, ce que facture le registrateur, et en quoi le Catastro diffère du registre.",
+      "h1": "La nota simple et le registre foncier : ce qu'un acheteur en Espagne doit savoir",
+      "lead": "Une nota simple est un court extrait du registre foncier espagnol qui indique qui le registre désigne comme propriétaire d'un bien et quels droits et charges y sont inscrits. Les honoraires du registrateur sont de 3,005061 euros par bien, et c'est le premier document à lire avant de verser un acompte. Le registre protège l'acheteur qui s'y fie, mais seulement une fois que son propre achat est inscrit.",
+      "sections": [
+        {
+          "h2": "Bon, qu'est-ce qu'une nota simple ?",
+          "paras": [
+            "C'est un extrait d'information du registre foncier (Registro de la Propiedad) pour un bien. Le registre existe pour consigner les actes et contrats relatifs à la propriété et aux autres droits réels sur les biens, comme une hypothèque ou un usufruit. La nota simple vous dit ce que contient le registre aujourd'hui, en une page ou deux.",
+            "Ce n'est pas le titre de propriété, ni une évaluation. Elle vous indique qui le registre désigne comme propriétaire, ce qu'est le bien selon le registre, et ce qui y est inscrit. Lisez-la avant de signer quoi que ce soit qui engage votre argent, et commandez-en aussi une nouvelle peu avant la signature définitive."
+          ]
+        },
+        {
+          "h2": "Pourquoi le registre foncier compte-t-il autant en Espagne ?",
+          "paras": [
+            "Parce que le droit espagnol s'appuie sur lui. Les droits inscrits au registre sont présumés, à toutes fins légales, exister et appartenir à leur titulaire dans la forme indiquée par l'inscription. Un titre de propriété ou autre droit non inscrit n'est pas opposable aux tiers, ce qui signifie qu'on ne peut pas opposer une vente ou une charge non inscrite à l'acheteur qui s'est fié au registre.",
+            "Et l'acheteur qui acquiert de bonne foi, et à titre onéreux, auprès de la personne que le registre désigne comme habilitée à vendre conserve cet achat une fois qu'il est inscrit. La protection dépend de l'inscription. Un acheteur qui signe l'acte et s'arrête là ne l'a pas encore, c'est pourquoi l'inscription rapide fait partie de l'achat et n'est pas un détail après coup."
+          ]
+        },
+        {
+          "h2": "Que faut-il regarder sur la nota simple ?",
+          "paras": [
+            "Commencez par le propriétaire. Le nom figurant au registre doit être celui de la personne qui vous vend, ou de chaque copropriétaire s'il y en a plusieurs. Si le vendeur est un héritier, ou si son nom diffère de celui du registre, demandez comment et quand cela sera régularisé avant la signature. Un vendeur qui ne figure pas au registre est l'information la plus importante qu'une nota simple puisse vous donner.",
+            "Vérifiez ensuite le type de droit. La plupart des acheteurs acquièrent la pleine propriété, mais le registre peut aussi indiquer un droit plus limité, comme un usufruit, un droit de superficie ou une concession administrative, qui sont autant de choses différentes à posséder. Lisez ensuite les charges (cargas), comme une hypothèque ou un embargo, c'est-à-dire une saisie pour une dette impayée. Chacune appelle une réponse du vendeur avant que vous ne payiez.",
+            "Enfin, vérifiez la description. Comparez la surface, le nombre de pièces et les annexes avec ce que vous avez vu lors de la visite. Une piscine ou un étage supplémentaire absent du registre est une question pour votre abogado, pas un détail."
+          ]
+        },
+        {
+          "h2": "Que ne montre pas la nota simple ?",
+          "paras": [
+            "Elle ne montre pas toutes les dettes. L'acheteur reprend les charges de copropriété impayées du vendeur pour la partie écoulée de l'année d'achat et les trois années civiles précédentes, et le bien en répond. L'IBI impayé, l'impôt foncier local, reste aussi attaché au bien lorsqu'il change de mains. Renseignez-vous sur les deux séparément plutôt que de supposer que la nota simple les couvre.",
+            "Associez donc la nota simple au dernier avis d'IBI et à une attestation écrite de l'administrateur de la copropriété confirmant que les charges sont payées. Les notaires doivent se renseigner sur l'IBI en attente et en avertir les parties, mais vous voulez le savoir bien avant d'être assis à la table du notaire, le stylo à la main."
+          ]
+        },
+        {
+          "h2": "Comment l'obtenir, et combien coûte-t-elle ?",
+          "paras": [
+            "Votre abogado ou votre agent peut la commander pour vous, ou vous pouvez la demander vous-même aux registrateurs, y compris en ligne. Les honoraires officiels du registrateur sont de 3,005061 euros par bien, quel que soit le nombre d'inscriptions sur la page du bien. Les services de demande en ligne et les intermédiaires ajoutent leurs propres frais : le prix que vous payez peut donc être plus élevé.",
+            "En juillet 2026, une consultation publique a proposé de nouvelles règles tarifaires pour les notas simples en ligne. C'était une proposition, et non une loi, la dernière fois que nous l'avons lue : vérifiez donc le prix en vigueur au moment de votre commande plutôt que de vous fier à un chiffre vu en ligne."
+          ]
+        },
+        {
+          "h2": "Le Catastro est-il la même chose que le registre foncier ?",
+          "paras": [
+            "Non, et la différence déroute presque tout le monde (les deux noms n'aident pas). Le registre foncier consigne des droits : qui possède quoi, et ce qui le grève. Le Catastro est un fichier administratif qui décrit le bien à des fins fiscales et lui attribue une valeur cadastrale, qui sert de base à l'IBI.",
+            "La valeur cadastrale est un chiffre administratif qui ne peut pas dépasser la valeur de marché. Le Catastro fixe aussi un valor de referencia à partir des prix déclarés dans les ventes passées devant notaire, et ce chiffre constitue la base minimale de l'impôt sur les transmissions et de l'impôt sur les successions et donations, sauf si le prix déclaré est plus élevé. Ni l'un ni l'autre ne correspond à ce que le bien vaut pour vous."
+          ]
+        },
+        {
+          "h2": "Et si la maison sur le terrain ne correspond pas aux documents ?",
+          "paras": [
+            "Cela arrive, surtout avec des maisons anciennes qui se sont agrandies au fil des ans. Les propriétaires doivent déclarer au Catastro les constructions nouvelles, extensions, rénovations, démolitions, divisions et changements d'usage dans un délai de deux mois à compter du lendemain de l'événement. Ne pas le faire constitue une infraction fiscale légère, et le Catastro peut intégrer lui-même la modification par une procédure qui donne lieu à une taxe de 60 euros par bien.",
+            "Avant d'acheter, comparez trois choses : ce que vous avez vu, ce que décrit le Catastro et ce qu'indique le registre. S'ils diffèrent, demandez au vendeur de mettre les documents à jour avant la signature, et demandez à votre abogado et à un arquitecto técnico ce que cet écart signifie. Un acheteur ne devrait pas hériter par surprise d'une extension non inscrite."
+          ]
+        },
+        {
+          "h2": "Quand mon nom est-il inscrit au registre, et qui paie ?",
+          "paras": [
+            "Une fois l'acte signé, il est présenté au registre dont dépend le bien, généralement par le notaire, le gestor ou votre avocat. Les frais de registre sont payés par la personne au profit de laquelle le droit est inscrit, c'est-à-dire normalement l'acheteur lors d'un achat. Vous n'avez pas à déclarer vous-même l'achat au Catastro lorsqu'il a été fait par acte authentique avec la référence cadastrale, car les notaires et les registrateurs le transmettent.",
+            "Les frais d'inscription de l'achat suivent un barème officiel : 24,040484 euros jusqu'à 6 010,12 euros de valeur, puis des taux pour mille décroissants sur chaque tranche au-delà, avec une réduction de 5 pour cent. Ce poste ne peut jamais dépasser 2 181,673939 euros. Ce n'est pas toute la facture, car d'autres postes du barème tarifent d'autres inscriptions."
+          ]
+        },
+        {
+          "h2": "Une fois le bien à moi, le registre compte-t-il encore ?",
+          "paras": [
+            "Oui, discrètement, tant que vous en êtes propriétaire. Pour qu'une personne puisse acquérir votre bien par une longue possession, un propriétaire qui vit à l'étranger est considéré comme absent, ce qui double le délai ordinaire, de dix à vingt ans. Un titre inscrit, une fiche du Catastro à jour et des avis d'IBI payés sont les documents simples qui gardent la situation claire.",
+            "Conservez une copie de la nota simple de votre achat avec l'acte, et commandez-en une nouvelle tous les quelques ans, ou chaque fois que quelque chose change. Si quelque chose vous semble anormal, demandez à un abogado de la lire avec vous. Puis profitez des lieux, en sachant que le registre dit bien ce que vous pensez qu'il dit."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Nota simple en het Spaanse eigendomsregister",
+      "description": "Wat een nota simple laat zien, wat het Spaanse eigendomsregister beschermt, wat de registrator rekent en hoe het Catastro van het register verschilt.",
+      "h1": "De nota simple en het eigendomsregister: wat een koper in Spanje moet weten",
+      "lead": "Een nota simple is een kort uittreksel uit het Spaanse eigendomsregister waarin staat wie volgens het register eigenaar is van een woning en welke rechten en lasten erop zijn ingeschreven. Het tarief van de registrator is 3,005061 euro per woning, en het is het eerste document dat u leest voordat u een aanbetaling doet. Het register beschermt een koper die erop vertrouwt, maar pas zodra de aankoop van die koper zelf is ingeschreven.",
+      "sections": [
+        {
+          "h2": "Goed, wat is een nota simple eigenlijk?",
+          "paras": [
+            "Het is een informatief uittreksel uit het eigendomsregister (Registro de la Propiedad) voor één woning. Het register bestaat om handelingen en contracten vast te leggen over eigendom en de andere zakelijke rechten op onroerend goed, zoals een hypotheek of een vruchtgebruik. De nota simple vertelt u in een pagina of twee wat het register vandaag bevat.",
+            "Het is geen eigendomsakte en geen taxatie. Het vertelt u wie het register als eigenaar noemt, wat de woning volgens het register is en wat er op is ingeschreven. Lees het voordat u iets tekent waarbij uw geld op het spel staat, en vraag kort voor de overdracht ook een nieuwe op."
+          ]
+        },
+        {
+          "h2": "Waarom is het eigendomsregister in Spanje zo belangrijk?",
+          "paras": [
+            "Omdat het Spaanse recht erop steunt. Voor rechten die in het register staan, geldt voor alle juridische doeleinden het vermoeden dat ze bestaan en toebehoren aan de houder zoals de inschrijving aangeeft. Een eigendomstitel of ander recht dat niet is ingeschreven, kan niet tegen derden worden ingeroepen, wat betekent dat een koper die op het register vertrouwde niet kan worden geconfronteerd met een niet-ingeschreven verkoop of last.",
+            "En een koper die te goeder trouw en onder bezwarende titel koopt van de persoon die volgens het register mag verkopen, behoudt die aankoop zodra die is ingeschreven. De bescherming hangt af van de inschrijving. Een koper die de akte tekent en het daarbij laat, heeft die bescherming nog niet, en daarom hoort snel inschrijven bij de aankoop en is het geen bijzaak."
+          ]
+        },
+        {
+          "h2": "Waar let ik op in de nota simple?",
+          "paras": [
+            "Begin bij de eigenaar. De naam in het register moet die zijn van de persoon die aan u verkoopt, of van elke mede-eigenaar als het er meerdere zijn. Is de verkoper een erfgenaam, of wijkt de naam van de verkoper af van het register, vraag dan hoe en wanneer dat vóór de overdracht wordt rechtgezet. Een verkoper die niet in het register staat, is het belangrijkste wat een nota simple u kan vertellen.",
+            "Controleer daarna het soort recht. De meeste kopers verwerven de volle eigendom, maar het register kan ook een beperkter recht tonen, zoals een vruchtgebruik, een opstalrecht of een administratieve concessie, en dat is telkens iets anders om te bezitten. Lees vervolgens de lasten (cargas), zoals een hypotheek of een embargo, een beslag wegens een onbetaalde schuld. Voor elk daarvan heeft u een antwoord van de verkoper nodig voordat u betaalt.",
+            "Controleer tot slot de omschrijving. Vergelijk de oppervlakte, het aantal kamers en eventuele bijgebouwen met wat u tijdens de bezichtiging zag. Een zwembad of extra verdieping die niet in het register staat, is een vraag voor uw abogado, geen detail."
+          ]
+        },
+        {
+          "h2": "Wat staat er niet in de nota simple?",
+          "paras": [
+            "Niet elke schuld. Een koper neemt de onbetaalde bijdragen van de verkoper aan de vereniging van eigenaars over voor het verstreken deel van het jaar van aankoop plus de drie voorgaande kalenderjaren, en de woning staat daarvoor in. Onbetaalde IBI, de lokale onroerendgoedbelasting, blijft ook aan de woning verbonden als die van eigenaar wisselt. Vraag naar beide apart, in plaats van aan te nemen dat de nota simple ze dekt.",
+            "Combineer de nota simple daarom met de laatste IBI-aanslag en een schriftelijke verklaring van de beheerder van de vereniging van eigenaars dat de bijdragen zijn betaald. Notarissen moeten naar openstaande IBI vragen en de partijen waarschuwen, maar u wilt het weten lang voordat u met de pen in de hand aan de tafel van de notaris zit."
+          ]
+        },
+        {
+          "h2": "Hoe vraag ik er een aan, en wat kost het?",
+          "paras": [
+            "Uw abogado of makelaar kan hem voor u opvragen, of u vraagt hem zelf aan bij de registrators, ook online. Het officiële tarief van de registrator is 3,005061 euro per woning, ongeacht hoeveel inschrijvingen er op de pagina van de woning staan. Online aanvraagdiensten en tussenpersonen rekenen hun eigen kosten, dus de prijs die u betaalt kan hoger liggen.",
+            "In juli 2026 werden in een openbare consultatie nieuwe tariefregels voor online notas simples voorgesteld. Toen wij het voor het laatst lazen, was het een voorstel en geen wet, dus controleer de actuele prijs op het moment dat u bestelt, in plaats van te vertrouwen op een bedrag dat u online zag."
+          ]
+        },
+        {
+          "h2": "Is het Catastro hetzelfde als het eigendomsregister?",
+          "paras": [
+            "Nee, en het verschil zorgt bij bijna iedereen voor verwarring (de twee namen helpen niet). Het eigendomsregister legt rechten vast: wie wat bezit en welke lasten erop rusten. Het Catastro is een administratief register dat de woning voor fiscale doeleinden beschrijft en er een kadastrale waarde aan geeft, de grondslag voor de IBI.",
+            "De kadastrale waarde is een administratief bedrag dat niet hoger mag zijn dan de marktwaarde. Het Catastro stelt daarnaast een valor de referencia vast op basis van de prijzen die bij verkopen voor notarissen zijn opgegeven, en dat bedrag is de minimale grondslag voor de overdrachtsbelasting en voor de erf- en schenkbelasting, tenzij de opgegeven prijs hoger is. Geen van beide is wat de woning voor u waard is."
+          ]
+        },
+        {
+          "h2": "Wat als het huis in werkelijkheid niet overeenkomt met de papieren?",
+          "paras": [
+            "Dat komt voor, vooral bij oudere huizen die in de loop der jaren zijn gegroeid. Eigenaren moeten nieuwbouw, uitbreidingen, verbouwingen, sloop, splitsingen en wijzigingen van gebruik binnen twee maanden na de dag na de gebeurtenis bij het Catastro melden. Wie dat niet doet, begaat een lichte belastingovertreding, en het Catastro kan de wijziging zelf verwerken via een procedure waarvoor 60 euro per woning wordt gerekend.",
+            "Vergelijk vóór de aankoop drie dingen: wat u zag, wat het Catastro beschrijft en wat het register laat zien. Wijken ze af, vraag de verkoper dan de papieren vóór de overdracht bij te werken, en vraag uw abogado en een arquitecto técnico wat het verschil betekent. Een koper hoort een niet-ingeschreven uitbreiding niet als verrassing te erven."
+          ]
+        },
+        {
+          "h2": "Wanneer komt mijn naam in het register, en wie betaalt dat?",
+          "paras": [
+            "Nadat de akte is getekend, wordt die aangeboden bij het register van de woning, meestal door de notaris, de gestor of uw advocaat. Registerkosten worden betaald door degene te wiens gunste het recht wordt ingeschreven, en bij een aankoop is dat normaal gesproken de koper. U hoeft de aankoop niet zelf bij het Catastro te melden als die in een openbare akte met de kadastrale referentie is vastgelegd, want notarissen en registrators geven die door.",
+            "De kosten voor het inschrijven van de aankoop volgen een officieel tarief: 24,040484 euro tot een waarde van 6.010,12 euro, daarna dalende tarieven per duizend over elke schijf daarboven, met een korting van 5 procent. Dat onderdeel kan nooit hoger zijn dan 2.181,673939 euro. Het is niet de hele rekening, want andere onderdelen van het tarief gelden voor andere inschrijvingen."
+          ]
+        },
+        {
+          "h2": "Doet het register er nog toe als de woning van mij is?",
+          "paras": [
+            "Ja, in stilte, zolang u eigenaar bent. Voor iemand die uw woning door langdurig bezit zou willen verwerven, geldt een eigenaar die in het buitenland woont als afwezig, waardoor de gewone termijn verdubbelt van tien naar twintig jaar. Een ingeschreven titel, een actuele vermelding in het Catastro en betaalde IBI-aanslagen zijn het eenvoudige papierwerk dat het beeld helder houdt.",
+            "Bewaar een kopie van de nota simple van uw aankoop bij de akte, en vraag om de paar jaar een nieuwe op, of telkens als er iets verandert. Ziet iets er niet goed uit, vraag dan een abogado om hem met u door te lezen. Geniet daarna van de plek, in de wetenschap dat het register zegt wat u denkt dat het zegt."
+          ]
+        }
+      ]
+    }
+  }
+}

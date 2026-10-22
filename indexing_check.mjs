@@ -80,7 +80,9 @@ if (existsSync('./dist/changed-urls.json')) {
   ok('the changed list is an array', Array.isArray(c.changed));
   ok('every url is absolute and on the right host',
      c.changed.every(u => u.startsWith('https://www.247spain.es/')), c.changed.slice(0, 2).join(', '));
-  ok('a build never announces the whole site', c.seeded || c.changed.length < 500, String(c.changed.length));
+  // A content release can genuinely add a thousand new pages (October 2026 added 1,300 answers
+  // and guides). What must never happen is announcing the whole site, so the cap is a share of it.
+  ok('a build never announces the whole site', c.seeded || c.changed.length < Math.max(500, (c.total || 0) * 0.1), String(c.changed.length));
   // The sitemap and the submission have to agree, or one of them is lying.
   if (existsSync('./dist/sitemap-pages.xml')) {
     const xml = readFileSync('./dist/sitemap-pages.xml', 'utf8');

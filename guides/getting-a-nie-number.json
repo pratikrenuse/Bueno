@@ -1,0 +1,460 @@
+{
+  "slug": "getting-a-nie-number",
+  "topic": "residency",
+  "tool": "utility-setup",
+  "rules": [
+    "nie.form",
+    "nie.fee",
+    "aml.obliged_agents",
+    "aml.identification",
+    "poa.apostille_parties",
+    "eu.registration_over_three_months",
+    "res.tie.required",
+    "res.uk.withdrawal_agreement",
+    "res.nationality.periods",
+    "res.nationality.conditions",
+    "res.nationality.renunciation",
+    "buy.deed.tax_ids"
+  ],
+  "answers": [
+    "nie-number-form-and-fee",
+    "why-spanish-estate-agents-ask-for-id",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "eu-citizen-staying-in-spain-over-three-months",
+    "how-long-can-i-stay-in-spain-without-residency"
+  ],
+  "i18n": {
+    "en": {
+      "title": "How to Get an NIE Number in Spain: Form EX-15 and Fee",
+      "description": "The NIE is applied for on form EX-15 with a fee of 9.84 euros. Which form people mix it up with, how to pay, and what changes if you move to Spain.",
+      "h1": "Getting an NIE number in Spain as a foreign property owner",
+      "lead": "An NIE is the identification number Spain gives you as a foreigner, and you apply for it on form EX-15. The fee for assigning an NIE is 9.84 euros. Form EX-18 is a different procedure, the registration certificate for EU citizens who live in Spain, and it is the form people most often bring by mistake.",
+      "sections": [
+        {
+          "h2": "What is an NIE, and why does a property owner need one?",
+          "paras": [
+            "The NIE (número de identidad de extranjero) is the number Spain uses to identify you as a foreigner. Most owners first meet it when they buy, because the notary must record each party's tax identification number in the deed, and for a foreign buyer that number is the NIE. After that, it is the number most Spanish paperwork in your name will ask for.",
+            "Estate agents who act in property sales are obliged subjects under Spain's anti-money-laundering law. That means they must identify every person taking part in an operation, using reliable documents, before the operation begins. So the request for your passport early on is not a whim of the agent. It is the law they work under.",
+            "For most of us the NIE is the first piece of Spanish paperwork, and the rest of the setup waits for it. A power or water contract is issued to a named person, which is why the utility planner on this site starts by asking whether you have your number yet."
+          ]
+        },
+        {
+          "h2": "Which form do I need, EX-15 or EX-18?",
+          "paras": [
+            "The NIE application form is the EX-15. The EX-18 is the application for the registration certificate for EU citizens who reside in Spain, a different procedure under a different decree. Old articles and well-meaning friends still send people to the counter with an EX-18, and they are sent away again.",
+            "There is a third form you may hear about. The EX-17 is for the TIE, the foreigner's identity card that non-EU residents receive. If you are buying a holiday home and will keep living in Norway, Sweden, Germany or the UK, the EX-15 is the one you want.",
+            "One small thing that confuses people: the EX-15 still carries a citation of the old immigration regulation in its header, even though a new regulation replaced it from 20 May 2025. The form is still the one in use, so do not go looking for a newer version."
+          ]
+        },
+        {
+          "h2": "How much does an NIE cost, and how do I pay?",
+          "paras": [
+            "The fee (tasa) for assigning an NIE is 9.84 euros, set by Orden PJC/617/2025 and in force from 16 June 2025. Older articles quote other amounts, so if a figure you read does not match, it is probably out of date.",
+            "The fee is paid with form 790 code 012. That one payment form covers many different procedures at different prices, so choose the line for the procedure you are actually doing, not just the form number. The same schedule sets 7.31 euros for a certificate of residence or non-residence and 12.00 euros for the EU citizen registration certificate.",
+            "Keep the stamped proof of payment with the rest of your papers, together with a photocopy. The office will want to see it at the appointment, and it is the one document people most often leave in the hotel or at home in the folder they meant to bring."
+          ]
+        },
+        {
+          "h2": "How do I actually apply in Spain?",
+          "paras": [
+            "If you apply in person in Spain, you will usually need an appointment (cita previa) at an office in the province you are dealing with. Look for a slot well before your trip, because in busy provinces they can be hard to find, and plan the rest of your visit around the date you get.",
+            "Take your passport, the completed EX-15, the paid 790 form and a photocopy of each, and, if the office asks for one, a document that shows why you need the number. The exact list differs between offices, so check what your province asks for before you travel rather than relying on a friend's list from another town.",
+            "Get there early. Not everyone at the counter will speak English, so write down the words you need in Spanish before you go (and a printed copy of your appointment confirmation never hurts). Bring a pen, because forms are often completed or corrected on the spot."
+          ]
+        },
+        {
+          "h2": "Can someone apply for my NIE while I stay at home?",
+          "paras": [
+            "Many owners abroad give a power of attorney to a professional in Spain, usually an abogado or a gestor, who can then handle much of the paperwork on their behalf. Ask them first whether the office they will use accepts an NIE application through a representative, since they will know what that office accepts.",
+            "If you sign that power before a notary at home, it becomes a public document issued abroad. Norway, Sweden, Germany, France, the Netherlands, the United Kingdom, Belgium, Denmark, Finland, Ireland and Switzerland are all parties to the Hague Apostille Convention, so an apostille is accepted in place of consular legalisation.",
+            "Before you sign anything, send the draft to the Spanish professional who will use it and ask them to confirm the wording covers what they need to do. A power that is too narrow means a second trip to the notary."
+          ]
+        },
+        {
+          "h2": "I am moving to Spain. Is the NIE enough?",
+          "paras": [
+            "No. The NIE identifies you, but living in Spain brings its own registration. A citizen of an EU or EEA state who resides in Spain for more than three months must register in person in the Registro Central de Extranjeros, applying within three months of entry on form EX-18. That registration is a residence formality, not a limit on how long you may stay.",
+            "A non-EU national authorised to stay for more than six months, for example on a non-lucrative residence, must apply for a TIE within one month of entering Spain. The application goes to the foreigners' office or police station in the province that handled the authorisation. Appointments can take several weeks, so book as soon as you know your entry date. The fee for a first temporary residence TIE is 16.08 euros.",
+            "British nationals who were already living in Spain before 31 December 2020 keep their Withdrawal Agreement rights and are documented with a TIE that names article 50 TUE. If you never documented your status, you can still prove residence before that date with any valid evidence, and should apply as soon as possible."
+          ]
+        },
+        {
+          "h2": "I cannot find the paper with my NIE on it. What now?",
+          "paras": [
+            "Before you book anything or pay a fee, sit down with your old Spanish paperwork and look for the number itself. It is recorded in your purchase deeds, because the notary must note each party's tax number there, and it usually appears on letters from the tax office and on utility contracts in your name. The notary or the professional who handled your purchase will usually have it on file too, so a short email to them is often the quickest route.",
+            "If an office asks for a certificate rather than just the number, ask which procedure they mean before you pay. The fee schedule prices a certificate of residence or non-residence separately, at 7.31 euros, and the 790 form must be paid for the right procedure.",
+            "If the document was stolen along with your passport, report the theft to the police first. Then keep a scan of every Spanish document you hold somewhere you can reach from home, so the next search takes minutes rather than an afternoon."
+          ]
+        },
+        {
+          "h2": "When does an NIE become a DNI?",
+          "paras": [
+            "Only when you become Spanish. The DNI (documento nacional de identidad) is the identity document of Spanish nationals, so the change from an NIE to a DNI is the last step after nationality, not a separate route to it. Owning a home here, however long, does not bring you any closer on its own.",
+            "For most European owners that is a long way off. Nationality by residence requires ten years of residence in general, and the residence must be legal, continuous and immediately before the application. Time spent as a visitor or as a non-resident owner does not count. The applicant must also show good civic conduct and sufficient integration into Spanish society.",
+            "At the end, the applicant swears or promises allegiance to the King and obedience to the Constitution, declares the renunciation of their previous nationality, unless they come from one of the exempt countries, and registers the acquisition in the Spanish Civil Registry. Until then, your NIE is the number that follows you through every Spanish form, so keep it close and get back to enjoying the place you bought it for."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Slik får du NIE-nummer i Spania: skjema EX-15 og gebyr",
+      "description": "Du søker om NIE på skjema EX-15 med et gebyr på 9,84 euro, og her ser du hvordan du betaler og hva som endres ved flytting.",
+      "h1": "Slik får du NIE-nummer i Spania som utenlandsk boligeier",
+      "lead": "NIE er identifikasjonsnummeret Spania gir deg som utlending, og du søker om det på skjema EX-15. Gebyret for å få tildelt et NIE er 9,84 euro. Skjema EX-18 er en annen prosedyre, registreringsbeviset for EU-borgere som bor i Spania, og det er det skjemaet folk oftest tar med seg ved en feil.",
+      "sections": [
+        {
+          "h2": "Hva er et NIE, og hvorfor trenger en boligeier det?",
+          "paras": [
+            "NIE (número de identidad de extranjero) er nummeret Spania bruker for å identifisere deg som utlending. De fleste eiere møter det først når de kjøper, fordi notaren må føre inn hver parts skatteidentifikasjonsnummer i skjøtet, og for en utenlandsk kjøper er det nummeret NIE. Etter det er det nummeret de fleste spanske papirer i ditt navn vil be om.",
+            "Eiendomsmeglere som opptrer i boligsalg, er rapporteringspliktige etter den spanske hvitvaskingsloven. Det betyr at de må identifisere alle som deltar i en transaksjon, med pålitelige dokumenter, før transaksjonen starter. Så når megleren tidlig ber om passet ditt, er det ikke et innfall. Det er loven de jobber under.",
+            "For de fleste av oss er NIE det første spanske papiret, og resten av oppsettet venter på det. En strøm- eller vannkontrakt utstedes til en navngitt person, og derfor starter planleggeren for strøm og vann på dette nettstedet med å spørre om du allerede har nummeret ditt."
+          ]
+        },
+        {
+          "h2": "Hvilket skjema trenger jeg, EX-15 eller EX-18?",
+          "paras": [
+            "Søknadsskjemaet for NIE er EX-15. EX-18 er søknaden om registreringsbevis for EU-borgere som er bosatt i Spania, en annen prosedyre under et annet dekret. Gamle artikler og velmenende venner sender fortsatt folk til skranken med et EX-18, og de blir sendt hjem igjen.",
+            "Det finnes et tredje skjema du kan høre om. EX-17 gjelder TIE, identitetskortet for utlendinger som bosatte fra land utenfor EU får. Kjøper du en feriebolig og fortsetter å bo i Norge, Sverige, Tyskland eller Storbritannia, er det EX-15 du skal ha.",
+            "En liten ting som forvirrer folk: EX-15 viser fortsatt til den gamle utlendingsforskriften i toppteksten, selv om en ny forskrift erstattet den fra 20. mai 2025. Skjemaet er fortsatt det som brukes, så ikke let etter en nyere versjon."
+          ]
+        },
+        {
+          "h2": "Hva koster et NIE, og hvordan betaler jeg?",
+          "paras": [
+            "Gebyret (tasa) for å få tildelt et NIE er 9,84 euro, fastsatt i Orden PJC/617/2025 og gjeldende fra 16. juni 2025. Eldre artikler oppgir andre beløp, så hvis et tall du leser ikke stemmer, er det trolig utdatert.",
+            "Gebyret betales med skjema 790 kode 012. Det ene betalingsskjemaet dekker mange ulike prosedyrer til ulike priser, så velg linjen for den prosedyren du faktisk gjennomfører, ikke bare skjemanummeret. Den samme oversikten fastsetter 7,31 euro for en attest om bosted eller ikke-bosted og 12,00 euro for registreringsbeviset for EU-borgere.",
+            "Ta vare på den stemplede betalingskvitteringen sammen med resten av papirene, og en kopi av den. Kontoret vil se den på timen, og det er det dokumentet folk oftest glemmer på hotellet eller hjemme i mappen de skulle ha tatt med."
+          ]
+        },
+        {
+          "h2": "Hvordan søker jeg i praksis i Spania?",
+          "paras": [
+            "Søker du personlig i Spania, trenger du som regel en time (cita previa) på et kontor i provinsen saken gjelder. Se etter en ledig time god tid før reisen, fordi de kan være vanskelige å finne i travle provinser, og legg resten av besøket opp rundt datoen du får.",
+            "Ta med passet, utfylt EX-15, betalt 790-skjema og en kopi av hvert, og, hvis kontoret ber om det, et dokument som viser hvorfor du trenger nummeret. Den nøyaktige listen varierer mellom kontorene, så sjekk hva provinsen din ber om før du reiser, i stedet for å stole på en venns liste fra en annen by.",
+            "Kom tidlig. Ikke alle i skranken snakker engelsk, så skriv ned ordene du trenger på spansk før du går (og en utskrift av timebekreftelsen skader aldri). Ta med en penn, fordi skjemaer ofte fylles ut eller rettes på stedet."
+          ]
+        },
+        {
+          "h2": "Kan noen søke om NIE for meg mens jeg er hjemme?",
+          "paras": [
+            "Mange eiere i utlandet gir fullmakt til en fagperson i Spania, som regel en abogado eller en gestor, som da kan ta seg av mye av papirarbeidet for dem. Spør dem først om kontoret de skal bruke godtar en NIE-søknad gjennom en representant, siden de vet hva det kontoret godtar.",
+            "Signerer du fullmakten hos en notar hjemme, blir den et offentlig dokument utstedt i utlandet. Norge, Sverige, Tyskland, Frankrike, Nederland, Storbritannia, Belgia, Danmark, Finland, Irland og Sveits er alle parter i Haagkonvensjonen om apostille, så en apostille godtas i stedet for konsulær legalisering.",
+            "Før du signerer noe, send utkastet til den spanske fagpersonen som skal bruke det, og be dem bekrefte at ordlyden dekker det de skal gjøre. En fullmakt som er for snever, betyr en ny tur til notaren."
+          ]
+        },
+        {
+          "h2": "Jeg skal flytte til Spania. Er NIE nok?",
+          "paras": [
+            "Nei. NIE identifiserer deg, men å bo i Spania krever en egen registrering. En borger av en EU- eller EØS-stat som bor i Spania i mer enn tre måneder, må registrere seg personlig i Registro Central de Extranjeros og søke innen tre måneder etter innreise på skjema EX-18. Den registreringen er en formalitet knyttet til bosted, ikke en grense for hvor lenge du kan bli.",
+            "En borger fra et land utenfor EU som har tillatelse til å oppholde seg i mer enn seks måneder, for eksempel med non-lucrative-opphold, må søke om TIE innen én måned etter innreise i Spania. Søknaden går til utlendingskontoret eller politistasjonen i provinsen som behandlet tillatelsen. Det kan ta flere uker å få time, så bestill så snart du vet innreisedatoen. Gebyret for et første TIE for midlertidig opphold er 16,08 euro.",
+            "Britiske borgere som allerede bodde i Spania før 31. desember 2020, beholder rettighetene sine etter utmeldingsavtalen og dokumenteres med et TIE som viser til artikkel 50 TEU. Har du aldri dokumentert statusen din, kan du fortsatt bevise bosted før den datoen med ethvert gyldig bevis, og du bør søke så snart som mulig."
+          ]
+        },
+        {
+          "h2": "Jeg finner ikke papiret med NIE-nummeret mitt. Hva nå?",
+          "paras": [
+            "Før du bestiller noe eller betaler et gebyr, sett deg ned med de gamle spanske papirene dine og let etter selve nummeret. Det står i kjøpsskjøtet ditt, fordi notaren må føre inn hver parts skattenummer der, og det står som regel på brev fra skattekontoret og på strøm- og vannkontrakter i ditt navn. Notaren eller fagpersonen som håndterte kjøpet ditt, har det som regel også registrert, så en kort e-post til dem er ofte den raskeste veien.",
+            "Ber et kontor om en attest og ikke bare nummeret, spør hvilken prosedyre de mener før du betaler. Gebyroversikten priser en attest om bosted eller ikke-bosted separat, til 7,31 euro, og 790-skjemaet må betales for riktig prosedyre.",
+            "Ble dokumentet stjålet sammen med passet ditt, anmeld tyveriet til politiet først. Oppbevar deretter en skannet kopi av hvert spanske dokument du har et sted du kan nå hjemmefra, slik at neste leting tar minutter og ikke en hel ettermiddag."
+          ]
+        },
+        {
+          "h2": "Når blir et NIE til et DNI?",
+          "paras": [
+            "Bare når du blir spansk. DNI (documento nacional de identidad) er identitetsdokumentet til spanske statsborgere, så overgangen fra NIE til DNI er siste steg etter statsborgerskap, ikke en egen vei dit. Å eie en bolig her, uansett hvor lenge, bringer deg ikke nærmere i seg selv.",
+            "For de fleste europeiske eiere er det langt fram. Statsborgerskap på grunnlag av bosted krever som hovedregel ti års bosted, og bostedet må være lovlig, sammenhengende og rett før søknaden. Tid som besøkende eller som ikke-bosatt eier teller ikke. Søkeren må også vise god vandel og tilstrekkelig integrering i det spanske samfunnet.",
+            "Til slutt sverger eller lover søkeren troskap til kongen og lydighet mot grunnloven, erklærer at tidligere statsborgerskap gis opp, med mindre søkeren kommer fra et av de unntatte landene, og registrerer ervervet i det spanske sivilregisteret. Fram til da er NIE nummeret som følger deg gjennom alle spanske skjemaer, så hold det nær, og vend tilbake til å nyte stedet du kjøpte."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Så får du ett NIE-nummer i Spanien: EX-15 och avgift",
+      "description": "NIE söks på blankett EX-15 och kostar 9,84 euro. Vilken blankett den förväxlas med, hur du betalar och vad som ändras om du flyttar till Spanien.",
+      "h1": "Att få ett NIE-nummer i Spanien som utländsk fastighetsägare",
+      "lead": "Ett NIE är det identifikationsnummer Spanien ger dig som utlänning, och du ansöker om det på blankett EX-15. Avgiften för att tilldelas ett NIE är 9,84 euro. Blankett EX-18 gäller ett annat förfarande, registreringsintyget för EU-medborgare som bor i Spanien, och det är den blankett folk oftast tar med sig av misstag.",
+      "sections": [
+        {
+          "h2": "Vad är ett NIE, och varför behöver en fastighetsägare ett?",
+          "paras": [
+            "NIE (número de identidad de extranjero) är det nummer Spanien använder för att identifiera dig som utlänning. De flesta ägare stöter på det första gången när de köper, eftersom notarien måste föra in varje parts skatteidentifikationsnummer i köpehandlingen, och för en utländsk köpare är det numret ditt NIE. Därefter är det numret som det mesta av spanskt pappersarbete i ditt namn frågar efter.",
+            "Mäklare som medverkar vid fastighetsförsäljningar är rapporteringsskyldiga enligt Spaniens penningtvättslag. Det betyder att de måste identifiera varje person som deltar i en affär, med tillförlitliga handlingar, innan affären inleds. Så när du tidigt ombeds visa ditt pass är det inte mäklarens nyck. Det är lagen de arbetar under.",
+            "För de flesta av oss är NIE det första spanska pappret, och resten av uppsättningen väntar på det. Ett el- eller vattenavtal utfärdas till en namngiven person, och det är därför planeraren för el och vatten på den här sajten börjar med att fråga om du redan har ditt nummer."
+          ]
+        },
+        {
+          "h2": "Vilken blankett behöver jag, EX-15 eller EX-18?",
+          "paras": [
+            "Ansökningsblanketten för NIE är EX-15. EX-18 är ansökan om registreringsintyget för EU-medborgare som är bosatta i Spanien, ett annat förfarande under ett annat dekret. Gamla artiklar och välmenande vänner skickar fortfarande folk till disken med en EX-18, och de skickas iväg igen.",
+            "Det finns en tredje blankett du kan höra talas om. EX-17 gäller TIE, utlänningens identitetskort som bosatta från länder utanför EU får. Köper du ett fritidshus och fortsätter bo i Norge, Sverige, Tyskland eller Storbritannien är det EX-15 du ska ha.",
+            "En liten sak som förvirrar folk: EX-15 hänvisar fortfarande till den gamla utlänningsförordningen i sitt sidhuvud, trots att en ny förordning ersatte den från 20 maj 2025. Blanketten är fortfarande den som används, så leta inte efter en nyare version."
+          ]
+        },
+        {
+          "h2": "Vad kostar ett NIE, och hur betalar jag?",
+          "paras": [
+            "Avgiften (tasa) för att tilldelas ett NIE är 9,84 euro, fastställd i Orden PJC/617/2025 och gäller från 16 juni 2025. Äldre artiklar anger andra belopp, så stämmer inte en siffra du läser är den troligen inaktuell.",
+            "Avgiften betalas med blankett 790 kod 012. Den betalblanketten täcker många olika förfaranden till olika priser, så välj raden för det förfarande du faktiskt gör, inte bara blankettnumret. Samma taxa anger 7,31 euro för ett intyg om bosättning eller icke-bosättning och 12,00 euro för registreringsintyget för EU-medborgare.",
+            "Spara det stämplade betalningsbeviset med resten av dina papper, tillsammans med en kopia. Kontoret vill se det vid besöket, och det är det dokument folk oftast lämnar kvar på hotellet eller hemma i mappen de tänkte ta med."
+          ]
+        },
+        {
+          "h2": "Hur ansöker jag i praktiken i Spanien?",
+          "paras": [
+            "Ansöker du personligen i Spanien behöver du oftast en bokad tid (cita previa) på ett kontor i den provins ärendet gäller. Leta efter en tid i god tid före resan, eftersom de kan vara svåra att hitta i provinser med högt tryck, och planera resten av besöket kring det datum du får.",
+            "Ta med passet, den ifyllda EX-15, den betalda 790-blanketten och en kopia av varje, och om kontoret begär det, en handling som visar varför du behöver numret. Den exakta listan skiljer sig mellan kontor, så kontrollera vad din provins begär innan du reser i stället för att lita på en väns lista från en annan stad.",
+            "Var där tidigt. Alla vid disken talar inte engelska, så skriv ner de ord du behöver på spanska innan du går (och en utskrift av din bokningsbekräftelse skadar aldrig). Ta med en penna, eftersom blanketter ofta fylls i eller rättas på plats."
+          ]
+        },
+        {
+          "h2": "Kan någon ansöka om mitt NIE medan jag stannar hemma?",
+          "paras": [
+            "Många ägare utomlands ger en fullmakt till en yrkesperson i Spanien, oftast en abogado eller en gestor, som sedan kan sköta mycket av pappersarbetet åt dem. Fråga dem först om kontoret de ska använda tar emot en NIE-ansökan genom ombud, eftersom de vet vad det kontoret godtar.",
+            "Skriver du under fullmakten inför en notarie hemma blir den en offentlig handling utfärdad i utlandet. Norge, Sverige, Tyskland, Frankrike, Nederländerna, Storbritannien, Belgien, Danmark, Finland, Irland och Schweiz är alla anslutna till Haagkonventionen om apostille, så en apostille godtas i stället för konsulär legalisering.",
+            "Innan du skriver under något, skicka utkastet till den spanska yrkesperson som ska använda det och be hen bekräfta att formuleringen täcker det hen behöver göra. En fullmakt som är för snäv betyder ett andra besök hos notarien."
+          ]
+        },
+        {
+          "h2": "Jag flyttar till Spanien. Räcker NIE?",
+          "paras": [
+            "Nej. NIE identifierar dig, men att bo i Spanien kräver en egen registrering. En medborgare i en EU- eller EES-stat som är bosatt i Spanien i mer än tre månader måste registrera sig personligen i Registro Central de Extranjeros, med ansökan inom tre månader från inresan på blankett EX-18. Registreringen är en formalitet för bosättning, inte en gräns för hur länge du får stanna.",
+            "En medborgare från ett land utanför EU som har tillstånd att stanna i mer än sex månader, till exempel med ett uppehållstillstånd utan förvärvsarbete, måste ansöka om TIE inom en månad från inresan i Spanien. Ansökan lämnas till utlänningskontoret eller polisstationen i den provins som hanterade tillståndet. Det kan ta flera veckor att få en tid, så boka så snart du vet ditt inresedatum. Avgiften för ett första TIE för tillfälligt uppehåll är 16,08 euro.",
+            "Brittiska medborgare som redan bodde i Spanien före 31 december 2020 behåller sina rättigheter enligt utträdesavtalet och får ett TIE som hänvisar till artikel 50 TUE. Har du aldrig dokumenterat din status kan du fortfarande styrka bosättning före det datumet med vilket giltigt bevis som helst, och bör ansöka så snart som möjligt."
+          ]
+        },
+        {
+          "h2": "Jag hittar inte pappret med mitt NIE. Vad gör jag nu?",
+          "paras": [
+            "Innan du bokar något eller betalar en avgift, sätt dig med dina gamla spanska papper och leta efter själva numret. Det står i dina köpehandlingar, eftersom notarien måste anteckna varje parts skattenummer där, och det brukar finnas på brev från skattemyndigheten och på avtal för el och vatten i ditt namn. Notarien eller den yrkesperson som hanterade ditt köp har oftast också numret sparat, så ett kort mejl till dem är ofta den snabbaste vägen.",
+            "Ber ett kontor om ett intyg och inte bara numret, fråga vilket förfarande de menar innan du betalar. Avgiftstaxan prissätter ett intyg om bosättning eller icke-bosättning separat, till 7,31 euro, och 790-blanketten måste betalas för rätt förfarande.",
+            "Blev handlingen stulen tillsammans med passet, anmäl stölden till polisen först. Spara sedan en skanning av varje spanskt dokument du har på ett ställe du når hemifrån, så att nästa sökning tar minuter i stället för en eftermiddag."
+          ]
+        },
+        {
+          "h2": "När blir ett NIE ett DNI?",
+          "paras": [
+            "Bara när du blir spansk medborgare. DNI (documento nacional de identidad) är spanska medborgares identitetshandling, så bytet från NIE till DNI är det sista steget efter medborgarskapet, inte en egen väg dit. Att äga en bostad här, hur länge som helst, för dig inte närmare i sig.",
+            "För de flesta europeiska ägare ligger det långt bort. Medborgarskap genom bosättning kräver i regel tio års bosättning, och bosättningen måste vara laglig, sammanhängande och ligga omedelbart före ansökan. Tid som besökare eller som icke-bosatt ägare räknas inte. Den sökande måste också visa gott medborgerligt uppförande och tillräcklig integration i det spanska samhället.",
+            "Till sist svär eller lovar den sökande trohet mot kungen och lydnad mot konstitutionen, förklarar att hen avsäger sig sitt tidigare medborgarskap, om hen inte kommer från något av de undantagna länderna, och registrerar förvärvet i det spanska folkbokföringsregistret (Registro Civil). Fram till dess är ditt NIE numret som följer dig genom varje spansk blankett, så håll det nära och gå tillbaka till att njuta av stället du skaffade det för."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "NIE-Nummer in Spanien beantragen: Formular EX-15 und Gebühr",
+      "description": "Die NIE wird mit dem Formular EX-15 und einer Gebühr von 9,84 Euro beantragt. Welches Formular oft verwechselt wird, wie Sie zahlen, was beim Umzug gilt.",
+      "h1": "Die NIE-Nummer in Spanien als ausländischer Immobilieneigentümer",
+      "lead": "Die NIE ist die Identifikationsnummer, die Spanien Ihnen als Ausländer zuteilt, und Sie beantragen sie mit dem Formular EX-15. Die Gebühr für die Zuteilung einer NIE beträgt 9,84 Euro. Das Formular EX-18 ist ein anderes Verfahren, die Registrierungsbescheinigung für EU-Bürger, die in Spanien leben, und es ist das Formular, das am häufigsten aus Versehen mitgebracht wird.",
+      "sections": [
+        {
+          "h2": "Was ist eine NIE, und warum braucht ein Immobilieneigentümer sie?",
+          "paras": [
+            "Die NIE (número de identidad de extranjero) ist die Nummer, mit der Spanien Sie als Ausländer identifiziert. Die meisten Eigentümer begegnen ihr zuerst beim Kauf, denn der Notar muss die Steuernummer jeder Partei in der Urkunde vermerken, und für einen ausländischen Käufer ist diese Nummer die NIE. Danach ist sie die Nummer, nach der die meisten spanischen Unterlagen auf Ihren Namen fragen.",
+            "Immobilienmakler, die bei Immobilienverkäufen tätig sind, sind nach dem spanischen Geldwäschegesetz Verpflichtete. Das heißt, sie müssen jede Person, die an einem Geschäft beteiligt ist, anhand verlässlicher Dokumente identifizieren, bevor das Geschäft beginnt. Die frühe Bitte um Ihren Reisepass ist also keine Laune des Maklers. Es ist das Gesetz, unter dem er arbeitet.",
+            "Für die meisten von uns ist die NIE das erste spanische Dokument, und alles Weitere wartet darauf. Ein Strom- oder Wasservertrag wird auf eine namentlich genannte Person ausgestellt, deshalb fragt der Versorgungsplaner auf dieser Seite als Erstes, ob Sie Ihre Nummer schon haben."
+          ]
+        },
+        {
+          "h2": "Welches Formular brauche ich, EX-15 oder EX-18?",
+          "paras": [
+            "Das Antragsformular für die NIE ist das EX-15. Das EX-18 ist der Antrag auf die Registrierungsbescheinigung für EU-Bürger mit Wohnsitz in Spanien, ein anderes Verfahren nach einem anderen Dekret. Alte Artikel und wohlmeinende Freunde schicken Leute immer noch mit einem EX-18 an den Schalter, und sie werden wieder weggeschickt.",
+            "Es gibt noch ein drittes Formular, von dem Sie hören könnten. Das EX-17 ist für die TIE, den Ausländerausweis, den Ansässige aus Ländern außerhalb der EU erhalten. Wenn Sie ein Ferienhaus kaufen und weiter in Norwegen, Schweden, Deutschland oder Großbritannien leben, ist das EX-15 das richtige.",
+            "Eine Kleinigkeit, die Leute verwirrt: Das EX-15 nennt in seiner Kopfzeile noch die alte Ausländerverordnung, obwohl eine neue Verordnung sie ab dem 20. Mai 2025 ersetzt hat. Das Formular ist weiterhin das gültige, suchen Sie also nicht nach einer neueren Version."
+          ]
+        },
+        {
+          "h2": "Was kostet eine NIE, und wie zahle ich?",
+          "paras": [
+            "Die Gebühr (tasa) für die Zuteilung einer NIE beträgt 9,84 Euro, festgelegt durch die Orden PJC/617/2025 und gültig ab dem 16. Juni 2025. Ältere Artikel nennen andere Beträge. Wenn eine Zahl, die Sie lesen, nicht passt, ist sie wahrscheinlich veraltet.",
+            "Die Gebühr wird mit dem Formular 790 Code 012 bezahlt. Dieses eine Zahlungsformular deckt viele verschiedene Verfahren zu verschiedenen Preisen ab, wählen Sie also die Zeile für das Verfahren, das Sie tatsächlich durchführen, nicht nur die Formularnummer. Dieselbe Gebührenordnung legt 7,31 Euro für eine Bescheinigung über Ansässigkeit oder Nichtansässigkeit fest und 12,00 Euro für die Registrierungsbescheinigung für EU-Bürger.",
+            "Bewahren Sie den abgestempelten Zahlungsnachweis zusammen mit Ihren übrigen Unterlagen und einer Kopie auf. Das Amt will ihn beim Termin sehen, und es ist das Dokument, das am häufigsten im Hotel liegen bleibt oder zu Hause in der Mappe, die man eigentlich mitnehmen wollte."
+          ]
+        },
+        {
+          "h2": "Wie beantrage ich die NIE konkret in Spanien?",
+          "paras": [
+            "Wenn Sie persönlich in Spanien beantragen, brauchen Sie in der Regel einen Termin (cita previa) bei einem Amt in der Provinz, um die es geht. Suchen Sie lange vor Ihrer Reise nach einem Termin, denn in gefragten Provinzen sind sie schwer zu bekommen, und planen Sie den Rest Ihres Aufenthalts um das Datum herum, das Sie erhalten.",
+            "Nehmen Sie Ihren Reisepass mit, das ausgefüllte EX-15, das bezahlte Formular 790 und von allem eine Kopie, und, falls das Amt danach fragt, ein Dokument, das zeigt, warum Sie die Nummer brauchen. Die genaue Liste unterscheidet sich von Amt zu Amt. Prüfen Sie also vor der Reise, was Ihre Provinz verlangt, statt sich auf die Liste eines Freundes aus einer anderen Stadt zu verlassen.",
+            "Seien Sie früh da. Nicht jeder am Schalter spricht Englisch, schreiben Sie sich also vorher die Wörter auf Spanisch auf, die Sie brauchen (und ein ausgedruckter Terminnachweis schadet nie). Nehmen Sie einen Stift mit, denn Formulare werden oft vor Ort ausgefüllt oder korrigiert."
+          ]
+        },
+        {
+          "h2": "Kann jemand meine NIE beantragen, während ich zu Hause bleibe?",
+          "paras": [
+            "Viele Eigentümer im Ausland erteilen einer Fachperson in Spanien eine Vollmacht, meist einem abogado oder einem gestor, die dann einen Großteil der Formalitäten in ihrem Namen erledigen kann. Fragen Sie zuerst, ob das Amt, das sie nutzen wird, einen NIE-Antrag über einen Vertreter annimmt, denn sie weiß, was dieses Amt akzeptiert.",
+            "Wenn Sie diese Vollmacht zu Hause vor einem Notar unterschreiben, wird sie zu einer im Ausland ausgestellten öffentlichen Urkunde. Norwegen, Schweden, Deutschland, Frankreich, die Niederlande, das Vereinigte Königreich, Belgien, Dänemark, Finnland, Irland und die Schweiz sind alle Vertragsstaaten des Haager Apostille-Übereinkommens, daher wird eine Apostille anstelle einer konsularischen Legalisation anerkannt.",
+            "Bevor Sie etwas unterschreiben, schicken Sie den Entwurf an die spanische Fachperson, die ihn nutzen wird, und lassen Sie sich bestätigen, dass der Wortlaut abdeckt, was sie tun muss. Eine zu eng gefasste Vollmacht bedeutet einen zweiten Gang zum Notar."
+          ]
+        },
+        {
+          "h2": "Ich ziehe nach Spanien. Reicht die NIE?",
+          "paras": [
+            "Nein. Die NIE identifiziert Sie, aber das Leben in Spanien bringt eine eigene Registrierung mit sich. Ein Bürger eines EU- oder EWR-Staates, der sich länger als drei Monate in Spanien aufhält, muss sich persönlich im Registro Central de Extranjeros eintragen lassen und den Antrag innerhalb von drei Monaten nach der Einreise mit dem Formular EX-18 stellen. Diese Registrierung ist eine Formalität des Wohnsitzes, keine Begrenzung, wie lange Sie bleiben dürfen.",
+            "Ein Staatsangehöriger eines Landes außerhalb der EU, der für mehr als sechs Monate zum Aufenthalt berechtigt ist, zum Beispiel mit einer Aufenthaltserlaubnis ohne Erwerbstätigkeit (residencia no lucrativa), muss innerhalb eines Monats nach der Einreise nach Spanien eine TIE beantragen. Der Antrag geht an die Ausländerbehörde oder Polizeiwache in der Provinz, die die Genehmigung bearbeitet hat. Termine können mehrere Wochen dauern, buchen Sie also, sobald Sie Ihr Einreisedatum kennen. Die Gebühr für eine erste TIE für einen befristeten Aufenthalt beträgt 16,08 Euro.",
+            "Britische Staatsangehörige, die bereits vor dem 31. Dezember 2020 in Spanien lebten, behalten ihre Rechte aus dem Austrittsabkommen und erhalten eine TIE, die Artikel 50 EUV nennt. Wenn Sie Ihren Status nie dokumentiert haben, können Sie den Aufenthalt vor diesem Datum weiterhin mit jedem gültigen Nachweis belegen und sollten so bald wie möglich den Antrag stellen."
+          ]
+        },
+        {
+          "h2": "Ich finde das Papier mit meiner NIE nicht. Was nun?",
+          "paras": [
+            "Bevor Sie einen Termin buchen oder eine Gebühr zahlen, setzen Sie sich mit Ihren alten spanischen Unterlagen hin und suchen Sie nach der Nummer selbst. Sie steht in Ihrer Kaufurkunde, weil der Notar dort die Steuernummer jeder Partei vermerken muss, und sie erscheint meist auf Schreiben des Finanzamts und auf Versorgungsverträgen auf Ihren Namen. Der Notar oder die Fachperson, die Ihren Kauf betreut hat, hat sie in der Regel ebenfalls in der Akte, eine kurze E-Mail dorthin ist also oft der schnellste Weg.",
+            "Wenn ein Amt nach einer Bescheinigung statt nur nach der Nummer fragt, erkundigen Sie sich vor dem Bezahlen, welches Verfahren gemeint ist. Die Gebührenordnung bepreist eine Bescheinigung über Ansässigkeit oder Nichtansässigkeit gesondert, mit 7,31 Euro, und das Formular 790 muss für das richtige Verfahren bezahlt werden.",
+            "Wenn das Dokument zusammen mit Ihrem Reisepass gestohlen wurde, zeigen Sie den Diebstahl zuerst bei der Polizei an. Bewahren Sie danach einen Scan jedes spanischen Dokuments an einem Ort auf, auf den Sie von zu Hause zugreifen können, damit die nächste Suche Minuten dauert und nicht einen Nachmittag."
+          ]
+        },
+        {
+          "h2": "Wann wird aus einer NIE ein DNI?",
+          "paras": [
+            "Nur wenn Sie Spanier werden. Der DNI (documento nacional de identidad) ist das Ausweisdokument spanischer Staatsangehöriger, der Wechsel von der NIE zum DNI ist also der letzte Schritt nach der Einbürgerung, kein eigener Weg dorthin. Ein Haus hier zu besitzen, egal wie lange, bringt Sie dem für sich allein nicht näher.",
+            "Für die meisten europäischen Eigentümer liegt das in weiter Ferne. Die Einbürgerung aufgrund von Aufenthalt setzt im Allgemeinen zehn Jahre Aufenthalt voraus, und der Aufenthalt muss rechtmäßig, ununterbrochen und unmittelbar vor dem Antrag sein. Zeit als Besucher oder als nichtansässiger Eigentümer zählt nicht. Der Antragsteller muss außerdem gute staatsbürgerliche Führung und ausreichende Integration in die spanische Gesellschaft nachweisen.",
+            "Am Ende schwört oder gelobt der Antragsteller Treue zum König und Gehorsam gegenüber der Verfassung, erklärt den Verzicht auf seine bisherige Staatsangehörigkeit, sofern er nicht aus einem der ausgenommenen Länder stammt, und lässt den Erwerb im spanischen Zivilregister eintragen. Bis dahin ist Ihre NIE die Nummer, die Sie durch jedes spanische Formular begleitet. Halten Sie sie also griffbereit und genießen Sie wieder den Ort, für den Sie sie bekommen haben."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Obtenir un NIE en Espagne : formulaire EX-15 et frais",
+      "description": "Le NIE se demande avec le formulaire EX-15 pour 9,84 euros. Le formulaire souvent confondu, le paiement et ce qui change si vous vous installez en Espagne.",
+      "h1": "Obtenir un numéro NIE en Espagne quand on est propriétaire étranger",
+      "lead": "Le NIE est le numéro d'identification que l'Espagne vous attribue en tant qu'étranger, et vous le demandez avec le formulaire EX-15. Les frais d'attribution d'un NIE sont de 9,84 euros. Le formulaire EX-18 correspond à une autre procédure, le certificat d'enregistrement des citoyens de l'UE qui vivent en Espagne, et c'est le formulaire que l'on apporte le plus souvent par erreur.",
+      "sections": [
+        {
+          "h2": "Qu'est-ce qu'un NIE, et pourquoi un propriétaire en a-t-il besoin ?",
+          "paras": [
+            "Le NIE (número de identidad de extranjero) est le numéro que l'Espagne utilise pour vous identifier en tant qu'étranger. La plupart des propriétaires le découvrent au moment de l'achat, car le notaire doit inscrire dans l'acte le numéro d'identification fiscale de chaque partie, et pour un acheteur étranger ce numéro est le NIE. Ensuite, c'est le numéro que demandera la plupart des démarches espagnoles à votre nom.",
+            "Les agents immobiliers qui interviennent dans des ventes sont des personnes assujetties à la loi espagnole contre le blanchiment de capitaux. Ils doivent donc identifier chaque personne qui participe à une opération, à l'aide de documents fiables, avant que l'opération ne commence. La demande de votre passeport dès le début n'est donc pas un caprice de l'agent. C'est la loi à laquelle il est soumis.",
+            "Pour la plupart d'entre nous, le NIE est le premier document administratif espagnol, et tout le reste de l'installation l'attend. Un contrat d'électricité ou d'eau est établi au nom d'une personne, c'est pourquoi l'outil de planification des fournisseurs de ce site commence par vous demander si vous avez déjà votre numéro."
+          ]
+        },
+        {
+          "h2": "De quel formulaire ai-je besoin, EX-15 ou EX-18 ?",
+          "paras": [
+            "Le formulaire de demande de NIE est l'EX-15. L'EX-18 est la demande de certificat d'enregistrement pour les citoyens de l'UE qui résident en Espagne, une procédure différente relevant d'un autre décret. D'anciens articles et des amis bien intentionnés envoient encore des gens au guichet avec un EX-18, et ils sont renvoyés.",
+            "Il existe un troisième formulaire dont vous entendrez peut-être parler. L'EX-17 concerne la TIE, la carte d'identité d'étranger que reçoivent les résidents non européens. Si vous achetez une maison de vacances et continuez à vivre en Norvège, en Suède, en Allemagne ou au Royaume-Uni, c'est l'EX-15 qu'il vous faut.",
+            "Un petit détail sème la confusion : l'en-tête de l'EX-15 cite toujours l'ancien règlement sur l'immigration, alors qu'un nouveau règlement l'a remplacé à partir du 20 mai 2025. Le formulaire reste celui en vigueur, ne cherchez donc pas une version plus récente."
+          ]
+        },
+        {
+          "h2": "Combien coûte un NIE, et comment le payer ?",
+          "paras": [
+            "Les frais (tasa) d'attribution d'un NIE sont de 9,84 euros, fixés par l'Orden PJC/617/2025 et en vigueur depuis le 16 juin 2025. Des articles plus anciens citent d'autres montants : si un chiffre que vous lisez ne correspond pas, il est probablement dépassé.",
+            "Les frais se paient avec le formulaire 790 code 012. Ce seul formulaire de paiement couvre de nombreuses procédures à des prix différents, choisissez donc la ligne correspondant à la procédure que vous faites réellement, pas seulement le numéro du formulaire. Le même barème fixe 7,31 euros pour un certificat de résidence ou de non-résidence et 12,00 euros pour le certificat d'enregistrement des citoyens de l'UE.",
+            "Gardez le justificatif de paiement tamponné avec le reste de vos papiers, accompagné d'une photocopie. Le bureau voudra le voir au rendez-vous, et c'est le document que l'on oublie le plus souvent à l'hôtel ou à la maison, dans le dossier qu'on comptait emporter."
+          ]
+        },
+        {
+          "h2": "Comment faire concrètement la demande en Espagne ?",
+          "paras": [
+            "Si vous faites la demande en personne en Espagne, il vous faudra généralement un rendez-vous (cita previa) dans un bureau de la province concernée. Cherchez un créneau bien avant votre voyage, car dans les provinces très demandées ils peuvent être difficiles à trouver, et organisez le reste de votre séjour autour de la date obtenue.",
+            "Apportez votre passeport, l'EX-15 rempli, le formulaire 790 payé et une photocopie de chacun, et, si le bureau le demande, un document qui montre pourquoi vous avez besoin du numéro. La liste exacte varie d'un bureau à l'autre : vérifiez ce que demande votre province avant de partir plutôt que de vous fier à la liste d'un ami venue d'une autre ville.",
+            "Arrivez tôt. Tout le monde au guichet ne parlera pas anglais, notez donc avant de partir les mots dont vous aurez besoin en espagnol (et une copie imprimée de la confirmation de rendez-vous ne fait jamais de mal). Prenez un stylo, car les formulaires sont souvent remplis ou corrigés sur place."
+          ]
+        },
+        {
+          "h2": "Quelqu'un peut-il demander mon NIE pendant que je reste chez moi ?",
+          "paras": [
+            "Beaucoup de propriétaires à l'étranger donnent une procuration à un professionnel en Espagne, généralement un abogado ou un gestor, qui peut alors gérer une grande partie des démarches à leur place. Demandez-lui d'abord si le bureau qu'il utilisera accepte une demande de NIE par l'intermédiaire d'un représentant, car il saura ce que ce bureau accepte.",
+            "Si vous signez cette procuration devant un notaire dans votre pays, elle devient un acte public établi à l'étranger. La Norvège, la Suède, l'Allemagne, la France, les Pays-Bas, le Royaume-Uni, la Belgique, le Danemark, la Finlande, l'Irlande et la Suisse sont tous parties à la Convention de La Haye sur l'apostille, une apostille est donc acceptée à la place de la légalisation consulaire.",
+            "Avant de signer quoi que ce soit, envoyez le projet au professionnel espagnol qui l'utilisera et demandez-lui de confirmer que la rédaction couvre ce qu'il doit faire. Une procuration trop restreinte signifie un second passage chez le notaire."
+          ]
+        },
+        {
+          "h2": "Je m'installe en Espagne. Le NIE suffit-il ?",
+          "paras": [
+            "Non. Le NIE vous identifie, mais vivre en Espagne entraîne son propre enregistrement. Un citoyen d'un État de l'UE ou de l'EEE qui réside en Espagne plus de trois mois doit s'inscrire en personne au Registro Central de Extranjeros, en faisant la demande dans les trois mois suivant son entrée avec le formulaire EX-18. Cet enregistrement est une formalité de résidence, pas une limite à la durée de votre séjour.",
+            "Un ressortissant non européen autorisé à séjourner plus de six mois, par exemple avec une résidence non lucrative, doit demander une TIE dans le mois qui suit son entrée en Espagne. La demande est déposée au bureau des étrangers ou au commissariat de la province qui a traité l'autorisation. Les rendez-vous peuvent prendre plusieurs semaines, réservez donc dès que vous connaissez votre date d'entrée. Les frais d'une première TIE de résidence temporaire sont de 16,08 euros.",
+            "Les ressortissants britanniques qui vivaient déjà en Espagne avant le 31 décembre 2020 conservent leurs droits au titre de l'accord de retrait et reçoivent une TIE qui mentionne l'article 50 TUE. Si vous n'avez jamais fait établir votre statut, vous pouvez encore prouver votre résidence avant cette date par tout moyen valable, et devriez faire la demande dès que possible."
+          ]
+        },
+        {
+          "h2": "Je ne retrouve pas le document où figure mon NIE. Que faire ?",
+          "paras": [
+            "Avant de réserver quoi que ce soit ou de payer des frais, asseyez-vous avec vos anciens papiers espagnols et cherchez le numéro lui-même. Il figure dans votre acte d'achat, car le notaire doit y noter le numéro fiscal de chaque partie, et il apparaît généralement sur les courriers de l'administration fiscale et sur les contrats d'électricité, d'eau ou de gaz à votre nom. Le notaire ou le professionnel qui s'est occupé de votre achat l'aura en général aussi dans son dossier, un court e-mail est donc souvent le moyen le plus rapide.",
+            "Si un bureau demande un certificat plutôt que le simple numéro, demandez de quelle procédure il s'agit avant de payer. Le barème fixe séparément le prix d'un certificat de résidence ou de non-résidence, à 7,31 euros, et le formulaire 790 doit être payé pour la bonne procédure.",
+            "Si le document a été volé avec votre passeport, signalez d'abord le vol à la police. Gardez ensuite une copie numérisée de chaque document espagnol que vous possédez dans un endroit accessible depuis chez vous, pour que la prochaine recherche prenne quelques minutes plutôt qu'un après-midi."
+          ]
+        },
+        {
+          "h2": "Quand un NIE devient-il un DNI ?",
+          "paras": [
+            "Seulement lorsque vous devenez espagnol. Le DNI (documento nacional de identidad) est le document d'identité des ressortissants espagnols, le passage du NIE au DNI est donc la dernière étape après la nationalité, pas une voie distincte pour l'obtenir. Posséder un logement ici, aussi longtemps que ce soit, ne vous en rapproche pas à lui seul.",
+            "Pour la plupart des propriétaires européens, c'est encore loin. La nationalité par résidence exige en général dix ans de résidence, et cette résidence doit être légale, continue et immédiatement antérieure à la demande. Le temps passé en tant que visiteur ou propriétaire non-résident ne compte pas. Le demandeur doit aussi justifier d'une bonne conduite civique et d'une intégration suffisante dans la société espagnole.",
+            "À la fin, le demandeur jure ou promet fidélité au Roi et obéissance à la Constitution, déclare renoncer à sa nationalité antérieure, sauf s'il vient de l'un des pays exemptés, et inscrit l'acquisition au Registre civil espagnol. D'ici là, votre NIE est le numéro qui vous suit sur chaque formulaire espagnol : gardez-le à portée de main et retournez profiter de l'endroit pour lequel vous l'avez obtenu."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "NIE-nummer aanvragen in Spanje: formulier EX-15 en kosten",
+      "description": "Het NIE vraagt u aan met formulier EX-15 en kost 9,84 euro. Met welk formulier het vaak wordt verward, hoe u betaalt en wat er verandert als u verhuist.",
+      "h1": "Een NIE-nummer aanvragen als buitenlandse eigenaar van een Spaanse woning",
+      "lead": "Een NIE is het identificatienummer dat Spanje u als buitenlander geeft, en u vraagt het aan met formulier EX-15. De kosten voor de toekenning van een NIE bedragen 9,84 euro. Formulier EX-18 is een andere procedure, het inschrijvingscertificaat voor EU-burgers die in Spanje wonen, en het is het formulier dat mensen het vaakst per vergissing meenemen.",
+      "sections": [
+        {
+          "h2": "Wat is een NIE, en waarom heeft een woningeigenaar er een nodig?",
+          "paras": [
+            "Het NIE (número de identidad de extranjero) is het nummer waarmee Spanje u als buitenlander identificeert. De meeste eigenaren komen het voor het eerst tegen bij de aankoop, omdat de notaris het fiscale identificatienummer van elke partij in de akte moet opnemen, en voor een buitenlandse koper is dat nummer het NIE. Daarna is het het nummer waar de meeste Spaanse papieren op uw naam om vragen.",
+            "Makelaars die bij woningverkopen optreden, zijn meldingsplichtigen onder de Spaanse antiwitwaswet. Dat betekent dat ze iedereen die aan een transactie deelneemt moeten identificeren met betrouwbare documenten, voordat de transactie begint. Dat er al vroeg om uw paspoort wordt gevraagd, is dus geen gril van de makelaar. Het is de wet waaronder hij werkt.",
+            "Voor de meesten van ons is het NIE het eerste Spaanse papierwerk, en de rest van de inrichting wacht erop. Een stroom- of watercontract wordt op naam van een persoon afgesloten, en daarom begint de planner voor nutsvoorzieningen op deze site met de vraag of u uw nummer al heeft."
+          ]
+        },
+        {
+          "h2": "Welk formulier heb ik nodig, EX-15 of EX-18?",
+          "paras": [
+            "Het aanvraagformulier voor het NIE is de EX-15. De EX-18 is de aanvraag voor het inschrijvingscertificaat voor EU-burgers die in Spanje verblijven, een andere procedure onder een ander besluit. Oude artikelen en goedbedoelende vrienden sturen mensen nog steeds met een EX-18 naar het loket, en daar worden ze weer weggestuurd.",
+            "Er is een derde formulier waar u misschien van hoort. De EX-17 is voor de TIE, de identiteitskaart voor buitenlanders die ingezetenen van buiten de EU krijgen. Koopt u een vakantiewoning en blijft u in Noorwegen, Zweden, Duitsland of het Verenigd Koninkrijk wonen, dan is de EX-15 het formulier dat u nodig heeft.",
+            "Eén klein ding dat mensen in verwarring brengt: in de kop van de EX-15 staat nog een verwijzing naar het oude vreemdelingenreglement, hoewel een nieuw reglement het sinds 20 mei 2025 heeft vervangen. Het formulier is nog steeds het formulier dat wordt gebruikt, dus ga niet op zoek naar een nieuwere versie."
+          ]
+        },
+        {
+          "h2": "Wat kost een NIE, en hoe betaal ik?",
+          "paras": [
+            "De leges (tasa) voor de toekenning van een NIE bedragen 9,84 euro, vastgesteld in Orden PJC/617/2025 en van kracht sinds 16 juni 2025. Oudere artikelen noemen andere bedragen, dus als een bedrag dat u leest niet klopt, is het waarschijnlijk verouderd.",
+            "De leges betaalt u met formulier 790 code 012. Dat ene betaalformulier dekt veel verschillende procedures tegen verschillende tarieven, dus kies de regel voor de procedure die u werkelijk doet, niet alleen het formuliernummer. Dezelfde tarieflijst noemt 7,31 euro voor een verklaring van ingezetenschap of niet-ingezetenschap en 12,00 euro voor het inschrijvingscertificaat voor EU-burgers.",
+            "Bewaar het gestempelde betalingsbewijs bij de rest van uw papieren, samen met een fotokopie. Het kantoor wil het bij de afspraak zien, en het is het document dat mensen het vaakst in het hotel laten liggen, of thuis in de map die ze wilden meenemen."
+          ]
+        },
+        {
+          "h2": "Hoe vraag ik het in Spanje aan?",
+          "paras": [
+            "Vraagt u het persoonlijk in Spanje aan, dan heeft u meestal een afspraak (cita previa) nodig bij een kantoor in de provincie waar het om gaat. Zoek ruim voor uw reis naar een plek, want in drukke provincies zijn ze moeilijk te vinden, en plan de rest van uw bezoek rond de datum die u krijgt.",
+            "Neem uw paspoort mee, de ingevulde EX-15, het betaalde formulier 790 en van elk een fotokopie, en, als het kantoor erom vraagt, een document waaruit blijkt waarom u het nummer nodig heeft. De precieze lijst verschilt per kantoor, dus controleer voor vertrek wat uw provincie vraagt in plaats van te vertrouwen op de lijst van een vriend uit een andere stad.",
+            "Ga er vroeg heen. Niet iedereen aan het loket spreekt Engels, dus schrijf de woorden die u nodig heeft vooraf in het Spaans op (en een geprinte bevestiging van uw afspraak kan nooit kwaad). Neem een pen mee, want formulieren worden vaak ter plekke ingevuld of verbeterd."
+          ]
+        },
+        {
+          "h2": "Kan iemand mijn NIE aanvragen terwijl ik thuisblijf?",
+          "paras": [
+            "Veel eigenaren in het buitenland geven een volmacht aan een professional in Spanje, meestal een abogado of een gestor, die dan een groot deel van het papierwerk namens hen kan regelen. Vraag eerst of het kantoor dat zij gebruiken een NIE-aanvraag via een vertegenwoordiger accepteert, want zij weten wat dat kantoor aanneemt.",
+            "Tekent u die volmacht thuis bij een notaris, dan wordt het een openbaar document dat in het buitenland is opgesteld. Noorwegen, Zweden, Duitsland, Frankrijk, Nederland, het Verenigd Koninkrijk, België, Denemarken, Finland, Ierland en Zwitserland zijn allemaal partij bij het Apostilleverdrag van Den Haag, dus een apostille wordt geaccepteerd in plaats van consulaire legalisatie.",
+            "Stuur het concept, voordat u iets tekent, naar de Spaanse professional die het gaat gebruiken en vraag te bevestigen dat de tekst dekt wat hij of zij moet doen. Een volmacht die te beperkt is, betekent een tweede bezoek aan de notaris."
+          ]
+        },
+        {
+          "h2": "Ik ga naar Spanje verhuizen. Is het NIE genoeg?",
+          "paras": [
+            "Nee. Het NIE identificeert u, maar wonen in Spanje brengt een eigen inschrijving met zich mee. Een burger van een EU- of EER-staat die langer dan drie maanden in Spanje verblijft, moet zich persoonlijk inschrijven in het Registro Central de Extranjeros en dat binnen drie maanden na binnenkomst aanvragen met formulier EX-18. Die inschrijving is een formaliteit voor verblijf, geen grens aan hoe lang u mag blijven.",
+            "Iemand van buiten de EU die toestemming heeft om langer dan zes maanden te blijven, bijvoorbeeld met een niet-lucratieve verblijfsvergunning, moet binnen één maand na binnenkomst in Spanje een TIE aanvragen. De aanvraag gaat naar het vreemdelingenkantoor of het politiebureau in de provincie die de vergunning heeft behandeld. Afspraken kunnen enkele weken duren, dus boek zodra u uw datum van binnenkomst weet. De kosten voor een eerste TIE voor tijdelijk verblijf bedragen 16,08 euro.",
+            "Britse staatsburgers die al vóór 31 december 2020 in Spanje woonden, behouden hun rechten onder het Terugtrekkingsakkoord en krijgen een TIE waarop artikel 50 VEU staat. Heeft u uw status nooit laten vastleggen, dan kunt u verblijf vóór die datum nog steeds aantonen met elk geldig bewijs, en u doet er goed aan zo snel mogelijk een aanvraag in te dienen."
+          ]
+        },
+        {
+          "h2": "Ik kan het papier met mijn NIE niet vinden. Wat nu?",
+          "paras": [
+            "Ga, voordat u iets boekt of leges betaalt, met uw oude Spaanse papieren zitten en zoek het nummer zelf op. Het staat in uw koopakte, omdat de notaris daar het fiscale nummer van elke partij moet vermelden, en het staat meestal ook op brieven van de belastingdienst en op contracten voor nutsvoorzieningen op uw naam. De notaris of de professional die uw aankoop heeft begeleid, heeft het meestal ook in het dossier, dus een korte e-mail aan hen is vaak de snelste weg.",
+            "Vraagt een kantoor om een verklaring in plaats van alleen het nummer, vraag dan eerst welke procedure ze bedoelen voordat u betaalt. De tarieflijst prijst een verklaring van ingezetenschap of niet-ingezetenschap apart, tegen 7,31 euro, en formulier 790 moet voor de juiste procedure worden betaald.",
+            "Is het document samen met uw paspoort gestolen, doe dan eerst aangifte bij de politie. Bewaar daarna een scan van elk Spaans document dat u heeft op een plek die u ook van thuis kunt bereiken, zodat de volgende zoektocht minuten duurt in plaats van een middag."
+          ]
+        },
+        {
+          "h2": "Wanneer wordt een NIE een DNI?",
+          "paras": [
+            "Alleen als u Spanjaard wordt. De DNI (documento nacional de identidad) is het identiteitsbewijs van Spaanse staatsburgers, dus de overstap van een NIE naar een DNI is de laatste stap na de nationaliteit, geen aparte weg ernaartoe. Een woning hier bezitten, hoe lang ook, brengt u daar op zichzelf niet dichterbij.",
+            "Voor de meeste Europese eigenaren is dat nog ver weg. Nationaliteit op grond van verblijf vereist in het algemeen tien jaar verblijf, en dat verblijf moet legaal, ononderbroken en direct voorafgaand aan de aanvraag zijn. Tijd als bezoeker of als eigenaar die geen inwoner is, telt niet mee. De aanvrager moet ook goed burgerschap en voldoende integratie in de Spaanse samenleving aantonen.",
+            "Aan het eind zweert of belooft de aanvrager trouw aan de Koning en gehoorzaamheid aan de Grondwet, verklaart afstand te doen van de vorige nationaliteit, tenzij hij of zij uit een van de vrijgestelde landen komt, en laat de verkrijging inschrijven in het Spaanse Registro Civil. Tot die tijd is uw NIE het nummer dat u door elk Spaans formulier volgt, dus houd het bij de hand en ga terug naar genieten van de plek waarvoor u het aanvroeg."
+          ]
+        }
+      ]
+    }
+  }
+}

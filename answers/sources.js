@@ -20,7 +20,16 @@ const RULES = {};
 for (const file of readdirSync(RULES_DIR)) {
   if (!file.endsWith('.json') || file.startsWith('_')) continue;
   const parsed = JSON.parse(readFileSync(join(RULES_DIR, file), 'utf8'));
-  for (const r of parsed.rules || []) if (r.id) RULES[r.id] = r;
+  // Most files keep their rules in a `rules` array, but a few older ones nest a rule under
+  // another key (itp-ajd.json keeps the minimum base under `minimum_base`). Any object that has
+  // both an id and a status is a rule, wherever it sits.
+  const walk = (node) => {
+    if (Array.isArray(node)) return node.forEach(walk);
+    if (!node || typeof node !== 'object') return;
+    if (typeof node.id === 'string' && typeof node.status === 'string') RULES[node.id] = node;
+    for (const [k, v] of Object.entries(node)) if (k !== 'source') walk(v);
+  };
+  walk(parsed);
 }
 
 export { RULES };

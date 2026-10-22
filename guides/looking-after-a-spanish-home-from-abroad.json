@@ -1,0 +1,427 @@
+{
+  "slug": "looking-after-a-spanish-home-from-abroad",
+  "topic": "home",
+  "tool": "maintenance-schedule",
+  "rules": [
+    "consorcio.wind_threshold",
+    "consorcio.exclusions",
+    "consorcio.precondition",
+    "limit.insurance.own_claim",
+    "limit.extracontractual",
+    "limit.interruption",
+    "own.lph.mandatory_works",
+    "own.lph.mandatory_works_cost",
+    "own.lph.domicile_in_spain",
+    "own.ibi.town_hall_manages",
+    "own.waste.fee_required",
+    "own.ibi.empty_surcharge",
+    "own.ibi.empty_justified",
+    "squat.second_home_is_morada"
+  ],
+  "answers": [
+    "does-the-consorcio-pay-for-rain-or-a-roof-leak",
+    "who-pays-for-storm-damage-in-spain",
+    "time-limit-to-claim-damage-from-a-neighbour-spain",
+    "insurer-refused-claim-complaint-route-spain",
+    "is-a-spanish-second-home-a-morada",
+    "challenge-a-spanish-community-of-owners-decision"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Looking After a Spanish Home From Abroad: A Year Plan",
+      "description": "How to maintain a Spanish holiday home you only visit a few times a year, who to leave in charge, and what insurance will and will not pay for.",
+      "h1": "How to look after your Spanish home when you live in another country",
+      "lead": "A Spanish home needs most of its care in autumn, before the heavy rain, and a second round in spring once the winter has done its damage. If you only visit once or twice a year, batch the outside jobs into an autumn trip and give one named person a key and written permission to act for you. Keep dated photographs and receipts, because ordinary wear and rain damage are not covered by the state's extraordinary risks scheme.",
+      "sections": [
+        {
+          "h2": "What does a Spanish home actually need through the year?",
+          "paras": [
+            "Sun, salt and a short, wet winter each break something different, and they do it in different seasons. UV makes terracotta roof tiles brittle and cracks exterior paint. Salt air on the coast gets into railings, hinges and shutter mechanisms. In much of Spain autumn brings the heaviest rain of the year down onto gutters holding a whole summer of dust and leaves.",
+            "So the year has a shape. Spring is for undoing the winter: clearing gutters, checking the facade for damp patches and running every tap you did not use. Summer is when the outdoor pipes and the irrigation are under real load, so a slow leak shows itself. Autumn carries the most work. Winter is mostly desk work, which suits an owner sitting at a kitchen table in Bergen or Hamburg."
+          ]
+        },
+        {
+          "h2": "I only get there once a year. When should I go?",
+          "paras": [
+            "Go in autumn if you can. Roof, gutters, alarm and boiler all sit in front of the weather that tests them, so one trip in October buys more than any other. Bring the spring gutter clear forward into the same visit, and get someone on the roof (or onto the flat roof terrace, if you have one) to look for cracked and slipped tiles.",
+            "The jobs that cannot move are the ones that need dry, mild weather, such as repainting and resealing. Those are the ones to hand to someone local. After the first heavy rain, ask whoever has your key to look at the ceilings under the roof and the top corners of external walls. A roof problem shows up as a stain long before it shows up as a drip."
+          ]
+        },
+        {
+          "h2": "Which jobs matter most near the sea?",
+          "paras": [
+            "Metal. Walk the outside and look for rust bloom on every fixing: railings, gate hinges, window grilles, satellite and aircon brackets. By the time salt damage is obvious, cleaning rarely helps, and on an older building those fixings are usually the originals. A stiff shutter is more often a seized mechanism than a broken slat, so rinse the runners with fresh water and work every handle through its full travel.",
+            "Water is the other coastal job. If the water in your area is hard, and the kettle will tell you quickly, the limescale you see there is building up in the pipes and the washing machine too. Descale shower heads and appliance filters each summer, and if the scale keeps coming back, price a water softener before you price a second boiler."
+          ]
+        },
+        {
+          "h2": "Who looks after the house when I am not there?",
+          "paras": [
+            "Give one named person a key, your phone number and written permission to go in. Without something in writing, a neighbour or key holder may hesitate at the moment you need them not to. Agree that they visit after every storm and send you dated photographs each time. That is how water damage is found while it is still a stain, and the photographs are the evidence you will want if you ever claim.",
+            "A pool and a garden each need a standing arrangement rather than a call when something has gone wrong. Untreated pool water in high summer turns into a drain and a deep clean, and an overgrown plot is where pests settle. Before you leave, empty the cupboards of flour, pasta and other dry food, which is what pantry moths and cockroaches wait for in an empty house."
+          ]
+        },
+        {
+          "h2": "Will my insurance pay if the roof leaks?",
+          "paras": [
+            "Not through the Consorcio. Spain's extraordinary risks scheme covers events such as extraordinary flooding, earthquakes and wind gusts above 120 km/h, measured as a three second gust. It does not cover ordinary rain, sub-threshold wind or damage from the mere action of time, meaning ordinary wear and weathering. A roof leak or a burst pipe goes to your own insurer, and whether they pay depends on your policy wording.",
+            "The Consorcio cover only exists on top of an ordinary policy, and it pays up to the sums insured in that policy. An owner who under-insures the building to save premium is under-insured against flood and earthquake by the same proportion. Read the policy once a year against how the house is used now, including whether it knows the property stands empty for long stretches.",
+            "If you do need to claim against your own insurer under a property policy, the claim runs out after two years. Keep the photographs, the repair invoices and the dates together, so the claim does not depend on anyone's memory."
+          ]
+        },
+        {
+          "h2": "What if water comes in from the flat above?",
+          "paras": [
+            "If a neighbour you have no contract with damages your home, you have one year to claim, counted from when you found out about the damage. For an owner abroad, that is usually the day the key holder rings. A written demand to the neighbour stops the clock and restarts it, which is why people send a burofax, a recorded letter that proves what was sent and when.",
+            "If the water comes from the roof or the communal terraces, it is likely to be the community's problem as well as yours. Works needed to maintain the building and keep it safe and habitable are compulsory, need no prior vote of the owners meeting, and are paid by all the owners. Ask the administrador de fincas when the roof was last inspected and what is planned."
+          ]
+        },
+        {
+          "h2": "Which bills and letters keep arriving while I am away?",
+          "paras": [
+            "IBI, the local property tax, is managed and collected by the town hall or its collection body, which also sets the rates. The household waste fee is a separate charge that every town hall must have, and its amount and its billing months are set locally by the town hall or its waste consortium. Billing months differ from one town to the next, so ask your ayuntamiento when each bill arrives and pay both by direct debit.",
+            "Give the community secretary an address in Spain for notices. Without one, notices go to the flat itself, and if nobody is there to receive them they are posted on the community notice board and take effect after three calendar days. That is how an owner in Oslo misses a meeting and is still bound by what it decided. One option is the address of someone you trust here, such as your gestor."
+          ]
+        },
+        {
+          "h2": "Will I be penalised for leaving the house empty?",
+          "paras": [
+            "Almost certainly not, if it is your holiday home. A town hall may add a surcharge to the IBI on a permanently empty home, but only where it has adopted the surcharge in its own tax ordinance and only where the owner holds four or more residential properties. The law also treats a second residence as having good reason to be empty for up to four years of continuous non occupation.",
+            "Using the house yourself helps in another way too. A second home where you carry on your private life, even occasionally, counts as a morada, a dwelling, in Spanish criminal law. That makes an occupation the more serious offence. Post that does not pile up, shutters that open now and then and a visible alarm all tell the street that someone looks after the place.",
+            "Most of this list is half an hour here and there, done in the right month. The schedule tool on this site builds it for your own house from five questions, including how close you are to the sea and how often you visit. Done that way, the next visit is for enjoying the house rather than repairing it."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Ta vare på boligen i Spania fra utlandet: en årsplan",
+      "description": "Slik vedlikeholder du en feriebolig i Spania som du bare besøker noen ganger i året, hvem du gir ansvaret, og hva forsikringen dekker og ikke dekker.",
+      "h1": "Slik tar du vare på boligen din i Spania når du bor i et annet land",
+      "lead": "En bolig i Spania trenger mest stell om høsten, før det kraftige regnet, og en ny runde om våren når vinteren har gjort sin skade. Er du der bare én eller to ganger i året, samle utendørsjobbene på en høsttur og gi én navngitt person en nøkkel og skriftlig tillatelse til å handle for deg. Ta vare på daterte bilder og kvitteringer, fordi vanlig slitasje og regnskader ikke dekkes av statens ordning for ekstraordinære risikoer.",
+      "sections": [
+        {
+          "h2": "Hva trenger egentlig en bolig i Spania gjennom året?",
+          "paras": [
+            "Sol, salt og en kort, våt vinter ødelegger hver sin ting, og de gjør det i ulike årstider. UV-stråling gjør takstein av terrakotta sprø og får utvendig maling til å sprekke. Saltluft ved kysten trenger inn i rekkverk, hengsler og mekanismene i skoddene. I store deler av Spania kommer årets kraftigste regn om høsten, ned i takrenner som holder på en hel sommer med støv og løv.",
+            "Året har derfor et mønster. Våren er for å rydde opp etter vinteren: rense takrenner, sjekke fasaden for fuktflekker og skru på hver kran du ikke har brukt. Sommeren er når utendørsrørene og vanningsanlegget er under reell belastning, så en sakte lekkasje viser seg. Høsten har mest arbeid. Vinteren er for det meste skrivebordsarbeid, noe som passer en eier som sitter ved et kjøkkenbord i Bergen eller Hamburg."
+          ]
+        },
+        {
+          "h2": "Jeg kommer dit bare én gang i året. Når bør jeg dra?",
+          "paras": [
+            "Dra om høsten hvis du kan. Tak, takrenner, alarm og varmtvannsbereder står alle foran været som tester dem, så én tur i oktober gir mer enn noen annen. Flytt vårens rensing av takrenner fram til samme besøk, og få noen opp på taket (eller ut på takterrassen, hvis du har en) for å se etter sprukne og forskjøvne takstein.",
+            "Jobbene som ikke kan flyttes, er de som krever tørt og mildt vær, som ommaling og ny fuging. Det er dem du bør overlate til noen lokalt. Etter det første kraftige regnet, be den som har nøkkelen din, se på himlingene under taket og de øverste hjørnene av ytterveggene. Et takproblem viser seg som en flekk lenge før det viser seg som drypp."
+          ]
+        },
+        {
+          "h2": "Hvilke jobber betyr mest nær sjøen?",
+          "paras": [
+            "Metall. Gå rundt utendørs og se etter rustutslag på hvert feste: rekkverk, porthengsler, vindusgitter, braketter for parabol og aircondition. Når saltskaden er tydelig, hjelper rengjøring sjelden, og på en eldre bygning er de festene som regel de opprinnelige. En treg skodde er oftere en mekanisme som har satt seg enn en knekt lamell, så skyll skinnene med ferskvann og beveg hvert håndtak gjennom hele bevegelsen.",
+            "Vann er den andre kystjobben. Er vannet i området ditt hardt, og det forteller vannkokeren deg raskt, bygger kalken du ser der seg også opp i rørene og vaskemaskinen. Avkalk dusjhoder og filtre i apparater hver sommer, og kommer kalken stadig tilbake, finn ut hva et vannmykningsanlegg koster før du finner ut hva en ny varmtvannsbereder koster."
+          ]
+        },
+        {
+          "h2": "Hvem passer på huset når jeg ikke er der?",
+          "paras": [
+            "Gi én navngitt person en nøkkel, telefonnummeret ditt og skriftlig tillatelse til å gå inn. Uten noe skriftlig kan en nabo eller nøkkelholder nøle akkurat når du trenger at de ikke gjør det. Avtal at de kommer innom etter hver storm og sender deg daterte bilder hver gang. Slik oppdages vannskader mens de fortsatt er en flekk, og bildene er bevisene du vil ha hvis du noen gang skal kreve erstatning.",
+            "Et basseng og en hage trenger hver sin faste avtale, ikke en telefon når noe har gått galt. Ubehandlet bassengvann midt på sommeren ender med tømming og grundig rengjøring, og en gjengrodd tomt er der skadedyr slår seg ned. Før du reiser, tøm skapene for mel, pasta og annen tørrmat, som er det matmøll og kakerlakker venter på i et tomt hus."
+          ]
+        },
+        {
+          "h2": "Betaler forsikringen hvis taket lekker?",
+          "paras": [
+            "Ikke gjennom Consorcio. Spanias ordning for ekstraordinære risikoer dekker hendelser som ekstraordinære flommer, jordskjelv og vindkast over 120 km/t, målt som et vindkast på tre sekunder. Den dekker ikke vanlig regn, vind under terskelen eller skader som bare skyldes at tiden går, altså vanlig slitasje og forvitring. En taklekkasje eller et sprukket rør går til ditt eget forsikringsselskap, og om de betaler, avhenger av ordlyden i polisen din.",
+            "Dekningen fra Consorcio finnes bare som et tillegg til en vanlig forsikring, og den betaler opp til forsikringssummene i den forsikringen. En eier som underforsikrer bygningen for å spare premie, er underforsikret mot flom og jordskjelv i samme forhold. Les polisen én gang i året opp mot hvordan huset brukes nå, også om den vet at boligen står tom i lange perioder.",
+            "Må du kreve erstatning fra ditt eget forsikringsselskap under en eiendomsforsikring, foreldes kravet etter to år. Hold bildene, reparasjonsfakturaene og datoene samlet, slik at kravet ikke avhenger av noens hukommelse."
+          ]
+        },
+        {
+          "h2": "Hva om det kommer vann fra leiligheten over?",
+          "paras": [
+            "Skader en nabo du ikke har kontrakt med boligen din, har du ett år på å kreve erstatning, regnet fra du fikk vite om skaden. For en eier i utlandet er det som regel dagen nøkkelholderen ringer. Et skriftlig krav til naboen stopper fristen og starter den på nytt, og derfor sender folk en burofax, et rekommandert brev som beviser hva som ble sendt og når.",
+            "Kommer vannet fra taket eller fellesterrassene, er det trolig sameiets problem i tillegg til ditt. Arbeid som trengs for å vedlikeholde bygningen og holde den trygg og beboelig, er obligatorisk, krever ikke forhåndsvedtak i sameiermøtet og betales av alle eierne. Spør administrador de fincas når taket sist ble inspisert, og hva som er planlagt."
+          ]
+        },
+        {
+          "h2": "Hvilke regninger og brev fortsetter å komme mens jeg er borte?",
+          "paras": [
+            "IBI, den lokale eiendomsskatten, forvaltes og kreves inn av rådhuset eller innkrevingsorganet dets, som også fastsetter satsene. Renovasjonsgebyret for husholdninger er en egen avgift som hvert rådhus må ha, og beløpet og fakturamånedene fastsettes lokalt av rådhuset eller renovasjonskonsortiet. Fakturamånedene varierer fra by til by, så spør ditt ayuntamiento når hver regning kommer, og betal begge med avtalegiro.",
+            "Gi sekretæren i sameiet en adresse i Spania for varsler. Uten en slik går varslene til selve leiligheten, og er det ingen der som tar imot dem, settes de opp på sameiets oppslagstavle og får virkning etter tre kalenderdager. Slik går en eier i Oslo glipp av et møte og er likevel bundet av det som ble vedtatt. Ett alternativ er adressen til noen du stoler på her, som din gestor."
+          ]
+        },
+        {
+          "h2": "Blir jeg straffet for å la huset stå tomt?",
+          "paras": [
+            "Nesten helt sikkert ikke, hvis det er ferieboligen din. Et rådhus kan legge et tillegg på IBI for en bolig som står permanent tom, men bare der det har vedtatt tillegget i sin egen skatteforskrift, og bare der eieren har fire eller flere boligeiendommer. Loven anser også at en fritidsbolig har god grunn til å stå tom i opptil fire år med sammenhengende fravær av beboere.",
+            "Å bruke huset selv hjelper også på en annen måte. En fritidsbolig der du lever ditt private liv, også bare av og til, regnes som en morada, en bolig, i spansk strafferett. Det gjør en okkupasjon til det mer alvorlige lovbruddet. Post som ikke hoper seg opp, skodder som åpnes av og til og en synlig alarm forteller alle i gaten at noen passer på stedet.",
+            "Det meste på denne listen er en halvtime her og der, gjort i riktig måned. Planleggingsverktøyet på dette nettstedet setter det opp for ditt eget hus ut fra fem spørsmål, blant annet hvor nær sjøen du bor og hvor ofte du er der. Gjort på den måten blir neste besøk for å nyte huset, ikke for å reparere det."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Sköta en bostad i Spanien från utlandet: en årsplan",
+      "description": "Så underhåller du ett fritidshus i Spanien som du bara besöker några gånger om året, vem som ska ha ansvaret och vad försäkringen betalar och inte betalar.",
+      "h1": "Så sköter du din spanska bostad när du bor i ett annat land",
+      "lead": "En spansk bostad behöver det mesta av sin omsorg på hösten, före de kraftiga regnen, och en andra omgång på våren när vintern har gjort sin skada. Besöker du den bara en eller två gånger om året, samla utomhusjobben till en höstresa och ge en namngiven person en nyckel och skriftlig fullmakt att agera åt dig. Spara daterade bilder och kvitton, eftersom vanligt slitage och regnskador inte täcks av statens system för extraordinära risker.",
+      "sections": [
+        {
+          "h2": "Vad behöver en spansk bostad egentligen under året?",
+          "paras": [
+            "Sol, salt och en kort, blöt vinter slår sönder olika saker, och de gör det under olika årstider. UV-ljus gör takpannor av terrakotta spröda och får fasadfärgen att spricka. Saltluften vid kusten tränger in i räcken, gångjärn och mekanismen i fönsterluckorna. I stora delar av Spanien för hösten med sig årets kraftigaste regn, rakt ner i hängrännor som rymmer en hel sommars damm och löv.",
+            "Året har alltså en form. Våren är till för att reparera vintern: rensa hängrännor, kontrollera fasaden efter fuktfläckar och spola varje kran du inte har använt. På sommaren är utomhusrören och bevattningen hårt belastade, så ett långsamt läckage visar sig. Hösten bär det mesta av arbetet. Vintern är mest skrivbordsarbete, vilket passar en ägare som sitter vid ett köksbord i Bergen eller Hamburg."
+          ]
+        },
+        {
+          "h2": "Jag kommer bara dit en gång om året. När ska jag åka?",
+          "paras": [
+            "Åk på hösten om du kan. Tak, hängrännor, larm och värmepanna står alla inför det väder som sätter dem på prov, så en resa i oktober ger mer än någon annan. Flytta fram vårens rensning av hängrännorna till samma besök, och få upp någon på taket (eller på takterrassen, om du har en) för att leta efter spruckna och förskjutna takpannor.",
+            "De jobb som inte kan flyttas är de som kräver torrt och milt väder, som ommålning och ny tätning. Det är dem du ska lämna över till någon på plats. Efter det första kraftiga regnet, be den som har din nyckel att titta på taken under yttertaket och de övre hörnen på ytterväggarna. Ett takproblem syns som en fläck långt innan det syns som ett dropp."
+          ]
+        },
+        {
+          "h2": "Vilka jobb är viktigast nära havet?",
+          "paras": [
+            "Metall. Gå runt utsidan och leta efter rostutslag på varje infästning: räcken, grindgångjärn, fönstergaller, fästen för parabol och luftkonditionering. När saltskadan väl syns hjälper rengöring sällan, och i en äldre byggnad är infästningarna oftast originalen. En trög fönsterlucka beror oftare på en mekanism som har kärvat än på en trasig lamell, så skölj skenorna med sötvatten och dra varje vev hela vägen.",
+            "Vatten är det andra kustjobbet. Är vattnet hårt där du bor, och vattenkokaren avslöjar det snabbt, så byggs kalken du ser där upp i rören och tvättmaskinen också. Avkalka duschmunstycken och filter i vitvaror varje sommar, och kommer kalken hela tiden tillbaka, ta in pris på en avhärdare innan du tar in pris på en ny värmepanna."
+          ]
+        },
+        {
+          "h2": "Vem ser efter huset när jag inte är där?",
+          "paras": [
+            "Ge en namngiven person en nyckel, ditt telefonnummer och skriftligt tillstånd att gå in. Utan något skriftligt kan en granne eller nyckelinnehavare tveka just när du behöver att de inte gör det. Kom överens om att de kommer förbi efter varje storm och skickar daterade bilder till dig varje gång. Det är så vattenskador upptäcks medan de fortfarande är en fläck, och bilderna är de bevis du vill ha om du någon gång gör en skadeanmälan.",
+            "En pool och en trädgård behöver var sin fast överenskommelse snarare än ett samtal när något redan har gått fel. Obehandlat poolvatten mitt i sommaren slutar med tömning och storstädning, och en igenvuxen tomt är där skadedjur slår sig ner. Innan du åker, töm skåpen på mjöl, pasta och annan torrvara, som är precis vad mjölmott och kackerlackor väntar på i ett tomt hus."
+          ]
+        },
+        {
+          "h2": "Betalar min försäkring om taket läcker?",
+          "paras": [
+            "Inte genom Consorcio. Spaniens system för extraordinära risker täcker händelser som extraordinära översvämningar, jordbävningar och vindbyar över 120 km/h, mätt som en vindby på tre sekunder. Det täcker inte vanligt regn, vind under gränsvärdet eller skador som bara beror på att tiden går, alltså vanligt slitage och väderpåverkan. Ett läckande tak eller ett sprucket rör går till ditt eget försäkringsbolag, och om de betalar beror på formuleringen i din försäkring.",
+            "Skyddet från Consorcio finns bara ovanpå en vanlig försäkring, och det betalar upp till försäkringsbeloppen i den försäkringen. En ägare som underförsäkrar byggnaden för att spara på premien är underförsäkrad mot översvämning och jordbävning i samma proportion. Läs försäkringen en gång om året mot hur huset används i dag, inklusive om försäkringsbolaget vet att bostaden står tom under långa perioder.",
+            "Behöver du göra anspråk mot ditt eget försäkringsbolag enligt en egendomsförsäkring preskriberas anspråket efter två år. Håll ihop bilderna, reparationsfakturorna och datumen, så att anspråket inte hänger på någons minne."
+          ]
+        },
+        {
+          "h2": "Vad gäller om vatten kommer in från lägenheten ovanför?",
+          "paras": [
+            "Skadar en granne som du inte har något avtal med din bostad har du ett år på dig att kräva ersättning, räknat från när du fick kännedom om skadan. För en ägare utomlands är det oftast dagen då nyckelinnehavaren ringer. Ett skriftligt krav till grannen stoppar klockan och startar den om, vilket är varför folk skickar en burofax, ett rekommenderat brev som bevisar vad som skickades och när.",
+            "Kommer vattnet från taket eller de gemensamma terrasserna är det sannolikt samfällighetens problem lika väl som ditt. Arbeten som behövs för att underhålla byggnaden och hålla den säker och beboelig är obligatoriska, kräver inget förhandsbeslut på ägarmötet och betalas av alla ägare. Fråga administrador de fincas när taket senast besiktades och vad som är planerat."
+          ]
+        },
+        {
+          "h2": "Vilka räkningar och brev fortsätter komma medan jag är borta?",
+          "paras": [
+            "IBI, den lokala fastighetsskatten, förvaltas och tas ut av kommunen eller dess indrivningsorgan, som också fastställer skattesatserna. Avgiften för hushållsavfall är en separat avgift som varje kommun måste ha, och beloppet och debiteringsmånaderna bestäms lokalt av kommunen eller dess avfallskonsortium. Debiteringsmånaderna skiljer sig från en ort till nästa, så fråga ditt ayuntamiento när varje räkning kommer och betala båda via autogiro.",
+            "Ge samfällighetens sekreterare en adress i Spanien för kallelser och meddelanden. Utan en sådan går de till själva lägenheten, och finns ingen där för att ta emot dem anslås de på samfällighetens anslagstavla och får verkan efter tre kalenderdagar. Det är så en ägare i Oslo missar ett möte och ändå är bunden av det som beslutades. Ett alternativ är adressen till någon du litar på här, till exempel din gestor."
+          ]
+        },
+        {
+          "h2": "Kan jag straffas för att lämna huset tomt?",
+          "paras": [
+            "Nästan säkert inte, om det är ditt fritidshus. En kommun kan lägga ett tillägg på IBI för en permanent tom bostad, men bara om den har infört tillägget i sin egen skatteförordning och bara om ägaren har fyra eller fler bostadsfastigheter. Lagen anser också att en andra bostad har goda skäl att stå tom i upp till fyra år i följd utan att användas.",
+            "Att använda huset själv hjälper på ett annat sätt också. Ett fritidshus där du lever ditt privatliv, även bara ibland, räknas som en morada, en bostad, i spansk straffrätt. Det gör en ockupation till det allvarligare brottet. Post som inte hopar sig, fönsterluckor som öppnas då och då och ett synligt larm talar alla om för gatan att någon ser efter stället.",
+            "Det mesta på den här listan är en halvtimme här och där, gjord i rätt månad. Underhållsguiden på den här sajten bygger schemat för ditt eget hus utifrån fem frågor, bland annat hur nära havet du bor och hur ofta du är där. Görs det så blir nästa besök till för att njuta av huset i stället för att laga det."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Ferienhaus in Spanien aus dem Ausland pflegen: ein Jahresplan",
+      "description": "Wie Sie ein Ferienhaus in Spanien pflegen, das Sie nur ein paar Mal im Jahr besuchen, wem Sie es anvertrauen und was die Versicherung zahlt und was nicht.",
+      "h1": "So kümmern Sie sich um Ihr Haus in Spanien, wenn Sie in einem anderen Land leben",
+      "lead": "Ein spanisches Haus braucht die meiste Pflege im Herbst, vor dem starken Regen, und eine zweite Runde im Frühjahr, wenn der Winter seinen Schaden angerichtet hat. Wenn Sie nur ein- oder zweimal im Jahr dort sind, bündeln Sie die Außenarbeiten auf eine Herbstreise und geben Sie einer bestimmten Person einen Schlüssel und die schriftliche Erlaubnis, für Sie zu handeln. Bewahren Sie datierte Fotos und Belege auf, denn gewöhnliche Abnutzung und Regenschäden deckt das staatliche System für außergewöhnliche Risiken nicht.",
+      "sections": [
+        {
+          "h2": "Was braucht ein spanisches Haus eigentlich übers Jahr?",
+          "paras": [
+            "Sonne, Salz und ein kurzer, nasser Winter beschädigen jeweils etwas anderes, und zwar zu verschiedenen Jahreszeiten. UV-Strahlung macht Dachziegel aus Terrakotta spröde und lässt die Außenfarbe reißen. Salzige Luft an der Küste setzt Geländern, Scharnieren und den Mechaniken der Rollläden zu. In weiten Teilen Spaniens bringt der Herbst den stärksten Regen des Jahres, und der landet in Dachrinnen voller Staub und Laub eines ganzen Sommers.",
+            "Das Jahr hat also eine Form. Das Frühjahr ist dafür da, den Winter rückgängig zu machen: Dachrinnen leeren, die Fassade auf feuchte Stellen prüfen und jeden Wasserhahn laufen lassen, den Sie nicht benutzt haben. Im Sommer stehen die Außenleitungen und die Bewässerung unter echter Last, sodass sich ein langsames Leck zeigt. Der Herbst bringt die meiste Arbeit. Der Winter ist vor allem Schreibtischarbeit, was einem Eigentümer am Küchentisch in Bergen oder Hamburg gut passt."
+          ]
+        },
+        {
+          "h2": "Ich komme nur einmal im Jahr hin. Wann sollte ich fahren?",
+          "paras": [
+            "Fahren Sie im Herbst, wenn Sie können. Dach, Dachrinnen, Alarmanlage und Heizkessel stehen alle unmittelbar vor dem Wetter, das sie auf die Probe stellt, eine Reise im Oktober bringt also mehr als jede andere. Ziehen Sie das Leeren der Dachrinnen aus dem Frühjahr in denselben Besuch vor und lassen Sie jemanden aufs Dach (oder auf die Dachterrasse, wenn Sie eine haben), um nach gesprungenen und verrutschten Ziegeln zu sehen.",
+            "Nicht verschieben lassen sich die Arbeiten, die trockenes, mildes Wetter brauchen, etwa Streichen und neu Abdichten. Diese übergeben Sie am besten jemandem vor Ort. Bitten Sie nach dem ersten starken Regen die Person mit Ihrem Schlüssel, sich die Decken unter dem Dach und die oberen Ecken der Außenwände anzusehen. Ein Dachproblem zeigt sich als Fleck, lange bevor es tropft."
+          ]
+        },
+        {
+          "h2": "Welche Arbeiten sind am Meer am wichtigsten?",
+          "paras": [
+            "Metall. Gehen Sie ums Haus und suchen Sie an jeder Befestigung nach Rostblüte: Geländer, Torscharniere, Fenstergitter, Halterungen für Satellitenschüssel und Klimaanlage. Wenn Salzschäden offensichtlich sind, hilft Reinigen selten noch, und bei einem älteren Gebäude sind diese Befestigungen meist noch die ursprünglichen. Ein schwergängiger Rollladen ist öfter eine festgefressene Mechanik als eine gebrochene Lamelle. Spülen Sie also die Führungsschienen mit Süßwasser und bewegen Sie jeden Griff über seinen ganzen Weg.",
+            "Wasser ist die andere Arbeit an der Küste. Wenn das Wasser in Ihrer Gegend hart ist, und der Wasserkocher verrät Ihnen das schnell, lagert sich der Kalk, den Sie dort sehen, auch in den Leitungen und in der Waschmaschine ab. Entkalken Sie jeden Sommer Duschköpfe und Gerätefilter, und wenn der Kalk immer wiederkommt, lassen Sie sich einen Preis für eine Enthärtungsanlage machen, bevor Sie einen Preis für einen zweiten Heizkessel einholen."
+          ]
+        },
+        {
+          "h2": "Wer kümmert sich ums Haus, wenn ich nicht da bin?",
+          "paras": [
+            "Geben Sie einer bestimmten Person einen Schlüssel, Ihre Telefonnummer und die schriftliche Erlaubnis, hineinzugehen. Ohne etwas Schriftliches zögert ein Nachbar oder Schlüsselhalter womöglich genau in dem Moment, in dem Sie es nicht brauchen können. Vereinbaren Sie, dass er nach jedem Sturm vorbeischaut und Ihnen jedes Mal datierte Fotos schickt. So wird ein Wasserschaden entdeckt, solange er noch ein Fleck ist, und die Fotos sind die Beweise, die Sie brauchen, falls Sie je einen Schaden melden.",
+            "Ein Pool und ein Garten brauchen jeweils eine feste Vereinbarung statt eines Anrufs, wenn etwas schiefgegangen ist. Unbehandeltes Poolwasser im Hochsommer bedeutet Ablassen und Grundreinigung, und ein verwildertes Grundstück ist der Ort, an dem sich Schädlinge niederlassen. Räumen Sie vor der Abreise die Schränke von Mehl, Nudeln und anderen trockenen Lebensmitteln leer, denn darauf warten Lebensmittelmotten und Kakerlaken in einem leeren Haus."
+          ]
+        },
+        {
+          "h2": "Zahlt meine Versicherung, wenn das Dach undicht ist?",
+          "paras": [
+            "Nicht über das Consorcio. Das spanische System für außergewöhnliche Risiken deckt Ereignisse wie außergewöhnliche Überschwemmungen, Erdbeben und Windböen über 120 km/h, gemessen als Drei-Sekunden-Böe. Es deckt keinen gewöhnlichen Regen, keinen Wind unter dem Schwellenwert und keine Schäden durch den bloßen Lauf der Zeit, also gewöhnliche Abnutzung und Verwitterung. Ein undichtes Dach oder ein geplatztes Rohr geht an Ihren eigenen Versicherer, und ob er zahlt, hängt vom Wortlaut Ihrer Police ab.",
+            "Die Deckung des Consorcio gibt es nur zusätzlich zu einer gewöhnlichen Police, und sie zahlt bis zu den Versicherungssummen dieser Police. Ein Eigentümer, der das Gebäude unterversichert, um Prämie zu sparen, ist gegen Überschwemmung und Erdbeben im gleichen Verhältnis unterversichert. Lesen Sie die Police einmal im Jahr mit Blick darauf, wie das Haus heute genutzt wird, auch darauf, ob sie weiß, dass die Immobilie lange Zeit leer steht.",
+            "Wenn Sie einen Anspruch gegen Ihren eigenen Versicherer aus einer Sachversicherung geltend machen müssen, verjährt er nach zwei Jahren. Bewahren Sie die Fotos, die Reparaturrechnungen und die Daten zusammen auf, damit der Anspruch nicht vom Gedächtnis eines anderen abhängt."
+          ]
+        },
+        {
+          "h2": "Was ist, wenn Wasser aus der Wohnung darüber kommt?",
+          "paras": [
+            "Wenn ein Nachbar, mit dem Sie keinen Vertrag haben, Ihr Haus beschädigt, haben Sie ein Jahr Zeit für Ihren Anspruch, gerechnet ab dem Zeitpunkt, an dem Sie von dem Schaden erfahren haben. Für einen Eigentümer im Ausland ist das meist der Tag, an dem der Schlüsselhalter anruft. Eine schriftliche Aufforderung an den Nachbarn hält die Frist an und lässt sie neu beginnen, deshalb schicken viele ein burofax, einen Einschreibebrief, der belegt, was wann verschickt wurde.",
+            "Kommt das Wasser vom Dach oder von den Gemeinschaftsterrassen, ist es wahrscheinlich auch ein Problem der Eigentümergemeinschaft, nicht nur Ihres. Arbeiten, die nötig sind, um das Gebäude zu erhalten und es sicher und bewohnbar zu halten, sind verpflichtend, brauchen keinen vorherigen Beschluss der Eigentümerversammlung und werden von allen Eigentümern bezahlt. Fragen Sie den administrador de fincas, wann das Dach zuletzt geprüft wurde und was geplant ist."
+          ]
+        },
+        {
+          "h2": "Welche Rechnungen und Briefe kommen weiter, während ich weg bin?",
+          "paras": [
+            "Die IBI, die örtliche Grundsteuer, wird vom Rathaus oder seiner Einzugsstelle verwaltet und eingezogen, und das Rathaus legt auch die Sätze fest. Die Müllgebühr ist eine eigene Abgabe, die jedes Rathaus erheben muss, und ihr Betrag und ihre Abrechnungsmonate werden vor Ort vom Rathaus oder seinem Abfallzweckverband festgelegt. Die Abrechnungsmonate unterscheiden sich von Ort zu Ort, fragen Sie also Ihr ayuntamiento, wann jede Rechnung kommt, und zahlen Sie beide per Lastschrift.",
+            "Geben Sie dem Sekretär der Eigentümergemeinschaft eine Adresse in Spanien für Mitteilungen. Ohne eine solche gehen Mitteilungen an die Wohnung selbst, und wenn dort niemand ist, der sie entgegennimmt, werden sie am Aushang der Gemeinschaft angeschlagen und gelten nach drei Kalendertagen als zugestellt. So verpasst ein Eigentümer in Oslo eine Versammlung und ist trotzdem an das gebunden, was sie beschlossen hat. Eine Möglichkeit ist die Adresse einer Vertrauensperson hier, etwa Ihres gestor."
+          ]
+        },
+        {
+          "h2": "Werde ich bestraft, wenn das Haus leer steht?",
+          "paras": [
+            "Fast sicher nicht, wenn es Ihr Ferienhaus ist. Ein Rathaus kann auf ein dauerhaft leerstehendes Haus einen Zuschlag zur IBI erheben, aber nur, wenn es diesen Zuschlag in seiner eigenen Steuersatzung eingeführt hat, und nur, wenn der Eigentümer vier oder mehr Wohnimmobilien besitzt. Das Gesetz erkennt bei einem Zweitwohnsitz außerdem bis zu vier Jahre ununterbrochenen Leerstands als begründet an.",
+            "Das Haus selbst zu nutzen hilft noch auf andere Weise. Ein Zweitwohnsitz, in dem Sie Ihr Privatleben führen, auch nur gelegentlich, gilt im spanischen Strafrecht als morada, als Wohnung. Das macht eine Besetzung zum schwereren Delikt. Post, die sich nicht stapelt, Rollläden, die ab und zu offen sind, und eine sichtbare Alarmanlage sagen der Straße, dass sich jemand um das Haus kümmert.",
+            "Das meiste auf dieser Liste ist hier und da eine halbe Stunde, im richtigen Monat erledigt. Das Planungswerkzeug auf dieser Seite erstellt den Plan für Ihr eigenes Haus aus fünf Fragen, darunter wie nah Sie am Meer sind und wie oft Sie kommen. So ist der nächste Besuch zum Genießen des Hauses da und nicht zum Reparieren."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Entretenir un logement en Espagne depuis l'étranger",
+      "description": "Comment entretenir une maison de vacances en Espagne visitée quelques fois par an, à qui confier les clés, et ce que l'assurance paiera ou non.",
+      "h1": "Comment prendre soin de votre logement en Espagne quand vous vivez dans un autre pays",
+      "lead": "Un logement en Espagne demande l'essentiel de son entretien à l'automne, avant les fortes pluies, et une seconde série au printemps, une fois que l'hiver a fait ses dégâts. Si vous ne venez qu'une ou deux fois par an, regroupez les travaux extérieurs lors d'un séjour d'automne et confiez à une personne précise une clé et une autorisation écrite d'agir pour vous. Gardez des photos datées et les factures, car l'usure ordinaire et les dégâts de pluie ne sont pas couverts par le régime public des risques extraordinaires.",
+      "sections": [
+        {
+          "h2": "De quoi un logement en Espagne a-t-il vraiment besoin au fil de l'année ?",
+          "paras": [
+            "Le soleil, le sel et un hiver court et humide abîment chacun quelque chose de différent, et à des saisons différentes. Les UV rendent les tuiles en terre cuite cassantes et font craqueler la peinture extérieure. L'air salin de la côte s'infiltre dans les garde-corps, les charnières et les mécanismes de volets. Dans une grande partie de l'Espagne, l'automne apporte les plus fortes pluies de l'année sur des gouttières chargées de tout un été de poussière et de feuilles.",
+            "L'année a donc un rythme. Le printemps sert à réparer l'hiver : nettoyer les gouttières, vérifier la façade à la recherche de taches d'humidité et faire couler chaque robinet que vous n'avez pas utilisé. L'été est le moment où les canalisations extérieures et l'arrosage travaillent vraiment, une fuite lente se révèle donc. L'automne concentre le plus de travail. L'hiver est surtout un travail de bureau, ce qui convient à un propriétaire installé à la table de sa cuisine à Bergen ou à Hambourg."
+          ]
+        },
+        {
+          "h2": "Je n'y vais qu'une fois par an. Quand dois-je y aller ?",
+          "paras": [
+            "Allez-y à l'automne si vous le pouvez. Toit, gouttières, alarme et chaudière sont alors juste avant la météo qui les met à l'épreuve, un seul séjour en octobre rapporte donc plus que n'importe quel autre. Avancez à ce même séjour le nettoyage des gouttières prévu au printemps, et faites monter quelqu'un sur le toit (ou sur la terrasse de toit, si vous en avez une) pour repérer les tuiles fêlées ou déplacées.",
+            "Les travaux qu'on ne peut pas déplacer sont ceux qui demandent un temps sec et doux, comme repeindre ou refaire les joints. Ce sont ceux-là qu'il faut confier à quelqu'un sur place. Après la première forte pluie, demandez à la personne qui a votre clé de regarder les plafonds sous le toit et les angles supérieurs des murs extérieurs. Un problème de toiture apparaît sous forme de tache bien avant d'apparaître sous forme de goutte."
+          ]
+        },
+        {
+          "h2": "Quels travaux comptent le plus près de la mer ?",
+          "paras": [
+            "Le métal. Faites le tour de l'extérieur et cherchez les traces de rouille sur chaque fixation : garde-corps, gonds de portail, grilles de fenêtres, supports de parabole et de climatisation. Quand les dégâts du sel sont visibles, le nettoyage aide rarement, et sur un bâtiment ancien ces fixations sont généralement d'origine. Un volet qui force est plus souvent un mécanisme grippé qu'une lame cassée, rincez donc les glissières à l'eau douce et actionnez chaque poignée sur toute sa course.",
+            "L'eau est l'autre travail propre à la côte. Si l'eau est dure dans votre secteur, et la bouilloire vous le dira vite, le calcaire que vous y voyez s'accumule aussi dans les canalisations et la machine à laver. Détartrez les pommeaux de douche et les filtres des appareils chaque été, et si le calcaire revient sans cesse, faites chiffrer un adoucisseur avant de faire chiffrer une deuxième chaudière."
+          ]
+        },
+        {
+          "h2": "Qui s'occupe de la maison quand je ne suis pas là ?",
+          "paras": [
+            "Confiez à une personne précise une clé, votre numéro de téléphone et une autorisation écrite d'entrer. Sans document écrit, un voisin ou un gardien de clés peut hésiter au moment précis où vous avez besoin qu'il agisse. Convenez qu'il passe après chaque tempête et vous envoie à chaque fois des photos datées. C'est ainsi qu'un dégât des eaux est découvert quand ce n'est encore qu'une tache, et ces photos sont les preuves dont vous aurez besoin si vous devez un jour déclarer un sinistre.",
+            "Une piscine et un jardin ont chacun besoin d'un arrangement permanent plutôt que d'un appel quand quelque chose a mal tourné. Une eau de piscine non traitée en plein été se termine en vidange et en nettoyage complet, et un terrain envahi par la végétation est l'endroit où s'installent les nuisibles. Avant de partir, videz les placards de la farine, des pâtes et des autres aliments secs, que les mites alimentaires et les cafards attendent dans une maison vide."
+          ]
+        },
+        {
+          "h2": "Mon assurance paiera-t-elle si le toit fuit ?",
+          "paras": [
+            "Pas par le Consorcio. Le régime espagnol des risques extraordinaires couvre des événements comme les inondations extraordinaires, les tremblements de terre et les rafales de vent supérieures à 120 km/h, mesurées sur une rafale de trois secondes. Il ne couvre pas la pluie ordinaire, le vent sous le seuil ni les dommages dus à la simple action du temps, c'est-à-dire l'usure et les intempéries ordinaires. Une fuite de toiture ou une canalisation qui éclate relève de votre propre assureur, et le fait qu'il paie ou non dépend de la rédaction de votre contrat.",
+            "La couverture du Consorcio n'existe qu'en complément d'un contrat ordinaire, et elle paie à hauteur des montants assurés dans ce contrat. Un propriétaire qui sous-assure le bâtiment pour économiser sur la prime est sous-assuré contre les inondations et les tremblements de terre dans la même proportion. Relisez le contrat une fois par an au regard de l'usage actuel de la maison, y compris pour savoir s'il tient compte du fait que le bien reste vide pendant de longues périodes.",
+            "Si vous devez faire une réclamation contre votre propre assureur au titre d'un contrat dommages aux biens, l'action se prescrit au bout de deux ans. Gardez ensemble les photos, les factures de réparation et les dates, pour que la réclamation ne dépende de la mémoire de personne."
+          ]
+        },
+        {
+          "h2": "Et si l'eau vient de l'appartement du dessus ?",
+          "paras": [
+            "Si un voisin avec qui vous n'avez aucun contrat endommage votre logement, vous avez un an pour réclamer, à compter du moment où vous avez eu connaissance du dommage. Pour un propriétaire à l'étranger, c'est généralement le jour où le gardien des clés appelle. Une mise en demeure écrite au voisin arrête le délai et le fait repartir, c'est pourquoi on envoie un burofax, un courrier recommandé qui prouve ce qui a été envoyé et quand.",
+            "Si l'eau vient du toit ou des terrasses communes, il est probable que ce soit aussi le problème de la copropriété, et pas seulement le vôtre. Les travaux nécessaires à l'entretien du bâtiment et à sa sécurité et son habitabilité sont obligatoires, ne nécessitent aucun vote préalable de l'assemblée des copropriétaires et sont payés par tous les propriétaires. Demandez à l'administrador de fincas quand le toit a été inspecté pour la dernière fois et ce qui est prévu."
+          ]
+        },
+        {
+          "h2": "Quelles factures et quels courriers continuent d'arriver pendant mon absence ?",
+          "paras": [
+            "L'IBI, l'impôt foncier local, est géré et recouvré par la mairie ou son organisme de recouvrement, qui fixe aussi les taux. La taxe sur les ordures ménagères est une redevance distincte que chaque mairie doit avoir, et son montant ainsi que ses mois de facturation sont fixés localement par la mairie ou son consortium de gestion des déchets. Les mois de facturation diffèrent d'une commune à l'autre, demandez donc à votre ayuntamiento quand arrive chaque facture et payez les deux par prélèvement automatique.",
+            "Donnez au secrétaire de la copropriété une adresse en Espagne pour les convocations et avis. Sans elle, les avis sont envoyés à l'appartement lui-même, et si personne n'est là pour les recevoir, ils sont affichés sur le panneau de la copropriété et prennent effet au bout de trois jours calendaires. C'est ainsi qu'un propriétaire à Oslo manque une assemblée et reste tout de même lié par ce qu'elle a décidé. Une option est l'adresse d'une personne de confiance ici, comme votre gestor."
+          ]
+        },
+        {
+          "h2": "Serai-je pénalisé si je laisse la maison vide ?",
+          "paras": [
+            "Presque certainement pas, s'il s'agit de votre maison de vacances. Une mairie peut ajouter une majoration à l'IBI d'un logement vide en permanence, mais seulement si elle l'a adoptée dans sa propre ordonnance fiscale et seulement si le propriétaire détient quatre biens résidentiels ou plus. La loi considère aussi qu'une résidence secondaire a une raison valable d'être vide pendant jusqu'à quatre ans d'inoccupation continue.",
+            "Utiliser la maison vous-même aide aussi d'une autre manière. Une résidence secondaire où vous menez votre vie privée, même de temps en temps, compte comme une morada, un domicile, en droit pénal espagnol. Une occupation devient alors l'infraction la plus grave. Un courrier qui ne s'entasse pas, des volets qui s'ouvrent de temps en temps et une alarme visible disent tous à la rue que quelqu'un s'occupe des lieux.",
+            "L'essentiel de cette liste représente une demi-heure par-ci par-là, faite au bon mois. L'outil de calendrier de ce site l'établit pour votre propre maison à partir de cinq questions, dont la distance à la mer et la fréquence de vos visites. Ainsi, le prochain séjour sert à profiter de la maison plutôt qu'à la réparer."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Uw Spaanse woning onderhouden vanuit het buitenland: jaarplan",
+      "description": "Zo onderhoudt u een Spaanse vakantiewoning die u maar een paar keer per jaar bezoekt, wie u de zorg geeft en wat de verzekering wel en niet betaalt.",
+      "h1": "Zo zorgt u voor uw Spaanse woning als u in een ander land woont",
+      "lead": "Een Spaanse woning heeft de meeste zorg nodig in de herfst, vóór de zware regen, en een tweede ronde in het voorjaar, als de winter zijn schade heeft gedaan. Komt u maar een of twee keer per jaar, bundel dan de klussen buiten in een herfstreis en geef één vaste persoon een sleutel en schriftelijke toestemming om namens u op te treden. Bewaar gedateerde foto's en bonnetjes, want gewone slijtage en regenschade vallen niet onder de staatsregeling voor buitengewone risico's.",
+      "sections": [
+        {
+          "h2": "Wat heeft een Spaanse woning door het jaar heen eigenlijk nodig?",
+          "paras": [
+            "Zon, zout en een korte, natte winter maken elk iets anders kapot, en elk in een ander seizoen. Uv-licht maakt terracotta dakpannen bros en laat buitenverf barsten. Zilte lucht aan de kust dringt in balustrades, scharnieren en het mechaniek van luiken. In grote delen van Spanje brengt de herfst de zwaarste regen van het jaar op dakgoten die vol liggen met een hele zomer aan stof en bladeren.",
+            "Het jaar heeft dus een vaste vorm. Het voorjaar is om de winter ongedaan te maken: dakgoten leeghalen, de gevel controleren op vochtplekken en elke kraan opendraaien die u niet heeft gebruikt. In de zomer staan de buitenleidingen en de beregening echt onder druk, dus dan laat een langzaam lek zich zien. De herfst brengt het meeste werk. De winter is vooral bureauwerk, wat goed uitkomt voor een eigenaar aan een keukentafel in Bergen of Hamburg."
+          ]
+        },
+        {
+          "h2": "Ik kom er maar één keer per jaar. Wanneer kan ik het beste gaan?",
+          "paras": [
+            "Ga in de herfst als het kan. Dak, dakgoten, alarm en cv-ketel staan dan allemaal vlak voor het weer dat ze op de proef stelt, dus één reis in oktober levert meer op dan welke andere ook. Haal het leegmaken van de dakgoten uit het voorjaar naar voren in hetzelfde bezoek, en laat iemand het dak op gaan (of het platte dakterras, als u dat heeft) om te kijken naar gebarsten en verschoven pannen.",
+            "De klussen die niet kunnen schuiven, zijn de klussen die droog en zacht weer nodig hebben, zoals schilderen en opnieuw afkitten. Die geeft u het beste aan iemand ter plaatse. Vraag na de eerste zware regenbui degene die uw sleutel heeft om naar de plafonds onder het dak en de bovenhoeken van de buitenmuren te kijken. Een dakprobleem verschijnt als vlek lang voordat het gaat druppelen."
+          ]
+        },
+        {
+          "h2": "Welke klussen zijn het belangrijkst vlak bij zee?",
+          "paras": [
+            "Metaal. Loop buiten rond en zoek naar roestuitslag op elk bevestigingspunt: balustrades, scharnieren van het hek, raamtralies, beugels van de schotel en de airco. Tegen de tijd dat zoutschade duidelijk zichtbaar is, helpt schoonmaken zelden nog, en bij een ouder gebouw zijn die bevestigingen meestal nog de originele. Een stroef luik is vaker een vastgelopen mechaniek dan een kapotte lamel, dus spoel de geleiders af met zoet water en beweeg elke hendel over de hele slag.",
+            "Water is de andere klus aan de kust. Is het water in uw omgeving hard, en de waterkoker vertelt u dat snel, dan zet de kalk die u daar ziet zich ook af in de leidingen en de wasmachine. Ontkalk elke zomer de douchekoppen en de filters van apparaten, en blijft de kalk terugkomen, laat dan eerst een prijs maken voor een waterontharder voordat u een prijs vraagt voor een tweede boiler."
+          ]
+        },
+        {
+          "h2": "Wie zorgt voor het huis als ik er niet ben?",
+          "paras": [
+            "Geef één vaste persoon een sleutel, uw telefoonnummer en schriftelijke toestemming om naar binnen te gaan. Zonder iets op papier kan een buurman of sleutelhouder aarzelen op het moment dat u dat juist niet wilt. Spreek af dat ze na elke storm langsgaan en u elke keer gedateerde foto's sturen. Zo wordt waterschade gevonden terwijl het nog een vlek is, en de foto's zijn het bewijs dat u wilt hebben als u ooit een claim indient.",
+            "Een zwembad en een tuin hebben elk een vaste afspraak nodig, niet een telefoontje als er al iets mis is. Onbehandeld zwembadwater in hartje zomer betekent leegpompen en een grondige schoonmaak, en een overwoekerd perceel is waar ongedierte zich vestigt. Haal voor vertrek bloem, pasta en ander droog voedsel uit de kasten, want daar wachten voedselmotten en kakkerlakken op in een leeg huis."
+          ]
+        },
+        {
+          "h2": "Betaalt mijn verzekering als het dak lekt?",
+          "paras": [
+            "Niet via het Consorcio. De Spaanse regeling voor buitengewone risico's dekt gebeurtenissen zoals buitengewone overstromingen, aardbevingen en windstoten boven 120 km/u, gemeten als windstoot van drie seconden. Ze dekt geen gewone regen, wind onder de drempel of schade door het simpele verstrijken van de tijd, dus gewone slijtage en verwering. Een daklek of een gesprongen leiding gaat naar uw eigen verzekeraar, en of die betaalt, hangt af van de tekst van uw polis.",
+            "De dekking van het Consorcio bestaat alleen bovenop een gewone polis, en betaalt tot de verzekerde bedragen in die polis. Een eigenaar die het gebouw onderverzekert om premie te besparen, is in dezelfde verhouding onderverzekerd tegen overstroming en aardbeving. Lees de polis eens per jaar door naast hoe het huis nu wordt gebruikt, ook of de verzekeraar weet dat de woning lange tijd leeg staat.",
+            "Moet u een claim indienen tegen uw eigen verzekeraar onder een opstal- of inboedelpolis, dan verjaart die claim na twee jaar. Bewaar de foto's, de reparatiefacturen en de data bij elkaar, zodat de claim niet afhangt van iemands geheugen."
+          ]
+        },
+        {
+          "h2": "Wat als er water binnenkomt vanuit het appartement erboven?",
+          "paras": [
+            "Brengt een buurman met wie u geen contract heeft schade toe aan uw woning, dan heeft u één jaar voor een claim, gerekend vanaf het moment dat u van de schade hoorde. Voor een eigenaar in het buitenland is dat meestal de dag dat de sleutelhouder belt. Een schriftelijke eis aan de buurman zet de klok stil en laat hem opnieuw lopen, en daarom sturen mensen een burofax, een aangetekende brief die bewijst wat er is verstuurd en wanneer.",
+            "Komt het water van het dak of de gemeenschappelijke terrassen, dan is het waarschijnlijk ook een probleem van de VvE, niet alleen van u. Werkzaamheden die nodig zijn om het gebouw te onderhouden en veilig en bewoonbaar te houden, zijn verplicht, hebben geen voorafgaand besluit van de vergadering van eigenaren nodig en worden door alle eigenaren betaald. Vraag de administrador de fincas wanneer het dak voor het laatst is geïnspecteerd en wat er gepland is."
+          ]
+        },
+        {
+          "h2": "Welke rekeningen en brieven blijven binnenkomen als ik weg ben?",
+          "paras": [
+            "De IBI, de lokale onroerendgoedbelasting, wordt beheerd en geïnd door de gemeente of haar inningsinstantie, die ook de tarieven vaststelt. De afvalstoffenheffing is een aparte heffing die elke gemeente moet hebben, en het bedrag en de maanden van inning worden lokaal vastgesteld door de gemeente of haar afvalconsortium. De maanden verschillen van gemeente tot gemeente, dus vraag uw ayuntamiento wanneer elke rekening komt en betaal beide via automatische incasso.",
+            "Geef de secretaris van de VvE een adres in Spanje voor kennisgevingen. Zonder adres gaan kennisgevingen naar het appartement zelf, en is daar niemand om ze in ontvangst te nemen, dan worden ze op het mededelingenbord van de VvE gehangen en gelden ze na drie kalenderdagen. Zo mist een eigenaar in Oslo een vergadering en is hij toch gebonden aan wat er werd besloten. Een mogelijkheid is het adres van iemand die u hier vertrouwt, zoals uw gestor."
+          ]
+        },
+        {
+          "h2": "Krijg ik een boete als ik het huis leeg laat staan?",
+          "paras": [
+            "Vrijwel zeker niet, als het uw vakantiewoning is. Een gemeente mag een toeslag op de IBI heffen voor een woning die permanent leeg staat, maar alleen als ze die toeslag in haar eigen belastingverordening heeft opgenomen, en alleen als de eigenaar vier of meer woningen bezit. De wet gaat er ook van uit dat een tweede woning een goede reden heeft om tot vier jaar onafgebroken leeg te staan.",
+            "Zelf in het huis verblijven helpt ook op een andere manier. Een tweede woning waar u uw privéleven leidt, ook al is het maar af en toe, geldt in het Spaanse strafrecht als morada, een woning. Dat maakt een bezetting het zwaardere delict. Post die zich niet opstapelt, luiken die af en toe opengaan en een zichtbaar alarm vertellen de straat allemaal dat iemand naar de woning omkijkt.",
+            "Het meeste van deze lijst is hier en daar een halfuurtje, gedaan in de juiste maand. De planningstool op deze site stelt hem voor uw eigen huis samen op basis van vijf vragen, onder andere hoe dicht u bij zee zit en hoe vaak u komt. Zo is het volgende bezoek om van het huis te genieten in plaats van het te repareren."
+          ]
+        }
+      ]
+    }
+  }
+}

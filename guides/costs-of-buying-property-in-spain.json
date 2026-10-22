@@ -1,0 +1,458 @@
+{
+  "slug": "costs-of-buying-property-in-spain",
+  "topic": "buying",
+  "tool": "purchase-costs",
+  "order": 2,
+  "rules": [
+    "buy.tax.resale_itp",
+    "buy.tax.newbuild_iva",
+    "buy.tax.itp_state_default",
+    "own.catastro.reference_value",
+    "own.catastro.reference_value_challenge",
+    "own.catastro.reference_value_no_ibi",
+    "buy.itp.madrid",
+    "buy.itp.castilla_la_mancha",
+    "buy.itp.valencia",
+    "buy.itp.baleares",
+    "buy.itp.catalunya",
+    "vat.newbuild.mainland",
+    "vat.newbuild.vpo",
+    "buy.tax.newbuild_ajd",
+    "igic.canarias",
+    "buy.notary.fee_scale",
+    "buy.notary.who_pays",
+    "buy.registry.fee_scale",
+    "buy.registry.who_pays",
+    "buy.registry.nota_simple_fee",
+    "nie.fee",
+    "buy.deed.tax_ids",
+    "buy.mortgage.costs_split",
+    "buy.mortgage.ajd_lender",
+    "buy.mortgage.acta_free",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "own.lph.seller_declaration",
+    "irnr.sale.retention",
+    "irnr.sale.gain_base",
+    "irnr.rates",
+    "itp.base.valor_referencia"
+  ],
+  "answers": [
+    "iva-on-a-new-build-home-in-spain",
+    "igic-on-a-new-build-holiday-home-canary-islands",
+    "nie-number-form-and-fee",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "three-percent-withheld-when-selling-spanish-property",
+    "capital-gains-tax-calculation-non-resident-sale-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Costs of Buying Property in Spain: Tax, Notary and Registry",
+      "description": "What you pay on top of the price in Spain: ITP or IVA, AJD, the official notary and registry scales, the nota simple, the NIE and mortgage costs.",
+      "h1": "What it costs to buy a property in Spain, on top of the price",
+      "lead": "The largest cost on top of the price is the purchase tax: ITP on a resale, at a rate each region sets, or 10 percent IVA plus AJD on a new build bought from the developer in mainland Spain or the Balearics. Notary and land registry fees follow official scales and are much smaller. On a mortgage, the law puts most of the set-up costs on the lender, apart from the valuation.",
+      "sections": [
+        {
+          "h2": "Which tax is the big one?",
+          "paras": [
+            "It depends on who sells. A home bought from a private individual is taxed under ITP, the transfer tax, and the buyer is the taxpayer. A new home sold by the developer, its first delivery, is taxed under IVA instead, paid by you to the seller, and an operation subject to IVA is not also subject to ITP. You pay one or the other, not both.",
+            "ITP is not always charged on the number in your contract. Its base is the valor de referencia, which the Catastro sets from the prices in sales before a notary, unless the price you declare is higher. If the reference value is above your agreed price, you pay tax on the reference value. Ask your gestor to look it up before you agree a price.",
+            "If you think the reference value is wrong, you cannot appeal it to the Catastro directly. It can only be challenged when it has a tax effect, by asking for rectification of your return or by appealing the assessment of the body that manages the tax. One thing it does not touch is your yearly IBI bill, which still uses the cadastral value."
+          ]
+        },
+        {
+          "h2": "How much is ITP in my region?",
+          "paras": [
+            "Each region sets its own rate, and where a region has not approved one, the state rate of 6 percent applies. In the Comunidad de Madrid, ITP on a second hand home is 6 percent. In Castilla-La Mancha it is generally 9 percent. In the Comunitat Valenciana it is 9 percent for purchases from 1 June 2026, and 11 percent where the value exceeds 1,000,000 euros. How that 11 percent band applies should be confirmed with your gestor before you rely on a figure.",
+            "Two regions charge in bands, each rate on its own slice of the value. In the Illes Balears it is 8 percent up to 400,000 euros, 9 percent to 600,000, 10 percent to 1,000,000, 12 percent to 2,000,000 and 13 percent above. On a 500,000 euro home in Mallorca, that is 32,000 euros on the first 400,000 plus 9,000 euros on the rest, so 41,000 euros in total.",
+            "In Catalunya it is 10 percent up to 600,000 euros, 11 percent to 900,000, 12 percent to 1,500,000 and 13 percent above, again slice by slice. There is also a 20 percent rate for large holders, meaning people who own more than 10 residential properties or more than 1,500 square metres of residential space in Catalunya, or five or more in a stressed market zone. It applies to Spanish buyers too (it is not a rule about nationality).",
+            "For any other region, the rate is set by that regional government and rates do change, so check the current one with your gestor before you sign. Some regions also have reduced rates tied to a main residence. A holiday home rarely fits those, so do not count on one unless your gestor confirms it in writing."
+          ]
+        },
+        {
+          "h2": "What do I pay on a new build?",
+          "paras": [
+            "You pay IVA at 10 percent in mainland Spain and the Balearics, including up to two parking spaces and annexes transferred with the home. Officially protected homes of the regimen especial or promocion publica, delivered by the promoter, take 4 percent. On a 300,000 euro new apartment on the mainland, the IVA alone is 30,000 euros, paid to the developer with the price.",
+            "The deed also pays AJD, the stamp duty on documents, at the rate your region sets, or 0.50 percent where the region has set none. In the Canary Islands the tax on a new build is IGIC, not IVA, because the islands sit outside the EU VAT territory. A holiday home pays the general rate of 7 percent, since the 5 and 3 percent rates require the home to be your main residence."
+          ]
+        },
+        {
+          "h2": "What do the notary and land registry charge?",
+          "paras": [
+            "Notary fees on the deed follow an official scale: 90.151816 euros up to 6,010.12 euros of value, then falling rates per thousand on each slice above (4.5, 1.5, 1, 0.5 and 0.3), with a 5 percent reduction. On a 250,000 euro deed, that scale item comes to about 364 euros. Other items of the tariff are priced separately, so the final notary bill is higher than the scale alone.",
+            "Land registry fees work the same way: 24.040484 euros up to 6,010.12 euros, then 1.75, 1.25, 0.75, 0.3 and 0.2 per thousand on each slice, with a 5 percent reduction and a cap of 2,181.673939 euros for that item. On 250,000 euros it is about 191 euros. They are paid by the person in whose favour the right is registered, which on a purchase is normally you.",
+            "Notary fees are owed by whoever asked for the notary's services and as the substantive and tax rules allocate them, and all those parties are jointly liable. Who finally pays is a matter for your purchase contract, so read that line before you sign it."
+          ]
+        },
+        {
+          "h2": "Which smaller fees come before the deed?",
+          "paras": [
+            "Each buyer needs an NIE, because every party shows the notary their tax identification number and it is written into the deed. The fee for assigning an NIE is 9.84 euros per person. The nota simple from the land registry has an official fee of 3.005061 euros per property, although online request services and intermediaries add their own charges on top.",
+            "Professional fees have no official scale. Your abogado, your gestor and the estate agent each quote their own, so ask for the quote in writing before work starts. Ask the agent early who pays the commission, because the answer changes your budget and is easier to settle before an offer than after."
+          ]
+        },
+        {
+          "h2": "If I take a mortgage, which costs are mine?",
+          "paras": [
+            "Fewer than many buyers expect. On a mortgage loan you pay the valuation, while the lender pays the gestoría, the notary fees for the loan deed and the registry fees for the mortgage. Copies are paid by whoever asks for them. The lender is also the taxpayer for AJD on the mortgage deed, and the notarial acta in which the notary explains the loan to you carries no fee at all.",
+            "This covers the loan deed only. The notary and registry costs of the purchase deed are a separate matter between you and the seller, and the AJD on the purchase deed of a new build is still yours. Budget for those whether you borrow or pay in full, and ask the lender for its list of costs alongside the loan documents."
+          ]
+        },
+        {
+          "h2": "Can I end up paying the seller's debts?",
+          "paras": [
+            "You can, if nobody checks. When ownership changes, the property itself stays liable for unpaid IBI, and notaries must ask about and warn of pending IBI on the property. A buyer also takes on unpaid community charges for the part of the year already gone plus the three previous calendar years. The seller must declare in the deed that they are up to date or provide a certificate of what they owe.",
+            "If the seller is not resident in Spain, you must usually withhold 3 percent of the agreed price and pay it to the tax office on modelo 211 within one month of the purchase. It is not an extra cost, because it comes out of the price, but it is your obligation as buyer, so make sure your abogado has it in the completion figures."
+          ]
+        },
+        {
+          "h2": "Why should I keep every receipt from the purchase?",
+          "paras": [
+            "Because they lower your tax when you sell. The gain on a sale is the transfer value less the acquisition value, and the acquisition value includes the price plus the taxes and costs inherent to buying: the ITP or AJD, the notary and the registry. For a non-resident the gain is taxed at 19 percent, so a purchase tax receipt you can no longer find is a cost you can no longer add.",
+            "Keep the deed, the purchase tax return and its payment receipt, the notary and registry invoices and any receipts for later improvements together in one folder, on paper and scanned. Years from now, whoever handles your sale will ask for exactly that folder. Then put it on a shelf and get on with enjoying the place."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Kostnader ved boligkjøp i Spania: skatt, notar og register",
+      "description": "Dette betaler du i tillegg til prisen i Spania: ITP eller IVA, AJD, de offisielle notar- og registersatsene, nota simple, NIE og kostnader ved boliglån.",
+      "h1": "Hva det koster å kjøpe bolig i Spania, i tillegg til prisen",
+      "lead": "Den største kostnaden i tillegg til prisen er kjøpsskatten: ITP ved kjøp av bruktbolig, med en sats hver region fastsetter, eller 10 prosent IVA pluss AJD på en nybygd bolig kjøpt fra utbyggeren på det spanske fastlandet eller Balearene. Notar- og registergebyrene følger offisielle satser og er mye mindre. Ved boliglån legger loven det meste av etableringskostnadene på långiveren, bortsett fra takseringen.",
+      "sections": [
+        {
+          "h2": "Hvilken skatt er den store?",
+          "paras": [
+            "Det avhenger av hvem som selger. En bolig kjøpt fra en privatperson skattlegges med ITP, overdragelsesskatten, og kjøperen er skattyteren. En ny bolig solgt av utbyggeren, ved første overlevering, skattlegges i stedet med IVA, som du betaler til selgeren, og en transaksjon som er underlagt IVA, er ikke i tillegg underlagt ITP. Du betaler den ene eller den andre, ikke begge.",
+            "ITP beregnes ikke alltid av tallet i kontrakten din. Grunnlaget er valor de referencia, som Catastro fastsetter ut fra prisene i salg hos notar, med mindre prisen du oppgir er høyere. Er referanseverdien høyere enn den avtalte prisen, betaler du skatt av referanseverdien. Be gestor om å slå den opp før du blir enig om en pris.",
+            "Mener du at referanseverdien er feil, kan du ikke klage den direkte inn for Catastro. Den kan bare angripes når den får skattemessig virkning, ved å be om retting av oppgaven din eller ved å klage på fastsettelsen fra organet som forvalter skatten. Én ting den ikke påvirker, er den årlige IBI-regningen din, som fortsatt bruker matrikkelverdien."
+          ]
+        },
+        {
+          "h2": "Hvor mye er ITP i min region?",
+          "paras": [
+            "Hver region fastsetter sin egen sats, og der en region ikke har vedtatt en, gjelder statens sats på 6 prosent. I Comunidad de Madrid er ITP på en bruktbolig 6 prosent. I Castilla-La Mancha er den som hovedregel 9 prosent. I Comunitat Valenciana er den 9 prosent for kjøp fra 1. juni 2026, og 11 prosent der verdien overstiger 1 000 000 euro. Hvordan det 11-prosentstrinnet brukes, bør bekreftes med gestor før du stoler på et tall.",
+            "To regioner bruker trinn, der hver sats gjelder sin egen del av verdien. På Illes Balears er det 8 prosent opp til 400 000 euro, 9 prosent opp til 600 000, 10 prosent opp til 1 000 000, 12 prosent opp til 2 000 000 og 13 prosent over det. På en bolig til 500 000 euro på Mallorca blir det 32 000 euro på de første 400 000 pluss 9 000 euro på resten, altså 41 000 euro totalt.",
+            "I Catalunya er det 10 prosent opp til 600 000 euro, 11 prosent opp til 900 000, 12 prosent opp til 1 500 000 og 13 prosent over det, igjen trinn for trinn. Det finnes også en sats på 20 prosent for store eiere, det vil si personer som eier mer enn 10 boligeiendommer eller mer enn 1 500 kvadratmeter boligareal i Catalunya, eller fem eller flere i et pressområde for boligmarkedet. Den gjelder også spanske kjøpere (det er ikke en regel om nasjonalitet).",
+            "For alle andre regioner fastsettes satsen av regionsregjeringen, og satsene endrer seg, så sjekk den gjeldende med gestor før du signerer. Noen regioner har også reduserte satser knyttet til en hovedbolig. En fritidsbolig passer sjelden inn der, så ikke regn med en slik sats med mindre gestor bekrefter det skriftlig."
+          ]
+        },
+        {
+          "h2": "Hva betaler jeg på en nybygd bolig?",
+          "paras": [
+            "Du betaler IVA med 10 prosent på det spanske fastlandet og Balearene, inkludert opptil to parkeringsplasser og tilleggsrom som overdras sammen med boligen. Offentlig regulerte boliger i regimen especial eller promocion publica, levert av utbyggeren, har 4 prosent. På en ny leilighet til 300 000 euro på fastlandet er IVA alene 30 000 euro, som betales til utbyggeren sammen med prisen.",
+            "Skjøtet betaler i tillegg AJD, dokumentavgiften, med satsen regionen din fastsetter, eller 0,50 prosent der regionen ikke har fastsatt noen. På Kanariøyene er skatten på en nybygd bolig IGIC, ikke IVA, fordi øyene ligger utenfor EUs merverdiavgiftsområde. En fritidsbolig betaler den generelle satsen på 7 prosent, siden satsene på 5 og 3 prosent krever at boligen er hovedboligen din."
+          ]
+        },
+        {
+          "h2": "Hva tar notaren og eiendomsregisteret?",
+          "paras": [
+            "Notarhonoraret for skjøtet følger en offisiell skala: 90,151816 euro opp til 6 010,12 euro i verdi, deretter fallende promillesatser på hvert trinn over det (4,5, 1,5, 1, 0,5 og 0,3), med en reduksjon på 5 prosent. På et skjøte på 250 000 euro blir den skalaposten omtrent 364 euro. Andre poster i takstene prises separat, så den endelige notarregningen blir høyere enn skalaen alene.",
+            "Registergebyrene fungerer på samme måte: 24,040484 euro opp til 6 010,12 euro, deretter 1,75, 1,25, 0,75, 0,3 og 0,2 promille på hvert trinn, med en reduksjon på 5 prosent og et tak på 2 181,673939 euro for den posten. På 250 000 euro er det omtrent 191 euro. De betales av den som rettigheten registreres til fordel for, og ved et kjøp er det normalt deg.",
+            "Notarhonoraret skyldes av den som ba om notarens tjenester og slik de materielle reglene og skattereglene fordeler det, og alle disse partene hefter solidarisk. Hvem som til slutt betaler, er et spørsmål for kjøpekontrakten din, så les den linjen før du signerer."
+          ]
+        },
+        {
+          "h2": "Hvilke mindre gebyrer kommer før skjøtet?",
+          "paras": [
+            "Hver kjøper trenger et NIE, fordi hver part viser notaren sitt skatteidentifikasjonsnummer, og det skrives inn i skjøtet. Gebyret for å få tildelt et NIE er 9,84 euro per person. Nota simple fra eiendomsregisteret har et offisielt gebyr på 3,005061 euro per eiendom, selv om nettjenester og mellommenn som bestiller den legger på egne gebyrer i tillegg.",
+            "Profesjonelle honorarer har ingen offisiell skala. Abogado, gestor og eiendomsmegleren gir hvert sitt pristilbud, så be om tilbudet skriftlig før arbeidet starter. Spør megleren tidlig hvem som betaler provisjonen, fordi svaret endrer budsjettet ditt og er lettere å avklare før et bud enn etter."
+          ]
+        },
+        {
+          "h2": "Hvis jeg tar opp boliglån, hvilke kostnader er mine?",
+          "paras": [
+            "Færre enn mange kjøpere tror. På et boliglån betaler du takseringen, mens långiveren betaler gestoría, notarhonoraret for låneskjøtet og registergebyrene for pantet. Kopier betales av den som ber om dem. Långiveren er også skattyter for AJD på låneskjøtet, og den notarielle actaen der notaren forklarer lånet for deg, koster ikke noe honorar i det hele tatt.",
+            "Dette gjelder bare låneskjøtet. Notar- og registerkostnadene for kjøpsskjøtet er en egen sak mellom deg og selgeren, og AJD på kjøpsskjøtet for en nybygd bolig er fortsatt din. Sett av penger til disse enten du låner eller betaler alt selv, og be långiveren om kostnadslisten sammen med lånedokumentene."
+          ]
+        },
+        {
+          "h2": "Kan jeg ende opp med å betale selgerens gjeld?",
+          "paras": [
+            "Det kan du, hvis ingen sjekker. Når eierskapet skifter, hefter eiendommen selv for ubetalt IBI, og notarer må spørre om og varsle om utestående IBI på eiendommen. En kjøper overtar også ubetalte fellesutgifter for den delen av året som har gått, pluss de tre foregående kalenderårene. Selgeren må erklære i skjøtet at alt er betalt, eller legge fram en attest på hva som skyldes.",
+            "Bor selgeren ikke i Spania, må du vanligvis holde tilbake 3 prosent av avtalt pris og betale det til skattekontoret på modelo 211 innen én måned etter kjøpet. Det er ikke en ekstra kostnad, fordi det trekkes fra prisen, men det er din plikt som kjøper, så sørg for at abogado har det med i oppgjørstallene."
+          ]
+        },
+        {
+          "h2": "Hvorfor bør jeg ta vare på alle kvitteringer fra kjøpet?",
+          "paras": [
+            "Fordi de senker skatten din når du selger. Gevinsten ved et salg er overdragelsesverdien minus anskaffelsesverdien, og anskaffelsesverdien omfatter prisen pluss skattene og kostnadene som hører til kjøpet: ITP eller AJD, notaren og registeret. For en ikke-bosatt skattlegges gevinsten med 19 prosent, så en kvittering for kjøpsskatten du ikke lenger finner, er en kostnad du ikke lenger kan legge til.",
+            "Oppbevar skjøtet, oppgaven for kjøpsskatten og betalingskvitteringen, fakturaene fra notar og register og eventuelle kvitteringer for senere påkostninger samlet i én mappe, på papir og skannet. Om mange år vil den som tar seg av salget ditt, be om akkurat den mappen. Sett den så i hylla og nyt stedet."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Köpkostnader i Spanien: skatt, notarie och registrering",
+      "description": "Det här betalar du utöver priset i Spanien: ITP eller IVA, AJD, notariens och registrets officiella taxor, nota simple, NIE och kostnader för bolån.",
+      "h1": "Vad det kostar att köpa en bostad i Spanien, utöver priset",
+      "lead": "Den största kostnaden utöver priset är köpskatten: ITP vid köp av en begagnad bostad, med en skattesats som varje region bestämmer, eller 10 procent IVA plus AJD på en nybyggd bostad som köps från byggherren på det spanska fastlandet eller Balearerna. Notariens och fastighetsregistrets avgifter följer officiella taxor och är mycket mindre. Vid ett bolån lägger lagen de flesta uppläggningskostnaderna på långivaren, förutom värderingen.",
+      "sections": [
+        {
+          "h2": "Vilken skatt är den stora?",
+          "paras": [
+            "Det beror på vem som säljer. En bostad som köps från en privatperson beskattas med ITP, överlåtelseskatten, och det är köparen som är skattskyldig. En ny bostad som säljs av byggherren, dess första överlåtelse, beskattas i stället med IVA, som du betalar till säljaren, och en transaktion som omfattas av IVA omfattas inte också av ITP. Du betalar den ena eller den andra, inte båda.",
+            "ITP tas inte alltid ut på siffran i ditt avtal. Underlaget är valor de referencia, som Catastro fastställer utifrån priserna vid försäljningar hos notarie, om inte det pris du anger är högre. Ligger referensvärdet över det pris ni kom överens om betalar du skatt på referensvärdet. Be din gestor ta fram det innan du kommer överens om ett pris.",
+            "Tycker du att referensvärdet är fel kan du inte överklaga det direkt till Catastro. Det kan bara angripas när det får en skatteeffekt, genom att du begär rättelse av din deklaration eller överklagar beslutet från det organ som förvaltar skatten. En sak som det inte påverkar är din årliga IBI-avgift, som fortfarande bygger på taxeringsvärdet."
+          ]
+        },
+        {
+          "h2": "Hur hög är ITP i min region?",
+          "paras": [
+            "Varje region bestämmer sin egen skattesats, och där en region inte har beslutat någon gäller den statliga satsen på 6 procent. I Comunidad de Madrid är ITP på en begagnad bostad 6 procent. I Castilla-La Mancha är den i regel 9 procent. I Comunitat Valenciana är den 9 procent för köp från och med 1 juni 2026, och 11 procent där värdet överstiger 1 000 000 euro. Hur den gränsen på 11 procent tillämpas bör du bekräfta med din gestor innan du räknar med en siffra.",
+            "Två regioner tar ut skatten i skikt, där varje sats gäller sin egen del av värdet. På Illes Balears är den 8 procent upp till 400 000 euro, 9 procent upp till 600 000, 10 procent upp till 1 000 000, 12 procent upp till 2 000 000 och 13 procent däröver. På en bostad för 500 000 euro på Mallorca blir det 32 000 euro på de första 400 000 plus 9 000 euro på resten, alltså 41 000 euro totalt.",
+            "I Catalunya är den 10 procent upp till 600 000 euro, 11 procent upp till 900 000, 12 procent upp till 1 500 000 och 13 procent däröver, även här skikt för skikt. Det finns också en sats på 20 procent för storägare, det vill säga personer som äger fler än 10 bostadsfastigheter eller mer än 1 500 kvadratmeter bostadsyta i Catalunya, eller fem eller fler i ett område med ansträngd bostadsmarknad. Den gäller även spanska köpare (det är ingen regel om nationalitet).",
+            "För alla andra regioner bestäms skattesatsen av regionregeringen, och satserna ändras, så kontrollera den aktuella med din gestor innan du skriver på. Vissa regioner har också sänkta satser som är kopplade till en permanentbostad. Ett fritidshus passar sällan in där, så räkna inte med en sådan om inte din gestor bekräftar det skriftligt."
+          ]
+        },
+        {
+          "h2": "Vad betalar jag på en nybyggd bostad?",
+          "paras": [
+            "Du betalar IVA med 10 procent på det spanska fastlandet och Balearerna, inklusive upp till två parkeringsplatser och biutrymmen som överlåts tillsammans med bostaden. Statligt skyddade bostäder inom regimen especial eller promocion publica, som levereras av byggherren, har 4 procent. På en ny lägenhet för 300 000 euro på fastlandet är enbart IVA 30 000 euro, som betalas till byggherren tillsammans med priset.",
+            "Köpebrevet belastas också med AJD, stämpelskatten på handlingar, enligt den sats din region bestämmer, eller 0,50 procent där regionen inte har fastställt någon. På Kanarieöarna är skatten på en nybyggd bostad IGIC, inte IVA, eftersom öarna ligger utanför EU:s mervärdesskatteområde. Ett fritidshus betalar den allmänna satsen på 7 procent, eftersom satserna på 5 och 3 procent kräver att bostaden är din permanentbostad."
+          ]
+        },
+        {
+          "h2": "Vad tar notarien och fastighetsregistret betalt?",
+          "paras": [
+            "Notariens arvode för köpebrevet följer en officiell taxa: 90,151816 euro upp till ett värde på 6 010,12 euro, därefter sjunkande promillesatser på varje skikt ovanför (4,5, 1,5, 1, 0,5 och 0,3), med en nedsättning på 5 procent. På ett köpebrev på 250 000 euro blir den taxeposten cirka 364 euro. Andra poster i taxan prissätts separat, så den slutliga notariefakturan blir högre än enbart taxan.",
+            "Fastighetsregistrets avgifter fungerar på samma sätt: 24,040484 euro upp till 6 010,12 euro, därefter 1,75, 1,25, 0,75, 0,3 och 0,2 promille på varje skikt, med en nedsättning på 5 procent och ett tak på 2 181,673939 euro för den posten. På 250 000 euro blir det cirka 191 euro. De betalas av den person till vars förmån rättigheten registreras, vilket vid ett köp normalt är du.",
+            "Notariearvodet ska betalas av den som anlitade notarien och enligt hur de materiella reglerna och skattereglerna fördelar det, och alla dessa parter är solidariskt ansvariga. Vem som till slut betalar avgörs av ditt köpeavtal, så läs den raden innan du skriver på."
+          ]
+        },
+        {
+          "h2": "Vilka mindre avgifter kommer före köpebrevet?",
+          "paras": [
+            "Varje köpare behöver ett NIE, eftersom alla parter visar notarien sitt skatteregistreringsnummer och det skrivs in i köpebrevet. Avgiften för att få ett NIE tilldelat är 9,84 euro per person. En nota simple från fastighetsregistret har en officiell avgift på 3,005061 euro per fastighet, även om beställningstjänster på nätet och mellanhänder lägger på egna avgifter ovanpå.",
+            "Arvoden till yrkespersoner har ingen officiell taxa. Din abogado, din gestor och fastighetsmäklaren lämnar var och en sin egen offert, så be om offerten skriftligt innan arbetet börjar. Fråga mäklaren tidigt vem som betalar provisionen, eftersom svaret påverkar din budget och är lättare att reda ut före ett bud än efter."
+          ]
+        },
+        {
+          "h2": "Om jag tar ett bolån, vilka kostnader är mina?",
+          "paras": [
+            "Färre än många köpare tror. Vid ett bolån betalar du värderingen, medan långivaren betalar gestoría, notariearvodet för lånehandlingen och registreringsavgifterna för hypoteket. Kopior betalas av den som beställer dem. Det är också långivaren som är skattskyldig för AJD på pantbrevet, och den notariella acta där notarien förklarar lånet för dig kostar ingenting alls.",
+            "Det här gäller bara lånehandlingen. Notariens och registrets kostnader för själva köpebrevet är en separat fråga mellan dig och säljaren, och AJD på köpebrevet för en nybyggd bostad är fortfarande din. Budgetera för dem oavsett om du lånar eller betalar allt kontant, och be långivaren om dess lista över kostnader tillsammans med lånehandlingarna."
+          ]
+        },
+        {
+          "h2": "Kan jag bli tvungen att betala säljarens skulder?",
+          "paras": [
+            "Det kan du, om ingen kontrollerar. När äganderätten byter händer är fastigheten själv fortsatt ansvarig för obetald IBI, och notarier måste fråga om och varna för utestående IBI på fastigheten. En köpare tar också över obetalda samfällighetsavgifter för den del av året som redan har gått plus de tre föregående kalenderåren. Säljaren måste intyga i köpebrevet att avgifterna är betalda eller lämna ett intyg om vad som är skyldigt.",
+            "Om säljaren inte är bosatt i Spanien måste du i regel hålla inne 3 procent av det avtalade priset och betala in det till skattemyndigheten på modelo 211 inom en månad från köpet. Det är ingen extra kostnad, eftersom det dras från priset, men det är din skyldighet som köpare, så se till att din abogado har med det i slutlikviden."
+          ]
+        },
+        {
+          "h2": "Varför ska jag spara alla kvitton från köpet?",
+          "paras": [
+            "För att de sänker din skatt när du säljer. Vinsten vid en försäljning är försäljningsvärdet minus anskaffningsvärdet, och anskaffningsvärdet omfattar priset plus de skatter och kostnader som hör till köpet: ITP eller AJD, notarien och registret. För en icke-bosatt beskattas vinsten med 19 procent, så ett kvitto på köpskatten som du inte längre hittar är en kostnad du inte längre kan lägga till.",
+            "Spara köpebrevet, deklarationen av köpskatten och betalningskvittot, fakturorna från notarien och registret och alla kvitton för senare förbättringar tillsammans i en mapp, på papper och inskannade. Om några år kommer den som sköter din försäljning att be om just den mappen. Ställ den sedan på en hylla och fortsätt njuta av stället."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Kaufnebenkosten in Spanien: Steuer, Notar und Grundbuch",
+      "description": "Was Sie in Spanien zusätzlich zum Preis zahlen: ITP oder IVA, AJD, die amtlichen Notar- und Grundbuchtarife, die nota simple, die NIE und Hypothekenkosten.",
+      "h1": "Was ein Immobilienkauf in Spanien zusätzlich zum Preis kostet",
+      "lead": "Der größte Posten neben dem Preis ist die Kaufsteuer: ITP bei einer Bestandsimmobilie, zu einem Satz, den jede Region festlegt, oder 10 Prozent IVA plus AJD bei einem Neubau, der vom Bauträger auf dem spanischen Festland oder den Balearen gekauft wird. Notar- und Grundbuchgebühren folgen amtlichen Tarifen und sind deutlich geringer. Bei einer Hypothek legt das Gesetz die meisten Einrichtungskosten dem Kreditgeber auf, mit Ausnahme der Bewertung.",
+      "sections": [
+        {
+          "h2": "Welche Steuer ist der große Posten?",
+          "paras": [
+            "Das hängt davon ab, wer verkauft. Eine Immobilie, die Sie von einer Privatperson kaufen, unterliegt der ITP, der Grunderwerbsteuer, und der Käufer ist der Steuerpflichtige. Eine neue Immobilie, die der Bauträger verkauft, also bei ihrer ersten Übergabe, unterliegt stattdessen der IVA, die Sie an den Verkäufer zahlen, und ein Vorgang, der der IVA unterliegt, unterliegt nicht zusätzlich der ITP. Sie zahlen das eine oder das andere, nicht beides.",
+            "Die ITP wird nicht immer auf den Betrag in Ihrem Vertrag erhoben. Ihre Grundlage ist der valor de referencia, den der Catastro aus den Preisen notarieller Verkäufe ermittelt, es sei denn, der von Ihnen angegebene Preis ist höher. Liegt der Referenzwert über Ihrem vereinbarten Preis, zahlen Sie Steuer auf den Referenzwert. Bitten Sie Ihren gestor, ihn nachzuschlagen, bevor Sie einen Preis vereinbaren.",
+            "Halten Sie den Referenzwert für falsch, können Sie ihn nicht direkt beim Catastro anfechten. Er kann nur angefochten werden, wenn er steuerliche Wirkung hat, indem Sie die Berichtigung Ihrer Erklärung beantragen oder den Bescheid der Stelle anfechten, die die Steuer verwaltet. Ihre jährliche IBI berührt er nicht, denn sie richtet sich weiterhin nach dem Katasterwert."
+          ]
+        },
+        {
+          "h2": "Wie hoch ist die ITP in meiner Region?",
+          "paras": [
+            "Jede Region legt ihren eigenen Satz fest, und wo eine Region keinen beschlossen hat, gilt der staatliche Satz von 6 Prozent. In der Comunidad de Madrid beträgt die ITP auf eine gebrauchte Immobilie 6 Prozent. In Castilla-La Mancha sind es allgemein 9 Prozent. In der Comunitat Valenciana sind es 9 Prozent für Käufe ab dem 1. Juni 2026 und 11 Prozent, wenn der Wert 1.000.000 Euro übersteigt. Wie diese 11-Prozent-Stufe angewendet wird, sollten Sie mit Ihrem gestor klären, bevor Sie sich auf eine Zahl verlassen.",
+            "Zwei Regionen erheben die Steuer in Stufen, jeder Satz auf seinen eigenen Teil des Werts. Auf den Illes Balears sind es 8 Prozent bis 400.000 Euro, 9 Prozent bis 600.000, 10 Prozent bis 1.000.000, 12 Prozent bis 2.000.000 und 13 Prozent darüber. Bei einer Immobilie für 500.000 Euro auf Mallorca sind das 32.000 Euro auf die ersten 400.000 plus 9.000 Euro auf den Rest, insgesamt also 41.000 Euro.",
+            "In Catalunya sind es 10 Prozent bis 600.000 Euro, 11 Prozent bis 900.000, 12 Prozent bis 1.500.000 und 13 Prozent darüber, wiederum Stufe für Stufe. Es gibt außerdem einen Satz von 20 Prozent für Großeigentümer, also Personen, die in Catalunya mehr als 10 Wohnimmobilien oder mehr als 1.500 Quadratmeter Wohnfläche besitzen, oder fünf oder mehr in einem angespannten Wohnungsmarktgebiet. Er gilt auch für spanische Käufer (es ist keine Regel, die an die Staatsangehörigkeit anknüpft).",
+            "In jeder anderen Region legt die jeweilige Regionalregierung den Satz fest, und Sätze ändern sich, prüfen Sie den aktuellen also mit Ihrem gestor, bevor Sie unterschreiben. Manche Regionen haben auch ermäßigte Sätze, die an einen Hauptwohnsitz geknüpft sind. Ein Ferienhaus erfüllt diese selten, rechnen Sie also nicht damit, solange Ihr gestor es nicht schriftlich bestätigt."
+          ]
+        },
+        {
+          "h2": "Was zahle ich bei einem Neubau?",
+          "paras": [
+            "Sie zahlen IVA von 10 Prozent auf dem spanischen Festland und den Balearen, einschließlich bis zu zwei Stellplätzen und Nebenräumen, die mit der Wohnung übertragen werden. Amtlich geförderte Wohnungen des regimen especial oder der promocion publica, die der Bauträger übergibt, werden mit 4 Prozent besteuert. Bei einer neuen Wohnung für 300.000 Euro auf dem Festland beträgt allein die IVA 30.000 Euro, die mit dem Preis an den Bauträger gezahlt werden.",
+            "Für die Urkunde fällt außerdem AJD an, die Stempelsteuer auf Urkunden, zu dem Satz, den Ihre Region festlegt, oder 0,50 Prozent, wo die Region keinen festgelegt hat. Auf den Kanarischen Inseln ist die Steuer auf einen Neubau die IGIC, nicht die IVA, weil die Inseln außerhalb des Mehrwertsteuergebiets der EU liegen. Ein Ferienhaus unterliegt dem allgemeinen Satz von 7 Prozent, da die Sätze von 5 und 3 Prozent voraussetzen, dass die Immobilie Ihr Hauptwohnsitz ist."
+          ]
+        },
+        {
+          "h2": "Was berechnen Notar und Grundbuchamt?",
+          "paras": [
+            "Die Notargebühren für die Urkunde folgen einem amtlichen Tarif: 90,151816 Euro bis zu einem Wert von 6.010,12 Euro, danach sinkende Promillesätze auf jede darüber liegende Stufe (4,5, 1,5, 1, 0,5 und 0,3), mit einer Ermäßigung von 5 Prozent. Bei einer Urkunde über 250.000 Euro ergibt diese Tarifposition etwa 364 Euro. Andere Positionen des Tarifs werden gesondert berechnet, die endgültige Notarrechnung ist also höher als der Tarif allein.",
+            "Die Grundbuchgebühren funktionieren genauso: 24,040484 Euro bis 6.010,12 Euro, danach 1,75, 1,25, 0,75, 0,3 und 0,2 Promille auf jede Stufe, mit einer Ermäßigung von 5 Prozent und einer Obergrenze von 2.181,673939 Euro für diese Position. Bei 250.000 Euro sind es etwa 191 Euro. Sie zahlt die Person, zu deren Gunsten das Recht eingetragen wird, und das sind bei einem Kauf normalerweise Sie.",
+            "Notargebühren schuldet, wer die Dienste des Notars in Anspruch genommen hat, sowie wer sie nach den materiellen und steuerlichen Vorschriften zu tragen hat, und alle diese Parteien haften gesamtschuldnerisch. Wer letztlich zahlt, regelt Ihr Kaufvertrag, lesen Sie diese Zeile also, bevor Sie ihn unterschreiben."
+          ]
+        },
+        {
+          "h2": "Welche kleineren Gebühren fallen vor der Urkunde an?",
+          "paras": [
+            "Jeder Käufer braucht eine NIE, denn jede Partei legt dem Notar ihre Steueridentifikationsnummer vor, und sie wird in die Urkunde geschrieben. Die Gebühr für die Zuteilung einer NIE beträgt 9,84 Euro pro Person. Die nota simple aus dem Grundbuch hat eine amtliche Gebühr von 3,005061 Euro pro Immobilie, auch wenn Online-Bestelldienste und Vermittler eigene Gebühren aufschlagen.",
+            "Für Honorare von Fachleuten gibt es keinen amtlichen Tarif. Ihr abogado, Ihr gestor und der Immobilienmakler nennen jeweils ihren eigenen Preis, lassen Sie sich das Angebot also schriftlich geben, bevor die Arbeit beginnt. Fragen Sie den Makler früh, wer die Provision zahlt, denn die Antwort verändert Ihr Budget und lässt sich vor einem Angebot leichter klären als danach."
+          ]
+        },
+        {
+          "h2": "Welche Kosten trage ich, wenn ich eine Hypothek aufnehme?",
+          "paras": [
+            "Weniger, als viele Käufer erwarten. Bei einem Hypothekendarlehen zahlen Sie die Bewertung, während der Kreditgeber die gestoría, die Notargebühren für die Darlehensurkunde und die Grundbuchgebühren für die Hypothek trägt. Abschriften zahlt, wer sie anfordert. Der Kreditgeber ist auch Steuerpflichtiger der AJD auf die Hypothekenurkunde, und für die notarielle acta, in der Ihnen der Notar das Darlehen erklärt, fällt überhaupt keine Gebühr an.",
+            "Das gilt nur für die Darlehensurkunde. Die Notar- und Grundbuchkosten der Kaufurkunde sind eine eigene Angelegenheit zwischen Ihnen und dem Verkäufer, und die AJD auf die Kaufurkunde eines Neubaus bleibt Ihre Sache. Planen Sie diese Kosten ein, ob Sie finanzieren oder vollständig bezahlen, und bitten Sie den Kreditgeber zusammen mit den Darlehensunterlagen um seine Kostenaufstellung."
+          ]
+        },
+        {
+          "h2": "Kann ich am Ende die Schulden des Verkäufers bezahlen?",
+          "paras": [
+            "Das kann passieren, wenn niemand nachprüft. Beim Eigentümerwechsel haftet die Immobilie selbst weiter für unbezahlte IBI, und Notare müssen nach offener IBI auf der Immobilie fragen und darauf hinweisen. Ein Käufer übernimmt außerdem unbezahlte Gemeinschaftsbeiträge für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre. Der Verkäufer muss in der Urkunde erklären, dass er auf dem aktuellen Stand ist, oder eine Bescheinigung über seine Rückstände vorlegen.",
+            "Ist der Verkäufer nicht in Spanien ansässig, müssen Sie in der Regel 3 Prozent des vereinbarten Preises einbehalten und innerhalb eines Monats nach dem Kauf mit modelo 211 an das Finanzamt abführen. Das sind keine zusätzlichen Kosten, denn der Betrag geht vom Preis ab, aber es ist Ihre Pflicht als Käufer, achten Sie also darauf, dass Ihr abogado ihn in der Abrechnung zum Abschluss berücksichtigt."
+          ]
+        },
+        {
+          "h2": "Warum sollte ich jeden Beleg vom Kauf aufbewahren?",
+          "paras": [
+            "Weil sie Ihre Steuer beim Verkauf senken. Der Gewinn bei einem Verkauf ist der Veräußerungswert minus der Anschaffungswert, und der Anschaffungswert umfasst den Preis plus die mit dem Kauf verbundenen Steuern und Kosten: ITP oder AJD, Notar und Grundbuch. Für Nichtansässige wird der Gewinn mit 19 Prozent besteuert, ein Beleg über die Kaufsteuer, den Sie nicht mehr finden, ist also ein Kostenpunkt, den Sie nicht mehr ansetzen können.",
+            "Bewahren Sie die Urkunde, die Erklärung zur Kaufsteuer und ihren Zahlungsbeleg, die Rechnungen von Notar und Grundbuch und alle Belege für spätere Verbesserungen zusammen in einem Ordner auf, auf Papier und eingescannt. In einigen Jahren wird genau nach diesem Ordner fragen, wer Ihren Verkauf abwickelt. Dann stellen Sie ihn ins Regal und genießen Ihr Zuhause."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Frais d'achat d'un bien en Espagne : impôts, notaire et registre",
+      "description": "Ce que vous payez en plus du prix en Espagne : ITP ou IVA, AJD, barèmes officiels du notaire et du registre, nota simple, NIE et frais de prêt.",
+      "h1": "Ce que coûte l'achat d'un bien en Espagne, en plus du prix",
+      "lead": "Le coût le plus important en plus du prix est l'impôt d'achat : l'ITP sur un bien ancien, à un taux fixé par chaque région, ou 10 pour cent d'IVA plus l'AJD sur un logement neuf acheté au promoteur en Espagne continentale ou aux Baléares. Les frais de notaire et de registre foncier suivent des barèmes officiels et sont bien plus faibles. Pour un prêt immobilier, la loi met la plupart des frais de mise en place à la charge du prêteur, hormis l'évaluation.",
+      "sections": [
+        {
+          "h2": "Quel est l'impôt le plus lourd ?",
+          "paras": [
+            "Tout dépend de qui vend. Un logement acheté à un particulier est soumis à l'ITP, l'impôt sur les transmissions, et c'est l'acheteur qui en est redevable. Un logement neuf vendu par le promoteur, lors de sa première livraison, est soumis à l'IVA à la place, que vous payez au vendeur, et une opération soumise à l'IVA n'est pas aussi soumise à l'ITP. Vous payez l'un ou l'autre, pas les deux.",
+            "L'ITP n'est pas toujours calculé sur le montant de votre contrat. Sa base est le valor de referencia, que le Catastro établit à partir des prix des ventes passées devant notaire, sauf si le prix que vous déclarez est plus élevé. Si la valeur de référence dépasse le prix convenu, vous payez l'impôt sur la valeur de référence. Demandez à votre gestor de la consulter avant de vous mettre d'accord sur un prix.",
+            "Si vous estimez que la valeur de référence est erronée, vous ne pouvez pas la contester directement auprès du Catastro. Elle ne peut être contestée que lorsqu'elle produit un effet fiscal, en demandant la rectification de votre déclaration ou en contestant la liquidation de l'organisme qui gère l'impôt. Une chose qu'elle ne touche pas : votre avis d'IBI annuel, qui reste fondé sur la valeur cadastrale."
+          ]
+        },
+        {
+          "h2": "Combien coûte l'ITP dans ma région ?",
+          "paras": [
+            "Chaque région fixe son propre taux, et lorsqu'une région n'en a pas adopté, le taux de l'État de 6 pour cent s'applique. Dans la Comunidad de Madrid, l'ITP sur un logement ancien est de 6 pour cent. En Castilla-La Mancha, il est en général de 9 pour cent. Dans la Comunitat Valenciana, il est de 9 pour cent pour les achats à partir du 1er juin 2026, et de 11 pour cent lorsque la valeur dépasse 1 000 000 euros. La façon dont s'applique cette tranche à 11 pour cent est à confirmer avec votre gestor avant de vous fier à un chiffre.",
+            "Deux régions appliquent un barème par tranches, chaque taux portant sur sa propre part de la valeur. Aux Illes Balears, c'est 8 pour cent jusqu'à 400 000 euros, 9 pour cent jusqu'à 600 000, 10 pour cent jusqu'à 1 000 000, 12 pour cent jusqu'à 2 000 000 et 13 pour cent au-delà. Pour un logement de 500 000 euros à Majorque, cela fait 32 000 euros sur les 400 000 premiers plus 9 000 euros sur le reste, soit 41 000 euros au total.",
+            "En Catalunya, c'est 10 pour cent jusqu'à 600 000 euros, 11 pour cent jusqu'à 900 000, 12 pour cent jusqu'à 1 500 000 et 13 pour cent au-delà, là encore tranche par tranche. Il existe aussi un taux de 20 pour cent pour les grands détenteurs, c'est-à-dire les personnes qui possèdent plus de 10 biens résidentiels ou plus de 1 500 mètres carrés de surface résidentielle en Catalunya, ou cinq ou plus dans une zone de marché tendu. Il s'applique aussi aux acheteurs espagnols (ce n'est pas une règle liée à la nationalité).",
+            "Pour toute autre région, le taux est fixé par le gouvernement régional et les taux changent : vérifiez donc le taux en vigueur avec votre gestor avant de signer. Certaines régions ont aussi des taux réduits liés à la résidence principale. Une résidence de vacances y correspond rarement : n'en tenez donc pas compte sauf si votre gestor vous le confirme par écrit."
+          ]
+        },
+        {
+          "h2": "Que vais-je payer sur un logement neuf ?",
+          "paras": [
+            "Vous payez l'IVA à 10 pour cent en Espagne continentale et aux Baléares, y compris jusqu'à deux places de stationnement et les annexes transmises avec le logement. Les logements bénéficiant d'une protection officielle du regimen especial ou de promocion publica, livrés par le promoteur, sont à 4 pour cent. Pour un appartement neuf de 300 000 euros sur le continent, l'IVA seule représente 30 000 euros, payés au promoteur avec le prix.",
+            "L'acte paie aussi l'AJD, le droit de timbre sur les actes, au taux fixé par votre région, ou 0,50 pour cent lorsque la région n'en a fixé aucun. Aux îles Canaries, l'impôt sur un logement neuf est l'IGIC et non l'IVA, car l'archipel se trouve hors du territoire TVA de l'UE. Une résidence de vacances paie le taux général de 7 pour cent, puisque les taux de 5 et 3 pour cent exigent que le logement soit votre résidence principale."
+          ]
+        },
+        {
+          "h2": "Combien facturent le notaire et le registre foncier ?",
+          "paras": [
+            "Les honoraires de notaire sur l'acte suivent un barème officiel : 90,151816 euros jusqu'à 6 010,12 euros de valeur, puis des taux pour mille décroissants sur chaque tranche au-delà (4,5, 1,5, 1, 0,5 et 0,3), avec une réduction de 5 pour cent. Pour un acte de 250 000 euros, ce poste du barème revient à environ 364 euros. Les autres postes du tarif sont facturés à part : la facture finale du notaire est donc plus élevée que le seul barème.",
+            "Les frais de registre foncier fonctionnent de la même manière : 24,040484 euros jusqu'à 6 010,12 euros, puis 1,75, 1,25, 0,75, 0,3 et 0,2 pour mille sur chaque tranche, avec une réduction de 5 pour cent et un plafond de 2 181,673939 euros pour ce poste. Sur 250 000 euros, cela fait environ 191 euros. Ils sont payés par la personne au profit de laquelle le droit est inscrit, c'est-à-dire normalement vous lors d'un achat.",
+            "Les honoraires du notaire sont dus par la personne qui a sollicité ses services et selon la répartition prévue par les règles de fond et les règles fiscales, et toutes ces parties en sont solidairement responsables. Qui paie finalement relève de votre contrat d'achat : lisez cette ligne avant de le signer."
+          ]
+        },
+        {
+          "h2": "Quels petits frais viennent avant l'acte ?",
+          "paras": [
+            "Chaque acheteur a besoin d'un NIE, car chaque partie présente au notaire son numéro d'identification fiscale, qui est inscrit dans l'acte. La taxe d'attribution d'un NIE est de 9,84 euros par personne. La nota simple du registre foncier a un tarif officiel de 3,005061 euros par bien, même si les services de demande en ligne et les intermédiaires ajoutent leurs propres frais.",
+            "Les honoraires des professionnels n'ont pas de barème officiel. Votre abogado, votre gestor et l'agent immobilier fixent chacun les leurs : demandez donc un devis écrit avant le début du travail. Demandez tôt à l'agent qui paie la commission, car la réponse change votre budget et se règle plus facilement avant une offre qu'après."
+          ]
+        },
+        {
+          "h2": "Si je prends un prêt immobilier, quels frais sont à ma charge ?",
+          "paras": [
+            "Moins que ne le pensent beaucoup d'acheteurs. Pour un prêt hypothécaire, vous payez l'évaluation, tandis que le prêteur paie la gestoría, les honoraires de notaire pour l'acte de prêt et les frais de registre de l'hypothèque. Les copies sont payées par celui qui les demande. Le prêteur est aussi redevable de l'AJD sur l'acte de prêt, et l'acta notarial dans lequel le notaire vous explique le prêt ne donne lieu à aucun honoraire.",
+            "Cela ne concerne que l'acte de prêt. Les frais de notaire et de registre de l'acte d'achat sont une question distincte entre vous et le vendeur, et l'AJD sur l'acte d'achat d'un logement neuf reste à votre charge. Prévoyez-les dans votre budget, que vous empruntiez ou payiez comptant, et demandez au prêteur sa liste de frais en même temps que les documents du prêt."
+          ]
+        },
+        {
+          "h2": "Puis-je finir par payer les dettes du vendeur ?",
+          "paras": [
+            "Oui, si personne ne vérifie. Lors d'un changement de propriétaire, le bien lui-même reste redevable de l'IBI impayé, et les notaires doivent se renseigner sur l'IBI en attente sur le bien et en avertir. L'acheteur reprend aussi les charges de copropriété impayées pour la partie de l'année déjà écoulée et les trois années civiles précédentes. Le vendeur doit déclarer dans l'acte qu'il est à jour ou fournir un certificat de ce qu'il doit.",
+            "Si le vendeur ne réside pas en Espagne, vous devez en général retenir 3 pour cent du prix convenu et les verser au fisc sur le modelo 211 dans un délai d'un mois après l'achat. Ce n'est pas un coût supplémentaire, puisqu'il est prélevé sur le prix, mais c'est votre obligation en tant qu'acheteur : vérifiez que votre abogado l'a intégré dans les montants de la signature."
+          ]
+        },
+        {
+          "h2": "Pourquoi garder tous les justificatifs de l'achat ?",
+          "paras": [
+            "Parce qu'ils réduisent votre impôt à la revente. La plus-value sur une vente est la valeur de transmission moins la valeur d'acquisition, et la valeur d'acquisition comprend le prix plus les impôts et frais inhérents à l'achat : l'ITP ou l'AJD, le notaire et le registre. Pour un non-résident, la plus-value est imposée à 19 pour cent : un justificatif d'impôt d'achat introuvable est donc un coût que vous ne pouvez plus ajouter.",
+            "Rangez ensemble dans un même dossier, sur papier et numérisés, l'acte, la déclaration d'impôt d'achat et son justificatif de paiement, les factures du notaire et du registre et les justificatifs des améliorations ultérieures. Dans quelques années, la personne qui s'occupera de votre vente vous demandera exactement ce dossier. Rangez-le ensuite sur une étagère et profitez des lieux."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Kosten koper in Spanje: belasting, notaris en register",
+      "description": "Wat u in Spanje bovenop de prijs betaalt: ITP of IVA, AJD, de officiële tarieven van notaris en register, de nota simple, de NIE en de hypotheekkosten.",
+      "h1": "Wat het kopen van een woning in Spanje kost, bovenop de prijs",
+      "lead": "De grootste kostenpost bovenop de prijs is de overdrachtsbelasting: ITP op een bestaande woning, tegen een tarief dat elke regio zelf vaststelt, of 10 procent IVA plus AJD op nieuwbouw die u op het Spaanse vasteland of de Balearen van de projectontwikkelaar koopt. De kosten van notaris en eigendomsregister volgen officiële tarieven en zijn veel lager. Bij een hypotheek legt de wet de meeste afsluitkosten bij de geldverstrekker, behalve de taxatie.",
+      "sections": [
+        {
+          "h2": "Welke belasting is de grootste?",
+          "paras": [
+            "Dat hangt af van wie verkoopt. Een woning die u van een particulier koopt, valt onder ITP, de overdrachtsbelasting, en de koper is de belastingplichtige. Een nieuwe woning die de projectontwikkelaar verkoopt, de eerste levering, valt in plaats daarvan onder IVA, die u aan de verkoper betaalt, en een transactie waarop IVA rust, is niet ook nog onderworpen aan ITP. U betaalt het een of het ander, niet allebei.",
+            "ITP wordt niet altijd berekend over het bedrag in uw contract. De grondslag is de valor de referencia, die het Catastro vaststelt op basis van de prijzen bij verkopen voor een notaris, tenzij de prijs die u opgeeft hoger is. Ligt de referentiewaarde boven de afgesproken prijs, dan betaalt u belasting over de referentiewaarde. Vraag uw gestor die waarde op te zoeken voordat u een prijs afspreekt.",
+            "Denkt u dat de referentiewaarde niet klopt, dan kunt u daartegen niet rechtstreeks bij het Catastro in bezwaar gaan. Ze kan alleen worden aangevochten als ze fiscale gevolgen heeft, door om correctie van uw aangifte te vragen of door bezwaar te maken tegen de aanslag van de instantie die de belasting beheert. Eén ding raakt ze niet: uw jaarlijkse IBI-aanslag, die nog steeds de kadastrale waarde gebruikt."
+          ]
+        },
+        {
+          "h2": "Hoe hoog is de ITP in mijn regio?",
+          "paras": [
+            "Elke regio stelt een eigen tarief vast, en waar een regio er geen heeft vastgesteld, geldt het landelijke tarief van 6 procent. In de Comunidad de Madrid is de ITP op een bestaande woning 6 procent. In Castilla-La Mancha is die in het algemeen 9 procent. In de Comunitat Valenciana is die 9 procent voor aankopen vanaf 1 juni 2026, en 11 procent als de waarde hoger is dan 1.000.000 euro. Hoe die schijf van 11 procent precies wordt toegepast, kunt u het beste met uw gestor nagaan voordat u op een bedrag rekent.",
+            "Twee regio's rekenen in schijven, elk tarief over een eigen deel van de waarde. Op de Illes Balears is het 8 procent tot 400.000 euro, 9 procent tot 600.000, 10 procent tot 1.000.000, 12 procent tot 2.000.000 en 13 procent daarboven. Op een woning van 500.000 euro op Mallorca is dat 32.000 euro over de eerste 400.000 plus 9.000 euro over de rest, dus in totaal 41.000 euro.",
+            "In Catalunya is het 10 procent tot 600.000 euro, 11 procent tot 900.000, 12 procent tot 1.500.000 en 13 procent daarboven, ook hier schijf voor schijf. Er is daarnaast een tarief van 20 procent voor grootbezitters, dat wil zeggen mensen met meer dan 10 woningen of meer dan 1.500 vierkante meter woonruimte in Catalunya, of vijf of meer in een gebied met een gespannen woningmarkt. Het geldt ook voor Spaanse kopers (het is geen regel over nationaliteit).",
+            "Voor elke andere regio stelt de regionale overheid het tarief vast en tarieven veranderen, dus controleer het actuele tarief met uw gestor voordat u tekent. Sommige regio's hebben ook verlaagde tarieven voor een hoofdverblijf. Een vakantiewoning komt daar zelden voor in aanmerking, dus reken er niet op tenzij uw gestor het schriftelijk bevestigt."
+          ]
+        },
+        {
+          "h2": "Wat betaal ik bij nieuwbouw?",
+          "paras": [
+            "U betaalt 10 procent IVA op het Spaanse vasteland en de Balearen, inclusief maximaal twee parkeerplaatsen en bijgebouwen die samen met de woning worden overgedragen. Officieel beschermde woningen van het regimen especial of de promocion publica, geleverd door de ontwikkelaar, vallen onder 4 procent. Op een nieuw appartement van 300.000 euro op het vasteland is alleen de IVA al 30.000 euro, die u met de prijs aan de projectontwikkelaar betaalt.",
+            "Over de akte betaalt u daarnaast AJD, de zegelbelasting op documenten, tegen het tarief dat uw regio vaststelt, of 0,50 procent waar de regio er geen heeft vastgesteld. Op de Canarische Eilanden is de belasting op nieuwbouw IGIC en geen IVA, omdat de eilanden buiten het btw-gebied van de EU vallen. Een vakantiewoning betaalt het algemene tarief van 7 procent, want voor de tarieven van 5 en 3 procent moet de woning uw hoofdverblijf zijn."
+          ]
+        },
+        {
+          "h2": "Wat rekenen de notaris en het eigendomsregister?",
+          "paras": [
+            "De notariskosten voor de akte volgen een officieel tarief: 90,151816 euro tot een waarde van 6.010,12 euro, daarna dalende tarieven per duizend over elke schijf daarboven (4,5, 1,5, 1, 0,5 en 0,3), met een korting van 5 procent. Op een akte van 250.000 euro komt dat onderdeel van het tarief uit op ongeveer 364 euro. Andere onderdelen van het tarief worden apart berekend, dus de uiteindelijke notarisrekening ligt hoger dan dit tarief alleen.",
+            "De kosten van het eigendomsregister werken op dezelfde manier: 24,040484 euro tot 6.010,12 euro, daarna 1,75, 1,25, 0,75, 0,3 en 0,2 per duizend over elke schijf, met een korting van 5 procent en een maximum van 2.181,673939 euro voor dat onderdeel. Op 250.000 euro is dat ongeveer 191 euro. Ze worden betaald door degene te wiens gunste het recht wordt ingeschreven, en bij een aankoop bent u dat normaal gesproken zelf.",
+            "Notariskosten zijn verschuldigd door wie de diensten van de notaris heeft gevraagd en volgens de verdeling in de materiële en fiscale regels, en al die partijen zijn hoofdelijk aansprakelijk. Wie uiteindelijk betaalt, is een zaak voor uw koopcontract, dus lees die regel voordat u tekent."
+          ]
+        },
+        {
+          "h2": "Welke kleinere kosten komen vóór de akte?",
+          "paras": [
+            "Elke koper heeft een NIE nodig, want elke partij toont de notaris haar fiscaal identificatienummer en dat wordt in de akte opgenomen. De leges voor de toekenning van een NIE zijn 9,84 euro per persoon. Voor de nota simple van het eigendomsregister geldt een officieel tarief van 3,005061 euro per woning, al rekenen online aanvraagdiensten en tussenpersonen daar hun eigen kosten bovenop.",
+            "Voor professionele honoraria bestaat geen officieel tarief. Uw abogado, uw gestor en de makelaar geven elk hun eigen prijs op, dus vraag de offerte schriftelijk voordat het werk begint. Vraag de makelaar vroeg wie de courtage betaalt, want het antwoord verandert uw budget en is makkelijker te regelen vóór een bod dan erna."
+          ]
+        },
+        {
+          "h2": "Welke kosten zijn voor mij als ik een hypotheek neem?",
+          "paras": [
+            "Minder dan veel kopers verwachten. Bij een hypothecaire lening betaalt u de taxatie, terwijl de geldverstrekker de gestoría, de notariskosten van de hypotheekakte en de registerkosten van de hypotheek betaalt. Afschriften worden betaald door wie ze aanvraagt. De geldverstrekker is ook de belastingplichtige voor de AJD op de hypotheekakte, en voor de notariële acta waarin de notaris u de lening uitlegt, wordt niets gerekend.",
+            "Dit geldt alleen voor de hypotheekakte. De notaris- en registerkosten van de koopakte zijn een aparte zaak tussen u en de verkoper, en de AJD op de koopakte van een nieuwbouwwoning blijft voor uw rekening. Reken daarop, of u nu leent of alles zelf betaalt, en vraag de geldverstrekker om een overzicht van de kosten naast de leningsdocumenten."
+          ]
+        },
+        {
+          "h2": "Kan ik de schulden van de verkoper moeten betalen?",
+          "paras": [
+            "Dat kan, als niemand het controleert. Bij een eigendomsoverdracht blijft de woning zelf aansprakelijk voor onbetaalde IBI, en notarissen moeten naar openstaande IBI op de woning vragen en daarvoor waarschuwen. Een koper neemt ook onbetaalde bijdragen aan de vereniging van eigenaars over voor het deel van het jaar dat al voorbij is plus de drie voorgaande kalenderjaren. De verkoper moet in de akte verklaren dat hij bij is met betalen of een verklaring overleggen van wat hij verschuldigd is.",
+            "Woont de verkoper niet in Spanje, dan moet u meestal 3 procent van de afgesproken prijs inhouden en die binnen een maand na de aankoop met modelo 211 aan de belastingdienst betalen. Het zijn geen extra kosten, want het bedrag gaat van de prijs af, maar het is wel uw verplichting als koper, dus zorg dat uw abogado het in de afrekening heeft opgenomen."
+          ]
+        },
+        {
+          "h2": "Waarom moet ik elk bewijsstuk van de aankoop bewaren?",
+          "paras": [
+            "Omdat ze uw belasting verlagen als u verkoopt. De winst bij een verkoop is de verkoopwaarde min de aankoopwaarde, en de aankoopwaarde omvat de prijs plus de belastingen en kosten die bij de aankoop horen: de ITP of AJD, de notaris en het register. Voor een niet-inwoner wordt de winst belast tegen 19 procent, dus een betalingsbewijs van de overdrachtsbelasting dat u niet meer kunt vinden, is een kostenpost die u niet meer kunt meetellen.",
+            "Bewaar de akte, de aangifte van de overdrachtsbelasting en het betalingsbewijs, de facturen van notaris en register en alle bonnen van latere verbeteringen samen in één map, op papier en gescand. Over een aantal jaren vraagt degene die uw verkoop regelt precies om die map. Zet hem dan op de plank en geniet van de plek."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "slug": "reservation-and-deposit-contracts-in-spain",
+  "topic": "buying",
+  "tool": "deal-checklist",
+  "rules": [
+    "buy.registry.good_faith_buyer",
+    "buy.registry.purpose",
+    "buy.registry.nota_simple_fee",
+    "buy.notary.who_pays",
+    "buy.registry.who_pays",
+    "own.ibi.pass_on",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "epc.requirement",
+    "buy.deed.payment_means",
+    "buy.cash.limit",
+    "buy.cash.border_spain",
+    "buy.mortgage.ten_days",
+    "buy.mortgage.fein_binding",
+    "buy.mortgage.notary_acta",
+    "aml.obliged_agents",
+    "aml.identification",
+    "aml.beneficial_owner",
+    "buy.deed.tax_ids",
+    "poa.apostille_parties",
+    "limit.hidden_defects",
+    "limit.contract.annulment"
+  ],
+  "answers": [
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "energy-certificate-for-a-spanish-property",
+    "why-spanish-estate-agents-ask-for-id",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "nie-number-form-and-fee",
+    "hidden-defects-after-buying-a-spanish-property",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Reservation and Deposit Contracts in Spain",
+      "description": "What a Spanish reservation or arras contract should say, how to pay the deposit safely, and which checks to make before any money leaves your account.",
+      "h1": "What to check before you sign a reservation or deposit contract in Spain",
+      "lead": "Between an accepted offer and the deed at the notary, most Spanish purchases go through a reservation document and a private contract with a deposit, usually called an arras contract. What happens to that deposit if someone pulls out depends on the exact wording, so the contract should spell it out and an abogado should confirm which type of arras it creates. Check the nota simple and the property's debts before you pay anything.",
+      "sections": [
+        {
+          "h2": "My offer was accepted. What am I actually signing now?",
+          "paras": [
+            "Usually three documents, in this order. First a short reservation or offer document, often prepared by the agent, which takes the property off the market. Then a private purchase contract with a deposit, which most agents call the contrato de arras. Last, the public deed (escritura) signed before a notary, which is the document that goes to the land registry.",
+            "The first two are private agreements, and their wording is what protects you. Agents often work from a standard contract they adjust for each sale, and it can arrive a day or two before signing. That is not long if you are reading legal Spanish in your second or third language, so ask for the draft early and have it checked.",
+            "The last step matters more than many buyers expect. Spanish law protects a buyer who acquires in good faith, and for value, from the person the registry shows as owner, but that protection depends on registering. Until the deed is on the land registry, you do not yet have it."
+          ]
+        },
+        {
+          "h2": "What should the reservation document say?",
+          "paras": [
+            "It should name the property, your offer price, the amount you pay to reserve it, who holds that money and what happens to it in each outcome. If the seller turns your offer down, the money should come back to you. If the sale goes ahead, the document should say whether the amount comes off the price or off the agent's fee.",
+            "The amount is agreed case by case, and the figures quoted online vary widely, so treat any number you are given as a proposal rather than a rule. Ask for a date on which the reservation ends. A reservation without an end date can leave your money tied up while nothing moves on the seller's side."
+          ]
+        },
+        {
+          "h2": "Is the arras contract the point of no return?",
+          "paras": [
+            "It is the point where the deal becomes serious, but what that means in money depends on the exact words. Spanish practice uses more than one type of arras, and the type decides whether either side can walk away and on what terms. A contract that simply says arras, with nothing more, can be read in more than one way.",
+            "So the contract should state, in plain sentences, what happens to the deposit if you withdraw, what happens if the seller withdraws, and what happens if a condition fails, for example if your mortgage is refused or the checks turn up a debt the seller does not clear. Do not rely on what someone tells you the usual rule is.",
+            "Ask an abogado to read the contract before you sign and to tell you in writing which type of arras it creates. One clear paragraph from a lawyer who has read your actual contract is worth more than any general summary, this one included."
+          ]
+        },
+        {
+          "h2": "What else belongs in the private contract?",
+          "paras": [
+            "The description of the property should match the nota simple: the address, the registry details, the size and anything included, such as a parking space or a storage room. Add the cadastral reference, the price, the deposit, the completion date and a list of the furniture and appliances that stay with the house.",
+            "Then come the costs. Notary fees are owed by whoever asked for the notary's services and by the parties as the substantive and tax rules allocate them, and where there are several, each can be asked for the whole amount, so who finally pays is for your contract to settle. Registry fees fall on the person the right is registered for, which on a purchase is normally the buyer.",
+            "Say how the year's IBI, the local property tax, will be shared. You can agree a split, but the town hall still bills whoever was the taxpayer. And on a sale, a copy of the registered energy certificate and its label must be annexed to the contract, so ask for it now rather than at the notary."
+          ]
+        },
+        {
+          "h2": "What should I check before paying the deposit?",
+          "paras": [
+            "Order a nota simple from the land registry. The registry exists to record who owns a property and the other rights over it, such as a mortgage, and the nota simple is your short extract of that. The registrar's own fee is 3.005061 euros per property, though online request services add their own charges on top.",
+            "Two kinds of debt can follow the property to you. A buyer takes on the seller's unpaid community charges for the part of the year already passed plus the three previous calendar years, and the property itself answers for them. Unpaid IBI also stays attached to the property, which is why notaries must ask about it and warn you.",
+            "Ask the seller for the latest IBI receipt and for written confirmation from the community's administrator that the charges are up to date. Then make clearing any debt a condition in the contract, and say in writing what happens to your deposit if it is not done."
+          ]
+        },
+        {
+          "h2": "How should I pay the deposit?",
+          "paras": [
+            "Pay by bank transfer, to an account whose holder you have confirmed, with the property address in the reference. When you sign the deed, the notary must record how the price was paid, whether before or at signing, and by what means: cash, cheque or transfer. Your deposit is part of the price, so keep the transfer receipt for that day.",
+            "Cash is a poor idea here. Where one side acts as a business or professional, such as a developer, cash payments are limited to 1,000 euros, or 10,000 euros for a private individual whose tax domicile is outside Spain. Carrying 10,000 euros or more into or out of Spain also has to be declared.",
+            "If payment instructions change by email at the last minute, stop. Phone someone you already know at the agency or law firm, on a number you already had, and confirm the account before sending anything (yes, even if it feels rude)."
+          ]
+        },
+        {
+          "h2": "I need a mortgage. How much time should the completion date allow?",
+          "paras": [
+            "It should allow enough time for the lender's paperwork and the legal waiting time. The lender must give you the FEIN, its binding offer, together with the warnings sheet and the draft contract, at least ten calendar days before the loan is signed. You also have to appear before a notary of your choice no later than the day before the deed, so the notary can explain the loan.",
+            "Build those days into the completion date in the private contract, with some margin, and make the mortgage a condition if you depend on it. A date that only works if every step goes perfectly is how a calm purchase turns tense in its last week."
+          ]
+        },
+        {
+          "h2": "Why does the agent want my passport, and can I sign from home?",
+          "paras": [
+            "Estate agents who act in property sales are obliged subjects under the anti-money-laundering law, so they must identify you with reliable documents before the deal goes ahead. If you buy through a company, they must also identify whoever holds more than 25 percent of it or otherwise controls it. It is a legal duty, not a sign of distrust.",
+            "At the deed, each party shows the notary their tax identification number, which for a foreign buyer is the NIE, and it is written into the deed. If you cannot travel, a power of attorney signed in Norway, Sweden, Germany, France, the Netherlands or the United Kingdom is accepted in Spain with an apostille instead of consular legalisation. Send the draft to the Spanish notary before you sign it at home."
+          ]
+        },
+        {
+          "h2": "What if I find a problem after completion?",
+          "paras": [
+            "Act quickly. A claim against the seller for hidden defects dies six months after the property was handed over, not six months after you found the defect. Setting the whole contract aside for mistake or deceit has a four year window, counted from completion of the contract.",
+            "Both depend on what the paperwork said, which is one more reason to want an accurate description and clear conditions in the private contract. Keep every version you signed with your deed. Then put the folder away and start enjoying the place, beginning with the first coffee on your own terrace."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Reservasjon og depositumskontrakt ved boligkjøp i Spania",
+      "description": "Hva en spansk reservasjon eller arras-kontrakt bør si, hvordan du betaler depositumet trygt, og hvilke kontroller du gjør før pengene forlater kontoen din.",
+      "h1": "Dette bør du sjekke før du signerer en reservasjon eller depositumskontrakt i Spania",
+      "lead": "Mellom et akseptert bud og skjøtet hos notaren går de fleste spanske kjøp gjennom et reservasjonsdokument og en privat kontrakt med depositum, vanligvis kalt en arras-kontrakt. Hva som skjer med depositumet hvis noen trekker seg, avhenger av den nøyaktige ordlyden, så kontrakten bør si det klart, og en abogado bør bekrefte hvilken type arras den oppretter. Sjekk nota simple og eiendommens gjeld før du betaler noe.",
+      "sections": [
+        {
+          "h2": "Budet mitt ble akseptert. Hva er det egentlig jeg signerer nå?",
+          "paras": [
+            "Vanligvis tre dokumenter, i denne rekkefølgen. Først et kort reservasjons- eller tilbudsdokument, ofte laget av megleren, som tar eiendommen av markedet. Deretter en privat kjøpekontrakt med depositum, som de fleste meglere kaller contrato de arras. Til slutt det offentlige skjøtet (escritura) som signeres hos en notar, og som er dokumentet som går til eiendomsregisteret.",
+            "De to første er private avtaler, og det er ordlyden i dem som beskytter deg. Meglere jobber ofte ut fra en standardkontrakt de tilpasser for hvert salg, og den kan komme en dag eller to før signering. Det er ikke lenge hvis du leser juridisk spansk på ditt andre eller tredje språk, så be om utkastet tidlig og få det sjekket.",
+            "Det siste steget betyr mer enn mange kjøpere tror. Spansk lov verner en kjøper som i god tro og mot vederlag kjøper fra den registeret viser som eier, men det vernet avhenger av registrering. Før skjøtet står i eiendomsregisteret, har du det ikke ennå."
+          ]
+        },
+        {
+          "h2": "Hva bør reservasjonsdokumentet si?",
+          "paras": [
+            "Det bør angi eiendommen, budet ditt, beløpet du betaler for å reservere den, hvem som holder pengene, og hva som skjer med dem i hvert utfall. Avslår selgeren budet ditt, bør pengene komme tilbake til deg. Blir salget noe av, bør dokumentet si om beløpet trekkes fra prisen eller fra meglerens honorar.",
+            "Beløpet avtales fra sak til sak, og tallene som oppgis på nettet varierer mye, så behandle ethvert tall du får som et forslag og ikke en regel. Be om en dato da reservasjonen opphører. En reservasjon uten sluttdato kan binde pengene dine mens ingenting skjer på selgerens side."
+          ]
+        },
+        {
+          "h2": "Er arras-kontrakten punktet der det ikke er noen vei tilbake?",
+          "paras": [
+            "Det er punktet der handelen blir alvorlig, men hva det betyr i penger, avhenger av de nøyaktige ordene. Spansk praksis bruker mer enn én type arras, og typen avgjør om noen av partene kan trekke seg, og på hvilke vilkår. En kontrakt som bare sier arras, uten noe mer, kan leses på mer enn én måte.",
+            "Kontrakten bør derfor si, i enkle setninger, hva som skjer med depositumet hvis du trekker deg, hva som skjer hvis selgeren trekker seg, og hva som skjer hvis en betingelse ikke oppfylles, for eksempel hvis boliglånet ditt blir avslått eller kontrollene avdekker en gjeld selgeren ikke gjør opp. Ikke stol på det noen forteller deg at den vanlige regelen er.",
+            "Be en abogado lese kontrakten før du signerer, og fortelle deg skriftlig hvilken type arras den oppretter. Ett klart avsnitt fra en advokat som har lest akkurat din kontrakt, er verdt mer enn noe generelt sammendrag, også dette."
+          ]
+        },
+        {
+          "h2": "Hva mer hører hjemme i den private kontrakten?",
+          "paras": [
+            "Beskrivelsen av eiendommen bør stemme med nota simple: adressen, registeropplysningene, størrelsen og alt som er inkludert, som en parkeringsplass eller en bod. Legg til matrikkelreferansen, prisen, depositumet, overtakelsesdatoen og en liste over møblene og hvitevarene som blir med huset.",
+            "Så kommer kostnadene. Notarhonoraret skyldes av den som ba om notarens tjenester og av partene slik de materielle reglene og skattereglene fordeler det, og er det flere, kan hver av dem bli krevd for hele beløpet, så hvem som til slutt betaler, er noe kontrakten din må avgjøre. Registergebyrene faller på den som rettigheten registreres til, og ved et kjøp er det normalt kjøperen.",
+            "Skriv hvordan årets IBI, den kommunale eiendomsskatten, skal deles. Dere kan avtale en fordeling, men kommunen sender fortsatt regningen til den som var skattyter. Og ved et salg må en kopi av den registrerte energiattesten og energimerket legges ved kontrakten, så be om den nå og ikke hos notaren."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg sjekke før jeg betaler depositumet?",
+          "paras": [
+            "Bestill en nota simple fra eiendomsregisteret. Registeret finnes for å registrere hvem som eier en eiendom og de andre rettighetene over den, som et pantelån, og nota simple er ditt korte utdrag av det. Registerførerens eget gebyr er 3,005061 euro per eiendom, selv om nettjenester som bestiller den legger på egne gebyrer i tillegg.",
+            "To typer gjeld kan følge eiendommen over til deg. En kjøper overtar selgerens ubetalte fellesutgifter for den delen av året som har gått, pluss de tre foregående kalenderårene, og eiendommen selv hefter for dem. Ubetalt IBI følger også eiendommen, og det er derfor notarer må spørre om det og advare deg.",
+            "Be selgeren om den siste IBI-kvitteringen og om skriftlig bekreftelse fra sameiets forvalter på at fellesutgiftene er betalt. Gjør deretter oppgjør av all gjeld til en betingelse i kontrakten, og skriv hva som skjer med depositumet ditt hvis det ikke blir gjort."
+          ]
+        },
+        {
+          "h2": "Hvordan bør jeg betale depositumet?",
+          "paras": [
+            "Betal med bankoverføring, til en konto der du har bekreftet hvem som er innehaver, med eiendommens adresse i referansen. Når du signerer skjøtet, må notaren registrere hvordan prisen ble betalt, om det var før eller ved signering, og med hvilket betalingsmiddel: kontanter, sjekk eller overføring. Depositumet ditt er en del av prisen, så ta vare på overføringskvitteringen til den dagen.",
+            "Kontanter er en dårlig idé her. Når en av partene opptrer som næringsdrivende eller profesjonell, som en utbygger, er kontantbetalinger begrenset til 1 000 euro, eller 10 000 euro for en privatperson med skattemessig bopel utenfor Spania. Å ta med 10 000 euro eller mer inn i eller ut av Spania må også deklareres.",
+            "Endres betalingsinstruksene på e-post i siste liten, stopp. Ring noen du allerede kjenner hos megleren eller advokatkontoret, på et nummer du hadde fra før, og bekreft kontoen før du sender noe (ja, selv om det føles uhøflig)."
+          ]
+        },
+        {
+          "h2": "Jeg trenger boliglån. Hvor god tid bør overtakelsesdatoen gi?",
+          "paras": [
+            "Den bør gi nok tid til långiverens papirarbeid og den lovpålagte ventetiden. Långiveren må gi deg FEIN, det bindende tilbudet, sammen med arket med advarsler og kontraktsutkastet, minst ti kalenderdager før lånet signeres. Du må også møte hos en notar du velger selv, senest dagen før skjøtet, slik at notaren kan forklare lånet.",
+            "Bygg de dagene inn i overtakelsesdatoen i den private kontrakten, med litt margin, og gjør boliglånet til en betingelse hvis du er avhengig av det. En dato som bare fungerer hvis hvert steg går perfekt, er slik et rolig kjøp blir anspent den siste uken."
+          ]
+        },
+        {
+          "h2": "Hvorfor vil megleren ha passet mitt, og kan jeg signere hjemmefra?",
+          "paras": [
+            "Eiendomsmeglere som medvirker ved boligsalg, er rapporteringspliktige etter hvitvaskingsloven, så de må identifisere deg med pålitelige dokumenter før handelen går videre. Kjøper du gjennom et selskap, må de også identifisere den som eier mer enn 25 prosent av det eller på annen måte kontrollerer det. Det er en lovpålagt plikt, ikke et tegn på mistillit.",
+            "Ved skjøtet viser hver part notaren sitt skatteidentifikasjonsnummer, som for en utenlandsk kjøper er NIE, og det skrives inn i skjøtet. Kan du ikke reise, godtas en fullmakt signert i Norge, Sverige, Tyskland, Frankrike, Nederland eller Storbritannia i Spania med apostille i stedet for konsulær legalisering. Send utkastet til den spanske notaren før du signerer det hjemme."
+          ]
+        },
+        {
+          "h2": "Hva om jeg oppdager et problem etter overtakelsen?",
+          "paras": [
+            "Handle raskt. Et krav mot selgeren for skjulte mangler faller bort seks måneder etter at eiendommen ble overlevert, ikke seks måneder etter at du oppdaget mangelen. Å få hele kontrakten opphevet på grunn av villfarelse eller svik har en frist på fire år, regnet fra kontrakten ble gjennomført.",
+            "Begge avhenger av hva papirene sa, som er enda en grunn til å ønske en nøyaktig beskrivelse og klare betingelser i den private kontrakten. Oppbevar hver versjon du signerte sammen med skjøtet. Legg så mappen bort og begynn å nyte stedet, med den første kaffen på din egen terrasse."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Reservationsavtal och handpenning vid bostadsköp i Spanien",
+      "description": "Vad ett spanskt reservations- eller arrasavtal bör innehålla, hur du betalar handpenningen säkert och vad du kontrollerar innan pengarna lämnar kontot.",
+      "h1": "Det här ska du kontrollera innan du skriver på ett reservations- eller handpenningsavtal i Spanien",
+      "lead": "Mellan ett accepterat bud och köpebrevet hos notarien går de flesta spanska köp via en reservationshandling och ett privat avtal med handpenning, oftast kallat arrasavtal. Vad som händer med handpenningen om någon drar sig ur beror på den exakta formuleringen, så avtalet bör skriva ut det och en abogado bör bekräfta vilken typ av arras det skapar. Kontrollera nota simple och fastighetens skulder innan du betalar något.",
+      "sections": [
+        {
+          "h2": "Mitt bud har accepterats. Vad är det jag skriver på nu?",
+          "paras": [
+            "Vanligtvis tre handlingar, i den här ordningen. Först en kort reservations- eller budhandling, ofta upprättad av mäklaren, som tar bostaden från marknaden. Sedan ett privat köpeavtal med handpenning, som de flesta mäklare kallar contrato de arras. Sist det offentliga köpebrevet (escritura) som undertecknas inför en notarie, och det är den handlingen som går till fastighetsregistret.",
+            "De två första är privata överenskommelser, och det är deras formulering som skyddar dig. Mäklare arbetar ofta utifrån ett standardavtal som de anpassar för varje försäljning, och det kan komma en eller två dagar före undertecknandet. Det är inte länge om du läser juridisk spanska på ditt andra eller tredje språk, så be om utkastet tidigt och låt någon granska det.",
+            "Det sista steget betyder mer än många köpare tror. Spansk lag skyddar en köpare som i god tro och mot vederlag förvärvar från den person som registret visar som ägare, men det skyddet bygger på registreringen. Tills köpebrevet finns i fastighetsregistret har du det inte ännu."
+          ]
+        },
+        {
+          "h2": "Vad ska reservationshandlingen innehålla?",
+          "paras": [
+            "Den ska ange bostaden, ditt budpris, beloppet du betalar för att reservera den, vem som förvaltar pengarna och vad som händer med dem i varje utfall. Om säljaren tackar nej till ditt bud ska pengarna komma tillbaka till dig. Om försäljningen genomförs ska handlingen ange om beloppet dras från priset eller från mäklarens arvode.",
+            "Beloppet bestäms från fall till fall, och siffrorna som anges på nätet varierar mycket, så behandla varje belopp du får som ett förslag snarare än en regel. Be om ett datum då reservationen upphör. En reservation utan slutdatum kan låsa dina pengar medan ingenting händer på säljarens sida."
+          ]
+        },
+        {
+          "h2": "Är arrasavtalet punkten där det inte finns någon väg tillbaka?",
+          "paras": [
+            "Det är punkten där affären blir allvarlig, men vad det betyder i pengar beror på de exakta orden. I spansk praxis används mer än en typ av arras, och typen avgör om någon av parterna kan dra sig ur och på vilka villkor. Ett avtal som bara säger arras, utan något mer, kan läsas på mer än ett sätt.",
+            "Avtalet bör därför ange, i tydliga meningar, vad som händer med handpenningen om du drar dig ur, vad som händer om säljaren drar sig ur, och vad som händer om ett villkor inte uppfylls, till exempel om ditt bolån avslås eller om kontrollerna visar en skuld som säljaren inte betalar. Förlita dig inte på vad någon säger att den vanliga regeln är.",
+            "Be en abogado läsa avtalet innan du skriver på och tala om för dig skriftligt vilken typ av arras det skapar. Ett tydligt stycke från en jurist som har läst just ditt avtal är värt mer än en allmän sammanfattning, den här inräknad."
+          ]
+        },
+        {
+          "h2": "Vad mer hör hemma i det privata avtalet?",
+          "paras": [
+            "Beskrivningen av bostaden ska stämma med nota simple: adressen, registeruppgifterna, storleken och allt som ingår, till exempel en parkeringsplats eller ett förråd. Lägg till fastighetsbeteckningen hos Catastro, priset, handpenningen, tillträdesdagen och en lista över de möbler och vitvaror som följer med huset.",
+            "Sedan kommer kostnaderna. Notariearvodet ska betalas av den som anlitade notarien och av parterna enligt hur de materiella reglerna och skattereglerna fördelar det, och finns det flera kan var och en krävas på hela beloppet, så vem som till slut betalar är något ditt avtal ska reglera. Registreringsavgifterna faller på den person som rättigheten registreras för, vilket vid ett köp normalt är köparen.",
+            "Ange hur årets IBI, den lokala fastighetsskatten, ska delas. Ni kan komma överens om en fördelning, men kommunen skickar ändå avin till den som var skattskyldig. Och vid en försäljning måste en kopia av den registrerade energideklarationen och dess märkning bifogas till avtalet, så be om den nu i stället för hos notarien."
+          ]
+        },
+        {
+          "h2": "Vad ska jag kontrollera innan jag betalar handpenningen?",
+          "paras": [
+            "Beställ en nota simple från fastighetsregistret. Registret finns till för att anteckna vem som äger en fastighet och de andra rättigheterna i den, till exempel ett hypotek, och nota simple är ditt korta utdrag ur det. Registratorns egen avgift är 3,005061 euro per fastighet, även om beställningstjänster på nätet lägger på egna avgifter ovanpå.",
+            "Två typer av skulder kan följa fastigheten till dig. En köpare tar över säljarens obetalda samfällighetsavgifter för den del av året som redan har gått plus de tre föregående kalenderåren, och fastigheten själv svarar för dem. Obetald IBI är också knuten till fastigheten, vilket är skälet till att notarier måste fråga om den och varna dig.",
+            "Be säljaren om den senaste IBI-avin och om skriftlig bekräftelse från samfällighetens förvaltare att avgifterna är betalda. Gör sedan betalningen av eventuella skulder till ett villkor i avtalet, och ange skriftligt vad som händer med din handpenning om det inte sker."
+          ]
+        },
+        {
+          "h2": "Hur ska jag betala handpenningen?",
+          "paras": [
+            "Betala med banköverföring, till ett konto vars innehavare du har bekräftat, med bostadens adress i referensen. När du skriver på köpebrevet måste notarien anteckna hur köpeskillingen betalades, före eller vid undertecknandet, och på vilket sätt: kontant, med check eller med överföring. Din handpenning är en del av köpeskillingen, så spara överföringskvittot till den dagen.",
+            "Kontanter är en dålig idé här. När en av parterna agerar som företag eller yrkesutövare, till exempel en byggherre, är kontantbetalningar begränsade till 1 000 euro, eller 10 000 euro för en privatperson med skatterättslig hemvist utanför Spanien. Att föra in eller ut 10 000 euro eller mer till eller från Spanien måste också deklareras.",
+            "Om betalningsinstruktionerna ändras via e-post i sista minuten, stanna. Ring någon du redan känner på mäklarbyrån eller advokatbyrån, på ett nummer du redan hade, och bekräfta kontot innan du skickar något (ja, även om det känns oartigt)."
+          ]
+        },
+        {
+          "h2": "Jag behöver ett bolån. Hur mycket tid ska tillträdesdagen ge?",
+          "paras": [
+            "Den ska ge tillräckligt med tid för långivarens pappersarbete och den lagstadgade väntetiden. Långivaren måste ge dig FEIN, sitt bindande erbjudande, tillsammans med bladet med varningar och utkastet till avtal minst tio kalenderdagar innan lånet undertecknas. Du måste också infinna dig hos en notarie som du själv väljer senast dagen före köpebrevet, så att notarien kan förklara lånet.",
+            "Bygg in de dagarna i tillträdesdagen i det privata avtalet, med lite marginal, och gör bolånet till ett villkor om du är beroende av det. Ett datum som bara fungerar om varje steg går perfekt är hur ett lugnt köp blir spänt den sista veckan."
+          ]
+        },
+        {
+          "h2": "Varför vill mäklaren ha mitt pass, och kan jag skriva under hemifrån?",
+          "paras": [
+            "Fastighetsmäklare som medverkar vid bostadsförsäljningar är rapporteringsskyldiga enligt penningtvättslagen, så de måste identifiera dig med tillförlitliga handlingar innan affären går vidare. Köper du via ett bolag måste de också identifiera den som innehar mer än 25 procent av det eller på annat sätt kontrollerar det. Det är en rättslig skyldighet, inte ett tecken på misstro.",
+            "Vid köpebrevet visar varje part notarien sitt skatteregistreringsnummer, vilket för en utländsk köpare är NIE, och det skrivs in i köpebrevet. Kan du inte resa godtas en fullmakt som undertecknats i Norge, Sverige, Tyskland, Frankrike, Nederländerna eller Storbritannien i Spanien med en apostille i stället för konsulär legalisering. Skicka utkastet till den spanska notarien innan du skriver under det hemma."
+          ]
+        },
+        {
+          "h2": "Vad händer om jag hittar ett problem efter tillträdet?",
+          "paras": [
+            "Agera snabbt. Ett krav mot säljaren för dolda fel upphör sex månader efter att bostaden överlämnades, inte sex månader efter att du upptäckte felet. Att häva hela avtalet på grund av misstag eller svek har ett fönster på fyra år, räknat från att avtalet fullgjordes.",
+            "Båda beror på vad handlingarna sa, vilket är ytterligare ett skäl att vilja ha en korrekt beskrivning och tydliga villkor i det privata avtalet. Spara varje version du skrev på tillsammans med ditt köpebrev. Lägg sedan undan mappen och börja njuta av stället, med början i det första kaffet på din egen terrass."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Reservierungs- und Anzahlungsvertrag in Spanien (arras)",
+      "description": "Was ein spanischer Reservierungs- oder arras-Vertrag regeln sollte, wie Sie die Anzahlung sicher leisten und was Sie prüfen, bevor Geld Ihr Konto verlässt.",
+      "h1": "Was Sie vor einem Reservierungs- oder Anzahlungsvertrag in Spanien prüfen sollten",
+      "lead": "Zwischen einem angenommenen Angebot und der Urkunde beim Notar durchlaufen die meisten Käufe in Spanien ein Reservierungsdokument und einen privaten Vertrag mit Anzahlung, meist arras-Vertrag genannt. Was mit dieser Anzahlung geschieht, wenn jemand aussteigt, hängt vom genauen Wortlaut ab, der Vertrag sollte es also ausdrücklich regeln, und ein abogado sollte bestätigen, welche Art von arras er begründet. Prüfen Sie die nota simple und die Schulden der Immobilie, bevor Sie etwas zahlen.",
+      "sections": [
+        {
+          "h2": "Mein Angebot wurde angenommen. Was unterschreibe ich jetzt eigentlich?",
+          "paras": [
+            "Meist drei Dokumente, in dieser Reihenfolge. Zuerst ein kurzes Reservierungs- oder Angebotsdokument, oft vom Makler vorbereitet, mit dem die Immobilie vom Markt genommen wird. Dann ein privater Kaufvertrag mit Anzahlung, den die meisten Makler contrato de arras nennen. Zuletzt die öffentliche Urkunde (escritura), die vor einem Notar unterschrieben wird und die an das Grundbuch geht.",
+            "Die ersten beiden sind private Vereinbarungen, und ihr Wortlaut ist das, was Sie schützt. Makler arbeiten oft mit einem Standardvertrag, den sie für jeden Verkauf anpassen, und er kann einen oder zwei Tage vor der Unterzeichnung eintreffen. Das ist nicht viel Zeit, wenn Sie juristisches Spanisch in Ihrer zweiten oder dritten Sprache lesen, bitten Sie also früh um den Entwurf und lassen Sie ihn prüfen.",
+            "Der letzte Schritt ist wichtiger, als viele Käufer erwarten. Das spanische Recht schützt einen Käufer, der gutgläubig und entgeltlich von der Person erwirbt, die das Grundbuch als Eigentümer ausweist, aber dieser Schutz hängt von der Eintragung ab. Solange die Urkunde nicht im Grundbuch steht, haben Sie ihn noch nicht."
+          ]
+        },
+        {
+          "h2": "Was sollte im Reservierungsdokument stehen?",
+          "paras": [
+            "Es sollte die Immobilie benennen, Ihren Angebotspreis, den Betrag, den Sie für die Reservierung zahlen, wer dieses Geld verwahrt und was in jedem Fall damit geschieht. Lehnt der Verkäufer Ihr Angebot ab, sollte das Geld an Sie zurückgehen. Kommt der Verkauf zustande, sollte das Dokument festlegen, ob der Betrag vom Preis oder von der Maklerprovision abgezogen wird.",
+            "Der Betrag wird von Fall zu Fall vereinbart, und die online genannten Zahlen gehen weit auseinander, betrachten Sie jede Zahl, die man Ihnen nennt, also als Vorschlag und nicht als Regel. Bitten Sie um ein Datum, an dem die Reservierung endet. Eine Reservierung ohne Enddatum kann Ihr Geld binden, während sich auf der Seite des Verkäufers nichts bewegt."
+          ]
+        },
+        {
+          "h2": "Ist der arras-Vertrag der Punkt, ab dem es kein Zurück mehr gibt?",
+          "paras": [
+            "Es ist der Punkt, an dem das Geschäft ernst wird, aber was das in Geld bedeutet, hängt vom genauen Wortlaut ab. Die spanische Praxis kennt mehr als eine Art von arras, und die Art entscheidet, ob eine Seite aussteigen kann und zu welchen Bedingungen. Ein Vertrag, in dem einfach nur arras steht, ohne weitere Angaben, kann auf mehr als eine Weise gelesen werden.",
+            "Der Vertrag sollte deshalb in klaren Sätzen festlegen, was mit der Anzahlung geschieht, wenn Sie zurücktreten, was geschieht, wenn der Verkäufer zurücktritt, und was geschieht, wenn eine Bedingung nicht eintritt, etwa wenn Ihre Hypothek abgelehnt wird oder die Prüfungen eine Schuld zutage fördern, die der Verkäufer nicht begleicht. Verlassen Sie sich nicht darauf, was Ihnen jemand als übliche Regel erzählt.",
+            "Bitten Sie einen abogado, den Vertrag vor der Unterschrift zu lesen und Ihnen schriftlich mitzuteilen, welche Art von arras er begründet. Ein klarer Absatz von einem Anwalt, der Ihren tatsächlichen Vertrag gelesen hat, ist mehr wert als jede allgemeine Zusammenfassung, diese hier eingeschlossen."
+          ]
+        },
+        {
+          "h2": "Was gehört noch in den privaten Vertrag?",
+          "paras": [
+            "Die Beschreibung der Immobilie sollte mit der nota simple übereinstimmen: Adresse, Grundbuchangaben, Größe und alles, was dazugehört, etwa ein Stellplatz oder ein Abstellraum. Fügen Sie die Katasterreferenz, den Preis, die Anzahlung, den Abschlusstermin und eine Liste der Möbel und Geräte hinzu, die im Haus bleiben.",
+            "Dann kommen die Kosten. Notargebühren schuldet, wer die Dienste des Notars in Anspruch genommen hat, sowie die Parteien, denen sie die materiellen und steuerlichen Vorschriften zuweisen, und gibt es mehrere, kann von jedem der volle Betrag verlangt werden, wer letztlich zahlt, muss also Ihr Vertrag regeln. Grundbuchgebühren trägt die Person, für die das Recht eingetragen wird, und das ist bei einem Kauf normalerweise der Käufer.",
+            "Legen Sie fest, wie die IBI des Jahres, die örtliche Grundsteuer, aufgeteilt wird. Sie können eine Aufteilung vereinbaren, aber das Rathaus stellt die Rechnung weiterhin dem, der Steuerpflichtiger war. Und bei einem Verkauf muss dem Vertrag eine Kopie des registrierten Energieausweises und seines Labels beigefügt werden, verlangen Sie ihn also jetzt und nicht erst beim Notar."
+          ]
+        },
+        {
+          "h2": "Was sollte ich prüfen, bevor ich die Anzahlung leiste?",
+          "paras": [
+            "Bestellen Sie eine nota simple beim Grundbuch. Das Grundbuch hält fest, wem eine Immobilie gehört und welche anderen Rechte daran bestehen, etwa eine Hypothek, und die nota simple ist Ihr kurzer Auszug daraus. Die Gebühr des Registerführers selbst beträgt 3,005061 Euro pro Immobilie, auch wenn Online-Bestelldienste eigene Gebühren aufschlagen.",
+            "Zwei Arten von Schulden können mit der Immobilie auf Sie übergehen. Ein Käufer übernimmt die unbezahlten Gemeinschaftsbeiträge des Verkäufers für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre, und die Immobilie selbst haftet dafür. Auch unbezahlte IBI bleibt an der Immobilie hängen, weshalb Notare danach fragen und Sie darauf hinweisen müssen.",
+            "Bitten Sie den Verkäufer um den letzten IBI-Beleg und um eine schriftliche Bestätigung des Verwalters der Gemeinschaft, dass die Beiträge auf dem aktuellen Stand sind. Machen Sie dann die Begleichung jeder Schuld zur Bedingung im Vertrag und halten Sie schriftlich fest, was mit Ihrer Anzahlung geschieht, wenn das nicht passiert."
+          ]
+        },
+        {
+          "h2": "Wie sollte ich die Anzahlung leisten?",
+          "paras": [
+            "Zahlen Sie per Banküberweisung auf ein Konto, dessen Inhaber Sie überprüft haben, mit der Adresse der Immobilie im Verwendungszweck. Wenn Sie die Urkunde unterschreiben, muss der Notar festhalten, wie der Preis gezahlt wurde, ob vor oder bei der Unterschrift und mit welchem Mittel: bar, per Scheck oder per Überweisung. Ihre Anzahlung ist Teil des Preises, bewahren Sie den Überweisungsbeleg also für diesen Tag auf.",
+            "Bargeld ist hier keine gute Idee. Wenn eine Seite als Unternehmer oder Freiberufler handelt, etwa ein Bauträger, sind Barzahlungen auf 1.000 Euro begrenzt, oder auf 10.000 Euro für eine Privatperson mit steuerlichem Wohnsitz außerhalb Spaniens. Wer 10.000 Euro oder mehr nach Spanien bringt oder aus Spanien mitnimmt, muss das außerdem anmelden.",
+            "Wenn sich die Zahlungsanweisungen in letzter Minute per E-Mail ändern, halten Sie inne. Rufen Sie jemanden an, den Sie bei der Agentur oder der Kanzlei bereits kennen, unter einer Nummer, die Sie schon hatten, und bestätigen Sie das Konto, bevor Sie etwas senden (ja, auch wenn es sich unhöflich anfühlt)."
+          ]
+        },
+        {
+          "h2": "Ich brauche eine Hypothek. Wie viel Zeit sollte der Abschlusstermin lassen?",
+          "paras": [
+            "Genug Zeit für die Unterlagen des Kreditgebers und die gesetzliche Wartezeit. Der Kreditgeber muss Ihnen die FEIN, sein verbindliches Angebot, zusammen mit dem Merkblatt mit Warnhinweisen und dem Vertragsentwurf mindestens zehn Kalendertage vor der Unterzeichnung des Darlehens übergeben. Außerdem müssen Sie spätestens am Tag vor der Urkunde bei einem Notar Ihrer Wahl erscheinen, damit er Ihnen das Darlehen erklären kann.",
+            "Planen Sie diese Tage mit etwas Spielraum in den Abschlusstermin im privaten Vertrag ein, und machen Sie die Hypothek zur Bedingung, wenn Sie auf sie angewiesen sind. Ein Termin, der nur funktioniert, wenn jeder Schritt perfekt läuft, ist genau das, was einen ruhigen Kauf in seiner letzten Woche angespannt macht."
+          ]
+        },
+        {
+          "h2": "Warum will der Makler meinen Reisepass, und kann ich von zu Hause aus unterschreiben?",
+          "paras": [
+            "Immobilienmakler, die bei Verkäufen tätig sind, sind nach dem Geldwäschegesetz Verpflichtete, sie müssen Sie also anhand verlässlicher Dokumente identifizieren, bevor das Geschäft weitergeht. Kaufen Sie über eine Gesellschaft, müssen sie auch identifizieren, wer mehr als 25 Prozent daran hält oder sie auf andere Weise kontrolliert. Das ist eine gesetzliche Pflicht, kein Zeichen von Misstrauen.",
+            "Bei der Urkunde legt jede Partei dem Notar ihre Steueridentifikationsnummer vor, für einen ausländischen Käufer ist das die NIE, und sie wird in die Urkunde geschrieben. Wenn Sie nicht reisen können, wird eine in Norwegen, Schweden, Deutschland, Frankreich, den Niederlanden oder dem Vereinigten Königreich unterschriebene Vollmacht in Spanien mit einer Apostille statt einer konsularischen Legalisation anerkannt. Schicken Sie den Entwurf an den spanischen Notar, bevor Sie sie zu Hause unterschreiben."
+          ]
+        },
+        {
+          "h2": "Was, wenn ich nach dem Abschluss ein Problem entdecke?",
+          "paras": [
+            "Handeln Sie schnell. Ein Anspruch gegen den Verkäufer wegen versteckter Mängel erlischt sechs Monate nach der Übergabe der Immobilie, nicht sechs Monate, nachdem Sie den Mangel entdeckt haben. Für die Anfechtung des gesamten Vertrags wegen Irrtums oder Täuschung gilt ein Zeitfenster von vier Jahren, gerechnet ab dem Vollzug des Vertrags.",
+            "Beides hängt davon ab, was in den Unterlagen stand, ein Grund mehr, im privaten Vertrag eine genaue Beschreibung und klare Bedingungen zu haben. Bewahren Sie jede unterschriebene Fassung zusammen mit Ihrer Urkunde auf. Dann legen Sie den Ordner weg und fangen an, Ihr Zuhause zu genießen, mit dem ersten Kaffee auf Ihrer eigenen Terrasse."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrat de réservation et contrat d'arras en Espagne",
+      "description": "Ce que doit dire un contrat de réservation ou d'arras en Espagne, comment verser l'acompte et quoi vérifier avant que l'argent ne quitte votre compte.",
+      "h1": "Ce qu'il faut vérifier avant de signer un contrat de réservation ou d'arras en Espagne",
+      "lead": "Entre une offre acceptée et l'acte chez le notaire, la plupart des achats en Espagne passent par un document de réservation et un contrat privé avec acompte, généralement appelé contrat d'arras. Ce qu'il advient de cet acompte si quelqu'un se retire dépend de la rédaction exacte : le contrat doit donc le préciser, et un abogado doit confirmer quel type d'arras il crée. Vérifiez la nota simple et les dettes du bien avant de payer quoi que ce soit.",
+      "sections": [
+        {
+          "h2": "Mon offre a été acceptée. Que suis-je en train de signer ?",
+          "paras": [
+            "En général trois documents, dans cet ordre. D'abord un court document de réservation ou d'offre, souvent préparé par l'agent, qui retire le bien du marché. Ensuite un contrat d'achat privé avec acompte, que la plupart des agents appellent contrato de arras. Enfin, l'acte authentique (escritura) signé devant un notaire, qui est le document transmis au registre foncier.",
+            "Les deux premiers sont des accords privés, et c'est leur rédaction qui vous protège. Les agents partent souvent d'un contrat type qu'ils adaptent à chaque vente, et il peut arriver un ou deux jours avant la signature. C'est peu si vous lisez de l'espagnol juridique dans votre deuxième ou troisième langue : demandez donc le projet tôt et faites-le vérifier.",
+            "La dernière étape compte plus que ne le pensent beaucoup d'acheteurs. Le droit espagnol protège l'acheteur qui acquiert de bonne foi, et à titre onéreux, auprès de la personne que le registre désigne comme propriétaire, mais cette protection dépend de l'inscription. Tant que l'acte n'est pas inscrit au registre foncier, vous ne l'avez pas encore."
+          ]
+        },
+        {
+          "h2": "Que doit dire le document de réservation ?",
+          "paras": [
+            "Il doit désigner le bien, le prix de votre offre, le montant que vous payez pour le réserver, qui détient cet argent et ce qu'il en advient dans chaque cas. Si le vendeur refuse votre offre, l'argent doit vous être rendu. Si la vente se fait, le document doit préciser si le montant est déduit du prix ou de la commission de l'agent.",
+            "Le montant se convient au cas par cas, et les chiffres cités en ligne varient beaucoup : considérez donc tout montant proposé comme une proposition et non comme une règle. Demandez une date de fin de la réservation. Une réservation sans date de fin peut immobiliser votre argent alors que rien ne bouge du côté du vendeur."
+          ]
+        },
+        {
+          "h2": "Le contrat d'arras est-il un point de non-retour ?",
+          "paras": [
+            "C'est le moment où l'affaire devient sérieuse, mais ce que cela signifie en argent dépend des mots exacts. La pratique espagnole connaît plus d'un type d'arras, et le type détermine si chaque partie peut se retirer et à quelles conditions. Un contrat qui dit simplement arras, sans rien de plus, peut se lire de plus d'une façon.",
+            "Le contrat doit donc dire, en phrases simples, ce qu'il advient de l'acompte si vous vous retirez, si le vendeur se retire, et si une condition n'est pas remplie, par exemple si votre prêt est refusé ou si les vérifications révèlent une dette que le vendeur ne règle pas. Ne vous fiez pas à ce que l'on vous présente comme la règle habituelle.",
+            "Demandez à un abogado de lire le contrat avant de signer et de vous indiquer par écrit quel type d'arras il crée. Un paragraphe clair d'un avocat qui a lu votre contrat réel vaut mieux que n'importe quel résumé général, celui-ci compris."
+          ]
+        },
+        {
+          "h2": "Que doit contenir d'autre le contrat privé ?",
+          "paras": [
+            "La description du bien doit correspondre à la nota simple : l'adresse, les références du registre, la surface et tout ce qui est inclus, comme une place de stationnement ou un débarras. Ajoutez la référence cadastrale, le prix, l'acompte, la date de signature définitive et une liste des meubles et appareils qui restent dans la maison.",
+            "Viennent ensuite les frais. Les honoraires du notaire sont dus par la personne qui a sollicité ses services et par les parties selon la répartition prévue par les règles de fond et les règles fiscales, et lorsqu'il y en a plusieurs, chacune peut être tenue de payer la totalité : c'est donc à votre contrat de régler qui paie finalement. Les frais de registre incombent à la personne au profit de laquelle le droit est inscrit, c'est-à-dire normalement l'acheteur lors d'un achat.",
+            "Précisez comment sera partagé l'IBI de l'année, l'impôt foncier local. Vous pouvez convenir d'une répartition, mais la mairie facture toujours la personne qui était le contribuable. Et lors d'une vente, une copie du certificat énergétique enregistré et son étiquette doivent être annexées au contrat : demandez-les donc maintenant plutôt que chez le notaire."
+          ]
+        },
+        {
+          "h2": "Que vérifier avant de verser l'acompte ?",
+          "paras": [
+            "Commandez une nota simple au registre foncier. Le registre existe pour consigner qui est propriétaire d'un bien et les autres droits qui le grèvent, comme une hypothèque, et la nota simple en est votre extrait court. Les honoraires propres du registrateur sont de 3,005061 euros par bien, même si les services de demande en ligne ajoutent leurs propres frais.",
+            "Deux types de dettes peuvent vous suivre avec le bien. L'acheteur reprend les charges de copropriété impayées du vendeur pour la partie de l'année déjà écoulée et les trois années civiles précédentes, et le bien lui-même en répond. L'IBI impayé reste aussi attaché au bien, c'est pourquoi les notaires doivent se renseigner à ce sujet et vous en avertir.",
+            "Demandez au vendeur le dernier avis d'IBI et une confirmation écrite de l'administrateur de la copropriété que les charges sont à jour. Faites ensuite du règlement de toute dette une condition du contrat, et précisez par écrit ce qu'il advient de votre acompte si ce n'est pas fait."
+          ]
+        },
+        {
+          "h2": "Comment verser l'acompte ?",
+          "paras": [
+            "Payez par virement bancaire, sur un compte dont vous avez vérifié le titulaire, avec l'adresse du bien dans la référence. Lors de la signature de l'acte, le notaire doit consigner la façon dont le prix a été payé, avant ou lors de la signature, et par quel moyen : espèces, chèque ou virement. Votre acompte fait partie du prix : gardez donc le justificatif de virement pour ce jour-là.",
+            "Les espèces sont une mauvaise idée ici. Lorsqu'une partie agit en tant qu'entreprise ou professionnel, comme un promoteur, les paiements en espèces sont limités à 1 000 euros, ou à 10 000 euros pour un particulier dont le domicile fiscal est hors d'Espagne. Transporter 10 000 euros ou plus à l'entrée ou à la sortie de l'Espagne doit aussi être déclaré.",
+            "Si les instructions de paiement changent par e-mail au dernier moment, arrêtez-vous. Appelez une personne que vous connaissez déjà à l'agence ou au cabinet d'avocats, à un numéro que vous aviez déjà, et confirmez le compte avant d'envoyer quoi que ce soit (oui, même si cela vous semble impoli)."
+          ]
+        },
+        {
+          "h2": "J'ai besoin d'un prêt immobilier. Quel délai prévoir avant la signature ?",
+          "paras": [
+            "Il faut prévoir assez de temps pour les documents du prêteur et le délai légal d'attente. Le prêteur doit vous remettre la FEIN, son offre ferme, avec la fiche d'avertissements et le projet de contrat, au moins dix jours calendaires avant la signature du prêt. Vous devez aussi vous présenter devant un notaire de votre choix au plus tard la veille de l'acte, afin qu'il vous explique le prêt.",
+            "Intégrez ces jours dans la date de signature prévue au contrat privé, avec une certaine marge, et faites du prêt une condition si vous en dépendez. Une date qui ne fonctionne que si chaque étape se déroule parfaitement, c'est ainsi qu'un achat serein devient tendu dans sa dernière semaine."
+          ]
+        },
+        {
+          "h2": "Pourquoi l'agent veut-il mon passeport, et puis-je signer depuis chez moi ?",
+          "paras": [
+            "Les agents immobiliers qui interviennent dans des ventes sont des sujets obligés au titre de la loi contre le blanchiment de capitaux : ils doivent donc vous identifier à l'aide de documents fiables avant que l'affaire ne se poursuive. Si vous achetez via une société, ils doivent aussi identifier quiconque en détient plus de 25 pour cent ou la contrôle d'une autre manière. C'est une obligation légale, pas un signe de méfiance.",
+            "Lors de l'acte, chaque partie présente au notaire son numéro d'identification fiscale, qui pour un acheteur étranger est le NIE, et il est inscrit dans l'acte. Si vous ne pouvez pas vous déplacer, une procuration signée en Norvège, en Suède, en Allemagne, en France, aux Pays-Bas ou au Royaume-Uni est acceptée en Espagne avec une apostille au lieu d'une légalisation consulaire. Envoyez le projet au notaire espagnol avant de le signer chez vous."
+          ]
+        },
+        {
+          "h2": "Et si je découvre un problème après la signature ?",
+          "paras": [
+            "Agissez vite. Une action contre le vendeur pour vices cachés s'éteint six mois après la remise du bien, et non six mois après la découverte du défaut. L'annulation de l'ensemble du contrat pour erreur ou dol bénéficie d'un délai de quatre ans, à compter de la conclusion du contrat.",
+            "Les deux dépendent de ce que disaient les documents, raison de plus pour vouloir une description exacte et des conditions claires dans le contrat privé. Conservez chaque version signée avec votre acte. Rangez ensuite le dossier et commencez à profiter des lieux, à commencer par le premier café sur votre propre terrasse."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Reserverings- en aanbetalingscontract in Spanje (arras)",
+      "description": "Wat een Spaans reserverings- of arrascontract moet bevatten, hoe u veilig aanbetaalt en wat u controleert voordat er geld van uw rekening gaat.",
+      "h1": "Wat u controleert voordat u in Spanje een reserverings- of aanbetalingscontract tekent",
+      "lead": "Tussen een geaccepteerd bod en de akte bij de notaris gaan de meeste Spaanse aankopen via een reserveringsdocument en een onderhands contract met een aanbetaling, meestal een arrascontract genoemd. Wat er met die aanbetaling gebeurt als iemand afhaakt, hangt af van de precieze formulering, dus het contract moet het uitschrijven en een abogado moet bevestigen welk type arras het in het leven roept. Controleer de nota simple en de schulden van de woning voordat u iets betaalt.",
+      "sections": [
+        {
+          "h2": "Mijn bod is geaccepteerd. Wat teken ik nu eigenlijk?",
+          "paras": [
+            "Meestal drie documenten, in deze volgorde. Eerst een kort reserverings- of biedingsdocument, vaak opgesteld door de makelaar, waarmee de woning van de markt gaat. Dan een onderhands koopcontract met een aanbetaling, dat de meeste makelaars het contrato de arras noemen. Tot slot de openbare akte (escritura), getekend bij een notaris, het document dat naar het eigendomsregister gaat.",
+            "De eerste twee zijn onderhandse overeenkomsten, en hun formulering is wat u beschermt. Makelaars werken vaak met een standaardcontract dat ze per verkoop aanpassen, en dat kan een dag of twee voor de ondertekening binnenkomen. Dat is niet lang als u juridisch Spaans leest in uw tweede of derde taal, dus vraag het concept vroeg op en laat het controleren.",
+            "De laatste stap is belangrijker dan veel kopers verwachten. Het Spaanse recht beschermt een koper die te goeder trouw en onder bezwarende titel koopt van de persoon die het register als eigenaar noemt, maar die bescherming hangt af van de inschrijving. Zolang de akte niet in het eigendomsregister staat, heeft u die bescherming nog niet."
+          ]
+        },
+        {
+          "h2": "Wat moet er in het reserveringsdocument staan?",
+          "paras": [
+            "Het moet de woning noemen, uw biedprijs, het bedrag dat u betaalt om de woning te reserveren, wie dat geld beheert en wat ermee gebeurt in elke uitkomst. Wijst de verkoper uw bod af, dan hoort het geld naar u terug te gaan. Gaat de verkoop door, dan moet het document zeggen of het bedrag van de prijs afgaat of van de courtage van de makelaar.",
+            "Het bedrag wordt per geval afgesproken, en de bedragen die online worden genoemd lopen sterk uiteen, dus zie elk bedrag dat u krijgt als een voorstel en niet als een regel. Vraag om een datum waarop de reservering afloopt. Een reservering zonder einddatum kan uw geld vastzetten terwijl er aan de kant van de verkoper niets gebeurt."
+          ]
+        },
+        {
+          "h2": "Is het arrascontract het punt waarop er geen weg terug is?",
+          "paras": [
+            "Het is het punt waarop de deal serieus wordt, maar wat dat in geld betekent, hangt af van de precieze woorden. In de Spaanse praktijk bestaat er meer dan één type arras, en het type bepaalt of een van beide partijen kan afhaken en onder welke voorwaarden. Een contract dat alleen arras zegt, zonder meer, kan op meer dan één manier worden uitgelegd.",
+            "Het contract moet daarom in gewone zinnen zeggen wat er met de aanbetaling gebeurt als u afhaakt, wat er gebeurt als de verkoper afhaakt, en wat er gebeurt als een voorwaarde niet wordt vervuld, bijvoorbeeld als uw hypotheek wordt geweigerd of de controles een schuld aan het licht brengen die de verkoper niet aflost. Vertrouw niet op wat iemand u vertelt dat de gebruikelijke regel is.",
+            "Vraag een abogado om het contract te lezen voordat u tekent en u schriftelijk te vertellen welk type arras het in het leven roept. Eén duidelijke alinea van een advocaat die uw eigen contract heeft gelezen, is meer waard dan welke algemene samenvatting ook, deze inbegrepen."
+          ]
+        },
+        {
+          "h2": "Wat hoort er verder in het onderhandse contract?",
+          "paras": [
+            "De omschrijving van de woning moet overeenkomen met de nota simple: het adres, de registergegevens, de oppervlakte en wat erbij hoort, zoals een parkeerplaats of een berging. Voeg de kadastrale referentie, de prijs, de aanbetaling, de overdrachtsdatum en een lijst van de meubels en apparaten die in het huis blijven toe.",
+            "Dan de kosten. Notariskosten zijn verschuldigd door wie de diensten van de notaris heeft gevraagd en door de partijen volgens de verdeling in de materiële en fiscale regels, en zijn er meerdere, dan kan elk van hen voor het hele bedrag worden aangesproken, dus wie uiteindelijk betaalt, moet uw contract regelen. Registerkosten komen voor rekening van degene voor wie het recht wordt ingeschreven, en bij een aankoop is dat normaal gesproken de koper.",
+            "Leg vast hoe de IBI van dit jaar, de lokale onroerendgoedbelasting, wordt verdeeld. U kunt een verdeling afspreken, maar de gemeente stuurt de aanslag nog steeds naar wie de belastingplichtige was. En bij een verkoop moeten een kopie van het geregistreerde energiecertificaat en het label bij het contract worden gevoegd, dus vraag er nu om en niet pas bij de notaris."
+          ]
+        },
+        {
+          "h2": "Wat controleer ik voordat ik de aanbetaling doe?",
+          "paras": [
+            "Vraag een nota simple op bij het eigendomsregister. Het register bestaat om vast te leggen wie eigenaar is van een woning en welke andere rechten erop rusten, zoals een hypotheek, en de nota simple is uw korte uittreksel daarvan. Het tarief van de registrator zelf is 3,005061 euro per woning, al rekenen online aanvraagdiensten daar hun eigen kosten bovenop.",
+            "Twee soorten schuld kunnen met de woning naar u overgaan. Een koper neemt de onbetaalde bijdragen van de verkoper aan de vereniging van eigenaars over voor het deel van het jaar dat al voorbij is plus de drie voorgaande kalenderjaren, en de woning zelf staat daarvoor in. Onbetaalde IBI blijft ook aan de woning verbonden, en daarom moeten notarissen ernaar vragen en u waarschuwen.",
+            "Vraag de verkoper om de laatste IBI-aanslag en om een schriftelijke bevestiging van de beheerder van de vereniging van eigenaars dat de bijdragen zijn betaald. Maak het aflossen van elke schuld vervolgens een voorwaarde in het contract, en leg schriftelijk vast wat er met uw aanbetaling gebeurt als dat niet gebeurt."
+          ]
+        },
+        {
+          "h2": "Hoe betaal ik de aanbetaling?",
+          "paras": [
+            "Betaal per bankoverschrijving, naar een rekening waarvan u de houder heeft gecontroleerd, met het adres van de woning in de omschrijving. Als u de akte tekent, moet de notaris vastleggen hoe de prijs is betaald, vóór of bij de ondertekening, en op welke manier: contant, per cheque of per overschrijving. Uw aanbetaling is een deel van de prijs, dus bewaar het betalingsbewijs voor die dag.",
+            "Contant betalen is hier geen goed idee. Als een van de partijen optreedt als onderneming of beroepsbeoefenaar, zoals een projectontwikkelaar, zijn contante betalingen beperkt tot 1.000 euro, of tot 10.000 euro voor een particulier met een fiscale woonplaats buiten Spanje. Wie 10.000 euro of meer Spanje in of uit brengt, moet dat bovendien melden.",
+            "Veranderen de betalingsinstructies op het laatste moment per e-mail, stop dan. Bel iemand die u al kent bij het makelaarskantoor of advocatenkantoor, op een nummer dat u al had, en bevestig de rekening voordat u iets verstuurt (ja, ook als dat onbeleefd voelt)."
+          ]
+        },
+        {
+          "h2": "Ik heb een hypotheek nodig. Hoeveel tijd moet de overdrachtsdatum geven?",
+          "paras": [
+            "Genoeg tijd voor de papieren van de geldverstrekker en de wettelijke wachttijd. De geldverstrekker moet u de FEIN, het bindende aanbod, samen met het waarschuwingsblad en het conceptcontract ten minste tien kalenderdagen vóór de ondertekening van de lening geven. U moet ook uiterlijk de dag vóór de akte verschijnen bij een notaris van uw keuze, zodat de notaris de lening kan uitleggen.",
+            "Neem die dagen op in de overdrachtsdatum in het onderhandse contract, met wat marge, en maak de hypotheek een voorwaarde als u ervan afhankelijk bent. Een datum die alleen werkt als elke stap perfect verloopt, is de manier waarop een rustige aankoop in de laatste week gespannen wordt."
+          ]
+        },
+        {
+          "h2": "Waarom wil de makelaar mijn paspoort, en kan ik vanuit huis tekenen?",
+          "paras": [
+            "Makelaars die bij woningverkopen optreden, vallen onder de antiwitwaswet, dus zij moeten u aan de hand van betrouwbare documenten identificeren voordat de deal doorgaat. Koopt u via een vennootschap, dan moeten zij ook identificeren wie meer dan 25 procent ervan bezit of de vennootschap op een andere manier controleert. Het is een wettelijke plicht, geen teken van wantrouwen.",
+            "Bij de akte toont elke partij de notaris haar fiscaal identificatienummer, en voor een buitenlandse koper is dat de NIE, die in de akte wordt opgenomen. Kunt u niet reizen, dan wordt een volmacht die in Noorwegen, Zweden, Duitsland, Frankrijk, Nederland of het Verenigd Koninkrijk is getekend in Spanje aanvaard met een apostille in plaats van met consulaire legalisatie. Stuur het concept naar de Spaanse notaris voordat u het thuis tekent."
+          ]
+        },
+        {
+          "h2": "Wat als ik na de overdracht een probleem ontdek?",
+          "paras": [
+            "Handel snel. Een vordering tegen de verkoper wegens verborgen gebreken vervalt zes maanden nadat de woning is overgedragen, niet zes maanden nadat u het gebrek ontdekte. Voor het vernietigen van het hele contract wegens dwaling of bedrog geldt een termijn van vier jaar, gerekend vanaf de uitvoering van het contract.",
+            "Beide hangen af van wat er in de papieren stond, nog een reden om een nauwkeurige omschrijving en duidelijke voorwaarden in het onderhandse contract te willen. Bewaar elke versie die u tekende bij uw akte. Leg de map daarna weg en begin te genieten van de plek, te beginnen met de eerste koffie op uw eigen terras."
+          ]
+        }
+      ]
+    }
+  }
+}

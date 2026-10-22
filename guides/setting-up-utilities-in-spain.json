@@ -1,0 +1,425 @@
+{
+  "slug": "setting-up-utilities-in-spain",
+  "topic": "home",
+  "tool": "utility-setup",
+  "rules": [
+    "nie.form",
+    "nie.fee",
+    "own.waste.fee_required",
+    "own.ibi.town_hall_manages",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "irnr.rental.deductibility",
+    "irnr.imputed.no_deductions"
+  ],
+  "answers": [
+    "nie-number-form-and-fee",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "deduct-costs-from-spanish-rental-income",
+    "tax-on-a-spanish-property-you-do-not-rent-out"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Setting Up Utilities in Spain as a Foreign Owner",
+      "description": "How to get electricity, water, gas and internet into your name in Spain, what each supplier asks for, and how to keep the bills paid from abroad.",
+      "h1": "Setting up electricity, water and other utilities in your Spanish home",
+      "lead": "To put electricity, water or gas in your name in Spain, expect to be asked for your NIE, a passport, proof that you own the property and an account for the direct debits. Electricity and mains gas come from a supplier you choose, while water is usually run by the town hall or a company it appoints. If the supplies are already live, ask for a change of holder rather than a new contract, because a supply that is cut off can be slow to bring back.",
+      "sections": [
+        {
+          "h2": "What do I need before I can set up any utility?",
+          "paras": [
+            "Four things, and most suppliers ask for the same four. Your passport or national ID, your NIE certificate, proof of your right to the property (the escritura, a nota simple or a rental contract) and the IBAN of the account the bills will be taken from, with the holder's name exactly as the bank writes it. Scan them once and keep them where you can reach them from home.",
+            "The NIE is the one that holds everything up, because suppliers contract with a named person and ask for a Spanish identity number. You apply on form EX-15, and the fee for assigning the number is 9.84 euros. Apply before you contact a single supplier. You can gather documents and book an electrician while you wait, but expect nothing to go into your name until the number exists."
+          ]
+        },
+        {
+          "h2": "Should I take over the seller's contracts or start new ones?",
+          "paras": [
+            "Take them over. Ask each supplier for a cambio de titularidad, a change of holder, which moves a live supply into your name in one step. Cancelling and contracting again drops the supply, and getting it back can mean a fee and a wait. Some sellers cancel supplies to stop their own bills, so ask them in writing not to.",
+            "At the notary, ask the seller for the last bill for every supply. Each one carries the supply point reference, the CUPS for electricity and gas, and the contracted power. Ask for written confirmation that the bills are paid up to date, and photograph every meter on the day you get the keys. That reading helps settle who pays for what was used before you arrived (and it takes thirty seconds)."
+          ]
+        },
+        {
+          "h2": "How do I get the electricity connected?",
+          "paras": [
+            "If the supply is live, you choose a supplier and contact them directly, by phone or online. Faults on the network and at the meter are usually a matter for the distribution company for your area, which you do not choose. Put the contract into your name first and switch tariff second, because you cannot move a contract that is not yours. Before signing a tariff, ask whether the price is fixed or indexed, what the minimum term is and what the standing charge is.",
+            "If the property has been off supply for a long time, the supplier may want a current electrical installation certificate (the boletín, or CIE) before switching it back on. It is issued by an authorised installer after a visit, and the rules on when one is needed are not the same everywhere. Book the installer first, because it is often the longest wait in the whole process.",
+            "Check the contracted power, the potencia contratada, on the last bill. The standing charge follows it, and it is charged whether anyone is in the house or not. A holiday home carrying the power a full time family needed pays for that every month, and lowering it is usually one phone call."
+          ]
+        },
+        {
+          "h2": "Who supplies the water, and can I choose?",
+          "paras": [
+            "Usually you cannot. Water is normally a municipal service: the ayuntamiento either bills you itself or tells you which company runs the supply for your street. Go to the counter with the same folder of documents, register the change of ownership and open the contract there. While you are standing in front of them, ask what else is billed to the property, because sewerage and the waste charge sometimes come from the same office.",
+            "In a block of flats, check whether your flat has its own meter or the community holds one contract and splits it through the community accounts. If the property has never been connected, a new connection is a bigger job than a contract change, so start it before anything else. In the campo, if the water comes from a well, ask the seller what authorisation the well has and have an abogado check it before you rely on it."
+          ]
+        },
+        {
+          "h2": "Do I need gas, and what about internet?",
+          "paras": [
+            "Often you do not need gas at all, and mains gas does not reach every town. Where there is no mains, gas means bottles or a tank from a local depot, and a delivery that needs someone at the door is not much use to an owner who visits twice a year. If there is a gas installation, ask the supplier which periodic safety checks apply to it, and plan for someone to let the inspector in when one is due.",
+            "Internet goes direct to the provider, with nothing through the town hall. Check fibre coverage at the exact address rather than the town, because coverage can change from one street to the next. Keep any existing line running until the new one works, and ask about the minimum term and returning the router before you sign."
+          ]
+        },
+        {
+          "h2": "What does the ayuntamiento bill to the property?",
+          "paras": [
+            "Two things, at least. Every town hall must charge a specific, separate fee for household waste, the tasa de basura, and the amount and billing dates are set by the town hall or its waste consortium, so they vary from place to place. Until someone tells the town hall about the new owner, the bill may keep going to the old one. Register the change and set up the direct debit at the same visit.",
+            "The town hall, or its collection body, also manages and collects IBI, the local property tax, and sets its rates. Check the IBI is debited from the same account. When a property changes hands, it stays liable for any unpaid IBI, and a buyer also takes on the seller's unpaid community charges for the part of the year of purchase plus the three previous calendar years. Asking at the counter costs nothing."
+          ]
+        },
+        {
+          "h2": "How do I keep the bills paid from abroad?",
+          "paras": [
+            "Set up the direct debit, the domiciliación, in the same conversation as each contract. Adding it later means going back to every provider one at a time. The provider usually picks the collection date, not you, so keep a standing buffer in the account rather than the exact amount. A debit a few euros short is returned like any other.",
+            "Treat a returned debit for electricity as urgent. Unpaid bills are how a supply ends up cut off while an owner is abroad, and then the fridge, the alarm and the dehumidifier all go off with nobody there to notice. Save the payment receipt for every bill, because it carries the customer reference each provider asks for before changing anything.",
+            "If you change accounts, do not assume the debits follow you. Unless your new account provider confirms in writing that it is moving them, tell every utility yourself, with the new IBAN. Leave the old account funded until you have watched a full billing cycle land on the new one."
+          ]
+        },
+        {
+          "h2": "What do the utilities cost when nobody is there?",
+          "paras": [
+            "More than nothing. Electricity and water usually carry a fixed charge for being connected, so an empty holiday home has a floor to its bills, and the contracted power is the main lever on it. Readings get estimated when nobody can reach the meter, and the correction arrives in one bill. Bills come monthly, every two months or quarterly depending on the provider, so note which and notice when one does not arrive.",
+            "The tax side depends on whether you let. If you never rent the house out, no expenses of any kind can be deducted against the imputed income tax. If you do let it and you live in another EU country or an EEA state that exchanges tax information, including Norway, rental expenses directly linked to the letting, such as the utilities for the let periods, can be deducted, with a tax residence certificate from your home country. Everyone else is taxed on the gross rent. Keep every bill either way.",
+            "Look at the tariffs once a year, in a quiet month, and check the standing charge and the contracted power rather than only the unit price. For a house that stands empty half the year, that is where the money is. Then the supplies become what they should be: the lights come on when you arrive, and you get on with the holiday."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Strøm, vann og internett i Spania for utenlandske eiere",
+      "description": "Slik får du strøm, vann, gass og internett i ditt navn i Spania, hva hver leverandør ber om, og hvordan du holder regningene betalt fra utlandet.",
+      "h1": "Slik ordner du strøm, vann og andre tjenester i boligen din i Spania",
+      "lead": "For å få strøm, vann eller gass i ditt navn i Spania bør du regne med å bli bedt om NIE, pass, bevis på at du eier boligen og en konto for avtalegiroene. Strøm og gass fra nettet kommer fra en leverandør du velger, mens vann som regel drives av rådhuset eller et selskap det har utpekt. Er tilførselen allerede aktiv, be om bytte av innehaver i stedet for en ny kontrakt, fordi en tilførsel som er stengt, kan ta tid å få tilbake.",
+      "sections": [
+        {
+          "h2": "Hva trenger jeg før jeg kan ordne noen av tjenestene?",
+          "paras": [
+            "Fire ting, og de fleste leverandører ber om de samme fire. Pass eller nasjonalt ID-kort, NIE-attesten din, bevis på din rett til boligen (escritura, en nota simple eller en leiekontrakt) og IBAN for kontoen regningene skal trekkes fra, med innehaverens navn nøyaktig slik banken skriver det. Skann dem én gang og oppbevar dem der du kan nå dem hjemmefra.",
+            "Det er NIE som holder alt opp, fordi leverandørene inngår kontrakt med en navngitt person og ber om et spansk identifikasjonsnummer. Du søker på skjema EX-15, og gebyret for å få tildelt nummeret er 9,84 euro. Søk før du kontakter en eneste leverandør. Du kan samle dokumenter og bestille en elektriker mens du venter, men regn med at ingenting kommer i ditt navn før nummeret finnes."
+          ]
+        },
+        {
+          "h2": "Bør jeg overta selgerens kontrakter eller starte nye?",
+          "paras": [
+            "Overta dem. Be hver leverandør om en cambio de titularidad, et bytte av innehaver, som flytter en aktiv tilførsel over i ditt navn i ett steg. Å si opp og inngå ny kontrakt kutter tilførselen, og å få den tilbake kan bety et gebyr og venting. Noen selgere sier opp tilførslene for å stoppe sine egne regninger, så be dem skriftlig om å la være.",
+            "Hos notaren, be selgeren om den siste regningen for hver tilførsel. Hver av dem viser referansen for målepunktet, CUPS for strøm og gass, og den avtalte effekten. Be om skriftlig bekreftelse på at regningene er betalt fram til i dag, og ta bilde av hver måler den dagen du får nøklene. Den avlesningen hjelper med å avgjøre hvem som betaler for det som ble brukt før du kom (og den tar tretti sekunder)."
+          ]
+        },
+        {
+          "h2": "Hvordan får jeg koblet til strømmen?",
+          "paras": [
+            "Er tilførselen aktiv, velger du en leverandør og kontakter dem direkte, på telefon eller på nett. Feil på nettet og ved måleren er som regel en sak for nettselskapet i området ditt, som du ikke velger. Få kontrakten over i ditt navn først og bytt tariff etterpå, fordi du ikke kan flytte en kontrakt som ikke er din. Før du signerer en tariff, spør om prisen er fast eller indeksert, hva minste bindingstid er og hva fastleddet er.",
+            "Har boligen vært uten tilførsel lenge, kan leverandøren kreve en gyldig attest for den elektriske installasjonen (boletín, eller CIE) før strømmen slås på igjen. Den utstedes av en autorisert installatør etter et besøk, og reglene for når den trengs, er ikke like overalt. Bestill installatøren først, fordi det ofte er den lengste ventetiden i hele prosessen.",
+            "Sjekk den avtalte effekten, potencia contratada, på den siste regningen. Fastleddet følger den, og det belastes enten noen er i huset eller ikke. En feriebolig med den effekten en familie som bodde der hele tiden trengte, betaler for det hver måned, og å senke den er som regel én telefonsamtale."
+          ]
+        },
+        {
+          "h2": "Hvem leverer vannet, og kan jeg velge?",
+          "paras": [
+            "Som regel ikke. Vann er normalt en kommunal tjeneste: ditt ayuntamiento fakturerer deg enten selv eller forteller deg hvilket selskap som driver tilførselen i gaten din. Gå til skranken med den samme mappen med dokumenter, registrer eierskiftet og opprett kontrakten der. Mens du står foran dem, spør hva mer som faktureres til boligen, fordi avløp og renovasjonsgebyret noen ganger kommer fra det samme kontoret.",
+            "I en boligblokk, sjekk om leiligheten din har egen måler, eller om sameiet har én kontrakt og fordeler den gjennom sameiets regnskap. Har boligen aldri vært tilkoblet, er en ny tilkobling en større jobb enn et kontraktbytte, så start den før alt annet. På landet, hvis vannet kommer fra en brønn, spør selgeren hvilken tillatelse brønnen har, og få en abogado til å sjekke den før du stoler på den."
+          ]
+        },
+        {
+          "h2": "Trenger jeg gass, og hva med internett?",
+          "paras": [
+            "Ofte trenger du ikke gass i det hele tatt, og gass fra nettet når ikke alle byer. Der det ikke finnes gassnett, betyr gass flasker eller en tank fra et lokalt lager, og en levering som krever at noen er hjemme, er ikke til mye hjelp for en eier som er der to ganger i året. Finnes det et gassanlegg, spør leverandøren hvilke periodiske sikkerhetskontroller som gjelder for det, og planlegg at noen kan slippe inn kontrolløren når en kontroll skal skje.",
+            "Internett går direkte til leverandøren, uten noe via rådhuset. Sjekk fiberdekningen på den nøyaktige adressen og ikke for byen, fordi dekningen kan endre seg fra én gate til den neste. Hold en eksisterende linje i gang til den nye fungerer, og spør om minste bindingstid og retur av ruteren før du signerer."
+          ]
+        },
+        {
+          "h2": "Hva fakturerer ditt ayuntamiento til boligen?",
+          "paras": [
+            "Minst to ting. Hvert rådhus må kreve et eget, særskilt gebyr for husholdningsavfall, tasa de basura, og beløpet og fakturadatoene fastsettes av rådhuset eller renovasjonskonsortiet, så de varierer fra sted til sted. Til noen forteller rådhuset om den nye eieren, kan regningen fortsette å gå til den gamle. Registrer endringen og opprett avtalegiroen ved det samme besøket.",
+            "Rådhuset, eller innkrevingsorganet dets, forvalter og krever også inn IBI, den lokale eiendomsskatten, og fastsetter satsene. Sjekk at IBI trekkes fra den samme kontoen. Når en eiendom skifter eier, hefter den fortsatt for ubetalt IBI, og en kjøper overtar også selgerens ubetalte fellesutgifter for den delen av kjøpsåret som har gått, pluss de tre foregående kalenderårene. Å spørre i skranken koster ingenting."
+          ]
+        },
+        {
+          "h2": "Hvordan holder jeg regningene betalt fra utlandet?",
+          "paras": [
+            "Opprett avtalegiroen, domiciliación, i den samme samtalen som hver kontrakt. Å legge den til senere betyr å gå tilbake til hver leverandør, én etter én. Det er som regel leverandøren som velger trekkdatoen, ikke du, så hold en fast buffer på kontoen i stedet for det nøyaktige beløpet. Et trekk som mangler noen euro, blir returnert som alle andre.",
+            "Behandle et returnert trekk for strøm som noe som haster. Ubetalte regninger er grunnen til at en tilførsel blir stengt mens en eier er i utlandet, og da går kjøleskapet, alarmen og avfukteren av uten at noen er der og merker det. Ta vare på betalingskvitteringen for hver regning, fordi den viser kundereferansen hver leverandør ber om før de endrer noe.",
+            "Bytter du konto, ikke anta at trekkene følger med. Med mindre den nye kontoleverandøren din bekrefter skriftlig at den flytter dem, gi beskjed til hver leverandør selv, med den nye IBAN-en. La det være penger på den gamle kontoen til du har sett en hel fakturasyklus gå til den nye."
+          ]
+        },
+        {
+          "h2": "Hva koster strøm og vann når ingen er der?",
+          "paras": [
+            "Mer enn ingenting. Strøm og vann har som regel et fast ledd for å være tilkoblet, så en tom feriebolig har et gulv for regningene, og den avtalte effekten er den viktigste spaken på det. Avlesninger blir anslått når ingen kommer til måleren, og korreksjonen kommer i én regning. Regningene kommer månedlig, annenhver måned eller kvartalsvis avhengig av leverandøren, så noter hvilken og legg merke til det når en ikke kommer.",
+            "Skattesiden avhenger av om du leier ut. Leier du aldri ut huset, kan ingen utgifter av noe slag trekkes fra den imputerte inntektsskatten. Leier du det ut og bor i et annet EU-land eller en EØS-stat som utveksler skatteopplysninger, også Norge, kan utleieutgifter som er direkte knyttet til utleien, som strøm og vann for utleieperiodene, trekkes fra, med en attest om skattemessig bosted fra hjemlandet ditt. Alle andre skattlegges av brutto leie. Ta vare på hver regning uansett.",
+            "Se på tariffene én gang i året, i en rolig måned, og sjekk fastleddet og den avtalte effekten, ikke bare enhetsprisen. For et hus som står tomt halve året, er det der pengene ligger. Da blir tilførslene det de skal være: lyset tennes når du kommer, og du kan bruke tiden på ferien."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "El, vatten och internet i Spanien för utländska ägare",
+      "description": "Så får du el, vatten, gas och internet i ditt namn i Spanien, vad varje leverantör begär och hur du ser till att räkningarna betalas från utlandet.",
+      "h1": "Att ordna el, vatten och annan försörjning i din spanska bostad",
+      "lead": "För att få el, vatten eller gas i ditt namn i Spanien kan du räkna med att bli ombedd att visa ditt NIE, ett pass, bevis på att du äger fastigheten och ett konto för autogirot. El och nätgas kommer från en leverantör du väljer, medan vatten oftast sköts av kommunen eller ett bolag som kommunen utser. Är leveranserna redan igång, be om byte av avtalsinnehavare i stället för ett nytt avtal, eftersom en leverans som har stängts av kan ta lång tid att få tillbaka.",
+      "sections": [
+        {
+          "h2": "Vad behöver jag innan jag kan ordna el, vatten och annat?",
+          "paras": [
+            "Fyra saker, och de flesta leverantörer frågar efter samma fyra. Ditt pass eller nationella id-kort, ditt NIE-intyg, bevis på din rätt till fastigheten (escritura, en nota simple eller ett hyresavtal) och IBAN för det konto som räkningarna ska dras från, med kontoinnehavarens namn exakt som banken skriver det. Skanna dem en gång och spara dem där du når dem hemifrån.",
+            "Det är NIE som håller upp allt, eftersom leverantörerna tecknar avtal med en namngiven person och frågar efter ett spanskt identitetsnummer. Du ansöker på blankett EX-15, och avgiften för att tilldelas numret är 9,84 euro. Ansök innan du kontaktar en enda leverantör. Du kan samla dokument och boka en elektriker medan du väntar, men räkna inte med att något hamnar i ditt namn förrän numret finns."
+          ]
+        },
+        {
+          "h2": "Ska jag ta över säljarens avtal eller teckna nya?",
+          "paras": [
+            "Ta över dem. Be varje leverantör om en cambio de titularidad, ett byte av avtalsinnehavare, som flyttar en pågående leverans till ditt namn i ett enda steg. Att säga upp och teckna nytt avbryter leveransen, och att få tillbaka den kan innebära en avgift och väntetid. En del säljare säger upp leveranserna för att stoppa sina egna räkningar, så be dem skriftligen att inte göra det.",
+            "Hos notarien, be säljaren om den senaste räkningen för varje leverans. Var och en har referensen till leveranspunkten, CUPS för el och gas, och den avtalade effekten. Be om skriftlig bekräftelse på att räkningarna är betalda fram till i dag, och fotografera varje mätare den dag du får nycklarna. Den mätarställningen hjälper till att avgöra vem som betalar för det som förbrukades innan du kom (och det tar trettio sekunder)."
+          ]
+        },
+        {
+          "h2": "Hur får jag elen inkopplad?",
+          "paras": [
+            "Är leveransen igång väljer du en elleverantör och kontaktar den direkt, per telefon eller på nätet. Fel på nätet och vid mätaren är oftast en fråga för nätbolaget i ditt område, som du inte väljer. Skriv först över avtalet i ditt namn och byt avtalsform sedan, eftersom du inte kan flytta ett avtal som inte är ditt. Innan du skriver under ett elavtal, fråga om priset är fast eller rörligt, vilken bindningstid som gäller och hur stor den fasta avgiften är.",
+            "Har fastigheten varit utan el länge kan leverantören vilja ha ett aktuellt intyg om elinstallationen (boletín, eller CIE) innan den slås på igen. Det utfärdas av en behörig installatör efter ett besök, och reglerna för när ett sådant behövs är inte desamma överallt. Boka installatören först, eftersom det ofta är den längsta väntan i hela processen.",
+            "Kontrollera den avtalade effekten, potencia contratada, på den senaste räkningen. Den fasta avgiften följer den, och den tas ut oavsett om någon är i huset eller inte. Ett fritidshus med den effekt som en heltidsboende familj behövde betalar för det varje månad, och att sänka den är oftast ett telefonsamtal."
+          ]
+        },
+        {
+          "h2": "Vem levererar vattnet, och kan jag välja?",
+          "paras": [
+            "Oftast inte. Vatten är normalt en kommunal tjänst: ayuntamiento fakturerar dig antingen själv eller talar om vilket bolag som sköter leveransen på din gata. Gå till disken med samma mapp med dokument, registrera ägarbytet och teckna avtalet där. Medan du ändå står framför dem, fråga vad mer som faktureras fastigheten, eftersom avlopp och avfallsavgiften ibland kommer från samma kontor.",
+            "I ett flerbostadshus, kontrollera om din lägenhet har en egen mätare eller om samfälligheten har ett avtal och fördelar kostnaden via samfällighetens räkenskaper. Har fastigheten aldrig varit ansluten är en ny anslutning ett större jobb än ett avtalsbyte, så börja med den före allt annat. På landsbygden (el campo), om vattnet kommer från en brunn, fråga säljaren vilket tillstånd brunnen har och låt en abogado kontrollera det innan du förlitar dig på den."
+          ]
+        },
+        {
+          "h2": "Behöver jag gas, och hur gör jag med internet?",
+          "paras": [
+            "Ofta behöver du inte gas alls, och nätgas når inte alla orter. Där det inte finns något gasnät betyder gas flaskor eller en tank från en lokal depå, och en leverans som kräver att någon öppnar dörren är inte till mycket nytta för en ägare som är där två gånger om året. Finns det en gasinstallation, fråga leverantören vilka återkommande säkerhetskontroller som gäller för den, och planera för att någon släpper in kontrollanten när det är dags.",
+            "Internet tecknar du direkt med leverantören, utan att gå via kommunen. Kontrollera fibertäckningen för den exakta adressen och inte bara orten, eftersom täckningen kan skilja sig från en gata till nästa. Låt en befintlig linje vara kvar tills den nya fungerar, och fråga om bindningstid och återlämning av routern innan du skriver under."
+          ]
+        },
+        {
+          "h2": "Vad fakturerar ayuntamiento fastigheten för?",
+          "paras": [
+            "Minst två saker. Varje kommun måste ta ut en särskild, separat avgift för hushållsavfall, tasa de basura, och beloppet och faktureringsdatumen bestäms av kommunen eller dess avfallskonsortium, så de skiljer sig från ort till ort. Tills någon berättar för kommunen om den nya ägaren kan räkningen fortsätta gå till den gamla. Registrera bytet och ordna autogirot vid samma besök.",
+            "Kommunen, eller dess indrivningsorgan, förvaltar och tar också ut IBI, den lokala fastighetsskatten, och fastställer skattesatserna. Kontrollera att IBI dras från samma konto. När en fastighet byter ägare fortsätter den att svara för obetald IBI, och en köpare tar också över säljarens obetalda samfällighetsavgifter för den del av köpåret som gått plus de tre föregående kalenderåren. Att fråga vid disken kostar ingenting."
+          ]
+        },
+        {
+          "h2": "Hur ser jag till att räkningarna betalas från utlandet?",
+          "paras": [
+            "Ordna autogirot, domiciliación, i samma samtal som varje avtal. Att lägga till det senare innebär att gå tillbaka till varje leverantör en i taget. Det är oftast leverantören som väljer dragningsdatum, inte du, så ha en fast buffert på kontot i stället för exakt belopp. En dragning som saknar några euro kommer i retur som vilken annan som helst.",
+            "Behandla en elräkning som kommit i retur som brådskande. Obetalda räkningar är det som gör att en leverans stängs av medan ägaren är utomlands, och då slocknar kylskåpet, larmet och avfuktaren utan att någon är där och märker det. Spara betalningskvittot för varje räkning, eftersom det har det kundnummer som varje leverantör frågar efter innan något ändras.",
+            "Byter du konto, utgå inte från att dragningarna följer med. Om inte den nya kontoleverantören bekräftar skriftligen att den flyttar dem, meddela själv varje leverantör, med det nya IBAN-numret. Låt det gamla kontot ha täckning tills du har sett en hel faktureringsperiod dras från det nya."
+          ]
+        },
+        {
+          "h2": "Vad kostar el och vatten när ingen är där?",
+          "paras": [
+            "Mer än ingenting. El och vatten har oftast en fast avgift för att vara anslutna, så ett tomt fritidshus har ett golv för sina räkningar, och den avtalade effekten är den största spaken. Mätarställningar uppskattas när ingen kommer åt mätaren, och rättelsen kommer på en och samma räkning. Räkningar kommer varje månad, varannan månad eller varje kvartal beroende på leverantör, så notera vilket och lägg märke till när en inte kommer.",
+            "Skattesidan beror på om du hyr ut. Hyr du aldrig ut huset får inga kostnader av något slag dras av mot skatten på schablonintäkten. Hyr du ut det och bor i ett annat EU-land eller en EES-stat som utbyter skatteinformation, vilket inkluderar Norge, får kostnader som är direkt kopplade till uthyrningen, som el och vatten för uthyrningsperioderna, dras av, med ett intyg om skatterättslig hemvist från ditt hemland. Alla andra beskattas på bruttohyran. Spara varje räkning i båda fallen.",
+            "Titta på avtalen en gång om året, under en lugn månad, och kontrollera den fasta avgiften och den avtalade effekten och inte bara priset per kilowattimme. För ett hus som står tomt halva året är det där pengarna finns. Då blir försörjningen det den ska vara: lamporna tänds när du kommer, och du kan ägna dig åt semestern."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Strom, Wasser und Internet in Spanien anmelden als Eigentümer",
+      "description": "Wie Sie Strom, Wasser, Gas und Internet in Spanien auf Ihren Namen anmelden, was die Anbieter verlangen und wie Sie die Rechnungen aus dem Ausland zahlen.",
+      "h1": "Strom, Wasser und andere Versorgung für Ihr Haus in Spanien einrichten",
+      "lead": "Um Strom, Wasser oder Gas in Spanien auf Ihren Namen anzumelden, werden Sie meist nach Ihrer NIE, einem Reisepass, einem Eigentumsnachweis und einem Konto für die Lastschriften gefragt. Strom und Erdgas kommen von einem Anbieter Ihrer Wahl, während das Wasser in der Regel vom Rathaus oder einem von ihm beauftragten Unternehmen geliefert wird. Wenn die Anschlüsse schon aktiv sind, beantragen Sie einen Inhaberwechsel statt eines neuen Vertrags, denn ein abgestellter Anschluss kann nur langsam wiederhergestellt werden.",
+      "sections": [
+        {
+          "h2": "Was brauche ich, bevor ich irgendeinen Anschluss anmelden kann?",
+          "paras": [
+            "Vier Dinge, und die meisten Anbieter fragen nach denselben vier. Ihren Reisepass oder Personalausweis, Ihre NIE-Bescheinigung, einen Nachweis Ihres Rechts an der Immobilie (die escritura, eine nota simple oder einen Mietvertrag) und die IBAN des Kontos, von dem die Rechnungen abgebucht werden, mit dem Namen des Inhabers genau so, wie die Bank ihn schreibt. Scannen Sie sie einmal ein und bewahren Sie sie dort auf, wo Sie von zu Hause darauf zugreifen können.",
+            "Die NIE ist das, woran alles hängt, denn Anbieter schließen Verträge mit einer namentlich genannten Person und fragen nach einer spanischen Identifikationsnummer. Sie beantragen sie mit dem Formular EX-15, und die Gebühr für die Zuteilung der Nummer beträgt 9,84 Euro. Beantragen Sie sie, bevor Sie einen einzigen Anbieter kontaktieren. Sie können während des Wartens Unterlagen sammeln und einen Elektriker buchen, aber rechnen Sie nicht damit, dass etwas auf Ihren Namen läuft, bevor es die Nummer gibt."
+          ]
+        },
+        {
+          "h2": "Sollte ich die Verträge des Verkäufers übernehmen oder neue abschließen?",
+          "paras": [
+            "Übernehmen Sie sie. Bitten Sie jeden Anbieter um einen cambio de titularidad, einen Inhaberwechsel, der einen aktiven Anschluss in einem Schritt auf Ihren Namen umschreibt. Kündigen und neu abschließen unterbricht die Versorgung, und sie zurückzubekommen kann eine Gebühr und Wartezeit bedeuten. Manche Verkäufer kündigen die Anschlüsse, um ihre eigenen Rechnungen zu stoppen. Bitten Sie sie also schriftlich, das nicht zu tun.",
+            "Bitten Sie den Verkäufer beim Notar um die letzte Rechnung für jeden Anschluss. Auf jeder steht die Kennung der Lieferstelle, der CUPS für Strom und Gas, und die vertragliche Leistung. Lassen Sie sich schriftlich bestätigen, dass die Rechnungen bis heute bezahlt sind, und fotografieren Sie jeden Zähler am Tag der Schlüsselübergabe. Dieser Zählerstand hilft zu klären, wer für den Verbrauch vor Ihrer Ankunft zahlt (und er dauert dreißig Sekunden)."
+          ]
+        },
+        {
+          "h2": "Wie bekomme ich Strom?",
+          "paras": [
+            "Wenn der Anschluss aktiv ist, wählen Sie einen Anbieter und wenden sich direkt an ihn, telefonisch oder online. Störungen im Netz und am Zähler sind in der Regel Sache des Netzbetreibers für Ihr Gebiet, den Sie nicht wählen können. Schreiben Sie zuerst den Vertrag auf Ihren Namen um und wechseln Sie danach den Tarif, denn einen Vertrag, der nicht Ihnen gehört, können Sie nicht umziehen. Fragen Sie vor der Unterschrift unter einen Tarif, ob der Preis fest oder indexiert ist, wie lang die Mindestlaufzeit ist und wie hoch die Grundgebühr ist.",
+            "Wenn die Immobilie lange ohne Versorgung war, kann der Anbieter eine aktuelle Bescheinigung über die Elektroinstallation verlangen (das boletín oder CIE), bevor er wieder einschaltet. Sie wird von einem zugelassenen Installateur nach einem Besuch ausgestellt, und die Regeln, wann eine nötig ist, sind nicht überall gleich. Buchen Sie zuerst den Installateur, denn das ist oft die längste Wartezeit im ganzen Ablauf.",
+            "Prüfen Sie die vertragliche Leistung, die potencia contratada, auf der letzten Rechnung. Die Grundgebühr richtet sich danach, und sie wird berechnet, ob jemand im Haus ist oder nicht. Ein Ferienhaus mit der Leistung, die eine Familie im Dauerbetrieb brauchte, zahlt dafür jeden Monat, und sie zu senken ist meist ein Anruf."
+          ]
+        },
+        {
+          "h2": "Wer liefert das Wasser, und kann ich wählen?",
+          "paras": [
+            "Meistens nicht. Wasser ist normalerweise eine kommunale Leistung: Das ayuntamiento rechnet entweder selbst mit Ihnen ab oder sagt Ihnen, welches Unternehmen die Versorgung in Ihrer Straße betreibt. Gehen Sie mit demselben Ordner voller Unterlagen zum Schalter, melden Sie den Eigentümerwechsel an und schließen Sie dort den Vertrag ab. Fragen Sie, wenn Sie schon dort stehen, was sonst noch für die Immobilie abgerechnet wird, denn Abwasser und Müllgebühr kommen manchmal von derselben Stelle.",
+            "Prüfen Sie in einem Mehrfamilienhaus, ob Ihre Wohnung einen eigenen Zähler hat oder ob die Gemeinschaft einen Vertrag hält und die Kosten über die Gemeinschaftsabrechnung aufteilt. Wenn die Immobilie nie angeschlossen war, ist ein neuer Anschluss eine größere Sache als ein Vertragswechsel, beginnen Sie damit also vor allem anderen. Auf dem campo, wenn das Wasser aus einem Brunnen kommt, fragen Sie den Verkäufer, welche Genehmigung der Brunnen hat, und lassen Sie das von einem abogado prüfen, bevor Sie sich darauf verlassen."
+          ]
+        },
+        {
+          "h2": "Brauche ich Gas, und wie ist es mit Internet?",
+          "paras": [
+            "Oft brauchen Sie gar kein Gas, und Erdgas erreicht nicht jeden Ort. Wo es keinen Gasanschluss gibt, bedeutet Gas Flaschen oder einen Tank von einem örtlichen Händler, und eine Lieferung, bei der jemand an der Tür sein muss, nützt einem Eigentümer, der zweimal im Jahr kommt, wenig. Wenn es eine Gasinstallation gibt, fragen Sie den Anbieter, welche regelmäßigen Sicherheitsprüfungen dafür gelten, und planen Sie, dass jemand den Prüfer hereinlässt, wenn eine fällig ist.",
+            "Internet läuft direkt über den Anbieter, ohne Rathaus. Prüfen Sie die Glasfaserabdeckung für die genaue Adresse statt für den Ort, denn die Abdeckung kann sich von einer Straße zur nächsten ändern. Lassen Sie eine bestehende Leitung weiterlaufen, bis die neue funktioniert, und fragen Sie vor der Unterschrift nach der Mindestlaufzeit und der Rückgabe des Routers."
+          ]
+        },
+        {
+          "h2": "Was rechnet das ayuntamiento für die Immobilie ab?",
+          "paras": [
+            "Mindestens zwei Dinge. Jedes Rathaus muss eine eigene, gesonderte Gebühr für Hausmüll erheben, die tasa de basura, und Betrag und Abrechnungstermine legt das Rathaus oder sein Abfallzweckverband fest, sie unterscheiden sich also von Ort zu Ort. Bis jemand dem Rathaus den neuen Eigentümer mitteilt, geht die Rechnung womöglich weiter an den alten. Melden Sie den Wechsel an und richten Sie beim selben Besuch die Lastschrift ein.",
+            "Das Rathaus oder seine Einzugsstelle verwaltet und erhebt außerdem die IBI, die örtliche Grundsteuer, und legt ihre Sätze fest. Prüfen Sie, dass die IBI vom selben Konto abgebucht wird. Wenn eine Immobilie den Eigentümer wechselt, haftet sie weiter für unbezahlte IBI, und ein Käufer übernimmt außerdem die unbezahlten Gemeinschaftsbeiträge des Verkäufers für den Teil des Kaufjahres plus die drei vorangegangenen Kalenderjahre. Am Schalter nachzufragen kostet nichts."
+          ]
+        },
+        {
+          "h2": "Wie zahle ich die Rechnungen aus dem Ausland?",
+          "paras": [
+            "Richten Sie die Lastschrift, die domiciliación, im selben Gespräch wie jeden Vertrag ein. Sie später hinzuzufügen heißt, zu jedem Anbieter einzeln zurückzugehen. Den Abbuchungstag wählt meist der Anbieter, nicht Sie, halten Sie also einen festen Puffer auf dem Konto statt genau des Betrags. Eine Lastschrift, der ein paar Euro fehlen, geht genauso zurück wie jede andere.",
+            "Behandeln Sie eine zurückgegebene Lastschrift für Strom als dringend. Unbezahlte Rechnungen sind der Grund, warum ein Anschluss abgestellt wird, während der Eigentümer im Ausland ist, und dann gehen Kühlschrank, Alarmanlage und Luftentfeuchter alle aus, ohne dass es jemand bemerkt. Bewahren Sie den Zahlungsbeleg jeder Rechnung auf, denn darauf steht die Kundennummer, nach der jeder Anbieter fragt, bevor er etwas ändert.",
+            "Wenn Sie das Konto wechseln, gehen Sie nicht davon aus, dass die Lastschriften mitkommen. Sofern Ihr neuer Kontoanbieter nicht schriftlich bestätigt, dass er sie umzieht, informieren Sie jeden Versorger selbst, mit der neuen IBAN. Lassen Sie das alte Konto gedeckt, bis Sie einen ganzen Abrechnungszyklus auf dem neuen gesehen haben."
+          ]
+        },
+        {
+          "h2": "Was kostet die Versorgung, wenn niemand da ist?",
+          "paras": [
+            "Mehr als nichts. Strom und Wasser haben meist eine feste Gebühr für den Anschluss, ein leeres Ferienhaus hat also eine Untergrenze bei den Rechnungen, und die vertragliche Leistung ist der wichtigste Hebel dafür. Zählerstände werden geschätzt, wenn niemand an den Zähler kommt, und die Korrektur kommt auf einer Rechnung. Rechnungen kommen je nach Anbieter monatlich, alle zwei Monate oder vierteljährlich. Notieren Sie also, welcher Rhythmus gilt, und achten Sie darauf, wenn eine ausbleibt.",
+            "Die steuerliche Seite hängt davon ab, ob Sie vermieten. Wenn Sie das Haus nie vermieten, können von der Steuer auf die fiktiven Einkünfte keinerlei Kosten abgezogen werden. Wenn Sie vermieten und in einem anderen EU-Land oder einem EWR-Staat leben, der Steuerinformationen austauscht, darunter Norwegen, können Vermietungskosten, die direkt mit der Vermietung zusammenhängen, etwa die Versorgungskosten für die Vermietungszeiträume, abgezogen werden, mit einer Ansässigkeitsbescheinigung Ihres Heimatlandes. Alle anderen werden auf die Bruttomiete besteuert. Bewahren Sie so oder so jede Rechnung auf.",
+            "Sehen Sie sich die Tarife einmal im Jahr in einem ruhigen Monat an und prüfen Sie die Grundgebühr und die vertragliche Leistung, nicht nur den Preis pro Einheit. Bei einem Haus, das das halbe Jahr leer steht, liegt dort das Geld. Dann wird die Versorgung zu dem, was sie sein sollte: Das Licht geht an, wenn Sie ankommen, und Sie können sich dem Urlaub widmen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Ouvrir l'électricité, l'eau et le gaz en Espagne",
+      "description": "Comment mettre l'électricité, l'eau, le gaz et internet à votre nom en Espagne, ce que demande chaque fournisseur et comment payer depuis l'étranger.",
+      "h1": "Mettre en place l'électricité, l'eau et les autres contrats dans votre logement en Espagne",
+      "lead": "Pour mettre l'électricité, l'eau ou le gaz à votre nom en Espagne, attendez-vous à ce qu'on vous demande votre NIE, un passeport, une preuve que vous êtes propriétaire du bien et un compte pour les prélèvements. L'électricité et le gaz de ville proviennent d'un fournisseur que vous choisissez, tandis que l'eau est généralement gérée par la mairie ou par une entreprise qu'elle désigne. Si les compteurs sont déjà en service, demandez un changement de titulaire plutôt qu'un nouveau contrat, car rétablir une alimentation coupée peut prendre du temps.",
+      "sections": [
+        {
+          "h2": "De quoi ai-je besoin avant d'ouvrir le moindre contrat ?",
+          "paras": [
+            "De quatre choses, et la plupart des fournisseurs demandent les mêmes. Votre passeport ou votre carte d'identité nationale, votre certificat de NIE, une preuve de votre droit sur le bien (l'escritura, une nota simple ou un contrat de location) et l'IBAN du compte sur lequel les factures seront prélevées, avec le nom du titulaire exactement tel que la banque l'écrit. Numérisez-les une fois et gardez-les à portée de main depuis chez vous.",
+            "C'est le NIE qui bloque tout, car les fournisseurs contractent avec une personne nommément désignée et demandent un numéro d'identification espagnol. Vous le demandez avec le formulaire EX-15, et les frais d'attribution du numéro sont de 9,84 euros. Faites la demande avant de contacter le moindre fournisseur. Vous pouvez réunir les documents et réserver un électricien en attendant, mais ne comptez sur aucun contrat à votre nom tant que le numéro n'existe pas."
+          ]
+        },
+        {
+          "h2": "Dois-je reprendre les contrats du vendeur ou en ouvrir de nouveaux ?",
+          "paras": [
+            "Reprenez-les. Demandez à chaque fournisseur un cambio de titularidad, un changement de titulaire, qui transfère en une seule étape un point de fourniture en service à votre nom. Résilier puis souscrire à nouveau coupe l'alimentation, et la rétablir peut entraîner des frais et de l'attente. Certains vendeurs résilient les contrats pour ne plus recevoir de factures, demandez-leur donc par écrit de ne pas le faire.",
+            "Chez le notaire, demandez au vendeur la dernière facture de chaque contrat. Chacune porte la référence du point de fourniture, le CUPS pour l'électricité et le gaz, et la puissance souscrite. Demandez une confirmation écrite que les factures sont payées à jour, et photographiez chaque compteur le jour où vous recevez les clés. Ce relevé aide à régler qui paie ce qui a été consommé avant votre arrivée (et cela prend trente secondes)."
+          ]
+        },
+        {
+          "h2": "Comment faire raccorder l'électricité ?",
+          "paras": [
+            "Si le compteur est en service, vous choisissez un fournisseur et le contactez directement, par téléphone ou en ligne. Les pannes sur le réseau et au compteur relèvent généralement du gestionnaire de réseau de distribution de votre secteur, que vous ne choisissez pas. Mettez d'abord le contrat à votre nom et changez de tarif ensuite, car vous ne pouvez pas transférer un contrat qui n'est pas le vôtre. Avant de signer un tarif, demandez si le prix est fixe ou indexé, quelle est la durée minimale d'engagement et quel est le montant de l'abonnement.",
+            "Si le logement est resté longtemps sans alimentation, le fournisseur peut exiger un certificat d'installation électrique à jour (le boletín, ou CIE) avant de la rétablir. Il est délivré par un installateur agréé après une visite, et les règles sur les cas où il est nécessaire ne sont pas les mêmes partout. Réservez d'abord l'installateur, car c'est souvent l'attente la plus longue de toute la démarche.",
+            "Vérifiez la puissance souscrite, la potencia contratada, sur la dernière facture. L'abonnement en dépend, et il est facturé qu'il y ait quelqu'un dans la maison ou non. Une maison de vacances qui garde la puissance dont avait besoin une famille à l'année paie pour cela chaque mois, et la réduire tient généralement en un appel téléphonique."
+          ]
+        },
+        {
+          "h2": "Qui fournit l'eau, et puis-je choisir ?",
+          "paras": [
+            "En général, non. L'eau est normalement un service municipal : l'ayuntamiento vous facture lui-même ou vous indique quelle entreprise gère l'alimentation de votre rue. Allez au guichet avec le même dossier de documents, enregistrez le changement de propriétaire et ouvrez le contrat sur place. Tant que vous êtes face à eux, demandez ce qui est facturé d'autre au bien, car l'assainissement et la taxe sur les ordures viennent parfois du même service.",
+            "Dans un immeuble, vérifiez si votre appartement a son propre compteur ou si la copropriété détient un seul contrat et le répartit dans les comptes de la copropriété. Si le bien n'a jamais été raccordé, un nouveau raccordement est un chantier plus lourd qu'un changement de contrat, lancez-le donc avant tout le reste. À la campagne (en el campo), si l'eau vient d'un puits, demandez au vendeur de quelle autorisation dispose le puits et faites-la vérifier par un abogado avant de compter dessus."
+          ]
+        },
+        {
+          "h2": "Ai-je besoin du gaz, et qu'en est-il d'internet ?",
+          "paras": [
+            "Souvent, vous n'avez pas du tout besoin du gaz, et le gaz de ville n'arrive pas dans toutes les communes. Là où il n'y a pas de réseau, le gaz signifie des bouteilles ou une citerne livrées par un dépôt local, et une livraison qui exige une présence à la porte n'est pas très utile à un propriétaire qui vient deux fois par an. S'il existe une installation de gaz, demandez au fournisseur quels contrôles de sécurité périodiques s'y appliquent, et prévoyez quelqu'un pour faire entrer l'inspecteur le moment venu.",
+            "Pour internet, on s'adresse directement à l'opérateur, sans passer par la mairie. Vérifiez la couverture fibre à l'adresse exacte plutôt qu'à l'échelle de la commune, car elle peut changer d'une rue à l'autre. Gardez toute ligne existante en service jusqu'à ce que la nouvelle fonctionne, et renseignez-vous sur la durée minimale d'engagement et la restitution du routeur avant de signer."
+          ]
+        },
+        {
+          "h2": "Que facture l'ayuntamiento au bien ?",
+          "paras": [
+            "Au moins deux choses. Chaque mairie doit percevoir une taxe spécifique et distincte pour les ordures ménagères, la tasa de basura, dont le montant et les dates de facturation sont fixés par la mairie ou son consortium de gestion des déchets, ils varient donc d'un endroit à l'autre. Tant que personne n'informe la mairie du nouveau propriétaire, la facture peut continuer d'aller à l'ancien. Enregistrez le changement et mettez en place le prélèvement lors de la même visite.",
+            "La mairie, ou son organisme de recouvrement, gère et recouvre aussi l'IBI, l'impôt foncier local, et en fixe les taux. Vérifiez que l'IBI est prélevé sur le même compte. Lorsqu'un bien change de propriétaire, il reste redevable de tout IBI impayé, et un acheteur reprend aussi les charges de copropriété impayées du vendeur pour la partie de l'année d'achat plus les trois années civiles précédentes. Poser la question au guichet ne coûte rien."
+          ]
+        },
+        {
+          "h2": "Comment payer les factures depuis l'étranger ?",
+          "paras": [
+            "Mettez en place le prélèvement, la domiciliación, lors du même échange que chaque contrat. L'ajouter plus tard oblige à recontacter chaque fournisseur un par un. C'est généralement le fournisseur qui choisit la date de prélèvement, pas vous, gardez donc une réserve permanente sur le compte plutôt que le montant exact. Un prélèvement auquel il manque quelques euros est rejeté comme n'importe quel autre.",
+            "Traitez un prélèvement d'électricité rejeté comme une urgence. Les factures impayées sont la façon dont une alimentation finit coupée pendant que le propriétaire est à l'étranger, et alors le réfrigérateur, l'alarme et le déshumidificateur s'arrêtent tous sans personne pour s'en apercevoir. Gardez le justificatif de paiement de chaque facture, car il porte la référence client que chaque fournisseur demande avant de modifier quoi que ce soit.",
+            "Si vous changez de compte, ne supposez pas que les prélèvements suivent. À moins que votre nouveau prestataire de compte ne confirme par écrit qu'il les transfère, prévenez vous-même chaque fournisseur, avec le nouvel IBAN. Laissez l'ancien compte approvisionné jusqu'à ce que vous ayez vu un cycle de facturation complet passer sur le nouveau."
+          ]
+        },
+        {
+          "h2": "Combien coûtent les contrats quand personne n'est là ?",
+          "paras": [
+            "Plus que rien. L'électricité et l'eau comportent généralement une part fixe liée au raccordement, une maison de vacances vide a donc un plancher de factures, et la puissance souscrite en est le principal levier. Les relevés sont estimés quand personne ne peut accéder au compteur, et la régularisation arrive en une seule facture. Les factures arrivent tous les mois, tous les deux mois ou tous les trimestres selon le fournisseur, notez donc lequel et remarquez quand l'une d'elles n'arrive pas.",
+            "Le côté fiscal dépend de la location. Si vous ne louez jamais la maison, aucune dépense, de quelque nature que ce soit, ne peut être déduite de l'impôt sur le revenu imputé. Si vous la louez et vivez dans un autre pays de l'UE ou dans un État de l'EEE qui échange des informations fiscales, y compris la Norvège, les dépenses directement liées à la location, comme l'électricité, l'eau et le gaz des périodes louées, peuvent être déduites, avec un certificat de résidence fiscale de votre pays d'origine. Tous les autres sont imposés sur le loyer brut. Gardez chaque facture dans tous les cas.",
+            "Regardez les tarifs une fois par an, pendant un mois calme, et vérifiez l'abonnement et la puissance souscrite plutôt que le seul prix du kilowattheure. Pour une maison vide la moitié de l'année, c'est là que se trouve l'argent. Les contrats deviennent alors ce qu'ils devraient être : la lumière s'allume quand vous arrivez, et vous profitez de vos vacances."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Nutsvoorzieningen regelen in Spanje als buitenlandse eigenaar",
+      "description": "Zo zet u elektriciteit, water, gas en internet in Spanje op uw naam, wat elke leverancier vraagt en hoe u de rekeningen vanuit het buitenland betaalt.",
+      "h1": "Elektriciteit, water en andere voorzieningen regelen voor uw Spaanse woning",
+      "lead": "Om elektriciteit, water of gas in Spanje op uw naam te zetten, wordt u waarschijnlijk gevraagd om uw NIE, een paspoort, bewijs dat de woning van u is en een rekening voor de automatische incasso's. Elektriciteit en aardgas komen van een leverancier die u zelf kiest, terwijl water meestal wordt geregeld door de gemeente of een bedrijf dat zij aanwijst. Zijn de aansluitingen al actief, vraag dan een wijziging van contracthouder aan in plaats van een nieuw contract, want een afgesloten aansluiting kan traag weer worden aangezet.",
+      "sections": [
+        {
+          "h2": "Wat heb ik nodig voordat ik een voorziening kan regelen?",
+          "paras": [
+            "Vier dingen, en de meeste leveranciers vragen dezelfde vier. Uw paspoort of nationale identiteitskaart, uw NIE-certificaat, bewijs van uw recht op de woning (de escritura, een nota simple of een huurcontract) en de IBAN van de rekening waarvan de rekeningen worden afgeschreven, met de naam van de rekeninghouder precies zoals de bank die schrijft. Scan ze één keer en bewaar ze waar u er ook van thuis bij kunt.",
+            "Het NIE is wat alles ophoudt, want leveranciers sluiten een contract met een persoon op naam en vragen om een Spaans identificatienummer. U vraagt het aan met formulier EX-15, en de kosten voor de toekenning van het nummer bedragen 9,84 euro. Vraag het aan voordat u ook maar één leverancier benadert. U kunt documenten verzamelen en een elektricien boeken terwijl u wacht, maar verwacht niet dat er iets op uw naam komt voordat het nummer er is."
+          ]
+        },
+        {
+          "h2": "Moet ik de contracten van de verkoper overnemen of nieuwe afsluiten?",
+          "paras": [
+            "Neem ze over. Vraag elke leverancier om een cambio de titularidad, een wijziging van contracthouder, waarmee een actieve aansluiting in één stap op uw naam komt. Opzeggen en opnieuw afsluiten laat de aansluiting vervallen, en haar terugkrijgen kan kosten en wachttijd betekenen. Sommige verkopers zeggen aansluitingen op om hun eigen rekeningen te stoppen, dus vraag hun schriftelijk dat niet te doen.",
+            "Vraag de verkoper bij de notaris om de laatste rekening van elke voorziening. Op elke rekening staat de referentie van het aansluitpunt, de CUPS voor elektriciteit en gas, en het gecontracteerde vermogen. Vraag schriftelijke bevestiging dat de rekeningen tot nu toe zijn betaald, en fotografeer elke meter op de dag dat u de sleutels krijgt. Die stand helpt te bepalen wie betaalt voor wat er vóór uw komst is verbruikt (en het kost dertig seconden)."
+          ]
+        },
+        {
+          "h2": "Hoe krijg ik de elektriciteit aangesloten?",
+          "paras": [
+            "Is de aansluiting actief, dan kiest u een leverancier en neemt u rechtstreeks contact op, telefonisch of online. Storingen op het net en aan de meter zijn meestal een zaak voor de netbeheerder in uw gebied, die u niet zelf kiest. Zet eerst het contract op uw naam en stap daarna pas over op een ander tarief, want een contract dat niet van u is, kunt u niet verhuizen. Vraag voordat u een tarief tekent of de prijs vast of geïndexeerd is, wat de minimale looptijd is en wat de vaste kosten zijn.",
+            "Is de woning lang zonder stroom geweest, dan kan de leverancier een actueel keuringsbewijs van de elektrische installatie (de boletín, of CIE) willen zien voordat de stroom weer wordt aangezet. Dat wordt afgegeven door een erkende installateur na een bezoek, en de regels over wanneer het nodig is, zijn niet overal hetzelfde. Boek de installateur als eerste, want dat is vaak de langste wachttijd van het hele proces.",
+            "Controleer het gecontracteerde vermogen, de potencia contratada, op de laatste rekening. De vaste kosten hangen ervan af, en die worden in rekening gebracht of er nu iemand in huis is of niet. Een vakantiewoning met het vermogen dat een gezin dat er het hele jaar woonde nodig had, betaalt daar elke maand voor, en het verlagen is meestal één telefoontje."
+          ]
+        },
+        {
+          "h2": "Wie levert het water, en kan ik kiezen?",
+          "paras": [
+            "Meestal niet. Water is normaal gesproken een gemeentelijke dienst: het ayuntamiento stuurt u zelf de rekening of vertelt u welk bedrijf de levering in uw straat verzorgt. Ga met dezelfde map documenten naar het loket, laat de eigendomswijziging registreren en sluit daar het contract af. Vraag, nu u er toch staat, wat er verder op de woning wordt gefactureerd, want riolering en de afvalstoffenheffing komen soms van hetzelfde kantoor.",
+            "Controleer in een appartementengebouw of uw appartement een eigen meter heeft of dat de VvE één contract heeft en dat via de VvE-administratie verdeelt. Is de woning nooit aangesloten geweest, dan is een nieuwe aansluiting een grotere klus dan een contractwijziging, dus begin daar als eerste mee. Komt het water op het platteland (in de campo) uit een put, vraag de verkoper dan welke vergunning de put heeft en laat een abogado dat controleren voordat u erop vertrouwt."
+          ]
+        },
+        {
+          "h2": "Heb ik gas nodig, en hoe zit het met internet?",
+          "paras": [
+            "Vaak heeft u helemaal geen gas nodig, en aardgas via het net komt niet in elke plaats. Waar geen gasnet is, betekent gas flessen of een tank van een lokaal depot, en een levering waarvoor iemand aan de deur moet zijn, heeft weinig zin voor een eigenaar die twee keer per jaar komt. Is er een gasinstallatie, vraag de leverancier dan welke periodieke veiligheidskeuringen ervoor gelden, en regel dat iemand de inspecteur binnenlaat als er een gepland staat.",
+            "Internet regelt u rechtstreeks met de aanbieder, zonder tussenkomst van de gemeente. Controleer de glasvezeldekking op het precieze adres in plaats van voor de plaats, want de dekking kan per straat verschillen. Houd een bestaande lijn aan tot de nieuwe werkt, en vraag naar de minimale looptijd en het terugsturen van de router voordat u tekent."
+          ]
+        },
+        {
+          "h2": "Wat factureert het ayuntamiento op de woning?",
+          "paras": [
+            "Minstens twee dingen. Elke gemeente moet een specifieke, aparte heffing voor huishoudelijk afval rekenen, de tasa de basura, en het bedrag en de factuurdata worden vastgesteld door de gemeente of haar afvalconsortium, dus die verschillen per plaats. Tot iemand de gemeente over de nieuwe eigenaar inlicht, kan de rekening naar de oude eigenaar blijven gaan. Laat de wijziging registreren en regel de automatische incasso bij hetzelfde bezoek.",
+            "De gemeente, of haar inningsinstantie, beheert en int ook de IBI, de lokale onroerendgoedbelasting, en stelt de tarieven vast. Controleer of de IBI van dezelfde rekening wordt afgeschreven. Bij een eigendomsoverdracht blijft de woning aansprakelijk voor onbetaalde IBI, en een koper neemt ook de onbetaalde VvE-bijdragen van de verkoper over voor het deel van het aankoopjaar plus de drie voorgaande kalenderjaren. Navragen aan het loket kost niets."
+          ]
+        },
+        {
+          "h2": "Hoe houd ik de rekeningen vanuit het buitenland betaald?",
+          "paras": [
+            "Regel de automatische incasso, de domiciliación, in hetzelfde gesprek als elk contract. Hem later toevoegen betekent dat u elke aanbieder opnieuw één voor één moet benaderen. De aanbieder kiest meestal de incassodatum, niet u, dus houd een vaste buffer op de rekening aan in plaats van het precieze bedrag. Een incasso waarvoor een paar euro te weinig op de rekening staat, wordt net zo goed gestorneerd.",
+            "Behandel een gestorneerde incasso voor elektriciteit als urgent. Onbetaalde rekeningen zijn de manier waarop een aansluiting wordt afgesloten terwijl een eigenaar in het buitenland is, en dan vallen de koelkast, het alarm en de ontvochtiger allemaal uit zonder dat iemand het merkt. Bewaar het betalingsbewijs van elke rekening, want daarop staat het klantnummer waar elke aanbieder om vraagt voordat er iets wordt gewijzigd.",
+            "Stapt u over naar een andere rekening, ga er dan niet van uit dat de incasso's meeverhuizen. Tenzij de aanbieder van uw nieuwe rekening schriftelijk bevestigt dat hij ze overzet, licht u elke voorziening zelf in, met de nieuwe IBAN. Houd geld op de oude rekening tot u een volledige factuurcyclus op de nieuwe heeft zien binnenkomen."
+          ]
+        },
+        {
+          "h2": "Wat kosten de voorzieningen als er niemand is?",
+          "paras": [
+            "Meer dan niets. Voor elektriciteit en water geldt meestal een vast bedrag voor de aansluiting, dus een lege vakantiewoning heeft een ondergrens aan haar rekeningen, en het gecontracteerde vermogen is daarbij de belangrijkste knop. Meterstanden worden geschat als niemand bij de meter kan, en de correctie komt in één rekening. Rekeningen komen maandelijks, tweemaandelijks of per kwartaal, afhankelijk van de aanbieder, dus noteer welke en let op wanneer er een niet komt.",
+            "De fiscale kant hangt af van of u verhuurt. Verhuurt u het huis nooit, dan mogen er geen kosten van welke aard ook worden afgetrokken van de belasting op het fictieve inkomen. Verhuurt u het wel en woont u in een ander EU-land of een EER-staat die belastinggegevens uitwisselt, Noorwegen inbegrepen, dan mogen huurkosten die direct met de verhuur samenhangen, zoals de voorzieningen voor de verhuurde periodes, worden afgetrokken, met een verklaring van fiscaal inwonerschap uit uw thuisland. Alle anderen worden belast over de bruto huur. Bewaar hoe dan ook elke rekening.",
+            "Kijk eens per jaar naar de tarieven, in een rustige maand, en controleer de vaste kosten en het gecontracteerde vermogen in plaats van alleen de prijs per eenheid. Voor een huis dat de helft van het jaar leeg staat, zit daar het geld. Dan worden de voorzieningen wat ze horen te zijn: de lichten gaan aan als u aankomt, en u kunt gewoon van de vakantie genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "slug": "buying-rural-property-in-spain",
+  "topic": "buying",
+  "tool": "deal-checklist",
+  "rules": [
+    "buy.registry.presumption",
+    "buy.registry.unregistered_titles",
+    "buy.registry.good_faith_buyer",
+    "buy.registry.nota_simple_fee",
+    "own.catastro.declare_changes",
+    "own.catastro.failure_to_declare",
+    "own.catastro.cadastral_value",
+    "own.catastro.reference_value",
+    "own.ibi.property_answers",
+    "limit.absent_owner.usucapion",
+    "limit.hidden_defects",
+    "limit.contract.annulment",
+    "limit.building.scope",
+    "epc.requirement",
+    "buy.tax.resale_itp",
+    "buy.tax.itp_state_default",
+    "itp.base.valor_referencia"
+  ],
+  "answers": [
+    "hidden-defects-after-buying-a-spanish-property",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake",
+    "can-someone-acquire-my-spanish-property-by-possession",
+    "new-build-guarantees-in-spain",
+    "energy-certificate-for-a-spanish-property",
+    "time-limit-to-claim-damage-from-a-neighbour-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Buying Rural Property in Spain: What to Check",
+      "description": "The checks to make before buying a finca or farmhouse in Spain: the land registry, the Catastro, the town hall's planning records, water and access.",
+      "h1": "Buying a rural property or finca in Spain: the checks that matter",
+      "lead": "Before buying rural property in Spain, check three records against what you see on the ground: the nota simple from the land registry, the Catastro description and map, and the town hall's planning records for the land and every building on it. Rural paperwork often lags behind reality, so an independent abogado and a surveyor or arquitecto técnico are worth having from the start.",
+      "sections": [
+        {
+          "h2": "Why is a finca harder to buy than a flat?",
+          "paras": [
+            "Because the paperwork is often older than the buildings. A farmhouse may have grown a kitchen, a pool and a guest house over thirty years, and the land may have been split between heirs without anyone updating the records. The seller may not be hiding anything. Many simply do not know what was never registered.",
+            "So check everything the seller tells you against the official records, and do it before you sign a deposit contract. Use an independent abogado for the legal side and a surveyor or arquitecto técnico for the land and buildings. The agent can help you find the place, but the checks are your side's job."
+          ]
+        },
+        {
+          "h2": "Is the seller the registered owner of all of it?",
+          "paras": [
+            "Order a nota simple from the land registry for every registered plot in the sale, because a finca is often several plots. The registrar's fee is 3.005061 euros per property, plus whatever an online service charges. The names on it should be the people selling to you, and every co-owner must be part of the sale.",
+            "The register matters because rights recorded there are presumed to belong to the holder shown, and an unregistered title cannot be used against a buyer who relied on the register. A buyer in good faith who buys from the registered owner keeps the purchase once it is registered. If part of the land or a building is missing from the register, ask the seller to put it right before completion, not after."
+          ]
+        },
+        {
+          "h2": "Does the land on the ground match the records?",
+          "paras": [
+            "Compare three things: the plot you walked, the Catastro map and description, and the registry entry. The usual differences are the plot size, the boundaries and the buildings listed. You can view the Catastro map for a cadastral reference on the Catastro's online service, which is a good first look before a visit.",
+            "If the figures disagree, a surveyor can measure the land and mark the boundaries. Ask the neighbours, too, if you can (they usually know where the old wall really was). Any difference you leave unresolved becomes your problem as owner, and it will matter again when you sell."
+          ]
+        },
+        {
+          "h2": "Can the house legally stand where it stands?",
+          "paras": [
+            "This is the question that matters most, and the town hall (ayuntamiento) is where to ask it. Rules on building in the countryside are set by regional law and the local plan, so they vary from one municipality to the next. Your abogado or arquitecto técnico can make the request, or you can visit the planning department yourself with the cadastral reference.",
+            "Ask how the land is classified in the local plan, whether each building on it has a licence, and whether there is any open planning infringement file or demolition order. Ask what could be built, extended or rebuilt in future. Get the answers in writing. If the house cannot be shown to be legal, take advice before going any further, and be ready to walk away."
+          ]
+        },
+        {
+          "h2": "What about the sheds, the pool and the extension?",
+          "paras": [
+            "Look at every structure, not just the house. Owners must declare new buildings, extensions, renovations and changes of use to the Catastro within two months from the day after the event. Failing to declare is a minor tax infringement, and the Catastro can add the change itself through a procedure that carries a fee of 60 euros per property.",
+            "A tool shed (casa de aperos) that has quietly become a bedroom is a classic rural example. Ask the town hall whether each structure has a licence, ask the seller for any licences they hold, and have your abogado check whether the buildings are recorded in the deeds. Undeclared work is something the seller should settle before the sale."
+          ]
+        },
+        {
+          "h2": "Who else has rights over the land?",
+          "paras": [
+            "Rural land often carries rights that a flat never would: a track a neighbour uses to reach his own field, a pipe or channel crossing the plot, a share of water from a well or an irrigation system. Read the nota simple for recorded rights, and walk the land with the seller to see what crosses it.",
+            "Use matters too. Someone who possesses land for long enough can acquire it, and an owner who lives abroad counts as absent, which doubles the ordinary period from ten years to twenty. On a large plot you visit twice a year, keep the boundaries clear and deal early with anyone who starts using a corner of it as their own."
+          ]
+        },
+        {
+          "h2": "Water, power and wastewater: what should I ask?",
+          "paras": [
+            "Spotting a power line and a tap is easy. Ask where the water comes from: a mains supply, a well, a deposit filled by lorry, or a share of irrigation water. Ask whether the electricity is a regular supply contract or a generator and solar panels. Each answer changes what living there is like in August.",
+            "Wastewater is where buyers get surprised. Many rural houses use a septic tank or a cesspit, and what is allowed varies from place to place, so ask the town hall what the house needs and what any renovation would require. And when an existing building is sold, a copy of its registered energy certificate must be annexed to the sale contract."
+          ]
+        },
+        {
+          "h2": "What protection do I have if something is wrong with an old farmhouse?",
+          "paras": [
+            "It is not the same as with a new build. The statutory building guarantees only apply to buildings whose planning permission was applied for on or after 6 May 2000, and older buildings fall under the previous regime. Against the seller, a claim for hidden defects dies six months after the property was handed over, whatever the day you discovered the problem.",
+            "Setting the contract aside for mistake or deceit has a four year window, counted from completion of the contract. Both routes are slow and uncertain compared with a proper survey before you buy, so pay for the survey and let it shape the price you offer."
+          ]
+        },
+        {
+          "h2": "What taxes and debts come with the purchase?",
+          "paras": [
+            "A finca bought from a private seller is taxed under ITP, the transfer tax, and the buyer pays it. The rate is set by each region, or 6 percent where a region has approved none. The base is the higher of the price you declare and the Catastro's valor de referencia. The cadastral value, used for the yearly IBI, is a separate administrative figure that may not exceed market value.",
+            "Unpaid IBI stays attached to the property when it changes hands, so ask for the latest receipts for every plot in the sale. Once those checks are done and the paperwork matches the land, you can enjoy the part you bought it for: long evenings, a lot of stars and very little traffic."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Kjøpe landeiendom eller finca i Spania: dette må du sjekke",
+      "description": "Kontrollene du bør gjøre før du kjøper en finca eller et gårdshus i Spania: eiendomsregisteret, Catastro, kommunens planarkiv, vann og atkomst.",
+      "h1": "Kjøpe en landeiendom eller finca i Spania: kontrollene som betyr noe",
+      "lead": "Før du kjøper en landeiendom i Spania, sjekk tre registre opp mot det du ser i terrenget: nota simple fra eiendomsregisteret, beskrivelsen og kartet i Catastro, og kommunens planarkiv for grunnen og hver bygning på den. Papirene på landet henger ofte etter virkeligheten, så en uavhengig abogado og en landmåler eller arquitecto técnico er verdt å ha med fra starten.",
+      "sections": [
+        {
+          "h2": "Hvorfor er en finca vanskeligere å kjøpe enn en leilighet?",
+          "paras": [
+            "Fordi papirene ofte er eldre enn bygningene. Et gårdshus kan ha fått et kjøkken, et basseng og et gjestehus i løpet av tretti år, og grunnen kan ha blitt delt mellom arvinger uten at noen oppdaterte registrene. Selgeren skjuler ikke nødvendigvis noe. Mange vet rett og slett ikke hva som aldri ble registrert.",
+            "Sjekk derfor alt selgeren forteller deg opp mot de offisielle registrene, og gjør det før du signerer en depositumskontrakt. Bruk en uavhengig abogado til den juridiske siden og en landmåler eller arquitecto técnico til grunnen og bygningene. Megleren kan hjelpe deg å finne stedet, men kontrollene er jobben til din side."
+          ]
+        },
+        {
+          "h2": "Er selgeren registrert eier av alt sammen?",
+          "paras": [
+            "Bestill en nota simple fra eiendomsregisteret for hver registrerte tomt i salget, fordi en finca ofte består av flere tomter. Registerførerens gebyr er 3,005061 euro per eiendom, pluss det en nettjeneste tar. Navnene på den bør være personene som selger til deg, og hver medeier må være med i salget.",
+            "Registeret betyr noe fordi rettigheter som er registrert der, antas å tilhøre innehaveren som står oppført, og en uregistrert hjemmel kan ikke brukes mot en kjøper som stolte på registeret. En kjøper i god tro som kjøper fra den registrerte eieren, beholder kjøpet når det er registrert. Mangler en del av grunnen eller en bygning i registeret, be selgeren rette det opp før overtakelsen, ikke etter."
+          ]
+        },
+        {
+          "h2": "Stemmer grunnen i terrenget med registrene?",
+          "paras": [
+            "Sammenlign tre ting: tomten du gikk over, kartet og beskrivelsen i Catastro, og oppføringen i registeret. De vanlige forskjellene er tomtestørrelsen, grensene og bygningene som er oppført. Du kan se Catastro-kartet for en matrikkelreferanse i Catastros nettjeneste, som er en god første titt før et besøk.",
+            "Stemmer ikke tallene, kan en landmåler måle opp grunnen og merke grensene. Spør naboene også hvis du kan (de vet som regel hvor den gamle muren egentlig gikk). Enhver forskjell du lar stå uløst, blir ditt problem som eier, og den vil bety noe igjen når du selger."
+          ]
+        },
+        {
+          "h2": "Kan huset lovlig stå der det står?",
+          "paras": [
+            "Dette er spørsmålet som betyr mest, og kommunen (ayuntamiento) er stedet å stille det. Reglene for bygging i landlige områder fastsettes av regional lov og den lokale planen, så de varierer fra kommune til kommune. Abogado eller arquitecto técnico kan sende forespørselen, eller du kan selv besøke planavdelingen med matrikkelreferansen.",
+            "Spør hvordan grunnen er klassifisert i den lokale planen, om hver bygning på den har tillatelse, og om det finnes en åpen sak om plan- og byggeovertredelse eller et rivningsvedtak. Spør hva som kan bygges, utvides eller gjenoppbygges i framtiden. Få svarene skriftlig. Kan det ikke vises at huset er lovlig, søk råd før du går videre, og vær klar til å trekke deg."
+          ]
+        },
+        {
+          "h2": "Hva med skurene, bassenget og tilbygget?",
+          "paras": [
+            "Se på hver konstruksjon, ikke bare huset. Eiere må melde nybygg, tilbygg, renoveringer og bruksendringer til Catastro innen to måneder fra dagen etter at det skjedde. Å la være å melde er en mindre skatteovertredelse, og Catastro kan føre inn endringen selv gjennom en prosedyre som koster et gebyr på 60 euro per eiendom.",
+            "Et redskapsskur (casa de aperos) som i det stille har blitt et soverom, er et klassisk eksempel på landet. Spør kommunen om hver konstruksjon har tillatelse, be selgeren om eventuelle tillatelser de har, og la abogado sjekke om bygningene er ført inn i skjøtene. Arbeid som ikke er meldt, er noe selgeren bør ordne før salget."
+          ]
+        },
+        {
+          "h2": "Hvem andre har rettigheter over grunnen?",
+          "paras": [
+            "Landeiendom har ofte rettigheter som en leilighet aldri ville hatt: en vei en nabo bruker for å komme til sitt eget jorde, et rør eller en kanal som krysser tomten, en andel vann fra en brønn eller et vanningsanlegg. Les nota simple for registrerte rettigheter, og gå over grunnen sammen med selgeren for å se hva som krysser den.",
+            "Bruk betyr også noe. Den som besitter grunn lenge nok, kan erverve den, og en eier som bor i utlandet, regnes som fraværende, noe som dobler den ordinære perioden fra ti til tjue år. På en stor tomt du besøker to ganger i året, hold grensene tydelige, og ta tak tidlig i alle som begynner å bruke et hjørne av den som sitt eget."
+          ]
+        },
+        {
+          "h2": "Vann, strøm og avløp: hva bør jeg spørre om?",
+          "paras": [
+            "Det er lett å få øye på en strømlinje og en kran. Spør hvor vannet kommer fra: offentlig vannforsyning, en brønn, en tank som fylles med tankbil, eller en andel av vanningsvann. Spør om strømmen er en vanlig leveringskontrakt eller et aggregat og solcellepaneler. Hvert svar endrer hvordan det er å bo der i august.",
+            "Avløp er der kjøpere blir overrasket. Mange hus på landet bruker septiktank eller tett tank, og hva som er tillatt, varierer fra sted til sted, så spør kommunen hva huset trenger, og hva en eventuell renovering vil kreve. Og når en eksisterende bygning selges, må en kopi av den registrerte energiattesten legges ved kjøpekontrakten."
+          ]
+        },
+        {
+          "h2": "Hvilket vern har jeg hvis noe er galt med et gammelt gårdshus?",
+          "paras": [
+            "Det er ikke det samme som med et nybygg. De lovfestede byggegarantiene gjelder bare bygg der det ble søkt om byggetillatelse 6. mai 2000 eller senere, og eldre bygg faller inn under den tidligere ordningen. Overfor selgeren faller et krav for skjulte mangler bort seks måneder etter at eiendommen ble overlevert, uansett hvilken dag du oppdaget problemet.",
+            "Å få kontrakten opphevet på grunn av villfarelse eller svik har en frist på fire år, regnet fra kontrakten ble gjennomført. Begge veier er langsomme og usikre sammenlignet med en skikkelig tilstandsvurdering før du kjøper, så betal for vurderingen og la den forme prisen du byr."
+          ]
+        },
+        {
+          "h2": "Hvilke skatter og gjeld følger med kjøpet?",
+          "paras": [
+            "En finca kjøpt fra en privat selger skattlegges med ITP, overdragelsesskatten, og kjøperen betaler den. Satsen fastsettes av hver region, eller er 6 prosent der en region ikke har vedtatt noen. Grunnlaget er det høyeste av prisen du oppgir og Catastros valor de referencia. Matrikkelverdien, som brukes til den årlige IBI, er et eget administrativt tall som ikke kan overstige markedsverdien.",
+            "Ubetalt IBI følger eiendommen når den skifter eier, så be om de siste kvitteringene for hver tomt i salget. Når disse kontrollene er gjort og papirene stemmer med grunnen, kan du nyte det du kjøpte den for: lange kvelder, mange stjerner og svært lite trafikk."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Köpa finca eller lantställe i Spanien: vad du ska kontrollera",
+      "description": "Kontrollerna att göra innan du köper en finca eller ett lantställe i Spanien: fastighetsregistret, Catastro, kommunens planhandlingar, vatten och tillfart.",
+      "h1": "Att köpa ett lantställe eller en finca i Spanien: kontrollerna som spelar roll",
+      "lead": "Innan du köper en fastighet på landsbygden i Spanien, jämför tre register med det du ser på plats: nota simple från fastighetsregistret, beskrivningen och kartan hos Catastro, och kommunens planhandlingar för marken och varje byggnad på den. Pappersarbetet på landsbygden ligger ofta efter verkligheten, så en oberoende abogado och en lantmätare eller arquitecto técnico är värda att ha med från början.",
+      "sections": [
+        {
+          "h2": "Varför är en finca svårare att köpa än en lägenhet?",
+          "paras": [
+            "För att pappersarbetet ofta är äldre än byggnaderna. Ett lantställe kan ha fått ett kök, en pool och ett gästhus under trettio år, och marken kan ha delats mellan arvingar utan att någon har uppdaterat registren. Säljaren behöver inte dölja något. Många vet helt enkelt inte vad som aldrig registrerades.",
+            "Kontrollera därför allt säljaren berättar mot de officiella registren, och gör det innan du skriver på ett handpenningsavtal. Anlita en oberoende abogado för den juridiska sidan och en lantmätare eller arquitecto técnico för marken och byggnaderna. Mäklaren kan hjälpa dig att hitta stället, men kontrollerna är din sidas uppgift."
+          ]
+        },
+        {
+          "h2": "Är säljaren registrerad ägare till allt?",
+          "paras": [
+            "Beställ en nota simple från fastighetsregistret för varje registrerad tomt som ingår i försäljningen, eftersom en finca ofta består av flera tomter. Registratorns avgift är 3,005061 euro per fastighet, plus vad en tjänst på nätet tar betalt. Namnen i den ska vara de personer som säljer till dig, och varje delägare måste vara med i försäljningen.",
+            "Registret spelar roll eftersom rättigheter som är inskrivna där presumeras tillhöra den innehavare som anges, och en oregistrerad äganderätt kan inte göras gällande mot en köpare som förlitade sig på registret. En köpare i god tro som köper från den registrerade ägaren behåller köpet när det väl är registrerat. Om en del av marken eller en byggnad saknas i registret, be säljaren rätta det före tillträdet, inte efter."
+          ]
+        },
+        {
+          "h2": "Stämmer marken på plats med registren?",
+          "paras": [
+            "Jämför tre saker: tomten du gick runt på, kartan och beskrivningen hos Catastro, och anteckningen i registret. De vanliga skillnaderna gäller tomtens storlek, gränserna och de byggnader som anges. Du kan se Catastros karta för en fastighetsbeteckning i Catastros tjänst på nätet, vilket är en bra första titt före ett besök.",
+            "Om siffrorna inte stämmer kan en lantmätare mäta marken och märka ut gränserna. Fråga också grannarna om du kan (de vet oftast var den gamla muren egentligen stod). Varje skillnad du lämnar olöst blir ditt problem som ägare, och den kommer att spela roll igen när du säljer."
+          ]
+        },
+        {
+          "h2": "Får huset lagligt stå där det står?",
+          "paras": [
+            "Det här är den fråga som betyder mest, och kommunen (ayuntamiento) är stället att ställa den. Reglerna för att bygga på landsbygden bestäms av regional lag och den lokala planen, så de varierar från en kommun till en annan. Din abogado eller arquitecto técnico kan göra förfrågan, eller så besöker du själv planavdelningen med fastighetsbeteckningen.",
+            "Fråga hur marken är klassad i den lokala planen, om varje byggnad på den har bygglov, och om det finns något öppet ärende om planöverträdelse eller något rivningsföreläggande. Fråga vad som skulle kunna byggas, byggas ut eller byggas om i framtiden. Få svaren skriftligt. Om det inte går att visa att huset är lagligt, ta råd innan du går vidare, och var beredd att backa ur."
+          ]
+        },
+        {
+          "h2": "Hur är det med boden, poolen och tillbyggnaden?",
+          "paras": [
+            "Titta på varje byggnad, inte bara huset. Ägare måste anmäla nybyggnader, tillbyggnader, renoveringar och ändrad användning till Catastro inom två månader från dagen efter händelsen. Att inte anmäla är en mindre skatteöverträdelse, och Catastro kan själv föra in ändringen genom ett förfarande som kostar en avgift på 60 euro per fastighet.",
+            "En redskapsbod (casa de aperos) som i tysthet har blivit ett sovrum är ett klassiskt exempel från landsbygden. Fråga kommunen om varje byggnad har bygglov, be säljaren om de lov som finns, och låt din abogado kontrollera om byggnaderna finns med i köpebreven. Oanmälda arbeten är något säljaren bör reda ut före försäljningen."
+          ]
+        },
+        {
+          "h2": "Vem mer har rättigheter till marken?",
+          "paras": [
+            "Mark på landsbygden har ofta rättigheter som en lägenhet aldrig skulle ha: en väg som en granne använder för att nå sin egen åker, ett rör eller en kanal som korsar tomten, en andel av vattnet från en brunn eller ett bevattningssystem. Läs nota simple för inskrivna rättigheter, och gå runt marken med säljaren för att se vad som korsar den.",
+            "Användningen spelar också roll. Den som innehar mark tillräckligt länge kan förvärva den, och en ägare som bor utomlands räknas som frånvarande, vilket fördubblar den ordinarie tiden från tio år till tjugo. På en stor tomt som du besöker två gånger om året, håll gränserna tydliga och ta tidigt tag i det om någon börjar använda ett hörn av den som sitt eget."
+          ]
+        },
+        {
+          "h2": "Vatten, el och avlopp: vad ska jag fråga?",
+          "paras": [
+            "Att se en elledning och en kran är lätt. Fråga var vattnet kommer ifrån: kommunalt vatten, en brunn, en tank som fylls med tankbil, eller en andel av bevattningsvattnet. Fråga om elen är ett vanligt elavtal eller ett elverk och solpaneler. Varje svar ändrar hur det är att bo där i augusti.",
+            "Avloppet är där köpare blir överraskade. Många hus på landsbygden har en septiktank eller en sluten tank, och vad som är tillåtet varierar från plats till plats, så fråga kommunen vad huset behöver och vad en renovering skulle kräva. Och när en befintlig byggnad säljs måste en kopia av dess registrerade energideklaration bifogas till köpeavtalet."
+          ]
+        },
+        {
+          "h2": "Vilket skydd har jag om något är fel med ett gammalt lantställe?",
+          "paras": [
+            "Det är inte detsamma som med en nybyggd bostad. De lagstadgade byggnadsgarantierna gäller bara byggnader där bygglov söktes den 6 maj 2000 eller senare, och äldre byggnader faller under den tidigare ordningen. Mot säljaren upphör ett krav för dolda fel sex månader efter att fastigheten överlämnades, oavsett vilken dag du upptäckte problemet.",
+            "Att häva avtalet på grund av misstag eller svek har ett fönster på fyra år, räknat från att avtalet fullgjordes. Båda vägarna är långsamma och osäkra jämfört med en ordentlig besiktning innan du köper, så betala för besiktningen och låt den påverka priset du bjuder."
+          ]
+        },
+        {
+          "h2": "Vilka skatter och skulder följer med köpet?",
+          "paras": [
+            "En finca som köps från en privat säljare beskattas med ITP, överlåtelseskatten, och det är köparen som betalar den. Skattesatsen bestäms av varje region, eller är 6 procent där en region inte har beslutat någon. Underlaget är det högsta av det pris du anger och Catastros valor de referencia. Taxeringsvärdet, som används för den årliga IBI, är en separat administrativ siffra som inte får överstiga marknadsvärdet.",
+            "Obetald IBI är fortsatt knuten till fastigheten när den byter ägare, så be om de senaste avierna för varje tomt som ingår i försäljningen. När de kontrollerna är gjorda och handlingarna stämmer med marken kan du njuta av det du köpte stället för: långa kvällar, en massa stjärnor och väldigt lite trafik."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Finca in Spanien kaufen: Was Sie prüfen sollten",
+      "description": "Die Prüfungen vor dem Kauf einer Finca oder eines Landhauses in Spanien: Grundbuch, Catastro, die Bauakten des Rathauses, Wasser und Zufahrt.",
+      "h1": "Eine ländliche Immobilie oder Finca in Spanien kaufen: die Prüfungen, auf die es ankommt",
+      "lead": "Bevor Sie eine ländliche Immobilie in Spanien kaufen, gleichen Sie drei Register mit dem ab, was Sie vor Ort sehen: die nota simple aus dem Grundbuch, die Beschreibung und Karte des Catastro und die Bauakten des Rathauses für das Grundstück und jedes Gebäude darauf. Ländliche Unterlagen hinken der Wirklichkeit oft hinterher, ein unabhängiger abogado und ein Vermesser oder arquitecto técnico lohnen sich also von Anfang an.",
+      "sections": [
+        {
+          "h2": "Warum ist eine Finca schwerer zu kaufen als eine Wohnung?",
+          "paras": [
+            "Weil die Unterlagen oft älter sind als die Gebäude. Ein Bauernhaus hat in dreißig Jahren vielleicht eine Küche, einen Pool und ein Gästehaus dazubekommen, und das Land wurde womöglich unter Erben aufgeteilt, ohne dass jemand die Register aktualisiert hat. Der Verkäufer verheimlicht vielleicht gar nichts. Viele wissen einfach nicht, was nie eingetragen wurde.",
+            "Gleichen Sie also alles, was der Verkäufer Ihnen sagt, mit den amtlichen Registern ab, und tun Sie das, bevor Sie einen Anzahlungsvertrag unterschreiben. Nehmen Sie für die rechtliche Seite einen unabhängigen abogado und für Grundstück und Gebäude einen Vermesser oder arquitecto técnico. Der Makler kann Ihnen helfen, die Immobilie zu finden, aber die Prüfungen sind Aufgabe Ihrer Seite."
+          ]
+        },
+        {
+          "h2": "Ist der Verkäufer der eingetragene Eigentümer des Ganzen?",
+          "paras": [
+            "Bestellen Sie für jedes eingetragene Grundstück im Verkauf eine nota simple beim Grundbuch, denn eine Finca besteht oft aus mehreren Grundstücken. Die Gebühr des Registerführers beträgt 3,005061 Euro pro Immobilie, zuzüglich dessen, was ein Online-Dienst berechnet. Die Namen darauf sollten die der Personen sein, die an Sie verkaufen, und jeder Miteigentümer muss am Verkauf beteiligt sein.",
+            "Das Grundbuch ist wichtig, weil dort eingetragene Rechte als dem genannten Inhaber zustehend gelten und ein nicht eingetragener Titel einem Käufer, der sich auf das Grundbuch verlassen hat, nicht entgegengehalten werden kann. Ein gutgläubiger Käufer, der vom eingetragenen Eigentümer kauft, behält den Kauf, sobald er eingetragen ist. Fehlt ein Teil des Landes oder ein Gebäude im Grundbuch, bitten Sie den Verkäufer, das vor dem Abschluss zu bereinigen, nicht danach."
+          ]
+        },
+        {
+          "h2": "Stimmt das Land vor Ort mit den Registern überein?",
+          "paras": [
+            "Vergleichen Sie drei Dinge: das Grundstück, das Sie abgegangen sind, die Karte und Beschreibung des Catastro und den Eintrag im Grundbuch. Die üblichen Abweichungen betreffen die Grundstücksgröße, die Grenzen und die aufgeführten Gebäude. Die Catastro-Karte zu einer Katasterreferenz können Sie im Online-Dienst des Catastro ansehen, ein guter erster Blick vor einem Besuch.",
+            "Stimmen die Zahlen nicht überein, kann ein Vermesser das Land vermessen und die Grenzen markieren. Fragen Sie, wenn möglich, auch die Nachbarn (sie wissen meist, wo die alte Mauer wirklich stand). Jede Abweichung, die Sie ungeklärt lassen, wird als Eigentümer zu Ihrem Problem, und sie wird beim Verkauf wieder eine Rolle spielen."
+          ]
+        },
+        {
+          "h2": "Darf das Haus rechtlich dort stehen, wo es steht?",
+          "paras": [
+            "Das ist die wichtigste Frage, und das Rathaus (ayuntamiento) ist der Ort, sie zu stellen. Die Regeln für das Bauen auf dem Land werden durch regionales Recht und den örtlichen Bebauungsplan festgelegt, sie unterscheiden sich also von Gemeinde zu Gemeinde. Ihr abogado oder arquitecto técnico kann die Anfrage stellen, oder Sie gehen mit der Katasterreferenz selbst zum Bauamt.",
+            "Fragen Sie, wie das Land im örtlichen Plan eingestuft ist, ob jedes Gebäude darauf eine Genehmigung hat und ob ein offenes baurechtliches Verfahren oder eine Abrissverfügung besteht. Fragen Sie, was künftig gebaut, erweitert oder wieder aufgebaut werden dürfte. Lassen Sie sich die Antworten schriftlich geben. Lässt sich nicht nachweisen, dass das Haus legal ist, holen Sie Rat ein, bevor Sie weitermachen, und seien Sie bereit, vom Kauf Abstand zu nehmen."
+          ]
+        },
+        {
+          "h2": "Was ist mit den Schuppen, dem Pool und dem Anbau?",
+          "paras": [
+            "Sehen Sie sich jedes Bauwerk an, nicht nur das Haus. Eigentümer müssen Neubauten, Erweiterungen, Renovierungen und Nutzungsänderungen innerhalb von zwei Monaten ab dem Tag nach dem Ereignis dem Catastro melden. Wer nicht meldet, begeht eine leichte Steuerordnungswidrigkeit, und der Catastro kann die Änderung selbst über ein Verfahren aufnehmen, das eine Gebühr von 60 Euro pro Immobilie kostet.",
+            "Ein Geräteschuppen (casa de aperos), der still und leise zum Schlafzimmer geworden ist, ist ein klassisches ländliches Beispiel. Fragen Sie das Rathaus, ob jedes Bauwerk eine Genehmigung hat, bitten Sie den Verkäufer um alle Genehmigungen, die er besitzt, und lassen Sie Ihren abogado prüfen, ob die Gebäude in den Urkunden verzeichnet sind. Nicht gemeldete Arbeiten sollte der Verkäufer vor dem Verkauf in Ordnung bringen."
+          ]
+        },
+        {
+          "h2": "Wer hat sonst noch Rechte an dem Land?",
+          "paras": [
+            "Auf ländlichem Land liegen oft Rechte, die es bei einer Wohnung nie gäbe: ein Weg, den ein Nachbar nutzt, um zu seinem eigenen Feld zu kommen, eine Leitung oder ein Kanal, der das Grundstück quert, ein Anteil am Wasser aus einem Brunnen oder einer Bewässerungsanlage. Lesen Sie die nota simple auf eingetragene Rechte hin und gehen Sie das Land mit dem Verkäufer ab, um zu sehen, was es durchquert.",
+            "Auch die Nutzung zählt. Wer Land lange genug besitzt, kann es ersitzen, und ein Eigentümer, der im Ausland lebt, gilt als abwesend, wodurch sich die normale Frist von zehn auf zwanzig Jahre verdoppelt. Bei einem großen Grundstück, das Sie zweimal im Jahr besuchen, halten Sie die Grenzen klar erkennbar und klären Sie früh, wenn jemand anfängt, eine Ecke davon als seine eigene zu nutzen."
+          ]
+        },
+        {
+          "h2": "Wasser, Strom und Abwasser: Was sollte ich fragen?",
+          "paras": [
+            "Eine Stromleitung und einen Wasserhahn zu entdecken, ist leicht. Fragen Sie, woher das Wasser kommt: aus einem öffentlichen Netz, einem Brunnen, einem Tank, der per Lastwagen befüllt wird, oder aus einem Anteil an Bewässerungswasser. Fragen Sie, ob der Strom aus einem regulären Liefervertrag kommt oder aus einem Generator und Solarmodulen. Jede Antwort verändert, wie es sich im August dort lebt.",
+            "Beim Abwasser werden Käufer überrascht. Viele ländliche Häuser nutzen eine Klärgrube oder eine Sickergrube, und was erlaubt ist, unterscheidet sich von Ort zu Ort, fragen Sie das Rathaus also, was das Haus braucht und was eine Renovierung erfordern würde. Und wenn ein bestehendes Gebäude verkauft wird, muss dem Kaufvertrag eine Kopie seines registrierten Energieausweises beigefügt werden."
+          ]
+        },
+        {
+          "h2": "Welchen Schutz habe ich, wenn mit einem alten Bauernhaus etwas nicht stimmt?",
+          "paras": [
+            "Nicht denselben wie bei einem Neubau. Die gesetzlichen Baugewährleistungen gelten nur für Gebäude, deren Baugenehmigung am oder nach dem 6. Mai 2000 beantragt wurde, und ältere Gebäude fallen unter die frühere Regelung. Gegenüber dem Verkäufer erlischt ein Anspruch wegen versteckter Mängel sechs Monate nach der Übergabe der Immobilie, egal an welchem Tag Sie das Problem entdeckt haben.",
+            "Für die Anfechtung des Vertrags wegen Irrtums oder Täuschung gilt ein Zeitfenster von vier Jahren, gerechnet ab dem Vollzug des Vertrags. Beide Wege sind langsam und ungewiss im Vergleich zu einem ordentlichen Gutachten vor dem Kauf, bezahlen Sie also das Gutachten und lassen Sie es den Preis bestimmen, den Sie anbieten."
+          ]
+        },
+        {
+          "h2": "Welche Steuern und Schulden kommen mit dem Kauf?",
+          "paras": [
+            "Eine Finca, die von einem privaten Verkäufer gekauft wird, unterliegt der ITP, der Grunderwerbsteuer, und der Käufer zahlt sie. Den Satz legt jede Region fest, oder es gelten 6 Prozent, wo eine Region keinen beschlossen hat. Grundlage ist der höhere Wert aus dem angegebenen Preis und dem valor de referencia des Catastro. Der Katasterwert, der für die jährliche IBI verwendet wird, ist eine eigene Verwaltungsgröße, die den Marktwert nicht übersteigen darf.",
+            "Unbezahlte IBI bleibt beim Eigentümerwechsel an der Immobilie hängen, verlangen Sie also für jedes Grundstück im Verkauf die letzten Belege. Sind diese Prüfungen erledigt und passen die Unterlagen zum Land, können Sie das genießen, wofür Sie gekauft haben: lange Abende, viele Sterne und sehr wenig Verkehr."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Acheter un bien rural en Espagne : ce qu'il faut vérifier",
+      "description": "Les vérifications à faire avant d'acheter une finca ou un mas en Espagne : registre foncier, Catastro, urbanisme de la mairie, eau et accès.",
+      "h1": "Acheter une propriété rurale ou une finca en Espagne : les vérifications qui comptent",
+      "lead": "Avant d'acheter un bien rural en Espagne, confrontez trois documents à ce que vous voyez sur le terrain : la nota simple du registre foncier, la description et le plan du Catastro, et les dossiers d'urbanisme de la mairie pour le terrain et chaque bâtiment qui s'y trouve. Les papiers ruraux sont souvent en retard sur la réalité : un abogado indépendant et un géomètre ou un arquitecto técnico valent donc la peine dès le départ.",
+      "sections": [
+        {
+          "h2": "Pourquoi une finca est-elle plus difficile à acheter qu'un appartement ?",
+          "paras": [
+            "Parce que les papiers sont souvent plus anciens que les bâtiments. Une ferme a pu s'agrandir d'une cuisine, d'une piscine et d'une maison d'amis en trente ans, et le terrain a pu être partagé entre héritiers sans que personne ne mette les registres à jour. Le vendeur ne cache peut-être rien. Beaucoup ne savent tout simplement pas ce qui n'a jamais été inscrit.",
+            "Vérifiez donc tout ce que dit le vendeur au regard des registres officiels, et faites-le avant de signer un contrat d'arras. Faites appel à un abogado indépendant pour le volet juridique et à un géomètre ou un arquitecto técnico pour le terrain et les bâtiments. L'agent peut vous aider à trouver le bien, mais les vérifications sont l'affaire de votre côté."
+          ]
+        },
+        {
+          "h2": "Le vendeur est-il le propriétaire inscrit de l'ensemble ?",
+          "paras": [
+            "Commandez une nota simple au registre foncier pour chaque parcelle inscrite comprise dans la vente, car une finca se compose souvent de plusieurs parcelles. Les honoraires du registrateur sont de 3,005061 euros par bien, plus ce que facture un service en ligne. Les noms qui y figurent doivent être ceux des personnes qui vous vendent, et chaque copropriétaire doit être partie à la vente.",
+            "Le registre compte, car les droits qui y sont inscrits sont présumés appartenir au titulaire indiqué, et un titre non inscrit ne peut pas être opposé à l'acheteur qui s'est fié au registre. L'acheteur de bonne foi qui achète au propriétaire inscrit conserve l'achat une fois qu'il est inscrit. Si une partie du terrain ou un bâtiment manque au registre, demandez au vendeur de régulariser avant la signature, et non après."
+          ]
+        },
+        {
+          "h2": "Le terrain sur place correspond-il aux registres ?",
+          "paras": [
+            "Comparez trois choses : la parcelle que vous avez parcourue, le plan et la description du Catastro, et l'inscription au registre. Les écarts habituels portent sur la surface de la parcelle, les limites et les bâtiments répertoriés. Vous pouvez consulter le plan du Catastro pour une référence cadastrale sur le service en ligne du Catastro, ce qui donne un bon premier aperçu avant une visite.",
+            "Si les chiffres ne concordent pas, un géomètre peut mesurer le terrain et borner les limites. Interrogez aussi les voisins si vous le pouvez (ils savent en général où se trouvait vraiment le vieux mur). Tout écart que vous laissez sans solution devient votre problème en tant que propriétaire, et il comptera de nouveau lorsque vous revendrez."
+          ]
+        },
+        {
+          "h2": "La maison a-t-elle légalement le droit d'être là où elle est ?",
+          "paras": [
+            "C'est la question qui compte le plus, et c'est à la mairie (ayuntamiento) qu'il faut la poser. Les règles de construction à la campagne sont fixées par la loi régionale et le plan local : elles varient donc d'une commune à l'autre. Votre abogado ou votre arquitecto técnico peut faire la demande, ou vous pouvez vous rendre vous-même au service d'urbanisme avec la référence cadastrale.",
+            "Demandez comment le terrain est classé dans le plan local, si chaque bâtiment qui s'y trouve dispose d'un permis, et s'il existe un dossier d'infraction d'urbanisme ouvert ou un ordre de démolition. Demandez ce qui pourrait être construit, agrandi ou reconstruit à l'avenir. Obtenez les réponses par écrit. S'il est impossible de démontrer que la maison est légale, prenez conseil avant d'aller plus loin, et soyez prêt à renoncer."
+          ]
+        },
+        {
+          "h2": "Et les abris, la piscine et l'extension ?",
+          "paras": [
+            "Regardez chaque construction, pas seulement la maison. Les propriétaires doivent déclarer au Catastro les constructions nouvelles, extensions, rénovations et changements d'usage dans un délai de deux mois à compter du lendemain de l'événement. Ne pas les déclarer constitue une infraction fiscale légère, et le Catastro peut intégrer lui-même la modification par une procédure qui donne lieu à une taxe de 60 euros par bien.",
+            "Un abri à outils (casa de aperos) discrètement devenu une chambre est un exemple rural classique. Demandez à la mairie si chaque construction dispose d'un permis, demandez au vendeur les permis qu'il détient, et faites vérifier par votre abogado si les bâtiments figurent dans les actes. Les travaux non déclarés sont une question que le vendeur doit régler avant la vente."
+          ]
+        },
+        {
+          "h2": "Qui d'autre a des droits sur le terrain ?",
+          "paras": [
+            "Un terrain rural porte souvent des droits qu'un appartement n'aurait jamais : un chemin qu'un voisin emprunte pour rejoindre son propre champ, une canalisation ou un canal qui traverse la parcelle, une part d'eau d'un puits ou d'un système d'irrigation. Lisez la nota simple pour les droits inscrits, et parcourez le terrain avec le vendeur pour voir ce qui le traverse.",
+            "L'usage compte aussi. Une personne qui possède un terrain assez longtemps peut l'acquérir, et un propriétaire qui vit à l'étranger est considéré comme absent, ce qui double le délai ordinaire, de dix à vingt ans. Sur une grande parcelle que vous visitez deux fois par an, gardez les limites bien nettes et réagissez tôt face à quiconque commence à utiliser un coin du terrain comme le sien."
+          ]
+        },
+        {
+          "h2": "Eau, électricité et eaux usées : que faut-il demander ?",
+          "paras": [
+            "Repérer une ligne électrique et un robinet est facile. Demandez d'où vient l'eau : un réseau public, un puits, une citerne remplie par camion, ou une part d'eau d'irrigation. Demandez si l'électricité provient d'un contrat de fourniture classique ou d'un groupe électrogène et de panneaux solaires. Chaque réponse change ce que signifie vivre là en août.",
+            "Les eaux usées sont là où les acheteurs ont des surprises. Beaucoup de maisons rurales utilisent une fosse septique ou une fosse d'aisances, et ce qui est autorisé varie d'un endroit à l'autre : demandez donc à la mairie ce dont la maison a besoin et ce qu'exigerait une rénovation. Et lorsqu'un bâtiment existant est vendu, une copie de son certificat énergétique enregistré doit être annexée au contrat de vente."
+          ]
+        },
+        {
+          "h2": "Quelle protection ai-je si quelque chose ne va pas dans une vieille ferme ?",
+          "paras": [
+            "Ce n'est pas la même chose qu'avec un logement neuf. Les garanties légales de construction ne s'appliquent qu'aux bâtiments dont le permis de construire a été demandé le 6 mai 2000 ou après, et les bâtiments plus anciens relèvent du régime antérieur. Contre le vendeur, une action pour vices cachés s'éteint six mois après la remise du bien, quel que soit le jour où vous avez découvert le problème.",
+            "L'annulation du contrat pour erreur ou dol bénéficie d'un délai de quatre ans, à compter de la conclusion du contrat. Ces deux voies sont lentes et incertaines comparées à une expertise sérieuse avant l'achat : payez donc l'expertise et laissez-la guider le prix que vous proposez."
+          ]
+        },
+        {
+          "h2": "Quels impôts et quelles dettes accompagnent l'achat ?",
+          "paras": [
+            "Une finca achetée à un vendeur particulier est soumise à l'ITP, l'impôt sur les transmissions, et c'est l'acheteur qui le paie. Le taux est fixé par chaque région, ou 6 pour cent lorsqu'une région n'en a adopté aucun. La base est le plus élevé du prix déclaré et du valor de referencia du Catastro. La valeur cadastrale, utilisée pour l'IBI annuel, est un chiffre administratif distinct qui ne peut pas dépasser la valeur de marché.",
+            "L'IBI impayé reste attaché au bien lorsqu'il change de mains : demandez donc les derniers avis pour chaque parcelle comprise dans la vente. Une fois ces vérifications faites et les papiers en accord avec le terrain, vous pouvez profiter de ce pour quoi vous l'avez acheté : de longues soirées, beaucoup d'étoiles et très peu de circulation."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Landelijk vastgoed of finca kopen in Spanje: wat u controleert",
+      "description": "De controles vóór de aankoop van een finca of boerderij in Spanje: het eigendomsregister, het Catastro, de bouwdossiers van de gemeente, water en toegang.",
+      "h1": "Een landelijke woning of finca kopen in Spanje: de controles die ertoe doen",
+      "lead": "Controleer vóór de aankoop van landelijk vastgoed in Spanje drie registers aan de hand van wat u ter plaatse ziet: de nota simple van het eigendomsregister, de omschrijving en kaart van het Catastro, en de ruimtelijke-ordeningsdossiers van de gemeente voor de grond en elk gebouw erop. Op het platteland lopen de papieren vaak achter op de werkelijkheid, dus een onafhankelijke abogado en een landmeter of arquitecto técnico zijn vanaf het begin de moeite waard.",
+      "sections": [
+        {
+          "h2": "Waarom is een finca moeilijker te kopen dan een appartement?",
+          "paras": [
+            "Omdat de papieren vaak ouder zijn dan de gebouwen. Een boerderij kan er in dertig jaar een keuken, een zwembad en een gastenverblijf bij hebben gekregen, en de grond kan tussen erfgenamen zijn verdeeld zonder dat iemand de registers heeft bijgewerkt. De verkoper verbergt misschien niets. Velen weten gewoon niet wat er nooit is ingeschreven.",
+            "Controleer daarom alles wat de verkoper u vertelt aan de hand van de officiële registers, en doe dat voordat u een aanbetalingscontract tekent. Schakel een onafhankelijke abogado in voor de juridische kant en een landmeter of arquitecto técnico voor de grond en de gebouwen. De makelaar kan u helpen de plek te vinden, maar de controles zijn de taak van uw kant."
+          ]
+        },
+        {
+          "h2": "Is de verkoper de ingeschreven eigenaar van alles?",
+          "paras": [
+            "Vraag een nota simple op bij het eigendomsregister voor elk ingeschreven perceel in de verkoop, want een finca bestaat vaak uit meerdere percelen. Het tarief van de registrator is 3,005061 euro per perceel, plus wat een onlinedienst rekent. De namen erop moeten die zijn van de mensen die aan u verkopen, en elke mede-eigenaar moet deel uitmaken van de verkoop.",
+            "Het register is belangrijk omdat voor rechten die daarin staan het vermoeden geldt dat ze toebehoren aan de vermelde houder, en een niet-ingeschreven titel niet kan worden ingeroepen tegen een koper die op het register vertrouwde. Een koper te goeder trouw die van de ingeschreven eigenaar koopt, behoudt de aankoop zodra die is ingeschreven. Ontbreekt een deel van de grond of een gebouw in het register, vraag de verkoper dan om dat vóór de overdracht recht te zetten, niet erna."
+          ]
+        },
+        {
+          "h2": "Komt de grond in werkelijkheid overeen met de registers?",
+          "paras": [
+            "Vergelijk drie dingen: het perceel waar u overheen liep, de kaart en omschrijving van het Catastro, en de inschrijving in het register. De gebruikelijke verschillen zitten in de oppervlakte van het perceel, de grenzen en de vermelde gebouwen. U kunt de kaart van het Catastro voor een kadastrale referentie bekijken via de onlinedienst van het Catastro, een goede eerste blik vóór een bezoek.",
+            "Kloppen de cijfers niet, dan kan een landmeter de grond opmeten en de grenzen markeren. Vraag het ook aan de buren als dat kan (zij weten meestal waar de oude muur echt stond). Elk verschil dat u onopgelost laat, wordt als eigenaar uw probleem, en het speelt opnieuw als u verkoopt."
+          ]
+        },
+        {
+          "h2": "Mag het huis wettelijk staan waar het staat?",
+          "paras": [
+            "Dit is de belangrijkste vraag, en de gemeente (ayuntamiento) is de plek om die te stellen. De regels voor bouwen op het platteland worden bepaald door regionale wetgeving en het lokale bestemmingsplan, dus ze verschillen per gemeente. Uw abogado of arquitecto técnico kan het verzoek indienen, of u gaat zelf met de kadastrale referentie langs bij de afdeling ruimtelijke ordening.",
+            "Vraag hoe de grond in het lokale plan is ingedeeld, of elk gebouw erop een vergunning heeft, en of er een openstaand dossier wegens een bouwovertreding of een sloopbevel is. Vraag wat er in de toekomst gebouwd, uitgebreid of herbouwd zou mogen worden. Laat de antwoorden op papier zetten. Kan niet worden aangetoond dat het huis legaal is, win dan advies in voordat u verdergaat, en wees bereid af te haken."
+          ]
+        },
+        {
+          "h2": "En de schuurtjes, het zwembad en de uitbreiding?",
+          "paras": [
+            "Bekijk elk bouwwerk, niet alleen het huis. Eigenaren moeten nieuwbouw, uitbreidingen, verbouwingen en wijzigingen van gebruik binnen twee maanden na de dag na de gebeurtenis bij het Catastro melden. Wie dat niet meldt, begaat een lichte belastingovertreding, en het Catastro kan de wijziging zelf verwerken via een procedure waarvoor 60 euro per woning wordt gerekend.",
+            "Een gereedschapsschuur (casa de aperos) die stilletjes een slaapkamer is geworden, is een klassiek voorbeeld op het platteland. Vraag de gemeente of elk bouwwerk een vergunning heeft, vraag de verkoper om de vergunningen die hij heeft, en laat uw abogado nagaan of de gebouwen in de aktes zijn vastgelegd. Niet-gemeld werk hoort de verkoper vóór de verkoop te regelen."
+          ]
+        },
+        {
+          "h2": "Wie heeft er nog meer rechten op de grond?",
+          "paras": [
+            "Op landelijke grond rusten vaak rechten die een appartement nooit zou hebben: een pad dat een buurman gebruikt om bij zijn eigen veld te komen, een leiding of kanaal dat het perceel kruist, een aandeel in het water van een put of een irrigatiesysteem. Lees de nota simple op ingeschreven rechten, en loop met de verkoper over de grond om te zien wat er doorheen loopt.",
+            "Ook gebruik telt. Iemand die grond lang genoeg in bezit heeft, kan die verwerven, en een eigenaar die in het buitenland woont, geldt als afwezig, waardoor de gewone termijn verdubbelt van tien naar twintig jaar. Op een groot perceel dat u twee keer per jaar bezoekt, houdt u de grenzen duidelijk en spreekt u iedereen die een hoekje als het zijne begint te gebruiken er vroeg op aan."
+          ]
+        },
+        {
+          "h2": "Water, stroom en afvalwater: wat moet ik vragen?",
+          "paras": [
+            "Een stroomkabel en een kraan zijn makkelijk te zien. Vraag waar het water vandaan komt: van het waterleidingnet, uit een put, uit een opslagtank die met een vrachtwagen wordt gevuld, of uit een aandeel in irrigatiewater. Vraag of de elektriciteit een gewoon leveringscontract is of een generator met zonnepanelen. Elk antwoord verandert hoe het is om er in augustus te wonen.",
+            "Afvalwater is waar kopers verrast worden. Veel landelijke huizen gebruiken een septic tank of een beerput, en wat is toegestaan verschilt per plek, dus vraag de gemeente wat het huis nodig heeft en wat een verbouwing zou vereisen. En als een bestaand gebouw wordt verkocht, moet een kopie van het geregistreerde energiecertificaat bij het koopcontract worden gevoegd."
+          ]
+        },
+        {
+          "h2": "Welke bescherming heb ik als er iets mis is met een oude boerderij?",
+          "paras": [
+            "Niet dezelfde als bij nieuwbouw. De wettelijke bouwgaranties gelden alleen voor gebouwen waarvan de bouwvergunning op of na 6 mei 2000 is aangevraagd, en oudere gebouwen vallen onder de vorige regeling. Tegen de verkoper vervalt een vordering wegens verborgen gebreken zes maanden nadat de woning is overgedragen, ongeacht de dag waarop u het probleem ontdekte.",
+            "Voor het vernietigen van het contract wegens dwaling of bedrog geldt een termijn van vier jaar, gerekend vanaf de uitvoering van het contract. Beide wegen zijn traag en onzeker vergeleken met een goede bouwkundige keuring vóór de aankoop, dus betaal voor de keuring en laat die de prijs bepalen die u biedt."
+          ]
+        },
+        {
+          "h2": "Welke belastingen en schulden komen met de aankoop mee?",
+          "paras": [
+            "Een finca die u van een particuliere verkoper koopt, valt onder ITP, de overdrachtsbelasting, en de koper betaalt die. Het tarief wordt door elke regio vastgesteld, of is 6 procent waar een regio er geen heeft vastgesteld. De grondslag is het hoogste van de prijs die u opgeeft en de valor de referencia van het Catastro. De kadastrale waarde, die voor de jaarlijkse IBI wordt gebruikt, is een apart administratief bedrag dat niet hoger mag zijn dan de marktwaarde.",
+            "Onbetaalde IBI blijft aan de woning verbonden als die van eigenaar wisselt, dus vraag om de laatste aanslagen voor elk perceel in de verkoop. Zijn die controles gedaan en kloppen de papieren met de grond, dan kunt u genieten van waarvoor u het kocht: lange avonden, veel sterren en heel weinig verkeer."
+          ]
+        }
+      ]
+    }
+  }
+}

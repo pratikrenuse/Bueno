@@ -1,0 +1,445 @@
+{
+  "slug": "non-resident-tax-on-spanish-property",
+  "topic": "tax",
+  "tool": "tax-calculator",
+  "order": 3,
+  "rules": [
+    "irnr.imputed.base",
+    "irnr.imputed.no_cadastral_value",
+    "irnr.imputed.rate_special_2023_2025",
+    "irnr.imputed.no_deductions",
+    "irnr.rates",
+    "irnr.rental.deductibility",
+    "deadline.imputed.upto_2025",
+    "deadline.imputed.from_2026",
+    "deadline.rental.from_2026",
+    "deadline.210.new_fields_2027",
+    "residency.day_counting",
+    "residency.treaty_override",
+    "ip.minimo_exento",
+    "ip.filing_trigger",
+    "late.recargo.voluntary",
+    "own.ibi.town_hall_manages",
+    "own.waste.fee_required"
+  ],
+  "answers": [
+    "tax-on-a-spanish-property-you-do-not-rent-out",
+    "imputed-income-tax-deadline-for-2025",
+    "imputed-income-when-there-is-no-cadastral-value",
+    "modelo-210-changes-from-january-2027",
+    "how-days-are-counted-for-spanish-tax-residency",
+    "tax-resident-in-spain-and-home-country-tie-breaker",
+    "spanish-wealth-tax-for-non-residents",
+    "filing-a-spanish-tax-return-late"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Non-Resident Tax on Spanish Property: Modelo 210 Explained",
+      "description": "If you live abroad and own a home in Spain, you pay tax on it every year, even with no rent. How it is worked out, the rates and the dates.",
+      "h1": "Non-resident tax on a Spanish home you own but do not live in",
+      "lead": "If you live outside Spain and own a home there, you pay Spanish non-resident income tax on it every year, even if you never rent it out. The tax falls on an imputed income worked out from the cadastral value on your IBI receipt, at 19 percent for residents of the EU, Norway, Iceland and Liechtenstein and 24 percent for everyone else. You declare it on modelo 210.",
+      "sections": [
+        {
+          "h2": "Do I really pay Spanish tax on a home I only use for holidays?",
+          "paras": [
+            "Yes. If you live outside Spain and own a home there, Spain treats the property as earning you an income, even if nobody ever pays you rent. This is imputed income (renta imputada), taxed under non-resident income tax, the IRNR, and declared on modelo 210. It is separate from IBI, the local property tax collected by your town hall, so the two arrive from different offices at different times of year.",
+            "Many owners are used to a home tax office that prepares most of the return for them. This one is a Spanish return you file yourself, so it waits until you, or someone you appoint, deals with it. That is the main reason owners abroad can go a year or two without realising anything is missing."
+          ]
+        },
+        {
+          "h2": "How is the imputed income worked out?",
+          "paras": [
+            "Start with the cadastral value (valor catastral) printed on your IBI receipt. Not the price you paid, and not what an agent thinks the house would sell for today. Cadastral values sit well below market value, so using the wrong figure overstates the tax several times over (a mistake older guides still repeat).",
+            "Then apply a percentage. For 2023, 2024 and 2025, the percentage is 1.1 percent where the cadastral values in your municipality were revised with effect from 1 January 2012 onwards. Where they were not, the standing rule decides the percentage instead, so find out the year of the last general revision before you calculate. The cadastre (Catastro) or your town hall holds that information.",
+            "No expenses of any kind can be deducted from imputed income. Community fees, IBI, insurance and repairs all stay out of this return. The special 1.1 percent rule covers 2023 to 2025 only, so check which percentage applies for 2026 before that window opens, rather than copying last year's figure."
+          ]
+        },
+        {
+          "h2": "What rate do I pay, and does Norway count as EU?",
+          "paras": [
+            "The rate is 19 percent for residents of the EU, Iceland, Norway and Liechtenstein, and 24 percent for everyone else, which includes residents of the United Kingdom. Norway is outside the EU, but for this tax it is treated in the same way as a member state, as are Iceland and Liechtenstein.",
+            "Say your IBI receipt shows a cadastral value of 100,000 euros and your town's values were revised with effect from 2012 or later. For 2025 the imputed income is 1,100 euros. A resident of Sweden or Norway pays 19 percent of that, which is 209 euros. A resident of the UK pays 24 percent, which is 264 euros.",
+            "If the property has no cadastral value yet, or the value has not been notified, a different calculation applies. You take 1.1 percent of 50 percent of the higher of two figures: the price you paid, or the value verified by the tax administration. Keep your purchase deed to hand for this."
+          ]
+        },
+        {
+          "h2": "When is the return due?",
+          "paras": [
+            "For 2025 and earlier years, the imputed income return can be filed at any point during the following calendar year, up to 31 December. So the return for 2025 can be filed until 31 December 2026. If you want to pay by direct debit (domiciliación), that option closes on 23 December, eight days earlier.",
+            "That gap is where owners slip. Someone plans to file on 28 December with a direct debit, finds the option has closed, and goes into the new year believing it is paid when it is not. If you are filing late in December, pay by another method before 31 December and keep the receipt.",
+            "From the 2026 tax year the window moves. The 2026 return can be filed from 1 April to 31 December 2027, with direct debit open from 1 April to 23 December 2027. Separately, every modelo 210 submitted from 1 January 2027 carries new fields, including days available and ownership percentage, whichever year the return covers."
+          ]
+        },
+        {
+          "h2": "I rent it out for a few weeks. Does that change anything?",
+          "paras": [
+            "Rental income is taxed separately, through the same modelo 210 system and at the same 19 or 24 percent rates. Residents of another EU state, Norway, Iceland or Liechtenstein can deduct expenses directly linked to the letting, with a certificate of tax residence from home. Everyone else is taxed on the gross rent, with no deductions at all.",
+            "The filing dates for rent are not the same as the dates for imputed income. Rent earned from 2026 is filed in the first 20 days of April of the following year, with direct debit closing on 15 April. Our guide to tax on rental income in Spain covers the detail, including how the 2026 changeover works."
+          ]
+        },
+        {
+          "h2": "Am I actually non-resident for Spanish tax?",
+          "paras": [
+            "This guide assumes you live elsewhere and Spain is your second home. Spain decides residence by its own tests, and the counting is stricter than many owners expect. Proven days of presence count, days between two proven stays can be presumed, and sporadic absences are added back to your Spanish days unless you prove tax residence elsewhere with a certificate.",
+            "If both Spain and your home country could treat you as resident, the tie-breaker in the double tax treaty between them decides. Norway, Sweden, Germany, the UK and France all have treaties with Spain. Keep the certificate of tax residence from your home tax office somewhere easy to find, because it supports your non-resident status and it is also what lets an EU or EEA landlord deduct expenses."
+          ]
+        },
+        {
+          "h2": "Is there anything else a non-resident owner pays?",
+          "paras": [
+            "Wealth tax (impuesto sobre el patrimonio) can reach non-residents on what they own in Spain. There is an exempt amount of 700,000 euros. A return is due when tax is payable, or when your assets in Spain are worth more than 2,000,000 euros counted without deducting debts, even if no tax comes out. Check both figures against everything you own in Spain, not only the house.",
+            "IBI and other local charges, such as rubbish collection, are set and collected locally, by the town hall or in some provinces by a collection agency acting for it. Amounts and payment dates vary from town to town, so the right place to ask is the local tax collection office named on your receipt. None of these replace modelo 210."
+          ]
+        },
+        {
+          "h2": "Can I do this myself, or do I need a gestor?",
+          "paras": [
+            "Plenty of owners file their own return once they have the cadastral value, the revision year and their NIE. Others hand it to a gestor or an asesor fiscal, especially where there are several co-owners, a letting history, or a year that was missed. Either way, keep a simple folder with each year's IBI receipt and the return you filed.",
+            "If you have missed a year, file it as soon as you can. Filing late on your own initiative, before the tax office writes to you, costs a surcharge of 1 percent plus 1 percent for each complete month of delay, up to 12 months, then 15 percent plus interest. Our guide on filing Spanish tax late explains how that works.",
+            "The calculator linked from this page works through the same steps with your own cadastral value, your country of residence and the year you are filing for. Then put a reminder in your calendar for early December, well before the direct debit closes, and let the rest of the year be about the house itself: the terrace, the market, the first swim of the season."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Skatt for ikke-bosatte på bolig i Spania: modelo 210",
+      "description": "Bor du i utlandet og eier en bolig i Spania, betaler du skatt av den hvert år, også uten leie, og her ser du beregning, satser og datoer.",
+      "h1": "Spansk skatt for ikke-bosatte på en bolig du eier, men ikke bor i",
+      "lead": "Bor du utenfor Spania og eier en bolig der, betaler du spansk inntektsskatt for ikke-bosatte av den hvert år, selv om du aldri leier den ut. Skatten beregnes av en imputert inntekt basert på matrikkelverdien på IBI-regningen din, med 19 prosent for bosatte i EU, Norge, Island og Liechtenstein og 24 prosent for alle andre. Du oppgir den på modelo 210.",
+      "sections": [
+        {
+          "h2": "Betaler jeg virkelig spansk skatt på en bolig jeg bare bruker i ferier?",
+          "paras": [
+            "Ja. Bor du utenfor Spania og eier en bolig der, behandler Spania eiendommen som om den gir deg en inntekt, selv om ingen noen gang betaler deg leie. Dette er imputert inntekt (renta imputada), som skattlegges etter inntektsskatten for ikke-bosatte, IRNR, og oppgis på modelo 210. Den er atskilt fra IBI, den lokale eiendomsskatten som kommunen krever inn, så de to kommer fra ulike kontorer til ulike tider av året.",
+            "Mange eiere er vant til et skattekontor hjemme som fyller ut det meste av skattemeldingen for dem. Dette er en spansk oppgave du leverer selv, så den blir liggende til du, eller noen du utpeker, tar deg av den. Det er hovedgrunnen til at eiere i utlandet kan gå et år eller to uten å merke at noe mangler."
+          ]
+        },
+        {
+          "h2": "Hvordan beregnes den imputerte inntekten?",
+          "paras": [
+            "Start med matrikkelverdien (valor catastral) som står på IBI-regningen din. Ikke prisen du betalte, og ikke det en megler tror huset kan selges for i dag. Matrikkelverdier ligger godt under markedsverdien, så bruker du feil tall, blir skatten flere ganger for høy (en feil eldre veiledninger fortsatt gjentar).",
+            "Deretter bruker du en prosentsats. For 2023, 2024 og 2025 er satsen 1,1 prosent der matrikkelverdiene i kommunen din ble revidert med virkning fra 1. januar 2012 eller senere. Der de ikke ble det, avgjør hovedregelen satsen i stedet, så finn ut året for siste generelle revisjon før du regner. Matrikkelen (Catastro) eller kommunen har den opplysningen.",
+            "Ingen utgifter av noe slag kan trekkes fra imputert inntekt. Fellesutgifter, IBI, forsikring og reparasjoner holdes alle utenfor denne oppgaven. Særregelen om 1,1 prosent gjelder bare for 2023 til 2025, så sjekk hvilken sats som gjelder for 2026 før det vinduet åpner, i stedet for å kopiere fjorårets tall."
+          ]
+        },
+        {
+          "h2": "Hvilken sats betaler jeg, og regnes Norge som EU?",
+          "paras": [
+            "Satsen er 19 prosent for bosatte i EU, Island, Norge og Liechtenstein, og 24 prosent for alle andre, som også omfatter bosatte i Storbritannia. Norge står utenfor EU, men for denne skatten behandles landet på samme måte som en medlemsstat, i likhet med Island og Liechtenstein.",
+            "Si at IBI-regningen din viser en matrikkelverdi på 100 000 euro, og at verdiene i kommunen din ble revidert med virkning fra 2012 eller senere. For 2025 er den imputerte inntekten 1 100 euro. En som bor i Sverige eller Norge betaler 19 prosent av det, altså 209 euro. En som bor i Storbritannia betaler 24 prosent, altså 264 euro.",
+            "Har eiendommen ennå ingen matrikkelverdi, eller er verdien ikke meddelt, gjelder en annen beregning. Du tar 1,1 prosent av 50 prosent av det høyeste av to tall: prisen du betalte, eller verdien skattemyndighetene har kontrollert. Ha kjøpeskjøtet ditt for hånden til dette."
+          ]
+        },
+        {
+          "h2": "Når er fristen for å levere?",
+          "paras": [
+            "For 2025 og tidligere år kan oppgaven for imputert inntekt leveres når som helst i løpet av det påfølgende kalenderåret, til og med 31. desember. Oppgaven for 2025 kan altså leveres til 31. desember 2026. Vil du betale med avtalegiro (domiciliación), stenger det valget 23. desember, åtte dager tidligere.",
+            "Det er i det mellomrommet eiere glipper. Noen planlegger å levere 28. desember med avtalegiro, oppdager at valget har stengt, og går inn i det nye året i den tro at alt er betalt når det ikke er det. Leverer du sent i desember, betal på en annen måte før 31. desember og ta vare på kvitteringen.",
+            "Fra inntektsåret 2026 flytter vinduet seg. Oppgaven for 2026 kan leveres fra 1. april til 31. desember 2027, med avtalegiro åpen fra 1. april til 23. desember 2027. I tillegg får hver modelo 210 som leveres fra 1. januar 2027 nye felt, blant annet antall disponible dager og eierandel i prosent, uansett hvilket år oppgaven gjelder."
+          ]
+        },
+        {
+          "h2": "Jeg leier den ut noen uker. Endrer det noe?",
+          "paras": [
+            "Leieinntekt skattlegges separat, gjennom det samme modelo 210-systemet og med de samme satsene på 19 eller 24 prosent. Bosatte i en annen EU-stat, Norge, Island eller Liechtenstein kan trekke fra utgifter som er direkte knyttet til utleien, med en attest om skattemessig bosted fra hjemlandet. Alle andre skattlegges av brutto leie, uten fradrag i det hele tatt.",
+            "Leveringsdatoene for leie er ikke de samme som for imputert inntekt. Leie opptjent fra 2026 leveres i de første 20 dagene av april året etter, og avtalegiro stenger 15. april. Veiledningen vår om skatt på leieinntekt i Spania går gjennom detaljene, også hvordan overgangen i 2026 fungerer."
+          ]
+        },
+        {
+          "h2": "Er jeg egentlig ikke-bosatt etter spanske skatteregler?",
+          "paras": [
+            "Denne veiledningen forutsetter at du bor et annet sted og at Spania er din sekundærbolig. Spania avgjør bosted etter egne kriterier, og tellingen er strengere enn mange eiere regner med. Dokumenterte oppholdsdager teller, dager mellom to dokumenterte opphold kan antas, og sporadisk fravær legges til de spanske dagene dine med mindre du dokumenterer skattemessig bosted et annet sted med en attest.",
+            "Kan både Spania og hjemlandet ditt behandle deg som bosatt, avgjør skatteavtalen mellom dem. Norge, Sverige, Tyskland, Storbritannia og Frankrike har alle skatteavtaler med Spania. Oppbevar attesten om skattemessig bosted fra skattekontoret hjemme et sted der du lett finner den, fordi den underbygger at du er ikke-bosatt, og det er også den som lar en utleier fra EU eller EØS trekke fra utgifter."
+          ]
+        },
+        {
+          "h2": "Er det noe annet en ikke-bosatt eier betaler?",
+          "paras": [
+            "Formuesskatt (impuesto sobre el patrimonio) kan ramme ikke-bosatte for det de eier i Spania. Det finnes et bunnfradrag på 700 000 euro. En oppgave skal leveres når det er skatt å betale, eller når eiendelene dine i Spania er verdt mer enn 2 000 000 euro regnet uten fradrag for gjeld, selv om det ikke blir noen skatt. Sjekk begge tallene mot alt du eier i Spania, ikke bare huset.",
+            "IBI og andre lokale avgifter, som renovasjon, fastsettes og kreves inn lokalt, av kommunen eller i enkelte provinser av et innkrevingsorgan som handler på dens vegne. Beløp og betalingsdatoer varierer fra kommune til kommune, så rett sted å spørre er det lokale innkrevingskontoret som står på regningen din. Ingen av disse erstatter modelo 210."
+          ]
+        },
+        {
+          "h2": "Kan jeg gjøre dette selv, eller trenger jeg en gestor?",
+          "paras": [
+            "Mange eiere leverer oppgaven selv når de har matrikkelverdien, revisjonsåret og NIE-nummeret sitt. Andre overlater den til en gestor eller en asesor fiscal, særlig der det er flere medeiere, en utleiehistorikk eller et år som er glemt. Uansett hva du velger, ha en enkel mappe med hvert års IBI-regning og oppgaven du leverte.",
+            "Har du gått glipp av et år, lever det så snart du kan. Leverer du for sent på eget initiativ, før skattekontoret skriver til deg, koster det et tillegg på 1 prosent pluss 1 prosent for hver hele måned forsinkelse, opp til 12 måneder, deretter 15 prosent pluss renter. Veiledningen vår om å levere spansk skatt for sent forklarer hvordan det fungerer.",
+            "Kalkulatoren det lenkes til fra denne siden går gjennom de samme stegene med din egen matrikkelverdi, landet du bor i og året du leverer for. Legg så inn en påminnelse i kalenderen tidlig i desember, i god tid før avtalegiro stenger, og la resten av året handle om selve huset: terrassen, markedet, sesongens første bad."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Skatt för icke-bosatta på bostad i Spanien: modelo 210",
+      "description": "Bor du utomlands och äger en bostad i Spanien betalar du skatt på den varje år, även utan hyra, och här ser du hur den räknas, satserna och datumen.",
+      "h1": "Skatt för icke-bosatta på en spansk bostad du äger men inte bor i",
+      "lead": "Bor du utanför Spanien och äger en bostad där betalar du spansk inkomstskatt för icke-bosatta på den varje år, även om du aldrig hyr ut den. Skatten tas ut på en schablonintäkt som räknas fram från taxeringsvärdet på din IBI-avi, med 19 procent för boende i EU, Norge, Island och Liechtenstein och 24 procent för alla andra. Du deklarerar den på modelo 210.",
+      "sections": [
+        {
+          "h2": "Betalar jag verkligen spansk skatt på en bostad jag bara använder på semestern?",
+          "paras": [
+            "Ja. Bor du utanför Spanien och äger en bostad där behandlar Spanien fastigheten som om den gav dig en inkomst, även om ingen någonsin betalar hyra till dig. Det här är schablonintäkt (renta imputada), som beskattas enligt inkomstskatten för icke-bosatta, IRNR, och deklareras på modelo 210. Den är skild från IBI, den lokala fastighetsskatten som kommunen tar ut, så de två kommer från olika kontor vid olika tider på året.",
+            "Många ägare är vana vid att skatteverket hemma förbereder det mesta av deklarationen åt dem. Den här är en spansk deklaration som du lämnar själv, så den ligger kvar tills du, eller någon du utser, tar hand om den. Det är huvudskälet till att ägare utomlands kan gå ett eller två år utan att märka att något saknas."
+          ]
+        },
+        {
+          "h2": "Hur räknas schablonintäkten fram?",
+          "paras": [
+            "Börja med taxeringsvärdet (valor catastral) som står på din IBI-avi. Inte priset du betalade, och inte vad en mäklare tror att huset skulle säljas för i dag. Taxeringsvärden ligger långt under marknadsvärdet, så används fel siffra blir skatten flera gånger för hög (ett misstag som äldre guider fortfarande upprepar).",
+            "Tillämpa sedan en procentsats. För 2023, 2024 och 2025 är procentsatsen 1,1 procent där taxeringsvärdena i din kommun har omprövats med verkan från 1 januari 2012 eller senare. Där de inte har det avgör den ordinarie regeln procentsatsen i stället, så ta reda på året för den senaste allmänna omprövningen innan du räknar. Fastighetsregistret (Catastro) eller kommunen har den uppgiften.",
+            "Inga kostnader av något slag får dras av från schablonintäkten. Samfällighetsavgifter, IBI, försäkring och reparationer hålls alla utanför den här deklarationen. Den särskilda regeln om 1,1 procent gäller bara 2023 till 2025, så kontrollera vilken procentsats som gäller för 2026 innan den perioden öppnar, i stället för att kopiera förra årets siffra."
+          ]
+        },
+        {
+          "h2": "Vilken skattesats betalar jag, och räknas Norge som EU?",
+          "paras": [
+            "Skattesatsen är 19 procent för boende i EU, Island, Norge och Liechtenstein, och 24 procent för alla andra, vilket inkluderar boende i Storbritannien. Norge står utanför EU, men för den här skatten behandlas landet på samma sätt som en medlemsstat, liksom Island och Liechtenstein.",
+            "Säg att din IBI-avi visar ett taxeringsvärde på 100 000 euro och att värdena i din kommun omprövades med verkan från 2012 eller senare. För 2025 blir schablonintäkten 1 100 euro. Den som bor i Sverige eller Norge betalar 19 procent av det, alltså 209 euro. Den som bor i Storbritannien betalar 24 procent, alltså 264 euro.",
+            "Saknar fastigheten ännu taxeringsvärde, eller har värdet inte meddelats, gäller en annan beräkning. Du tar 1,1 procent av 50 procent av det högsta av två belopp: priset du betalade, eller det värde som skatteförvaltningen har fastställt. Ha köpehandlingen nära till hands för det här."
+          ]
+        },
+        {
+          "h2": "När ska deklarationen lämnas?",
+          "paras": [
+            "För 2025 och tidigare år kan deklarationen för schablonintäkt lämnas när som helst under det följande kalenderåret, fram till 31 december. Deklarationen för 2025 kan alltså lämnas till och med 31 december 2026. Vill du betala via autogiro (domiciliación) stänger den möjligheten den 23 december, åtta dagar tidigare.",
+            "Det är i den luckan ägare halkar. Någon planerar att deklarera den 28 december med autogiro, upptäcker att möjligheten har stängt och går in i det nya året i tron att skatten är betald när den inte är det. Deklarerar du sent i december, betala på annat sätt före 31 december och spara kvittot.",
+            "Från inkomståret 2026 flyttas perioden. Deklarationen för 2026 kan lämnas från 1 april till 31 december 2027, med autogiro öppet från 1 april till 23 december 2027. Separat gäller att varje modelo 210 som lämnas från 1 januari 2027 har nya fält, bland annat tillgängliga dagar och ägarandel i procent, oavsett vilket år deklarationen avser."
+          ]
+        },
+        {
+          "h2": "Jag hyr ut den några veckor. Ändrar det något?",
+          "paras": [
+            "Hyresinkomst beskattas separat, genom samma system med modelo 210 och med samma satser, 19 eller 24 procent. Den som bor i ett annat EU-land, Norge, Island eller Liechtenstein kan dra av kostnader som är direkt kopplade till uthyrningen, med ett intyg om skatterättslig hemvist från hemlandet. Alla andra beskattas på bruttohyran, utan några avdrag alls.",
+            "Deklarationsdatumen för hyra är inte desamma som för schablonintäkt. Hyra som tjänas in från 2026 deklareras under de första 20 dagarna i april året därpå, och autogiro stänger den 15 april. Vår guide om skatt på hyresinkomst i Spanien går igenom detaljerna, bland annat hur övergången 2026 fungerar."
+          ]
+        },
+        {
+          "h2": "Är jag verkligen icke-bosatt i spansk skattemening?",
+          "paras": [
+            "Den här guiden utgår från att du bor någon annanstans och att Spanien är ditt andra hem. Spanien avgör bosättning med egna kriterier, och räkningen är strängare än många ägare tror. Bevisade vistelsedagar räknas, dagar mellan två bevisade vistelser kan presumeras, och sporadisk frånvaro läggs tillbaka till dina spanska dagar om du inte visar skatterättslig hemvist någon annanstans med ett intyg.",
+            "Kan både Spanien och ditt hemland betrakta dig som bosatt avgör skiljeregeln i dubbelbeskattningsavtalet mellan dem. Norge, Sverige, Tyskland, Storbritannien och Frankrike har alla avtal med Spanien. Förvara intyget om skatterättslig hemvist från skatteverket hemma där du lätt hittar det, eftersom det styrker att du är icke-bosatt och det är också det som låter en uthyrare från EU eller EES dra av kostnader."
+          ]
+        },
+        {
+          "h2": "Betalar en icke-bosatt ägare något mer?",
+          "paras": [
+            "Förmögenhetsskatt (impuesto sobre el patrimonio) kan träffa icke-bosatta för det de äger i Spanien. Det finns ett skattefritt belopp på 700 000 euro. Deklaration ska lämnas när skatt ska betalas, eller när dina tillgångar i Spanien är värda mer än 2 000 000 euro räknat utan avdrag för skulder, även om ingen skatt blir följden. Kontrollera båda beloppen mot allt du äger i Spanien, inte bara huset.",
+            "IBI och andra lokala avgifter, som sophämtning, fastställs och tas ut lokalt, av kommunen eller i vissa provinser av ett uppbördsorgan som agerar för den. Belopp och betalningsdatum varierar från kommun till kommun, så rätt ställe att fråga är det lokala uppbördskontor som står på din avi. Inget av detta ersätter modelo 210."
+          ]
+        },
+        {
+          "h2": "Kan jag göra det här själv, eller behöver jag en gestor?",
+          "paras": [
+            "Många ägare lämnar sin egen deklaration när de har taxeringsvärdet, omprövningsåret och sitt NIE. Andra lämnar över den till en gestor eller en asesor fiscal, särskilt när det finns flera delägare, en historik av uthyrning eller ett år som missats. Hur du än gör, spara en enkel mapp med varje års IBI-avi och den deklaration du lämnade.",
+            "Har du missat ett år, lämna det så snart du kan. Att deklarera sent på eget initiativ, innan skattemyndigheten skriver till dig, kostar ett tillägg på 1 procent plus 1 procent för varje hel månads dröjsmål, upp till 12 månader, därefter 15 procent plus ränta. Vår guide om att lämna spansk deklaration för sent förklarar hur det fungerar.",
+            "Beräkningen som länkas från den här sidan går igenom samma steg med ditt eget taxeringsvärde, ditt bosättningsland och det år du deklarerar för. Lägg sedan in en påminnelse i kalendern i början av december, i god tid innan autogirot stänger, och låt resten av året handla om själva huset: terrassen, marknaden, säsongens första dopp."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Steuer für Nichtansässige in Spanien: modelo 210 erklärt",
+      "description": "Wer im Ausland lebt und in Spanien ein Haus besitzt, zahlt dafür jedes Jahr Steuer, auch ohne Miete. So wird sie berechnet, mit Sätzen und Fristen.",
+      "h1": "Steuer für Nichtansässige auf eine spanische Immobilie, die Sie nicht selbst bewohnen",
+      "lead": "Wenn Sie außerhalb Spaniens leben und dort eine Immobilie besitzen, zahlen Sie dafür jedes Jahr die spanische Einkommensteuer für Nichtansässige, auch wenn Sie nie vermieten. Besteuert werden fiktive Einkünfte, berechnet aus dem Katasterwert auf Ihrem IBI-Bescheid, mit 19 Prozent für Ansässige der EU, Norwegens, Islands und Liechtensteins und 24 Prozent für alle anderen. Erklärt wird die Steuer mit modelo 210.",
+      "sections": [
+        {
+          "h2": "Zahle ich wirklich spanische Steuer auf ein Haus, das ich nur im Urlaub nutze?",
+          "paras": [
+            "Ja. Wenn Sie außerhalb Spaniens leben und dort eine Immobilie besitzen, behandelt Spanien die Immobilie so, als brächte sie Ihnen Einkünfte, auch wenn Ihnen nie jemand Miete zahlt. Das sind fiktive Einkünfte (renta imputada), besteuert über die Einkommensteuer für Nichtansässige, die IRNR, und erklärt mit modelo 210. Sie sind unabhängig von der IBI, der örtlichen Grundsteuer, die Ihr Rathaus erhebt. Die beiden kommen also von verschiedenen Stellen zu verschiedenen Zeiten im Jahr.",
+            "Viele Eigentümer sind von zu Hause ein Finanzamt gewohnt, das den Großteil der Erklärung für sie vorbereitet. Diese hier ist eine spanische Erklärung, die Sie selbst abgeben, sie wartet also, bis Sie oder jemand, den Sie beauftragen, sich darum kümmert. Das ist der Hauptgrund, warum Eigentümer im Ausland ein oder zwei Jahre verstreichen lassen, ohne zu merken, dass etwas fehlt."
+          ]
+        },
+        {
+          "h2": "Wie werden die fiktiven Einkünfte berechnet?",
+          "paras": [
+            "Ausgangspunkt ist der Katasterwert (valor catastral), der auf Ihrem IBI-Bescheid steht. Nicht der Kaufpreis und nicht das, was ein Makler heute als Verkaufspreis schätzen würde. Katasterwerte liegen deutlich unter dem Marktwert, wer also die falsche Zahl nimmt, setzt die Steuer um ein Vielfaches zu hoch an (ein Fehler, den ältere Ratgeber immer noch wiederholen).",
+            "Darauf wird ein Prozentsatz angewendet. Für 2023, 2024 und 2025 beträgt er 1,1 Prozent, wenn die Katasterwerte Ihrer Gemeinde mit Wirkung ab dem 1. Januar 2012 oder später revidiert wurden. Ist das nicht der Fall, bestimmt stattdessen die allgemeine Regel den Prozentsatz. Finden Sie also vor der Berechnung heraus, in welchem Jahr die letzte allgemeine Revision stattfand. Das Kataster (Catastro) oder Ihr Rathaus hat diese Information.",
+            "Von fiktiven Einkünften sind keinerlei Kosten abziehbar. Gemeinschaftskosten, IBI, Versicherung und Reparaturen bleiben alle außerhalb dieser Erklärung. Die Sonderregel mit 1,1 Prozent gilt nur für 2023 bis 2025. Prüfen Sie daher, welcher Prozentsatz für 2026 gilt, bevor dieser Zeitraum beginnt, statt einfach die Zahl vom Vorjahr zu übernehmen."
+          ]
+        },
+        {
+          "h2": "Welchen Steuersatz zahle ich, und zählt Norwegen als EU?",
+          "paras": [
+            "Der Satz beträgt 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins und 24 Prozent für alle anderen, darunter auch Ansässige im Vereinigten Königreich. Norwegen liegt außerhalb der EU, wird bei dieser Steuer aber genauso behandelt wie ein Mitgliedstaat, ebenso Island und Liechtenstein.",
+            "Angenommen, Ihr IBI-Bescheid weist einen Katasterwert von 100.000 Euro aus und die Werte Ihrer Gemeinde wurden mit Wirkung ab 2012 oder später revidiert. Für 2025 betragen die fiktiven Einkünfte dann 1.100 Euro. Wer in Schweden oder Norwegen ansässig ist, zahlt davon 19 Prozent, also 209 Euro. Wer im Vereinigten Königreich ansässig ist, zahlt 24 Prozent, also 264 Euro.",
+            "Hat die Immobilie noch keinen Katasterwert oder wurde der Wert nicht mitgeteilt, gilt eine andere Berechnung. Dann werden 1,1 Prozent von 50 Prozent des höheren von zwei Werten angesetzt: dem Kaufpreis oder dem von der Steuerverwaltung geprüften Wert. Halten Sie dafür Ihre Kaufurkunde bereit."
+          ]
+        },
+        {
+          "h2": "Wann ist die Erklärung fällig?",
+          "paras": [
+            "Für 2025 und frühere Jahre kann die Erklärung zu den fiktiven Einkünften jederzeit im folgenden Kalenderjahr abgegeben werden, bis zum 31. Dezember. Die Erklärung für 2025 kann also bis zum 31. Dezember 2026 abgegeben werden. Wenn Sie per Lastschrift (domiciliación) zahlen möchten, endet diese Möglichkeit am 23. Dezember, acht Tage früher.",
+            "Genau in dieser Lücke passieren die Fehler. Jemand plant, am 28. Dezember per Lastschrift abzugeben, stellt fest, dass die Option geschlossen ist, und geht ins neue Jahr im Glauben, es sei bezahlt, obwohl es das nicht ist. Wenn Sie Ende Dezember abgeben, zahlen Sie vor dem 31. Dezember auf anderem Weg und bewahren Sie den Beleg auf.",
+            "Ab dem Steuerjahr 2026 verschiebt sich der Zeitraum. Die Erklärung für 2026 kann vom 1. April bis zum 31. Dezember 2027 abgegeben werden, die Lastschrift ist vom 1. April bis zum 23. Dezember 2027 möglich. Unabhängig davon enthält jedes ab dem 1. Januar 2027 eingereichte modelo 210 neue Felder, darunter die verfügbaren Tage und den Eigentumsanteil, egal welches Jahr die Erklärung betrifft."
+          ]
+        },
+        {
+          "h2": "Ich vermiete ein paar Wochen im Jahr. Ändert das etwas?",
+          "paras": [
+            "Mieteinkünfte werden gesondert besteuert, über dasselbe System mit modelo 210 und zu denselben Sätzen von 19 oder 24 Prozent. Ansässige eines anderen EU-Staates, Norwegens, Islands oder Liechtensteins können Kosten abziehen, die direkt mit der Vermietung zusammenhängen, mit einer Bescheinigung über die steuerliche Ansässigkeit aus dem Heimatland. Alle anderen werden auf die Bruttomiete besteuert, ganz ohne Abzüge.",
+            "Die Fristen für Mieteinkünfte sind nicht dieselben wie für fiktive Einkünfte. Mieteinkünfte ab 2026 werden in den ersten 20 Tagen im April des Folgejahres erklärt, die Lastschrift endet am 15. April. Unser Ratgeber zur Steuer auf Mieteinkünfte in Spanien erklärt die Einzelheiten, auch wie die Umstellung 2026 funktioniert."
+          ]
+        },
+        {
+          "h2": "Bin ich steuerlich in Spanien überhaupt nicht ansässig?",
+          "paras": [
+            "Dieser Ratgeber geht davon aus, dass Sie anderswo leben und Spanien Ihr Zweitwohnsitz ist. Spanien bestimmt die Ansässigkeit nach eigenen Kriterien, und die Zählung ist strenger, als viele Eigentümer erwarten. Nachgewiesene Aufenthaltstage zählen, Tage zwischen zwei nachgewiesenen Aufenthalten können vermutet werden, und gelegentliche Abwesenheiten werden Ihren spanischen Tagen wieder hinzugerechnet, es sei denn, Sie weisen Ihre steuerliche Ansässigkeit anderswo mit einer Bescheinigung nach.",
+            "Wenn sowohl Spanien als auch Ihr Heimatland Sie als ansässig behandeln könnten, entscheidet die Kollisionsregel im Doppelbesteuerungsabkommen zwischen beiden. Norwegen, Schweden, Deutschland, das Vereinigte Königreich und Frankreich haben alle Abkommen mit Spanien. Bewahren Sie die Ansässigkeitsbescheinigung Ihres heimischen Finanzamts gut auffindbar auf, denn sie stützt Ihren Status als Nichtansässiger und ist zugleich das, was einem Vermieter aus der EU oder dem EWR den Abzug von Kosten erlaubt."
+          ]
+        },
+        {
+          "h2": "Zahle ich als Nichtansässiger sonst noch etwas?",
+          "paras": [
+            "Die Vermögensteuer (impuesto sobre el patrimonio) kann Nichtansässige auf ihr Vermögen in Spanien treffen. Es gibt einen Freibetrag von 700.000 Euro. Eine Erklärung ist fällig, wenn Steuer zu zahlen ist oder wenn Ihr Vermögen in Spanien mehr als 2.000.000 Euro wert ist, gerechnet ohne Abzug von Schulden, auch wenn keine Steuer anfällt. Prüfen Sie beide Zahlen anhand von allem, was Sie in Spanien besitzen, nicht nur anhand des Hauses.",
+            "Die IBI und andere örtliche Abgaben, etwa die Müllabfuhr, werden vor Ort festgesetzt und erhoben, vom Rathaus oder in manchen Provinzen von einer Einzugsstelle, die in seinem Auftrag handelt. Beträge und Zahlungstermine sind von Ort zu Ort verschieden, fragen Sie also am besten bei der örtlichen Steuerstelle nach, die auf Ihrem Bescheid genannt ist. Keine dieser Abgaben ersetzt modelo 210."
+          ]
+        },
+        {
+          "h2": "Kann ich das selbst erledigen, oder brauche ich einen gestor?",
+          "paras": [
+            "Viele Eigentümer geben ihre Erklärung selbst ab, sobald sie den Katasterwert, das Revisionsjahr und ihre NIE haben. Andere übergeben sie einem gestor oder einem asesor fiscal, vor allem bei mehreren Miteigentümern, einer Vermietungshistorie oder einem versäumten Jahr. So oder so: Legen Sie einen einfachen Ordner an, mit dem IBI-Bescheid jedes Jahres und der abgegebenen Erklärung.",
+            "Wenn Sie ein Jahr versäumt haben, geben Sie die Erklärung so bald wie möglich ab. Wer aus eigenem Antrieb verspätet abgibt, bevor das Finanzamt sich meldet, zahlt einen Zuschlag von 1 Prozent plus 1 Prozent für jeden vollen Monat Verzug, bis zu 12 Monaten, danach 15 Prozent plus Zinsen. Unser Ratgeber zur verspäteten Abgabe spanischer Steuererklärungen erklärt, wie das funktioniert.",
+            "Der Rechner, der auf dieser Seite verlinkt ist, geht dieselben Schritte mit Ihrem eigenen Katasterwert, Ihrem Wohnsitzland und dem Jahr durch, für das Sie die Erklärung abgeben. Tragen Sie sich dann eine Erinnerung für Anfang Dezember in den Kalender ein, lange bevor die Lastschrift schließt, und lassen Sie den Rest des Jahres dem Haus selbst gehören: der Terrasse, dem Markt, dem ersten Bad der Saison."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Impôt des non-résidents en Espagne : le modelo 210 expliqué",
+      "description": "Si vous vivez à l'étranger et possédez un logement en Espagne, vous payez un impôt chaque année, même sans loyer : calcul, taux et dates.",
+      "h1": "L'impôt des non-résidents sur un logement en Espagne où vous ne vivez pas",
+      "lead": "Si vous vivez hors d'Espagne et y possédez un logement, vous payez chaque année l'impôt espagnol sur le revenu des non-résidents, même si vous ne le louez jamais. L'impôt porte sur un revenu imputé calculé à partir de la valeur cadastrale figurant sur votre avis d'IBI, au taux de 19 pour cent pour les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein, et de 24 pour cent pour tous les autres. Vous le déclarez sur le modelo 210.",
+      "sections": [
+        {
+          "h2": "Dois-je vraiment payer un impôt espagnol sur un logement que j'utilise seulement en vacances ?",
+          "paras": [
+            "Oui. Si vous vivez hors d'Espagne et y possédez un logement, l'Espagne considère que ce bien vous procure un revenu, même si personne ne vous verse jamais de loyer. C'est le revenu imputé (renta imputada), imposé au titre de l'impôt sur le revenu des non-résidents, l'IRNR, et déclaré sur le modelo 210. Il est distinct de l'IBI, l'impôt foncier local perçu par votre mairie, si bien que les deux viennent de services différents à des moments différents de l'année.",
+            "Beaucoup de propriétaires sont habitués à une administration fiscale qui prépare l'essentiel de la déclaration à leur place chez eux. Ici, c'est une déclaration espagnole que vous déposez vous-même : elle attend donc que vous, ou une personne que vous désignez, vous en occupiez. C'est la principale raison pour laquelle des propriétaires vivant à l'étranger peuvent passer un an ou deux sans se rendre compte qu'il manque quelque chose."
+          ]
+        },
+        {
+          "h2": "Comment le revenu imputé est-il calculé ?",
+          "paras": [
+            "Partez de la valeur cadastrale (valor catastral) imprimée sur votre avis d'IBI. Pas du prix que vous avez payé, ni de ce qu'un agent pense que la maison vaudrait aujourd'hui. Les valeurs cadastrales sont bien inférieures à la valeur de marché, si bien qu'utiliser le mauvais chiffre gonfle l'impôt de plusieurs fois (une erreur que d'anciens guides répètent encore).",
+            "Appliquez ensuite un pourcentage. Pour 2023, 2024 et 2025, ce pourcentage est de 1,1 pour cent lorsque les valeurs cadastrales de votre commune ont été révisées avec effet à partir du 1er janvier 2012. Dans le cas contraire, c'est la règle générale qui fixe le pourcentage : renseignez-vous donc sur l'année de la dernière révision générale avant de calculer. Le cadastre (Catastro) ou votre mairie dispose de cette information.",
+            "Aucune dépense, de quelque nature que ce soit, ne peut être déduite du revenu imputé. Les charges de copropriété, l'IBI, l'assurance et les réparations restent toutes hors de cette déclaration. La règle spéciale de 1,1 pour cent ne couvre que 2023 à 2025 : vérifiez donc quel pourcentage s'applique pour 2026 avant l'ouverture de cette période, plutôt que de reprendre le chiffre de l'année précédente."
+          ]
+        },
+        {
+          "h2": "Quel taux dois-je payer, et la Norvège compte-t-elle comme l'UE ?",
+          "paras": [
+            "Le taux est de 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein, et de 24 pour cent pour tous les autres, ce qui inclut les résidents du Royaume-Uni. La Norvège est hors de l'UE, mais pour cet impôt elle est traitée comme un État membre, tout comme l'Islande et le Liechtenstein.",
+            "Imaginons que votre avis d'IBI indique une valeur cadastrale de 100 000 euros et que les valeurs de votre commune aient été révisées avec effet en 2012 ou après. Pour 2025, le revenu imputé est de 1 100 euros. Un résident de Suède ou de Norvège paie 19 pour cent de ce montant, soit 209 euros. Un résident du Royaume-Uni paie 24 pour cent, soit 264 euros.",
+            "Si le bien n'a pas encore de valeur cadastrale, ou si la valeur n'a pas été notifiée, un autre calcul s'applique. Vous prenez 1,1 pour cent de 50 pour cent du plus élevé de deux montants : le prix que vous avez payé, ou la valeur vérifiée par l'administration fiscale. Gardez votre acte d'achat à portée de main pour cela."
+          ]
+        },
+        {
+          "h2": "Quand faut-il déposer la déclaration ?",
+          "paras": [
+            "Pour 2025 et les années antérieures, la déclaration du revenu imputé peut être déposée à tout moment de l'année civile suivante, jusqu'au 31 décembre. La déclaration de 2025 peut donc être déposée jusqu'au 31 décembre 2026. Si vous voulez payer par prélèvement (domiciliación), cette option ferme le 23 décembre, huit jours plus tôt.",
+            "C'est dans cet écart que les propriétaires se font piéger. Quelqu'un prévoit de déposer le 28 décembre avec prélèvement, découvre que l'option est fermée, et entre dans la nouvelle année en croyant avoir payé alors que ce n'est pas le cas. Si vous déposez tard en décembre, payez par un autre moyen avant le 31 décembre et gardez le justificatif.",
+            "À partir de l'année fiscale 2026, la période change. La déclaration de 2026 pourra être déposée du 1er avril au 31 décembre 2027, avec un prélèvement possible du 1er avril au 23 décembre 2027. Par ailleurs, tout modelo 210 déposé à partir du 1er janvier 2027 comporte de nouveaux champs, notamment les jours de disponibilité et le pourcentage de propriété, quelle que soit l'année couverte."
+          ]
+        },
+        {
+          "h2": "Je le loue quelques semaines par an. Cela change-t-il quelque chose ?",
+          "paras": [
+            "Les revenus locatifs sont imposés à part, par le même système du modelo 210 et aux mêmes taux de 19 ou 24 pour cent. Les résidents d'un autre État de l'UE, de Norvège, d'Islande ou du Liechtenstein peuvent déduire les dépenses directement liées à la location, avec un certificat de résidence fiscale de leur pays. Tous les autres sont imposés sur le loyer brut, sans aucune déduction.",
+            "Les dates de dépôt pour les loyers ne sont pas les mêmes que pour le revenu imputé. Les loyers perçus à partir de 2026 se déclarent dans les 20 premiers jours d'avril de l'année suivante, le prélèvement fermant le 15 avril. Notre guide sur l'imposition des revenus locatifs en Espagne entre dans le détail, y compris le fonctionnement de la transition de 2026."
+          ]
+        },
+        {
+          "h2": "Suis-je vraiment non-résident pour l'impôt espagnol ?",
+          "paras": [
+            "Ce guide part du principe que vous vivez ailleurs et que l'Espagne est votre résidence secondaire. L'Espagne détermine la résidence selon ses propres critères, et le décompte est plus strict que beaucoup de propriétaires ne l'imaginent. Les jours de présence prouvés comptent, les jours entre deux séjours prouvés peuvent être présumés, et les absences sporadiques sont rajoutées à vos jours en Espagne, sauf si vous prouvez votre résidence fiscale ailleurs par un certificat.",
+            "Si l'Espagne et votre pays d'origine pouvaient tous deux vous considérer comme résident, c'est la règle de départage de la convention fiscale entre les deux pays qui tranche. La Norvège, la Suède, l'Allemagne, le Royaume-Uni et la France ont tous une convention avec l'Espagne. Rangez le certificat de résidence fiscale délivré par votre administration fiscale dans un endroit facile à retrouver, car il appuie votre statut de non-résident et c'est aussi lui qui permet à un bailleur de l'UE ou de l'EEE de déduire ses dépenses."
+          ]
+        },
+        {
+          "h2": "Un propriétaire non-résident paie-t-il autre chose ?",
+          "paras": [
+            "L'impôt sur la fortune (impuesto sobre el patrimonio) peut toucher les non-résidents sur ce qu'ils possèdent en Espagne. Il existe un abattement de 700 000 euros. Une déclaration est due lorsqu'un impôt est à payer, ou lorsque vos biens en Espagne valent plus de 2 000 000 euros comptés sans déduire les dettes, même si aucun impôt n'en résulte. Vérifiez ces deux montants par rapport à tout ce que vous possédez en Espagne, pas seulement la maison.",
+            "L'IBI et les autres taxes locales, comme l'enlèvement des ordures, sont fixés et perçus localement, par la mairie ou, dans certaines provinces, par un organisme de recouvrement agissant pour elle. Les montants et les dates de paiement varient d'une commune à l'autre, si bien que le bon interlocuteur est le bureau local de recouvrement indiqué sur votre avis. Aucun de ces impôts ne remplace le modelo 210."
+          ]
+        },
+        {
+          "h2": "Puis-je m'en occuper moi-même, ou faut-il un gestor ?",
+          "paras": [
+            "Bien des propriétaires déposent eux-mêmes leur déclaration une fois qu'ils ont la valeur cadastrale, l'année de révision et leur NIE. D'autres la confient à un gestor ou à un asesor fiscal, surtout lorsqu'il y a plusieurs copropriétaires, un historique de location ou une année oubliée. Dans tous les cas, gardez un dossier simple avec l'avis d'IBI de chaque année et la déclaration que vous avez déposée.",
+            "Si vous avez oublié une année, déposez-la dès que possible. Déposer en retard de votre propre initiative, avant que l'administration fiscale ne vous écrive, coûte une majoration de 1 pour cent plus 1 pour cent par mois complet de retard, jusqu'à 12 mois, puis 15 pour cent plus des intérêts. Notre guide sur la déclaration tardive en Espagne explique comment cela fonctionne.",
+            "Le calculateur accessible depuis cette page reprend les mêmes étapes avec votre propre valeur cadastrale, votre pays de résidence et l'année que vous déclarez. Notez ensuite un rappel dans votre agenda pour début décembre, bien avant la fermeture du prélèvement, et laissez le reste de l'année à la maison elle-même : la terrasse, le marché, la première baignade de la saison."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Belasting voor niet-inwoners op een Spaanse woning: modelo 210",
+      "description": "Woont u in het buitenland en heeft u een woning in Spanje, dan betaalt u er elk jaar belasting over, ook zonder huur. Zo werkt het.",
+      "h1": "Belasting als niet-inwoner op een Spaanse woning waar u niet woont",
+      "lead": "Woont u buiten Spanje en heeft u daar een woning, dan betaalt u er elk jaar Spaanse inkomstenbelasting voor niet-inwoners over, ook als u de woning nooit verhuurt. De belasting gaat over een fictief inkomen dat wordt berekend op basis van de kadastrale waarde op uw IBI-aanslag, tegen 19 procent voor inwoners van de EU, Noorwegen, IJsland en Liechtenstein en 24 procent voor alle anderen. U geeft het aan met modelo 210.",
+      "sections": [
+        {
+          "h2": "Betaal ik echt Spaanse belasting over een woning die ik alleen voor vakanties gebruik?",
+          "paras": [
+            "Ja. Woont u buiten Spanje en heeft u daar een woning, dan beschouwt Spanje de woning als een bron van inkomen voor u, ook als niemand u ooit huur betaalt. Dit is fictief inkomen (renta imputada), belast via de inkomstenbelasting voor niet-inwoners, de IRNR, en aangegeven met modelo 210. Het staat los van de IBI, de lokale onroerendgoedbelasting die uw gemeente int, dus de twee komen van verschillende instanties en op verschillende momenten in het jaar.",
+            "Veel eigenaren zijn gewend aan een belastingdienst thuis die het grootste deel van de aangifte voor hen klaarzet. Dit is een Spaanse aangifte die u zelf indient, dus die blijft liggen tot u, of iemand die u aanwijst, ermee aan de slag gaat. Dat is de belangrijkste reden dat eigenaren in het buitenland een jaar of twee kunnen laten verstrijken zonder te merken dat er iets ontbreekt."
+          ]
+        },
+        {
+          "h2": "Hoe wordt het fictieve inkomen berekend?",
+          "paras": [
+            "Begin bij de kadastrale waarde (valor catastral) die op uw IBI-aanslag staat. Niet de prijs die u betaalde, en niet wat een makelaar denkt dat het huis vandaag zou opbrengen. Kadastrale waarden liggen ruim onder de marktwaarde, dus wie het verkeerde bedrag gebruikt, overschat de belasting meerdere keren (een fout die oudere gidsen nog steeds herhalen).",
+            "Pas daarna een percentage toe. Voor 2023, 2024 en 2025 is het percentage 1,1 procent als de kadastrale waarden in uw gemeente zijn herzien met ingang van 1 januari 2012 of later. Is dat niet het geval, dan bepaalt de gewone regel het percentage, dus zoek het jaar van de laatste algemene herziening op voordat u gaat rekenen. Het Catastro of uw gemeente heeft die informatie.",
+            "Van fictief inkomen mag u geen enkele kosten aftrekken. VvE-bijdrage, IBI, verzekering en reparaties blijven allemaal buiten deze aangifte. De bijzondere regel van 1,1 procent geldt alleen voor 2023 tot en met 2025, dus controleer welk percentage voor 2026 geldt voordat die periode begint, in plaats van het cijfer van vorig jaar over te nemen."
+          ]
+        },
+        {
+          "h2": "Welk tarief betaal ik, en telt Noorwegen als EU?",
+          "paras": [
+            "Het tarief is 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein, en 24 procent voor alle anderen, waaronder inwoners van het Verenigd Koninkrijk. Noorwegen hoort niet bij de EU, maar voor deze belasting wordt het behandeld als een lidstaat, net als IJsland en Liechtenstein.",
+            "Stel dat uw IBI-aanslag een kadastrale waarde van 100.000 euro vermeldt en dat de waarden in uw gemeente zijn herzien met ingang van 2012 of later. Voor 2025 is het fictieve inkomen dan 1.100 euro. Een inwoner van Zweden of Noorwegen betaalt daar 19 procent over, dat is 209 euro. Een inwoner van het Verenigd Koninkrijk betaalt 24 procent, dat is 264 euro.",
+            "Heeft de woning nog geen kadastrale waarde, of is de waarde niet bekendgemaakt, dan geldt een andere berekening. U neemt 1,1 procent van 50 procent van het hoogste van twee bedragen: de prijs die u betaalde, of de waarde die de belastingdienst heeft vastgesteld. Houd uw koopakte hiervoor bij de hand."
+          ]
+        },
+        {
+          "h2": "Wanneer moet de aangifte binnen zijn?",
+          "paras": [
+            "Voor 2025 en eerdere jaren kan de aangifte fictief inkomen op elk moment in het volgende kalenderjaar worden ingediend, tot en met 31 december. De aangifte over 2025 kan dus tot 31 december 2026 worden ingediend. Wilt u betalen via automatische incasso (domiciliación), dan sluit die mogelijkheid op 23 december, acht dagen eerder.",
+            "Juist daar gaat het bij eigenaren mis. Iemand wil op 28 december indienen met automatische incasso, ziet dat die optie gesloten is, en gaat het nieuwe jaar in in de veronderstelling dat er betaald is terwijl dat niet zo is. Dient u laat in december in, betaal dan vóór 31 december op een andere manier en bewaar het betaalbewijs.",
+            "Vanaf belastingjaar 2026 verschuift de termijn. De aangifte over 2026 kan worden ingediend van 1 april tot en met 31 december 2027, met automatische incasso van 1 april tot en met 23 december 2027. Daarnaast bevat elke modelo 210 die vanaf 1 januari 2027 wordt ingediend nieuwe velden, waaronder het aantal beschikbare dagen en het eigendomspercentage, ongeacht over welk jaar de aangifte gaat."
+          ]
+        },
+        {
+          "h2": "Ik verhuur de woning een paar weken. Verandert dat iets?",
+          "paras": [
+            "Huurinkomsten worden apart belast, via hetzelfde modelo 210-systeem en tegen dezelfde tarieven van 19 of 24 procent. Inwoners van een andere EU-lidstaat, Noorwegen, IJsland of Liechtenstein mogen kosten aftrekken die rechtstreeks met de verhuur samenhangen, met een verklaring van fiscale woonplaats uit hun eigen land. Alle anderen worden belast over de bruto huur, zonder enige aftrek.",
+            "De aangiftedata voor huur zijn niet dezelfde als die voor fictief inkomen. Huur die vanaf 2026 wordt ontvangen, wordt aangegeven in de eerste 20 dagen van april van het volgende jaar, waarbij automatische incasso sluit op 15 april. Onze gids over belasting op huurinkomsten in Spanje behandelt de details, ook hoe de overgang in 2026 werkt."
+          ]
+        },
+        {
+          "h2": "Ben ik voor de Spaanse belasting eigenlijk wel niet-inwoner?",
+          "paras": [
+            "Deze gids gaat ervan uit dat u elders woont en dat Spanje uw tweede woning is. Spanje bepaalt de fiscale woonplaats met eigen toetsen, en er wordt strenger geteld dan veel eigenaren verwachten. Bewezen dagen van aanwezigheid tellen mee, dagen tussen twee bewezen verblijven kunnen worden verondersteld, en incidentele afwezigheid wordt bij uw Spaanse dagen opgeteld, tenzij u met een verklaring aantoont dat u elders fiscaal inwoner bent.",
+            "Kunnen zowel Spanje als uw eigen land u als inwoner beschouwen, dan beslist de beslisregel in het belastingverdrag tussen beide landen. Noorwegen, Zweden, Duitsland, het Verenigd Koninkrijk en Frankrijk hebben allemaal een verdrag met Spanje. Bewaar de verklaring van fiscale woonplaats van uw eigen belastingdienst op een plek waar u die makkelijk terugvindt, want die ondersteunt uw status als niet-inwoner en is ook wat een verhuurder uit de EU of EER in staat stelt kosten af te trekken."
+          ]
+        },
+        {
+          "h2": "Betaalt een eigenaar die niet in Spanje woont verder nog iets?",
+          "paras": [
+            "Vermogensbelasting (impuesto sobre el patrimonio) kan niet-inwoners treffen over wat zij in Spanje bezitten. Er geldt een vrijgesteld bedrag van 700.000 euro. Er moet aangifte worden gedaan wanneer er belasting verschuldigd is, of wanneer uw bezittingen in Spanje meer dan 2.000.000 euro waard zijn, gerekend zonder aftrek van schulden, ook als er geen belasting uit komt. Toets beide bedragen aan alles wat u in Spanje bezit, niet alleen aan het huis.",
+            "IBI en andere lokale heffingen, zoals de afvalheffing, worden lokaal vastgesteld en geïnd, door de gemeente of in sommige provincies door een inningsinstantie die namens de gemeente optreedt. Bedragen en betaaldata verschillen per gemeente, dus de juiste plek voor vragen is het lokale belastingkantoor dat op uw aanslag staat. Geen van deze heffingen vervangt modelo 210."
+          ]
+        },
+        {
+          "h2": "Kan ik dit zelf doen, of heb ik een gestor nodig?",
+          "paras": [
+            "Veel eigenaren dienen hun aangifte zelf in zodra ze de kadastrale waarde, het herzieningsjaar en hun NIE hebben. Anderen laten het over aan een gestor of een asesor fiscal, vooral als er meerdere mede-eigenaren zijn, als er eerder is verhuurd, of als er een jaar is overgeslagen. Hoe u het ook doet, houd een eenvoudige map bij met de IBI-aanslag en de ingediende aangifte van elk jaar.",
+            "Heeft u een jaar gemist, dien de aangifte dan zo snel mogelijk in. Wie uit eigen beweging te laat indient, voordat de belastingdienst u aanschrijft, betaalt een toeslag van 1 procent plus 1 procent voor elke volle maand vertraging, tot 12 maanden, daarna 15 procent plus rente. Onze gids over te laat indienen van Spaanse belastingaangiften legt uit hoe dat werkt.",
+            "De rekentool waarnaar deze pagina linkt, doorloopt dezelfde stappen met uw eigen kadastrale waarde, uw woonland en het jaar waarvoor u aangifte doet. Zet daarna een herinnering in uw agenda voor begin december, ruim voordat de automatische incasso sluit, en laat de rest van het jaar over het huis zelf gaan: het terras, de markt, de eerste duik van het seizoen."
+          ]
+        }
+      ]
+    }
+  }
+}

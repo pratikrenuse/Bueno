@@ -1,0 +1,427 @@
+{
+  "slug": "protecting-an-empty-home-from-squatters",
+  "topic": "legal-claims",
+  "tool": "closing-up",
+  "rules": [
+    "squat.offences",
+    "squat.second_home_is_morada",
+    "squat.civil_express",
+    "limit.absent_owner.usucapion",
+    "cover.definition",
+    "cover.free_choice",
+    "cover.search_terms",
+    "registry.regional_unaffected"
+  ],
+  "answers": [
+    "is-squatting-a-crime-in-spain",
+    "is-a-spanish-second-home-a-morada",
+    "company-owned-property-squatters-express-eviction",
+    "can-someone-acquire-my-spanish-property-by-possession",
+    "what-legal-expenses-cover-pays-for-spain",
+    "free-choice-of-lawyer-spanish-home-insurance"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Squatters in Spain: Protecting an Empty Home",
+      "description": "What Spanish law says about squatters in a second home, why there is no 48-hour rule, and what an owner abroad can do before and after it happens.",
+      "h1": "How to protect your empty Spanish home from squatters",
+      "lead": "Occupying someone else's home in Spain is a criminal offence, and a second home that you use personally, even occasionally, counts as a morada, which brings the more serious offence into play. There is no 48-hour rule in Spanish law. What decides how fast the police and courts can act is the evidence that the home is yours and that you live your private life there.",
+      "sections": [
+        {
+          "h2": "Wait, so someone can just move into my holiday home?",
+          "paras": [
+            "Well, not exactly. Spanish criminal law has three offences that cover it. Entering or staying in someone's home, allanamiento de morada, carries six months to two years in prison. Occupying a property with violence carries one to two years. Peaceful occupation of a property that is not anyone's home is a lesser offence, punished with a fine of three to six months.",
+            "It is not something to lose sleep over. Still, an owner who spends the winter in Bergen or Düsseldorf has a home that sits empty for long stretches, and the steps that protect it are simple. Most of them cost very little, and the rest of this page is about those steps and what to do if they fail."
+          ]
+        },
+        {
+          "h2": "Does my second home count as a morada?",
+          "paras": [
+            "Usually, yes. Second homes and seasonal homes are a morada, provided the people entitled to be there carry on their private life in it, even occasionally. That cuts in your favour, because it makes an occupation the more serious offence and opens the door to precautionary eviction.",
+            "A property bought purely as an investment, left empty and never personally used, is more likely to fall under the lesser offence. The difference turns on evidence of personal use, not on how many weeks a year you spend there.",
+            "So keep that evidence. Boarding passes, photos of you in the home, utility bills with real consumption, receipts from the supermarket in town, messages with a neighbour who has seen you there. It feels odd to collect proof that you live in your own house, but it is the kind of thing a police officer or a judge will ask about."
+          ]
+        },
+        {
+          "h2": "Is there really a 48-hour rule?",
+          "paras": [
+            "No. There is no 48-hour rule in Spanish law, and it is not Spanish police practice either. It is repeated across most English-language guidance on the subject, and it is wrong. The figure appears in an official Spanish prosecutors' instruction only as a description of police powers in France, next to a 24-hour reference for Germany.",
+            "What Spain uses instead is a test, not a clock: solid signs that the offence was committed, urgency and harm to the rightful owner, and proportionality. Speed still matters, because a fresh occupation that you report straight away fits that test far more easily. But an owner who finds out on day three, or day thirty, has not missed any legal window."
+          ]
+        },
+        {
+          "h2": "What do I do if I find people living in my home?",
+          "paras": [
+            "Report it to the police first, in person or through someone you trust in Spain, and keep a copy of the report (the denuncia). Bring, or send, proof of ownership and the evidence of personal use described above, because whether the home counts as a morada turns on that evidence.",
+            "Do not try to deal with the occupiers yourself. Do not confront them, cut the water or electricity, or try to get back in by force. Apart from the risk to you, it can turn a clear case into a messy one.",
+            "Then speak to an abogado who handles occupation cases where the home is. They will decide with you whether to pursue the criminal route that follows the police report, the civil route, or both, and they can work from a power of attorney if you cannot travel."
+          ]
+        },
+        {
+          "h2": "Is there a faster civil route to get my home back?",
+          "paras": [
+            "There is a civil express procedure for recovering possession. It is open to private individuals, to non-profit bodies with a right to possess the property, and to public social housing bodies. Once it starts, the occupiers have five days to show a title that entitles them to be there.",
+            "If you hold the property through a company, the express route is not open to you, and you must use the ordinary civil route instead. As far as we could find, no later change has extended it to companies. If you bought through a company for tax or inheritance reasons, it is worth knowing this before anything happens."
+          ]
+        },
+        {
+          "h2": "How do I make an empty home look lived in?",
+          "paras": [
+            "An empty home is easier to target when it looks unattended, so the aim is simple: make it look looked after. Ask a neighbour or a key holder to visit regularly, clear the post and open the shutters now and then. A full postbox in a quiet street is the clearest sign there is.",
+            "Timer switches on a lamp or two, an alarm that alerts someone local, and sound doors and window bars on the ground floor all help. So does a short note with the community president or the administrador de fincas, so they know who to call and recognise anyone who should not be there.",
+            "Some owners let the home for part of the year, which keeps it occupied and puts someone on site. If you do, check that you meet the rules for letting in your region before the first guest arrives. The regional licence is what binds you, and it varies from region to region."
+          ]
+        },
+        {
+          "h2": "Will insurance help if it happens?",
+          "paras": [
+            "It may, in two ways. Some home policies may include a specific chapter on illegal occupation (ocupación ilegal). If yours does, what it pays and on what conditions depends entirely on its wording, so search your policy for the phrase and ask the insurer to explain in writing what you would receive.",
+            "Separately, legal expenses cover (defensa jurídica) pays the costs of court proceedings and gives you legal help, within the limits of the law and the policy. Where it applies, you have the right to choose your own lawyer and procurador, and that lawyer takes instructions from you. Search the policy for libre elección de abogado and hechos anteriores, because an occupation that began before the cover started may be treated differently."
+          ]
+        },
+        {
+          "h2": "Can a squatter end up owning my home?",
+          "paras": [
+            "It is very unlikely. Spanish law does let someone acquire property through long possession, but the periods are long. With a title and in good faith it is ten years, and for an owner living abroad that doubles to twenty, because you count as absent. Without a title or good faith, it is thirty years.",
+            "An owner who visits, pays the local taxes and community fees, and acts when something is wrong is a long way from that. Keep the receipts, keep your contact details up to date with the community, and then get back to the part that matters: the light in the evening, the walk to the bakery, the reason you bought the place."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Okkupanter i Spania: slik beskytter du en tom bolig",
+      "description": "Hva spansk lov sier om okkupanter i en fritidsbolig, hvorfor det ikke finnes noen 48-timersregel, og hva du kan gjøre før og etter at det skjer.",
+      "h1": "Slik beskytter du den tomme boligen din i Spania mot okkupanter",
+      "lead": "Å okkupere en annens bolig i Spania er en straffbar handling, og en fritidsbolig som du bruker selv, også bare av og til, regnes som en morada, noe som gjør at det mer alvorlige lovbruddet kommer til anvendelse. Det finnes ingen 48-timersregel i spansk lov. Det som avgjør hvor raskt politiet og domstolene kan handle, er bevisene for at boligen er din, og at du lever ditt private liv der.",
+      "sections": [
+        {
+          "h2": "Vent, kan hvem som helst bare flytte inn i feriehuset mitt?",
+          "paras": [
+            "Vel, ikke helt. Spansk strafferett har tre lovbrudd som dekker dette. Å gå inn i eller bli værende i en annens bolig, allanamiento de morada, gir seks måneder til to års fengsel. Å okkupere en eiendom med vold gir ett til to år. Fredelig okkupasjon av en eiendom som ikke er noens bolig, er et mindre alvorlig lovbrudd, som straffes med bot i tre til seks måneder.",
+            "Det er ikke noe å miste nattesøvnen over. Likevel har en eier som tilbringer vinteren i Bergen eller Düsseldorf en bolig som står tom i lange perioder, og tiltakene som beskytter den, er enkle. De fleste koster svært lite, og resten av denne siden handler om de tiltakene og hva du gjør hvis de ikke holder."
+          ]
+        },
+        {
+          "h2": "Regnes fritidsboligen min som en morada?",
+          "paras": [
+            "Som regel, ja. Fritidsboliger og sesongboliger er en morada, forutsatt at de som har rett til å være der, lever sitt private liv i den, også bare av og til. Det slår ut i din favør, fordi det gjør en okkupasjon til det mer alvorlige lovbruddet og åpner for midlertidig utkastelse.",
+            "En eiendom kjøpt kun som investering, som står tom og aldri brukes personlig, faller lettere inn under det mindre alvorlige lovbruddet. Forskjellen avhenger av bevis for personlig bruk, ikke av hvor mange uker i året du tilbringer der.",
+            "Så ta vare på de bevisene. Boardingkort, bilder av deg i boligen, strøm- og vannregninger med reelt forbruk, kvitteringer fra supermarkedet i byen, meldinger med en nabo som har sett deg der. Det føles rart å samle bevis på at du bor i ditt eget hus, men det er akkurat den typen ting en politibetjent eller en dommer vil spørre om."
+          ]
+        },
+        {
+          "h2": "Finnes det virkelig en 48-timersregel?",
+          "paras": [
+            "Nei. Det finnes ingen 48-timersregel i spansk lov, og det er heller ikke spansk politipraksis. Den gjentas i det meste av den engelskspråklige veiledningen om temaet, og den er feil. Tallet dukker opp i en offisiell instruks fra den spanske påtalemyndigheten bare som en beskrivelse av politiets fullmakter i Frankrike, ved siden av en henvisning til 24 timer for Tyskland.",
+            "Det Spania bruker i stedet, er en vurdering, ikke en klokke: tydelige tegn på at lovbruddet er begått, at det haster og skader den rettmessige eieren, og at tiltaket står i forhold. Tid betyr likevel noe, fordi en fersk okkupasjon som du melder med en gang, mye lettere oppfyller den vurderingen. Men en eier som oppdager det på dag tre, eller dag tretti, har ikke gått glipp av noen juridisk frist."
+          ]
+        },
+        {
+          "h2": "Hva gjør jeg hvis jeg finner folk som bor i boligen min?",
+          "paras": [
+            "Anmeld det til politiet først, personlig eller gjennom noen du stoler på i Spania, og ta vare på en kopi av anmeldelsen (la denuncia). Ta med, eller send, bevis på eierskap og bevisene for personlig bruk som er beskrevet over, fordi det er de bevisene som avgjør om boligen regnes som en morada.",
+            "Ikke prøv å håndtere okkupantene selv. Ikke konfronter dem, ikke steng vannet eller strømmen, og ikke prøv å ta deg inn med makt. I tillegg til risikoen for deg selv kan det gjøre en klar sak rotete.",
+            "Snakk deretter med en abogado som jobber med okkupasjonssaker der boligen ligger. Sammen med deg avgjør vedkommende om du skal gå den strafferettslige veien som følger av politianmeldelsen, den sivilrettslige veien eller begge, og advokaten kan arbeide ut fra en fullmakt hvis du ikke kan reise."
+          ]
+        },
+        {
+          "h2": "Finnes det en raskere sivil vei for å få boligen tilbake?",
+          "paras": [
+            "Det finnes en sivil hasteprosedyre for å få tilbake besittelsen. Den er åpen for privatpersoner, for ideelle organisasjoner som har rett til å besitte eiendommen, og for offentlige organer for sosial boligutleie. Når den har startet, har okkupantene fem dager på seg til å vise et grunnlag som gir dem rett til å være der.",
+            "Eier du eiendommen gjennom et selskap, er hasteprosedyren ikke åpen for deg, og du må bruke den ordinære sivile veien i stedet. Så vidt vi har funnet, har ingen senere endring utvidet den til selskaper. Kjøpte du gjennom et selskap av skatte- eller arvehensyn, er det verdt å vite dette før noe skjer."
+          ]
+        },
+        {
+          "h2": "Hvordan får jeg en tom bolig til å se bebodd ut?",
+          "paras": [
+            "En tom bolig er et lettere mål når den ser forlatt ut, så målet er enkelt: få den til å se ivaretatt ut. Be en nabo eller en nøkkelholder om å komme innom jevnlig, tømme postkassen og åpne skodder av og til. En full postkasse i en stille gate er det tydeligste tegnet som finnes.",
+            "Tidsbrytere på en lampe eller to, en alarm som varsler noen lokalt, og solide dører og gitter for vinduene i første etasje hjelper alle. Det gjør også en kort beskjed til styrelederen i sameiet eller til administrador de fincas, slik at de vet hvem de skal ringe, og kjenner igjen noen som ikke burde være der.",
+            "Noen eiere leier ut boligen deler av året, noe som holder den bebodd og sørger for at noen er på stedet. Gjør du det, sjekk at du oppfyller reglene for utleie i din region før den første gjesten kommer. Det er den regionale lisensen som binder deg, og den varierer fra region til region."
+          ]
+        },
+        {
+          "h2": "Hjelper forsikringen hvis det skjer?",
+          "paras": [
+            "Den kan hjelpe, på to måter. Noen boligforsikringer kan ha et eget kapittel om ulovlig okkupasjon (ocupación ilegal). Har din det, avhenger hva den betaler og på hvilke vilkår helt av ordlyden, så søk etter uttrykket i polisen din og be forsikringsselskapet forklare skriftlig hva du ville fått.",
+            "I tillegg betaler rettshjelpsdekning (defensa jurídica) kostnadene ved rettssaker og gir deg juridisk hjelp, innenfor grensene i loven og polisen. Der den gjelder, har du rett til å velge din egen advokat og procurador, og den advokaten tar instrukser fra deg. Søk i polisen etter libre elección de abogado og hechos anteriores, fordi en okkupasjon som startet før dekningen trådte i kraft, kan bli behandlet annerledes."
+          ]
+        },
+        {
+          "h2": "Kan en okkupant ende opp med å eie boligen min?",
+          "paras": [
+            "Det er svært lite sannsynlig. Spansk lov gjør det riktignok mulig å erverve eiendom gjennom lang tids besittelse, men periodene er lange. Med et rettsgrunnlag og i god tro er det ti år, og for en eier som bor i utlandet dobles det til tjue, fordi du regnes som fraværende. Uten rettsgrunnlag eller god tro er det tretti år.",
+            "En eier som kommer på besøk, betaler de lokale skattene og fellesutgiftene, og handler når noe er galt, er langt unna det. Ta vare på kvitteringene, hold kontaktopplysningene dine oppdatert hos sameiet, og vend så tilbake til det som betyr noe: lyset om kvelden, turen til bakeriet, grunnen til at du kjøpte stedet."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Ockupanter i Spanien: så skyddar du en tom bostad",
+      "description": "Vad spansk lag säger om ockupanter i ett fritidshus, varför det inte finns någon 48-timmarsregel och vad du som ägare utomlands kan göra före och efter.",
+      "h1": "Så skyddar du din tomma bostad i Spanien mot ockupanter",
+      "lead": "Att ockupera någon annans bostad i Spanien är ett brott, och ett fritidshus som du själv använder, även bara ibland, räknas som en morada, vilket gör att det allvarligare brottet blir aktuellt. Det finns ingen 48-timmarsregel i spansk lag. Det som avgör hur snabbt polis och domstol kan agera är bevisen för att bostaden är din och att du lever ditt privatliv där.",
+      "sections": [
+        {
+          "h2": "Vänta, kan vem som helst bara flytta in i mitt fritidshus?",
+          "paras": [
+            "Nja, inte riktigt. Spansk straffrätt har tre brott som täcker det. Att ta sig in i eller stanna kvar i någons bostad, allanamiento de morada, ger sex månader till två års fängelse. Att ockupera en fastighet med våld ger ett till två år. Fredlig ockupation av en fastighet som inte är någons bostad är ett lindrigare brott, som straffas med dagsböter i tre till sex månader.",
+            "Det är inget att ligga sömnlös över. Men en ägare som tillbringar vintern i Bergen eller Düsseldorf har en bostad som står tom under långa perioder, och åtgärderna som skyddar den är enkla. De flesta kostar väldigt lite, och resten av den här sidan handlar om de åtgärderna och om vad du gör om de inte räcker."
+          ]
+        },
+        {
+          "h2": "Räknas mitt fritidshus som en morada?",
+          "paras": [
+            "Oftast, ja. Fritidshus och säsongsbostäder är en morada, förutsatt att de som har rätt att vara där lever sitt privatliv i dem, även bara ibland. Det talar till din fördel, eftersom en ockupation då blir det allvarligare brottet och öppnar för en avhysning som skyddsåtgärd.",
+            "En fastighet som köpts enbart som investering, står tom och aldrig används personligen hamnar troligare under det lindrigare brottet. Skillnaden hänger på bevis för personlig användning, inte på hur många veckor om året du är där.",
+            "Spara därför de bevisen. Boardingkort, bilder på dig i bostaden, räkningar för el och vatten med verklig förbrukning, kvitton från mataffären i stan, meddelanden med en granne som har sett dig där. Det känns konstigt att samla bevis för att du bor i ditt eget hus, men det är just sådant som en polis eller en domare frågar efter."
+          ]
+        },
+        {
+          "h2": "Finns det verkligen en 48-timmarsregel?",
+          "paras": [
+            "Nej. Det finns ingen 48-timmarsregel i spansk lag, och det är inte heller spansk polispraxis. Den upprepas i de flesta engelskspråkiga guider i ämnet, och den är fel. Siffran förekommer i en officiell instruktion från spanska åklagare bara som en beskrivning av polisens befogenheter i Frankrike, bredvid en hänvisning till 24 timmar för Tyskland.",
+            "Det Spanien använder i stället är en prövning, inte en klocka: tydliga tecken på att brottet har begåtts, brådska och skada för den rättmätiga ägaren, samt proportionalitet. Tiden spelar ändå roll, eftersom en färsk ockupation som du anmäler direkt mycket lättare uppfyller den prövningen. Men en ägare som upptäcker det dag tre, eller dag trettio, har inte missat något rättsligt tidsfönster."
+          ]
+        },
+        {
+          "h2": "Vad gör jag om jag hittar folk som bor i min bostad?",
+          "paras": [
+            "Anmäl det till polisen först, personligen eller genom någon du litar på i Spanien, och spara en kopia av anmälan (la denuncia). Ta med, eller skicka, bevis på ägande och de bevis på personlig användning som beskrivs ovan, eftersom frågan om bostaden räknas som en morada hänger på just de bevisen.",
+            "Försök inte hantera ockupanterna själv. Konfrontera dem inte, stäng inte av vatten eller el, och försök inte ta dig in med våld. Förutom risken för dig själv kan det göra ett tydligt ärende rörigt.",
+            "Tala sedan med en abogado som hanterar ockupationsärenden där bostaden ligger. Tillsammans med dig avgör hen om ni ska driva den straffrättsliga vägen som följer polisanmälan, den civilrättsliga vägen eller båda, och hen kan arbeta utifrån en fullmakt om du inte kan resa."
+          ]
+        },
+        {
+          "h2": "Finns det en snabbare civilrättslig väg att få tillbaka bostaden?",
+          "paras": [
+            "Det finns ett civilrättsligt snabbförfarande för att återfå besittningen. Det är öppet för privatpersoner, för ideella organisationer med rätt att besitta fastigheten och för offentliga organ för socialt boende. När det har inletts har ockupanterna fem dagar på sig att visa en rättighet som ger dem rätt att vara där.",
+            "Äger du fastigheten genom ett bolag är snabbförfarandet inte öppet för dig, och du måste i stället använda den vanliga civilrättsliga vägen. Så vitt vi har kunnat hitta har ingen senare ändring utvidgat det till bolag. Köpte du genom ett bolag av skatte- eller arvsskäl är det värt att känna till detta innan något händer."
+          ]
+        },
+        {
+          "h2": "Hur får jag en tom bostad att se bebodd ut?",
+          "paras": [
+            "En tom bostad blir lättare att utse som mål när den ser obevakad ut, så målet är enkelt: få den att se omskött ut. Be en granne eller någon med nyckel att komma förbi regelbundet, tömma posten och öppna fönsterluckorna då och då. En full brevlåda på en lugn gata är den tydligaste signal som finns.",
+            "Timer på en lampa eller två, ett larm som larmar någon på plats, samt stabila dörrar och fönstergaller på bottenvåningen hjälper alla till. Det gör också en kort rad till ordföranden i samfälligheten eller till administrador de fincas, så att de vet vem de ska ringa och känner igen någon som inte ska vara där.",
+            "En del ägare hyr ut bostaden under delar av året, vilket håller den bebodd och sätter någon på plats. Gör du det, kontrollera att du uppfyller reglerna för uthyrning i din region innan den första gästen kommer. Det är den regionala licensen som binder dig, och den skiljer sig från region till region."
+          ]
+        },
+        {
+          "h2": "Hjälper försäkringen om det händer?",
+          "paras": [
+            "Det kan den göra, på två sätt. En del hemförsäkringar kan ha ett eget kapitel om olaglig ockupation (ocupación ilegal). Har din det, beror vad det betalar och på vilka villkor helt på formuleringen, så sök efter frasen i din försäkring och be försäkringsbolaget förklara skriftligen vad du skulle få.",
+            "Därutöver betalar rättsskyddet (defensa jurídica) kostnaderna för rättegång och ger dig juridisk hjälp, inom de gränser som lagen och försäkringen sätter. När det gäller har du rätt att välja egen advokat och procurador, och den advokaten tar instruktioner från dig. Sök i försäkringen efter libre elección de abogado och hechos anteriores, eftersom en ockupation som började innan skyddet trädde i kraft kan behandlas annorlunda."
+          ]
+        },
+        {
+          "h2": "Kan en ockupant till slut bli ägare till min bostad?",
+          "paras": [
+            "Det är mycket osannolikt. Spansk lag låter visserligen någon förvärva egendom genom långvarig besittning, men tiderna är långa. Med en rättighet och i god tro är det tio år, och för en ägare som bor utomlands fördubblas det till tjugo, eftersom du räknas som frånvarande. Utan rättighet eller god tro är det trettio år.",
+            "En ägare som kommer på besök, betalar de lokala skatterna och samfällighetsavgifterna och agerar när något är fel är långt därifrån. Spara kvittona, håll dina kontaktuppgifter uppdaterade hos samfälligheten, och gå sedan tillbaka till det som betyder något: ljuset på kvällen, promenaden till bageriet, anledningen till att du köpte stället."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Hausbesetzer in Spanien: leerstehendes Haus schützen",
+      "description": "Was das spanische Recht zu Hausbesetzern in einem Zweitwohnsitz sagt, warum es keine 48-Stunden-Regel gibt und was Eigentümer im Ausland tun können.",
+      "h1": "So schützen Sie Ihr leerstehendes Haus in Spanien vor Hausbesetzern",
+      "lead": "Die Wohnung eines anderen in Spanien zu besetzen ist eine Straftat, und ein Zweitwohnsitz, den Sie selbst nutzen, auch nur gelegentlich, gilt als morada, was den schwereren Straftatbestand ins Spiel bringt. Eine 48-Stunden-Regel gibt es im spanischen Recht nicht. Wie schnell Polizei und Gerichte handeln können, entscheiden die Beweise dafür, dass das Haus Ihnen gehört und dass Sie dort Ihr Privatleben führen.",
+      "sections": [
+        {
+          "h2": "Moment, kann einfach jemand in mein Ferienhaus einziehen?",
+          "paras": [
+            "Nun, nicht ganz. Das spanische Strafrecht kennt drei Tatbestände, die das abdecken. Wer in die Wohnung eines anderen eindringt oder darin bleibt, allanamiento de morada, dem drohen sechs Monate bis zwei Jahre Haft. Die Besetzung einer Immobilie mit Gewalt wird mit einem bis zwei Jahren bestraft. Die friedliche Besetzung einer Immobilie, die niemandes Wohnung ist, ist ein leichteres Delikt und wird mit einer Geldstrafe von drei bis sechs Monaten geahndet.",
+            "Deswegen muss niemand schlaflose Nächte haben. Trotzdem hat ein Eigentümer, der den Winter in Bergen oder Düsseldorf verbringt, ein Haus, das lange leer steht, und die Schritte, die es schützen, sind einfach. Die meisten kosten sehr wenig, und im Rest dieser Seite geht es um diese Schritte und darum, was zu tun ist, wenn sie nicht ausreichen."
+          ]
+        },
+        {
+          "h2": "Gilt mein Zweitwohnsitz als morada?",
+          "paras": [
+            "In der Regel ja. Zweitwohnungen und Saisonwohnungen sind eine morada, sofern die Berechtigten dort ihr Privatleben führen, auch nur gelegentlich. Das spricht für Sie, denn es macht eine Besetzung zum schwereren Delikt und öffnet die Tür zur vorläufigen Räumung.",
+            "Eine Immobilie, die rein als Kapitalanlage gekauft wurde, leer steht und nie selbst genutzt wird, fällt eher unter das leichtere Delikt. Der Unterschied hängt an den Beweisen für die eigene Nutzung, nicht daran, wie viele Wochen im Jahr Sie dort verbringen.",
+            "Bewahren Sie diese Beweise also auf. Bordkarten, Fotos von Ihnen im Haus, Rechnungen für Strom und Wasser mit echtem Verbrauch, Kassenbons aus dem Supermarkt im Ort, Nachrichten mit einem Nachbarn, der Sie dort gesehen hat. Es fühlt sich seltsam an, Beweise dafür zu sammeln, dass Sie in Ihrem eigenen Haus wohnen, aber genau danach fragt ein Polizist oder ein Richter."
+          ]
+        },
+        {
+          "h2": "Gibt es wirklich eine 48-Stunden-Regel?",
+          "paras": [
+            "Nein. Im spanischen Recht gibt es keine 48-Stunden-Regel, und sie ist auch keine Praxis der spanischen Polizei. Sie wird in den meisten englischsprachigen Ratgebern zum Thema wiederholt, und sie ist falsch. Die Zahl taucht in einer offiziellen Weisung der spanischen Staatsanwaltschaft nur als Beschreibung der polizeilichen Befugnisse in Frankreich auf, neben einem Hinweis auf 24 Stunden für Deutschland.",
+            "Spanien verwendet stattdessen eine Prüfung, keine Uhr: deutliche Anzeichen, dass die Tat begangen wurde, Dringlichkeit und Schaden für den rechtmäßigen Eigentümer sowie Verhältnismäßigkeit. Schnelligkeit zählt trotzdem, denn eine frische Besetzung, die Sie sofort anzeigen, erfüllt diese Prüfung viel leichter. Aber ein Eigentümer, der es am dritten oder am dreißigsten Tag erfährt, hat keine gesetzliche Frist verpasst."
+          ]
+        },
+        {
+          "h2": "Was tue ich, wenn ich Menschen in meinem Haus wohnen sehe?",
+          "paras": [
+            "Zeigen Sie es zuerst bei der Polizei an, persönlich oder über eine Vertrauensperson in Spanien, und bewahren Sie eine Kopie der Anzeige (der denuncia) auf. Bringen oder schicken Sie den Eigentumsnachweis und die oben beschriebenen Beweise für die eigene Nutzung, denn ob das Haus als morada gilt, hängt an diesen Beweisen.",
+            "Versuchen Sie nicht, die Besetzer selbst zu verdrängen. Konfrontieren Sie sie nicht, stellen Sie nicht Wasser oder Strom ab und versuchen Sie nicht, sich mit Gewalt Zutritt zu verschaffen. Abgesehen vom Risiko für Sie selbst kann das einen klaren Fall in einen verworrenen verwandeln.",
+            "Sprechen Sie dann mit einem abogado vor Ort, der Besetzungsfälle bearbeitet. Er entscheidet mit Ihnen, ob Sie den strafrechtlichen Weg verfolgen, der sich an die Anzeige anschließt, den zivilrechtlichen Weg oder beide, und er kann mit einer Vollmacht arbeiten, wenn Sie nicht anreisen können."
+          ]
+        },
+        {
+          "h2": "Gibt es einen schnelleren zivilrechtlichen Weg, mein Haus zurückzubekommen?",
+          "paras": [
+            "Es gibt ein zivilrechtliches Eilverfahren zur Wiedererlangung des Besitzes. Es steht Privatpersonen offen, gemeinnützigen Einrichtungen mit einem Besitzrecht an der Immobilie und öffentlichen Trägern des sozialen Wohnungsbaus. Sobald es läuft, haben die Besetzer fünf Tage Zeit, einen Titel vorzulegen, der sie zum Aufenthalt berechtigt.",
+            "Wenn Sie die Immobilie über eine Gesellschaft halten, steht Ihnen das Eilverfahren nicht offen, und Sie müssen stattdessen den ordentlichen Zivilweg gehen. Soweit wir finden konnten, hat keine spätere Änderung es auf Gesellschaften ausgeweitet. Wenn Sie aus steuerlichen oder erbrechtlichen Gründen über eine Gesellschaft gekauft haben, lohnt es sich, das zu wissen, bevor etwas passiert."
+          ]
+        },
+        {
+          "h2": "Wie lasse ich ein leeres Haus bewohnt aussehen?",
+          "paras": [
+            "Ein leeres Haus ist ein leichteres Ziel, wenn es unbeaufsichtigt wirkt, das Ziel ist also einfach: Es soll gepflegt aussehen. Bitten Sie einen Nachbarn oder Schlüsselhalter, regelmäßig vorbeizuschauen, die Post zu leeren und ab und zu die Fensterläden zu öffnen. Ein voller Briefkasten in einer ruhigen Straße ist das deutlichste Zeichen überhaupt.",
+            "Zeitschaltuhren an ein oder zwei Lampen, eine Alarmanlage, die jemanden vor Ort benachrichtigt, sowie solide Türen und Fenstergitter im Erdgeschoss helfen alle. Ebenso eine kurze Nachricht an den Präsidenten der Eigentümergemeinschaft oder den administrador de fincas, damit sie wissen, wen sie anrufen sollen, und jeden erkennen, der dort nichts zu suchen hat.",
+            "Manche Eigentümer vermieten das Haus für einen Teil des Jahres, so bleibt es bewohnt und es ist jemand vor Ort. Wenn Sie das tun, prüfen Sie, ob Sie die Vermietungsregeln Ihrer Region erfüllen, bevor der erste Gast ankommt. Verbindlich ist die regionale Lizenz, und sie ist von Region zu Region verschieden."
+          ]
+        },
+        {
+          "h2": "Hilft die Versicherung, wenn es passiert?",
+          "paras": [
+            "Möglicherweise, auf zwei Wegen. Manche Hausversicherungen enthalten ein eigenes Kapitel zur illegalen Besetzung (ocupación ilegal). Wenn Ihre das tut, hängt ganz vom Wortlaut ab, was sie zahlt und unter welchen Bedingungen. Suchen Sie also in Ihrer Police nach dem Begriff und bitten Sie den Versicherer, Ihnen schriftlich zu erklären, was Sie erhalten würden.",
+            "Unabhängig davon trägt der Rechtsschutz (defensa jurídica) die Kosten von Gerichtsverfahren und gibt Ihnen rechtliche Hilfe, in den Grenzen von Gesetz und Police. Wo er greift, haben Sie das Recht, Ihren eigenen Anwalt und procurador zu wählen, und dieser Anwalt nimmt Weisungen von Ihnen entgegen. Suchen Sie in der Police nach libre elección de abogado und hechos anteriores, denn eine Besetzung, die vor Beginn der Deckung angefangen hat, kann anders behandelt werden."
+          ]
+        },
+        {
+          "h2": "Kann ein Hausbesetzer am Ende Eigentümer meines Hauses werden?",
+          "paras": [
+            "Das ist sehr unwahrscheinlich. Das spanische Recht lässt zwar zu, dass jemand Eigentum durch lange Besitzzeit erwirbt (Ersitzung), aber die Fristen sind lang. Mit einem Titel und in gutem Glauben sind es zehn Jahre, und bei einem Eigentümer, der im Ausland lebt, verdoppelt sich das auf zwanzig, weil Sie als abwesend gelten. Ohne Titel oder guten Glauben sind es dreißig Jahre.",
+            "Ein Eigentümer, der vorbeikommt, die örtlichen Steuern und Gemeinschaftsbeiträge zahlt und handelt, wenn etwas nicht stimmt, ist davon weit entfernt. Bewahren Sie die Belege auf, halten Sie Ihre Kontaktdaten bei der Eigentümergemeinschaft aktuell und kehren Sie dann zu dem zurück, was zählt: das Licht am Abend, der Weg zur Bäckerei, der Grund, warum Sie das Haus gekauft haben."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Squatteurs en Espagne : protéger un logement vide",
+      "description": "Ce que dit la loi espagnole sur les squatteurs dans une résidence secondaire, pourquoi la règle des 48 heures n'existe pas et que faire depuis l'étranger.",
+      "h1": "Comment protéger votre logement vide en Espagne contre les squatteurs",
+      "lead": "Occuper le logement d'autrui est une infraction pénale en Espagne, et une résidence secondaire que vous utilisez personnellement, même de temps en temps, compte comme une morada, ce qui fait entrer en jeu l'infraction la plus grave. La règle des 48 heures n'existe pas en droit espagnol. Ce qui détermine la rapidité d'action de la police et des tribunaux, ce sont les preuves que le logement est à vous et que vous y menez votre vie privée.",
+      "sections": [
+        {
+          "h2": "Attendez, quelqu'un peut donc simplement s'installer dans ma maison de vacances ?",
+          "paras": [
+            "Pas exactement. Le droit pénal espagnol prévoit trois infractions qui couvrent ce cas. Entrer ou rester dans le domicile d'autrui, l'allanamiento de morada, est puni de six mois à deux ans de prison. Occuper un bien avec violence est puni d'un à deux ans. L'occupation paisible d'un bien qui n'est le domicile de personne est une infraction moins grave, punie d'une amende de trois à six mois.",
+            "Ce n'est pas une raison pour en perdre le sommeil. Reste qu'un propriétaire qui passe l'hiver à Bergen ou à Düsseldorf a un logement qui reste vide pendant de longues périodes, et les mesures qui le protègent sont simples. La plupart coûtent très peu, et la suite de cette page porte sur ces mesures et sur ce qu'il faut faire si elles échouent."
+          ]
+        },
+        {
+          "h2": "Ma résidence secondaire compte-t-elle comme une morada ?",
+          "paras": [
+            "En général, oui. Les résidences secondaires et saisonnières sont une morada, à condition que les personnes qui ont le droit d'y être y mènent leur vie privée, même de temps en temps. Cela joue en votre faveur, car une occupation devient alors l'infraction la plus grave et ouvre la porte à une expulsion à titre conservatoire.",
+            "Un bien acheté uniquement comme investissement, laissé vide et jamais utilisé personnellement, relève plus probablement de l'infraction moins grave. La différence tient aux preuves d'usage personnel, pas au nombre de semaines par an que vous y passez.",
+            "Conservez donc ces preuves. Cartes d'embarquement, photos de vous dans le logement, factures d'eau ou d'électricité avec une vraie consommation, tickets du supermarché du village, messages avec un voisin qui vous y a vu. Cela paraît étrange de rassembler des preuves que vous vivez dans votre propre maison, mais c'est précisément ce qu'un policier ou un juge vous demandera."
+          ]
+        },
+        {
+          "h2": "La règle des 48 heures existe-t-elle vraiment ?",
+          "paras": [
+            "Non. La règle des 48 heures n'existe pas en droit espagnol, et ce n'est pas non plus une pratique de la police espagnole. Elle est répétée dans la plupart des guides en anglais sur le sujet, et elle est fausse. Le chiffre n'apparaît dans une instruction officielle du parquet espagnol que pour décrire les pouvoirs de la police en France, à côté d'une référence de 24 heures pour l'Allemagne.",
+            "L'Espagne applique à la place un critère, pas un chronomètre : des indices solides que l'infraction a été commise, l'urgence et le préjudice pour le propriétaire légitime, et la proportionnalité. La rapidité compte tout de même, car une occupation récente que vous signalez immédiatement remplit ce critère bien plus facilement. Mais un propriétaire qui s'en aperçoit au troisième jour, ou au trentième, n'a manqué aucun délai légal."
+          ]
+        },
+        {
+          "h2": "Que faire si je trouve des gens qui vivent dans mon logement ?",
+          "paras": [
+            "Signalez-le d'abord à la police, en personne ou par l'intermédiaire d'une personne de confiance en Espagne, et gardez une copie de la plainte (la denuncia). Apportez, ou envoyez, la preuve de propriété et les preuves d'usage personnel décrites plus haut, car c'est d'elles que dépend la question de savoir si le logement compte comme une morada.",
+            "N'essayez pas de régler la situation vous-même avec les occupants. Ne les affrontez pas, ne coupez pas l'eau ou l'électricité, et n'essayez pas de rentrer par la force. Outre le risque pour vous, cela peut transformer un dossier clair en dossier compliqué.",
+            "Parlez ensuite à un abogado qui traite les affaires d'occupation là où se trouve le logement. Il décidera avec vous s'il faut suivre la voie pénale qui découle de la plainte, la voie civile, ou les deux, et il peut agir sur la base d'une procuration si vous ne pouvez pas vous déplacer."
+          ]
+        },
+        {
+          "h2": "Existe-t-il une voie civile plus rapide pour récupérer mon logement ?",
+          "paras": [
+            "Il existe une procédure civile express pour récupérer la possession. Elle est ouverte aux particuliers, aux organismes à but non lucratif ayant un droit à posséder le bien et aux organismes publics de logement social. Une fois lancée, les occupants disposent de cinq jours pour présenter un titre qui les autorise à être là.",
+            "Si vous détenez le bien par l'intermédiaire d'une société, la voie express ne vous est pas ouverte, et vous devez passer par la voie civile ordinaire. D'après nos recherches, aucune modification ultérieure ne l'a étendue aux sociétés. Si vous avez acheté via une société pour des raisons fiscales ou successorales, mieux vaut le savoir avant que quoi que ce soit n'arrive."
+          ]
+        },
+        {
+          "h2": "Comment donner l'impression qu'un logement vide est habité ?",
+          "paras": [
+            "Un logement vide est une cible plus facile lorsqu'il semble laissé à l'abandon, l'objectif est donc simple : qu'il ait l'air entretenu. Demandez à un voisin ou à une personne qui détient les clés de passer régulièrement, de vider le courrier et d'ouvrir les volets de temps en temps. Une boîte aux lettres pleine dans une rue calme est le signe le plus visible qui soit.",
+            "Des minuteries sur une ou deux lampes, une alarme qui prévient quelqu'un sur place, des portes solides et des barreaux aux fenêtres du rez-de-chaussée aident tous. Tout comme un petit mot au président de la copropriété ou à l'administrador de fincas, pour qu'ils sachent qui appeler et reconnaissent toute personne qui ne devrait pas être là.",
+            "Certains propriétaires louent le logement une partie de l'année, ce qui le maintient occupé et met quelqu'un sur place. Si vous le faites, vérifiez que vous respectez les règles de location de votre région avant l'arrivée du premier locataire. C'est la licence régionale qui vous engage, et elle varie d'une région à l'autre."
+          ]
+        },
+        {
+          "h2": "L'assurance m'aidera-t-elle si cela arrive ?",
+          "paras": [
+            "Peut-être, de deux façons. Certains contrats habitation peuvent comporter un chapitre spécifique sur l'occupation illégale (ocupación ilegal). Si c'est le cas du vôtre, ce qu'il paie et à quelles conditions dépend entièrement de sa rédaction : cherchez donc l'expression dans votre contrat et demandez à l'assureur de vous expliquer par écrit ce que vous recevriez.",
+            "Par ailleurs, la garantie protection juridique (defensa jurídica) paie les frais de procédure judiciaire et vous apporte une aide juridique, dans les limites de la loi et du contrat. Lorsqu'elle s'applique, vous avez le droit de choisir votre propre avocat et votre procurador, et cet avocat reçoit ses instructions de vous. Cherchez dans le contrat libre elección de abogado et hechos anteriores, car une occupation qui a commencé avant le début de la couverture peut être traitée différemment."
+          ]
+        },
+        {
+          "h2": "Un squatteur peut-il finir par devenir propriétaire de mon logement ?",
+          "paras": [
+            "C'est très peu probable. Le droit espagnol permet bien d'acquérir un bien par une longue possession, mais les délais sont longs. Avec un titre et de bonne foi, c'est dix ans, et pour un propriétaire qui vit à l'étranger cela double pour atteindre vingt ans, car vous êtes considéré comme absent. Sans titre ni bonne foi, c'est trente ans.",
+            "Un propriétaire qui vient sur place, paie les impôts locaux et les charges de copropriété, et réagit quand quelque chose ne va pas en est très loin. Gardez les reçus, tenez vos coordonnées à jour auprès de la copropriété, puis revenez à l'essentiel : la lumière du soir, la promenade jusqu'à la boulangerie, la raison pour laquelle vous avez acheté ce logement."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Krakers in Spanje: een lege woning beschermen",
+      "description": "Wat de Spaanse wet zegt over krakers in een tweede woning, waarom er geen 48-uursregel is en wat u vanuit het buitenland kunt doen, ervoor en erna.",
+      "h1": "Zo beschermt u uw lege Spaanse woning tegen krakers",
+      "lead": "Het bezetten van andermans woning is in Spanje een strafbaar feit, en een tweede woning die u zelf gebruikt, ook al is het maar af en toe, geldt als morada, waardoor het zwaardere delict van toepassing is. Een 48-uursregel bestaat in de Spaanse wet niet. Hoe snel politie en rechter kunnen optreden, hangt af van het bewijs dat de woning van u is en dat u er uw privéleven leidt.",
+      "sections": [
+        {
+          "h2": "Wacht even, kan iemand zomaar in mijn vakantiewoning gaan wonen?",
+          "paras": [
+            "Nou, niet helemaal. Het Spaanse strafrecht kent drie delicten die dit dekken. Het binnendringen of verblijven in iemands woning, allanamiento de morada, wordt bestraft met zes maanden tot twee jaar gevangenisstraf. Het bezetten van een woning met geweld wordt bestraft met één tot twee jaar. Het vreedzaam bezetten van een pand dat niemands woning is, is een lichter delict, bestraft met een geldboete van drie tot zes maanden.",
+            "U hoeft er niet wakker van te liggen. Toch staat de woning van een eigenaar die de winter in Bergen of Düsseldorf doorbrengt lange tijd leeg, en de stappen om haar te beschermen zijn eenvoudig. De meeste kosten heel weinig, en de rest van deze pagina gaat over die stappen en over wat u doet als ze niet werken."
+          ]
+        },
+        {
+          "h2": "Geldt mijn tweede woning als morada?",
+          "paras": [
+            "Meestal wel. Tweede woningen en seizoenswoningen zijn een morada, mits de mensen die er recht op hebben er hun privéleven leiden, ook al is het maar af en toe. Dat werkt in uw voordeel, want het maakt een bezetting tot het zwaardere delict en opent de deur naar een voorlopige ontruiming.",
+            "Een pand dat puur als belegging is gekocht, leeg staat en nooit zelf wordt gebruikt, valt eerder onder het lichtere delict. Het verschil hangt af van bewijs van eigen gebruik, niet van hoeveel weken per jaar u er bent.",
+            "Bewaar dat bewijs dus. Instapkaarten, foto's van u in de woning, rekeningen voor nutsvoorzieningen met echt verbruik, bonnetjes van de supermarkt in het dorp, berichten met een buurman die u er heeft gezien. Het voelt vreemd om bewijs te verzamelen dat u in uw eigen huis woont, maar het is precies waar een politieagent of rechter naar zal vragen."
+          ]
+        },
+        {
+          "h2": "Bestaat er echt een 48-uursregel?",
+          "paras": [
+            "Nee. Er is geen 48-uursregel in de Spaanse wet, en het is ook geen Spaanse politiepraktijk. Het wordt herhaald in de meeste Engelstalige informatie over het onderwerp, en het klopt niet. Het getal komt in een officiële Spaanse instructie van het Openbaar Ministerie alleen voor als beschrijving van de politiebevoegdheden in Frankrijk, naast een verwijzing naar 24 uur voor Duitsland.",
+            "Wat Spanje in plaats daarvan gebruikt, is een toets en geen klok: sterke aanwijzingen dat het delict is gepleegd, spoed en schade voor de rechtmatige eigenaar, en evenredigheid. Snelheid doet er nog steeds toe, want een verse bezetting die u meteen meldt, past veel makkelijker in die toets. Maar een eigenaar die het op dag drie of dag dertig ontdekt, heeft geen enkele wettelijke termijn gemist."
+          ]
+        },
+        {
+          "h2": "Wat doe ik als ik mensen in mijn woning aantref?",
+          "paras": [
+            "Doe eerst aangifte bij de politie, zelf of via iemand die u in Spanje vertrouwt, en bewaar een kopie van de aangifte (de denuncia). Neem bewijs van eigendom mee, of stuur het op, samen met het hierboven beschreven bewijs van eigen gebruik, want of de woning als morada geldt, hangt van dat bewijs af.",
+            "Probeer het niet zelf met de bezetters op te lossen. Ga de confrontatie niet aan, sluit het water of de elektriciteit niet af en probeer niet met geweld weer binnen te komen. Afgezien van het risico voor uzelf kan dat een duidelijke zaak tot een rommelige zaak maken.",
+            "Spreek daarna een abogado die bezettingszaken behandelt in de plaats waar de woning staat. Samen met u besluit die of u de strafrechtelijke weg volgt die op de aangifte volgt, de civiele weg, of allebei, en hij of zij kan op basis van een volmacht werken als u niet kunt reizen."
+          ]
+        },
+        {
+          "h2": "Is er een snellere civiele weg om mijn woning terug te krijgen?",
+          "paras": [
+            "Er bestaat een civiele spoedprocedure om het bezit terug te krijgen. Die staat open voor particulieren, voor organisaties zonder winstoogmerk met een recht op bezit van het pand en voor publieke instellingen voor sociale huisvesting. Zodra de procedure loopt, hebben de bezetters vijf dagen om een titel te tonen die hun het recht geeft er te zijn.",
+            "Heeft u de woning via een bedrijf, dan staat de spoedprocedure niet voor u open en moet u de gewone civiele weg volgen. Voor zover wij konden vinden, is die later niet uitgebreid naar bedrijven. Heeft u via een bedrijf gekocht om fiscale of erfrechtelijke redenen, dan is het goed om dit te weten voordat er iets gebeurt."
+          ]
+        },
+        {
+          "h2": "Hoe laat ik een lege woning bewoond lijken?",
+          "paras": [
+            "Een lege woning is een makkelijker doelwit als ze er onbeheerd uitziet, dus het doel is eenvoudig: laat zien dat er iemand naar omkijkt. Vraag een buurman of sleutelhouder om regelmatig langs te gaan, de post weg te halen en af en toe de luiken te openen. Een volle brievenbus in een rustige straat is het duidelijkste signaal dat er is.",
+            "Tijdschakelaars op een lamp of twee, een alarm dat iemand in de buurt waarschuwt, en stevige deuren en raamtralies op de begane grond helpen allemaal. Net als een kort berichtje aan de voorzitter van de VvE of de administrador de fincas, zodat zij weten wie ze moeten bellen en iemand herkennen die er niet hoort.",
+            "Sommige eigenaren verhuren de woning een deel van het jaar, zodat ze bewoond blijft en er iemand ter plaatse is. Doet u dat, controleer dan of u aan de verhuurregels in uw regio voldoet voordat de eerste gast aankomt. De regionale vergunning is wat voor u geldt, en die verschilt per regio."
+          ]
+        },
+        {
+          "h2": "Helpt mijn verzekering als het gebeurt?",
+          "paras": [
+            "Misschien, op twee manieren. Sommige woonhuispolissen bevatten een apart hoofdstuk over illegale bezetting (ocupación ilegal). Staat dat in de uwe, dan hangt wat het uitkeert en onder welke voorwaarden volledig af van de formulering, dus zoek de term op in uw polis en vraag de verzekeraar schriftelijk uit te leggen wat u zou ontvangen.",
+            "Daarnaast betaalt rechtsbijstand (defensa jurídica) de kosten van gerechtelijke procedures en geeft u juridische hulp, binnen de grenzen van de wet en de polis. Waar die van toepassing is, heeft u het recht om zelf uw advocaat en procurador te kiezen, en die advocaat volgt uw instructies. Zoek in de polis naar libre elección de abogado en hechos anteriores, want een bezetting die begon voordat de dekking inging, kan anders worden behandeld."
+          ]
+        },
+        {
+          "h2": "Kan een kraker uiteindelijk eigenaar van mijn woning worden?",
+          "paras": [
+            "Dat is zeer onwaarschijnlijk. De Spaanse wet laat iemand wel eigendom verkrijgen door langdurig bezit, maar de termijnen zijn lang. Met een titel en te goeder trouw is het tien jaar, en voor een eigenaar die in het buitenland woont verdubbelt dat tot twintig, omdat u als afwezig geldt. Zonder titel of goede trouw is het dertig jaar.",
+            "Een eigenaar die langskomt, de lokale belastingen en VvE-bijdragen betaalt en optreedt als er iets mis is, zit daar ver vandaan. Bewaar de bonnetjes, houd uw contactgegevens bij de VvE actueel, en ga dan terug naar waar het om draait: het licht in de avond, de wandeling naar de bakker, de reden dat u de woning kocht."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "slug": "buying-property-in-spain-step-by-step",
+  "topic": "buying",
+  "tool": "deal-checklist",
+  "order": 1,
+  "rules": [
+    "nie.form",
+    "nie.fee",
+    "aml.obliged_agents",
+    "aml.identification",
+    "aml.beneficial_owner",
+    "visa.golden_closed",
+    "eu.registration_over_three_months",
+    "buy.registry.nota_simple_fee",
+    "buy.registry.presumption",
+    "buy.registry.unregistered_titles",
+    "buy.registry.good_faith_buyer",
+    "buy.registry.who_pays",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "own.lph.seller_declaration",
+    "epc.requirement",
+    "epc.validity",
+    "buy.deed.tax_ids",
+    "buy.deed.payment_means",
+    "buy.notary.who_pays",
+    "poa.apostille_parties",
+    "buy.mortgage.ten_days",
+    "buy.mortgage.fein_binding",
+    "buy.mortgage.notary_acta",
+    "buy.mortgage.acta_free",
+    "buy.mortgage.costs_split",
+    "buy.registry.purpose",
+    "buy.tax.resale_itp",
+    "buy.tax.itp_state_default",
+    "own.catastro.reference_value",
+    "buy.tax.newbuild_iva",
+    "vat.newbuild.mainland",
+    "buy.tax.newbuild_ajd",
+    "igic.canarias",
+    "own.catastro.purchase_exempt",
+    "own.catastro.declare_changes",
+    "irnr.imputed.base",
+    "irnr.rates",
+    "limit.hidden_defects",
+    "itp.base.valor_referencia"
+  ],
+  "answers": [
+    "nie-number-form-and-fee",
+    "why-spanish-estate-agents-ask-for-id",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "energy-certificate-for-a-spanish-property",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "hidden-defects-after-buying-a-spanish-property",
+    "spanish-golden-visa-closed",
+    "tax-on-a-spanish-property-you-do-not-rent-out"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Buying Property in Spain Step by Step: Guide for Non-Residents",
+      "description": "How a Spanish purchase runs from NIE to land registry: the checks, the deposit contract, the notary, the purchase tax and what to do after signing.",
+      "h1": "How buying a property in Spain works, from NIE to land registry",
+      "lead": "Buying in Spain follows a fixed order: get your NIE, check the property at the land registry, sign a private contract with a deposit, sign the public deed before a notary, then register the purchase in your name. The notary writes your NIE and how you paid into the deed, and the protection the land registry gives a buyer only becomes yours once the purchase is registered.",
+      "sections": [
+        {
+          "h2": "What do I need before I start viewing?",
+          "paras": [
+            "You need an NIE (número de identidad de extranjero). For a deed on a property, each party must show the notary their tax identification number, and for a foreign buyer that is the NIE, which is recorded in the deed. You apply on form EX-15 and the fee is 9.84 euros. Form EX-18 is a different procedure, the registration certificate for EU citizens who live in Spain, and it is the one people most often bring by mistake.",
+            "Have your passport scanned and ready to send. Estate agents who act in property sales are obliged subjects under Spain's anti-money-laundering law, so they must identify everyone taking part in an operation, using reliable documents, before it begins. If you buy through a company, they must also identify its beneficial owner, which includes anyone holding more than 25 percent of the capital or voting rights.",
+            "Be clear about what the purchase does not give you. Buying a home in Spain is no longer a route to residence, because the investor route closed to new applications on 3 April 2025. If you are an EU or EEA citizen and plan to live in Spain for more than three months, you register in person on form EX-18 within three months of entry. Owning and residing are two separate questions."
+          ]
+        },
+        {
+          "h2": "OK, so how do I check the property before I commit?",
+          "paras": [
+            "Start with a nota simple from the land registry (Registro de la Propiedad). The registrar's own fee is 3.005061 euros per property (roughly the price of a coffee), although online request services add their own charges. It shows who the registry names as owner and what is recorded against the property, and rights recorded there are presumed to exist and to belong to the holder in the form the entry shows.",
+            "That matters because Spain protects the buyer who relies on the register. Titles that are not registered do not prejudice third parties, and a buyer who acquires in good faith and for value from the person the registry shows as entitled to sell keeps that purchase once it is registered. So check that the seller in your contract is the owner on the nota simple, and ask your abogado to explain any charge you do not recognise.",
+            "Some debts follow the property rather than the seller. The property stays liable for unpaid IBI, the local property tax, and notaries must ask about and warn of pending IBI on a transfer. A buyer also takes on unpaid community charges for the part of the year already gone plus the three previous calendar years. The seller must declare in the deed that they are up to date or provide a certificate of what they owe, so ask the administrador de fincas for that certificate early.",
+            "Ask for the energy certificate too. On a sale, a copy of the registered certificate and its energy label are annexed to the contract. A certificate lasts up to ten years, or five years where the rating is G, so look at the date before you agree a timetable."
+          ]
+        },
+        {
+          "h2": "What am I signing when I pay the deposit?",
+          "paras": [
+            "It is a private contract between you and the seller, often called a contrato de arras, which usually sets the price, the completion date and what happens if either side does not go ahead. What happens to your deposit in that case depends on how the contract is worded, so have your abogado read that clause before you transfer anything.",
+            "Pay the deposit by bank transfer and keep the receipt. When you later sign the deed, the notary must record how the price was paid, including any part paid before signing. A deposit paid months earlier still has to be accounted for at the notary, and the transfer receipt is the simplest way to do it."
+          ]
+        },
+        {
+          "h2": "What happens at the notary, and do I have to be there?",
+          "paras": [
+            "The sale is completed by signing the public deed (escritura) before a notary. The notary must identify how the price was paid: before or at signing, and whether in cash, by cheque with its details, or by bank transfer. If a party does not provide a required declaration, the notary records that in the deed and notifies the notarial body, which passes information on unidentified payments to the tax administration. Bring every transfer receipt and cheque copy with you.",
+            "You can sign through someone else. Norway, Sweden, Germany, France, the Netherlands, the United Kingdom and Spain are parties to the Hague Apostille Convention, so a public document issued at home, such as a power of attorney, is accepted in Spain with an apostille instead of consular legalisation. Send the draft to the Spanish notary who will use it before you sign it at home.",
+            "Notary fees are owed by whoever asked for the notary's services and as the substantive and tax rules allocate them, and where there are several, all of them are jointly liable. Who finally bears the cost is a matter for your purchase contract, so make sure it says."
+          ]
+        },
+        {
+          "h2": "What changes if I am taking a mortgage?",
+          "paras": [
+            "The timetable gets two fixed steps. The lender must give you the FEIN, the FiAE, the draft contract and the other required documents at least ten calendar days before the loan is signed, and the FEIN is a binding offer for that period. Calendar days include weekends, so count them before you book flights.",
+            "You must also appear before the notary of your choice no later than the day before the deed, so the notary can check the documents, explain the loan and record it in an acta. That acta carries no notary fee at all. On the loan itself you pay the valuation, while the lender pays the gestoría, the notary fees for the loan deed and the registry fees for the mortgage."
+          ]
+        },
+        {
+          "h2": "Which purchase tax will I pay?",
+          "paras": [
+            "On a home bought from a private individual you pay ITP, the transfer tax, and you as buyer are the taxpayer. Each region sets its own rate, and where a region has not approved one the state rate of 6 percent applies. The tax is charged on the higher of the price you agreed and the valor de referencia, a value the Catastro sets from notarised sales, so a low price does not always mean a low tax.",
+            "On a new home bought from the developer, its first delivery, you pay IVA instead, at 10 percent in mainland Spain and the Balearics, and the deed also pays AJD at the regional rate, or 0.50 percent where the region has set none. In the Canary Islands the tax on a new build is IGIC, not IVA, and a holiday home pays the general rate of 7 percent. The costs guide on this site sets out the regional rates and fees in detail."
+          ]
+        },
+        {
+          "h2": "What do I still need to do after I sign?",
+          "paras": [
+            "Register the purchase. Registry fees are paid by the person in whose favour the right is registered, which on a purchase is normally you. The protection for a buyer in good faith depends on registering, so make sure your abogado or gestor presents the deed promptly and sends you the registered title. You do not need to declare the purchase to the Catastro yourself where it was made in a public deed with the cadastral reference, because notaries and registrars pass it on.",
+            "Building work is different. New buildings, extensions, renovations and changes of use must be declared to the Catastro by the owner within two months, even though the purchase itself was passed on for you. Keep that in mind if you plan to enlarge the terrace in your first summer.",
+            "Once you own the property, Spain taxes you on an imputed income from it under non-resident income tax, even if you never let it. The base is a percentage of the cadastral value on the IBI receipt, not the market value, and the rate is 19 percent for residents of the EU, Norway, Iceland and Liechtenstein and 24 percent for everyone else. A claim against the seller for hidden defects ends six months after handover, so look the house over properly in the first weeks. Then go and enjoy it."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Kjøpe bolig i Spania steg for steg som ikke-bosatt",
+      "description": "Slik går et boligkjøp i Spania fra NIE til eiendomsregisteret: kontrollene, depositumskontrakten, notaren, kjøpsskatten og det som gjenstår etterpå.",
+      "h1": "Slik fungerer et boligkjøp i Spania, fra NIE til eiendomsregisteret",
+      "lead": "Et kjøp i Spania følger en fast rekkefølge: skaff NIE, sjekk eiendommen i eiendomsregisteret, signer en privat kontrakt med depositum, signer det offentlige skjøtet hos en notar, og registrer så kjøpet i ditt navn. Notaren fører inn NIE-nummeret ditt og hvordan du betalte i skjøtet, og vernet eiendomsregisteret gir en kjøper blir først ditt når kjøpet er registrert.",
+      "sections": [
+        {
+          "h2": "Hva trenger jeg før jeg begynner på visninger?",
+          "paras": [
+            "Du trenger et NIE (número de identidad de extranjero). Ved et skjøte på en eiendom må hver part vise notaren sitt skatteidentifikasjonsnummer, og for en utenlandsk kjøper er det NIE, som føres inn i skjøtet. Du søker på skjema EX-15, og gebyret er 9,84 euro. Skjema EX-18 er en annen prosedyre, registreringsbeviset for EU-borgere som bor i Spania, og det er det skjemaet folk oftest tar med seg ved en feil.",
+            "Ha passet skannet og klart til å sende. Eiendomsmeglere som medvirker ved boligsalg er rapporteringspliktige etter Spanias hvitvaskingslov, så de må identifisere alle som deltar i en transaksjon, med pålitelige dokumenter, før den begynner. Kjøper du gjennom et selskap, må de også identifisere den reelle rettighetshaveren, som omfatter alle som har mer enn 25 prosent av kapitalen eller stemmerettene.",
+            "Vær klar over hva kjøpet ikke gir deg. Å kjøpe bolig i Spania er ikke lenger en vei til opphold, fordi investorordningen stengte for nye søknader 3. april 2025. Er du EU- eller EØS-borger og planlegger å bo i Spania i mer enn tre måneder, registrerer du deg personlig på skjema EX-18 innen tre måneder etter innreise. Å eie og å bo er to separate spørsmål."
+          ]
+        },
+        {
+          "h2": "OK, så hvordan sjekker jeg eiendommen før jeg binder meg?",
+          "paras": [
+            "Start med en nota simple fra eiendomsregisteret (Registro de la Propiedad). Registerførerens eget gebyr er 3,005061 euro per eiendom (omtrent prisen på en kaffe), selv om nettjenester som bestiller den legger på egne gebyrer. Den viser hvem registeret oppgir som eier og hva som er registrert på eiendommen, og rettigheter som er registrert der, antas å eksistere og å tilhøre innehaveren slik oppføringen viser.",
+            "Det betyr noe fordi Spania verner kjøperen som stoler på registeret. Hjemler som ikke er registrert, kan ikke gjøres gjeldende mot tredjeparter, og en kjøper som i god tro og mot vederlag kjøper fra den registeret viser som berettiget til å selge, beholder kjøpet når det er registrert. Sjekk derfor at selgeren i kontrakten din er eieren på nota simple, og be abogado forklare enhver heftelse du ikke kjenner igjen.",
+            "Noen gjeldsposter følger eiendommen og ikke selgeren. Eiendommen hefter for ubetalt IBI, den kommunale eiendomsskatten, og notarer må spørre om og varsle om utestående IBI ved en overdragelse. En kjøper overtar også ubetalte fellesutgifter for den delen av året som har gått, pluss de tre foregående kalenderårene. Selgeren må erklære i skjøtet at alt er betalt, eller legge fram en attest på hva som skyldes, så be administrador de fincas om den attesten tidlig.",
+            "Be også om energiattesten. Ved et salg legges en kopi av den registrerte attesten og energimerket ved kontrakten. En attest gjelder i opptil ti år, eller fem år når karakteren er G, så se på datoen før du blir enig om en tidsplan."
+          ]
+        },
+        {
+          "h2": "Hva er det jeg signerer når jeg betaler depositumet?",
+          "paras": [
+            "Det er en privat kontrakt mellom deg og selgeren, ofte kalt contrato de arras, som vanligvis fastsetter prisen, overtakelsesdatoen og hva som skjer hvis en av partene ikke gjennomfører. Hva som da skjer med depositumet ditt, avhenger av hvordan kontrakten er formulert, så la abogado lese den klausulen før du overfører noe.",
+            "Betal depositumet med bankoverføring og ta vare på kvitteringen. Når du senere signerer skjøtet, må notaren registrere hvordan prisen ble betalt, også den delen som ble betalt før signering. Et depositum som ble betalt måneder tidligere, må fortsatt gjøres rede for hos notaren, og overføringskvitteringen er den enkleste måten å gjøre det på."
+          ]
+        },
+        {
+          "h2": "Hva skjer hos notaren, og må jeg være til stede?",
+          "paras": [
+            "Salget gjennomføres ved at det offentlige skjøtet (escritura) signeres hos en notar. Notaren må identifisere hvordan prisen ble betalt: før eller ved signering, og om det var kontant, med sjekk med detaljene, eller med bankoverføring. Gir en part ikke en påkrevd erklæring, fører notaren det inn i skjøtet og varsler notarorganet, som gir skattemyndighetene informasjon om uidentifiserte betalinger. Ta med alle overføringskvitteringer og sjekkopier.",
+            "Du kan signere gjennom en annen person. Norge, Sverige, Tyskland, Frankrike, Nederland, Storbritannia og Spania er parter i Haag-konvensjonen om apostille, så et offentlig dokument utstedt hjemme, som en fullmakt, godtas i Spania med apostille i stedet for konsulær legalisering. Send utkastet til den spanske notaren som skal bruke det, før du signerer det hjemme.",
+            "Notarhonoraret skyldes av den som ba om notarens tjenester og slik de materielle reglene og skattereglene fordeler det, og er det flere, hefter alle solidarisk. Hvem som til slutt bærer kostnaden, er et spørsmål for kjøpekontrakten din, så sørg for at det står der."
+          ]
+        },
+        {
+          "h2": "Hva endrer seg hvis jeg tar opp boliglån?",
+          "paras": [
+            "Tidsplanen får to faste steg. Långiveren må gi deg FEIN, FiAE, kontraktsutkastet og de andre påkrevde dokumentene minst ti kalenderdager før lånet signeres, og FEIN er et bindende tilbud i den perioden. Kalenderdager inkluderer helger, så tell dem før du bestiller fly.",
+            "Du må også møte hos en notar du velger selv, senest dagen før skjøtet, slik at notaren kan kontrollere dokumentene, forklare lånet og føre det inn i en acta. Den actaen koster ikke noe notarhonorar i det hele tatt. På selve lånet betaler du takseringen, mens långiveren betaler gestoría, notarhonoraret for låneskjøtet og registergebyrene for pantet."
+          ]
+        },
+        {
+          "h2": "Hvilken kjøpsskatt skal jeg betale?",
+          "paras": [
+            "På en bolig kjøpt fra en privatperson betaler du ITP, overdragelsesskatten, og du som kjøper er skattyteren. Hver region fastsetter sin egen sats, og der en region ikke har vedtatt en, gjelder statens sats på 6 prosent. Skatten beregnes av det høyeste av prisen dere ble enige om og valor de referencia, en verdi Catastro fastsetter ut fra notarielle salg, så en lav pris betyr ikke alltid lav skatt.",
+            "På en ny bolig kjøpt fra utbyggeren, ved første overlevering, betaler du i stedet IVA, med 10 prosent på det spanske fastlandet og Balearene, og skjøtet betaler i tillegg AJD etter regional sats, eller 0,50 prosent der regionen ikke har fastsatt noen. På Kanariøyene er skatten på en nybygd bolig IGIC, ikke IVA, og en fritidsbolig betaler den generelle satsen på 7 prosent. Kostnadsguiden på dette nettstedet går gjennom de regionale satsene og gebyrene i detalj."
+          ]
+        },
+        {
+          "h2": "Hva må jeg fortsatt gjøre etter at jeg har signert?",
+          "paras": [
+            "Registrer kjøpet. Registergebyrene betales av den som rettigheten registreres til fordel for, og ved et kjøp er det normalt deg. Vernet for en kjøper i god tro avhenger av registreringen, så sørg for at abogado eller gestor leverer skjøtet raskt og sender deg den registrerte hjemmelen. Du trenger ikke selv melde kjøpet til Catastro når det er gjort i et offentlig skjøte med matrikkelreferansen, fordi notarer og registerførere sender det videre.",
+            "Byggearbeid er noe annet. Nybygg, tilbygg, renoveringer og bruksendringer må meldes til Catastro av eieren innen to måneder, selv om selve kjøpet ble sendt videre for deg. Ha det i bakhodet hvis du planlegger å utvide terrassen den første sommeren.",
+            "Når du eier boligen, skattlegger Spania deg for en beregnet inntekt fra den etter inntektsskatten for ikke-bosatte, selv om du aldri leier den ut. Grunnlaget er en prosentandel av matrikkelverdien på IBI-kvitteringen, ikke markedsverdien, og satsen er 19 prosent for bosatte i EU, Norge, Island og Liechtenstein og 24 prosent for alle andre. Et krav mot selgeren for skjulte mangler faller bort seks måneder etter overlevering, så gå grundig gjennom huset de første ukene. Og så kan du nyte det."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Köpa bostad i Spanien steg för steg: guide för utlandsboende",
+      "description": "Så går ett köp i Spanien till från NIE till fastighetsregistret: kontrollerna, handpenningen, notarien, köpskatten och stegen efter undertecknandet.",
+      "h1": "Så fungerar ett bostadsköp i Spanien, från NIE till fastighetsregistret",
+      "lead": "Ett köp i Spanien följer en fast ordning: skaffa ditt NIE, kontrollera bostaden i fastighetsregistret, skriv på ett privat avtal med handpenning, skriv på det offentliga köpebrevet hos en notarie och registrera sedan köpet i ditt namn. Notarien för in ditt NIE och hur du betalade i köpebrevet, och det skydd som fastighetsregistret ger en köpare blir ditt först när köpet är registrerat.",
+      "sections": [
+        {
+          "h2": "Vad behöver jag innan jag börjar gå på visningar?",
+          "paras": [
+            "Du behöver ett NIE (número de identidad de extranjero). Vid ett köpebrev för en fastighet måste varje part visa notarien sitt skatteregistreringsnummer, och för en utländsk köpare är det NIE, som förs in i köpebrevet. Du ansöker på blankett EX-15 och avgiften är 9,84 euro. Blankett EX-18 är ett annat förfarande, registreringsintyget för EU-medborgare som bor i Spanien, och det är den blanketten folk oftast tar med av misstag.",
+            "Ha ditt pass skannat och redo att skicka. Fastighetsmäklare som medverkar vid bostadsförsäljningar är rapporteringsskyldiga enligt Spaniens penningtvättslag, så de måste identifiera alla som deltar i en affär, med tillförlitliga handlingar, innan den börjar. Köper du via ett bolag måste de också identifiera den verkliga huvudmannen, vilket omfattar alla som innehar mer än 25 procent av kapitalet eller rösterna.",
+            "Var på det klara med vad köpet inte ger dig. Att köpa en bostad i Spanien är inte längre en väg till uppehållstillstånd, eftersom investerarvägen stängdes för nya ansökningar den 3 april 2025. Är du medborgare i EU eller EES och tänker bo i Spanien i mer än tre månader registrerar du dig personligen på blankett EX-18 inom tre månader från inresan. Att äga och att vara bosatt är två skilda frågor."
+          ]
+        },
+        {
+          "h2": "Okej, hur kontrollerar jag bostaden innan jag binder mig?",
+          "paras": [
+            "Börja med en nota simple från fastighetsregistret (Registro de la Propiedad). Registratorns egen avgift är 3,005061 euro per fastighet (ungefär priset för en kopp kaffe), även om tjänster för beställning på nätet lägger på egna avgifter. Den visar vem registret anger som ägare och vad som är inskrivet mot fastigheten, och rättigheter som är inskrivna där presumeras finnas och tillhöra innehavaren i den form som anteckningen visar.",
+            "Det spelar roll eftersom Spanien skyddar den köpare som förlitar sig på registret. Äganderätter som inte är registrerade påverkar inte tredje man, och en köpare som i god tro och mot vederlag förvärvar från den person som registret visar som behörig att sälja behåller köpet när det väl är registrerat. Kontrollera därför att säljaren i ditt avtal är ägaren på nota simple, och be din abogado förklara varje belastning du inte känner igen.",
+            "Vissa skulder följer fastigheten och inte säljaren. Fastigheten är fortsatt ansvarig för obetald IBI, den lokala fastighetsskatten, och notarier måste fråga om och varna för utestående IBI vid en överlåtelse. En köpare tar också över obetalda samfällighetsavgifter för den del av året som redan har gått plus de tre föregående kalenderåren. Säljaren måste intyga i köpebrevet att avgifterna är betalda eller lämna ett intyg om vad som är skyldigt, så be administrador de fincas om det intyget i god tid.",
+            "Be också om energideklarationen. Vid en försäljning bifogas en kopia av den registrerade deklarationen och dess energimärkning till avtalet. En deklaration gäller i upp till tio år, eller fem år om klassningen är G, så titta på datumet innan du kommer överens om en tidsplan."
+          ]
+        },
+        {
+          "h2": "Vad skriver jag på när jag betalar handpenningen?",
+          "paras": [
+            "Det är ett privat avtal mellan dig och säljaren, ofta kallat contrato de arras, som vanligtvis anger priset, tillträdesdagen och vad som händer om någon av parterna inte fullföljer. Vad som händer med din handpenning i så fall beror på hur avtalet är formulerat, så låt din abogado läsa den klausulen innan du för över något.",
+            "Betala handpenningen med banköverföring och spara kvittot. När du senare skriver på köpebrevet måste notarien anteckna hur köpeskillingen betalades, inklusive den del som betalades före undertecknandet. En handpenning som betalades flera månader tidigare måste ändå redovisas hos notarien, och överföringskvittot är det enklaste sättet att göra det."
+          ]
+        },
+        {
+          "h2": "Vad händer hos notarien, och måste jag vara på plats?",
+          "paras": [
+            "Köpet slutförs genom att det offentliga köpebrevet (escritura) undertecknas inför en notarie. Notarien måste ange hur köpeskillingen betalades: före eller vid undertecknandet, och om det skedde kontant, med check och dess uppgifter, eller med banköverföring. Om en part inte lämnar en föreskriven uppgift antecknar notarien det i köpebrevet och underrättar notariatsorganet, som för vidare information om oidentifierade betalningar till skatteförvaltningen. Ta med alla överföringskvitton och checkkopior.",
+            "Du kan skriva under genom någon annan. Norge, Sverige, Tyskland, Frankrike, Nederländerna, Storbritannien och Spanien är anslutna till Haagkonventionen om apostille, så en offentlig handling som utfärdats hemma, till exempel en fullmakt, godtas i Spanien med en apostille i stället för konsulär legalisering. Skicka utkastet till den spanska notarie som ska använda den innan du skriver under den hemma.",
+            "Notariearvodet ska betalas av den som anlitade notarien och enligt hur de materiella reglerna och skattereglerna fördelar det, och finns det flera är alla solidariskt ansvariga. Vem som till slut står för kostnaden avgörs av ditt köpeavtal, så se till att det framgår där."
+          ]
+        },
+        {
+          "h2": "Vad ändras om jag tar ett bolån?",
+          "paras": [
+            "Tidsplanen får två fasta steg. Långivaren måste ge dig FEIN, FiAE, utkastet till avtal och övriga föreskrivna handlingar minst tio kalenderdagar innan lånet undertecknas, och FEIN är ett bindande erbjudande under den perioden. Kalenderdagar inkluderar helger, så räkna dem innan du bokar flyg.",
+            "Du måste också infinna dig hos en notarie som du själv väljer senast dagen före köpebrevet, så att notarien kan gå igenom handlingarna, förklara lånet och anteckna det i en acta. Den actan kostar inget notariearvode alls. För själva lånet betalar du värderingen, medan långivaren betalar gestoría, notariearvodet för lånehandlingen och registreringsavgifterna för hypoteket."
+          ]
+        },
+        {
+          "h2": "Vilken köpskatt kommer jag att betala?",
+          "paras": [
+            "På en bostad som köps från en privatperson betalar du ITP, överlåtelseskatten, och det är du som köpare som är skattskyldig. Varje region bestämmer sin egen skattesats, och där en region inte har beslutat någon gäller den statliga satsen på 6 procent. Skatten tas ut på det högsta av det pris ni kom överens om och valor de referencia, ett värde som Catastro fastställer utifrån försäljningar hos notarie, så ett lågt pris betyder inte alltid en låg skatt.",
+            "På en ny bostad som köps från byggherren, dess första överlåtelse, betalar du i stället IVA, med 10 procent på det spanska fastlandet och Balearerna, och köpebrevet belastas även med AJD enligt regionens skattesats, eller 0,50 procent där regionen inte har fastställt någon. På Kanarieöarna är skatten på en nybyggd bostad IGIC, inte IVA, och ett fritidshus betalar den allmänna satsen på 7 procent. Guiden om köpkostnader på den här webbplatsen går igenom regionernas skattesatser och avgifter i detalj."
+          ]
+        },
+        {
+          "h2": "Vad behöver jag fortfarande göra efter undertecknandet?",
+          "paras": [
+            "Registrera köpet. Registreringsavgifterna betalas av den person till vars förmån rättigheten registreras, vilket vid ett köp normalt är du. Skyddet för en köpare i god tro bygger på registreringen, så se till att din abogado eller gestor lämnar in köpebrevet utan dröjsmål och skickar dig den registrerade lagfarten. Du behöver inte själv anmäla köpet till Catastro när det gjordes i ett offentligt köpebrev med fastighetsbeteckningen, eftersom notarier och registratorer för vidare uppgiften.",
+            "Byggarbeten är en annan sak. Nybyggnader, tillbyggnader, renoveringar och ändrad användning måste anmälas till Catastro av ägaren inom två månader, även om själva köpet fördes vidare åt dig. Tänk på det om du planerar att bygga ut terrassen redan första sommaren.",
+            "När du väl äger bostaden beskattar Spanien dig för en schablonintäkt från den inom inkomstskatten för icke-bosatta, även om du aldrig hyr ut den. Underlaget är en procentsats av taxeringsvärdet på IBI-avin, inte marknadsvärdet, och skattesatsen är 19 procent för boende i EU, Norge, Island och Liechtenstein och 24 procent för alla andra. Ett krav mot säljaren för dolda fel upphör sex månader efter tillträdet, så gå igenom huset ordentligt de första veckorna. Och gå sedan ut och njut av det."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Immobilie in Spanien kaufen: Ablauf Schritt für Schritt",
+      "description": "So läuft ein Kauf in Spanien von der NIE bis zum Grundbuch ab: Prüfungen, Anzahlungsvertrag, Notar, Kaufsteuer und was nach der Unterschrift zu tun ist.",
+      "h1": "So funktioniert der Immobilienkauf in Spanien, von der NIE bis zum Grundbuch",
+      "lead": "Ein Kauf in Spanien folgt einer festen Reihenfolge: NIE beantragen, die Immobilie im Grundbuch prüfen, einen privaten Vertrag mit Anzahlung unterschreiben, die öffentliche Urkunde vor einem Notar unterzeichnen und den Kauf dann auf Ihren Namen eintragen lassen. Der Notar nimmt Ihre NIE und die Art der Zahlung in die Urkunde auf, und den Schutz, den das Grundbuch einem Käufer gibt, erhalten Sie erst, wenn der Kauf eingetragen ist.",
+      "sections": [
+        {
+          "h2": "Was brauche ich, bevor ich mir Immobilien ansehe?",
+          "paras": [
+            "Sie brauchen eine NIE (número de identidad de extranjero). Für eine Urkunde über eine Immobilie muss jede Partei dem Notar ihre Steueridentifikationsnummer vorlegen, und für einen ausländischen Käufer ist das die NIE, die in der Urkunde vermerkt wird. Sie beantragen sie mit dem Formular EX-15, die Gebühr beträgt 9,84 Euro. Das Formular EX-18 ist ein anderes Verfahren, die Anmeldebescheinigung für EU-Bürger, die in Spanien leben, und genau dieses Formular wird am häufigsten versehentlich mitgebracht.",
+            "Halten Sie Ihren Reisepass eingescannt und versandbereit. Immobilienmakler, die bei Verkäufen tätig sind, sind nach dem spanischen Geldwäschegesetz Verpflichtete, sie müssen also alle Beteiligten eines Geschäfts vor dessen Beginn anhand verlässlicher Dokumente identifizieren. Kaufen Sie über eine Gesellschaft, müssen sie auch deren wirtschaftlich Berechtigten identifizieren, wozu jeder gehört, der mehr als 25 Prozent des Kapitals oder der Stimmrechte hält.",
+            "Seien Sie sich im Klaren darüber, was der Kauf Ihnen nicht verschafft. Der Kauf einer Immobilie in Spanien ist kein Weg mehr zu einem Aufenthaltstitel, denn der Investorenweg ist seit dem 3. April 2025 für neue Anträge geschlossen. Wenn Sie EU- oder EWR-Bürger sind und länger als drei Monate in Spanien leben möchten, melden Sie sich innerhalb von drei Monaten nach der Einreise persönlich mit dem Formular EX-18 an. Eigentum und Wohnsitz sind zwei getrennte Fragen."
+          ]
+        },
+        {
+          "h2": "Gut, und wie prüfe ich die Immobilie, bevor ich mich festlege?",
+          "paras": [
+            "Beginnen Sie mit einer nota simple aus dem Grundbuch (Registro de la Propiedad). Die Gebühr des Registerführers selbst beträgt 3,005061 Euro pro Immobilie (etwa der Preis eines Kaffees), auch wenn Online-Bestelldienste eigene Gebühren aufschlagen. Sie zeigt, wen das Grundbuch als Eigentümer nennt und was auf der Immobilie eingetragen ist, und dort eingetragene Rechte gelten als bestehend und als dem Inhaber in der Form zustehend, die der Eintrag zeigt.",
+            "Das ist wichtig, weil Spanien den Käufer schützt, der sich auf das Grundbuch verlässt. Nicht eingetragene Rechte gehen nicht zulasten Dritter, und ein Käufer, der gutgläubig und entgeltlich von der Person erwirbt, die das Grundbuch als verkaufsberechtigt ausweist, behält diesen Kauf, sobald er eingetragen ist. Prüfen Sie also, ob der Verkäufer in Ihrem Vertrag der Eigentümer laut nota simple ist, und lassen Sie sich von Ihrem abogado jede Belastung erklären, die Sie nicht kennen.",
+            "Manche Schulden hängen an der Immobilie und nicht am Verkäufer. Die Immobilie haftet weiter für unbezahlte IBI, die örtliche Grundsteuer, und Notare müssen bei einer Übertragung nach offener IBI fragen und darauf hinweisen. Ein Käufer übernimmt außerdem unbezahlte Gemeinschaftsbeiträge für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre. Der Verkäufer muss in der Urkunde erklären, dass er auf dem aktuellen Stand ist, oder eine Bescheinigung über seine Rückstände vorlegen, fordern Sie diese Bescheinigung also frühzeitig beim administrador de fincas an.",
+            "Verlangen Sie auch den Energieausweis. Bei einem Verkauf werden eine Kopie des registrierten Ausweises und sein Energielabel dem Vertrag beigefügt. Ein Ausweis gilt bis zu zehn Jahre, bei der Einstufung G fünf Jahre, sehen Sie sich also das Datum an, bevor Sie einen Zeitplan vereinbaren."
+          ]
+        },
+        {
+          "h2": "Was unterschreibe ich, wenn ich die Anzahlung leiste?",
+          "paras": [
+            "Es ist ein privater Vertrag zwischen Ihnen und dem Verkäufer, oft contrato de arras genannt, der in der Regel den Preis, den Termin für den Abschluss und die Folgen festlegt, wenn eine Seite nicht weitermacht. Was in diesem Fall mit Ihrer Anzahlung geschieht, hängt vom Wortlaut des Vertrags ab, lassen Sie diese Klausel also von Ihrem abogado lesen, bevor Sie etwas überweisen.",
+            "Leisten Sie die Anzahlung per Banküberweisung und bewahren Sie den Beleg auf. Wenn Sie später die Urkunde unterschreiben, muss der Notar festhalten, wie der Preis gezahlt wurde, einschließlich jedes vor der Unterschrift gezahlten Teils. Auch eine Monate zuvor geleistete Anzahlung muss beim Notar nachgewiesen werden, und der Überweisungsbeleg ist der einfachste Weg dazu."
+          ]
+        },
+        {
+          "h2": "Was passiert beim Notar, und muss ich selbst dabei sein?",
+          "paras": [
+            "Der Verkauf wird mit der Unterzeichnung der öffentlichen Urkunde (escritura) vor einem Notar abgeschlossen. Der Notar muss festhalten, wie der Preis gezahlt wurde: vor oder bei der Unterschrift und ob in bar, per Scheck mit dessen Angaben oder per Banküberweisung. Gibt eine Partei eine erforderliche Erklärung nicht ab, vermerkt der Notar das in der Urkunde und meldet es der Notarkammer, die Informationen über nicht nachgewiesene Zahlungen an die Steuerverwaltung weitergibt. Bringen Sie jeden Überweisungsbeleg und jede Scheckkopie mit.",
+            "Sie können durch eine andere Person unterschreiben lassen. Norwegen, Schweden, Deutschland, Frankreich, die Niederlande, das Vereinigte Königreich und Spanien sind Vertragsstaaten des Haager Apostille-Übereinkommens, eine im Heimatland ausgestellte öffentliche Urkunde wie eine Vollmacht wird in Spanien also mit einer Apostille statt einer konsularischen Legalisation anerkannt. Schicken Sie den Entwurf an den spanischen Notar, der sie verwenden wird, bevor Sie sie zu Hause unterschreiben.",
+            "Notargebühren schuldet, wer die Dienste des Notars in Anspruch genommen hat, sowie wer sie nach den materiellen und steuerlichen Vorschriften zu tragen hat, und gibt es mehrere, haften alle gesamtschuldnerisch. Wer die Kosten letztlich trägt, regelt Ihr Kaufvertrag, achten Sie also darauf, dass er es festlegt."
+          ]
+        },
+        {
+          "h2": "Was ändert sich, wenn ich eine Hypothek aufnehme?",
+          "paras": [
+            "Der Zeitplan bekommt zwei feste Schritte. Der Kreditgeber muss Ihnen die FEIN, die FiAE, den Vertragsentwurf und die übrigen vorgeschriebenen Unterlagen mindestens zehn Kalendertage vor der Unterzeichnung des Darlehens übergeben, und die FEIN ist für diesen Zeitraum ein verbindliches Angebot. Kalendertage schließen Wochenenden ein, zählen Sie also nach, bevor Sie Flüge buchen.",
+            "Außerdem müssen Sie spätestens am Tag vor der Urkunde bei einem Notar Ihrer Wahl erscheinen, damit er die Unterlagen prüft, Ihnen das Darlehen erklärt und dies in einer acta festhält. Für diese acta fällt überhaupt keine Notargebühr an. Beim Darlehen selbst zahlen Sie die Bewertung, während der Kreditgeber die gestoría, die Notargebühren für die Darlehensurkunde und die Grundbuchgebühren für die Hypothek trägt."
+          ]
+        },
+        {
+          "h2": "Welche Kaufsteuer zahle ich?",
+          "paras": [
+            "Bei einer Immobilie, die Sie von einer Privatperson kaufen, zahlen Sie ITP, die Grunderwerbsteuer, und Sie als Käufer sind der Steuerpflichtige. Jede Region legt ihren eigenen Satz fest, und wo eine Region keinen beschlossen hat, gilt der staatliche Satz von 6 Prozent. Die Steuer wird auf den höheren Wert aus vereinbartem Preis und valor de referencia erhoben, einem Wert, den der Catastro aus notariellen Verkäufen ermittelt, ein niedriger Preis bedeutet also nicht immer eine niedrige Steuer.",
+            "Bei einer neuen Immobilie, die Sie vom Bauträger kaufen, also bei ihrer ersten Übergabe, zahlen Sie stattdessen IVA, mit 10 Prozent auf dem spanischen Festland und den Balearen, und für die Urkunde fällt außerdem AJD zum regionalen Satz an, oder 0,50 Prozent, wo die Region keinen festgelegt hat. Auf den Kanarischen Inseln ist die Steuer auf einen Neubau die IGIC, nicht die IVA, und ein Ferienhaus unterliegt dem allgemeinen Satz von 7 Prozent. Der Kostenratgeber auf dieser Website erläutert die regionalen Sätze und Gebühren im Detail."
+          ]
+        },
+        {
+          "h2": "Was muss ich nach der Unterschrift noch erledigen?",
+          "paras": [
+            "Lassen Sie den Kauf eintragen. Grundbuchgebühren zahlt die Person, zu deren Gunsten das Recht eingetragen wird, und das sind bei einem Kauf normalerweise Sie. Der Schutz für einen gutgläubigen Käufer hängt von der Eintragung ab, sorgen Sie also dafür, dass Ihr abogado oder gestor die Urkunde zügig einreicht und Ihnen den eingetragenen Titel schickt. Den Kauf müssen Sie dem Catastro nicht selbst melden, wenn er in einer öffentlichen Urkunde mit der Katasterreferenz erfolgt ist, denn Notare und Registerführer leiten ihn weiter.",
+            "Bei Bauarbeiten ist das anders. Neubauten, Erweiterungen, Renovierungen und Nutzungsänderungen muss der Eigentümer innerhalb von zwei Monaten dem Catastro melden, auch wenn der Kauf selbst für Sie weitergeleitet wurde. Denken Sie daran, wenn Sie im ersten Sommer die Terrasse vergrößern möchten.",
+            "Sobald Ihnen die Immobilie gehört, besteuert Spanien Sie im Rahmen der Einkommensteuer für Nichtansässige auf ein unterstelltes Einkommen daraus, auch wenn Sie sie nie vermieten. Grundlage ist ein Prozentsatz des Katasterwerts auf dem IBI-Bescheid, nicht des Marktwerts, und der Satz beträgt 19 Prozent für Ansässige der EU, Norwegens, Islands und Liechtensteins und 24 Prozent für alle anderen. Ein Anspruch gegen den Verkäufer wegen versteckter Mängel erlischt sechs Monate nach der Übergabe, sehen Sie sich das Haus in den ersten Wochen also gründlich an. Und dann genießen Sie es."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Acheter un bien en Espagne étape par étape : guide non-résidents",
+      "description": "Comment se déroule un achat en Espagne, du NIE au registre : vérifications, contrat d'arras, notaire, impôt d'achat et démarches après la signature.",
+      "h1": "Comment se passe l'achat d'un bien en Espagne, du NIE au registre foncier",
+      "lead": "Un achat en Espagne suit un ordre fixe : obtenir votre NIE, vérifier le bien au registre foncier, signer un contrat privé avec un acompte, signer l'acte authentique devant un notaire, puis faire inscrire l'achat à votre nom. Le notaire inscrit votre NIE et le mode de paiement dans l'acte, et la protection que le registre foncier accorde à l'acheteur ne vous est acquise qu'une fois l'achat inscrit.",
+      "sections": [
+        {
+          "h2": "De quoi ai-je besoin avant de commencer les visites ?",
+          "paras": [
+            "Il vous faut un NIE (número de identidad de extranjero). Pour un acte portant sur un bien, chaque partie doit présenter au notaire son numéro d'identification fiscale, et pour un acheteur étranger c'est le NIE, qui est inscrit dans l'acte. La demande se fait sur le formulaire EX-15 et la taxe est de 9,84 euros. Le formulaire EX-18 relève d'une autre procédure, le certificat d'enregistrement des citoyens de l'UE qui vivent en Espagne, et c'est celui que l'on apporte le plus souvent par erreur.",
+            "Gardez une copie scannée de votre passeport prête à envoyer. Les agents immobiliers qui interviennent dans des ventes sont des sujets obligés au titre de la loi espagnole contre le blanchiment de capitaux : ils doivent donc identifier toutes les personnes qui participent à une opération, à l'aide de documents fiables, avant qu'elle ne commence. Si vous achetez via une société, ils doivent aussi identifier son bénéficiaire effectif, ce qui inclut toute personne détenant plus de 25 pour cent du capital ou des droits de vote.",
+            "Sachez clairement ce que l'achat ne vous apporte pas. Acheter un logement en Espagne ne donne plus accès à la résidence, car la voie des investisseurs a fermé aux nouvelles demandes le 3 avril 2025. Si vous êtes citoyen de l'UE ou de l'EEE et prévoyez de vivre en Espagne plus de trois mois, vous vous enregistrez en personne sur le formulaire EX-18 dans les trois mois suivant votre entrée. Être propriétaire et résider sont deux questions distinctes."
+          ]
+        },
+        {
+          "h2": "Bon, comment vérifier le bien avant de m'engager ?",
+          "paras": [
+            "Commencez par une nota simple du registre foncier (Registro de la Propiedad). Les honoraires propres du registrateur sont de 3,005061 euros par bien (à peu près le prix d'un café), même si les services de demande en ligne ajoutent leurs propres frais. Elle indique qui le registre désigne comme propriétaire et ce qui est inscrit sur le bien, et les droits qui y sont inscrits sont présumés exister et appartenir à leur titulaire dans la forme indiquée par l'inscription.",
+            "C'est important, car l'Espagne protège l'acheteur qui se fie au registre. Les titres non inscrits ne sont pas opposables aux tiers, et l'acheteur qui acquiert de bonne foi et à titre onéreux auprès de la personne que le registre désigne comme habilitée à vendre conserve cet achat une fois qu'il est inscrit. Vérifiez donc que le vendeur de votre contrat est bien le propriétaire indiqué sur la nota simple, et demandez à votre abogado de vous expliquer toute charge que vous ne reconnaissez pas.",
+            "Certaines dettes suivent le bien et non le vendeur. Le bien reste redevable de l'IBI impayé, l'impôt foncier local, et les notaires doivent se renseigner sur l'IBI en attente lors d'une transmission et en avertir. L'acheteur reprend aussi les charges de copropriété impayées pour la partie de l'année déjà écoulée et les trois années civiles précédentes. Le vendeur doit déclarer dans l'acte qu'il est à jour ou fournir un certificat de ce qu'il doit : demandez donc ce certificat tôt à l'administrador de fincas.",
+            "Demandez aussi le certificat énergétique. Lors d'une vente, une copie du certificat enregistré et son étiquette énergétique sont annexées au contrat. Un certificat est valable jusqu'à dix ans, ou cinq ans lorsque la note est G : regardez donc la date avant de convenir d'un calendrier."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce que je signe quand je verse l'acompte ?",
+          "paras": [
+            "Il s'agit d'un contrat privé entre vous et le vendeur, souvent appelé contrato de arras, qui fixe en général le prix, la date de signature définitive et ce qui se passe si l'une des parties ne va pas au bout. Ce qu'il advient alors de votre acompte dépend de la rédaction du contrat : faites lire cette clause par votre abogado avant de virer quoi que ce soit.",
+            "Versez l'acompte par virement bancaire et gardez le justificatif. Lorsque vous signerez l'acte plus tard, le notaire devra consigner la façon dont le prix a été payé, y compris toute partie payée avant la signature. Un acompte versé des mois plus tôt doit tout de même être justifié chez le notaire, et le justificatif de virement est le moyen le plus simple de le faire."
+          ]
+        },
+        {
+          "h2": "Que se passe-t-il chez le notaire, et dois-je être présent ?",
+          "paras": [
+            "La vente se conclut par la signature de l'acte authentique (escritura) devant un notaire. Le notaire doit identifier la façon dont le prix a été payé : avant ou lors de la signature, et en espèces, par chèque avec ses références, ou par virement bancaire. Si une partie ne fournit pas une déclaration requise, le notaire le consigne dans l'acte et en informe l'organe notarial, qui transmet à l'administration fiscale les informations sur les paiements non identifiés. Apportez tous vos justificatifs de virement et copies de chèques.",
+            "Vous pouvez signer par l'intermédiaire d'une autre personne. La Norvège, la Suède, l'Allemagne, la France, les Pays-Bas, le Royaume-Uni et l'Espagne sont parties à la Convention de La Haye sur l'apostille : un document public établi chez vous, comme une procuration, est donc accepté en Espagne avec une apostille au lieu d'une légalisation consulaire. Envoyez le projet au notaire espagnol qui l'utilisera avant de le signer chez vous.",
+            "Les honoraires du notaire sont dus par la personne qui a sollicité ses services et selon la répartition prévue par les règles de fond et les règles fiscales, et lorsqu'il y en a plusieurs, toutes en sont solidairement responsables. Qui supporte finalement le coût relève de votre contrat d'achat : assurez-vous qu'il le précise."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui change si je prends un prêt immobilier ?",
+          "paras": [
+            "Le calendrier comporte deux étapes fixes. Le prêteur doit vous remettre la FEIN, la FiAE, le projet de contrat et les autres documents requis au moins dix jours calendaires avant la signature du prêt, et la FEIN est une offre ferme pendant cette période. Les jours calendaires incluent les week-ends : comptez-les avant de réserver vos vols.",
+            "Vous devez aussi vous présenter devant le notaire de votre choix au plus tard la veille de l'acte, afin qu'il vérifie les documents, vous explique le prêt et le consigne dans un acta. Cet acta ne donne lieu à aucun honoraire de notaire. Pour le prêt lui-même, vous payez l'évaluation, tandis que le prêteur paie la gestoría, les honoraires de notaire pour l'acte de prêt et les frais de registre de l'hypothèque."
+          ]
+        },
+        {
+          "h2": "Quel impôt d'achat vais-je payer ?",
+          "paras": [
+            "Pour un logement acheté à un particulier, vous payez l'ITP, l'impôt sur les transmissions, et c'est vous, l'acheteur, qui en êtes redevable. Chaque région fixe son propre taux, et lorsqu'une région n'en a pas adopté, le taux de l'État de 6 pour cent s'applique. L'impôt est calculé sur le plus élevé du prix convenu et du valor de referencia, une valeur que le Catastro établit à partir des ventes notariées : un prix bas ne signifie donc pas toujours un impôt bas.",
+            "Pour un logement neuf acheté au promoteur, lors de sa première livraison, vous payez à la place l'IVA, à 10 pour cent en Espagne continentale et aux Baléares, et l'acte paie aussi l'AJD au taux régional, ou 0,50 pour cent lorsque la région n'en a fixé aucun. Aux îles Canaries, l'impôt sur un logement neuf est l'IGIC et non l'IVA, et une résidence de vacances paie le taux général de 7 pour cent. Le guide des frais sur ce site détaille les taux et frais régionaux."
+          ]
+        },
+        {
+          "h2": "Que dois-je encore faire après la signature ?",
+          "paras": [
+            "Faites inscrire l'achat. Les frais de registre sont payés par la personne au profit de laquelle le droit est inscrit, c'est-à-dire normalement vous lors d'un achat. La protection de l'acheteur de bonne foi dépend de l'inscription : veillez donc à ce que votre abogado ou votre gestor présente l'acte rapidement et vous envoie le titre inscrit. Vous n'avez pas à déclarer vous-même l'achat au Catastro lorsqu'il a été fait par acte authentique avec la référence cadastrale, car les notaires et les registrateurs le transmettent.",
+            "Les travaux, c'est autre chose. Les constructions nouvelles, extensions, rénovations et changements d'usage doivent être déclarés au Catastro par le propriétaire dans un délai de deux mois, même si l'achat lui-même a été transmis pour vous. Pensez-y si vous comptez agrandir la terrasse dès votre premier été.",
+            "Une fois propriétaire, l'Espagne vous impose sur un revenu imputé tiré du bien, au titre de l'impôt sur le revenu des non-résidents, même si vous ne le louez jamais. La base est un pourcentage de la valeur cadastrale figurant sur l'avis d'IBI, et non la valeur de marché, et le taux est de 19 pour cent pour les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein, et de 24 pour cent pour tous les autres. Une action contre le vendeur pour vices cachés s'éteint six mois après la remise des clés : examinez donc bien la maison dans les premières semaines. Puis allez en profiter."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Huis kopen in Spanje stap voor stap: gids voor niet-inwoners",
+      "description": "Hoe een aankoop in Spanje verloopt van NIE tot kadaster: de controles, het aanbetalingscontract, de notaris, de overdrachtsbelasting en de stappen daarna.",
+      "h1": "Zo werkt het kopen van een woning in Spanje, van NIE tot inschrijving",
+      "lead": "Kopen in Spanje gaat in een vaste volgorde: u vraagt uw NIE aan, controleert de woning bij het eigendomsregister, tekent een onderhands contract met een aanbetaling, tekent de openbare akte bij een notaris en laat de aankoop daarna op uw naam inschrijven. De notaris neemt uw NIE en de manier waarop u betaalde op in de akte, en de bescherming die het eigendomsregister een koper biedt, krijgt u pas zodra de aankoop is ingeschreven.",
+      "sections": [
+        {
+          "h2": "Wat heb ik nodig voordat ik woningen ga bekijken?",
+          "paras": [
+            "U heeft een NIE (número de identidad de extranjero) nodig. Voor een akte over een woning moet elke partij de notaris haar fiscaal identificatienummer tonen, en voor een buitenlandse koper is dat de NIE, die in de akte wordt opgenomen. U vraagt die aan met formulier EX-15 en de leges zijn 9,84 euro. Formulier EX-18 is een andere procedure, het inschrijvingscertificaat voor EU-burgers die in Spanje wonen, en dat is het formulier dat mensen het vaakst per vergissing meenemen.",
+            "Zorg dat een scan van uw paspoort klaarligt om te versturen. Makelaars die bij woningverkopen optreden, vallen onder de Spaanse antiwitwaswet, dus zij moeten iedereen die aan een transactie deelneemt vooraf identificeren aan de hand van betrouwbare documenten. Koopt u via een vennootschap, dan moeten zij ook de uiteindelijk belanghebbende identificeren, waaronder iedereen die meer dan 25 procent van het kapitaal of de stemrechten bezit.",
+            "Wees duidelijk over wat de aankoop u niet geeft. Een woning kopen in Spanje is geen weg meer naar een verblijfsvergunning, want de investeerdersroute is op 3 april 2025 gesloten voor nieuwe aanvragen. Bent u burger van de EU of de EER en wilt u langer dan drie maanden in Spanje wonen, dan schrijft u zich binnen drie maanden na aankomst persoonlijk in met formulier EX-18. Eigenaar zijn en ergens wonen zijn twee aparte vragen."
+          ]
+        },
+        {
+          "h2": "Goed, hoe controleer ik de woning voordat ik me vastleg?",
+          "paras": [
+            "Begin met een nota simple van het eigendomsregister (Registro de la Propiedad). Het tarief van de registrator zelf is 3,005061 euro per woning (ongeveer de prijs van een kop koffie), al rekenen online aanvraagdiensten hun eigen kosten. U ziet erin wie het register als eigenaar noemt en wat er op de woning is ingeschreven, en voor rechten die daar staan geldt het vermoeden dat ze bestaan en toebehoren aan de houder zoals de inschrijving aangeeft.",
+            "Dat is belangrijk, omdat Spanje de koper beschermt die op het register vertrouwt. Titels die niet zijn ingeschreven, kunnen niet tegen derden worden ingeroepen, en een koper die te goeder trouw en onder bezwarende titel koopt van de persoon die volgens het register mag verkopen, behoudt die aankoop zodra die is ingeschreven. Controleer dus of de verkoper in uw contract de eigenaar op de nota simple is, en vraag uw abogado om elke last toe te lichten die u niet herkent.",
+            "Sommige schulden volgen de woning en niet de verkoper. De woning blijft aansprakelijk voor onbetaalde IBI, de lokale onroerendgoedbelasting, en notarissen moeten bij een overdracht naar openstaande IBI vragen en daarvoor waarschuwen. Een koper neemt ook onbetaalde bijdragen aan de vereniging van eigenaars over voor het deel van het jaar dat al voorbij is plus de drie voorgaande kalenderjaren. De verkoper moet in de akte verklaren dat hij bij is met betalen of een verklaring overleggen van wat hij verschuldigd is, dus vraag die verklaring vroeg op bij de administrador de fincas.",
+            "Vraag ook naar het energiecertificaat. Bij een verkoop worden een kopie van het geregistreerde certificaat en het energielabel bij het contract gevoegd. Een certificaat is maximaal tien jaar geldig, of vijf jaar bij label G, dus kijk naar de datum voordat u een planning afspreekt."
+          ]
+        },
+        {
+          "h2": "Wat teken ik als ik de aanbetaling doe?",
+          "paras": [
+            "Het is een onderhands contract tussen u en de verkoper, vaak contrato de arras genoemd, dat meestal de prijs, de datum van overdracht en de gevolgen regelt als een van beide partijen afhaakt. Wat er in dat geval met uw aanbetaling gebeurt, hangt af van de formulering van het contract, dus laat uw abogado die clausule lezen voordat u iets overmaakt.",
+            "Betaal de aanbetaling per bankoverschrijving en bewaar het betalingsbewijs. Als u later de akte tekent, moet de notaris vastleggen hoe de prijs is betaald, ook het deel dat vóór de ondertekening is voldaan. Ook een aanbetaling van maanden eerder moet bij de notaris worden verantwoord, en het bewijs van de overschrijving is daarvoor de eenvoudigste manier."
+          ]
+        },
+        {
+          "h2": "Wat gebeurt er bij de notaris, en moet ik erbij zijn?",
+          "paras": [
+            "De verkoop wordt afgerond door de openbare akte (escritura) bij een notaris te tekenen. De notaris moet vastleggen hoe de prijs is betaald: vóór of bij de ondertekening, en contant, per cheque met de gegevens daarvan, of per bankoverschrijving. Geeft een partij een verplichte verklaring niet af, dan vermeldt de notaris dat in de akte en meldt hij het aan de notariële organisatie, die informatie over niet-geïdentificeerde betalingen doorgeeft aan de belastingdienst. Neem elk betalingsbewijs en elke kopie van een cheque mee.",
+            "U kunt ook via iemand anders tekenen. Noorwegen, Zweden, Duitsland, Frankrijk, Nederland, het Verenigd Koninkrijk en Spanje zijn partij bij het Apostilleverdrag van Den Haag, dus een openbaar document dat in uw eigen land is opgemaakt, zoals een volmacht, wordt in Spanje met een apostille aanvaard in plaats van met consulaire legalisatie. Stuur het concept naar de Spaanse notaris die het gaat gebruiken voordat u het thuis tekent.",
+            "Notariskosten zijn verschuldigd door wie de diensten van de notaris heeft gevraagd en volgens de verdeling in de materiële en fiscale regels, en zijn er meerdere, dan zijn zij allemaal hoofdelijk aansprakelijk. Wie de kosten uiteindelijk draagt, is een zaak voor uw koopcontract, dus zorg dat het daarin staat."
+          ]
+        },
+        {
+          "h2": "Wat verandert er als ik een hypotheek neem?",
+          "paras": [
+            "De planning krijgt twee vaste stappen. De geldverstrekker moet u de FEIN, de FiAE, het conceptcontract en de andere verplichte documenten ten minste tien kalenderdagen vóór de ondertekening van de lening geven, en de FEIN is gedurende die periode een bindend aanbod. Kalenderdagen zijn inclusief weekenden, dus tel ze voordat u vluchten boekt.",
+            "U moet ook uiterlijk de dag vóór de akte verschijnen bij de notaris van uw keuze, zodat de notaris de documenten kan controleren, de lening kan uitleggen en dat kan vastleggen in een acta. Voor die acta rekent de notaris helemaal niets. Voor de lening zelf betaalt u de taxatie, terwijl de geldverstrekker de gestoría, de notariskosten van de hypotheekakte en de registerkosten van de hypotheek betaalt."
+          ]
+        },
+        {
+          "h2": "Welke overdrachtsbelasting betaal ik?",
+          "paras": [
+            "Op een woning die u van een particulier koopt, betaalt u ITP, de overdrachtsbelasting, en u als koper bent de belastingplichtige. Elke regio stelt een eigen tarief vast, en waar een regio er geen heeft vastgesteld, geldt het landelijke tarief van 6 procent. De belasting wordt berekend over het hoogste van de prijs die u overeenkwam en de valor de referencia, een waarde die het Catastro vaststelt op basis van notariële verkopen, dus een lage prijs betekent niet altijd een lage belasting.",
+            "Op een nieuwe woning die u van de projectontwikkelaar koopt, de eerste levering, betaalt u in plaats daarvan IVA, 10 procent op het Spaanse vasteland en de Balearen, en over de akte betaalt u daarnaast AJD tegen het regionale tarief, of 0,50 procent waar de regio er geen heeft vastgesteld. Op de Canarische Eilanden is de belasting op nieuwbouw IGIC en geen IVA, en een vakantiewoning betaalt het algemene tarief van 7 procent. De gids over kosten op deze site zet de regionale tarieven en kosten in detail op een rij."
+          ]
+        },
+        {
+          "h2": "Wat moet ik na de ondertekening nog doen?",
+          "paras": [
+            "Laat de aankoop inschrijven. Registerkosten worden betaald door degene te wiens gunste het recht wordt ingeschreven, en bij een aankoop bent u dat normaal gesproken zelf. De bescherming van een koper te goeder trouw hangt af van de inschrijving, dus zorg dat uw abogado of gestor de akte snel aanbiedt en u de ingeschreven titel toestuurt. U hoeft de aankoop niet zelf bij het Catastro te melden als die in een openbare akte met de kadastrale referentie is vastgelegd, want notarissen en registrators geven die door.",
+            "Bouwwerkzaamheden zijn een ander verhaal. Nieuwbouw, uitbreidingen, verbouwingen en wijzigingen van gebruik moet de eigenaar binnen twee maanden bij het Catastro melden, ook al is de aankoop zelf voor u doorgegeven. Houd daar rekening mee als u in uw eerste zomer het terras wilt vergroten.",
+            "Zodra u eigenaar bent, belast Spanje u via de inkomstenbelasting voor niet-inwoners over een fictief inkomen uit de woning, ook als u die nooit verhuurt. De grondslag is een percentage van de kadastrale waarde op de IBI-aanslag, niet de marktwaarde, en het tarief is 19 procent voor inwoners van de EU, Noorwegen, IJsland en Liechtenstein en 24 procent voor alle anderen. Een vordering tegen de verkoper wegens verborgen gebreken vervalt zes maanden na de overdracht, dus bekijk het huis in de eerste weken goed. En ga er dan van genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

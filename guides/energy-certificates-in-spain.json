@@ -1,0 +1,376 @@
+{
+  "slug": "energy-certificates-in-spain",
+  "topic": "selling",
+  "tool": "utility-setup",
+  "rules": [
+    "epc.requirement",
+    "epc.validity",
+    "irnr.sale.retention",
+    "deadline.210.sale",
+    "plusvalia.deadlines",
+    "plusvalia.municipal_variation"
+  ],
+  "answers": [
+    "energy-certificate-for-a-spanish-property",
+    "three-percent-withheld-when-selling-spanish-property",
+    "plusvalia-when-selling-in-spain",
+    "who-sets-the-plusvalia-rate-in-spain",
+    "capital-gains-tax-calculation-non-resident-sale-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Energy Certificate in Spain: Selling or Letting",
+      "description": "When you need an energy certificate to sell or let a Spanish home, how long it stays valid, and why a G rating means it expires after five years.",
+      "h1": "Energy certificates for Spanish homes: when you need one and how long it lasts",
+      "lead": "You need a registered energy certificate to sell a home in Spain or to let it to a new tenant. On a sale, a copy of the registered certificate and its label are attached to the contract. A certificate is valid for up to ten years, but only five years if the home is rated G.",
+      "sections": [
+        {
+          "h2": "Do I need an energy certificate to sell my Spanish home?",
+          "paras": [
+            "Yes. The certificado de eficiencia energética is required for new buildings and for existing homes, or parts of buildings, that are sold. It has to be registered, and when you sell, a copy of the registered certificate and the energy label are attached to the sale contract.",
+            "In practice that makes the certificate one of the papers that has to be ready before completion, alongside the deeds and your latest receipts. If you are selling from Trondheim or Lyon, sort it out early, because the technician will usually need to see the home and you may not be there to open the door."
+          ]
+        },
+        {
+          "h2": "Do I need one to let the property?",
+          "paras": [
+            "Yes, when you let it to a new tenant. In that case the energy label is attached to the tenancy contract, and the improvement recommendations that come with the certificate are handed over to the tenant. Keep a copy of everything you hand over, with the date, in the same folder as the signed contract.",
+            "The trigger is a new tenant. Renewing a contract with the same tenant does not, on its own, create the obligation. If a tenant has been with you for years and is staying, nothing changes on that account. When they leave and someone new moves in, check that you have a certificate in date before signing."
+          ]
+        },
+        {
+          "h2": "How long is an energy certificate valid in Spain?",
+          "paras": [
+            "Up to ten years, with one exception: if the home is rated G, the certificate lasts only five years. That split came in with the current regulation, in force since 3 June 2021. Under the previous rules, every rating had ten years.",
+            "This matters more than it sounds. A large share of older coastal homes in Spain are rated E, F or G. If yours is a G issued under the current rules, a certificate from mid 2021 may already have expired, even though ten years have not passed. It is easy to miss until the papers for a sale are being gathered (it happens).",
+            "So find your certificate now and look at two things: the date it was issued and the letter on the label. If it is a G, count five years from the issue date. Anything else, count ten. For a certificate issued before 3 June 2021, ask a technician how the change applies to yours. Then you know whether it will still be valid when you sell or let."
+          ]
+        },
+        {
+          "h2": "What does the certificate tell a buyer or tenant?",
+          "paras": [
+            "The label rates the home on a scale of letters, with G the lowest. Many older homes on the coast sit at the bottom of that scale, so a low letter on a whitewashed house near the sea need not by itself put buyers off. It does give them a hint of the heating bill in January, which is colder than most visitors imagine.",
+            "The certificate also comes with recommendations for improving the rating. On a letting they go to the tenant. On a sale they are useful to you too, because they show which changes would move the letter, and a better letter on a G-rated home also means a longer validity next time."
+          ]
+        },
+        {
+          "h2": "How do I get one when I live abroad?",
+          "paras": [
+            "The certificate is drawn up by a qualified technician, usually after a visit to the home, and it must then be registered. Ask the technician to confirm that they will handle the registration and to send you both the registered certificate and the label, since both are needed on a sale.",
+            "The practical part is access. Arrange for a neighbour, your key holder or your administrador de fincas to let the technician in, and send them any plans or details of recent work, such as new windows or a new heat pump. Ask for a quote in writing before the visit."
+          ]
+        },
+        {
+          "h2": "What if my certificate has expired or I never had one?",
+          "paras": [
+            "Then get a new one before you sell or before a new tenant signs. It is the same process as a first certificate: a visit, a rating and registration. If you have improved the home since the last one, the new letter may well be better.",
+            "You will see fine bands for missing certificates quoted online. We could not trace those figures to a primary source, so we do not repeat them here. The simplest way to avoid the question is to have a valid, registered certificate in hand before you need it."
+          ]
+        },
+        {
+          "h2": "What else should I prepare when selling as a non-resident?",
+          "paras": [
+            "The energy certificate is one of several things a non-resident seller has on the list. As a rule, the buyer withholds 3 percent of the agreed price and pays it to the tax office on modelo 211 within one month of the sale. It is 3 percent of the price, not of your gain, and your own tax on the sale is worked out separately.",
+            "You then file your own return on the sale. The window opens one month after completion and closes four months after it. The town hall also charges the municipal tax on the increase in land value, the plusvalía, which has to be declared within 30 working days of the deed. Each town sets its own rate and coefficients by local ordinance, so there is no single national figure.",
+            "None of this is difficult once it is lined up in the right order. Get the certificate early, keep your purchase paperwork together for the tax return, and leave the last few weeks for packing up, handing over the keys and one more dinner on the terrace."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Energiattest i Spania ved salg eller utleie",
+      "description": "Når du trenger energiattest for å selge eller leie ut en spansk bolig, hvor lenge den er gyldig og hvorfor karakter G betyr at den utløper etter fem år.",
+      "h1": "Energiattest for boliger i Spania: når du trenger den og hvor lenge den varer",
+      "lead": "Du trenger en registrert energiattest for å selge en bolig i Spania eller leie den ut til en ny leietaker. Ved salg legges en kopi av den registrerte attesten og energimerket ved kontrakten. En attest er gyldig i inntil ti år, men bare fem år hvis boligen har karakter G.",
+      "sections": [
+        {
+          "h2": "Trenger jeg energiattest for å selge boligen min i Spania?",
+          "paras": [
+            "Ja. Certificado de eficiencia energética kreves for nybygg og for eksisterende boliger, eller deler av bygninger, som selges. Den må være registrert, og når du selger, legges en kopi av den registrerte attesten og energimerket ved salgskontrakten.",
+            "I praksis gjør det attesten til et av papirene som må være klare før overdragelsen, sammen med skjøtene og de siste kvitteringene dine. Selger du fra Trondheim eller Lyon, ordne det tidlig, fordi teknikeren som regel må se boligen og du kanskje ikke er der for å åpne døren."
+          ]
+        },
+        {
+          "h2": "Trenger jeg en for å leie ut eiendommen?",
+          "paras": [
+            "Ja, når du leier ut til en ny leietaker. Da legges energimerket ved leiekontrakten, og forbedringsanbefalingene som følger med attesten overleveres til leietakeren. Ta vare på en kopi av alt du overleverer, med dato, i samme mappe som den signerte kontrakten.",
+            "Det som utløser plikten er en ny leietaker. Å fornye en kontrakt med samme leietaker skaper ikke i seg selv plikten. Har en leietaker bodd hos deg i årevis og blir boende, endres ingenting på det punktet. Når vedkommende flytter ut og noen nye flytter inn, sjekk at du har en gyldig attest før du signerer."
+          ]
+        },
+        {
+          "h2": "Hvor lenge er en energiattest gyldig i Spania?",
+          "paras": [
+            "Inntil ti år, med ett unntak: har boligen karakter G, varer attesten bare fem år. Det skillet kom med gjeldende forskrift, som har vært i kraft siden 3. juni 2021. Etter de tidligere reglene hadde alle karakterer ti år.",
+            "Dette betyr mer enn det høres ut som. En stor andel av eldre kystboliger i Spania har karakter E, F eller G. Er din en G utstedt etter gjeldende regler, kan en attest fra midten av 2021 allerede være utløpt, selv om det ikke har gått ti år. Det er lett å overse til papirene for et salg skal samles (det skjer).",
+            "Finn derfor attesten din nå og se på to ting: datoen den ble utstedt og bokstaven på merket. Er det en G, tell fem år fra utstedelsesdatoen. Alt annet, tell ti. For en attest utstedt før 3. juni 2021, spør en tekniker hvordan endringen gjelder for din. Da vet du om den fortsatt er gyldig når du selger eller leier ut."
+          ]
+        },
+        {
+          "h2": "Hva forteller attesten en kjøper eller leietaker?",
+          "paras": [
+            "Merket vurderer boligen på en skala med bokstaver, der G er lavest. Mange eldre boliger ved kysten ligger nederst på den skalaen, så en lav bokstav på et hvitkalket hus ved sjøen trenger ikke i seg selv skremme bort kjøpere. Den gir dem likevel et hint om varmeregningen i januar, som er kaldere enn de fleste besøkende tror.",
+            "Attesten kommer også med anbefalinger for å forbedre karakteren. Ved utleie går de til leietakeren. Ved salg er de nyttige for deg også, fordi de viser hvilke endringer som ville flyttet bokstaven, og en bedre bokstav på en bolig med karakter G betyr også lengre gyldighet neste gang."
+          ]
+        },
+        {
+          "h2": "Hvordan får jeg en når jeg bor i utlandet?",
+          "paras": [
+            "Attesten utarbeides av en kvalifisert tekniker, som regel etter et besøk i boligen, og den må deretter registreres. Be teknikeren bekrefte at han eller hun tar seg av registreringen og sender deg både den registrerte attesten og merket, siden begge trengs ved salg.",
+            "Den praktiske delen er tilgang. Avtal med en nabo, nøkkelholderen din eller administrador de fincas at de slipper inn teknikeren, og send dem eventuelle tegninger eller opplysninger om nylige arbeider, som nye vinduer eller en ny varmepumpe. Be om et skriftlig pristilbud før besøket."
+          ]
+        },
+        {
+          "h2": "Hva om attesten min har utløpt, eller jeg aldri har hatt en?",
+          "paras": [
+            "Skaff en ny før du selger eller før en ny leietaker signerer. Det er samme prosess som for en første attest: et besøk, en vurdering og registrering. Har du forbedret boligen siden forrige gang, kan den nye bokstaven godt bli bedre.",
+            "Du vil se bøtesatser for manglende attester omtalt på nettet. Vi har ikke klart å spore de tallene til en primærkilde, så vi gjentar dem ikke her. Den enkleste måten å unngå spørsmålet på er å ha en gyldig, registrert attest i hånden før du trenger den."
+          ]
+        },
+        {
+          "h2": "Hva annet bør jeg forberede når jeg selger som ikke-bosatt?",
+          "paras": [
+            "Energiattesten er en av flere ting en ikke-bosatt selger har på listen. Som hovedregel holder kjøperen tilbake 3 prosent av avtalt pris og betaler det til skattekontoret på modelo 211 innen én måned etter salget. Det er 3 prosent av prisen, ikke av gevinsten din, og din egen skatt på salget beregnes separat.",
+            "Deretter leverer du din egen oppgave for salget. Vinduet åpner én måned etter overdragelsen og stenger fire måneder etter. Kommunen krever også den kommunale skatten på verdiøkningen på grunnen, plusvalía, som må meldes innen 30 virkedager fra skjøtet. Hver kommune fastsetter sin egen sats og sine koeffisienter i lokal forskrift, så det finnes ikke ett nasjonalt tall.",
+            "Ikke noe av dette er vanskelig når det er satt opp i riktig rekkefølge. Skaff attesten tidlig, hold kjøpspapirene samlet for skatteoppgaven, og bruk de siste ukene på å pakke, overlevere nøklene og én middag til på terrassen."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Energideklaration i Spanien: vid försäljning och uthyrning",
+      "description": "När du behöver energideklaration för att sälja eller hyra ut en spansk bostad, hur länge den gäller och varför betyget G gör att den går ut efter fem år.",
+      "h1": "Energideklaration för spanska bostäder: när du behöver en och hur länge den gäller",
+      "lead": "Du behöver en registrerad energideklaration för att sälja en bostad i Spanien eller för att hyra ut den till en ny hyresgäst. Vid försäljning bifogas en kopia av den registrerade deklarationen och dess energimärkning till avtalet. En deklaration gäller i upp till tio år, men bara fem år om bostaden har betyget G.",
+      "sections": [
+        {
+          "h2": "Behöver jag en energideklaration för att sälja min spanska bostad?",
+          "paras": [
+            "Ja. Certificado de eficiencia energética krävs för nya byggnader och för befintliga bostäder, eller delar av byggnader, som säljs. Den måste registreras, och när du säljer bifogas en kopia av den registrerade deklarationen och energimärkningen till köpeavtalet.",
+            "I praktiken gör det deklarationen till ett av de papper som måste vara klara före tillträdet, tillsammans med handlingarna och dina senaste kvitton. Säljer du från Trondheim eller Lyon, ordna den i god tid, eftersom teknikern oftast behöver se bostaden och du kanske inte är där och kan öppna dörren."
+          ]
+        },
+        {
+          "h2": "Behöver jag en för att hyra ut fastigheten?",
+          "paras": [
+            "Ja, när du hyr ut till en ny hyresgäst. Då bifogas energimärkningen till hyresavtalet, och de förbättringsrekommendationer som följer med deklarationen lämnas över till hyresgästen. Spara en kopia av allt du lämnar över, med datum, i samma mapp som det undertecknade avtalet.",
+            "Det som utlöser kravet är en ny hyresgäst. Att förnya ett avtal med samma hyresgäst skapar inte i sig skyldigheten. Har en hyresgäst bott hos dig i flera år och bor kvar ändras ingenting av den anledningen. När hen flyttar och någon ny flyttar in, kontrollera att du har en giltig deklaration innan avtalet skrivs under."
+          ]
+        },
+        {
+          "h2": "Hur länge gäller en energideklaration i Spanien?",
+          "paras": [
+            "Upp till tio år, med ett undantag: har bostaden betyget G gäller deklarationen bara i fem år. Den uppdelningen kom med den nuvarande förordningen, som gäller sedan 3 juni 2021. Enligt de tidigare reglerna hade alla betyg tio år.",
+            "Det här spelar större roll än det låter. En stor andel av de äldre bostäderna vid den spanska kusten har betyget E, F eller G. Är din ett G som utfärdats enligt de nuvarande reglerna kan en deklaration från mitten av 2021 redan ha gått ut, även om tio år inte har passerat. Det är lätt att missa tills papperen för en försäljning ska samlas ihop (det händer).",
+            "Leta därför fram din deklaration nu och titta på två saker: datumet den utfärdades och bokstaven på märkningen. Är det ett G, räkna fem år från utfärdandedatumet. Allt annat, räkna tio. För en deklaration som utfärdats före 3 juni 2021, fråga en tekniker hur ändringen påverkar din. Då vet du om den fortfarande gäller när du säljer eller hyr ut."
+          ]
+        },
+        {
+          "h2": "Vad säger deklarationen till en köpare eller hyresgäst?",
+          "paras": [
+            "Märkningen betygsätter bostaden på en skala med bokstäver, där G är lägst. Många äldre bostäder vid kusten ligger längst ner på den skalan, så en låg bokstav på ett vitkalkat hus nära havet behöver inte i sig skrämma bort köpare. Den ger dem däremot en antydan om värmeräkningen i januari, som är kallare än de flesta besökare tror.",
+            "Deklarationen kommer också med rekommendationer för att förbättra betyget. Vid uthyrning går de till hyresgästen. Vid försäljning är de användbara för dig också, eftersom de visar vilka ändringar som skulle flytta bokstaven, och en bättre bokstav på en bostad med betyget G betyder också längre giltighet nästa gång."
+          ]
+        },
+        {
+          "h2": "Hur får jag en när jag bor utomlands?",
+          "paras": [
+            "Deklarationen upprättas av en behörig tekniker, oftast efter ett besök i bostaden, och måste sedan registreras. Be teknikern bekräfta att hen sköter registreringen och att du får både den registrerade deklarationen och märkningen, eftersom båda behövs vid en försäljning.",
+            "Den praktiska delen är tillträdet. Ordna så att en granne, din nyckelhållare eller din administrador de fincas släpper in teknikern, och skicka ritningar eller uppgifter om nyligen utförda arbeten, som nya fönster eller en ny värmepump. Be om en skriftlig offert före besöket."
+          ]
+        },
+        {
+          "h2": "Vad gör jag om min deklaration har gått ut eller om jag aldrig haft någon?",
+          "paras": [
+            "Skaffa då en ny innan du säljer eller innan en ny hyresgäst skriver under. Det är samma process som för en första deklaration: ett besök, ett betyg och registrering. Har du förbättrat bostaden sedan den förra kan den nya bokstaven mycket väl bli bättre.",
+            "Du kommer att se bötesintervall för saknade deklarationer citeras på nätet. Vi har inte kunnat spåra de siffrorna till en primärkälla, så vi upprepar dem inte här. Det enklaste sättet att undvika frågan är att ha en giltig, registrerad deklaration i handen innan du behöver den."
+          ]
+        },
+        {
+          "h2": "Vad mer ska jag förbereda när jag säljer som icke-bosatt?",
+          "paras": [
+            "Energideklarationen är en av flera saker på listan för en säljare som är icke-bosatt. Som regel håller köparen inne 3 procent av det avtalade priset och betalar in det till skattemyndigheten på modelo 211 inom en månad från försäljningen. Det är 3 procent av priset, inte av din vinst, och din egen skatt på försäljningen räknas fram separat.",
+            "Du lämnar sedan din egen deklaration för försäljningen. Perioden öppnar en månad efter tillträdet och stänger fyra månader efter det. Kommunen tar också ut den kommunala skatten på värdeökningen på marken, plusvalía, som måste anmälas inom 30 arbetsdagar från handlingen. Varje kommun bestämmer sin egen sats och sina koefficienter i en lokal förordning, så det finns ingen enskild nationell siffra.",
+            "Inget av detta är svårt när det väl ligger i rätt ordning. Skaffa deklarationen i god tid, håll ihop köpdokumentationen inför skattedeklarationen, och spara de sista veckorna till att packa, lämna över nycklarna och äta en sista middag på terrassen."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Energieausweis in Spanien: Pflicht bei Verkauf und Vermietung",
+      "description": "Wann Sie in Spanien einen Energieausweis zum Verkaufen oder Vermieten brauchen, wie lange er gilt und warum er bei G nach fünf Jahren endet.",
+      "h1": "Energieausweise für spanische Immobilien: wann Sie einen brauchen und wie lange er gilt",
+      "lead": "Sie brauchen einen registrierten Energieausweis, um eine Immobilie in Spanien zu verkaufen oder an einen neuen Mieter zu vermieten. Beim Verkauf werden eine Kopie des registrierten Ausweises und sein Label dem Vertrag beigefügt. Ein Ausweis gilt bis zu zehn Jahre, aber nur fünf Jahre, wenn die Immobilie mit G eingestuft ist.",
+      "sections": [
+        {
+          "h2": "Brauche ich einen Energieausweis, um meine spanische Immobilie zu verkaufen?",
+          "paras": [
+            "Ja. Das certificado de eficiencia energética ist für Neubauten vorgeschrieben und für bestehende Wohnungen oder Gebäudeteile, die verkauft werden. Er muss registriert sein, und beim Verkauf werden eine Kopie des registrierten Ausweises und das Energielabel dem Kaufvertrag beigefügt.",
+            "In der Praxis gehört der Ausweis damit zu den Unterlagen, die vor dem Notartermin bereitliegen müssen, neben den Urkunden und Ihren letzten Bescheiden. Wenn Sie von Trondheim oder Lyon aus verkaufen, kümmern Sie sich früh darum, denn der Techniker muss die Immobilie in der Regel sehen, und Sie sind vielleicht nicht vor Ort, um die Tür zu öffnen."
+          ]
+        },
+        {
+          "h2": "Brauche ich einen für die Vermietung?",
+          "paras": [
+            "Ja, wenn Sie an einen neuen Mieter vermieten. Dann wird das Energielabel dem Mietvertrag beigefügt, und die Verbesserungsempfehlungen, die zum Ausweis gehören, werden dem Mieter übergeben. Bewahren Sie eine Kopie von allem, was Sie übergeben, mit Datum im selben Ordner wie den unterschriebenen Vertrag auf.",
+            "Auslöser ist ein neuer Mieter. Die Verlängerung eines Vertrags mit demselben Mieter begründet die Pflicht für sich allein nicht. Wohnt ein Mieter seit Jahren bei Ihnen und bleibt, ändert sich in dieser Hinsicht nichts. Zieht er aus und jemand Neues ein, prüfen Sie vor der Unterschrift, ob Sie einen gültigen Ausweis haben."
+          ]
+        },
+        {
+          "h2": "Wie lange ist ein Energieausweis in Spanien gültig?",
+          "paras": [
+            "Bis zu zehn Jahre, mit einer Ausnahme: Ist die Immobilie mit G eingestuft, gilt der Ausweis nur fünf Jahre. Diese Aufteilung kam mit der aktuellen Verordnung, die seit dem 3. Juni 2021 in Kraft ist. Nach den vorherigen Regeln galt jede Einstufung zehn Jahre.",
+            "Das ist wichtiger, als es klingt. Ein großer Teil der älteren Häuser an der spanischen Küste ist mit E, F oder G eingestuft. Ist Ihrer ein G-Ausweis nach den aktuellen Regeln, kann ein Ausweis von Mitte 2021 bereits abgelaufen sein, obwohl keine zehn Jahre vergangen sind. Das übersieht man leicht, bis die Unterlagen für einen Verkauf zusammengestellt werden (das kommt vor).",
+            "Suchen Sie also jetzt Ihren Ausweis heraus und achten Sie auf zwei Dinge: das Ausstellungsdatum und den Buchstaben auf dem Label. Bei G zählen Sie fünf Jahre ab Ausstellung, bei allem anderen zehn. Bei einem Ausweis, der vor dem 3. Juni 2021 ausgestellt wurde, fragen Sie einen Techniker, wie sich die Änderung auf Ihren auswirkt. Dann wissen Sie, ob er beim Verkauf oder bei der Vermietung noch gültig ist."
+          ]
+        },
+        {
+          "h2": "Was verrät der Ausweis einem Käufer oder Mieter?",
+          "paras": [
+            "Das Label stuft die Immobilie auf einer Buchstabenskala ein, mit G als niedrigster Klasse. Viele ältere Häuser an der Küste liegen am unteren Ende dieser Skala, ein niedriger Buchstabe bei einem weiß getünchten Haus am Meer muss Käufer also für sich allein nicht abschrecken. Er gibt ihnen aber einen Hinweis auf die Heizkosten im Januar, der kälter ist, als sich die meisten Besucher vorstellen.",
+            "Zum Ausweis gehören außerdem Empfehlungen zur Verbesserung der Einstufung. Bei einer Vermietung gehen sie an den Mieter. Beim Verkauf sind sie auch für Sie nützlich, denn sie zeigen, welche Änderungen den Buchstaben verbessern würden, und ein besserer Buchstabe bei einer mit G eingestuften Immobilie bedeutet beim nächsten Mal auch eine längere Gültigkeit."
+          ]
+        },
+        {
+          "h2": "Wie bekomme ich einen, wenn ich im Ausland lebe?",
+          "paras": [
+            "Der Ausweis wird von einem qualifizierten Techniker erstellt, meist nach einem Besuch der Immobilie, und muss anschließend registriert werden. Bitten Sie den Techniker, zu bestätigen, dass er die Registrierung übernimmt, und Ihnen sowohl den registrierten Ausweis als auch das Label zu schicken, da beim Verkauf beides gebraucht wird.",
+            "Der praktische Teil ist der Zugang. Bitten Sie einen Nachbarn, Ihren Schlüsselverwalter oder Ihren administrador de fincas, den Techniker hereinzulassen, und schicken Sie ihm alle Pläne oder Angaben zu kürzlich erledigten Arbeiten, etwa neue Fenster oder eine neue Wärmepumpe. Lassen Sie sich vor dem Besuch ein schriftliches Angebot geben."
+          ]
+        },
+        {
+          "h2": "Was, wenn mein Ausweis abgelaufen ist oder ich nie einen hatte?",
+          "paras": [
+            "Dann besorgen Sie einen neuen, bevor Sie verkaufen oder bevor ein neuer Mieter unterschreibt. Es ist dasselbe Verfahren wie beim ersten Ausweis: ein Besuch, eine Einstufung und die Registrierung. Haben Sie die Immobilie seit dem letzten verbessert, kann der neue Buchstabe durchaus besser ausfallen.",
+            "Online finden Sie Bußgeldspannen für fehlende Ausweise. Wir konnten diese Zahlen nicht auf eine Primärquelle zurückführen, deshalb wiederholen wir sie hier nicht. Am einfachsten umgehen Sie die Frage, indem Sie einen gültigen, registrierten Ausweis in der Hand haben, bevor Sie ihn brauchen."
+          ]
+        },
+        {
+          "h2": "Was sollte ich als Nichtansässiger beim Verkauf noch vorbereiten?",
+          "paras": [
+            "Der Energieausweis ist einer von mehreren Punkten auf der Liste eines nichtansässigen Verkäufers. In der Regel behält der Käufer 3 Prozent des vereinbarten Preises ein und führt sie innerhalb eines Monats nach dem Verkauf mit modelo 211 an das Finanzamt ab. Es sind 3 Prozent des Preises, nicht Ihres Gewinns, und Ihre eigene Steuer auf den Verkauf wird gesondert berechnet.",
+            "Danach geben Sie Ihre eigene Erklärung zum Verkauf ab. Der Zeitraum öffnet sich einen Monat nach dem Notartermin und schließt vier Monate danach. Das Rathaus erhebt außerdem die Gemeindesteuer auf den Wertzuwachs des Bodens, die plusvalía, die innerhalb von 30 Werktagen nach der Urkunde erklärt werden muss. Jede Gemeinde legt Satz und Koeffizienten per örtlicher Satzung selbst fest, es gibt also keine landesweite Zahl.",
+            "Nichts davon ist schwierig, wenn es in der richtigen Reihenfolge angegangen wird. Besorgen Sie den Ausweis früh, halten Sie Ihre Kaufunterlagen für die Steuererklärung zusammen und lassen Sie die letzten Wochen frei für das Packen, die Schlüsselübergabe und ein letztes Abendessen auf der Terrasse."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Certificat énergétique en Espagne : vente et location",
+      "description": "Quand il faut un certificat énergétique pour vendre ou louer un logement en Espagne, sa durée de validité, et pourquoi une note G le limite à cinq ans.",
+      "h1": "Le certificat énergétique des logements en Espagne : quand il faut l'avoir et combien de temps il dure",
+      "lead": "Il vous faut un certificat énergétique enregistré pour vendre un logement en Espagne ou pour le louer à un nouveau locataire. En cas de vente, une copie du certificat enregistré et son étiquette sont jointes au contrat. Un certificat est valable jusqu'à dix ans, mais seulement cinq ans si le logement est classé G.",
+      "sections": [
+        {
+          "h2": "Ai-je besoin d'un certificat énergétique pour vendre mon logement en Espagne ?",
+          "paras": [
+            "Oui. Le certificado de eficiencia energética est exigé pour les bâtiments neufs et pour les logements existants, ou parties de bâtiments, qui sont vendus. Il doit être enregistré et, lorsque vous vendez, une copie du certificat enregistré et l'étiquette énergétique sont jointes au contrat de vente.",
+            "En pratique, le certificat fait donc partie des papiers qui doivent être prêts avant la vente, avec les actes et vos derniers avis. Si vous vendez depuis Trondheim ou Lyon, occupez-vous-en tôt, car le technicien aura généralement besoin de voir le logement et vous ne serez peut-être pas là pour lui ouvrir la porte."
+          ]
+        },
+        {
+          "h2": "En ai-je besoin pour louer le bien ?",
+          "paras": [
+            "Oui, lorsque vous le louez à un nouveau locataire. Dans ce cas, l'étiquette énergétique est jointe au contrat de location, et les recommandations d'amélioration qui accompagnent le certificat sont remises au locataire. Gardez une copie datée de tout ce que vous remettez, dans le même dossier que le contrat signé.",
+            "Le déclencheur, c'est un nouveau locataire. Renouveler un contrat avec le même locataire ne crée pas, à lui seul, l'obligation. Si un locataire est chez vous depuis des années et qu'il reste, rien ne change à ce titre. Lorsqu'il part et que quelqu'un de nouveau emménage, vérifiez que vous avez un certificat en cours de validité avant de signer."
+          ]
+        },
+        {
+          "h2": "Combien de temps un certificat énergétique est-il valable en Espagne ?",
+          "paras": [
+            "Jusqu'à dix ans, avec une exception : si le logement est classé G, le certificat ne dure que cinq ans. Cette distinction est arrivée avec la réglementation actuelle, en vigueur depuis le 3 juin 2021. Selon les règles précédentes, toutes les classes avaient dix ans.",
+            "Cela compte plus qu'il n'y paraît. Une grande partie des logements anciens du littoral espagnol est classée E, F ou G. Si le vôtre est un G délivré selon les règles actuelles, un certificat de mi-2021 peut déjà avoir expiré, alors que dix ans ne se sont pas écoulés. On passe facilement à côté jusqu'au moment où l'on rassemble les papiers d'une vente (cela arrive).",
+            "Retrouvez donc votre certificat maintenant et regardez deux choses : la date de délivrance et la lettre de l'étiquette. Si c'est un G, comptez cinq ans à partir de la date de délivrance. Pour toute autre lettre, comptez dix ans. Pour un certificat délivré avant le 3 juin 2021, demandez à un technicien comment le changement s'applique au vôtre. Vous saurez alors s'il sera encore valable au moment de vendre ou de louer."
+          ]
+        },
+        {
+          "h2": "Qu'apprend le certificat à un acheteur ou à un locataire ?",
+          "paras": [
+            "L'étiquette classe le logement sur une échelle de lettres, G étant la plus basse. Beaucoup de logements anciens de la côte se situent au bas de cette échelle : une mauvaise lettre sur une maison blanchie à la chaux près de la mer n'a donc pas forcément de quoi faire fuir les acheteurs à elle seule. Elle leur donne en revanche une idée de la facture de chauffage en janvier, plus froid que la plupart des visiteurs ne l'imaginent.",
+            "Le certificat s'accompagne aussi de recommandations pour améliorer la note. Pour une location, elles vont au locataire. Pour une vente, elles vous sont utiles aussi, car elles montrent quels changements feraient évoluer la lettre, et une meilleure lettre sur un logement classé G signifie aussi une validité plus longue la prochaine fois."
+          ]
+        },
+        {
+          "h2": "Comment en obtenir un quand je vis à l'étranger ?",
+          "paras": [
+            "Le certificat est établi par un technicien qualifié, généralement après une visite du logement, et il doit ensuite être enregistré. Demandez au technicien de confirmer qu'il se charge de l'enregistrement et de vous envoyer à la fois le certificat enregistré et l'étiquette, car les deux sont nécessaires lors d'une vente.",
+            "La partie pratique, c'est l'accès. Organisez-vous pour qu'un voisin, la personne qui garde vos clés ou votre administrador de fincas fasse entrer le technicien, et envoyez-lui les plans ou le détail des travaux récents, comme de nouvelles fenêtres ou une nouvelle pompe à chaleur. Demandez un devis écrit avant la visite."
+          ]
+        },
+        {
+          "h2": "Et si mon certificat a expiré ou si je n'en ai jamais eu ?",
+          "paras": [
+            "Faites-en établir un nouveau avant de vendre ou avant qu'un nouveau locataire ne signe. La démarche est la même que pour un premier certificat : une visite, une note et un enregistrement. Si vous avez amélioré le logement depuis le dernier, la nouvelle lettre pourrait bien être meilleure.",
+            "Vous verrez en ligne des fourchettes d'amendes citées pour l'absence de certificat. Nous n'avons pas pu rattacher ces chiffres à une source primaire, nous ne les reprenons donc pas ici. La façon la plus simple d'éviter la question est d'avoir en main un certificat valable et enregistré avant d'en avoir besoin."
+          ]
+        },
+        {
+          "h2": "Que dois-je préparer d'autre pour vendre en tant que non-résident ?",
+          "paras": [
+            "Le certificat énergétique n'est qu'un des éléments de la liste d'un vendeur non-résident. En règle générale, l'acheteur retient 3 pour cent du prix convenu et les verse à l'administration fiscale sur le modelo 211 dans le mois qui suit la vente. Il s'agit de 3 pour cent du prix, et non de votre plus-value, et votre propre impôt sur la vente se calcule séparément.",
+            "Vous déposez ensuite votre propre déclaration sur la vente. La période s'ouvre un mois après la vente et se ferme quatre mois après. La mairie perçoit aussi l'impôt municipal sur la hausse de valeur du terrain, la plusvalía, qui doit être déclarée dans les 30 jours ouvrables suivant l'acte. Chaque commune fixe son propre taux et ses coefficients par ordonnance locale : il n'existe donc pas de chiffre national unique.",
+            "Rien de tout cela n'est difficile une fois les étapes mises dans le bon ordre. Obtenez le certificat tôt, gardez vos papiers d'achat ensemble pour la déclaration fiscale, et réservez les dernières semaines aux cartons, à la remise des clés et à un dernier dîner sur la terrasse."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Energiecertificaat in Spanje: verkopen of verhuren",
+      "description": "Wanneer u een energiecertificaat nodig heeft om een Spaanse woning te verkopen of verhuren, hoe lang het geldig blijft en waarom label G sneller verloopt.",
+      "h1": "Energiecertificaten voor Spaanse woningen: wanneer u er een nodig heeft en hoe lang het geldt",
+      "lead": "U heeft een geregistreerd energiecertificaat nodig om een woning in Spanje te verkopen of aan een nieuwe huurder te verhuren. Bij verkoop worden een kopie van het geregistreerde certificaat en het label bij het contract gevoegd. Een certificaat is maximaal tien jaar geldig, maar slechts vijf jaar als de woning label G heeft.",
+      "sections": [
+        {
+          "h2": "Heb ik een energiecertificaat nodig om mijn Spaanse woning te verkopen?",
+          "paras": [
+            "Ja. Het certificado de eficiencia energética is verplicht voor nieuwe gebouwen en voor bestaande woningen, of delen van gebouwen, die worden verkocht. Het moet worden geregistreerd, en bij verkoop worden een kopie van het geregistreerde certificaat en het energielabel bij het koopcontract gevoegd.",
+            "In de praktijk maakt dat het certificaat tot een van de papieren die vóór de overdracht klaar moeten zijn, naast de aktes en uw laatste aanslagen. Verkoopt u vanuit Trondheim of Lyon, regel het dan vroeg, want de technicus moet de woning meestal zien en u bent er misschien niet om de deur open te doen."
+          ]
+        },
+        {
+          "h2": "Heb ik er een nodig om de woning te verhuren?",
+          "paras": [
+            "Ja, als u verhuurt aan een nieuwe huurder. In dat geval wordt het energielabel bij het huurcontract gevoegd, en worden de verbeteringsaanbevelingen die bij het certificaat horen aan de huurder overhandigd. Bewaar een kopie van alles wat u overhandigt, met de datum, in dezelfde map als het ondertekende contract.",
+            "Het gaat om een nieuwe huurder. Het verlengen van een contract met dezelfde huurder brengt op zichzelf de verplichting niet mee. Woont een huurder al jaren in de woning en blijft hij, dan verandert er op dat punt niets. Vertrekt hij en komt er iemand nieuw, controleer dan vóór de ondertekening of u een geldig certificaat heeft."
+          ]
+        },
+        {
+          "h2": "Hoe lang is een energiecertificaat in Spanje geldig?",
+          "paras": [
+            "Maximaal tien jaar, met één uitzondering: heeft de woning label G, dan is het certificaat maar vijf jaar geldig. Dat onderscheid kwam er met de huidige regeling, die sinds 3 juni 2021 van kracht is. Onder de vorige regels gold voor elk label tien jaar.",
+            "Dit doet er meer toe dan het lijkt. Een groot deel van de oudere woningen aan de Spaanse kust heeft label E, F of G. Is het uwe een G die onder de huidige regels is afgegeven, dan kan een certificaat van medio 2021 al verlopen zijn, ook al zijn er nog geen tien jaar voorbij. Dat ziet u makkelijk over het hoofd tot de papieren voor een verkoop worden verzameld (het gebeurt).",
+            "Zoek uw certificaat dus nu op en kijk naar twee dingen: de datum van afgifte en de letter op het label. Is het een G, tel dan vijf jaar vanaf de datum van afgifte. Bij elke andere letter telt u tien. Voor een certificaat dat vóór 3 juni 2021 is afgegeven, vraagt u een technicus hoe de wijziging voor het uwe uitpakt. Dan weet u of het nog geldig is wanneer u verkoopt of verhuurt."
+          ]
+        },
+        {
+          "h2": "Wat vertelt het certificaat aan een koper of huurder?",
+          "paras": [
+            "Het label beoordeelt de woning op een schaal van letters, met G als laagste. Veel oudere woningen aan de kust zitten onderaan die schaal, dus een lage letter op een witgekalkt huis vlak bij zee hoeft kopers op zichzelf niet af te schrikken. Het geeft hun wel een idee van de stookkosten in januari, en die maand is kouder dan de meeste bezoekers denken.",
+            "Bij het certificaat horen ook aanbevelingen om het label te verbeteren. Bij verhuur gaan die naar de huurder. Bij verkoop zijn ze ook voor u nuttig, omdat ze laten zien welke aanpassingen de letter verbeteren, en een betere letter op een woning met label G betekent de volgende keer ook een langere geldigheid."
+          ]
+        },
+        {
+          "h2": "Hoe kom ik aan een certificaat als ik in het buitenland woon?",
+          "paras": [
+            "Het certificaat wordt opgesteld door een gekwalificeerde technicus, meestal na een bezoek aan de woning, en moet daarna worden geregistreerd. Vraag de technicus te bevestigen dat hij de registratie regelt en u zowel het geregistreerde certificaat als het label stuurt, want bij verkoop zijn beide nodig.",
+            "Het praktische deel is de toegang. Regel dat een buurman, uw sleutelbeheerder of uw administrador de fincas de technicus binnenlaat, en stuur hun eventuele plattegronden of gegevens over recente werkzaamheden, zoals nieuwe ramen of een nieuwe warmtepomp. Vraag vóór het bezoek een schriftelijke offerte."
+          ]
+        },
+        {
+          "h2": "Wat als mijn certificaat is verlopen of ik er nooit een had?",
+          "paras": [
+            "Vraag dan een nieuw aan voordat u verkoopt of voordat een nieuwe huurder tekent. Het is hetzelfde proces als bij een eerste certificaat: een bezoek, een beoordeling en registratie. Heeft u de woning sinds het vorige certificaat verbeterd, dan kan de nieuwe letter best beter uitvallen.",
+            "Online ziet u boetebedragen genoemd voor ontbrekende certificaten. Wij konden die bedragen niet herleiden tot een primaire bron, dus herhalen we ze hier niet. De eenvoudigste manier om de vraag te vermijden, is een geldig, geregistreerd certificaat in handen hebben voordat u het nodig heeft."
+          ]
+        },
+        {
+          "h2": "Wat moet ik verder voorbereiden als ik als niet-inwoner verkoop?",
+          "paras": [
+            "Het energiecertificaat is een van de dingen op de lijst van een verkoper die niet in Spanje woont. In de regel houdt de koper 3 procent van de overeengekomen prijs in en betaalt die binnen een maand na de verkoop met modelo 211 aan de belastingdienst. Het gaat om 3 procent van de prijs, niet van uw winst, en uw eigen belasting over de verkoop wordt apart berekend.",
+            "Daarna dient u uw eigen aangifte over de verkoop in. De periode opent een maand na de overdracht en sluit vier maanden erna. De gemeente heft daarnaast de gemeentelijke belasting over de waardestijging van de grond, de plusvalía, die binnen 30 werkdagen na de akte moet worden aangegeven. Elke gemeente stelt haar eigen tarief en coëfficiënten vast in een lokale verordening, dus er is niet één landelijk bedrag.",
+            "Niets hiervan is moeilijk als het eenmaal in de juiste volgorde staat. Regel het certificaat vroeg, houd uw aankooppapieren bij elkaar voor de belastingaangifte, en bewaar de laatste weken voor het inpakken, het overdragen van de sleutels en nog één diner op het terras."
+          ]
+        }
+      ]
+    }
+  }
+}

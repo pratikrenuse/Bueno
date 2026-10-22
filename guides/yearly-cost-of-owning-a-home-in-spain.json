@@ -1,0 +1,466 @@
+{
+  "slug": "yearly-cost-of-owning-a-home-in-spain",
+  "topic": "tax",
+  "tool": "cost-audit",
+  "rules": [
+    "own.ibi.base",
+    "own.ibi.urban_rates",
+    "own.ibi.town_hall_manages",
+    "own.ibi.property_answers",
+    "own.waste.fee_required",
+    "own.lph.contribute",
+    "own.lph.reserve_fund",
+    "own.lph.mandatory_works",
+    "own.lph.mandatory_works_cost",
+    "own.lph.annual_meeting",
+    "own.lph.domicile_in_spain",
+    "own.catastro.declare_changes",
+    "irnr.imputed.base",
+    "irnr.imputed.rate_special_2023_2025",
+    "irnr.imputed.no_deductions",
+    "irnr.rates",
+    "irnr.rental.deductibility",
+    "irnr.sale.gain_base",
+    "consorcio.precondition",
+    "ip.minimo_exento",
+    "ip.filing_trigger",
+    "ip.eu_option"
+  ],
+  "answers": [
+    "tax-on-a-spanish-property-you-do-not-rent-out",
+    "imputed-income-tax-deadline-for-2025",
+    "deduct-costs-from-spanish-rental-income",
+    "filing-a-spanish-tax-return-late",
+    "who-pays-for-storm-damage-in-spain",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "spanish-wealth-tax-for-non-residents"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Yearly Cost of Owning a Home in Spain from Abroad",
+      "description": "The yearly bills on a Spanish second home: IBI, the rubbish fee, community charges, insurance and non-resident income tax, and how each one is worked out.",
+      "h1": "What a home in Spain costs you every year",
+      "lead": "A Spanish second home comes with a small set of yearly bills: IBI to the town hall, a waste fee, community charges if you share a building or pool, home insurance, and non-resident income tax even if you never let it. Most of them are worked out from the cadastral value or decided by your community, so the figures for your own home are knowable in advance.",
+      "sections": [
+        {
+          "h2": "What bills come every year, whether I use the home or not?",
+          "paras": [
+            "Five, for most owners. The local property tax (IBI) and a household waste fee go to the town hall. Community charges (gastos de comunidad) go to the community of owners if your home shares anything with others. Insurance goes to your insurer, with a public surcharge built in. And non-resident income tax goes to the national tax agency, whether you let the home or not.",
+            "On top of those come the running costs you choose: electricity, water, internet, someone to check on the place. Those depend on how you use the home, so no rule fixes them. The fixed bills are the ones worth understanding, because they arrive on their own timetable while you are somewhere else."
+          ]
+        },
+        {
+          "h2": "How much is IBI likely to be?",
+          "paras": [
+            "IBI is a percentage of the cadastral value of the property, not of the price you paid or its market value. For urban property each town hall sets a rate between 0.4 percent and 1.10 percent in its own tax ordinance. A flat with a cadastral value of 100,000 euros therefore pays between 400 and 1,100 euros a year, depending on the town.",
+            "The town hall manages and collects it, so questions about the payment period go there rather than to the Catastro. Before you buy, check that the seller is up to date. When a property changes hands, the property itself stays liable for unpaid IBI, so an old debt can follow the home to you."
+          ]
+        },
+        {
+          "h2": "Is there a separate charge for rubbish collection?",
+          "paras": [
+            "Yes. Every local authority must have a specific, separate charge for household waste, either a tasa or a non tax public charge, and the law says it should move towards charging by the amount of waste generated. The amount is set by each town hall or its waste consortium, so it varies from town to town.",
+            "Because no national figure exists, the only reliable number is the one on your own receipt. If you are budgeting before you buy, ask the seller for the last waste receipt alongside the IBI one, and you will know both local bills for that home."
+          ]
+        },
+        {
+          "h2": "Do I pay income tax on a home I never rent out?",
+          "paras": [
+            "Yes. Spain taxes a non-resident owner on imputed income, a notional figure worked out from the cadastral value on the IBI receipt. For 2023, 2024 and 2025 the rate is 1.1 percent of that value where the cadastral values were revised with effect from 1 January 2012 onwards. No expenses of any kind can be deducted against it.",
+            "Take a flat with a revised cadastral value of 100,000 euros. The imputed income is 1,100 euros. A resident of the EU, Iceland, Norway or Liechtenstein pays 19 percent of that, which is 209 euros. Other non-residents pay 24 percent. It is a small bill, but it is a yearly return, and the linked answers cover the deadlines."
+          ]
+        },
+        {
+          "h2": "What changes if I let the home for part of the year?",
+          "paras": [
+            "Rental income is taxed at the same rates, 19 percent for residents of the EU, Iceland, Norway and Liechtenstein and 24 percent for everyone else. The difference is in what you may deduct. Residents of another EU state, or an EEA state with effective exchange of tax information, which includes Norway, Iceland and Liechtenstein, can deduct expenses directly and inseparably linked to the letting.",
+            "Everyone else is taxed on the gross rent with no deductions. A certificate of tax residence from your home country is required to claim the expenses. For an owner who can deduct, the part of the community charges, IBI and insurance that is directly linked to the letting may reduce the tax on the rent, as long as you keep the paperwork."
+          ]
+        },
+        {
+          "h2": "How much are community fees, and can they go up?",
+          "paras": [
+            "There is no national figure. Every owner pays a share of the general costs of the building according to the participation share fixed in the title deed or statutes, and not using a service, such as the pool or the lift, does not exempt you from paying for it. The owners meeting approves the budget and accounts at least once a year.",
+            "The community must also keep a reserve fund of at least 10 percent of its last ordinary budget, for repairs and certain accessibility and energy works. Older guides still say 5 percent, which is out of date. Works needed for safety, habitability and basic accessibility are compulsory, need no prior vote and are paid by all owners, so a large bill can arrive outside the normal fees."
+          ]
+        },
+        {
+          "h2": "Is flood and earthquake cover an extra cost?",
+          "paras": [
+            "No. If you hold an ordinary home policy in a qualifying branch, a compulsory surcharge for the Consorcio de Compensación de Seguros is collected with your premium. It covers extraordinary events such as earthquakes and extraordinary floods. There is nothing separate to buy.",
+            "The catch is that the Consorcio pays only up to the sums insured in your ordinary policy. If you under-insure the building to save on the premium, you are under-insured against extraordinary events in exactly the same proportion. An uninsured property has no Consorcio cover at all, which makes the policy one of the more important yearly costs."
+          ]
+        },
+        {
+          "h2": "Will I owe Spanish wealth tax?",
+          "paras": [
+            "If your Spanish assets are worth less than 700,000 euros, there is nothing to pay. A non-resident taxed only on Spanish assets has a tax free allowance (minimo exento) of that amount. A return is only required where tax is actually payable, or where the value of your Spanish assets exceeds 2,000,000 euros, counting exempt assets and without deducting debts.",
+            "That second trigger catches owners of more valuable property who owe nothing but still have to file. If your Spanish assets are near either figure, ask a gestor to check before the filing window opens rather than after. Owners resident in the EU or EEA may also opt to apply the rules of the region where most of their assets sit, which can change the result."
+          ]
+        },
+        {
+          "h2": "What does owning from abroad cost in time?",
+          "paras": [
+            "Mostly it costs attention at a few fixed points. Give the community secretary an address in Spain for notices; without one, notices go to the flat itself, and if they cannot be delivered they are posted on the community notice board and take effect after three calendar days. Building work such as an extension or renovation must be declared to the Catastro within two months.",
+            "Keep the receipts for any improvements, together with your original completion file. When you sell, the cost of improvements and the taxes and fees you paid on purchase are added to your acquisition value, which reduces the taxable gain. A folder kept well now saves real money later, and leaves more of your time in Spain for the home itself."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Årlige kostnader ved å eie bolig i Spania fra utlandet",
+      "description": "De årlige regningene på en sekundærbolig i Spania: IBI, renovasjon, fellesutgifter, forsikring og skatt for ikke-bosatte, og hvordan hver av dem beregnes.",
+      "h1": "Hva en bolig i Spania koster deg hvert år",
+      "lead": "En sekundærbolig i Spania kommer med et lite sett årlige regninger: IBI til kommunen, en renovasjonsavgift, fellesutgifter hvis du deler bygg eller basseng, husforsikring og inntektsskatt for ikke-bosatte selv om du aldri leier ut. De fleste beregnes ut fra matrikkelverdien eller bestemmes av sameiet ditt, så tallene for din egen bolig kan du vite på forhånd.",
+      "sections": [
+        {
+          "h2": "Hvilke regninger kommer hvert år, enten jeg bruker boligen eller ikke?",
+          "paras": [
+            "Fem, for de fleste eiere. Den lokale eiendomsskatten (IBI) og en avgift for husholdningsavfall går til kommunen. Fellesutgifter (gastos de comunidad) går til sameiet hvis boligen din deler noe med andre. Forsikringen går til forsikringsselskapet, med et offentlig tillegg innbakt. Og inntektsskatten for ikke-bosatte går til det nasjonale skattekontoret, enten du leier ut boligen eller ikke.",
+            "I tillegg kommer driftskostnadene du selv velger: strøm, vann, internett, noen som ser til stedet. De avhenger av hvordan du bruker boligen, så ingen regel fastsetter dem. Det er de faste regningene som er verdt å forstå, fordi de kommer etter sin egen tidsplan mens du er et annet sted."
+          ]
+        },
+        {
+          "h2": "Hvor mye blir IBI trolig?",
+          "paras": [
+            "IBI er en prosentandel av eiendommens matrikkelverdi, ikke av prisen du betalte eller markedsverdien. For bebygd eiendom fastsetter hver kommune en sats mellom 0,4 prosent og 1,10 prosent i sin egen skatteforskrift. En leilighet med matrikkelverdi på 100 000 euro betaler derfor mellom 400 og 1 100 euro i året, avhengig av kommunen.",
+            "Kommunen forvalter og krever den inn, så spørsmål om betalingsperioden går dit og ikke til Catastro. Før du kjøper, sjekk at selgeren er à jour. Når en eiendom skifter eier, hefter eiendommen selv fortsatt for ubetalt IBI, så en gammel gjeld kan følge boligen over til deg."
+          ]
+        },
+        {
+          "h2": "Er det en egen avgift for renovasjon?",
+          "paras": [
+            "Ja. Hver kommune må ha en egen, særskilt avgift for husholdningsavfall, enten en tasa eller en offentlig avgift som ikke er skatt, og loven sier at den skal bevege seg mot betaling etter mengden avfall. Beløpet fastsettes av hver kommune eller dens avfallskonsortium, så det varierer fra kommune til kommune.",
+            "Fordi det ikke finnes noe nasjonalt tall, er det eneste pålitelige tallet det som står på din egen regning. Budsjetterer du før du kjøper, be selgeren om den siste renovasjonsregningen sammen med IBI-regningen, så vet du begge de lokale regningene for den boligen."
+          ]
+        },
+        {
+          "h2": "Betaler jeg inntektsskatt på en bolig jeg aldri leier ut?",
+          "paras": [
+            "Ja. Spania skattlegger en ikke-bosatt eier for imputert inntekt, et beregnet tall basert på matrikkelverdien på IBI-regningen. For 2023, 2024 og 2025 er satsen 1,1 prosent av den verdien der matrikkelverdiene ble revidert med virkning fra 1. januar 2012 eller senere. Ingen utgifter av noe slag kan trekkes fra.",
+            "Ta en leilighet med revidert matrikkelverdi på 100 000 euro. Den imputerte inntekten er 1 100 euro. En som bor i EU, Island, Norge eller Liechtenstein betaler 19 prosent av det, altså 209 euro. Andre ikke-bosatte betaler 24 prosent. Det er en liten regning, men det er en årlig oppgave, og svarene det lenkes til dekker fristene."
+          ]
+        },
+        {
+          "h2": "Hva endrer seg hvis jeg leier ut boligen deler av året?",
+          "paras": [
+            "Leieinntekt skattlegges med de samme satsene, 19 prosent for bosatte i EU, Island, Norge og Liechtenstein og 24 prosent for alle andre. Forskjellen ligger i hva du kan trekke fra. Bosatte i en annen EU-stat, eller i en EØS-stat med effektiv utveksling av skatteopplysninger, som omfatter Norge, Island og Liechtenstein, kan trekke fra utgifter som er direkte og uatskillelig knyttet til utleien.",
+            "Alle andre skattlegges av brutto leie uten fradrag. Det kreves en attest om skattemessig bosted fra hjemlandet for å kreve fradrag for utgiftene. For en eier som kan trekke fra, kan den delen av fellesutgiftene, IBI og forsikringen som er direkte knyttet til utleien redusere skatten på leien, så lenge du tar vare på papirene."
+          ]
+        },
+        {
+          "h2": "Hvor store er fellesutgiftene, og kan de øke?",
+          "paras": [
+            "Det finnes ikke noe nasjonalt tall. Hver eier betaler en andel av byggets felleskostnader etter eierbrøken som er fastsatt i skjøtet eller vedtektene, og at du ikke bruker en tjeneste, som bassenget eller heisen, fritar deg ikke fra å betale for den. Sameiermøtet godkjenner budsjett og regnskap minst én gang i året.",
+            "Sameiet må også ha et reservefond på minst 10 prosent av sitt siste ordinære budsjett, til reparasjoner og visse arbeider for tilgjengelighet og energi. Eldre veiledninger sier fortsatt 5 prosent, noe som er utdatert. Arbeider som trengs for sikkerhet, beboelighet og grunnleggende tilgjengelighet er obligatoriske, krever ingen forutgående avstemning og betales av alle eiere, så en stor regning kan komme utenom de vanlige fellesutgiftene."
+          ]
+        },
+        {
+          "h2": "Er dekning for flom og jordskjelv en ekstra kostnad?",
+          "paras": [
+            "Nei. Har du en vanlig husforsikring i en kvalifiserende bransje, kreves et obligatorisk tillegg til Consorcio de Compensación de Seguros inn sammen med premien. Det dekker ekstraordinære hendelser som jordskjelv og ekstraordinær flom. Det er ingenting eget å kjøpe.",
+            "Haken er at Consorcio bare betaler opp til forsikringssummene i den vanlige polisen din. Underforsikrer du bygningen for å spare på premien, er du underforsikret mot ekstraordinære hendelser i nøyaktig samme forhold. En uforsikret eiendom har ingen dekning fra Consorcio i det hele tatt, og det gjør polisen til en av de viktigere årlige kostnadene."
+          ]
+        },
+        {
+          "h2": "Må jeg betale spansk formuesskatt?",
+          "paras": [
+            "Er de spanske eiendelene dine verdt mindre enn 700 000 euro, er det ingenting å betale. En ikke-bosatt som bare skattlegges for spanske eiendeler har et bunnfradrag (minimo exento) på det beløpet. Oppgave kreves bare der det faktisk skal betales skatt, eller der verdien av de spanske eiendelene dine overstiger 2 000 000 euro, medregnet fritatte eiendeler og uten fradrag for gjeld.",
+            "Den andre utløseren fanger eiere av mer verdifulle eiendommer som ikke skylder noe, men likevel må levere. Ligger de spanske eiendelene dine nær et av tallene, be en gestor sjekke før leveringsvinduet åpner, ikke etter. Eiere bosatt i EU eller EØS kan også velge å bruke reglene i regionen der det meste av eiendelene ligger, noe som kan endre resultatet."
+          ]
+        },
+        {
+          "h2": "Hva koster det i tid å eie fra utlandet?",
+          "paras": [
+            "Stort sett koster det oppmerksomhet på noen faste punkter. Gi sameiets sekretær en adresse i Spania for varsler; uten en slik adresse går varslene til selve leiligheten, og kan de ikke leveres, slås de opp på sameiets oppslagstavle og får virkning etter tre kalenderdager. Byggearbeider som påbygg eller renovering må meldes til Catastro innen to måneder.",
+            "Ta vare på kvitteringene for påkostninger, sammen med den opprinnelige kjøpsmappen. Når du selger, legges kostnadene til påkostninger og skattene og gebyrene du betalte ved kjøpet til anskaffelsesverdien, noe som reduserer den skattepliktige gevinsten. En godt ordnet mappe nå sparer virkelige penger senere, og gir deg mer av tiden i Spania til selve boligen."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Årlig kostnad för att äga en bostad i Spanien från utlandet",
+      "description": "De årliga räkningarna för ett spanskt fritidshus: IBI, sophämtning, samfällighetsavgifter, försäkring och skatt för icke-bosatta, och hur de räknas.",
+      "h1": "Vad en bostad i Spanien kostar dig varje år",
+      "lead": "Ett spanskt fritidshus kommer med ett litet antal årliga räkningar: IBI till kommunen, en avfallsavgift, samfällighetsavgifter om du delar hus eller pool, hemförsäkring och inkomstskatt för icke-bosatta även om du aldrig hyr ut. De flesta räknas fram från taxeringsvärdet eller bestäms av din samfällighet, så siffrorna för din egen bostad går att veta i förväg.",
+      "sections": [
+        {
+          "h2": "Vilka räkningar kommer varje år, oavsett om jag använder bostaden eller inte?",
+          "paras": [
+            "Fem, för de flesta ägare. Den lokala fastighetsskatten (IBI) och en avgift för hushållsavfall går till kommunen. Samfällighetsavgifter (gastos de comunidad) går till samfälligheten om din bostad delar något med andra. Försäkringen går till ditt försäkringsbolag, med ett offentligt tillägg inbakat. Och inkomstskatt för icke-bosatta går till den nationella skattemyndigheten, oavsett om du hyr ut bostaden eller inte.",
+            "Utöver dem kommer de löpande kostnader du själv väljer: el, vatten, internet, någon som tittar till stället. De beror på hur du använder bostaden, så ingen regel bestämmer dem. Det är de fasta räkningarna som är värda att förstå, eftersom de kommer enligt sitt eget schema medan du är någon annanstans."
+          ]
+        },
+        {
+          "h2": "Hur mycket blir IBI troligen?",
+          "paras": [
+            "IBI är en procentsats av fastighetens taxeringsvärde, inte av priset du betalade eller marknadsvärdet. För fastigheter i tätort bestämmer varje kommun en sats mellan 0,4 procent och 1,10 procent i sin egen skatteförordning. En lägenhet med ett taxeringsvärde på 100 000 euro betalar därför mellan 400 och 1 100 euro om året, beroende på kommun.",
+            "Kommunen förvaltar och tar ut skatten, så frågor om betalningsperioden går dit i stället för till Catastro. Kontrollera innan du köper att säljaren har betalat det som ska betalas. När en fastighet byter ägare förblir fastigheten själv ansvarig för obetald IBI, så en gammal skuld kan följa med bostaden till dig."
+          ]
+        },
+        {
+          "h2": "Finns det en separat avgift för sophämtning?",
+          "paras": [
+            "Ja. Varje kommun måste ha en specifik och separat avgift för hushållsavfall, antingen en tasa eller en offentlig avgift som inte är skatt, och lagen säger att den ska gå mot att ta betalt efter mängden avfall. Beloppet bestäms av varje kommun eller dess avfallskonsortium, så det varierar från kommun till kommun.",
+            "Eftersom det inte finns någon nationell siffra är det enda pålitliga beloppet det som står på din egen avi. Budgeterar du innan du köper, be säljaren om den senaste avfallsavin tillsammans med IBI-avin, så vet du båda de lokala räkningarna för just den bostaden."
+          ]
+        },
+        {
+          "h2": "Betalar jag inkomstskatt på en bostad jag aldrig hyr ut?",
+          "paras": [
+            "Ja. Spanien beskattar en icke-bosatt ägare för schablonintäkt, ett tänkt belopp som räknas fram från taxeringsvärdet på IBI-avin. För 2023, 2024 och 2025 är satsen 1,1 procent av det värdet där taxeringsvärdena omprövats med verkan från 1 januari 2012 eller senare. Inga kostnader av något slag får dras av mot den.",
+            "Ta en lägenhet med ett omprövat taxeringsvärde på 100 000 euro. Schablonintäkten är 1 100 euro. Den som bor i EU, Island, Norge eller Liechtenstein betalar 19 procent av det, alltså 209 euro. Andra icke-bosatta betalar 24 procent. Det är en liten räkning, men det är en årlig deklaration, och svaren som länkas nedan tar upp fristerna."
+          ]
+        },
+        {
+          "h2": "Vad ändras om jag hyr ut bostaden en del av året?",
+          "paras": [
+            "Hyresinkomst beskattas med samma satser, 19 procent för boende i EU, Island, Norge och Liechtenstein och 24 procent för alla andra. Skillnaden ligger i vad du får dra av. Den som bor i ett annat EU-land, eller i ett EES-land med effektivt utbyte av skatteinformation, vilket omfattar Norge, Island och Liechtenstein, får dra av kostnader som är direkt och oskiljaktigt kopplade till uthyrningen.",
+            "Alla andra beskattas på bruttohyran utan avdrag. Ett intyg om skatterättslig hemvist från hemlandet krävs för att dra av kostnaderna. För en ägare som får göra avdrag kan den del av samfällighetsavgifterna, IBI och försäkringen som är direkt kopplad till uthyrningen minska skatten på hyran, så länge du sparar underlagen."
+          ]
+        },
+        {
+          "h2": "Hur höga är samfällighetsavgifterna, och kan de höjas?",
+          "paras": [
+            "Det finns ingen nationell siffra. Varje ägare betalar en andel av husets gemensamma kostnader enligt det andelstal som fastställts i lagfartshandlingen eller stadgarna, och att inte använda en tjänst, som poolen eller hissen, befriar dig inte från att betala för den. Ägarstämman godkänner budget och räkenskaper minst en gång om året.",
+            "Samfälligheten måste också ha en reservfond på minst 10 procent av sin senaste ordinarie budget, för reparationer och vissa tillgänglighets- och energiåtgärder. Äldre guider säger fortfarande 5 procent, vilket är inaktuellt. Arbeten som behövs för säkerhet, beboelighet och grundläggande tillgänglighet är obligatoriska, kräver ingen föregående omröstning och betalas av alla ägare, så en stor räkning kan komma utöver de vanliga avgifterna."
+          ]
+        },
+        {
+          "h2": "Kostar skydd mot översvämning och jordbävning extra?",
+          "paras": [
+            "Nej. Har du en vanlig hemförsäkring i en kvalificerande gren tas ett obligatoriskt tillägg för Consorcio de Compensación de Seguros ut med premien. Det täcker extraordinära händelser som jordbävningar och extraordinära översvämningar. Det finns inget separat att köpa.",
+            "Haken är att Consorcio bara betalar upp till försäkringsbeloppen i din vanliga försäkring. Underförsäkrar du byggnaden för att spara på premien är du underförsäkrad mot extraordinära händelser i exakt samma proportion. En oförsäkrad fastighet har inget skydd från Consorcio alls, vilket gör försäkringen till en av de viktigare årliga kostnaderna."
+          ]
+        },
+        {
+          "h2": "Kommer jag att betala spansk förmögenhetsskatt?",
+          "paras": [
+            "Är dina spanska tillgångar värda mindre än 700 000 euro finns det inget att betala. En icke-bosatt som bara beskattas för spanska tillgångar har ett skattefritt grundavdrag (minimo exento) på det beloppet. Deklaration krävs bara när skatt faktiskt ska betalas, eller när värdet av dina spanska tillgångar överstiger 2 000 000 euro, räknat med skattefria tillgångar och utan avdrag för skulder.",
+            "Det andra villkoret fångar ägare av mer värdefulla fastigheter som inte ska betala något men ändå måste deklarera. Ligger dina spanska tillgångar nära något av beloppen, be en gestor kontrollera innan deklarationsperioden öppnar i stället för efter. Ägare bosatta i EU eller EES kan också välja att tillämpa reglerna i den region där störst del av tillgångarna finns, vilket kan ändra resultatet."
+          ]
+        },
+        {
+          "h2": "Vad kostar det i tid att äga från utlandet?",
+          "paras": [
+            "Mest kostar det uppmärksamhet vid några fasta tillfällen. Ge samfällighetens sekreterare en adress i Spanien för meddelanden; utan en sådan skickas meddelanden till själva lägenheten, och kan de inte delas ut sätts de upp på samfällighetens anslagstavla och får verkan efter tre kalenderdagar. Byggarbeten som en tillbyggnad eller renovering måste anmälas till Catastro inom två månader.",
+            "Spara kvittona för alla förbättringar, tillsammans med den ursprungliga köpdokumentationen. När du säljer läggs kostnaden för förbättringar och de skatter och avgifter du betalade vid köpet till ditt anskaffningsvärde, vilket minskar den skattepliktiga vinsten. En välskött mapp i dag sparar riktiga pengar senare, och lämnar mer av din tid i Spanien åt själva bostaden."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Jährliche Kosten einer Immobilie in Spanien aus dem Ausland",
+      "description": "Die jährlichen Kosten eines spanischen Zweitwohnsitzes: IBI, Müllgebühr, Gemeinschaftskosten, Versicherung und Steuer für Nichtansässige, mit Berechnung.",
+      "h1": "Was Sie ein Haus in Spanien jedes Jahr kostet",
+      "lead": "Ein spanischer Zweitwohnsitz bringt eine überschaubare Reihe jährlicher Rechnungen mit sich: die IBI an das Rathaus, eine Müllgebühr, Gemeinschaftskosten, wenn Sie ein Gebäude oder einen Pool teilen, eine Hausratversicherung und die Einkommensteuer für Nichtansässige, auch wenn Sie nie vermieten. Die meisten werden aus dem Katasterwert berechnet oder von Ihrer Eigentümergemeinschaft beschlossen, die Beträge für Ihr eigenes Haus lassen sich also im Voraus ermitteln.",
+      "sections": [
+        {
+          "h2": "Welche Rechnungen kommen jedes Jahr, ob ich das Haus nutze oder nicht?",
+          "paras": [
+            "Für die meisten Eigentümer fünf. Die örtliche Grundsteuer (IBI) und eine Gebühr für Haushaltsabfälle gehen an das Rathaus. Gemeinschaftskosten (gastos de comunidad) gehen an die Eigentümergemeinschaft, wenn Ihr Haus etwas mit anderen teilt. Die Versicherung geht an Ihren Versicherer, mit einem eingebauten öffentlichen Zuschlag. Und die Einkommensteuer für Nichtansässige geht an die staatliche Steuerbehörde, ob Sie vermieten oder nicht.",
+            "Dazu kommen die laufenden Kosten, die Sie selbst bestimmen: Strom, Wasser, Internet, jemand, der nach dem Rechten sieht. Sie hängen davon ab, wie Sie das Haus nutzen, keine Regel legt sie fest. Die festen Rechnungen sind es, die man verstehen sollte, denn sie kommen nach ihrem eigenen Zeitplan, während Sie woanders sind."
+          ]
+        },
+        {
+          "h2": "Wie hoch ist die IBI voraussichtlich?",
+          "paras": [
+            "Die IBI ist ein Prozentsatz des Katasterwerts der Immobilie, nicht des Kaufpreises oder des Marktwerts. Für städtische Immobilien legt jedes Rathaus in seiner eigenen Steuersatzung einen Satz zwischen 0,4 Prozent und 1,10 Prozent fest. Eine Wohnung mit einem Katasterwert von 100.000 Euro zahlt also je nach Gemeinde zwischen 400 und 1.100 Euro im Jahr.",
+            "Das Rathaus verwaltet und erhebt sie, Fragen zum Zahlungszeitraum gehen also dorthin und nicht an das Catastro. Prüfen Sie vor dem Kauf, ob der Verkäufer auf dem aktuellen Stand ist. Wechselt eine Immobilie den Eigentümer, haftet die Immobilie selbst weiter für unbezahlte IBI, eine alte Schuld kann also mit dem Haus zu Ihnen wandern."
+          ]
+        },
+        {
+          "h2": "Gibt es eine eigene Gebühr für die Müllabfuhr?",
+          "paras": [
+            "Ja. Jede Kommune muss eine eigene, gesonderte Abgabe für Haushaltsabfälle haben, entweder eine tasa oder eine nichtsteuerliche öffentliche Abgabe, und das Gesetz sieht vor, dass sie sich zu einer Abrechnung nach der erzeugten Abfallmenge hin entwickelt. Den Betrag legt jedes Rathaus oder sein Abfallzweckverband fest, er ist also von Ort zu Ort verschieden.",
+            "Weil es keine landesweite Zahl gibt, ist die einzige verlässliche Zahl die auf Ihrem eigenen Bescheid. Wenn Sie vor dem Kauf rechnen, bitten Sie den Verkäufer um den letzten Müllbescheid zusammen mit dem IBI-Bescheid, dann kennen Sie beide örtlichen Abgaben für dieses Haus."
+          ]
+        },
+        {
+          "h2": "Zahle ich Einkommensteuer auf ein Haus, das ich nie vermiete?",
+          "paras": [
+            "Ja. Spanien besteuert einen nichtansässigen Eigentümer auf fiktive Einkünfte, einen rechnerischen Betrag, der aus dem Katasterwert auf dem IBI-Bescheid ermittelt wird. Für 2023, 2024 und 2025 beträgt er 1,1 Prozent dieses Werts, wenn die Katasterwerte mit Wirkung ab dem 1. Januar 2012 oder später revidiert wurden. Davon sind keinerlei Kosten abziehbar.",
+            "Nehmen wir eine Wohnung mit einem revidierten Katasterwert von 100.000 Euro. Die fiktiven Einkünfte betragen 1.100 Euro. Wer in der EU, Island, Norwegen oder Liechtenstein ansässig ist, zahlt davon 19 Prozent, also 209 Euro. Andere Nichtansässige zahlen 24 Prozent. Es ist eine kleine Rechnung, aber eine jährliche Erklärung, und die verlinkten Antworten erklären die Fristen."
+          ]
+        },
+        {
+          "h2": "Was ändert sich, wenn ich das Haus einen Teil des Jahres vermiete?",
+          "paras": [
+            "Mieteinkünfte werden zu denselben Sätzen besteuert, 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins und 24 Prozent für alle anderen. Der Unterschied liegt darin, was Sie abziehen dürfen. Ansässige eines anderen EU-Staates oder eines EWR-Staates mit wirksamem steuerlichem Informationsaustausch, wozu Norwegen, Island und Liechtenstein gehören, können Kosten abziehen, die unmittelbar und untrennbar mit der Vermietung zusammenhängen.",
+            "Alle anderen werden auf die Bruttomiete ohne Abzüge besteuert. Um Kosten geltend zu machen, ist eine Bescheinigung über die steuerliche Ansässigkeit aus Ihrem Heimatland erforderlich. Wer abziehen darf, kann mit dem Teil der Gemeinschaftskosten, der IBI und der Versicherung, der direkt mit der Vermietung zusammenhängt, die Steuer auf die Miete senken, solange die Unterlagen aufbewahrt werden."
+          ]
+        },
+        {
+          "h2": "Wie hoch sind die Gemeinschaftskosten, und können sie steigen?",
+          "paras": [
+            "Es gibt keine landesweite Zahl. Jeder Eigentümer trägt einen Anteil an den allgemeinen Kosten des Gebäudes entsprechend dem Miteigentumsanteil, der in der Eigentumsurkunde oder der Satzung festgelegt ist, und wer eine Leistung nicht nutzt, etwa den Pool oder den Aufzug, ist deshalb nicht von der Zahlung befreit. Die Eigentümerversammlung genehmigt mindestens einmal im Jahr Haushalt und Abrechnung.",
+            "Die Gemeinschaft muss außerdem eine Rücklage von mindestens 10 Prozent ihres letzten ordentlichen Haushalts bilden, für Reparaturen sowie bestimmte Arbeiten zur Barrierefreiheit und Energieeffizienz. Ältere Ratgeber nennen noch 5 Prozent, das ist veraltet. Arbeiten, die für Sicherheit, Bewohnbarkeit und grundlegende Barrierefreiheit nötig sind, sind Pflicht, brauchen keine vorherige Abstimmung und werden von allen Eigentümern bezahlt. Eine große Rechnung kann also auch außerhalb der normalen Beiträge kommen."
+          ]
+        },
+        {
+          "h2": "Kostet der Schutz gegen Überschwemmung und Erdbeben extra?",
+          "paras": [
+            "Nein. Wenn Sie eine gewöhnliche Hausversicherung in einer berechtigten Sparte haben, wird mit Ihrer Prämie ein Pflichtzuschlag für das Consorcio de Compensación de Seguros erhoben. Er deckt außergewöhnliche Ereignisse wie Erdbeben und außergewöhnliche Überschwemmungen. Sie müssen nichts gesondert abschließen.",
+            "Der Haken: Das Consorcio zahlt nur bis zu den Versicherungssummen Ihrer gewöhnlichen Police. Wer das Gebäude unterversichert, um an der Prämie zu sparen, ist gegen außergewöhnliche Ereignisse in genau demselben Verhältnis unterversichert. Eine unversicherte Immobilie hat überhaupt keinen Schutz durch das Consorcio, was die Police zu einer der wichtigeren jährlichen Ausgaben macht."
+          ]
+        },
+        {
+          "h2": "Muss ich spanische Vermögensteuer zahlen?",
+          "paras": [
+            "Ist Ihr Vermögen in Spanien weniger als 700.000 Euro wert, ist nichts zu zahlen. Ein Nichtansässiger, der nur auf sein spanisches Vermögen besteuert wird, hat einen Freibetrag (minimo exento) in dieser Höhe. Eine Erklärung ist nur nötig, wenn tatsächlich Steuer zu zahlen ist oder wenn der Wert Ihres spanischen Vermögens 2.000.000 Euro übersteigt, gerechnet einschließlich befreiter Vermögenswerte und ohne Abzug von Schulden.",
+            "Diese zweite Schwelle trifft Eigentümer wertvollerer Immobilien, die nichts schulden, aber trotzdem eine Erklärung abgeben müssen. Liegt Ihr spanisches Vermögen in der Nähe einer der beiden Zahlen, lassen Sie es von einem gestor prüfen, bevor der Abgabezeitraum beginnt, nicht danach. Eigentümer mit Wohnsitz in der EU oder im EWR können außerdem die Regeln der Region anwenden, in der der größte Teil ihres Vermögens liegt, was das Ergebnis verändern kann."
+          ]
+        },
+        {
+          "h2": "Wie viel Zeit kostet der Besitz aus dem Ausland?",
+          "paras": [
+            "Vor allem kostet er Aufmerksamkeit an ein paar festen Punkten. Geben Sie dem Sekretär der Gemeinschaft eine Adresse in Spanien für Mitteilungen. Ohne eine solche gehen Mitteilungen an die Wohnung selbst, und wenn sie nicht zugestellt werden können, werden sie am Aushang der Gemeinschaft angeschlagen und gelten nach drei Kalendertagen als zugestellt. Bauarbeiten wie eine Erweiterung oder Renovierung müssen innerhalb von zwei Monaten beim Catastro gemeldet werden.",
+            "Bewahren Sie die Belege für alle Verbesserungen zusammen mit Ihren ursprünglichen Kaufunterlagen auf. Beim Verkauf werden die Kosten der Verbesserungen sowie die beim Kauf gezahlten Steuern und Gebühren Ihrem Anschaffungswert hinzugerechnet, was den steuerpflichtigen Gewinn senkt. Ein gut geführter Ordner spart später echtes Geld und lässt Ihnen mehr Zeit in Spanien für das Haus selbst."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Coût annuel d'un logement en Espagne quand on vit à l'étranger",
+      "description": "Les factures annuelles d'une résidence secondaire en Espagne : IBI, ordures, charges de copropriété, assurance et impôt des non-résidents, et leur calcul.",
+      "h1": "Ce que vous coûte chaque année un logement en Espagne",
+      "lead": "Une résidence secondaire en Espagne s'accompagne d'un petit ensemble de factures annuelles : l'IBI à la mairie, une taxe sur les déchets, des charges de copropriété si vous partagez un immeuble ou une piscine, l'assurance habitation et l'impôt sur le revenu des non-résidents, même si vous ne louez jamais. La plupart se calculent à partir de la valeur cadastrale ou sont décidées par votre copropriété : les montants pour votre propre logement peuvent donc être connus à l'avance.",
+      "sections": [
+        {
+          "h2": "Quelles factures arrivent chaque année, que j'utilise le logement ou non ?",
+          "paras": [
+            "Cinq, pour la plupart des propriétaires. L'impôt foncier local (IBI) et une taxe sur les déchets ménagers vont à la mairie. Les charges de copropriété (gastos de comunidad) vont à la copropriété si votre logement partage quoi que ce soit avec d'autres. L'assurance va à votre assureur, avec une surprime publique incluse. Et l'impôt sur le revenu des non-résidents va à l'administration fiscale nationale, que vous louiez le logement ou non.",
+            "S'y ajoutent les frais de fonctionnement que vous choisissez : électricité, eau, internet, quelqu'un qui passe vérifier les lieux. Ils dépendent de la façon dont vous utilisez le logement, donc aucune règle ne les fixe. Ce sont les factures fixes qu'il vaut la peine de comprendre, car elles arrivent selon leur propre calendrier pendant que vous êtes ailleurs."
+          ]
+        },
+        {
+          "h2": "À combien l'IBI est-il susceptible de s'élever ?",
+          "paras": [
+            "L'IBI est un pourcentage de la valeur cadastrale du bien, et non du prix que vous avez payé ni de sa valeur de marché. Pour les biens urbains, chaque mairie fixe un taux compris entre 0,4 pour cent et 1,10 pour cent dans sa propre ordonnance fiscale. Un appartement d'une valeur cadastrale de 100 000 euros paie donc entre 400 et 1 100 euros par an, selon la commune.",
+            "C'est la mairie qui le gère et le perçoit : les questions sur la période de paiement s'adressent donc à elle plutôt qu'au Catastro. Avant d'acheter, vérifiez que le vendeur est à jour. Lorsqu'un bien change de mains, le bien lui-même reste tenu de l'IBI impayé, si bien qu'une vieille dette peut suivre le logement jusqu'à vous."
+          ]
+        },
+        {
+          "h2": "Y a-t-il une taxe à part pour l'enlèvement des ordures ?",
+          "paras": [
+            "Oui. Chaque collectivité locale doit avoir une redevance spécifique et distincte pour les déchets ménagers, soit une tasa, soit une redevance publique non fiscale, et la loi prévoit qu'elle évolue vers une facturation selon la quantité de déchets produite. Le montant est fixé par chaque mairie ou par son consortium des déchets : il varie donc d'une commune à l'autre.",
+            "Comme il n'existe pas de chiffre national, le seul montant fiable est celui de votre propre avis. Si vous établissez un budget avant d'acheter, demandez au vendeur le dernier avis de la taxe sur les déchets en même temps que celui de l'IBI, et vous connaîtrez les deux factures locales de ce logement."
+          ]
+        },
+        {
+          "h2": "Dois-je payer un impôt sur le revenu pour un logement que je ne loue jamais ?",
+          "paras": [
+            "Oui. L'Espagne impose un propriétaire non-résident sur un revenu imputé, un montant théorique calculé à partir de la valeur cadastrale figurant sur l'avis d'IBI. Pour 2023, 2024 et 2025, le taux est de 1,1 pour cent de cette valeur lorsque les valeurs cadastrales ont été révisées avec effet à partir du 1er janvier 2012. Aucune dépense, de quelque nature que ce soit, ne peut en être déduite.",
+            "Prenons un appartement d'une valeur cadastrale révisée de 100 000 euros. Le revenu imputé est de 1 100 euros. Un résident de l'UE, d'Islande, de Norvège ou du Liechtenstein paie 19 pour cent de ce montant, soit 209 euros. Les autres non-résidents paient 24 pour cent. C'est une petite facture, mais c'est une déclaration annuelle, et les réponses liées couvrent les échéances."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui change si je loue le logement une partie de l'année ?",
+          "paras": [
+            "Les revenus locatifs sont imposés aux mêmes taux, 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein et 24 pour cent pour tous les autres. La différence tient à ce que vous pouvez déduire. Les résidents d'un autre État de l'UE, ou d'un État de l'EEE pratiquant un échange effectif d'informations fiscales, ce qui inclut la Norvège, l'Islande et le Liechtenstein, peuvent déduire les dépenses directement et indissociablement liées à la location.",
+            "Tous les autres sont imposés sur le loyer brut, sans aucune déduction. Un certificat de résidence fiscale de votre pays est exigé pour déduire les dépenses. Pour un propriétaire qui peut déduire, la part des charges de copropriété, de l'IBI et de l'assurance directement liée à la location peut réduire l'impôt sur le loyer, à condition de garder les justificatifs."
+          ]
+        },
+        {
+          "h2": "À combien s'élèvent les charges de copropriété, et peuvent-elles augmenter ?",
+          "paras": [
+            "Il n'existe pas de chiffre national. Chaque propriétaire paie une part des dépenses générales de l'immeuble selon la quote-part fixée dans le titre constitutif ou les statuts, et le fait de ne pas utiliser un service, comme la piscine ou l'ascenseur, ne dispense pas de le payer. L'assemblée des copropriétaires approuve le budget et les comptes au moins une fois par an.",
+            "La copropriété doit aussi constituer un fonds de réserve d'au moins 10 pour cent de son dernier budget ordinaire, pour les réparations et certains travaux d'accessibilité et d'efficacité énergétique. D'anciens guides parlent encore de 5 pour cent, ce qui est dépassé. Les travaux nécessaires à la sécurité, à l'habitabilité et à l'accessibilité de base sont obligatoires, ne nécessitent aucun vote préalable et sont payés par tous les propriétaires : une grosse facture peut donc arriver en dehors des charges habituelles."
+          ]
+        },
+        {
+          "h2": "La couverture inondation et tremblement de terre est-elle un coût supplémentaire ?",
+          "paras": [
+            "Non. Si vous avez une assurance habitation ordinaire dans une branche concernée, une surprime obligatoire pour le Consorcio de Compensación de Seguros est perçue avec votre prime. Elle couvre des événements extraordinaires comme les tremblements de terre et les inondations extraordinaires. Il n'y a rien à souscrire à part.",
+            "Le piège, c'est que le Consorcio ne paie que jusqu'aux montants assurés dans votre police ordinaire. Si vous sous-assurez le bâtiment pour économiser sur la prime, vous êtes sous-assuré contre les événements extraordinaires exactement dans la même proportion. Un bien non assuré n'a aucune couverture du Consorcio, ce qui fait de l'assurance l'un des coûts annuels les plus importants."
+          ]
+        },
+        {
+          "h2": "Vais-je devoir payer l'impôt espagnol sur la fortune ?",
+          "paras": [
+            "Si vos biens en Espagne valent moins de 700 000 euros, il n'y a rien à payer. Un non-résident imposé uniquement sur ses biens espagnols bénéficie d'un abattement (minimo exento) de ce montant. Une déclaration n'est exigée que lorsqu'un impôt est réellement dû, ou lorsque la valeur de vos biens en Espagne dépasse 2 000 000 euros, en comptant les biens exonérés et sans déduire les dettes.",
+            "Ce second seuil concerne les propriétaires de biens de plus grande valeur qui ne doivent rien mais doivent tout de même déclarer. Si vos biens en Espagne sont proches de l'un de ces chiffres, demandez à un gestor de vérifier avant l'ouverture de la période de déclaration plutôt qu'après. Les propriétaires résidant dans l'UE ou l'EEE peuvent aussi choisir d'appliquer les règles de la région où se trouve la plus grande partie de leurs biens, ce qui peut changer le résultat."
+          ]
+        },
+        {
+          "h2": "Combien de temps coûte la propriété depuis l'étranger ?",
+          "paras": [
+            "Surtout de l'attention à quelques moments fixes. Donnez au secrétaire de la copropriété une adresse en Espagne pour les convocations et avis ; sans elle, les avis sont envoyés à l'appartement lui-même et, s'ils ne peuvent pas être remis, ils sont affichés sur le tableau d'affichage de la copropriété et produisent leurs effets au bout de trois jours calendaires. Les travaux comme une extension ou une rénovation doivent être déclarés au Catastro dans les deux mois.",
+            "Gardez les factures de toutes les améliorations, avec votre dossier d'achat d'origine. Lorsque vous vendez, le coût des améliorations et les impôts et frais payés à l'achat s'ajoutent à votre valeur d'acquisition, ce qui réduit la plus-value imposable. Un dossier bien tenu aujourd'hui fait économiser de vraies sommes plus tard, et laisse davantage de votre temps en Espagne au logement lui-même."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Jaarlijkse kosten van een woning in Spanje vanuit het buitenland",
+      "description": "De jaarlijkse rekeningen van een tweede woning in Spanje, zoals IBI, afvalheffing, VvE-bijdrage, verzekering en belasting, en hoe ze worden berekend.",
+      "h1": "Wat een woning in Spanje u elk jaar kost",
+      "lead": "Een tweede woning in Spanje brengt een beperkt aantal jaarlijkse rekeningen mee: IBI aan de gemeente, een afvalheffing, VvE-bijdragen als u een gebouw of zwembad deelt, een opstalverzekering, en inkomstenbelasting voor niet-inwoners, ook als u de woning nooit verhuurt. De meeste worden berekend op basis van de kadastrale waarde of door uw VvE vastgesteld, dus de bedragen voor uw eigen woning zijn vooraf te kennen.",
+      "sections": [
+        {
+          "h2": "Welke rekeningen komen elk jaar, of ik de woning nu gebruik of niet?",
+          "paras": [
+            "Voor de meeste eigenaren zijn het er vijf. De lokale onroerendgoedbelasting (IBI) en een afvalheffing gaan naar de gemeente. VvE-bijdragen (gastos de comunidad) gaan naar de vereniging van eigenaren als uw woning iets met anderen deelt. De verzekering gaat naar uw verzekeraar, met een ingebouwde publieke toeslag. En de inkomstenbelasting voor niet-inwoners gaat naar de landelijke belastingdienst, of u de woning nu verhuurt of niet.",
+            "Daarbovenop komen de lopende kosten waar u zelf voor kiest: elektriciteit, water, internet, iemand die af en toe gaat kijken. Die hangen af van hoe u de woning gebruikt, dus geen enkele regel legt ze vast. De vaste rekeningen zijn de moeite waard om te begrijpen, omdat ze volgens hun eigen schema binnenkomen terwijl u ergens anders bent."
+          ]
+        },
+        {
+          "h2": "Hoe hoog is de IBI ongeveer?",
+          "paras": [
+            "De IBI is een percentage van de kadastrale waarde van de woning, niet van de prijs die u betaalde of de marktwaarde. Voor stedelijk vastgoed stelt elke gemeente in haar eigen belastingverordening een tarief vast tussen 0,4 procent en 1,10 procent. Een appartement met een kadastrale waarde van 100.000 euro betaalt dus tussen 400 en 1.100 euro per jaar, afhankelijk van de gemeente.",
+            "De gemeente beheert en int de IBI, dus vragen over de betaalperiode gaan daarheen en niet naar het Catastro. Controleer vóór de aankoop of de verkoper bij is met betalen. Wisselt een woning van eigenaar, dan blijft de woning zelf aansprakelijk voor onbetaalde IBI, dus een oude schuld kan met de woning bij u terechtkomen."
+          ]
+        },
+        {
+          "h2": "Is er een aparte heffing voor het ophalen van afval?",
+          "paras": [
+            "Ja. Elke lokale overheid moet een specifieke, aparte heffing voor huishoudelijk afval hebben, ofwel een tasa ofwel een niet-fiscale publieke heffing, en volgens de wet moet die toegroeien naar een heffing op basis van de hoeveelheid afval die wordt geproduceerd. Het bedrag wordt vastgesteld door elke gemeente of haar afvalconsortium, dus het verschilt per gemeente.",
+            "Omdat er geen landelijk bedrag bestaat, is het enige betrouwbare getal het getal op uw eigen aanslag. Maakt u een begroting vóór de aankoop, vraag de verkoper dan om de laatste afvalaanslag naast die van de IBI, en u kent beide lokale rekeningen voor die woning."
+          ]
+        },
+        {
+          "h2": "Betaal ik inkomstenbelasting over een woning die ik nooit verhuur?",
+          "paras": [
+            "Ja. Spanje belast een eigenaar die niet in Spanje woont over fictief inkomen, een denkbeeldig bedrag dat wordt berekend op basis van de kadastrale waarde op de IBI-aanslag. Voor 2023, 2024 en 2025 is dat 1,1 procent van die waarde als de kadastrale waarden zijn herzien met ingang van 1 januari 2012 of later. Daar mogen geen enkele kosten van worden afgetrokken.",
+            "Neem een appartement met een herziene kadastrale waarde van 100.000 euro. Het fictieve inkomen is 1.100 euro. Een inwoner van de EU, IJsland, Noorwegen of Liechtenstein betaalt daar 19 procent over, dat is 209 euro. Andere niet-inwoners betalen 24 procent. Het is een kleine rekening, maar het is een jaarlijkse aangifte, en de gekoppelde antwoorden behandelen de termijnen."
+          ]
+        },
+        {
+          "h2": "Wat verandert er als ik de woning een deel van het jaar verhuur?",
+          "paras": [
+            "Huurinkomsten worden tegen dezelfde tarieven belast, 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein en 24 procent voor alle anderen. Het verschil zit in wat u mag aftrekken. Inwoners van een andere EU-lidstaat, of van een EER-staat met effectieve uitwisseling van belastinginformatie, waaronder Noorwegen, IJsland en Liechtenstein, mogen kosten aftrekken die rechtstreeks en onlosmakelijk met de verhuur samenhangen.",
+            "Alle anderen worden belast over de bruto huur, zonder aftrek. Om de kosten af te trekken is een verklaring van fiscale woonplaats uit uw eigen land nodig. Voor een eigenaar die mag aftrekken, kan het deel van de VvE-bijdragen, IBI en verzekering dat rechtstreeks met de verhuur samenhangt de belasting op de huur verlagen, zolang u de papieren bewaart."
+          ]
+        },
+        {
+          "h2": "Hoe hoog zijn de VvE-bijdragen, en kunnen ze stijgen?",
+          "paras": [
+            "Er is geen landelijk bedrag. Elke eigenaar betaalt een deel van de algemene kosten van het gebouw naar rato van het aandeel dat in de akte of de statuten is vastgelegd, en wie een voorziening niet gebruikt, zoals het zwembad of de lift, is daarmee niet vrijgesteld van betalen. De vergadering van eigenaren keurt minstens één keer per jaar de begroting en de rekeningen goed.",
+            "De VvE moet ook een reservefonds aanhouden van minstens 10 procent van haar laatste gewone begroting, voor reparaties en bepaalde werken op het gebied van toegankelijkheid en energie. Oudere gidsen noemen nog 5 procent, en dat is achterhaald. Werken die nodig zijn voor veiligheid, bewoonbaarheid en basistoegankelijkheid zijn verplicht, vragen geen voorafgaande stemming en worden door alle eigenaren betaald, dus er kan een grote rekening komen buiten de gewone bijdragen om."
+          ]
+        },
+        {
+          "h2": "Is dekking tegen overstroming en aardbeving een extra kostenpost?",
+          "paras": [
+            "Nee. Heeft u een gewone woonverzekering in een daarvoor in aanmerking komende tak, dan wordt met uw premie een verplichte toeslag voor het Consorcio de Compensación de Seguros geïnd. Die dekt buitengewone gebeurtenissen zoals aardbevingen en buitengewone overstromingen. Er hoeft niets apart te worden afgesloten.",
+            "Het addertje is dat het Consorcio alleen uitkeert tot de verzekerde bedragen in uw gewone polis. Verzekert u het gebouw te laag om op de premie te besparen, dan bent u in precies dezelfde verhouding onderverzekerd tegen buitengewone gebeurtenissen. Een onverzekerde woning heeft helemaal geen dekking van het Consorcio, en dat maakt de polis tot een van de belangrijkere jaarlijkse kosten."
+          ]
+        },
+        {
+          "h2": "Ben ik Spaanse vermogensbelasting verschuldigd?",
+          "paras": [
+            "Zijn uw Spaanse bezittingen minder dan 700.000 euro waard, dan valt er niets te betalen. Een niet-inwoner die alleen over Spaanse bezittingen wordt belast, heeft een belastingvrij bedrag (minimo exento) van die omvang. Aangifte is alleen verplicht als er werkelijk belasting verschuldigd is, of als de waarde van uw Spaanse bezittingen hoger is dan 2.000.000 euro, vrijgestelde bezittingen meegerekend en zonder aftrek van schulden.",
+            "Die tweede drempel treft eigenaren van waardevollere woningen die niets verschuldigd zijn maar toch aangifte moeten doen. Zitten uw Spaanse bezittingen in de buurt van een van beide bedragen, laat een gestor het dan controleren voordat de aangifteperiode opent en niet erna. Eigenaren die in de EU of EER wonen, kunnen er ook voor kiezen de regels toe te passen van de regio waar het grootste deel van hun bezittingen ligt, en dat kan de uitkomst veranderen."
+          ]
+        },
+        {
+          "h2": "Hoeveel tijd kost een woning bezitten vanuit het buitenland?",
+          "paras": [
+            "Vooral aandacht op een paar vaste momenten. Geef de secretaris van de VvE een adres in Spanje voor kennisgevingen; zonder dat adres gaan kennisgevingen naar het appartement zelf, en als ze daar niet kunnen worden bezorgd, worden ze op het mededelingenbord van de VvE gehangen en gaan ze na drie kalenderdagen in. Bouwwerken zoals een uitbreiding of renovatie moeten binnen twee maanden bij het Catastro worden gemeld.",
+            "Bewaar de bonnen van alle verbeteringen, samen met uw oorspronkelijke aankoopdossier. Verkoopt u, dan worden de kosten van verbeteringen en de belastingen en kosten die u bij de aankoop betaalde bij uw aanschafwaarde opgeteld, wat de belastbare winst verlaagt. Een goed bijgehouden map bespaart later echt geld, en laat meer van uw tijd in Spanje over voor de woning zelf."
+          ]
+        }
+      ]
+    }
+  }
+}

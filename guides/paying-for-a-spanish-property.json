@@ -1,0 +1,378 @@
+{
+  "slug": "paying-for-a-spanish-property",
+  "topic": "buying",
+  "tool": "purchase-costs",
+  "rules": [
+    "buy.deed.payment_means",
+    "buy.deed.tax_ids",
+    "buy.cash.limit",
+    "buy.cash.border_eu",
+    "buy.cash.border_spain",
+    "aml.obliged_agents",
+    "aml.identification",
+    "aml.beneficial_owner",
+    "aml.pep",
+    "aml.reporting",
+    "buy.registry.presumption",
+    "buy.registry.good_faith_buyer",
+    "irnr.sale.retention",
+    "own.ibi.pass_on",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "own.lph.seller_declaration",
+    "poa.apostille_parties",
+    "irnr.sale.gain_base"
+  ],
+  "answers": [
+    "why-spanish-estate-agents-ask-for-id",
+    "three-percent-withheld-when-selling-spanish-property",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "nie-number-form-and-fee",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "capital-gains-tax-calculation-non-resident-sale-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Paying for a Spanish Property: Transfers, Cash and the Deed",
+      "description": "How to pay for a home in Spain from abroad: why the notary records every payment, the cash limits for non-residents and when cash must be declared.",
+      "h1": "How to pay for a property in Spain when your money is abroad",
+      "lead": "Pay by bank transfer and keep every receipt, because the notary must record in the deed how the price was paid, before or at signing, and whether in cash, by cheque or by transfer. Cash is limited to 1,000 euros where one party acts as a business or professional, or 10,000 euros for a private individual whose tax domicile is outside Spain. Carrying 10,000 euros or more in cash into or out of Spain must be declared.",
+      "sections": [
+        {
+          "h2": "How does the notary know how I paid?",
+          "paras": [
+            "You tell them, with evidence. In a deed that transfers a property for a price, the notary must identify how that price was paid: whether before or at signing, and whether in cash, by cheque with its details, or by bank transfer. That covers the deposit you paid weeks or months earlier as well as the balance on the day.",
+            "If a party does not provide a required declaration, the notary records that in the deed and notifies the notarial body, which passes information on unidentified payments to the tax administration. Nobody wants their purchase to start that way. Bring the transfer receipts and any cheque copies to the signing, in the same order as the payments, and the notary's questions take minutes."
+          ]
+        },
+        {
+          "h2": "Why does the estate agent ask so many questions about me?",
+          "paras": [
+            "Because the law requires it. Estate agents who act in property sales are obliged subjects under Spain's anti-money-laundering law. They must identify every person taking part in an operation, using reliable documents, before the operation begins. So expect the request for your passport early, and have it scanned and ready to send before you start viewing.",
+            "If you buy through a company, the agent must also identify the beneficial owner, which includes anyone holding more than 25 percent of the capital or voting rights, or who otherwise controls it. Politically exposed persons, their families and close associates face enhanced checks. Agents must report any operation showing signs of money laundering to SEPBLAC, and they are not allowed to tell the client that a report has been made."
+          ]
+        },
+        {
+          "h2": "Can I pay part of the price in cash?",
+          "paras": [
+            "Where a business or professional is involved, only a small part. The cash payment limit is 1,000 euros in any transaction where one of the parties acts as a business or professional. For a private individual whose tax domicile is outside Spain, the limit is 10,000 euros. Before Ley 11/2021 the figures were 2,500 and 15,000 euros, and older guides still quote them.",
+            "Payments between two private individuals fall outside the limit. But a purchase from a developer, an estate agent paid in cash or any professional seller brings it in. Whatever the amount, cash paid for the property is still declared to the notary as cash and written into the deed. For a sum this size, a bank transfer is simpler for everyone, including you when you sell and have to prove what you paid."
+          ]
+        },
+        {
+          "h2": "Do I have to declare cash I carry with me?",
+          "paras": [
+            "Yes, from 10,000 euros. Anyone carrying cash of 10,000 euros or more when entering or leaving the European Union must declare it, and the threshold is per person and per trip. Spain also requires a declaration of 10,000 euros or more carried into or out of Spain, including to or from another EU country. Driving down from Germany or flying in from Oslo with an envelope of notes is covered either way.",
+            "Inside Spain, moving 100,000 euros or more in means of payment must also be declared. Movements to or from another EU Member State use form S1, and movements to or from a non-EU country use form E1. None of this makes carrying cash illegal. It means the paperwork has to travel with the money."
+          ]
+        },
+        {
+          "h2": "How do I pay the deposit safely?",
+          "paras": [
+            "Pay the person who can actually sell. Rights recorded in the land registry are presumed to exist and to belong to the holder in the form the entry shows, and a buyer who acquires in good faith and for value from the person the registry shows as entitled to sell keeps the purchase once it is registered. So check the nota simple before any money moves, and make sure the seller named there is the seller in your contract.",
+            "Then pay by transfer to the account named in the contract, with a reference that names the property and the contract. What happens to the deposit if either side pulls out depends on the wording of your contract, so have your abogado read that clause before you transfer. Keep the receipt with the contract (you will need both again at the notary)."
+          ]
+        },
+        {
+          "h2": "What comes out of the price at completion?",
+          "paras": [
+            "If the seller is not resident in Spain, you must withhold 3 percent of the agreed price and pay it to the tax office on modelo 211 within one month of the purchase. It applies whether or not you live in Spain yourself, and it is 3 percent of the price, not of the seller's gain. The tax office keeps a list of cases where no withholding applies, so your abogado should confirm it for your purchase.",
+            "Debts that follow the property also need settling. The property stays liable for unpaid IBI, and a buyer takes on unpaid community charges for the part of the year already gone plus the three previous calendar years. The seller must declare in the deed that they are up to date or provide a certificate of what they owe. Any agreement to share this year's IBI with the seller is a private matter between you, and the town hall still bills its own taxpayer."
+          ]
+        },
+        {
+          "h2": "Can I pay and sign without travelling to Spain?",
+          "paras": [
+            "Yes. Everyone named in the deed shows the notary their tax identification number, which for a foreign buyer is the NIE, so get yours before anything else. Norway, Sweden, Germany, France, the Netherlands, the United Kingdom and Spain are parties to the Hague Apostille Convention, so a public document issued at home, such as a power of attorney, is accepted in Spain with an apostille instead of consular legalisation.",
+            "Keep the whole payment trail afterwards: the transfer receipts, the deed and the invoices from the notary and registry. When you sell, the acquisition value used to work out your gain is what you actually paid plus the taxes and costs of buying, and the receipts are how you prove it. Then the money side is done, and the house is yours to enjoy."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Betale for bolig i Spania: overføring, kontanter og skjøte",
+      "description": "Slik betaler du for en bolig i Spania fra utlandet: hvorfor notaren registrerer hver betaling, kontantgrensene og når kontanter må deklareres.",
+      "h1": "Slik betaler du for en bolig i Spania når pengene dine er i utlandet",
+      "lead": "Betal med bankoverføring og ta vare på alle kvitteringer, fordi notaren må føre inn i skjøtet hvordan prisen ble betalt, før eller ved signering, og om det var kontant, med sjekk eller med overføring. Kontanter er begrenset til 1 000 euro når en av partene opptrer som næringsdrivende eller profesjonell, eller 10 000 euro for en privatperson med skattemessig bopel utenfor Spania. Å ta med 10 000 euro eller mer i kontanter inn i eller ut av Spania må deklareres.",
+      "sections": [
+        {
+          "h2": "Hvordan vet notaren hvordan jeg betalte?",
+          "paras": [
+            "Du forteller det, med dokumentasjon. I et skjøte som overdrar en eiendom mot en pris, må notaren identifisere hvordan prisen ble betalt: om det skjedde før eller ved signering, og om det var kontant, med sjekk med detaljene, eller med bankoverføring. Det gjelder depositumet du betalte uker eller måneder tidligere, i tillegg til restbeløpet på dagen.",
+            "Gir en part ikke en påkrevd erklæring, fører notaren det inn i skjøtet og varsler notarorganet, som gir skattemyndighetene informasjon om uidentifiserte betalinger. Ingen ønsker at kjøpet skal starte slik. Ta med overføringskvitteringene og eventuelle sjekkopier til signeringen, i samme rekkefølge som betalingene, så tar notarens spørsmål bare noen minutter."
+          ]
+        },
+        {
+          "h2": "Hvorfor stiller eiendomsmegleren så mange spørsmål om meg?",
+          "paras": [
+            "Fordi loven krever det. Eiendomsmeglere som medvirker ved boligsalg, er rapporteringspliktige etter Spanias hvitvaskingslov. De må identifisere hver person som deltar i en transaksjon, med pålitelige dokumenter, før transaksjonen begynner. Regn derfor med at de ber om passet ditt tidlig, og ha det skannet og klart til å sende før du begynner på visninger.",
+            "Kjøper du gjennom et selskap, må megleren også identifisere den reelle rettighetshaveren, som omfatter alle som har mer enn 25 prosent av kapitalen eller stemmerettene, eller som på annen måte kontrollerer selskapet. Politisk eksponerte personer, familien deres og nære medarbeidere får skjerpede kontroller. Meglere må rapportere enhver transaksjon som viser tegn på hvitvasking til SEPBLAC, og de har ikke lov til å fortelle kunden at det er sendt en rapport."
+          ]
+        },
+        {
+          "h2": "Kan jeg betale deler av prisen kontant?",
+          "paras": [
+            "Når en næringsdrivende eller profesjonell er involvert, bare en liten del. Grensen for kontantbetaling er 1 000 euro i enhver transaksjon der en av partene opptrer som næringsdrivende eller profesjonell. For en privatperson med skattemessig bopel utenfor Spania er grensen 10 000 euro. Før Ley 11/2021 var tallene 2 500 og 15 000 euro, og eldre guider oppgir dem fortsatt.",
+            "Betalinger mellom to privatpersoner faller utenfor grensen. Men et kjøp fra en utbygger, en eiendomsmegler som får betalt kontant, eller enhver profesjonell selger gjør at grensen gjelder. Uansett beløp skal kontanter betalt for eiendommen fortsatt oppgis til notaren som kontanter og føres inn i skjøtet. For et beløp i denne størrelsen er bankoverføring enklere for alle, også for deg når du selger og må dokumentere hva du betalte."
+          ]
+        },
+        {
+          "h2": "Må jeg deklarere kontanter jeg har med meg?",
+          "paras": [
+            "Ja, fra 10 000 euro. Alle som har med seg kontanter på 10 000 euro eller mer ved innreise til eller utreise fra Den europeiske union, må deklarere dem, og grensen gjelder per person og per reise. Spania krever også deklarasjon av 10 000 euro eller mer som tas inn i eller ut av Spania, også til eller fra et annet EU-land. Kjører du ned fra Tyskland eller flyr inn fra Oslo med en konvolutt med sedler, er du omfattet uansett.",
+            "Innenfor Spania må flytting av 100 000 euro eller mer i betalingsmidler også deklareres. Bevegelser til eller fra en annen EU-medlemsstat bruker skjema S1, og bevegelser til eller fra et land utenfor EU bruker skjema E1. Ingenting av dette gjør det ulovlig å ha med kontanter. Det betyr at papirene må følge med pengene."
+          ]
+        },
+        {
+          "h2": "Hvordan betaler jeg depositumet trygt?",
+          "paras": [
+            "Betal den som faktisk kan selge. Rettigheter som er registrert i eiendomsregisteret, antas å eksistere og å tilhøre innehaveren slik oppføringen viser, og en kjøper som i god tro og mot vederlag kjøper fra den registeret viser som berettiget til å selge, beholder kjøpet når det er registrert. Sjekk derfor nota simple før noen penger flyttes, og sørg for at selgeren som står der, er selgeren i kontrakten din.",
+            "Betal deretter med overføring til kontoen som er oppgitt i kontrakten, med en referanse som nevner eiendommen og kontrakten. Hva som skjer med depositumet hvis en av partene trekker seg, avhenger av ordlyden i kontrakten din, så la abogado lese den klausulen før du overfører. Oppbevar kvitteringen sammen med kontrakten (du trenger begge igjen hos notaren)."
+          ]
+        },
+        {
+          "h2": "Hva trekkes fra prisen ved overtakelsen?",
+          "paras": [
+            "Bor selgeren ikke i Spania, må du holde tilbake 3 prosent av avtalt pris og betale det til skattekontoret på modelo 211 innen én måned etter kjøpet. Det gjelder enten du selv bor i Spania eller ikke, og det er 3 prosent av prisen, ikke av selgerens gevinst. Skattekontoret har en liste over tilfeller der det ikke skal holdes tilbake noe, så abogado bør bekrefte det for kjøpet ditt.",
+            "Gjeld som følger eiendommen, må også gjøres opp. Eiendommen hefter for ubetalt IBI, og en kjøper overtar ubetalte fellesutgifter for den delen av året som har gått, pluss de tre foregående kalenderårene. Selgeren må erklære i skjøtet at alt er betalt, eller legge fram en attest på hva som skyldes. En avtale om å dele årets IBI med selgeren er en privat sak mellom dere, og kommunen sender fortsatt regningen til sin egen skattyter."
+          ]
+        },
+        {
+          "h2": "Kan jeg betale og signere uten å reise til Spania?",
+          "paras": [
+            "Ja. Alle som står i skjøtet, viser notaren sitt skatteidentifikasjonsnummer, som for en utenlandsk kjøper er NIE, så skaff ditt før noe annet. Norge, Sverige, Tyskland, Frankrike, Nederland, Storbritannia og Spania er parter i Haag-konvensjonen om apostille, så et offentlig dokument utstedt hjemme, som en fullmakt, godtas i Spania med apostille i stedet for konsulær legalisering.",
+            "Ta vare på hele betalingssporet etterpå: overføringskvitteringene, skjøtet og fakturaene fra notar og register. Når du selger, er anskaffelsesverdien som brukes til å beregne gevinsten din det du faktisk betalte, pluss skattene og kostnadene ved kjøpet, og kvitteringene er det som beviser det. Da er pengesiden ferdig, og huset er ditt å nyte."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Betala en bostad i Spanien: överföring, kontanter och köpebrev",
+      "description": "Så betalar du en bostad i Spanien från utlandet: varför notarien antecknar varje betalning, kontantgränserna och när kontanter måste deklareras.",
+      "h1": "Så betalar du för en bostad i Spanien när dina pengar finns utomlands",
+      "lead": "Betala med banköverföring och spara alla kvitton, eftersom notarien måste anteckna i köpebrevet hur köpeskillingen betalades, före eller vid undertecknandet, och om det skedde kontant, med check eller med överföring. Kontanter är begränsade till 1 000 euro när en av parterna agerar som företag eller yrkesutövare, eller 10 000 euro för en privatperson med skatterättslig hemvist utanför Spanien. Att föra in eller ut 10 000 euro eller mer i kontanter till eller från Spanien måste deklareras.",
+      "sections": [
+        {
+          "h2": "Hur vet notarien hur jag betalade?",
+          "paras": [
+            "Du berättar det, med bevis. I ett köpebrev som överlåter en fastighet mot betalning måste notarien ange hur köpeskillingen betalades: före eller vid undertecknandet, och om det skedde kontant, med check och dess uppgifter, eller med banköverföring. Det gäller handpenningen du betalade veckor eller månader tidigare lika väl som resten på själva dagen.",
+            "Om en part inte lämnar en föreskriven uppgift antecknar notarien det i köpebrevet och underrättar notariatsorganet, som för vidare information om oidentifierade betalningar till skatteförvaltningen. Ingen vill att köpet ska börja så. Ta med överföringskvittona och eventuella checkkopior till undertecknandet, i samma ordning som betalningarna, så tar notariens frågor bara några minuter."
+          ]
+        },
+        {
+          "h2": "Varför ställer mäklaren så många frågor om mig?",
+          "paras": [
+            "För att lagen kräver det. Fastighetsmäklare som medverkar vid bostadsförsäljningar är rapporteringsskyldiga enligt Spaniens penningtvättslag. De måste identifiera varje person som deltar i en affär, med tillförlitliga handlingar, innan affären börjar. Räkna därför med att få frågan om ditt pass tidigt, och ha det inskannat och redo att skicka innan du börjar gå på visningar.",
+            "Köper du via ett bolag måste mäklaren också identifiera den verkliga huvudmannen, vilket omfattar alla som innehar mer än 25 procent av kapitalet eller rösterna, eller som på annat sätt kontrollerar bolaget. Personer i politiskt utsatt ställning, deras familjemedlemmar och nära medarbetare granskas extra noga. Mäklare måste rapportera varje affär som visar tecken på penningtvätt till SEPBLAC, och de får inte berätta för kunden att en rapport har lämnats."
+          ]
+        },
+        {
+          "h2": "Kan jag betala en del av priset kontant?",
+          "paras": [
+            "När ett företag eller en yrkesutövare är inblandad, bara en liten del. Gränsen för kontantbetalning är 1 000 euro i varje transaktion där en av parterna agerar som företag eller yrkesutövare. För en privatperson med skatterättslig hemvist utanför Spanien är gränsen 10 000 euro. Före Ley 11/2021 var beloppen 2 500 och 15 000 euro, och äldre guider anger dem fortfarande.",
+            "Betalningar mellan två privatpersoner omfattas inte av gränsen. Men ett köp från en byggherre, en mäklare som får betalt kontant eller en säljare som är yrkesutövare gör att den gäller. Oavsett belopp anges kontanter som betalas för bostaden ändå som kontanter för notarien och skrivs in i köpebrevet. För en summa av den här storleken är en banköverföring enklare för alla, även för dig när du säljer och måste visa vad du betalade."
+          ]
+        },
+        {
+          "h2": "Måste jag deklarera kontanter som jag har med mig?",
+          "paras": [
+            "Ja, från 10 000 euro. Alla som har med sig kontanter på 10 000 euro eller mer när de reser in i eller ut ur Europeiska unionen måste deklarera dem, och gränsen gäller per person och per resa. Spanien kräver också en deklaration av 10 000 euro eller mer som förs in i eller ut ur Spanien, även till eller från ett annat EU-land. Att köra ner från Tyskland eller flyga in från Oslo med ett kuvert sedlar omfattas i båda fallen.",
+            "Inom Spanien måste även förflyttning av 100 000 euro eller mer i betalningsmedel deklareras. Förflyttningar till eller från en annan EU-medlemsstat görs på blankett S1, och förflyttningar till eller från ett land utanför EU på blankett E1. Inget av detta gör det olagligt att bära kontanter. Det betyder att pappersarbetet måste följa med pengarna."
+          ]
+        },
+        {
+          "h2": "Hur betalar jag handpenningen säkert?",
+          "paras": [
+            "Betala den person som faktiskt kan sälja. Rättigheter som är inskrivna i fastighetsregistret presumeras finnas och tillhöra innehavaren i den form som anteckningen visar, och en köpare som i god tro och mot vederlag förvärvar från den person som registret visar som behörig att sälja behåller köpet när det väl är registrerat. Kontrollera därför nota simple innan några pengar flyttas, och se till att säljaren som anges där är säljaren i ditt avtal.",
+            "Betala sedan med överföring till det konto som anges i avtalet, med en referens som anger bostaden och avtalet. Vad som händer med handpenningen om någon av parterna drar sig ur beror på hur ditt avtal är formulerat, så låt din abogado läsa den klausulen innan du för över pengarna. Spara kvittot tillsammans med avtalet (du behöver båda igen hos notarien)."
+          ]
+        },
+        {
+          "h2": "Vad dras från priset vid tillträdet?",
+          "paras": [
+            "Om säljaren inte är bosatt i Spanien måste du hålla inne 3 procent av det avtalade priset och betala in det till skattemyndigheten på modelo 211 inom en månad från köpet. Det gäller oavsett om du själv bor i Spanien eller inte, och det är 3 procent av priset, inte av säljarens vinst. Skattemyndigheten har en lista över fall där ingen innehållning görs, så din abogado bör bekräfta vad som gäller för ditt köp.",
+            "Skulder som följer fastigheten måste också regleras. Fastigheten är fortsatt ansvarig för obetald IBI, och en köpare tar över obetalda samfällighetsavgifter för den del av året som redan har gått plus de tre föregående kalenderåren. Säljaren måste intyga i köpebrevet att avgifterna är betalda eller lämna ett intyg om vad som är skyldigt. En överenskommelse om att dela årets IBI med säljaren är en privat sak mellan er, och kommunen skickar ändå avin till sin egen skattskyldige."
+          ]
+        },
+        {
+          "h2": "Kan jag betala och skriva under utan att resa till Spanien?",
+          "paras": [
+            "Ja. Alla som nämns i köpebrevet visar notarien sitt skatteregistreringsnummer, vilket för en utländsk köpare är NIE, så skaffa ditt före allt annat. Norge, Sverige, Tyskland, Frankrike, Nederländerna, Storbritannien och Spanien är anslutna till Haagkonventionen om apostille, så en offentlig handling som utfärdats hemma, till exempel en fullmakt, godtas i Spanien med en apostille i stället för konsulär legalisering.",
+            "Spara hela betalningskedjan efteråt: överföringskvittona, köpebrevet och fakturorna från notarien och registret. När du säljer är det anskaffningsvärde som används för att räkna fram din vinst det du faktiskt betalade plus skatterna och kostnaderna för köpet, och kvittona är hur du bevisar det. Sedan är den ekonomiska sidan klar, och huset är ditt att njuta av."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Spanische Immobilie bezahlen: Überweisung, Bargeld, Urkunde",
+      "description": "So bezahlen Sie eine Immobilie in Spanien aus dem Ausland: warum der Notar jede Zahlung festhält, Bargeldgrenzen für Nichtansässige und die Anmeldepflicht.",
+      "h1": "Eine Immobilie in Spanien bezahlen, wenn Ihr Geld im Ausland liegt",
+      "lead": "Zahlen Sie per Banküberweisung und bewahren Sie jeden Beleg auf, denn der Notar muss in der Urkunde festhalten, wie der Preis gezahlt wurde, vor oder bei der Unterschrift und ob in bar, per Scheck oder per Überweisung. Bargeld ist auf 1.000 Euro begrenzt, wenn eine Partei als Unternehmer oder Freiberufler handelt, oder auf 10.000 Euro für eine Privatperson mit steuerlichem Wohnsitz außerhalb Spaniens. Wer 10.000 Euro oder mehr in bar nach Spanien bringt oder aus Spanien mitnimmt, muss das anmelden.",
+      "sections": [
+        {
+          "h2": "Woher weiß der Notar, wie ich bezahlt habe?",
+          "paras": [
+            "Sie sagen es ihm, mit Nachweisen. In einer Urkunde, mit der eine Immobilie gegen einen Preis übertragen wird, muss der Notar festhalten, wie dieser Preis gezahlt wurde: ob vor oder bei der Unterschrift und ob in bar, per Scheck mit dessen Angaben oder per Banküberweisung. Das umfasst die Anzahlung, die Sie Wochen oder Monate zuvor geleistet haben, ebenso wie den Restbetrag am Tag selbst.",
+            "Gibt eine Partei eine erforderliche Erklärung nicht ab, vermerkt der Notar das in der Urkunde und meldet es der Notarkammer, die Informationen über nicht nachgewiesene Zahlungen an die Steuerverwaltung weitergibt. So möchte niemand seinen Kauf beginnen. Bringen Sie die Überweisungsbelege und etwaige Scheckkopien zur Unterzeichnung mit, in der Reihenfolge der Zahlungen, dann dauern die Fragen des Notars nur wenige Minuten."
+          ]
+        },
+        {
+          "h2": "Warum stellt mir der Makler so viele Fragen zu meiner Person?",
+          "paras": [
+            "Weil das Gesetz es verlangt. Immobilienmakler, die bei Verkäufen tätig sind, sind nach dem spanischen Geldwäschegesetz Verpflichtete. Sie müssen jede an einem Geschäft beteiligte Person vor dessen Beginn anhand verlässlicher Dokumente identifizieren. Rechnen Sie also früh mit der Bitte um Ihren Reisepass und halten Sie ihn eingescannt und versandbereit, bevor Sie mit Besichtigungen beginnen.",
+            "Kaufen Sie über eine Gesellschaft, muss der Makler auch den wirtschaftlich Berechtigten identifizieren, wozu jeder gehört, der mehr als 25 Prozent des Kapitals oder der Stimmrechte hält oder die Gesellschaft auf andere Weise kontrolliert. Politisch exponierte Personen, ihre Angehörigen und ihnen nahestehende Personen werden verstärkt geprüft. Makler müssen jedes Geschäft mit Anzeichen von Geldwäsche an SEPBLAC melden und dürfen dem Kunden nicht mitteilen, dass eine Meldung erfolgt ist."
+          ]
+        },
+        {
+          "h2": "Kann ich einen Teil des Preises bar bezahlen?",
+          "paras": [
+            "Wenn ein Unternehmer oder Freiberufler beteiligt ist, nur einen kleinen Teil. Die Grenze für Barzahlungen liegt bei 1.000 Euro bei jedem Geschäft, bei dem eine der Parteien als Unternehmer oder Freiberufler handelt. Für eine Privatperson mit steuerlichem Wohnsitz außerhalb Spaniens liegt die Grenze bei 10.000 Euro. Vor der Ley 11/2021 lagen die Beträge bei 2.500 und 15.000 Euro, und ältere Ratgeber nennen noch diese Zahlen.",
+            "Zahlungen zwischen zwei Privatpersonen fallen nicht unter die Grenze. Ein Kauf vom Bauträger, ein bar bezahlter Immobilienmakler oder ein gewerblicher Verkäufer bringen sie jedoch ins Spiel. Unabhängig vom Betrag wird Bargeld, das für die Immobilie gezahlt wird, dem Notar als Barzahlung angegeben und in die Urkunde geschrieben. Bei einer Summe dieser Größe ist eine Banküberweisung für alle einfacher, auch für Sie, wenn Sie später verkaufen und nachweisen müssen, was Sie gezahlt haben."
+          ]
+        },
+        {
+          "h2": "Muss ich Bargeld anmelden, das ich bei mir trage?",
+          "paras": [
+            "Ja, ab 10.000 Euro. Wer bei der Einreise in die Europäische Union oder bei der Ausreise Bargeld von 10.000 Euro oder mehr mit sich führt, muss es anmelden, und der Schwellenwert gilt pro Person und pro Reise. Spanien verlangt außerdem eine Anmeldung von 10.000 Euro oder mehr, die nach Spanien oder aus Spanien gebracht werden, auch von oder in ein anderes EU-Land. Wer mit einem Umschlag voller Scheine aus Deutschland herunterfährt oder aus Oslo einfliegt, fällt in jedem Fall darunter.",
+            "Innerhalb Spaniens muss auch die Bewegung von 100.000 Euro oder mehr an Zahlungsmitteln angemeldet werden. Bewegungen von oder in einen anderen EU-Mitgliedstaat laufen über das Formular S1, Bewegungen von oder in ein Land außerhalb der EU über das Formular E1. Nichts davon macht das Mitführen von Bargeld illegal. Es bedeutet nur, dass die Papiere mit dem Geld reisen müssen."
+          ]
+        },
+        {
+          "h2": "Wie leiste ich die Anzahlung sicher?",
+          "paras": [
+            "Zahlen Sie an die Person, die tatsächlich verkaufen darf. Im Grundbuch eingetragene Rechte gelten als bestehend und als dem Inhaber in der Form zustehend, die der Eintrag zeigt, und ein Käufer, der gutgläubig und entgeltlich von der Person erwirbt, die das Grundbuch als verkaufsberechtigt ausweist, behält den Kauf, sobald er eingetragen ist. Prüfen Sie also die nota simple, bevor Geld fließt, und achten Sie darauf, dass der dort genannte Verkäufer auch der Verkäufer in Ihrem Vertrag ist.",
+            "Zahlen Sie dann per Überweisung auf das im Vertrag genannte Konto, mit einem Verwendungszweck, der die Immobilie und den Vertrag nennt. Was mit der Anzahlung geschieht, wenn eine Seite aussteigt, hängt vom Wortlaut Ihres Vertrags ab, lassen Sie diese Klausel also von Ihrem abogado lesen, bevor Sie überweisen. Bewahren Sie den Beleg zusammen mit dem Vertrag auf (beide brauchen Sie beim Notar wieder)."
+          ]
+        },
+        {
+          "h2": "Was geht beim Abschluss vom Preis ab?",
+          "paras": [
+            "Ist der Verkäufer nicht in Spanien ansässig, müssen Sie 3 Prozent des vereinbarten Preises einbehalten und innerhalb eines Monats nach dem Kauf mit modelo 211 an das Finanzamt abführen. Das gilt unabhängig davon, ob Sie selbst in Spanien leben, und es sind 3 Prozent des Preises, nicht des Gewinns des Verkäufers. Das Finanzamt führt eine Liste von Fällen, in denen kein Einbehalt gilt, Ihr abogado sollte das also für Ihren Kauf bestätigen.",
+            "Auch Schulden, die an der Immobilie hängen, müssen beglichen werden. Die Immobilie haftet weiter für unbezahlte IBI, und ein Käufer übernimmt unbezahlte Gemeinschaftsbeiträge für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre. Der Verkäufer muss in der Urkunde erklären, dass er auf dem aktuellen Stand ist, oder eine Bescheinigung über seine Rückstände vorlegen. Eine Vereinbarung, die IBI dieses Jahres mit dem Verkäufer zu teilen, ist eine private Sache zwischen Ihnen, und das Rathaus stellt die Rechnung weiterhin seinem eigenen Steuerpflichtigen."
+          ]
+        },
+        {
+          "h2": "Kann ich bezahlen und unterschreiben, ohne nach Spanien zu reisen?",
+          "paras": [
+            "Ja. Jede in der Urkunde genannte Person legt dem Notar ihre Steueridentifikationsnummer vor, für einen ausländischen Käufer ist das die NIE, beantragen Sie Ihre also vor allem anderen. Norwegen, Schweden, Deutschland, Frankreich, die Niederlande, das Vereinigte Königreich und Spanien sind Vertragsstaaten des Haager Apostille-Übereinkommens, eine im Heimatland ausgestellte öffentliche Urkunde wie eine Vollmacht wird in Spanien also mit einer Apostille statt einer konsularischen Legalisation anerkannt.",
+            "Bewahren Sie danach die gesamte Zahlungsspur auf: die Überweisungsbelege, die Urkunde und die Rechnungen von Notar und Grundbuch. Wenn Sie verkaufen, ist der Anschaffungswert, aus dem Ihr Gewinn berechnet wird, das, was Sie tatsächlich gezahlt haben, plus die Steuern und Kosten des Kaufs, und die Belege sind Ihr Nachweis dafür. Dann ist die Geldseite erledigt, und das Haus gehört Ihnen zum Genießen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Payer un bien en Espagne : virements, espèces et acte notarié",
+      "description": "Comment payer un logement en Espagne depuis l'étranger : le notaire consigne chaque paiement, et des limites et déclarations s'appliquent aux espèces.",
+      "h1": "Comment payer un bien en Espagne quand votre argent est à l'étranger",
+      "lead": "Payez par virement bancaire et gardez tous les justificatifs, car le notaire doit consigner dans l'acte la façon dont le prix a été payé, avant ou lors de la signature, et en espèces, par chèque ou par virement. Les espèces sont limitées à 1 000 euros lorsqu'une partie agit en tant qu'entreprise ou professionnel, ou à 10 000 euros pour un particulier dont le domicile fiscal est hors d'Espagne. Transporter 10 000 euros ou plus en espèces à l'entrée ou à la sortie de l'Espagne doit être déclaré.",
+      "sections": [
+        {
+          "h2": "Comment le notaire sait-il comment j'ai payé ?",
+          "paras": [
+            "C'est vous qui le lui dites, preuves à l'appui. Dans un acte qui transmet un bien contre un prix, le notaire doit identifier la façon dont ce prix a été payé : avant ou lors de la signature, et en espèces, par chèque avec ses références, ou par virement bancaire. Cela vaut pour l'acompte versé des semaines ou des mois plus tôt comme pour le solde le jour même.",
+            "Si une partie ne fournit pas une déclaration requise, le notaire le consigne dans l'acte et en informe l'organe notarial, qui transmet à l'administration fiscale les informations sur les paiements non identifiés. Personne ne souhaite que son achat commence ainsi. Apportez à la signature les justificatifs de virement et les éventuelles copies de chèques, dans l'ordre des paiements, et les questions du notaire ne prendront que quelques minutes."
+          ]
+        },
+        {
+          "h2": "Pourquoi l'agent immobilier me pose-t-il autant de questions ?",
+          "paras": [
+            "Parce que la loi l'exige. Les agents immobiliers qui interviennent dans des ventes sont des sujets obligés au titre de la loi espagnole contre le blanchiment de capitaux. Ils doivent identifier toutes les personnes qui participent à une opération, à l'aide de documents fiables, avant que l'opération ne commence. Attendez-vous donc à ce que l'on vous demande votre passeport tôt, et gardez-en une copie scannée prête à envoyer avant de commencer les visites.",
+            "Si vous achetez via une société, l'agent doit aussi identifier le bénéficiaire effectif, ce qui inclut toute personne détenant plus de 25 pour cent du capital ou des droits de vote, ou qui la contrôle d'une autre manière. Les personnes politiquement exposées, leur famille et leurs proches font l'objet de vérifications renforcées. Les agents doivent signaler au SEPBLAC toute opération présentant des indices de blanchiment, et ils n'ont pas le droit de dire au client qu'un signalement a été fait."
+          ]
+        },
+        {
+          "h2": "Puis-je payer une partie du prix en espèces ?",
+          "paras": [
+            "Lorsqu'une entreprise ou un professionnel intervient, seulement une petite partie. La limite de paiement en espèces est de 1 000 euros pour toute opération dans laquelle l'une des parties agit en tant qu'entreprise ou professionnel. Pour un particulier dont le domicile fiscal est hors d'Espagne, la limite est de 10 000 euros. Avant la Ley 11/2021, les montants étaient de 2 500 et 15 000 euros, et d'anciens guides les citent encore.",
+            "Les paiements entre deux particuliers échappent à cette limite. Mais un achat auprès d'un promoteur, un agent immobilier payé en espèces ou tout vendeur professionnel y fait entrer l'opération. Quel que soit le montant, les espèces versées pour le bien sont tout de même déclarées au notaire comme espèces et inscrites dans l'acte. Pour une somme de cette taille, un virement bancaire est plus simple pour tout le monde, y compris pour vous lorsque vous revendrez et devrez prouver ce que vous avez payé."
+          ]
+        },
+        {
+          "h2": "Dois-je déclarer les espèces que je transporte ?",
+          "paras": [
+            "Oui, à partir de 10 000 euros. Toute personne transportant 10 000 euros ou plus en espèces à l'entrée ou à la sortie de l'Union européenne doit les déclarer, et le seuil s'entend par personne et par voyage. L'Espagne exige aussi une déclaration pour 10 000 euros ou plus transportés à l'entrée ou à la sortie de l'Espagne, y compris depuis ou vers un autre pays de l'UE. Descendre en voiture depuis l'Allemagne ou arriver en avion d'Oslo avec une enveloppe de billets est couvert dans les deux cas.",
+            "À l'intérieur de l'Espagne, déplacer 100 000 euros ou plus en moyens de paiement doit aussi être déclaré. Les mouvements depuis ou vers un autre État membre de l'UE utilisent le formulaire S1, et ceux depuis ou vers un pays hors UE le formulaire E1. Rien de cela ne rend illégal le transport d'espèces. Cela signifie simplement que les papiers doivent voyager avec l'argent."
+          ]
+        },
+        {
+          "h2": "Comment verser l'acompte en toute sécurité ?",
+          "paras": [
+            "Payez la personne qui peut réellement vendre. Les droits inscrits au registre foncier sont présumés exister et appartenir à leur titulaire dans la forme indiquée par l'inscription, et l'acheteur qui acquiert de bonne foi et à titre onéreux auprès de la personne que le registre désigne comme habilitée à vendre conserve l'achat une fois inscrit. Vérifiez donc la nota simple avant tout mouvement d'argent, et assurez-vous que le vendeur qui y figure est bien le vendeur de votre contrat.",
+            "Payez ensuite par virement sur le compte indiqué dans le contrat, avec une référence qui mentionne le bien et le contrat. Ce qu'il advient de l'acompte si l'une des parties se retire dépend de la rédaction de votre contrat : faites lire cette clause par votre abogado avant de virer. Gardez le justificatif avec le contrat (vous aurez besoin des deux chez le notaire)."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui est retenu sur le prix lors de la signature ?",
+          "paras": [
+            "Si le vendeur ne réside pas en Espagne, vous devez retenir 3 pour cent du prix convenu et les verser au fisc sur le modelo 211 dans un délai d'un mois après l'achat. Cela s'applique que vous viviez vous-même en Espagne ou non, et il s'agit de 3 pour cent du prix, et non de la plus-value du vendeur. Le fisc tient une liste des cas où aucune retenue ne s'applique : votre abogado doit donc le confirmer pour votre achat.",
+            "Les dettes qui suivent le bien doivent aussi être réglées. Le bien reste redevable de l'IBI impayé, et l'acheteur reprend les charges de copropriété impayées pour la partie de l'année déjà écoulée et les trois années civiles précédentes. Le vendeur doit déclarer dans l'acte qu'il est à jour ou fournir un certificat de ce qu'il doit. Tout accord pour partager l'IBI de l'année avec le vendeur reste une affaire privée entre vous, et la mairie continue de facturer son propre contribuable."
+          ]
+        },
+        {
+          "h2": "Puis-je payer et signer sans me rendre en Espagne ?",
+          "paras": [
+            "Oui. Toute personne nommée dans l'acte présente au notaire son numéro d'identification fiscale, qui pour un acheteur étranger est le NIE : obtenez donc le vôtre avant toute autre chose. La Norvège, la Suède, l'Allemagne, la France, les Pays-Bas, le Royaume-Uni et l'Espagne sont parties à la Convention de La Haye sur l'apostille : un document public établi chez vous, comme une procuration, est donc accepté en Espagne avec une apostille au lieu d'une légalisation consulaire.",
+            "Conservez ensuite toute la trace des paiements : les justificatifs de virement, l'acte et les factures du notaire et du registre. Lorsque vous revendrez, la valeur d'acquisition utilisée pour calculer votre plus-value est ce que vous avez réellement payé plus les impôts et frais d'achat, et les justificatifs sont votre preuve. Le volet financier est alors réglé, et la maison est à vous pour en profiter."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Een Spaanse woning betalen: overboeking, contant en de akte",
+      "description": "Zo betaalt u vanuit het buitenland voor een woning in Spanje: waarom de notaris elke betaling vastlegt, de contantlimieten en wanneer u contant geld meldt.",
+      "h1": "Hoe u een woning in Spanje betaalt als uw geld in het buitenland staat",
+      "lead": "Betaal per bankoverschrijving en bewaar elk betalingsbewijs, want de notaris moet in de akte vastleggen hoe de prijs is betaald, vóór of bij de ondertekening, en contant, per cheque of per overschrijving. Contant betalen is beperkt tot 1.000 euro als een van de partijen optreedt als onderneming of beroepsbeoefenaar, of tot 10.000 euro voor een particulier met een fiscale woonplaats buiten Spanje. Wie 10.000 euro of meer aan contant geld Spanje in of uit brengt, moet dat melden.",
+      "sections": [
+        {
+          "h2": "Hoe weet de notaris hoe ik heb betaald?",
+          "paras": [
+            "Dat vertelt u zelf, met bewijs. In een akte waarin een woning tegen een prijs wordt overgedragen, moet de notaris vastleggen hoe die prijs is betaald: vóór of bij de ondertekening, en contant, per cheque met de gegevens daarvan, of per bankoverschrijving. Dat geldt voor de aanbetaling die u weken of maanden eerder deed en ook voor het restant op de dag zelf.",
+            "Geeft een partij een verplichte verklaring niet af, dan vermeldt de notaris dat in de akte en meldt hij het aan de notariële organisatie, die informatie over niet-geïdentificeerde betalingen doorgeeft aan de belastingdienst. Zo wil niemand zijn aankoop beginnen. Neem de betalingsbewijzen van de overschrijvingen en eventuele kopieën van cheques mee naar de ondertekening, in dezelfde volgorde als de betalingen, en de vragen van de notaris zijn in een paar minuten beantwoord."
+          ]
+        },
+        {
+          "h2": "Waarom stelt de makelaar zoveel vragen over mij?",
+          "paras": [
+            "Omdat de wet dat verplicht. Makelaars die bij woningverkopen optreden, vallen onder de Spaanse antiwitwaswet. Zij moeten iedereen die aan een transactie deelneemt identificeren aan de hand van betrouwbare documenten, voordat de transactie begint. Reken er dus op dat er vroeg om uw paspoort wordt gevraagd, en zorg dat een scan klaarligt voordat u woningen gaat bekijken.",
+            "Koopt u via een vennootschap, dan moet de makelaar ook de uiteindelijk belanghebbende identificeren, waaronder iedereen die meer dan 25 procent van het kapitaal of de stemrechten bezit of de vennootschap op een andere manier controleert. Voor politiek prominente personen, hun familie en naaste geassocieerden gelden strengere controles. Makelaars moeten elke transactie met aanwijzingen van witwassen melden bij SEPBLAC, en ze mogen de klant niet vertellen dat er een melding is gedaan."
+          ]
+        },
+        {
+          "h2": "Mag ik een deel van de prijs contant betalen?",
+          "paras": [
+            "Als er een onderneming of beroepsbeoefenaar bij betrokken is, alleen een klein deel. De limiet voor contante betalingen is 1.000 euro bij elke transactie waarin een van de partijen optreedt als onderneming of beroepsbeoefenaar. Voor een particulier met een fiscale woonplaats buiten Spanje is de limiet 10.000 euro. Vóór Ley 11/2021 waren de bedragen 2.500 en 15.000 euro, en oudere gidsen noemen die nog steeds.",
+            "Betalingen tussen twee particulieren vallen buiten de limiet. Maar een aankoop van een projectontwikkelaar, een makelaar die contant wordt betaald of elke professionele verkoper valt er wel onder. Ongeacht het bedrag wordt contant geld dat voor de woning is betaald nog steeds als contant bij de notaris opgegeven en in de akte vermeld. Voor een bedrag van deze omvang is een bankoverschrijving voor iedereen eenvoudiger, ook voor u als u later verkoopt en moet aantonen wat u betaalde."
+          ]
+        },
+        {
+          "h2": "Moet ik contant geld dat ik bij me heb melden?",
+          "paras": [
+            "Ja, vanaf 10.000 euro. Iedereen die bij het binnenkomen of verlaten van de Europese Unie 10.000 euro of meer aan contant geld bij zich heeft, moet dat melden, en die grens geldt per persoon en per reis. Spanje verplicht daarnaast een melding van 10.000 euro of meer die Spanje in of uit wordt gebracht, ook van of naar een ander EU-land. Wie vanuit Duitsland naar het zuiden rijdt of vanuit Oslo invliegt met een envelop vol biljetten, valt hoe dan ook onder deze regels.",
+            "Binnen Spanje moet het verplaatsen van 100.000 euro of meer aan betaalmiddelen ook worden gemeld. Voor verplaatsingen van of naar een andere EU-lidstaat gebruikt u formulier S1, en voor verplaatsingen van of naar een land buiten de EU formulier E1. Niets hiervan maakt het meenemen van contant geld illegaal. Het betekent alleen dat de papieren met het geld mee moeten reizen."
+          ]
+        },
+        {
+          "h2": "Hoe betaal ik de aanbetaling veilig?",
+          "paras": [
+            "Betaal de persoon die daadwerkelijk mag verkopen. Voor rechten die in het eigendomsregister staan, geldt het vermoeden dat ze bestaan en toebehoren aan de houder zoals de inschrijving aangeeft, en een koper die te goeder trouw en onder bezwarende titel koopt van de persoon die volgens het register mag verkopen, behoudt de aankoop zodra die is ingeschreven. Controleer dus de nota simple voordat er geld wordt overgemaakt, en zorg dat de verkoper die daarin staat dezelfde is als de verkoper in uw contract.",
+            "Betaal daarna per overschrijving naar de rekening die in het contract staat, met een omschrijving waarin de woning en het contract worden genoemd. Wat er met de aanbetaling gebeurt als een van beide partijen afhaakt, hangt af van de formulering van uw contract, dus laat uw abogado die clausule lezen voordat u overmaakt. Bewaar het betalingsbewijs bij het contract (u heeft ze allebei weer nodig bij de notaris)."
+          ]
+        },
+        {
+          "h2": "Wat gaat er bij de overdracht van de prijs af?",
+          "paras": [
+            "Woont de verkoper niet in Spanje, dan moet u 3 procent van de afgesproken prijs inhouden en die binnen een maand na de aankoop met modelo 211 aan de belastingdienst betalen. Dat geldt of u nu zelf in Spanje woont of niet, en het gaat om 3 procent van de prijs, niet van de winst van de verkoper. De belastingdienst houdt een lijst bij van gevallen waarin geen inhouding geldt, dus uw abogado moet het voor uw aankoop bevestigen.",
+            "Ook schulden die de woning volgen, moeten worden afgewikkeld. De woning blijft aansprakelijk voor onbetaalde IBI, en een koper neemt onbetaalde bijdragen aan de vereniging van eigenaars over voor het deel van het jaar dat al voorbij is plus de drie voorgaande kalenderjaren. De verkoper moet in de akte verklaren dat hij bij is met betalen of een verklaring overleggen van wat hij verschuldigd is. Een afspraak om de IBI van dit jaar met de verkoper te delen, is een privézaak tussen u beiden, en de gemeente stuurt de aanslag nog steeds naar haar eigen belastingplichtige."
+          ]
+        },
+        {
+          "h2": "Kan ik betalen en tekenen zonder naar Spanje te reizen?",
+          "paras": [
+            "Ja. Iedereen die in de akte wordt genoemd, toont de notaris zijn fiscaal identificatienummer, en voor een buitenlandse koper is dat de NIE, dus regel die als eerste. Noorwegen, Zweden, Duitsland, Frankrijk, Nederland, het Verenigd Koninkrijk en Spanje zijn partij bij het Apostilleverdrag van Den Haag, dus een openbaar document dat in uw eigen land is opgemaakt, zoals een volmacht, wordt in Spanje met een apostille aanvaard in plaats van met consulaire legalisatie.",
+            "Bewaar daarna het hele betalingsspoor: de betalingsbewijzen van de overschrijvingen, de akte en de facturen van notaris en register. Als u verkoopt, is de aankoopwaarde waarmee uw winst wordt berekend wat u werkelijk betaalde plus de belastingen en kosten van de aankoop, en met de bewijsstukken toont u dat aan. Dan is de financiële kant geregeld, en kunt u van het huis genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

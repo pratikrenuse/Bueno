@@ -1,0 +1,377 @@
+{
+  "slug": "mortgages-for-non-residents-in-spain",
+  "topic": "buying",
+  "tool": "purchase-costs",
+  "rules": [
+    "buy.mortgage.scope",
+    "buy.mortgage.ten_days",
+    "buy.mortgage.fein_binding",
+    "buy.mortgage.fiae",
+    "buy.mortgage.notary_acta",
+    "buy.mortgage.acta_free",
+    "buy.mortgage.costs_split",
+    "buy.mortgage.ajd_lender",
+    "buy.tax.newbuild_ajd",
+    "buy.deed.payment_means",
+    "buy.deed.tax_ids",
+    "poa.apostille_parties",
+    "nie.form",
+    "nie.fee"
+  ],
+  "answers": [
+    "nie-number-form-and-fee",
+    "apostille-for-a-power-of-attorney-used-in-spain",
+    "why-spanish-estate-agents-ask-for-id",
+    "iva-on-a-new-build-home-in-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Mortgages for Non-Residents in Spain: FEIN, Costs and Timing",
+      "description": "What Spanish law gives you when you borrow to buy from abroad: the FEIN and FiAE, the ten days before signing, the notary acta and who pays which cost.",
+      "h1": "Taking a Spanish mortgage when you live in another country",
+      "lead": "Spain's mortgage credit law, Ley 5/2019, sets the steps for a loan secured on a home. The lender must give you a binding offer (the FEIN), a warnings sheet (the FiAE) and the draft contract at least ten calendar days before signing, and you must see a notary of your choice no later than the day before. By law the lender pays most of the set-up costs, and you pay the valuation.",
+      "sections": [
+        {
+          "h2": "Does the Spanish mortgage law cover me if I live abroad?",
+          "paras": [
+            "The law applies to loans secured by a mortgage on a residential property, and to loans to buy or keep property rights in land or buildings where the borrower or guarantor is a consumer. Where you live is not one of the conditions it sets, so if your loan fits that description, read its protections as written for you too.",
+            "What the law does not do is decide whether a lender will lend to you, or how much. Those are the lender's own decisions, and they differ from one lender to the next. Ask early, before you make an offer, so the completion date in your purchase contract is one you can actually meet."
+          ]
+        },
+        {
+          "h2": "What documents must the lender give me, and when?",
+          "paras": [
+            "At least ten calendar days before the loan is signed, the lender must give you the FEIN (the European standardised information sheet), the FiAE (the standardised warnings sheet), the draft contract and the other required documents. These are calendar days, not working days, so weekends and holidays count towards the ten.",
+            "The FEIN is a binding offer from the lender for the agreed period up to signing, and that period must be at least ten days. For a variable rate loan the lender must also give you a separate document showing what your instalments would be under different interest rate scenarios. Use the ten days. If you do not read Spanish comfortably, that is the time to have the draft contract translated, not the morning of the signing."
+          ]
+        },
+        {
+          "h2": "What does the FiAE warn me about?",
+          "paras": [
+            "It covers the clauses that matter most once the loan is running. It must warn you about the reference index the rate follows, any interest floor, early maturity of the loan if you stop paying, how the set-up costs are shared and whether the loan is in a foreign currency.",
+            "That last warning is the one to read twice if your income is in Norwegian kroner, Swedish kronor or pounds. If the loan is in euros and your income is not, what each instalment costs you moves with the exchange rate. Ask yourself what the payment would feel like if your own currency weakened, and decide before you sign rather than after."
+          ]
+        },
+        {
+          "h2": "Why do I have to see the notary before the signing?",
+          "paras": [
+            "Because the law wants someone independent to explain the loan to you first. No later than the day before the deed, you must appear before the notary of your choice, who checks the documents, explains the loan and records it in an acta. You choose the notary, not the lender.",
+            "The acta carries no notary fee at all. But it is a separate step from the signing, so it has to fit into your travel plans. If you fly in for completion, arrive at least a day early and book both appointments together (and leave a little slack for a delayed flight).",
+            "If you cannot be there, you can act through a power of attorney. Norway, Sweden, Germany, France, the Netherlands, the United Kingdom and Spain are parties to the Hague Apostille Convention, so a public document issued at home is accepted in Spain with an apostille instead of consular legalisation. Send the draft to the Spanish notary first."
+          ]
+        },
+        {
+          "h2": "Who pays the costs of the mortgage?",
+          "paras": [
+            "The law splits them. You, as borrower, pay the valuation of the property. The lender pays the gestoría, the notary fees for the loan deed and the registry fees for the mortgage, and copies are paid by whoever asks for them. The lender is also the taxpayer for AJD, the stamp duty, on the mortgage loan deed.",
+            "That covers the loan deed only. The notary and registry costs of the purchase deed are a separate matter between you and the seller. And on a new build, the AJD on the purchase deed is still paid by you as buyer, at your region's rate, or 0.50 percent where the region has set none. Keep the two deeds apart in your budget."
+          ]
+        },
+        {
+          "h2": "How does the loan fit into the purchase timetable?",
+          "paras": [
+            "Work backwards from the completion date. You need the loan documents at least ten calendar days before signing and the notary's acta no later than the day before. If the lender's valuation, its approval and those two steps cannot fit before the date in your private purchase contract, ask your abogado to agree a later date before you sign that contract, not afterwards.",
+            "At the signing itself, the notary must record how the price was paid, and the loan money is part of that. Each party also shows the notary their tax identification number, which for you is the NIE. If you do not have one yet, apply on form EX-15 (the fee is 9.84 euros) as soon as you decide to buy."
+          ]
+        },
+        {
+          "h2": "What should I ask a lender before I choose?",
+          "paras": [
+            "Ask each lender you are considering for its offer in writing, and remember that once you hold a FEIN, that is the document that binds the lender. Ask whether the rate is fixed or variable, which index a variable rate follows and whether there is a floor. Ask what an early repayment would cost and get the answer in writing.",
+            "Ask whether the offer depends on buying other products, and what the loan would cost without them. Then read the FiAE with your abogado, especially the currency warning. A loan you understand before you sign is one you can stop thinking about, and get back to the reason you bought."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Boliglån i Spania for ikke-bosatte: FEIN, kostnader og frister",
+      "description": "Dette gir spansk lov deg når du låner til et kjøp fra utlandet: FEIN og FiAE, de ti dagene før signering, notarens acta og hvem som betaler hva.",
+      "h1": "Spansk boliglån når du bor i et annet land",
+      "lead": "Spanias lov om boligkreditt, Ley 5/2019, fastsetter stegene for et lån med pant i en bolig. Långiveren må gi deg et bindende tilbud (FEIN), et ark med advarsler (FiAE) og kontraktsutkastet minst ti kalenderdager før signering, og du må møte hos en notar du velger selv, senest dagen før. Etter loven betaler långiveren det meste av etableringskostnadene, og du betaler takseringen.",
+      "sections": [
+        {
+          "h2": "Gjelder den spanske boliglånsloven for meg hvis jeg bor i utlandet?",
+          "paras": [
+            "Loven gjelder lån med pant i en boligeiendom, og lån til å kjøpe eller beholde eiendomsrett til tomter eller bygninger der låntakeren eller garantisten er forbruker. Hvor du bor, er ikke en av betingelsene den setter, så hvis lånet ditt passer den beskrivelsen, kan du lese vernet slik det står, også for deg.",
+            "Det loven ikke gjør, er å avgjøre om en långiver vil låne deg penger, eller hvor mye. Det er långiverens egne beslutninger, og de varierer fra långiver til långiver. Spør tidlig, før du legger inn et bud, slik at overtakelsesdatoen i kjøpekontrakten er en du faktisk kan holde."
+          ]
+        },
+        {
+          "h2": "Hvilke dokumenter må långiveren gi meg, og når?",
+          "paras": [
+            "Minst ti kalenderdager før lånet signeres, må långiveren gi deg FEIN (det europeiske standardiserte informasjonsarket), FiAE (det standardiserte arket med advarsler), kontraktsutkastet og de andre påkrevde dokumentene. Dette er kalenderdager, ikke virkedager, så helger og helligdager teller med i de ti.",
+            "FEIN er et bindende tilbud fra långiveren for den avtalte perioden fram til signering, og den perioden må være minst ti dager. For et lån med flytende rente må långiveren også gi deg et eget dokument som viser hva terminbeløpene dine ville vært under ulike rentescenarioer. Bruk de ti dagene. Leser du ikke spansk uten problemer, er det da du bør få kontraktsutkastet oversatt, ikke på morgenen før signeringen."
+          ]
+        },
+        {
+          "h2": "Hva advarer FiAE meg om?",
+          "paras": [
+            "Det dekker klausulene som betyr mest når lånet først løper. Det må advare deg om referanseindeksen renten følger, et eventuelt rentegulv, at lånet kan forfalle før tiden hvis du slutter å betale, hvordan etableringskostnadene fordeles, og om lånet er i utenlandsk valuta.",
+            "Den siste advarselen er den du bør lese to ganger hvis inntekten din er i norske kroner, svenske kroner eller pund. Er lånet i euro og inntekten din ikke er det, endrer det hvert terminbeløp koster deg seg med valutakursen. Spør deg selv hvordan betalingen ville kjentes hvis din egen valuta ble svakere, og bestem deg før du signerer, ikke etter."
+          ]
+        },
+        {
+          "h2": "Hvorfor må jeg møte hos notaren før signeringen?",
+          "paras": [
+            "Fordi loven vil at noen uavhengige skal forklare lånet for deg først. Senest dagen før skjøtet må du møte hos en notar du velger selv, som kontrollerer dokumentene, forklarer lånet og fører det inn i en acta. Det er du som velger notaren, ikke långiveren.",
+            "Actaen koster ikke noe notarhonorar i det hele tatt. Men det er et eget steg, atskilt fra signeringen, så det må passe inn i reiseplanene dine. Flyr du ned til overtakelsen, kom minst en dag tidligere og bestill begge avtalene samtidig (og legg inn litt slakk for et forsinket fly).",
+            "Kan du ikke være til stede, kan du handle gjennom en fullmakt. Norge, Sverige, Tyskland, Frankrike, Nederland, Storbritannia og Spania er parter i Haag-konvensjonen om apostille, så et offentlig dokument utstedt hjemme godtas i Spania med apostille i stedet for konsulær legalisering. Send utkastet til den spanske notaren først."
+          ]
+        },
+        {
+          "h2": "Hvem betaler kostnadene ved boliglånet?",
+          "paras": [
+            "Loven fordeler dem. Du som låntaker betaler takseringen av eiendommen. Långiveren betaler gestoría, notarhonoraret for låneskjøtet og registergebyrene for pantet, og kopier betales av den som ber om dem. Långiveren er også skattyter for AJD, dokumentavgiften, på låneskjøtet.",
+            "Dette gjelder bare låneskjøtet. Notar- og registerkostnadene for kjøpsskjøtet er en egen sak mellom deg og selgeren. Og på et nybygg betales AJD på kjøpsskjøtet fortsatt av deg som kjøper, etter regionens sats, eller 0,50 prosent der regionen ikke har fastsatt noen. Hold de to skjøtene adskilt i budsjettet ditt."
+          ]
+        },
+        {
+          "h2": "Hvordan passer lånet inn i tidsplanen for kjøpet?",
+          "paras": [
+            "Regn baklengs fra overtakelsesdatoen. Du trenger lånedokumentene minst ti kalenderdager før signering og notarens acta senest dagen før. Hvis långiverens taksering, godkjenningen og de to stegene ikke rekker å bli ferdige før datoen i den private kjøpekontrakten, be abogado avtale en senere dato før du signerer den kontrakten, ikke etterpå.",
+            "Ved selve signeringen må notaren registrere hvordan prisen ble betalt, og lånebeløpet er en del av det. Hver part viser også notaren sitt skatteidentifikasjonsnummer, som for deg er NIE. Har du ikke ett ennå, søk på skjema EX-15 (gebyret er 9,84 euro) så snart du bestemmer deg for å kjøpe."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg spørre en långiver om før jeg velger?",
+          "paras": [
+            "Be hver långiver du vurderer om tilbudet skriftlig, og husk at når du har en FEIN, er det det dokumentet som binder långiveren. Spør om renten er fast eller flytende, hvilken indeks en flytende rente følger, og om det finnes et rentegulv. Spør hva en førtidig innfrielse vil koste, og få svaret skriftlig.",
+            "Spør om tilbudet forutsetter at du kjøper andre produkter, og hva lånet ville kostet uten dem. Les deretter FiAE sammen med abogado, særlig valutaadvarselen. Et lån du forstår før du signerer, er et lån du kan slutte å tenke på, og komme tilbake til grunnen til at du kjøpte."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Bolån i Spanien för utlandsboende: FEIN, kostnader och tidsplan",
+      "description": "Det här ger spansk lag dig när du lånar från utlandet: FEIN och FiAE, de tio dagarna före undertecknandet, notariens acta och vem som betalar vad.",
+      "h1": "Att ta ett spanskt bolån när du bor i ett annat land",
+      "lead": "Spaniens lag om bostadskrediter, Ley 5/2019, anger stegen för ett lån med säkerhet i en bostad. Långivaren måste ge dig ett bindande erbjudande (FEIN), ett informationsblad med varningar (FiAE) och utkastet till avtal minst tio kalenderdagar före undertecknandet, och du måste träffa en notarie som du själv väljer senast dagen innan. Enligt lag betalar långivaren de flesta uppläggningskostnaderna, och du betalar värderingen.",
+      "sections": [
+        {
+          "h2": "Omfattas jag av den spanska bolånelagen om jag bor utomlands?",
+          "paras": [
+            "Lagen gäller lån med säkerhet i form av hypotek i en bostadsfastighet, och lån för att köpa eller behålla äganderätt till mark eller byggnader där låntagaren eller borgensmannen är konsument. Var du bor är inte ett av de villkor den ställer, så om ditt lån passar in på den beskrivningen gäller dess skydd även för dig, precis som det är skrivet.",
+            "Det lagen inte gör är att avgöra om en långivare lånar ut till dig, eller hur mycket. Det är långivarens egna beslut, och de skiljer sig från en långivare till en annan. Fråga tidigt, innan du lägger ett bud, så att tillträdesdagen i ditt köpeavtal är en dag du faktiskt kan hålla."
+          ]
+        },
+        {
+          "h2": "Vilka handlingar måste långivaren ge mig, och när?",
+          "paras": [
+            "Minst tio kalenderdagar innan lånet undertecknas måste långivaren ge dig FEIN (det europeiska standardiserade informationsbladet), FiAE (det standardiserade bladet med varningar), utkastet till avtal och övriga föreskrivna handlingar. Det handlar om kalenderdagar, inte arbetsdagar, så helger och helgdagar räknas in i de tio.",
+            "FEIN är ett bindande erbjudande från långivaren under den överenskomna perioden fram till undertecknandet, och den perioden måste vara minst tio dagar. För ett lån med rörlig ränta måste långivaren också ge dig en separat handling som visar vad dina betalningar skulle bli vid olika räntescenarier. Använd de tio dagarna. Läser du inte spanska obehindrat är det då du ska låta översätta utkastet till avtal, inte på morgonen samma dag som du skriver under."
+          ]
+        },
+        {
+          "h2": "Vad varnar FiAE mig för?",
+          "paras": [
+            "Det gäller de klausuler som betyder mest när lånet väl löper. Det måste varna dig för det referensindex som räntan följer, eventuellt räntegolv, att lånet kan sägas upp i förtid om du slutar betala, hur uppläggningskostnaderna fördelas och om lånet är i en utländsk valuta.",
+            "Den sista varningen är den du ska läsa två gånger om din inkomst är i norska kronor, svenska kronor eller pund. Är lånet i euro och din inkomst inte det, följer kostnaden för varje betalning växelkursen. Fråga dig själv hur betalningen skulle kännas om din egen valuta försvagades, och bestäm dig innan du skriver under, inte efteråt."
+          ]
+        },
+        {
+          "h2": "Varför måste jag träffa notarien före undertecknandet?",
+          "paras": [
+            "För att lagen vill att någon oberoende förklarar lånet för dig först. Senast dagen före köpebrevet måste du infinna dig hos en notarie som du själv väljer, som går igenom handlingarna, förklarar lånet och antecknar det i en acta. Det är du som väljer notarie, inte långivaren.",
+            "Actan kostar inget notariearvode alls. Men det är ett separat steg från undertecknandet, så det måste få plats i dina resplaner. Flyger du in för tillträdet, kom minst en dag i förväg och boka båda tiderna samtidigt (och lämna lite marginal för ett försenat flyg).",
+            "Kan du inte vara på plats kan du agera genom en fullmakt. Norge, Sverige, Tyskland, Frankrike, Nederländerna, Storbritannien och Spanien är anslutna till Haagkonventionen om apostille, så en offentlig handling som utfärdats hemma godtas i Spanien med en apostille i stället för konsulär legalisering. Skicka utkastet till den spanska notarien först."
+          ]
+        },
+        {
+          "h2": "Vem betalar kostnaderna för bolånet?",
+          "paras": [
+            "Lagen delar upp dem. Du som låntagare betalar värderingen av bostaden. Långivaren betalar gestoría, notariearvodet för lånehandlingen och registreringsavgifterna för hypoteket, och kopior betalas av den som beställer dem. Det är också långivaren som är skattskyldig för AJD, stämpelskatten, på pantbrevet för lånet.",
+            "Det gäller bara lånehandlingen. Notariens och registrets kostnader för köpebrevet är en separat fråga mellan dig och säljaren. Och på en nybyggd bostad betalas AJD på köpebrevet fortfarande av dig som köpare, enligt din regions sats, eller 0,50 procent där regionen inte har fastställt någon. Håll isär de två handlingarna i din budget."
+          ]
+        },
+        {
+          "h2": "Hur passar lånet in i köpets tidsplan?",
+          "paras": [
+            "Räkna baklänges från tillträdesdagen. Du behöver lånehandlingarna minst tio kalenderdagar före undertecknandet och notariens acta senast dagen innan. Om långivarens värdering, beviljandet och de två stegen inte hinner bli klara före datumet i ditt privata köpeavtal, be din abogado komma överens om ett senare datum innan du skriver på det avtalet, inte efteråt.",
+            "Vid själva undertecknandet måste notarien anteckna hur köpeskillingen betalades, och lånebeloppet är en del av det. Varje part visar också notarien sitt skatteregistreringsnummer, vilket för dig är NIE. Har du inget ännu, ansök på blankett EX-15 (avgiften är 9,84 euro) så fort du bestämmer dig för att köpa."
+          ]
+        },
+        {
+          "h2": "Vad ska jag fråga en långivare innan jag väljer?",
+          "paras": [
+            "Be varje långivare du överväger om dess erbjudande skriftligt, och kom ihåg att när du väl har ett FEIN är det den handlingen som binder långivaren. Fråga om räntan är fast eller rörlig, vilket index en rörlig ränta följer och om det finns ett räntegolv. Fråga vad en förtidsinlösen skulle kosta och få svaret skriftligt.",
+            "Fråga om erbjudandet förutsätter att du köper andra produkter, och vad lånet skulle kosta utan dem. Läs sedan FiAE tillsammans med din abogado, särskilt varningen om valuta. Ett lån som du förstår innan du skriver under är ett lån du kan sluta tänka på, och återgå till anledningen till att du köpte."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Hypothek in Spanien für Nichtansässige: FEIN, Kosten, Fristen",
+      "description": "Was Ihnen das spanische Recht bei einer Finanzierung aus dem Ausland gibt: FEIN und FiAE, zehn Tage Frist, die notarielle acta und die Kosten.",
+      "h1": "Eine spanische Hypothek aufnehmen, wenn Sie in einem anderen Land leben",
+      "lead": "Das spanische Immobilienkreditgesetz, die Ley 5/2019, legt die Schritte für ein durch eine Wohnimmobilie besichertes Darlehen fest. Der Kreditgeber muss Ihnen ein verbindliches Angebot (die FEIN), ein Merkblatt mit Warnhinweisen (die FiAE) und den Vertragsentwurf mindestens zehn Kalendertage vor der Unterzeichnung übergeben, und Sie müssen spätestens am Tag davor bei einem Notar Ihrer Wahl erscheinen. Laut Gesetz trägt der Kreditgeber die meisten Einrichtungskosten, und Sie zahlen die Bewertung.",
+      "sections": [
+        {
+          "h2": "Gilt das spanische Hypothekengesetz auch für mich, wenn ich im Ausland lebe?",
+          "paras": [
+            "Das Gesetz gilt für Darlehen, die durch eine Hypothek auf eine Wohnimmobilie besichert sind, sowie für Darlehen zum Erwerb oder Erhalt von Eigentumsrechten an Grundstücken oder Gebäuden, wenn der Darlehensnehmer oder Bürge ein Verbraucher ist. Ihr Wohnort gehört nicht zu den Bedingungen, die es festlegt, wenn Ihr Darlehen also dieser Beschreibung entspricht, lesen Sie seine Schutzbestimmungen als auch für Sie geschrieben.",
+            "Was das Gesetz nicht regelt, ist, ob ein Kreditgeber Ihnen etwas leiht und wie viel. Das sind eigene Entscheidungen des Kreditgebers, und sie unterscheiden sich von einem zum anderen. Fragen Sie früh, bevor Sie ein Angebot machen, damit der Abschlusstermin in Ihrem Kaufvertrag einer ist, den Sie tatsächlich einhalten können."
+          ]
+        },
+        {
+          "h2": "Welche Unterlagen muss mir der Kreditgeber geben, und wann?",
+          "paras": [
+            "Mindestens zehn Kalendertage vor der Unterzeichnung des Darlehens muss der Kreditgeber Ihnen die FEIN (das Europäische Standardisierte Merkblatt), die FiAE (das standardisierte Merkblatt mit Warnhinweisen), den Vertragsentwurf und die übrigen vorgeschriebenen Unterlagen übergeben. Es sind Kalendertage, keine Werktage, Wochenenden und Feiertage zählen also zu den zehn.",
+            "Die FEIN ist ein verbindliches Angebot des Kreditgebers für den vereinbarten Zeitraum bis zur Unterzeichnung, und dieser Zeitraum muss mindestens zehn Tage betragen. Bei einem Darlehen mit variablem Zins muss der Kreditgeber Ihnen außerdem ein gesondertes Dokument geben, das Ihre Raten in verschiedenen Zinsszenarien zeigt. Nutzen Sie die zehn Tage. Wenn Sie Spanisch nicht sicher lesen, ist das die Zeit, den Vertragsentwurf übersetzen zu lassen, nicht der Morgen der Unterzeichnung."
+          ]
+        },
+        {
+          "h2": "Wovor warnt mich die FiAE?",
+          "paras": [
+            "Sie behandelt die Klauseln, die am meisten zählen, sobald das Darlehen läuft. Sie muss Sie auf den Referenzindex hinweisen, dem der Zins folgt, auf eine etwaige Zinsuntergrenze, auf die vorzeitige Fälligstellung des Darlehens, wenn Sie nicht mehr zahlen, auf die Aufteilung der Einrichtungskosten und darauf, ob das Darlehen in einer Fremdwährung läuft.",
+            "Diesen letzten Hinweis sollten Sie zweimal lesen, wenn Ihr Einkommen in norwegischen Kronen, schwedischen Kronen oder Pfund anfällt. Läuft das Darlehen in Euro und Ihr Einkommen nicht, ändert sich mit dem Wechselkurs, was Sie jede Rate kostet. Fragen Sie sich, wie sich die Zahlung anfühlen würde, wenn Ihre eigene Währung schwächer würde, und entscheiden Sie das vor der Unterschrift, nicht danach."
+          ]
+        },
+        {
+          "h2": "Warum muss ich vor der Unterzeichnung zum Notar?",
+          "paras": [
+            "Weil das Gesetz will, dass Ihnen zuerst jemand Unabhängiges das Darlehen erklärt. Spätestens am Tag vor der Urkunde müssen Sie bei einem Notar Ihrer Wahl erscheinen, der die Unterlagen prüft, Ihnen das Darlehen erklärt und dies in einer acta festhält. Den Notar wählen Sie, nicht der Kreditgeber.",
+            "Für die acta fällt überhaupt keine Notargebühr an. Sie ist aber ein eigener Schritt neben der Unterzeichnung und muss daher in Ihre Reiseplanung passen. Wenn Sie zum Abschluss einfliegen, kommen Sie mindestens einen Tag früher an und buchen Sie beide Termine zusammen (und planen Sie etwas Puffer für einen verspäteten Flug ein).",
+            "Wenn Sie nicht dabei sein können, können Sie über eine Vollmacht handeln. Norwegen, Schweden, Deutschland, Frankreich, die Niederlande, das Vereinigte Königreich und Spanien sind Vertragsstaaten des Haager Apostille-Übereinkommens, eine im Heimatland ausgestellte öffentliche Urkunde wird in Spanien also mit einer Apostille statt einer konsularischen Legalisation anerkannt. Schicken Sie den Entwurf zuerst an den spanischen Notar."
+          ]
+        },
+        {
+          "h2": "Wer trägt die Kosten der Hypothek?",
+          "paras": [
+            "Das Gesetz teilt sie auf. Sie als Darlehensnehmer zahlen die Bewertung der Immobilie. Der Kreditgeber zahlt die gestoría, die Notargebühren für die Darlehensurkunde und die Grundbuchgebühren für die Hypothek, und Abschriften zahlt, wer sie anfordert. Der Kreditgeber ist auch Steuerpflichtiger der AJD, der Stempelsteuer, auf die Darlehensurkunde.",
+            "Das gilt nur für die Darlehensurkunde. Die Notar- und Grundbuchkosten der Kaufurkunde sind eine eigene Angelegenheit zwischen Ihnen und dem Verkäufer. Und bei einem Neubau zahlen Sie als Käufer weiterhin die AJD auf die Kaufurkunde, zum Satz Ihrer Region, oder 0,50 Prozent, wo die Region keinen festgelegt hat. Halten Sie die beiden Urkunden in Ihrem Budget getrennt."
+          ]
+        },
+        {
+          "h2": "Wie passt das Darlehen in den Zeitplan des Kaufs?",
+          "paras": [
+            "Rechnen Sie vom Abschlusstermin rückwärts. Sie brauchen die Darlehensunterlagen mindestens zehn Kalendertage vor der Unterzeichnung und die acta des Notars spätestens am Tag davor. Wenn die Bewertung des Kreditgebers, seine Zusage und diese beiden Schritte nicht vor den Termin in Ihrem privaten Kaufvertrag passen, bitten Sie Ihren abogado, einen späteren Termin zu vereinbaren, bevor Sie diesen Vertrag unterschreiben, nicht danach.",
+            "Bei der Unterzeichnung selbst muss der Notar festhalten, wie der Preis gezahlt wurde, und das Darlehensgeld gehört dazu. Jede Partei legt dem Notar außerdem ihre Steueridentifikationsnummer vor, für Sie ist das die NIE. Wenn Sie noch keine haben, beantragen Sie sie mit dem Formular EX-15 (die Gebühr beträgt 9,84 Euro), sobald Sie sich für den Kauf entscheiden."
+          ]
+        },
+        {
+          "h2": "Was sollte ich einen Kreditgeber fragen, bevor ich mich entscheide?",
+          "paras": [
+            "Bitten Sie jeden Kreditgeber, den Sie in Betracht ziehen, um sein Angebot in schriftlicher Form, und denken Sie daran, dass ab dem Moment, in dem Sie eine FEIN in der Hand halten, dieses Dokument den Kreditgeber bindet. Fragen Sie, ob der Zins fest oder variabel ist, welchem Index ein variabler Zins folgt und ob es eine Zinsuntergrenze gibt. Fragen Sie, was eine vorzeitige Rückzahlung kosten würde, und lassen Sie sich die Antwort schriftlich geben.",
+            "Fragen Sie, ob das Angebot vom Abschluss weiterer Produkte abhängt und was das Darlehen ohne sie kosten würde. Lesen Sie dann die FiAE mit Ihrem abogado, besonders den Hinweis zur Währung. Ein Darlehen, das Sie vor der Unterschrift verstehen, ist eines, über das Sie nicht mehr nachdenken müssen, und Sie können sich wieder dem Grund widmen, aus dem Sie gekauft haben."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Prêt immobilier en Espagne pour non-résidents : FEIN et frais",
+      "description": "Ce que la loi espagnole vous garantit si vous empruntez depuis l'étranger : FEIN et FiAE, dix jours avant la signature, acta notarial et partage des frais.",
+      "h1": "Souscrire un prêt immobilier espagnol quand vous vivez dans un autre pays",
+      "lead": "La loi espagnole sur le crédit immobilier, la Ley 5/2019, fixe les étapes d'un prêt garanti par un logement. Le prêteur doit vous remettre une offre ferme (la FEIN), une fiche d'avertissements (la FiAE) et le projet de contrat au moins dix jours calendaires avant la signature, et vous devez voir un notaire de votre choix au plus tard la veille. Selon la loi, le prêteur paie la plupart des frais de mise en place, et vous payez l'évaluation.",
+      "sections": [
+        {
+          "h2": "La loi espagnole sur le crédit immobilier me protège-t-elle si je vis à l'étranger ?",
+          "paras": [
+            "La loi s'applique aux prêts garantis par une hypothèque sur un bien résidentiel, et aux prêts destinés à acquérir ou conserver des droits de propriété sur des terrains ou des bâtiments lorsque l'emprunteur ou le garant est un consommateur. Votre lieu de résidence ne figure pas parmi les conditions qu'elle pose : si votre prêt correspond à cette description, considérez que ses protections, telles qu'elles sont rédigées, s'appliquent aussi à vous.",
+            "Ce que la loi ne fait pas, c'est décider si un prêteur vous prêtera, ni combien. Ce sont des décisions propres au prêteur, et elles varient d'un prêteur à l'autre. Renseignez-vous tôt, avant de faire une offre, afin que la date de signature de votre contrat d'achat soit une date que vous pouvez réellement tenir."
+          ]
+        },
+        {
+          "h2": "Quels documents le prêteur doit-il me remettre, et quand ?",
+          "paras": [
+            "Au moins dix jours calendaires avant la signature du prêt, le prêteur doit vous remettre la FEIN (la fiche européenne d'information standardisée), la FiAE (la fiche d'avertissements standardisés), le projet de contrat et les autres documents requis. Il s'agit de jours calendaires et non ouvrables : les week-ends et jours fériés comptent dans les dix.",
+            "La FEIN est une offre ferme du prêteur pour la période convenue jusqu'à la signature, et cette période doit être d'au moins dix jours. Pour un prêt à taux variable, le prêteur doit aussi vous remettre un document distinct montrant ce que seraient vos mensualités selon différents scénarios de taux d'intérêt. Profitez de ces dix jours. Si vous ne lisez pas l'espagnol avec aisance, c'est le moment de faire traduire le projet de contrat, pas le matin de la signature."
+          ]
+        },
+        {
+          "h2": "Contre quoi la FiAE me met-elle en garde ?",
+          "paras": [
+            "Elle couvre les clauses qui comptent le plus une fois le prêt en cours. Elle doit vous avertir de l'indice de référence que suit le taux, d'un éventuel taux plancher, de l'exigibilité anticipée du prêt si vous cessez de payer, de la répartition des frais de mise en place et du fait que le prêt soit ou non en devise étrangère.",
+            "Ce dernier avertissement est celui à relire deux fois si vos revenus sont en couronnes norvégiennes, en couronnes suédoises ou en livres. Si le prêt est en euros et vos revenus ne le sont pas, le coût de chaque mensualité varie avec le taux de change. Demandez-vous ce que représenterait le paiement si votre propre monnaie s'affaiblissait, et décidez avant de signer plutôt qu'après."
+          ]
+        },
+        {
+          "h2": "Pourquoi dois-je voir le notaire avant la signature ?",
+          "paras": [
+            "Parce que la loi veut qu'une personne indépendante vous explique d'abord le prêt. Au plus tard la veille de l'acte, vous devez vous présenter devant le notaire de votre choix, qui vérifie les documents, vous explique le prêt et le consigne dans un acta. C'est vous qui choisissez le notaire, pas le prêteur.",
+            "Cet acta ne donne lieu à aucun honoraire de notaire. Mais c'est une étape distincte de la signature, qui doit donc trouver sa place dans votre programme de voyage. Si vous venez en avion pour la signature, arrivez au moins un jour à l'avance et réservez les deux rendez-vous ensemble (en gardant un peu de marge pour un vol retardé).",
+            "Si vous ne pouvez pas être présent, vous pouvez agir par procuration. La Norvège, la Suède, l'Allemagne, la France, les Pays-Bas, le Royaume-Uni et l'Espagne sont parties à la Convention de La Haye sur l'apostille : un document public établi chez vous est donc accepté en Espagne avec une apostille au lieu d'une légalisation consulaire. Envoyez d'abord le projet au notaire espagnol."
+          ]
+        },
+        {
+          "h2": "Qui paie les frais du prêt immobilier ?",
+          "paras": [
+            "La loi les répartit. Vous, l'emprunteur, payez l'évaluation du bien. Le prêteur paie la gestoría, les honoraires de notaire pour l'acte de prêt et les frais de registre de l'hypothèque, et les copies sont payées par celui qui les demande. Le prêteur est aussi redevable de l'AJD, le droit de timbre, sur l'acte de prêt hypothécaire.",
+            "Cela ne concerne que l'acte de prêt. Les frais de notaire et de registre de l'acte d'achat sont une question distincte entre vous et le vendeur. Et pour un logement neuf, l'AJD sur l'acte d'achat reste à votre charge en tant qu'acheteur, au taux de votre région, ou 0,50 pour cent lorsque la région n'en a fixé aucun. Séparez bien les deux actes dans votre budget."
+          ]
+        },
+        {
+          "h2": "Comment le prêt s'intègre-t-il au calendrier de l'achat ?",
+          "paras": [
+            "Partez de la date de signature et remontez le temps. Il vous faut les documents du prêt au moins dix jours calendaires avant la signature et l'acta du notaire au plus tard la veille. Si l'évaluation du prêteur, son accord et ces deux étapes ne peuvent pas tenir avant la date prévue dans votre contrat d'achat privé, demandez à votre abogado de convenir d'une date plus tardive avant de signer ce contrat, et non après.",
+            "Lors de la signature elle-même, le notaire doit consigner la façon dont le prix a été payé, et l'argent du prêt en fait partie. Chaque partie présente aussi au notaire son numéro d'identification fiscale, qui pour vous est le NIE. Si vous n'en avez pas encore, faites la demande sur le formulaire EX-15 (la taxe est de 9,84 euros) dès que vous décidez d'acheter."
+          ]
+        },
+        {
+          "h2": "Que demander à un prêteur avant de choisir ?",
+          "paras": [
+            "Demandez à chaque prêteur envisagé son offre par écrit, et rappelez-vous qu'une fois la FEIN en main, c'est ce document qui engage le prêteur. Demandez si le taux est fixe ou variable, quel indice suit un taux variable et s'il existe un plancher. Demandez ce que coûterait un remboursement anticipé et obtenez la réponse par écrit.",
+            "Demandez si l'offre dépend de la souscription d'autres produits, et ce que coûterait le prêt sans eux. Lisez ensuite la FiAE avec votre abogado, en particulier l'avertissement sur la devise. Un prêt que vous comprenez avant de signer est un prêt auquel vous pouvez cesser de penser, pour revenir à la raison de votre achat."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Hypotheek in Spanje als niet-inwoner: FEIN, kosten en timing",
+      "description": "Wat de Spaanse wet u biedt als u vanuit het buitenland leent: FEIN en FiAE, de tien dagen vóór ondertekening, de acta en wie welke kosten betaalt.",
+      "h1": "Een Spaanse hypotheek afsluiten als u in een ander land woont",
+      "lead": "De Spaanse wet op hypothecair krediet, Ley 5/2019, legt de stappen vast voor een lening met een woning als onderpand. De geldverstrekker moet u ten minste tien kalenderdagen vóór de ondertekening een bindend aanbod (de FEIN), een overzicht met waarschuwingen (de FiAE) en het conceptcontract geven, en u moet uiterlijk de dag ervoor naar een notaris van uw keuze. Volgens de wet betaalt de geldverstrekker de meeste afsluitkosten, en betaalt u de taxatie.",
+      "sections": [
+        {
+          "h2": "Geldt de Spaanse hypotheekwet ook voor mij als ik in het buitenland woon?",
+          "paras": [
+            "De wet geldt voor leningen met een hypotheek op een woning als zekerheid, en voor leningen om eigendomsrechten op grond of gebouwen te kopen of te behouden waarbij de lener of borg een consument is. Waar u woont, is geen van de voorwaarden die de wet stelt, dus past uw lening in die omschrijving, lees de bescherming dan als ook voor u geschreven.",
+            "Wat de wet niet doet, is bepalen of een geldverstrekker u een lening geeft, of hoeveel. Dat beslist de geldverstrekker zelf, en dat verschilt per geldverstrekker. Vraag het vroeg, voordat u een bod doet, zodat de overdrachtsdatum in uw koopcontract een datum is die u ook echt kunt halen."
+          ]
+        },
+        {
+          "h2": "Welke documenten moet de geldverstrekker mij geven, en wanneer?",
+          "paras": [
+            "Ten minste tien kalenderdagen vóór de ondertekening van de lening moet de geldverstrekker u de FEIN (het Europees gestandaardiseerd informatieblad), de FiAE (het gestandaardiseerde waarschuwingsblad), het conceptcontract en de andere verplichte documenten geven. Het gaat om kalenderdagen, niet om werkdagen, dus weekenden en feestdagen tellen mee voor de tien.",
+            "De FEIN is een bindend aanbod van de geldverstrekker voor de afgesproken periode tot de ondertekening, en die periode moet ten minste tien dagen zijn. Bij een lening met variabele rente moet de geldverstrekker u ook een apart document geven waaruit blijkt wat uw termijnen zouden zijn bij verschillende rentescenario's. Gebruik die tien dagen. Leest u niet makkelijk Spaans, dan is dit het moment om het conceptcontract te laten vertalen, niet de ochtend van de ondertekening."
+          ]
+        },
+        {
+          "h2": "Waarvoor waarschuwt de FiAE mij?",
+          "paras": [
+            "Het blad behandelt de clausules die het meest tellen zodra de lening loopt. Het moet u waarschuwen voor de referentie-index die de rente volgt, een eventuele bodemrente, het vervroegd opeisen van de lening als u stopt met betalen, hoe de afsluitkosten worden verdeeld en of de lening in een vreemde valuta is.",
+            "Die laatste waarschuwing moet u twee keer lezen als uw inkomen in Noorse kronen, Zweedse kronen of ponden is. Is de lening in euro en uw inkomen niet, dan beweegt wat elke termijn u kost mee met de wisselkoers. Vraag uzelf af hoe de betaling zou voelen als uw eigen valuta zwakker werd, en beslis dat vóór de ondertekening en niet erna."
+          ]
+        },
+        {
+          "h2": "Waarom moet ik vóór de ondertekening naar de notaris?",
+          "paras": [
+            "Omdat de wet wil dat iemand die onafhankelijk is u de lening eerst uitlegt. Uiterlijk de dag vóór de akte moet u verschijnen bij de notaris van uw keuze, die de documenten controleert, de lening uitlegt en dat vastlegt in een acta. U kiest de notaris, niet de geldverstrekker.",
+            "Voor de acta rekent de notaris helemaal niets. Maar het is een aparte stap naast de ondertekening, dus die moet in uw reisplanning passen. Vliegt u in voor de overdracht, kom dan ten minste een dag eerder aan en plan beide afspraken samen in (en houd wat ruimte over voor een vertraagde vlucht).",
+            "Kunt u er niet bij zijn, dan kunt u via een volmacht handelen. Noorwegen, Zweden, Duitsland, Frankrijk, Nederland, het Verenigd Koninkrijk en Spanje zijn partij bij het Apostilleverdrag van Den Haag, dus een openbaar document dat in uw eigen land is opgemaakt, wordt in Spanje met een apostille aanvaard in plaats van met consulaire legalisatie. Stuur het concept eerst naar de Spaanse notaris."
+          ]
+        },
+        {
+          "h2": "Wie betaalt de kosten van de hypotheek?",
+          "paras": [
+            "De wet verdeelt ze. U betaalt als lener de taxatie van de woning. De geldverstrekker betaalt de gestoría, de notariskosten van de hypotheekakte en de registerkosten van de hypotheek, en afschriften worden betaald door wie ze aanvraagt. De geldverstrekker is ook de belastingplichtige voor de AJD, de zegelbelasting, op de hypotheekakte.",
+            "Dat geldt alleen voor de hypotheekakte. De notaris- en registerkosten van de koopakte zijn een aparte zaak tussen u en de verkoper. En bij nieuwbouw betaalt u als koper nog steeds de AJD op de koopakte, tegen het tarief van uw regio, of 0,50 procent waar de regio er geen heeft vastgesteld. Houd de twee aktes in uw budget gescheiden."
+          ]
+        },
+        {
+          "h2": "Hoe past de lening in de planning van de aankoop?",
+          "paras": [
+            "Reken terug vanaf de overdrachtsdatum. U heeft de leningsdocumenten ten minste tien kalenderdagen vóór de ondertekening nodig en de acta van de notaris uiterlijk de dag ervoor. Passen de taxatie van de geldverstrekker, de goedkeuring en die twee stappen niet vóór de datum in uw onderhandse koopcontract, vraag uw abogado dan om een latere datum af te spreken voordat u dat contract tekent, niet erna.",
+            "Bij de ondertekening zelf moet de notaris vastleggen hoe de prijs is betaald, en het geld van de lening hoort daarbij. Elke partij toont de notaris ook haar fiscaal identificatienummer, en voor u is dat de NIE. Heeft u die nog niet, vraag hem dan aan met formulier EX-15 (de leges zijn 9,84 euro) zodra u besluit te kopen."
+          ]
+        },
+        {
+          "h2": "Wat vraag ik een geldverstrekker voordat ik kies?",
+          "paras": [
+            "Vraag elke geldverstrekker die u overweegt om een schriftelijk aanbod, en onthoud dat zodra u een FEIN heeft, dat het document is dat de geldverstrekker bindt. Vraag of de rente vast of variabel is, welke index een variabele rente volgt en of er een bodemrente is. Vraag wat vervroegd aflossen kost en laat het antwoord op papier zetten.",
+            "Vraag of het aanbod afhangt van het afnemen van andere producten, en wat de lening zonder die producten zou kosten. Lees daarna de FiAE met uw abogado, vooral de waarschuwing over de valuta. Een lening die u begrijpt voordat u tekent, is een lening waar u niet meer over hoeft na te denken, zodat u terug kunt naar de reden waarom u kocht."
+          ]
+        }
+      ]
+    }
+  }
+}

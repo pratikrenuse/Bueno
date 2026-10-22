@@ -1,0 +1,505 @@
+{
+  "slug": "moving-to-spain-residency-and-visas",
+  "topic": "residency",
+  "tool": "day-counter",
+  "rules": [
+    "schengen.short_stay",
+    "schengen.entry_exit_days",
+    "eu.registration_over_three_months",
+    "res.uk.new_arrivals",
+    "res.uk.withdrawal_agreement",
+    "res.nlv.means",
+    "res.nlv.health_insurance",
+    "res.nlv.no_work",
+    "res.nlv.duration",
+    "res.nlv.application",
+    "res.telework.means",
+    "res.telework.relationship",
+    "res.telework.spanish_clients",
+    "res.telework.visa",
+    "visa.golden_closed",
+    "res.tie.required",
+    "nie.fee",
+    "res.licence.eu",
+    "res.licence.uk",
+    "res.tax.183_days",
+    "res.tax.worldwide_income",
+    "residency.treaty_override",
+    "res.special_regime.eligibility",
+    "res.nationality.periods",
+    "res.nationality.conditions",
+    "res.tax.economic_interests"
+  ],
+  "answers": [
+    "how-long-can-i-stay-in-spain-without-residency",
+    "eu-citizen-staying-in-spain-over-three-months",
+    "spanish-golden-visa-closed",
+    "how-days-are-counted-for-spanish-tax-residency",
+    "tax-resident-in-spain-and-home-country-tie-breaker",
+    "nie-number-form-and-fee"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Moving to Spain: Residency, Visas and the 90 Day Rule",
+      "description": "EU citizens register after three months, while British and other non-EU owners need a visa for long stays. The routes, the conditions and what follows.",
+      "h1": "Moving to Spain as a property owner: residency and visas",
+      "lead": "Owning a home in Spain does not give you the right to live in it. EU and EEA citizens do not need the visa routes below but must register if they reside in Spain for more than three months, while British and other non-EU owners can visit for 90 days in any 180 and need a residence route, such as the non-lucrative visa, to stay longer.",
+      "sections": [
+        {
+          "h2": "Does owning a home in Spain let me live there?",
+          "paras": [
+            "No. Your passport decides how long you can stay, not your deeds or how long you have owned the place. That surprises a lot of owners, especially those who bought before 2021 on a British passport and remember coming and going as they liked.",
+            "If you hold an EU or EEA passport, as Swedes, Germans, Dutch, French and Norwegians do, the visa routes below are not for you. A citizen who resides in Spain for more than three months must register in person in the Registro Central de Extranjeros, applying within three months of entry on form EX-18. That registration is a formality of residence, not a limit on time in the country, and EU rules set their own conditions for staying longer, which are worth checking before you move.",
+            "If you are a non-EU national, including British citizens who arrived from 1 January 2021, you fall under the general immigration rules. Visits are limited, and a longer stay needs a visa route. Buying a home in Spain does not change this."
+          ]
+        },
+        {
+          "h2": "How does the 90 days in 180 rule work?",
+          "paras": [
+            "A non-EU national may stay in the Schengen area for no more than 90 days in any 180-day period. The window looks back 180 days from each day of your stay, so a trip has to fit on every day it lasts, not just on the day you land.",
+            "The allowance covers the whole Schengen area, not Spain alone. A week in France spends the same days as a week in Alicante. Both the day you arrive and the day you leave count as full days, so a four-night stay uses five.",
+            "Easter in the sun, a long summer and three weeks in October add up faster than most people expect. The day counter on this site adds your past and booked trips together and shows the exact date a plan would go over."
+          ]
+        },
+        {
+          "h2": "What is the non-lucrative visa?",
+          "paras": [
+            "The non-lucrative residence lets a non-EU national live in Spain without working. It is the route owners who have retired usually look at first. You must show monthly means of 400 percent of IPREM for yourself and 100 percent of IPREM for each family member. IPREM is a public index set each year, so check the figure in force on the day you apply.",
+            "You also need public or private health insurance with an insurer authorised to operate in Spain. You apply in person at the Spanish consulate for where you live, with a criminal record certificate covering every country you lived in during the last five years.",
+            "The first authorisation lasts one year from the date you enter Spain, and you must enter while the visa is valid, which is never more than three months. Because the visa does not allow employment or professional work, it does not fit someone who still works for clients from the terrace."
+          ]
+        },
+        {
+          "h2": "Can I move to Spain and keep working remotely?",
+          "paras": [
+            "Yes, through the international teleworking route, often called the digital nomad visa. You need monthly gross means of 200 percent of the Spanish minimum wage (SMI), plus 75 percent of the SMI for a second household member and 25 percent for each additional one. The SMI changes, so the euro figure does too.",
+            "You must have worked with the foreign employer or client for at least three months before applying, and that company must have at least one year of real and continuous activity. You also need a recognised degree or postgraduate qualification, or at least three years of experience in similar work.",
+            "A self-employed teleworker may also work for Spanish companies, provided that work is not more than 20 percent of their total activity. The visa allows one year in Spain, and to stay longer you request the residence authorisation in the 60 days before the visa expires, while it is still valid."
+          ]
+        },
+        {
+          "h2": "Can I still get a golden visa by buying property?",
+          "paras": [
+            "No. The investor residence route closed to new applications on 3 April 2025. Ley Orgánica 1/2025 closed the whole investor route, not only the property version, so there is no other investment version of it left to switch to instead.",
+            "Applications filed before 3 April 2025 continue under the old rules, existing authorisations keep their validity, and renewals are decided under the law in force when the original permit was granted. Some articles still give April 2024, or quote the old threshold in dollars. The correct date is 3 April 2025, and the scheme was always in euros."
+          ]
+        },
+        {
+          "h2": "What do I do after I arrive with a visa?",
+          "paras": [
+            "Apply for your TIE (tarjeta de identidad de extranjero), the foreigner's identity card. A non-EU national authorised to stay for more than six months must apply within one month of entering Spain, at the foreigners' office or police station in the province that handled the authorisation. The fee for a first temporary residence card is 16.08 euros.",
+            "Appointments can take several weeks, so book one as soon as you know your travel date rather than after you land. One month passes quickly when you are also unpacking boxes, finding a doctor and waiting for the internet to be connected."
+          ]
+        },
+        {
+          "h2": "I am British. What changed for me?",
+          "paras": [
+            "It depends on when you moved. UK nationals who were living in Spain before 31 December 2020, and their family members, keep their Withdrawal Agreement rights and hold a TIE that names article 50 TUE. Only that card, not the old registration certificate, exempts the holder from the new EU border checks, so exchange it if you have not.",
+            "If you arrived from 1 January 2021, or were never covered, you are treated as a non-EU national like any other. That means 90 days in any 180 for visits, counted across the whole Schengen area, and a visa route such as the non-lucrative residence if you want to live here.",
+            "Driving is the other change. A UK licence holder who becomes resident may drive on the UK licence for six months from entry or from obtaining residence, then exchange it at the DGT with the TIE, a medical fitness report and a fee of 28.87 euros, which changes each year. An EU or EEA licence stays valid while it is in force, and exchanging it is optional."
+          ]
+        },
+        {
+          "h2": "What happens to my tax when I move?",
+          "paras": [
+            "Living in Spain usually makes you tax resident. You are resident for a calendar year if you spend more than 183 days in Spain in that year, or if the main base of your activities or economic interests is here. A Spanish tax resident pays income tax on worldwide income, so pensions and investments from home come into the Spanish return.",
+            "Where both Spain and your home country treat you as resident, the double tax treaty decides. Norway, Sweden, Germany, the UK and France all have one with Spain. The special tax regime for people moving to Spain is tied to a job, a directorship or certain business activity, and is not available simply for retiring or buying a home.",
+            "This is the point to sit down with a tax adviser (asesor fiscal) who knows both systems, ideally before the year you move rather than after it. Our guide to Spanish tax residency and the 183 day rule goes through each test in detail."
+          ]
+        },
+        {
+          "h2": "Can I become Spanish one day?",
+          "paras": [
+            "Possibly, but slowly. Nationality by residence needs ten years of residence in general, with shorter periods for refugees, for nationals of Ibero-American countries, Andorra, the Philippines, Equatorial Guinea and Portugal, and one year in specific cases such as marriage to a Spanish national.",
+            "The residence must be legal, continuous and immediately before the application, so years as a visitor or a non-resident owner do not count. For most of us, the realistic goal is simpler: the right paperwork for the life you actually want here, and then the time to enjoy it."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Flytte til Spania: opphold, visum og 90-dagersregelen",
+      "description": "EU-borgere registrerer seg etter tre måneder, mens britiske og andre eiere utenfor EU trenger visum for lange opphold.",
+      "h1": "Å flytte til Spania som boligeier: opphold og visum",
+      "lead": "Å eie en bolig i Spania gir deg ikke rett til å bo i den. Borgere fra EU og EØS trenger ikke visumveiene nedenfor, men må registrere seg hvis de bor i Spania i mer enn tre måneder, mens britiske og andre eiere fra land utenfor EU kan være på besøk i 90 dager i løpet av 180 og trenger en oppholdsvei, som non-lucrative-visumet, for å bli lenger.",
+      "sections": [
+        {
+          "h2": "Gir det å eie en bolig i Spania meg rett til å bo der?",
+          "paras": [
+            "Nei. Det er passet ditt som avgjør hvor lenge du kan bli, ikke skjøtet eller hvor lenge du har eid stedet. Det overrasker mange eiere, særlig de som kjøpte før 2021 med britisk pass og husker at de kom og gikk som de ville.",
+            "Har du et pass fra EU eller EØS, slik svensker, tyskere, nederlendere, franskmenn og nordmenn har, er visumveiene nedenfor ikke for deg. En borger som bor i Spania i mer enn tre måneder, må registrere seg personlig i Registro Central de Extranjeros og søke innen tre måneder etter innreise på skjema EX-18. Den registreringen er en formalitet knyttet til bosted, ikke en grense for tiden i landet, og EU-reglene setter egne vilkår for lengre opphold, som det er verdt å sjekke før du flytter.",
+            "Er du borger av et land utenfor EU, også britiske borgere som kom fra 1. januar 2021, faller du inn under de alminnelige utlendingsreglene. Besøk er begrenset, og et lengre opphold krever en visumvei. Å kjøpe bolig i Spania endrer ikke dette."
+          ]
+        },
+        {
+          "h2": "Hvordan fungerer regelen om 90 dager i løpet av 180?",
+          "paras": [
+            "En borger fra et land utenfor EU kan ikke oppholde seg i Schengen-området i mer enn 90 dager i løpet av en periode på 180 dager. Vinduet ser 180 dager tilbake fra hver dag av oppholdet, så en reise må gå opp på hver eneste dag den varer, ikke bare dagen du lander.",
+            "Kvoten gjelder hele Schengen-området, ikke bare Spania. En uke i Frankrike bruker de samme dagene som en uke i Alicante. Både ankomstdagen og avreisedagen teller som hele dager, så et opphold på fire netter bruker fem.",
+            "Påske i sola, en lang sommer og tre uker i oktober blir fort mer enn de fleste regner med. Dagtelleren på dette nettstedet legger sammen tidligere og bestilte reiser og viser nøyaktig hvilken dato en plan vil gå over grensen."
+          ]
+        },
+        {
+          "h2": "Hva er non-lucrative-visumet?",
+          "paras": [
+            "Non-lucrative-opphold lar en borger fra et land utenfor EU bo i Spania uten å arbeide. Det er den veien pensjonerte eiere som regel ser på først. Du må vise månedlige midler på 400 prosent av IPREM for deg selv og 100 prosent av IPREM for hvert familiemedlem. IPREM er en offentlig indeks som fastsettes hvert år, så sjekk tallet som gjelder den dagen du søker.",
+            "Du trenger også offentlig eller privat helseforsikring hos et forsikringsselskap med tillatelse til å drive i Spania. Du søker personlig ved det spanske konsulatet for der du bor, med en politiattest som dekker alle land du har bodd i de siste fem årene.",
+            "Den første tillatelsen varer i ett år fra datoen du reiser inn i Spania, og du må reise inn mens visumet er gyldig, noe som aldri er mer enn tre måneder. Fordi visumet ikke tillater ansettelse eller yrkesaktivitet, passer det ikke for noen som fortsatt jobber for kunder fra terrassen."
+          ]
+        },
+        {
+          "h2": "Kan jeg flytte til Spania og fortsette å jobbe på fjernarbeid?",
+          "paras": [
+            "Ja, gjennom ordningen for internasjonalt fjernarbeid, ofte kalt visum for digitale nomader. Du trenger månedlige bruttomidler på 200 prosent av den spanske minstelønnen (SMI), pluss 75 prosent av SMI for et andre husstandsmedlem og 25 prosent for hvert ytterligere. SMI endres, så eurobeløpet gjør det også.",
+            "Du må ha jobbet for den utenlandske arbeidsgiveren eller kunden i minst tre måneder før du søker, og det selskapet må ha hatt minst ett år med reell og sammenhengende virksomhet. Du trenger også en anerkjent grad eller videreutdanning, eller minst tre års erfaring fra lignende arbeid.",
+            "En selvstendig fjernarbeider kan også jobbe for spanske selskaper, forutsatt at det arbeidet ikke utgjør mer enn 20 prosent av den samlede virksomheten. Visumet gir ett år i Spania, og for å bli lenger søker du om oppholdstillatelse i løpet av de 60 dagene før visumet utløper, mens det fortsatt er gyldig."
+          ]
+        },
+        {
+          "h2": "Kan jeg fortsatt få golden visa ved å kjøpe bolig?",
+          "paras": [
+            "Nei. Oppholdsordningen for investorer ble stengt for nye søknader 3. april 2025. Ley Orgánica 1/2025 stengte hele investorordningen, ikke bare eiendomsvarianten, så det finnes ingen annen investeringsvariant igjen å bytte til.",
+            "Søknader levert før 3. april 2025 behandles videre etter de gamle reglene, eksisterende tillatelser beholder gyldigheten, og fornyelser avgjøres etter loven som gjaldt da den opprinnelige tillatelsen ble gitt. Noen artikler oppgir fortsatt april 2024, eller siterer den gamle terskelen i dollar. Riktig dato er 3. april 2025, og ordningen var alltid i euro."
+          ]
+        },
+        {
+          "h2": "Hva gjør jeg etter at jeg har kommet med visum?",
+          "paras": [
+            "Søk om TIE (tarjeta de identidad de extranjero), identitetskortet for utlendinger. En borger fra et land utenfor EU som har tillatelse til å oppholde seg i mer enn seks måneder, må søke innen én måned etter innreise i Spania, ved utlendingskontoret eller politistasjonen i provinsen som behandlet tillatelsen. Gebyret for et første kort for midlertidig opphold er 16,08 euro.",
+            "Det kan ta flere uker å få time, så bestill en så snart du vet reisedatoen, ikke etter at du har landet. En måned går fort når du samtidig pakker ut esker, finner en lege og venter på at internett skal kobles til."
+          ]
+        },
+        {
+          "h2": "Jeg er britisk. Hva har endret seg for meg?",
+          "paras": [
+            "Det avhenger av når du flyttet. Britiske borgere som bodde i Spania før 31. desember 2020, og familiemedlemmene deres, beholder rettighetene sine etter utmeldingsavtalen og har et TIE som viser til artikkel 50 TEU. Bare det kortet, ikke det gamle registreringsbeviset, fritar innehaveren fra de nye grensekontrollene i EU, så bytt det hvis du ikke har gjort det.",
+            "Kom du fra 1. januar 2021, eller var aldri omfattet, behandles du som enhver annen borger fra et land utenfor EU. Det betyr 90 dager i løpet av 180 for besøk, regnet over hele Schengen-området, og en visumvei som non-lucrative-opphold hvis du vil bo her.",
+            "Bilkjøring er den andre endringen. En innehaver av britisk førerkort som blir bosatt, kan kjøre på det britiske førerkortet i seks måneder fra innreise eller fra oppholdet ble innvilget, og deretter bytte det hos DGT med TIE, en legeattest og et gebyr på 28,87 euro, som endres hvert år. Et førerkort fra EU eller EØS er gyldig så lenge det gjelder, og det er frivillig å bytte det."
+          ]
+        },
+        {
+          "h2": "Hva skjer med skatten min når jeg flytter?",
+          "paras": [
+            "Å bo i Spania gjør deg som regel skattemessig bosatt. Du er bosatt for et kalenderår hvis du tilbringer mer enn 183 dager i Spania det året, eller hvis hovedtyngden av virksomheten eller de økonomiske interessene dine er her. En som er skattemessig bosatt i Spania, betaler inntektsskatt av inntekt fra hele verden, så pensjoner og investeringer hjemmefra kommer med i den spanske skattemeldingen.",
+            "Der både Spania og hjemlandet ditt behandler deg som bosatt, avgjør skatteavtalen. Norge, Sverige, Tyskland, Storbritannia og Frankrike har alle en med Spania. Den særskilte skatteordningen for folk som flytter til Spania, er knyttet til en jobb, et styreverv eller visse typer næringsvirksomhet, og er ikke tilgjengelig bare fordi du går av med pensjon eller kjøper bolig.",
+            "Dette er tidspunktet for å sette seg ned med en skatterådgiver (asesor fiscal) som kjenner begge systemene, helst før året du flytter og ikke etterpå. Vår guide til skattemessig bosted i Spania og 183-dagersregelen går gjennom hver test i detalj."
+          ]
+        },
+        {
+          "h2": "Kan jeg bli spansk statsborger en dag?",
+          "paras": [
+            "Kanskje, men det tar tid. Statsborgerskap på grunnlag av bosted krever som hovedregel ti års bosted, med kortere perioder for flyktninger, for borgere av iberoamerikanske land, Andorra, Filippinene, Ekvatorial-Guinea og Portugal, og ett år i særlige tilfeller som ekteskap med en spansk borger.",
+            "Bostedet må være lovlig, sammenhengende og rett før søknaden, så år som besøkende eller som ikke-bosatt eier teller ikke. For de fleste av oss er det realistiske målet enklere: de riktige papirene for det livet du faktisk vil ha her, og så tiden til å nyte det."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Flytta till Spanien: uppehåll, visum och 90-dagarsregeln",
+      "description": "EU-medborgare registrerar sig efter tre månader, medan britter och andra utanför EU behöver visum för långa vistelser. Vägarna, villkoren och nästa steg.",
+      "h1": "Att flytta till Spanien som fastighetsägare: uppehållstillstånd och visum",
+      "lead": "Att äga en bostad i Spanien ger dig inte rätt att bo i den. Medborgare i EU och EES behöver inte visumvägarna nedan men måste registrera sig om de är bosatta i Spanien i mer än tre månader, medan brittiska ägare och andra från länder utanför EU kan besöka landet i 90 dagar av 180 och behöver en väg till uppehållstillstånd, till exempel visum utan förvärvsarbete, för att stanna längre.",
+      "sections": [
+        {
+          "h2": "Får jag bo i Spanien för att jag äger en bostad där?",
+          "paras": [
+            "Nej. Det är ditt pass som avgör hur länge du får stanna, inte dina köpehandlingar eller hur länge du har ägt stället. Det överraskar många ägare, särskilt de som köpte före 2021 med brittiskt pass och minns att de kom och gick som de ville.",
+            "Har du ett pass från EU eller EES, som svenskar, tyskar, nederländare, fransmän och norrmän har, är visumvägarna nedan inte för dig. En medborgare som är bosatt i Spanien i mer än tre månader måste registrera sig personligen i Registro Central de Extranjeros, med ansökan inom tre månader från inresan på blankett EX-18. Registreringen är en formalitet för bosättning, inte en gräns för tiden i landet, och EU:s regler har egna villkor för längre vistelser som är värda att kontrollera innan du flyttar.",
+            "Är du medborgare i ett land utanför EU, vilket inkluderar brittiska medborgare som kom från 1 januari 2021, omfattas du av de allmänna utlänningsreglerna. Besök är begränsade, och en längre vistelse kräver en visumväg. Att köpa en bostad i Spanien ändrar inte det."
+          ]
+        },
+        {
+          "h2": "Hur fungerar regeln om 90 dagar av 180?",
+          "paras": [
+            "En medborgare från ett land utanför EU får vistas i Schengenområdet i högst 90 dagar under varje period om 180 dagar. Fönstret räknas 180 dagar bakåt från varje dag av vistelsen, så en resa måste rymmas inom gränsen varje dag den pågår, inte bara den dag du landar.",
+            "Kvoten gäller hela Schengenområdet, inte bara Spanien. En vecka i Frankrike förbrukar lika många dagar som en vecka i Alicante. Både ankomstdagen och avresedagen räknas som hela dagar, så en vistelse på fyra nätter förbrukar fem.",
+            "Påsk i solen, en lång sommar och tre veckor i oktober blir mer än de flesta räknar med. Guiden för att räkna dagar på den här sajten lägger ihop dina tidigare och bokade resor och visar exakt vilket datum en plan skulle gå över gränsen."
+          ]
+        },
+        {
+          "h2": "Vad är visum utan förvärvsarbete?",
+          "paras": [
+            "Uppehållstillstånd utan förvärvsarbete (residencia no lucrativa) låter en medborgare från ett land utanför EU bo i Spanien utan att arbeta. Det är den väg som pensionerade ägare oftast tittar på först. Du måste visa månatliga medel på 400 procent av IPREM för dig själv och 100 procent av IPREM för varje familjemedlem. IPREM är ett offentligt index som fastställs varje år, så kontrollera vilken siffra som gäller den dag du ansöker.",
+            "Du behöver också en offentlig eller privat sjukförsäkring hos ett försäkringsbolag med tillstånd att verka i Spanien. Du ansöker personligen på det spanska konsulatet för den ort där du bor, med ett utdrag ur belastningsregistret från varje land där du har bott de senaste fem åren.",
+            "Det första tillståndet gäller i ett år från den dag du reser in i Spanien, och du måste resa in medan visumet är giltigt, vilket aldrig är mer än tre månader. Eftersom visumet inte tillåter anställning eller yrkesverksamhet passar det inte den som fortfarande arbetar för kunder från terrassen."
+          ]
+        },
+        {
+          "h2": "Kan jag flytta till Spanien och fortsätta jobba på distans?",
+          "paras": [
+            "Ja, genom vägen för internationellt distansarbete, ofta kallad visum för digitala nomader. Du behöver månatliga bruttomedel på 200 procent av den spanska minimilönen (SMI), plus 75 procent av SMI för en andra person i hushållet och 25 procent för varje ytterligare person. SMI ändras, så beloppet i euro gör det också.",
+            "Du måste ha arbetat för den utländska arbetsgivaren eller kunden i minst tre månader före ansökan, och det företaget måste ha haft minst ett års verklig och sammanhängande verksamhet. Du behöver också en erkänd examen eller forskarutbildning, eller minst tre års erfarenhet av liknande arbete.",
+            "En egenföretagare som distansarbetar får också arbeta för spanska företag, förutsatt att det arbetet inte är mer än 20 procent av den totala verksamheten. Visumet ger ett år i Spanien, och för att stanna längre begär du uppehållstillståndet under de 60 dagarna innan visumet går ut, medan det fortfarande är giltigt."
+          ]
+        },
+        {
+          "h2": "Kan jag fortfarande få ett golden visa genom att köpa en fastighet?",
+          "paras": [
+            "Nej. Vägen till uppehållstillstånd för investerare stängdes för nya ansökningar den 3 april 2025. Ley Orgánica 1/2025 stängde hela investerarvägen, inte bara fastighetsvarianten, så det finns ingen annan investeringsvariant kvar att byta till.",
+            "Ansökningar som lämnades in före 3 april 2025 fortsätter enligt de gamla reglerna, befintliga tillstånd behåller sin giltighet, och förlängningar avgörs enligt den lag som gällde när det ursprungliga tillståndet beviljades. En del artiklar anger fortfarande april 2024, eller den gamla tröskeln i dollar. Rätt datum är 3 april 2025, och systemet var alltid i euro."
+          ]
+        },
+        {
+          "h2": "Vad gör jag när jag har kommit med visum?",
+          "paras": [
+            "Ansök om ditt TIE (tarjeta de identidad de extranjero), utlänningens identitetskort. En medborgare från ett land utanför EU som har tillstånd att stanna i mer än sex månader måste ansöka inom en månad från inresan i Spanien, hos utlänningskontoret eller polisstationen i den provins som hanterade tillståndet. Avgiften för ett första kort för tillfälligt uppehåll är 16,08 euro.",
+            "Det kan ta flera veckor att få en tid, så boka en så snart du vet ditt resedatum i stället för efter att du har landat. En månad går fort när du samtidigt packar upp flyttkartonger, letar läkare och väntar på att internet ska kopplas in."
+          ]
+        },
+        {
+          "h2": "Jag är brittisk medborgare. Vad har ändrats för mig?",
+          "paras": [
+            "Det beror på när du flyttade. Brittiska medborgare som bodde i Spanien före 31 december 2020, och deras familjemedlemmar, behåller sina rättigheter enligt utträdesavtalet och har ett TIE som hänvisar till artikel 50 TUE. Bara det kortet, inte det gamla registreringsintyget, undantar innehavaren från EU:s nya gränskontroller, så byt ut det om du inte redan har gjort det.",
+            "Kom du från 1 januari 2021, eller omfattades du aldrig, behandlas du som vilken medborgare från ett land utanför EU som helst. Det betyder 90 dagar av 180 för besök, räknat över hela Schengenområdet, och en visumväg som uppehållstillstånd utan förvärvsarbete om du vill bo här.",
+            "Körkortet är den andra förändringen. Den som har brittiskt körkort och blir bosatt får köra på det i sex månader från inresan eller från att bosättningen beviljades, och ska sedan byta det hos DGT med TIE, ett läkarintyg och en avgift på 28,87 euro, som ändras varje år. Ett körkort från EU eller EES gäller så länge det är giltigt, och att byta det är frivilligt."
+          ]
+        },
+        {
+          "h2": "Vad händer med min skatt när jag flyttar?",
+          "paras": [
+            "Att bo i Spanien gör dig oftast skattemässigt bosatt. Du är bosatt för ett kalenderår om du vistas mer än 183 dagar i Spanien det året, eller om huvuddelen av din verksamhet eller dina ekonomiska intressen finns här. Den som är skattemässigt bosatt i Spanien betalar inkomstskatt på sina inkomster i hela världen, så pensioner och investeringar hemifrån kommer med i den spanska deklarationen.",
+            "När både Spanien och ditt hemland betraktar dig som bosatt avgör skatteavtalet. Norge, Sverige, Tyskland, Storbritannien och Frankrike har alla ett sådant med Spanien. Den särskilda skatteordningen för personer som flyttar till Spanien är knuten till en anställning, ett styrelseuppdrag eller viss företagsverksamhet, och gäller inte bara för att du går i pension eller köper en bostad.",
+            "Det är här du bör sätta dig ner med en skatterådgivare (asesor fiscal) som kan båda systemen, helst före det år du flyttar och inte efter. Vår guide om spansk skatterättslig hemvist och 183-dagarsregeln går igenom varje kriterium i detalj."
+          ]
+        },
+        {
+          "h2": "Kan jag bli spansk medborgare en dag?",
+          "paras": [
+            "Kanske, men det tar tid. Medborgarskap genom bosättning kräver i regel tio års bosättning, med kortare tider för flyktingar, för medborgare i iberoamerikanska länder, Andorra, Filippinerna, Ekvatorialguinea och Portugal, och ett år i särskilda fall som äktenskap med en spansk medborgare.",
+            "Bosättningen måste vara laglig, sammanhängande och ligga omedelbart före ansökan, så år som besökare eller som icke-bosatt ägare räknas inte. För de flesta av oss är det realistiska målet enklare: rätt papper för det liv du faktiskt vill leva här, och sedan tid att njuta av det."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Auswandern nach Spanien: Aufenthalt, Visum und 90-Tage-Regel",
+      "description": "EU-Bürger melden sich nach drei Monaten an, Briten und andere Nicht-EU-Eigentümer brauchen für lange Aufenthalte ein Visum. Wege, Bedingungen und Folgen.",
+      "h1": "Als Immobilieneigentümer nach Spanien ziehen: Aufenthalt und Visum",
+      "lead": "Ein Haus in Spanien zu besitzen gibt Ihnen nicht das Recht, darin zu leben. Bürger der EU und des EWR brauchen die Visumwege unten nicht, müssen sich aber registrieren, wenn sie länger als drei Monate in Spanien wohnen, während britische und andere Eigentümer von außerhalb der EU 90 Tage innerhalb von 180 zu Besuch kommen können und für einen längeren Aufenthalt einen Aufenthaltsweg brauchen, etwa das Visum ohne Erwerbstätigkeit.",
+      "sections": [
+        {
+          "h2": "Darf ich in Spanien leben, wenn mir dort ein Haus gehört?",
+          "paras": [
+            "Nein. Ihr Reisepass entscheidet, wie lange Sie bleiben dürfen, nicht Ihre Kaufurkunde und nicht, wie lange Ihnen das Haus schon gehört. Das überrascht viele Eigentümer, vor allem diejenigen, die vor 2021 mit einem britischen Pass gekauft haben und sich daran erinnern, wie sie kamen und gingen, wie sie wollten.",
+            "Wenn Sie einen Pass der EU oder des EWR haben, wie Schweden, Deutsche, Niederländer, Franzosen und Norweger, sind die Visumwege unten nichts für Sie. Wer länger als drei Monate in Spanien wohnt, muss sich persönlich im Registro Central de Extranjeros eintragen lassen und den Antrag innerhalb von drei Monaten nach der Einreise mit dem Formular EX-18 stellen. Diese Registrierung ist eine Formalität des Wohnsitzes, keine Begrenzung der Zeit im Land, und das EU-Recht legt eigene Bedingungen für längere Aufenthalte fest, die Sie vor dem Umzug prüfen sollten.",
+            "Wenn Sie Staatsangehöriger eines Landes außerhalb der EU sind, einschließlich britischer Bürger, die ab dem 1. Januar 2021 gekommen sind, gelten für Sie die allgemeinen Ausländerregeln. Besuche sind begrenzt, und ein längerer Aufenthalt braucht einen Visumweg. Ein Hauskauf in Spanien ändert daran nichts."
+          ]
+        },
+        {
+          "h2": "Wie funktioniert die Regel 90 Tage in 180?",
+          "paras": [
+            "Ein Staatsangehöriger eines Landes außerhalb der EU darf sich im Schengen-Raum höchstens 90 Tage innerhalb eines Zeitraums von 180 Tagen aufhalten. Das Zeitfenster schaut von jedem Tag Ihres Aufenthalts 180 Tage zurück, eine Reise muss also an jedem Tag passen, den sie dauert, nicht nur am Tag der Landung.",
+            "Das Kontingent gilt für den gesamten Schengen-Raum, nicht nur für Spanien. Eine Woche in Frankreich verbraucht dieselben Tage wie eine Woche in Alicante. Sowohl der Ankunfts- als auch der Abreisetag zählen als volle Tage, ein Aufenthalt mit vier Nächten verbraucht also fünf.",
+            "Ostern in der Sonne, ein langer Sommer und drei Wochen im Oktober summieren sich schneller, als die meisten erwarten. Der Tagerechner auf dieser Seite zählt Ihre vergangenen und gebuchten Reisen zusammen und zeigt das genaue Datum, an dem ein Plan die Grenze überschreiten würde."
+          ]
+        },
+        {
+          "h2": "Was ist das Visum ohne Erwerbstätigkeit (no lucrativa)?",
+          "paras": [
+            "Der Aufenthalt ohne Erwerbstätigkeit (residencia no lucrativa) erlaubt einem Staatsangehörigen eines Landes außerhalb der EU, in Spanien zu leben, ohne zu arbeiten. Es ist der Weg, den Eigentümer im Ruhestand meist zuerst ansehen. Sie müssen monatliche Mittel von 400 Prozent des IPREM für sich selbst und 100 Prozent des IPREM für jedes Familienmitglied nachweisen. Der IPREM ist ein öffentlicher Index, der jedes Jahr festgelegt wird. Prüfen Sie also den am Tag Ihres Antrags geltenden Wert.",
+            "Außerdem brauchen Sie eine öffentliche oder private Krankenversicherung bei einem Versicherer, der in Spanien zugelassen ist. Sie beantragen persönlich beim spanischen Konsulat für Ihren Wohnort, mit einem Führungszeugnis für jedes Land, in dem Sie in den letzten fünf Jahren gelebt haben.",
+            "Die erste Genehmigung gilt ein Jahr ab dem Datum Ihrer Einreise nach Spanien, und Sie müssen einreisen, solange das Visum gültig ist, was nie mehr als drei Monate sind. Da das Visum keine Beschäftigung oder berufliche Tätigkeit erlaubt, passt es nicht für jemanden, der noch von der Terrasse aus für Kunden arbeitet."
+          ]
+        },
+        {
+          "h2": "Kann ich nach Spanien ziehen und weiter remote arbeiten?",
+          "paras": [
+            "Ja, über den Weg für internationale Telearbeit, oft Visum für digitale Nomaden genannt. Sie brauchen monatliche Bruttomittel von 200 Prozent des spanischen Mindestlohns (SMI), dazu 75 Prozent des SMI für ein zweites Haushaltsmitglied und 25 Prozent für jedes weitere. Der SMI ändert sich, und damit auch der Betrag in Euro.",
+            "Sie müssen vor dem Antrag mindestens drei Monate mit dem ausländischen Arbeitgeber oder Kunden gearbeitet haben, und dieses Unternehmen muss mindestens ein Jahr echte und ununterbrochene Tätigkeit vorweisen. Außerdem brauchen Sie einen anerkannten Hochschulabschluss oder eine postgraduale Qualifikation oder mindestens drei Jahre Erfahrung in einer ähnlichen Tätigkeit.",
+            "Ein selbstständiger Telearbeiter darf auch für spanische Unternehmen arbeiten, sofern diese Arbeit nicht mehr als 20 Prozent seiner gesamten Tätigkeit ausmacht. Das Visum erlaubt ein Jahr in Spanien, und um länger zu bleiben, beantragen Sie die Aufenthaltsgenehmigung in den 60 Tagen vor Ablauf des Visums, solange es noch gültig ist."
+          ]
+        },
+        {
+          "h2": "Bekomme ich durch einen Immobilienkauf noch ein Golden Visa?",
+          "paras": [
+            "Nein. Der Aufenthaltsweg für Investoren wurde am 3. April 2025 für neue Anträge geschlossen. Die Ley Orgánica 1/2025 hat den gesamten Investorenweg geschlossen, nicht nur die Immobilienvariante, es gibt also keine andere Investitionsvariante mehr, auf die Sie stattdessen ausweichen könnten.",
+            "Anträge, die vor dem 3. April 2025 gestellt wurden, laufen nach den alten Regeln weiter, bestehende Genehmigungen behalten ihre Gültigkeit, und über Verlängerungen wird nach dem Recht entschieden, das bei Erteilung der ursprünglichen Genehmigung galt. Manche Artikel nennen noch April 2024 oder geben die alte Schwelle in Dollar an. Das richtige Datum ist der 3. April 2025, und das Programm lief immer in Euro."
+          ]
+        },
+        {
+          "h2": "Was tue ich nach der Ankunft mit einem Visum?",
+          "paras": [
+            "Beantragen Sie Ihre TIE (tarjeta de identidad de extranjero), den Ausländerausweis. Ein Staatsangehöriger eines Landes außerhalb der EU, der für mehr als sechs Monate zum Aufenthalt berechtigt ist, muss den Antrag innerhalb eines Monats nach der Einreise nach Spanien stellen, bei der Ausländerbehörde oder Polizeiwache in der Provinz, die die Genehmigung bearbeitet hat. Die Gebühr für eine erste Karte für einen befristeten Aufenthalt beträgt 16,08 Euro.",
+            "Termine können mehrere Wochen dauern, buchen Sie also einen, sobald Sie Ihr Reisedatum kennen, und nicht erst nach der Landung. Ein Monat vergeht schnell, wenn Sie gleichzeitig Kisten auspacken, einen Arzt suchen und darauf warten, dass das Internet angeschlossen wird."
+          ]
+        },
+        {
+          "h2": "Ich bin Brite. Was hat sich für mich geändert?",
+          "paras": [
+            "Das hängt davon ab, wann Sie umgezogen sind. Britische Staatsangehörige, die vor dem 31. Dezember 2020 in Spanien lebten, und ihre Familienangehörigen behalten ihre Rechte aus dem Austrittsabkommen und haben eine TIE, die Artikel 50 EUV nennt. Nur diese Karte, nicht die alte Registrierungsbescheinigung, befreit den Inhaber von den neuen Grenzkontrollen der EU. Tauschen Sie sie also um, falls Sie das noch nicht getan haben.",
+            "Wenn Sie ab dem 1. Januar 2021 gekommen sind oder nie erfasst waren, werden Sie wie jeder andere Staatsangehörige eines Landes außerhalb der EU behandelt. Das bedeutet 90 Tage innerhalb von 180 für Besuche, gezählt über den gesamten Schengen-Raum, und einen Visumweg wie den Aufenthalt ohne Erwerbstätigkeit, wenn Sie hier leben wollen.",
+            "Die andere Änderung betrifft das Autofahren. Wer einen britischen Führerschein hat und ansässig wird, darf sechs Monate ab der Einreise oder ab Erhalt des Aufenthaltsrechts mit dem britischen Führerschein fahren und muss ihn dann bei der DGT umtauschen, mit der TIE, einem ärztlichen Tauglichkeitsbericht und einer Gebühr von 28,87 Euro, die sich jedes Jahr ändert. Ein Führerschein aus der EU oder dem EWR bleibt gültig, solange er in Kraft ist, und ein Umtausch ist freiwillig."
+          ]
+        },
+        {
+          "h2": "Was passiert mit meinen Steuern, wenn ich umziehe?",
+          "paras": [
+            "Wer in Spanien lebt, wird in der Regel steuerlich ansässig. Sie sind für ein Kalenderjahr ansässig, wenn Sie in diesem Jahr mehr als 183 Tage in Spanien verbringen oder wenn der Mittelpunkt Ihrer Tätigkeiten oder wirtschaftlichen Interessen hier liegt. Wer in Spanien steuerlich ansässig ist, zahlt Einkommensteuer auf sein weltweites Einkommen, Renten und Kapitalanlagen aus der Heimat gehören also in die spanische Erklärung.",
+            "Wenn sowohl Spanien als auch Ihr Heimatland Sie als ansässig ansehen, entscheidet das Doppelbesteuerungsabkommen. Norwegen, Schweden, Deutschland, das Vereinigte Königreich und Frankreich haben alle eines mit Spanien. Die Sonderregelung für Personen, die nach Spanien ziehen, ist an eine Anstellung, eine Geschäftsführung oder bestimmte unternehmerische Tätigkeiten gebunden und steht nicht schon deshalb offen, weil Sie in Rente gehen oder ein Haus kaufen.",
+            "An diesem Punkt sollten Sie sich mit einem Steuerberater (asesor fiscal) zusammensetzen, der beide Systeme kennt, am besten vor dem Jahr Ihres Umzugs und nicht danach. Unser Ratgeber zur steuerlichen Ansässigkeit in Spanien und zur 183-Tage-Regel geht jede Prüfung im Detail durch."
+          ]
+        },
+        {
+          "h2": "Kann ich eines Tages Spanier werden?",
+          "paras": [
+            "Möglicherweise, aber langsam. Die Einbürgerung aufgrund von Aufenthalt setzt im Allgemeinen zehn Jahre Aufenthalt voraus, mit kürzeren Fristen für Flüchtlinge, für Staatsangehörige iberoamerikanischer Länder, Andorras, der Philippinen, Äquatorialguineas und Portugals sowie einem Jahr in bestimmten Fällen wie der Ehe mit einem spanischen Staatsangehörigen.",
+            "Der Aufenthalt muss rechtmäßig, ununterbrochen und unmittelbar vor dem Antrag sein, Jahre als Besucher oder als nichtansässiger Eigentümer zählen also nicht. Für die meisten von uns ist das realistische Ziel einfacher: die richtigen Papiere für das Leben, das Sie hier wirklich führen wollen, und dann die Zeit, es zu genießen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "S'installer en Espagne : résidence, visas et règle des 90 jours",
+      "description": "Les citoyens de l'UE s'enregistrent après trois mois, les Britanniques et autres non-Européens ont besoin d'un visa pour un long séjour. Les options.",
+      "h1": "S'installer en Espagne quand on y est propriétaire : résidence et visas",
+      "lead": "Posséder un logement en Espagne ne vous donne pas le droit d'y vivre. Les citoyens de l'UE et de l'EEE n'ont pas besoin des visas présentés ci-dessous, mais doivent s'enregistrer s'ils résident en Espagne plus de trois mois, tandis que les propriétaires britanniques et autres non-Européens peuvent séjourner 90 jours sur toute période de 180 et ont besoin d'une voie de résidence, comme le visa non lucratif, pour rester plus longtemps.",
+      "sections": [
+        {
+          "h2": "Être propriétaire en Espagne me permet-il d'y vivre ?",
+          "paras": [
+            "Non. C'est votre passeport qui détermine combien de temps vous pouvez rester, pas votre acte de propriété ni depuis combien de temps vous possédez le logement. Cela surprend beaucoup de propriétaires, surtout ceux qui ont acheté avant 2021 avec un passeport britannique et se souviennent d'aller et venir à leur guise.",
+            "Si vous avez un passeport de l'UE ou de l'EEE, comme les Suédois, les Allemands, les Néerlandais, les Français et les Norvégiens, les visas ci-dessous ne vous concernent pas. Un citoyen qui réside en Espagne plus de trois mois doit s'inscrire en personne au Registro Central de Extranjeros, en faisant la demande dans les trois mois suivant son entrée avec le formulaire EX-18. Cet enregistrement est une formalité de résidence, pas une limite de durée de séjour, et les règles européennes fixent leurs propres conditions pour rester plus longtemps, qu'il vaut la peine de vérifier avant de vous installer.",
+            "Si vous êtes ressortissant d'un pays hors UE, y compris les citoyens britanniques arrivés à partir du 1er janvier 2021, vous relevez des règles générales d'immigration. Les séjours de visite sont limités, et un séjour plus long nécessite un visa. Acheter un logement en Espagne n'y change rien."
+          ]
+        },
+        {
+          "h2": "Comment fonctionne la règle des 90 jours sur 180 ?",
+          "paras": [
+            "Un ressortissant non européen ne peut pas séjourner dans l'espace Schengen plus de 90 jours sur toute période de 180 jours. La fenêtre remonte 180 jours en arrière à partir de chaque jour de votre séjour, un voyage doit donc respecter la règle chaque jour qu'il dure, et pas seulement le jour de votre arrivée.",
+            "Ce quota couvre tout l'espace Schengen, pas seulement l'Espagne. Une semaine en France consomme les mêmes jours qu'une semaine à Alicante. Le jour d'arrivée et le jour de départ comptent tous deux comme des jours entiers, un séjour de quatre nuits en utilise donc cinq.",
+            "Pâques au soleil, un long été et trois semaines en octobre s'additionnent plus vite que la plupart des gens ne le pensent. Le compteur de jours de ce site additionne vos voyages passés et réservés et indique la date exacte à laquelle un projet dépasserait la limite."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce que le visa non lucratif ?",
+          "paras": [
+            "La résidence non lucrative permet à un ressortissant non européen de vivre en Espagne sans travailler. C'est la voie que les propriétaires retraités regardent généralement en premier. Vous devez justifier de ressources mensuelles de 400 pour cent de l'IPREM pour vous-même et de 100 pour cent de l'IPREM pour chaque membre de la famille. L'IPREM est un indice public fixé chaque année, vérifiez donc le montant en vigueur le jour de votre demande.",
+            "Il vous faut aussi une assurance maladie publique ou privée auprès d'un assureur autorisé à exercer en Espagne. Vous faites la demande en personne au consulat d'Espagne dont dépend votre lieu de résidence, avec un extrait de casier judiciaire couvrant chaque pays où vous avez vécu au cours des cinq dernières années.",
+            "La première autorisation dure un an à compter de votre entrée en Espagne, et vous devez entrer pendant la validité du visa, qui ne dépasse jamais trois mois. Comme le visa ne permet ni emploi ni activité professionnelle, il ne convient pas à quelqu'un qui travaille encore pour des clients depuis la terrasse."
+          ]
+        },
+        {
+          "h2": "Puis-je m'installer en Espagne et continuer à travailler à distance ?",
+          "paras": [
+            "Oui, grâce à la voie du télétravail international, souvent appelée visa nomade numérique. Il vous faut des ressources mensuelles brutes de 200 pour cent du salaire minimum espagnol (SMI), plus 75 pour cent du SMI pour un deuxième membre du foyer et 25 pour cent pour chaque membre supplémentaire. Le SMI évolue, le montant en euros aussi.",
+            "Vous devez avoir travaillé avec l'employeur ou le client étranger pendant au moins trois mois avant la demande, et cette entreprise doit avoir au moins un an d'activité réelle et continue. Il vous faut aussi un diplôme ou un titre de troisième cycle reconnu, ou au moins trois ans d'expérience dans un travail similaire.",
+            "Un télétravailleur indépendant peut aussi travailler pour des entreprises espagnoles, à condition que ce travail ne dépasse pas 20 pour cent de son activité totale. Le visa permet un an en Espagne, et pour rester plus longtemps vous demandez l'autorisation de résidence dans les 60 jours qui précèdent l'expiration du visa, tant qu'il est encore valable."
+          ]
+        },
+        {
+          "h2": "Peut-on encore obtenir un golden visa en achetant un bien ?",
+          "paras": [
+            "Non. La voie de résidence pour investisseurs a fermé aux nouvelles demandes le 3 avril 2025. La Ley Orgánica 1/2025 a fermé toute la voie investisseurs, pas seulement la version immobilière, il n'existe donc plus d'autre forme d'investissement vers laquelle se tourner.",
+            "Les demandes déposées avant le 3 avril 2025 continuent selon les anciennes règles, les autorisations existantes restent valables, et les renouvellements sont décidés selon la loi en vigueur lors de la délivrance du permis initial. Certains articles indiquent encore avril 2024, ou citent l'ancien seuil en dollars. La bonne date est le 3 avril 2025, et le dispositif a toujours été en euros."
+          ]
+        },
+        {
+          "h2": "Que faire après mon arrivée avec un visa ?",
+          "paras": [
+            "Demandez votre TIE (tarjeta de identidad de extranjero), la carte d'identité d'étranger. Un ressortissant non européen autorisé à séjourner plus de six mois doit en faire la demande dans le mois qui suit son entrée en Espagne, au bureau des étrangers ou au commissariat de la province qui a traité l'autorisation. Les frais d'une première carte de résidence temporaire sont de 16,08 euros.",
+            "Les rendez-vous peuvent prendre plusieurs semaines, réservez-en donc un dès que vous connaissez votre date de voyage plutôt qu'après votre arrivée. Un mois passe vite quand vous défaites aussi des cartons, cherchez un médecin et attendez que l'internet soit raccordé."
+          ]
+        },
+        {
+          "h2": "Je suis britannique. Qu'est-ce qui a changé pour moi ?",
+          "paras": [
+            "Cela dépend de la date de votre installation. Les ressortissants britanniques qui vivaient en Espagne avant le 31 décembre 2020, ainsi que les membres de leur famille, conservent leurs droits au titre de l'accord de retrait et détiennent une TIE qui mentionne l'article 50 TUE. Seule cette carte, et non l'ancien certificat d'enregistrement, exempte son titulaire des nouveaux contrôles aux frontières de l'UE, échangez-la donc si ce n'est pas déjà fait.",
+            "Si vous êtes arrivé à partir du 1er janvier 2021, ou n'avez jamais été couvert, vous êtes traité comme n'importe quel ressortissant non européen. Cela signifie 90 jours sur toute période de 180 pour les visites, comptés sur l'ensemble de l'espace Schengen, et un visa comme la résidence non lucrative si vous voulez vivre ici.",
+            "La conduite est l'autre changement. Le titulaire d'un permis britannique qui devient résident peut conduire avec ce permis pendant six mois à compter de son entrée ou de l'obtention de la résidence, puis l'échanger auprès de la DGT avec la TIE, un certificat d'aptitude médicale et des frais de 28,87 euros, qui changent chaque année. Un permis de l'UE ou de l'EEE reste valable tant qu'il est en cours de validité, et l'échanger est facultatif."
+          ]
+        },
+        {
+          "h2": "Qu'arrive-t-il à ma fiscalité quand je m'installe ?",
+          "paras": [
+            "Vivre en Espagne fait généralement de vous un résident fiscal. Vous êtes résident pour une année civile si vous passez plus de 183 jours en Espagne cette année-là, ou si le centre principal de vos activités ou de vos intérêts économiques se trouve ici. Un résident fiscal espagnol paie l'impôt sur le revenu sur ses revenus mondiaux, les pensions et placements de votre pays d'origine entrent donc dans la déclaration espagnole.",
+            "Lorsque l'Espagne et votre pays d'origine vous considèrent tous deux comme résident, c'est la convention fiscale qui tranche. La Norvège, la Suède, l'Allemagne, le Royaume-Uni et la France en ont tous une avec l'Espagne. Le régime fiscal spécial pour les personnes qui s'installent en Espagne est lié à un emploi, à un mandat d'administrateur ou à certaines activités d'entreprise, et n'est pas accessible du seul fait de prendre sa retraite ou d'acheter un logement.",
+            "C'est le moment de vous asseoir avec un conseiller fiscal (asesor fiscal) qui connaît les deux systèmes, idéalement avant l'année de votre installation plutôt qu'après. Notre guide sur la résidence fiscale espagnole et la règle des 183 jours détaille chaque critère."
+          ]
+        },
+        {
+          "h2": "Puis-je devenir espagnol un jour ?",
+          "paras": [
+            "Peut-être, mais lentement. La nationalité par résidence exige en général dix ans de résidence, avec des durées plus courtes pour les réfugiés, pour les ressortissants des pays ibéro-américains, d'Andorre, des Philippines, de Guinée équatoriale et du Portugal, et un an dans des cas précis comme le mariage avec un ressortissant espagnol.",
+            "La résidence doit être légale, continue et immédiatement antérieure à la demande, les années passées comme visiteur ou propriétaire non-résident ne comptent donc pas. Pour la plupart d'entre nous, l'objectif réaliste est plus simple : les bons papiers pour la vie que vous voulez vraiment mener ici, puis le temps d'en profiter."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Verhuizen naar Spanje: verblijf, visa en de 90-dagenregel",
+      "description": "EU-burgers schrijven zich na drie maanden in, Britten en andere niet-EU-eigenaren hebben voor lang verblijf een visum nodig. Zo werken de routes.",
+      "h1": "Als woningeigenaar naar Spanje verhuizen: verblijf en visa",
+      "lead": "Een woning in Spanje bezitten geeft u niet het recht om er te wonen. Burgers van de EU en de EER hebben de visumroutes hieronder niet nodig, maar moeten zich inschrijven als ze langer dan drie maanden in Spanje verblijven, terwijl Britse en andere niet-EU-eigenaren 90 dagen binnen elke 180 dagen op bezoek mogen komen en een verblijfsroute nodig hebben, zoals het niet-lucratieve visum, om langer te blijven.",
+      "sections": [
+        {
+          "h2": "Mag ik in Spanje wonen omdat ik er een huis heb?",
+          "paras": [
+            "Nee. Uw paspoort bepaalt hoe lang u mag blijven, niet uw eigendomsakte en niet hoe lang de woning al van u is. Dat verrast veel eigenaren, vooral wie vóór 2021 met een Brits paspoort kocht en zich herinnert dat ze kwamen en gingen wanneer ze wilden.",
+            "Heeft u een paspoort van de EU of de EER, zoals Zweden, Duitsers, Nederlanders, Fransen en Noren, dan zijn de visumroutes hieronder niet voor u bedoeld. Een burger die langer dan drie maanden in Spanje verblijft, moet zich persoonlijk inschrijven in het Registro Central de Extranjeros en dat binnen drie maanden na binnenkomst aanvragen met formulier EX-18. Die inschrijving is een formaliteit voor verblijf, geen grens aan de tijd in het land, en de EU-regels stellen eigen voorwaarden voor langer verblijf, die het waard zijn om voor de verhuizing na te gaan.",
+            "Bent u geen EU-burger, ook als Brit die vanaf 1 januari 2021 aankwam, dan valt u onder de algemene vreemdelingenregels. Bezoeken zijn beperkt, en voor een langer verblijf heeft u een visumroute nodig. Een woning kopen in Spanje verandert daar niets aan."
+          ]
+        },
+        {
+          "h2": "Hoe werkt de regel van 90 dagen binnen 180 dagen?",
+          "paras": [
+            "Iemand van buiten de EU mag niet langer dan 90 dagen binnen elke periode van 180 dagen in het Schengengebied verblijven. Het venster kijkt vanaf elke dag van uw verblijf 180 dagen terug, dus een reis moet op elke dag dat hij duurt passen, niet alleen op de dag dat u landt.",
+            "De toegestane tijd geldt voor het hele Schengengebied, niet alleen voor Spanje. Een week in Frankrijk kost dezelfde dagen als een week in Alicante. Zowel de dag van aankomst als de dag van vertrek tellen als volle dagen, dus een verblijf van vier nachten gebruikt er vijf.",
+            "Pasen in de zon, een lange zomer en drie weken in oktober tellen sneller op dan de meeste mensen denken. De dagenteller op deze site telt uw eerdere en geboekte reizen bij elkaar op en laat de precieze datum zien waarop een plan over de grens zou gaan."
+          ]
+        },
+        {
+          "h2": "Wat is het niet-lucratieve visum?",
+          "paras": [
+            "Het niet-lucratieve verblijf laat iemand van buiten de EU in Spanje wonen zonder te werken. Het is de route waar gepensioneerde eigenaren meestal als eerste naar kijken. U moet maandelijkse middelen aantonen van 400 procent van de IPREM voor uzelf en 100 procent van de IPREM voor elk gezinslid. De IPREM is een publieke index die elk jaar wordt vastgesteld, dus controleer het bedrag dat geldt op de dag dat u aanvraagt.",
+            "U heeft ook een publieke of particuliere ziektekostenverzekering nodig bij een verzekeraar die in Spanje mag werken. U vraagt persoonlijk aan bij het Spaanse consulaat voor uw woonplaats, met een verklaring omtrent het gedrag voor elk land waar u in de afgelopen vijf jaar heeft gewoond.",
+            "De eerste vergunning geldt één jaar vanaf de datum waarop u Spanje binnenkomt, en u moet binnenkomen terwijl het visum geldig is, wat nooit langer is dan drie maanden. Omdat het visum geen loondienst of beroepswerkzaamheden toestaat, past het niet bij iemand die vanaf het terras nog voor klanten werkt."
+          ]
+        },
+        {
+          "h2": "Kan ik naar Spanje verhuizen en op afstand blijven werken?",
+          "paras": [
+            "Ja, via de route voor internationaal telewerken, vaak het digitale-nomadenvisum genoemd. U heeft maandelijkse bruto middelen nodig van 200 procent van het Spaanse minimumloon (SMI), plus 75 procent van het SMI voor een tweede gezinslid en 25 procent voor elk volgend gezinslid. Het SMI verandert, dus het bedrag in euro ook.",
+            "U moet vóór de aanvraag minstens drie maanden voor de buitenlandse werkgever of opdrachtgever hebben gewerkt, en dat bedrijf moet minstens één jaar echte en ononderbroken activiteit hebben. U heeft ook een erkend diploma of postdoctorale opleiding nodig, of minstens drie jaar ervaring in vergelijkbaar werk.",
+            "Een zelfstandige telewerker mag ook voor Spaanse bedrijven werken, mits dat werk niet meer dan 20 procent van zijn of haar totale activiteit is. Het visum geeft één jaar in Spanje, en wie langer wil blijven, vraagt de verblijfsvergunning aan in de 60 dagen voordat het visum verloopt, terwijl het nog geldig is."
+          ]
+        },
+        {
+          "h2": "Kan ik nog een golden visa krijgen door een woning te kopen?",
+          "paras": [
+            "Nee. De verblijfsroute voor investeerders is op 3 april 2025 gesloten voor nieuwe aanvragen. Ley Orgánica 1/2025 sloot de hele investeerdersroute, niet alleen de vastgoedvariant, dus er is geen andere investeringsvariant meer over om op over te stappen.",
+            "Aanvragen die vóór 3 april 2025 zijn ingediend, lopen door onder de oude regels, bestaande vergunningen blijven geldig, en verlengingen worden beoordeeld volgens de wet die gold toen de oorspronkelijke vergunning werd verleend. Sommige artikelen noemen nog april 2024, of geven de oude drempel in dollars. De juiste datum is 3 april 2025, en de regeling was altijd in euro."
+          ]
+        },
+        {
+          "h2": "Wat doe ik nadat ik met een visum ben aangekomen?",
+          "paras": [
+            "Vraag uw TIE (tarjeta de identidad de extranjero) aan, de identiteitskaart voor buitenlanders. Iemand van buiten de EU die toestemming heeft om langer dan zes maanden te blijven, moet die binnen één maand na binnenkomst in Spanje aanvragen, bij het vreemdelingenkantoor of het politiebureau in de provincie die de vergunning heeft behandeld. De kosten voor een eerste kaart voor tijdelijk verblijf bedragen 16,08 euro.",
+            "Afspraken kunnen enkele weken duren, dus boek er een zodra u uw reisdatum weet, niet pas na de landing. Eén maand is snel om als u ook dozen uitpakt, een huisarts zoekt en wacht tot het internet is aangesloten."
+          ]
+        },
+        {
+          "h2": "Ik ben Brits. Wat is er voor mij veranderd?",
+          "paras": [
+            "Dat hangt ervan af wanneer u verhuisde. Britse staatsburgers die al vóór 31 december 2020 in Spanje woonden, en hun gezinsleden, behouden hun rechten onder het Terugtrekkingsakkoord en hebben een TIE waarop artikel 50 VEU staat. Alleen die kaart, niet het oude inschrijvingscertificaat, stelt de houder vrij van de nieuwe EU-grenscontroles, dus ruil hem om als u dat nog niet heeft gedaan.",
+            "Bent u vanaf 1 januari 2021 aangekomen, of viel u er nooit onder, dan wordt u behandeld als iedere andere niet-EU-burger. Dat betekent 90 dagen binnen elke 180 dagen voor bezoeken, geteld over het hele Schengengebied, en een visumroute zoals het niet-lucratieve verblijf als u hier wilt wonen.",
+            "Autorijden is de andere verandering. Wie een Brits rijbewijs heeft en ingezetene wordt, mag zes maanden na binnenkomst of na het verkrijgen van verblijf met het Britse rijbewijs rijden, en moet het daarna bij de DGT omruilen met de TIE, een medische keuringsverklaring en leges van 28,87 euro, die elk jaar veranderen. Een rijbewijs uit de EU of de EER blijft geldig zolang het van kracht is, en omruilen is vrijwillig."
+          ]
+        },
+        {
+          "h2": "Wat gebeurt er met mijn belasting als ik verhuis?",
+          "paras": [
+            "Wonen in Spanje maakt u meestal fiscaal inwoner. U bent inwoner voor een kalenderjaar als u in dat jaar meer dan 183 dagen in Spanje doorbrengt, of als het belangrijkste centrum van uw activiteiten of economische belangen hier ligt. Een fiscaal inwoner van Spanje betaalt inkomstenbelasting over zijn wereldinkomen, dus pensioenen en beleggingen uit het thuisland komen in de Spaanse aangifte.",
+            "Als zowel Spanje als uw thuisland u als inwoner beschouwen, beslist het belastingverdrag. Noorwegen, Zweden, Duitsland, het Verenigd Koninkrijk en Frankrijk hebben er allemaal een met Spanje. De bijzondere belastingregeling voor mensen die naar Spanje verhuizen, is gekoppeld aan een baan, een bestuursfunctie of bepaalde bedrijfsactiviteiten, en is niet beschikbaar alleen omdat u met pensioen gaat of een woning koopt.",
+            "Dit is het moment om te gaan zitten met een belastingadviseur (asesor fiscal) die beide systemen kent, het liefst vóór het jaar van de verhuizing en niet erna. Onze gids over Spaans fiscaal inwonerschap en de 183-dagenregel loopt elke toets in detail door."
+          ]
+        },
+        {
+          "h2": "Kan ik ooit Spanjaard worden?",
+          "paras": [
+            "Misschien, maar langzaam. Nationaliteit op grond van verblijf vereist in het algemeen tien jaar verblijf, met kortere termijnen voor vluchtelingen, voor burgers van Ibero-Amerikaanse landen, Andorra, de Filipijnen, Equatoriaal-Guinea en Portugal, en één jaar in specifieke gevallen, zoals een huwelijk met een Spaanse staatsburger.",
+            "Het verblijf moet legaal, ononderbroken en direct voorafgaand aan de aanvraag zijn, dus jaren als bezoeker of als eigenaar die geen inwoner is, tellen niet mee. Voor de meesten van ons is het realistische doel eenvoudiger: de juiste papieren voor het leven dat u hier echt wilt, en daarna de tijd om ervan te genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

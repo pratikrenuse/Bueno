@@ -1,0 +1,641 @@
+{
+  "domain": "Inheritance, wills and the death of an owner: making a will, finding it, declaring heirs, accepting or renouncing, the inheritance tax filing for non-resident heirs, and the European Certificate of Succession.",
+  "rules": [
+    {
+      "id": "inh.will.forms",
+      "statement": "Under the common Civil Code there are three ordinary forms of will: the open will made before a notary, who drafts it and keeps it in the notarial records, which is the usual form; the closed will, handed to a notary who does not know its content, now rarely used; and the holographic will, written, signed and dated by the testator, which is uncommon.",
+      "value": [
+        "abierto",
+        "cerrado",
+        "olografo"
+      ],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Article numbers (676 onward) were not read verbatim because the BOE consolidated Civil Code truncates long before Book III. The forms are as described by the Spanish authorities on the e-Justice page. Age and witness requirements were not read and must not be stated."
+    },
+    {
+      "id": "inh.will.no_joint",
+      "statement": "The common Civil Code does not allow a joint will made by two people in one document, or a succession pact. Some foral regions do allow them.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Relevant to couples from countries where a joint will is normal (for example a German Berliner Testament). In common law regions each spouse makes a separate will."
+    },
+    {
+      "id": "inh.will.form_law",
+      "statement": "The form of a will is governed by the law of the country where it is made. A will is also valid if it meets the formalities of the law that governs its content or of the testator's personal law.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 11 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is why a foreign owner can sign a will in Spanish form before a Spanish notary, and why a will made correctly at home is not invalid in Spain for its form alone. Article 9.8 of the Civil Code (national law of the deceased) is displaced for deaths from 17 August 2015 by Regulation (EU) 650/2012; see succession.eu_election."
+    },
+    {
+      "id": "inh.registry.notaries_report",
+      "statement": "Notaries must report every will they authorise to the Registro General de Actos de Ultima Voluntad, which depends on the Ministry of Justice. The register records the date of the last will, earlier wills and the notarial records where each one is kept.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.registry.not_public",
+      "statement": "The register of last wills is not public. After the death, anyone who shows a legitimate interest in the succession may obtain the information. During the testator's life only the testator, a person holding a special power from them, or someone with a court mandate may access it.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.registry.certificate_shows",
+      "statement": "The certificate of last wills shows whether a person made a will and before which notary. Heirs then go to that notary for an authorised copy of the last will. Without it no succession step can be taken.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Justicia",
+        "ref": "Registro de Ultimas Voluntades, informacion al ciudadano",
+        "url": "https://www.mjusticia.gob.es/es/ciudadania/victimas/informacion-util-afectados-dana/registro-ultimas-voluntades",
+        "source_dated": "not shown on page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The certificate tells you where the will is, not what it says."
+    },
+    {
+      "id": "inh.registry.wait",
+      "statement": "The certificate of last wills cannot be requested until fifteen working days have passed since the date of death.",
+      "value": 15,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Justicia sede electronica",
+        "ref": "Tramite: Certificado de Actos de Ultima Voluntad",
+        "url": "https://sede.mjusticia.gob.es/tramites/certificado-actos-ultima",
+        "source_dated": "not shown on page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Working days (dias habiles), not calendar days. Weekends and Spanish public holidays do not count, so the real wait is about three weeks."
+    },
+    {
+      "id": "inh.registry.how_to_apply",
+      "statement": "The certificate can be requested online with a Cl@ve login, in person in Madrid at calle Bolsa 8 with a prior appointment, or by post with form 790. A request in person or by post must include the full death certificate (certificado literal de defuncion).",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Ministerio de Justicia sede electronica",
+        "ref": "Tramite: Certificado de Actos de Ultima Voluntad",
+        "url": "https://sede.mjusticia.gob.es/tramites/certificado-actos-ultima",
+        "source_dated": "not shown on page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Online requests only work where the death is after 2 April 2009 and is recorded electronically, not in a juzgado de paz. A death abroad is not addressed on the page. A certificate issued online can be downloaded for 90 calendar days, after which it must be requested again. A certificate for use abroad must be legalised."
+    },
+    {
+      "id": "inh.registry.fee",
+      "statement": "The certificate of last wills carries a state fee, paid as tasa 006 through the tax agency payment gateway online or with form 790 for requests in person or by post.",
+      "value": null,
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "Ministerio de Justicia sede electronica",
+        "ref": "Tramite: Certificado de Actos de Ultima Voluntad",
+        "url": "https://sede.mjusticia.gob.es/tramites/certificado-actos-ultima",
+        "source_dated": "not shown on page",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: the euro amount was not shown on any official page read on 2026-10-22. Do not state an amount until it is read on an official page."
+    },
+    {
+      "id": "inh.intestate.order",
+      "statement": "Where there is no will, the common Civil Code calls the heirs in this order: descendants; then ascendants, with the surviving spouse taking a usufruct of one third or one half as the case may be; then the spouse who was not separated; then relatives up to the fourth degree, such as first cousins; and finally the State.",
+      "value": [
+        "descendants",
+        "ascendants",
+        "spouse",
+        "collaterals_to_fourth_degree",
+        "state"
+      ],
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Article numbers (930 onward) were not read verbatim on BOE. Foral regions have their own order. The spouse comes after ascendants, which surprises many foreign families: with no will and no children, the parents of the deceased inherit before the spouse."
+    },
+    {
+      "id": "inh.declaration.notary",
+      "statement": "Where there is no will, descendants, ascendants, the spouse or a person in an analogous relationship, and collateral relatives can obtain the declaration of heirs (declaracion de herederos abintestato) from a notary.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 55 and 56 Ley del Notariado de 28 de mayo de 1862, as amended by Ley 15/2015",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Court proceedings are only needed where the condition of heir, the assets or the division is disputed (e-Justice, Succession, Spain)."
+    },
+    {
+      "id": "inh.declaration.which_notary",
+      "statement": "The applicant may choose a notary where the deceased had their last domicile or habitual residence, where most of the estate is located, or where they died if that was in Spain. A notary in an adjoining district may also act. If none of these applies, the notary of the applicant's domicile is competent.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 55 and 56 Ley del Notariado de 28 de mayo de 1862, as amended by Ley 15/2015",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.declaration.procedure",
+      "statement": "The applicant must prove the death, the identity and domicile of the deceased and the kinship, and show there is no will using the Registro Civil and the register of last wills. At least two witnesses must confirm the facts. The notary closes the act after twenty working days from the initial request, or one month after a notice in the BOE where an interested party cannot be found.",
+      "value": {
+        "witnesses": 2,
+        "working_days": 20,
+        "opposition_after_publication_months": 1
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 55 and 56 Ley del Notariado de 28 de mayo de 1862, as amended by Ley 15/2015",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "So the certificate of last wills comes first. Anyone who could not prove their right keeps the right to go to court."
+    },
+    {
+      "id": "inh.declaration.state",
+      "statement": "If no relative with a right is found and two months pass after the interested parties were summoned with nobody appearing, the notary sends a copy to the Delegacion de Economia y Hacienda for a possible administrative declaration of the State or the autonomous community as heir.",
+      "value": 2,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "arts. 55 and 56 Ley del Notariado de 28 de mayo de 1862, as amended by Ley 15/2015",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2021-06-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.acceptance.form",
+      "statement": "As a rule an inheritance is accepted or renounced before a notary. Acceptance can also be express in a private document or tacit, but a notarial public document is needed to prove it and to have assets transferred to the heir.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Article numbers (988 onward) were not read verbatim on BOE."
+    },
+    {
+      "id": "inh.acceptance.thirty_days",
+      "statement": "Anyone with an interest can ask a notary to tell an heir that they have thirty calendar days to accept or renounce the inheritance.",
+      "value": 30,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "There is no general deadline to accept. The thirty days only start once a notary has notified the heir at someone's request. Calendar days (dias naturales)."
+    },
+    {
+      "id": "inh.acceptance.all_or_nothing",
+      "statement": "An inheritance cannot be accepted in part or under a condition. An heir may accept the inheritance and refuse a legacy, or the other way round.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "You cannot accept the house and refuse the debts."
+    },
+    {
+      "id": "inh.acceptance.debts",
+      "statement": "An heir who accepts outright, without the benefit of inventory, answers for the debts of the deceased with their own assets as well as with the estate. An heir who accepts with the benefit of inventory pays the debts only up to the value of the estate.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Procedure and time limits for the benefit of inventory were not read and must not be stated."
+    },
+    {
+      "id": "inh.renunciation.creditors",
+      "statement": "If an heir renounces an inheritance to the detriment of their own creditors, those creditors can ask the court for authorisation to accept it in the heir's name.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.legitima.descendants",
+      "statement": "For children and descendants the legitima is two thirds of the estate. One of those thirds may be used as mejora to favour particular children or descendants, and the remaining third is freely disposable.",
+      "value": {
+        "legitima": "2/3",
+        "mejora": "1/3",
+        "free": "1/3"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE, Resolucion DGSJFP de 29 de julio de 2022",
+        "ref": "arts. 806, 808, 809 and 818 Codigo Civil, quoted in the resolution",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-13444",
+        "source_dated": "2022-08-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The two thirds (art. 808) and the definition of legitima as the part the testator cannot dispose of (art. 806) were read as quoted in the BOE resolution. The split into strict legitima and mejora is stated in the same resolution and by the Spanish authorities on e-Justice. Supersedes the partial caveat on succession.legitima for these figures. Common Civil Code only; foral regions differ (succession.foral). A foreign national can displace it with a choice of law in a will (succession.eu_election)."
+    },
+    {
+      "id": "inh.legitima.ascendants",
+      "statement": "Where there are no children or descendants, the legitima of parents and ascendants is one half of the estate, or one third where they inherit together with the surviving spouse.",
+      "value": {
+        "alone": "1/2",
+        "with_spouse": "1/3"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE, Resolucion DGSJFP de 29 de julio de 2022",
+        "ref": "arts. 806, 808, 809 and 818 Codigo Civil, quoted in the resolution",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-13444",
+        "source_dated": "2022-08-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The one half (art. 809) was read as quoted in the BOE resolution. The one third with a spouse is as stated by the Spanish authorities on the e-Justice page (Succession, Spain, 2026-03-27); the full text of art. 809 was not read on BOE."
+    },
+    {
+      "id": "inh.legitima.forced_heirs",
+      "statement": "The forced heirs are children and descendants; failing them, parents and ascendants; and the widowed spouse in the form the law provides.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, content supplied by the Spanish authorities",
+        "ref": "Succession, Spain (Derecho civil comun)",
+        "url": "https://e-justice.europa.eu/topics/family-matters-inheritance/inheritance/succession/es_es",
+        "source_dated": "2026-03-27",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Art. 807 CC. The spouse's share is a usufruct, not ownership; see succession.spouse_usufruct."
+    },
+    {
+      "id": "inh.legitima.base",
+      "statement": "The legitima is calculated on the assets left at death after deducting debts and charges, other than those imposed in the will, and adding the value of gifts made by the deceased during their life.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE, Resolucion DGSJFP de 29 de julio de 2022",
+        "ref": "arts. 806, 808, 809 and 818 Codigo Civil, quoted in the resolution",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-13444",
+        "source_dated": "2022-08-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Art. 818 CC as quoted in the BOE resolution; the inclusion of lifetime gifts is as stated on the e-Justice page. Run this after separating any matrimonial community share (succession.gananciales_first)."
+    },
+    {
+      "id": "inh.isd.deadline",
+      "statement": "Inheritance tax must be filed within six months of the date of death, or of the date the declaration of death becomes final.",
+      "value": 6,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Adquisiciones mortis causa, Modelo 650, plazos de presentacion",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/adquisiciones-mortis-causa-modelo-650/plazos-presentacion.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Applies to inheritances and to life insurance paid on death. Confirms the six months in isd.deadlines."
+    },
+    {
+      "id": "inh.isd.extension",
+      "statement": "One extension of six more months may be requested within the first five months after the death. If no decision is notified in the following month it is treated as granted. A request made after the five months is treated as refused without notice.",
+      "value": {
+        "request_within_months": 5,
+        "extension_months": 6
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Resolves the partial caveat on isd.deadlines: the request must be made within five months of the death. Read on AEAT; arts. 67 and 68 RD 1629/1991 could not be read verbatim because the BOE consolidated text truncates before them."
+    },
+    {
+      "id": "inh.isd.extension_interest",
+      "statement": "An extension is not free: late payment interest runs from the end of the original six months until filing, and the heir must calculate it and enter it in box 62 of modelo 650.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Rate follows the late payment interest rule elsewhere in the base, not a surcharge."
+    },
+    {
+      "id": "inh.isd.who_files",
+      "statement": "Each heir or legatee is the taxpayer for their own share and files their own return. A legal entity does not pay this tax.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.isd.competent_office",
+      "statement": "The tax agency's Oficina Nacional de Gestion Tributaria in Madrid handles inheritance tax where the deceased was not resident in Spain at the date of death, or where the heir was not habitually resident in Spain.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Which office handles the return is separate from which rules apply. The heir may still choose a region's rules (isd.nonresident_option). Paper returns are only accepted at the ONGT, Paseo de la Castellana 147, Madrid."
+    },
+    {
+      "id": "inh.isd.forms",
+      "statement": "Modelo 650 is the return for inheritances, modelo 651 for gifts and modelo 655 for the consolidation of ownership when a usufruct ends.",
+      "value": {
+        "inheritance": "650",
+        "gift": "651",
+        "usufruct_end": "655"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.isd.online",
+      "statement": "Modelos 650, 651 and 655 can be filed online at the tax agency electronic office with an electronic certificate, electronic DNI or Cl@ve PIN, and the filing certification is obtained online without visiting the office.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.isd.nif",
+      "statement": "Every heir must have a Spanish tax number (NIF). A non-resident with no DNI or NIE can request a NIF at a Spanish consulate or with modelo 030.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The only exception is a deceased person who had no NIF, who may be identified on a paper return by name and surnames only."
+    },
+    {
+      "id": "inh.isd.representative",
+      "statement": "A non-resident heir who lives outside the European Union and the European Economic Area, or in a state without mutual assistance rules with Spain, must appoint an individual or company resident in Spain as representative. Residents of EU or EEA states with mutual assistance rules do not have to.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The United Kingdom is outside both, so a UK resident heir falls in the first group."
+    },
+    {
+      "id": "inh.gift.deadline",
+      "statement": "Gift tax must be filed within thirty working days counted from the day after the gift is made.",
+      "value": 30,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "Preguntas frecuentes, Impuesto sobre Sucesiones y Donaciones, no residentes (Reglamento del ISD, RD 1629/1991)",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/impuesto-sobre-sucesiones-donaciones/preguntas-frecuentes.html",
+        "source_dated": "2026-06-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Working days (dias habiles), not calendar days. Confirms the gift deadline in isd.deadlines."
+    },
+    {
+      "id": "inh.ecs.purpose",
+      "statement": "The European Certificate of Succession is for heirs, legatees with direct rights, and executors or administrators who need to prove their status or powers in another Member State. Using it is optional and it does not replace national documents.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex",
+        "ref": "arts. 62 to 73 Reglamento (UE) 650/2012",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02012R0650-20120705",
+        "source_dated": "2012-07-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "inh.ecs.effects",
+      "statement": "The certificate takes effect in all Member States without any special procedure. It is presumed to prove what it certifies and is a valid document for registering inherited property in a Member State's property register.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex",
+        "ref": "arts. 62 to 73 Reglamento (UE) 650/2012",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02012R0650-20120705",
+        "source_dated": "2012-07-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The Spanish Directorate General has held that a valid certificate is enough title to register a Spanish inheritance without also producing the will (Resolucion DGRN 4 January 2019, BOE-A-2019-1522)."
+    },
+    {
+      "id": "inh.ecs.copies",
+      "statement": "The issuing authority keeps the original and issues certified copies, which are valid for six months. The authority may extend that period in exceptional, justified cases. An expired copy has no effect.",
+      "value": 6,
+      "unit": "months",
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex",
+        "ref": "arts. 62 to 73 Reglamento (UE) 650/2012",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02012R0650-20120705",
+        "source_dated": "2012-07-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Check the expiry date on the copy before the notary appointment in Spain; a copy out of date when presented will be refused (BOE-A-2019-1522)."
+    },
+    {
+      "id": "inh.ecs.issuer_spain",
+      "statement": "In Spain the certificate is issued by the court that deals with the succession, or by the notary who declares the succession, on request.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "European e-Justice Portal, European Judicial Atlas, Spain",
+        "ref": "Succession, Regulation (EU) 650/2012, arts. 64, 72 and 78; disposicion final vigesimosexta Ley 1/2000 as amended by Ley 29/2015",
+        "url": "https://e-justice.europa.eu/topics/taking-legal-action/european-judicial-atlas-civil-matters/succession/es_en",
+        "source_dated": "2024-02-26",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "It is issued in the Member State whose courts have jurisdiction under arts. 4, 7, 10 or 11 of the Regulation (art. 64), so a Spanish authority only issues it where Spain has that jurisdiction. Norway is not an EU Member State and is outside the Regulation; Denmark and Ireland do not take part (succession.eu_election)."
+    },
+    {
+      "id": "inh.ecs.correction",
+      "statement": "The issuing authority must correct clerical errors and amend or annul a certificate shown to be wrong, informing everyone who holds a certified copy. Its effects can be suspended while an amendment or appeal is decided.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "EUR-Lex",
+        "ref": "arts. 62 to 73 Reglamento (UE) 650/2012",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02012R0650-20120705",
+        "source_dated": "2012-07-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    }
+  ]
+}

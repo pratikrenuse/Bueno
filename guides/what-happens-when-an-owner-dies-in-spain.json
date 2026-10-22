@@ -1,0 +1,478 @@
+{
+  "slug": "what-happens-when-an-owner-dies-in-spain",
+  "topic": "inheritance",
+  "tool": "inheritance-roadmap",
+  "rules": [
+    "inh.registry.not_public",
+    "inh.registry.certificate_shows",
+    "inh.registry.wait",
+    "inh.registry.how_to_apply",
+    "inh.intestate.order",
+    "inh.declaration.notary",
+    "inh.declaration.which_notary",
+    "inh.declaration.procedure",
+    "inh.acceptance.form",
+    "inh.acceptance.thirty_days",
+    "inh.acceptance.all_or_nothing",
+    "inh.acceptance.debts",
+    "inh.isd.deadline",
+    "inh.isd.extension",
+    "inh.isd.extension_interest",
+    "inh.isd.who_files",
+    "inh.isd.competent_office",
+    "inh.isd.forms",
+    "inh.isd.online",
+    "inh.isd.nif",
+    "inh.isd.representative",
+    "isd.nonresident_option",
+    "isd.state_scale",
+    "late.recargo.voluntary",
+    "late.interest",
+    "plusvalia.deadlines",
+    "plusvalia.methods",
+    "plusvalia.no_gain",
+    "plusvalia.municipal_variation",
+    "own.ibi.property_answers",
+    "inh.ecs.purpose",
+    "inh.ecs.effects",
+    "inh.ecs.issuer_spain",
+    "inh.ecs.copies",
+    "succession.eu_election"
+  ],
+  "answers": [
+    "plusvalia-deadline-after-inheriting-spanish-property",
+    "inheritance-tax-regional-rules-for-non-resident-heirs",
+    "spanish-inheritance-tax-rates-state-scale",
+    "what-a-surviving-spouse-inherits-in-spain",
+    "filing-a-spanish-tax-return-late",
+    "apostille-for-a-power-of-attorney-used-in-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "When an Owner Dies in Spain: The Steps for Heirs",
+      "description": "The order of steps after the death of a Spanish property owner: the certificate of last wills, heirs, acceptance, inheritance tax, plusvalia and registry.",
+      "h1": "What happens to a Spanish property when the owner dies, step by step",
+      "lead": "After a death, the heirs first get the certificate of last wills, which can be requested fifteen working days after the death. Then comes the will or, without one, a declaration of heirs from a notary, followed by acceptance before a notary. Each heir files their own inheritance tax return within six months of the death, and the plusvalia is due to the town hall within the same six months.",
+      "sections": [
+        {
+          "h2": "Where do we start?",
+          "paras": [
+            "With paperwork that tells you where the will is. Every succession in Spain begins with the certificate of last wills (certificado de actos de ultima voluntad), and without it no other step can be taken. It shows whether the person made a Spanish will and before which notary, not what the will says.",
+            "After that the usual order runs like this. The will, or a declaration of heirs where there is none. Acceptance before a notary. Inheritance tax, filed by each heir. The plusvalia to the town hall. Then the property is put in the heirs' names. Get the full death certificate (certificado literal de defuncion) early, because the register asks for it with any request made in person or by post."
+          ]
+        },
+        {
+          "h2": "How do we find out whether there is a Spanish will?",
+          "paras": [
+            "Ask the register of last wills, which depends on the Ministry of Justice. It is not public, but after a death anyone with a legitimate interest in the succession can get the information. You cannot apply until fifteen working days after the date of death. Weekends and Spanish public holidays do not count, so in practice it is about three weeks.",
+            "You can apply online with a Cl@ve login, in person at calle Bolsa 8 in Madrid with an appointment, or by post with form 790. In person or by post, include the full death certificate. Online only works for deaths after 2 April 2009 that are recorded electronically. An online certificate can be downloaded for 90 days, and one for use abroad must be legalised. With the certificate, the heirs ask the named notary for an authorised copy of the will."
+          ]
+        },
+        {
+          "h2": "There is no will. What do we do?",
+          "paras": [
+            "Ask a notary for a declaration of heirs (declaracion de herederos abintestato). Descendants, ascendants, the spouse or partner, and other relatives can request it. You may go to a notary where the deceased last lived, where most of the estate is, or where they died if that was in Spain, or one in a neighbouring district. If none of these applies, the notary where the applicant lives can act.",
+            "The applicant proves the death, the identity and address of the deceased and the family relationship, and shows there is no will through the civil register and the certificate of last wills. At least two witnesses confirm the facts. The notary closes the act after twenty working days. The law then calls heirs in a fixed order, and with no children the parents come before the spouse. A court is needed only if something is disputed."
+          ]
+        },
+        {
+          "h2": "Do we have to accept the inheritance, and is there a deadline?",
+          "paras": [
+            "Yes, and it is usually done before a notary. Acceptance can also be made in a private document or by conduct, but the property can only be transferred to an heir with a notarial public document. There is no general deadline. If anyone with an interest asks a notary to notify an heir, that heir then has thirty calendar days to accept or renounce.",
+            "An inheritance is taken whole or not at all (you cannot keep the house and leave the debts). An heir who accepts outright answers for the deceased's debts with their own assets too. Accepting with the benefit of inventory limits that to the value of the estate. If there is any chance of debts, talk to an abogado before signing anything at the notary."
+          ]
+        },
+        {
+          "h2": "Who files the inheritance tax, and by when?",
+          "paras": [
+            "Each heir and legatee files their own return, modelo 650, for their own share. It is due within six months of the date of death. Where the deceased or the heir was not resident in Spain, the return is handled by the national tax management office (Oficina Nacional de Gestion Tributaria) in Madrid. It can be filed online with an electronic certificate or Cl@ve, and paper returns go only to that office.",
+            "Every heir needs a Spanish tax number (NIF), which a non-resident can request at a Spanish consulate or with modelo 030. An heir living outside the EU and EEA, which includes the United Kingdom, must appoint a representative resident in Spain. Heirs in EU or EEA countries with mutual assistance rules do not. Non-resident heirs may also choose a region's tax rules instead of the state rules, which often lowers the bill for close family."
+          ]
+        },
+        {
+          "h2": "Can we get more time to file?",
+          "paras": [
+            "Yes, once. Ask for an extension within the first five months after the death and you get six more months. If no answer arrives within a month it counts as granted. A request made after five months counts as refused, without any notice telling you so.",
+            "The extra time is not free. Late payment interest runs from the end of the original six months until you file, and the heir works it out and enters it in box 62 of modelo 650. For 2026 that rate is 4.0625 percent a year. Filing after the deadline without an extension, and before the tax office writes to you, carries a surcharge of 1 percent plus 1 percent for each full month late, up to twelve months."
+          ]
+        },
+        {
+          "h2": "Is there a plusvalia on an inherited home?",
+          "paras": [
+            "Yes. The plusvalia, the town hall tax on the rise in value of the land, applies to an inheritance as well as a sale. It is due within six months of the death, and you can stretch that to one year if you ask within the first six months. Note the different windows: five months to ask the tax office, six to ask the town hall.",
+            "Each town hall sets its own coefficients and rate and decides whether you file a declaration or a self-assessment. You may choose the real gain method if it gives a lower figure than the cadastral calculation. Where there was no increase in value there is nothing to pay, but the transfer must still be declared with both deeds. Your gestor or the town hall's tax office can confirm the local procedure."
+          ]
+        },
+        {
+          "h2": "How does the house end up in our names?",
+          "paras": [
+            "Through the notarial deed of acceptance, which is the document that lets the property be transferred to the heirs and recorded in the property register (Registro de la Propiedad). Before signing, the notary asks about unpaid IBI, because when ownership changes for any reason the property itself stays liable for any unpaid IBI.",
+            "Heirs who live elsewhere rarely want to fly in for each appointment. A power of attorney lets someone in Spain sign for you, and it is worth arranging before the first appointment. We have no verified figure for notary and registry fees, so ask the notary or your gestor for a quote before you start."
+          ]
+        },
+        {
+          "h2": "Does the European Certificate of Succession help?",
+          "paras": [
+            "It can, if you are in another EU country. The certificate lets heirs, legatees and executors prove their status in another Member State without any special procedure, and it is a valid document for registering inherited property. The Spanish registries directorate has held that a valid certificate is enough to register a Spanish inheritance without also producing the will. Using it is optional.",
+            "It is issued in the Member State whose courts have jurisdiction over the succession. In Spain that means the court dealing with it or the notary who declares it, on request. The original stays with the issuer, and certified copies are valid for six months, so check the date on yours before you book the Spanish notary. Norway is not an EU Member State and is outside the Regulation, and Denmark and Ireland do not take part. Once it is done, the house is yours to enjoy."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Når en eier dør i Spania: stegene for arvingene",
+      "description": "Rekkefølgen etter at en boligeier i Spania dør: attest om siste viljeserklæringer, arvinger, aksept, arveavgift, plusvalia og tinglysing.",
+      "h1": "Hva skjer med en bolig i Spania når eieren dør, steg for steg",
+      "lead": "Etter et dødsfall henter arvingene først attesten om siste viljeserklæringer, som kan bestilles femten virkedager etter dødsfallet. Deretter kommer testamentet eller, uten et slikt, en arvingserklæring fra en notar, fulgt av aksept hos en notar. Hver arving leverer sin egen oppgave for arveavgift innen seks måneder etter dødsfallet, og plusvalia skal betales til rådhuset innen de samme seks månedene.",
+      "sections": [
+        {
+          "h2": "Hvor begynner vi?",
+          "paras": [
+            "Med papirene som forteller deg hvor testamentet er. Hvert arveoppgjør i Spania begynner med attesten om siste viljeserklæringer (certificado de actos de ultima voluntad), og uten den kan ingen andre steg tas. Den viser om personen opprettet et spansk testament og hos hvilken notar, ikke hva testamentet sier.",
+            "Etter det følger den vanlige rekkefølgen slik. Testamentet, eller en arvingserklæring der det ikke finnes et. Aksept hos en notar. Arveavgift, levert av hver arving. Plusvalia til rådhuset. Deretter settes boligen i arvingenes navn. Skaff den fullstendige dødsattesten (certificado literal de defuncion) tidlig, fordi registeret ber om den ved enhver bestilling som gjøres personlig eller per post."
+          ]
+        },
+        {
+          "h2": "Hvordan finner vi ut om det finnes et spansk testament?",
+          "paras": [
+            "Spør registeret over siste viljeserklæringer, som ligger under justisdepartementet. Det er ikke offentlig, men etter et dødsfall kan alle med en legitim interesse i arveoppgjøret få opplysningene. Du kan ikke søke før femten virkedager etter dødsdatoen. Helger og spanske helligdager teller ikke, så i praksis blir det rundt tre uker.",
+            "Du kan søke på nett med Cl@ve-innlogging, personlig i calle Bolsa 8 i Madrid med time, eller per post med skjema 790. Personlig eller per post legger du ved den fullstendige dødsattesten. Nettsøknad fungerer bare for dødsfall etter 2. april 2009 som er registrert elektronisk. En attest bestilt på nett kan lastes ned i 90 dager, og en som skal brukes i utlandet, må legaliseres. Med attesten ber arvingene den oppgitte notaren om en bekreftet kopi av testamentet."
+          ]
+        },
+        {
+          "h2": "Det finnes ikke noe testament. Hva gjør vi?",
+          "paras": [
+            "Be en notar om en arvingserklæring (declaracion de herederos abintestato). Etterkommere, forfedre, ektefellen eller samboeren og andre slektninger kan be om den. Du kan gå til en notar der avdøde sist bodde, der det meste av dødsboet er, eller der de døde hvis det var i Spania, eller til en i et nabodistrikt. Gjelder ingen av disse, kan notaren der søkeren bor, ta saken.",
+            "Søkeren dokumenterer dødsfallet, avdødes identitet og adresse og slektskapet, og viser at det ikke finnes testament gjennom sivilregisteret og attesten om siste viljeserklæringer. Minst to vitner bekrefter fakta. Notaren avslutter saken etter tjue virkedager. Loven kaller deretter inn arvingene i en fast rekkefølge, og uten barn kommer foreldrene før ektefellen. Retten trengs bare hvis noe er omstridt."
+          ]
+        },
+        {
+          "h2": "Må vi akseptere arven, og er det en frist?",
+          "paras": [
+            "Ja, og det gjøres som regel hos en notar. Aksept kan også skje i et privat dokument eller gjennom handling, men eiendommen kan bare overføres til en arving med et notarialt offentlig dokument. Det finnes ingen generell frist. Hvis noen med en interesse ber en notar om å varsle en arving, har den arvingen deretter tretti kalenderdager på seg til å akseptere eller avslå.",
+            "En arv tas imot helt eller ikke i det hele tatt (du kan ikke beholde huset og la gjelden ligge). En arving som aksepterer uten forbehold, svarer for avdødes gjeld også med sine egne eiendeler. Å akseptere med inventarforbehold begrenser det til verdien av dødsboet. Er det noen mulighet for gjeld, snakk med en abogado før du signerer noe hos notaren."
+          ]
+        },
+        {
+          "h2": "Hvem leverer oppgaven for arveavgift, og innen når?",
+          "paras": [
+            "Hver arving og legatar leverer sin egen oppgave, modelo 650, for sin egen andel. Fristen er seks måneder etter dødsdatoen. Der avdøde eller arvingen ikke var bosatt i Spania, behandles oppgaven av det nasjonale skatteforvaltningskontoret (Oficina Nacional de Gestion Tributaria) i Madrid. Den kan leveres på nett med elektronisk sertifikat eller Cl@ve, og papiroppgaver går bare til det kontoret.",
+            "Hver arving trenger et spansk skattenummer (NIF), som en ikke-bosatt kan be om ved et spansk konsulat eller med modelo 030. En arving som bor utenfor EU og EØS, noe som omfatter Storbritannia, må utnevne en representant som er bosatt i Spania. Arvinger i EU- eller EØS-land med regler om gjensidig bistand trenger ikke det. Ikke-bosatte arvinger kan også velge en regions skatteregler i stedet for de statlige, noe som ofte gir lavere regning for nær familie."
+          ]
+        },
+        {
+          "h2": "Kan vi få mer tid til å levere?",
+          "paras": [
+            "Ja, én gang. Be om utsettelse innen de første fem månedene etter dødsfallet, så får du seks måneder til. Kommer det ikke svar innen en måned, regnes den som innvilget. En søknad sendt etter fem måneder regnes som avslått, uten at du får noe varsel om det.",
+            "Den ekstra tiden er ikke gratis. Forsinkelsesrente løper fra slutten av de opprinnelige seks månedene til du leverer, og arvingen regner den ut selv og fører den i felt 62 på modelo 650. For 2026 er den renten 4,0625 prosent i året. Leverer du etter fristen uten utsettelse, og før skattekontoret har skrevet til deg, kommer det et tillegg på 1 prosent pluss 1 prosent for hver hele måned for sent, opp til tolv måneder."
+          ]
+        },
+        {
+          "h2": "Er det plusvalia på en arvet bolig?",
+          "paras": [
+            "Ja. Plusvalia, rådhusets skatt på verdiøkningen av tomten, gjelder ved arv så vel som ved salg. Fristen er seks måneder etter dødsfallet, og du kan forlenge den til ett år hvis du ber om det innen de første seks månedene. Merk de ulike vinduene: fem måneder for å spørre skattekontoret, seks for å spørre rådhuset.",
+            "Hvert rådhus fastsetter sine egne koeffisienter og sats og avgjør om du leverer en erklæring eller en egenberegning. Du kan velge metoden for faktisk gevinst hvis den gir et lavere tall enn beregningen ut fra matrikkelverdien. Der det ikke var noen verdiøkning, er det ingenting å betale, men overdragelsen må likevel meldes med begge skjøtene. Din gestor eller rådhusets skattekontor kan bekrefte den lokale prosedyren."
+          ]
+        },
+        {
+          "h2": "Hvordan havner huset i våre navn?",
+          "paras": [
+            "Gjennom det notarielle akseptskjøtet, som er dokumentet som gjør at eiendommen kan overføres til arvingene og føres inn i eiendomsregisteret (Registro de la Propiedad). Før signering spør notaren om ubetalt IBI, fordi når eierskapet endres av en hvilken som helst grunn, hefter selve eiendommen fortsatt for ubetalt IBI.",
+            "Arvinger som bor andre steder, vil sjelden fly inn til hver avtale. En fullmakt lar noen i Spania signere for deg, og det er verdt å ordne den før den første avtalen. Vi har ikke noe bekreftet tall for notar- og registergebyrer, så be notaren eller din gestor om et prisoverslag før du begynner."
+          ]
+        },
+        {
+          "h2": "Hjelper det europeiske arvebeviset?",
+          "paras": [
+            "Det kan det, hvis du er i et annet EU-land. Beviset lar arvinger, legatarer og testamentfullbyrdere dokumentere sin stilling i en annen medlemsstat uten noen særskilt prosedyre, og det er et gyldig dokument for å tinglyse arvet eiendom. Det spanske registerdirektoratet har slått fast at et gyldig bevis er nok til å tinglyse en spansk arv uten at testamentet også må legges fram. Det er frivillig å bruke det.",
+            "Det utstedes i medlemsstaten der domstolene har jurisdiksjon over arveoppgjøret. I Spania betyr det retten som behandler saken eller notaren som erklærer den, etter søknad. Originalen blir hos utstederen, og bekreftede kopier er gyldige i seks måneder, så sjekk datoen på din før du bestiller time hos den spanske notaren. Norge er ikke en EU-medlemsstat og står utenfor forordningen, og Danmark og Irland deltar ikke. Når det er gjort, er huset ditt å nyte."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "När en ägare dör i Spanien: stegen för arvingarna",
+      "description": "Ordningen på stegen när en fastighetsägare i Spanien dör: intyget om sista vilja, arvingar, godkännande, arvsskatt, plusvalia och inskrivning.",
+      "h1": "Vad som händer med en spansk fastighet när ägaren dör, steg för steg",
+      "lead": "Efter ett dödsfall hämtar arvingarna först intyget om sista vilja, som kan begäras femton arbetsdagar efter dödsfallet. Sedan kommer testamentet eller, om det saknas, en förklaring om arvingar från en notarie, följd av godkännande av arvet inför en notarie. Varje arvinge lämnar sin egen arvsskattedeklaration inom sex månader från dödsfallet, och plusvalian ska betalas till kommunen inom samma sex månader.",
+      "sections": [
+        {
+          "h2": "Var börjar vi?",
+          "paras": [
+            "Med pappret som visar var testamentet finns. Varje arvskifte i Spanien börjar med intyget om sista vilja (certificado de actos de ultima voluntad), och utan det kan inget annat steg tas. Det visar om personen upprättade ett spanskt testamente och inför vilken notarie, inte vad testamentet säger.",
+            "Därefter ser den vanliga ordningen ut så här. Testamentet, eller en förklaring om arvingar om det inte finns något. Godkännande inför notarie. Arvsskatt, som varje arvinge deklarerar. Plusvalian till kommunen. Sedan skrivs fastigheten över i arvingarnas namn. Skaffa det fullständiga dödsbeviset (certificado literal de defuncion) tidigt, eftersom registret begär det vid varje ansökan som görs personligen eller per post."
+          ]
+        },
+        {
+          "h2": "Hur får vi veta om det finns ett spanskt testamente?",
+          "paras": [
+            "Fråga registret över sista viljor, som lyder under justitieministeriet. Det är inte offentligt, men efter ett dödsfall kan alla med ett berättigat intresse i arvskiftet få uppgifterna. Du kan inte ansöka förrän femton arbetsdagar efter dödsdagen. Helger och spanska helgdagar räknas inte, så i praktiken blir det ungefär tre veckor.",
+            "Du kan ansöka på nätet med inloggning via Cl@ve, personligen på calle Bolsa 8 i Madrid med bokad tid, eller per post med blankett 790. Personligen eller per post bifogar du det fullständiga dödsbeviset. Ansökan på nätet fungerar bara för dödsfall efter 2 april 2009 som är registrerade elektroniskt. Ett intyg från nätet kan laddas ner i 90 dagar, och ett intyg som ska användas utomlands måste legaliseras. Med intyget begär arvingarna en bestyrkt kopia av testamentet från den angivna notarien."
+          ]
+        },
+        {
+          "h2": "Det finns inget testamente. Vad gör vi?",
+          "paras": [
+            "Be en notarie om en förklaring om arvingar (declaracion de herederos abintestato). Barn och barnbarn, släktingar i uppstigande led, make, maka eller partner samt andra släktingar kan begära den. Du kan vända dig till en notarie där den avlidne senast bodde, där större delen av kvarlåtenskapen finns, eller där hen dog om det var i Spanien, eller till en notarie i ett angränsande distrikt. Gäller inget av detta kan notarien där den sökande bor handlägga ärendet.",
+            "Den sökande styrker dödsfallet, den avlidnes identitet och adress och släktskapet, och visar att det inte finns något testamente genom folkbokföringsregistret och intyget om sista vilja. Minst två vittnen bekräftar uppgifterna. Notarien avslutar handlingen efter tjugo arbetsdagar. Lagen kallar sedan arvingarna i en fast ordning, och utan barn kommer föräldrarna före maken eller makan. Domstol behövs bara om något är omtvistat."
+          ]
+        },
+        {
+          "h2": "Måste vi godkänna arvet, och finns det en tidsgräns?",
+          "paras": [
+            "Ja, och det görs oftast inför en notarie. Godkännandet kan också göras i en privat handling eller genom handlande, men fastigheten kan bara överföras till en arvinge med en offentlig notariehandling. Det finns ingen allmän tidsgräns. Om någon med ett intresse ber en notarie att underrätta en arvinge har den arvingen sedan trettio kalenderdagar på sig att godkänna eller avsäga sig arvet.",
+            "Ett arv tas emot helt eller inte alls (du kan inte behålla huset och lämna skulderna). En arvinge som godkänner arvet utan förbehåll svarar för den avlidnes skulder även med sina egna tillgångar. Att godkänna med förbehåll för inventering (a beneficio de inventario) begränsar det till kvarlåtenskapens värde. Finns det någon risk för skulder, tala med en abogado innan du skriver under något hos notarien."
+          ]
+        },
+        {
+          "h2": "Vem deklarerar arvsskatten, och när?",
+          "paras": [
+            "Varje arvinge och legatarie lämnar sin egen deklaration, modelo 650, för sin egen andel. Den ska lämnas inom sex månader från dödsdagen. När den avlidne eller arvingen inte var bosatt i Spanien hanteras deklarationen av det nationella skattekontoret (Oficina Nacional de Gestion Tributaria) i Madrid. Den kan lämnas på nätet med elektroniskt certifikat eller Cl@ve, och deklarationer på papper går bara till det kontoret.",
+            "Varje arvinge behöver ett spanskt skattenummer (NIF), som en icke-bosatt kan begära på ett spanskt konsulat eller med modelo 030. En arvinge som bor utanför EU och EES, vilket inkluderar Storbritannien, måste utse ett ombud som är bosatt i Spanien. Arvingar i EU- eller EES-länder med regler om ömsesidigt bistånd behöver inte det. Icke-bosatta arvingar kan också välja en regions skatteregler i stället för de statliga, vilket ofta sänker skatten för nära familj."
+          ]
+        },
+        {
+          "h2": "Kan vi få längre tid att deklarera?",
+          "paras": [
+            "Ja, en gång. Begär du anstånd inom de första fem månaderna efter dödsfallet får du sex månader till. Kommer inget svar inom en månad räknas det som beviljat. En begäran som görs efter fem månader räknas som avslagen, utan att du får något besked om det.",
+            "Den extra tiden är inte gratis. Dröjsmålsränta löper från slutet av de ursprungliga sex månaderna tills du deklarerar, och arvingen räknar själv fram den och för in den i ruta 62 på modelo 650. För 2026 är räntan 4,0625 procent per år. Att deklarera efter fristen utan anstånd, och innan skattemyndigheten har hört av sig, ger ett tillägg på 1 procent plus 1 procent för varje hel månad i efterskott, upp till tolv månader."
+          ]
+        },
+        {
+          "h2": "Blir det plusvalia på en ärvd bostad?",
+          "paras": [
+            "Ja. Plusvalian, kommunens skatt på värdeökningen på marken, gäller vid arv lika väl som vid försäljning. Den ska betalas inom sex månader från dödsfallet, och du kan förlänga det till ett år om du begär det inom de första sex månaderna. Notera de olika fristerna: fem månader för att fråga skattemyndigheten, sex för att fråga kommunen.",
+            "Varje kommun fastställer sina egna koefficienter och sin egen skattesats och avgör om du lämnar en deklaration eller gör en egen beräkning av skatten. Du kan välja metoden med verklig vinst om den ger en lägre siffra än beräkningen utifrån taxeringsvärdet. Har det inte skett någon värdeökning finns inget att betala, men överlåtelsen måste ändå deklareras med båda köpehandlingarna. Din gestor eller kommunens skattekontor kan bekräfta det lokala förfarandet."
+          ]
+        },
+        {
+          "h2": "Hur hamnar huset i våra namn?",
+          "paras": [
+            "Genom notariehandlingen om godkännande av arvet, som är den handling som gör att fastigheten kan överföras till arvingarna och skrivas in i fastighetsregistret (Registro de la Propiedad). Före undertecknandet frågar notarien om obetald IBI, eftersom fastigheten själv fortsätter att svara för obetald IBI när ägandet byter hand av vilket skäl som helst.",
+            "Arvingar som bor någon annanstans vill sällan flyga in till varje möte. En fullmakt låter någon i Spanien skriva under åt dig, och den är värd att ordna före det första mötet. Vi har ingen verifierad siffra för avgifter till notarie och register, så be notarien eller din gestor om en offert innan du sätter igång."
+          ]
+        },
+        {
+          "h2": "Hjälper det europeiska arvsintyget?",
+          "paras": [
+            "Det kan göra det, om du befinner dig i ett annat EU-land. Intyget låter arvingar, legatarier och testamentsexekutorer styrka sin ställning i en annan medlemsstat utan något särskilt förfarande, och det är en giltig handling för att skriva in ärvd egendom. Den spanska registermyndigheten har slagit fast att ett giltigt intyg räcker för att skriva in ett spanskt arv utan att också visa upp testamentet. Det är frivilligt att använda det.",
+            "Det utfärdas i den medlemsstat vars domstolar är behöriga för arvskiftet. I Spanien betyder det den domstol som handlägger det eller den notarie som utfärdar det, på begäran. Originalet stannar hos utfärdaren, och bestyrkta kopior gäller i sex månader, så kontrollera datumet på din innan du bokar den spanska notarien. Norge är inte en medlemsstat i EU och står utanför förordningen, och Danmark och Irland deltar inte. När allt är klart är huset ert att njuta av."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Todesfall in Spanien: die Schritte für die Erben",
+      "description": "Die Schritte nach dem Tod eines Eigentümers in Spanien: Testamentsregister, Erben, Annahme, Erbschaftsteuer, plusvalia und Eintragung ins Grundbuch.",
+      "h1": "Was mit einer spanischen Immobilie passiert, wenn der Eigentümer stirbt, Schritt für Schritt",
+      "lead": "Nach einem Todesfall holen die Erben zuerst die Bescheinigung über letztwillige Verfügungen ein, die fünfzehn Werktage nach dem Tod beantragt werden kann. Dann folgt das Testament oder, wenn es keines gibt, eine Erbenfeststellung durch einen Notar, danach die Annahme vor einem Notar. Jeder Erbe reicht innerhalb von sechs Monaten nach dem Tod seine eigene Erbschaftsteuererklärung ein, und die plusvalia ist innerhalb derselben sechs Monate an das Rathaus fällig.",
+      "sections": [
+        {
+          "h2": "Wo fangen wir an?",
+          "paras": [
+            "Mit dem Papier, das Ihnen sagt, wo das Testament ist. Jede Erbfolge in Spanien beginnt mit der Bescheinigung über letztwillige Verfügungen (certificado de actos de ultima voluntad), und ohne sie kann kein anderer Schritt getan werden. Sie zeigt, ob die Person ein spanisches Testament errichtet hat und vor welchem Notar, nicht was darin steht.",
+            "Danach ist die übliche Reihenfolge diese. Das Testament, oder eine Erbenfeststellung, wenn es keines gibt. Die Annahme vor einem Notar. Die Erbschaftsteuer, von jedem Erben erklärt. Die plusvalia an das Rathaus. Dann wird die Immobilie auf die Erben umgeschrieben. Besorgen Sie früh die vollständige Sterbeurkunde (certificado literal de defuncion), denn das Register verlangt sie bei jedem persönlichen oder postalischen Antrag."
+          ]
+        },
+        {
+          "h2": "Wie finden wir heraus, ob es ein spanisches Testament gibt?",
+          "paras": [
+            "Fragen Sie beim Register der letztwilligen Verfügungen, das dem Justizministerium untersteht. Es ist nicht öffentlich, aber nach einem Todesfall kann jeder mit einem berechtigten Interesse an der Erbfolge die Auskunft erhalten. Sie können erst fünfzehn Werktage nach dem Todesdatum beantragen. Wochenenden und spanische Feiertage zählen nicht mit, in der Praxis sind es also etwa drei Wochen.",
+            "Sie können online mit einem Cl@ve-Zugang beantragen, persönlich in der calle Bolsa 8 in Madrid mit Termin oder per Post mit dem Formular 790. Persönlich oder per Post legen Sie die vollständige Sterbeurkunde bei. Online geht nur bei Todesfällen nach dem 2. April 2009, die elektronisch erfasst sind. Eine Online-Bescheinigung kann 90 Tage lang heruntergeladen werden, und eine für die Verwendung im Ausland muss legalisiert werden. Mit der Bescheinigung bitten die Erben den genannten Notar um eine beglaubigte Abschrift des Testaments."
+          ]
+        },
+        {
+          "h2": "Es gibt kein Testament. Was tun wir?",
+          "paras": [
+            "Bitten Sie einen Notar um eine Erbenfeststellung (declaracion de herederos abintestato). Abkömmlinge, Vorfahren, der Ehepartner oder Lebenspartner und andere Verwandte können sie beantragen. Sie können zu einem Notar am letzten Wohnort des Verstorbenen gehen, dort, wo sich der größte Teil des Nachlasses befindet, oder dort, wo er gestorben ist, wenn das in Spanien war, oder zu einem Notar in einem angrenzenden Bezirk. Trifft nichts davon zu, kann der Notar am Wohnort des Antragstellers tätig werden.",
+            "Der Antragsteller weist den Tod, die Identität und Anschrift des Verstorbenen und das Verwandtschaftsverhältnis nach und belegt über das Zivilregister und die Bescheinigung über letztwillige Verfügungen, dass es kein Testament gibt. Mindestens zwei Zeugen bestätigen die Tatsachen. Der Notar schließt die Urkunde nach zwanzig Werktagen ab. Das Gesetz beruft die Erben dann in einer festen Reihenfolge, und ohne Kinder kommen die Eltern vor dem Ehepartner. Ein Gericht ist nur nötig, wenn etwas strittig ist."
+          ]
+        },
+        {
+          "h2": "Müssen wir das Erbe annehmen, und gibt es eine Frist?",
+          "paras": [
+            "Ja, und das geschieht meist vor einem Notar. Die Annahme kann auch in einer privatschriftlichen Urkunde oder durch schlüssiges Verhalten erfolgen, aber die Immobilie kann nur mit einer notariellen öffentlichen Urkunde auf einen Erben übertragen werden. Eine allgemeine Frist gibt es nicht. Wenn jemand mit einem Interesse einen Notar bittet, einen Erben zu benachrichtigen, hat dieser Erbe danach dreißig Kalendertage, um anzunehmen oder auszuschlagen.",
+            "Ein Erbe wird ganz oder gar nicht angenommen (Sie können nicht das Haus behalten und die Schulden zurücklassen). Ein Erbe, der vorbehaltlos annimmt, haftet für die Schulden des Verstorbenen auch mit seinem eigenen Vermögen. Die Annahme unter dem Vorbehalt der Inventarerrichtung begrenzt das auf den Wert des Nachlasses. Wenn es Schulden geben könnte, sprechen Sie mit einem abogado, bevor Sie beim Notar etwas unterschreiben."
+          ]
+        },
+        {
+          "h2": "Wer reicht die Erbschaftsteuer ein, und bis wann?",
+          "paras": [
+            "Jeder Erbe und Vermächtnisnehmer reicht seine eigene Erklärung ein, das modelo 650, für seinen eigenen Anteil. Sie ist innerhalb von sechs Monaten ab dem Todesdatum fällig. War der Verstorbene oder der Erbe nicht in Spanien ansässig, bearbeitet die nationale Steuerverwaltungsstelle (Oficina Nacional de Gestion Tributaria) in Madrid die Erklärung. Sie kann online mit einem elektronischen Zertifikat oder Cl@ve eingereicht werden, und Papiererklärungen gehen nur an diese Stelle.",
+            "Jeder Erbe braucht eine spanische Steuernummer (NIF), die ein Nichtansässiger bei einem spanischen Konsulat oder mit dem modelo 030 beantragen kann. Ein Erbe, der außerhalb der EU und des EWR lebt, wozu auch das Vereinigte Königreich gehört, muss einen in Spanien ansässigen Vertreter bestellen. Erben in Ländern der EU oder des EWR mit Regeln zur gegenseitigen Amtshilfe müssen das nicht. Nichtansässige Erben können außerdem statt der staatlichen Regeln die Steuerregeln einer Region wählen, was die Rechnung für nahe Angehörige oft senkt."
+          ]
+        },
+        {
+          "h2": "Können wir mehr Zeit für die Erklärung bekommen?",
+          "paras": [
+            "Ja, einmal. Beantragen Sie eine Verlängerung innerhalb der ersten fünf Monate nach dem Tod, und Sie bekommen sechs weitere Monate. Kommt innerhalb eines Monats keine Antwort, gilt sie als gewährt. Ein Antrag nach fünf Monaten gilt als abgelehnt, ohne dass Ihnen das mitgeteilt wird.",
+            "Die zusätzliche Zeit ist nicht kostenlos. Verzugszinsen laufen vom Ende der ursprünglichen sechs Monate bis zur Einreichung, und der Erbe berechnet sie selbst und trägt sie in Feld 62 des modelo 650 ein. Für 2026 beträgt dieser Satz 4,0625 Prozent im Jahr. Wer nach Fristablauf ohne Verlängerung einreicht, bevor das Finanzamt sich meldet, zahlt einen Zuschlag von 1 Prozent plus 1 Prozent für jeden vollen Monat der Verspätung, bis zu zwölf Monaten."
+          ]
+        },
+        {
+          "h2": "Fällt auf ein geerbtes Haus eine plusvalia an?",
+          "paras": [
+            "Ja. Die plusvalia, die Steuer des Rathauses auf den Wertzuwachs des Grundstücks, gilt bei einer Erbschaft ebenso wie bei einem Verkauf. Sie ist innerhalb von sechs Monaten nach dem Tod fällig, und Sie können das auf ein Jahr verlängern, wenn Sie innerhalb der ersten sechs Monate darum bitten. Beachten Sie die unterschiedlichen Fristen: fünf Monate für den Antrag beim Finanzamt, sechs für den beim Rathaus.",
+            "Jedes Rathaus legt seine eigenen Koeffizienten und seinen eigenen Satz fest und entscheidet, ob Sie eine Erklärung oder eine Selbstveranlagung abgeben. Sie können die Methode des tatsächlichen Gewinns wählen, wenn sie eine niedrigere Zahl ergibt als die Berechnung über den Katasterwert. Gab es keinen Wertzuwachs, ist nichts zu zahlen, aber die Übertragung muss trotzdem mit beiden Urkunden erklärt werden. Ihr gestor oder die Steuerstelle des Rathauses kann das örtliche Verfahren bestätigen."
+          ]
+        },
+        {
+          "h2": "Wie kommt das Haus auf unseren Namen?",
+          "paras": [
+            "Über die notarielle Annahmeurkunde, das Dokument, mit dem die Immobilie auf die Erben übertragen und im Grundbuch (Registro de la Propiedad) eingetragen werden kann. Vor der Unterschrift fragt der Notar nach unbezahlter IBI, denn wenn das Eigentum aus irgendeinem Grund wechselt, haftet die Immobilie selbst weiter für unbezahlte IBI.",
+            "Erben, die anderswo leben, wollen selten zu jedem Termin einfliegen. Mit einer Vollmacht kann jemand in Spanien für Sie unterschreiben, und es lohnt sich, sie vor dem ersten Termin zu regeln. Für Notar- und Grundbuchkosten haben wir keine geprüfte Zahl, bitten Sie also den Notar oder Ihren gestor um ein Angebot, bevor Sie anfangen."
+          ]
+        },
+        {
+          "h2": "Hilft das Europäische Nachlasszeugnis?",
+          "paras": [
+            "Es kann helfen, wenn Sie in einem anderen EU-Land sind. Das Zeugnis erlaubt Erben, Vermächtnisnehmern und Testamentsvollstreckern, ihre Stellung in einem anderen Mitgliedstaat ohne besonderes Verfahren nachzuweisen, und es ist ein gültiges Dokument zur Eintragung geerbter Immobilien. Die spanische Registerdirektion hat entschieden, dass ein gültiges Zeugnis ausreicht, um ein spanisches Erbe einzutragen, ohne zusätzlich das Testament vorzulegen. Die Nutzung ist freiwillig.",
+            "Es wird in dem Mitgliedstaat ausgestellt, dessen Gerichte für die Erbfolge zuständig sind. In Spanien ist das auf Antrag das damit befasste Gericht oder der Notar, der die Erbfolge feststellt. Das Original bleibt bei der ausstellenden Stelle, und beglaubigte Abschriften gelten sechs Monate. Prüfen Sie also das Datum auf Ihrer, bevor Sie den spanischen Notar buchen. Norwegen ist kein EU-Mitgliedstaat und fällt nicht unter die Verordnung, und Dänemark und Irland nehmen nicht teil. Ist das erledigt, gehört das Haus Ihnen, um es zu genießen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Décès d'un propriétaire en Espagne : étapes pour les héritiers",
+      "description": "Les étapes après le décès d'un propriétaire en Espagne : dernières volontés, héritiers, acceptation, droits de succession, plusvalia et registre.",
+      "h1": "Ce qui arrive à un bien en Espagne au décès du propriétaire, étape par étape",
+      "lead": "Après un décès, les héritiers obtiennent d'abord le certificat des dernières volontés, qui peut être demandé quinze jours ouvrables après le décès. Viennent ensuite le testament ou, à défaut, un acte de notoriété établi par un notaire, puis l'acceptation devant notaire. Chaque héritier dépose sa propre déclaration de droits de succession dans les six mois suivant le décès, et la plusvalia est due à la mairie dans ces mêmes six mois.",
+      "sections": [
+        {
+          "h2": "Par où commencer ?",
+          "paras": [
+            "Par les papiers qui vous indiquent où se trouve le testament. Toute succession en Espagne commence par le certificat des dernières volontés (certificado de actos de ultima voluntad), et sans lui aucune autre étape n'est possible. Il indique si la personne a fait un testament espagnol et devant quel notaire, pas ce que dit le testament.",
+            "Ensuite, l'ordre habituel est le suivant. Le testament, ou un acte de notoriété s'il n'y en a pas. L'acceptation devant notaire. Les droits de succession, déclarés par chaque héritier. La plusvalia à la mairie. Puis le bien est mis au nom des héritiers. Obtenez tôt l'acte de décès intégral (certificado literal de defuncion), car le registre le demande pour toute demande faite en personne ou par courrier."
+          ]
+        },
+        {
+          "h2": "Comment savoir s'il existe un testament espagnol ?",
+          "paras": [
+            "Adressez-vous au registre des dernières volontés, qui dépend du ministère de la Justice. Il n'est pas public, mais après un décès toute personne ayant un intérêt légitime dans la succession peut obtenir l'information. Vous ne pouvez pas faire la demande avant quinze jours ouvrables après la date du décès. Les week-ends et les jours fériés espagnols ne comptent pas, ce qui fait en pratique environ trois semaines.",
+            "Vous pouvez faire la demande en ligne avec un identifiant Cl@ve, en personne au calle Bolsa 8 à Madrid sur rendez-vous, ou par courrier avec le formulaire 790. En personne ou par courrier, joignez l'acte de décès intégral. La demande en ligne ne fonctionne que pour les décès survenus après le 2 avril 2009 et enregistrés électroniquement. Un certificat obtenu en ligne peut être téléchargé pendant 90 jours, et un certificat destiné à l'étranger doit être légalisé. Avec le certificat, les héritiers demandent au notaire indiqué une copie authentique du testament."
+          ]
+        },
+        {
+          "h2": "Il n'y a pas de testament. Que faisons-nous ?",
+          "paras": [
+            "Demandez à un notaire un acte de notoriété (declaracion de herederos abintestato). Les descendants, les ascendants, le conjoint ou partenaire et les autres parents peuvent le demander. Vous pouvez vous adresser à un notaire du dernier lieu de résidence du défunt, du lieu où se trouve l'essentiel de la succession, ou du lieu du décès s'il a eu lieu en Espagne, ou à un notaire d'un district voisin. Si aucun de ces cas ne s'applique, le notaire du lieu de résidence du demandeur peut intervenir.",
+            "Le demandeur prouve le décès, l'identité et l'adresse du défunt et le lien de parenté, et montre qu'il n'existe pas de testament grâce à l'état civil et au certificat des dernières volontés. Au moins deux témoins confirment les faits. Le notaire clôt l'acte au bout de vingt jours ouvrables. La loi appelle ensuite les héritiers dans un ordre fixe, et sans enfants les parents passent avant le conjoint. Un tribunal n'est nécessaire qu'en cas de contestation."
+          ]
+        },
+        {
+          "h2": "Devons-nous accepter la succession, et y a-t-il un délai ?",
+          "paras": [
+            "Oui, et cela se fait généralement devant notaire. L'acceptation peut aussi se faire par acte sous seing privé ou par un comportement, mais le bien ne peut être transféré à un héritier que par un acte public notarié. Il n'existe pas de délai général. Si une personne intéressée demande à un notaire de mettre un héritier en demeure, cet héritier dispose alors de trente jours calendaires pour accepter ou renoncer.",
+            "Une succession s'accepte en totalité ou pas du tout (vous ne pouvez pas garder la maison et laisser les dettes). Un héritier qui accepte purement et simplement répond aussi des dettes du défunt sur ses propres biens. Accepter à concurrence de l'actif net (bajo beneficio de inventario) limite cette responsabilité à la valeur de la succession. S'il existe le moindre risque de dettes, parlez à un abogado avant de signer quoi que ce soit chez le notaire."
+          ]
+        },
+        {
+          "h2": "Qui déclare les droits de succession, et dans quel délai ?",
+          "paras": [
+            "Chaque héritier et légataire dépose sa propre déclaration, le modelo 650, pour sa propre part. Elle doit être déposée dans les six mois suivant la date du décès. Lorsque le défunt ou l'héritier ne résidait pas en Espagne, la déclaration est traitée par le bureau national de gestion fiscale (Oficina Nacional de Gestion Tributaria) à Madrid. Elle peut être déposée en ligne avec un certificat électronique ou Cl@ve, et les déclarations papier ne sont acceptées que par ce bureau.",
+            "Chaque héritier a besoin d'un numéro fiscal espagnol (NIF), qu'un non-résident peut demander dans un consulat d'Espagne ou avec le modelo 030. Un héritier qui vit hors de l'UE et de l'EEE, ce qui inclut le Royaume-Uni, doit désigner un représentant résidant en Espagne. Les héritiers vivant dans des pays de l'UE ou de l'EEE dotés de règles d'assistance mutuelle n'y sont pas tenus. Les héritiers non-résidents peuvent aussi choisir les règles fiscales d'une région plutôt que celles de l'État, ce qui allège souvent la facture pour la famille proche."
+          ]
+        },
+        {
+          "h2": "Pouvons-nous obtenir plus de temps pour déclarer ?",
+          "paras": [
+            "Oui, une fois. Demandez une prolongation dans les cinq premiers mois suivant le décès et vous obtenez six mois de plus. Sans réponse dans un délai d'un mois, elle est réputée accordée. Une demande faite après cinq mois est réputée refusée, sans qu'aucune notification ne vous en informe.",
+            "Ce délai supplémentaire n'est pas gratuit. Des intérêts de retard courent de la fin des six mois initiaux jusqu'au dépôt, et l'héritier les calcule et les inscrit dans la case 62 du modelo 650. Pour 2026, ce taux est de 4,0625 pour cent par an. Déposer après l'échéance sans prolongation, et avant que l'administration fiscale ne vous écrive, entraîne une majoration de 1 pour cent plus 1 pour cent par mois entier de retard, jusqu'à douze mois."
+          ]
+        },
+        {
+          "h2": "Y a-t-il une plusvalia sur un logement hérité ?",
+          "paras": [
+            "Oui. La plusvalia, l'impôt municipal sur l'augmentation de valeur du terrain, s'applique à une succession comme à une vente. Elle est due dans les six mois suivant le décès, et vous pouvez porter ce délai à un an si vous le demandez dans les six premiers mois. Attention aux délais différents : cinq mois pour le demander à l'administration fiscale, six pour le demander à la mairie.",
+            "Chaque mairie fixe ses propres coefficients et son propre taux et décide si vous déposez une déclaration ou une autoliquidation. Vous pouvez choisir la méthode du gain réel si elle donne un montant inférieur au calcul cadastral. S'il n'y a pas eu d'augmentation de valeur, il n'y a rien à payer, mais la transmission doit tout de même être déclarée avec les deux actes. Votre gestor ou le service fiscal de la mairie peut vous confirmer la procédure locale."
+          ]
+        },
+        {
+          "h2": "Comment la maison passe-t-elle à notre nom ?",
+          "paras": [
+            "Par l'acte notarié d'acceptation, qui est le document permettant de transférer le bien aux héritiers et de l'inscrire au registre foncier (Registro de la Propiedad). Avant la signature, le notaire demande s'il reste de l'IBI impayé, car lorsque la propriété change de mains pour quelque raison que ce soit, le bien lui-même reste redevable de tout IBI impayé.",
+            "Les héritiers qui vivent ailleurs ont rarement envie de prendre l'avion pour chaque rendez-vous. Une procuration permet à quelqu'un en Espagne de signer pour vous, et mieux vaut l'organiser avant le premier rendez-vous. Nous n'avons pas de chiffre vérifié pour les frais de notaire et de registre, demandez donc un devis au notaire ou à votre gestor avant de commencer."
+          ]
+        },
+        {
+          "h2": "Le certificat successoral européen est-il utile ?",
+          "paras": [
+            "Il peut l'être, si vous êtes dans un autre pays de l'UE. Le certificat permet aux héritiers, légataires et exécuteurs testamentaires de prouver leur qualité dans un autre État membre sans procédure particulière, et c'est un document valable pour inscrire un bien hérité. La direction espagnole des registres a jugé qu'un certificat valable suffit pour inscrire une succession espagnole sans produire en plus le testament. Son utilisation est facultative.",
+            "Il est délivré dans l'État membre dont les juridictions sont compétentes pour la succession. En Espagne, cela signifie le tribunal qui en est saisi ou le notaire qui l'établit, sur demande. L'original reste chez l'autorité qui l'a délivré, et les copies certifiées sont valables six mois, vérifiez donc la date de la vôtre avant de prendre rendez-vous chez le notaire espagnol. La Norvège n'est pas un État membre de l'UE et se trouve hors du règlement, et le Danemark et l'Irlande n'y participent pas. Une fois tout cela fait, la maison est à vous, pour en profiter."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Overlijden van een eigenaar in Spanje: de stappen voor erfgenamen",
+      "description": "Na het overlijden van een eigenaar in Spanje: certificaat van uiterste wil, erfgenamen, aanvaarding, erfbelasting, plusvalia en register, op volgorde.",
+      "h1": "Wat er stap voor stap met een Spaanse woning gebeurt als de eigenaar overlijdt",
+      "lead": "Na een overlijden vragen de erfgenamen eerst het certificaat van uiterste wilsbeschikkingen op, dat vijftien werkdagen na het overlijden kan worden aangevraagd. Daarna volgt het testament of, als er geen is, een verklaring van erfrecht van een notaris, en vervolgens de aanvaarding bij een notaris. Elke erfgenaam dient binnen zes maanden na het overlijden een eigen aangifte erfbelasting in, en de plusvalia moet binnen dezelfde zes maanden bij de gemeente worden voldaan.",
+      "sections": [
+        {
+          "h2": "Waar beginnen we?",
+          "paras": [
+            "Met de papieren die u vertellen waar het testament is. Elke nalatenschap in Spanje begint met het certificaat van uiterste wilsbeschikkingen (certificado de actos de ultima voluntad), en zonder dat certificaat kan geen enkele andere stap worden gezet. Het laat zien of de overledene een Spaans testament heeft gemaakt en bij welke notaris, niet wat er in het testament staat.",
+            "Daarna is de gebruikelijke volgorde als volgt. Het testament, of een verklaring van erfrecht als er geen is. Aanvaarding bij een notaris. Erfbelasting, aangegeven door elke erfgenaam. De plusvalia bij de gemeente. Daarna wordt de woning op naam van de erfgenamen gezet. Vraag vroeg de volledige overlijdensakte (certificado literal de defuncion) op, want het register vraagt erom bij elke aanvraag die persoonlijk of per post wordt gedaan."
+          ]
+        },
+        {
+          "h2": "Hoe komen we erachter of er een Spaans testament is?",
+          "paras": [
+            "Vraag het na bij het register van uiterste wilsbeschikkingen, dat onder het ministerie van Justitie valt. Het is niet openbaar, maar na een overlijden kan iedereen met een rechtmatig belang bij de nalatenschap de informatie krijgen. U kunt pas aanvragen vijftien werkdagen na de datum van overlijden. Weekenden en Spaanse feestdagen tellen niet mee, dus in de praktijk is het ongeveer drie weken.",
+            "U kunt online aanvragen met een Cl@ve-login, persoonlijk op calle Bolsa 8 in Madrid op afspraak, of per post met formulier 790. Persoonlijk of per post voegt u de volledige overlijdensakte bij. Online werkt alleen voor overlijdens na 2 april 2009 die elektronisch zijn geregistreerd. Een online certificaat kan 90 dagen worden gedownload, en een certificaat voor gebruik in het buitenland moet worden gelegaliseerd. Met het certificaat vragen de erfgenamen de genoemde notaris om een gewaarmerkt afschrift van het testament."
+          ]
+        },
+        {
+          "h2": "Er is geen testament. Wat doen we?",
+          "paras": [
+            "Vraag een notaris om een verklaring van erfrecht (declaracion de herederos abintestato). Afstammelingen, voorouders, de echtgenoot of partner en andere verwanten kunnen die aanvragen. U kunt naar een notaris gaan waar de overledene het laatst woonde, waar het grootste deel van de nalatenschap ligt, of waar hij of zij overleed als dat in Spanje was, of naar een notaris in een aangrenzend district. Is geen van die gevallen van toepassing, dan kan de notaris in de woonplaats van de aanvrager optreden.",
+            "De aanvrager bewijst het overlijden, de identiteit en het adres van de overledene en de familieband, en toont via de burgerlijke stand en het certificaat van uiterste wilsbeschikkingen aan dat er geen testament is. Minstens twee getuigen bevestigen de feiten. De notaris sluit de akte na twintig werkdagen. De wet roept de erfgenamen daarna in een vaste volgorde, en zonder kinderen komen de ouders vóór de echtgenoot. Een rechter is alleen nodig als er iets wordt betwist."
+          ]
+        },
+        {
+          "h2": "Moeten we de erfenis aanvaarden, en is er een termijn?",
+          "paras": [
+            "Ja, en dat gebeurt meestal bij een notaris. Aanvaarding kan ook in een onderhands document of door gedrag, maar de woning kan alleen met een notariële akte op een erfgenaam worden overgeschreven. Er is geen algemene termijn. Vraagt iemand met een belang een notaris om een erfgenaam in kennis te stellen, dan heeft die erfgenaam vanaf dat moment dertig kalenderdagen om te aanvaarden of te verwerpen.",
+            "Een erfenis neemt u in zijn geheel of helemaal niet (u kunt niet het huis houden en de schulden laten liggen). Een erfgenaam die zuiver aanvaardt, staat ook met zijn eigen vermogen in voor de schulden van de overledene. Aanvaarding onder voorrecht van boedelbeschrijving beperkt dat tot de waarde van de nalatenschap. Is er enige kans op schulden, praat dan met een abogado voordat u iets bij de notaris tekent."
+          ]
+        },
+        {
+          "h2": "Wie doet de aangifte erfbelasting, en wanneer?",
+          "paras": [
+            "Elke erfgenaam en legataris dient een eigen aangifte in, modelo 650, voor zijn eigen deel. Die moet binnen zes maanden na de datum van overlijden worden ingediend. Was de overledene of de erfgenaam geen inwoner van Spanje, dan wordt de aangifte behandeld door het nationale belastingkantoor (Oficina Nacional de Gestion Tributaria) in Madrid. Ze kan online worden ingediend met een elektronisch certificaat of Cl@ve, en papieren aangiften gaan alleen naar dat kantoor.",
+            "Elke erfgenaam heeft een Spaans fiscaal nummer (NIF) nodig, dat iemand die geen inwoner is kan aanvragen bij een Spaans consulaat of met modelo 030. Een erfgenaam die buiten de EU en de EER woont, en dat geldt ook voor het Verenigd Koninkrijk, moet een vertegenwoordiger aanwijzen die in Spanje woont. Erfgenamen in landen van de EU of de EER met regels voor wederzijdse bijstand hoeven dat niet. Erfgenamen die geen inwoner zijn, mogen ook voor de belastingregels van een regio kiezen in plaats van de landelijke regels, wat de rekening voor naaste familie vaak verlaagt."
+          ]
+        },
+        {
+          "h2": "Kunnen we meer tijd krijgen voor de aangifte?",
+          "paras": [
+            "Ja, één keer. Vraag binnen de eerste vijf maanden na het overlijden uitstel aan en u krijgt zes maanden extra. Komt er binnen een maand geen antwoord, dan geldt het uitstel als verleend. Een verzoek dat na vijf maanden wordt gedaan, geldt als afgewezen, zonder dat u daar bericht over krijgt.",
+            "De extra tijd is niet gratis. Over de periode vanaf het einde van de oorspronkelijke zes maanden tot de indiening loopt nalatigheidsrente, die de erfgenaam zelf berekent en invult in vak 62 van modelo 650. Voor 2026 is die rente 4,0625 procent per jaar. Wie zonder uitstel na de termijn aangifte doet, maar voordat de belastingdienst schrijft, betaalt een toeslag van 1 procent plus 1 procent voor elke volle maand te laat, tot twaalf maanden."
+          ]
+        },
+        {
+          "h2": "Is er plusvalia verschuldigd over een geërfde woning?",
+          "paras": [
+            "Ja. De plusvalia, de gemeentelijke belasting op de waardestijging van de grond, geldt bij een erfenis net zo goed als bij een verkoop. Ze moet binnen zes maanden na het overlijden worden voldaan, en u kunt dat verlengen tot één jaar als u het binnen de eerste zes maanden aanvraagt. Let op de verschillende termijnen: vijf maanden om het de belastingdienst te vragen, zes om het de gemeente te vragen.",
+            "Elke gemeente stelt haar eigen coëfficiënten en tarief vast en bepaalt of u een aangifte of een eigen berekening indient. U mag kiezen voor de methode van de werkelijke winst als die een lager bedrag oplevert dan de berekening op basis van de kadastrale waarde. Was er geen waardestijging, dan valt er niets te betalen, maar de overdracht moet nog steeds met beide aktes worden aangegeven. Uw gestor of het belastingkantoor van de gemeente kan de lokale procedure bevestigen."
+          ]
+        },
+        {
+          "h2": "Hoe komt het huis op onze naam?",
+          "paras": [
+            "Via de notariële akte van aanvaarding, het document waarmee de woning op de erfgenamen kan worden overgeschreven en ingeschreven in het eigendomsregister (Registro de la Propiedad). Voor de ondertekening vraagt de notaris naar onbetaalde IBI, want als de eigendom om welke reden ook overgaat, blijft de woning zelf aansprakelijk voor onbetaalde IBI.",
+            "Erfgenamen die elders wonen, willen zelden voor elke afspraak overvliegen. Met een volmacht kan iemand in Spanje voor u tekenen, en het loont om die vóór de eerste afspraak te regelen. We hebben geen geverifieerd bedrag voor notaris- en registerkosten, dus vraag de notaris of uw gestor om een offerte voordat u begint."
+          ]
+        },
+        {
+          "h2": "Helpt de Europese erfrechtverklaring?",
+          "paras": [
+            "Dat kan, als u in een ander EU-land woont. Met de verklaring kunnen erfgenamen, legatarissen en executeurs hun hoedanigheid in een andere lidstaat aantonen zonder bijzondere procedure, en ze is een geldig document om geërfd vastgoed in te schrijven. De Spaanse directie van de registers heeft geoordeeld dat een geldige verklaring genoeg is om een Spaanse erfenis in te schrijven, zonder daarnaast het testament over te leggen. Het gebruik ervan is vrijwillig.",
+            "De verklaring wordt afgegeven in de lidstaat waarvan de rechter bevoegd is voor de nalatenschap. In Spanje is dat, op verzoek, de rechter die de zaak behandelt of de notaris die de verklaring van erfrecht opmaakt. Het origineel blijft bij de afgever, en gewaarmerkte afschriften zijn zes maanden geldig, dus controleer de datum op het uwe voordat u de Spaanse notaris boekt. Noorwegen is geen lidstaat van de EU en valt buiten de Verordening, en Denemarken en Ierland doen niet mee. Als alles klaar is, is het huis van u om van te genieten."
+          ]
+        }
+      ]
+    }
+  }
+}

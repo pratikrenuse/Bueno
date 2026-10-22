@@ -1,0 +1,437 @@
+{
+  "slug": "tax-on-rental-income-in-spain",
+  "topic": "tax",
+  "tool": "rental-tax",
+  "rules": [
+    "irnr.rates",
+    "irnr.rental.deductibility",
+    "irnr.sale.gain_base",
+    "deadline.rental.2024_2025",
+    "deadline.rental.from_2026",
+    "deadline.rental.last_quarterly",
+    "deadline.210.new_fields_2027",
+    "vat.letting",
+    "parte.obligation",
+    "registry.regional_unaffected",
+    "registry.survives",
+    "lau.seasonal_basis",
+    "lau.tourist_excluded",
+    "lph.17_12.majority",
+    "late.recargo.voluntary",
+    "late.recargo.excludes_penalty"
+  ],
+  "answers": [
+    "deduct-costs-from-spanish-rental-income",
+    "when-to-file-spanish-rental-income-from-2026",
+    "spanish-rental-income-2024-and-2025-filing-deadline",
+    "iva-on-a-spanish-holiday-let",
+    "guest-registration-for-spanish-holiday-lets",
+    "seasonal-let-versus-tourist-let-spain",
+    "community-approval-for-a-new-tourist-let-spain",
+    "filing-a-spanish-tax-return-late"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Tax on Rental Income in Spain for Non-Resident Owners",
+      "description": "Rent from a Spanish home is taxed in Spain on modelo 210. The rates, the costs you can deduct, the new April filing window and what a holiday let adds.",
+      "h1": "Paying Spanish tax on rent when you live in another country",
+      "lead": "If you live abroad and let your Spanish property, the rent is taxed in Spain under non-resident income tax and declared on modelo 210. The rate is 19 percent for residents of the EU, Norway, Iceland and Liechtenstein, who may deduct linked costs, and 24 percent on the gross rent for everyone else. Rent earned from 2026 is filed in the first 20 days of April of the following year.",
+      "sections": [
+        {
+          "h2": "I already declare the rent at home. Do I pay in Spain too?",
+          "paras": [
+            "Yes. Rent from a property in Spain is taxed in Spain, under non-resident income tax (the IRNR), whatever your home country does with it. You declare it on modelo 210, the same form non-residents use for the imputed income on a home they do not let. Your home tax office may also ask about the Spanish rent.",
+            "How the two countries share the tax, and whether you get credit at home for what you paid in Spain, depends on your home country's rules and its treaty with Spain. That part is a question for a tax adviser in your own country. This guide covers the Spanish side, which is where most owners abroad lose track."
+          ]
+        },
+        {
+          "h2": "What rate do I pay on rent?",
+          "paras": [
+            "The rate is 19 percent for residents of the EU, Iceland, Norway and Liechtenstein, and 24 percent for everyone else, including residents of the United Kingdom. Norway sits outside the EU, but for this tax it is treated as a member state would be, so a landlord living in Oslo or Bergen pays the same rate as one living in Stockholm or Hamburg.",
+            "The bigger difference is not the rate but the base. A landlord at the 19 percent rate can usually deduct costs, while a landlord at 24 percent pays on every euro of rent that comes in. So a landlord at 24 percent should budget on the full rent received, not on what is left after costs."
+          ]
+        },
+        {
+          "h2": "Which costs can I deduct from the rent?",
+          "paras": [
+            "Residents of another EU state, or of an EEA state with effective exchange of tax information, can deduct expenses. Norway, Iceland and Liechtenstein qualify. The costs must be directly and inseparably linked to the letting in Spain, and you need a certificate of tax residence from your home tax office to back up the claim.",
+            "Everyone else is taxed on the gross rent, with no deductions of any kind. For a UK owner that means cleaning, platform commission and repairs do not reduce the Spanish tax, however large they were. Keep the invoices anyway, because your home tax office may treat them differently.",
+            "One thing to remember for later. If you deduct amortisation, the yearly allowance for wear on the building, against rental income, that amount reduces your acquisition value when you eventually sell. A lower acquisition value means a larger taxable gain, so keep a record of every amount you deducted, year by year."
+          ]
+        },
+        {
+          "h2": "When do I file the rent now that the dates have changed?",
+          "paras": [
+            "The dates have moved twice in a short time, so older guides describing four quarterly deadlines are out of date. Rent earned in 2024 and 2025 is declared on a single grouped annual return, filed from 1 to 20 January of the following year, with direct debit open from 1 to 15 January.",
+            "For 2026, the last quarterly return, covering July to September 2026, was due from 1 to 20 October 2026. Rent earned from 2026 onwards, and any separate return from the fourth quarter of 2026, is filed in the first 20 days of April of the following year, with direct debit closing on 15 April. The first April window is April 2027.",
+            "Because 2026 is a changeover year, check which of your 2026 months have already been declared before April 2027, especially if a gestor filed for you earlier in the year. And from 1 January 2027, every modelo 210 carries new fields, including days available and ownership percentage."
+          ]
+        },
+        {
+          "h2": "Do I have to charge VAT on a holiday let?",
+          "paras": [
+            "Not usually. Letting a home as a residence is exempt from VAT (IVA). It becomes taxable at 10 percent when you add hotel-type services, meaning reception, cleaning during the stay, changes of linen, meals, laundry and similar. The list speaks of cleaning during the stay, so read it carefully before you change what you offer.",
+            "A 21 percent rate applies where the let is neither an exempt residential let nor a hotel-type accommodation service. You may have read that tourist lets are moving to 21 percent across the board. That is a proposal, and no such change has taken effect in Spanish law."
+          ]
+        },
+        {
+          "h2": "What else comes with letting to holidaymakers?",
+          "paras": [
+            "Guest registration. Anyone letting short-term tourist accommodation, private owners using online portals included, must send each guest's details and the transaction data to the Secretaria de Estado de Seguridad within 24 hours of the stay starting, and keep a register. Plenty of owners leave this to a key holder or manager, which is fine, as long as someone is actually doing it.",
+            "The licence that matters is regional. The national rental registration number procedure has been annulled, but regional tourist registration and licensing are unaffected and remain fully in force, and the rules vary by region and increasingly by town. Booking platforms may still ask for a number (some have not caught up), and their data-sharing duties under EU Regulation 2024/1028 remain in place.",
+            "If your flat is in a building with a community of owners, a new tourist let needs approval by three fifths of the owners, who must also hold three fifths of the participation quotas. Ask the administrador de fincas before you list the flat, not after the first guest arrives."
+          ]
+        },
+        {
+          "h2": "Is a long-term or seasonal let treated differently?",
+          "paras": [
+            "The income tax works the same way: modelo 210, the same rates, the same deductibility rule. What changes is the legal frame around the let. A seasonal let, for a summer or a season, falls under the tenancy law (LAU) as a let for a use other than a permanent home, and is largely governed by what you and the tenant agree.",
+            "A tourist let is different. A whole furnished home marketed through tourist channels, and subject to a regional tourism regime, falls outside the tenancy law and under regional tourism rules instead. Marketing through tourist channels is exactly what pulls a let across that line, so how you advertise matters as much as how long the guests stay."
+          ]
+        },
+        {
+          "h2": "I have let the house for years and never declared it. What now?",
+          "paras": [
+            "Declare it, and do it before the tax office writes to you. Filing late on your own initiative carries a surcharge of 1 percent plus 1 percent for each complete month of delay, up to 12 months, and after that 15 percent plus interest. That is far more predictable than waiting, and the surcharge replaces any penalty that could otherwise have been imposed.",
+            "A gestor or asesor fiscal who files modelo 210 for non-residents can put the missing periods together from your booking statements and bank records. Then set the April date in your calendar, and the rent goes back to being what it was meant to be: something that pays for the house you love spending time in."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Skatt på leieinntekt i Spania for ikke-bosatte eiere",
+      "description": "Leie fra en bolig i Spania skattlegges i Spania på modelo 210, og her finner du satser, fradrag, det nye aprilvinduet og hva ferieutleie legger til.",
+      "h1": "Spansk skatt på leieinntekt når du bor i et annet land",
+      "lead": "Bor du i utlandet og leier ut boligen din i Spania, skattlegges leien i Spania etter inntektsskatten for ikke-bosatte og oppgis på modelo 210. Satsen er 19 prosent for bosatte i EU, Norge, Island og Liechtenstein, som kan trekke fra tilknyttede kostnader, og 24 prosent av brutto leie for alle andre. Leie opptjent fra 2026 leveres i de første 20 dagene av april året etter.",
+      "sections": [
+        {
+          "h2": "Jeg oppgir allerede leien hjemme. Betaler jeg i Spania også?",
+          "paras": [
+            "Ja. Leie fra en eiendom i Spania skattlegges i Spania, etter inntektsskatten for ikke-bosatte (IRNR), uansett hva hjemlandet ditt gjør med den. Du oppgir den på modelo 210, det samme skjemaet ikke-bosatte bruker for den imputerte inntekten på en bolig de ikke leier ut. Skattekontoret hjemme kan også spørre om den spanske leien.",
+            "Hvordan de to landene deler skatten, og om du får fradrag hjemme for det du betalte i Spania, avhenger av hjemlandets regler og skatteavtalen med Spania. Den delen er et spørsmål for en skatterådgiver i ditt eget land. Denne veiledningen dekker den spanske siden, som er der de fleste eiere i utlandet mister oversikten."
+          ]
+        },
+        {
+          "h2": "Hvilken skattesats betaler jeg på leie?",
+          "paras": [
+            "Satsen er 19 prosent for bosatte i EU, Island, Norge og Liechtenstein, og 24 prosent for alle andre, også bosatte i Storbritannia. Norge står utenfor EU, men for denne skatten behandles landet som en medlemsstat, så en utleier som bor i Oslo eller Bergen betaler samme sats som en som bor i Stockholm eller Hamburg.",
+            "Den store forskjellen er ikke satsen, men grunnlaget. En utleier med satsen på 19 prosent kan som regel trekke fra kostnader, mens en utleier med 24 prosent betaler av hver euro leie som kommer inn. En utleier med 24 prosent bør derfor budsjettere ut fra hele leien som er mottatt, ikke det som står igjen etter kostnader."
+          ]
+        },
+        {
+          "h2": "Hvilke kostnader kan jeg trekke fra leien?",
+          "paras": [
+            "Bosatte i en annen EU-stat, eller i en EØS-stat med effektiv utveksling av skatteopplysninger, kan trekke fra utgifter. Norge, Island og Liechtenstein oppfyller kravet. Kostnadene må være direkte og uatskillelig knyttet til utleien i Spania, og du trenger en attest om skattemessig bosted fra skattekontoret hjemme for å underbygge kravet.",
+            "Alle andre skattlegges av brutto leie, uten fradrag av noe slag. For en britisk eier betyr det at renhold, plattformprovisjon og reparasjoner ikke reduserer den spanske skatten, uansett hvor store de var. Ta vare på fakturaene likevel, fordi skattekontoret hjemme kan behandle dem annerledes.",
+            "En ting å huske til senere. Trekker du fra avskrivning, det årlige fradraget for slit på bygningen, mot leieinntekten, reduserer det beløpet anskaffelsesverdien din når du en dag selger. Lavere anskaffelsesverdi betyr større skattepliktig gevinst, så før en oversikt over hvert beløp du har trukket fra, år for år."
+          ]
+        },
+        {
+          "h2": "Når leverer jeg leien nå som datoene er endret?",
+          "paras": [
+            "Datoene har flyttet seg to ganger på kort tid, så eldre veiledninger som beskriver fire kvartalsvise frister er utdatert. Leie opptjent i 2024 og 2025 oppgis på én samlet årsoppgave, levert fra 1. til 20. januar året etter, med avtalegiro åpen fra 1. til 15. januar.",
+            "For 2026 hadde den siste kvartalsvise oppgaven, for juli til september 2026, frist fra 1. til 20. oktober 2026. Leie opptjent fra 2026 og fremover, og en eventuell egen oppgave fra fjerde kvartal 2026, leveres i de første 20 dagene av april året etter, og avtalegiro stenger 15. april. Det første aprilvinduet er april 2027.",
+            "Fordi 2026 er et overgangsår, bør du sjekke hvilke av månedene dine i 2026 som allerede er oppgitt før april 2027, særlig hvis en gestor leverte for deg tidligere i året. Og fra 1. januar 2027 får hver modelo 210 nye felt, blant annet antall disponible dager og eierandel i prosent."
+          ]
+        },
+        {
+          "h2": "Må jeg beregne merverdiavgift på ferieutleie?",
+          "paras": [
+            "Som regel ikke. Utleie av en bolig som bolig er fritatt for merverdiavgift (IVA). Den blir avgiftspliktig med 10 prosent når du legger til hotelliknende tjenester, det vil si resepsjon, renhold under oppholdet, skift av sengetøy, måltider, klesvask og lignende. Listen sier renhold under oppholdet, så les den nøye før du endrer det du tilbyr.",
+            "En sats på 21 prosent gjelder der utleien verken er en fritatt boligutleie eller en hotelliknende overnattingstjeneste. Du har kanskje lest at turistutleie skal over på 21 prosent over hele linjen. Det er et forslag, og ingen slik endring har trådt i kraft i spansk rett."
+          ]
+        },
+        {
+          "h2": "Hva annet følger med utleie til feriegjester?",
+          "paras": [
+            "Gjesteregistrering. Alle som leier ut turistovernatting på kort tid, også private eiere som bruker nettportaler, må sende hver gjests opplysninger og transaksjonsdataene til Secretaria de Estado de Seguridad innen 24 timer etter at oppholdet starter, og føre et register. Mange eiere overlater dette til en nøkkelholder eller forvalter, og det er greit, så lenge noen faktisk gjør det.",
+            "Lisensen som teller er regional. Den nasjonale ordningen med registreringsnummer for utleie er opphevet, men regional turistregistrering og lisensiering er uberørt og fullt i kraft, og reglene varierer fra region til region og i økende grad fra kommune til kommune. Bookingplattformer kan fortsatt be om et nummer (noen har ikke tatt det igjen), og deres plikter til datadeling etter EU-forordning 2024/1028 består.",
+            "Ligger leiligheten din i et bygg med sameie, krever ny turistutleie godkjenning fra tre femtedeler av eierne, som også må ha tre femtedeler av eierbrøkene. Spør administrador de fincas før du legger ut leiligheten, ikke etter at den første gjesten har kommet."
+          ]
+        },
+        {
+          "h2": "Behandles langtidsutleie eller sesongutleie annerledes?",
+          "paras": [
+            "Inntektsskatten fungerer på samme måte: modelo 210, de samme satsene, den samme regelen for fradrag. Det som endres er den juridiske rammen rundt utleien. En sesongutleie, for en sommer eller en sesong, faller inn under husleieloven (LAU) som utleie til annen bruk enn fast bolig, og styres i stor grad av det du og leietakeren avtaler.",
+            "Turistutleie er noe annet. En hel møblert bolig som markedsføres gjennom turistkanaler, og som er underlagt en regional turistordning, faller utenfor husleieloven og inn under regionale turistregler i stedet. Markedsføring gjennom turistkanaler er nettopp det som trekker en utleie over den grensen, så hvordan du annonserer betyr like mye som hvor lenge gjestene blir."
+          ]
+        },
+        {
+          "h2": "Jeg har leid ut huset i årevis og aldri oppgitt det. Hva nå?",
+          "paras": [
+            "Oppgi det, og gjør det før skattekontoret skriver til deg. Leverer du for sent på eget initiativ, gir det et tillegg på 1 prosent pluss 1 prosent for hver hele måned forsinkelse, opp til 12 måneder, og deretter 15 prosent pluss renter. Det er langt mer forutsigbart enn å vente, og tillegget erstatter enhver bot som ellers kunne blitt ilagt.",
+            "En gestor eller asesor fiscal som leverer modelo 210 for ikke-bosatte kan sette sammen de manglende periodene ut fra bookingoversikter og kontoutskrifter. Legg så aprildatoen inn i kalenderen, og leien blir igjen det den var ment å være: noe som betaler for huset du elsker å tilbringe tid i."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Skatt på hyresintäkt i Spanien för icke-bosatta ägare",
+      "description": "Hyra från en spansk bostad beskattas i Spanien på modelo 210, och här är satserna, avdragen, den nya aprilperioden och vad korttidsuthyrning lägger till.",
+      "h1": "Spansk skatt på hyran när du bor i ett annat land",
+      "lead": "Bor du utomlands och hyr ut din spanska fastighet beskattas hyran i Spanien enligt inkomstskatten för icke-bosatta och deklareras på modelo 210. Skattesatsen är 19 procent för boende i EU, Norge, Island och Liechtenstein, som får dra av kopplade kostnader, och 24 procent på bruttohyran för alla andra. Hyra som tjänas in från 2026 deklareras under de första 20 dagarna i april året därpå.",
+      "sections": [
+        {
+          "h2": "Jag deklarerar redan hyran hemma. Betalar jag i Spanien också?",
+          "paras": [
+            "Ja. Hyra från en fastighet i Spanien beskattas i Spanien, enligt inkomstskatten för icke-bosatta (IRNR), oavsett vad ditt hemland gör med den. Du deklarerar den på modelo 210, samma blankett som icke-bosatta använder för schablonintäkten på en bostad de inte hyr ut. Skatteverket hemma kan också fråga om den spanska hyran.",
+            "Hur de två länderna delar på skatten, och om du får avräkning hemma för det du betalat i Spanien, beror på ditt hemlands regler och dess skatteavtal med Spanien. Den delen är en fråga för en skatterådgivare i ditt eget land. Den här guiden handlar om den spanska sidan, som är där de flesta ägare utomlands tappar greppet."
+          ]
+        },
+        {
+          "h2": "Vilken skattesats betalar jag på hyran?",
+          "paras": [
+            "Skattesatsen är 19 procent för boende i EU, Island, Norge och Liechtenstein, och 24 procent för alla andra, inklusive boende i Storbritannien. Norge står utanför EU, men för den här skatten behandlas landet som en medlemsstat skulle behandlas, så en uthyrare som bor i Oslo eller Bergen betalar samma sats som en som bor i Stockholm eller Hamburg.",
+            "Den stora skillnaden är inte satsen utan underlaget. En uthyrare med 19 procent kan oftast dra av kostnader, medan en uthyrare med 24 procent betalar på varje euro hyra som kommer in. En uthyrare med 24 procent bör alltså budgetera utifrån hela den mottagna hyran, inte utifrån det som blir kvar efter kostnader."
+          ]
+        },
+        {
+          "h2": "Vilka kostnader får jag dra av från hyran?",
+          "paras": [
+            "Den som bor i ett annat EU-land, eller i ett EES-land med effektivt utbyte av skatteinformation, får dra av kostnader. Norge, Island och Liechtenstein uppfyller kraven. Kostnaderna måste vara direkt och oskiljaktigt kopplade till uthyrningen i Spanien, och du behöver ett intyg om skatterättslig hemvist från skatteverket hemma för att styrka avdraget.",
+            "Alla andra beskattas på bruttohyran, utan avdrag av något slag. För en ägare i Storbritannien betyder det att städning, plattformsprovision och reparationer inte minskar den spanska skatten, hur stora de än var. Spara fakturorna ändå, eftersom skattemyndigheten hemma kan behandla dem annorlunda.",
+            "En sak att komma ihåg till senare. Drar du av avskrivning, det årliga avdraget för slitage på byggnaden, mot hyresinkomsten minskar det beloppet ditt anskaffningsvärde när du så småningom säljer. Ett lägre anskaffningsvärde betyder en större skattepliktig vinst, så för anteckningar om varje belopp du dragit av, år för år."
+          ]
+        },
+        {
+          "h2": "När deklarerar jag hyran nu när datumen har ändrats?",
+          "paras": [
+            "Datumen har flyttats två gånger på kort tid, så äldre guider som beskriver fyra kvartalsvisa frister är inaktuella. Hyra som tjänats in 2024 och 2025 deklareras i en enda samlad årsdeklaration, som lämnas från 1 till 20 januari året därpå, med autogiro öppet från 1 till 15 januari.",
+            "För 2026 skulle den sista kvartalsdeklarationen, för juli till september 2026, lämnas från 1 till 20 oktober 2026. Hyra som tjänas in från 2026 och framåt, och en eventuell separat deklaration för fjärde kvartalet 2026, lämnas under de första 20 dagarna i april året därpå, och autogiro stänger den 15 april. Den första aprilperioden är april 2027.",
+            "Eftersom 2026 är ett övergångsår, kontrollera vilka av dina månader 2026 som redan har deklarerats före april 2027, särskilt om en gestor deklarerade åt dig tidigare under året. Och från 1 januari 2027 har varje modelo 210 nya fält, bland annat tillgängliga dagar och ägarandel i procent."
+          ]
+        },
+        {
+          "h2": "Måste jag ta ut moms på korttidsuthyrning?",
+          "paras": [
+            "Oftast inte. Uthyrning av en bostad som bostad är undantagen från moms (IVA). Den blir skattepliktig med 10 procent när du lägger till hotelliknande tjänster, det vill säga reception, städning under vistelsen, byte av sängkläder, måltider, tvätt och liknande. Listan talar om städning under vistelsen, så läs den noga innan du ändrar det du erbjuder.",
+            "En sats på 21 procent gäller när uthyrningen varken är en undantagen bostadsuthyrning eller en hotelliknande logitjänst. Du kanske har läst att turistuthyrning ska gå över till 21 procent rakt över. Det är ett förslag, och ingen sådan ändring har trätt i kraft i spansk lag."
+          ]
+        },
+        {
+          "h2": "Vad mer följer med uthyrning till semesterfirare?",
+          "paras": [
+            "Gästregistrering. Alla som hyr ut korttidsboende för turister, privata ägare som använder bokningsportaler inräknade, måste skicka varje gästs uppgifter och transaktionsuppgifterna till Secretaria de Estado de Seguridad inom 24 timmar från att vistelsen börjar, och föra ett register. Många ägare överlåter det här till en nyckelhållare eller förvaltare, vilket går bra, så länge någon faktiskt gör det.",
+            "Det tillstånd som spelar roll är regionalt. Det nationella förfarandet för registreringsnummer för uthyrning har upphävts, men regional turistregistrering och licensiering är opåverkade och gäller fullt ut, och reglerna varierar mellan regioner och i allt högre grad mellan kommuner. Bokningsplattformar kan fortfarande be om ett nummer (vissa har inte hängt med), och deras skyldigheter att dela data enligt EU-förordning 2024/1028 ligger kvar.",
+            "Ligger din lägenhet i ett hus med en samfällighet behöver en ny turistuthyrning godkännas av tre femtedelar av ägarna, som också måste representera tre femtedelar av andelstalen. Fråga administrador de fincas innan du lägger ut lägenheten, inte efter att den första gästen har kommit."
+          ]
+        },
+        {
+          "h2": "Behandlas långtidsuthyrning eller säsongsuthyrning annorlunda?",
+          "paras": [
+            "Inkomstskatten fungerar på samma sätt: modelo 210, samma satser, samma regel för avdrag. Det som ändras är den rättsliga ramen kring uthyrningen. En säsongsuthyrning, för en sommar eller en säsong, faller under hyreslagen (LAU) som uthyrning för annat ändamål än permanent bostad, och styrs till stor del av vad du och hyresgästen kommer överens om.",
+            "En turistuthyrning är något annat. En hel möblerad bostad som marknadsförs via turistkanaler, och som omfattas av en regional turistreglering, faller utanför hyreslagen och under regionala turistregler i stället. Det är just marknadsföringen via turistkanaler som drar uthyrningen över den gränsen, så hur du annonserar spelar lika stor roll som hur länge gästerna stannar."
+          ]
+        },
+        {
+          "h2": "Jag har hyrt ut huset i flera år och aldrig deklarerat. Vad gör jag nu?",
+          "paras": [
+            "Deklarera, och gör det innan skattemyndigheten skriver till dig. Att deklarera sent på eget initiativ ger ett tillägg på 1 procent plus 1 procent för varje hel månads dröjsmål, upp till 12 månader, och därefter 15 procent plus ränta. Det är mycket mer förutsägbart än att vänta, och tillägget ersätter den sanktionsavgift som annars kunnat påföras.",
+            "En gestor eller asesor fiscal som lämnar modelo 210 för icke-bosatta kan sätta ihop de saknade perioderna från dina bokningsbesked och kontoutdrag. Lägg sedan in aprildatumet i kalendern, så blir hyran åter det den var tänkt att vara: något som betalar för huset du tycker så mycket om att vara i."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Steuer auf Mieteinkünfte in Spanien für Nichtansässige",
+      "description": "Miete aus einer spanischen Immobilie wird in Spanien mit modelo 210 versteuert. Hier finden Sie Sätze, abziehbare Kosten, die neue Frist im April und mehr.",
+      "h1": "Spanische Steuer auf Mieteinnahmen, wenn Sie in einem anderen Land leben",
+      "lead": "Wenn Sie im Ausland leben und Ihre spanische Immobilie vermieten, wird die Miete in Spanien über die Einkommensteuer für Nichtansässige besteuert und mit modelo 210 erklärt. Der Satz beträgt 19 Prozent für Ansässige der EU, Norwegens, Islands und Liechtensteins, die zugehörige Kosten abziehen dürfen, und 24 Prozent auf die Bruttomiete für alle anderen. Mieteinkünfte ab 2026 werden in den ersten 20 Tagen im April des Folgejahres erklärt.",
+      "sections": [
+        {
+          "h2": "Ich gebe die Miete schon zu Hause an. Zahle ich auch in Spanien?",
+          "paras": [
+            "Ja. Miete aus einer Immobilie in Spanien wird in Spanien besteuert, über die Einkommensteuer für Nichtansässige (die IRNR), ganz gleich, was Ihr Heimatland damit macht. Sie erklären sie mit modelo 210, demselben Formular, das Nichtansässige für die fiktiven Einkünfte aus einer nicht vermieteten Immobilie verwenden. Auch Ihr heimisches Finanzamt kann nach der spanischen Miete fragen.",
+            "Wie die beiden Länder die Steuer aufteilen und ob Ihnen die in Spanien gezahlte Steuer zu Hause angerechnet wird, hängt von den Regeln Ihres Heimatlandes und seinem Abkommen mit Spanien ab. Das ist eine Frage für einen Steuerberater in Ihrem eigenen Land. Dieser Ratgeber behandelt die spanische Seite, und genau dort verlieren die meisten Eigentümer im Ausland den Überblick."
+          ]
+        },
+        {
+          "h2": "Welchen Steuersatz zahle ich auf Mieteinnahmen?",
+          "paras": [
+            "Der Satz beträgt 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins und 24 Prozent für alle anderen, auch für Ansässige im Vereinigten Königreich. Norwegen liegt außerhalb der EU, wird bei dieser Steuer aber wie ein Mitgliedstaat behandelt. Ein Vermieter aus Oslo oder Bergen zahlt also denselben Satz wie einer aus Stockholm oder Hamburg.",
+            "Der größere Unterschied liegt nicht im Satz, sondern in der Bemessungsgrundlage. Ein Vermieter mit 19 Prozent kann in der Regel Kosten abziehen, während ein Vermieter mit 24 Prozent auf jeden eingenommenen Euro Miete zahlt. Wer mit 24 Prozent besteuert wird, sollte also mit der vollen erhaltenen Miete rechnen, nicht mit dem, was nach den Kosten übrig bleibt."
+          ]
+        },
+        {
+          "h2": "Welche Kosten kann ich von der Miete abziehen?",
+          "paras": [
+            "Ansässige eines anderen EU-Staates oder eines EWR-Staates mit wirksamem steuerlichem Informationsaustausch können Kosten abziehen. Norwegen, Island und Liechtenstein erfüllen das. Die Kosten müssen unmittelbar und untrennbar mit der Vermietung in Spanien zusammenhängen, und Sie brauchen eine Bescheinigung über die steuerliche Ansässigkeit von Ihrem heimischen Finanzamt, um den Abzug zu belegen.",
+            "Alle anderen werden auf die Bruttomiete besteuert, ganz ohne Abzüge. Für einen Eigentümer aus dem Vereinigten Königreich heißt das: Reinigung, Plattformprovision und Reparaturen mindern die spanische Steuer nicht, egal wie hoch sie waren. Bewahren Sie die Rechnungen trotzdem auf, denn Ihr heimisches Finanzamt behandelt sie vielleicht anders.",
+            "Eine Sache sollten Sie sich für später merken. Wenn Sie Abschreibungen, also den jährlichen Betrag für die Abnutzung des Gebäudes, von den Mieteinkünften abziehen, mindert dieser Betrag Ihren Anschaffungswert, wenn Sie später verkaufen. Ein niedrigerer Anschaffungswert bedeutet einen höheren steuerpflichtigen Gewinn. Notieren Sie daher jeden abgezogenen Betrag, Jahr für Jahr."
+          ]
+        },
+        {
+          "h2": "Wann erkläre ich die Miete, nachdem sich die Fristen geändert haben?",
+          "paras": [
+            "Die Fristen haben sich in kurzer Zeit zweimal verschoben, ältere Ratgeber mit vier Quartalsfristen sind also veraltet. Mieteinkünfte aus 2024 und 2025 werden in einer einzigen zusammengefassten Jahreserklärung angegeben, abzugeben vom 1. bis 20. Januar des Folgejahres, mit Lastschrift vom 1. bis 15. Januar.",
+            "Für 2026 war die letzte Quartalserklärung, für Juli bis September 2026, vom 1. bis 20. Oktober 2026 fällig. Mieteinkünfte ab 2026 und eine etwaige gesonderte Erklärung für das vierte Quartal 2026 werden in den ersten 20 Tagen im April des Folgejahres abgegeben, die Lastschrift endet am 15. April. Der erste Zeitraum im April ist der April 2027.",
+            "Weil 2026 ein Umstellungsjahr ist, prüfen Sie, welche Ihrer Monate aus 2026 vor April 2027 bereits erklärt wurden, vor allem wenn ein gestor früher im Jahr für Sie abgegeben hat. Und ab dem 1. Januar 2027 enthält jedes modelo 210 neue Felder, darunter die verfügbaren Tage und den Eigentumsanteil."
+          ]
+        },
+        {
+          "h2": "Muss ich bei einer Ferienvermietung Mehrwertsteuer berechnen?",
+          "paras": [
+            "Normalerweise nicht. Die Vermietung einer Wohnung zu Wohnzwecken ist von der Mehrwertsteuer (IVA) befreit. Steuerpflichtig mit 10 Prozent wird sie, wenn Sie hotelartige Leistungen hinzufügen, also Rezeption, Reinigung während des Aufenthalts, Wäschewechsel, Mahlzeiten, Wäscheservice und Ähnliches. Die Liste spricht von Reinigung während des Aufenthalts, lesen Sie sie also genau, bevor Sie Ihr Angebot ändern.",
+            "Ein Satz von 21 Prozent gilt, wenn die Vermietung weder eine befreite Wohnraumvermietung noch eine hotelartige Beherbergungsleistung ist. Vielleicht haben Sie gelesen, dass Ferienvermietungen generell auf 21 Prozent steigen. Das ist ein Vorschlag, und keine solche Änderung ist im spanischen Recht in Kraft getreten."
+          ]
+        },
+        {
+          "h2": "Was gehört bei der Vermietung an Urlauber noch dazu?",
+          "paras": [
+            "Die Gästeregistrierung. Wer kurzzeitig touristische Unterkünfte vermietet, auch Privateigentümer über Onlineportale, muss die Daten jedes Gastes und die Angaben zur Buchung innerhalb von 24 Stunden nach Beginn des Aufenthalts an die Secretaria de Estado de Seguridad übermitteln und ein Register führen. Viele Eigentümer überlassen das einem Schlüsselverwalter oder Verwalter. Das ist in Ordnung, solange es tatsächlich jemand erledigt.",
+            "Die entscheidende Lizenz ist regional. Das nationale Verfahren für die Registrierungsnummer für Vermietungen wurde aufgehoben, die regionale touristische Registrierung und Lizenzierung bleibt davon aber unberührt und gilt vollständig weiter. Die Regeln unterscheiden sich je nach Region und zunehmend auch je nach Gemeinde. Buchungsplattformen fragen womöglich trotzdem nach einer Nummer (manche sind noch nicht auf dem neuesten Stand), und ihre Pflichten zum Datenaustausch nach der EU-Verordnung 2024/1028 bestehen fort.",
+            "Liegt Ihre Wohnung in einem Gebäude mit Eigentümergemeinschaft, braucht eine neue Ferienvermietung die Zustimmung von drei Fünfteln der Eigentümer, die zugleich drei Fünftel der Miteigentumsanteile halten müssen. Fragen Sie den administrador de fincas, bevor Sie die Wohnung inserieren, nicht erst, wenn der erste Gast ankommt."
+          ]
+        },
+        {
+          "h2": "Wird eine Langzeit- oder Saisonvermietung anders behandelt?",
+          "paras": [
+            "Die Einkommensteuer funktioniert gleich: modelo 210, dieselben Sätze, dieselbe Regel zur Abziehbarkeit. Was sich ändert, ist der rechtliche Rahmen der Vermietung. Eine Saisonvermietung, für einen Sommer oder eine Saison, fällt unter das Mietgesetz (LAU) als Vermietung zu einem anderen Zweck als dem dauerhaften Wohnen und richtet sich weitgehend nach dem, was Sie mit dem Mieter vereinbaren.",
+            "Eine Ferienvermietung ist etwas anderes. Eine ganze möblierte Wohnung, die über touristische Kanäle vermarktet wird und einer regionalen Tourismusregelung unterliegt, fällt nicht unter das Mietgesetz, sondern unter die regionalen Tourismusvorschriften. Gerade die Vermarktung über touristische Kanäle zieht eine Vermietung über diese Grenze. Wie Sie inserieren, zählt also genauso viel wie die Dauer des Aufenthalts."
+          ]
+        },
+        {
+          "h2": "Ich vermiete seit Jahren und habe es nie erklärt. Was jetzt?",
+          "paras": [
+            "Erklären Sie es, und zwar bevor das Finanzamt sich bei Ihnen meldet. Wer aus eigenem Antrieb verspätet abgibt, zahlt einen Zuschlag von 1 Prozent plus 1 Prozent für jeden vollen Monat Verzug, bis zu 12 Monaten, danach 15 Prozent plus Zinsen. Das ist weit besser planbar als Abwarten, und der Zuschlag tritt an die Stelle jeder Strafe, die sonst hätte verhängt werden können.",
+            "Ein gestor oder asesor fiscal, der modelo 210 für Nichtansässige abgibt, kann die fehlenden Zeiträume aus Ihren Buchungsübersichten und Kontoauszügen zusammenstellen. Tragen Sie sich danach den Termin im April in den Kalender ein, und die Miete wird wieder zu dem, was sie sein sollte: etwas, das das Haus mitfinanziert, in dem Sie so gern Zeit verbringen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Impôt sur les revenus locatifs en Espagne pour non-résidents",
+      "description": "Le loyer d'un logement espagnol est imposé en Espagne sur le modelo 210 : taux, frais déductibles, nouvelle période d'avril et location saisonnière.",
+      "h1": "Payer l'impôt espagnol sur vos loyers quand vous vivez dans un autre pays",
+      "lead": "Si vous vivez à l'étranger et louez votre bien en Espagne, le loyer est imposé en Espagne au titre de l'impôt sur le revenu des non-résidents et déclaré sur le modelo 210. Le taux est de 19 pour cent pour les résidents de l'UE, de Norvège, d'Islande et du Liechtenstein, qui peuvent déduire les frais liés, et de 24 pour cent sur le loyer brut pour tous les autres. Les loyers perçus à partir de 2026 se déclarent dans les 20 premiers jours d'avril de l'année suivante.",
+      "sections": [
+        {
+          "h2": "Je déclare déjà le loyer chez moi. Dois-je aussi payer en Espagne ?",
+          "paras": [
+            "Oui. Le loyer d'un bien situé en Espagne est imposé en Espagne, au titre de l'impôt sur le revenu des non-résidents (l'IRNR), quoi qu'en fasse votre pays d'origine. Vous le déclarez sur le modelo 210, le même formulaire que les non-résidents utilisent pour le revenu imputé d'un logement qu'ils ne louent pas. Votre administration fiscale peut aussi vous interroger sur le loyer espagnol.",
+            "La façon dont les deux pays se partagent l'impôt, et la question de savoir si vous obtenez chez vous un crédit pour ce que vous avez payé en Espagne, dépendent des règles de votre pays et de sa convention avec l'Espagne. Cette partie relève d'un conseiller fiscal dans votre propre pays. Ce guide couvre le côté espagnol, là où la plupart des propriétaires vivant à l'étranger perdent le fil."
+          ]
+        },
+        {
+          "h2": "Quel taux s'applique à mes loyers ?",
+          "paras": [
+            "Le taux est de 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein, et de 24 pour cent pour tous les autres, y compris les résidents du Royaume-Uni. La Norvège est hors de l'UE, mais pour cet impôt elle est traitée comme le serait un État membre : un bailleur vivant à Oslo ou à Bergen paie donc le même taux qu'un bailleur vivant à Stockholm ou à Hambourg.",
+            "La plus grande différence ne tient pas au taux mais à la base. Un bailleur au taux de 19 pour cent peut généralement déduire ses frais, tandis qu'un bailleur à 24 pour cent paie sur chaque euro de loyer encaissé. Un bailleur à 24 pour cent doit donc budgéter sur la totalité du loyer perçu, et non sur ce qui reste après les frais."
+          ]
+        },
+        {
+          "h2": "Quels frais puis-je déduire du loyer ?",
+          "paras": [
+            "Les résidents d'un autre État de l'UE, ou d'un État de l'EEE pratiquant un échange effectif d'informations fiscales, peuvent déduire leurs dépenses. La Norvège, l'Islande et le Liechtenstein remplissent cette condition. Les frais doivent être directement et indissociablement liés à la location en Espagne, et vous avez besoin d'un certificat de résidence fiscale délivré par votre administration fiscale pour appuyer la déduction.",
+            "Tous les autres sont imposés sur le loyer brut, sans aucune déduction. Pour un propriétaire britannique, cela signifie que le ménage, la commission de la plateforme et les réparations ne réduisent pas l'impôt espagnol, quel que soit leur montant. Gardez tout de même les factures, car votre administration fiscale peut les traiter différemment.",
+            "Un point à garder en tête pour plus tard. Si vous déduisez l'amortissement, la part annuelle qui reflète l'usure du bâtiment, de vos revenus locatifs, ce montant réduit votre valeur d'acquisition le jour où vous vendez. Une valeur d'acquisition plus basse signifie une plus-value imposable plus élevée : gardez donc une trace de chaque montant déduit, année après année."
+          ]
+        },
+        {
+          "h2": "Quand déclarer les loyers maintenant que les dates ont changé ?",
+          "paras": [
+            "Les dates ont changé deux fois en peu de temps, si bien que les anciens guides décrivant quatre échéances trimestrielles sont dépassés. Les loyers perçus en 2024 et 2025 se déclarent sur une seule déclaration annuelle groupée, déposée du 1er au 20 janvier de l'année suivante, avec un prélèvement possible du 1er au 15 janvier.",
+            "Pour 2026, la dernière déclaration trimestrielle, couvrant juillet à septembre 2026, était due du 1er au 20 octobre 2026. Les loyers perçus à partir de 2026, ainsi que toute déclaration séparée du quatrième trimestre 2026, se déclarent dans les 20 premiers jours d'avril de l'année suivante, le prélèvement fermant le 15 avril. La première période d'avril est celle d'avril 2027.",
+            "Comme 2026 est une année de transition, vérifiez quels mois de 2026 ont déjà été déclarés avant avril 2027, surtout si un gestor a déposé pour vous plus tôt dans l'année. Et à partir du 1er janvier 2027, chaque modelo 210 comporte de nouveaux champs, notamment les jours de disponibilité et le pourcentage de propriété."
+          ]
+        },
+        {
+          "h2": "Dois-je facturer la TVA sur une location saisonnière ?",
+          "paras": [
+            "En général, non. La location d'un logement à usage d'habitation est exonérée de TVA (IVA). Elle devient taxable à 10 pour cent lorsque vous ajoutez des services de type hôtelier, c'est-à-dire réception, ménage pendant le séjour, changement du linge, repas, blanchisserie et services similaires. La liste parle du ménage pendant le séjour : lisez-la attentivement avant de modifier ce que vous proposez.",
+            "Un taux de 21 pour cent s'applique lorsque la location n'est ni une location d'habitation exonérée ni un service d'hébergement de type hôtelier. Vous avez peut-être lu que les locations touristiques allaient passer à 21 pour cent dans tous les cas. Il s'agit d'une proposition, et aucun changement de ce type n'est entré en vigueur dans le droit espagnol."
+          ]
+        },
+        {
+          "h2": "Qu'implique encore la location à des vacanciers ?",
+          "paras": [
+            "L'enregistrement des voyageurs. Toute personne qui loue un hébergement touristique de courte durée, y compris les particuliers passant par des plateformes en ligne, doit transmettre les données de chaque voyageur et celles de la transaction à la Secretaria de Estado de Seguridad dans les 24 heures suivant le début du séjour, et tenir un registre. Beaucoup de propriétaires laissent cela à la personne qui garde les clés ou à un gestionnaire, ce qui est très bien, à condition que quelqu'un le fasse réellement.",
+            "La licence qui compte est régionale. La procédure nationale d'enregistrement des locations a été annulée, mais l'enregistrement et les licences touristiques régionaux ne sont pas concernés et restent pleinement en vigueur, et les règles varient selon la région et de plus en plus selon la commune. Les plateformes de réservation peuvent encore demander un numéro (certaines n'ont pas suivi), et leurs obligations de partage de données au titre du règlement européen 2024/1028 restent en place.",
+            "Si votre appartement se trouve dans un immeuble en copropriété, une nouvelle location touristique doit être approuvée par les trois cinquièmes des copropriétaires, qui doivent aussi détenir les trois cinquièmes des quotes-parts. Interrogez l'administrador de fincas avant de mettre l'appartement en ligne, pas après l'arrivée du premier voyageur."
+          ]
+        },
+        {
+          "h2": "Une location longue durée ou saisonnière est-elle traitée différemment ?",
+          "paras": [
+            "L'impôt sur le revenu fonctionne de la même façon : modelo 210, mêmes taux, même règle de déductibilité. Ce qui change, c'est le cadre juridique de la location. Une location saisonnière, pour un été ou une saison, relève de la loi sur les baux (LAU) en tant que location à un usage autre que la résidence permanente, et dépend largement de ce que vous et le locataire convenez.",
+            "La location touristique est différente. Un logement entier meublé, commercialisé par des canaux touristiques et soumis à un régime touristique régional, sort de la loi sur les baux et relève plutôt des règles touristiques régionales. C'est justement la commercialisation par des canaux touristiques qui fait basculer une location de l'autre côté de cette ligne : la façon dont vous faites votre annonce compte donc autant que la durée du séjour des voyageurs."
+          ]
+        },
+        {
+          "h2": "Je loue la maison depuis des années sans l'avoir jamais déclaré. Que faire ?",
+          "paras": [
+            "Déclarez-le, et faites-le avant que l'administration fiscale ne vous écrive. Déposer en retard de votre propre initiative entraîne une majoration de 1 pour cent plus 1 pour cent par mois complet de retard, jusqu'à 12 mois, puis de 15 pour cent plus des intérêts. C'est bien plus prévisible que d'attendre, et la majoration remplace toute sanction qui aurait pu être infligée par ailleurs.",
+            "Un gestor ou un asesor fiscal qui dépose le modelo 210 pour des non-résidents peut reconstituer les périodes manquantes à partir de vos relevés de réservation et de vos relevés bancaires. Notez ensuite la date d'avril dans votre agenda, et le loyer redevient ce qu'il devait être : quelque chose qui paie la maison où vous aimez tant passer du temps."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Belasting op huurinkomsten in Spanje voor niet-inwoners",
+      "description": "Huur uit een Spaanse woning wordt in Spanje belast via modelo 210, met tarieven, aftrekbare kosten en een nieuwe aangifteperiode in april.",
+      "h1": "Spaanse belasting betalen over huur als u in een ander land woont",
+      "lead": "Woont u in het buitenland en verhuurt u uw Spaanse woning, dan wordt de huur in Spanje belast via de inkomstenbelasting voor niet-inwoners en aangegeven met modelo 210. Het tarief is 19 procent voor inwoners van de EU, Noorwegen, IJsland en Liechtenstein, die samenhangende kosten mogen aftrekken, en 24 procent over de bruto huur voor alle anderen. Huur die vanaf 2026 wordt ontvangen, wordt aangegeven in de eerste 20 dagen van april van het volgende jaar.",
+      "sections": [
+        {
+          "h2": "Ik geef de huur al thuis aan. Betaal ik ook in Spanje?",
+          "paras": [
+            "Ja. Huur uit een woning in Spanje wordt in Spanje belast, via de inkomstenbelasting voor niet-inwoners (de IRNR), wat uw eigen land er ook mee doet. U geeft het aan met modelo 210, hetzelfde formulier dat niet-inwoners gebruiken voor het fictieve inkomen op een woning die zij niet verhuren. Ook uw eigen belastingdienst kan naar de Spaanse huur vragen.",
+            "Hoe de twee landen de belasting verdelen, en of u thuis een verrekening krijgt voor wat u in Spanje betaalde, hangt af van de regels van uw eigen land en het belastingverdrag met Spanje. Dat deel is een vraag voor een belastingadviseur in uw eigen land. Deze gids behandelt de Spaanse kant, waar de meeste eigenaren in het buitenland het overzicht kwijtraken."
+          ]
+        },
+        {
+          "h2": "Welk tarief betaal ik over huur?",
+          "paras": [
+            "Het tarief is 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein, en 24 procent voor alle anderen, ook voor inwoners van het Verenigd Koninkrijk. Noorwegen ligt buiten de EU, maar voor deze belasting wordt het behandeld zoals een lidstaat, dus een verhuurder die in Oslo of Bergen woont, betaalt hetzelfde tarief als iemand in Stockholm of Hamburg.",
+            "Het grotere verschil zit niet in het tarief maar in de grondslag. Een verhuurder met het tarief van 19 procent kan meestal kosten aftrekken, terwijl een verhuurder met 24 procent betaalt over elke euro huur die binnenkomt. Een verhuurder met 24 procent moet dus rekenen met de volledige ontvangen huur, niet met wat er na de kosten overblijft."
+          ]
+        },
+        {
+          "h2": "Welke kosten mag ik van de huur aftrekken?",
+          "paras": [
+            "Inwoners van een andere EU-lidstaat, of van een EER-staat met effectieve uitwisseling van belastinginformatie, mogen kosten aftrekken. Noorwegen, IJsland en Liechtenstein voldoen daaraan. De kosten moeten rechtstreeks en onlosmakelijk verbonden zijn met de verhuur in Spanje, en u heeft een verklaring van fiscale woonplaats van uw eigen belastingdienst nodig om de aftrek te onderbouwen.",
+            "Alle anderen worden belast over de bruto huur, zonder enige aftrek. Voor een eigenaar uit het Verenigd Koninkrijk betekent dat dat schoonmaak, platformcommissie en reparaties de Spaanse belasting niet verlagen, hoe hoog ze ook waren. Bewaar de facturen toch, want uw eigen belastingdienst kan er anders mee omgaan.",
+            "Eén ding om voor later te onthouden. Trekt u afschrijving af van de huurinkomsten, de jaarlijkse vergoeding voor slijtage van het gebouw, dan verlaagt dat bedrag uw aanschafwaarde wanneer u uiteindelijk verkoopt. Een lagere aanschafwaarde betekent een grotere belastbare winst, dus houd per jaar bij welk bedrag u heeft afgetrokken."
+          ]
+        },
+        {
+          "h2": "Wanneer geef ik de huur aan nu de data zijn veranderd?",
+          "paras": [
+            "De data zijn in korte tijd twee keer verschoven, dus oudere gidsen die vier kwartaaltermijnen beschrijven, zijn achterhaald. Huur ontvangen in 2024 en 2025 wordt aangegeven op één gegroepeerde jaaraangifte, in te dienen van 1 tot en met 20 januari van het volgende jaar, met automatische incasso van 1 tot en met 15 januari.",
+            "Voor 2026 moest de laatste kwartaalaangifte, over juli tot en met september 2026, worden ingediend van 1 tot en met 20 oktober 2026. Huur die vanaf 2026 wordt ontvangen, en een eventuele aparte aangifte over het vierde kwartaal van 2026, wordt ingediend in de eerste 20 dagen van april van het volgende jaar, waarbij automatische incasso sluit op 15 april. De eerste aprilperiode is april 2027.",
+            "Omdat 2026 een overgangsjaar is, controleert u vóór april 2027 welke maanden van 2026 al zijn aangegeven, vooral als een gestor eerder in het jaar namens u heeft ingediend. En vanaf 1 januari 2027 bevat elke modelo 210 nieuwe velden, waaronder het aantal beschikbare dagen en het eigendomspercentage."
+          ]
+        },
+        {
+          "h2": "Moet ik btw rekenen over vakantieverhuur?",
+          "paras": [
+            "Meestal niet. Verhuur van een woning als woonruimte is vrijgesteld van btw (IVA). Ze wordt belast tegen 10 procent wanneer u hotelachtige diensten toevoegt, zoals receptie, schoonmaak tijdens het verblijf, verschonen van beddengoed, maaltijden, wasservice en vergelijkbaar. De lijst spreekt van schoonmaak tijdens het verblijf, dus lees die goed voordat u verandert wat u aanbiedt.",
+            "Een tarief van 21 procent geldt wanneer de verhuur noch een vrijgestelde woonverhuur noch een hotelachtige accommodatiedienst is. Misschien heeft u gelezen dat toeristische verhuur over de hele linie naar 21 procent gaat. Dat is een voorstel, en zo'n wijziging is in de Spaanse wet niet in werking getreden."
+          ]
+        },
+        {
+          "h2": "Wat komt er nog meer bij verhuur aan vakantiegasten kijken?",
+          "paras": [
+            "Registratie van gasten. Iedereen die kortdurend toeristisch verblijf verhuurt, ook particuliere eigenaren die online platforms gebruiken, moet de gegevens van elke gast en de transactiegegevens binnen 24 uur na het begin van het verblijf doorgeven aan de Secretaria de Estado de Seguridad, en een register bijhouden. Veel eigenaren laten dit over aan een sleutelbeheerder of beheerder, en dat is prima, zolang iemand het ook echt doet.",
+            "De vergunning die telt, is regionaal. De landelijke procedure voor het registratienummer voor verhuur is nietig verklaard, maar de regionale toeristische registratie en vergunning blijven onaangetast en volledig van kracht, en de regels verschillen per regio en steeds vaker per gemeente. Boekingsplatforms kunnen nog steeds om een nummer vragen (sommige lopen achter), en hun verplichtingen om gegevens te delen onder EU-verordening 2024/1028 blijven bestaan.",
+            "Ligt uw appartement in een gebouw met een VvE, dan moet nieuwe toeristische verhuur worden goedgekeurd door drie vijfde van de eigenaren, die ook drie vijfde van de aandelen moeten vertegenwoordigen. Vraag het de administrador de fincas voordat u het appartement aanbiedt, niet nadat de eerste gast is aangekomen."
+          ]
+        },
+        {
+          "h2": "Wordt langdurige of seizoensverhuur anders behandeld?",
+          "paras": [
+            "De inkomstenbelasting werkt op dezelfde manier: modelo 210, dezelfde tarieven, dezelfde regel voor aftrek. Wat verandert, is het juridische kader rond de verhuur. Seizoensverhuur, voor een zomer of een seizoen, valt onder de huurwet (LAU) als verhuur voor een ander gebruik dan permanente bewoning, en wordt grotendeels bepaald door wat u en de huurder afspreken.",
+            "Toeristische verhuur is anders. Een volledig gemeubileerde woning die via toeristische kanalen wordt aangeboden en onder een regionale toerismeregeling valt, valt buiten de huurwet en onder de regionale toerismeregels. Juist het aanbieden via toeristische kanalen brengt een verhuur over die grens, dus hoe u adverteert telt even zwaar als hoe lang de gasten blijven."
+          ]
+        },
+        {
+          "h2": "Ik verhuur het huis al jaren en heb het nooit aangegeven. Wat nu?",
+          "paras": [
+            "Geef het aan, en doe dat voordat de belastingdienst u aanschrijft. Wie uit eigen beweging te laat indient, betaalt een toeslag van 1 procent plus 1 procent voor elke volle maand vertraging, tot 12 maanden, en daarna 15 procent plus rente. Dat is veel voorspelbaarder dan wachten, en de toeslag komt in plaats van een boete die anders had kunnen worden opgelegd.",
+            "Een gestor of asesor fiscal die modelo 210 voor niet-inwoners indient, kan de ontbrekende periodes samenstellen uit uw boekingsoverzichten en bankafschriften. Zet daarna de datum in april in uw agenda, en de huur wordt weer wat die moest zijn: iets wat het huis betaalt waar u zo graag tijd doorbrengt."
+          ]
+        }
+      ]
+    }
+  }
+}

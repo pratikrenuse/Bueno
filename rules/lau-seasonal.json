@@ -38,7 +38,7 @@
       "statement": "No 2025 or 2026 tightening of seasonal lets has been enacted. The LAU consolidated text is unchanged since 25 May 2023.",
       "value": false,
       "unit": null,
-      "status": "verified",
+      "status": "partial",
       "source": {
         "name": "Congreso de los Diputados",
         "ref": "Proposicion de Ley 122/000136, BOCG of 2 December 2025",
@@ -47,7 +47,7 @@
         "read_on": "2026-09-07"
       },
       "review_by": "2026-12-31",
-      "notes": "The bill on temporary and room lets is still in tramitacion before the Comision de Vivienda. Verified only to 2 December 2025 plus the negative check on the LAU. Re-check Congress before publishing."
+      "notes": "The bill on temporary and room lets is still in tramitacion before the Comision de Vivienda. Verified only to 2 December 2025 plus the negative check on the LAU. Re-check Congress before publishing. SUPERSEDED IN PART 22 Oct 2026: the BOE consolidated LAU was updated on 7 Oct 2026. Real Decreto-ley 28/2026 and 29/2026 change tacit extensions, rent updates and temporary leases, pending validation by Congress. Do not state that the LAU is unchanged. See let.* rules."
     },
     {
       "id": "lau.short_term_definitions",

@@ -50,6 +50,36 @@ returned zero on 21 Oct 2026 while Google had 11.5K pages indexed.
 - To add answers: pick verified rules not yet used, write EN, translate into the five other
   languages with `TRANSLATIONS.md` and the terms already used in `answers.js`, run `npm test`.
 
+## Adding more content
+
+Follow `content/README.md`: the eight step pipeline (verify rules, draft, fact check, translate
+per language, merge with `content/merge-answers.mjs` and `content/merge-guides.mjs`, gate with
+`npm test`). `locale_check.mjs` fails the build if any page family is missing a language.
+
+## Guides (long form)
+
+- `guides/<slug>.json`, one file per guide with all six languages in `i18n`, loaded by
+  `guides/index.js` (node only). Routes `/guides` (hub by topic) and `/guides/<slug>`, rendered
+  by `seo/StaticPage.jsx` from the prerendered block, with Article schema, sources and a checked date.
+- 31 guides as of 22 Oct 2026 (buying, tax, selling, letting, community, home, insurance, claims,
+  inheritance, residency). Every fact rests on verified rules listed in `rules`. `guide_check.mjs`
+  (in `npm test`) enforces six languages, matching structure, title and description lengths, no
+  dashes, no brands, verified rules and existing answer links. Only fully translated guides publish.
+- Workflow that worked: research verified rules first, write English from rules only (old
+  articles in `studio/articles` for topic and structure, never their figures), independent fact
+  check against the rules, then translate per language, then merge and run the gates.
+
+## Rules base growth (22 Oct 2026)
+
+New verified files: `rules/buying.json`, `owning.json`, `letting.json`, `residency.json`,
+`inheritance.json` (about 170 verified rules). `answers/sources.js` finds rules anywhere in a
+file (any object with id and status). 190 answers in six languages.
+
+Watch list: Real Decreto-ley 28/2026 and 29/2026 (leases, rent updates, short-stay VAT from
+1 December 2026) await validation by Congress; rules are partial with review_by 2026-11-30.
+If confirmed, update the letting rules, the rental-vat tool and the answers on holiday-let IVA.
+`lau.2025_2026_reform` is outdated and marked partial.
+
 ## About page
 
 `answers/about.js`, six languages, route kind `about`. Editor Pratik Renuse, sponsored by Bueno.
@@ -78,13 +108,14 @@ unknown URL is `noindex`.
 
 ## Deploying
 
-- Production is Vercel, deploying `main` of github.com/pratikrenuse/Bueno.
-- A cloud session clones the repo and pushes. Pushing to `main` needs Pratik to approve the
-  permission prompt in the session. Ask for that approval in one line; do not leave finished work
-  sitting on a side branch.
-- Do not run git in Pratik's local copy (`~/Documents/GitHub/Bueno`); GitHub Desktop pulls.
-- On the deploy commit, leave `seo/lastmod.json` uncommitted so the Vercel build marks changed
-  pages with today's date and IndexNow submits them. Commit the regenerated ledger straight after.
+- Claude writes the finished, tested changes straight into Pratik's local folder
+  `/Users/pratikrenuse/Documents/GitHub/Bueno`. Pratik commits and pushes from GitHub Desktop, and
+  Vercel deploys `main`.
+- Never push from a cloud session, and never create branches or pull requests. Building and testing
+  in a cloud clone is fine; the result goes into the local folder.
+- Do not run git in the local folder.
+- Do not overwrite `seo/lastmod.json` from a local build. The Vercel build works out which pages
+  changed and IndexNow submits them.
 
 ## What moves rankings and citations (research, Oct 2026)
 

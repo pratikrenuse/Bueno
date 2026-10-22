@@ -1,0 +1,463 @@
+{
+  "slug": "holiday-lets-and-tourist-licences-in-spain",
+  "topic": "letting",
+  "tool": "rental-vat",
+  "rules": [
+    "lau.tourist_excluded",
+    "lau.seasonal_basis",
+    "let.lau.deposit",
+    "registry.regional_unaffected",
+    "registry.survives",
+    "let.tourist.valencia",
+    "let.tourist.valencia_conditions",
+    "let.tourist.andalucia",
+    "let.tourist.andalucia_capacity",
+    "let.tourist.balears",
+    "let.tourist.murcia",
+    "lph.17_12.majority",
+    "lph.17_12.effective_date",
+    "lph.17_12.retroactivity",
+    "lph.17_12.expense_surcharge",
+    "lph.scope",
+    "parte.obligation",
+    "let.tax.modelo179",
+    "let.tax.dac7",
+    "vat.letting",
+    "irnr.rates",
+    "irnr.rental.deductibility",
+    "deadline.rental.from_2026",
+    "let.lau.tacit_extension_current"
+  ],
+  "answers": [
+    "seasonal-let-versus-tourist-let-spain",
+    "community-approval-for-a-new-tourist-let-spain",
+    "tourist-letting-and-the-community-of-owners",
+    "community-surcharge-on-a-tourist-flat-spain",
+    "does-a-community-tourist-let-ban-cover-seasonal-lets",
+    "guest-registration-for-spanish-holiday-lets",
+    "iva-on-a-spanish-holiday-let",
+    "deduct-costs-from-spanish-rental-income"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Holiday Lets and Tourist Licences in Spain",
+      "description": "What a holiday let in Spain needs: the regional tourist licence, your community's vote, guest registration, VAT and tax on the rent from abroad.",
+      "h1": "Letting your Spanish home to holidaymakers: licences, neighbours and tax",
+      "lead": "To let a whole furnished home to holidaymakers in Spain you need the tourist registration of the region where it sits, and since 3 April 2025 a new tourist let in a building also needs the approval of three fifths of the owners, holding three fifths of the quotas. You must report every guest to the state security authorities within 24 hours, and you declare the rent in Spain on modelo 210. The national registration number procedure was annulled, so there is no state number to obtain.",
+      "sections": [
+        {
+          "h2": "Is my holiday let a tourist let or a seasonal let?",
+          "paras": [
+            "It depends a great deal on how you market it, not only on how long people stay. A whole furnished home, ready to move into and marketed or promoted through tourist channels, is a tourist let. It falls outside the national lease law (the LAU) and comes under the region's tourism rules, which is where licences and registers live.",
+            "A seasonal let, for the summer or another season, is a lease under the LAU for a use other than housing, and it is governed mostly by what you and the tenant agree. The cash deposit on a seasonal let is two months of rent. The moment you list a seasonal let on a holiday platform, though, you are using a tourist channel, and that is exactly what pulls a let into the tourism rules.",
+            "So decide which you want before you write the advert. Owners who want August with the family and a steady tenant the rest of the year are usually in the seasonal camp. Weekly guests from June to October means the tourist one."
+          ]
+        },
+        {
+          "h2": "Do I still need a national registration number?",
+          "paras": [
+            "No. The national registration number procedure has been annulled, so there is no state number to apply for or renew. Platforms may still ask for one in practice, and some official pages had not been updated when we checked, so a request for one should not worry you.",
+            "What binds you is the regional licence or registration, and that is unaffected and fully in force. The rules vary by region and, more and more, by town. The single digital window and the duty of platforms to share data with the authorities also survive, because they implement an EU regulation on short-term lets."
+          ]
+        },
+        {
+          "h2": "What does my region ask for?",
+          "paras": [
+            "In the Comunitat Valenciana you file a responsible declaration (declaración responsable) and are entered in the regional tourism register, backed by a favourable town hall report that tourist use fits the local planning rules. Registration lasts five years and is renewed with a new declaration and updated report in the month before it expires. The home is let as a whole for stays of ten days or less to the same guest, letting by rooms is prohibited, and every advert must show the registration number.",
+            "In Andalucía you file the declaration electronically before the service starts, and you may advertise the home as a tourist dwelling only from that moment. It is then entered in the Registro de Turismo de Andalucía, whose code must appear on the contract and the receipt. A home let as a whole can take at most fifteen guests, and one let by rooms at most six. A home in a building whose community statutes expressly prohibit tourist accommodation cannot be a tourist dwelling.",
+            "In the Illes Balears, advertising tourist stays without first filing the declaration of start of tourist activity (DRIAT) is illegal, and every advert must show the registration number. In the Región de Murcia you file a declaration before you start, the home enters the regional register once a complete declaration is in, and adverts carry the number. Murcia allows letting the whole home or by bedrooms.",
+            "In Valencia and Andalucía, town halls may cap the number of tourist homes per building or area, and whether your town has paused new registrations is a local question. For Catalonia and the Canary Islands, ask the regional tourism authority and the town hall directly before you commit to a plan."
+          ]
+        },
+        {
+          "h2": "Can the other owners in my building stop me?",
+          "paras": [
+            "Yes, and since 3 April 2025 they also have to say yes first. Article 17.12 of the horizontal property law requires three fifths of the owners, who must also hold three fifths of the participation quotas, to approve, limit, condition or prohibit tourist letting in the building. Before that date this majority was what it took to ban a tourist let. Now it is also what it takes to start one.",
+            "The vote is not retroactive. An owner already letting may carry on, but only where the tourist licence or responsible declaration was obtained before 3 April 2025. A municipal planning compatibility report on its own does not count. The same majority may also raise the share of common costs paid by a tourist flat, by up to 20 percent.",
+            "A genuine seasonal let is outside article 17.12. A community can still restrict uses by other routes, such as a clause in its statutes, so read the statutes and the recent minutes before you buy, not after the first complaint from a neighbour."
+          ]
+        },
+        {
+          "h2": "What do I have to do for each guest?",
+          "paras": [
+            "Report them. Anyone running or intermediating in lodging, expressly including private individuals letting tourist homes through portals, must send the guest and booking details to the Secretaría de Estado de Seguridad within 24 hours of the start of the stay and keep a register. A foreign owner letting from abroad is covered too, and the data includes how the guest paid.",
+            "This is the job most worth handing to the person who does your check-ins (with a clear agreement on who sends what, and when). Twenty-four hours goes quickly when guests land on a Saturday evening and you are at home in Gothenburg.",
+            "Two reports happen without you. Platforms and other intermediaries report each tourist let to the tax office once a year on modelo 179, in January, for the previous year, and you do not file it yourself. Digital platforms also report their hosts on modelo 238, including amounts paid each quarter, and that information goes to the tax office where you live."
+          ]
+        },
+        {
+          "h2": "Do I charge VAT on a holiday let?",
+          "paras": [
+            "Under the rules in force when this guide was written, letting a home to live in is exempt from VAT (IVA). A let where you provide hotel-type services, such as reception, cleaning during the stay, linen changes or meals, is taxed at 10 percent, and 21 percent applies to an operation that is neither an exempt residential let nor a hotel-type accommodation service.",
+            "Two decree-laws issued in autumn 2026 (Real Decreto-ley 28/2026 and 29/2026), which still await confirmation by Congress, change several letting rules. Until they are confirmed and their effect on short stays is clear, an owner should check the current position with a gestor or an abogado before setting prices for the coming season or signing a new contract. The holiday let VAT checker on this site shows where your let falls today."
+          ]
+        },
+        {
+          "h2": "How is holiday rent taxed if I live abroad?",
+          "paras": [
+            "The rent is taxed in Spain under non-resident income tax and declared on modelo 210. The rate is 19 percent for residents of the EU, Iceland, Norway and Liechtenstein, who may deduct the costs linked to the let, and 24 percent on the gross rent for everyone else, including residents of the United Kingdom.",
+            "Rent earned from 2026 is filed in the first 20 days of April of the following year. Keep every cleaning invoice, utility bill and platform statement. Those are the costs an owner at the 19 percent rate can set against the rent, and the tax office already has the platform figures."
+          ]
+        },
+        {
+          "h2": "I am buying with a holiday let in mind. What should I check first?",
+          "paras": [
+            "Check three things before you sign anything. Whether the region and the town are still accepting new tourist registrations for that address. Whether the community has voted on tourist letting, and whether its statutes say anything about it. And, if the seller says the home is already licensed, whether that registration was obtained before 3 April 2025 and is still valid.",
+            "A licence in the seller's name and a page of good reviews do not, on their own, tell you whether the next owner can carry on. Ask for the registration number, check it with the regional tourism authority, and ask the community's administrador de fincas for the minutes of recent meetings.",
+            "Get those answers early and the rest is good housekeeping: clear adverts with the number shown, every guest reported on time, the rent declared each April. Then the let pays its way, and you can enjoy the weeks you keep for yourself."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Ferieutleie og turistlisens i Spania",
+      "description": "Dette krever ferieutleie i Spania: regional turistlisens, sameiets avstemning, gjesteregistrering, merverdiavgift og skatt på leien fra utlandet.",
+      "h1": "Slik leier du ut boligen din i Spania til feriegjester: lisens, naboer og skatt",
+      "lead": "For å leie ut en hel møblert bolig til feriegjester i Spania trenger du turistregistreringen i regionen der den ligger, og siden 3. april 2025 krever ny turistutleie i et bygg også godkjenning fra tre femtedeler av eierne, med tre femtedeler av eierbrøkene. Du må melde hver gjest til statens sikkerhetsmyndigheter innen 24 timer, og du oppgir leien i Spania på modelo 210. Den nasjonale ordningen med registreringsnummer er opphevet, så det finnes ikke noe statlig nummer å skaffe.",
+      "sections": [
+        {
+          "h2": "Er ferieutleien min turistutleie eller sesongutleie?",
+          "paras": [
+            "Det avhenger i stor grad av hvordan du markedsfører den, ikke bare av hvor lenge folk blir. En hel møblert bolig, klar til innflytting og markedsført eller promotert gjennom turistkanaler, er turistutleie. Den faller utenfor den nasjonale husleieloven (LAU) og inn under regionens turistregler, og det er der lisenser og registre hører hjemme.",
+            "En sesongutleie, for sommeren eller en annen sesong, er en kontrakt etter LAU for annen bruk enn bolig, og den styres i hovedsak av det du og leietakeren avtaler. Det kontante depositumet ved sesongutleie er to måneders leie. Men i det øyeblikket du legger ut en sesongutleie på en ferieplattform, bruker du en turistkanal, og det er nettopp det som trekker en utleie inn under turistreglene.",
+            "Bestem deg derfor for hva du vil før du skriver annonsen. Eiere som vil ha august med familien og en stabil leietaker resten av året, havner som regel i sesongleiren. Ukesgjester fra juni til oktober betyr turistutleie."
+          ]
+        },
+        {
+          "h2": "Trenger jeg fortsatt et nasjonalt registreringsnummer?",
+          "paras": [
+            "Nei. Den nasjonale ordningen med registreringsnummer er opphevet, så det finnes ikke noe statlig nummer å søke om eller fornye. Plattformer kan i praksis fortsatt be om et, og noen offentlige sider var ikke oppdatert da vi sjekket, så en forespørsel om nummer bør ikke bekymre deg.",
+            "Det som binder deg er den regionale lisensen eller registreringen, og den er uberørt og fullt i kraft. Reglene varierer fra region til region og i økende grad fra kommune til kommune. Den digitale enkeltportalen og plattformenes plikt til å dele data med myndighetene består også, fordi de gjennomfører en EU-forordning om korttidsutleie."
+          ]
+        },
+        {
+          "h2": "Hva krever regionen min?",
+          "paras": [
+            "I Comunitat Valenciana leverer du en declaración responsable (egenerklæring) og føres inn i det regionale turistregisteret, støttet av en positiv uttalelse fra kommunen om at turistbruk er forenlig med de lokale planreglene. Registreringen varer i fem år og fornyes med en ny erklæring og oppdatert uttalelse i måneden før den utløper. Boligen leies ut som helhet for opphold på ti dager eller mindre til samme gjest, utleie av enkeltrom er forbudt, og hver annonse må vise registreringsnummeret.",
+            "I Andalucía leverer du erklæringen elektronisk før tjenesten starter, og du kan annonsere boligen som turistbolig først fra det tidspunktet. Den føres deretter inn i Registro de Turismo de Andalucía, og koden derfra må stå på kontrakten og kvitteringen. En bolig som leies ut som helhet kan ta imot høyst femten gjester, og en som leies ut romvis høyst seks. En bolig i et bygg der sameiets vedtekter uttrykkelig forbyr turistovernatting kan ikke være turistbolig.",
+            "På Balearene (Illes Balears) er det ulovlig å annonsere turistopphold uten først å ha levert erklæringen om oppstart av turistvirksomhet (DRIAT), og hver annonse må vise registreringsnummeret. I Región de Murcia leverer du en erklæring før du starter, boligen føres inn i det regionale registeret når en fullstendig erklæring er levert, og annonsene skal ha nummeret. Murcia tillater utleie av hele boligen eller romvis.",
+            "I Valencia og Andalucía kan kommunene sette tak på antall turistboliger per bygg eller område, og om din kommune har stanset nye registreringer er et lokalt spørsmål. For Catalonia og Kanariøyene, spør den regionale turistmyndigheten og kommunen direkte før du forplikter deg til en plan."
+          ]
+        },
+        {
+          "h2": "Kan de andre eierne i bygget mitt stoppe meg?",
+          "paras": [
+            "Ja, og siden 3. april 2025 må de også si ja først. Artikkel 17.12 i eierseksjonsloven krever at tre femtedeler av eierne, som også må ha tre femtedeler av eierbrøkene, godkjenner, begrenser, setter vilkår for eller forbyr turistutleie i bygget. Før den datoen var dette flertallet det som skulle til for å forby turistutleie. Nå er det også det som skal til for å starte en.",
+            "Avstemningen har ikke tilbakevirkende kraft. En eier som allerede leier ut kan fortsette, men bare der turistlisensen eller declaración responsable ble innhentet før 3. april 2025. En kommunal uttalelse om forenlighet med planreglene teller ikke alene. Samme flertall kan også øke andelen av felleskostnadene som en turistleilighet betaler, med inntil 20 prosent.",
+            "En reell sesongutleie ligger utenfor artikkel 17.12. Et sameie kan fortsatt begrense bruk på andre måter, for eksempel med en klausul i vedtektene, så les vedtektene og de siste protokollene før du kjøper, ikke etter den første klagen fra en nabo."
+          ]
+        },
+        {
+          "h2": "Hva må jeg gjøre for hver gjest?",
+          "paras": [
+            "Melde dem. Alle som driver eller formidler overnatting, uttrykkelig inkludert privatpersoner som leier ut turistboliger gjennom portaler, må sende opplysninger om gjesten og bookingen til Secretaría de Estado de Seguridad innen 24 timer etter at oppholdet starter, og føre et register. En utenlandsk eier som leier ut fra utlandet er også omfattet, og opplysningene inkluderer hvordan gjesten betalte.",
+            "Dette er den oppgaven det er mest verdt å overlate til den som tar seg av innsjekkingen (med en klar avtale om hvem som sender hva, og når). Tjuefire timer går fort når gjestene lander en lørdagskveld og du sitter hjemme i Göteborg.",
+            "To rapporter skjer uten deg. Plattformer og andre formidlere rapporterer hver turistutleie til skattekontoret én gang i året på modelo 179, i januar, for året før, og den leverer du ikke selv. Digitale plattformer rapporterer også vertene sine på modelo 238, inkludert beløp utbetalt hvert kvartal, og de opplysningene går til skattekontoret der du bor."
+          ]
+        },
+        {
+          "h2": "Skal jeg beregne merverdiavgift på ferieutleie?",
+          "paras": [
+            "Etter reglene som gjaldt da denne veiledningen ble skrevet, er utleie av en bolig til å bo i fritatt for merverdiavgift (IVA). En utleie der du tilbyr hotelliknende tjenester, som resepsjon, renhold under oppholdet, skift av sengetøy eller måltider, beskattes med 10 prosent, og 21 prosent gjelder for en transaksjon som verken er en fritatt boligutleie eller en hotelliknende overnattingstjeneste.",
+            "To lovdekreter utstedt høsten 2026 (Real Decreto-ley 28/2026 og 29/2026), som fortsatt venter på bekreftelse i Kongressen, endrer flere regler for utleie. Inntil de er bekreftet og virkningen for korte opphold er klar, bør en eier sjekke gjeldende stilling med en gestor eller en abogado før prisene for kommende sesong settes eller en ny kontrakt signeres. Merverdiavgiftssjekken for ferieutleie på dette nettstedet viser hvor utleien din havner i dag."
+          ]
+        },
+        {
+          "h2": "Hvordan skattlegges ferieleie hvis jeg bor i utlandet?",
+          "paras": [
+            "Leien skattlegges i Spania etter inntektsskatten for ikke-bosatte og oppgis på modelo 210. Satsen er 19 prosent for bosatte i EU, Island, Norge og Liechtenstein, som kan trekke fra kostnadene knyttet til utleien, og 24 prosent av brutto leie for alle andre, også bosatte i Storbritannia.",
+            "Leie opptjent fra 2026 leveres i de første 20 dagene av april året etter. Ta vare på hver renholdsfaktura, strøm- og vannregning og plattformoversikt. Det er kostnadene en eier med satsen på 19 prosent kan trekke fra leien, og skattekontoret har allerede tallene fra plattformene."
+          ]
+        },
+        {
+          "h2": "Jeg kjøper med tanke på ferieutleie. Hva bør jeg sjekke først?",
+          "paras": [
+            "Sjekk tre ting før du signerer noe. Om regionen og kommunen fortsatt tar imot nye turistregistreringer for den adressen. Om sameiet har stemt over turistutleie, og om vedtektene sier noe om det. Og, hvis selgeren sier at boligen allerede har lisens, om den registreringen ble innhentet før 3. april 2025 og fortsatt er gyldig.",
+            "En lisens i selgerens navn og en side med gode anmeldelser sier ikke i seg selv om neste eier kan fortsette. Be om registreringsnummeret, sjekk det med den regionale turistmyndigheten, og be sameiets administrador de fincas om protokollene fra de siste møtene.",
+            "Få de svarene tidlig, så er resten god husholdning: tydelige annonser med nummeret synlig, hver gjest meldt i tide, leien oppgitt hver april. Da betaler utleien for seg, og du kan nyte ukene du holder av til deg selv."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Semesteruthyrning och turistlicens i Spanien",
+      "description": "Det här kräver en semesteruthyrning i Spanien: regional turistlicens, samfällighetens röst, gästregistrering, moms och skatt på hyran från utlandet.",
+      "h1": "Hyra ut din spanska bostad till semesterfirare: licenser, grannar och skatt",
+      "lead": "För att hyra ut en hel möblerad bostad till semesterfirare i Spanien behöver du turistregistrering i den region där den ligger, och sedan 3 april 2025 behöver en ny turistuthyrning i ett flerbostadshus också godkännas av tre femtedelar av ägarna, som representerar tre femtedelar av andelstalen. Du måste anmäla varje gäst till statens säkerhetsmyndigheter inom 24 timmar, och du deklarerar hyran i Spanien på modelo 210. Det nationella förfarandet för registreringsnummer har upphävts, så det finns inget statligt nummer att skaffa.",
+      "sections": [
+        {
+          "h2": "Är min semesteruthyrning en turistuthyrning eller en säsongsuthyrning?",
+          "paras": [
+            "Det beror i hög grad på hur du marknadsför den, inte bara på hur länge folk stannar. En hel möblerad bostad, klar att flytta in i och som marknadsförs eller främjas via turistkanaler, är en turistuthyrning. Den faller utanför den nationella hyreslagen (LAU) och omfattas av regionens turistregler, och det är där licenser och register finns.",
+            "En säsongsuthyrning, för sommaren eller en annan säsong, är ett hyresavtal enligt LAU för annat ändamål än bostad, och den styrs mest av vad du och hyresgästen kommer överens om. Den kontanta depositionen vid säsongsuthyrning är två månadshyror. Men i samma stund som du lägger ut en säsongsuthyrning på en semesterplattform använder du en turistkanal, och det är precis det som drar in uthyrningen under turistreglerna.",
+            "Bestäm därför vilken du vill ha innan du skriver annonsen. Ägare som vill ha augusti med familjen och en stadig hyresgäst resten av året hör oftast till säsongslägret. Gäster vecka för vecka från juni till oktober betyder det turistiska."
+          ]
+        },
+        {
+          "h2": "Behöver jag fortfarande ett nationellt registreringsnummer?",
+          "paras": [
+            "Nej. Det nationella förfarandet för registreringsnummer har upphävts, så det finns inget statligt nummer att ansöka om eller förnya. Plattformar kan i praktiken fortfarande be om ett, och vissa officiella sidor hade inte uppdaterats när vi kontrollerade, så en sådan förfrågan behöver inte oroa dig.",
+            "Det som binder dig är den regionala licensen eller registreringen, och den är opåverkad och gäller fullt ut. Reglerna varierar mellan regioner och, i allt högre grad, mellan kommuner. Den digitala enda kontaktpunkten och plattformarnas skyldighet att dela data med myndigheterna finns också kvar, eftersom de genomför en EU-förordning om korttidsuthyrning."
+          ]
+        },
+        {
+          "h2": "Vad kräver min region?",
+          "paras": [
+            "I Comunitat Valenciana lämnar du en declaración responsable och förs in i det regionala turistregistret, med stöd av ett positivt utlåtande från kommunen om att turistanvändning stämmer med de lokala planreglerna. Registreringen gäller i fem år och förnyas med en ny declaración och ett uppdaterat utlåtande under månaden innan den löper ut. Bostaden hyrs ut i sin helhet för vistelser på tio dagar eller kortare till samma gäst, uthyrning rum för rum är förbjuden, och varje annons måste visa registreringsnumret.",
+            "I Andalucía lämnar du declaración elektroniskt innan verksamheten startar, och du får marknadsföra bostaden som turistbostad först från den stunden. Den förs sedan in i Registro de Turismo de Andalucía, vars kod måste stå på avtalet och kvittot. En bostad som hyrs ut i sin helhet får ta högst femton gäster, och en som hyrs ut rum för rum högst sex. En bostad i ett hus vars samfällighetsstadgar uttryckligen förbjuder turistboende kan inte vara en turistbostad.",
+            "På Illes Balears är det olagligt att marknadsföra turistvistelser utan att först ha lämnat anmälan om start av turistverksamhet (DRIAT), och varje annons måste visa registreringsnumret. I Región de Murcia lämnar du en declaración innan du börjar, bostaden förs in i det regionala registret när en fullständig declaración har kommit in, och annonserna ska ha numret. Murcia tillåter uthyrning av hela bostaden eller rum för rum.",
+            "I Valencia och Andalucía får kommunerna begränsa antalet turistbostäder per hus eller område, och om din kommun har pausat nya registreringar är en lokal fråga. För Katalonien och Kanarieöarna, fråga den regionala turistmyndigheten och kommunen direkt innan du bestämmer dig för en plan."
+          ]
+        },
+        {
+          "h2": "Kan de andra ägarna i huset stoppa mig?",
+          "paras": [
+            "Ja, och sedan 3 april 2025 måste de också säga ja först. Artikel 17.12 i lagen om ägarlägenheter (propiedad horizontal) kräver tre femtedelar av ägarna, som också måste representera tre femtedelar av andelstalen, för att godkänna, begränsa, villkora eller förbjuda turistuthyrning i huset. Före det datumet var det den majoriteten som krävdes för att förbjuda en turistuthyrning. Nu är det också den som krävs för att starta en.",
+            "Omröstningen har ingen retroaktiv verkan. En ägare som redan hyr ut får fortsätta, men bara om turistlicensen eller declaración responsable erhölls före 3 april 2025. Ett kommunalt utlåtande om förenlighet med planreglerna räcker inte ensamt. Samma majoritet får också höja den andel av de gemensamma kostnaderna som en turistlägenhet betalar, med upp till 20 procent.",
+            "En verklig säsongsuthyrning faller utanför artikel 17.12. En samfällighet kan ändå begränsa användningen på andra sätt, som en bestämmelse i stadgarna, så läs stadgarna och de senaste protokollen innan du köper, inte efter det första klagomålet från en granne."
+          ]
+        },
+        {
+          "h2": "Vad måste jag göra för varje gäst?",
+          "paras": [
+            "Anmäla dem. Var och en som bedriver eller förmedlar logiverksamhet, uttryckligen inklusive privatpersoner som hyr ut turistbostäder via portaler, måste skicka uppgifter om gäst och bokning till Secretaría de Estado de Seguridad inom 24 timmar från att vistelsen börjar och föra ett register. En utländsk ägare som hyr ut från utlandet omfattas också, och uppgifterna inkluderar hur gästen betalade.",
+            "Det här är den uppgift som är mest värd att lämna över till den som sköter dina incheckningar (med en tydlig överenskommelse om vem som skickar vad, och när). Tjugofyra timmar går fort när gästerna landar en lördagskväll och du är hemma i Göteborg.",
+            "Två rapporter sker utan dig. Plattformar och andra förmedlare rapporterar varje turistuthyrning till skattemyndigheten en gång om året på modelo 179, i januari, för det föregående året, och du lämnar den inte själv. Digitala plattformar rapporterar också sina värdar på modelo 238, inklusive belopp som betalats ut varje kvartal, och den informationen går till skattemyndigheten där du bor."
+          ]
+        },
+        {
+          "h2": "Ska jag ta ut moms på en semesteruthyrning?",
+          "paras": [
+            "Enligt de regler som gällde när den här guiden skrevs är uthyrning av en bostad att bo i undantagen från moms (IVA). En uthyrning där du tillhandahåller hotelliknande tjänster, som reception, städning under vistelsen, byte av sängkläder eller måltider, beskattas med 10 procent, och 21 procent gäller för en transaktion som varken är en undantagen bostadsuthyrning eller en hotelliknande logitjänst.",
+            "Två lagdekret som utfärdades hösten 2026 (Real Decreto-ley 28/2026 och 29/2026), och som ännu väntar på bekräftelse av kongressen, ändrar flera regler för uthyrning. Till dess de bekräftats och deras effekt på korta vistelser är klar bör en ägare kontrollera det aktuella läget med en gestor eller en abogado innan priserna för kommande säsong sätts eller ett nytt avtal skrivs. Momsguiden för semesteruthyrning på den här webbplatsen visar var din uthyrning hamnar i dag."
+          ]
+        },
+        {
+          "h2": "Hur beskattas semesterhyra om jag bor utomlands?",
+          "paras": [
+            "Hyran beskattas i Spanien enligt inkomstskatten för icke-bosatta och deklareras på modelo 210. Skattesatsen är 19 procent för boende i EU, Island, Norge och Liechtenstein, som får dra av kostnaderna kopplade till uthyrningen, och 24 procent på bruttohyran för alla andra, inklusive boende i Storbritannien.",
+            "Hyra som tjänas in från 2026 deklareras under de första 20 dagarna i april året därpå. Spara varje städfaktura, räkning för el och vatten och varje besked från plattformen. Det är de kostnaderna en ägare med 19 procent kan ställa mot hyran, och skattemyndigheten har redan plattformens siffror."
+          ]
+        },
+        {
+          "h2": "Jag köper med tanke på semesteruthyrning. Vad ska jag kontrollera först?",
+          "paras": [
+            "Kontrollera tre saker innan du skriver under något. Om regionen och kommunen fortfarande tar emot nya turistregistreringar för den adressen. Om samfälligheten har röstat om turistuthyrning, och om dess stadgar säger något om det. Och, om säljaren säger att bostaden redan har licens, om den registreringen erhölls före 3 april 2025 och fortfarande är giltig.",
+            "En licens i säljarens namn och en sida med goda omdömen säger inte i sig om nästa ägare kan fortsätta. Be om registreringsnumret, kontrollera det med den regionala turistmyndigheten, och be samfällighetens administrador de fincas om protokollen från de senaste stämmorna.",
+            "Få de svaren tidigt, så är resten god ordning: tydliga annonser med numret synligt, varje gäst anmäld i tid, hyran deklarerad varje april. Då bär uthyrningen sig, och du kan njuta av de veckor du behåller för dig själv."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Ferienvermietung in Spanien: touristische Lizenz und Regeln",
+      "description": "Was eine Ferienvermietung in Spanien braucht: die regionale Lizenz, die Zustimmung der Gemeinschaft, Gästemeldung, Mehrwertsteuer und Steuer auf die Miete.",
+      "h1": "Ihre spanische Immobilie an Urlauber vermieten: Lizenzen, Nachbarn und Steuern",
+      "lead": "Um eine ganze möblierte Wohnung in Spanien an Urlauber zu vermieten, brauchen Sie die touristische Registrierung der Region, in der sie liegt, und seit dem 3. April 2025 braucht eine neue Ferienvermietung in einem Gebäude zudem die Zustimmung von drei Fünfteln der Eigentümer, die drei Fünftel der Anteile halten. Sie müssen jeden Gast innerhalb von 24 Stunden an die staatlichen Sicherheitsbehörden melden und erklären die Miete in Spanien mit modelo 210. Das Verfahren für die nationale Registrierungsnummer wurde aufgehoben, es gibt also keine staatliche Nummer zu beantragen.",
+      "sections": [
+        {
+          "h2": "Ist meine Vermietung eine Ferienvermietung oder eine Saisonvermietung?",
+          "paras": [
+            "Das hängt stark davon ab, wie Sie vermarkten, nicht nur davon, wie lange die Gäste bleiben. Eine ganze möblierte, bezugsfertige Wohnung, die über touristische Kanäle vermarktet oder beworben wird, ist eine Ferienvermietung. Sie fällt nicht unter das nationale Mietgesetz (die LAU), sondern unter die Tourismusvorschriften der Region, und dort sind auch Lizenzen und Register geregelt.",
+            "Eine Saisonvermietung, für den Sommer oder eine andere Saison, ist ein Mietvertrag nach der LAU zu einem anderen Zweck als dem Wohnen und richtet sich überwiegend nach dem, was Sie mit dem Mieter vereinbaren. Die Barkaution bei einer Saisonvermietung beträgt zwei Monatsmieten. Sobald Sie eine Saisonvermietung aber auf einer Ferienplattform inserieren, nutzen Sie einen touristischen Kanal, und genau das zieht eine Vermietung in die Tourismusvorschriften.",
+            "Entscheiden Sie also, was Sie wollen, bevor Sie das Inserat schreiben. Eigentümer, die den August mit der Familie verbringen und den Rest des Jahres einen beständigen Mieter wollen, gehören meist ins Lager der Saisonvermietung. Wöchentlich wechselnde Gäste von Juni bis Oktober bedeuten Ferienvermietung."
+          ]
+        },
+        {
+          "h2": "Brauche ich noch eine nationale Registrierungsnummer?",
+          "paras": [
+            "Nein. Das Verfahren für die nationale Registrierungsnummer wurde aufgehoben, es gibt also keine staatliche Nummer zu beantragen oder zu verlängern. Plattformen fragen in der Praxis womöglich trotzdem danach, und manche offiziellen Seiten waren bei unserer Prüfung noch nicht aktualisiert. Eine solche Anfrage muss Sie also nicht beunruhigen.",
+            "Verbindlich ist für Sie die regionale Lizenz oder Registrierung, und die bleibt unberührt und gilt vollständig weiter. Die Regeln unterscheiden sich je nach Region und zunehmend auch je nach Gemeinde. Das einheitliche digitale Fenster und die Pflicht der Plattformen, Daten mit den Behörden zu teilen, bestehen ebenfalls fort, weil sie eine EU-Verordnung über Kurzzeitvermietungen umsetzen."
+          ]
+        },
+        {
+          "h2": "Was verlangt meine Region?",
+          "paras": [
+            "In der Comunitat Valenciana reichen Sie eine verantwortliche Erklärung (declaración responsable) ein und werden in das regionale Tourismusregister eingetragen, gestützt auf einen positiven Bericht des Rathauses, dass die touristische Nutzung mit der örtlichen Bauleitplanung vereinbar ist. Die Registrierung gilt fünf Jahre und wird im Monat vor Ablauf mit einer neuen Erklärung und einem aktualisierten Bericht verlängert. Die Wohnung wird als Ganzes für Aufenthalte von höchstens zehn Tagen an denselben Gast vermietet, die Vermietung einzelner Zimmer ist verboten, und jedes Inserat muss die Registrierungsnummer zeigen.",
+            "In Andalucía reichen Sie die Erklärung elektronisch ein, bevor die Leistung beginnt, und dürfen die Wohnung erst ab diesem Moment als Ferienwohnung bewerben. Sie wird dann in das Registro de Turismo de Andalucía eingetragen, dessen Code auf Vertrag und Quittung stehen muss. Eine als Ganzes vermietete Wohnung darf höchstens fünfzehn Gäste aufnehmen, eine zimmerweise vermietete höchstens sechs. Eine Wohnung in einem Gebäude, dessen Gemeinschaftssatzung touristische Unterkünfte ausdrücklich verbietet, kann keine Ferienwohnung sein.",
+            "Auf den Illes Balears ist es rechtswidrig, touristische Aufenthalte zu bewerben, ohne vorher die Erklärung über den Beginn der touristischen Tätigkeit (DRIAT) eingereicht zu haben, und jedes Inserat muss die Registrierungsnummer zeigen. In der Región de Murcia reichen Sie vor Beginn eine Erklärung ein, die Wohnung wird in das regionale Register eingetragen, sobald eine vollständige Erklärung vorliegt, und Inserate tragen die Nummer. Murcia erlaubt die Vermietung der ganzen Wohnung oder einzelner Schlafzimmer.",
+            "In Valencia und Andalucía können Rathäuser die Zahl der Ferienwohnungen pro Gebäude oder Gebiet begrenzen, und ob Ihre Gemeinde neue Registrierungen ausgesetzt hat, ist eine örtliche Frage. Für Katalonien und die Kanarischen Inseln fragen Sie direkt bei der regionalen Tourismusbehörde und beim Rathaus nach, bevor Sie sich auf einen Plan festlegen."
+          ]
+        },
+        {
+          "h2": "Können die anderen Eigentümer in meinem Gebäude mich stoppen?",
+          "paras": [
+            "Ja, und seit dem 3. April 2025 müssen sie sogar vorher zustimmen. Artikel 17.12 des Wohnungseigentumsgesetzes verlangt drei Fünftel der Eigentümer, die zugleich drei Fünftel der Miteigentumsanteile halten müssen, um Ferienvermietung im Gebäude zu genehmigen, zu begrenzen, an Bedingungen zu knüpfen oder zu verbieten. Vor diesem Datum war diese Mehrheit nötig, um eine Ferienvermietung zu verbieten. Jetzt ist sie auch nötig, um eine zu beginnen.",
+            "Die Abstimmung wirkt nicht rückwirkend. Ein Eigentümer, der bereits vermietet, darf weitermachen, aber nur, wenn die touristische Lizenz oder die verantwortliche Erklärung vor dem 3. April 2025 erlangt wurde. Ein städtebaulicher Vereinbarkeitsbericht der Gemeinde allein zählt nicht. Dieselbe Mehrheit kann auch den Anteil einer Ferienwohnung an den Gemeinschaftskosten erhöhen, um bis zu 20 Prozent.",
+            "Eine echte Saisonvermietung fällt nicht unter Artikel 17.12. Eine Gemeinschaft kann Nutzungen aber auf anderem Weg einschränken, etwa durch eine Klausel in ihrer Satzung. Lesen Sie also Satzung und aktuelle Protokolle vor dem Kauf, nicht erst nach der ersten Beschwerde eines Nachbarn."
+          ]
+        },
+        {
+          "h2": "Was muss ich für jeden Gast tun?",
+          "paras": [
+            "Ihn melden. Wer Unterkünfte betreibt oder vermittelt, ausdrücklich auch Privatpersonen, die Ferienwohnungen über Portale vermieten, muss die Daten des Gastes und der Buchung innerhalb von 24 Stunden nach Beginn des Aufenthalts an die Secretaría de Estado de Seguridad übermitteln und ein Register führen. Das gilt auch für einen ausländischen Eigentümer, der vom Ausland aus vermietet, und zu den Daten gehört, wie der Gast bezahlt hat.",
+            "Diese Aufgabe gibt man am besten an die Person ab, die Ihre Check-ins erledigt (mit einer klaren Absprache, wer was wann übermittelt). 24 Stunden vergehen schnell, wenn Gäste an einem Samstagabend landen und Sie zu Hause in Göteborg sind.",
+            "Zwei Meldungen laufen ohne Sie. Plattformen und andere Vermittler melden jede Ferienvermietung einmal im Jahr mit modelo 179 an das Finanzamt, im Januar für das Vorjahr, und Sie geben es nicht selbst ab. Digitale Plattformen melden ihre Gastgeber außerdem mit modelo 238, einschließlich der pro Quartal gezahlten Beträge, und diese Informationen gehen an das Finanzamt in Ihrem Wohnsitzland."
+          ]
+        },
+        {
+          "h2": "Muss ich auf eine Ferienvermietung Mehrwertsteuer berechnen?",
+          "paras": [
+            "Nach den Regeln, die beim Schreiben dieses Ratgebers galten, ist die Vermietung einer Wohnung zu Wohnzwecken von der Mehrwertsteuer (IVA) befreit. Eine Vermietung mit hotelartigen Leistungen, etwa Rezeption, Reinigung während des Aufenthalts, Wäschewechsel oder Mahlzeiten, wird mit 10 Prozent besteuert, und 21 Prozent gelten für einen Vorgang, der weder eine befreite Wohnraumvermietung noch eine hotelartige Beherbergungsleistung ist.",
+            "Zwei im Herbst 2026 erlassene Gesetzesdekrete (Real Decreto-ley 28/2026 und 29/2026), die noch auf Bestätigung durch den Kongress warten, ändern mehrere Regeln zur Vermietung. Bis sie bestätigt sind und ihre Wirkung auf kurze Aufenthalte klar ist, sollte ein Eigentümer den aktuellen Stand mit einem gestor oder abogado prüfen, bevor er die Preise für die kommende Saison festlegt oder einen neuen Vertrag unterschreibt. Der Mehrwertsteuer-Check für Ferienvermietungen auf dieser Website zeigt, wo Ihre Vermietung heute einzuordnen ist."
+          ]
+        },
+        {
+          "h2": "Wie wird Ferienmiete besteuert, wenn ich im Ausland lebe?",
+          "paras": [
+            "Die Miete wird in Spanien über die Einkommensteuer für Nichtansässige besteuert und mit modelo 210 erklärt. Der Satz beträgt 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins, die die mit der Vermietung verbundenen Kosten abziehen dürfen, und 24 Prozent auf die Bruttomiete für alle anderen, auch für Ansässige im Vereinigten Königreich.",
+            "Mieteinkünfte ab 2026 werden in den ersten 20 Tagen im April des Folgejahres erklärt. Bewahren Sie jede Rechnung für Reinigung, jede Nebenkostenabrechnung und jede Plattformabrechnung auf. Das sind die Kosten, die ein Eigentümer mit 19 Prozent von der Miete abziehen kann, und das Finanzamt hat die Zahlen der Plattform ohnehin schon."
+          ]
+        },
+        {
+          "h2": "Ich kaufe mit Blick auf eine Ferienvermietung. Was sollte ich zuerst prüfen?",
+          "paras": [
+            "Prüfen Sie drei Dinge, bevor Sie irgendetwas unterschreiben. Ob Region und Gemeinde für diese Adresse noch neue touristische Registrierungen annehmen. Ob die Gemeinschaft über Ferienvermietung abgestimmt hat und ob ihre Satzung etwas dazu sagt. Und, wenn der Verkäufer sagt, die Wohnung sei bereits lizenziert, ob diese Registrierung vor dem 3. April 2025 erlangt wurde und noch gültig ist.",
+            "Eine Lizenz auf den Namen des Verkäufers und eine Seite guter Bewertungen sagen für sich allein nicht, ob der nächste Eigentümer weitermachen kann. Fragen Sie nach der Registrierungsnummer, prüfen Sie sie bei der regionalen Tourismusbehörde und bitten Sie den administrador de fincas der Gemeinschaft um die Protokolle der letzten Versammlungen.",
+            "Holen Sie diese Antworten früh ein, dann ist der Rest gute Haushaltsführung: klare Inserate mit sichtbarer Nummer, jeder Gast pünktlich gemeldet, die Miete jeden April erklärt. Dann trägt sich die Vermietung, und Sie können die Wochen genießen, die Sie für sich selbst behalten."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Location de vacances et licence touristique en Espagne",
+      "description": "Ce qu'exige une location de vacances en Espagne : licence touristique régionale, vote de la copropriété, déclaration des voyageurs, TVA et impôt.",
+      "h1": "Louer votre logement espagnol à des vacanciers : licences, voisins et impôts",
+      "lead": "Pour louer un logement entier meublé à des vacanciers en Espagne, il vous faut l'enregistrement touristique de la région où il se trouve et, depuis le 3 avril 2025, une nouvelle location touristique dans un immeuble doit aussi être approuvée par les trois cinquièmes des copropriétaires, détenant les trois cinquièmes des quotes-parts. Vous devez déclarer chaque voyageur aux autorités de sécurité de l'État dans les 24 heures, et vous déclarez le loyer en Espagne sur le modelo 210. La procédure nationale de numéro d'enregistrement a été annulée : il n'y a donc pas de numéro d'État à obtenir.",
+      "sections": [
+        {
+          "h2": "Ma location de vacances est-elle une location touristique ou saisonnière ?",
+          "paras": [
+            "Cela dépend beaucoup de la façon dont vous la commercialisez, et pas seulement de la durée du séjour. Un logement entier meublé, prêt à habiter et commercialisé ou promu par des canaux touristiques, est une location touristique. Il sort de la loi nationale sur les baux (la LAU) et relève des règles touristiques de la région, là où se trouvent les licences et les registres.",
+            "Une location saisonnière, pour l'été ou une autre saison, est un bail relevant de la LAU à usage autre que l'habitation, et elle est régie principalement par ce que vous et le locataire convenez. Le dépôt de garantie en espèces d'une location saisonnière est de deux mois de loyer. Mais dès que vous publiez une location saisonnière sur une plateforme de vacances, vous utilisez un canal touristique, et c'est exactement ce qui fait basculer une location dans les règles touristiques.",
+            "Décidez donc ce que vous voulez avant de rédiger l'annonce. Les propriétaires qui veulent le mois d'août en famille et un locataire stable le reste de l'année sont généralement dans le camp saisonnier. Des voyageurs à la semaine de juin à octobre, c'est le camp touristique."
+          ]
+        },
+        {
+          "h2": "Ai-je encore besoin d'un numéro d'enregistrement national ?",
+          "paras": [
+            "Non. La procédure nationale de numéro d'enregistrement a été annulée : il n'y a donc pas de numéro d'État à demander ni à renouveler. Les plateformes peuvent encore en demander un en pratique, et certaines pages officielles n'avaient pas été mises à jour lors de notre vérification : une telle demande ne doit donc pas vous inquiéter.",
+            "Ce qui vous lie, c'est la licence ou l'enregistrement régional, qui n'est pas concerné et reste pleinement en vigueur. Les règles varient selon la région et, de plus en plus, selon la commune. Le guichet numérique unique et l'obligation des plateformes de partager des données avec les autorités subsistent aussi, car ils mettent en œuvre un règlement européen sur les locations de courte durée."
+          ]
+        },
+        {
+          "h2": "Que demande ma région ?",
+          "paras": [
+            "Dans la Comunitat Valenciana, vous déposez une déclaration responsable (declaración responsable) et êtes inscrit au registre régional du tourisme, sur la base d'un rapport favorable de la mairie attestant que l'usage touristique est conforme aux règles d'urbanisme locales. L'inscription dure cinq ans et se renouvelle par une nouvelle déclaration et un rapport actualisé dans le mois précédant son expiration. Le logement se loue en entier pour des séjours de dix jours au plus au même voyageur, la location par chambres est interdite, et chaque annonce doit afficher le numéro d'enregistrement.",
+            "En Andalucía, vous déposez la déclaration par voie électronique avant le début du service, et vous ne pouvez annoncer le logement comme logement touristique qu'à partir de ce moment. Il est ensuite inscrit au Registro de Turismo de Andalucía, dont le code doit figurer sur le contrat et sur le reçu. Un logement loué en entier peut accueillir au maximum quinze voyageurs, et un logement loué par chambres au maximum six. Un logement situé dans un immeuble dont les statuts de copropriété interdisent expressément l'hébergement touristique ne peut pas être un logement touristique.",
+            "Dans les Illes Balears, annoncer des séjours touristiques sans avoir d'abord déposé la déclaration de début d'activité touristique (DRIAT) est illégal, et chaque annonce doit afficher le numéro d'enregistrement. Dans la Región de Murcia, vous déposez une déclaration avant de commencer, le logement est inscrit au registre régional dès qu'une déclaration complète est déposée, et les annonces portent le numéro. La Región de Murcia autorise la location du logement entier ou par chambres.",
+            "Dans la Comunitat Valenciana et en Andalucía, les mairies peuvent plafonner le nombre de logements touristiques par immeuble ou par zone, et savoir si votre commune a suspendu les nouvelles inscriptions est une question locale. Pour la Catalogne et les îles Canaries, interrogez directement l'autorité touristique régionale et la mairie avant de vous engager dans un projet."
+          ]
+        },
+        {
+          "h2": "Les autres copropriétaires de mon immeuble peuvent-ils m'en empêcher ?",
+          "paras": [
+            "Oui, et depuis le 3 avril 2025, ils doivent aussi donner leur accord au préalable. L'article 17.12 de la loi sur la propriété horizontale exige les trois cinquièmes des copropriétaires, qui doivent aussi détenir les trois cinquièmes des quotes-parts, pour approuver, limiter, conditionner ou interdire la location touristique dans l'immeuble. Avant cette date, cette majorité était ce qu'il fallait pour interdire une location touristique. Elle est désormais aussi ce qu'il faut pour en lancer une.",
+            "Le vote n'est pas rétroactif. Un propriétaire qui loue déjà peut continuer, mais seulement si la licence touristique ou la déclaration responsable a été obtenue avant le 3 avril 2025. Un simple rapport municipal de compatibilité urbanistique ne suffit pas. La même majorité peut aussi augmenter la part des charges communes payée par un appartement touristique, jusqu'à 20 pour cent.",
+            "Une véritable location saisonnière n'entre pas dans le champ de l'article 17.12. Une copropriété peut toutefois restreindre certains usages par d'autres voies, comme une clause de ses statuts : lisez donc les statuts et les procès-verbaux récents avant d'acheter, pas après la première plainte d'un voisin."
+          ]
+        },
+        {
+          "h2": "Que dois-je faire pour chaque voyageur ?",
+          "paras": [
+            "Le déclarer. Toute personne qui exploite un hébergement ou sert d'intermédiaire, y compris expressément les particuliers qui louent des logements touristiques via des plateformes, doit transmettre les données du voyageur et de la réservation à la Secretaría de Estado de Seguridad dans les 24 heures suivant le début du séjour et tenir un registre. Un propriétaire étranger qui loue depuis l'étranger est concerné aussi, et les données incluent le mode de paiement du voyageur.",
+            "C'est la tâche qu'il vaut le plus la peine de confier à la personne qui fait vos accueils (avec un accord clair sur qui envoie quoi, et quand). Vingt-quatre heures passent vite quand les voyageurs atterrissent un samedi soir et que vous êtes chez vous à Göteborg.",
+            "Deux déclarations se font sans vous. Les plateformes et autres intermédiaires déclarent chaque location touristique à l'administration fiscale une fois par an sur le modelo 179, en janvier, pour l'année précédente, et vous ne le déposez pas vous-même. Les plateformes numériques déclarent aussi leurs hôtes sur le modelo 238, y compris les montants versés chaque trimestre, et ces informations sont transmises à l'administration fiscale de votre pays de résidence."
+          ]
+        },
+        {
+          "h2": "Dois-je facturer la TVA sur une location de vacances ?",
+          "paras": [
+            "Selon les règles en vigueur au moment de la rédaction de ce guide, la location d'un logement destiné à l'habitation est exonérée de TVA (IVA). Une location où vous fournissez des services de type hôtelier, comme la réception, le ménage pendant le séjour, le changement du linge ou les repas, est taxée à 10 pour cent, et le taux de 21 pour cent s'applique à une opération qui n'est ni une location d'habitation exonérée ni un service d'hébergement de type hôtelier.",
+            "Deux décrets-lois publiés à l'automne 2026 (Real Decreto-ley 28/2026 et 29/2026), qui attendent encore leur validation par le Congrès, modifient plusieurs règles de location. Tant qu'ils ne sont pas validés et que leur effet sur les courts séjours n'est pas clair, un propriétaire doit vérifier la situation en vigueur avec un gestor ou un abogado avant de fixer ses prix pour la saison à venir ou de signer un nouveau contrat. Le vérificateur de TVA pour locations de vacances de ce site montre où se situe votre location aujourd'hui."
+          ]
+        },
+        {
+          "h2": "Comment le loyer d'une location de vacances est-il imposé si je vis à l'étranger ?",
+          "paras": [
+            "Le loyer est imposé en Espagne au titre de l'impôt sur le revenu des non-résidents et déclaré sur le modelo 210. Le taux est de 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein, qui peuvent déduire les frais liés à la location, et de 24 pour cent sur le loyer brut pour tous les autres, y compris les résidents du Royaume-Uni.",
+            "Les loyers perçus à partir de 2026 se déclarent dans les 20 premiers jours d'avril de l'année suivante. Gardez chaque facture de ménage, chaque facture d'eau ou d'électricité et chaque relevé de plateforme. Ce sont les frais qu'un propriétaire au taux de 19 pour cent peut déduire du loyer, et l'administration fiscale dispose déjà des chiffres des plateformes."
+          ]
+        },
+        {
+          "h2": "J'achète en pensant à la location de vacances. Que dois-je vérifier d'abord ?",
+          "paras": [
+            "Vérifiez trois choses avant de signer quoi que ce soit. Si la région et la commune acceptent encore de nouvelles inscriptions touristiques pour cette adresse. Si la copropriété a voté sur la location touristique, et si ses statuts en disent quelque chose. Et, si le vendeur affirme que le logement a déjà une licence, si cet enregistrement a été obtenu avant le 3 avril 2025 et s'il est toujours valable.",
+            "Une licence au nom du vendeur et une page de bons avis ne vous disent pas, à elles seules, si le prochain propriétaire pourra continuer. Demandez le numéro d'enregistrement, vérifiez-le auprès de l'autorité touristique régionale, et demandez à l'administrador de fincas de la copropriété les procès-verbaux des assemblées récentes.",
+            "Obtenez ces réponses tôt, et le reste relève de la bonne gestion : des annonces claires avec le numéro affiché, chaque voyageur déclaré à temps, le loyer déclaré chaque mois d'avril. La location se finance alors d'elle-même, et vous pouvez profiter des semaines que vous gardez pour vous."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Vakantieverhuur en toeristische vergunning in Spanje",
+      "description": "Wat vakantieverhuur in Spanje vraagt: de regionale toeristische vergunning, de stem van uw VvE, gastenregistratie, btw en belasting op de huur.",
+      "h1": "Uw Spaanse woning aan vakantiegasten verhuren: vergunningen, buren en belasting",
+      "lead": "Om een volledig gemeubileerde woning in Spanje aan vakantiegasten te verhuren, heeft u de toeristische registratie nodig van de regio waar de woning staat, en sinds 3 april 2025 heeft nieuwe toeristische verhuur in een gebouw ook de goedkeuring nodig van drie vijfde van de eigenaren, die drie vijfde van de aandelen vertegenwoordigen. U moet elke gast binnen 24 uur melden bij de staatsveiligheidsdiensten, en u geeft de huur in Spanje aan met modelo 210. De landelijke procedure voor het registratienummer is nietig verklaard, dus er is geen nummer van de staat aan te vragen.",
+      "sections": [
+        {
+          "h2": "Is mijn vakantieverhuur toeristische verhuur of seizoensverhuur?",
+          "paras": [
+            "Dat hangt sterk af van hoe u de woning aanbiedt, niet alleen van hoe lang mensen blijven. Een volledig gemeubileerde woning, direct klaar voor gebruik en aangeboden of gepromoot via toeristische kanalen, is toeristische verhuur. Die valt buiten de landelijke huurwet (de LAU) en komt onder de toerismeregels van de regio, en daar liggen ook de vergunningen en registers.",
+            "Seizoensverhuur, voor de zomer of een ander seizoen, is een huurovereenkomst onder de LAU voor een ander gebruik dan bewoning, en wordt grotendeels bepaald door wat u en de huurder afspreken. De borg bij seizoensverhuur is twee maanden huur. Zodra u seizoensverhuur op een vakantieplatform zet, gebruikt u echter een toeristisch kanaal, en juist dat brengt een verhuur onder de toerismeregels.",
+            "Bepaal dus wat u wilt voordat u de advertentie schrijft. Eigenaren die augustus met de familie willen doorbrengen en de rest van het jaar een vaste huurder willen, zitten meestal in het kamp van de seizoensverhuur. Wekelijkse gasten van juni tot oktober betekent toeristische verhuur."
+          ]
+        },
+        {
+          "h2": "Heb ik nog een landelijk registratienummer nodig?",
+          "paras": [
+            "Nee. De landelijke procedure voor het registratienummer is nietig verklaard, dus er is geen nummer van de staat aan te vragen of te verlengen. Platforms kunnen er in de praktijk nog steeds om vragen, en sommige officiële pagina's waren bij onze controle nog niet bijgewerkt, dus een verzoek om zo'n nummer hoeft u niet ongerust te maken.",
+            "Waar u wel aan gebonden bent, is de regionale vergunning of registratie, en die blijft onaangetast en volledig van kracht. De regels verschillen per regio en steeds vaker per gemeente. Het centrale digitale loket en de plicht van platforms om gegevens met de overheid te delen blijven ook bestaan, omdat die een EU-verordening over kortetermijnverhuur uitvoeren."
+          ]
+        },
+        {
+          "h2": "Wat vraagt mijn regio?",
+          "paras": [
+            "In de Comunitat Valenciana dient u een declaración responsable in en wordt u ingeschreven in het regionale toerismeregister, op basis van een gunstig rapport van de gemeente dat toeristisch gebruik past binnen de lokale bestemmingsregels. De inschrijving geldt vijf jaar en wordt verlengd met een nieuwe verklaring en een bijgewerkt rapport in de maand voordat ze afloopt. De woning wordt als geheel verhuurd voor verblijven van tien dagen of korter aan dezelfde gast, verhuur per kamer is verboden, en elke advertentie moet het registratienummer tonen.",
+            "In Andalusië dient u de verklaring elektronisch in voordat de dienstverlening begint, en pas vanaf dat moment mag u de woning als toeristische woning adverteren. Ze wordt daarna ingeschreven in het Registro de Turismo de Andalucía, waarvan de code op het contract en het betaalbewijs moet staan. Een woning die als geheel wordt verhuurd, mag maximaal vijftien gasten ontvangen, en een woning die per kamer wordt verhuurd maximaal zes. Een woning in een gebouw waarvan de statuten van de VvE toeristische accommodatie uitdrukkelijk verbieden, kan geen toeristische woning zijn.",
+            "Op de Illes Balears is het adverteren van toeristische verblijven zonder eerst de verklaring van aanvang van toeristische activiteit (DRIAT) in te dienen illegaal, en elke advertentie moet het registratienummer tonen. In de Región de Murcia dient u een verklaring in voordat u begint, wordt de woning in het regionale register opgenomen zodra een volledige verklaring binnen is, en vermelden advertenties het nummer. Murcia staat verhuur van de hele woning of per slaapkamer toe.",
+            "In Valencia en Andalusië mogen gemeenten het aantal toeristische woningen per gebouw of gebied begrenzen, en of uw gemeente nieuwe inschrijvingen heeft stilgelegd, is een lokale kwestie. Vraag voor Catalonië en de Canarische Eilanden de regionale toerismeautoriteit en de gemeente rechtstreeks om informatie voordat u zich aan een plan verbindt."
+          ]
+        },
+        {
+          "h2": "Kunnen de andere eigenaren in mijn gebouw mij tegenhouden?",
+          "paras": [
+            "Ja, en sinds 3 april 2025 moeten ze er ook eerst ja tegen zeggen. Artikel 17.12 van de wet op de horizontale eigendom vereist dat drie vijfde van de eigenaren, die ook drie vijfde van de aandelen moeten vertegenwoordigen, toeristische verhuur in het gebouw goedkeurt, beperkt, aan voorwaarden bindt of verbiedt. Vóór die datum was deze meerderheid nodig om toeristische verhuur te verbieden. Nu is ze ook nodig om ermee te beginnen.",
+            "De stemming werkt niet met terugwerkende kracht. Een eigenaar die al verhuurt, mag doorgaan, maar alleen als de toeristische vergunning of declaración responsable vóór 3 april 2025 is verkregen. Een gemeentelijk rapport over planologische verenigbaarheid telt op zichzelf niet. Dezelfde meerderheid kan ook het aandeel in de gemeenschappelijke kosten van een toeristisch appartement met maximaal 20 procent verhogen.",
+            "Echte seizoensverhuur valt buiten artikel 17.12. Een VvE kan gebruik nog steeds via andere wegen beperken, zoals een clausule in de statuten, dus lees de statuten en de recente notulen voordat u koopt, niet na de eerste klacht van een buurman."
+          ]
+        },
+        {
+          "h2": "Wat moet ik voor elke gast doen?",
+          "paras": [
+            "Hem of haar melden. Iedereen die logies verzorgt of daarin bemiddelt, uitdrukkelijk ook particulieren die toeristische woningen via portals verhuren, moet de gegevens van de gast en de boeking binnen 24 uur na het begin van het verblijf doorgeven aan de Secretaría de Estado de Seguridad, en een register bijhouden. Ook een buitenlandse eigenaar die vanuit het buitenland verhuurt, valt hieronder, en de gegevens omvatten hoe de gast heeft betaald.",
+            "Dit is de taak die u het best kunt overdragen aan degene die uw gasten ontvangt (met een duidelijke afspraak over wie wat verstuurt, en wanneer). Vierentwintig uur is snel om als gasten op zaterdagavond landen en u thuis in Göteborg zit.",
+            "Twee meldingen gebeuren zonder u. Platforms en andere tussenpersonen melden elke toeristische verhuur eenmaal per jaar met modelo 179 aan de belastingdienst, in januari, over het voorgaande jaar, en die dient u niet zelf in. Digitale platforms melden hun verhuurders ook met modelo 238, inclusief de per kwartaal betaalde bedragen, en die informatie gaat naar de belastingdienst van het land waar u woont."
+          ]
+        },
+        {
+          "h2": "Moet ik btw rekenen over vakantieverhuur?",
+          "paras": [
+            "Volgens de regels die golden toen deze gids werd geschreven, is verhuur van een woning om in te wonen vrijgesteld van btw (IVA). Verhuur waarbij u hotelachtige diensten levert, zoals receptie, schoonmaak tijdens het verblijf, verschonen van beddengoed of maaltijden, wordt belast tegen 10 procent, en 21 procent geldt voor een handeling die noch een vrijgestelde woonverhuur noch een hotelachtige accommodatiedienst is.",
+            "Twee wetsbesluiten uit het najaar van 2026 (Real Decreto-ley 28/2026 en 29/2026), die nog op bekrachtiging door het Congreso wachten, wijzigen verschillende verhuurregels. Tot ze zijn bekrachtigd en hun effect op korte verblijven duidelijk is, doet een eigenaar er goed aan de actuele stand met een gestor of een abogado te controleren voordat hij prijzen voor het komende seizoen vaststelt of een nieuw contract tekent. De btw-check voor vakantieverhuur op deze site laat zien waar uw verhuur vandaag onder valt."
+          ]
+        },
+        {
+          "h2": "Hoe wordt vakantiehuur belast als ik in het buitenland woon?",
+          "paras": [
+            "De huur wordt in Spanje belast via de inkomstenbelasting voor niet-inwoners en aangegeven met modelo 210. Het tarief is 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein, die de kosten van de verhuur mogen aftrekken, en 24 procent over de bruto huur voor alle anderen, ook voor inwoners van het Verenigd Koninkrijk.",
+            "Huur die vanaf 2026 wordt ontvangen, wordt aangegeven in de eerste 20 dagen van april van het volgende jaar. Bewaar elke schoonmaakfactuur, elke energierekening en elk platformoverzicht. Dat zijn de kosten die een eigenaar met het tarief van 19 procent van de huur kan aftrekken, en de belastingdienst heeft de cijfers van de platforms al."
+          ]
+        },
+        {
+          "h2": "Ik koop met vakantieverhuur in gedachten. Wat moet ik eerst controleren?",
+          "paras": [
+            "Controleer drie dingen voordat u iets tekent. Of de regio en de gemeente voor dat adres nog nieuwe toeristische inschrijvingen accepteren. Of de VvE over toeristische verhuur heeft gestemd, en of de statuten er iets over zeggen. En, als de verkoper zegt dat de woning al een vergunning heeft, of die inschrijving vóór 3 april 2025 is verkregen en nog geldig is.",
+            "Een vergunning op naam van de verkoper en een pagina vol goede recensies zeggen op zichzelf niet of de volgende eigenaar kan doorgaan. Vraag om het registratienummer, controleer het bij de regionale toerismeautoriteit, en vraag de administrador de fincas van de VvE om de notulen van recente vergaderingen.",
+            "Heeft u die antwoorden vroeg, dan is de rest een kwestie van goed bijhouden: duidelijke advertenties met het nummer erop, elke gast op tijd gemeld, de huur elk jaar in april aangegeven. Dan betaalt de verhuur zichzelf, en kunt u genieten van de weken die u voor uzelf houdt."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "slug": "plusvalia-tax-explained",
+  "topic": "selling",
+  "tool": "sale-tax",
+  "rules": [
+    "plusvalia.methods",
+    "plusvalia.no_gain",
+    "plusvalia.deadlines",
+    "plusvalia.municipal_variation",
+    "irnr.rates",
+    "irnr.sale.gain_base",
+    "irnr.sale.retention"
+  ],
+  "answers": [
+    "plusvalia-when-selling-in-spain",
+    "who-sets-the-plusvalia-rate-in-spain",
+    "plusvalia-deadline-after-inheriting-spanish-property",
+    "capital-gains-tax-calculation-non-resident-sale-spain",
+    "three-percent-withheld-when-selling-spanish-property"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Plusvalia Tax in Spain Explained for Foreign Owners",
+      "description": "The plusvalia is a town hall tax on the rise in land value when a Spanish property changes hands. How it is worked out, who sets it and the deadlines.",
+      "h1": "The plusvalia: the town hall tax on selling or inheriting a Spanish home",
+      "lead": "The plusvalia is a municipal tax on the increase in value of the land under a property, charged when it is sold or inherited. It is worked out either from the cadastral value of the land and a coefficient for the years of ownership, or from the real gain between the two deeds, and the taxpayer may choose the lower. On a sale it is due within 30 working days of the deed.",
+      "sections": [
+        {
+          "h2": "OK, so what is the plusvalia?",
+          "paras": [
+            "Its full name is the impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, which is why everyone says plusvalia. Plus means more and valía means value, and that is roughly the idea: a tax on the increase in the value of the land your home stands on, charged by the town hall when the property changes hands.",
+            "The two moments owners meet it are a sale and an inheritance. It is a local tax, so it has nothing to do with your modelo 210 or with the national tax office. The town hall, or the body that collects taxes on its behalf, decides how it is assessed and where you pay."
+          ]
+        },
+        {
+          "h2": "Is the plusvalia the same as capital gains tax?",
+          "paras": [
+            "No, and mixing the two up is an easy mistake to make. Capital gains tax for a non-resident is paid to the national tax office, at 19 percent of the real gain on the whole property, after costs of buying and selling. The plusvalia goes to the town hall and looks only at the land.",
+            "When a non-resident sells, the buyer normally withholds 3 percent of the price for the national tax office. That withholding relates to the capital gains tax, not to the plusvalia. So on a sale you are looking at three separate figures: the withholding, the tax on your gain, and the plusvalia, each with its own date."
+          ]
+        },
+        {
+          "h2": "How is the plusvalia calculated?",
+          "paras": [
+            "There are two methods. The objective method takes the cadastral value of the land only, not the total cadastral value on your IBI receipt, and multiplies it by a coefficient for the number of years you owned the property. The real gain method uses the actual increase in value between the deed you bought with and the deed you sell with.",
+            "You may choose the lower of the two. The choice is made on request, and you need evidence of both the acquisition value and the transfer value, which in practice means both deeds. This system has been in force since 10 November 2021, so older articles that describe a single formula with no choice are out of date."
+          ]
+        },
+        {
+          "h2": "I am selling for less than I paid. Do I still owe it?",
+          "paras": [
+            "No. Where it is shown that no increase in value arose, there is no liability. If you bought at the top of a market and are selling for less, you can demonstrate that with the two deeds, and no plusvalia is assessed.",
+            "You still have to declare the transfer, though, with both deeds attached (the town hall needs to see the numbers even when the answer is zero). Skipping the declaration because there is nothing to pay leaves out the one step the law still asks of you, so file it with the same care as a sale with tax due."
+          ]
+        },
+        {
+          "h2": "Why does every town give me a different figure?",
+          "paras": [
+            "Because the town sets the figures. The coefficients, the tax rate, and whether the town works by declaration or by self-assessment are all set by local ordinance. The state fixes the upper limits, but each town hall chooses where it sits under them, so two similar flats in neighbouring towns can come out quite differently.",
+            "That is also why no honest guide can give you one national rate. Each town publishes its own ordinance, usually on its municipal tax portal. Look up the ordinance for the town where your property is, or ask your abogado or gestor to work out both methods for you before you agree a price."
+          ]
+        },
+        {
+          "h2": "How long do I have after selling or inheriting?",
+          "paras": [
+            "On a sale, the deadline is 30 working days from the date of the public deed. Working days means Saturdays, Sundays and public holidays do not count. August, on the other hand, does count, so a sale signed just before the summer holidays does not get an extra month.",
+            "On an inheritance the deadline is six months from the date of death. It can be extended to one year, but only if you ask for the extension within the first six months. For families abroad, dealing with a death and a foreign probate at the same time, that request is worth making early."
+          ]
+        },
+        {
+          "h2": "How should I handle it at the notary?",
+          "paras": [
+            "Ask for an estimate of both methods before you sign the reservation or arras contract, not after. That gives you a realistic idea of your net proceeds alongside the 3 percent withholding and the tax on your gain, and it gives you time to gather the evidence for the real gain method if that is the lower one.",
+            "Then agree in writing, in the sale contract, how the plusvalia will be dealt with at completion, and who will file the declaration with the town hall. If you have an abogado acting for you on the sale, ask them to take this on. Keep a copy of the filed declaration with your sale papers."
+          ]
+        },
+        {
+          "h2": "What should I keep so I can use the real gain method?",
+          "paras": [
+            "Both deeds, first and foremost: the escritura you bought with and the one you sell with. They are the evidence of the acquisition and transfer values that the real gain method relies on. If the original purchase deed is in a drawer at home in Bergen or Gothenburg, find it before you list the property.",
+            "Keep the IBI receipts too, and ask the town hall or the cadastre for the land part of the cadastral value, because the objective method uses the land value only. With those papers in one folder, the plusvalia stops being a mystery figure on the completion statement and becomes a sum you can check, which leaves you free to think about what comes next."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Plusvalia i Spania forklart for utenlandske eiere",
+      "description": "Plusvalia er en kommunal skatt på verdiøkningen på grunnen når en spansk eiendom skifter eier, og her ser du beregning, hvem som fastsetter den og frister.",
+      "h1": "Plusvalia: kommuneskatten når du selger eller arver en bolig i Spania",
+      "lead": "Plusvalia er en kommunal skatt på verdiøkningen på grunnen under en eiendom, og den kreves når eiendommen selges eller arves. Den beregnes enten ut fra matrikkelverdien på grunnen og en koeffisient for antall år med eierskap, eller ut fra den reelle gevinsten mellom de to skjøtene, og skattyter kan velge den laveste. Ved salg er fristen 30 virkedager fra skjøtet.",
+      "sections": [
+        {
+          "h2": "OK, så hva er egentlig plusvalia?",
+          "paras": [
+            "Det fulle navnet er impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, og det er derfor alle sier plusvalia. Plus betyr mer og valía betyr verdi, og det er omtrent ideen: en skatt på verdiøkningen på grunnen boligen din står på, som kommunen krever når eiendommen skifter eier.",
+            "De to anledningene eiere møter den er ved salg og ved arv. Det er en lokal skatt, så den har ingenting med modelo 210 eller det nasjonale skattekontoret å gjøre. Kommunen, eller organet som krever inn skatter på dens vegne, bestemmer hvordan den fastsettes og hvor du betaler."
+          ]
+        },
+        {
+          "h2": "Er plusvalia det samme som gevinstskatt?",
+          "paras": [
+            "Nei, og det er lett å blande de to. Gevinstskatt for en ikke-bosatt betales til det nasjonale skattekontoret, med 19 prosent av den reelle gevinsten på hele eiendommen, etter kostnader ved kjøp og salg. Plusvalia går til kommunen og ser bare på grunnen.",
+            "Når en ikke-bosatt selger, holder kjøperen normalt tilbake 3 prosent av prisen til det nasjonale skattekontoret. Det tilbakeholdet gjelder gevinstskatten, ikke plusvalia. Ved et salg ser du altså på tre separate tall: tilbakeholdet, skatten på gevinsten og plusvalia, hver med sin egen dato."
+          ]
+        },
+        {
+          "h2": "Hvordan beregnes plusvalia?",
+          "paras": [
+            "Det finnes to metoder. Den objektive metoden tar bare matrikkelverdien på grunnen, ikke den samlede matrikkelverdien på IBI-regningen din, og ganger den med en koeffisient for antall år du eide eiendommen. Metoden med reell gevinst bruker den faktiske verdiøkningen mellom skjøtet du kjøpte med og skjøtet du selger med.",
+            "Du kan velge den laveste av de to. Valget gjøres på anmodning, og du trenger dokumentasjon på både anskaffelsesverdien og overdragelsesverdien, som i praksis betyr begge skjøtene. Denne ordningen har gjeldt siden 10. november 2021, så eldre artikler som beskriver én enkelt formel uten valg er utdatert."
+          ]
+        },
+        {
+          "h2": "Jeg selger for mindre enn jeg betalte. Skylder jeg likevel plusvalia?",
+          "paras": [
+            "Nei. Der det er vist at det ikke oppsto noen verdiøkning, er det ingen skatteplikt. Kjøpte du på toppen av markedet og selger for mindre, kan du vise det med de to skjøtene, og det fastsettes ingen plusvalia.",
+            "Du må likevel melde overdragelsen, med begge skjøtene vedlagt (kommunen må se tallene selv når svaret er null). Å hoppe over meldingen fordi det ikke er noe å betale, betyr å utelate det ene steget loven fortsatt krever av deg, så lever den like nøye som ved et salg der det skal betales skatt."
+          ]
+        },
+        {
+          "h2": "Hvorfor gir hver kommune meg et annet tall?",
+          "paras": [
+            "Fordi kommunen fastsetter tallene. Koeffisientene, skattesatsen og om kommunen bruker melding eller egenberegning fastsettes alle i lokal forskrift. Staten setter øvre grenser, men hver kommune velger hvor den legger seg under dem, så to like leiligheter i nabokommuner kan få ganske ulike resultater.",
+            "Det er også grunnen til at ingen ærlig veiledning kan gi deg én nasjonal sats. Hver kommune publiserer sin egen forskrift, som regel på den kommunale skatteportalen. Slå opp forskriften for kommunen der eiendommen din ligger, eller be abogado eller gestor regne ut begge metodene for deg før du blir enig om en pris."
+          ]
+        },
+        {
+          "h2": "Hvor lang tid har jeg etter salg eller arv?",
+          "paras": [
+            "Ved salg er fristen 30 virkedager fra datoen på det offentlige skjøtet. Virkedager betyr at lørdager, søndager og helligdager ikke teller. August teller derimot, så et salg som signeres like før sommerferien får ikke en ekstra måned.",
+            "Ved arv er fristen seks måneder fra dødsdatoen. Den kan forlenges til ett år, men bare hvis du ber om forlengelsen innen de første seks månedene. For familier i utlandet, som håndterer et dødsfall og et utenlandsk dødsbo samtidig, er det verdt å sende den anmodningen tidlig."
+          ]
+        },
+        {
+          "h2": "Hvordan bør jeg håndtere den hos notaren?",
+          "paras": [
+            "Be om et overslag etter begge metodene før du signerer reservasjonsavtalen eller arras-kontrakten, ikke etter. Det gir deg et realistisk bilde av nettoproveny ved siden av tilbakeholdet på 3 prosent og skatten på gevinsten, og det gir deg tid til å samle dokumentasjon for metoden med reell gevinst hvis det er den som gir lavest beløp.",
+            "Avtal deretter skriftlig, i salgskontrakten, hvordan plusvalia skal håndteres ved overdragelsen, og hvem som skal levere meldingen til kommunen. Har du en abogado som bistår deg ved salget, be vedkommende ta seg av dette. Ta vare på en kopi av den leverte meldingen sammen med salgspapirene."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg ta vare på for å kunne bruke metoden med reell gevinst?",
+          "paras": [
+            "Først og fremst begge skjøtene: escritura du kjøpte med og den du selger med. De dokumenterer anskaffelsesverdien og overdragelsesverdien som metoden med reell gevinst bygger på. Ligger det originale kjøpsskjøtet i en skuff hjemme i Bergen eller Göteborg, finn det før du legger eiendommen ut for salg.",
+            "Ta vare på IBI-regningene også, og be kommunen eller matrikkelen om grunnens andel av matrikkelverdien, fordi den objektive metoden bare bruker verdien på grunnen. Med de papirene i én mappe slutter plusvalia å være et mystisk tall på oppgjøret og blir et beløp du kan kontrollere, og da står du fritt til å tenke på det som kommer etterpå."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Plusvalia i Spanien förklarad för utländska ägare",
+      "description": "Plusvalia är en kommunal skatt på markens värdeökning när en spansk fastighet byter ägare, och här ser du hur den räknas, vem som styr den och fristerna.",
+      "h1": "Plusvalia: kommunens skatt när en spansk bostad säljs eller ärvs",
+      "lead": "Plusvalia är en kommunal skatt på värdeökningen på marken under en fastighet, som tas ut när den säljs eller ärvs. Den räknas fram antingen från markens taxeringsvärde och en koefficient för antalet ägarår, eller från den verkliga vinsten mellan de två handlingarna, och den skattskyldige får välja det lägsta. Vid försäljning ska den betalas inom 30 arbetsdagar från handlingen.",
+      "sections": [
+        {
+          "h2": "OK, vad är plusvalia egentligen?",
+          "paras": [
+            "Det fullständiga namnet är impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, vilket är skälet till att alla säger plusvalia. Plus betyder mer och valía betyder värde, och det är ungefär tanken: en skatt på värdeökningen på marken som din bostad står på, som kommunen tar ut när fastigheten byter ägare.",
+            "De två tillfällen då ägare stöter på den är försäljning och arv. Det är en lokal skatt, så den har ingenting med din modelo 210 eller den nationella skattemyndigheten att göra. Kommunen, eller det organ som tar ut skatter för dess räkning, bestämmer hur den fastställs och var du betalar."
+          ]
+        },
+        {
+          "h2": "Är plusvalia samma sak som kapitalvinstskatt?",
+          "paras": [
+            "Nej, och att blanda ihop de två är ett lätt misstag att göra. Kapitalvinstskatt för en icke-bosatt betalas till den nationella skattemyndigheten, med 19 procent av den verkliga vinsten på hela fastigheten, efter kostnader för köp och försäljning. Plusvalia går till kommunen och ser bara på marken.",
+            "När en icke-bosatt säljer håller köparen normalt inne 3 procent av priset för den nationella skattemyndigheten. Det skatteavdraget hör till kapitalvinstskatten, inte till plusvalia. Vid en försäljning har du alltså tre separata belopp: skatteavdraget, skatten på din vinst och plusvalia, vart och ett med sitt eget datum."
+          ]
+        },
+        {
+          "h2": "Hur räknas plusvalia ut?",
+          "paras": [
+            "Det finns två metoder. Den objektiva metoden tar bara markens taxeringsvärde, inte det totala taxeringsvärdet på din IBI-avi, och multiplicerar det med en koefficient för antalet år du ägt fastigheten. Metoden med verklig vinst använder den faktiska värdeökningen mellan handlingen du köpte med och handlingen du säljer med.",
+            "Du får välja det lägsta av de två. Valet görs på begäran, och du behöver bevis på både anskaffningsvärdet och överlåtelsevärdet, vilket i praktiken betyder båda handlingarna. Systemet har gällt sedan 10 november 2021, så äldre artiklar som beskriver en enda formel utan valmöjlighet är inaktuella."
+          ]
+        },
+        {
+          "h2": "Jag säljer för mindre än jag betalade. Ska jag ändå betala?",
+          "paras": [
+            "Nej. När det visas att ingen värdeökning uppstod finns ingen skattskyldighet. Köpte du på toppen av en marknad och säljer för mindre kan du visa det med de två handlingarna, och ingen plusvalia fastställs.",
+            "Du måste ändå anmäla överlåtelsen, med båda handlingarna bifogade (kommunen behöver se siffrorna även när svaret är noll). Att hoppa över anmälan för att det inte finns något att betala utelämnar det enda steg som lagen fortfarande kräver av dig, så lämna den med samma omsorg som vid en försäljning där skatt ska betalas."
+          ]
+        },
+        {
+          "h2": "Varför ger varje kommun mig en annan siffra?",
+          "paras": [
+            "Därför att kommunen bestämmer siffrorna. Koefficienterna, skattesatsen och om kommunen arbetar med anmälan eller självdeklaration bestäms i en lokal förordning. Staten fastställer de övre gränserna, men varje kommun väljer var den lägger sig under dem, så två likadana lägenheter i grannkommuner kan få helt olika resultat.",
+            "Det är också därför ingen ärlig guide kan ge dig en nationell skattesats. Varje kommun publicerar sin egen förordning, oftast på sin kommunala skatteportal. Slå upp förordningen för den kommun där din fastighet ligger, eller be din abogado eller gestor räkna fram båda metoderna åt dig innan du kommer överens om ett pris."
+          ]
+        },
+        {
+          "h2": "Hur lång tid har jag på mig efter en försäljning eller ett arv?",
+          "paras": [
+            "Vid försäljning är fristen 30 arbetsdagar från datumet på den offentliga handlingen. Arbetsdagar betyder att lördagar, söndagar och helgdagar inte räknas. Augusti räknas däremot, så en försäljning som skrivs under strax före sommarsemestern får ingen extra månad.",
+            "Vid arv är fristen sex månader från dödsdagen. Den kan förlängas till ett år, men bara om du begär förlängningen inom de första sex månaderna. För familjer utomlands, som hanterar ett dödsfall och ett utländskt dödsbo samtidigt, är det värt att göra den begäran tidigt."
+          ]
+        },
+        {
+          "h2": "Hur ska jag hantera den hos notarien?",
+          "paras": [
+            "Be om en uppskattning enligt båda metoderna innan du skriver under reservationsavtalet eller arras-avtalet, inte efter. Det ger dig en realistisk bild av vad du får ut netto vid sidan av de 3 procent som hålls inne och skatten på din vinst, och det ger dig tid att samla bevis för metoden med verklig vinst om den blir lägst.",
+            "Kom sedan överens skriftligt, i köpeavtalet, om hur plusvalia ska hanteras vid tillträdet och vem som lämnar anmälan till kommunen. Har du en abogado som företräder dig vid försäljningen, be hen ta hand om det. Spara en kopia av den inlämnade anmälan tillsammans med försäljningspapperen."
+          ]
+        },
+        {
+          "h2": "Vad ska jag spara för att kunna använda metoden med verklig vinst?",
+          "paras": [
+            "Framför allt båda handlingarna: den escritura du köpte med och den du säljer med. De är beviset på anskaffnings- och överlåtelsevärdena som metoden med verklig vinst bygger på. Ligger den ursprungliga köpehandlingen i en låda hemma i Bergen eller Göteborg, leta fram den innan du lägger ut fastigheten.",
+            "Spara IBI-avierna också, och be kommunen eller Catastro om markdelen av taxeringsvärdet, eftersom den objektiva metoden bara använder markvärdet. Med de papperen i en och samma mapp slutar plusvalia att vara en gåtfull siffra på likvidavräkningen och blir en summa du kan kontrollera, vilket lämnar dig fri att tänka på vad som kommer härnäst."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Plusvalia in Spanien einfach erklärt für ausländische Eigentümer",
+      "description": "Die plusvalia ist eine Gemeindesteuer auf den Wertzuwachs des Bodens beim Eigentümerwechsel. So wird sie berechnet, mit Zuständigkeit und Fristen.",
+      "h1": "Die plusvalia: die Gemeindesteuer beim Verkauf oder Erben einer spanischen Immobilie",
+      "lead": "Die plusvalia ist eine Gemeindesteuer auf den Wertzuwachs des Bodens unter einer Immobilie, fällig beim Verkauf oder bei einer Erbschaft. Sie wird entweder aus dem Katasterwert des Bodens und einem Koeffizienten für die Besitzjahre berechnet oder aus dem tatsächlichen Gewinn zwischen den beiden Urkunden, und der Steuerpflichtige darf die günstigere Variante wählen. Beim Verkauf ist sie innerhalb von 30 Werktagen nach der Urkunde fällig.",
+      "sections": [
+        {
+          "h2": "Gut, aber was ist die plusvalia eigentlich?",
+          "paras": [
+            "Ihr voller Name lautet impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, weshalb alle einfach plusvalia sagen. Plus heißt mehr und valía heißt Wert, und genau darum geht es ungefähr: eine Steuer auf den Wertzuwachs des Bodens, auf dem Ihr Haus steht, die das Rathaus erhebt, wenn die Immobilie den Eigentümer wechselt.",
+            "Eigentümer begegnen ihr in zwei Momenten: beim Verkauf und bei einer Erbschaft. Es ist eine örtliche Steuer, sie hat also nichts mit Ihrem modelo 210 oder dem staatlichen Finanzamt zu tun. Das Rathaus oder die Stelle, die in seinem Auftrag Steuern einzieht, entscheidet, wie sie festgesetzt wird und wo Sie zahlen."
+          ]
+        },
+        {
+          "h2": "Ist die plusvalia dasselbe wie die Steuer auf den Veräußerungsgewinn?",
+          "paras": [
+            "Nein, und die beiden zu verwechseln passiert leicht. Die Steuer auf den Veräußerungsgewinn zahlt ein Nichtansässiger an das staatliche Finanzamt, mit 19 Prozent des tatsächlichen Gewinns auf die gesamte Immobilie, nach Abzug der Kauf- und Verkaufskosten. Die plusvalia geht an das Rathaus und betrachtet nur den Boden.",
+            "Wenn ein Nichtansässiger verkauft, behält der Käufer normalerweise 3 Prozent des Preises für das staatliche Finanzamt ein. Dieser Einbehalt gehört zur Steuer auf den Veräußerungsgewinn, nicht zur plusvalia. Beim Verkauf haben Sie es also mit drei getrennten Beträgen zu tun: dem Einbehalt, der Steuer auf Ihren Gewinn und der plusvalia, jeder mit eigenem Datum."
+          ]
+        },
+        {
+          "h2": "Wie wird die plusvalia berechnet?",
+          "paras": [
+            "Es gibt zwei Methoden. Die objektive Methode nimmt nur den Katasterwert des Bodens, nicht den gesamten Katasterwert auf Ihrem IBI-Bescheid, und multipliziert ihn mit einem Koeffizienten für die Zahl der Jahre, in denen Ihnen die Immobilie gehörte. Die Methode des tatsächlichen Gewinns verwendet den tatsächlichen Wertzuwachs zwischen der Urkunde, mit der Sie gekauft haben, und der, mit der Sie verkaufen.",
+            "Sie dürfen die günstigere der beiden wählen. Die Wahl erfolgt auf Antrag, und Sie brauchen Nachweise sowohl für den Anschaffungswert als auch für den Veräußerungswert, in der Praxis also beide Urkunden. Dieses System gilt seit dem 10. November 2021, ältere Artikel, die nur eine einzige Formel ohne Wahlmöglichkeit beschreiben, sind also veraltet."
+          ]
+        },
+        {
+          "h2": "Ich verkaufe für weniger, als ich bezahlt habe. Muss ich trotzdem zahlen?",
+          "paras": [
+            "Nein. Wenn nachgewiesen ist, dass kein Wertzuwachs entstanden ist, fällt keine Steuer an. Haben Sie auf dem Höhepunkt des Marktes gekauft und verkaufen nun für weniger, können Sie das mit den beiden Urkunden belegen, und es wird keine plusvalia festgesetzt.",
+            "Die Übertragung müssen Sie trotzdem erklären, mit beiden Urkunden im Anhang (das Rathaus will die Zahlen sehen, auch wenn das Ergebnis null ist). Wer die Erklärung weglässt, weil nichts zu zahlen ist, überspringt genau den einen Schritt, den das Gesetz noch verlangt. Geben Sie sie also mit derselben Sorgfalt ab wie bei einem Verkauf mit Steuerschuld."
+          ]
+        },
+        {
+          "h2": "Warum nennt mir jede Gemeinde einen anderen Betrag?",
+          "paras": [
+            "Weil die Gemeinde die Zahlen festlegt. Die Koeffizienten, der Steuersatz und ob die Gemeinde mit Erklärung oder Selbstveranlagung arbeitet, werden alle per örtlicher Satzung bestimmt. Der Staat legt die Obergrenzen fest, aber jedes Rathaus entscheidet, wo es darunter liegt. Zwei ähnliche Wohnungen in benachbarten Gemeinden können deshalb recht unterschiedlich ausfallen.",
+            "Deshalb kann Ihnen auch kein ehrlicher Ratgeber einen landesweiten Satz nennen. Jede Gemeinde veröffentlicht ihre eigene Satzung, meist auf ihrem kommunalen Steuerportal. Schlagen Sie die Satzung der Gemeinde nach, in der Ihre Immobilie liegt, oder bitten Sie Ihren abogado oder gestor, beide Methoden für Sie durchzurechnen, bevor Sie einen Preis vereinbaren."
+          ]
+        },
+        {
+          "h2": "Wie viel Zeit habe ich nach Verkauf oder Erbschaft?",
+          "paras": [
+            "Beim Verkauf beträgt die Frist 30 Werktage ab dem Datum der öffentlichen Urkunde. Werktage heißt, dass Samstage, Sonntage und Feiertage nicht zählen. Der August dagegen zählt, ein Verkauf kurz vor den Sommerferien bekommt also keinen zusätzlichen Monat.",
+            "Bei einer Erbschaft beträgt die Frist sechs Monate ab dem Todestag. Sie kann auf ein Jahr verlängert werden, aber nur, wenn Sie die Verlängerung innerhalb der ersten sechs Monate beantragen. Für Familien im Ausland, die gleichzeitig mit einem Todesfall und einem ausländischen Nachlassverfahren zu tun haben, lohnt es sich, diesen Antrag früh zu stellen."
+          ]
+        },
+        {
+          "h2": "Wie gehe ich beim Notar damit um?",
+          "paras": [
+            "Lassen Sie sich beide Methoden schätzen, bevor Sie den Reservierungs- oder arras-Vertrag unterschreiben, nicht danach. So bekommen Sie ein realistisches Bild Ihres Nettoerlöses neben dem Einbehalt von 3 Prozent und der Steuer auf Ihren Gewinn, und Sie haben Zeit, die Nachweise für die Methode des tatsächlichen Gewinns zu sammeln, falls diese günstiger ist.",
+            "Vereinbaren Sie dann schriftlich im Kaufvertrag, wie die plusvalia beim Notartermin behandelt wird und wer die Erklärung beim Rathaus einreicht. Wenn ein abogado Sie beim Verkauf vertritt, bitten Sie ihn, das zu übernehmen. Bewahren Sie eine Kopie der eingereichten Erklärung bei Ihren Verkaufsunterlagen auf."
+          ]
+        },
+        {
+          "h2": "Was sollte ich aufbewahren, um die Methode des tatsächlichen Gewinns nutzen zu können?",
+          "paras": [
+            "Vor allem beide Urkunden: die escritura, mit der Sie gekauft haben, und die, mit der Sie verkaufen. Sie belegen den Anschaffungs- und den Veräußerungswert, auf denen die Methode des tatsächlichen Gewinns beruht. Liegt die ursprüngliche Kaufurkunde zu Hause in Bergen oder Göteborg in einer Schublade, suchen Sie sie heraus, bevor Sie die Immobilie inserieren.",
+            "Bewahren Sie auch die IBI-Bescheide auf, und fragen Sie beim Rathaus oder beim Kataster nach dem Bodenanteil des Katasterwerts, denn die objektive Methode verwendet nur den Bodenwert. Mit diesen Unterlagen in einem Ordner ist die plusvalia kein rätselhafter Betrag in der Abrechnung zum Notartermin mehr, sondern eine Summe, die Sie prüfen können. So bleibt der Kopf frei für das, was als Nächstes kommt."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "La plusvalia en Espagne expliquée aux propriétaires étrangers",
+      "description": "La plusvalia est un impôt municipal sur la hausse de valeur du terrain quand un bien espagnol change de mains : calcul, qui la fixe et délais.",
+      "h1": "La plusvalia : l'impôt de la mairie quand vous vendez ou héritez d'un logement en Espagne",
+      "lead": "La plusvalia est un impôt municipal sur la hausse de valeur du terrain situé sous un bien, perçu lors d'une vente ou d'une succession. Elle se calcule soit à partir de la valeur cadastrale du terrain et d'un coefficient lié aux années de détention, soit à partir de la plus-value réelle entre les deux actes, et le contribuable peut choisir la plus basse. En cas de vente, elle est due dans les 30 jours ouvrables suivant l'acte.",
+      "sections": [
+        {
+          "h2": "Bon, qu'est-ce que la plusvalia exactement ?",
+          "paras": [
+            "Son nom complet est impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, ce qui explique que tout le monde dise plusvalia. Plus veut dire davantage et valía veut dire valeur, et c'est à peu près l'idée : un impôt sur la hausse de valeur du terrain sur lequel se trouve votre logement, perçu par la mairie lorsque le bien change de mains.",
+            "Les propriétaires la rencontrent à deux moments : une vente et une succession. C'est un impôt local, qui n'a donc rien à voir avec votre modelo 210 ni avec l'administration fiscale nationale. La mairie, ou l'organisme qui perçoit les impôts pour son compte, décide de la façon dont elle est établie et de l'endroit où vous payez."
+          ]
+        },
+        {
+          "h2": "La plusvalia est-elle la même chose que l'impôt sur la plus-value ?",
+          "paras": [
+            "Non, et il est facile de confondre les deux. Pour un non-résident, l'impôt sur la plus-value est payé à l'administration fiscale nationale, à 19 pour cent de la plus-value réelle sur l'ensemble du bien, après les frais d'achat et de vente. La plusvalia va à la mairie et ne regarde que le terrain.",
+            "Lorsqu'un non-résident vend, l'acheteur retient normalement 3 pour cent du prix pour l'administration fiscale nationale. Cette retenue concerne l'impôt sur la plus-value, pas la plusvalia. Lors d'une vente, vous avez donc affaire à trois montants distincts : la retenue, l'impôt sur votre plus-value et la plusvalia, chacun avec sa propre date."
+          ]
+        },
+        {
+          "h2": "Comment la plusvalia est-elle calculée ?",
+          "paras": [
+            "Il existe deux méthodes. La méthode objective prend uniquement la valeur cadastrale du terrain, pas la valeur cadastrale totale figurant sur votre avis d'IBI, et la multiplie par un coefficient correspondant au nombre d'années de détention du bien. La méthode de la plus-value réelle utilise la hausse effective de valeur entre l'acte par lequel vous avez acheté et celui par lequel vous vendez.",
+            "Vous pouvez choisir la plus basse des deux. Ce choix se fait sur demande, et vous devez prouver à la fois la valeur d'acquisition et la valeur de transmission, ce qui signifie en pratique les deux actes. Ce système est en vigueur depuis le 10 novembre 2021 : les anciens articles qui décrivent une formule unique sans choix sont donc dépassés."
+          ]
+        },
+        {
+          "h2": "Je vends moins cher que ce que j'ai payé. Dois-je quand même la payer ?",
+          "paras": [
+            "Non. Lorsqu'il est démontré qu'aucune hausse de valeur ne s'est produite, rien n'est dû. Si vous avez acheté au sommet du marché et que vous vendez moins cher, vous pouvez le démontrer avec les deux actes, et aucune plusvalia n'est établie.",
+            "Vous devez toutefois déclarer la transmission, avec les deux actes joints (la mairie a besoin de voir les chiffres même quand la réponse est zéro). Sauter la déclaration parce qu'il n'y a rien à payer revient à omettre la seule étape que la loi vous demande encore : déposez-la avec le même soin qu'une vente avec impôt à payer."
+          ]
+        },
+        {
+          "h2": "Pourquoi chaque commune me donne-t-elle un chiffre différent ?",
+          "paras": [
+            "Parce que c'est la commune qui fixe les chiffres. Les coefficients, le taux et le fait que la commune fonctionne par déclaration ou par auto-liquidation sont tous fixés par ordonnance locale. L'État fixe les plafonds, mais chaque mairie choisit où elle se situe en dessous : deux appartements similaires dans des communes voisines peuvent donc aboutir à des montants assez différents.",
+            "C'est aussi pour cela qu'aucun guide honnête ne peut vous donner un taux national unique. Chaque commune publie sa propre ordonnance, généralement sur son portail fiscal municipal. Consultez l'ordonnance de la commune où se trouve votre bien, ou demandez à votre abogado ou à votre gestor de calculer les deux méthodes pour vous avant de vous mettre d'accord sur un prix."
+          ]
+        },
+        {
+          "h2": "De combien de temps est-ce que je dispose après une vente ou une succession ?",
+          "paras": [
+            "En cas de vente, le délai est de 30 jours ouvrables à compter de la date de l'acte authentique. Jours ouvrables signifie que les samedis, dimanches et jours fériés ne comptent pas. Le mois d'août, en revanche, compte : une vente signée juste avant les vacances d'été ne bénéficie donc pas d'un mois de plus.",
+            "En cas de succession, le délai est de six mois à compter de la date du décès. Il peut être prolongé à un an, mais seulement si vous demandez la prolongation dans les six premiers mois. Pour les familles vivant à l'étranger, qui doivent faire face à un décès et à une succession étrangère en même temps, cette demande mérite d'être faite tôt."
+          ]
+        },
+        {
+          "h2": "Comment m'y prendre chez le notaire ?",
+          "paras": [
+            "Demandez une estimation selon les deux méthodes avant de signer le contrat de réservation ou d'arras, pas après. Vous aurez ainsi une idée réaliste de votre produit net, en tenant compte de la retenue de 3 pour cent et de l'impôt sur votre plus-value, et vous aurez le temps de réunir les preuves pour la méthode de la plus-value réelle si c'est la plus basse.",
+            "Convenez ensuite par écrit, dans le contrat de vente, de la façon dont la plusvalia sera traitée à la signature et de qui déposera la déclaration auprès de la mairie. Si un abogado vous représente pour la vente, demandez-lui de s'en charger. Gardez une copie de la déclaration déposée avec vos papiers de vente."
+          ]
+        },
+        {
+          "h2": "Que dois-je conserver pour pouvoir utiliser la méthode de la plus-value réelle ?",
+          "paras": [
+            "Avant tout, les deux actes : l'escritura par laquelle vous avez acheté et celle par laquelle vous vendez. Ce sont les preuves des valeurs d'acquisition et de transmission sur lesquelles repose la méthode de la plus-value réelle. Si l'acte d'achat original est dans un tiroir chez vous à Bergen ou à Göteborg, retrouvez-le avant de mettre le bien en vente.",
+            "Gardez aussi les avis d'IBI, et demandez à la mairie ou au cadastre la part de la valeur cadastrale qui correspond au terrain, car la méthode objective n'utilise que la valeur du terrain. Avec ces papiers réunis dans un même dossier, la plusvalia cesse d'être un chiffre mystérieux sur le décompte de vente et devient une somme que vous pouvez vérifier, ce qui vous laisse libre de penser à la suite."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Plusvalia in Spanje uitgelegd voor buitenlandse eigenaren",
+      "description": "De plusvalia is een gemeentelijke belasting op de waardestijging van grond wanneer een Spaanse woning van eigenaar wisselt, met eigen termijnen.",
+      "h1": "De plusvalia: de gemeentebelasting bij verkoop of erfenis van een Spaanse woning",
+      "lead": "De plusvalia is een gemeentelijke belasting over de waardestijging van de grond onder een woning, die wordt geheven bij verkoop of erfenis. Ze wordt berekend op basis van de kadastrale waarde van de grond en een coëfficiënt voor de bezitsjaren, of op basis van de werkelijke winst tussen de twee aktes, en de belastingplichtige mag de laagste kiezen. Bij verkoop moet ze binnen 30 werkdagen na de akte worden voldaan.",
+      "sections": [
+        {
+          "h2": "Goed, wat is de plusvalia eigenlijk?",
+          "paras": [
+            "De volledige naam is impuesto sobre el incremento de valor de los terrenos de naturaleza urbana, en daarom zegt iedereen plusvalia. Plus betekent meer en valía betekent waarde, en dat is ongeveer het idee: een belasting over de waardestijging van de grond waarop uw woning staat, die de gemeente heft wanneer de woning van eigenaar wisselt.",
+            "De twee momenten waarop eigenaren ermee te maken krijgen, zijn een verkoop en een erfenis. Het is een lokale belasting, dus ze heeft niets te maken met uw modelo 210 of met de landelijke belastingdienst. De gemeente, of de instantie die namens haar belastingen int, bepaalt hoe de aanslag wordt vastgesteld en waar u betaalt."
+          ]
+        },
+        {
+          "h2": "Is de plusvalia hetzelfde als vermogenswinstbelasting?",
+          "paras": [
+            "Nee, en de twee door elkaar halen is een makkelijke vergissing. Vermogenswinstbelasting betaalt een niet-inwoner aan de landelijke belastingdienst, tegen 19 procent van de werkelijke winst op de hele woning, na aftrek van aankoop- en verkoopkosten. De plusvalia gaat naar de gemeente en kijkt alleen naar de grond.",
+            "Verkoopt een niet-inwoner, dan houdt de koper normaal 3 procent van de prijs in voor de landelijke belastingdienst. Die inhouding hoort bij de vermogenswinstbelasting, niet bij de plusvalia. Bij een verkoop heeft u dus te maken met drie aparte bedragen: de inhouding, de belasting over uw winst en de plusvalia, elk met een eigen datum."
+          ]
+        },
+        {
+          "h2": "Hoe wordt de plusvalia berekend?",
+          "paras": [
+            "Er zijn twee methoden. De objectieve methode neemt alleen de kadastrale waarde van de grond, niet de totale kadastrale waarde op uw IBI-aanslag, en vermenigvuldigt die met een coëfficiënt voor het aantal jaren dat u de woning bezat. De methode van de werkelijke winst gebruikt de daadwerkelijke waardestijging tussen de akte waarmee u kocht en de akte waarmee u verkoopt.",
+            "U mag de laagste van de twee kiezen. Die keuze maakt u op verzoek, en u heeft bewijs nodig van zowel de aanschafwaarde als de overdrachtswaarde, wat in de praktijk neerkomt op beide aktes. Dit systeem geldt sinds 10 november 2021, dus oudere artikelen die één formule zonder keuze beschrijven, zijn achterhaald."
+          ]
+        },
+        {
+          "h2": "Ik verkoop voor minder dan ik betaalde. Moet ik dan nog steeds betalen?",
+          "paras": [
+            "Nee. Als wordt aangetoond dat er geen waardestijging is ontstaan, is er geen belastingplicht. Kocht u op de top van de markt en verkoopt u nu voor minder, dan kunt u dat met de twee aktes aantonen, en wordt er geen plusvalia geheven.",
+            "U moet de overdracht wel aangeven, met beide aktes als bijlage (de gemeente wil de cijfers zien, ook als de uitkomst nul is). Wie de aangifte overslaat omdat er niets te betalen valt, laat juist de ene stap weg die de wet nog van u vraagt, dus dien die even zorgvuldig in als bij een verkoop waarover wel belasting verschuldigd is."
+          ]
+        },
+        {
+          "h2": "Waarom geeft elke gemeente mij een ander bedrag?",
+          "paras": [
+            "Omdat de gemeente de cijfers bepaalt. De coëfficiënten, het belastingtarief en of de gemeente werkt met aangifte of met zelfberekening worden allemaal in een lokale verordening vastgelegd. De staat stelt de bovengrenzen vast, maar elke gemeente kiest zelf waar ze daaronder zit, dus twee vergelijkbare appartementen in naburige gemeenten kunnen heel verschillend uitkomen.",
+            "Daarom kan ook geen eerlijke gids u één landelijk tarief geven. Elke gemeente publiceert haar eigen verordening, meestal op haar gemeentelijke belastingportaal. Zoek de verordening op van de gemeente waar uw woning staat, of vraag uw abogado of gestor beide methoden voor u uit te rekenen voordat u een prijs afspreekt."
+          ]
+        },
+        {
+          "h2": "Hoeveel tijd heb ik na een verkoop of erfenis?",
+          "paras": [
+            "Bij verkoop is de termijn 30 werkdagen vanaf de datum van de notariële akte. Werkdagen betekent dat zaterdagen, zondagen en feestdagen niet meetellen. Augustus telt daarentegen wel mee, dus een verkoop die vlak voor de zomervakantie wordt getekend, krijgt er geen extra maand bij.",
+            "Bij een erfenis is de termijn zes maanden vanaf de datum van overlijden. Die kan worden verlengd tot een jaar, maar alleen als u de verlenging binnen de eerste zes maanden aanvraagt. Voor families in het buitenland, die tegelijk met een overlijden en een buitenlandse nalatenschap te maken hebben, loont het om dat verzoek vroeg in te dienen."
+          ]
+        },
+        {
+          "h2": "Hoe pak ik het aan bij de notaris?",
+          "paras": [
+            "Vraag om een schatting van beide methoden voordat u het reserverings- of arrascontract tekent, niet erna. Dan heeft u een realistisch beeld van uw netto-opbrengst naast de inhouding van 3 procent en de belasting over uw winst, en heeft u tijd om het bewijs voor de methode van de werkelijke winst te verzamelen als die het laagst uitvalt.",
+            "Leg daarna in het koopcontract schriftelijk vast hoe de plusvalia bij de overdracht wordt afgehandeld, en wie de aangifte bij de gemeente indient. Heeft u een abogado die u bij de verkoop bijstaat, vraag hem of haar dit op zich te nemen. Bewaar een kopie van de ingediende aangifte bij uw verkooppapieren."
+          ]
+        },
+        {
+          "h2": "Wat moet ik bewaren om de methode van de werkelijke winst te kunnen gebruiken?",
+          "paras": [
+            "Allereerst beide aktes: de escritura waarmee u kocht en die waarmee u verkoopt. Ze zijn het bewijs van de aanschaf- en overdrachtswaarde waarop de methode van de werkelijke winst steunt. Ligt de originele aankoopakte thuis in een la in Bergen of Göteborg, zoek die dan op voordat u de woning te koop zet.",
+            "Bewaar ook de IBI-aanslagen, en vraag de gemeente of het Catastro naar het grondgedeelte van de kadastrale waarde, omdat de objectieve methode alleen de grondwaarde gebruikt. Met die papieren in één map is de plusvalia geen raadselachtig bedrag meer op de afrekening, maar een som die u kunt controleren, en houdt u ruimte om na te denken over wat er daarna komt."
+          ]
+        }
+      ]
+    }
+  }
+}

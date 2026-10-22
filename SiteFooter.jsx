@@ -35,12 +35,12 @@ export function SponsorLine({ className = 's247f-sponsor' }) {
 // The answers and the about page are static pages (seo/StaticPage.jsx). Every page links them,
 // so a crawler that lands anywhere reaches the part of the site it can quote.
 const EXTRA = {
-  en: { answers: 'Questions and answers', about: 'About Spain 24/7' },
-  no: { answers: 'Spørsmål og svar', about: 'Om Spain 24/7' },
-  sv: { answers: 'Frågor och svar', about: 'Om Spain 24/7' },
-  de: { answers: 'Fragen und Antworten', about: 'Über Spain 24/7' },
-  fr: { answers: 'Questions et réponses', about: 'À propos de Spain 24/7' },
-  nl: { answers: 'Vragen en antwoorden', about: 'Over Spain 24/7' },
+  en: { answers: 'Questions and answers', guides: 'Guides', about: 'About Spain 24/7' },
+  no: { answers: 'Spørsmål og svar', guides: 'Guider', about: 'Om Spain 24/7' },
+  sv: { answers: 'Frågor och svar', guides: 'Guider', about: 'Om Spain 24/7' },
+  de: { answers: 'Fragen und Antworten', guides: 'Ratgeber', about: 'Über Spain 24/7' },
+  fr: { answers: 'Questions et réponses', guides: 'Guides', about: 'À propos de Spain 24/7' },
+  nl: { answers: 'Vragen en antwoorden', guides: 'Gidsen', about: 'Over Spain 24/7' },
 };
 
 export default function SiteFooter({ note }) {
@@ -59,6 +59,7 @@ export default function SiteFooter({ note }) {
 
         <nav className="s247f-links" aria-label="Footer">
           <LLink to="/answers">{extra.answers}</LLink>
+          <LLink to="/guides">{extra.guides}</LLink>
           <LLink to="/spain-directory">{t('nav.directory')}</LLink>
           <LLink to="/spain-professionals">{t('nav.professionals')}</LLink>
           <LLink to="/tax-calculator">{t('nav.tax')}</LLink>

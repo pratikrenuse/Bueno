@@ -77,6 +77,7 @@ const cap = s => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 // needs a sentence, an article and a date, and these carry all three.
 import { ANSWERS } from '../answers/answers.js';
 import { ABOUT } from '../answers/about.js';
+import { GUIDES as ALL_GUIDES } from '../guides/index.js';
 import { sourceLine, lastCheckedOf, citationsOf } from '../answers/sources.js';
 
 const ANSWERS_PATH = '/answers';
@@ -92,15 +93,27 @@ const ANSWERS_UI = {
 
 // Topic headings for the answers hub, and the two lines every answer page adds under the
 // answer. A long flat list of questions reads as a dump; grouped, it reads as a reference.
-const TOPICS = ['tax', 'selling', 'buying', 'letting', 'community', 'insurance', 'legal-claims', 'inheritance', 'residency'];
+const TOPICS = ['buying', 'tax', 'selling', 'letting', 'community', 'home', 'insurance', 'legal-claims', 'inheritance', 'residency'];
 const TOPIC_UI = {
-  en: { tax: 'Tax and filing deadlines', selling: 'Selling', buying: 'Buying', letting: 'Letting', community: 'Your community of owners', insurance: 'Insurance', 'legal-claims': 'Claims, time limits and squatters', inheritance: 'Inheritance', residency: 'Residency and time in Spain' },
-  no: { tax: 'Skatt og frister', selling: 'Salg', buying: 'Kjøp', letting: 'Utleie', community: 'Sameiet', insurance: 'Forsikring', 'legal-claims': 'Krav, frister og okkupanter', inheritance: 'Arv', residency: 'Bosted og tid i Spania' },
-  sv: { tax: 'Skatt och deklarationsfrister', selling: 'Försäljning', buying: 'Köp', letting: 'Uthyrning', community: 'Samfälligheten', insurance: 'Försäkring', 'legal-claims': 'Krav, frister och ockupanter', inheritance: 'Arv', residency: 'Bosättning och tid i Spanien' },
-  de: { tax: 'Steuern und Fristen', selling: 'Verkaufen', buying: 'Kaufen', letting: 'Vermieten', community: 'Ihre Eigentümergemeinschaft', insurance: 'Versicherung', 'legal-claims': 'Ansprüche, Fristen und Hausbesetzer', inheritance: 'Erben', residency: 'Wohnsitz und Aufenthalt in Spanien' },
-  fr: { tax: 'Impôts et délais de déclaration', selling: 'Vendre', buying: 'Acheter', letting: 'Louer', community: 'Votre copropriété', insurance: 'Assurance', 'legal-claims': 'Recours, délais et squatteurs', inheritance: 'Succession', residency: 'Résidence et séjour en Espagne' },
-  nl: { tax: 'Belasting en aangiftetermijnen', selling: 'Verkopen', buying: 'Kopen', letting: 'Verhuren', community: 'Uw VvE', insurance: 'Verzekering', 'legal-claims': 'Claims, termijnen en krakers', inheritance: 'Erven', residency: 'Verblijf en tijd in Spanje' },
+  en: { home: 'Looking after the home', tax: 'Tax and filing deadlines', selling: 'Selling', buying: 'Buying', letting: 'Letting', community: 'Your community of owners', insurance: 'Insurance', 'legal-claims': 'Claims, time limits and squatters', inheritance: 'Inheritance', residency: 'Residency and time in Spain' },
+  no: { home: 'Vedlikehold av boligen', tax: 'Skatt og frister', selling: 'Salg', buying: 'Kjøp', letting: 'Utleie', community: 'Sameiet', insurance: 'Forsikring', 'legal-claims': 'Krav, frister og okkupanter', inheritance: 'Arv', residency: 'Bosted og tid i Spania' },
+  sv: { home: 'Att sköta bostaden', tax: 'Skatt och deklarationsfrister', selling: 'Försäljning', buying: 'Köp', letting: 'Uthyrning', community: 'Samfälligheten', insurance: 'Försäkring', 'legal-claims': 'Krav, frister och ockupanter', inheritance: 'Arv', residency: 'Bosättning och tid i Spanien' },
+  de: { home: 'Pflege der Immobilie', tax: 'Steuern und Fristen', selling: 'Verkaufen', buying: 'Kaufen', letting: 'Vermieten', community: 'Ihre Eigentümergemeinschaft', insurance: 'Versicherung', 'legal-claims': 'Ansprüche, Fristen und Hausbesetzer', inheritance: 'Erben', residency: 'Wohnsitz und Aufenthalt in Spanien' },
+  fr: { home: 'Entretenir le logement', tax: 'Impôts et délais de déclaration', selling: 'Vendre', buying: 'Acheter', letting: 'Louer', community: 'Votre copropriété', insurance: 'Assurance', 'legal-claims': 'Recours, délais et squatteurs', inheritance: 'Succession', residency: 'Résidence et séjour en Espagne' },
+  nl: { home: 'Onderhoud van de woning', tax: 'Belasting en aangiftetermijnen', selling: 'Verkopen', buying: 'Kopen', letting: 'Verhuren', community: 'Uw VvE', insurance: 'Verzekering', 'legal-claims': 'Claims, termijnen en krakers', inheritance: 'Erven', residency: 'Verblijf en tijd in Spanje' },
 };
+const GUIDES_PATH = '/guides';
+// Only a guide written in all six languages is published; a half translated one waits.
+const GUIDES = ALL_GUIDES.filter(g => ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => g.i18n && g.i18n[l]));
+const GUIDES_UI = {
+  en: { hub: 'Guides for owners in Spain', hubTitle: 'Guides to owning property in Spain', lead: 'The whole subject in one place: buying, owning, letting, tax, inheritance and residency, written for people who own in Spain and live somewhere else. Every figure comes from an official source.', sources: 'Sources', answers: 'Short answers on this subject', guides: 'More guides', tool: 'Work it out for your own property', checked: d => `Every figure checked against its official source. Last checked ${d}.` },
+  no: { hub: 'Guider for eiere i Spania', hubTitle: 'Guider til å eie bolig i Spania', lead: 'Hele temaet på ett sted: kjøp, eierskap, utleie, skatt, arv og bosted, skrevet for deg som eier i Spania og bor et annet sted. Alle tall kommer fra en offisiell kilde.', sources: 'Kilder', answers: 'Korte svar om dette temaet', guides: 'Flere guider', tool: 'Regn det ut for din egen bolig', checked: d => `Alle tall er kontrollert mot den offisielle kilden. Sist kontrollert ${d}.` },
+  sv: { hub: 'Guider för ägare i Spanien', hubTitle: 'Guider till att äga bostad i Spanien', lead: 'Hela ämnet på ett ställe: köp, ägande, uthyrning, skatt, arv och bosättning, skrivet för dig som äger i Spanien och bor någon annanstans. Varje siffra kommer från en officiell källa.', sources: 'Källor', answers: 'Korta svar i ämnet', guides: 'Fler guider', tool: 'Räkna ut det för din egen bostad', checked: d => `Varje siffra är kontrollerad mot sin officiella källa. Senast kontrollerad ${d}.` },
+  de: { hub: 'Ratgeber für Eigentümer in Spanien', hubTitle: 'Ratgeber zum Immobilienbesitz in Spanien', lead: 'Das ganze Thema an einem Ort: Kaufen, Besitzen, Vermieten, Steuern, Erbe und Wohnsitz, geschrieben für Eigentümer in Spanien, die anderswo leben. Jede Zahl stammt aus einer amtlichen Quelle.', sources: 'Quellen', answers: 'Kurze Antworten zum Thema', guides: 'Weitere Ratgeber', tool: 'Für die eigene Immobilie ausrechnen', checked: d => `Jede Zahl mit ihrer amtlichen Quelle abgeglichen. Zuletzt geprüft am ${d}.` },
+  fr: { hub: 'Guides pour les propriétaires en Espagne', hubTitle: 'Guides pour posséder un bien en Espagne', lead: "Tout le sujet au même endroit : acheter, posséder, louer, impôts, succession et résidence, écrit pour ceux qui possèdent en Espagne et vivent ailleurs. Chaque chiffre provient d'une source officielle.", sources: 'Sources', answers: 'Réponses courtes sur ce sujet', guides: 'Autres guides', tool: 'Calculez-le pour votre propre bien', checked: d => `Chaque chiffre est vérifié auprès de sa source officielle. Dernière vérification le ${d}.` },
+  nl: { hub: 'Gidsen voor eigenaren in Spanje', hubTitle: 'Gidsen over woningbezit in Spanje', lead: 'Het hele onderwerp op één plek: kopen, bezitten, verhuren, belasting, erven en verblijf, geschreven voor wie in Spanje bezit en elders woont. Elk cijfer komt uit een officiële bron.', sources: 'Bronnen', answers: 'Korte antwoorden over dit onderwerp', guides: 'Meer gidsen', tool: 'Reken het uit voor uw eigen woning', checked: d => `Elk cijfer is gecontroleerd aan de officiële bron. Laatst gecontroleerd op ${d}.` },
+};
+
 const ABOUT_SUFFIX = {
   en: 'who runs it and how every figure is checked',
   no: 'hvem driver det og hvordan tall kontrolleres',
@@ -142,6 +155,7 @@ export function buildRoutes({ tools } = {}) {
       // The answers hub sits first because it is the only part of the site a crawler or an
       // assistant can read an actual answer out of. Everything else is a tool or a listing.
       { href: lp(locale, ANSWERS_PATH), label: ANSWERS_UI[locale].hub },
+      ...(GUIDES.length ? [{ href: lp(locale, GUIDES_PATH), label: GUIDES_UI[locale].hub }] : []),
       { href: lp(locale, HUBS.trades.path), label: ui.trades },
       { href: lp(locale, HUBS.pros.path), label: ui.pros },
       { href: lp(locale, '/areas'), label: ui.areas },
@@ -457,6 +471,8 @@ export function buildRoutes({ tools } = {}) {
           ...[...ANSWERS.filter(o => o.slug !== x.slug && o.tool === x.tool),
               ...ANSWERS.filter(o => o.slug !== x.slug && o.tool !== x.tool && o.topic === x.topic)]
             .slice(0, 8).map(o => ({ href: lp(locale, `${ANSWERS_PATH}/${o.slug}`), label: o.q[locale] })),
+          ...GUIDES.filter(gd => gd.topic === x.topic || (gd.answers || []).includes(x.slug)).slice(0, 3)
+            .map(gd => ({ href: lp(locale, `${GUIDES_PATH}/${gd.slug}`), label: gd.i18n[locale].h1 })),
           { href: lp(locale, '/about'), label: ABOUT[locale].h1 },
         ],
         alternates: {},
@@ -464,6 +480,72 @@ export function buildRoutes({ tools } = {}) {
         answerRules: x.rules,
         citations: citationsOf(x.rules),
         lastChecked: lastCheckedOf(x.rules),
+        toolSlug: x.tool,
+      });
+    }
+  }
+
+  // --- guides ------------------------------------------------------------------------------
+  // The long form. A hub per locale grouped by topic, then one page per guide per locale.
+  if (GUIDES.length) for (const locale of LOCALES) {
+    const ui = UI[locale];
+    const g = GUIDES_UI[locale];
+    const hub = lp(locale, GUIDES_PATH);
+    add({
+      path: hub, locale, kind: 'guides-hub', group: 'guides',
+      title: g.hubTitle,
+      description: g.lead.slice(0, 155),
+      h1: g.hub,
+      intro: [g.lead],
+      breadcrumbs: [{ name: ui.home, path: lp(locale, '/') }, { name: g.hub, path: hub }],
+      changefreq: CHANGEFREQ.tool,
+      priority: 0.8,
+      links: [],
+      sections: TOPICS.map(topic => ({
+        h2: TOPIC_UI[locale][topic],
+        links: GUIDES.filter(x => x.topic === topic)
+          .map(x => ({ href: lp(locale, `${GUIDES_PATH}/${x.slug}`), label: x.i18n[locale].h1 })),
+      })).filter(sec => sec.links.length),
+      alternates: {},
+    });
+
+    for (const x of GUIDES) {
+      const c = x.i18n[locale];
+      const p = lp(locale, `${GUIDES_PATH}/${x.slug}`);
+      const tool = toolPages.find(t => t.slug === x.tool);
+      const toolLabel = TOOL_COPY[x.tool]?.[locale]?.h1 || tool?.title || x.tool;
+      const checked = lastCheckedOf(x.rules);
+      const related = (x.answers || []).map(s => ANSWERS.find(a => a.slug === s)).filter(Boolean);
+      add({
+        path: p, locale, kind: 'guide', group: `guide:${x.slug}`,
+        title: c.title,
+        description: c.description,
+        h1: c.h1,
+        intro: [c.lead],
+        body: c.sections,
+        sources: [
+          ...x.rules.map(id => sourceLine(id)).filter(Boolean),
+          ...(checked ? [g.checked(checked)] : []),
+        ],
+        sourcesLabel: g.sources,
+        breadcrumbs: [
+          { name: ui.home, path: lp(locale, '/') },
+          { name: g.hub, path: hub },
+          { name: c.h1, path: p },
+        ],
+        changefreq: CHANGEFREQ.tool,
+        priority: 0.8,
+        links: [
+          ...(tool ? [{ href: lp(locale, tool.path), label: `${g.tool}: ${toolLabel}` }] : []),
+          ...related.map(a => ({ href: lp(locale, `${ANSWERS_PATH}/${a.slug}`), label: a.q[locale] })),
+          ...GUIDES.filter(o => o.slug !== x.slug && o.topic === x.topic).slice(0, 4)
+            .map(o => ({ href: lp(locale, `${GUIDES_PATH}/${o.slug}`), label: o.i18n[locale].h1 })),
+          { href: hub, label: g.hub },
+          { href: lp(locale, '/about'), label: ABOUT[locale].h1 },
+        ],
+        alternates: {},
+        citations: citationsOf(x.rules),
+        lastChecked: checked,
         toolSlug: x.tool,
       });
     }

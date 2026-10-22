@@ -1,0 +1,477 @@
+{
+  "slug": "spanish-tax-residency-and-the-183-day-rule",
+  "topic": "residency",
+  "tool": "day-counter",
+  "rules": [
+    "res.tax.183_days",
+    "res.tax.economic_interests",
+    "res.tax.family_presumption",
+    "res.tax.worldwide_income",
+    "res.tax.calendar_year",
+    "residency.day_counting",
+    "residency.treaty_override",
+    "schengen.short_stay",
+    "irnr.rates",
+    "res.m720.residents_only",
+    "res.m720.threshold",
+    "res.m720.refiling",
+    "res.special_regime.eligibility",
+    "res.special_regime.duration",
+    "res.special_regime.option_deadline",
+    "res.special_regime.rates",
+    "res.special_regime.no_720",
+    "irnr.imputed.base"
+  ],
+  "answers": [
+    "how-days-are-counted-for-spanish-tax-residency",
+    "tax-resident-in-spain-and-home-country-tie-breaker",
+    "how-long-can-i-stay-in-spain-without-residency",
+    "tax-on-a-spanish-property-you-do-not-rent-out"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Spanish Tax Residency: How the 183 Day Rule Really Works",
+      "description": "You are tax resident in Spain if you spend more than 183 days there in a calendar year, or if your main economic base is there. How the days are counted.",
+      "h1": "Spanish tax residency and the 183 day rule for property owners",
+      "lead": "You are tax resident in Spain for a calendar year if you spend more than 183 days in Spain in that year, or if the main base of your activities or economic interests is in Spain. Owning a home there is not a test on its own. Short absences are added to your Spanish days unless you prove tax residence in another country.",
+      "sections": [
+        {
+          "h2": "When do I become tax resident in Spain?",
+          "paras": [
+            "Spanish law has two tests, and meeting either one is enough. The first is time: more than 183 days in Spanish territory during the calendar year. The second is your economic base: if the main nucleus of your activities or economic interests is in Spain, directly or indirectly, you are resident even with fewer days.",
+            "There is also a presumption. Unless you prove otherwise, you are presumed resident when your spouse, not legally separated, and your dependent minor children live habitually in Spain. It can be rebutted, for example with a tax residence certificate from your home country.",
+            "Owning a home in Spain is not one of the tests. Many Norwegian and Swedish owners keep a flat on the coast for decades and stay non-resident throughout, because their days, their work, their income and their family all remain at home."
+          ]
+        },
+        {
+          "h2": "Is it 183 days in any twelve months, or in the calendar year?",
+          "paras": [
+            "The calendar year. The count runs from 1 January to 31 December, not over any rolling twelve months, and residence is decided for the whole year. The tax period is the calendar year and the tax accrues on 31 December, and there is no general split year in the Spanish rule.",
+            "That matters if you move partway through a year. Arrive in March and stay, and you will likely pass 183 days in that same year. Arrive in September, and the first year may still be a non-resident year, with residence starting the following January. Ask a tax adviser (asesor fiscal) to check your dates before you book the removal van."
+          ]
+        },
+        {
+          "h2": "Do my short trips home stop the count?",
+          "paras": [
+            "Not necessarily, and this is the part most people get wrong. Spain counts three things together: the days you can show you were present, the days that fall between two documented presences, and your sporadic absences. Those absences are added to your Spanish days unless you prove tax residence elsewhere with a certificate.",
+            "There is no fixed trip length that makes an absence stop being sporadic. A rule of thumb you may hear, such as anything under 30 days counting and anything longer not, has no basis. And one documented day in Spain counts in full, whatever the hours.",
+            "So if you spend long winters in Spain and pop home for Christmas, do not assume those weeks come off your total. The safest proof is a tax residence certificate from your home tax office for the year in question."
+          ]
+        },
+        {
+          "h2": "Is the 183 day rule the same as the 90 day rule?",
+          "paras": [
+            "No. They are two different laws doing two different jobs. The 90 day rule is immigration: a non-EU national may stay in the Schengen area for no more than 90 days in any 180-day period, counting the whole area, not just Spain. It has no bearing on tax residence.",
+            "The 183 day rule is tax, and it applies to everyone, whatever passport you hold. A Swedish or German owner is not held to the 90 day limit, so for them the 183 days are the count to watch. A British owner visiting without a visa will hit the 90 day limit long before the tax count matters (the day counter on this site keeps track of the 90)."
+          ]
+        },
+        {
+          "h2": "What if my home country also says I am resident?",
+          "paras": [
+            "Then the double tax treaty between the two countries decides. Where you are resident in both countries under their own domestic laws, the treaty's tie-breaker rules override those domestic tests and settle on a single country of residence for the purposes of the treaty.",
+            "Norway, Sweden, Germany, the United Kingdom and France all have treaties with Spain. So a calculator, or a friend at the golf club, that gives you a bare yes or no from the 183 days alone is only giving you half the answer. If both countries could claim you, a tax adviser with experience of both systems is worth the fee."
+          ]
+        },
+        {
+          "h2": "What changes once I am tax resident?",
+          "paras": [
+            "You pay Spanish personal income tax (IRPF) on your total income, wherever it was produced and wherever the payer is based. Pensions, interest, dividends and rent from your home country all come into the Spanish return, subject to whatever the double tax treaty with that country says.",
+            "This is the real shift. As a non-resident owner, your Spanish return is about the Spanish home, such as the imputed income on a home you do not rent out, worked out from its cadastral value and taxed at 19 percent for residents of the EU, Iceland, Norway and Liechtenstein and 24 percent for everyone else. As a resident, Spain looks at your total income, on a different return."
+          ]
+        },
+        {
+          "h2": "Do I have to report my savings and property abroad?",
+          "paras": [
+            "Possibly. Modelo 720 is the return on assets held abroad, and it is filed by individuals who are resident in Spain, not by non-residents. A non-resident owner of a Spanish home does not file it, however many years they have owned the place.",
+            "Once resident, there is no obligation to report a type of asset when its combined value does not exceed 50,000 euros. The limit is tested per type: accounts, securities and funds, and real estate. After the first return, a new one is needed only when the value of a block rises by more than 20,000 euros since the last declaration, or another cause such as a transfer requires it.",
+            "If you have a house in Norway, a pension fund in Sweden or savings in Germany, list each one with its value on 31 December before your first resident year ends (a simple spreadsheet will do). It makes the first conversation with your adviser much shorter."
+          ]
+        },
+        {
+          "h2": "Is there a special tax regime for people moving to Spain?",
+          "paras": [
+            "Yes, but only for some moves. The special regime of article 93 of the income tax law is open to a worker, professional, entrepreneur or investor who moves to Spain and was not resident in the five tax periods before. The move must come from an employment contract, a directorship, an entrepreneurial activity, or highly qualified work for startups, training or research. It is not available simply for retiring or buying a home.",
+            "It applies in the year you become resident and the following five years. You opt in on modelo 149 within six months of the start date of the activity shown in your Social Security registration or equivalent. General income is then taxed at 24 percent up to 600,000 euros and 47 percent above, savings income at 19 to 30 percent from 2025, and the return is modelo 151. People under the regime do not file modelo 720."
+          ]
+        },
+        {
+          "h2": "How do I keep my position clear?",
+          "paras": [
+            "Keep evidence of where you were. Boarding passes, travel bookings and receipts help you show your days, and a tax residence certificate from your home country is the document that answers the sporadic absence question. Ask for one each year if your time in Spain is getting close to half the year.",
+            "Count your days in calendar years, not seasons, and talk to an asesor fiscal before the year you plan to cross the line rather than after. Then you can spend your winters on the terrace knowing which country expects a return from you."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Skattemessig bosted i Spania: slik virker 183-dagersregelen",
+      "description": "Du er skattemessig bosatt i Spania med mer enn 183 dager der i et kalenderår, eller med økonomisk hovedbase der, og slik telles dagene.",
+      "h1": "Skattemessig bosted i Spania og 183-dagersregelen for boligeiere",
+      "lead": "Du er skattemessig bosatt i Spania for et kalenderår hvis du tilbringer mer enn 183 dager i Spania det året, eller hvis hovedtyngden av virksomheten eller de økonomiske interessene dine er i Spania. Å eie en bolig der er ikke en test i seg selv. Korte fravær legges til de spanske dagene dine, med mindre du beviser skattemessig bosted i et annet land.",
+      "sections": [
+        {
+          "h2": "Når blir jeg skattemessig bosatt i Spania?",
+          "paras": [
+            "Spansk lov har to tester, og det er nok å oppfylle én av dem. Den første er tid: mer enn 183 dager på spansk territorium i løpet av kalenderåret. Den andre er den økonomiske basen din: hvis hovedtyngden av virksomheten eller de økonomiske interessene dine ligger i Spania, direkte eller indirekte, er du bosatt selv med færre dager.",
+            "Det finnes også en presumpsjon. Med mindre du beviser noe annet, antas du å være bosatt når ektefellen din, som ikke er juridisk separert, og mindreårige barn du forsørger, bor fast i Spania. Den kan motbevises, for eksempel med en attest om skattemessig bosted fra hjemlandet ditt.",
+            "Å eie en bolig i Spania er ikke en av testene. Mange norske og svenske eiere har en leilighet ved kysten i flere tiår og forblir ikke-bosatte hele tiden, fordi dagene, jobben, inntekten og familien deres blir værende hjemme."
+          ]
+        },
+        {
+          "h2": "Er det 183 dager i løpet av tolv måneder, eller i kalenderåret?",
+          "paras": [
+            "Kalenderåret. Tellingen går fra 1. januar til 31. desember, ikke over en hvilken som helst rullerende tolvmånedersperiode, og bosted avgjøres for hele året. Skatteperioden er kalenderåret og skatten oppstår 31. desember, og det finnes ingen generell deling av året i den spanske regelen.",
+            "Det betyr noe hvis du flytter midt i et år. Kommer du i mars og blir, passerer du trolig 183 dager samme år. Kommer du i september, kan det første året fortsatt være et år som ikke-bosatt, med bosted fra januar året etter. Be en skatterådgiver (asesor fiscal) sjekke datoene dine før du bestiller flyttebilen."
+          ]
+        },
+        {
+          "h2": "Stopper korte turer hjem tellingen?",
+          "paras": [
+            "Ikke nødvendigvis, og det er her de fleste tar feil. Spania teller tre ting sammen: dagene du kan vise at du var til stede, dagene som faller mellom to dokumenterte opphold, og de sporadiske fraværene dine. De fraværene legges til de spanske dagene dine, med mindre du beviser skattemessig bosted et annet sted med en attest.",
+            "Det finnes ingen fast reiselengde som gjør at et fravær slutter å være sporadisk. En tommelfingerregel du kan høre, som at alt under 30 dager teller og alt lengre ikke gjør det, har ikke noe grunnlag. Og én dokumentert dag i Spania teller fullt ut, uansett antall timer.",
+            "Så tilbringer du lange vintre i Spania og stikker hjem til jul, ikke anta at de ukene trekkes fra totalen. Det sikreste beviset er en attest om skattemessig bosted fra skattekontoret hjemme for det aktuelle året."
+          ]
+        },
+        {
+          "h2": "Er 183-dagersregelen det samme som 90-dagersregelen?",
+          "paras": [
+            "Nei. Det er to ulike lover som gjør to ulike jobber. 90-dagersregelen gjelder innvandring: en borger fra et land utenfor EU kan ikke oppholde seg i Schengen-området i mer enn 90 dager i løpet av en periode på 180 dager, regnet over hele området, ikke bare Spania. Den har ingen betydning for skattemessig bosted.",
+            "183-dagersregelen gjelder skatt, og den gjelder alle, uansett hvilket pass du har. En svensk eller tysk eier er ikke bundet av 90-dagersgrensen, så for dem er det de 183 dagene som må følges med på. En britisk eier på besøk uten visum treffer 90-dagersgrensen lenge før skattetellingen får betydning (dagtelleren på dette nettstedet holder styr på de 90)."
+          ]
+        },
+        {
+          "h2": "Hva om hjemlandet mitt også sier at jeg er bosatt?",
+          "paras": [
+            "Da avgjør skatteavtalen mellom de to landene. Der du er bosatt i begge land etter deres egne nasjonale regler, går avtalens regler for å avgjøre bosted foran de nasjonale testene og fastsetter ett enkelt bostedsland i avtalens forstand.",
+            "Norge, Sverige, Tyskland, Storbritannia og Frankrike har alle skatteavtaler med Spania. Så en kalkulator, eller en venn i golfklubben, som gir deg et rent ja eller nei bare ut fra de 183 dagene, gir deg bare halve svaret. Kan begge land gjøre krav på deg, er en skatterådgiver med erfaring fra begge systemene verdt honoraret."
+          ]
+        },
+        {
+          "h2": "Hva endres når jeg er skattemessig bosatt?",
+          "paras": [
+            "Du betaler spansk personlig inntektsskatt (IRPF) av den samlede inntekten din, uansett hvor den er opptjent og hvor utbetaleren holder til. Pensjoner, renter, utbytte og leie fra hjemlandet ditt kommer alle med i den spanske skattemeldingen, med forbehold om det skatteavtalen med det landet sier.",
+            "Dette er den egentlige endringen. Som ikke-bosatt eier handler den spanske skattemeldingen din om den spanske boligen, for eksempel den imputerte inntekten på en bolig du ikke leier ut, beregnet ut fra matrikkelverdien og skattlagt med 19 prosent for bosatte i EU, Island, Norge og Liechtenstein og 24 prosent for alle andre. Som bosatt ser Spania på den samlede inntekten din, på en annen skattemelding."
+          ]
+        },
+        {
+          "h2": "Må jeg rapportere sparepenger og eiendom i utlandet?",
+          "paras": [
+            "Kanskje. Modelo 720 er oppgaven over eiendeler i utlandet, og den leveres av personer som er bosatt i Spania, ikke av ikke-bosatte. En ikke-bosatt eier av en spansk bolig leverer den ikke, uansett hvor mange år de har eid stedet.",
+            "Når du er bosatt, er det ingen plikt til å rapportere en type eiendel når den samlede verdien ikke overstiger 50 000 euro. Grensen vurderes per type: kontoer, verdipapirer og fond, og fast eiendom. Etter den første oppgaven trengs en ny bare når verdien av en gruppe har økt med mer enn 20 000 euro siden forrige oppgave, eller en annen grunn, som et salg, krever det.",
+            "Har du et hus i Norge, et pensjonsfond i Sverige eller sparepenger i Tyskland, før opp hver av dem med verdien per 31. desember før ditt første år som bosatt er over (et enkelt regneark holder). Det gjør den første samtalen med rådgiveren din mye kortere."
+          ]
+        },
+        {
+          "h2": "Finnes det en særskilt skatteordning for folk som flytter til Spania?",
+          "paras": [
+            "Ja, men bare for noen flyttinger. Særordningen i artikkel 93 i inntektsskatteloven er åpen for en arbeidstaker, selvstendig yrkesutøver, gründer eller investor som flytter til Spania og ikke var bosatt i de fem skatteperiodene før. Flyttingen må skyldes en arbeidskontrakt, et styreverv, en gründervirksomhet eller høyt kvalifisert arbeid for oppstartsselskaper, opplæring eller forskning. Den er ikke tilgjengelig bare fordi du går av med pensjon eller kjøper bolig.",
+            "Den gjelder året du blir bosatt og de fem påfølgende årene. Du velger den på modelo 149 innen seks måneder etter startdatoen for virksomheten som står i registreringen din i trygdesystemet eller tilsvarende. Alminnelig inntekt skattlegges da med 24 prosent opp til 600 000 euro og 47 prosent over det, kapitalinntekt med 19 til 30 prosent fra 2025, og skattemeldingen er modelo 151. De som er i ordningen, leverer ikke modelo 720."
+          ]
+        },
+        {
+          "h2": "Hvordan holder jeg situasjonen min tydelig?",
+          "paras": [
+            "Ta vare på bevis for hvor du var. Boardingkort, reisebestillinger og kvitteringer hjelper deg å vise dagene dine, og en attest om skattemessig bosted fra hjemlandet ditt er dokumentet som besvarer spørsmålet om sporadisk fravær. Be om en hvert år hvis tiden din i Spania nærmer seg halve året.",
+            "Tell dagene i kalenderår, ikke i sesonger, og snakk med en asesor fiscal før året du planlegger å krysse grensen, ikke etterpå. Da kan du tilbringe vintrene på terrassen og vite hvilket land som venter en skattemelding fra deg."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Skatterättslig hemvist i Spanien: så fungerar 183-dagarsregeln",
+      "description": "Du har skatterättslig hemvist i Spanien om du vistas där mer än 183 dagar under ett kalenderår eller har din ekonomiska bas där. Så räknas dagarna.",
+      "h1": "Skatterättslig hemvist i Spanien och 183-dagarsregeln för fastighetsägare",
+      "lead": "Du har skatterättslig hemvist i Spanien för ett kalenderår om du vistas mer än 183 dagar i Spanien det året, eller om huvuddelen av din verksamhet eller dina ekonomiska intressen finns i Spanien. Att äga en bostad där är inget kriterium i sig. Kortare frånvaro läggs till dina spanska dagar om du inte kan styrka skatterättslig hemvist i ett annat land.",
+      "sections": [
+        {
+          "h2": "När får jag skatterättslig hemvist i Spanien?",
+          "paras": [
+            "Spansk lag har två kriterier, och det räcker att uppfylla ett av dem. Det första är tid: mer än 183 dagar på spanskt territorium under kalenderåret. Det andra är din ekonomiska bas: finns den huvudsakliga kärnan i din verksamhet eller dina ekonomiska intressen i Spanien, direkt eller indirekt, är du bosatt även med färre dagar.",
+            "Det finns också en presumtion. Om du inte visar något annat presumeras du vara bosatt när din make eller maka, som inte är rättsligt separerad från dig, och dina omyndiga barn som du försörjer stadigvarande bor i Spanien. Presumtionen kan motbevisas, till exempel med ett intyg om skatterättslig hemvist från ditt hemland.",
+            "Att äga en bostad i Spanien är inte ett av kriterierna. Många norska och svenska ägare har en lägenhet vid kusten i årtionden och förblir icke-bosatta hela tiden, eftersom deras dagar, arbete, inkomster och familj finns kvar hemma."
+          ]
+        },
+        {
+          "h2": "Gäller 183 dagar under valfria tolv månader eller under kalenderåret?",
+          "paras": [
+            "Kalenderåret. Räkningen löper från 1 januari till 31 december, inte över valfria rullande tolv månader, och hemvisten avgörs för hela året. Beskattningsperioden är kalenderåret och skatten uppstår den 31 december, och det finns ingen allmän uppdelning av året i den spanska regeln.",
+            "Det spelar roll om du flyttar mitt under ett år. Kommer du i mars och stannar passerar du sannolikt 183 dagar samma år. Kommer du i september kan det första året fortfarande vara ett år som icke-bosatt, och hemvisten börjar då nästa januari. Be en skatterådgivare (asesor fiscal) kontrollera dina datum innan du bokar flyttbilen."
+          ]
+        },
+        {
+          "h2": "Stoppar mina korta resor hem räkningen?",
+          "paras": [
+            "Inte nödvändigtvis, och det är här de flesta gör fel. Spanien räknar ihop tre saker: de dagar du kan visa att du var på plats, de dagar som ligger mellan två dokumenterade vistelser, och din tillfälliga frånvaro. Den frånvaron läggs till dina spanska dagar om du inte styrker skatterättslig hemvist någon annanstans med ett intyg.",
+            "Det finns ingen bestämd reslängd som gör att en frånvaro slutar vara tillfällig. En tumregel du kan höra, som att allt under 30 dagar räknas och allt längre inte gör det, saknar grund. Och en dokumenterad dag i Spanien räknas fullt ut, oavsett antalet timmar.",
+            "Så tillbringar du långa vintrar i Spanien och åker hem en sväng över julen, räkna inte med att de veckorna dras av från din summa. Det säkraste beviset är ett intyg om skatterättslig hemvist från din hemmaskattemyndighet för det aktuella året."
+          ]
+        },
+        {
+          "h2": "Är 183-dagarsregeln samma sak som 90-dagarsregeln?",
+          "paras": [
+            "Nej. Det är två olika lagar som gör två olika jobb. 90-dagarsregeln gäller in- och utresa: en medborgare från ett land utanför EU får vistas i Schengenområdet i högst 90 dagar under varje period om 180 dagar, räknat över hela området, inte bara Spanien. Den har ingen betydelse för skatterättslig hemvist.",
+            "183-dagarsregeln gäller skatt, och den gäller alla, oavsett vilket pass du har. En svensk eller tysk ägare omfattas inte av 90-dagarsgränsen, så för dem är det de 183 dagarna som ska bevakas. En brittisk ägare som besöker landet utan visum når 90-dagarsgränsen långt innan skatteräkningen spelar roll (guiden för att räkna dagar på den här sajten håller koll på de 90)."
+          ]
+        },
+        {
+          "h2": "Vad gäller om mitt hemland också säger att jag är bosatt?",
+          "paras": [
+            "Då avgör skatteavtalet mellan de två länderna. När du är bosatt i båda länderna enligt deras egna nationella regler går avtalets regler för att avgöra hemvist före de nationella kriterierna och pekar ut ett enda hemvistland för avtalets syften.",
+            "Norge, Sverige, Tyskland, Storbritannien och Frankrike har alla avtal med Spanien. Så en beräkning, eller en vän på golfklubben, som ger dig ett rent ja eller nej utifrån enbart de 183 dagarna ger dig bara halva svaret. Kan båda länderna göra anspråk på dig är en skatterådgivare med erfarenhet av båda systemen värd sitt arvode."
+          ]
+        },
+        {
+          "h2": "Vad ändras när jag har skatterättslig hemvist?",
+          "paras": [
+            "Du betalar spansk inkomstskatt för fysiska personer (IRPF) på hela din inkomst, var den än har uppstått och var den som betalar än finns. Pensioner, ränta, utdelningar och hyra från ditt hemland kommer alla med i den spanska deklarationen, med förbehåll för vad skatteavtalet med det landet säger.",
+            "Det här är den verkliga förändringen. Som icke-bosatt ägare handlar din spanska deklaration om den spanska bostaden, till exempel schablonintäkten på en bostad du inte hyr ut, beräknad utifrån taxeringsvärdet och beskattad med 19 procent för boende i EU, Island, Norge och Liechtenstein och 24 procent för alla andra. Som bosatt tittar Spanien på hela din inkomst, i en annan deklaration."
+          ]
+        },
+        {
+          "h2": "Måste jag redovisa mina besparingar och fastigheter utomlands?",
+          "paras": [
+            "Kanske. Modelo 720 är deklarationen över tillgångar i utlandet, och den lämnas av fysiska personer som är bosatta i Spanien, inte av icke-bosatta. En icke-bosatt ägare av en spansk bostad lämnar den inte, hur många år hen än har ägt stället.",
+            "När du väl är bosatt finns ingen skyldighet att redovisa en typ av tillgång när det sammanlagda värdet inte överstiger 50 000 euro. Gränsen prövas per typ: konton, värdepapper och fonder, samt fast egendom. Efter den första deklarationen behövs en ny bara när värdet på en grupp har ökat med mer än 20 000 euro sedan den senaste redovisningen, eller när något annat, till exempel en överlåtelse, kräver det.",
+            "Har du ett hus i Norge, en pensionsfond i Sverige eller besparingar i Tyskland, lista var och en med sitt värde den 31 december innan ditt första år som bosatt är slut (ett enkelt kalkylark räcker). Det gör det första samtalet med din rådgivare mycket kortare."
+          ]
+        },
+        {
+          "h2": "Finns det en särskild skatteordning för den som flyttar till Spanien?",
+          "paras": [
+            "Ja, men bara för vissa flyttar. Den särskilda ordningen i artikel 93 i inkomstskattelagen är öppen för en anställd, yrkesutövare, entreprenör eller investerare som flyttar till Spanien och inte var bosatt under de fem beskattningsperioderna dessförinnan. Flytten måste bero på ett anställningsavtal, ett styrelseuppdrag, en entreprenörsverksamhet eller högt kvalificerat arbete för startupföretag, utbildning eller forskning. Den gäller inte bara för att du går i pension eller köper en bostad.",
+            "Den gäller det år du blir bosatt och de följande fem åren. Du ansluter dig på modelo 149 inom sex månader från startdatumet för verksamheten enligt din registrering i socialförsäkringen eller motsvarande. Allmänna inkomster beskattas då med 24 procent upp till 600 000 euro och 47 procent därutöver, kapitalinkomster med 19 till 30 procent från 2025, och deklarationen är modelo 151. Den som omfattas av ordningen lämnar inte modelo 720."
+          ]
+        },
+        {
+          "h2": "Hur håller jag min ställning tydlig?",
+          "paras": [
+            "Spara bevis på var du har varit. Boardingkort, resebokningar och kvitton hjälper dig att visa dina dagar, och ett intyg om skatterättslig hemvist från ditt hemland är det dokument som besvarar frågan om tillfällig frånvaro. Begär ett varje år om din tid i Spanien närmar sig halva året.",
+            "Räkna dina dagar i kalenderår, inte säsonger, och tala med en asesor fiscal före det år du planerar att passera gränsen, inte efter. Då kan du tillbringa vintrarna på terrassen och veta vilket land som väntar sig en deklaration från dig."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Steuerliche Ansässigkeit in Spanien: die 183-Tage-Regel",
+      "description": "Sie sind in Spanien steuerlich ansässig, wenn Sie dort mehr als 183 Tage im Kalenderjahr verbringen oder Ihr wirtschaftlicher Mittelpunkt dort liegt.",
+      "h1": "Steuerliche Ansässigkeit in Spanien und die 183-Tage-Regel für Eigentümer",
+      "lead": "Sie sind für ein Kalenderjahr in Spanien steuerlich ansässig, wenn Sie in diesem Jahr mehr als 183 Tage in Spanien verbringen oder wenn der Mittelpunkt Ihrer Tätigkeiten oder wirtschaftlichen Interessen in Spanien liegt. Ein Haus dort zu besitzen ist für sich allein keines der Kriterien. Kurze Abwesenheiten werden Ihren spanischen Tagen zugerechnet, sofern Sie nicht die steuerliche Ansässigkeit in einem anderen Land nachweisen.",
+      "sections": [
+        {
+          "h2": "Wann werde ich in Spanien steuerlich ansässig?",
+          "paras": [
+            "Das spanische Recht hat zwei Kriterien, und es reicht, eines davon zu erfüllen. Das erste ist die Zeit: mehr als 183 Tage auf spanischem Staatsgebiet im Kalenderjahr. Das zweite ist Ihr wirtschaftlicher Mittelpunkt: Liegt der Hauptkern Ihrer Tätigkeiten oder wirtschaftlichen Interessen direkt oder indirekt in Spanien, sind Sie auch mit weniger Tagen ansässig.",
+            "Es gibt außerdem eine Vermutung. Sofern Sie nichts anderes beweisen, gelten Sie als ansässig, wenn Ihr Ehepartner, von dem Sie nicht rechtlich getrennt sind, und Ihre unterhaltsberechtigten minderjährigen Kinder gewöhnlich in Spanien leben. Diese Vermutung lässt sich widerlegen, zum Beispiel mit einer Ansässigkeitsbescheinigung Ihres Heimatlandes.",
+            "Ein Haus in Spanien zu besitzen ist keines der Kriterien. Viele norwegische und schwedische Eigentümer haben jahrzehntelang eine Wohnung an der Küste und bleiben die ganze Zeit nichtansässig, weil ihre Tage, ihre Arbeit, ihr Einkommen und ihre Familie alle in der Heimat bleiben."
+          ]
+        },
+        {
+          "h2": "Sind es 183 Tage in beliebigen zwölf Monaten oder im Kalenderjahr?",
+          "paras": [
+            "Im Kalenderjahr. Gezählt wird vom 1. Januar bis zum 31. Dezember, nicht über beliebige rollierende zwölf Monate, und die Ansässigkeit wird für das ganze Jahr entschieden. Der Steuerzeitraum ist das Kalenderjahr, die Steuer entsteht am 31. Dezember, und eine allgemeine Aufteilung des Jahres kennt die spanische Regel nicht.",
+            "Das ist wichtig, wenn Sie mitten im Jahr umziehen. Wer im März ankommt und bleibt, überschreitet wahrscheinlich noch im selben Jahr 183 Tage. Wer im September ankommt, hat womöglich im ersten Jahr noch ein Jahr als Nichtansässiger, und die Ansässigkeit beginnt im folgenden Januar. Lassen Sie einen Steuerberater (asesor fiscal) Ihre Daten prüfen, bevor Sie den Umzugswagen buchen."
+          ]
+        },
+        {
+          "h2": "Unterbrechen meine kurzen Heimreisen die Zählung?",
+          "paras": [
+            "Nicht unbedingt, und hier liegen die meisten falsch. Spanien zählt drei Dinge zusammen: die Tage, an denen Sie Ihre Anwesenheit nachweisen können, die Tage zwischen zwei belegten Anwesenheiten und Ihre gelegentlichen Abwesenheiten. Diese Abwesenheiten werden Ihren spanischen Tagen zugerechnet, sofern Sie nicht mit einer Bescheinigung die steuerliche Ansässigkeit anderswo nachweisen.",
+            "Es gibt keine feste Reisedauer, ab der eine Abwesenheit nicht mehr als gelegentlich gilt. Eine Faustregel, die Sie vielleicht hören, etwa dass alles unter 30 Tagen zählt und alles darüber nicht, hat keine Grundlage. Und ein belegter Tag in Spanien zählt voll, egal wie viele Stunden.",
+            "Wenn Sie also lange Winter in Spanien verbringen und über Weihnachten kurz nach Hause fahren, gehen Sie nicht davon aus, dass diese Wochen von Ihrer Summe abgezogen werden. Der sicherste Nachweis ist eine Ansässigkeitsbescheinigung Ihres heimischen Finanzamts für das betreffende Jahr."
+          ]
+        },
+        {
+          "h2": "Ist die 183-Tage-Regel dasselbe wie die 90-Tage-Regel?",
+          "paras": [
+            "Nein. Es sind zwei verschiedene Gesetze mit zwei verschiedenen Aufgaben. Die 90-Tage-Regel gehört zum Ausländerrecht: Ein Staatsangehöriger eines Landes außerhalb der EU darf sich im Schengen-Raum höchstens 90 Tage innerhalb eines Zeitraums von 180 Tagen aufhalten, gezählt über den ganzen Raum, nicht nur Spanien. Für die steuerliche Ansässigkeit spielt sie keine Rolle.",
+            "Die 183-Tage-Regel ist Steuerrecht, und sie gilt für alle, egal welchen Pass Sie haben. Für einen schwedischen oder deutschen Eigentümer gilt die 90-Tage-Grenze nicht, für ihn sind also die 183 Tage die Zahl, auf die er achten muss. Ein britischer Eigentümer, der ohne Visum kommt, stößt an die 90-Tage-Grenze, lange bevor die steuerliche Zählung eine Rolle spielt (der Tagerechner auf dieser Seite behält die 90 im Blick)."
+          ]
+        },
+        {
+          "h2": "Was ist, wenn mein Heimatland mich auch als ansässig ansieht?",
+          "paras": [
+            "Dann entscheidet das Doppelbesteuerungsabkommen zwischen den beiden Ländern. Wenn Sie nach dem jeweiligen nationalen Recht in beiden Ländern ansässig sind, gehen die Kollisionsregeln des Abkommens diesen nationalen Kriterien vor und legen für Zwecke des Abkommens ein einziges Ansässigkeitsland fest.",
+            "Norwegen, Schweden, Deutschland, das Vereinigte Königreich und Frankreich haben alle Abkommen mit Spanien. Ein Rechner oder ein Bekannter im Golfclub, der Ihnen allein aufgrund der 183 Tage ein schlichtes Ja oder Nein gibt, liefert also nur die halbe Antwort. Wenn beide Länder Sie beanspruchen könnten, ist ein Steuerberater mit Erfahrung in beiden Systemen sein Honorar wert."
+          ]
+        },
+        {
+          "h2": "Was ändert sich, wenn ich steuerlich ansässig bin?",
+          "paras": [
+            "Sie zahlen die spanische Einkommensteuer (IRPF) auf Ihr gesamtes Einkommen, egal wo es erzielt wurde und wo der Zahlende sitzt. Renten, Zinsen, Dividenden und Mieteinnahmen aus Ihrem Heimatland gehören alle in die spanische Erklärung, vorbehaltlich dessen, was das Doppelbesteuerungsabkommen mit diesem Land vorsieht.",
+            "Das ist die eigentliche Umstellung. Als nichtansässiger Eigentümer betrifft Ihre spanische Erklärung das spanische Haus, etwa die fiktiven Einkünfte aus einem Haus, das Sie nicht vermieten, berechnet aus dem Katasterwert und besteuert mit 19 Prozent für Ansässige der EU, Islands, Norwegens und Liechtensteins und 24 Prozent für alle anderen. Als Ansässiger betrachtet Spanien Ihr gesamtes Einkommen, in einer anderen Erklärung."
+          ]
+        },
+        {
+          "h2": "Muss ich meine Ersparnisse und Immobilien im Ausland melden?",
+          "paras": [
+            "Möglicherweise. Das modelo 720 ist die Erklärung über Vermögen im Ausland, und es wird von natürlichen Personen abgegeben, die in Spanien ansässig sind, nicht von Nichtansässigen. Ein nichtansässiger Eigentümer eines spanischen Hauses gibt es nicht ab, egal wie viele Jahre ihm das Haus schon gehört.",
+            "Als Ansässiger besteht keine Pflicht, eine Vermögensart zu melden, wenn deren Gesamtwert 50.000 Euro nicht übersteigt. Die Grenze wird je Art geprüft: Konten, Wertpapiere und Fonds sowie Immobilien. Nach der ersten Erklärung ist eine neue nur nötig, wenn der Wert einer Gruppe seit der letzten Erklärung um mehr als 20.000 Euro gestiegen ist oder ein anderer Grund, etwa eine Veräußerung, es erfordert.",
+            "Wenn Sie ein Haus in Norwegen, einen Pensionsfonds in Schweden oder Ersparnisse in Deutschland haben, listen Sie jedes davon mit seinem Wert zum 31. Dezember auf, bevor Ihr erstes Jahr als Ansässiger endet (eine einfache Tabelle reicht). Das macht das erste Gespräch mit Ihrem Berater deutlich kürzer."
+          ]
+        },
+        {
+          "h2": "Gibt es eine Sonderregelung für Menschen, die nach Spanien ziehen?",
+          "paras": [
+            "Ja, aber nur für manche Umzüge. Die Sonderregelung nach Artikel 93 des Einkommensteuergesetzes steht Arbeitnehmern, Freiberuflern, Unternehmern oder Investoren offen, die nach Spanien ziehen und in den fünf Steuerzeiträumen davor nicht ansässig waren. Der Umzug muss auf einem Arbeitsvertrag, einer Geschäftsführerstellung, einer unternehmerischen Tätigkeit oder hochqualifizierter Arbeit für Startups, Ausbildung oder Forschung beruhen. Sie steht nicht schon deshalb offen, weil Sie in Rente gehen oder ein Haus kaufen.",
+            "Sie gilt im Jahr, in dem Sie ansässig werden, und in den fünf folgenden Jahren. Sie wählen sie mit dem modelo 149 innerhalb von sechs Monaten ab dem Beginn der Tätigkeit, der in Ihrer Anmeldung bei der Sozialversicherung oder einem Gleichwertigen ausgewiesen ist. Allgemeine Einkünfte werden dann mit 24 Prozent bis 600.000 Euro und 47 Prozent darüber besteuert, Kapitaleinkünfte ab 2025 mit 19 bis 30 Prozent, und die Erklärung ist das modelo 151. Wer unter die Regelung fällt, gibt kein modelo 720 ab."
+          ]
+        },
+        {
+          "h2": "Wie halte ich meine Lage klar?",
+          "paras": [
+            "Bewahren Sie Nachweise darüber auf, wo Sie waren. Bordkarten, Reisebuchungen und Quittungen helfen Ihnen, Ihre Tage zu belegen, und eine Ansässigkeitsbescheinigung aus Ihrem Heimatland ist das Dokument, das die Frage der gelegentlichen Abwesenheit beantwortet. Fordern Sie jedes Jahr eine an, wenn Ihre Zeit in Spanien sich dem halben Jahr nähert.",
+            "Zählen Sie Ihre Tage in Kalenderjahren, nicht in Saisons, und sprechen Sie mit einem asesor fiscal vor dem Jahr, in dem Sie die Grenze überschreiten wollen, nicht danach. Dann können Sie Ihre Winter auf der Terrasse verbringen und wissen, welches Land eine Erklärung von Ihnen erwartet."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Résidence fiscale en Espagne : la règle des 183 jours",
+      "description": "Vous êtes résident fiscal en Espagne au-delà de 183 jours dans l'année civile ou si votre base économique y est. Voici comment les jours se comptent.",
+      "h1": "La résidence fiscale espagnole et la règle des 183 jours pour les propriétaires",
+      "lead": "Vous êtes résident fiscal en Espagne pour une année civile si vous passez plus de 183 jours en Espagne cette année-là, ou si le centre principal de vos activités ou de vos intérêts économiques se trouve en Espagne. Posséder un logement sur place n'est pas un critère à lui seul. Les absences courtes s'ajoutent à vos jours espagnols, sauf si vous prouvez votre résidence fiscale dans un autre pays.",
+      "sections": [
+        {
+          "h2": "Quand devient-on résident fiscal en Espagne ?",
+          "paras": [
+            "Le droit espagnol prévoit deux critères, et il suffit d'en remplir un. Le premier est la durée : plus de 183 jours sur le territoire espagnol au cours de l'année civile. Le second est votre base économique : si le noyau principal de vos activités ou de vos intérêts économiques se trouve en Espagne, directement ou indirectement, vous êtes résident même avec moins de jours.",
+            "Il existe aussi une présomption. Sauf preuve contraire, vous êtes présumé résident lorsque votre conjoint, non séparé légalement, et vos enfants mineurs à charge vivent habituellement en Espagne. Elle peut être renversée, par exemple avec un certificat de résidence fiscale de votre pays d'origine.",
+            "Posséder un logement en Espagne ne fait pas partie des critères. Beaucoup de propriétaires norvégiens et suédois gardent un appartement sur la côte pendant des décennies et restent non-résidents tout du long, parce que leurs jours, leur travail, leurs revenus et leur famille restent tous dans leur pays."
+          ]
+        },
+        {
+          "h2": "Est-ce 183 jours sur douze mois glissants ou sur l'année civile ?",
+          "paras": [
+            "Sur l'année civile. Le décompte va du 1er janvier au 31 décembre, pas sur douze mois glissants, et la résidence est déterminée pour l'année entière. La période d'imposition est l'année civile, l'impôt est exigible au 31 décembre, et la règle espagnole ne prévoit pas de manière générale de fractionnement de l'année.",
+            "Cela compte si vous vous installez en cours d'année. Arrivez en mars et restez, et vous dépasserez probablement 183 jours cette même année. Arrivez en septembre, et la première année peut encore être une année de non-résident, la résidence commençant en janvier suivant. Demandez à un conseiller fiscal (asesor fiscal) de vérifier vos dates avant de réserver le déménageur."
+          ]
+        },
+        {
+          "h2": "Mes courts séjours dans mon pays interrompent-ils le décompte ?",
+          "paras": [
+            "Pas nécessairement, et c'est là que la plupart des gens se trompent. L'Espagne additionne trois choses : les jours où vous pouvez prouver votre présence, les jours situés entre deux présences documentées, et vos absences sporadiques. Ces absences s'ajoutent à vos jours espagnols, sauf si vous prouvez votre résidence fiscale ailleurs avec un certificat.",
+            "Il n'existe pas de durée de voyage fixe au-delà de laquelle une absence cesse d'être sporadique. Une règle empirique que vous entendrez peut-être, selon laquelle tout ce qui fait moins de 30 jours compte et le reste non, n'a aucun fondement. Et un jour documenté en Espagne compte en entier, quel que soit le nombre d'heures.",
+            "Si vous passez de longs hivers en Espagne et rentrez chez vous pour Noël, ne supposez donc pas que ces semaines sont déduites de votre total. La preuve la plus sûre est un certificat de résidence fiscale délivré par l'administration fiscale de votre pays pour l'année concernée."
+          ]
+        },
+        {
+          "h2": "La règle des 183 jours est-elle la même que la règle des 90 jours ?",
+          "paras": [
+            "Non. Ce sont deux lois différentes qui ont deux rôles différents. La règle des 90 jours relève de l'immigration : un ressortissant non européen ne peut pas séjourner dans l'espace Schengen plus de 90 jours sur toute période de 180 jours, en comptant tout l'espace, pas seulement l'Espagne. Elle n'a aucune incidence sur la résidence fiscale.",
+            "La règle des 183 jours relève de la fiscalité, et elle s'applique à tous, quel que soit votre passeport. Un propriétaire suédois ou allemand n'est pas soumis à la limite des 90 jours, pour lui ce sont donc les 183 jours qu'il faut surveiller. Un propriétaire britannique en visite sans visa atteindra la limite des 90 jours bien avant que le décompte fiscal n'entre en jeu (le compteur de jours de ce site suit les 90)."
+          ]
+        },
+        {
+          "h2": "Et si mon pays d'origine dit aussi que je suis résident ?",
+          "paras": [
+            "C'est alors la convention fiscale entre les deux pays qui tranche. Lorsque vous êtes résident des deux pays selon leurs lois nationales, les règles de départage de la convention priment sur ces critères nationaux et désignent un seul pays de résidence aux fins de la convention.",
+            "La Norvège, la Suède, l'Allemagne, le Royaume-Uni et la France ont tous une convention avec l'Espagne. Un simulateur, ou un ami au club de golf, qui vous donne un simple oui ou non à partir des seuls 183 jours ne vous donne donc que la moitié de la réponse. Si les deux pays peuvent vous revendiquer, un conseiller fiscal qui connaît les deux systèmes vaut ses honoraires."
+          ]
+        },
+        {
+          "h2": "Qu'est-ce qui change une fois que je suis résident fiscal ?",
+          "paras": [
+            "Vous payez l'impôt espagnol sur le revenu des personnes physiques (IRPF) sur l'ensemble de vos revenus, où qu'ils aient été produits et où que se trouve le payeur. Les pensions, intérêts, dividendes et loyers de votre pays d'origine entrent tous dans la déclaration espagnole, sous réserve de ce que prévoit la convention fiscale avec ce pays.",
+            "C'est là le vrai changement. En tant que propriétaire non-résident, votre déclaration espagnole porte sur le logement espagnol, par exemple le revenu imputé d'un logement que vous ne louez pas, calculé à partir de sa valeur cadastrale et imposé à 19 pour cent pour les résidents de l'UE, d'Islande, de Norvège et du Liechtenstein et à 24 pour cent pour tous les autres. En tant que résident, l'Espagne regarde l'ensemble de vos revenus, sur une autre déclaration."
+          ]
+        },
+        {
+          "h2": "Dois-je déclarer mon épargne et mes biens à l'étranger ?",
+          "paras": [
+            "Peut-être. Le modelo 720 est la déclaration des biens détenus à l'étranger, et elle est déposée par les personnes résidentes en Espagne, pas par les non-résidents. Un propriétaire non-résident d'un logement espagnol ne la dépose pas, même s'il possède le bien depuis de nombreuses années.",
+            "Une fois résident, il n'y a aucune obligation de déclarer une catégorie de biens lorsque sa valeur totale ne dépasse pas 50 000 euros. La limite s'apprécie par catégorie : comptes, titres et fonds, et biens immobiliers. Après la première déclaration, une nouvelle n'est nécessaire que lorsque la valeur d'une catégorie augmente de plus de 20 000 euros depuis la dernière déclaration, ou lorsqu'une autre cause, comme une cession, l'exige.",
+            "Si vous avez une maison en Norvège, un fonds de pension en Suède ou de l'épargne en Allemagne, listez chacun avec sa valeur au 31 décembre avant la fin de votre première année de résidence (un simple tableur suffit). Cela raccourcit beaucoup la première conversation avec votre conseiller."
+          ]
+        },
+        {
+          "h2": "Existe-t-il un régime fiscal spécial pour ceux qui s'installent en Espagne ?",
+          "paras": [
+            "Oui, mais seulement pour certaines installations. Le régime spécial de l'article 93 de la loi sur l'impôt sur le revenu est ouvert au salarié, professionnel, entrepreneur ou investisseur qui s'installe en Espagne et n'y était pas résident au cours des cinq périodes d'imposition précédentes. L'installation doit découler d'un contrat de travail, d'un mandat d'administrateur, d'une activité entrepreneuriale, ou d'un travail hautement qualifié pour des startups, la formation ou la recherche. Il n'est pas accessible du seul fait de prendre sa retraite ou d'acheter un logement.",
+            "Il s'applique l'année où vous devenez résident et les cinq années suivantes. Vous optez pour ce régime avec le modelo 149 dans les six mois suivant la date de début d'activité figurant dans votre affiliation à la Sécurité sociale ou équivalent. Les revenus généraux sont alors imposés à 24 pour cent jusqu'à 600 000 euros et à 47 pour cent au-delà, les revenus de l'épargne de 19 à 30 pour cent à partir de 2025, et la déclaration est le modelo 151. Les personnes relevant de ce régime ne déposent pas le modelo 720."
+          ]
+        },
+        {
+          "h2": "Comment garder une situation claire ?",
+          "paras": [
+            "Conservez les preuves de l'endroit où vous étiez. Cartes d'embarquement, réservations de voyage et reçus vous aident à justifier vos jours, et un certificat de résidence fiscale de votre pays d'origine est le document qui répond à la question des absences sporadiques. Demandez-en un chaque année si votre temps en Espagne approche de la moitié de l'année.",
+            "Comptez vos jours par année civile, pas par saison, et parlez à un asesor fiscal avant l'année où vous comptez franchir le seuil plutôt qu'après. Vous pourrez alors passer vos hivers sur la terrasse en sachant quel pays attend une déclaration de votre part."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Fiscaal inwoner van Spanje: zo werkt de 183-dagenregel echt",
+      "description": "U bent fiscaal inwoner van Spanje als u er in een kalenderjaar meer dan 183 dagen verblijft of uw economische basis er ligt. Zo worden de dagen geteld.",
+      "h1": "Spaans fiscaal inwonerschap en de 183-dagenregel voor woningeigenaren",
+      "lead": "U bent fiscaal inwoner van Spanje voor een kalenderjaar als u in dat jaar meer dan 183 dagen in Spanje doorbrengt, of als het belangrijkste centrum van uw activiteiten of economische belangen in Spanje ligt. Een woning daar bezitten is op zichzelf geen toets. Korte afwezigheden worden bij uw Spaanse dagen opgeteld, tenzij u aantoont dat u in een ander land fiscaal inwoner bent.",
+      "sections": [
+        {
+          "h2": "Wanneer word ik fiscaal inwoner van Spanje?",
+          "paras": [
+            "De Spaanse wet kent twee toetsen, en aan één ervan voldoen is genoeg. De eerste is tijd: meer dan 183 dagen op Spaans grondgebied tijdens het kalenderjaar. De tweede is uw economische basis: ligt het belangrijkste centrum van uw activiteiten of economische belangen, direct of indirect, in Spanje, dan bent u inwoner, ook met minder dagen.",
+            "Er is ook een vermoeden. Tenzij u het tegendeel bewijst, wordt u geacht inwoner te zijn als uw echtgenoot, van wie u niet wettelijk gescheiden bent, en uw minderjarige kinderen die van u afhankelijk zijn gewoonlijk in Spanje wonen. Dat vermoeden kan worden weerlegd, bijvoorbeeld met een verklaring van fiscaal inwonerschap uit uw thuisland.",
+            "Een woning in Spanje bezitten is geen van de toetsen. Veel Noorse en Zweedse eigenaren houden tientallen jaren een appartement aan de kust en blijven al die tijd niet-inwoner, omdat hun dagen, hun werk, hun inkomen en hun gezin allemaal thuis blijven."
+          ]
+        },
+        {
+          "h2": "Gaat het om 183 dagen in elke twaalf maanden, of in het kalenderjaar?",
+          "paras": [
+            "Het kalenderjaar. De telling loopt van 1 januari tot en met 31 december, niet over een willekeurige periode van twaalf maanden, en het inwonerschap wordt voor het hele jaar bepaald. Het belastingtijdvak is het kalenderjaar en de belasting ontstaat op 31 december, en de Spaanse regel kent geen algemeen gesplitst jaar.",
+            "Dat is belangrijk als u halverwege een jaar verhuist. Komt u in maart en blijft u, dan komt u waarschijnlijk in datzelfde jaar boven de 183 dagen. Komt u in september, dan kan het eerste jaar nog een jaar als niet-inwoner zijn, met inwonerschap vanaf de volgende januari. Vraag een belastingadviseur (asesor fiscal) om uw data te controleren voordat u de verhuiswagen boekt."
+          ]
+        },
+        {
+          "h2": "Stoppen mijn korte reisjes naar huis de telling?",
+          "paras": [
+            "Niet per se, en dit is het deel waar de meeste mensen zich vergissen. Spanje telt drie dingen bij elkaar op: de dagen waarop u aantoonbaar aanwezig was, de dagen die tussen twee gedocumenteerde aanwezigheden vallen, en uw sporadische afwezigheden. Die afwezigheden worden bij uw Spaanse dagen opgeteld, tenzij u met een verklaring aantoont dat u elders fiscaal inwoner bent.",
+            "Er is geen vaste reisduur waardoor een afwezigheid niet meer sporadisch is. Een vuistregel die u misschien hoort, zoals dat alles onder de 30 dagen meetelt en alles daarboven niet, heeft geen basis. En één gedocumenteerde dag in Spanje telt volledig mee, hoeveel uur het ook was.",
+            "Brengt u dus lange winters in Spanje door en gaat u even naar huis voor kerst, ga er dan niet van uit dat die weken van uw totaal afgaan. Het veiligste bewijs is een verklaring van fiscaal inwonerschap van de belastingdienst in uw thuisland voor het jaar in kwestie."
+          ]
+        },
+        {
+          "h2": "Is de 183-dagenregel hetzelfde als de 90-dagenregel?",
+          "paras": [
+            "Nee. Het zijn twee verschillende wetten met twee verschillende taken. De 90-dagenregel gaat over immigratie: iemand van buiten de EU mag niet langer dan 90 dagen binnen elke periode van 180 dagen in het Schengengebied verblijven, geteld over het hele gebied, niet alleen Spanje. Hij heeft geen invloed op fiscaal inwonerschap.",
+            "De 183-dagenregel gaat over belasting, en die geldt voor iedereen, welk paspoort u ook heeft. Een Zweedse of Duitse eigenaar is niet aan de grens van 90 dagen gebonden, dus voor hen zijn de 183 dagen de telling om in de gaten te houden. Een Britse eigenaar die zonder visum op bezoek komt, loopt al lang tegen de grens van 90 dagen aan voordat de fiscale telling ertoe doet (de dagenteller op deze site houdt de 90 bij)."
+          ]
+        },
+        {
+          "h2": "Wat als mijn thuisland ook zegt dat ik er inwoner ben?",
+          "paras": [
+            "Dan beslist het belastingverdrag tussen de twee landen. Bent u volgens de nationale wetten van beide landen inwoner, dan gaan de beslisregels van het verdrag boven die nationale toetsen en wijzen ze voor de toepassing van het verdrag één land van inwonerschap aan.",
+            "Noorwegen, Zweden, Duitsland, het Verenigd Koninkrijk en Frankrijk hebben allemaal een verdrag met Spanje. Een rekenhulp, of een vriend op de golfclub, die u op basis van alleen de 183 dagen een simpel ja of nee geeft, geeft u dus maar de helft van het antwoord. Kunnen beide landen u opeisen, dan is een belastingadviseur met ervaring in beide systemen het honorarium waard."
+          ]
+        },
+        {
+          "h2": "Wat verandert er als ik fiscaal inwoner ben?",
+          "paras": [
+            "U betaalt Spaanse inkomstenbelasting (IRPF) over uw totale inkomen, waar het ook is verdiend en waar de betaler ook gevestigd is. Pensioenen, rente, dividenden en huur uit uw thuisland komen allemaal in de Spaanse aangifte, met inachtneming van wat het belastingverdrag met dat land bepaalt.",
+            "Dit is de echte verschuiving. Als eigenaar die geen inwoner is, gaat uw Spaanse aangifte over de Spaanse woning, zoals het fictieve inkomen uit een woning die u niet verhuurt, berekend op basis van de kadastrale waarde en belast tegen 19 procent voor inwoners van de EU, IJsland, Noorwegen en Liechtenstein en 24 procent voor alle anderen. Als inwoner kijkt Spanje naar uw totale inkomen, in een andere aangifte."
+          ]
+        },
+        {
+          "h2": "Moet ik mijn spaargeld en bezittingen in het buitenland opgeven?",
+          "paras": [
+            "Misschien. Modelo 720 is de aangifte van vermogen in het buitenland, en die wordt ingediend door personen die inwoner van Spanje zijn, niet door niet-inwoners. Een eigenaar van een Spaanse woning die geen inwoner is, dient hem niet in, hoeveel jaar de woning ook al van hem is.",
+            "Bent u eenmaal inwoner, dan hoeft u een soort vermogen niet op te geven als de gezamenlijke waarde ervan niet hoger is dan 50.000 euro. De grens wordt per soort getoetst: rekeningen, effecten en fondsen, en onroerend goed. Na de eerste aangifte is pas een nieuwe nodig als de waarde van een blok sinds de laatste aangifte met meer dan 20.000 euro is gestegen, of als een andere reden, zoals een overdracht, dat vereist.",
+            "Heeft u een huis in Noorwegen, een pensioenfonds in Zweden of spaargeld in Duitsland, zet dan elk ervan met de waarde op 31 december op een rij voordat uw eerste jaar als inwoner afloopt (een eenvoudig spreadsheet volstaat). Dat maakt het eerste gesprek met uw adviseur een stuk korter."
+          ]
+        },
+        {
+          "h2": "Is er een bijzondere belastingregeling voor wie naar Spanje verhuist?",
+          "paras": [
+            "Ja, maar alleen voor sommige verhuizingen. De bijzondere regeling van artikel 93 van de wet op de inkomstenbelasting staat open voor een werknemer, professional, ondernemer of investeerder die naar Spanje verhuist en in de vijf belastingtijdvakken daarvoor geen inwoner was. De verhuizing moet voortkomen uit een arbeidscontract, een bestuursfunctie, een ondernemersactiviteit, of hooggekwalificeerd werk voor startups, opleiding of onderzoek. Ze is niet beschikbaar alleen omdat u met pensioen gaat of een woning koopt.",
+            "Ze geldt in het jaar waarin u inwoner wordt en de vijf jaar daarna. U kiest ervoor met modelo 149, binnen zes maanden na de begindatum van de activiteit die blijkt uit uw inschrijving bij de Sociale Zekerheid of een gelijkwaardige inschrijving. Algemeen inkomen wordt dan belast tegen 24 procent tot 600.000 euro en 47 procent daarboven, inkomen uit sparen tegen 19 tot 30 procent vanaf 2025, en de aangifte is modelo 151. Wie onder de regeling valt, dient geen modelo 720 in."
+          ]
+        },
+        {
+          "h2": "Hoe houd ik mijn positie duidelijk?",
+          "paras": [
+            "Bewaar bewijs van waar u was. Instapkaarten, reisboekingen en bonnetjes helpen u uw dagen aan te tonen, en een verklaring van fiscaal inwonerschap uit uw thuisland is het document dat de vraag over sporadische afwezigheid beantwoordt. Vraag er elk jaar een aan als uw tijd in Spanje richting de helft van het jaar gaat.",
+            "Tel uw dagen per kalenderjaar, niet per seizoen, en praat met een asesor fiscal vóór het jaar waarin u van plan bent de grens over te gaan, niet erna. Dan kunt u uw winters op het terras doorbrengen in de wetenschap welk land een aangifte van u verwacht."
+          ]
+        }
+      ]
+    }
+  }
+}

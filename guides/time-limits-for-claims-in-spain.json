@@ -1,0 +1,493 @@
+{
+  "slug": "time-limits-for-claims-in-spain",
+  "topic": "legal-claims",
+  "tool": "your-rights",
+  "rules": [
+    "limit.contract.general",
+    "limit.extracontractual",
+    "limit.interruption",
+    "limit.interruption.guarantor",
+    "limit.rent.arrears",
+    "limit.community.challenge",
+    "limit.community.challenge.absent",
+    "limit.community.challenge.standing",
+    "limit.community.buyer_liability",
+    "limit.building.guarantee",
+    "limit.building.action",
+    "limit.building.scope",
+    "limit.hidden_defects",
+    "limit.contract.annulment",
+    "limit.insurance.own_claim",
+    "limit.absent_owner.usucapion",
+    "cover.complaint_route",
+    "succession.foral"
+  ],
+  "answers": [
+    "limitation-period-for-a-contract-claim-spain",
+    "time-limit-to-claim-damage-from-a-neighbour-spain",
+    "how-far-back-can-i-claim-unpaid-rent-spain",
+    "hidden-defects-after-buying-a-spanish-property",
+    "new-build-guarantees-in-spain",
+    "challenge-a-spanish-community-of-owners-decision",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake",
+    "can-someone-acquire-my-spanish-property-by-possession"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Time Limits for Property Claims in Spain",
+      "description": "How long you have to bring a property claim in Spain, from unpaid rent and hidden defects to insurance, and how a written demand stops the clock.",
+      "h1": "How long you have to make a property claim in Spain",
+      "lead": "Most property claims in Spain have a fixed time limit, and several are shorter than owners expect. A general contract claim lasts five years, damage caused by someone you have no contract with one year, a claim against your own insurer two years, and a hidden defect claim against the seller only six months from handover. A written demand can stop some of these clocks, but not all of them.",
+      "sections": [
+        {
+          "h2": "Why do time limits matter more when you live abroad?",
+          "paras": [
+            "Spanish law gives you a set period to act on most property disputes, and once it has passed, a good claim can no longer be brought. For an owner in Oslo or Hamburg the law is rarely the hard part. The problem is found late, the letter arrives in Spanish, and a few months slip by while you work out who to ask.",
+            "There are two kinds of clock. Some can be stopped and restarted, which Spanish lawyers call prescripción. Others run out on a fixed date whatever you do, which is caducidad. The community challenge windows, the hidden defects window and the window to annul a contract are all the second kind. We flag which is which as we go."
+          ]
+        },
+        {
+          "h2": "How long do I have for a contract claim?",
+          "paras": [
+            "A personal claim with no special period of its own runs out after five years, counted from the day you could first demand that the other side do what they promised. That covers a lot of everyday disputes: a service you paid for and never received, or money someone agreed to pass on to you and kept.",
+            "You will still see fifteen years in older articles and in advice given years ago. That was the period until 7 October 2015, when it was cut to five, so check again anything you read or were told before then.",
+            "Unpaid rent also has five years, but each month counts separately from the day that month fell due. Rent owed for January runs out before rent owed for June of the same year. If a tenant has been behind for a long time, the oldest months are the first to go, so act on those first."
+          ]
+        },
+        {
+          "h2": "What if a neighbour or a stranger damages my property?",
+          "paras": [
+            "When the damage is caused by someone you have no contract with, you have one year. Water coming through the ceiling from the flat upstairs, or a wall damaged by works next door, are typical examples for owners who are away.",
+            "The year counts from when you found out about the damage, not from the day it happened, which matters for someone who visits a few times a year. Write down the date you learned of it and how, whether a message from the cleaner or photos from a neighbour, and keep that note with the photos."
+          ]
+        },
+        {
+          "h2": "How long can I wait to claim on my own home insurance?",
+          "paras": [
+            "A claim against your own insurer under a property policy runs out after two years. That is the outer limit for taking a claim further, for example when the insurer has refused to pay and you want to challenge it.",
+            "It is not a reason to wait before reporting damage. Tell the insurer as soon as you know about it, and check your policy for its own reporting terms. The two years is the time you have to pursue a disputed claim, not the time you have to mention it.",
+            "If the insurer says no, you complain first to its own customer service department. Only then can you go to the insurance supervisor, whose report is free but not binding and cannot order anyone to pay. The courts are the only route that can, so keep an eye on the two years while the complaint runs."
+          ]
+        },
+        {
+          "h2": "I found a defect after buying. Is it too late?",
+          "paras": [
+            "Against the seller, a claim for hidden defects dies six months after the property was handed over to you, not six months after you found the defect. It is the shortest clock on this page, and a letter cannot stop it. A crack that first appears in month seven is, as against the seller, usually out of time.",
+            "Newer buildings have separate guarantees, counted from the date the works were signed off: ten years for structural defects, three years for defects that make the home unfit to live in, and one year for finishes, against the builder only. They apply to buildings whose planning permission was applied for on or after 6 May 2000. Older buildings fall under the previous rules.",
+            "Once a defect covered by those guarantees appears, you then have two years to bring the claim, counted from when the damage occurred. Separately, if you want to set the purchase itself aside for mistake or deceit, the window is four years from completion of the contract, and that one cannot be stopped either."
+          ]
+        },
+        {
+          "h2": "Can I still challenge a decision of the community meeting?",
+          "paras": [
+            "You have three months if your complaint is that a decision seriously harms the community or unfairly harms one owner. You have one year if the decision breaks the law or the community's statutes. Which ground you rely on decides which window applies, so it is worth settling that early.",
+            "If you were not at the meeting, the window counts from the day the decision was communicated to you, not from the day of the meeting. For an owner who lives abroad this is the most useful rule on the page. Keep the email or letter that brought you the minutes, and note the date it reached you.",
+            "To bring a challenge you must be up to date with community payments, or pay the disputed amount into court first. The exception is a challenge about the shares themselves. These windows are the fixed kind, so a letter to the administrator does not extend them.",
+            "One figure often gets mixed up with these. When you buy, you take on the seller's unpaid community charges for the part of the year already gone plus the three previous calendar years, and the property itself answers for them. That is not a time limit for you to act. It is how far back a debt follows the home."
+          ]
+        },
+        {
+          "h2": "How do I stop the clock?",
+          "paras": [
+            "Three things stop the clock and start it again from the beginning: going to court, a demand from you made out of court, and any acknowledgement of the debt by the other side. A written demand is enough on its own, which is why Spanish lawyers send a burofax, the certified letter that proves what was sent and when. This only works on the stoppable kind of period. It does not extend the community challenge windows, the four years to annul a contract or the six months for hidden defects.",
+            "If a guarantor is involved, for example on a tenancy, be careful. A court claim against the main debtor also stops the clock against the guarantor. An out of court demand, or a private acknowledgement by the debtor, does not. A burofax to the tenant alone may leave the guarantor's clock still running."
+          ]
+        },
+        {
+          "h2": "Can someone take my property just by living in it?",
+          "paras": [
+            "In theory, yes, but over a very long time. Spanish law lets a person acquire property through long possession. With a title and in good faith, the ordinary period is ten years. For an owner who lives abroad that period is doubled to twenty, because you count as absent. Without a title or good faith it is thirty years.",
+            "The owners who should think about this are those who have not visited or paid anything for many years (an inherited flat nobody goes to, say, or a plot inland). Keep paying the local taxes and community fees, keep your deeds and receipts together, and visit or send someone now and then. A paper trail is the best answer here."
+          ]
+        },
+        {
+          "h2": "What should I do if a deadline is coming up?",
+          "paras": [
+            "Start by writing down three dates: when the problem happened, when you found out, and when you received anything in writing. Most of the periods above count from one of those, and for owners abroad the second and third often come much later than the first. Keep photos, messages and letters together in one folder.",
+            "These figures come from the national Civil Code and the national laws on communities, building and insurance. Some regions have their own civil law in certain areas, Catalonia among them, so if your home is there ask a local abogado which period applies. For a claim close to its limit, an abogado can send the burofax or file for you. Then spend your next visit on the terrace, not in a waiting room."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Foreldelsesfrister for boligkrav i Spania",
+      "description": "Hvor lang tid du har på å fremme et boligkrav i Spania, fra ubetalt husleie og skjulte feil til forsikring, og hvordan et skriftlig krav stopper fristen.",
+      "h1": "Hvor lang tid du har på å fremme et krav om bolig i Spania",
+      "lead": "De fleste boligkrav i Spania har en fast frist, og flere er kortere enn eiere forventer. Et alminnelig kontraktskrav varer i fem år, skade forårsaket av noen du ikke har kontrakt med i ett år, et krav mot ditt eget forsikringsselskap i to år, og et krav om skjulte feil mot selgeren bare i seks måneder fra overtakelsen. Et skriftlig krav kan stoppe noen av disse fristene, men ikke alle.",
+      "sections": [
+        {
+          "h2": "Hvorfor betyr frister mer når du bor i utlandet?",
+          "paras": [
+            "Spansk lov gir deg en bestemt periode til å handle i de fleste boligtvister, og når den er over, kan et godt krav ikke lenger fremmes. For en eier i Oslo eller Hamburg er loven sjelden den vanskelige delen. Problemet oppdages sent, brevet kommer på spansk, og noen måneder går mens du finner ut hvem du skal spørre.",
+            "Det finnes to typer frister. Noen kan stoppes og starte på nytt, det spanske jurister kaller prescripción. Andre løper ut på en fast dato uansett hva du gjør, og det er caducidad. Fristene for å angripe sameiebeslutninger, fristen for skjulte feil og fristen for å kjenne en kontrakt ugyldig er alle av den andre typen. Vi merker av hvilken som er hvilken underveis."
+          ]
+        },
+        {
+          "h2": "Hvor lang tid har jeg på et kontraktskrav?",
+          "paras": [
+            "Et personlig krav uten egen særskilt frist foreldes etter fem år, regnet fra dagen du først kunne kreve at den andre parten gjorde det de lovet. Det dekker mange hverdagslige tvister: en tjeneste du betalte for og aldri fikk, eller penger noen avtalte å sende videre til deg og beholdt.",
+            "Du vil fortsatt se femten år i eldre artikler og i råd som ble gitt for mange år siden. Det var fristen fram til 7. oktober 2015, da den ble kortet ned til fem, så sjekk på nytt alt du leste eller ble fortalt før det.",
+            "Ubetalt husleie har også fem år, men hver måned regnes for seg fra dagen den måneden forfalt. Husleie for januar foreldes før husleie for juni samme år. Har en leietaker ligget etter lenge, er det de eldste månedene som går ut først, så ta tak i dem først."
+          ]
+        },
+        {
+          "h2": "Hva om en nabo eller en fremmed skader boligen min?",
+          "paras": [
+            "Når skaden er forårsaket av noen du ikke har kontrakt med, har du ett år. Vann som kommer gjennom taket fra leiligheten over, eller en vegg skadet av arbeid hos naboen, er typiske eksempler for eiere som er borte.",
+            "Året regnes fra du fikk vite om skaden, ikke fra dagen den skjedde, noe som betyr mye for den som er på besøk noen ganger i året. Skriv ned datoen du fikk vite om den, og hvordan, enten det var en melding fra vaskehjelpen eller bilder fra en nabo, og oppbevar notatet sammen med bildene."
+          ]
+        },
+        {
+          "h2": "Hvor lenge kan jeg vente med å kreve erstatning fra boligforsikringen min?",
+          "paras": [
+            "Et krav mot ditt eget forsikringsselskap under en eiendomsforsikring foreldes etter to år. Det er den ytterste grensen for å ta et krav videre, for eksempel når forsikringsselskapet har nektet å betale og du vil bestride det.",
+            "Det er ingen grunn til å vente med å melde skaden. Gi beskjed til forsikringsselskapet så snart du vet om den, og sjekk polisen for egne vilkår om skademelding. De to årene er tiden du har til å forfølge et omtvistet krav, ikke tiden du har til å nevne det.",
+            "Sier forsikringsselskapet nei, klager du først til selskapets egen kundeserviceavdeling. Først da kan du gå til tilsynsmyndigheten for forsikring, som gir en uttalelse som er gratis, men ikke bindende, og som ikke kan pålegge noen å betale. Domstolene er den eneste veien som kan det, så hold øye med de to årene mens klagen behandles."
+          ]
+        },
+        {
+          "h2": "Jeg fant en feil etter at jeg kjøpte. Er det for sent?",
+          "paras": [
+            "Overfor selgeren faller et krav om skjulte feil bort seks måneder etter at boligen ble overlevert til deg, ikke seks måneder etter at du fant feilen. Det er den korteste fristen på denne siden, og et brev kan ikke stoppe den. En sprekk som først viser seg i måned sju, er overfor selgeren som regel for sent ute.",
+            "Nyere bygninger har egne garantier, regnet fra datoen arbeidene ble godkjent som ferdige: ti år for konstruksjonsfeil, tre år for feil som gjør boligen ubeboelig, og ett år for overflatearbeid, bare overfor utbyggeren. De gjelder bygninger der det ble søkt om byggetillatelse 6. mai 2000 eller senere. Eldre bygninger faller inn under de tidligere reglene.",
+            "Når en feil som dekkes av disse garantiene viser seg, har du deretter to år på å fremme kravet, regnet fra skaden oppsto. I tillegg gjelder det at hvis du vil få selve kjøpet satt til side på grunn av villfarelse eller svik, er fristen fire år fra kontrakten ble gjennomført, og heller ikke den kan stoppes."
+          ]
+        },
+        {
+          "h2": "Kan jeg fortsatt angripe en beslutning fra sameiermøtet?",
+          "paras": [
+            "Du har tre måneder hvis klagen din er at en beslutning skader sameiet alvorlig eller urimelig skader én eier. Du har ett år hvis beslutningen bryter loven eller sameiets vedtekter. Hvilket grunnlag du bygger på, avgjør hvilken frist som gjelder, så det er lurt å avklare det tidlig.",
+            "Var du ikke på møtet, regnes fristen fra dagen beslutningen ble meddelt deg, ikke fra møtedagen. For en eier som bor i utlandet er dette den mest nyttige regelen på siden. Ta vare på e-posten eller brevet som ga deg protokollen, og noter datoen den kom fram til deg.",
+            "For å kunne angripe en beslutning må du være à jour med betalingene til sameiet, eller betale det omtvistede beløpet inn til retten først. Unntaket er når du angriper selve fordelingsbrøkene. Disse fristene er av den faste typen, så et brev til forvalteren forlenger dem ikke.",
+            "Ett tall blandes ofte sammen med disse. Når du kjøper, overtar du selgerens ubetalte fellesutgifter for den delen av året som allerede har gått, pluss de tre foregående kalenderårene, og selve boligen hefter for dem. Det er ikke en frist for deg til å handle. Det er hvor langt tilbake en gjeld følger boligen."
+          ]
+        },
+        {
+          "h2": "Hvordan stopper jeg fristen?",
+          "paras": [
+            "Tre ting stopper fristen og starter den på nytt fra begynnelsen: å gå til retten, et krav fra deg fremsatt utenfor retten, og enhver erkjennelse av gjelden fra den andre parten. Et skriftlig krav er nok i seg selv, og derfor sender spanske advokater en burofax, det rekommanderte brevet som beviser hva som ble sendt og når. Dette virker bare på den typen frist som kan stoppes. Det forlenger ikke fristene for å angripe sameiebeslutninger, de fire årene for å kjenne en kontrakt ugyldig eller de seks månedene for skjulte feil.",
+            "Er det en kausjonist inne i bildet, for eksempel ved et leieforhold, bør du være forsiktig. Et søksmål mot hoveddebitoren stopper også fristen overfor kausjonisten. Et krav utenfor retten, eller en privat erkjennelse fra debitoren, gjør det ikke. En burofax bare til leietakeren kan la kausjonistens frist fortsette å løpe."
+          ]
+        },
+        {
+          "h2": "Kan noen ta boligen min bare ved å bo i den?",
+          "paras": [
+            "I teorien ja, men over svært lang tid. Spansk lov gjør det mulig for en person å erverve eiendom gjennom lang tids besittelse. Med et rettsgrunnlag og i god tro er den ordinære perioden ti år. For en eier som bor i utlandet dobles perioden til tjue, fordi du regnes som fraværende. Uten rettsgrunnlag eller god tro er det tretti år.",
+            "De eierne som bør tenke på dette, er de som ikke har vært der eller betalt noe på mange år (en arvet leilighet ingen besøker, for eksempel, eller en tomt i innlandet). Fortsett å betale de lokale skattene og fellesutgiftene, hold skjøter og kvitteringer samlet, og dra dit eller send noen dit av og til. Et papirspor er det beste svaret her."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg gjøre hvis en frist nærmer seg?",
+          "paras": [
+            "Begynn med å skrive ned tre datoer: når problemet oppsto, når du fikk vite om det, og når du mottok noe skriftlig. De fleste fristene over regnes fra én av dem, og for eiere i utlandet kommer den andre og tredje ofte mye senere enn den første. Hold bilder, meldinger og brev samlet i én mappe.",
+            "Disse tallene kommer fra den nasjonale sivilloven og de nasjonale lovene om sameier, bygg og forsikring. Noen regioner har egen sivilrett på enkelte områder, blant dem Catalonia, så ligger boligen din der, spør en lokal abogado hvilken frist som gjelder. For et krav som nærmer seg fristen, kan en abogado sende burofaxen eller gå til retten for deg. Tilbring så neste besøk på terrassen, ikke på et venterom."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Preskriptionstider för fastighetsanspråk i Spanien",
+      "description": "Hur länge du har på dig för ett fastighetsanspråk i Spanien, från obetald hyra och dolda fel till försäkring, och hur ett skriftligt krav stoppar klockan.",
+      "h1": "Hur länge du har på dig att framställa ett fastighetsanspråk i Spanien",
+      "lead": "De flesta fastighetsanspråk i Spanien har en fast tidsgräns, och flera är kortare än ägare räknar med. Ett allmänt avtalsanspråk gäller i fem år, skada orsakad av någon du inte har avtal med i ett år, ett anspråk mot ditt eget försäkringsbolag i två år, och ett anspråk mot säljaren för dolda fel bara sex månader från tillträdet. Ett skriftligt krav kan stoppa en del av de här klockorna, men inte alla.",
+      "sections": [
+        {
+          "h2": "Varför spelar tidsgränser större roll när du bor utomlands?",
+          "paras": [
+            "Spansk lag ger dig en bestämd tid att agera i de flesta fastighetstvister, och när den har gått kan ett bra anspråk inte längre drivas. För en ägare i Oslo eller Hamburg är lagen sällan det svåra. Problemet upptäcks sent, brevet kommer på spanska, och några månader går medan du listar ut vem du ska fråga.",
+            "Det finns två sorters klockor. En del kan stoppas och startas om, vilket spanska jurister kallar prescripción. Andra löper ut på ett fast datum vad du än gör, vilket är caducidad. Fristerna för att klandra beslut i samfälligheten, fristen för dolda fel och fristen för att ogiltigförklara ett avtal hör alla till den andra sorten. Vi anger vilken som är vilken längs vägen."
+          ]
+        },
+        {
+          "h2": "Hur länge har jag på mig för ett avtalsanspråk?",
+          "paras": [
+            "Ett personligt anspråk utan egen särskild frist preskriberas efter fem år, räknat från den dag du först kunde kräva att motparten gjorde det de lovat. Det täcker många vardagstvister: en tjänst du betalade för men aldrig fick, eller pengar som någon gick med på att föra vidare till dig men behöll.",
+            "Du ser fortfarande femton år i äldre artiklar och i råd som gavs för flera år sedan. Det var fristen fram till 7 oktober 2015, då den kortades till fem, så kontrollera på nytt allt du läste eller fick höra före det datumet.",
+            "Obetald hyra har också fem år, men varje månad räknas för sig från den dag den månaden förföll till betalning. Hyra för januari preskriberas före hyra för juni samma år. Har en hyresgäst legat efter länge är det de äldsta månaderna som försvinner först, så agera på dem först."
+          ]
+        },
+        {
+          "h2": "Vad gäller om en granne eller en främling skadar min fastighet?",
+          "paras": [
+            "När skadan orsakas av någon du inte har avtal med har du ett år. Vatten som kommer genom taket från lägenheten ovanför, eller en vägg som skadas av arbeten intill, är typiska exempel för ägare som är borta.",
+            "Året räknas från när du fick kännedom om skadan, inte från den dag den inträffade, vilket spelar roll för den som är där några gånger om året. Skriv ner datumet då du fick veta det och hur, om det var ett meddelande från städaren eller bilder från en granne, och spara anteckningen tillsammans med bilderna."
+          ]
+        },
+        {
+          "h2": "Hur länge kan jag vänta med att göra anspråk på min egen hemförsäkring?",
+          "paras": [
+            "Ett anspråk mot ditt eget försäkringsbolag enligt en egendomsförsäkring preskriberas efter två år. Det är den yttersta gränsen för att driva ett anspråk vidare, till exempel när försäkringsbolaget har vägrat betala och du vill bestrida det.",
+            "Det är inget skäl att vänta med att anmäla en skada. Meddela försäkringsbolaget så snart du känner till den, och kontrollera din försäkring för dess egna villkor om anmälan. De två åren är tiden du har på dig att driva ett omtvistat anspråk, inte tiden du har på dig att nämna det.",
+            "Säger försäkringsbolaget nej klagar du först till dess egen kundtjänstavdelning. Först därefter kan du vända dig till försäkringstillsynen, vars utlåtande är gratis men inte bindande och inte kan ålägga någon att betala. Domstolarna är den enda väg som kan det, så håll koll på de två åren medan klagomålet pågår."
+          ]
+        },
+        {
+          "h2": "Jag hittade ett fel efter köpet. Är det för sent?",
+          "paras": [
+            "Mot säljaren upphör ett anspråk för dolda fel sex månader efter att fastigheten överlämnades till dig, inte sex månader efter att du upptäckte felet. Det är den kortaste klockan på den här sidan, och ett brev kan inte stoppa den. En spricka som visar sig först i månad sju är, mot säljaren, oftast för sent.",
+            "Nyare byggnader har särskilda garantier, räknat från datumet då arbetena godkändes: tio år för konstruktionsfel, tre år för fel som gör bostaden olämplig att bo i, och ett år för ytskikt, då bara mot byggaren. De gäller byggnader där bygglov söktes den 6 maj 2000 eller senare. Äldre byggnader omfattas av de tidigare reglerna.",
+            "När ett fel som omfattas av de garantierna visar sig har du sedan två år på dig att väcka anspråket, räknat från när skadan uppstod. Vill du därutöver häva själva köpet på grund av misstag eller svek är fristen fyra år från att avtalet fullgjordes, och inte heller den kan stoppas."
+          ]
+        },
+        {
+          "h2": "Kan jag fortfarande klandra ett beslut från samfällighetens möte?",
+          "paras": [
+            "Du har tre månader om ditt klagomål är att ett beslut allvarligt skadar samfälligheten eller orättvist drabbar en ägare. Du har ett år om beslutet bryter mot lagen eller samfällighetens stadgar. Vilken grund du stöder dig på avgör vilken frist som gäller, så det är värt att reda ut det tidigt.",
+            "Var du inte med på mötet räknas fristen från den dag beslutet meddelades dig, inte från mötesdagen. För en ägare som bor utomlands är detta den mest användbara regeln på sidan. Spara mejlet eller brevet som gav dig protokollet, och notera datumet då det nådde dig.",
+            "För att klandra ett beslut måste du ha betalat dina avgifter till samfälligheten, eller först deponera det omtvistade beloppet hos domstolen. Undantaget är klander som gäller själva andelarna. De här fristerna är av den fasta sorten, så ett brev till förvaltaren förlänger dem inte.",
+            "En siffra blandas ofta ihop med dessa. När du köper tar du över säljarens obetalda samfällighetsavgifter för den del av året som redan gått plus de tre föregående kalenderåren, och fastigheten själv svarar för dem. Det är ingen tidsgräns för dig att agera. Det är hur långt bakåt en skuld följer bostaden."
+          ]
+        },
+        {
+          "h2": "Hur stoppar jag klockan?",
+          "paras": [
+            "Tre saker stoppar klockan och startar den om från början: att gå till domstol, ett krav från dig utanför domstol, och varje erkännande av skulden från motparten. Ett skriftligt krav räcker i sig, vilket är varför spanska jurister skickar en burofax, det rekommenderade brevet som bevisar vad som skickades och när. Det fungerar bara på den sortens frist som kan stoppas. Det förlänger inte fristerna för att klandra samfällighetsbeslut, de fyra åren för att ogiltigförklara ett avtal eller de sex månaderna för dolda fel.",
+            "Finns det en borgensman inblandad, till exempel vid ett hyresavtal, var försiktig. Ett anspråk i domstol mot huvudgäldenären stoppar också klockan mot borgensmannen. Ett krav utanför domstol, eller ett privat erkännande från gäldenären, gör det inte. En burofax bara till hyresgästen kan lämna borgensmannens klocka fortfarande tickande."
+          ]
+        },
+        {
+          "h2": "Kan någon ta min fastighet bara genom att bo i den?",
+          "paras": [
+            "I teorin ja, men under mycket lång tid. Spansk lag låter en person förvärva egendom genom långvarig besittning. Med en rättighet och i god tro är den vanliga tiden tio år. För en ägare som bor utomlands fördubblas den till tjugo, eftersom du räknas som frånvarande. Utan rättighet eller god tro är det trettio år.",
+            "De ägare som bör fundera på detta är de som inte har varit där eller betalat något på många år (en ärvd lägenhet som ingen besöker, till exempel, eller en tomt inåt landet). Fortsätt betala de lokala skatterna och samfällighetsavgifterna, håll ihop köpehandlingar och kvitton, och åk dit eller skicka någon då och då. Ett pappersspår är det bästa svaret här."
+          ]
+        },
+        {
+          "h2": "Vad ska jag göra om en tidsgräns närmar sig?",
+          "paras": [
+            "Börja med att skriva ner tre datum: när problemet uppstod, när du fick veta det, och när du fick något skriftligt. De flesta frister ovan räknas från ett av dem, och för ägare utomlands kommer det andra och det tredje ofta långt efter det första. Samla bilder, meddelanden och brev i en och samma mapp.",
+            "Siffrorna kommer från den nationella civillagen (Código Civil) och de nationella lagarna om samfälligheter, byggande och försäkring. En del regioner har egen civilrätt på vissa områden, Katalonien bland dem, så ligger din bostad där, fråga en lokal abogado vilken frist som gäller. För ett anspråk nära sin gräns kan en abogado skicka burofaxen eller lämna in för din räkning. Tillbringa sedan ditt nästa besök på terrassen, inte i ett väntrum."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Verjährungsfristen für Immobilienansprüche in Spanien",
+      "description": "Wie lange Sie in Spanien Zeit für einen Anspruch rund um Ihre Immobilie haben, von Mietschulden über versteckte Mängel bis zur Versicherung.",
+      "h1": "Wie lange Sie in Spanien Zeit haben, einen Immobilienanspruch geltend zu machen",
+      "lead": "Für die meisten Immobilienansprüche gilt in Spanien eine feste Frist, und mehrere sind kürzer, als Eigentümer erwarten. Ein allgemeiner vertraglicher Anspruch läuft fünf Jahre, ein Schaden durch jemanden, mit dem Sie keinen Vertrag haben, ein Jahr, ein Anspruch gegen Ihren eigenen Versicherer zwei Jahre und ein Anspruch wegen versteckter Mängel gegen den Verkäufer nur sechs Monate ab Übergabe. Eine schriftliche Aufforderung kann manche dieser Fristen anhalten, aber nicht alle.",
+      "sections": [
+        {
+          "h2": "Warum sind Fristen wichtiger, wenn man im Ausland lebt?",
+          "paras": [
+            "Das spanische Recht gibt Ihnen für die meisten Streitigkeiten rund um eine Immobilie einen festen Zeitraum zum Handeln, und wenn er abgelaufen ist, kann auch ein berechtigter Anspruch nicht mehr geltend gemacht werden. Für einen Eigentümer in Oslo oder Hamburg ist selten das Recht der schwierige Teil. Das Problem wird spät entdeckt, der Brief kommt auf Spanisch, und ein paar Monate vergehen, während Sie herausfinden, wen Sie fragen können.",
+            "Es gibt zwei Arten von Fristen. Manche lassen sich anhalten und neu starten, was spanische Juristen prescripción nennen. Andere laufen an einem festen Datum ab, egal was Sie tun, das ist die caducidad. Die Fristen zur Anfechtung von Beschlüssen der Eigentümergemeinschaft, die Frist für versteckte Mängel und die Frist zur Anfechtung eines Vertrags gehören alle zur zweiten Art. Wir sagen jeweils dazu, welche welche ist."
+          ]
+        },
+        {
+          "h2": "Wie lange habe ich für einen vertraglichen Anspruch Zeit?",
+          "paras": [
+            "Ein persönlicher Anspruch ohne eigene Sonderfrist verjährt nach fünf Jahren, gerechnet ab dem Tag, an dem Sie erstmals verlangen konnten, dass die andere Seite tut, was sie versprochen hat. Das deckt viele alltägliche Streitigkeiten ab: eine Leistung, die Sie bezahlt und nie erhalten haben, oder Geld, das jemand an Sie weiterleiten sollte und behalten hat.",
+            "In älteren Artikeln und in Ratschlägen von vor Jahren sehen Sie noch fünfzehn Jahre. Das war die Frist bis zum 7. Oktober 2015, als sie auf fünf verkürzt wurde. Prüfen Sie also alles noch einmal, was Sie vor diesem Datum gelesen oder gehört haben.",
+            "Auch Mietschulden haben fünf Jahre, aber jeder Monat zählt gesondert ab dem Tag, an dem er fällig wurde. Die Miete für Januar verjährt vor der Miete für Juni desselben Jahres. Wenn ein Mieter schon lange im Rückstand ist, verfallen die ältesten Monate zuerst, kümmern Sie sich also zuerst um diese."
+          ]
+        },
+        {
+          "h2": "Was ist, wenn ein Nachbar oder ein Fremder meine Immobilie beschädigt?",
+          "paras": [
+            "Wenn der Schaden von jemandem verursacht wird, mit dem Sie keinen Vertrag haben, haben Sie ein Jahr. Wasser, das aus der Wohnung darüber durch die Decke kommt, oder eine Wand, die durch Bauarbeiten nebenan beschädigt wird, sind typische Beispiele für Eigentümer, die nicht vor Ort sind.",
+            "Das Jahr zählt ab dem Zeitpunkt, an dem Sie von dem Schaden erfahren haben, nicht ab dem Tag, an dem er entstand, und das ist wichtig für jemanden, der ein paar Mal im Jahr kommt. Notieren Sie das Datum, an dem Sie davon erfahren haben, und wie, ob durch eine Nachricht der Reinigungskraft oder Fotos eines Nachbarn, und bewahren Sie diese Notiz bei den Fotos auf."
+          ]
+        },
+        {
+          "h2": "Wie lange kann ich mit einem Anspruch an meine eigene Hausversicherung warten?",
+          "paras": [
+            "Ein Anspruch gegen Ihren eigenen Versicherer aus einer Sachversicherung verjährt nach zwei Jahren. Das ist die äußerste Grenze, um einen Anspruch weiterzuverfolgen, zum Beispiel wenn der Versicherer die Zahlung abgelehnt hat und Sie das anfechten wollen.",
+            "Es ist kein Grund, mit der Schadensmeldung zu warten. Informieren Sie den Versicherer, sobald Sie davon wissen, und prüfen Sie Ihre Police auf ihre eigenen Meldefristen. Die zwei Jahre sind die Zeit, um einen strittigen Anspruch zu verfolgen, nicht die Zeit, um ihn zu erwähnen.",
+            "Wenn der Versicherer ablehnt, beschweren Sie sich zuerst bei seiner eigenen Kundendienstabteilung. Erst dann können Sie sich an die Versicherungsaufsicht wenden, deren Bericht kostenlos, aber nicht bindend ist und niemanden zur Zahlung verpflichten kann. Das können nur die Gerichte, behalten Sie die zwei Jahre also im Blick, während die Beschwerde läuft."
+          ]
+        },
+        {
+          "h2": "Ich habe nach dem Kauf einen Mangel entdeckt. Ist es zu spät?",
+          "paras": [
+            "Gegenüber dem Verkäufer erlischt ein Anspruch wegen versteckter Mängel sechs Monate nach der Übergabe der Immobilie an Sie, nicht sechs Monate nach der Entdeckung des Mangels. Das ist die kürzeste Frist auf dieser Seite, und ein Brief kann sie nicht anhalten. Ein Riss, der erstmals im siebten Monat auftaucht, ist gegenüber dem Verkäufer in der Regel verfristet.",
+            "Für neuere Gebäude gibt es eigene Gewährleistungen, gerechnet ab der Abnahme der Bauarbeiten: zehn Jahre für Mängel an der Tragstruktur, drei Jahre für Mängel, die das Haus unbewohnbar machen, und ein Jahr für Ausbaumängel, letztere nur gegenüber dem Bauunternehmer. Sie gelten für Gebäude, deren Baugenehmigung am oder nach dem 6. Mai 2000 beantragt wurde. Ältere Gebäude fallen unter die früheren Regeln.",
+            "Sobald ein Mangel auftritt, der unter diese Gewährleistungen fällt, haben Sie zwei Jahre Zeit, den Anspruch geltend zu machen, gerechnet ab dem Eintritt des Schadens. Unabhängig davon beträgt die Frist, wenn Sie den Kauf selbst wegen Irrtums oder Täuschung anfechten wollen, vier Jahre ab Vollzug des Vertrags, und auch diese lässt sich nicht anhalten."
+          ]
+        },
+        {
+          "h2": "Kann ich einen Beschluss der Eigentümerversammlung noch anfechten?",
+          "paras": [
+            "Sie haben drei Monate, wenn Sie geltend machen, dass ein Beschluss der Gemeinschaft schwer schadet oder einen einzelnen Eigentümer unfair benachteiligt. Sie haben ein Jahr, wenn der Beschluss gegen das Gesetz oder die Satzung der Gemeinschaft verstößt. Auf welchen Grund Sie sich stützen, entscheidet über die Frist, es lohnt sich also, das früh zu klären.",
+            "Wenn Sie nicht bei der Versammlung waren, zählt die Frist ab dem Tag, an dem Ihnen der Beschluss mitgeteilt wurde, nicht ab dem Tag der Versammlung. Für einen Eigentümer im Ausland ist das die nützlichste Regel auf dieser Seite. Bewahren Sie die E-Mail oder den Brief mit dem Protokoll auf und notieren Sie, wann er bei Ihnen ankam.",
+            "Um anzufechten, müssen Sie mit den Zahlungen an die Gemeinschaft auf dem Laufenden sein oder den strittigen Betrag vorher beim Gericht hinterlegen. Ausgenommen ist eine Anfechtung, die die Anteile selbst betrifft. Diese Fristen gehören zur festen Art, ein Brief an den Verwalter verlängert sie also nicht.",
+            "Eine Zahl wird oft damit verwechselt. Beim Kauf übernehmen Sie die unbezahlten Gemeinschaftsbeiträge des Verkäufers für den bereits vergangenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre, und die Immobilie selbst haftet dafür. Das ist keine Frist, innerhalb derer Sie handeln müssen. Es beschreibt, wie weit eine Schuld dem Haus zurück folgt."
+          ]
+        },
+        {
+          "h2": "Wie halte ich die Frist an?",
+          "paras": [
+            "Drei Dinge halten die Frist an und lassen sie von vorn beginnen: der Gang vor Gericht, eine außergerichtliche Aufforderung von Ihnen und jede Anerkennung der Schuld durch die andere Seite. Eine schriftliche Aufforderung reicht für sich allein aus, deshalb schicken spanische Anwälte ein burofax, den beglaubigten Brief, der belegt, was wann verschickt wurde. Das funktioniert nur bei der anhaltbaren Art von Frist. Es verlängert weder die Anfechtungsfristen der Eigentümergemeinschaft noch die vier Jahre zur Anfechtung eines Vertrags oder die sechs Monate für versteckte Mängel.",
+            "Wenn ein Bürge beteiligt ist, zum Beispiel bei einem Mietverhältnis, seien Sie vorsichtig. Eine Klage gegen den Hauptschuldner hält auch die Frist gegenüber dem Bürgen an. Eine außergerichtliche Aufforderung oder eine private Anerkennung durch den Schuldner tut das nicht. Ein burofax allein an den Mieter kann die Frist des Bürgen weiterlaufen lassen."
+          ]
+        },
+        {
+          "h2": "Kann jemand meine Immobilie bekommen, nur weil er darin wohnt?",
+          "paras": [
+            "Theoretisch ja, aber nur über sehr lange Zeit. Das spanische Recht lässt zu, dass jemand Eigentum durch lange Besitzzeit erwirbt. Mit einem Titel und in gutem Glauben beträgt die gewöhnliche Frist zehn Jahre. Für einen Eigentümer, der im Ausland lebt, verdoppelt sich diese Frist auf zwanzig, weil Sie als abwesend gelten. Ohne Titel oder guten Glauben sind es dreißig Jahre.",
+            "Darüber nachdenken sollten Eigentümer, die viele Jahre weder vorbeigekommen sind noch etwas bezahlt haben (eine geerbte Wohnung, zu der niemand fährt, etwa, oder ein Grundstück im Hinterland). Zahlen Sie weiter die örtlichen Steuern und Gemeinschaftsbeiträge, bewahren Sie Urkunden und Belege zusammen auf und kommen Sie ab und zu vorbei oder schicken Sie jemanden. Eine lückenlose Papierspur ist hier die beste Antwort."
+          ]
+        },
+        {
+          "h2": "Was sollte ich tun, wenn eine Frist bald abläuft?",
+          "paras": [
+            "Schreiben Sie zuerst drei Daten auf: wann das Problem entstand, wann Sie davon erfahren haben und wann Sie etwas Schriftliches erhalten haben. Die meisten Fristen oben zählen ab einem dieser Daten, und für Eigentümer im Ausland liegen das zweite und dritte oft weit nach dem ersten. Bewahren Sie Fotos, Nachrichten und Briefe zusammen in einem Ordner auf.",
+            "Diese Zahlen stammen aus dem nationalen Zivilgesetzbuch und den nationalen Gesetzen zu Eigentümergemeinschaften, Bau und Versicherung. Manche Regionen haben in bestimmten Bereichen ihr eigenes Zivilrecht, darunter Katalonien. Liegt Ihr Haus dort, fragen Sie einen abogado vor Ort, welche Frist gilt. Bei einem Anspruch kurz vor Fristablauf kann ein abogado das burofax schicken oder für Sie Klage einreichen. Und dann verbringen Sie Ihren nächsten Besuch auf der Terrasse, nicht in einem Wartezimmer."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Délais de prescription immobilière en Espagne",
+      "description": "Combien de temps vous avez pour agir sur un bien en Espagne, des loyers impayés aux vices cachés, et comment une mise en demeure arrête le délai.",
+      "h1": "Combien de temps avez-vous pour faire une réclamation immobilière en Espagne ?",
+      "lead": "La plupart des réclamations immobilières en Espagne sont soumises à un délai fixe, et plusieurs sont plus courts que les propriétaires ne le pensent. Une action contractuelle générale dure cinq ans, un dommage causé par une personne avec qui vous n'avez aucun contrat un an, une réclamation contre votre propre assureur deux ans, et une action pour vice caché contre le vendeur seulement six mois à compter de la remise des clés. Une mise en demeure écrite peut arrêter certains de ces délais, mais pas tous.",
+      "sections": [
+        {
+          "h2": "Pourquoi les délais comptent-ils davantage quand on vit à l'étranger ?",
+          "paras": [
+            "Le droit espagnol vous accorde une période déterminée pour agir dans la plupart des litiges immobiliers, et une fois qu'elle est écoulée, une réclamation fondée ne peut plus être engagée. Pour un propriétaire à Oslo ou à Hambourg, le droit est rarement la partie difficile. Le problème est découvert tard, la lettre arrive en espagnol, et quelques mois passent pendant que vous cherchez à qui vous adresser.",
+            "Il existe deux sortes de délais. Certains peuvent être interrompus puis repartir, ce que les juristes espagnols appellent prescripción. D'autres expirent à une date fixe quoi que vous fassiez, c'est la caducidad. Les délais de contestation en copropriété, le délai pour vices cachés et le délai pour annuler un contrat relèvent tous de la seconde catégorie. Nous indiquons de quelle sorte il s'agit au fil de la page."
+          ]
+        },
+        {
+          "h2": "De combien de temps est-ce que je dispose pour une action contractuelle ?",
+          "paras": [
+            "Une action personnelle sans délai particulier se prescrit au bout de cinq ans, à compter du jour où vous pouviez pour la première fois exiger que l'autre partie fasse ce qu'elle avait promis. Cela couvre beaucoup de litiges du quotidien : un service payé et jamais reçu, ou une somme que quelqu'un avait accepté de vous reverser et qu'il a gardée.",
+            "Vous verrez encore quinze ans dans des articles anciens et dans des conseils donnés il y a des années. C'était le délai jusqu'au 7 octobre 2015, date à laquelle il a été ramené à cinq ans : vérifiez donc à nouveau tout ce que vous avez lu ou entendu avant cette date.",
+            "Les loyers impayés ont aussi un délai de cinq ans, mais chaque mois se compte séparément à partir du jour où ce mois était dû. Le loyer dû pour janvier se prescrit avant le loyer dû pour juin de la même année. Si un locataire a du retard depuis longtemps, les mois les plus anciens sont les premiers à disparaître, agissez donc d'abord sur ceux-là."
+          ]
+        },
+        {
+          "h2": "Et si un voisin ou un inconnu endommage mon bien ?",
+          "paras": [
+            "Lorsque le dommage est causé par une personne avec qui vous n'avez aucun contrat, vous avez un an. L'eau qui traverse le plafond depuis l'appartement du dessus, ou un mur endommagé par des travaux chez le voisin, sont des exemples typiques pour les propriétaires absents.",
+            "L'année se compte à partir du moment où vous avez eu connaissance du dommage, pas du jour où il s'est produit, ce qui compte pour quelqu'un qui vient quelques fois par an. Notez la date à laquelle vous l'avez appris et comment, qu'il s'agisse d'un message de la personne qui fait le ménage ou de photos d'un voisin, et gardez cette note avec les photos."
+          ]
+        },
+        {
+          "h2": "Combien de temps puis-je attendre pour réclamer auprès de mon assurance habitation ?",
+          "paras": [
+            "Une action contre votre propre assureur au titre d'un contrat dommages aux biens se prescrit au bout de deux ans. C'est la limite extrême pour donner suite à une réclamation, par exemple lorsque l'assureur a refusé de payer et que vous voulez contester.",
+            "Ce n'est pas une raison pour attendre avant de déclarer un dommage. Prévenez l'assureur dès que vous en avez connaissance, et vérifiez dans votre contrat ses propres conditions de déclaration. Les deux ans sont le temps dont vous disposez pour poursuivre une réclamation contestée, pas le temps dont vous disposez pour la signaler.",
+            "Si l'assureur refuse, vous réclamez d'abord auprès de son propre service clients. Ce n'est qu'ensuite que vous pouvez saisir l'autorité de contrôle des assurances, dont l'avis est gratuit mais non contraignant et ne peut obliger personne à payer. Les tribunaux sont la seule voie qui le peut, gardez donc un œil sur les deux ans pendant que la réclamation suit son cours."
+          ]
+        },
+        {
+          "h2": "J'ai découvert un défaut après l'achat. Est-il trop tard ?",
+          "paras": [
+            "Contre le vendeur, une action pour vices cachés s'éteint six mois après la remise du bien, et non six mois après la découverte du défaut. C'est le délai le plus court de cette page, et une lettre ne peut pas l'arrêter. Une fissure qui apparaît pour la première fois au septième mois est, à l'égard du vendeur, généralement hors délai.",
+            "Les bâtiments plus récents bénéficient de garanties distinctes, comptées à partir de la date de réception des travaux : dix ans pour les défauts structurels, trois ans pour les défauts qui rendent le logement impropre à l'habitation, et un an pour les finitions, contre le constructeur uniquement. Elles s'appliquent aux bâtiments dont le permis de construire a été demandé le 6 mai 2000 ou après. Les bâtiments plus anciens relèvent des règles antérieures.",
+            "Lorsqu'un défaut couvert par ces garanties apparaît, vous disposez ensuite de deux ans pour engager l'action, à compter de la survenance du dommage. Par ailleurs, si vous voulez faire annuler l'achat lui-même pour erreur ou dol, le délai est de quatre ans à compter de l'exécution du contrat, et celui-là ne peut pas non plus être arrêté."
+          ]
+        },
+        {
+          "h2": "Puis-je encore contester une décision de l'assemblée de copropriété ?",
+          "paras": [
+            "Vous avez trois mois si vous reprochez à une décision de nuire gravement à la copropriété ou de nuire injustement à un propriétaire. Vous avez un an si la décision viole la loi ou les statuts de la copropriété. Le motif invoqué détermine le délai applicable, mieux vaut donc le fixer tôt.",
+            "Si vous n'étiez pas à l'assemblée, le délai court à partir du jour où la décision vous a été communiquée, et non du jour de l'assemblée. Pour un propriétaire qui vit à l'étranger, c'est la règle la plus utile de cette page. Gardez l'e-mail ou la lettre qui vous a transmis le procès-verbal, et notez la date à laquelle il vous est parvenu.",
+            "Pour contester, vous devez être à jour de vos charges de copropriété, ou consigner d'abord la somme contestée auprès du tribunal. L'exception est une contestation portant sur les quotes-parts elles-mêmes. Ces délais sont du type fixe, une lettre à l'administrateur ne les prolonge donc pas.",
+            "Un chiffre est souvent confondu avec ceux-ci. Lorsque vous achetez, vous reprenez les charges de copropriété impayées du vendeur pour la partie de l'année déjà écoulée plus les trois années civiles précédentes, et le bien lui-même en répond. Ce n'est pas un délai pour agir. C'est la durée pendant laquelle une dette suit le logement."
+          ]
+        },
+        {
+          "h2": "Comment arrêter le délai ?",
+          "paras": [
+            "Trois choses arrêtent le délai et le font repartir de zéro : saisir le tribunal, une mise en demeure de votre part faite en dehors du tribunal, et toute reconnaissance de la dette par l'autre partie. Une mise en demeure écrite suffit à elle seule, c'est pourquoi les avocats espagnols envoient un burofax, le courrier certifié qui prouve ce qui a été envoyé et quand. Cela ne fonctionne que pour les délais qui peuvent être interrompus. Cela ne prolonge pas les délais de contestation en copropriété, les quatre ans pour annuler un contrat ni les six mois pour vices cachés.",
+            "Si un garant est concerné, par exemple dans une location, soyez prudent. Une action en justice contre le débiteur principal arrête aussi le délai à l'égard du garant. Une mise en demeure hors tribunal, ou une reconnaissance privée par le débiteur, ne l'arrête pas. Un burofax adressé au seul locataire peut laisser courir le délai du garant."
+          ]
+        },
+        {
+          "h2": "Quelqu'un peut-il prendre mon bien simplement en y vivant ?",
+          "paras": [
+            "En théorie, oui, mais sur une très longue durée. Le droit espagnol permet d'acquérir un bien par une longue possession. Avec un titre et de bonne foi, le délai ordinaire est de dix ans. Pour un propriétaire qui vit à l'étranger, ce délai est doublé à vingt ans, car vous êtes considéré comme absent. Sans titre ni bonne foi, c'est trente ans.",
+            "Les propriétaires qui devraient y penser sont ceux qui ne sont pas venus ou n'ont rien payé depuis de nombreuses années (un appartement hérité où personne ne va, par exemple, ou un terrain dans l'arrière-pays). Continuez à payer les impôts locaux et les charges de copropriété, gardez ensemble vos actes et vos reçus, et venez ou envoyez quelqu'un de temps en temps. Une trace écrite est la meilleure réponse ici."
+          ]
+        },
+        {
+          "h2": "Que faire si une échéance approche ?",
+          "paras": [
+            "Commencez par noter trois dates : quand le problème s'est produit, quand vous l'avez appris, et quand vous avez reçu quelque chose par écrit. La plupart des délais ci-dessus partent de l'une d'elles, et pour les propriétaires à l'étranger la deuxième et la troisième arrivent souvent bien après la première. Gardez photos, messages et lettres ensemble dans un seul dossier.",
+            "Ces chiffres viennent du Code civil national et des lois nationales sur la copropriété, la construction et l'assurance. Certaines régions ont leur propre droit civil dans certains domaines, dont la Catalogne : si votre logement s'y trouve, demandez à un abogado local quel délai s'applique. Pour une réclamation proche de son échéance, un abogado peut envoyer le burofax ou engager l'action pour vous. Passez ensuite votre prochain séjour sur la terrasse, pas dans une salle d'attente."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Verjaringstermijnen voor vastgoedclaims in Spanje",
+      "description": "Hoe lang u in Spanje heeft voor een vastgoedclaim, van onbetaalde huur tot verborgen gebreken en verzekering, en hoe een schriftelijke eis de klok stopt.",
+      "h1": "Hoeveel tijd u heeft voor een claim over uw woning in Spanje",
+      "lead": "Voor de meeste vastgoedclaims in Spanje geldt een vaste termijn, en een aantal daarvan is korter dan eigenaren verwachten. Een gewone contractuele claim loopt vijf jaar, schade door iemand met wie u geen contract heeft één jaar, een claim tegen uw eigen verzekeraar twee jaar, en een claim wegens verborgen gebreken tegen de verkoper maar zes maanden na de overdracht. Een schriftelijke eis kan sommige van deze klokken stilzetten, maar niet allemaal.",
+      "sections": [
+        {
+          "h2": "Waarom zijn termijnen belangrijker als u in het buitenland woont?",
+          "paras": [
+            "De Spaanse wet geeft u voor de meeste geschillen over vastgoed een vaste periode om op te treden, en als die voorbij is, kan een goede claim niet meer worden ingediend. Voor een eigenaar in Oslo of Hamburg is de wet zelden het moeilijke deel. Het probleem wordt laat ontdekt, de brief komt in het Spaans, en er gaan een paar maanden voorbij terwijl u uitzoekt wie u het moet vragen.",
+            "Er zijn twee soorten klokken. Sommige kunnen worden stilgezet en opnieuw gestart, wat Spaanse juristen prescripción noemen. Andere lopen af op een vaste datum, wat u ook doet, en dat is caducidad. De termijnen om een besluit van de VvE aan te vechten, de termijn voor verborgen gebreken en de termijn om een contract te vernietigen zijn allemaal van de tweede soort. We geven onderweg aan welke soort het is."
+          ]
+        },
+        {
+          "h2": "Hoe lang heb ik voor een contractuele claim?",
+          "paras": [
+            "Een persoonlijke vordering zonder eigen bijzondere termijn verjaart na vijf jaar, gerekend vanaf de dag waarop u voor het eerst kon eisen dat de andere partij deed wat ze had beloofd. Dat dekt veel alledaagse geschillen: een dienst waarvoor u betaalde en die u nooit kreeg, of geld dat iemand aan u zou doorgeven en heeft gehouden.",
+            "In oudere artikelen en in advies van jaren geleden ziet u nog vijftien jaar staan. Dat was de termijn tot 7 oktober 2015, toen hij werd ingekort tot vijf, dus controleer opnieuw alles wat u vóór die datum heeft gelezen of gehoord.",
+            "Ook onbetaalde huur heeft vijf jaar, maar elke maand telt apart vanaf de dag waarop die maand verschuldigd was. Huur voor januari verjaart eerder dan huur voor juni van hetzelfde jaar. Loopt een huurder al lang achter, dan vervallen de oudste maanden het eerst, dus pak die als eerste aan."
+          ]
+        },
+        {
+          "h2": "Wat als een buurman of een onbekende schade aan mijn woning toebrengt?",
+          "paras": [
+            "Als de schade wordt veroorzaakt door iemand met wie u geen contract heeft, heeft u één jaar. Water dat door het plafond komt vanuit het appartement erboven, of een muur die beschadigd raakt door werkzaamheden ernaast, zijn typische voorbeelden voor eigenaren die weg zijn.",
+            "Het jaar telt vanaf het moment dat u van de schade hoorde, niet vanaf de dag dat het gebeurde, en dat is belangrijk voor wie een paar keer per jaar langskomt. Noteer de datum waarop u het hoorde en hoe, of het nu een bericht van de schoonmaker was of foto's van een buurman, en bewaar die notitie bij de foto's."
+          ]
+        },
+        {
+          "h2": "Hoe lang kan ik wachten met een claim op mijn eigen woonhuisverzekering?",
+          "paras": [
+            "Een claim tegen uw eigen verzekeraar onder een opstal- of inboedelpolis verjaart na twee jaar. Dat is de uiterste grens om een claim verder te brengen, bijvoorbeeld als de verzekeraar weigert te betalen en u dat wilt aanvechten.",
+            "Het is geen reden om te wachten met het melden van schade. Laat het de verzekeraar weten zodra u ervan weet, en kijk in uw polis naar de eigen meldingsvoorwaarden. De twee jaar is de tijd die u heeft om een betwiste claim door te zetten, niet de tijd die u heeft om hem te melden.",
+            "Zegt de verzekeraar nee, dan dient u eerst een klacht in bij de eigen klantenservice. Pas daarna kunt u naar de toezichthouder op verzekeringen, wiens rapport gratis is maar niet bindend en niemand kan verplichten te betalen. Alleen de rechter kan dat, dus houd de twee jaar in het oog terwijl de klacht loopt."
+          ]
+        },
+        {
+          "h2": "Ik ontdekte een gebrek na de aankoop. Is het te laat?",
+          "paras": [
+            "Tegenover de verkoper vervalt een claim wegens verborgen gebreken zes maanden nadat de woning aan u is overgedragen, niet zes maanden nadat u het gebrek ontdekte. Het is de kortste klok op deze pagina, en een brief kan hem niet stilzetten. Een scheur die pas in maand zeven verschijnt, is tegenover de verkoper meestal te laat.",
+            "Voor nieuwere gebouwen gelden aparte garanties, gerekend vanaf de datum van oplevering van de werkzaamheden: tien jaar voor constructieve gebreken, drie jaar voor gebreken die de woning onbewoonbaar maken, en één jaar voor de afwerking, alleen tegenover de bouwer. Ze gelden voor gebouwen waarvan de bouwvergunning op of na 6 mei 2000 is aangevraagd. Oudere gebouwen vallen onder de vorige regels.",
+            "Zodra een gebrek dat onder die garanties valt zich voordoet, heeft u daarna twee jaar om de claim in te dienen, gerekend vanaf het moment dat de schade ontstond. Wilt u daarnaast de aankoop zelf ongedaan maken wegens dwaling of bedrog, dan is de termijn vier jaar na de voltooiing van het contract, en ook die kan niet worden stilgezet."
+          ]
+        },
+        {
+          "h2": "Kan ik een besluit van de VvE-vergadering nog aanvechten?",
+          "paras": [
+            "U heeft drie maanden als uw bezwaar is dat een besluit de gemeenschap ernstig schaadt of één eigenaar onterecht benadeelt. U heeft één jaar als het besluit in strijd is met de wet of met de statuten van de gemeenschap. Op welke grond u zich beroept, bepaalt welke termijn geldt, dus het loont om dat vroeg vast te stellen.",
+            "Was u niet bij de vergadering, dan telt de termijn vanaf de dag waarop het besluit aan u is meegedeeld, niet vanaf de dag van de vergadering. Voor een eigenaar die in het buitenland woont, is dit de nuttigste regel op de pagina. Bewaar de e-mail of brief waarmee u de notulen ontving, en noteer de datum waarop die u bereikte.",
+            "Om een besluit aan te vechten moet u bij zijn met de betalingen aan de VvE, of eerst het betwiste bedrag bij de rechtbank storten. De uitzondering is een bezwaar tegen de verdeelsleutel zelf. Deze termijnen zijn van de vaste soort, dus een brief aan de beheerder verlengt ze niet.",
+            "Eén getal wordt hier vaak mee verward. Bij aankoop neemt u de onbetaalde VvE-bijdragen van de verkoper over voor het al verstreken deel van het jaar plus de drie voorgaande kalenderjaren, en de woning zelf staat daarvoor in. Dat is geen termijn waarbinnen u moet handelen. Het is hoe ver terug een schuld de woning volgt."
+          ]
+        },
+        {
+          "h2": "Hoe zet ik de klok stil?",
+          "paras": [
+            "Drie dingen zetten de klok stil en laten hem opnieuw vanaf het begin lopen: naar de rechter stappen, een buitengerechtelijke eis van uw kant, en elke erkenning van de schuld door de andere partij. Een schriftelijke eis is op zichzelf genoeg, en daarom sturen Spaanse advocaten een burofax, de aangetekende brief die bewijst wat er is verstuurd en wanneer. Dit werkt alleen bij het soort termijn dat kan worden stilgezet. Het verlengt niet de termijnen om VvE-besluiten aan te vechten, de vier jaar om een contract te vernietigen of de zes maanden voor verborgen gebreken.",
+            "Is er een borg betrokken, bijvoorbeeld bij een huurovereenkomst, wees dan voorzichtig. Een gerechtelijke vordering tegen de hoofdschuldenaar zet ook de klok tegenover de borg stil. Een buitengerechtelijke eis, of een onderhandse erkenning door de schuldenaar, doet dat niet. Een burofax alleen aan de huurder kan de klok van de borg gewoon laten doorlopen."
+          ]
+        },
+        {
+          "h2": "Kan iemand mijn woning overnemen door er gewoon te wonen?",
+          "paras": [
+            "In theorie wel, maar over een zeer lange tijd. De Spaanse wet laat iemand eigendom verkrijgen door langdurig bezit. Met een titel en te goeder trouw is de gewone termijn tien jaar. Voor een eigenaar die in het buitenland woont, verdubbelt die termijn tot twintig jaar, omdat u als afwezig geldt. Zonder titel of goede trouw is het dertig jaar.",
+            "De eigenaren die hierover moeten nadenken, zijn degenen die al vele jaren niet zijn geweest en niets hebben betaald (een geërfd appartement waar niemand komt, bijvoorbeeld, of een stuk grond in het binnenland). Blijf de lokale belastingen en VvE-bijdragen betalen, bewaar uw aktes en bonnetjes bij elkaar, en ga af en toe zelf of stuur iemand. Een papieren spoor is hier het beste antwoord."
+          ]
+        },
+        {
+          "h2": "Wat moet ik doen als een termijn bijna afloopt?",
+          "paras": [
+            "Begin met het opschrijven van drie data: wanneer het probleem ontstond, wanneer u het ontdekte, en wanneer u iets op schrift ontving. De meeste termijnen hierboven tellen vanaf een van die data, en voor eigenaren in het buitenland komen de tweede en derde vaak veel later dan de eerste. Bewaar foto's, berichten en brieven samen in één map.",
+            "Deze cijfers komen uit het nationale Burgerlijk Wetboek (Código Civil) en de nationale wetten over VvE's, bouw en verzekeringen. Sommige regio's hebben op bepaalde gebieden hun eigen burgerlijk recht, Catalonië bijvoorbeeld, dus staat uw woning daar, vraag dan een lokale abogado welke termijn geldt. Bij een claim die bijna verjaart, kan een abogado de burofax sturen of de zaak voor u indienen. Besteed uw volgende bezoek daarna op het terras, niet in een wachtkamer."
+          ]
+        }
+      ]
+    }
+  }
+}

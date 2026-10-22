@@ -1,0 +1,441 @@
+{
+  "slug": "home-insurance-in-spain",
+  "topic": "insurance",
+  "tool": "storm-claim",
+  "rules": [
+    "consorcio.perils",
+    "consorcio.wind_threshold",
+    "consorcio.precondition",
+    "consorcio.exclusions",
+    "cover.definition",
+    "cover.free_choice",
+    "cover.mandatory",
+    "cover.separate_chapter",
+    "cover.policy_must_state",
+    "cover.fines_excluded",
+    "cover.liability_defence_is_different",
+    "cover.limiting_clause_form",
+    "cover.complaint_route",
+    "cover.search_terms",
+    "limit.insurance.own_claim"
+  ],
+  "answers": [
+    "who-pays-for-storm-damage-in-spain",
+    "does-the-consorcio-pay-for-rain-or-a-roof-leak",
+    "what-legal-expenses-cover-pays-for-spain",
+    "free-choice-of-lawyer-spanish-home-insurance",
+    "own-lawyer-when-insurer-defends-a-third-party-claim",
+    "insurer-refused-claim-complaint-route-spain",
+    "policy-cap-on-fees-of-your-own-lawyer-spain"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Home Insurance in Spain for Non-Resident Owners",
+      "description": "How Spanish home insurance works for owners abroad: what your policy pays, when the Consorcio pays instead, and the legal cover most owners never use.",
+      "h1": "Home insurance for a Spanish property you own from abroad",
+      "lead": "Ordinary damage such as a leak, a burst pipe or a storm with gusts below 120 km/h is a matter for your own home insurer, on the terms of your policy. Extraordinary events such as earthquakes, extraordinary floods and gusts above 120 km/h are paid by a public body, the Consorcio de Compensación de Seguros, but only if you hold an ordinary policy, and only up to the sums that policy insures.",
+      "sections": [
+        {
+          "h2": "What does a Spanish home policy actually do?",
+          "paras": [
+            "Most home policies here are sold in two parts, the building (continente) and the contents (contenido), usually combined, often with liability cover for damage you cause to someone else. For an owner in Stockholm or Rotterdam the shape is familiar. What is different is who pays when something big happens, and the legal chapter hidden in the middle of the document.",
+            "Spain splits disasters from everyday damage. Your own insurer handles the everyday, on the terms of your policy: rain coming in, a pipe that bursts while you are away, a storm that is strong but not extreme. A public body, the Consorcio de Compensación de Seguros, handles a fixed list of extraordinary events. Knowing which side of that line a loss falls on decides who you send the claim to."
+          ]
+        },
+        {
+          "h2": "Who pays when a storm or flood hits my home?",
+          "paras": [
+            "The Consorcio covers earthquakes and seaquakes, extraordinary flooding, volcanic eruptions, atypical cyclonic storms and the fall of meteorites. It also covers terrorism, rebellion, sedition, riot and civil commotion, and acts of the armed forces and security forces in peacetime. For wind, the line is precise. Extraordinary wind means gusts above 120 km/h, measured as a three second gust. Below that, storm damage belongs to your private insurer under the ordinary storm cover in your policy.",
+            "The figure that counts is the official gust record for that date and place, not how windy it felt to the neighbour who sent you photos. A storm reported by its average wind speed can still have produced qualifying gusts, and the reverse is also true. So when you report storm damage, give the date and the exact location, and let the record decide which side it falls on."
+          ]
+        },
+        {
+          "h2": "Do I need to buy flood and earthquake cover separately?",
+          "paras": [
+            "No. The Consorcio cover is not something you buy on its own. If you hold an ordinary policy in a qualifying branch, a compulsory surcharge for the Consorcio is collected by your insurer with the premium. There is nothing separate to sign.",
+            "The catch is that it leans entirely on that ordinary policy. A property with no insurance has no Consorcio cover at all. And the Consorcio pays only up to the sums insured in your own policy, so if you insure the building for less than it is worth to save on the premium, you are under-insured against an earthquake or extraordinary flood in exactly the same proportion.",
+            "There is also a waiting period after a new policy starts, so cover is not in place from the very first day. If you are switching insurer or insuring a home for the first time, do it well before the stormy months rather than the week before."
+          ]
+        },
+        {
+          "h2": "Will the Consorcio pay for rain or a roof leak?",
+          "paras": [
+            "No. The Consorcio excludes natural events other than those on its list, and that exclusion sends ordinary rain, hail, wind below the threshold and water getting in back to your private insurer. A burst pipe or a roof that leaks is never a Consorcio matter. Only extraordinary flooding is.",
+            "It also excludes damage from the simple passing of time, meaning ordinary wear and weathering, along with armed conflict, bad faith by the insured, losses within the waiting period, and indirect losses beyond any business interruption expressly covered. Its property cover is limited to events that happen in Spain. A roof that has been slowly letting water in for three winters is a maintenance question before it is an insurance one."
+          ]
+        },
+        {
+          "h2": "Is there a lawyer included in my home policy?",
+          "paras": [
+            "Possibly, and many owners never look, because it sits in a chapter written in Spanish. Legal expenses cover (defensa jurídica) means the insurer pays the costs of an administrative, court or arbitration procedure and gives you legal help in and out of court, within the limits set by law and by the policy.",
+            "Inside a combined home policy, this cover must appear as a separate chapter that states what it covers and carries its own premium. If you cannot find a separate premium line for it, ask your insurer whether you have it at all, and on what terms.",
+            "When it applies, you have the right to choose your own lawyer and procurador in any kind of proceedings, and the lawyer you choose takes instructions from you, not from the insurer. That right does not depend on the insurer agreeing. The policy must spell it out, and the insurer must tell you about it straight away if there is a conflict of interest or a disagreement about how to run the case. These rules are binding, and a policy may only depart from them in your favour."
+          ]
+        },
+        {
+          "h2": "What will legal cover not do?",
+          "paras": [
+            "Fines and penalties imposed by an authority or a court are excluded by the law itself, whatever the policy says. Legal cover helps you fight a case, or defend yourself in one. It does not pay a sanction that a town hall, a tax office or a judge has imposed on you.",
+            "If a third party sues you, for example a neighbour whose flat was flooded from yours, the defence your insurer runs sits under the liability section, not under legal expenses. The free choice rules do not apply there. You may bring your own lawyer when there is a conflict of interest, and the insurer pays up to the policy limit.",
+            "Any clause that limits your rights, such as a cap on what the insurer pays a lawyer you choose yourself, has to be highlighted in the policy and specifically accepted by you in writing. General conditions may never work against the insured. If you signed the policy without reading it (most of us have), it is worth looking for that signed page now."
+          ]
+        },
+        {
+          "h2": "How do I read a policy that is all in Spanish?",
+          "paras": [
+            "Open the PDF and search for a short list of phrases. Defensa jurídica and libre elección de abogado tell you whether you have legal cover and the right to choose. Suma asegurada and sublímite show how much is insured and where smaller limits apply. Cláusulas limitativas and exclusiones are where the conditions sit.",
+            "Then look for hechos anteriores, which deals with events that happened before the cover started, ámbito territorial for where the cover applies, and arrendamiento if you let the home. Finding a phrase tells you what you have. Not finding it tells you what to ask.",
+            "Check the sum insured for the building against what it would really cost to rebuild, given the Consorcio leans on that same figure. Ten minutes with the policy and a translation app, once a year when the renewal arrives, is usually enough."
+          ]
+        },
+        {
+          "h2": "What can I do if the insurer refuses my claim?",
+          "paras": [
+            "Start with the insurer's own customer service department. You must complain there first. Only after that can you take it to the insurance supervisor, whose report is free but not binding and cannot order anyone to pay. The courts remain the only route that can.",
+            "A claim against your own insurer under a property policy runs out after two years, so do not let the complaint stages drift. Keep the dates, the photos, the insurer's letters and the gust record together, and if it needs to go further, an abogado can take it from there, possibly under your own legal expenses chapter. Then go back to the part of owning a Spanish home you bought it for."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Boligforsikring i Spania for eiere som bor i utlandet",
+      "description": "Slik fungerer spansk boligforsikring når du bor i utlandet: hva polisen dekker, når Consorcio betaler, og den rettshjelpen de fleste aldri bruker.",
+      "h1": "Boligforsikring for en bolig i Spania som du eier fra utlandet",
+      "lead": "Vanlige skader som en lekkasje, et sprukket rør eller en storm med vindkast under 120 km/t er en sak for ditt eget forsikringsselskap, etter vilkårene i polisen din. Ekstraordinære hendelser som jordskjelv, ekstraordinære flommer og vindkast over 120 km/t betales av et offentlig organ, Consorcio de Compensación de Seguros, men bare hvis du har en vanlig forsikring, og bare opp til forsikringssummene i den forsikringen.",
+      "sections": [
+        {
+          "h2": "Hva dekker egentlig en spansk boligforsikring?",
+          "paras": [
+            "De fleste boligforsikringer her selges i to deler, bygningen (continente) og innboet (contenido), som regel samlet, ofte med ansvarsdekning for skade du påfører andre. For en eier i Stockholm eller Rotterdam er oppbygningen kjent. Det som er annerledes, er hvem som betaler når noe stort skjer, og kapittelet om rettshjelp som ligger gjemt midt i dokumentet.",
+            "Spania skiller katastrofer fra hverdagsskader. Ditt eget forsikringsselskap tar seg av hverdagen, etter vilkårene i polisen din: regn som trenger inn, et rør som sprekker mens du er borte, en storm som er kraftig, men ikke ekstrem. Et offentlig organ, Consorcio de Compensación de Seguros, tar seg av en fast liste med ekstraordinære hendelser. Hvilken side av den grensen en skade havner på, avgjør hvem du sender kravet til."
+          ]
+        },
+        {
+          "h2": "Hvem betaler når en storm eller flom rammer boligen min?",
+          "paras": [
+            "Consorcio dekker jordskjelv og sjøskjelv, ekstraordinære flommer, vulkanutbrudd, atypiske syklonstormer og meteorittnedslag. Det dekker også terrorisme, opprør, oppvigleri, opptøyer og sivil uro, samt handlinger utført av de væpnede styrkene og sikkerhetsstyrkene i fredstid. For vind er grensen presis. Ekstraordinær vind betyr vindkast over 120 km/t, målt som et vindkast på tre sekunder. Under det hører stormskader til ditt private forsikringsselskap, under den vanlige stormdekningen i polisen din.",
+            "Tallet som teller, er den offisielle registreringen av vindkast for den datoen og det stedet, ikke hvor mye det føltes som det blåste for naboen som sendte deg bilder. En storm som omtales ut fra gjennomsnittlig vindhastighet, kan likevel ha gitt vindkast som kvalifiserer, og det motsatte kan også skje. Når du melder en stormskade, oppgir du derfor datoen og det nøyaktige stedet, og lar registreringen avgjøre hvilken side skaden havner på."
+          ]
+        },
+        {
+          "h2": "Må jeg kjøpe flom- og jordskjelvdekning separat?",
+          "paras": [
+            "Nei. Dekningen fra Consorcio er ikke noe du kjøper for seg. Har du en vanlig forsikring i en bransje som kvalifiserer, krever forsikringsselskapet inn et obligatorisk tillegg til Consorcio sammen med premien. Det er ingenting ekstra å signere.",
+            "Haken er at alt hviler på den vanlige forsikringen. En bolig uten forsikring har ingen dekning fra Consorcio i det hele tatt. Og Consorcio betaler bare opp til forsikringssummene i din egen polise, så hvis du forsikrer bygningen for mindre enn den er verdt for å spare premie, er du underforsikret mot jordskjelv eller ekstraordinær flom i nøyaktig samme forhold.",
+            "Det er også en karenstid etter at en ny forsikring starter, så dekningen gjelder ikke fra første dag. Bytter du forsikringsselskap eller forsikrer en bolig for første gang, bør du gjøre det god tid før stormmånedene, ikke uken før."
+          ]
+        },
+        {
+          "h2": "Betaler Consorcio for regn eller et lekk tak?",
+          "paras": [
+            "Nei. Consorcio unntar naturhendelser som ikke står på listen, og det unntaket sender vanlig regn, hagl, vind under terskelen og vann som trenger inn, tilbake til ditt private forsikringsselskap. Et sprukket rør eller et tak som lekker, er aldri en sak for Consorcio. Det er bare ekstraordinær flom.",
+            "Det unntar også skader som skyldes at tiden går, altså vanlig slitasje og forvitring, i tillegg til væpnet konflikt, ond tro hos den forsikrede, tap i karenstiden og indirekte tap utover et eventuelt driftsavbrudd som er uttrykkelig dekket. Eiendomsdekningen er begrenset til hendelser som skjer i Spania. Et tak som sakte har sluppet inn vann i tre vintre, er et vedlikeholdsspørsmål før det er et forsikringsspørsmål."
+          ]
+        },
+        {
+          "h2": "Er det inkludert advokat i boligforsikringen min?",
+          "paras": [
+            "Kanskje, og mange eiere sjekker det aldri, fordi det står i et kapittel skrevet på spansk. Rettshjelpsdekning (defensa jurídica) betyr at forsikringsselskapet betaler kostnadene ved en forvaltningssak, rettssak eller voldgift og gir deg juridisk hjelp i og utenfor retten, innenfor grensene som loven og polisen setter.",
+            "I en kombinert boligforsikring må denne dekningen stå som et eget kapittel som sier hva den dekker, og ha sin egen premie. Finner du ingen egen premielinje for den, spør forsikringsselskapet om du i det hele tatt har den, og på hvilke vilkår.",
+            "Når den gjelder, har du rett til å velge din egen advokat og procurador i alle typer saker, og advokaten du velger, tar instrukser fra deg, ikke fra forsikringsselskapet. Den retten avhenger ikke av at forsikringsselskapet sier ja. Polisen må si det tydelig, og forsikringsselskapet må fortelle deg om det med en gang hvis det oppstår en interessekonflikt eller uenighet om hvordan saken skal føres. Disse reglene er bindende, og en polise kan bare fravike dem til din fordel."
+          ]
+        },
+        {
+          "h2": "Hva dekker ikke rettshjelpen?",
+          "paras": [
+            "Bøter og sanksjoner ilagt av en myndighet eller en domstol er unntatt av loven selv, uansett hva polisen sier. Rettshjelpen hjelper deg å føre en sak, eller å forsvare deg i en. Den betaler ikke en sanksjon som et rådhus, et skattekontor eller en dommer har ilagt deg.",
+            "Hvis en tredjepart saksøker deg, for eksempel en nabo som fikk vannskade fra leiligheten din, hører forsvaret som forsikringsselskapet fører under ansvarsdelen, ikke under rettshjelp. Reglene om fritt valg gjelder ikke der. Du kan ta med din egen advokat når det er en interessekonflikt, og forsikringsselskapet betaler opp til grensen i polisen.",
+            "Enhver klausul som begrenser rettighetene dine, for eksempel et tak på hva forsikringsselskapet betaler en advokat du velger selv, må være uthevet i polisen og særskilt godtatt av deg skriftlig. Generelle vilkår kan aldri slå ut mot den forsikrede. Signerte du polisen uten å lese den (det har de fleste av oss gjort), er det verdt å lete fram den signerte siden nå."
+          ]
+        },
+        {
+          "h2": "Hvordan leser jeg en forsikring som er skrevet på spansk?",
+          "paras": [
+            "Åpne PDF-en og søk etter en kort liste med uttrykk. Defensa jurídica og libre elección de abogado forteller deg om du har rettshjelp og rett til å velge. Suma asegurada og sublímite viser hvor mye som er forsikret, og hvor lavere grenser gjelder. Cláusulas limitativas og exclusiones er der vilkårene står.",
+            "Se deretter etter hechos anteriores, som handler om hendelser som skjedde før dekningen startet, ámbito territorial for hvor dekningen gjelder, og arrendamiento hvis du leier ut boligen. Finner du et uttrykk, vet du hva du har. Finner du det ikke, vet du hva du skal spørre om.",
+            "Sjekk forsikringssummen for bygningen mot hva det faktisk ville koste å bygge den opp igjen, siden Consorcio hviler på det samme tallet. Ti minutter med polisen og en oversettelsesapp, én gang i året når fornyelsen kommer, er som regel nok."
+          ]
+        },
+        {
+          "h2": "Hva kan jeg gjøre hvis forsikringsselskapet avslår kravet mitt?",
+          "paras": [
+            "Start med forsikringsselskapets egen kundeserviceavdeling. Du må klage der først. Først etter det kan du ta saken til tilsynsmyndigheten for forsikring, som gir en uttalelse som er gratis, men ikke bindende, og som ikke kan pålegge noen å betale. Domstolene er fortsatt den eneste veien som kan det.",
+            "Et krav mot ditt eget forsikringsselskap under en eiendomsforsikring foreldes etter to år, så ikke la klagetrinnene trekke ut. Hold datoene, bildene, brevene fra forsikringsselskapet og vindkastregistreringen samlet, og må saken videre, kan en abogado ta den derfra, kanskje under ditt eget rettshjelpskapittel. Gå så tilbake til den delen av det å eie en bolig i Spania som du kjøpte den for."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Hemförsäkring i Spanien för ägare som bor utomlands",
+      "description": "Så fungerar spansk hemförsäkring för ägare utomlands: vad den betalar, när Consorcio betalar i stället och rättsskyddet som de flesta aldrig använder.",
+      "h1": "Hemförsäkring för en spansk bostad som du äger från utlandet",
+      "lead": "Vanliga skador som ett läckage, ett sprucket rör eller en storm med vindbyar under 120 km/h hanteras av ditt eget försäkringsbolag, enligt villkoren i din försäkring. Extraordinära händelser som jordbävningar, extraordinära översvämningar och vindbyar över 120 km/h betalas av ett offentligt organ, Consorcio de Compensación de Seguros, men bara om du har en vanlig försäkring, och bara upp till de belopp som den försäkringen omfattar.",
+      "sections": [
+        {
+          "h2": "Vad gör en spansk hemförsäkring egentligen?",
+          "paras": [
+            "De flesta hemförsäkringar här säljs i två delar, byggnaden (continente) och lösöret (contenido), oftast kombinerade och ofta med ansvarsskydd för skador du orsakar någon annan. För en ägare i Stockholm eller Rotterdam känns upplägget bekant. Det som skiljer sig är vem som betalar när något stort händer, och rättsskyddskapitlet som ligger gömt mitt i dokumentet.",
+            "Spanien skiljer katastrofer från vardagsskador. Ditt eget försäkringsbolag hanterar vardagen, enligt villkoren i din försäkring: regn som tränger in, ett rör som spricker medan du är borta, en storm som är kraftig men inte extrem. Ett offentligt organ, Consorcio de Compensación de Seguros, hanterar en fast lista med extraordinära händelser. Vilken sida av den gränsen en skada hamnar på avgör vem du skickar skadeanmälan till."
+          ]
+        },
+        {
+          "h2": "Vem betalar när en storm eller översvämning drabbar min bostad?",
+          "paras": [
+            "Consorcio täcker jordbävningar och havsbävningar, extraordinära översvämningar, vulkanutbrott, atypiska cykloniska stormar och meteoritnedslag. Det täcker också terrorism, uppror, uppvigling, upplopp och civila oroligheter, samt åtgärder av de väpnade styrkorna och säkerhetsstyrkorna i fredstid. För vind är gränsen exakt. Extraordinär vind betyder vindbyar över 120 km/h, mätt som en vindby på tre sekunder. Under den gränsen hör stormskador till ditt privata försäkringsbolag, under det vanliga stormskyddet i din försäkring.",
+            "Det som räknas är den officiella mätningen av vindbyar för det datumet och den platsen, inte hur blåsigt det kändes för grannen som skickade bilder till dig. En storm som rapporterats med sin genomsnittliga vindhastighet kan ändå ha gett vindbyar som räknas, och tvärtom. Så när du anmäler en stormskada, ange datum och exakt plats, och låt mätningen avgöra vilken sida skadan hamnar på."
+          ]
+        },
+        {
+          "h2": "Måste jag köpa skydd mot översvämning och jordbävning separat?",
+          "paras": [
+            "Nej. Skyddet från Consorcio är inget du köper för sig. Har du en vanlig försäkring i en gren som omfattas tar ditt försäkringsbolag ut en obligatorisk tilläggsavgift för Consorcio tillsammans med premien. Det finns inget separat att skriva under.",
+            "Haken är att skyddet helt vilar på den vanliga försäkringen. En fastighet utan försäkring har inget skydd från Consorcio alls. Och Consorcio betalar bara upp till försäkringsbeloppen i din egen försäkring, så om du försäkrar byggnaden för mindre än den är värd för att spara på premien är du underförsäkrad mot jordbävning eller extraordinär översvämning i exakt samma proportion.",
+            "Det finns också en karenstid efter att en ny försäkring börjar gälla, så skyddet finns inte på plats från första dagen. Byter du försäkringsbolag eller försäkrar en bostad för första gången, gör det i god tid före de stormiga månaderna och inte veckan innan."
+          ]
+        },
+        {
+          "h2": "Betalar Consorcio för regn eller ett läckande tak?",
+          "paras": [
+            "Nej. Consorcio undantar naturhändelser som inte står på dess lista, och det undantaget skickar vanligt regn, hagel, vind under gränsvärdet och vatten som tränger in tillbaka till ditt privata försäkringsbolag. Ett sprucket rör eller ett tak som läcker är aldrig en fråga för Consorcio. Det är bara extraordinära översvämningar.",
+            "Det undantar också skador som beror på att tiden helt enkelt går, alltså vanligt slitage och väderpåverkan, liksom väpnad konflikt, ond tro från den försäkrade, skador under karenstiden och indirekta förluster utöver ett avbrottsskydd som uttryckligen ingår. Egendomsskyddet är begränsat till händelser som inträffar i Spanien. Ett tak som långsamt har släppt in vatten i tre vintrar är en underhållsfråga innan det är en försäkringsfråga."
+          ]
+        },
+        {
+          "h2": "Ingår det en advokat i min hemförsäkring?",
+          "paras": [
+            "Kanske, och många ägare tittar aldrig efter, eftersom det står i ett kapitel på spanska. Rättsskydd (defensa jurídica) innebär att försäkringsbolaget betalar kostnaderna för ett förvaltningsärende, en rättegång eller ett skiljeförfarande och ger dig juridisk hjälp både i och utanför domstol, inom de gränser som lagen och försäkringen sätter.",
+            "I en kombinerad hemförsäkring måste det här skyddet stå som ett eget kapitel som anger vad det omfattar och har en egen premie. Hittar du ingen separat premie för det, fråga ditt försäkringsbolag om du alls har det, och på vilka villkor.",
+            "När det gäller har du rätt att välja egen advokat och procurador i alla typer av förfaranden, och den advokat du väljer tar instruktioner från dig, inte från försäkringsbolaget. Den rätten hänger inte på att försäkringsbolaget godkänner det. Försäkringen måste skriva ut det tydligt, och försäkringsbolaget måste informera dig direkt om det uppstår en intressekonflikt eller oenighet om hur ärendet ska drivas. Reglerna är tvingande, och en försäkring får bara avvika från dem till din fördel."
+          ]
+        },
+        {
+          "h2": "Vad gör rättsskyddet inte?",
+          "paras": [
+            "Böter och sanktioner som en myndighet eller domstol har beslutat är undantagna enligt lagen själv, oavsett vad försäkringen säger. Rättsskyddet hjälper dig att driva ett ärende, eller att försvara dig i ett. Det betalar inte en sanktion som ett kommunkontor, en skattemyndighet eller en domare har ålagt dig.",
+            "Om en tredje part stämmer dig, till exempel en granne vars lägenhet fick vattenskador från din, ligger försvaret som ditt försäkringsbolag driver under ansvarsdelen, inte under rättsskyddet. Reglerna om fritt val gäller inte där. Du får ta in egen advokat när det finns en intressekonflikt, och försäkringsbolaget betalar upp till försäkringens gräns.",
+            "Varje villkor som begränsar dina rättigheter, till exempel ett tak för vad försäkringsbolaget betalar en advokat du själv väljer, måste vara framhävt i försäkringen och särskilt godkänt av dig skriftligen. Allmänna villkor får aldrig verka mot den försäkrade. Skrev du under försäkringen utan att läsa den (det har de flesta av oss gjort) är det värt att leta fram den underskrivna sidan nu."
+          ]
+        },
+        {
+          "h2": "Hur läser jag en försäkring som är helt på spanska?",
+          "paras": [
+            "Öppna PDF:en och sök efter en kort lista med fraser. Defensa jurídica och libre elección de abogado visar om du har rättsskydd och rätt att välja advokat. Suma asegurada och sublímite visar hur mycket som är försäkrat och var lägre gränser gäller. Cláusulas limitativas och exclusiones är där villkoren står.",
+            "Leta sedan efter hechos anteriores, som handlar om händelser före skyddets början, ámbito territorial för var skyddet gäller, och arrendamiento om du hyr ut bostaden. Hittar du en fras vet du vad du har. Hittar du den inte vet du vad du ska fråga om.",
+            "Jämför försäkringsbeloppet för byggnaden med vad det verkligen skulle kosta att bygga upp den igen, eftersom Consorcio vilar på samma siffra. Tio minuter med försäkringen och en översättningsapp, en gång om året när förnyelsen kommer, räcker oftast."
+          ]
+        },
+        {
+          "h2": "Vad kan jag göra om försäkringsbolaget avslår min skadeanmälan?",
+          "paras": [
+            "Börja med försäkringsbolagets egen kundtjänstavdelning. Du måste klaga där först. Först därefter kan du vända dig till försäkringstillsynen, vars utlåtande är gratis men inte bindande och inte kan ålägga någon att betala. Domstolarna är fortfarande den enda väg som kan det.",
+            "Ett anspråk mot ditt eget försäkringsbolag enligt en egendomsförsäkring preskriberas efter två år, så låt inte klagomålsstegen dra ut på tiden. Håll ihop datum, bilder, försäkringsbolagets brev och mätningen av vindbyar, och behöver ärendet gå vidare kan en abogado ta det därifrån, möjligen under ditt eget rättsskyddskapitel. Gå sedan tillbaka till den del av att äga en spansk bostad som du köpte den för."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Hausversicherung in Spanien für Nichtansässige",
+      "description": "So funktioniert die spanische Hausversicherung für Eigentümer im Ausland: was die Police zahlt, wann das Consorcio zahlt und welcher Rechtsschutz drin ist.",
+      "h1": "Hausversicherung für eine spanische Immobilie, die Sie aus dem Ausland besitzen",
+      "lead": "Gewöhnliche Schäden wie ein Leck, ein geplatztes Rohr oder ein Sturm mit Böen unter 120 km/h sind Sache Ihres eigenen Hausversicherers, zu den Bedingungen Ihrer Police. Außergewöhnliche Ereignisse wie Erdbeben, außergewöhnliche Überschwemmungen und Böen über 120 km/h zahlt eine öffentliche Einrichtung, das Consorcio de Compensación de Seguros, aber nur, wenn Sie eine gewöhnliche Police haben, und nur bis zu den Summen, die diese Police versichert.",
+      "sections": [
+        {
+          "h2": "Was leistet eine spanische Hausversicherung eigentlich?",
+          "paras": [
+            "Die meisten Hausversicherungen werden hier in zwei Teilen verkauft, das Gebäude (continente) und der Inhalt (contenido), meist kombiniert, oft mit einer Haftpflichtdeckung für Schäden, die Sie anderen zufügen. Für einen Eigentümer in Stockholm oder Rotterdam ist der Aufbau vertraut. Anders ist, wer zahlt, wenn etwas Großes passiert, und das Kapitel zum Rechtsschutz, das mitten im Dokument versteckt ist.",
+            "Spanien trennt Katastrophen von alltäglichen Schäden. Ihr eigener Versicherer kümmert sich um das Alltägliche, zu den Bedingungen Ihrer Police: Regen, der hereinkommt, ein Rohr, das platzt, während Sie weg sind, ein Sturm, der stark, aber nicht extrem ist. Eine öffentliche Einrichtung, das Consorcio de Compensación de Seguros, übernimmt eine feste Liste außergewöhnlicher Ereignisse. Auf welcher Seite dieser Linie ein Schaden liegt, entscheidet, an wen Sie die Schadensmeldung schicken."
+          ]
+        },
+        {
+          "h2": "Wer zahlt, wenn ein Sturm oder eine Überschwemmung mein Haus trifft?",
+          "paras": [
+            "Das Consorcio deckt Erdbeben und Seebeben, außergewöhnliche Überschwemmungen, Vulkanausbrüche, atypische Wirbelstürme und den Einschlag von Meteoriten. Es deckt auch Terrorismus, Rebellion, Aufruhr, Tumult und innere Unruhen sowie Handlungen der Streitkräfte und Sicherheitskräfte in Friedenszeiten. Beim Wind ist die Grenze genau festgelegt. Außergewöhnlicher Wind bedeutet Böen über 120 km/h, gemessen als Drei-Sekunden-Böe. Darunter gehört ein Sturmschaden zu Ihrem privaten Versicherer, unter der gewöhnlichen Sturmdeckung Ihrer Police.",
+            "Maßgeblich ist die amtliche Böenaufzeichnung für dieses Datum und diesen Ort, nicht wie windig es sich für den Nachbarn anfühlte, der Ihnen Fotos geschickt hat. Ein Sturm, der mit seiner durchschnittlichen Windgeschwindigkeit gemeldet wurde, kann trotzdem Böen erzeugt haben, die zählen, und umgekehrt gilt das ebenso. Wenn Sie also einen Sturmschaden melden, nennen Sie das Datum und den genauen Ort, und lassen Sie die Aufzeichnung entscheiden, auf welche Seite er fällt."
+          ]
+        },
+        {
+          "h2": "Muss ich Schutz gegen Überschwemmung und Erdbeben extra abschließen?",
+          "paras": [
+            "Nein. Die Deckung des Consorcio ist nichts, was Sie einzeln kaufen. Wenn Sie eine gewöhnliche Police in einer berechtigten Sparte haben, zieht Ihr Versicherer mit der Prämie einen Pflichtzuschlag für das Consorcio ein. Es gibt nichts Gesondertes zu unterschreiben.",
+            "Der Haken ist, dass sie sich vollständig auf diese gewöhnliche Police stützt. Eine Immobilie ohne Versicherung hat überhaupt keine Deckung durch das Consorcio. Und das Consorcio zahlt nur bis zu den Versicherungssummen Ihrer eigenen Police. Wenn Sie das Gebäude also unter seinem Wert versichern, um Prämie zu sparen, sind Sie gegen ein Erdbeben oder eine außergewöhnliche Überschwemmung im genau gleichen Verhältnis unterversichert.",
+            "Außerdem gibt es nach Beginn einer neuen Police eine Wartezeit, der Schutz besteht also nicht schon ab dem ersten Tag. Wenn Sie den Versicherer wechseln oder ein Haus zum ersten Mal versichern, tun Sie es lange vor den stürmischen Monaten und nicht in der Woche davor."
+          ]
+        },
+        {
+          "h2": "Zahlt das Consorcio bei Regen oder einem undichten Dach?",
+          "paras": [
+            "Nein. Das Consorcio schließt Naturereignisse aus, die nicht auf seiner Liste stehen, und dieser Ausschluss schickt gewöhnlichen Regen, Hagel, Wind unter dem Schwellenwert und eindringendes Wasser zurück zu Ihrem privaten Versicherer. Ein geplatztes Rohr oder ein undichtes Dach ist nie eine Sache des Consorcio. Nur eine außergewöhnliche Überschwemmung ist es.",
+            "Ausgeschlossen sind außerdem Schäden durch den bloßen Lauf der Zeit, also gewöhnliche Abnutzung und Verwitterung, dazu bewaffnete Konflikte, Böswilligkeit des Versicherten, Schäden innerhalb der Wartezeit und indirekte Schäden, die über eine ausdrücklich gedeckte Betriebsunterbrechung hinausgehen. Die Sachdeckung beschränkt sich auf Ereignisse, die in Spanien geschehen. Ein Dach, durch das seit drei Wintern langsam Wasser eindringt, ist eine Frage der Instandhaltung, bevor es eine Versicherungsfrage ist."
+          ]
+        },
+        {
+          "h2": "Ist in meiner Hausversicherung ein Anwalt enthalten?",
+          "paras": [
+            "Möglicherweise, und viele Eigentümer schauen nie nach, weil es in einem spanisch geschriebenen Kapitel steht. Rechtsschutz (defensa jurídica) bedeutet, dass der Versicherer die Kosten eines Verwaltungs-, Gerichts- oder Schiedsverfahrens trägt und Ihnen innerhalb und außerhalb des Gerichts rechtlich hilft, in den Grenzen, die Gesetz und Police setzen.",
+            "Innerhalb einer kombinierten Hausversicherung muss diese Deckung als eigenes Kapitel erscheinen, das angibt, was es deckt, und eine eigene Prämie ausweist. Wenn Sie dafür keine eigene Prämienzeile finden, fragen Sie Ihren Versicherer, ob Sie sie überhaupt haben, und zu welchen Bedingungen.",
+            "Wenn sie greift, haben Sie das Recht, in jeder Art von Verfahren Ihren eigenen Anwalt und procurador zu wählen, und der Anwalt Ihrer Wahl nimmt Weisungen von Ihnen entgegen, nicht vom Versicherer. Dieses Recht hängt nicht von der Zustimmung des Versicherers ab. Die Police muss es ausdrücklich nennen, und der Versicherer muss Sie sofort darauf hinweisen, wenn ein Interessenkonflikt oder eine Meinungsverschiedenheit über die Führung des Falls besteht. Diese Regeln sind zwingend, und eine Police darf nur zu Ihren Gunsten davon abweichen."
+          ]
+        },
+        {
+          "h2": "Was leistet der Rechtsschutz nicht?",
+          "paras": [
+            "Bußgelder und Strafen, die eine Behörde oder ein Gericht verhängt, sind schon vom Gesetz ausgeschlossen, egal was die Police sagt. Rechtsschutz hilft Ihnen, einen Fall zu führen oder sich darin zu verteidigen. Er zahlt keine Sanktion, die ein Rathaus, ein Finanzamt oder ein Richter gegen Sie verhängt hat.",
+            "Wenn ein Dritter Sie verklagt, zum Beispiel ein Nachbar, dessen Wohnung von Ihrer aus überflutet wurde, läuft die Verteidigung durch Ihren Versicherer über den Haftpflichtteil, nicht über den Rechtsschutz. Die Regeln zur freien Anwaltswahl gelten dort nicht. Bei einem Interessenkonflikt dürfen Sie Ihren eigenen Anwalt hinzuziehen, und der Versicherer zahlt bis zur Grenze der Police.",
+            "Jede Klausel, die Ihre Rechte einschränkt, etwa eine Obergrenze dafür, was der Versicherer einem selbst gewählten Anwalt zahlt, muss in der Police hervorgehoben und von Ihnen ausdrücklich schriftlich angenommen werden. Allgemeine Bedingungen dürfen sich nie gegen den Versicherten richten. Wenn Sie die Police unterschrieben haben, ohne sie zu lesen (das haben die meisten von uns), lohnt es sich, jetzt nach dieser unterschriebenen Seite zu suchen."
+          ]
+        },
+        {
+          "h2": "Wie lese ich eine Police, die komplett auf Spanisch ist?",
+          "paras": [
+            "Öffnen Sie das PDF und suchen Sie nach einer kurzen Liste von Begriffen. Defensa jurídica und libre elección de abogado zeigen, ob Sie Rechtsschutz und das Recht auf freie Wahl haben. Suma asegurada und sublímite zeigen, wie viel versichert ist und wo kleinere Grenzen gelten. Cláusulas limitativas und exclusiones sind die Stellen, an denen die Bedingungen stehen.",
+            "Suchen Sie dann nach hechos anteriores, wo es um Ereignisse geht, die vor Beginn der Deckung geschahen, nach ámbito territorial für den Geltungsbereich der Deckung und nach arrendamiento, wenn Sie das Haus vermieten. Einen Begriff zu finden sagt Ihnen, was Sie haben. Ihn nicht zu finden sagt Ihnen, was Sie fragen sollten.",
+            "Vergleichen Sie die Versicherungssumme für das Gebäude mit dem, was ein Wiederaufbau wirklich kosten würde, denn das Consorcio stützt sich auf genau diese Zahl. Zehn Minuten mit der Police und einer Übersetzungs-App, einmal im Jahr, wenn die Verlängerung kommt, reichen meistens aus."
+          ]
+        },
+        {
+          "h2": "Was kann ich tun, wenn der Versicherer meinen Schaden ablehnt?",
+          "paras": [
+            "Beginnen Sie bei der Kundendienstabteilung des Versicherers selbst. Dort müssen Sie sich zuerst beschweren. Erst danach können Sie sich an die Versicherungsaufsicht wenden, deren Bericht kostenlos, aber nicht bindend ist und niemanden zur Zahlung verpflichten kann. Das können nach wie vor nur die Gerichte.",
+            "Ein Anspruch gegen Ihren eigenen Versicherer aus einer Sachversicherung verjährt nach zwei Jahren, lassen Sie die Beschwerdestufen also nicht schleifen. Bewahren Sie die Daten, die Fotos, die Schreiben des Versicherers und die Böenaufzeichnung zusammen auf, und wenn es weitergehen muss, kann ein abogado von dort übernehmen, möglicherweise über Ihr eigenes Rechtsschutzkapitel. Und dann kehren Sie zu dem Teil zurück, für den Sie ein spanisches Haus gekauft haben."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Assurance habitation en Espagne pour propriétaires non-résidents",
+      "description": "Assurance habitation espagnole depuis l'étranger : ce que paie votre contrat, quand le Consorcio paie, et la protection juridique souvent ignorée.",
+      "h1": "L'assurance habitation d'un bien en Espagne que vous possédez depuis l'étranger",
+      "lead": "Les dommages ordinaires, comme une fuite, une canalisation qui éclate ou une tempête avec des rafales inférieures à 120 km/h, relèvent de votre propre assureur habitation, selon les termes de votre contrat. Les événements extraordinaires, comme les tremblements de terre, les inondations extraordinaires et les rafales supérieures à 120 km/h, sont pris en charge par un organisme public, le Consorcio de Compensación de Seguros, mais seulement si vous avez un contrat ordinaire, et seulement à hauteur des montants assurés par ce contrat.",
+      "sections": [
+        {
+          "h2": "À quoi sert réellement un contrat d'assurance habitation espagnol ?",
+          "paras": [
+            "La plupart des contrats habitation sont vendus ici en deux parties, le bâtiment (continente) et le contenu (contenido), généralement combinés, souvent avec une garantie responsabilité civile pour les dommages que vous causez à quelqu'un d'autre. Pour un propriétaire installé à Stockholm ou à Rotterdam, la forme est familière. Ce qui change, c'est qui paie lorsqu'un gros sinistre survient, et le chapitre juridique caché au milieu du document.",
+            "L'Espagne sépare les catastrophes des dommages du quotidien. Votre propre assureur s'occupe du quotidien, selon les termes de votre contrat : la pluie qui s'infiltre, une canalisation qui éclate pendant votre absence, une tempête forte mais pas extrême. Un organisme public, le Consorcio de Compensación de Seguros, s'occupe d'une liste fixe d'événements extraordinaires. Savoir de quel côté de cette ligne tombe un sinistre détermine à qui vous adressez la déclaration."
+          ]
+        },
+        {
+          "h2": "Qui paie quand une tempête ou une inondation touche mon logement ?",
+          "paras": [
+            "Le Consorcio couvre les tremblements de terre et les raz-de-marée, les inondations extraordinaires, les éruptions volcaniques, les tempêtes cycloniques atypiques et les chutes de météorites. Il couvre aussi le terrorisme, la rébellion, la sédition, les émeutes et les troubles civils, ainsi que les actions des forces armées et des forces de sécurité en temps de paix. Pour le vent, la limite est précise. Un vent extraordinaire correspond à des rafales supérieures à 120 km/h, mesurées sur une rafale de trois secondes. En dessous, les dégâts de tempête relèvent de votre assureur privé, au titre de la garantie tempête ordinaire de votre contrat.",
+            "Le chiffre qui compte est le relevé officiel des rafales pour cette date et ce lieu, pas l'impression du voisin qui vous a envoyé des photos. Une tempête annoncée par sa vitesse moyenne de vent peut tout de même avoir produit des rafales qui entrent dans le seuil, et l'inverse est aussi vrai. Quand vous déclarez des dégâts de tempête, indiquez donc la date et l'emplacement exact, et laissez le relevé décider de quel côté ils tombent."
+          ]
+        },
+        {
+          "h2": "Dois-je souscrire séparément une garantie inondation et tremblement de terre ?",
+          "paras": [
+            "Non. La couverture du Consorcio ne s'achète pas seule. Si vous avez un contrat ordinaire dans une branche concernée, une surprime obligatoire destinée au Consorcio est perçue par votre assureur avec la prime. Il n'y a rien de plus à signer.",
+            "Le hic, c'est qu'elle repose entièrement sur ce contrat ordinaire. Un bien sans assurance n'a aucune couverture du Consorcio. Et le Consorcio ne paie qu'à hauteur des montants assurés dans votre propre contrat : si vous assurez le bâtiment en dessous de sa valeur pour économiser sur la prime, vous êtes sous-assuré contre un tremblement de terre ou une inondation extraordinaire exactement dans la même proportion.",
+            "Il existe aussi un délai de carence après le début d'un nouveau contrat, la couverture n'est donc pas acquise dès le premier jour. Si vous changez d'assureur ou assurez un logement pour la première fois, faites-le bien avant les mois de tempêtes plutôt que la semaine précédente."
+          ]
+        },
+        {
+          "h2": "Le Consorcio paiera-t-il pour la pluie ou une fuite de toiture ?",
+          "paras": [
+            "Non. Le Consorcio exclut les phénomènes naturels autres que ceux de sa liste, et cette exclusion renvoie la pluie ordinaire, la grêle, le vent sous le seuil et les infiltrations d'eau vers votre assureur privé. Une canalisation qui éclate ou un toit qui fuit ne relève jamais du Consorcio. Seule l'inondation extraordinaire en relève.",
+            "Il exclut aussi les dommages dus au simple passage du temps, c'est-à-dire l'usure et les intempéries ordinaires, ainsi que les conflits armés, la mauvaise foi de l'assuré, les sinistres survenus pendant le délai de carence et les pertes indirectes au-delà d'une éventuelle perte d'exploitation expressément couverte. Sa couverture des biens se limite aux événements survenus en Espagne. Un toit qui laisse lentement entrer l'eau depuis trois hivers est une question d'entretien avant d'être une question d'assurance."
+          ]
+        },
+        {
+          "h2": "Mon contrat habitation inclut-il un avocat ?",
+          "paras": [
+            "Peut-être, et beaucoup de propriétaires ne vérifient jamais, parce que cela figure dans un chapitre rédigé en espagnol. La garantie protection juridique (defensa jurídica) signifie que l'assureur paie les frais d'une procédure administrative, judiciaire ou d'arbitrage et vous apporte une aide juridique, en justice comme à l'amiable, dans les limites fixées par la loi et par le contrat.",
+            "Dans un contrat habitation combiné, cette garantie doit figurer dans un chapitre séparé qui précise ce qu'elle couvre et comporte sa propre prime. Si vous ne trouvez pas de ligne de prime distincte pour elle, demandez à votre assureur si vous l'avez seulement, et à quelles conditions.",
+            "Lorsqu'elle s'applique, vous avez le droit de choisir votre propre avocat et votre procurador dans tout type de procédure, et l'avocat que vous choisissez reçoit ses instructions de vous, pas de l'assureur. Ce droit ne dépend pas de l'accord de l'assureur. Le contrat doit l'énoncer clairement, et l'assureur doit vous en informer immédiatement en cas de conflit d'intérêts ou de désaccord sur la conduite de l'affaire. Ces règles sont impératives, et un contrat ne peut s'en écarter qu'en votre faveur."
+          ]
+        },
+        {
+          "h2": "Que ne fera pas la protection juridique ?",
+          "paras": [
+            "Les amendes et sanctions imposées par une autorité ou un tribunal sont exclues par la loi elle-même, quoi que dise le contrat. La protection juridique vous aide à mener une affaire, ou à vous défendre dans une affaire. Elle ne paie pas une sanction qu'une mairie, l'administration fiscale ou un juge vous a infligée.",
+            "Si un tiers vous poursuit, par exemple un voisin dont l'appartement a été inondé depuis le vôtre, la défense menée par votre assureur relève de la garantie responsabilité civile, pas de la protection juridique. Les règles de libre choix ne s'y appliquent pas. Vous pouvez faire appel à votre propre avocat en cas de conflit d'intérêts, et l'assureur paie jusqu'au plafond du contrat.",
+            "Toute clause qui limite vos droits, comme un plafond sur ce que l'assureur verse à un avocat que vous choisissez vous-même, doit être mise en évidence dans le contrat et acceptée expressément par vous par écrit. Les conditions générales ne peuvent jamais jouer contre l'assuré. Si vous avez signé le contrat sans le lire (c'est le cas de la plupart d'entre nous), cela vaut la peine de chercher cette page signée dès maintenant."
+          ]
+        },
+        {
+          "h2": "Comment lire un contrat entièrement rédigé en espagnol ?",
+          "paras": [
+            "Ouvrez le PDF et cherchez une courte liste d'expressions. Defensa jurídica et libre elección de abogado vous indiquent si vous avez une protection juridique et le droit de choisir. Suma asegurada et sublímite montrent le montant assuré et où s'appliquent des limites plus basses. Cláusulas limitativas et exclusiones sont l'endroit où se trouvent les conditions.",
+            "Cherchez ensuite hechos anteriores, qui traite des événements survenus avant le début de la couverture, ámbito territorial pour savoir où s'applique la couverture, et arrendamiento si vous louez le logement. Trouver une expression vous dit ce que vous avez. Ne pas la trouver vous dit quoi demander.",
+            "Comparez le montant assuré du bâtiment avec ce que coûterait réellement sa reconstruction, puisque le Consorcio s'appuie sur ce même chiffre. Dix minutes avec le contrat et une application de traduction, une fois par an à l'arrivée du renouvellement, suffisent généralement."
+          ]
+        },
+        {
+          "h2": "Que faire si l'assureur refuse mon sinistre ?",
+          "paras": [
+            "Commencez par le service clients de l'assureur lui-même. Vous devez d'abord y déposer votre réclamation. Ce n'est qu'ensuite que vous pouvez saisir l'autorité de contrôle des assurances, dont l'avis est gratuit mais non contraignant et ne peut obliger personne à payer. Les tribunaux restent la seule voie qui le peut.",
+            "Une action contre votre propre assureur au titre d'un contrat dommages aux biens se prescrit au bout de deux ans, ne laissez donc pas traîner les étapes de réclamation. Gardez ensemble les dates, les photos, les courriers de l'assureur et le relevé des rafales, et si l'affaire doit aller plus loin, un abogado peut prendre le relais, éventuellement au titre de votre propre chapitre protection juridique. Puis revenez à ce pour quoi vous avez acheté votre logement en Espagne."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Opstalverzekering in Spanje voor eigenaren in het buitenland",
+      "description": "Zo werkt een Spaanse woonhuisverzekering voor eigenaren in het buitenland: wat uw polis betaalt, wanneer het Consorcio betaalt en welke rechtshulp u heeft.",
+      "h1": "Een woonhuisverzekering voor een Spaanse woning die u vanuit het buitenland bezit",
+      "lead": "Gewone schade, zoals een lekkage, een gesprongen leiding of een storm met windstoten onder 120 km/u, valt onder uw eigen woonhuisverzekeraar, volgens de voorwaarden van uw polis. Buitengewone gebeurtenissen, zoals aardbevingen, buitengewone overstromingen en windstoten boven 120 km/u, worden betaald door een publieke instelling, het Consorcio de Compensación de Seguros, maar alleen als u een gewone polis heeft, en alleen tot de bedragen die die polis verzekert.",
+      "sections": [
+        {
+          "h2": "Wat dekt een Spaanse woonhuisverzekering eigenlijk?",
+          "paras": [
+            "De meeste woonhuispolissen worden hier in twee delen verkocht, het gebouw (continente) en de inboedel (contenido), meestal gecombineerd en vaak met een aansprakelijkheidsdekking voor schade die u een ander toebrengt. Voor een eigenaar in Stockholm of Rotterdam is die opbouw vertrouwd. Wat anders is, is wie betaalt als er iets groots gebeurt, en het juridische hoofdstuk dat midden in het document verstopt zit.",
+            "Spanje scheidt rampen van alledaagse schade. Uw eigen verzekeraar regelt het alledaagse, volgens de voorwaarden van uw polis: regen die binnenkomt, een leiding die springt terwijl u weg bent, een storm die hevig is maar niet extreem. Een publieke instelling, het Consorcio de Compensación de Seguros, regelt een vaste lijst van buitengewone gebeurtenissen. Aan welke kant van die grens een schade valt, bepaalt bij wie u de claim indient."
+          ]
+        },
+        {
+          "h2": "Wie betaalt als een storm of overstroming mijn woning treft?",
+          "paras": [
+            "Het Consorcio dekt aardbevingen en zeebevingen, buitengewone overstromingen, vulkaanuitbarstingen, atypische cyclonale stormen en de inslag van meteorieten. Het dekt ook terrorisme, rebellie, opruiing, oproer en burgerlijke onrust, en handelingen van de strijdkrachten en veiligheidsdiensten in vredestijd. Voor wind is de grens precies. Buitengewone wind betekent windstoten boven 120 km/u, gemeten als windstoot van drie seconden. Daaronder hoort stormschade bij uw particuliere verzekeraar, onder de gewone stormdekking in uw polis.",
+            "Het cijfer dat telt is de officiële windstootmeting voor die datum en die plaats, niet hoe hard het voelde voor de buurman die u foto's stuurde. Een storm die wordt gemeld met zijn gemiddelde windsnelheid kan toch windstoten hebben gehad die meetellen, en andersom ook. Geef bij het melden van stormschade dus de datum en de exacte locatie op, en laat de meting bepalen aan welke kant de schade valt."
+          ]
+        },
+        {
+          "h2": "Moet ik een aparte dekking voor overstroming en aardbeving afsluiten?",
+          "paras": [
+            "Nee. De dekking van het Consorcio koopt u niet los. Heeft u een gewone polis in een branche die daarvoor in aanmerking komt, dan int uw verzekeraar samen met de premie een verplichte toeslag voor het Consorcio. Er is niets apart te tekenen.",
+            "Het addertje is dat alles op die gewone polis leunt. Een woning zonder verzekering heeft helemaal geen dekking van het Consorcio. En het Consorcio betaalt alleen tot de verzekerde bedragen in uw eigen polis, dus wie het gebouw voor minder verzekert dan het waard is om op de premie te besparen, is in precies dezelfde verhouding onderverzekerd tegen een aardbeving of buitengewone overstroming.",
+            "Er geldt ook een wachttijd nadat een nieuwe polis ingaat, dus de dekking loopt niet vanaf de allereerste dag. Stapt u over naar een andere verzekeraar of verzekert u een woning voor het eerst, doe dat dan ruim voor de stormachtige maanden en niet in de week ervoor."
+          ]
+        },
+        {
+          "h2": "Betaalt het Consorcio voor regen of een lekkend dak?",
+          "paras": [
+            "Nee. Het Consorcio sluit natuurverschijnselen uit die niet op zijn lijst staan, en door die uitsluiting gaan gewone regen, hagel, wind onder de drempel en binnendringend water terug naar uw particuliere verzekeraar. Een gesprongen leiding of een dak dat lekt is nooit een zaak voor het Consorcio. Alleen een buitengewone overstroming is dat.",
+            "Het sluit ook schade door het simpele verstrijken van de tijd uit, dus gewone slijtage en verwering, net als gewapend conflict, kwade trouw van de verzekerde, schade binnen de wachttijd en indirecte schade buiten een uitdrukkelijk gedekte bedrijfsonderbreking. De dekking voor eigendommen is beperkt tot gebeurtenissen in Spanje. Een dak dat al drie winters langzaam water doorlaat, is eerst een kwestie van onderhoud en pas daarna een verzekeringskwestie."
+          ]
+        },
+        {
+          "h2": "Zit er rechtsbijstand in mijn woonhuisverzekering?",
+          "paras": [
+            "Misschien, en veel eigenaren kijken er nooit naar, omdat het in een hoofdstuk in het Spaans staat. Rechtsbijstand (defensa jurídica) betekent dat de verzekeraar de kosten van een bestuursrechtelijke procedure, een rechtszaak of een arbitrage betaalt en u juridische hulp geeft binnen en buiten de rechtszaal, binnen de grenzen van de wet en de polis.",
+            "Binnen een gecombineerde woonhuispolis moet deze dekking als apart hoofdstuk zijn opgenomen, met vermelding van wat het dekt en met een eigen premie. Vindt u er geen aparte premieregel voor, vraag uw verzekeraar dan of u deze dekking wel heeft, en onder welke voorwaarden.",
+            "Als de dekking van toepassing is, heeft u het recht om in elk soort procedure zelf uw advocaat en procurador te kiezen, en de advocaat die u kiest volgt uw instructies op, niet die van de verzekeraar. Dat recht hangt niet af van de instemming van de verzekeraar. De polis moet het uitdrukkelijk vermelden, en de verzekeraar moet u er direct op wijzen als er een belangenconflict is of onenigheid over hoe de zaak gevoerd moet worden. Deze regels zijn dwingend, en een polis mag er alleen in uw voordeel van afwijken."
+          ]
+        },
+        {
+          "h2": "Wat doet rechtsbijstand niet?",
+          "paras": [
+            "Boetes en sancties die een overheid of rechter oplegt, zijn door de wet zelf uitgesloten, wat de polis ook zegt. Rechtsbijstand helpt u een zaak te voeren of u in een zaak te verdedigen. Het betaalt geen sanctie die een gemeente, een belastingkantoor of een rechter u heeft opgelegd.",
+            "Als een derde u aanklaagt, bijvoorbeeld een buurman wiens appartement onder water liep vanuit het uwe, dan valt de verdediging die uw verzekeraar voert onder de aansprakelijkheidsdekking, niet onder de rechtsbijstand. De regels over vrije advocaatkeuze gelden daar niet. U mag uw eigen advocaat inschakelen als er een belangenconflict is, en de verzekeraar betaalt tot de limiet van de polis.",
+            "Elke clausule die uw rechten beperkt, zoals een maximum voor wat de verzekeraar betaalt aan een advocaat die u zelf kiest, moet in de polis opvallend worden vermeld en door u schriftelijk en uitdrukkelijk worden aanvaard. Algemene voorwaarden mogen nooit in het nadeel van de verzekerde werken. Heeft u de polis getekend zonder hem te lezen (dat hebben de meesten van ons gedaan), dan loont het om die ondertekende pagina nu op te zoeken."
+          ]
+        },
+        {
+          "h2": "Hoe lees ik een polis die helemaal in het Spaans is?",
+          "paras": [
+            "Open de pdf en zoek op een korte lijst woorden. Defensa jurídica en libre elección de abogado vertellen u of u rechtsbijstand heeft en het recht om zelf te kiezen. Suma asegurada en sublímite laten zien hoeveel er verzekerd is en waar lagere limieten gelden. Cláusulas limitativas en exclusiones is waar de voorwaarden staan.",
+            "Zoek daarna naar hechos anteriores, over gebeurtenissen die plaatsvonden voordat de dekking inging, ámbito territorial voor waar de dekking geldt, en arrendamiento als u de woning verhuurt. Vindt u een term, dan weet u wat u heeft. Vindt u hem niet, dan weet u wat u moet vragen.",
+            "Vergelijk het verzekerde bedrag voor het gebouw met wat herbouw werkelijk zou kosten, omdat het Consorcio op datzelfde bedrag leunt. Tien minuten met de polis en een vertaalapp, eens per jaar als de verlenging binnenkomt, is meestal genoeg."
+          ]
+        },
+        {
+          "h2": "Wat kan ik doen als de verzekeraar mijn claim afwijst?",
+          "paras": [
+            "Begin bij de klantenservice van de verzekeraar zelf. Daar moet u eerst een klacht indienen. Pas daarna kunt u naar de toezichthouder op verzekeringen stappen, wiens rapport gratis is maar niet bindend en niemand kan verplichten te betalen. Alleen de rechter kan dat.",
+            "Een claim tegen uw eigen verzekeraar onder een opstal- of inboedelpolis verjaart na twee jaar, dus laat de klachtstappen niet op hun beloop. Bewaar de data, de foto's, de brieven van de verzekeraar en de windstootmeting bij elkaar, en moet het verder, dan kan een abogado het overnemen, mogelijk onder uw eigen hoofdstuk rechtsbijstand. Daarna kunt u terug naar het deel van een Spaanse woning waarvoor u hem kocht."
+          ]
+        }
+      ]
+    }
+  }
+}

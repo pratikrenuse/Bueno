@@ -1,0 +1,696 @@
+{
+  "domain": "Buying a property in Spain and taking a mortgage: the deposit contract, notary and registry fees, what the land registry protects, cash limits and declarations, the deed, consumer mortgage protections, and which purchase tax applies.",
+  "rules": [
+    {
+      "id": "buy.arras.penitential",
+      "statement": "Where a deposit called arras or senal is paid on a sale contract, either side can walk away: the buyer by losing the deposit, the seller by paying it back twice over.",
+      "value": {
+        "buyer_withdraws": "loses deposit",
+        "seller_withdraws": "returns double"
+      },
+      "unit": null,
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1454 Codigo Civil",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "PARTIAL: the BOE consolidated Codigo Civil truncates long before art. 1454, so the article was not read verbatim in this session. The rule applies to penitential arras; Spanish courts read arras as confirmatory unless the contract clearly says the parties may withdraw this way, so the wording of the private contract decides. Confirm the article text before citing it to customers."
+    },
+    {
+      "id": "buy.notary.fee_scale",
+      "statement": "Notary fees on a deed with a stated value follow an official scale: 90.151816 euros up to 6,010.12 euros of value, then falling rates per thousand on each slice above (4.5, 1.5, 1, 0.5 and 0.3), with a 5 percent reduction applied to every case in that section.",
+      "value": {
+        "fixed_upto_6010_12": 90.151816,
+        "bands_per_mil": [
+          {
+            "from": 6010.13,
+            "to": 30050.61,
+            "per_mil": 4.5
+          },
+          {
+            "from": 30050.62,
+            "to": 60101.21,
+            "per_mil": 1.5
+          },
+          {
+            "from": 60101.22,
+            "to": 150253.03,
+            "per_mil": 1.0
+          },
+          {
+            "from": 150253.04,
+            "to": 601012.1,
+            "per_mil": 0.5
+          },
+          {
+            "from": 601012.1,
+            "to": 6010121.04,
+            "per_mil": 0.3
+          }
+        ],
+        "above_6010121_04": "freely agreed",
+        "general_reduction_percent": 5
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1426/1989, Anexo I, Numero 2 (arancel de los Notarios)",
+        "url": "https://www.boe.es/eli/es/rd/1989/11/17/1426/con",
+        "source_dated": "2011-11-17",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Each per mil rate applies only to the slice of value inside its band. Other numbers of the arancel price other items, so this scale is not the whole notary bill."
+    },
+    {
+      "id": "buy.notary.who_pays",
+      "statement": "Notary fees are owed by whoever asked for the notary's services and, where relevant, by the parties as the substantive and tax rules allocate them; if there are several, all of them are jointly liable.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1426/1989, Anexo II, norma sexta",
+        "url": "https://www.boe.es/eli/es/rd/1989/11/17/1426/con",
+        "source_dated": "2011-11-17",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Joint liability means the notary can claim the whole fee from any party. Who finally bears it is a matter for the purchase contract."
+    },
+    {
+      "id": "buy.registry.fee_scale",
+      "statement": "Land registry fees for registering a property follow an official scale: 24.040484 euros up to 6,010.12 euros of value, then falling rates per thousand on each slice above, with a 5 percent reduction, and the total for that item can never exceed 2,181.673939 euros.",
+      "value": {
+        "fixed_upto_6010_12": 24.040484,
+        "bands_per_mil": [
+          {
+            "from": 6010.13,
+            "to": 30050.61,
+            "per_mil": 1.75
+          },
+          {
+            "from": 30050.62,
+            "to": 60101.21,
+            "per_mil": 1.25
+          },
+          {
+            "from": 60101.22,
+            "to": 150253.03,
+            "per_mil": 0.75
+          },
+          {
+            "from": 150253.04,
+            "to": 601012.1,
+            "per_mil": 0.3
+          },
+          {
+            "above": 601012.1,
+            "per_mil": 0.2
+          }
+        ],
+        "general_reduction_percent": 5,
+        "maximum": 2181.673939,
+        "minimum": 24.04
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1427/1989, Anexo I, Numero 2 (arancel de los Registradores)",
+        "url": "https://www.boe.es/eli/es/rd/1989/11/17/1427/con",
+        "source_dated": "2011-11-17",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The cap applies to the Numero 2 fee for the registration. A public consultation in July 2026 proposed amending RD 1427/1989 to add fees for online notas simples and continuous registry information; it was a proposal, not law, when read."
+    },
+    {
+      "id": "buy.registry.who_pays",
+      "statement": "Registry fees are paid by the person in whose favour the right is registered, which on a purchase is normally the buyer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1427/1989, Anexo II, norma octava",
+        "url": "https://www.boe.es/eli/es/rd/1989/11/17/1427/con",
+        "source_dated": "2011-11-17",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The person who presented the document can also be asked to pay."
+    },
+    {
+      "id": "buy.registry.nota_simple_fee",
+      "statement": "The official registry fee for a nota simple informativa is 3.005061 euros per property, however many entries the property's registry page holds.",
+      "value": 3.005061,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "RD 1427/1989, Anexo I, Numero 4.1.f",
+        "url": "https://www.boe.es/eli/es/rd/1989/11/17/1427/con",
+        "source_dated": "2011-11-17",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is the registrar's fee only. Online request services and intermediaries add their own charges. A July 2026 consultation proposed new fee rules for online notas simples; check before quoting a total."
+    },
+    {
+      "id": "buy.registry.purpose",
+      "statement": "The Spanish land registry exists to record acts and contracts about ownership and other rights in rem over immovable property.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 1 Ley Hipotecaria",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "buy.registry.unregistered_titles",
+      "statement": "Titles of ownership or other rights in rem over a property that are not registered in the land registry do not prejudice third parties.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 32 Ley Hipotecaria",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is why a charge or a sale that is not on the register cannot be used against a buyer who relied on it, and why the buyer should register promptly."
+    },
+    {
+      "id": "buy.registry.good_faith_buyer",
+      "statement": "A third party who acquires a right in good faith and for value from the person the registry shows as entitled to transfer it keeps that acquisition once the right is registered.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 34 Ley Hipotecaria",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The protection depends on registering. A buyer who signs the deed but does not register does not yet have it."
+    },
+    {
+      "id": "buy.registry.presumption",
+      "statement": "For all legal purposes, rights in rem recorded in the land registry are presumed to exist and to belong to the holder in the form the entry shows.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 38 Ley Hipotecaria",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "buy.cash.limit",
+      "statement": "The cash payment limit is 1,000 euros in a transaction where one of the parties acts as a business or professional; for private individuals with tax domicile outside Spain the limit is 10,000 euros.",
+      "value": {
+        "general": 1000,
+        "non_resident_individual": 10000
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 7 Ley 7/2012, as amended by Ley 11/2021",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/normativa-criterios-interpretativos/analisis.BK.2024.03.06/2022/Pagos_en_efectivo.html",
+        "source_dated": "2023-01-09",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The limit was 2,500 and 15,000 euros before Ley 11/2021. Payments between two private individuals fall outside it, but a purchase through a developer, an agent paid in cash or any professional seller brings it in. The sanction amount was not read in this session."
+    },
+    {
+      "id": "buy.cash.border_eu",
+      "statement": "Anyone carrying cash of 10,000 euros or more when entering or leaving the European Union must declare it, under Regulation (EU) 2018/1672, applicable since 3 June 2021.",
+      "value": 10000,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT, Aduanas nota informativa NIGA 21/2021",
+        "ref": "art. 3.1 Regulation (EU) 2018/1672, as quoted in the AEAT customs note",
+        "url": "https://www3.agenciatributaria.gob.es/static_files/Sede/Tema/Aduanas/Notas_info/NI_2021/NIGA21_21.pdf",
+        "source_dated": "2021-07-05",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Read through the AEAT customs note; the EUR-Lex page could not be reached in this session. The threshold is per person and per journey."
+    },
+    {
+      "id": "buy.cash.border_spain",
+      "statement": "Spain also requires a declaration of means of payment of 10,000 euros or more carried into or out of Spain, including to or from another EU country, and of 100,000 euros or more moved within Spain.",
+      "value": {
+        "entry_exit_spain": 10000,
+        "within_spain": 100000
+      },
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "AEAT sede electronica",
+        "ref": "art. 34.1 Ley 10/2010; Viajeros, medios de pago",
+        "url": "https://sede.agenciatributaria.gob.es/Sede/viajeros-trabajadores-desplazados-fronterizos/viajeros/medios-pago.html",
+        "source_dated": "2026-09-23",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Movements to or from an EU Member State use form S1; movements to or from a non-EU country use form E1. The 10,000 euro figure for entry to or exit from Spain is from art. 34.1.a Ley 10/2010 as quoted in the AEAT customs note NIGA 21/2021."
+    },
+    {
+      "id": "buy.deed.payment_means",
+      "statement": "In a deed transferring property for a price, the notary must identify how the price was paid: whether before or at signing, and whether in cash, by cheque (with its details) or by bank transfer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 24 Ley del Notariado, as amended with effect 11 July 2021",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "If a party fails to provide a required declaration, the notary records that in the deed and notifies the notarial body, which passes information on unidentified payments to the tax administration. Keep the transfer receipts and cheque copies for signing."
+    },
+    {
+      "id": "buy.deed.tax_ids",
+      "statement": "For deeds on immovable property, each party must show the notary their tax identification number, which for a foreign buyer is the NIE, and it is recorded in the deed.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 23.1 Ley del Notariado",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1862-4073",
+        "source_dated": "2025-01-03",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "How to obtain the NIE is covered by the nie rules; this rule is only about the deed."
+    },
+    {
+      "id": "buy.mortgage.scope",
+      "statement": "The mortgage credit law applies to loans secured by a mortgage on a residential property, and to loans to buy or keep property rights in land or buildings where the borrower or guarantor is a consumer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 2.1 Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "buy.mortgage.ten_days",
+      "statement": "The lender must give the borrower the FEIN, the FiAE, the draft contract and the other required documents at least ten calendar days before the loan is signed.",
+      "value": 10,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 14.1 Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Calendar days, not working days. For a variable rate loan the lender must also give a separate document showing instalments under different interest rate scenarios."
+    },
+    {
+      "id": "buy.mortgage.fein_binding",
+      "statement": "The FEIN, the European standardised information sheet, is a binding offer from the lender for the agreed period up to signing, which must be at least ten days.",
+      "value": 10,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 14.1.a Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "buy.mortgage.fiae",
+      "statement": "The FiAE, the standardised warnings sheet, must warn the borrower about the relevant clauses, such as the reference index, any interest floor, early maturity for non-payment, how set-up costs are shared and whether the loan is in a foreign currency.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 14.1.b Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The foreign currency warning matters for owners whose income is in kroner, kronor or pounds."
+    },
+    {
+      "id": "buy.mortgage.costs_split",
+      "statement": "On a mortgage loan the borrower pays the valuation, the lender pays the gestoria, the notary fees for the loan deed and the registry fees for the mortgage, and copies are paid by whoever asks for them.",
+      "value": {
+        "valuation": "borrower",
+        "gestoria": "lender",
+        "notary_loan_deed": "lender",
+        "registry_mortgage": "lender",
+        "copies": "requester"
+      },
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 14.1.e Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This covers the loan deed only. The notary and registry costs of the purchase deed itself are a separate matter between buyer and seller."
+    },
+    {
+      "id": "buy.mortgage.notary_acta",
+      "statement": "Before signing a mortgage, the borrower must appear before the notary of their choice no later than the day before the deed, so the notary can check the documents, explain the loan and record it in an acta.",
+      "value": 1,
+      "unit": "days",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 15.2 and 15.3 Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The borrower chooses the notary. The acta is a separate step from the signing itself, so it has to fit into the timetable."
+    },
+    {
+      "id": "buy.mortgage.acta_free",
+      "statement": "The notarial acta recording the delivery of documents and the impartial advice to the borrower carries no notary fee at all.",
+      "value": 0,
+      "unit": "eur",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 15.8 Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": null
+    },
+    {
+      "id": "buy.mortgage.ajd_lender",
+      "statement": "For a mortgage loan deed, the lender, not the borrower, is the taxpayer for the stamp duty on documents (AJD).",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 29 RDLeg 1/1993, as amended by RDL 17/2018 with effect 10 November 2018",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is the AJD on the mortgage deed only. AJD on the purchase deed of a new build is still paid by the buyer."
+    },
+    {
+      "id": "buy.mortgage.early_repayment",
+      "statement": "Early repayment compensation on a consumer mortgage is capped: on a variable rate loan 0.25 percent of the capital repaid in the first five years or 0.15 percent in the first three years, depending on the contract, and nothing after that; on a fixed rate loan 2 percent in the first ten years and 1.5 percent after.",
+      "value": {
+        "variable": {
+          "option_a": {
+            "rate": 0.25,
+            "years": 5
+          },
+          "option_b": {
+            "rate": 0.15,
+            "years": 3
+          }
+        },
+        "fixed": {
+          "first_10_years": 2.0,
+          "after": 1.5
+        }
+      },
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 23 Ley 5/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814",
+        "source_dated": "2026-10-07",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-03-01",
+      "notes": "PARTIAL: the BOE consolidated text and the original publication both truncate before art. 23, so these figures were not read verbatim in this session. Art. 23.6 (switching from variable to fixed) was amended by RDL 19/2022 and RDL 8/2023. The compensation can also never exceed the lender's actual financial loss. Do not publish these caps until art. 23 is read."
+    },
+    {
+      "id": "buy.tax.resale_itp",
+      "statement": "A home bought from a private individual is taxed under ITP (transfer tax), and the taxpayer is the buyer.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Punto de Acceso General, administracion.gob.es (Ministerio de Hacienda and AEAT)",
+        "ref": "Compraventa de bienes inmuebles. Impuestos; art. 8.a RDLeg 1/1993",
+        "url": "https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/ciudadanos/residencia/compraventa-bienes-inmuebles/impuestos.html?imprimir=1",
+        "source_dated": "2026-03-20",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Art. 8.a RDLeg 1/1993 (the acquirer is the taxpayer) was read on BOE the same day. Resales by a business are normally also under ITP, with IVA only in some business to business cases."
+    },
+    {
+      "id": "buy.tax.newbuild_iva",
+      "statement": "A new home sold by the developer, its first delivery, is taxed under IVA, paid by the buyer to the seller, and an operation subject to IVA is not also subject to the transfer tax ITP.",
+      "value": null,
+      "unit": null,
+      "status": "verified",
+      "source": {
+        "name": "Punto de Acceso General, administracion.gob.es (Ministerio de Hacienda and AEAT)",
+        "ref": "Compraventa de bienes inmuebles. Impuestos; art. 4.Cuatro Ley 37/1992; art. 7.5 RDLeg 1/1993",
+        "url": "https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/ciudadanos/residencia/compraventa-bienes-inmuebles/impuestos.html?imprimir=1",
+        "source_dated": "2026-03-20",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "Art. 4.Cuatro Ley 37/1992 and art. 7.5 RDLeg 1/1993 were read on BOE the same day. The exception is a property delivery that is exempt from IVA, which falls back into ITP. IVA rates are in the vat.newbuild rules."
+    },
+    {
+      "id": "buy.tax.newbuild_ajd",
+      "statement": "The first copy of a notarial deed with a valuable, registrable object that is not subject to ITP, such as the purchase deed of a new build, also pays AJD at the regional rate, or 0.50 percent where the region has set none.",
+      "value": 0.5,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 31.2 RDLeg 1/1993",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "The 0.50 percent is only the state fallback. Regional AJD rates are in itp-ajd.json."
+    },
+    {
+      "id": "buy.tax.itp_state_default",
+      "statement": "Where a region has not approved its own rate, the transfer of a property is taxed at 6 percent under ITP.",
+      "value": 6,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 11.1.a RDLeg 1/1993",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359",
+        "source_dated": "2026-03-21",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-06-01",
+      "notes": "This is a fallback. Use the regional rate where one is verified."
+    },
+    {
+      "id": "buy.itp.valencia",
+      "statement": "In the Comunitat Valenciana, ITP on the purchase of a property is 9 percent for taxable events from 1 June 2026, and 11 percent where the value of the property exceeds 1,000,000 euros.",
+      "value": {
+        "general": 9,
+        "over_1000000": 11,
+        "from": "2026-06-01"
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Generalitat Valenciana, Agencia Tributaria Valenciana",
+        "ref": "Ley 5/2025, de 30 de mayo, de medidas fiscales (DOGV 31.05.2025), novedades fiscales, Direccion General de Tributos y Juego",
+        "url": "https://atv.gva.es/documents/173852445/177585437/Presentaci%C3%B3n+DG+Tributos+novedades+fiscales/ad720e9a-a565-4862-bb72-c281a3a2d500",
+        "source_dated": "2025-05-31",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "The source does not say whether the 11 percent applies to the whole value or only the excess; do not compute the over 1,000,000 case until that is confirmed. Before 1 June 2026 the general rate was 10 percent. Reduced rates for a main residence are not covered here."
+    },
+    {
+      "id": "buy.itp.baleares",
+      "statement": "In the Illes Balears, ITP on the purchase of a property is banded by value: 8 percent up to 400,000 euros, 9 percent to 600,000, 10 percent to 1,000,000, 12 percent to 2,000,000 and 13 percent above, each rate on its own slice.",
+      "value": [
+        {
+          "from": 0,
+          "to": 400000,
+          "rate": 8,
+          "cumulative_cuota": 0
+        },
+        {
+          "from": 400000.01,
+          "to": 600000,
+          "rate": 9,
+          "cumulative_cuota": 32000
+        },
+        {
+          "from": 600000.01,
+          "to": 1000000,
+          "rate": 10,
+          "cumulative_cuota": 50000
+        },
+        {
+          "from": 1000000.01,
+          "to": 2000000,
+          "rate": 12,
+          "cumulative_cuota": 90000
+        },
+        {
+          "from": 2000000.01,
+          "to": null,
+          "rate": 13,
+          "cumulative_cuota": 210000
+        }
+      ],
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "art. 10.a Decreto Legislativo 1/2014 (Illes Balears)",
+        "url": "https://www.boe.es/eli/es-ib/dlg/2014/06/06/1/con",
+        "source_dated": "2026-06-13",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Progressive by slice: the cumulative cuota column gives 32,000 euros at 400,000, 50,000 at 600,000, 90,000 at 1,000,000 and 210,000 at 2,000,000."
+    },
+    {
+      "id": "buy.itp.catalunya",
+      "statement": "In Catalunya, ITP on the purchase of a property is banded by value: 10 percent up to 600,000 euros, 11 percent to 900,000, 12 percent to 1,500,000 and 13 percent above, each rate on its own slice, with 20 percent on homes bought by large holders.",
+      "value": {
+        "bands": [
+          {
+            "upto": 600000,
+            "rate": 10
+          },
+          {
+            "upto": 900000,
+            "rate": 11
+          },
+          {
+            "upto": 1500000,
+            "rate": 12
+          },
+          {
+            "above": 1500000,
+            "rate": 13
+          }
+        ],
+        "large_holder_rate": 20
+      },
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "BOE, publication of Decreto-ley 5/2025 de Catalunya",
+        "ref": "art. 5 Decreto-ley 5/2025, de 25 de marzo (new art. 641-1 of the Catalan tax code)",
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-10270",
+        "source_dated": "2025-05-24",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Read in the enacting decree as published in BOE, not in a consolidated text, so a later change would not show there. A large holder owns more than 10 residential properties or more than 1,500 m2 of residential space in Catalunya, or five or more in a stressed market zone; it is not a nationality rule. Officially protected homes have their own 7 percent rate."
+    },
+    {
+      "id": "buy.itp.madrid",
+      "statement": "In the Comunidad de Madrid, ITP on the purchase of a second hand home is 6 percent of the property's value.",
+      "value": 6,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Comunidad de Madrid, Atencion al contribuyente",
+        "ref": "Preguntas frecuentes, Impuesto sobre Transmisiones Patrimoniales",
+        "url": "https://www.comunidad.madrid/servicios/atencion-contribuyente/preguntas-frecuentes",
+        "source_dated": "2026-05-12",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "The page does not cite the article that sets the rate. The base is the higher of the price and the Catastro reference value."
+    },
+    {
+      "id": "buy.itp.castilla_la_mancha",
+      "statement": "In Castilla-La Mancha, ITP on the purchase of a property is generally 9 percent.",
+      "value": 9,
+      "unit": "percent",
+      "status": "verified",
+      "source": {
+        "name": "Junta de Comunidades de Castilla-La Mancha, Direccion General de Tributos, consulta 63/2026",
+        "ref": "art. 19.1 Ley 8/2013 de Medidas Tributarias de Castilla-La Mancha",
+        "url": "https://portaltributario.jccm.es/sites/portaltributario.castillalamancha.es/files/documentos/pdf/20260511/c-63-2026-itpajd-tpo.pdf",
+        "source_dated": "2026-04-14",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "Reduced rates for a main residence exist but were not read in this session."
+    },
+    {
+      "id": "buy.itp.andalucia",
+      "statement": "In Andalucia, ITP on the purchase of a property is a single general rate of 7 percent.",
+      "value": 7,
+      "unit": "percent",
+      "status": "partial",
+      "source": {
+        "name": "BOE consolidated text",
+        "ref": "Ley 5/2021 de Tributos Cedidos de Andalucia, exposicion de motivos VI",
+        "url": "https://www.boe.es/eli/es-an/l/2021/10/20/5/con",
+        "source_dated": "2025-12-31",
+        "read_on": "2026-10-22"
+      },
+      "review_by": "2027-01-31",
+      "notes": "PARTIAL: read only in the preamble of the consolidated law, which says the 8, 9 and 10 percent rates were replaced by a single 7 percent general rate; the operative article (Titulo II, from art. 41) truncates on BOE. Confirm the article before publishing."
+    }
+  ]
+}

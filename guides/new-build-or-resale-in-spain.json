@@ -1,0 +1,406 @@
+{
+  "slug": "new-build-or-resale-in-spain",
+  "topic": "buying",
+  "tool": "purchase-costs",
+  "rules": [
+    "buy.tax.newbuild_iva",
+    "buy.tax.resale_itp",
+    "vat.newbuild.mainland",
+    "vat.newbuild.vpo",
+    "igic.canarias",
+    "buy.tax.newbuild_ajd",
+    "buy.tax.itp_state_default",
+    "buy.itp.madrid",
+    "buy.itp.valencia",
+    "own.catastro.reference_value",
+    "limit.building.guarantee",
+    "limit.building.action",
+    "limit.building.scope",
+    "limit.hidden_defects",
+    "limit.contract.annulment",
+    "own.ibi.property_answers",
+    "limit.community.buyer_liability",
+    "own.lph.seller_declaration",
+    "own.lph.terrace_closure",
+    "own.catastro.declare_changes",
+    "buy.registry.presumption",
+    "buy.deed.payment_means",
+    "epc.requirement",
+    "epc.validity",
+    "own.ibi.base",
+    "own.ibi.urban_rates",
+    "own.lph.contribute",
+    "itp.base.valor_referencia"
+  ],
+  "answers": [
+    "iva-on-a-new-build-home-in-spain",
+    "igic-on-a-new-build-holiday-home-canary-islands",
+    "new-build-guarantees-in-spain",
+    "hidden-defects-after-buying-a-spanish-property",
+    "time-limit-to-annul-a-spanish-property-purchase-for-mistake",
+    "buying-a-spanish-property-with-unpaid-community-fees",
+    "energy-certificate-for-a-spanish-property"
+  ],
+  "i18n": {
+    "en": {
+      "title": "New Build or Resale in Spain: Tax, Guarantees and Checks",
+      "description": "New build or resale in Spain? The purchase tax differs, and so do the legal protections and the checks a buyer from abroad should make first.",
+      "h1": "Choosing between a new build and a resale home in Spain",
+      "lead": "The clearest difference is the tax. A new home bought from the developer pays 10 percent IVA plus AJD in mainland Spain and the Balearics, while a home bought from a private individual pays ITP at the regional rate. A new build also carries building guarantees of ten, three and one years from sign-off, whereas a claim against a private seller for hidden defects ends six months after handover.",
+      "sections": [
+        {
+          "h2": "What counts as a new build for tax purposes?",
+          "paras": [
+            "For the tax office, new means the first delivery of a home by the developer, and that is taxed under IVA. A home bought from a private individual is taxed under ITP, the transfer tax, with you as the taxpayer. An operation subject to IVA is not also subject to ITP, so you pay one or the other.",
+            "How modern the house looks does not decide it. A home bought from a private individual is a resale for tax, however recently it was finished. Resales by a business are normally taxed under ITP too, with IVA only in some business to business cases, and a delivery exempt from IVA falls back into ITP. If you are unsure which applies, ask your abogado to confirm it from the seller's paperwork before you sign anything."
+          ]
+        },
+        {
+          "h2": "So which one costs more in tax?",
+          "paras": [
+            "On a new build in mainland Spain or the Balearics, IVA is 10 percent, including up to two parking spaces and annexes transferred with the home. The deed then pays AJD at your region's rate, or 0.50 percent where the region has set none. Officially protected homes of the regimen especial or promocion publica take 4 percent IVA. In the Canary Islands the tax is IGIC, and a holiday home pays the general 7 percent.",
+            "On a resale, ITP is set by each region, with a state rate of 6 percent where a region has approved none. In the Comunidad de Madrid it is 6 percent on a second hand home, so a 300,000 euro flat pays 18,000 euros. In the Comunitat Valenciana it is 9 percent for purchases from 1 June 2026, so the same price there pays 27,000 euros. A new build at 300,000 euros pays 30,000 euros in IVA before AJD.",
+            "One catch on resales: ITP is charged on the valor de referencia set by the Catastro whenever that is higher than the price you agreed. A bargain price does not always bring a bargain tax bill, so ask your gestor to look the value up before you make an offer."
+          ]
+        },
+        {
+          "h2": "What protection comes with a new build?",
+          "paras": [
+            "Building guarantees run from the date the works were signed off: ten years for structural defects, three years for defects that make the home unfit to live in, and one year for finishes, the last against the builder only. They apply to buildings whose planning permission was applied for on or after 6 May 2000.",
+            "Once a covered defect appears, you have two years to bring the claim, counted from when the damage occurred, not from the sign-off. That is why it pays to note defects as soon as you see them. Date your photos, write to the developer by a method that proves receipt, and keep a copy of everything you send."
+          ]
+        },
+        {
+          "h2": "What protection comes with a resale?",
+          "paras": [
+            "Much less time. A claim against the seller for hidden defects ends six months after the property was handed over, not six months after you found the defect. After a summer handover, that clock can run out before the winter rain shows you where the roof leaks.",
+            "Setting a purchase aside for mistake or deceit has a longer window of four years from completion, but that is a court case, not a repair. The practical answer is to look harder before you commit. A building surveyor (arquitecto técnico) can inspect the roof, the damp and the structure, and an abogado can check the paperwork while there is still time to walk away."
+          ]
+        },
+        {
+          "h2": "What should I check on a resale that a new build does not need?",
+          "paras": [
+            "Check the debts that travel with the property. The property itself stays liable for the seller's unpaid IBI, and a buyer takes on unpaid community charges for the part of the year already gone plus the three previous calendar years. The seller must declare in the deed that they are up to date or provide a certificate of what they owe, so get that certificate from the administrador de fincas before you pay a deposit.",
+            "Check the work the seller did. A closed-in terrace is a typical example, and closing a terrace needs a vote of three fifths of all owners who also hold three fifths of the participation shares. Ask to see the minutes. Extensions and renovations also have to be declared to the Catastro by the owner within two months, so compare what you see with the cadastral description.",
+            "Ask for the energy certificate. On a sale, a copy of the registered certificate and its label are annexed to the contract. It lasts up to ten years, or five where the rating is G, and older coastal homes often sit near the bottom of the scale."
+          ]
+        },
+        {
+          "h2": "What should I check on a new build?",
+          "paras": [
+            "Check that the developer is the registered owner. Rights recorded in the land registry are presumed to exist and to belong to the holder in the form the entry shows, so a nota simple tells you who can sell and what is charged against the land or the building. Ask your abogado to explain any mortgage the developer has on the development and how it will be cleared from your home.",
+            "Check how your stage payments are protected. Off-plan purchases are often paid in instalments long before the keys, and each one should go by bank transfer to the account named in your contract. At the deed, the notary must record how the price was paid, including payments made before signing, so keep every receipt. Your abogado should explain what secures those payments if the building is never finished.",
+            "New buildings need a registered energy certificate as well. Ask for a copy with the rest of the handover file and note its rating and its date, because the same limits of ten years, or five where the rating is G, apply to it."
+          ]
+        },
+        {
+          "h2": "Does the choice change my yearly costs?",
+          "paras": [
+            "Some of them. IBI is charged on the cadastral value, and for urban property each town hall sets a rate between 0.4 and 1.10 percent in its tax ordinance, so the bill depends on the cadastral value of your particular home and the rate your town has chosen. Community charges follow your participation share in the title deed, and not using the pool or the gym does not exempt you from paying for it.",
+            "Whichever you choose, the buying route is much the same: an NIE, checks at the land registry, a private contract, the deed before a notary and registration. The difference is in the tax, the time you have to complain, and what you need to look at before you sign. Get those right and the rest is about which terrace you would rather sit on."
+          ]
+        }
+      ]
+    },
+    "no": {
+      "title": "Nybygg eller bruktbolig i Spania: skatt, garantier og kontroller",
+      "description": "Nybygg eller bruktbolig i Spania? Kjøpsskatten er ulik, og det samme er det rettslige vernet og kontrollene en kjøper fra utlandet bør gjøre først.",
+      "h1": "Slik velger du mellom nybygg og bruktbolig i Spania",
+      "lead": "Den tydeligste forskjellen er skatten. En ny bolig kjøpt fra utbyggeren betaler 10 prosent IVA pluss AJD på det spanske fastlandet og Balearene, mens en bolig kjøpt fra en privatperson betaler ITP etter regional sats. Et nybygg har også byggegarantier på ti, tre og ett år fra ferdigattest, mens et krav mot en privat selger for skjulte mangler faller bort seks måneder etter overlevering.",
+      "sections": [
+        {
+          "h2": "Hva regnes som nybygg når det gjelder skatt?",
+          "paras": [
+            "For skattekontoret betyr ny den første overleveringen av en bolig fra utbyggeren, og den skattlegges med IVA. En bolig kjøpt fra en privatperson skattlegges med ITP, overdragelsesskatten, med deg som skattyter. En transaksjon som er underlagt IVA, er ikke i tillegg underlagt ITP, så du betaler den ene eller den andre.",
+            "Hvor moderne huset ser ut, avgjør ikke saken. En bolig kjøpt fra en privatperson er en bruktbolig skattemessig, uansett hvor nylig den ble ferdig. Videresalg fra et foretak skattlegges normalt også med ITP, med IVA bare i enkelte tilfeller mellom foretak, og en overlevering som er fritatt for IVA, faller tilbake under ITP. Er du usikker på hva som gjelder, be abogado bekrefte det ut fra selgerens papirer før du signerer noe."
+          ]
+        },
+        {
+          "h2": "Så hva koster mest i skatt?",
+          "paras": [
+            "På et nybygg på det spanske fastlandet eller Balearene er IVA 10 prosent, inkludert opptil to parkeringsplasser og tilleggsrom som overdras sammen med boligen. Skjøtet betaler deretter AJD etter regionens sats, eller 0,50 prosent der regionen ikke har fastsatt noen. Offentlig regulerte boliger i regimen especial eller promocion publica har 4 prosent IVA. På Kanariøyene er skatten IGIC, og en fritidsbolig betaler den generelle satsen på 7 prosent.",
+            "På en bruktbolig fastsettes ITP av hver region, med en statlig sats på 6 prosent der en region ikke har vedtatt noen. I Comunidad de Madrid er den 6 prosent på en bruktbolig, så en leilighet til 300 000 euro betaler 18 000 euro. I Comunitat Valenciana er den 9 prosent for kjøp fra 1. juni 2026, så samme pris der betaler 27 000 euro. Et nybygg til 300 000 euro betaler 30 000 euro i IVA før AJD.",
+            "Én felle ved bruktbolig: ITP beregnes av valor de referencia fastsatt av Catastro når den er høyere enn prisen dere ble enige om. En billig pris gir ikke alltid en billig skatteregning, så be gestor slå opp verdien før du legger inn et bud."
+          ]
+        },
+        {
+          "h2": "Hvilket vern følger med et nybygg?",
+          "paras": [
+            "Byggegarantiene løper fra datoen arbeidene ble godkjent: ti år for konstruksjonsfeil, tre år for feil som gjør boligen ubeboelig, og ett år for overflatearbeid, det siste bare overfor byggeren. De gjelder bygg der det ble søkt om byggetillatelse 6. mai 2000 eller senere.",
+            "Når en dekket mangel viser seg, har du to år på å fremme kravet, regnet fra skaden oppsto, ikke fra godkjenningen. Derfor lønner det seg å notere mangler med en gang du ser dem. Datér bildene dine, skriv til utbyggeren på en måte som beviser mottak, og ta vare på en kopi av alt du sender."
+          ]
+        },
+        {
+          "h2": "Hvilket vern følger med en bruktbolig?",
+          "paras": [
+            "Mye kortere tid. Et krav mot selgeren for skjulte mangler faller bort seks måneder etter at eiendommen ble overlevert, ikke seks måneder etter at du oppdaget mangelen. Etter en overlevering om sommeren kan fristen gå ut før vinterregnet viser deg hvor taket lekker.",
+            "Å få et kjøp opphevet på grunn av villfarelse eller svik har en lengre frist på fire år fra overtakelse, men det er en rettssak, ikke en reparasjon. Det praktiske svaret er å se grundigere etter før du binder deg. En bygningsteknisk takstmann (arquitecto técnico) kan undersøke taket, fukten og konstruksjonen, og en abogado kan sjekke papirene mens det fortsatt er tid til å trekke seg."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg sjekke på en bruktbolig som et nybygg ikke trenger?",
+          "paras": [
+            "Sjekk gjelden som følger eiendommen. Eiendommen hefter selv for selgerens ubetalte IBI, og en kjøper overtar ubetalte fellesutgifter for den delen av året som har gått, pluss de tre foregående kalenderårene. Selgeren må erklære i skjøtet at alt er betalt, eller legge fram en attest på hva som skyldes, så skaff den attesten fra administrador de fincas før du betaler depositum.",
+            "Sjekk arbeidet selgeren har gjort. En innbygd terrasse er et typisk eksempel, og å bygge inn en terrasse krever et vedtak med tre femtedeler av alle eierne som også har tre femtedeler av eierandelene. Be om å få se protokollen. Tilbygg og renoveringer må også meldes til Catastro av eieren innen to måneder, så sammenlign det du ser med beskrivelsen i matrikkelen.",
+            "Be om energiattesten. Ved et salg legges en kopi av den registrerte attesten og energimerket ved kontrakten. Den gjelder i opptil ti år, eller fem år når karakteren er G, og eldre boliger ved kysten ligger ofte nær bunnen av skalaen."
+          ]
+        },
+        {
+          "h2": "Hva bør jeg sjekke på et nybygg?",
+          "paras": [
+            "Sjekk at utbyggeren er registrert eier. Rettigheter som er registrert i eiendomsregisteret, antas å eksistere og å tilhøre innehaveren slik oppføringen viser, så en nota simple forteller deg hvem som kan selge og hva som hefter på tomten eller bygget. Be abogado forklare eventuelle pantelån utbyggeren har på prosjektet, og hvordan de skal slettes fra boligen din.",
+            "Sjekk hvordan delbetalingene dine er sikret. Kjøp på tegning betales ofte i avdrag lenge før nøklene, og hver betaling bør gå med bankoverføring til kontoen som er oppgitt i kontrakten din. Ved skjøtet må notaren registrere hvordan prisen ble betalt, også betalinger gjort før signering, så ta vare på alle kvitteringer. Abogado bør forklare hva som sikrer de betalingene hvis bygget aldri blir ferdig.",
+            "Nye bygg trenger også en registrert energiattest. Be om en kopi sammen med resten av overleveringsmappen, og noter karakteren og datoen, fordi de samme grensene på ti år, eller fem år når karakteren er G, gjelder for den."
+          ]
+        },
+        {
+          "h2": "Påvirker valget de årlige kostnadene mine?",
+          "paras": [
+            "Noen av dem. IBI beregnes av matrikkelverdien, og for urban eiendom fastsetter hver kommune en sats mellom 0,4 og 1,10 prosent i sin skatteforskrift, så regningen avhenger av matrikkelverdien til akkurat din bolig og satsen kommunen din har valgt. Fellesutgiftene følger eierandelen din i skjøtet, og at du ikke bruker bassenget eller treningsrommet, fritar deg ikke fra å betale for det.",
+            "Uansett hva du velger, er kjøpsprosessen stort sett den samme: et NIE, kontroller i eiendomsregisteret, en privat kontrakt, skjøtet hos en notar og registrering. Forskjellen ligger i skatten, tiden du har til å klage, og hva du må se på før du signerer. Får du det riktig, handler resten om hvilken terrasse du helst vil sitte på."
+          ]
+        }
+      ]
+    },
+    "sv": {
+      "title": "Nybyggt eller begagnat i Spanien: skatt, garantier och kontroller",
+      "description": "Nybyggt eller begagnat i Spanien? Köpskatten skiljer sig, och det gör även det rättsliga skyddet och vad en köpare från utlandet bör kontrollera först.",
+      "h1": "Att välja mellan en nybyggd och en begagnad bostad i Spanien",
+      "lead": "Den tydligaste skillnaden är skatten. En ny bostad som köps från byggherren betalar 10 procent IVA plus AJD på det spanska fastlandet och Balearerna, medan en bostad som köps från en privatperson betalar ITP enligt regionens skattesats. En nybyggd bostad har också byggnadsgarantier på tio, tre och ett år från slutbesiktningen, medan ett krav mot en privat säljare för dolda fel upphör sex månader efter tillträdet.",
+      "sections": [
+        {
+          "h2": "Vad räknas som nybyggt i skattehänseende?",
+          "paras": [
+            "För skattemyndigheten betyder ny byggherrens första överlåtelse av en bostad, och den beskattas med IVA. En bostad som köps från en privatperson beskattas med ITP, överlåtelseskatten, och det är du som är skattskyldig. En transaktion som omfattas av IVA omfattas inte också av ITP, så du betalar den ena eller den andra.",
+            "Hur modernt huset ser ut avgör inte saken. En bostad som köps från en privatperson är skattemässigt begagnad, hur nyligen den än blev klar. Vidareförsäljningar från ett företag beskattas normalt också med ITP, med IVA bara i vissa fall mellan företag, och en överlåtelse som är undantagen från IVA faller tillbaka under ITP. Är du osäker på vad som gäller, be din abogado bekräfta det utifrån säljarens handlingar innan du skriver på något."
+          ]
+        },
+        {
+          "h2": "Vilket blir dyrast i skatt?",
+          "paras": [
+            "På en nybyggd bostad på det spanska fastlandet eller Balearerna är IVA 10 procent, inklusive upp till två parkeringsplatser och biutrymmen som överlåts tillsammans med bostaden. Köpebrevet belastas sedan med AJD enligt din regions sats, eller 0,50 procent där regionen inte har fastställt någon. Statligt skyddade bostäder inom regimen especial eller promocion publica har 4 procent IVA. På Kanarieöarna är skatten IGIC, och ett fritidshus betalar den allmänna satsen på 7 procent.",
+            "På en begagnad bostad bestäms ITP av varje region, med en statlig sats på 6 procent där en region inte har beslutat någon. I Comunidad de Madrid är den 6 procent på en begagnad bostad, så en lägenhet för 300 000 euro betalar 18 000 euro. I Comunitat Valenciana är den 9 procent för köp från och med 1 juni 2026, så samma pris betalar där 27 000 euro. En nybyggd bostad för 300 000 euro betalar 30 000 euro i IVA före AJD.",
+            "En hake med begagnade bostäder: ITP tas ut på det valor de referencia som Catastro fastställer, närhelst det är högre än det pris ni kom överens om. Ett fyndpris ger inte alltid en fyndskatt, så be din gestor ta fram värdet innan du lägger ett bud."
+          ]
+        },
+        {
+          "h2": "Vilket skydd följer med en nybyggd bostad?",
+          "paras": [
+            "Byggnadsgarantierna löper från det datum då arbetena godkändes vid slutbesiktningen: tio år för konstruktionsfel, tre år för fel som gör bostaden olämplig att bo i, och ett år för ytskikt, där det sista bara gäller mot byggaren. De gäller byggnader där bygglov söktes den 6 maj 2000 eller senare.",
+            "När ett fel som omfattas visar sig har du två år på dig att framställa kravet, räknat från när skadan uppstod, inte från slutbesiktningen. Därför lönar det sig att notera fel så fort du ser dem. Datera dina foton, skriv till byggherren på ett sätt som bevisar mottagandet, och spara en kopia av allt du skickar."
+          ]
+        },
+        {
+          "h2": "Vilket skydd följer med en begagnad bostad?",
+          "paras": [
+            "Mycket kortare tid. Ett krav mot säljaren för dolda fel upphör sex månader efter att bostaden överlämnades, inte sex månader efter att du upptäckte felet. Efter ett tillträde på sommaren kan den tiden gå ut innan vinterregnet visar dig var taket läcker.",
+            "Att häva ett köp på grund av misstag eller svek har ett längre fönster på fyra år från tillträdet, men det är ett domstolsärende, inte en reparation. Det praktiska svaret är att titta noggrannare innan du binder dig. En byggnadsinspektör (arquitecto técnico) kan undersöka taket, fukten och stommen, och en abogado kan granska handlingarna medan det fortfarande finns tid att backa ur."
+          ]
+        },
+        {
+          "h2": "Vad ska jag kontrollera på en begagnad bostad som inte behövs på en nybyggd?",
+          "paras": [
+            "Kontrollera skulderna som följer med fastigheten. Fastigheten själv är fortsatt ansvarig för säljarens obetalda IBI, och en köpare tar över obetalda samfällighetsavgifter för den del av året som redan har gått plus de tre föregående kalenderåren. Säljaren måste intyga i köpebrevet att avgifterna är betalda eller lämna ett intyg om vad som är skyldigt, så hämta det intyget från administrador de fincas innan du betalar en handpenning.",
+            "Kontrollera arbeten som säljaren har gjort. En inglasad terrass är ett typiskt exempel, och att glasa in en terrass kräver en röst från tre femtedelar av alla ägare som också innehar tre femtedelar av andelstalen. Be att få se protokollet. Tillbyggnader och renoveringar måste också anmälas till Catastro av ägaren inom två månader, så jämför det du ser med beskrivningen i fastighetsregistret hos Catastro.",
+            "Be om energideklarationen. Vid en försäljning bifogas en kopia av den registrerade deklarationen och dess märkning till avtalet. Den gäller i upp till tio år, eller fem om klassningen är G, och äldre hus vid kusten hamnar ofta nära botten av skalan."
+          ]
+        },
+        {
+          "h2": "Vad ska jag kontrollera på en nybyggd bostad?",
+          "paras": [
+            "Kontrollera att byggherren är registrerad ägare. Rättigheter som är inskrivna i fastighetsregistret presumeras finnas och tillhöra innehavaren i den form som anteckningen visar, så en nota simple talar om vem som kan sälja och vad som belastar marken eller byggnaden. Be din abogado förklara eventuella hypotek som byggherren har på projektet och hur de ska lösas från din bostad.",
+            "Kontrollera hur dina delbetalningar är skyddade. Köp på ritning betalas ofta i omgångar långt innan du får nycklarna, och varje betalning bör gå via banköverföring till det konto som anges i ditt avtal. Vid köpebrevet måste notarien anteckna hur köpeskillingen betalades, inklusive betalningar som gjordes före undertecknandet, så spara alla kvitton. Din abogado bör förklara vad som säkrar de betalningarna om byggnaden aldrig blir klar.",
+            "Nya byggnader behöver också en registrerad energideklaration. Be om en kopia tillsammans med resten av överlämningshandlingarna och notera dess klassning och datum, eftersom samma gränser på tio år, eller fem där klassningen är G, gäller för den."
+          ]
+        },
+        {
+          "h2": "Påverkar valet mina årliga kostnader?",
+          "paras": [
+            "En del av dem. IBI tas ut på taxeringsvärdet, och för fastigheter i tätort bestämmer varje kommun en skattesats mellan 0,4 och 1,10 procent i sin skatteförordning, så avgiften beror på taxeringsvärdet för just din bostad och den sats din kommun har valt. Samfällighetsavgifterna följer ditt andelstal i lagfarten, och att du inte använder poolen eller gymmet befriar dig inte från att betala för dem.",
+            "Vad du än väljer är köpvägen i stort sett densamma: ett NIE, kontroller i fastighetsregistret, ett privat avtal, köpebrevet hos en notarie och registreringen. Skillnaden ligger i skatten, hur lång tid du har på dig att reklamera och vad du behöver titta på innan du skriver på. Får du det rätt handlar resten om vilken terrass du helst vill sitta på."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "title": "Neubau oder Bestandsimmobilie in Spanien: Steuer und Garantien",
+      "description": "Neubau oder Bestandsimmobilie in Spanien? Kaufsteuer, rechtlicher Schutz und nötige Prüfungen für Käufer aus dem Ausland unterscheiden sich.",
+      "h1": "Die Wahl zwischen Neubau und gebrauchter Immobilie in Spanien",
+      "lead": "Der deutlichste Unterschied ist die Steuer. Eine neue Immobilie, die vom Bauträger gekauft wird, kostet auf dem spanischen Festland und den Balearen 10 Prozent IVA plus AJD, während für eine Immobilie von einer Privatperson ITP zum regionalen Satz anfällt. Ein Neubau hat außerdem Baugewährleistungen von zehn, drei und einem Jahr ab der Bauabnahme, während ein Anspruch gegen einen privaten Verkäufer wegen versteckter Mängel sechs Monate nach der Übergabe erlischt.",
+      "sections": [
+        {
+          "h2": "Was gilt steuerlich als Neubau?",
+          "paras": [
+            "Für das Finanzamt bedeutet neu die erste Übergabe einer Wohnung durch den Bauträger, und diese unterliegt der IVA. Eine Immobilie, die von einer Privatperson gekauft wird, unterliegt der ITP, der Grunderwerbsteuer, wobei Sie der Steuerpflichtige sind. Ein Vorgang, der der IVA unterliegt, unterliegt nicht zusätzlich der ITP, Sie zahlen also das eine oder das andere.",
+            "Wie modern das Haus aussieht, entscheidet das nicht. Eine Immobilie, die von einer Privatperson gekauft wird, ist steuerlich eine Bestandsimmobilie, wie kurz ihre Fertigstellung auch zurückliegt. Weiterverkäufe durch ein Unternehmen unterliegen normalerweise ebenfalls der ITP, die IVA nur in manchen Fällen zwischen Unternehmen, und eine von der IVA befreite Übergabe fällt wieder unter die ITP. Wenn Sie unsicher sind, was gilt, lassen Sie es Ihren abogado anhand der Unterlagen des Verkäufers bestätigen, bevor Sie etwas unterschreiben."
+          ]
+        },
+        {
+          "h2": "Und welche Variante kostet mehr Steuer?",
+          "paras": [
+            "Bei einem Neubau auf dem spanischen Festland oder den Balearen beträgt die IVA 10 Prozent, einschließlich bis zu zwei Stellplätzen und Nebenräumen, die mit der Wohnung übertragen werden. Für die Urkunde fällt dann AJD zum Satz Ihrer Region an, oder 0,50 Prozent, wo die Region keinen festgelegt hat. Amtlich geförderte Wohnungen des regimen especial oder der promocion publica werden mit 4 Prozent IVA besteuert. Auf den Kanarischen Inseln ist die Steuer die IGIC, und ein Ferienhaus unterliegt dem allgemeinen Satz von 7 Prozent.",
+            "Bei einer Bestandsimmobilie legt jede Region die ITP fest, mit einem staatlichen Satz von 6 Prozent, wo eine Region keinen beschlossen hat. In der Comunidad de Madrid sind es 6 Prozent auf eine gebrauchte Immobilie, eine Wohnung für 300.000 Euro kostet also 18.000 Euro. In der Comunitat Valenciana sind es 9 Prozent für Käufe ab dem 1. Juni 2026, derselbe Preis kostet dort also 27.000 Euro. Ein Neubau für 300.000 Euro kostet 30.000 Euro IVA, noch vor der AJD.",
+            "Ein Haken bei Bestandsimmobilien: Die ITP wird auf den vom Catastro festgelegten valor de referencia erhoben, wann immer dieser höher ist als der vereinbarte Preis. Ein Schnäppchenpreis bringt also nicht immer eine Schnäppchensteuer, bitten Sie Ihren gestor, den Wert nachzuschlagen, bevor Sie ein Angebot machen."
+          ]
+        },
+        {
+          "h2": "Welchen Schutz bietet ein Neubau?",
+          "paras": [
+            "Die Baugewährleistungen laufen ab dem Datum der Bauabnahme: zehn Jahre für Mängel an der Tragkonstruktion, drei Jahre für Mängel, die die Wohnung unbewohnbar machen, und ein Jahr für Ausbauarbeiten, Letzteres nur gegenüber dem Bauunternehmer. Sie gelten für Gebäude, deren Baugenehmigung am oder nach dem 6. Mai 2000 beantragt wurde.",
+            "Tritt ein abgedeckter Mangel auf, haben Sie zwei Jahre Zeit für die Klage, gerechnet ab dem Eintritt des Schadens, nicht ab der Bauabnahme. Deshalb lohnt es sich, Mängel festzuhalten, sobald Sie sie sehen. Datieren Sie Ihre Fotos, schreiben Sie dem Bauträger auf einem Weg, der den Empfang belegt, und bewahren Sie eine Kopie von allem auf, was Sie senden."
+          ]
+        },
+        {
+          "h2": "Welchen Schutz bietet eine Bestandsimmobilie?",
+          "paras": [
+            "Deutlich weniger Zeit. Ein Anspruch gegen den Verkäufer wegen versteckter Mängel erlischt sechs Monate nach der Übergabe der Immobilie, nicht sechs Monate, nachdem Sie den Mangel entdeckt haben. Nach einer Übergabe im Sommer kann diese Frist ablaufen, bevor der Winterregen Ihnen zeigt, wo das Dach undicht ist.",
+            "Die Anfechtung eines Kaufs wegen Irrtums oder Täuschung hat mit vier Jahren ab dem Abschluss ein längeres Zeitfenster, aber das ist ein Gerichtsverfahren, keine Reparatur. Die praktische Antwort ist, genauer hinzusehen, bevor Sie sich festlegen. Ein Bausachverständiger (arquitecto técnico) kann Dach, Feuchtigkeit und Bausubstanz prüfen, und ein abogado kann die Unterlagen prüfen, solange noch Zeit ist, vom Kauf Abstand zu nehmen."
+          ]
+        },
+        {
+          "h2": "Was sollte ich bei einer Bestandsimmobilie prüfen, das bei einem Neubau entfällt?",
+          "paras": [
+            "Prüfen Sie die Schulden, die mit der Immobilie wandern. Die Immobilie selbst haftet weiter für unbezahlte IBI des Verkäufers, und ein Käufer übernimmt unbezahlte Gemeinschaftsbeiträge für den bereits verstrichenen Teil des Jahres plus die drei vorangegangenen Kalenderjahre. Der Verkäufer muss in der Urkunde erklären, dass er auf dem aktuellen Stand ist, oder eine Bescheinigung über seine Rückstände vorlegen, holen Sie diese Bescheinigung also beim administrador de fincas ein, bevor Sie eine Anzahlung leisten.",
+            "Prüfen Sie die Arbeiten, die der Verkäufer ausgeführt hat. Eine geschlossene Terrasse ist ein typisches Beispiel, und das Schließen einer Terrasse erfordert die Zustimmung von drei Fünfteln aller Eigentümer, die zugleich drei Fünftel der Miteigentumsanteile halten. Lassen Sie sich das Protokoll zeigen. Erweiterungen und Renovierungen muss der Eigentümer außerdem innerhalb von zwei Monaten dem Catastro melden, vergleichen Sie also, was Sie sehen, mit der Katasterbeschreibung.",
+            "Verlangen Sie den Energieausweis. Bei einem Verkauf werden eine Kopie des registrierten Ausweises und sein Label dem Vertrag beigefügt. Er gilt bis zu zehn Jahre, bei der Einstufung G fünf Jahre, und ältere Häuser an der Küste liegen oft am unteren Ende der Skala."
+          ]
+        },
+        {
+          "h2": "Was sollte ich bei einem Neubau prüfen?",
+          "paras": [
+            "Prüfen Sie, ob der Bauträger der eingetragene Eigentümer ist. Im Grundbuch eingetragene Rechte gelten als bestehend und als dem Inhaber in der Form zustehend, die der Eintrag zeigt, eine nota simple sagt Ihnen also, wer verkaufen darf und welche Belastungen auf dem Grundstück oder dem Gebäude liegen. Lassen Sie sich von Ihrem abogado jede Hypothek erklären, die der Bauträger auf dem Projekt hat, und wie sie von Ihrer Wohnung gelöscht wird.",
+            "Prüfen Sie, wie Ihre Ratenzahlungen abgesichert sind. Käufe vom Plan werden oft lange vor der Schlüsselübergabe in Raten bezahlt, und jede Rate sollte per Banküberweisung auf das in Ihrem Vertrag genannte Konto gehen. Bei der Urkunde muss der Notar festhalten, wie der Preis gezahlt wurde, einschließlich der Zahlungen vor der Unterschrift, bewahren Sie also jeden Beleg auf. Ihr abogado sollte Ihnen erklären, was diese Zahlungen absichert, falls das Gebäude nie fertig wird.",
+            "Auch Neubauten brauchen einen registrierten Energieausweis. Verlangen Sie eine Kopie mit den übrigen Übergabeunterlagen und notieren Sie Einstufung und Datum, denn für ihn gelten dieselben Grenzen von zehn Jahren, oder fünf bei der Einstufung G."
+          ]
+        },
+        {
+          "h2": "Ändert die Wahl meine jährlichen Kosten?",
+          "paras": [
+            "Zum Teil. Die IBI wird auf den Katasterwert erhoben, und für städtische Immobilien legt jedes Rathaus in seiner Steuersatzung einen Satz zwischen 0,4 und 1,10 Prozent fest, die Rechnung hängt also vom Katasterwert Ihrer konkreten Immobilie und dem Satz ab, den Ihre Gemeinde gewählt hat. Die Gemeinschaftsbeiträge richten sich nach Ihrem Miteigentumsanteil in der Eigentumsurkunde, und wer den Pool oder das Fitnessstudio nicht nutzt, ist deshalb nicht von der Zahlung befreit.",
+            "Wofür Sie sich auch entscheiden, der Ablauf des Kaufs ist weitgehend derselbe: eine NIE, Prüfungen im Grundbuch, ein privater Vertrag, die Urkunde vor einem Notar und die Eintragung. Der Unterschied liegt in der Steuer, in der Zeit, die Ihnen für Reklamationen bleibt, und darin, was Sie vor der Unterschrift prüfen müssen. Wenn das stimmt, geht es beim Rest nur noch darum, auf welcher Terrasse Sie lieber sitzen."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Neuf ou ancien en Espagne : impôts, garanties et vérifications",
+      "description": "Neuf ou ancien en Espagne ? L'impôt d'achat diffère, tout comme les protections juridiques et les vérifications à faire quand on achète depuis l'étranger.",
+      "h1": "Choisir entre un logement neuf et un logement ancien en Espagne",
+      "lead": "La différence la plus nette, c'est l'impôt. Un logement neuf acheté au promoteur paie 10 pour cent d'IVA plus l'AJD en Espagne continentale et aux Baléares, tandis qu'un logement acheté à un particulier paie l'ITP au taux régional. Un logement neuf est aussi couvert par des garanties de construction de dix, trois et un an à compter de la réception des travaux, alors qu'une action contre un vendeur particulier pour vices cachés s'éteint six mois après la remise des clés.",
+      "sections": [
+        {
+          "h2": "Qu'est-ce qu'un logement neuf aux yeux du fisc ?",
+          "paras": [
+            "Pour le fisc, neuf signifie la première livraison d'un logement par le promoteur, et elle est soumise à l'IVA. Un logement acheté à un particulier est soumis à l'ITP, l'impôt sur les transmissions, dont vous êtes redevable. Une opération soumise à l'IVA n'est pas aussi soumise à l'ITP : vous payez donc l'un ou l'autre.",
+            "L'aspect moderne de la maison ne tranche pas la question. Un logement acheté à un particulier est un bien ancien au sens fiscal, même s'il vient d'être terminé. Les reventes par une entreprise sont normalement soumises à l'ITP elles aussi, l'IVA ne s'appliquant que dans certains cas entre professionnels, et une livraison exonérée d'IVA retombe dans l'ITP. En cas de doute, demandez à votre abogado de le confirmer à partir des documents du vendeur avant de signer quoi que ce soit."
+          ]
+        },
+        {
+          "h2": "Alors, lequel coûte le plus en impôts ?",
+          "paras": [
+            "Pour un logement neuf en Espagne continentale ou aux Baléares, l'IVA est de 10 pour cent, y compris jusqu'à deux places de stationnement et les annexes transmises avec le logement. L'acte paie ensuite l'AJD au taux de votre région, ou 0,50 pour cent lorsque la région n'en a fixé aucun. Les logements bénéficiant d'une protection officielle du regimen especial ou de promocion publica sont à 4 pour cent d'IVA. Aux îles Canaries, l'impôt est l'IGIC, et une résidence de vacances paie le taux général de 7 pour cent.",
+            "Pour un bien ancien, l'ITP est fixé par chaque région, avec un taux de l'État de 6 pour cent lorsqu'une région n'en a adopté aucun. Dans la Comunidad de Madrid, il est de 6 pour cent sur un logement ancien : un appartement de 300 000 euros paie donc 18 000 euros. Dans la Comunitat Valenciana, il est de 9 pour cent pour les achats à partir du 1er juin 2026 : le même prix y paie donc 27 000 euros. Un logement neuf à 300 000 euros paie 30 000 euros d'IVA avant l'AJD.",
+            "Un piège pour l'ancien : l'ITP est calculé sur le valor de referencia fixé par le Catastro chaque fois qu'il dépasse le prix convenu. Un prix avantageux n'entraîne pas toujours un impôt avantageux : demandez donc à votre gestor de consulter cette valeur avant de faire une offre."
+          ]
+        },
+        {
+          "h2": "Quelle protection accompagne un logement neuf ?",
+          "paras": [
+            "Les garanties de construction courent à compter de la date de réception des travaux : dix ans pour les défauts structurels, trois ans pour les défauts qui rendent le logement inhabitable, et un an pour les finitions, cette dernière uniquement contre le constructeur. Elles s'appliquent aux bâtiments dont le permis de construire a été demandé le 6 mai 2000 ou après.",
+            "Dès qu'un défaut couvert apparaît, vous avez deux ans pour agir, à compter de la survenance du dommage et non de la réception des travaux. C'est pourquoi il vaut la peine de noter les défauts dès que vous les voyez. Datez vos photos, écrivez au promoteur par un moyen qui prouve la réception, et gardez une copie de tout ce que vous envoyez."
+          ]
+        },
+        {
+          "h2": "Quelle protection accompagne un logement ancien ?",
+          "paras": [
+            "Beaucoup moins de temps. Une action contre le vendeur pour vices cachés s'éteint six mois après la remise du bien, et non six mois après la découverte du défaut. Après une remise des clés en été, ce délai peut expirer avant que les pluies d'hiver ne vous montrent où fuit le toit.",
+            "L'annulation d'un achat pour erreur ou dol bénéficie d'un délai plus long de quatre ans à compter de la signature, mais c'est une procédure judiciaire, pas une réparation. La réponse pratique est de regarder de plus près avant de vous engager. Un technicien du bâtiment (arquitecto técnico) peut inspecter le toit, l'humidité et la structure, et un abogado peut vérifier les documents tant qu'il est encore temps de renoncer."
+          ]
+        },
+        {
+          "h2": "Que faut-il vérifier sur un bien ancien, et pas sur un neuf ?",
+          "paras": [
+            "Vérifiez les dettes qui suivent le bien. Le bien lui-même reste redevable de l'IBI impayé du vendeur, et l'acheteur reprend les charges de copropriété impayées pour la partie de l'année déjà écoulée et les trois années civiles précédentes. Le vendeur doit déclarer dans l'acte qu'il est à jour ou fournir un certificat de ce qu'il doit : obtenez donc ce certificat auprès de l'administrador de fincas avant de verser un acompte.",
+            "Vérifiez les travaux faits par le vendeur. Une terrasse fermée en est un exemple typique, et fermer une terrasse exige un vote des trois cinquièmes de l'ensemble des propriétaires représentant aussi les trois cinquièmes des quotes-parts. Demandez à voir le procès-verbal. Les extensions et rénovations doivent aussi être déclarées au Catastro par le propriétaire dans un délai de deux mois : comparez donc ce que vous voyez avec la description cadastrale.",
+            "Demandez le certificat énergétique. Lors d'une vente, une copie du certificat enregistré et son étiquette sont annexées au contrat. Il est valable jusqu'à dix ans, ou cinq lorsque la note est G, et les logements anciens du littoral se situent souvent en bas de l'échelle."
+          ]
+        },
+        {
+          "h2": "Que faut-il vérifier sur un logement neuf ?",
+          "paras": [
+            "Vérifiez que le promoteur est le propriétaire inscrit. Les droits inscrits au registre foncier sont présumés exister et appartenir à leur titulaire dans la forme indiquée par l'inscription : une nota simple vous dit donc qui peut vendre et quelles charges pèsent sur le terrain ou le bâtiment. Demandez à votre abogado de vous expliquer toute hypothèque du promoteur sur le programme et comment elle sera levée sur votre logement.",
+            "Vérifiez comment vos paiements échelonnés sont protégés. Les achats sur plan sont souvent payés par versements bien avant la remise des clés, et chacun doit se faire par virement bancaire sur le compte indiqué dans votre contrat. Lors de l'acte, le notaire doit consigner la façon dont le prix a été payé, y compris les paiements faits avant la signature : gardez donc tous les justificatifs. Votre abogado doit vous expliquer ce qui garantit ces paiements si le bâtiment n'est jamais achevé.",
+            "Les bâtiments neufs ont aussi besoin d'un certificat énergétique enregistré. Demandez-en une copie avec le reste du dossier de remise et notez sa note et sa date, car les mêmes limites de dix ans, ou cinq lorsque la note est G, s'y appliquent."
+          ]
+        },
+        {
+          "h2": "Ce choix change-t-il mes frais annuels ?",
+          "paras": [
+            "Certains. L'IBI est calculé sur la valeur cadastrale, et pour les biens urbains chaque mairie fixe dans son ordonnance fiscale un taux compris entre 0,4 et 1,10 pour cent : le montant dépend donc de la valeur cadastrale de votre logement et du taux choisi par votre commune. Les charges de copropriété suivent votre quote-part indiquée dans le titre de propriété, et ne pas utiliser la piscine ou la salle de sport ne vous dispense pas de payer pour elles.",
+            "Quel que soit votre choix, le parcours d'achat est à peu près le même : un NIE, des vérifications au registre foncier, un contrat privé, l'acte devant notaire et l'inscription. La différence porte sur l'impôt, le délai dont vous disposez pour réclamer, et ce que vous devez examiner avant de signer. Réglez bien ces points, et le reste se résume à choisir sur quelle terrasse vous préférez vous asseoir."
+          ]
+        }
+      ]
+    },
+    "nl": {
+      "title": "Nieuwbouw of bestaande woning in Spanje: belasting en garanties",
+      "description": "Nieuwbouw of een bestaande woning in Spanje? De belasting verschilt, net als de bescherming en wat u vanuit het buitenland eerst controleert.",
+      "h1": "Kiezen tussen nieuwbouw en een bestaande woning in Spanje",
+      "lead": "Het duidelijkste verschil is de belasting. Op een nieuwe woning van de projectontwikkelaar betaalt u op het Spaanse vasteland en de Balearen 10 procent IVA plus AJD, terwijl u op een woning van een particulier ITP betaalt tegen het regionale tarief. Nieuwbouw heeft bovendien bouwgaranties van tien, drie en één jaar vanaf de oplevering, terwijl een vordering tegen een particuliere verkoper wegens verborgen gebreken zes maanden na de overdracht vervalt.",
+      "sections": [
+        {
+          "h2": "Wat geldt fiscaal als nieuwbouw?",
+          "paras": [
+            "Voor de belastingdienst betekent nieuw de eerste levering van een woning door de projectontwikkelaar, en die valt onder IVA. Een woning die u van een particulier koopt, valt onder ITP, de overdrachtsbelasting, met u als belastingplichtige. Een transactie waarop IVA rust, is niet ook nog onderworpen aan ITP, dus u betaalt het een of het ander.",
+            "Hoe modern het huis eruitziet, is niet beslissend. Een woning die u van een particulier koopt, is fiscaal een bestaande woning, hoe recent die ook is afgebouwd. Doorverkopen door een onderneming vallen normaal gesproken ook onder ITP, met IVA alleen in sommige gevallen tussen ondernemingen, en een levering die van IVA is vrijgesteld, valt terug onder ITP. Weet u niet zeker wat van toepassing is, vraag uw abogado het dan aan de hand van de papieren van de verkoper te bevestigen voordat u iets tekent."
+          ]
+        },
+        {
+          "h2": "Welke kost dan meer belasting?",
+          "paras": [
+            "Op nieuwbouw op het Spaanse vasteland of de Balearen is de IVA 10 procent, inclusief maximaal twee parkeerplaatsen en bijgebouwen die samen met de woning worden overgedragen. Over de akte betaalt u daarna AJD tegen het tarief van uw regio, of 0,50 procent waar de regio er geen heeft vastgesteld. Officieel beschermde woningen van het regimen especial of de promocion publica vallen onder 4 procent IVA. Op de Canarische Eilanden is de belasting IGIC, en een vakantiewoning betaalt het algemene tarief van 7 procent.",
+            "Op een bestaande woning stelt elke regio de ITP vast, met een landelijk tarief van 6 procent waar een regio er geen heeft vastgesteld. In de Comunidad de Madrid is het 6 procent op een bestaande woning, dus een appartement van 300.000 euro betaalt 18.000 euro. In de Comunitat Valenciana is het 9 procent voor aankopen vanaf 1 juni 2026, dus dezelfde prijs betaalt daar 27.000 euro. Nieuwbouw van 300.000 euro betaalt 30.000 euro aan IVA, nog vóór de AJD.",
+            "Eén addertje bij bestaande woningen: ITP wordt berekend over de valor de referencia die het Catastro vaststelt, telkens als die hoger is dan de prijs die u overeenkwam. Een koopje levert dus niet altijd een koopje op bij de belasting, vraag uw gestor de waarde op te zoeken voordat u een bod doet."
+          ]
+        },
+        {
+          "h2": "Welke bescherming krijg ik bij nieuwbouw?",
+          "paras": [
+            "De bouwgaranties lopen vanaf de datum waarop het werk is opgeleverd: tien jaar voor constructieve gebreken, drie jaar voor gebreken die de woning onbewoonbaar maken, en één jaar voor de afwerking, die laatste alleen tegen de aannemer. Ze gelden voor gebouwen waarvan de bouwvergunning op of na 6 mei 2000 is aangevraagd.",
+            "Zodra een gedekt gebrek zich voordoet, heeft u twee jaar om de vordering in te stellen, gerekend vanaf het moment dat de schade ontstond, niet vanaf de oplevering. Daarom loont het om gebreken te noteren zodra u ze ziet. Zet een datum op uw foto's, schrijf de projectontwikkelaar aan op een manier waarmee u de ontvangst kunt bewijzen, en bewaar een kopie van alles wat u verstuurt."
+          ]
+        },
+        {
+          "h2": "Welke bescherming krijg ik bij een bestaande woning?",
+          "paras": [
+            "Veel minder tijd. Een vordering tegen de verkoper wegens verborgen gebreken vervalt zes maanden nadat de woning is overgedragen, niet zes maanden nadat u het gebrek ontdekte. Na een overdracht in de zomer kan die termijn verstreken zijn voordat de winterregen u laat zien waar het dak lekt.",
+            "Voor het vernietigen van een aankoop wegens dwaling of bedrog geldt een langere termijn van vier jaar na de overdracht, maar dat is een rechtszaak, geen reparatie. Het praktische antwoord is beter kijken voordat u zich vastlegt. Een bouwkundige (arquitecto técnico) kan het dak, het vocht en de constructie inspecteren, en een abogado kan de papieren controleren zolang u nog kunt afhaken."
+          ]
+        },
+        {
+          "h2": "Wat controleer ik bij een bestaande woning dat bij nieuwbouw niet nodig is?",
+          "paras": [
+            "Controleer de schulden die met de woning meegaan. De woning zelf blijft aansprakelijk voor de onbetaalde IBI van de verkoper, en een koper neemt onbetaalde bijdragen aan de vereniging van eigenaars over voor het deel van het jaar dat al voorbij is plus de drie voorgaande kalenderjaren. De verkoper moet in de akte verklaren dat hij bij is met betalen of een verklaring overleggen van wat hij verschuldigd is, dus vraag die verklaring op bij de administrador de fincas voordat u een aanbetaling doet.",
+            "Controleer het werk dat de verkoper heeft laten doen. Een dichtgemaakt terras is een typisch voorbeeld, en voor het dichtmaken van een terras is een stemming nodig van drie vijfde van alle eigenaars, die samen ook drie vijfde van de aandelen in de gemeenschap vertegenwoordigen. Vraag de notulen in te zien. Uitbreidingen en verbouwingen moet de eigenaar ook binnen twee maanden bij het Catastro melden, dus vergelijk wat u ziet met de kadastrale omschrijving.",
+            "Vraag naar het energiecertificaat. Bij een verkoop worden een kopie van het geregistreerde certificaat en het label bij het contract gevoegd. Het is maximaal tien jaar geldig, of vijf jaar bij label G, en oudere woningen aan de kust zitten vaak onderaan de schaal."
+          ]
+        },
+        {
+          "h2": "Wat controleer ik bij nieuwbouw?",
+          "paras": [
+            "Controleer of de projectontwikkelaar de ingeschreven eigenaar is. Voor rechten die in het eigendomsregister staan, geldt het vermoeden dat ze bestaan en toebehoren aan de houder zoals de inschrijving aangeeft, dus een nota simple laat zien wie mag verkopen en welke lasten er op de grond of het gebouw rusten. Vraag uw abogado om elke hypotheek van de ontwikkelaar op het project toe te lichten en uit te leggen hoe die van uw woning wordt afgehaald.",
+            "Controleer hoe uw termijnbetalingen beschermd zijn. Aankopen op plan worden vaak in termijnen betaald, lang voordat u de sleutels krijgt, en elke termijn hoort per bankoverschrijving naar de rekening te gaan die in uw contract staat. Bij de akte moet de notaris vastleggen hoe de prijs is betaald, ook betalingen van vóór de ondertekening, dus bewaar elk betalingsbewijs. Uw abogado hoort uit te leggen wat die betalingen zekerstelt als het gebouw nooit wordt afgemaakt.",
+            "Ook nieuwbouw heeft een geregistreerd energiecertificaat nodig. Vraag een kopie bij de rest van het opleveringsdossier en noteer het label en de datum, want dezelfde grenzen van tien jaar, of vijf jaar bij label G, gelden ook hiervoor."
+          ]
+        },
+        {
+          "h2": "Verandert de keuze mijn jaarlijkse kosten?",
+          "paras": [
+            "Voor een deel. IBI wordt berekend over de kadastrale waarde, en voor stedelijk vastgoed stelt elke gemeente in haar belastingverordening een tarief vast tussen 0,4 en 1,10 procent, dus de aanslag hangt af van de kadastrale waarde van uw woning en het tarief dat uw gemeente heeft gekozen. De bijdragen aan de vereniging van eigenaars volgen uw aandeel in de eigendomsakte, en wie het zwembad of de sportruimte niet gebruikt, is daarom niet vrijgesteld van betaling.",
+            "Wat u ook kiest, de koopprocedure is grotendeels dezelfde: een NIE, controles bij het eigendomsregister, een onderhands contract, de akte bij een notaris en de inschrijving. Het verschil zit in de belasting, de tijd die u heeft om te klagen en wat u moet bekijken voordat u tekent. Heeft u dat goed geregeld, dan gaat de rest vooral over op welk terras u liever zit."
+          ]
+        }
+      ]
+    }
+  }
+}

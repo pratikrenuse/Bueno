@@ -32,6 +32,7 @@ const routes = buildRoutes({ tools });
 const english = routes.filter(r => r.locale === 'en');
 const toolRoutes = english.filter(r => r.kind === 'tool');
 const answerRoutes = english.filter(r => r.kind === 'answer');
+const guideRoutes = english.filter(r => r.kind === 'guide');
 
 const freshest = lastCheckedOf(ANSWERS.flatMap(a => a.rules)) || '';
 
@@ -47,7 +48,10 @@ All of it is free, with no account and no sign up.
 The site is published in English, Norwegian, Swedish, German, French and Dutch. Add the
 language code to the path for a translated page, for example ${abs('/de/answers')}.
 
-## Answers
+${guideRoutes.length ? `## Guides
+${guideRoutes.map(r => `- [${r.h1}](${abs(r.path)}): ${r.description}`).join('\n')}
+
+` : ''}## Answers
 ${answerRoutes.map(r => `- [${r.h1}](${abs(r.path)}): ${r.description}`).join('\n')}
 
 ## Tools
