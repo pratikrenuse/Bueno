@@ -126,6 +126,86 @@ export const TOWNS = [
   ['cambrils', 'Cambrils', 'Costa Dorada', 41.067, 1.060, 0],
   ['barcelona', 'Barcelona', 'Barcelona', 41.387, 2.170, 0],
   ['madrid', 'Madrid', 'Madrid', 40.417, -3.703, 0],
+  // Third pass, 27 Oct 2026: every other coastal and island municipality in the foreign-buyer
+  // provinces (GeoNames, from spain-directory/localities.js), at least 7 km from a town above.
+  ['orihuela', "Orihuela", 'Costa Blanca', 38.085, -0.944, 0],
+  ['adra', "Adra", 'Costa de Almería', 36.748, -3.021, 0],
+  ['huercal-overa', "Huercal-Overa", 'Costa de Almería', 37.389, -1.943, 0],
+  ['nijar', "Níjar", 'Costa de Almería', 36.967, -2.206, 0],
+  ['andratx', "Andratx", 'Balearics', 39.575, 2.421, 0],
+  ['felanitx', "Felanitx", 'Balearics', 39.470, 3.148, 0],
+  ['inca', "Inca", 'Balearics', 39.721, 2.911, 0],
+  ['llucmajor', "Llucmajor", 'Balearics', 39.491, 2.891, 0],
+  ['marratxi', "Marratxí", 'Balearics', 39.621, 2.725, 0],
+  ['soller', "Sóller", 'Balearics', 39.766, 2.716, 0],
+  ['arenys-de-mar', "Arenys de Mar", 'Costa del Maresme / Garraf', 41.582, 2.549, 0],
+  ['calella', "Calella", 'Costa del Maresme / Garraf', 41.614, 2.654, 0],
+  ['castelldefels', "Castelldefels", 'Costa del Maresme / Garraf', 41.278, 1.970, 0],
+  ['mataro', "Mataró", 'Costa del Maresme / Garraf', 41.542, 2.445, 0],
+  ['premia-de-mar', "Premià de Mar", 'Costa del Maresme / Garraf', 41.492, 2.365, 0],
+  ['vilaseca', "Vilaseca", 'Costa del Maresme / Garraf', 42.062, 2.255, 0],
+  ['algeciras', "Algeciras", 'Costa de la Luz', 36.133, -5.450, 0],
+  ['barbate', "Barbate", 'Costa de la Luz', 36.192, -5.922, 0],
+  ['cadiz', "Cádiz", 'Costa de la Luz', 36.527, -6.289, 0],
+  ['chiclana', "Chiclana de la Frontera", 'Costa de la Luz', 36.419, -6.147, 0],
+  ['chipiona', "Chipiona", 'Costa de la Luz', 36.737, -6.437, 0],
+  ['conil-de-la-frontera', "Conil de la Frontera", 'Costa de la Luz', 36.277, -6.088, 0],
+  ['el-puerto-de-santa-maria', "El Puerto de Santa María", 'Costa de la Luz', 36.594, -6.233, 0],
+  ['jerez-de-la-frontera', "Jerez de la Frontera", 'Costa de la Luz', 36.687, -6.136, 0],
+  ['la-linea-de-la-concepcion', "La Línea de la Concepción", 'Costa de la Luz', 36.168, -5.348, 0],
+  ['puerto-real', "Puerto Real", 'Costa de la Luz', 36.528, -6.190, 0],
+  ['rota', "Rota", 'Costa de la Luz', 36.624, -6.360, 0],
+  ['sanlucar-de-barrameda', "Sanlúcar de Barrameda", 'Costa de la Luz', 36.778, -6.351, 0],
+  ['tarifa', "Tarifa", 'Costa de la Luz', 36.014, -5.604, 0],
+  ['benicarlo', "Benicarló", 'Costa del Azahar', 40.416, 0.427, 0],
+  ['benicassim', "Benicàssim", 'Costa del Azahar', 40.050, 0.067, 0],
+  ['el-grao', "El Grao", 'Costa del Azahar', 39.974, 0.013, 0],
+  ['vinaros', "Vinaròs", 'Costa del Azahar', 40.470, 0.476, 0],
+  ['figueres', "Figueres", 'Costa Brava', 42.266, 2.962, 0],
+  ['girona', "Girona", 'Costa Brava', 41.979, 2.821, 0],
+  ['palamos', "Palamós", 'Costa Brava', 41.848, 3.129, 0],
+  ['sant-feliu-de-guixols', "Sant Feliu de Guíxols", 'Costa Brava', 41.783, 3.033, 0],
+  ['aljaraque', "Aljaraque", 'Costa de la Luz', 37.270, -7.023, 0],
+  ['almonte', "Almonte", 'Costa de la Luz', 37.265, -6.517, 0],
+  ['ayamonte', "Ayamonte", 'Costa de la Luz', 37.213, -7.408, 0],
+  ['cartaya', "Cartaya", 'Costa de la Luz', 37.281, -7.151, 0],
+  ['huelva', "Huelva", 'Costa de la Luz', 37.266, -6.940, 0],
+  ['isla-cristina', "Isla Cristina", 'Costa de la Luz', 37.200, -7.317, 0],
+  ['aguimes', "Agüimes", 'Canary Islands', 27.905, -15.446, 0],
+  ['arucas', "Arucas", 'Canary Islands', 28.120, -15.523, 0],
+  ['galdar', "Gáldar", 'Canary Islands', 28.147, -15.650, 0],
+  ['pajara', "Pájara", 'Canary Islands', 28.350, -14.108, 0],
+  ['san-bartolome', "San Bartolomé", 'Canary Islands', 29.001, -13.613, 0],
+  ['san-bartolome-de-tirajana', "San Bartolomé de Tirajana", 'Canary Islands', 27.925, -15.573, 0],
+  ['santa-brigida', "Santa Brígida", 'Canary Islands', 28.032, -15.504, 0],
+  ['teguise', "Teguise", 'Canary Islands', 29.061, -13.564, 0],
+  ['telde', "Telde", 'Canary Islands', 27.992, -15.419, 0],
+  ['alhaurin-de-la-torre', "Alhaurín de la Torre", 'Costa del Sol', 36.664, -4.561, 0],
+  ['cartama', "Cártama", 'Costa del Sol', 36.711, -4.633, 0],
+  ['torrox', "Torrox", 'Costa del Sol', 36.758, -3.955, 0],
+  ['alhama-de-murcia', "Alhama de Murcia", 'Costa Cálida', 37.851, -1.425, 0],
+  ['atamaria', "Atamaría", 'Costa Cálida', 37.600, -0.807, 0],
+  ['fuente-alamo', "Fuente Álamo", 'Costa Cálida', 37.727, -1.165, 0],
+  ['lorca', "Lorca", 'Costa Cálida', 37.671, -1.702, 0],
+  ['totana', "Totana", 'Costa Cálida', 37.769, -1.502, 0],
+  ['candelaria', "Candelaria", 'Canary Islands', 28.355, -16.373, 0],
+  ['granadilla-de-abona', "Granadilla de Abona", 'Canary Islands', 28.119, -16.576, 0],
+  ['icod-de-los-vinos', "Icod de los Vinos", 'Canary Islands', 28.372, -16.712, 0],
+  ['la-laguna', "La Laguna", 'Canary Islands', 28.485, -16.320, 0],
+  ['los-llanos-de-aridane', "Los Llanos de Aridane", 'Canary Islands', 28.659, -17.918, 0],
+  ['santa-cruz-de-la-palma', "Santa Cruz de la Palma", 'Canary Islands', 28.683, -17.764, 0],
+  ['tacoronte', "Tacoronte", 'Canary Islands', 28.477, -16.410, 0],
+  ['valverde', "Valverde", 'Canary Islands', 27.806, -17.916, 0],
+  ['amposta', "Amposta", 'Costa Dorada', 40.710, 0.579, 0],
+  ['calafell', "Calafell", 'Costa Dorada', 41.200, 1.568, 0],
+  ['reus', "Reus", 'Costa Dorada', 41.156, 1.107, 0],
+  ['sant-carles-de-la-rapita', "Sant Carles de la Ràpita", 'Costa Dorada', 40.617, 0.600, 0],
+  ['tarragona', "Tarragona", 'Costa Dorada', 41.119, 1.245, 0],
+  ['torredembarra', "Torredembarra", 'Costa Dorada', 41.145, 1.399, 0],
+  ['cullera', "Cullera", 'Costa de Valencia', 39.167, -0.250, 0],
+  ['grao-de-murviedro', "Grao de Murviedro", 'Costa de Valencia', 39.642, -0.239, 0],
+  ['massamagrell', "Massamagrell", 'Costa de Valencia', 39.567, -0.333, 0],
+  ['tavernes-de-la-valldigna', "Tavernes de la Valldigna", 'Costa de Valencia', 39.072, -0.266, 0],
 ].map(([slug, name, region, lat, lng, hub]) => ({ slug, name, region, lat, lng, hub: !!hub }));
 
 // Query 0 finds the market, 1 the English-facing agencies, 2 and 3 the Nordic ones by the
@@ -133,7 +213,9 @@ export const TOWNS = [
 // the pattern worth finding, so 4 to 6 do the same in German, Dutch and Danish.
 // A query's index is part of the cache path, so these are only ever appended to.
 export const QUERIES = ['inmobiliaria', 'real estate agency', 'eiendomsmegler', 'fastighetsmäklare',
-  'immobilienmakler', 'makelaar', 'ejendomsmægler'];
+  'immobilienmakler', 'makelaar', 'ejendomsmægler',
+  // 27 Oct 2026, appended: wider nets for the agencies the first seven missed.
+  'estate agent', 'property for sale', 'agence immobilière', 'kiinteistönvälittäjä', 'agencia inmobiliaria internacional'];
 
 const FIELDS = [
   'places.id', 'places.displayName', 'places.businessStatus', 'places.rating',
@@ -334,7 +416,7 @@ async function delObj(url, key, paths) {
   });
 }
 
-const DAILY_CAP = parseInt(process.env.LEADS_DAILY_CAP || '400', 10);
+const DAILY_CAP = parseInt(process.env.LEADS_DAILY_CAP || '2000', 10);
 const capPath = () => `leads/budget/${new Date().toISOString().slice(0, 10)}.json`;
 
 async function runPage({ url, key, google }, town, qi, page, token) {
@@ -405,6 +487,184 @@ export function buildCsv(rows, all) {
   return { csv: [COLS.join(','), ...list.map(r => COLS.map(c => csvCell(r[c])).join(','))].join('\n'), count: list.length, without_email: noEmail.length };
 }
 
+// ---- named contacts (27 Oct 2026) ----
+// One named person per agency, read off the agency's own team, about and contact pages.
+// Nothing is stored server-side and Google is not called: the caller already has the
+// websites from the stored Places pages and collects the answers itself.
+//
+//   GET /api/directory?leads=people&pass=P&sites=<url>|<url>|...   (up to 4 per call)
+
+const TEAM_LINK = /team|equipo|nuestro-?equipo|agent|agente|asesor|staff|people|meet|about|sobre|nosotros|quienes|who-we-are|contact|contacto|kontakt|om-oss|omoss|ansatte|medarbeidere|medarbetare|personal|mitarbeiter|uber-uns|ueber-uns|over-ons|qui-sommes|equipe/i;
+const NOT_PERSON = /^(info|ventas|venta|sales|sale|contact|contacto|contacta|kontakt|hello|hola|office|oficina|admin|administracion|administration|mail|email|correo|post|enquiries|enquiry|inquiries|inquiry|properties|property|propiedades|inmobiliaria|inmo|reservas|reservations|booking|bookings|marketing|web|webmaster|rentals|rental|alquiler|alquileres|lettings|accounts|contabilidad|facturacion|billing|rrhh|hr|jobs|empleo|careers|support|soporte|recepcion|reception|comercial|gerencia|direccion|legal|prensa|press|newbuild|obranueva|valoraciones|valuations|casas|home|homes|team|equipo|service|servicio|services|customer|clientes|atencion|consultas|buy|sell|realestate|agency|agencia|privacy|privacidad|lopd|rgpd|gdpr|dpo|datos|protecciondedatos|noreply|general|main|central|estate|villas|online|news|newsletter|bolig|eiendom|kunde|kundeservice|kundtjanst|makler|immobilien|makelaar|management|gestion|direccion|director|manager|ceo|mallorca|ibiza|marbella|spain|espana|costa|international)[\d._-]*@/i;
+const FREE_MAIL = /@(gmail|googlemail|hotmail|outlook|yahoo|icloud|live|msn|aol|telefonica|terra|ono|me|protonmail|gmx|web)\.[a-z.]+$/i;
+const ROLE_TOP = /director|owner|founder|co-?founder|ceo|managing|principal|gerente|propietari[oa]|fundador|socio|partner|daglig leder|eier|[äa]gare|\bvd\b|inhaber|gesch[äa]ftsf[üu]hrer|eigenaar|directrice|g[ée]rant/i;
+const ROLE_AGENT = /agent|asesor|advisor|adviser|consultant|consultor|sales|ventas|negotiator|broker|megler|m[äa]klare|makler|makelaar|comercial/i;
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+function plainText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<a[^>]+href=["']mailto:([^"'?]+)[^>]*>/gi, ' $1 ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;|&#160;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&#64;|&#x40;|%40/gi, '@')
+    .replace(/\s+/g, ' ');
+}
+
+function teamLinks(html, base, max = 6) {
+  const out = [];
+  let host;
+  try { host = new URL(base).hostname.replace(/^www\./, ''); } catch { return out; }
+  for (const m of html.matchAll(/href=["']([^"'#]+)["']/gi)) {
+    const href = m[1];
+    if (!TEAM_LINK.test(href) || /\.(pdf|jpe?g|png|webp)$/i.test(href)) continue;
+    try {
+      const u = new URL(href, base);
+      if (u.hostname.replace(/^www\./, '') !== host || !/^https?:$/.test(u.protocol)) continue;
+      const s = u.href.split('#')[0];
+      if (s.replace(/\/$/, '') === base.replace(/\/$/, '')) continue;
+      if (!out.includes(s)) out.push(s);
+    } catch { /* skip */ }
+    if (out.length >= max) break;
+  }
+  // Team pages first: they are where named addresses live.
+  return out.sort((a, b) => (/team|equipo|agent|asesor|staff|people|ansatte|medarbe|mitarbeiter/i.test(b) ? 1 : 0) - (/team|equipo|agent|asesor|staff|people|ansatte|medarbe|mitarbeiter/i.test(a) ? 1 : 0));
+}
+
+// Is the local part a person, and what is their name? Accepted only when the name the
+// address implies is also written on the page, so "costablanca@" or "villas2@" never
+// passes as a person.
+const fold = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const SKIP_SURNAME = /^(Real|Estate|Properties|Property|Inmobiliaria|Spain|Costa|Sales|Agent|Team|Phone|Tel|Email|Mobile|Movil|Contact|The|And|Office|Director|Directora|Manager|Founder|Owner|Agente|Asesor|Asesora|Telefono|Whatsapp)$/;
+
+function personFrom(email, rawText) {
+  const text = fold(rawText);
+  const local = email.split('@')[0];
+  const parts = local.split(/[._-]+/).filter(p => /^[a-z]{2,}$/.test(p));
+  if (!parts.length) return null;
+  const first = parts[0];
+  // Look beside the address first, then anywhere on the page.
+  const i = text.toLowerCase().indexOf(email);
+  const near = i >= 0 ? text.slice(Math.max(0, i - 160), i) : '';
+  if (first.length < 3) {
+    // j.smith@ style: initial plus surname, check the surname is on the page.
+    const sur = parts[1];
+    if (!sur || sur.length < 3) return null;
+    const re = new RegExp(`\\b([A-Z][a-z]+)\\s+${cap(sur)}\\b`);
+    const m = near.match(re) || text.match(re);
+    return m ? { name: `${m[1]} ${cap(sur)}` } : null;
+  }
+  const re = new RegExp(`\\b${cap(first)}\\b(?:\\s+([A-Z][a-z'-]+))?`, 'g');
+  const hits = [...near.matchAll(re)].reverse().concat([...text.matchAll(re)]);
+  if (!hits.length) {
+    // Two-part address like anna.berg@ is a person even if the page renders the name in an image.
+    return parts.length >= 2 && parts[1].length >= 3 ? { name: `${cap(first)} ${cap(parts[1])}`, weak: true } : null;
+  }
+  let name = cap(first);
+  if (parts[1] && parts[1].length >= 3) return { name: `${name} ${cap(parts[1])}` };
+  const withSurname = hits.find(h => h[1] && !SKIP_SURNAME.test(h[1]));
+  if (withSurname) name += ' ' + withSurname[1];
+  return { name };
+}
+
+function roleNear(text, email) {
+  const i = text.toLowerCase().indexOf(email);
+  if (i < 0) return '';
+  // Only the text since the previous address, so one person's title never lands on the next.
+  let start = Math.max(0, i - 90);
+  const before = text.slice(start, i);
+  const prev = [...before.matchAll(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g)].pop();
+  if (prev) start += prev.index + prev[0].length;
+  const ctx = text.slice(start, i);
+  if (ROLE_TOP.test(ctx)) return 'owner/director';
+  if (ROLE_AGENT.test(ctx)) return 'agent';
+  return '';
+}
+
+// Links from a team page to one agent's own page (/team/kari-nordmann, /agentes/lars).
+const PROFILE_LINK = /\/(team|equipo|our-team|nuestro-equipo|agents?|agentes?|asesor(es)?|staff|people|ansatte|medarbeidere|medarbetare|mitarbeiter|makelaars?|meglere?|consultants?)\/[a-z0-9-]{4,}\/?$/i;
+
+function profileLinks(pages, host, max = 4) {
+  const out = [];
+  for (const p of pages) {
+    for (const m of p.html.matchAll(/href=["']([^"'#?]+)["']/gi)) {
+      try {
+        const u = new URL(m[1], p.url);
+        if (u.hostname.replace(/^www\./, '') !== host || !PROFILE_LINK.test(u.pathname)) continue;
+        if (!out.includes(u.href)) out.push(u.href);
+      } catch { /* skip */ }
+      if (out.length >= max) return out;
+    }
+  }
+  return out;
+}
+
+// A named owner or director on the page with no address of their own. Returned so the
+// caller can try first@domain and let the verifier decide; always flagged as guessed.
+const NAME_ROLE = /([A-ZÀ-Ý][a-zà-ÿ]{2,})\s+([A-ZÀ-Ý][a-zà-ÿ'-]{2,})(?:\s+[A-ZÀ-Ý][a-zà-ÿ'-]{2,})?\s*[,|\-–]?\s*(?:\(?\s*)(founder|co-?founder|owner|managing director|director|ceo|gerente|propietari[oa]|fundador[a]?|socio|daglig leder|eier|[äa]gare|inhaber|gesch[äa]ftsf[üu]hrer|eigenaar)\b/i;
+const NOT_NAME = /^(Real|Estate|Properties|Property|Inmobiliaria|Spain|Costa|Sales|Our|The|Contact|Meet|About|Team|Blanca|Del|Sol|Luxury|Home|Homes|Villas|International|Managing|General|Sales|Office|Marketing)$/;
+
+function guessOwner(text, host) {
+  const m = text.match(NAME_ROLE);
+  if (!m || NOT_NAME.test(m[1]) || NOT_NAME.test(m[2]) || !host) return null;
+  const first = m[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  return { email: `${first}@${host}`, name: `${m[1]} ${m[2]}`, role: 'owner/director', own: true, guessed: true };
+}
+
+export async function findPeople(website) {
+  const out = { website, people: [], generic: '', langs: [], pages: 0, guess: null };
+  if (!website) return out;
+  const home = await get(website, 5000);
+  if (!home.html) return out;
+  let host = '';
+  try { host = new URL(home.url).hostname.replace(/^www\./, '').toLowerCase(); } catch { /* none */ }
+  const stem = host.split('.')[0];
+  const links = teamLinks(home.html, home.url, 8);
+  const pages = await Promise.all(links.map(l => get(l, 5000)));
+  let all = [home, ...pages].filter(p => p.html);
+
+  const read = () => {
+    const html = all.map(p => p.html).join('\n');
+    const text = plainText(html);
+    const people = [];
+    let generic = '';
+    const seen = new Set();
+    for (const e of extractEmails(html)) {
+      if (seen.has(e)) continue;
+      seen.add(e);
+      const domain = e.split('@')[1];
+      const own = domain === host || (stem.length >= 4 && domain.includes(stem));
+      if (NOT_PERSON.test(e)) { if (own && !generic) generic = e; continue; }
+      if (!own && !FREE_MAIL.test(e)) continue; // a portal, a developer, the web agency
+      const p = personFrom(e, text);
+      if (!p) { if (own && !generic) generic = e; continue; }
+      people.push({ email: e, name: p.name, role: roleNear(text, e), own, weak: !!p.weak });
+    }
+    return { people, generic, text };
+  };
+
+  let r = read();
+  // Nobody named yet: open up to four individual agent pages linked from the team page.
+  if (!r.people.length) {
+    const prof = profileLinks(all, host).filter(u => !all.some(p => p.url === u));
+    if (prof.length) {
+      const more = await Promise.all(prof.map(l => get(l, 5000)));
+      all = all.concat(more.filter(p => p.html));
+      r = read();
+    }
+  }
+  out.pages = all.length;
+  out.langs = detectLangs(home.html);
+  out.generic = r.generic;
+  const rank = (p) => (p.role === 'owner/director' ? 4 : p.role === 'agent' ? 1 : 0) + (p.own ? 2 : 0) + (p.weak ? 0 : 1);
+  out.people = r.people.sort((a, b) => rank(b) - rank(a));
+  out.best = out.people[0] || null;
+  // Only guess on a site that uses its own domain for mail (a generic address proves it).
+  if (!out.best && out.generic && out.generic.endsWith('@' + host)) out.guess = guessOwner(r.text, host);
+  return out;
+}
+
 export async function leadsHandler(req, res, envv) {
   const pass = req.headers['x-passcode'] || req.query.pass;
   if (pass !== process.env.INTERNAL_PASSCODE) return res.status(401).json({ error: 'unauthorized' });
@@ -412,6 +672,13 @@ export async function leadsHandler(req, res, envv) {
   const mode = req.query.leads;
 
   if (mode === 'towns') return res.status(200).json({ towns: TOWNS.map(t => t.slug), queries: QUERIES, daily_cap: DAILY_CAP });
+
+  if (mode === 'people') {
+    const sites = String(req.query.sites || req.query.site || '').split('|').map(s => s.trim()).filter(s => /^https?:\/\//i.test(s)).slice(0, 4);
+    if (!sites.length) return res.status(400).json({ error: 'sites=<url>|<url> required' });
+    const results = await Promise.all(sites.map(s => findPeople(s).catch(e => ({ website: s, error: String(e?.message || e), people: [] }))));
+    return res.status(200).json({ results });
+  }
 
   if (mode === 'run') {
     if (!google) return res.status(500).json({ error: 'Missing GOOGLE_PLACES_KEY' });
@@ -456,5 +723,5 @@ export async function leadsHandler(req, res, envv) {
     return res.status(200).send(csv);
   }
 
-  return res.status(400).json({ error: 'leads must be towns, run, export or purge' });
+  return res.status(400).json({ error: 'leads must be towns, run, people, export or purge' });
 }
