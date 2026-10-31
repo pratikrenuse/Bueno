@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Eier du bolig i Spania? Bli med i WhatsApp-gruppen vår for boligeiere.",
-    "wa_bar_short": "Eier du bolig i Spania? Bli med i WhatsApp-gruppen.",
-    "wa_btn_long": "Bli med i gruppen",
-    "wa_btn_short": "Bli med",
+    "wa_bar_long": "Eier du bolig i Spania? Følg WhatsApp-kanalen vår for nytt om skatt, regler og livet i Spania.",
+    "wa_bar_short": "Eier du bolig i Spania? Følg oss på WhatsApp.",
+    "wa_btn_long": "Følg kanalen",
+    "wa_btn_short": "Følg",
     "close": "Lukk",
     "nav_tools": "Verktøy",
     "nav_repairs": "Reparasjoner",
@@ -686,13 +686,10 @@
     "tools_title": "Flere gratis verktøy",
     "tools_more": "Se alle verktøyene",
     "tools_less": "Vis færre verktøy",
-    "comm_title": "Bli med andre eiere",
+    "comm_title": "Få nytt om Spania",
     "comm_em": "på WhatsApp.",
-    "comm_group_t": "Gruppen",
-    "comm_group_b": "Still spørsmål og del tips med andre som også eier bolig i Spania.",
-    "comm_group_cta": "Bli med i gruppen",
-    "comm_chan_t": "Kanalen",
-    "comm_chan_b": "Vi gir deg beskjed når noe endrer seg i Spania som påvirker boligen din.",
+    "comm_chan_t": "Spain 24/7-kanalen",
+    "comm_chan_b": "Vi gir deg beskjed når noe endrer seg i Spania som påvirker boligen din, som en ny skattefrist eller en ny regel for ferieutleie. Du bare leser, så det er ingen gruppechat å følge med på.",
     "comm_chan_cta": "Følg kanalen",
     "sponsor_title": "Spain 24/7 er sponset av",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Spørsmål og svar",
     "footer_guides": "Guider",
     "footer_about": "Om Spain 24/7",
-    "footer_wa_group": "WhatsApp-gruppe",
     "footer_wa_channel": "WhatsApp-kanal"
   }
 }

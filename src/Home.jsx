@@ -7,7 +7,7 @@ import { CATEGORIES } from '../spain-directory/categories.js'
 import { isForAudience, audienceLabels } from '../audiences.js'
 import { buenoHome } from '../SiteFooter.jsx'
 import { TOOL_COPY } from '../seo/copy.js'
-import { WHATSAPP_GROUP_URL, WHATSAPP_CHANNEL_URL } from '../whatsapp.js'
+import { whatsappChannel } from '../whatsapp.js'
 
 // The owners' home page, rebuilt October 2026.
 //
@@ -85,7 +85,7 @@ function useReveal(rootRef) {
   }, [rootRef])
 }
 
-function WhatsAppBar({ t, onClose }) {
+function WhatsAppBar({ t, url, onClose }) {
   const ref = useRef(null)
   // The nav sits under the bar, so the page needs the bar's real height, which changes with
   // the language and the screen width.
@@ -104,7 +104,7 @@ function WhatsAppBar({ t, onClose }) {
           <span className="h7-long">{t('home2.wa_bar_long')}</span>
           <span className="h7-short">{t('home2.wa_bar_short')}</span>
         </p>
-        <a className="h7-wa-btn" href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener">
+        <a className="h7-wa-btn" href={url} target="_blank" rel="noopener">
           <WaIcon />
           <span className="h7-long">{t('home2.wa_btn_long')}</span>
           <span className="h7-short">{t('home2.wa_btn_short')}</span>
@@ -227,6 +227,7 @@ export default function Home() {
   const rootRef = useRef(null)
   const [bar, setBar] = useState(true)
   const [solid, setSolid] = useState(false)
+  const channel = whatsappChannel(locale)
 
   useReveal(rootRef)
 
@@ -247,7 +248,7 @@ export default function Home() {
   return (
     <div className={`h7${bar ? ' h7-bar-on' : ''}`} ref={rootRef}>
 
-      {bar && <WhatsAppBar t={t} onClose={() => setBar(false)} />}
+      {bar && <WhatsAppBar t={t} url={channel} onClose={() => setBar(false)} />}
 
       <header className={`h7-nav${solid ? ' solid' : ''}`}>
         <div className="h7-wrap">
@@ -331,23 +332,16 @@ export default function Home() {
         <section className="h7-comm" id="whatsapp">
           <div className="h7-wrap">
             <div className="h7-head h7-rv"><h2>{t('home2.comm_title')} <em>{t('home2.comm_em')}</em></h2></div>
-            <div className="h7-comm-grid">
-              <div className="h7-card dark h7-rv">
-                <div className="h7-ic"><WaIcon className="" /></div>
-                <h3>{t('home2.comm_group_t')}</h3>
-                <p>{t('home2.comm_group_b')}</p>
-                <a className="h7-btn h7-btn-light" href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener">
-                  {t('home2.comm_group_cta')} <span className="h7-arr">&#8594;</span>
-                </a>
-              </div>
-              <div className="h7-card h7-rv s1">
+            <div className="h7-comm-one h7-rv">
+              <div className="h7-comm-copy">
                 <div className="h7-ic"><WaIcon className="" /></div>
                 <h3>{t('home2.comm_chan_t')}</h3>
                 <p>{t('home2.comm_chan_b')}</p>
-                <a className="h7-btn h7-btn-navy" href={WHATSAPP_CHANNEL_URL} target="_blank" rel="noopener">
-                  {t('home2.comm_chan_cta')} <span className="h7-arr">&#8594;</span>
+                <a className="h7-btn h7-btn-light" href={channel} target="_blank" rel="noopener">
+                  <WaIcon /> {t('home2.comm_chan_cta')}
                 </a>
               </div>
+              <div className="h7-comm-img"><img src={IMG('village.jpg')} alt="" loading="lazy" /></div>
             </div>
           </div>
         </section>
@@ -385,8 +379,7 @@ export default function Home() {
               <LLink to="/for-agents">{aud.for_agents}</LLink>
               <LLink to="/for-lawyers">{aud.for_lawyers}</LLink>
               <LLink to="/about">{t('home2.footer_about')}</LLink>
-              <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener">{t('home2.footer_wa_group')}</a>
-              <a href={WHATSAPP_CHANNEL_URL} target="_blank" rel="noopener">{t('home2.footer_wa_channel')}</a>
+              <a href={channel} target="_blank" rel="noopener">{t('home2.footer_wa_channel')}</a>
             </nav>
           </div>
           <p className="h7-legal">{t('home2.footer_legal')}</p>

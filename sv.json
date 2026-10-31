@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Äger du en bostad i Spanien? Gå med i vår WhatsApp-grupp för bostadsägare.",
-    "wa_bar_short": "Äger du en bostad i Spanien? Gå med i WhatsApp-gruppen.",
-    "wa_btn_long": "Gå med i gruppen",
-    "wa_btn_short": "Gå med",
+    "wa_bar_long": "Äger du en bostad i Spanien? Följ vår WhatsApp-kanal för nyheter om skatt, regler och livet i Spanien.",
+    "wa_bar_short": "Äger du en bostad i Spanien? Följ oss på WhatsApp.",
+    "wa_btn_long": "Följ kanalen",
+    "wa_btn_short": "Följ",
     "close": "Stäng",
     "nav_tools": "Verktyg",
     "nav_repairs": "Reparationer",
@@ -686,13 +686,10 @@
     "tools_title": "Fler gratis verktyg",
     "tools_more": "Se alla verktyg",
     "tools_less": "Visa färre verktyg",
-    "comm_title": "Gå med andra ägare",
+    "comm_title": "Få nyheter om Spanien",
     "comm_em": "på WhatsApp.",
-    "comm_group_t": "Gruppen",
-    "comm_group_b": "Ställ frågor och dela tips med andra som också äger en bostad i Spanien.",
-    "comm_group_cta": "Gå med i gruppen",
-    "comm_chan_t": "Kanalen",
-    "comm_chan_b": "Vi skickar ett meddelande när något ändras i Spanien som påverkar din bostad.",
+    "comm_chan_t": "Spain 24/7-kanalen",
+    "comm_chan_b": "Vi skickar ett meddelande när något ändras i Spanien som påverkar din bostad, som en ny deklarationsfrist eller en ny regel för semesteruthyrning. Du läser bara, så det finns ingen gruppchatt att hänga med i.",
     "comm_chan_cta": "Följ kanalen",
     "sponsor_title": "Spain 24/7 sponsras av",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Frågor och svar",
     "footer_guides": "Guider",
     "footer_about": "Om Spain 24/7",
-    "footer_wa_group": "WhatsApp-grupp",
     "footer_wa_channel": "WhatsApp-kanal"
   }
 }

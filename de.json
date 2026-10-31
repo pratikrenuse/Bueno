@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Sie haben ein Zuhause in Spanien? Treten Sie unserer WhatsApp-Gruppe für Eigentümer bei.",
-    "wa_bar_short": "Zuhause in Spanien? Treten Sie unserer WhatsApp-Gruppe bei.",
-    "wa_btn_long": "Der Gruppe beitreten",
-    "wa_btn_short": "Beitreten",
+    "wa_bar_long": "Sie haben ein Zuhause in Spanien? Folgen Sie unserem WhatsApp-Kanal für Neues zu Steuern, Regeln und dem Leben in Spanien.",
+    "wa_bar_short": "Zuhause in Spanien? Folgen Sie uns auf WhatsApp.",
+    "wa_btn_long": "Dem Kanal folgen",
+    "wa_btn_short": "Folgen",
     "close": "Schließen",
     "nav_tools": "Tools",
     "nav_repairs": "Reparaturen",
@@ -686,13 +686,10 @@
     "tools_title": "Weitere kostenlose Tools",
     "tools_more": "Alle Tools ansehen",
     "tools_less": "Weniger Tools zeigen",
-    "comm_title": "Treffen Sie andere Eigentümer",
+    "comm_title": "Neues aus Spanien",
     "comm_em": "auf WhatsApp.",
-    "comm_group_t": "Die Gruppe",
-    "comm_group_b": "Stellen Sie Fragen und tauschen Sie Tipps mit anderen aus, die auch ein Zuhause in Spanien haben.",
-    "comm_group_cta": "Der Gruppe beitreten",
-    "comm_chan_t": "Der Kanal",
-    "comm_chan_b": "Wir schreiben Ihnen, wenn sich in Spanien etwas ändert, das Ihr Zuhause betrifft.",
+    "comm_chan_t": "Der Spain 24/7 Kanal",
+    "comm_chan_b": "Wir schreiben Ihnen, wenn sich in Spanien etwas ändert, das Ihr Zuhause betrifft, etwa eine neue Steuerfrist oder eine neue Regel für Ferienvermietung. Sie lesen nur mit, es gibt also keinen Gruppenchat, dem Sie folgen müssen.",
     "comm_chan_cta": "Dem Kanal folgen",
     "sponsor_title": "Spain 24/7 wird gesponsert von",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Fragen und Antworten",
     "footer_guides": "Ratgeber",
     "footer_about": "Über Spain 24/7",
-    "footer_wa_group": "WhatsApp-Gruppe",
     "footer_wa_channel": "WhatsApp-Kanal"
   }
 }

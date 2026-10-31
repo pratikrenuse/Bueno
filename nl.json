@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Heeft u een huis in Spanje? Word lid van onze WhatsApp-groep voor eigenaren.",
-    "wa_bar_short": "Een huis in Spanje? Word lid van onze WhatsApp-groep.",
-    "wa_btn_long": "Word lid",
-    "wa_btn_short": "Lid worden",
+    "wa_bar_long": "Heeft u een huis in Spanje? Volg ons WhatsApp-kanaal voor nieuws over belasting, regels en het leven in Spanje.",
+    "wa_bar_short": "Een huis in Spanje? Volg ons op WhatsApp.",
+    "wa_btn_long": "Volg het kanaal",
+    "wa_btn_short": "Volgen",
     "close": "Sluiten",
     "nav_tools": "Tools",
     "nav_repairs": "Reparaties",
@@ -686,13 +686,10 @@
     "tools_title": "Meer gratis tools",
     "tools_more": "Bekijk alle tools",
     "tools_less": "Toon minder tools",
-    "comm_title": "Ontmoet andere eigenaren",
+    "comm_title": "Nieuws over Spanje",
     "comm_em": "op WhatsApp.",
-    "comm_group_t": "De groep",
-    "comm_group_b": "Stel vragen en deel tips met anderen die ook een huis in Spanje hebben.",
-    "comm_group_cta": "Word lid van de groep",
-    "comm_chan_t": "Het kanaal",
-    "comm_chan_b": "We sturen u een bericht als er in Spanje iets verandert dat uw huis raakt.",
+    "comm_chan_t": "Het Spain 24/7-kanaal",
+    "comm_chan_b": "We sturen u een bericht als er in Spanje iets verandert dat uw huis raakt, zoals een nieuwe belastingtermijn of een nieuwe regel voor vakantieverhuur. U leest alleen mee, dus er is geen groepschat om bij te houden.",
     "comm_chan_cta": "Volg het kanaal",
     "sponsor_title": "Spain 24/7 wordt gesponsord door",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Vragen en antwoorden",
     "footer_guides": "Gidsen",
     "footer_about": "Over Spain 24/7",
-    "footer_wa_group": "WhatsApp-groep",
     "footer_wa_channel": "WhatsApp-kanaal"
   }
 }

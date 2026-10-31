@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Own a home in Spain? Come and join our WhatsApp group for owners.",
-    "wa_bar_short": "Own a home in Spain? Join our WhatsApp group.",
-    "wa_btn_long": "Join the group",
-    "wa_btn_short": "Join",
+    "wa_bar_long": "Own a home in Spain? Follow our WhatsApp channel for updates on tax, rules and life in Spain.",
+    "wa_bar_short": "Own a home in Spain? Follow us on WhatsApp.",
+    "wa_btn_long": "Follow the channel",
+    "wa_btn_short": "Follow",
     "close": "Close",
     "nav_tools": "Tools",
     "nav_repairs": "Home repairs",
@@ -686,13 +686,10 @@
     "tools_title": "More free tools",
     "tools_more": "See every tool",
     "tools_less": "Show fewer tools",
-    "comm_title": "Join other owners",
+    "comm_title": "Get updates about Spain",
     "comm_em": "on WhatsApp.",
-    "comm_group_t": "The group",
-    "comm_group_b": "Ask questions and swap tips with people who own a home in Spain too.",
-    "comm_group_cta": "Join the group",
-    "comm_chan_t": "The channel",
-    "comm_chan_b": "We will message you when something changes in Spain that affects your home.",
+    "comm_chan_t": "The Spain 24/7 channel",
+    "comm_chan_b": "We will message you when something changes in Spain that affects your home, like a new tax deadline or a new rule for holiday lets. You only read it, so there is no group chat to keep up with.",
     "comm_chan_cta": "Follow the channel",
     "sponsor_title": "Spain 24/7 is sponsored by",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Questions and answers",
     "footer_guides": "Guides",
     "footer_about": "About Spain 24/7",
-    "footer_wa_group": "WhatsApp group",
     "footer_wa_channel": "WhatsApp channel"
   }
 }

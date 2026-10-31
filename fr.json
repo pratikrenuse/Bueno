@@ -637,10 +637,10 @@
     ]
   },
   "home2": {
-    "wa_bar_long": "Vous avez une maison en Espagne ? Rejoignez notre groupe WhatsApp de propriétaires.",
-    "wa_bar_short": "Une maison en Espagne ? Rejoignez notre groupe WhatsApp.",
-    "wa_btn_long": "Rejoindre le groupe",
-    "wa_btn_short": "Rejoindre",
+    "wa_bar_long": "Vous avez une maison en Espagne ? Suivez notre chaîne WhatsApp pour les nouvelles sur les impôts, les règles et la vie en Espagne.",
+    "wa_bar_short": "Une maison en Espagne ? Suivez-nous sur WhatsApp.",
+    "wa_btn_long": "Suivre la chaîne",
+    "wa_btn_short": "Suivre",
     "close": "Fermer",
     "nav_tools": "Outils",
     "nav_repairs": "Réparations",
@@ -686,13 +686,10 @@
     "tools_title": "Plus d’outils gratuits",
     "tools_more": "Voir tous les outils",
     "tools_less": "Afficher moins d’outils",
-    "comm_title": "Rejoignez d’autres propriétaires",
+    "comm_title": "Les nouvelles d’Espagne",
     "comm_em": "sur WhatsApp.",
-    "comm_group_t": "Le groupe",
-    "comm_group_b": "Posez vos questions et échangez des conseils avec d’autres propriétaires en Espagne.",
-    "comm_group_cta": "Rejoindre le groupe",
-    "comm_chan_t": "La chaîne",
-    "comm_chan_b": "Nous vous prévenons quand quelque chose change en Espagne et touche votre maison.",
+    "comm_chan_t": "La chaîne Spain 24/7",
+    "comm_chan_b": "Nous vous prévenons quand quelque chose change en Espagne et touche votre maison, comme un nouveau délai fiscal ou une nouvelle règle pour la location saisonnière. Vous lisez seulement, il n’y a donc pas de discussion de groupe à suivre.",
     "comm_chan_cta": "Suivre la chaîne",
     "sponsor_title": "Spain 24/7 est sponsorisé par",
     "sponsor_em": "Bueno.",
@@ -704,7 +701,6 @@
     "footer_answers": "Questions et réponses",
     "footer_guides": "Guides",
     "footer_about": "À propos de Spain 24/7",
-    "footer_wa_group": "Groupe WhatsApp",
     "footer_wa_channel": "Chaîne WhatsApp"
   }
 }
