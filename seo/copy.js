@@ -599,10 +599,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7: free tools for property owners in Spain', 'Free tools for foreign property owners in Spain', 'Own a home in Spain? Free tools and a directory'],
-      h1: 'Know your Spanish property inside out.',
+      h1: 'Own a home in Spain? Start here.',
       leads: ['Free tools for people who own a home in Spain and live somewhere else.'],
       tail: ['Work out the tax, see what the year really costs, and find a tradesperson.', 'No sign up, and nobody pays to be listed.'],
-      intro: ['Free tools for foreign property owners in Spain. Understand your tax obligations, check if you are overpaying, and manage everything with confidence.', 'There is also a directory of tradespeople and property professionals in 660 Spanish towns, ranked from public Google reviews.'],
+      intro: ['Work out your Spanish tax, find a good plumber and see what the house really costs you. It is free, and there is nothing to sign up for.', 'There is also a directory of tradespeople and property professionals in 660 Spanish towns, ranked from public Google reviews.'],
     },
     trades_hub: {
       titles: ['Home repairs in Spain: plumbers and electricians', 'Find a plumber or an electrician in Spain', 'Tradespeople in 660 Spanish towns'],
@@ -667,10 +667,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7: gratis verktøy for boligeiere i Spania', 'Gratis verktøy for utenlandske boligeiere i Spania', 'Eier du bolig i Spania? Gratis verktøy og register'],
-      h1: 'Få full oversikt over den spanske boligen din.',
+      h1: 'Eier du bolig i Spania? Start her.',
       leads: ['Gratis verktøy for deg som eier en bolig i Spania og bor et annet sted.'],
       tail: ['Regn ut skatten, se hva året faktisk koster, og finn en håndverker.', 'Ingen registrering, og ingen betaler for å stå her.'],
-      intro: ['Gratis verktøy for utenlandske boligeiere i Spania. Forstå skatteforpliktelsene dine, se om du betaler for mye, og hold oversikten.', 'Her finnes også et register over håndverkere og boligeksperter i 660 spanske byer, rangert etter offentlige Google-omtaler.'],
+      intro: ['Regn ut den spanske skatten, finn en god rørlegger og se hva boligen faktisk koster deg. Det er gratis, og du trenger ikke registrere deg.', 'Her finnes også et register over håndverkere og boligeksperter i 660 spanske byer, rangert etter offentlige Google-omtaler.'],
     },
     trades_hub: {
       titles: ['Reparasjoner i Spania: rørlegger og elektriker', 'Finn rørlegger eller elektriker i Spania', 'Håndverkere i 660 spanske byer'],
@@ -735,10 +735,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7: gratis verktyg för bostadsägare', 'Gratis verktyg för utländska bostadsägare i Spanien', 'Äger du bostad i Spanien? Gratis verktyg och register'],
-      h1: 'Få en fullständig översikt över din spanska fastighet.',
+      h1: 'Äger du en bostad i Spanien? Börja här.',
       leads: ['Gratis verktyg för dig som äger en bostad i Spanien och bor någon annanstans.'],
       tail: ['Räkna ut skatten, se vad året faktiskt kostar, och hitta en hantverkare.', 'Ingen registrering, och ingen betalar för att synas.'],
-      intro: ['Gratis verktyg för utländska fastighetsägare i Spanien. Förstå dina skatteskyldigheter, se om du betalar för mycket, och behåll överblicken.', 'Här finns också ett register över hantverkare och bostadsexperter på 660 spanska orter, rankat efter offentliga Google-omdömen.'],
+      intro: ['Räkna ut din spanska skatt, hitta en bra rörmokare och se vad huset faktiskt kostar dig. Det är gratis och du behöver inte registrera dig.', 'Här finns också ett register över hantverkare och bostadsexperter på 660 spanska orter, rankat efter offentliga Google-omdömen.'],
     },
     trades_hub: {
       titles: ['Reparationer i Spanien: rörmokare och elektriker', 'Hitta rörmokare eller elektriker i Spanien', 'Hantverkare på 660 spanska orter'],
@@ -803,10 +803,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7: Gratis-Tools für Immobilienbesitzer', 'Kostenlose Tools für ausländische Eigentümer in Spanien', 'Immobilie in Spanien? Kostenlose Tools und Verzeichnis'],
-      h1: 'Kennen Sie Ihre spanische Immobilie ganz genau.',
+      h1: 'Sie haben ein Zuhause in Spanien? Fangen Sie hier an.',
       leads: ['Kostenlose Tools für Menschen, die eine Immobilie in Spanien besitzen und woanders leben.'],
       tail: ['Steuer berechnen, Jahreskosten prüfen und einen Handwerker finden.', 'Keine Anmeldung, und niemand bezahlt für einen Platz.'],
-      intro: ['Kostenlose Tools für ausländische Immobilienbesitzer in Spanien. Verstehen Sie Ihre Steuerpflichten, prüfen Sie, ob Sie zu viel zahlen, und behalten Sie den Überblick.', 'Dazu ein Verzeichnis von Handwerkern und Immobilienexperten in 660 spanischen Orten, sortiert nach öffentlichen Google-Bewertungen.'],
+      intro: ['Berechnen Sie Ihre spanische Steuer, finden Sie einen guten Klempner und sehen Sie, was das Haus Sie wirklich kostet. Es ist kostenlos, und Sie müssen sich nicht anmelden.', 'Dazu ein Verzeichnis von Handwerkern und Immobilienexperten in 660 spanischen Orten, sortiert nach öffentlichen Google-Bewertungen.'],
     },
     trades_hub: {
       titles: ['Reparaturen in Spanien: Installateur und Elektriker', 'Installateur oder Elektriker in Spanien finden', 'Handwerker in 660 spanischen Orten'],
@@ -871,10 +871,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7 : outils gratuits pour propriétaires', 'Outils gratuits pour propriétaires étrangers en Espagne', 'Un bien en Espagne ? Outils gratuits et annuaire'],
-      h1: 'Connaissez votre bien immobilier espagnol dans les moindres détails.',
+      h1: 'Vous avez une maison en Espagne ? Commencez ici.',
       leads: ["Des outils gratuits pour ceux qui possèdent un logement en Espagne et vivent ailleurs."],
       tail: ["Calculez l'impôt, voyez le coût réel de l'année, et trouvez un artisan.", 'Sans inscription, et personne ne paie pour figurer ici.'],
-      intro: ["Des outils gratuits pour les propriétaires étrangers en Espagne. Comprenez vos obligations fiscales, vérifiez si vous payez trop, et gardez la maîtrise.", "S'y ajoute un annuaire d'artisans et d'experts immobiliers dans 660 communes espagnoles, classé selon les avis publics Google."],
+      intro: ["Calculez votre impôt espagnol, trouvez un bon plombier et voyez ce que la maison vous coûte vraiment. C’est gratuit, sans inscription.", "S'y ajoute un annuaire d'artisans et d'experts immobiliers dans 660 communes espagnoles, classé selon les avis publics Google."],
     },
     trades_hub: {
       titles: ['Réparations en Espagne : plombier et électricien', 'Trouver un plombier ou un électricien en Espagne', 'Artisans dans 660 communes espagnoles'],
@@ -939,10 +939,10 @@ export const S = {
     },
     home: {
       titles: ['Spain 24/7: gratis tools voor woningeigenaren', 'Gratis tools voor buitenlandse woningeigenaren in Spanje', 'Woning in Spanje? Gratis tools en een gids'],
-      h1: 'Ken uw Spaanse woning tot in detail.',
+      h1: 'Heeft u een huis in Spanje? Begin hier.',
       leads: ['Gratis tools voor mensen die een woning in Spanje bezitten en ergens anders wonen.'],
       tail: ['Bereken de belasting, zie wat het jaar echt kost, en vind een vakman.', 'Geen aanmelding, en niemand betaalt om vermeld te worden.'],
-      intro: ['Gratis tools voor buitenlandse woningeigenaren in Spanje. Begrijp uw belastingplichten, controleer of u te veel betaalt, en houd het overzicht.', 'Daarnaast een gids van vakmensen en vastgoedexperts in 660 Spaanse plaatsen, gerangschikt op openbare Google-beoordelingen.'],
+      intro: ['Bereken uw Spaanse belasting, vind een goede loodgieter en zie wat het huis u echt kost. Het is gratis en u hoeft zich nergens voor aan te melden.', 'Daarnaast een gids van vakmensen en vastgoedexperts in 660 Spaanse plaatsen, gerangschikt op openbare Google-beoordelingen.'],
     },
     trades_hub: {
       titles: ['Reparaties in Spanje: loodgieter en elektricien', 'Loodgieter of elektricien vinden in Spanje', 'Vakmensen in 660 Spaanse plaatsen'],
