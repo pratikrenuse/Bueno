@@ -24,6 +24,8 @@ import { queueOf, nextDay, sentOn, withCurrentTranslations, deliver, save } from
 import { groupsToday, sendQueueEmpty, sendQueueLow, LOW_QUEUE_DAYS, finalText } from './_fb_email.js';
 import { DAILY_START } from './_fb_groups.js';
 import { dueNotices, sendNotices } from './_fb_notice.js';
+import { channelDaysLeft } from './_fb_whatsapp.js';
+import { sendMail, PRATIK_ONLY } from './_fb_email.js';
 
 const truthy = (v) => v === true || v === 1 || v === '1' || v === 'true';
 
@@ -87,6 +89,15 @@ export default async function handler(req, res) {
   }
   // One-off task briefs ride with the first post sent on or after their date (api/_fb_notice.js).
   const notices = await sendNotices(rows);
+  // The WhatsApp channel posts are written ahead by date. When fewer than three days are left,
+  // Pratik alone gets a short note so the next batch is written before they run out.
+  const channelLeft = channelDaysLeft(new Date().toISOString().slice(0, 10));
+  let channelWarned = false;
+  if (channelLeft < 3) {
+    const n = await sendMail({ to: PRATIK_ONLY, subject: `WhatsApp channel posts: ${channelLeft} day${channelLeft === 1 ? '' : 's'} left`,
+      html: `<p style="font-family:Arial,sans-serif;font-size:14px">Only ${channelLeft} day${channelLeft === 1 ? '' : 's'} of WhatsApp channel posts are written. Ask Claude for the next batch of news posts so Poornima does not run out.</p>` });
+    channelWarned = !!n.ok;
+  }
   const left = queue.length - 1;
   let lowWarned = false;
   if (left < LOW_QUEUE_DAYS) {
@@ -95,6 +106,6 @@ export default async function handler(req, res) {
   }
   res.json({
     ok: true, sent: true, day, idea_key: next.idea_key, queued: left,
-    retranslated: ready.retranslated, warning: r.warning, low_queue_warned: lowWarned, notices,
+    retranslated: ready.retranslated, warning: r.warning, low_queue_warned: lowWarned, notices, channel_days_left: channelLeft, channel_warned: channelWarned,
   });
 }

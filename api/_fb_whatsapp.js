@@ -91,3 +91,25 @@ export function agentPostFor(date) {
   const n = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${AGENT_POSTS_FROM}T00:00:00Z`)) / DAY_MS);
   return AGENT_POSTS[n % AGENT_POSTS.length];
 }
+
+// Posts for inside the estate agents' WhatsApp group (Agents' WhatsApp Hub). Off until Pratik
+// says a few agents have joined: then set HUB_POSTS_ON to true, commit and push. They rotate daily.
+export const HUB_POSTS_ON = false;
+export const HUB_POSTS_FROM = '2026-11-02';
+export const HUB_POSTS = [
+  'Welcome to the hub. This is a place for estate agents in Spain who sell to foreign buyers. Post any question a client has asked you that you could not answer, and we will come back with a clear answer and the official source.',
+  'A question buyers ask a lot: what is held back when a non-resident sells? The buyer keeps back 3% of the price and pays it to the tax office for the seller. The seller then files a return to settle the real tax, and gets back anything paid too much. The full answer is here: https://www.247spain.es/answers/three-percent-withheld-when-selling-spanish-property',
+  'For buyers who cannot fly in to sign: a power of attorney can be signed at a Spanish consulate, or at a notary at home with an apostille. Our planner sets out the steps for each country: https://www.247spain.es/poa-planner',
+  'Buyers who plan to let their home will ask about the October housing decree. It adds 10% VAT on holiday lets of 30 nights or fewer from 1 December, unless the home is the owner\'s main home, and it still needs parliament\'s confirmation. We will post here as soon as it is decided.',
+  'A tool you can send to any buyer before they sign: the buying costs for every region, with the taxes worked out for their price, in their own language. https://www.247spain.es/purchase-costs',
+];
+export function hubPostFor(date) {
+  if (!HUB_POSTS_ON || date < HUB_POSTS_FROM) return null;
+  const n = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${HUB_POSTS_FROM}T00:00:00Z`)) / DAY_MS);
+  return HUB_POSTS[((n % HUB_POSTS.length) + HUB_POSTS.length) % HUB_POSTS.length];
+}
+
+// Days of channel posts still written from `date` onwards (used for Pratik's reminder).
+export function channelDaysLeft(date) {
+  return Object.keys(CHANNEL_POSTS).filter(d => d >= date).length;
+}

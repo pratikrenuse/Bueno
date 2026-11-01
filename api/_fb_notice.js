@@ -38,8 +38,10 @@ function whatsappTasksBody() {
         24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;New tasks</span>
       </div>
       <div style="padding:22px">
+        <div style="background:#FBF5E7;border-left:4px solid #C9A96E;border-radius:8px;padding:14px 16px;margin:0 0 18px;font-family:${SANS};font-size:14.5px;line-height:1.6;color:#010221">
+          <b>Important: new tasks from today.</b> Please keep doing the daily Facebook group posts as usual and do these alongside them. Please start with tasks 1 and 2 today.
+        </div>
         ${P('Hi Agent,')}
-        ${P('Please keep doing the daily Facebook group posts as usual. The tasks below are extra, so do them alongside.')}
 
         ${H('1. Add descriptions to the WhatsApp channels')}
         ${P('You are now admin of six channels, one per language, and of the estate agents\' group. Please copy each description below into its channel exactly as written.')}
@@ -56,10 +58,10 @@ function whatsappTasksBody() {
         ${H('4. Post in the estate agents\' group (later)')}
         ${P('Once a few agents have joined the hub, you will also get a daily post for that group in your email. Please do not start this until I tell you.')}
 
-        ${H('5. Find Facebook groups for estate agents')}
+        ${H('5. Find Facebook groups for estate agents (every day)')}
         ${P('Please research Facebook groups where estate agents in Spain are active, especially agents who sell to foreign buyers. Add each group to your tracking sheet with:')}
         ${LI(['The group name and link.', 'The number of members.', 'The language.', 'Whether the group allows posts.'])}
-        ${P('Then send the list to me as well.')}
+        ${P('Then send the list to me as well. From now on, your daily email will ask you to find at least three more each day.')}
 
         ${H('6. Join those groups from all seven accounts')}
         ${P('Join the estate agents\' groups you find from Account 1 to Account 7, today and tomorrow. From Wednesday 4 November, your daily email will have a post about our agents\' group, with the steps for where to post it.')}
@@ -79,7 +81,7 @@ export const NOTICES = [
   {
     id: 'whatsapp-tasks-2026-11',
     date: '2026-11-02',
-    subject: 'New WhatsApp tasks, alongside the daily posts',
+    subject: 'IMPORTANT: New WhatsApp tasks, alongside the daily posts',
     body: whatsappTasksBody,
   },
 ];

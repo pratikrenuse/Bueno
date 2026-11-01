@@ -22,7 +22,7 @@
 import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.js';
 import { ACCOUNT, GROUPS, groupsFor, perDay, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
-import { CHANNEL_LANGS, CHANNEL_NAME, channelPostFor, agentPostFor, AGENT_COMMENT, AGENT_GROUPS_PER_DAY } from './_fb_whatsapp.js';
+import { CHANNEL_LANGS, CHANNEL_NAME, channelPostFor, agentPostFor, hubPostFor, AGENT_COMMENT, AGENT_GROUPS_PER_DAY } from './_fb_whatsapp.js';
 
 const PUBLISHER = 'poornimanirwal@gmail.com';
 const JOHN = 'john@getbueno.com';
@@ -173,6 +173,20 @@ export function whatsappSection(date = new Date().toISOString().slice(0, 10)) {
           ${pre(channel[l])}`).join('')}
         </div>`;
   }
+  const hub = hubPostFor(date);
+  if (hub) {
+    out += `
+        <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
+          <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Also today: post in the estate agents' WhatsApp group</p>
+          <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Post this in the Agents' WhatsApp Hub, exactly as written. If an agent asks a question in the group, send it to me and I will give you the reply.</p>
+          ${pre(hub)}
+        </div>`;
+  }
+  out += `
+        <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
+          <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Also today: find more estate agents' groups</p>
+          <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Find at least three more Facebook groups where estate agents in Spain are active. Add each one to your tracking sheet with its name, link, number of members, language and whether it allows posts, ask to join it from the accounts, and list the new groups in your reply to this email.</p>
+        </div>`;
   if (agent) {
     out += `
         <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
