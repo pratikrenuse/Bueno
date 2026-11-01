@@ -22,6 +22,7 @@
 import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.js';
 import { ACCOUNT, GROUPS, groupsFor, perDay, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
+import { CHANNEL_LANGS, CHANNEL_NAME, channelPostFor, agentPostFor, AGENT_COMMENT, AGENT_GROUPS_PER_DAY } from './_fb_whatsapp.js';
 
 const PUBLISHER = 'poornimanirwal@gmail.com';
 const JOHN = 'john@getbueno.com';
@@ -153,6 +154,44 @@ const block = (n, lang, text, day, image) => `
                     line-height:1.55;color:#111;white-space:pre-wrap">${esc(text)}</div>
         ${commentBlock(lang)}${groupList(lang, day)}`;
 
+// The WhatsApp channel post and the estate agents' group post for today, if there are any
+// (api/_fb_whatsapp.js). Shown under the Facebook post in the same daily email.
+const pre = (text) => `<div style="background:#F7F7F5;border:1px solid #E0DFDC;border-radius:10px;padding:12px 14px;margin:0 0 12px;
+  font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a;white-space:pre-wrap">${esc(text)}</div>`;
+
+export function whatsappSection(date = new Date().toISOString().slice(0, 10)) {
+  const channel = channelPostFor(date);
+  const agent = agentPostFor(date);
+  let out = '';
+  if (channel) {
+    out += `
+        <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
+          <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Also today: post in the WhatsApp channels</p>
+          <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Post each text in its own channel, exactly as written. No image is needed.</p>
+          ${CHANNEL_LANGS.filter(l => channel[l]).map(l => `
+          <p style="margin:14px 0 6px;font-size:13px;font-weight:bold;color:#010221;font-family:${SANS}">${esc(CHANNEL_NAME[l])}</p>
+          ${pre(channel[l])}`).join('')}
+        </div>`;
+  }
+  if (agent) {
+    out += `
+        <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
+          <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Also today: the estate agents' groups</p>
+          <ol style="margin:0 0 14px;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
+            <li>Post the text below, in English, in ${esc(String(AGENT_GROUPS_PER_DAY))} of the estate agents' Facebook groups you have joined, each from a different account. Use groups you did not post in yesterday.</li>
+            <li>Straight after posting, add the comment below under your own post.</li>
+            <li>In your other posts today, in the Facebook groups and the WhatsApp channels, add the same comment wherever estate agents are likely to see it.</li>
+            <li>Note each post and its link in your tracking sheet.</li>
+          </ol>
+          <p style="margin:0 0 6px;font-size:13px;font-weight:bold;color:#010221;font-family:${SANS}">The post</p>
+          ${pre(agent)}
+          <p style="margin:0 0 6px;font-size:13px;font-weight:bold;color:#010221;font-family:${SANS}">The comment</p>
+          ${pre(AGENT_COMMENT)}
+        </div>`;
+  }
+  return out;
+}
+
 /**
  * The whole envelope: the English post and its six translations, one image, and under each
  * language the account that posts it and the groups it goes into that day.
@@ -196,6 +235,8 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
         ${available.map((lang, i) =>
           block(i + 2, lang, String(translations[lang]).trim(), day, imageFor(post, lang))
         ).join('')}
+
+        ${whatsappSection()}
 
         <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When every language is posted</p>
         <ol style="margin:0;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">

@@ -60,6 +60,9 @@ export function linkFor(tool, lang) {
 // the daily email tells Poornima to skip the first comment; once it is set, the comment carries it.
 export const WHATSAPP_URL = '';
 
+// The estate agents' WhatsApp group (Agents' WhatsApp Hub), given by Pratik on 31 October 2026.
+export const WHATSAPP_AGENTS_HUB = 'https://chat.whatsapp.com/HSkoRFSDXiQGA7xK7awW7j';
+
 // The first comment, posted by Poornima under her own post once it is up. The only
 // invitation anywhere in the system, and it names no company.
 export const COMMENT = {

@@ -23,6 +23,7 @@ import { gateCron, rest, readBody } from './_fb_db.js';
 import { queueOf, nextDay, sentOn, withCurrentTranslations, deliver, save } from './_fb_queue.js';
 import { groupsToday, sendQueueEmpty, sendQueueLow, LOW_QUEUE_DAYS, finalText } from './_fb_email.js';
 import { DAILY_START } from './_fb_groups.js';
+import { dueNotices, sendNotices } from './_fb_notice.js';
 
 const truthy = (v) => v === true || v === 1 || v === '1' || v === 'true';
 
@@ -61,6 +62,7 @@ export default async function handler(req, res) {
       ok: true, dry: true, sent: false, day, queued: queue.length,
       would_send: { idea_key: next.idea_key, tool_slug: next.tool_slug, hook: (finalText(next).split('\n')[0] || '').slice(0, 120) },
       already_sent_today: sentOn(rows),
+      notices: dueNotices(rows).map(n => n.id),
       groups: groupsToday(day),
       then: queue.slice(1, 6).map(r => r.idea_key),
     });
@@ -83,6 +85,8 @@ export default async function handler(req, res) {
   if (!r.sent) {
     return res.status(500).json({ ok: false, sent: false, idea_key: next.idea_key, error: r.error });
   }
+  // One-off task briefs ride with the first post sent on or after their date (api/_fb_notice.js).
+  const notices = await sendNotices(rows);
   const left = queue.length - 1;
   let lowWarned = false;
   if (left < LOW_QUEUE_DAYS) {
@@ -91,6 +95,6 @@ export default async function handler(req, res) {
   }
   res.json({
     ok: true, sent: true, day, idea_key: next.idea_key, queued: left,
-    retranslated: ready.retranslated, warning: r.warning, low_queue_warned: lowWarned,
+    retranslated: ready.retranslated, warning: r.warning, low_queue_warned: lowWarned, notices,
   });
 }
