@@ -5,6 +5,7 @@
 //   POST /api/news?action=decide     approve, reject, edit, undo        (passcode)
 //   POST /api/news?action=ingest     paste a newsletter by hand         (passcode)
 //   POST /api/news?action=reprocess  retry an email that failed         (passcode)
+//   POST /api/news?action=resend     send the summary email again       (passcode)
 //   GET  /api/news?action=health     env vars, tables, last email       (passcode)
 //
 // Same shape as api/fb.js and api/linkedin.js: helpers start with "_" so the whole surface
@@ -18,6 +19,8 @@ const ROUTES = {
   decide: async () => (await import('./_news_decide.js')).decide,
   ingest: async () => (await import('./_news_decide.js')).ingest,
   reprocess: async () => (await import('./_news_decide.js')).reprocess,
+  resend: async () => (await import('./_news_decide.js')).resend,
+  announce: async () => (await import('./_news_decide.js')).announce,
 };
 
 // Sorting one newsletter with Claude takes 20 to 40 seconds.

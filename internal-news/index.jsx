@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 //   what is not useful to foreign owners and writes a short English post for the rest ->
 //   Pratik (or John) approves here -> approving translates it into Norwegian, Swedish,
 //   German, French and Dutch -> the oldest approved story becomes the WhatsApp channel post
-//   in Poornima's next daily email, on any day without a hand-written channel post.
+//   in the next daily email, on any day without a hand-written channel post.
 //
 // No meta.js on purpose: never on the homepage grid, never in the sitemap, and noindex.
 
@@ -22,7 +22,7 @@ const SANS = "'DM Sans', Arial, Helvetica, sans-serif"
 const TABS = [
   { key: 'pending', label: 'To review' },
   { key: 'approved', label: 'Approved, in line' },
-  { key: 'used', label: 'Sent to Poornima' },
+  { key: 'used', label: 'Used in the channels' },
   { key: 'skipped', label: 'Left out by Claude' },
   { key: 'rejected', label: 'Rejected' },
 ]

@@ -89,6 +89,8 @@ const iNews = vercel.rewrites.findIndex(r => r.source === '/api/news/:action');
 const iAll = vercel.rewrites.findIndex(r => r.source === '/api/(.*)');
 ok('the /api/news/:action rewrite exists and comes before the catch-all', iNews !== -1 && iNews < iAll);
 
+ok('nothing in the news surface names the publisher', ![...readdirSync('./api').filter(f => f === 'news.js' || f.startsWith('_news_')).map(f => `./api/${f}`), './internal-news/index.jsx', './NEWS_RUNBOOK.md'].some(p => /Poornima/i.test(readFileSync(p, 'utf8'))));
+
 // --- 6. The news surface stays self-contained ------------------------------------------
 const code = (p) => readFileSync(p, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
 const importsOf = (src) => [...src.matchAll(/(?:from|import)\s*\(?\s*['"]([^'"]+)['"]/g)].map(m => m[1]);
@@ -165,7 +167,8 @@ await router(hook('em1'), res);
 ok('webhook: the email is sorted', res.code === 200 && res.body.ok === true && res.body.stories === 2 && res.body.kept === 1, JSON.stringify(res.body));
 ok('webhook: the stories are stored', store.items.length === 2 && store.items[0].status === 'pending' && store.items[1].status === 'skipped');
 ok('webhook: the email is marked done', store.emails[0].status === 'done');
-ok('webhook: Pratik and John both get the email', mailSent.length === 1 && mailSent[0].to.includes('pratik.y.renuse@gmail.com') && mailSent[0].to.includes('john@getbueno.com'));
+ok('webhook: only Pratik gets the email while testing', mailSent.length === 1 && mailSent[0].to.join() === 'pratik.y.renuse@gmail.com' && !mailSent[0].cc);
+ok('webhook: the email has no link or button', !/<a\b|href=/i.test(mailSent[0].html));
 ok('webhook: the email carries the English story', mailSent[0].html.includes('Renting takes 39% of household income, according to idealista.'));
 ok('webhook: the subject has no euro sign', !/€/.test(mailSent[0].subject));
 const claudeCalls = calls.filter(c => c.includes('anthropic')).length;

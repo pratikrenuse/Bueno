@@ -3,7 +3,7 @@
 // POST /api/news?action=reprocess { email_id }                retry an email that failed
 //
 // Approving translates the story into the five other channel languages, from the edited
-// English if there is one, and puts it in line for Poornima's daily email. The translation
+// English if there is one, and puts it in line for the daily channel post. The translation
 // is stamped with a hash of the English it was made from, so an edit after approval sends
 // the story back to review instead of going out with an old translation.
 import { createHash } from 'node:crypto';
@@ -11,6 +11,7 @@ import { gate, db, now, readBody } from './_news_db.js';
 import { translateItem, clean } from './_news_sort.js';
 import { tidy, isAllowedSender, sourceOf, addressOf } from './_news_parse.js';
 import { processEmail, claim } from './_news_process.js';
+import { notifyNewStories, sendMail, esc } from './_news_mail.js';
 import { reprocess as retry } from './_news_inbound.js';
 
 export const hashOf = (s) => createHash('sha1').update(String(s || ''), 'utf8').digest('hex');
@@ -92,4 +93,36 @@ export async function reprocess(req, res) {
   if (!email_id) return res.status(400).json({ error: 'email_id is required' });
   const out = await retry(email_id);
   res.status(out.ok ? 200 : 502).json(out);
+}
+
+// POST /api/news?action=resend { email_id, note?, with_john? }  sends the summary email for an email already
+// sorted, from what is stored, without asking Claude again. Used to test the email.
+export async function resend(req, res) {
+  if (!gate(req, res)) return;
+  const { email_id, note, with_john } = { ...(req.query || {}), ...readBody(req) };
+  if (!email_id) return res.status(400).json({ error: 'email_id is required' });
+  const [e, i] = await Promise.all([
+    db('emails', `?email_id=eq.${encodeURIComponent(email_id)}&select=source,subject`),
+    db('items', `?email_id=eq.${encodeURIComponent(email_id)}&select=*&order=position.asc`),
+  ]);
+  if (!e.ok || !i.ok) return res.status(500).json({ error: e.error || i.error });
+  if (!e.data[0] || !i.data.length) return res.status(404).json({ error: 'No sorted email with that id.' });
+  const stories = i.data.map(r => ({ ...r, keep: !!r.keep, en: englishOf(r) }));
+  const out = await notifyNewStories({ source: e.data[0].source, subject: e.data[0].subject, stories, note: note || '', withJohn: with_john === true || with_john === '1' });
+  res.status(out.ok ? 200 : 502).json(out);
+}
+
+// POST /api/news?action=announce { subject, text, with_john }  a plain one-off note from
+// the system, to Pratik (and John only when with_john is set). Used on 2 Nov 2026 to tell
+// John the first idealista email was a test.
+export async function announce(req, res) {
+  if (!gate(req, res)) return;
+  const { subject, text, with_john } = readBody(req);
+  if (!subject || !text) return res.status(400).json({ error: 'subject and text are required' });
+  const to = ['pratik.y.renuse@gmail.com'];
+  if (with_john === true || with_john === '1') to.push('john@getbueno.com');
+  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#010221;max-width:560px">${
+    String(text).split(/\n{2,}/).map(p => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`).join('')}</div>`;
+  const out = await sendMail({ to, subject: String(subject), html });
+  res.status(out.ok ? 200 : 502).json({ ...out, to });
 }

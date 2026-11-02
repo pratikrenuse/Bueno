@@ -17,7 +17,7 @@ useful to foreign owners, translate it, and use it for the Spain 24/7 WhatsApp c
 5. Pratik gets a short email (John copied) listing the kept stories, with a button to
    `/internal-news`.
 6. Approving a story translates it into Norwegian, Swedish, German, French and Dutch.
-7. Poornima's daily email (api/_fb_dispatch.js) uses the oldest approved story as the WhatsApp
+7. The daily posting email (api/_fb_dispatch.js) uses the oldest approved story as the WhatsApp
    channel post on any day without a hand-written post in `api/_fb_whatsapp.js`, then marks it
    as used. A hand-written day always wins.
 

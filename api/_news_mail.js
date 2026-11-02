@@ -6,9 +6,10 @@
 
 const PRATIK = 'pratik.y.renuse@gmail.com';
 const JOHN = 'john@getbueno.com';
-export const NOTIFY_TO = [PRATIK];
-export const NOTIFY_CC = [JOHN];
-export const DECK_URL = 'https://www.247spain.es/internal-news';
+// Pratik only until he has checked the email and says John can have it too (2 Nov 2026).
+// Then set SEND_TO_JOHN to true, commit and push.
+export const SEND_TO_JOHN = false;
+export const NOTIFY_TO = SEND_TO_JOHN ? [PRATIK, JOHN] : [PRATIK];
 
 const SANS = 'Arial,Helvetica,sans-serif';
 export const esc = (s) => String(s ?? '')
@@ -35,24 +36,32 @@ export async function sendMail({ to, cc, subject, html }) {
   }
 }
 
-export function notifyBody({ source, subject, kept, dropped }) {
-  const list = kept.map(s => `<li style="margin:0 0 6px">${esc(s.title_en || s.title_es)}${s.is_proposal ? ' <span style="color:#8a6d1f">(proposal, not law)</span>' : ''}</li>`).join('');
+// The email carries the stories themselves. No link and no button: everything is in the email.
+export function notifyBody({ source, subject, kept, dropped, note = '' }) {
+  const stories = kept.map(s => `
+    <div style="border-top:1px solid #E0DFDC;padding:12px 0">
+      <p style="margin:0 0 4px;font-weight:bold">${esc(s.title_en || s.title_es)}${s.is_proposal ? ' <span style="color:#8a6d1f;font-weight:normal">(proposal, not law)</span>' : ''}</p>
+      <p style="margin:0">${esc(s.en)}</p>
+    </div>`).join('');
+  const intro = kept.length
+    ? `Today's ${esc(source)} email has come in. ${kept.length} of its ${kept.length + dropped} stories are useful for people who own a home in Spain, and here they are in English. The rest were adverts, celebrity homes, company news or stories from outside Spain.`
+    : `Today's ${esc(source)} email has come in, but none of its ${dropped} stories is useful for people who own a home in Spain.`;
   return `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221;max-width:560px">
-  <p>Hi Pratik,</p>
-  <p>Today's ${esc(source)} email (${esc(subject)}) has been read and translated. ${kept.length} of its ${kept.length + dropped} stories look useful for the WhatsApp channels:</p>
-  <ul style="padding-left:20px;margin:0 0 14px">${list}</ul>
-  <p>The rest were celebrity homes, ads, company news or stories outside Spain, so they were left out. You can still see them on the page.</p>
-  <p>Approve the ones you want and they go into Poornima's daily email as the channel post, one a day, in all six languages.</p>
-  <p><a href="${DECK_URL}" style="display:inline-block;background:#010221;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:bold">Review the stories</a></p>
+  <p>Hi,</p>
+  ${note ? `<p>${esc(note)}</p>` : ''}
+  <p>${intro}</p>
+  ${stories}
+  <p style="color:#5a5f78;font-size:12.5px;margin-top:16px">From the ${esc(source)} email "${esc(subject)}".</p>
 </div>`;
 }
 
-export async function notifyNewStories({ source, subject, stories }) {
+export async function notifyNewStories({ source, subject, stories, note = '', withJohn = false }) {
   const kept = stories.filter(s => s.keep);
-  if (!kept.length) return { ok: true, skipped: 'nothing kept' };
   return sendMail({
-    to: NOTIFY_TO, cc: NOTIFY_CC,
-    subject: `${kept.length} new Spain property ${kept.length === 1 ? 'story' : 'stories'} ready to review`,
-    html: notifyBody({ source, subject, kept, dropped: stories.length - kept.length }),
+    to: withJohn ? [PRATIK, JOHN] : NOTIFY_TO,
+    subject: kept.length
+      ? `idealista today: ${kept.length} useful ${kept.length === 1 ? 'story' : 'stories'} for owners in Spain`
+      : 'idealista today: nothing useful for owners in Spain',
+    html: notifyBody({ source, subject, kept, dropped: stories.length - kept.length, note }),
   });
 }

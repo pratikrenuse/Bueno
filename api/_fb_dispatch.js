@@ -105,7 +105,7 @@ export default async function handler(req, res) {
   let channelWarned = false;
   if (channelLeft < 3) {
     const n = await sendMail({ to: PRATIK_ONLY, subject: `WhatsApp channel posts: ${channelLeft} day${channelLeft === 1 ? '' : 's'} left`,
-      html: `<p style="font-family:Arial,sans-serif;font-size:14px">Only ${channelLeft} day${channelLeft === 1 ? '' : 's'} of WhatsApp channel posts are written. Approve a few more news stories at https://www.247spain.es/internal-news so Poornima does not run out.</p>` });
+      html: `<p style="font-family:Arial,sans-serif;font-size:14px">Only ${channelLeft} day${channelLeft === 1 ? '' : 's'} of WhatsApp channel posts are written. Approve a few more news stories at https://www.247spain.es/internal-news so the channels do not run out.</p>` });
     channelWarned = !!n.ok;
   }
   const left = queue.length - 1;
