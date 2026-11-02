@@ -159,8 +159,9 @@ const block = (n, lang, text, day, image) => `
 const pre = (text) => `<div style="background:#F7F7F5;border:1px solid #E0DFDC;border-radius:10px;padding:12px 14px;margin:0 0 12px;
   font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a;white-space:pre-wrap">${esc(text)}</div>`;
 
-export function whatsappSection(date = new Date().toISOString().slice(0, 10)) {
-  const channel = channelPostFor(date);
+export function whatsappSection(date = new Date().toISOString().slice(0, 10), fromNews = null) {
+  // A hand-written post for the day wins; otherwise the next approved newsletter story.
+  const channel = channelPostFor(date) || fromNews;
   const agent = agentPostFor(date);
   let out = '';
   if (channel) {
@@ -215,7 +216,7 @@ export function whatsappSection(date = new Date().toISOString().slice(0, 10)) {
  * subject lines that look almost identical in an inbox, and a real chance of the German
  * going into a Swedish group. One email, seven clearly labelled blocks, one image at the top.
  */
-export function bodyFor(post, day = 1, { trial = false } = {}) {
+export function bodyFor(post, day = 1, { trial = false, channel = null } = {}) {
   const english = finalText(post);
   const instruction = (post.note || '').trim();
   const translations = post.translations || {};
@@ -250,7 +251,7 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
           block(i + 2, lang, String(translations[lang]).trim(), day, imageFor(post, lang))
         ).join('')}
 
-        ${whatsappSection()}
+        ${whatsappSection(undefined, channel)}
 
         <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When every language is posted</p>
         <ol style="margin:0;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
@@ -268,12 +269,12 @@ export function bodyFor(post, day = 1, { trial = false } = {}) {
  * Send one post as the given day. Returns { ok, id, warning } or { ok: false, error }.
  * A warning is a send that the API accepted but that may not have reached anyone.
  */
-export async function sendPost(post, day = 1) {
+export async function sendPost(post, day = 1, { channel = null } = {}) {
   const result = await sendMail({
     to: SEND_TO,
     bcc: SEND_BCC,
     subject: subjectFor(post, day),
-    html: bodyFor(post, day),
+    html: bodyFor(post, day, { channel }),
   });
   if (result.ok && usingSandboxSender()) {
     return {

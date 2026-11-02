@@ -86,6 +86,18 @@ const DAY_MS = 24 * 3600 * 1000;
 export function channelPostFor(date) {
   return CHANNEL_POSTS[date] || null;
 }
+
+// An approved story from the newsletter digest (news_items), in the same shape as a
+// CHANNEL_POSTS day: one text per channel language. Used only on a day CHANNEL_POSTS has no
+// entry for, so a post written by hand always wins. Returns null unless every language is there.
+export function channelFromNews(item) {
+  if (!item) return null;
+  const en = (item.edited_en && String(item.edited_en).trim()) ? item.edited_en : item.en;
+  const t = item.translations || {};
+  const out = { en: String(en || '').trim() };
+  for (const l of CHANNEL_LANGS.filter(x => x !== 'en')) out[l] = String(t[l] || '').trim();
+  return CHANNEL_LANGS.every(l => out[l]) ? out : null;
+}
 export function agentPostFor(date) {
   if (date < AGENT_POSTS_FROM) return null;
   const n = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${AGENT_POSTS_FROM}T00:00:00Z`)) / DAY_MS);

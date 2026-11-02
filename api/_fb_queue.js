@@ -64,8 +64,8 @@ export async function withCurrentTranslations(row) {
  * Email one post to the publisher as the given day and record that it went.
  * Returns { ok, post, sent, error, warning }. ok is false only when the database refused.
  */
-export async function deliver(res, row, day, extraPatch = {}) {
-  const result = await sendPost(row, day);
+export async function deliver(res, row, day, extraPatch = {}, { channel = null } = {}) {
+  const result = await sendPost(row, day, { channel });
   const patch = result.ok
     ? { ...extraPatch, status: row.status === 'posted' ? 'posted' : 'approved', sent_at: new Date().toISOString(),
         sent_to: RECIPIENTS.join(', '), send_day: day, send_error: null }

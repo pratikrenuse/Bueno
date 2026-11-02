@@ -1,4 +1,9 @@
-// The only place this surface talks to Supabase, and the only table it is allowed to name.
+// The only place this surface talks to Supabase, and the only table it writes posts to.
+//
+// One more table is read here, news_items, written by the newsletter digest (api/news.js).
+// Its approved stories become the WhatsApp channel post in the daily email on days with no
+// hand-written channel post. This surface only takes the next approved story and marks it
+// as used; everything else about that table belongs to the digest.
 //
 // TABLE is a constant rather than a parameter on purpose. A handler cannot be talked into
 // reading or writing linkedin_posts or studio_packages, because it never gets to choose.
@@ -75,4 +80,43 @@ export function readBody(req) {
   if (req.body && typeof req.body === 'object') return req.body;
   if (typeof req.body === 'string' && req.body) { try { return JSON.parse(req.body); } catch { return {}; } }
   return {};
+}
+
+// --- Approved newsletter stories for the WhatsApp channel section -------------------------
+export const NEWS_TABLE = 'news_items';
+
+async function newsFetch(path, init = {}) {
+  const url = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').replace(/\/$/, '');
+  const key = process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key) return { ok: false, error: 'Supabase is not configured.' };
+  try {
+    const r = await fetch(`${url}/rest/v1/${NEWS_TABLE}${path}`, {
+      ...init,
+      headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
+    });
+    const text = await r.text();
+    if (!r.ok) return { ok: false, error: `Supabase ${r.status}: ${text.slice(0, 200)}` };
+    let data = [];
+    try { data = text ? JSON.parse(text) : []; } catch { data = []; }
+    return { ok: true, data };
+  } catch (e) {
+    return { ok: false, error: String((e && e.message) || e) };
+  }
+}
+
+// The oldest approved story that has not gone out yet, or null. Never throws: a problem here
+// must not stop the Facebook post going out, so it only means no channel post today.
+export async function nextChannelNews() {
+  const r = await newsFetch('?select=id,title_en,en,edited_en,translations,is_proposal,source,link&status=eq.approved&used_on=is.null&translations=not.is.null&order=decided_at.asc&limit=1');
+  return r.ok ? { ok: true, item: r.data[0] || null } : { ok: false, item: null, error: r.error };
+}
+export async function countChannelNews() {
+  const r = await newsFetch('?select=id&status=eq.approved&used_on=is.null&translations=not.is.null');
+  return r.ok ? r.data.length : 0;
+}
+export async function markChannelNewsUsed(id, date) {
+  return newsFetch(`?id=eq.${encodeURIComponent(id)}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status: 'used', used_on: date, updated_at: new Date().toISOString() }),
+  });
 }

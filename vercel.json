@@ -38,6 +38,10 @@
       "destination": "/api/fb?action=:action"
     },
     {
+      "source": "/api/news/:action",
+      "destination": "/api/news?action=:action"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
