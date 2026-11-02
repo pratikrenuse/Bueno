@@ -3,7 +3,7 @@
 // Every network call is mocked: nothing here reaches Supabase, Resend or Claude.
 import { readFileSync, readdirSync } from 'node:fs';
 import { emailText, htmlToText, decodeDataUri, isAllowedSender, sourceOf, tidy } from './api/_news_parse.js';
-import { normaliseStories, clean, sortPrompt, BANNED, shortenLinks } from './api/_news_sort.js';
+import { normaliseStories, clean, sortPrompt, BANNED, shortenLinks, capKept } from './api/_news_sort.js';
 import { itemRow } from './api/_news_process.js';
 import { resolveAction, ACTIONS } from './api/news.js';
 import { channelFromNews, CHANNEL_LANGS, channelPostFor } from './api/_fb_whatsapp.js';
@@ -73,6 +73,12 @@ const sh = shortenLinks(`Story one. Leer más [link: ${long}]\nStory two. Leer m
 ok('long links become short tokens', sh.text.includes('[link: L1]') && sh.text.includes('[link: L2]') && !sh.text.includes('x'.repeat(50)));
 const back = normaliseStories({ stories: [{ keep: true, post: 'A post.', link: 'L1' }, { keep: true, post: 'B post.', link: '[link: L2]' }] }, sh.links);
 ok('tokens turn back into the real links', back[0].link === long && back[1].link === 'https://a.b/c');
+
+const many = Array.from({ length: 8 }, (_, i) => ({ position: i, keep: true, score: (i % 5) + 1, en: 'x', reason: 'r' }));
+const capped = capKept(many);
+ok('never more than five stories are kept', capped.filter(s => s.keep).length === 5);
+ok('the five kept are the highest scores', Math.min(...capped.filter(s => s.keep).map(s => s.score)) >= Math.max(...capped.filter(s => !s.keep).map(s => s.score)));
+ok('the prompt asks for five', /Keep exactly the 5 most useful/.test(sortPrompt({ text: 'x' })));
 
 // --- 4. Rows for the bulk insert all have the same keys (PGRST102) ---------------------
 const rows = stories.map(s => itemRow(s, { email_id: 'e1', source: 'idealista', received_on: '2026-10-29' }));
@@ -167,7 +173,7 @@ await router(hook('em1'), res);
 ok('webhook: the email is sorted', res.code === 200 && res.body.ok === true && res.body.stories === 2 && res.body.kept === 1, JSON.stringify(res.body));
 ok('webhook: the stories are stored', store.items.length === 2 && store.items[0].status === 'pending' && store.items[1].status === 'skipped');
 ok('webhook: the email is marked done', store.emails[0].status === 'done');
-ok('webhook: only Pratik gets the email while testing', mailSent.length === 1 && mailSent[0].to.join() === 'pratik.y.renuse@gmail.com' && !mailSent[0].cc);
+ok('webhook: To Pratik, John in CC', mailSent.length === 1 && mailSent[0].to.join() === 'pratik.y.renuse@gmail.com' && mailSent[0].cc.join() === 'john@getbueno.com');
 ok('webhook: the email has no link or button', !/<a\b|href=/i.test(mailSent[0].html));
 ok('webhook: the email carries the English story', mailSent[0].html.includes('Renting takes 39% of household income, according to idealista.'));
 ok('webhook: the subject has no euro sign', !/€/.test(mailSent[0].subject));

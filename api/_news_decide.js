@@ -108,7 +108,7 @@ export async function resend(req, res) {
   if (!e.ok || !i.ok) return res.status(500).json({ error: e.error || i.error });
   if (!e.data[0] || !i.data.length) return res.status(404).json({ error: 'No sorted email with that id.' });
   const stories = i.data.map(r => ({ ...r, keep: !!r.keep, en: englishOf(r) }));
-  const out = await notifyNewStories({ source: e.data[0].source, subject: e.data[0].subject, stories, note: note || '', withJohn: with_john === true || with_john === '1' });
+  const out = await notifyNewStories({ source: e.data[0].source, subject: e.data[0].subject, stories, note: note || '' });
   res.status(out.ok ? 200 : 502).json(out);
 }
 

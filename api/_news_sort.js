@@ -67,6 +67,9 @@ export const clean = (s) => String(s || '')
   .replace(/[ \t]+\n/g, '\n')
   .trim();
 
+// Pratik wants 5 useful stories in every email (2 Nov 2026).
+export const MAX_KEPT = 5;
+
 export function sortPrompt({ text, subject, source, recentTitles = [] }) {
   return `You are the editor of Spain 24/7, a free information service for foreigners who own a home in Spain or are buying one. Most readers are Norwegian, Swedish, German, Dutch, French or British, aged 40 to 70, and many do not live in Spain all year.
 
@@ -80,6 +83,8 @@ KEEP a story when it changes something for, or tells something useful to, a fore
 DROP: celebrity and luxury homes, single listings, homes outside Spain, foreign countries' housing politics, company deals and corporate finance, appointments and reshuffles, curiosities, sport, adverts, any story that is mainly a specific bank's or company's product, and anything marked as a rumour unless it is a policy proposal that would affect owners.
 
 ${recentTitles.length ? `These stories were already handled in the last few days. If one appears again with nothing new, DROP it with the reason "already covered":\n${recentTitles.map(t => `- ${t}`).join('\n')}\n` : ''}
+Keep exactly the ${MAX_KEPT} most useful stories for our readers (fewer only when the email has fewer than ${MAX_KEPT} stories worth keeping). Every other story is dropped.
+
 For each KEPT story write "post": the English text for the channel. Rules, all mandatory:
 - 2 to 4 short sentences, plain and calm, the way a well-informed friend would say it out loud. Complete natural sentences only.
 - Our own words. Never copy or closely paraphrase the newsletter's sentences.
@@ -134,6 +139,15 @@ export function normaliseStories(parsed, links = {}) {
   });
 }
 
+// Code backs up the prompt: if Claude keeps more than MAX_KEPT, the lowest scores are dropped.
+export function capKept(stories, max = MAX_KEPT) {
+  const keep = stories.filter(s => s.keep).sort((a, b) => b.score - a.score || a.position - b.position).slice(0, max);
+  const ids = new Set(keep.map(s => s.position));
+  return stories.map(s => (s.keep && !ids.has(s.position))
+    ? { ...s, keep: false, en: null, reason: 'Useful, but not among the five most useful stories in this email.' }
+    : s);
+}
+
 export async function sortStories(input) {
   const short = shortenLinks(input.text);
   const r = await callClaude(sortPrompt({ ...input, text: short.text }), { maxTokens: 16000 });
@@ -141,7 +155,7 @@ export async function sortStories(input) {
   if (r.stop === 'max_tokens') return { ok: false, error: 'Claude\'s answer was cut off because the email was too long.' };
   const parsed = parseJson(r.text);
   if (!parsed) return { ok: false, error: `Could not read Claude's answer: ${r.text.slice(-200)}` };
-  const stories = normaliseStories(parsed, short.links);
+  const stories = capKept(normaliseStories(parsed, short.links));
   if (!stories.length) return { ok: false, error: 'Claude found no stories in this email.' };
   return { ok: true, stories, model: r.model };
 }

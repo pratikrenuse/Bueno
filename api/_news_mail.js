@@ -6,10 +6,9 @@
 
 const PRATIK = 'pratik.y.renuse@gmail.com';
 const JOHN = 'john@getbueno.com';
-// Pratik only until he has checked the email and says John can have it too (2 Nov 2026).
-// Then set SEND_TO_JOHN to true, commit and push.
-export const SEND_TO_JOHN = false;
-export const NOTIFY_TO = SEND_TO_JOHN ? [PRATIK, JOHN] : [PRATIK];
+// To Pratik with John in CC on every email (Pratik, 2 Nov 2026).
+export const NOTIFY_TO = [PRATIK];
+export const NOTIFY_CC = [JOHN];
 
 const SANS = 'Arial,Helvetica,sans-serif';
 export const esc = (s) => String(s ?? '')
@@ -55,10 +54,11 @@ export function notifyBody({ source, subject, kept, dropped, note = '' }) {
 </div>`;
 }
 
-export async function notifyNewStories({ source, subject, stories, note = '', withJohn = false }) {
+export async function notifyNewStories({ source, subject, stories, note = '' }) {
   const kept = stories.filter(s => s.keep);
   return sendMail({
-    to: withJohn ? [PRATIK, JOHN] : NOTIFY_TO,
+    to: NOTIFY_TO,
+    cc: NOTIFY_CC,
     subject: kept.length
       ? `idealista today: ${kept.length} useful ${kept.length === 1 ? 'story' : 'stories'} for owners in Spain`
       : 'idealista today: nothing useful for owners in Spain',
