@@ -159,7 +159,8 @@ await router(hook('em1'), res);
 ok('webhook: the email is sorted', res.code === 200 && res.body.ok === true && res.body.stories === 2 && res.body.kept === 1, JSON.stringify(res.body));
 ok('webhook: the stories are stored', store.items.length === 2 && store.items[0].status === 'pending' && store.items[1].status === 'skipped');
 ok('webhook: the email is marked done', store.emails[0].status === 'done');
-ok('webhook: Pratik is told, John copied', mailSent.length === 1 && mailSent[0].to.includes('pratik.y.renuse@gmail.com') && mailSent[0].cc.includes('john@getbueno.com'));
+ok('webhook: Pratik and John both get the email', mailSent.length === 1 && mailSent[0].to.includes('pratik.y.renuse@gmail.com') && mailSent[0].to.includes('john@getbueno.com'));
+ok('webhook: the email carries the English story', mailSent[0].html.includes('Renting takes 39% of household income, according to idealista.'));
 ok('webhook: the subject has no euro sign', !/€/.test(mailSent[0].subject));
 const claudeCalls = calls.filter(c => c.includes('anthropic')).length;
 
