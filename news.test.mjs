@@ -3,7 +3,7 @@
 // Every network call is mocked: nothing here reaches Supabase, Resend or Claude.
 import { readFileSync, readdirSync } from 'node:fs';
 import { emailText, htmlToText, decodeDataUri, isAllowedSender, sourceOf, tidy } from './api/_news_parse.js';
-import { normaliseStories, clean, sortPrompt, BANNED } from './api/_news_sort.js';
+import { normaliseStories, clean, sortPrompt, BANNED, shortenLinks } from './api/_news_sort.js';
 import { itemRow } from './api/_news_process.js';
 import { resolveAction, ACTIONS } from './api/news.js';
 import { channelFromNews, CHANNEL_LANGS, channelPostFor } from './api/_fb_whatsapp.js';
@@ -67,6 +67,12 @@ ok('the prompt tells Claude to flag proposals', /proposal/i.test(prompt) && /not
 ok('the prompt forbids copying', /Never copy/.test(prompt));
 ok('the prompt carries the recent titles', prompt.includes('- Old story'));
 ok('the prompt never asks for Bueno', /Never mention Bueno/.test(prompt));
+
+const long = 'https://l.diario.idealista.com/rts/go2.aspx?h=2318176&tp=' + 'x'.repeat(300);
+const sh = shortenLinks(`Story one. Leer más [link: ${long}]\nStory two. Leer más [link: https://a.b/c]`);
+ok('long links become short tokens', sh.text.includes('[link: L1]') && sh.text.includes('[link: L2]') && !sh.text.includes('x'.repeat(50)));
+const back = normaliseStories({ stories: [{ keep: true, post: 'A post.', link: 'L1' }, { keep: true, post: 'B post.', link: '[link: L2]' }] }, sh.links);
+ok('tokens turn back into the real links', back[0].link === long && back[1].link === 'https://a.b/c');
 
 // --- 4. Rows for the bulk insert all have the same keys (PGRST102) ---------------------
 const rows = stories.map(s => itemRow(s, { email_id: 'e1', source: 'idealista', received_on: '2026-10-29' }));

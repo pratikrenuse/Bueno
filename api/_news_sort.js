@@ -41,7 +41,7 @@ export async function callClaude(prompt, { maxTokens = 6000 } = {}) {
     }
     if (r.ok) {
       const text = (j.content || []).map(c => c.text || '').join('').trim();
-      return { ok: true, text, model };
+      return { ok: true, text, model, stop: j.stop_reason };
     }
     last = `Claude API ${r.status} (${model}): ${JSON.stringify(j).slice(0, 300)}`;
     const notFound = r.status === 404 || (r.status === 400 && /model/i.test(JSON.stringify(j)));
@@ -90,20 +90,35 @@ For each KEPT story write "post": the English text for the channel. Rules, all m
 - Never name a bank, an energy company or any other company. No em dashes or en dashes, no emojis, no hashtags, no links, no exclamation marks, no fear or penalty-based urgency. Never mention Bueno.
 
 Return ONLY valid JSON in this exact shape, one entry per story in the order they appear:
-{"stories":[{"title_es":"<the Spanish headline>","title_en":"<a short English headline in our words>","link":"<the story's [link: ...] URL if there is one, else empty>","category":"<one of: tax-and-law, market, letting, buying-selling, squatting, politics, other>","keep":true,"score":<1 to 5, how useful to our readers>,"is_proposal":<true if it is not yet law>,"reason":"<one plain sentence saying why it was kept or dropped>","post":"<the English post, or empty when dropped>"}]}
+{"stories":[{"title_es":"<the Spanish headline>","title_en":"<a short English headline in our words>","link":"<the story's link token, for example L3, if there is one, else empty>","category":"<one of: tax-and-law, market, letting, buying-selling, squatting, politics, other>","keep":true,"score":<1 to 5, how useful to our readers>,"is_proposal":<true if it is not yet law>,"reason":"<one plain sentence saying why it was kept or dropped>","post":"<the English post, or empty when dropped>"}]}
 
 The email:
 ${text}`;
 }
 
-export function normaliseStories(parsed) {
+// Newsletter links are long tracking URLs (300+ characters each). Sent as they are, they
+// double the size of Claude's answer and can cut it off mid-way. Each one is swapped for a
+// short token before Claude reads the email, and swapped back afterwards.
+export function shortenLinks(text) {
+  const links = {};
+  let n = 0;
+  const out = String(text || '').replace(/\[link: (https?:\/\/[^\]\s]+)\]/g, (_, url) => {
+    n += 1;
+    links[`L${n}`] = url;
+    return `[link: L${n}]`;
+  });
+  return { text: out, links };
+}
+
+export function normaliseStories(parsed, links = {}) {
   const list = (parsed && Array.isArray(parsed.stories)) ? parsed.stories : [];
   return list.map((s, i) => {
     const post = clean(s.post);
     let keep = !!s.keep && !!post;
     let reason = clean(s.reason);
     if (keep && BANNED.test(post)) { keep = false; reason = 'Dropped because the post would name a company, which our posts never do.'; }
-    const link = String(s.link || '').trim();
+    const raw = String(s.link || '').trim();
+    const link = links[raw] || links[raw.replace(/^\[?link:\s*/i, '').replace(/\]$/, '')] || raw;
     return {
       position: i,
       title_es: clean(s.title_es).slice(0, 300),
@@ -120,11 +135,13 @@ export function normaliseStories(parsed) {
 }
 
 export async function sortStories(input) {
-  const r = await callClaude(sortPrompt(input), { maxTokens: 8000 });
+  const short = shortenLinks(input.text);
+  const r = await callClaude(sortPrompt({ ...input, text: short.text }), { maxTokens: 16000 });
   if (!r.ok) return r;
+  if (r.stop === 'max_tokens') return { ok: false, error: 'Claude\'s answer was cut off because the email was too long.' };
   const parsed = parseJson(r.text);
-  if (!parsed) return { ok: false, error: `Could not read Claude's answer: ${r.text.slice(0, 200)}` };
-  const stories = normaliseStories(parsed);
+  if (!parsed) return { ok: false, error: `Could not read Claude's answer: ${r.text.slice(-200)}` };
+  const stories = normaliseStories(parsed, short.links);
   if (!stories.length) return { ok: false, error: 'Claude found no stories in this email.' };
   return { ok: true, stories, model: r.model };
 }
