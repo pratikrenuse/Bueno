@@ -77,9 +77,11 @@ export default async function handler(req, res) {
         // reviewing something different from what is sent is not reviewing.
         const body = post.edited_text || post.post_text;
         const streamName = { owners: 'property owners', agents: 'estate agents', attorneys: 'legal advisers' }[post.audience || 'owners'] || post.audience;
+        // Posts written from the idealista digest (api/_lk_news.js) have no place in the series.
+        const isNews = String(post.slug || '').startsWith('news_');
         const mail = await sendMail({
           to: APPROVAL_TO,
-          subject: `[Internal] Approved, not yet sent: ${post.title || post.slug} (day ${post.day})`,
+          subject: `[Internal] Approved, not yet sent: ${post.title || post.slug}${isNews ? '' : ` (day ${post.day})`}`,
           html: shell({
             heading: 'review deck',
             greeting: 'A post was just approved.',
@@ -87,8 +89,8 @@ export default async function handler(req, res) {
             notice: `<div style="margin:0 0 16px;font-size:13px;color:#3a3f52;background:#FBF3DF;border:1px solid #E8DCBE;border-radius:10px;padding:12px 14px">
                 <div style="font-weight:bold;color:#7a611c;margin-bottom:6px">Internal preview. Not sent to the team.</div>
                 <div style="margin-bottom:4px">This email went to Pratik and John only, so you can see what has been signed off.</div>
-                <div style="margin-bottom:4px"><b>What this is:</b> post day ${post.day} of the series written for ${streamName}.</div>
-                <div><b>When the team gets it:</b> approved posts go out to everyone on Tuesday and Thursday at 08:00 Barcelona time, one per posting day, oldest first. You can also send them early from the dashboard.</div>
+                <div style="margin-bottom:4px"><b>What this is:</b> ${isNews ? `a property news post for ${streamName}, written from the idealista newsletter.` : `post day ${post.day} of the series written for ${streamName}.`}</div>
+                <div><b>When the team gets it:</b> approved posts go out to everyone on Tuesday and Thursday at 08:00 Barcelona time, one per posting day${isNews ? ', news posts first' : ', oldest first'}. You can also send them early from the dashboard.</div>
               </div>
               <p style="margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5B7FCC">The approved post</p>`,
             body,

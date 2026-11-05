@@ -32,6 +32,7 @@ export async function recentTitles(days = 4) {
  * Returns { ok, stories, kept, notified, error }
  */
 export async function processEmail(email, { notify = true } = {}) {
+  const t0 = Date.now();
   const fail = async (error) => {
     await db('emails', `?email_id=eq.${encodeURIComponent(email.email_id)}`, {
       method: 'PATCH', body: JSON.stringify({ status: 'failed', error: String(error).slice(0, 1000), updated_at: now() }),
@@ -64,7 +65,32 @@ export async function processEmail(email, { notify = true } = {}) {
     const n = await notifyNewStories({ source: email.source, subject: email.subject, stories: sorted.stories });
     notified = n.ok ? true : n.error;
   }
-  return { ok: true, stories: sorted.stories.length, kept, notified, model: sorted.model };
+  // Only when there is time left in this run (60 seconds at most). If not, each deck picks
+  // the stories up on its next load, so nothing is lost.
+  const fed = kept && Date.now() - t0 < 50000 ? await feedDecks() : null;
+  return { ok: true, stories: sorted.stories.length, kept, notified, fed, model: sorted.model };
+}
+
+// Since 5 November 2026 the useful stories also become posts in the team's LinkedIn deck.
+// The deck writes its own posts from news_items, on its own side (api/_lk_news.js); this only
+// tells it there is something new, and does not wait. If the call is lost, the deck notices
+// the missing posts on its next load. The Facebook deck is parked (Pratik, 5 November 2026):
+// api/_fb_news.js exists but nothing calls it until he says so.
+const DECKS = ['/api/linkedin?action=news'];
+export async function feedDecks() {
+  const pass = process.env.INTERNAL_PASSCODE;
+  if (!pass) return 'Missing env var: INTERNAL_PASSCODE';
+  const site = process.env.NEWS_SITE || 'https://www.247spain.es';
+  await Promise.all(DECKS.map(async (path) => {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 2500);
+    try {
+      await fetch(`${site}${path}`, {
+        method: 'POST', headers: { 'x-passcode': pass, 'Content-Type': 'application/json' }, body: '{}', signal: c.signal,
+      });
+    } catch { /* the deck carries on by itself, or picks it up on its next load */ } finally { clearTimeout(t); }
+  }));
+  return true;
 }
 
 // Claims an email so a webhook retry, or a second delivery, can never process it twice.

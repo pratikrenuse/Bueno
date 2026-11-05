@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     const H = { apikey: key, Authorization: `Bearer ${key}` };
 
     const [pr, mr] = await Promise.all([
-      fetch(`${url}/rest/v1/linkedin_posts?language=eq.en&select=slug,title,day,audience,status,sent_at&order=day.asc`, { headers: H }),
+      fetch(`${url}/rest/v1/linkedin_posts?language=eq.en&select=slug,title,day,audience,status,sent_at&order=batch.desc,day.asc`, { headers: H }),
       fetch(`${url}/rest/v1/team_members?active=eq.true&select=name,email,stream,language`, { headers: H }),
     ]);
     if (!pr.ok) return res.status(500).json({ error: `Supabase posts ${pr.status}: ${await pr.text()}` });
@@ -38,7 +38,9 @@ export default async function handler(req, res) {
     const posts = await pr.json();
     const members = (await mr.json()).filter(m => m.email && m.email.includes('@'));
 
-    const pending = posts.filter(p => p.status === 'pending');
+    // Only the news posts wait for review now; the unapproved written series is kept in
+    // Supabase but no longer shown (api/_lk_posts.js), so it is not counted here either.
+    const pending = posts.filter(p => p.status === 'pending' && String(p.slug || '').startsWith('news_'));
     const queued = posts.filter(p => p.status === 'approved' && !p.sent_at);
     const sent = posts.filter(p => p.sent_at);
 

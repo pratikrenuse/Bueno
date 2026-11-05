@@ -47,7 +47,9 @@ export default async function handler(req, res) {
       if (!streamMembers.length) { results.push({ stream, skipped: 'no members with an email on this stream' }); continue; }
 
       const pr = await fetch(
-        `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&order=day.asc&limit=1&select=*`,
+        // batch.desc puts the idealista news posts (batch 100, api/_lk_news.js) first, because news
+      // goes stale; the written posts follow in day order as before.
+      `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&order=batch.desc,day.asc&limit=1&select=*`,
         { headers: H });
       if (!pr.ok) return res.status(500).json({ error: `Supabase posts ${pr.status}: ${await pr.text()}` });
       const post = (await pr.json())[0];

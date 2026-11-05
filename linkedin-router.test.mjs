@@ -49,7 +49,7 @@ eq('a prototype key is not an action', req('/api/linkedin/constructor'), null);
 eq('__proto__ is not an action', req('/api/linkedin/__proto__'), null);
 
 // --- the full set is what we think it is ---------------------------------------
-eq('eight actions', ACTIONS.length, 8);
+eq('nine actions', ACTIONS.length, 9);
 eq('the two cron actions exist', ACTIONS.includes('dispatch') && ACTIONS.includes('remind'), true);
 
 console.log(`\n${pass} passed, ${fail} failed`);

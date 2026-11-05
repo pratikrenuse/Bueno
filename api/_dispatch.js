@@ -53,7 +53,7 @@ export async function sendPostToTeam({ url, headers, post, members, anthropicKey
 
   // What is queued behind this one, for the "coming up" section.
   const ur = await fetch(
-    `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&day=gt.${post.day}&order=day.asc&select=day,title`,
+    `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&id=neq.${post.id}&order=batch.desc,day.asc&select=day,title`,
     { headers });
   const upcoming = ur.ok ? await ur.json() : [];
 

@@ -8,6 +8,7 @@ import { isForAudience, audienceLabels } from '../audiences.js'
 import { buenoHome } from '../SiteFooter.jsx'
 import { TOOL_COPY } from '../seo/copy.js'
 import { whatsappChannel } from '../whatsapp.js'
+import { WhatsAppOtherLangs } from '../WhatsAppFollow.jsx'
 
 // The owners' home page, rebuilt October 2026.
 //
@@ -340,6 +341,7 @@ export default function Home() {
                 <a className="h7-btn h7-btn-light" href={channel} target="_blank" rel="noopener">
                   <WaIcon /> {t('home2.comm_chan_cta')}
                 </a>
+                <WhatsAppOtherLangs className="waf-langs waf-langs-dark" />
               </div>
               <div className="h7-comm-img"><img src={IMG('village.jpg')} alt="" loading="lazy" /></div>
             </div>

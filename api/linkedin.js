@@ -34,7 +34,11 @@ const ROUTES = {
   refresh:   () => import('./_lk_refresh.js'),
   remind:    () => import('./_lk_remind.js'),
   translate: () => import('./_lk_translate.js'),
+  news:      () => import('./_lk_news.js'),
 };
+
+// Writing a post from an idealista story takes 10 to 20 seconds (api/_lk_news.js).
+export const config = { maxDuration: 60 };
 
 export const ACTIONS = Object.keys(ROUTES);
 

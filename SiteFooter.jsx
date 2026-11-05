@@ -1,6 +1,9 @@
 import { useT, useLocale, LLink } from './i18n.jsx';
 import { audienceLabels } from './audiences.js';
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { whatsappChannel } from './whatsapp.js';
+import { WhatsAppBand, WhatsAppFloat } from './WhatsAppFollow.jsx';
 import { toolFaqFor } from './seo/toolFaq.js';
 
 // The site's one real footer, used by every tool page.
@@ -51,11 +54,15 @@ export default function SiteFooter({ note }) {
   const extra = EXTRA[useLocale().locale] || EXTRA.en;
   const year = new Date().getFullYear();
 
+  const { locale } = useLocale();
   const faq = toolFaqFor(useLocation().pathname);
+  const [bandSeen, setBandSeen] = useState(false);
 
   return (
     <>
     {faq && <section className="tool-faq-visible" aria-label={extra.answers} dangerouslySetInnerHTML={{ __html: faq }} />}
+    <WhatsAppBand onSeen={setBandSeen} />
+    <WhatsAppFloat hidden={bandSeen} />
     <footer className="s247f">
       <div className="s247f-top">
         <div className="s247f-brand">
@@ -75,6 +82,7 @@ export default function SiteFooter({ note }) {
           <LLink to="/for-agents">{aud.for_agents}</LLink>
           <LLink to="/for-lawyers">{aud.for_lawyers}</LLink>
           <LLink to="/about">{extra.about}</LLink>
+          <a href={whatsappChannel(locale)} target="_blank" rel="noopener">{t('home2.footer_wa_channel')}</a>
         </nav>
       </div>
 

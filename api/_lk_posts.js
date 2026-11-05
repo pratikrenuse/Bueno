@@ -1,5 +1,7 @@
 // GET /api/linkedin-posts?status=pending|approved|rejected|all&lang=en
 // Same shared-password gate as the studio: x-passcode header (or ?pass=) vs INTERNAL_PASSCODE.
+import { missingStories, poke } from './_lk_news.js';
+
 export default async function handler(req, res) {
   try {
     const pass = req.headers['x-passcode'] || req.query.pass;
@@ -19,12 +21,25 @@ export default async function handler(req, res) {
     const audFilter = ['owners', 'agents', 'attorneys'].includes(req.query.aud)
       ? `&audience=eq.${req.query.aud}` : '';
 
+    // 5 November 2026, Pratik: the deck now runs on the idealista news posts (batch 100,
+    // api/_lk_news.js). The written series that was never approved stays in Supabase but is
+    // not shown here; approved and rejected posts are shown as before.
+    const shownFilter = '&or=(status.neq.pending,batch.eq.100)';
     const r = await fetch(
-      `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?${statusFilter}${langFilter}${audFilter}&order=day.asc&select=*`,
+      `${url.replace(/\/$/, '')}/rest/v1/linkedin_posts?${statusFilter}${shownFilter}${langFilter}${audFilter}&order=day.asc&select=*`,
       { headers: { apikey: key, Authorization: `Bearer ${key}` } }
     );
     if (!r.ok) return res.status(500).json({ error: `Supabase ${r.status}: ${await r.text()}` });
-    res.json({ posts: await r.json() });
+    // A useful idealista story with no LinkedIn post yet: start the writer (api/_lk_news.js)
+    // and carry on. Its posts show on the next load. Never holds up the deck.
+    let newsWriting = 0;
+    if (status === 'all' && req.query.lang !== 'all') {
+      try {
+        const m = await missingStories();
+        if (m.ok && m.items.length) { newsWriting = m.items.length; await poke(pass); }
+      } catch { /* the digest's own trigger covers it */ }
+    }
+    res.json({ posts: await r.json(), news_writing: newsWriting });
   } catch (e) {
     res.status(500).json({ error: String((e && e.message) || e) });
   }

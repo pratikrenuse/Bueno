@@ -47,3 +47,26 @@ domains) to accept another newsletter.
 - A failed email shows in red at the top of `/internal-news` with a "Try again" button.
 - "Paste a newsletter" on the page sorts any newsletter text by hand, without email.
 - `node news.test.mjs` runs everything with Supabase, Resend and Claude mocked.
+
+## Feeding the LinkedIn deck (5 November 2026)
+
+Every kept story with a score of 4 or 5 also becomes an English master post for the owners
+stream in `/internal-linkedin` (`api/_lk_news.js`): slug `news_<date>_<story id>`, batch 100,
+day 101 upwards, written from the story and the Spanish text it came from, with the usual
+Bueno line at the end. The image is a Bueno frame from `public/posts` (photo above the navy
+Bueno band, no text), taken in turn from posts that are no longer shown. John reviews it like
+any other post. The Tuesday and Thursday send takes approved news first, and each member gets
+it in their own language at send time.
+
+The written series that was never approved is kept in Supabase but no longer shown in the
+deck, the dashboard or the reminder email. Approved and rejected posts show as before.
+
+How it is triggered: after an email is sorted, `api/_news_process.js` calls
+`/api/linkedin?action=news` without waiting. The deck also checks on load for a kept story
+without a post and starts the writer. One run writes what fits in 40 seconds and calls itself
+for the rest. The slug stops any story being written twice.
+
+Read-only check: `/api/linkedin?action=news&dry=1&pass=...` lists the stories that would be written.
+
+The Facebook deck is parked: `api/_fb_news.js` exists, but nothing calls it and the deck does
+not show or queue news rows until it is switched on.

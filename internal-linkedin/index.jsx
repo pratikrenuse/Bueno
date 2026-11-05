@@ -92,7 +92,13 @@ export default function InternalLinkedIn() {
     b.total += 1
     if (b[p.status] !== undefined) b[p.status] += 1
   })
-  const streamPosts = posts.filter(p => (p.audience || 'owners') === stream)
+  // Posts written from the idealista digest (slug news_..., api/_lk_news.js) come first, newest
+  // story at the top, because news goes stale. Then the written series in day order.
+  const isNews = (p) => String(p.slug || '').startsWith('news_')
+  const streamPosts = [
+    ...posts.filter(p => (p.audience || 'owners') === stream && isNews(p)).sort((x, y) => String(y.slug).localeCompare(String(x.slug))),
+    ...posts.filter(p => (p.audience || 'owners') === stream && !isNews(p)),
+  ]
   const shown = (tab === 'all' ? streamPosts : streamPosts.filter(p => p.status === tab))
   const sc = byStream[stream]
   const reviewed = sc.total - sc.pending
@@ -483,6 +489,9 @@ export default function InternalLinkedIn() {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
                   <span style={{ display: 'inline-flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
                     <span style={{ fontSize: 12, background: st.bg, color: st.fg, borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>{st.label}</span>
+                    {isNews(p) && (
+                      <span style={{ fontSize: 12, background: '#CBEFFF', color: '#010221', borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>Property news</span>
+                    )}
                     {p.slug.includes('partner') && (
                       <span style={{ fontSize: 12, background: '#F4EBDD', color: '#7a611c', borderRadius: 999, padding: '4px 12px', fontWeight: 600 }}>Partner post</span>
                     )}

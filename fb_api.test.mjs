@@ -107,7 +107,7 @@ const samplePost = (over = {}) => ({
 });
 
 // Routing
-ok('the router knows six actions', ACTIONS.length === 6 && ['seed', 'dispatch', 'trial', 'intro'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
+ok('the router knows seven actions', ACTIONS.length === 7 && ['seed', 'dispatch', 'trial', 'intro'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
 ok('query form resolves', resolveAction(req('/api/fb?action=posts')) === 'posts');
 ok('path form resolves', resolveAction(req('/api/fb/decide')) === 'decide');
 ok('hyphen form resolves', resolveAction(req('/api/fb-seed')) === 'seed');

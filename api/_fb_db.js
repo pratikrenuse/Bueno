@@ -85,12 +85,17 @@ export function readBody(req) {
 // --- Approved newsletter stories for the WhatsApp channel section -------------------------
 export const NEWS_TABLE = 'news_items';
 
-async function newsFetch(path, init = {}) {
+// The digest's two tables, read only from this side. news_items carries the stories,
+// news_emails the Spanish text they came from (api/_fb_news.js writes posts from both).
+const NEWS_TABLES = new Set([NEWS_TABLE, 'news_emails']);
+
+async function newsFetch(path, init = {}, table = NEWS_TABLE) {
+  if (!NEWS_TABLES.has(table)) return { ok: false, error: `Not a news table: ${table}` };
   const url = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').replace(/\/$/, '');
   const key = process.env.SUPABASE_SERVICE_KEY;
   if (!url || !key) return { ok: false, error: 'Supabase is not configured.' };
   try {
-    const r = await fetch(`${url}/rest/v1/${NEWS_TABLE}${path}`, {
+    const r = await fetch(`${url}/rest/v1/${table}${path}`, {
       ...init,
       headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
     });
@@ -119,4 +124,9 @@ export async function markChannelNewsUsed(id, date) {
     method: 'PATCH',
     body: JSON.stringify({ status: 'used', used_on: date, updated_at: new Date().toISOString() }),
   });
+}
+
+// A read of the digest's tables for api/_fb_news.js. GET only: this side never changes a story.
+export async function readNews(path, table = NEWS_TABLE) {
+  return newsFetch(path, {}, table);
 }

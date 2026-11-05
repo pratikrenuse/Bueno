@@ -18,6 +18,7 @@ const ROUTES = {
   dispatch: () => import('./_fb_dispatch.js'),
   trial:    () => import('./_fb_trial.js'),
   intro:    () => import('./_fb_trial.js'),
+  news:     () => import('./_fb_news.js'),
 };
 
 // An edited post is translated into six languages on the way out, which takes longer than
