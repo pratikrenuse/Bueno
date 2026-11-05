@@ -7,6 +7,8 @@
 //   GET /api/directory?venues=run&pass=P&town=albir&q=0&page=0      -> one Places page, crawled + scored
 //       (&token=<nextPageToken> for page 1 and 2; cached pages return without a Google call)
 //   GET /api/directory?venues=export&pass=P[&format=json|rows][&towns=a,b]  -> CSV, deduped, best first
+//   GET /api/directory?venues=pages&pass=P&town=albir               -> stored page files for a town
+//   GET /api/directory?venues=recrawl&pass=P&town=albir&file=0-0.json -> re-read those sites for named contacts (no Google call)
 //   GET /api/directory?venues=purge&pass=P                          -> deletes every stored page
 //
 // Where the towns come from: council padron figures (Torrevieja 2025, l'Alfas del Pi,
@@ -19,7 +21,7 @@
 // harvest. What we read on the venue's OWN website (emails, languages, offers, socials)
 // is ours and is not covered by that rule. Review text is read in flight and never stored.
 
-import { TOWNS as LEAD_TOWNS, extractEmails, detectLangs } from './_leads.js';
+import { TOWNS as LEAD_TOWNS, extractEmails, detectLangs, findPeople } from './_leads.js';
 
 // Nordic hotspots, in priority order. Every slug that also exists in the estate-agent
 // list reuses its coordinates; the four below are hotspots that list did not have.
@@ -45,6 +47,9 @@ const ORDER = [
   'arguineguin', 'patalavaca', 'puerto-rico-gc', 'puerto-de-mogan', 'playa-del-ingles', 'san-agustin-gc', 'maspalomas', 'las-palmas',
   // Tenerife and Mallorca: Swedish schools and churches
   'los-cristianos', 'playa-de-las-americas', 'costa-adeje', 'palma', 'santa-ponsa', 'port-andratx', 'alcudia',
+  // British owner hotspots added Nov 2026 (appended, so nothing above changes)
+  'denia', 'santa-pola', 'san-pedro-del-pinatar', 'los-alcazares', 'la-manga', 'mazarron', 'mojacar', 'manilva',
+  'playa-blanca', 'puerto-del-carmen', 'corralejo', 'golf-del-sur',
 ];
 
 const NORDIC_HQ = new Set(['alfaz-del-pi', 'albir', 'altea', 'villajoyosa', 'torrevieja', 'la-siesta', 'orihuela-costa',
@@ -76,6 +81,23 @@ export const QUERIES = [
   { q: 'óptica', cat: 'Optician', pages: 1 },
   { q: 'gimnasio', cat: 'Gym', pages: 1 },
   { q: 'alquiler de coches', cat: 'Car hire', pages: 1 },
+  // Added Nov 2026: furniture, and the shops foreign owners actually use.
+  { q: 'tienda de muebles', cat: 'Furniture and interiors', pages: 2 },
+  { q: 'furniture store', cat: 'Furniture and interiors', pages: 1 },
+  { q: 'scandinavian furniture nordic design', cat: 'Furniture and interiors (Nordic)', pages: 1 },
+  { q: 'colchonería sofás', cat: 'Furniture and interiors', pages: 1 },
+  { q: 'norwegian shop norsk butikk', cat: 'Nordic shop', pages: 1 },
+  { q: 'swedish shop svensk butik', cat: 'Nordic shop', pages: 1 },
+  { q: 'godteri lösgodis pick and mix sweets', cat: 'Sweets shop', pages: 1 },
+  { q: 'scandinavian bakery', cat: 'Nordic shop', pages: 1 },
+  { q: 'british shop english food', cat: 'British shop', pages: 1 },
+  { q: 'english supermarket british products', cat: 'British shop', pages: 1 },
+  { q: 'british butcher', cat: 'British shop', pages: 1 },
+  { q: 'english pub', cat: 'Pub (British)', pages: 1 },
+  { q: 'british restaurant fish and chips', cat: 'Restaurant (British)', pages: 1 },
+  { q: 'sunday roast english breakfast', cat: 'Restaurant (British)', pages: 1 },
+  { q: 'dutch shop german shop', cat: 'Dutch and German shop', pages: 1 },
+  { q: 'garden centre', cat: 'Garden centre', pages: 1 },
 ];
 
 const FIELDS = [
@@ -95,6 +117,50 @@ const RE_GIFT = /tarjeta regalo|gift (card|voucher)|gavekort|presentkort|cheque 
 const RE_PARTNER = /colaborador(es)?|nuestros partners|our partners|partner offers?|patrocin|sponsor|en colaboraci[oó]n|samarbeid|samarbete|samarbejde/i;
 const RE_FORK = /thefork\.|eltenedor\.|lafourchette\./i;
 const RE_CHAIN = /mcdonald|burger king|\bkfc\b|telepizza|starbucks|100 montaditos|foster'?s hollywood|\bvips\b|goiko|\btgb\b|domino'?s|pans ?& ?company|rodilla|five guys|taco bell|hard rock|carrefour|mercadona|\blidl\b|\baldi\b|\bzara\b|decathlon|\bikea\b|leroy merlin|el corte ingl[eé]s|ginos|la tagliatella|udon|wok to walk|subway|papa john|popeyes|tim hortons|costa coffee|primark|druni|primor|mango\b|h&m|europcar|hertz|avis\b|sixt\b|enterprise rent|goldcar|holiday autos|basic[- ]fit|mcfit|vivagym|altafit|synergym|multiopticas|general [oó]ptica|alain afflelou|specsavers|opticalia|marionnaud|llongueras|jean louis david/i;
+
+const RE_BRIT_NAME = /british|\benglish\b|\bbrits?\b|\buk\b|union jack|fish ?(&|and|n'?) ?chips|chippy|\bpub\b|tavern|\binn\b|sunday roast|full english|scottish|\birish\b|yorkshire|lancashire|cockney|bulldog|red lion|king'?s head|queen'?s head|the crown|iceland foods/i;
+const RE_DUNL_NAME = /dutch|holland|hollands|nederland|\bgerman\b|deutsch|b[äa]ckerei|bakkerij|biergarten|metzgerei|bratwurst|frituur|snackbar/i;
+const SPECIFIC = /Nordic|British|Sweets|Dutch|Garden/;
+
+// Which foreign audience a venue serves, from its name, its latest review languages and
+// its website languages. Works on stored rows too, so the October harvest can be re-labelled.
+export function audienceOf(name, reviewLangs, siteLangs, nordic) {
+  const en = reviewLangs.filter(l => l === 'en').length;
+  const dn = reviewLangs.filter(l => l === 'de' || l === 'nl').length;
+  const british = RE_BRIT_NAME.test(name) || en >= 3;
+  const dutchGerman = RE_DUNL_NAME.test(name) || dn >= 2 || siteLangs.includes('nl');
+  const list = [nordic && 'Nordic', british && 'British', dutchGerman && 'Dutch/German'].filter(Boolean);
+  const bonus = (RE_BRIT_NAME.test(name) ? 12 : 0) + (en >= 3 ? 6 : 0) + (RE_DUNL_NAME.test(name) ? 8 : 0);
+  return { audience: list.join(', '), british, dutchGerman, bonus };
+}
+
+const GENERIC_FIRST = /^(info|hola|hello|reservas|booking|contact|contacto|kontakt|admin|office|tienda|shop|ventas|sales)@/;
+
+// The best email for a venue: a named owner or manager when the site lists one, otherwise
+// the venue's own general inbox, which at a small restaurant or shop is read by the owner.
+const VENUE_WORDS = /^(tienda|shop|store|tiendaonline|restaurante|restaurant|resto|bar|cafe|cafeteria|pub|pedidos|orders|order|eventos|events|event|catering|muebles|mueble|deco|decoracion|interiores|interiors|hotel|cocina|kitchen|carta|menu|delivery|takeaway|compras|tiendas|showroom|almacen|clientes|pedido|ecommerce|online|club|golf|spa|salon|panaderia|bakery|vinos|wine|garden|jardin)$/;
+const realPerson = (p) => {
+  if (!p?.email || !p.name) return false;
+  const local = p.email.split('@')[0].toLowerCase();
+  const first = p.name.split(' ')[0].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  return !VENUE_WORDS.test(local.split(/[._-]/)[0]) && local.includes(first.slice(0, 3));
+};
+
+export function contactFields(site, people) {
+  const best = (people?.people || []).find(realPerson) || null;
+  const generic = site.emails.find(e => GENERIC_FIRST.test(e)) || people?.generic || site.emails.find(e => e !== best?.email) || '';
+  const email = best?.email || generic;
+  const all = [...new Set([...(people?.people || []).map(x => x.email), ...site.emails])];
+  return {
+    email,
+    email_type: best ? 'named' : email ? 'generic' : 'none',
+    contact_name: best?.name || '',
+    contact_role: best?.role || '',
+    contact_email: best?.email || '',
+    generic_email: generic && generic !== best?.email ? generic : '',
+    emails_all: all.slice(0, 6).join(' '),
+  };
+}
 
 const PRIOR_COUNT = 50, PRIOR_RATING = 4.3;
 
@@ -130,16 +196,17 @@ export function venueLinks(html, base) {
   let host;
   try { host = new URL(base).hostname.replace(/^www\./, ''); } catch { return out; }
   for (const m of html.matchAll(/href=["']([^"'#]+)["']/gi)) {
-    if (!/ofert|promo|descuento|club|socio|loyalty|member|offer|deal|contact|contacto|kontakt|carta|menu|meny/i.test(m[1])) continue;
+    if (!/ofert|promo|descuento|club|socio|loyalty|member|offer|deal|contact|contacto|kontakt|carta|menu|meny|aviso-?legal|legal|nosotros|about|quienes/i.test(m[1])) continue;
     try {
       const u = new URL(m[1], base);
       if (u.hostname.replace(/^www\./, '') !== host || !/^https?:$/.test(u.protocol)) continue;
       const s = u.href.split('#')[0];
       if (!out.includes(s)) out.push(s);
     } catch { /* skip */ }
-    if (out.length >= 2) break;
+    if (out.length >= 4) break;
   }
-  return out;
+  // Contact and legal pages first: that is where the email is.
+  return out.sort((a, b) => (/contact|kontakt|legal/i.test(b) ? 1 : 0) - (/contact|kontakt|legal/i.test(a) ? 1 : 0)).slice(0, 3);
 }
 
 export function socials(html) {
@@ -224,8 +291,10 @@ export function scoreVenue(p, site, town) {
   s = Math.round(Math.max(0, Math.min(100, s)));
 
   const nordic = nordicSite || nordicName || nordicReviews >= 1 || mention;
-  const tier = chain ? 'C' : (nordic && s >= 50) ? 'A' : s >= 32 ? 'B' : 'C';
-  return { score: s, tier, nordic, nordicSite, nordicName, nordicReviews, foreignReviews, mention, chain, offers, langs };
+  const au = audienceOf(name, langs, site.langs, nordic);
+  s = Math.round(Math.max(0, Math.min(100, s + (chain ? 0 : au.bonus))));
+  const tier = chain ? 'C' : ((nordic || au.british || au.dutchGerman) && s >= 50) ? 'A' : s >= 32 ? 'B' : 'C';
+  return { score: s, tier, audience: au.audience, nordic, nordicSite, nordicName, nordicReviews, foreignReviews, mention, chain, offers, langs };
 }
 
 // ---- storage (same bucket as the directory cache) ----
@@ -312,7 +381,7 @@ export async function runPage({ url, key, google }, town, qi, page, token, fetch
     .filter(p => !p.location || distKm(town, { lat: p.location.latitude, lng: p.location.longitude }) <= 10);
 
   const rows = await Promise.all(places.map(async p => {
-    const site = await crawlVenue(p.websiteUri);
+    const [site, people] = await Promise.all([crawlVenue(p.websiteUri), findPeople(p.websiteUri).catch(() => null)]);
     const sc = scoreVenue(p, site, town);
     const signals = [site.member && 'member or loyalty card', site.discount && 'discounts or promotions', site.gift && 'gift cards', site.partner && 'partners or sponsors', site.thefork && 'TheFork bookings'].filter(Boolean);
     return {
@@ -323,8 +392,8 @@ export async function runPage({ url, key, google }, town, qi, page, token, fetch
       town: town.name, region: town.region, nordic_hq: town.nordic_hq,
       phone: p.nationalPhoneNumber || '',
       phone_intl: p.internationalPhoneNumber || '',
-      email: site.emails.find(e => /^(info|hola|hello|reservas|booking|contact|contacto|kontakt|admin|office)@/.test(e)) || site.emails[0] || '',
-      emails_all: site.emails.slice(0, 5).join(' '),
+      ...contactFields(site, people),
+      audience: sc.audience,
       website: p.websiteUri || '',
       instagram: site.instagram, facebook: site.facebook,
       rating: p.rating ?? '', reviews: p.userRatingCount ?? 0, price: priceLabel(p),
@@ -337,13 +406,13 @@ export async function runPage({ url, key, google }, town, qi, page, token, fetch
       found_by: Q.q,
     };
   }));
-  const out = { town: town.slug, q: qi, page, next: data.nextPageToken || null, rows, at: new Date().toISOString() };
+  const out = { town: town.slug, q: qi, page, next: data.nextPageToken || null, rows, at: new Date().toISOString(), v: 2 };
   await writeObj(url, key, path, out);
   return out;
 }
 
-export const COLS = ['tier', 'score', 'name', 'category', 'google_type', 'town', 'region', 'phone_intl', 'phone', 'email', 'website',
-  'instagram', 'facebook', 'rating', 'reviews', 'price', 'nordic_reviews', 'foreign_reviews', 'review_languages', 'nordic_mention',
+export const COLS = ['tier', 'score', 'audience', 'name', 'category', 'google_type', 'town', 'region', 'phone_intl', 'phone', 'email',
+  'email_type', 'contact_name', 'contact_role', 'contact_email', 'generic_email', 'emails_all', 'website', 'instagram', 'facebook', 'rating', 'reviews', 'price', 'nordic_reviews', 'foreign_reviews', 'review_languages', 'nordic_mention',
   'nordic_site', 'nordic_name', 'site_languages', 'offer_signals', 'offer_snippet', 'chain', 'address', 'maps_url', 'found_by', 'place_id'];
 const csvCell = (v) => { const s = String(v ?? ''); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
 
@@ -355,10 +424,33 @@ export function dedupe(rows) {
     const prev = byId.get(r.place_id);
     if (!prev) { byId.set(r.place_id, r); continue; }
     const best = r.score > prev.score ? r : prev;
-    if (/Nordic/.test(r.category) || /Nordic/.test(prev.category)) best.category = /Nordic/.test(r.category) ? r.category : prev.category;
+    if (SPECIFIC.test(r.category) || SPECIFIC.test(prev.category)) best.category = SPECIFIC.test(r.category) ? r.category : prev.category;
+    if (!best.email && (r.email || prev.email)) Object.assign(best, contactPart(r.email ? r : prev));
     byId.set(r.place_id, best);
   }
   return [...byId.values()].sort((a, b) => b.score - a.score);
+}
+
+const CONTACT_KEYS = ['email', 'email_type', 'contact_name', 'contact_role', 'contact_email', 'generic_email', 'emails_all'];
+const contactPart = (r) => Object.fromEntries(CONTACT_KEYS.map(k => [k, r[k]]));
+
+// Re-read the websites behind one stored page (no Google call) with the named-contact
+// crawler, and add the audience label. Used on pages harvested before Nov 2026.
+export async function recrawlPage(obj, townObj) {
+  const rows = await Promise.all((obj.rows || []).map(async r => {
+    if (!r.website) return { ...r, email_type: r.email ? 'generic' : 'none', audience: r.audience ?? '' };
+    const [site, people] = await Promise.all([crawlVenue(r.website), findPeople(r.website).catch(() => null)]);
+    const c = site.site_ok ? contactFields(site, people) : { email_type: r.email ? 'generic' : 'none' };
+    if (site.site_ok && !c.email && r.email) Object.assign(c, { email: r.email, email_type: 'generic', generic_email: r.email });
+    const langs = String(r.review_languages || '').split(' ').filter(Boolean);
+    const siteLangs = site.site_ok ? site.langs : String(r.site_languages || '').split(' ').filter(Boolean);
+    const nordic = !!(r.nordic_site || r.nordic_name || r.nordic_reviews >= 1 || r.nordic_mention);
+    const au = audienceOf(r.name || '', langs, siteLangs, nordic);
+    const score = r.chain ? r.score : Math.min(100, (r.score || 0) + au.bonus);
+    const tier = r.chain ? 'C' : ((nordic || au.british || au.dutchGerman) && score >= 50) ? 'A' : score >= 32 ? 'B' : 'C';
+    return { ...r, ...c, audience: au.audience, score, tier, instagram: r.instagram || site.instagram || '', facebook: r.facebook || site.facebook || '' };
+  }));
+  return { ...obj, rows, v: 2, recrawled_at: new Date().toISOString() };
 }
 
 export async function venuesHandler(req, res, envv) {
@@ -385,6 +477,27 @@ export async function venuesHandler(req, res, envv) {
     });
   }
 
+  // Stored pages for one town, and whether each already has named contacts (v2).
+  if (mode === 'pages') {
+    const town = VENUE_TOWNS.find(t => t.slug === req.query.town);
+    if (!town) return res.status(400).json({ error: 'bad town' });
+    const items = await listObj(url, key, `venues/v1/${town.slug}/`);
+    return res.status(200).json({ town: town.slug, files: (items || []).map(i => i.name).filter(n => /^\d+-\d\.json$/.test(n || '')) });
+  }
+
+  if (mode === 'recrawl') {
+    const town = VENUE_TOWNS.find(t => t.slug === req.query.town);
+    const file = String(req.query.file || '');
+    if (!town || !/^\d+-\d\.json$/.test(file)) return res.status(400).json({ error: 'bad town/file' });
+    const path = `venues/v1/${town.slug}/${file}`;
+    const obj = await readObj(url, key, path);
+    if (!obj) return res.status(404).json({ error: 'not_found' });
+    if (obj.v >= 2 && !req.query.force) return res.status(200).json({ skipped: true, rows: obj.rows?.length || 0 });
+    const out = await recrawlPage(obj, town);
+    await writeObj(url, key, path, out);
+    return res.status(200).json({ rows: out.rows.length, named: out.rows.filter(r => r.email_type === 'named').length, with_email: out.rows.filter(r => r.email).length });
+  }
+
   if (mode === 'export' || mode === 'purge') {
     const wanted = req.query.towns ? String(req.query.towns).split(',') : null;
     const towns = wanted ? VENUE_TOWNS.filter(t => wanted.includes(t.slug)) : VENUE_TOWNS;
@@ -406,5 +519,5 @@ export async function venuesHandler(req, res, envv) {
     return res.status(200).send(csv);
   }
 
-  return res.status(400).json({ error: 'venues must be towns, run, export or purge' });
+  return res.status(400).json({ error: 'venues must be towns, run, pages, recrawl, export or purge' });
 }

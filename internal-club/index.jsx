@@ -9,8 +9,8 @@
 // Google's terms: delete the stored search data within 30 days of the harvest.
 import React, { useState } from 'react';
 
-const COLS = ['tier', 'score', 'name', 'category', 'google_type', 'town', 'region', 'phone_intl', 'phone', 'email', 'website',
-  'instagram', 'facebook', 'rating', 'reviews', 'price', 'nordic_reviews', 'foreign_reviews', 'review_languages', 'nordic_mention',
+const COLS = ['tier', 'score', 'audience', 'name', 'category', 'google_type', 'town', 'region', 'phone_intl', 'phone', 'email',
+  'email_type', 'contact_name', 'contact_role', 'contact_email', 'generic_email', 'emails_all', 'website', 'instagram', 'facebook', 'rating', 'reviews', 'price', 'nordic_reviews', 'foreign_reviews', 'review_languages', 'nordic_mention',
   'nordic_site', 'nordic_name', 'site_languages', 'offer_signals', 'offer_snippet', 'chain', 'address', 'maps_url', 'found_by', 'place_id'];
 
 const cell = (v) => {
@@ -22,7 +22,13 @@ function dedupe(rows) {
   const byId = new Map();
   for (const r of rows) {
     const prev = byId.get(r.place_id);
-    if (!prev || r.score > prev.score) byId.set(r.place_id, r);
+    if (!prev) { byId.set(r.place_id, r); continue; }
+    const chosen = r.score > prev.score ? r : prev;
+    const other = chosen === r ? prev : r;
+    const best = { ...chosen };
+    if (/Nordic|British|Sweets|Dutch|Garden/.test(other.category) && !/Nordic|British|Sweets|Dutch|Garden/.test(best.category)) best.category = other.category;
+    if (!best.email && other.email) for (const k of ['email', 'email_type', 'contact_name', 'contact_role', 'contact_email', 'generic_email', 'emails_all']) best[k] = other[k];
+    byId.set(r.place_id, best);
   }
   return [...byId.values()].sort((a, b) => b.score - a.score);
 }
@@ -120,6 +126,39 @@ export default function InternalClub() {
     setBusy(false);
   };
 
+  // Re-reads the websites behind searches already stored, for named owner and manager
+  // emails. No Google call, so it costs nothing. Pages done before are skipped.
+  const recrawl = async () => {
+    setBusy(true); setError('');
+    const progress = { done: 0, total: 0, named: 0, failed: 0 };
+    window.__clubRecrawl = progress;
+    try {
+      const meta = await call('/api/directory?venues=towns');
+      if (!meta.towns) throw new Error(meta.error || 'The endpoint did not answer as expected.');
+      const jobs = [];
+      for (const t of meta.towns) {
+        const j = await call(`/api/directory?venues=pages&town=${t}`);
+        for (const f of j.files || []) jobs.push(() => call(`/api/directory?venues=recrawl&town=${t}&file=${f}`).then(r => {
+          progress.done += 1;
+          if (r.error) progress.failed += 1;
+          progress.named += r.named || 0;
+          setStatus(`Reading websites. ${progress.done} of ${progress.total} search pages done, ${progress.named} named contacts found so far.`);
+          return r;
+        }).catch(() => { progress.done += 1; progress.failed += 1; }));
+        progress.total = jobs.length;
+        setStatus(`Listing stored searches, ${jobs.length} so far.`);
+      }
+      await pool(jobs, 5);
+      progress.finished = true;
+      setStatus(`Websites read for ${progress.done} search pages, ${progress.named} named contacts found. Now press Collect the list.`);
+      if (progress.failed) setError(`${progress.failed} pages could not be read. Press this again to retry them.`);
+    } catch (e) {
+      progress.finished = true; progress.fatal = String(e.message || e);
+      setError(String(e.message || e));
+    }
+    setBusy(false);
+  };
+
   const collect = async () => {
     setBusy(true); setError('');
     try {
@@ -138,7 +177,10 @@ export default function InternalClub() {
       window.__clubRows = list;
       const a = list.filter(r => r.tier === 'A').length;
       const offers = list.filter(r => r.offer_signals).length;
-      setStatus(`${list.length} venues. ${a} are Tier A, ${offers} already advertise an offer, card or partnership. Press Download to save the file.`);
+      const withEmail = list.filter(r => r.email).length;
+      const named = list.filter(r => r.email_type === 'named').length;
+      const withPhone = list.filter(r => r.phone_intl || r.phone).length;
+      setStatus(`${list.length} venues. ${withEmail} have an email (${named} of them a named person) and ${withPhone} have a phone number. ${a} are Tier A and ${offers} already advertise an offer, card or partnership. Press Download to save the file.`);
     } catch (e) {
       setError(String(e.message || e));
     }
@@ -172,9 +214,10 @@ export default function InternalClub() {
       <div style={S.card}>
         <h1 style={S.h}>Bueno Club partner list</h1>
         <p style={S.p}>
-          This page searches Google for restaurants, cafes and shops in the towns where Nordic
-          owners live, reads each venue's own website for offers and contact details, and builds
-          the partner list. Searches already paid for are never charged twice.
+          This page searches Google for restaurants, furniture shops and the Nordic, British,
+          Dutch and German shops in the towns where foreign owners live. It reads each venue's
+          own website for the owner's or manager's email, the general inbox, phone and offers,
+          and builds the partner list. Searches already paid for are never charged twice.
         </p>
         <input
           style={S.input}
@@ -185,6 +228,9 @@ export default function InternalClub() {
         />
         <button style={S.btn} disabled={busy || !pass} onClick={runSearches}>
           1. Run the searches
+        </button>
+        <button style={S.btnQuiet} disabled={busy || !pass} onClick={recrawl}>
+          Read websites again for named contacts (free)
         </button>
         <button style={S.btn} disabled={busy || !pass} onClick={collect}>
           2. Collect the list
