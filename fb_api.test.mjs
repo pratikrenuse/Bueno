@@ -107,7 +107,7 @@ const samplePost = (over = {}) => ({
 });
 
 // Routing
-ok('the router knows seven actions', ACTIONS.length === 7 && ['seed', 'dispatch', 'trial', 'intro'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
+ok('the router knows eight actions', ACTIONS.length === 8 && ['seed', 'dispatch', 'trial', 'intro', 'channels'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
 ok('query form resolves', resolveAction(req('/api/fb?action=posts')) === 'posts');
 ok('path form resolves', resolveAction(req('/api/fb/decide')) === 'decide');
 ok('hyphen form resolves', resolveAction(req('/api/fb-seed')) === 'seed');
@@ -741,10 +741,10 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   await fbRouter(post('/api/fb?action=dispatch', {}), res);
   ok('an empty queue sends no post', res.body.sent === false && res.body.reason === 'queue empty');
   const m = mails(calls).map(c => JSON.parse(c.body));
-  ok('an empty queue tells Pratik and only Pratik', m.length === 1 && m[0].to.join() === 'pratik.y.renuse@gmail.com' && !m[0].cc);
+  ok('an empty queue tells Pratik and only Pratik', m.length >= 1 && m.every(x => x.to.join() === 'pratik.y.renuse@gmail.com' && !x.cc && !x.bcc) && m.some(x => /nothing is approved/.test(x.subject)), JSON.stringify(m.map(x => x.subject)));
   const res2 = makeRes();
   await fbRouter(req('/api/fb?action=dispatch&dry=1'), res2);
-  ok('a dry run on an empty queue emails nobody', mails(calls).length === 1 && res2.body.reason === 'queue empty');
+  ok('a dry run on an empty queue emails nobody', mails(calls).length === m.length && res2.body.reason === 'queue empty');
 }
 
 // A send that fails is a failure the scheduled job can see.

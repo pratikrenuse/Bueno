@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Dashboard from './Dashboard.jsx'
+import Channels from './Channels.jsx'
 
 // The Facebook group posts that go to Poornima. Route: /internal-poornima.
 //
@@ -370,10 +371,14 @@ export default function InternalPratik() {
           onClick={() => setView('review')}>Review posts ({counts.pending || 0} to review)</button>
         <button className={`fbp-chip${view === 'dashboard' ? ' current' : ''}`} aria-pressed={view === 'dashboard'}
           onClick={() => setView('dashboard')}>Dashboard</button>
+        <button className={`fbp-chip${view === 'channels' ? ' current' : ''}`} aria-pressed={view === 'channels'}
+          onClick={() => setView('channels')}>WhatsApp channels</button>
         <button className="fbp-chip" style={{ marginLeft: 'auto' }} onClick={seed} disabled={busy}
           title="Pulls in any new or rewritten posts. Never overwrites a decision, an edit or a send.">
           {busy ? 'Syncing...' : 'Sync posts'}</button>
       </nav>
+
+      {view === 'channels' && <Channels pass={pass} />}
 
       {view === 'dashboard' && (
         <>

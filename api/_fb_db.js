@@ -109,21 +109,86 @@ async function newsFetch(path, init = {}, table = NEWS_TABLE) {
   }
 }
 
-// The oldest approved story that has not gone out yet, or null. Never throws: a problem here
-// must not stop the Facebook post going out, so it only means no channel post today.
+// The approved story that has waited longest, or null. Never throws: a problem here must
+// not stop the Facebook post going out, so it only means no channel post today.
+// 6 November 2026, Pratik: nothing goes into the channels unless he approved it in the deck's
+// WhatsApp channels view. Approving translates the story (api/_news_decide.js) and puts it in
+// line; one goes out a day, in the order he approved them.
+const QUEUED = 'status=eq.approved&used_on=is.null&translations=not.is.null';
+const CHANNEL_FIELDS = 'id,title_en,title_es,en,edited_en,translations,is_proposal,source,link,received_on,score,channel_image,decided_at,status,used_on';
 export async function nextChannelNews() {
-  const r = await newsFetch('?select=id,title_en,en,edited_en,translations,is_proposal,source,link&status=eq.approved&used_on=is.null&translations=not.is.null&order=decided_at.asc&limit=1');
+  const r = await newsFetch(`?select=${CHANNEL_FIELDS}&${QUEUED}&order=decided_at.asc&limit=1`);
   return r.ok ? { ok: true, item: r.data[0] || null } : { ok: false, item: null, error: r.error };
 }
 export async function countChannelNews() {
-  const r = await newsFetch('?select=id&status=eq.approved&used_on=is.null&translations=not.is.null');
+  const r = await newsFetch(`?select=id&${QUEUED}`);
   return r.ok ? r.data.length : 0;
+}
+// The channel view in the deck: approved stories waiting to go out, in sending order.
+export async function queuedChannelNews() {
+  return newsFetch(`?select=${CHANNEL_FIELDS}&${QUEUED}&order=decided_at.asc`);
+}
+// Stories from the last REVIEW_DAYS days the digest kept and nobody has decided on yet.
+export const REVIEW_DAYS = 7;
+export async function reviewChannelNews() {
+  const since = new Date(Date.now() - (REVIEW_DAYS - 1) * 864e5).toISOString().slice(0, 10);
+  return newsFetch(`?select=${CHANNEL_FIELDS}&keep=eq.true&status=eq.pending&received_on=gte.${since}&order=received_on.desc,score.desc,position.asc`);
+}
+export async function getChannelNews(id) {
+  const r = await newsFetch(`?select=${CHANNEL_FIELDS}&id=eq.${encodeURIComponent(id)}`);
+  return r.ok ? (r.data[0] || null) : null;
+}
+// The deck's own changes to a story: the photo, "not for the channels" (skipped, which keeps
+// it kept so the LinkedIn deck is not affected) and undo. Never touches a story already sent.
+export async function patchChannelNews(id, patch) {
+  return newsFetch(`?id=eq.${encodeURIComponent(id)}&used_on=is.null`, {
+    method: 'PATCH', headers: { Prefer: 'return=representation' },
+    body: JSON.stringify({ ...patch, updated_at: new Date().toISOString() }),
+  });
 }
 export async function markChannelNewsUsed(id, date) {
   return newsFetch(`?id=eq.${encodeURIComponent(id)}`, {
     method: 'PATCH',
     body: JSON.stringify({ status: 'used', used_on: date, updated_at: new Date().toISOString() }),
   });
+}
+
+// --- The record of what went to the WhatsApp channels -----------------------------------
+// wa_channel_sends: one row per day, written when the daily task email carries a channel
+// post. It stops the same day going out twice (there are two daily send times) and is what
+// the deck's channel view shows as sent. Created 6 November 2026.
+export const SENDS_TABLE = 'wa_channel_sends';
+async function sendsFetch(path, init = {}) {
+  const url = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').replace(/\/$/, '');
+  const key = process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key) return { ok: false, error: 'Supabase is not configured.' };
+  try {
+    const r = await fetch(`${url}/rest/v1/${SENDS_TABLE}${path}`, {
+      ...init,
+      headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
+    });
+    const text = await r.text();
+    if (!r.ok) return { ok: false, error: `Supabase ${r.status}: ${text.slice(0, 200)}` };
+    let data = [];
+    try { data = text ? JSON.parse(text) : []; } catch { data = []; }
+    return { ok: true, data };
+  } catch (e) {
+    return { ok: false, error: String((e && e.message) || e) };
+  }
+}
+export async function channelSentOn(day) {
+  const r = await sendsFetch(`?select=day&day=eq.${day}`);
+  return r.ok && r.data.length > 0;
+}
+export async function logChannelSend({ day, source, news_id = null, title = null, texts, via }) {
+  return sendsFetch('?on_conflict=day', {
+    method: 'POST',
+    headers: { Prefer: 'resolution=ignore-duplicates,return=minimal' },
+    body: JSON.stringify([{ day, source, news_id, title, texts, via, sent_at: new Date().toISOString() }]),
+  });
+}
+export async function recentChannelSends(limit = 14) {
+  return sendsFetch(`?select=*&order=day.desc&limit=${limit}`);
 }
 
 // A read of the digest's tables for api/_fb_news.js. GET only: this side never changes a story.

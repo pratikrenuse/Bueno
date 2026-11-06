@@ -83,8 +83,26 @@ export const AGENT_POSTS = [
 export const AGENT_COMMENT = `Here is the link to the estate agents' WhatsApp group: ${WHATSAPP_AGENTS_HUB}`;
 
 const DAY_MS = 24 * 3600 * 1000;
+// 6 November 2026, Pratik: nothing goes into the channels unless he has approved it in the
+// deck's WhatsApp channels view. These hand-written days were never approved there, so they
+// are no longer sent. Kept for the record; set to true only if he asks for them back.
+export const WRITTEN_CHANNEL_POSTS_ON = false;
 export function channelPostFor(date) {
-  return CHANNEL_POSTS[date] || null;
+  return WRITTEN_CHANNEL_POSTS_ON ? (CHANNEL_POSTS[date] || null) : null;
+}
+
+// The photo that goes with a channel post: the one Pratik picked in the deck, or one chosen
+// from the story's id. Plain photographs from studio/photos, published at /photos by the
+// build, with no text and no logo, so the same image is right in every language.
+export const CHANNEL_PHOTOS = ['g00', 'g01', 'g02', 'g03', 'g04', 'g05', 'g06', 'g07', 'g08', 'g09', 'g10',
+  'coast_bay', 'golden_coast', 'marina', 'pool_dusk', 'sunset_village', 'terrace_sunset', 'arch_terrace', 'cove_house', 'poolside'];
+export const photoUrl = (name) => `${SITE}/photos/${name}.jpg`;
+export function channelImageFor(item) {
+  if (item && item.channel_image && CHANNEL_PHOTOS.includes(item.channel_image)) return photoUrl(item.channel_image);
+  const id = String((item && item.id) || '');
+  let n = 0;
+  for (const ch of id) n = (n * 31 + ch.charCodeAt(0)) >>> 0;
+  return photoUrl(CHANNEL_PHOTOS[n % CHANNEL_PHOTOS.length]);
 }
 
 // An approved story from the newsletter digest (news_items), in the same shape as a
@@ -96,7 +114,9 @@ export function channelFromNews(item) {
   const t = item.translations || {};
   const out = { en: String(en || '').trim() };
   for (const l of CHANNEL_LANGS.filter(x => x !== 'en')) out[l] = String(t[l] || '').trim();
-  return CHANNEL_LANGS.every(l => out[l]) ? out : null;
+  if (!CHANNEL_LANGS.every(l => out[l])) return null;
+  out.image = channelImageFor(item);
+  return out;
 }
 export function agentPostFor(date) {
   if (date < AGENT_POSTS_FROM) return null;
@@ -123,5 +143,6 @@ export function hubPostFor(date) {
 
 // Days of channel posts still written from `date` onwards (used for Pratik's reminder).
 export function channelDaysLeft(date) {
+  if (!WRITTEN_CHANNEL_POSTS_ON) return 0;
   return Object.keys(CHANNEL_POSTS).filter(d => d >= date).length;
 }

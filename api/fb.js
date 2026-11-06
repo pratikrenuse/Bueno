@@ -19,6 +19,7 @@ const ROUTES = {
   trial:    () => import('./_fb_trial.js'),
   intro:    () => import('./_fb_trial.js'),
   news:     () => import('./_fb_news.js'),
+  channels: () => import('./_fb_channels.js'),
 };
 
 // An edited post is translated into six languages on the way out, which takes longer than

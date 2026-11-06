@@ -161,16 +161,21 @@ const pre = (text) => `<div style="background:#F7F7F5;border:1px solid #E0DFDC;b
 
 export function whatsappSection(date = new Date().toISOString().slice(0, 10), fromNews = null) {
   // A hand-written post for the day wins; otherwise the next approved newsletter story.
-  const channel = channelPostFor(date) || fromNews;
+  // false means the channels already had their post today, so none is shown again.
+  const channel = fromNews === false ? null : (channelPostFor(date) || fromNews);
   const agent = agentPostFor(date);
   let out = '';
   if (channel) {
     out += `
         <div style="border-top:3px solid #C9A96E;margin:28px 0 0;padding-top:18px">
           <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Also today: post in the WhatsApp channels</p>
-          <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Post each text in its own channel, exactly as written. No image is needed.</p>
+          <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">${channel.image
+            ? 'Post each language in its own channel: the image first, with the text below it as the caption, exactly as written.'
+            : 'Post each text in its own channel, exactly as written.'}</p>
           ${CHANNEL_LANGS.filter(l => channel[l]).map(l => `
-          <p style="margin:14px 0 6px;font-size:13px;font-weight:bold;color:#010221;font-family:${SANS}">${esc(CHANNEL_NAME[l])}</p>
+          <p style="margin:18px 0 6px;font-size:13px;font-weight:bold;color:#010221;font-family:${SANS}">${esc(CHANNEL_NAME[l])}</p>
+          ${channel.image ? `<img src="${esc(channel.image)}" alt="" width="560" style="display:block;width:100%;max-width:560px;height:auto;border-radius:10px;margin:0 0 6px">
+          <p style="margin:0 0 8px;font-size:12px;font-family:${SANS}"><a href="${esc(channel.image)}" style="color:#5B7FCC">Download the image</a></p>` : ''}
           ${pre(channel[l])}`).join('')}
         </div>`;
   }
@@ -285,6 +290,42 @@ export async function sendPost(post, day = 1, { channel = null } = {}) {
     };
   }
   return result;
+}
+
+/**
+ * The daily task on a day with no Facebook post (6 November 2026). The Facebook group posts
+ * are on hold, but the WhatsApp channels still get their post every day, so the same people
+ * get the same daily email with only the WhatsApp tasks in it. Same envelope as sendPost:
+ * Pratik in To, the publisher and John in BCC.
+ */
+export function channelOnlyBody(date, channel) {
+  const d = new Date(`${date}T12:00:00Z`);
+  const when = `${d.getUTCDate()} ${MONTH[d.getUTCMonth()]}`;
+  return `
+  <div style="background:#F4F2EE;padding:24px 12px;font-family:Georgia,serif">
+    <div style="max-width:620px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #E0DFDC">
+      <div style="background:#010221;color:#ffffff;padding:16px 22px;font-size:18px;font-weight:bold">
+        24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;WhatsApp channels, ${esc(when)}</span>
+      </div>
+      <div style="padding:22px">
+        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi Agent,</p>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.6;color:#22263a;font-family:${SANS}">There is no Facebook group post today. Your tasks for today are below.</p>
+        ${whatsappSection(date, channel).split('Also today: ').join('Today: ')}
+        <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When it is all done</p>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Reply to this email with one line saying the task is done, and list anything that failed. Send any question as a reply to this email too.</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+export async function sendChannelOnly(date, channel) {
+  const d = new Date(`${date}T12:00:00Z`);
+  return sendMail({
+    to: SEND_TO,
+    bcc: SEND_BCC,
+    subject: `Today's task: post in the WhatsApp channels (${d.getUTCDate()} ${MONTH[d.getUTCMonth()]})`,
+    html: channelOnlyBody(date, channel),
+  });
 }
 
 /**

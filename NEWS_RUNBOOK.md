@@ -70,3 +70,22 @@ Read-only check: `/api/linkedin?action=news&dry=1&pass=...` lists the stories th
 
 The Facebook deck is parked: `api/_fb_news.js` exists, but nothing calls it and the deck does
 not show or queue news rows until it is switched on.
+
+## The WhatsApp channels, approved by Pratik (6 November 2026)
+
+Nothing goes into the channels unless Pratik approves it. Every kept story from the last week
+shows by itself in the Facebook deck's "WhatsApp channels" view (`Channels.jsx` in its folder,
+`/api/fb?action=channels`), with a photo from `studio/photos` (plain, no text, no logo, the same
+in every language). He can approve it, change the photo, or set it aside ("Not for the
+channels", status skipped, so it stays kept and the LinkedIn deck is not affected). Approving
+calls `/api/news?action=decide`, which translates it into the five other channel languages.
+
+The daily task email (`api/_fb_dispatch.js`, 01:30 and 12:00 UTC) carries the approved story
+that has waited longest: for each of the six channels the photo, a download link and the text.
+When there is no Facebook post in the queue, the email still goes out with only the WhatsApp
+tasks in it. With nothing approved, nothing goes to the publisher. Each day is recorded in
+`wa_channel_sends`, so the channels never get two posts on one day. The hand-written days in
+`api/_fb_whatsapp.js` are no longer sent (WRITTEN_CHANNEL_POSTS_ON is false).
+
+Pratik alone gets a reminder on the morning run when fewer than three approved posts are left,
+with how many stories wait for his review. Tests: `node channels.test.mjs`.

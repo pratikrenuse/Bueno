@@ -121,7 +121,7 @@ ok('the edited English wins', channelFromNews({ ...full, edited_en: 'Edited.' })
 ok('a story missing a language is not used', channelFromNews({ en: 'x', translations: { no: 'N' } }) === null);
 ok('no story means no channel day', channelFromNews(null) === null);
 const handDay = Object.keys((await import('./api/_fb_whatsapp.js')).CHANNEL_POSTS)[0];
-ok('a hand-written day wins over a story', !whatsappSection(handDay, { ...ch, en: 'FROM NEWS' }).includes('FROM NEWS') && !!channelPostFor(handDay));
+ok('hand-written days are no longer sent (6 Nov 2026: only approved posts go out)', channelPostFor(handDay) === null && whatsappSection(handDay, { ...ch, en: 'FROM NEWS' }).includes('FROM NEWS'));
 const freeDay = '2031-01-01';
 ok('on a free day the story is in the email', whatsappSection(freeDay, ch).includes('English text.') && whatsappSection(freeDay, ch).includes('post in the WhatsApp channels'));
 ok('on a free day with no story there is no channel section', !whatsappSection(freeDay, null).includes('post in the WhatsApp channels'));

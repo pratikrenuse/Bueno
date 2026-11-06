@@ -76,6 +76,8 @@ export async function processEmail(email, { notify = true } = {}) {
 // tells it there is something new, and does not wait. If the call is lost, the deck notices
 // the missing posts on its next load. The Facebook deck is parked (Pratik, 5 November 2026):
 // api/_fb_news.js exists but nothing calls it until he says so.
+// The WhatsApp channel posts are not fed from here: Pratik approves each one in the Facebook
+// deck's WhatsApp channels view, which reads news_items itself (api/_fb_channels.js).
 const DECKS = ['/api/linkedin?action=news'];
 export async function feedDecks() {
   const pass = process.env.INTERNAL_PASSCODE;
