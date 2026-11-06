@@ -53,7 +53,9 @@ function Story({ item, head, children, langs, names, picking, onPick, photos, on
     <article style={{ background: '#fff', border: '1px solid #E0DFDC', borderRadius: 12, overflow: 'hidden', marginBottom: 14 }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 220px) 1fr', gap: 0 }}>
         <div style={{ background: '#EDEBE6' }}>
-          {item.image && <img src={item.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: 160 }} />}
+          {item.image
+            ? <img src={item.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: 160 }} />
+            : <div style={{ minHeight: 160, display: 'grid', placeItems: 'center', fontSize: 13, color: '#55596b', padding: 12, textAlign: 'center' }}>No photo yet</div>}
         </div>
         <div style={{ padding: '14px 16px' }}>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>{head}</div>
@@ -63,11 +65,13 @@ function Story({ item, head, children, langs, names, picking, onPick, photos, on
         </div>
       </div>
       {picking && (
-        <div style={{ borderTop: '1px solid #E0DFDC', padding: 12, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: 8 }}>
-          {photos.map(p => (
-            <button key={p.key} onClick={() => onPhoto(p.key)} aria-label={`Use photo ${p.key}`}
-              style={{ padding: 0, border: item.image === p.url ? `3px solid ${ACCENT}` : '1px solid #E0DFDC', borderRadius: 8, overflow: 'hidden', cursor: 'pointer', background: '#EDEBE6' }}>
-              <img src={p.url} alt="" loading="lazy" style={{ width: '100%', height: 74, objectFit: 'cover', display: 'block' }} />
+        <div style={{ borderTop: '1px solid #E0DFDC', padding: 12, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: 8 }}>
+          {!photos && <p style={{ margin: 0, fontSize: 13.5 }}>Finding photos...</p>}
+          {photos && photos.error && <p className="fbp-err" style={{ margin: 0 }}>{photos.error}</p>}
+          {photos && (photos.list || []).map(url => (
+            <button key={url} onClick={() => onPhoto(url)} aria-label="Use this photo"
+              style={{ padding: 0, border: '1px solid #E0DFDC', borderRadius: 8, overflow: 'hidden', cursor: 'pointer', background: '#EDEBE6' }}>
+              <img src={url.replace('w=1200', 'w=320')} alt="" loading="lazy" style={{ width: '100%', height: 86, objectFit: 'cover', display: 'block' }} />
             </button>
           ))}
           <button onClick={onPick} style={btn(false)}>Close</button>
@@ -84,6 +88,7 @@ export default function Channels({ pass, mode = 'posts' }) {
   const [working, setWorking] = useState(null) // { id, action }
   const [picking, setPicking] = useState(null)
   const [flash, setFlash] = useState('')
+  const [options, setOptions] = useState(null) // photo choices for the story being picked
 
   const load = useCallback(async () => {
     setBusy(true); setErr('')
@@ -115,14 +120,23 @@ export default function Channels({ pass, mode = 'posts' }) {
     } catch (e) { setErr(String(e.message || e)) }
     setWorking(null)
   }
+  async function openPicker(id) {
+    if (picking === id) { setPicking(null); return }
+    setPicking(id); setOptions(null)
+    try {
+      const r = await fetch(`/api/fb?action=channels&photos=${encodeURIComponent(id)}`, { headers: { 'x-passcode': pass } })
+      const j = await r.json().catch(() => ({}))
+      setOptions(j.error ? { error: j.error } : { list: j.photos || [] })
+    } catch (e) { setOptions({ error: String(e.message || e) }) }
+  }
   const doing = (id, action) => working && working.id === id && working.action === action
 
   if (!data) return <div className="fbp-wide">{err ? <p className="fbp-err">{err}</p> : <p>Loading the WhatsApp channels...</p>}</div>
 
-  const { langs, names, photos, review, queued, sent, today, sent_today } = data
+  const { langs, names, review, queued, sent, today, sent_today, photo_error } = data
   // The daily email goes at 07:00 India time (01:30 UTC), with a catch-up at 12:00 UTC.
   const firstDay = (!sent_today && new Date().getUTCHours() < 12) ? today : addDays(today, 1)
-  const common = { langs, names, photos }
+  const common = { langs, names, photos: options }
 
   if (mode === 'dashboard') {
     return <WhatsAppDashboard data={data} firstDay={firstDay} busy={busy} onRefresh={load} err={err} />
@@ -137,13 +151,14 @@ export default function Channels({ pass, mode = 'posts' }) {
         <button className="fbp-chip" onClick={load} disabled={busy}>{busy ? 'Refreshing...' : 'Refresh'}</button>
       </div>
       {err && <p className="fbp-err">{err}</p>}
+      {photo_error && <p className="fbp-err">The photos could not be fetched: {photo_error}</p>}
       {flash && <p className="fbp-ok">{flash}</p>}
 
       <h2 style={{ fontSize: 17, color: NAVY, margin: '18px 0 10px' }}>To review ({review.length})</h2>
       {review.length === 0 && <p style={{ fontSize: 14, color: '#22263a' }}>Nothing is waiting. The next idealista newsletter adds its stories here.</p>}
       {review.map(i => (
         <Story key={i.id} item={i} {...common} picking={picking === i.id} onPick={() => setPicking(null)}
-          onPhoto={(key) => act(i.id, 'image', { image: key })}
+          onPhoto={(url) => act(i.id, 'image', { image: url })}
           head={<>
             <b style={{ color: NAVY }}>{i.title}</b>
             {pill(`idealista, ${day(i.received_on)}`, '#CBEFFF', NAVY)}
@@ -151,7 +166,7 @@ export default function Channels({ pass, mode = 'posts' }) {
           </>}>
           <button style={btn(true)} disabled={!!working} onClick={() => act(i.id, 'approve')}>
             {doing(i.id, 'approve') ? 'Approving and translating...' : 'Approve'}</button>
-          <button style={btn(false)} disabled={!!working} onClick={() => setPicking(picking === i.id ? null : i.id)}>Change photo</button>
+          <button style={btn(false)} disabled={!!working} onClick={() => openPicker(i.id)}>Change photo</button>
           <button style={btn(false)} disabled={!!working} onClick={() => act(i.id, 'skip')}>
             {doing(i.id, 'skip') ? 'Setting aside...' : 'Not for the channels'}</button>
         </Story>
@@ -161,13 +176,13 @@ export default function Channels({ pass, mode = 'posts' }) {
       {queued.length === 0 && <p style={{ fontSize: 14, color: '#22263a' }}>Nothing is approved yet, so nothing will go into the channels.</p>}
       {queued.map((i, n) => (
         <Story key={i.id} item={i} {...common} picking={picking === i.id} onPick={() => setPicking(null)}
-          onPhoto={(key) => act(i.id, 'image', { image: key })}
+          onPhoto={(url) => act(i.id, 'image', { image: url })}
           head={<>
             <b style={{ color: NAVY }}>Goes out {day(addDays(firstDay, n))}</b>
             {pill('Approved', '#E8F3E8', '#2e7d32')}
             {pill(`idealista, ${day(i.received_on)}`, '#CBEFFF', NAVY)}
           </>}>
-          <button style={btn(false)} disabled={!!working} onClick={() => setPicking(picking === i.id ? null : i.id)}>Change photo</button>
+          <button style={btn(false)} disabled={!!working} onClick={() => openPicker(i.id)}>Change photo</button>
           <button style={btn(false)} disabled={!!working} onClick={() => act(i.id, 'undo')}>
             {doing(i.id, 'undo') ? 'Undoing...' : 'Undo approval'}</button>
         </Story>

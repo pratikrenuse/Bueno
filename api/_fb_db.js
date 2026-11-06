@@ -115,7 +115,7 @@ async function newsFetch(path, init = {}, table = NEWS_TABLE) {
 // WhatsApp channels view. Approving translates the story (api/_news_decide.js) and puts it in
 // line; one goes out a day, in the order he approved them.
 const QUEUED = 'status=eq.approved&used_on=is.null&translations=not.is.null';
-const CHANNEL_FIELDS = 'id,title_en,title_es,en,edited_en,translations,is_proposal,source,link,received_on,score,channel_image,decided_at,status,used_on';
+const CHANNEL_FIELDS = 'id,title_en,title_es,en,edited_en,translations,is_proposal,source,link,received_on,score,category,position,channel_image,decided_at,status,used_on';
 export async function nextChannelNews() {
   const r = await newsFetch(`?select=${CHANNEL_FIELDS}&${QUEUED}&order=decided_at.asc&limit=1`);
   return r.ok ? { ok: true, item: r.data[0] || null } : { ok: false, item: null, error: r.error };

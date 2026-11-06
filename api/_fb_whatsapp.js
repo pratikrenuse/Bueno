@@ -91,38 +91,15 @@ export function channelPostFor(date) {
   return WRITTEN_CHANNEL_POSTS_ON ? (CHANNEL_POSTS[date] || null) : null;
 }
 
-// The photo that goes with a channel post. 6 November 2026, Pratik: the photos must not
-// repeat. These are 98 different plain photographs of Spain (the LinkedIn photo set in the
-// studio-assets bucket), with no text and no logo, so the same image is right in every
-// language. Each story gets its own photo the first time the deck lists it, in this order,
-// skipping any photo another story already has (api/_fb_channels.js), and keeps it.
-export const CHANNEL_PHOTOS = [
-  'escritura_notary', 'pest_prevention_empty', 'ag_nie_timing', 'at_nonresident_seller', 'ag_partner_week_after_keys', 'retirement_183_line',
-  'ag_epc_advertising', 'owners_year', 'brexit_buying', 's1_before_you_leave', 'spanish_lifestyle_owner', 'ag_unregistered_extensions',
-  'extension_deeds', 'inheritance_tax', 'tourist_license', 'at_spanish_wills', 'ag_nota_simple_twice', 'frozen_account',
-  'landlord_tenant_issues', 'ag_100pct_tax_calm', 'ag_partner_handover_service', 'seasonal_vs_tourist', 'rental_rule_changes', 'ag_partner_99_euros',
-  'holiday_home_running_cost', 'squatter_signals', 'inheritance_foreign_law', 'nota_simple', 'hidden_time_cost', 'at_arras_window',
-  'at_tourist_ban_ruling', 'irnr_who_pays', 'at_notary_role', 'ag_paperwork_sequence', 'nie_to_dni', 'ag_ibi_attaches',
-  'epc_certificates', 'spanish_citizenship', 'occupation_cover', 'community_fees', 'preventative_maintenance', 'at_partner_referral_logic',
-  'ag_seller_debt_certificate', 'rural_property', 'accountant_non_resident', 'ag_resale_questions', 'property_search_start', 'ag_modelo210_answer',
-  'free_banking_myth', 'currency_transfer', 'village_or_city_spain', 'hidden_bank_fees', 'ag_rural_land_checks', 'ag_notary_role',
-  'ibi_deep', 'at_gift_tax', 'at_partner_unbillable_email', 'ag_arras_window', 'ag_tourist_licence_first', 'late_tax_penalties',
-  'direct_debit_switch', 'at_bank_guarantee', 'ag_partner_aftersales_list', 'ag_rental_registration_2025', 'october_ibi_month', 'at_choice_of_law',
-  'ag_three_fifths_ruling', 'solar_panels_costs', 'leasehold_freehold', 'retire_coast_shortlist', 'ag_market_calendar', 'ag_partner_utility_bill_text',
-  'ag_scam_red_flags', 'credit_card_fees', 'at_succession_tax', 'noneu_tax_proposal', 'seasonal_rental_roi', 'at_partner_after_closing',
-  'ag_true_buying_costs', 'modelo210_scenarios', 'ag_fx_completion_funds', 'invest_locations', 'at_rural_diligence', 'at_extension_legalisation',
-  'gift_tax', 'healthcare_access_owners', 'ag_brexit_briefing', 'ag_3pct_withholding', 'property_insurance', 'ag_partner_saying_no',
-  'alquiler_opcion_compra', 'utilities_setup', 'at_community_debts', 'buying_fees', 'ag_offer_accepted', 'ag_law5768_guarantee',
-  'buying_2026_compliance', 'costa_blanca_eight_towns',
-];
-const PHOTO_BASE = 'https://zwdkmqzlrhwihijgqgzl.supabase.co/storage/v1/object/public/studio-assets/linkedin/photos-v3';
-export const photoUrl = (name) => `${PHOTO_BASE}/${name}.jpg`;
+// The photo that goes with a channel post. 6 November 2026, Pratik: the WhatsApp channels are
+// Spain 24/7, so no Bueno logo and no mention of Bueno anywhere, and none of the LinkedIn
+// tool's images. Each story gets its own plain photograph of Spain from Pexels
+// (api/_fb_channels.js), never one another story already has, and keeps it. The same photo
+// is right in every language because it carries no text.
+export const isChannelPhoto = (url) => /^https:\/\/images\.pexels\.com\/photos\/\d+\//.test(String(url || ''));
+export const photoIdOf = (url) => { const m = String(url || '').match(/\/photos\/(\d+)\//); return m ? m[1] : null; };
 export function channelImageFor(item) {
-  if (item && item.channel_image && CHANNEL_PHOTOS.includes(item.channel_image)) return photoUrl(item.channel_image);
-  const id = String((item && item.id) || '');
-  let n = 0;
-  for (const ch of id) n = (n * 31 + ch.charCodeAt(0)) >>> 0;
-  return photoUrl(CHANNEL_PHOTOS[n % CHANNEL_PHOTOS.length]);
+  return item && isChannelPhoto(item.channel_image) ? item.channel_image : null;
 }
 
 // An approved story from the newsletter digest (news_items), in the same shape as a

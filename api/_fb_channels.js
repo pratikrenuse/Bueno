@@ -13,9 +13,9 @@
 //            never by import, so the two surfaces stay apart.
 //   skip     "not for the channels". The story stays kept, so the LinkedIn deck is not affected.
 //   undo     back to waiting for review, from approved or skipped, as long as it has not gone.
-//   image    the photo that goes with it, one of CHANNEL_PHOTOS.
+//   image    the photo that goes with it, a Pexels photo from GET ?action=channels&photos=<id>.
 import { gate, readBody, readNews, queuedChannelNews, reviewChannelNews, recentChannelSends, channelSentOn, getChannelNews, patchChannelNews, usedChannelImages } from './_fb_db.js';
-import { CHANNEL_LANGS, CHANNEL_NAME, CHANNEL_PHOTOS, photoUrl, channelFromNews, channelImageFor } from './_fb_whatsapp.js';
+import { CHANNEL_LANGS, CHANNEL_NAME, channelFromNews, channelImageFor, isChannelPhoto, photoIdOf } from './_fb_whatsapp.js';
 
 const SITE = 'https://www.247spain.es';
 const englishOf = (i) => (i.edited_en && String(i.edited_en).trim()) ? i.edited_en : (i.en || '');
@@ -35,21 +35,75 @@ async function approveInDigest(pass, id) {
   } finally { clearTimeout(t); }
 }
 
-// Gives every story without a photo its own one, in CHANNEL_PHOTOS order, never one another
-// story already has (6 November 2026: the photos must not repeat). Saved, so it never changes.
-async function assignPhotos(items) {
-  const missing = items.filter(i => !i.channel_image).sort((a, b) => (a.received_on < b.received_on ? -1 : a.received_on > b.received_on ? 1 : 0));
-  if (!missing.length) return;
-  const used = await usedChannelImages();
-  let k = 0;
-  for (const i of missing) {
-    while (k < CHANNEL_PHOTOS.length && used.has(CHANNEL_PHOTOS[k])) k++;
-    // All 98 used: start again from the photo used longest ago.
-    const name = k < CHANNEL_PHOTOS.length ? CHANNEL_PHOTOS[k++] : CHANNEL_PHOTOS[(used.size + k++) % CHANNEL_PHOTOS.length];
-    used.add(name);
-    const p = await patchChannelNews(i.id, { channel_image: name });
-    if (p.ok) i.channel_image = name;
+// Photos: plain photographs of Spain from Pexels (6 November 2026, Pratik: Spain 24/7 only,
+// no Bueno logo, none of the LinkedIn tool's images). The search follows the story's topic and
+// varies with its place in the newsletter, so neighbouring stories look different.
+const QUERIES = {
+  'tax-and-law': ['spanish old town street', 'seville street', 'spanish town square', 'toledo spain'],
+  market: ['spain apartment buildings', 'malaga city', 'valencia spain architecture', 'alicante coast city'],
+  letting: ['spain apartment balcony', 'mediterranean terrace sea view', 'barcelona balconies', 'spanish apartment building'],
+  'buying-selling': ['spanish villa', 'white village andalusia', 'costa del sol houses', 'mallorca house'],
+  squatting: ['spanish house front door', 'old door spain', 'spanish house facade'],
+  politics: ['madrid city', 'madrid street', 'madrid architecture'],
+  other: ['spanish coastal town', 'spanish village', 'spain old town', 'costa brava town'],
+};
+const queriesFor = (i) => {
+  const list = QUERIES[i.category] || QUERIES.other;
+  const start = Number(i.position || 0) % list.length;
+  return [...list.slice(start), ...list.slice(0, start), ...QUERIES.other];
+};
+const PEXELS = 'https://api.pexels.com/v1/search';
+// A photo at a size that suits WhatsApp and email, from its Pexels id.
+export const photoFromId = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1200`;
+
+async function searchPhotos(query, page = 1) {
+  const key = process.env.PEXELS_API_KEY;
+  if (!key) return { ok: false, error: 'Missing env var: PEXELS_API_KEY.' };
+  try {
+    const r = await fetch(`${PEXELS}?query=${encodeURIComponent(query)}&orientation=landscape&per_page=40&page=${page}`, { headers: { Authorization: key } });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) return { ok: false, error: `Pexels ${r.status}` };
+    return { ok: true, ids: (j.photos || []).map(p => String(p.id)) };
+  } catch (e) {
+    return { ok: false, error: String((e && e.message) || e) };
   }
+}
+
+// Up to n photos for a story that no other story has.
+async function freshPhotos(item, used, n) {
+  const out = [];
+  let error = null;
+  for (const q of queriesFor(item)) {
+    const r = await searchPhotos(q);
+    if (!r.ok) { error = r.error; break; }
+    for (const id of r.ids) {
+      if (!used.has(id) && !out.includes(id)) out.push(id);
+      if (out.length >= n) return { ok: true, ids: out };
+    }
+  }
+  return out.length ? { ok: true, ids: out } : { ok: false, error: error || 'Pexels found no photo.' };
+}
+
+async function usedIds() {
+  const used = await usedChannelImages();
+  return new Set([...used].map(photoIdOf).filter(Boolean));
+}
+
+// Gives every story without a photo its own one and saves it, so it never changes by itself.
+async function assignPhotos(items) {
+  const missing = items.filter(i => !isChannelPhoto(i.channel_image))
+    .sort((a, b) => (a.received_on < b.received_on ? -1 : a.received_on > b.received_on ? 1 : (a.position || 0) - (b.position || 0)));
+  if (!missing.length) return null;
+  const used = await usedIds();
+  for (const i of missing) {
+    const f = await freshPhotos(i, used, 1);
+    if (!f.ok) return f.error;
+    used.add(f.ids[0]);
+    const url = photoFromId(f.ids[0]);
+    const p = await patchChannelNews(i.id, { channel_image: url });
+    if (p.ok) i.channel_image = url;
+  }
+  return null;
 }
 
 const card = (i) => ({
@@ -70,8 +124,10 @@ export default async function handler(req, res) {
     if (item.used_on) return res.status(409).json({ error: 'This one has already gone out to the channels.' });
 
     if (action === 'image') {
-      if (!CHANNEL_PHOTOS.includes(image)) return res.status(400).json({ error: 'Unknown photo.' });
-      const p = await patchChannelNews(id, { channel_image: image });
+      if (!isChannelPhoto(image)) return res.status(400).json({ error: 'Unknown photo.' });
+      const taken = await usedIds();
+      if (taken.has(photoIdOf(image)) && photoIdOf(image) !== photoIdOf(item.channel_image)) return res.status(409).json({ error: 'Another story already has that photo.' });
+      const p = await patchChannelNews(id, { channel_image: photoFromId(photoIdOf(image)) });
       if (!p.ok) return res.status(500).json({ error: p.error });
     } else if (action === 'approve') {
       if (item.status !== 'pending') return res.status(409).json({ error: 'Only a story waiting for review can be approved.' });
@@ -94,18 +150,27 @@ export default async function handler(req, res) {
     return res.json({ ok: true, item: after ? card(after) : null });
   }
 
+  // Photo choices for one story, for "Change photo".
+  if (req.query && req.query.photos) {
+    const item = await getChannelNews(req.query.photos);
+    if (!item) return res.status(404).json({ error: 'No such story.' });
+    const f = await freshPhotos(item, await usedIds(), 18);
+    if (!f.ok) return res.status(502).json({ error: f.error });
+    return res.json({ ok: true, photos: f.ids.map(photoFromId) });
+  }
+
   const today = new Date().toISOString().slice(0, 10);
   const [review, queued, sent, doneToday, emails] = await Promise.all([
     reviewChannelNews(), queuedChannelNews(), recentChannelSends(60), channelSentOn(today),
     readNews('?select=received_at,subject,status,stories,kept&source=eq.idealista&order=received_at.desc&limit=10', 'news_emails'),
   ]);
   for (const r of [review, queued, sent]) if (!r.ok) return res.status(500).json({ error: r.error });
-  await assignPhotos([...review.data, ...queued.data]);
+  const photoError = await assignPhotos([...review.data, ...queued.data]);
 
   res.json({
     ok: true, today, sent_today: doneToday,
     langs: CHANNEL_LANGS, names: CHANNEL_NAME,
-    photos: CHANNEL_PHOTOS.map(p => ({ key: p, url: photoUrl(p) })),
+    photo_error: photoError,
     review: review.data.map(card),
     queued: queued.data.map(card),
     sent: sent.data,
