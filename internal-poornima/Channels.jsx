@@ -77,7 +77,7 @@ function Story({ item, head, children, langs, names, picking, onPick, photos, on
   )
 }
 
-export default function Channels({ pass }) {
+export default function Channels({ pass, mode = 'posts' }) {
   const [data, setData] = useState(null)
   const [err, setErr] = useState('')
   const [busy, setBusy] = useState(false)
@@ -123,6 +123,10 @@ export default function Channels({ pass }) {
   // The daily email goes at 07:00 India time (01:30 UTC), with a catch-up at 12:00 UTC.
   const firstDay = (!sent_today && new Date().getUTCHours() < 12) ? today : addDays(today, 1)
   const common = { langs, names, photos }
+
+  if (mode === 'dashboard') {
+    return <WhatsAppDashboard data={data} firstDay={firstDay} busy={busy} onRefresh={load} err={err} />
+  }
 
   return (
     <div className="fbp-wide" style={{ paddingBottom: 40 }}>
@@ -179,6 +183,82 @@ export default function Channels({ pass }) {
             {s.title && <span style={{ fontSize: 13, color: '#55596b' }}>{s.title}</span>}
           </>} />
       ))}
+    </div>
+  )
+}
+
+// The dashboard (6 November 2026): what is waiting, what goes out when, what went, and the
+// idealista emails that came in. Same data as the posts view, from /api/fb?action=channels.
+const time = (iso) => {
+  if (!iso) return ''
+  try { return new Date(iso).toLocaleString(undefined, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) }
+  catch { return iso }
+}
+
+function Tile({ big, label, sub }) {
+  return (
+    <div style={{ background: '#fff', border: '1px solid #E0DFDC', borderRadius: 12, padding: '14px 16px' }}>
+      <div style={{ fontSize: 28, fontWeight: 700, color: NAVY, lineHeight: 1.1 }}>{big}</div>
+      <div style={{ fontSize: 13.5, color: '#22263a', marginTop: 4 }}>{label}</div>
+      {sub && <div style={{ fontSize: 12.5, color: '#55596b', marginTop: 4 }}>{sub}</div>}
+    </div>
+  )
+}
+
+function Table({ head, rows, empty }) {
+  if (!rows.length) return <p style={{ fontSize: 14, color: '#22263a' }}>{empty}</p>
+  return (
+    <div style={{ background: '#fff', border: '1px solid #E0DFDC', borderRadius: 12, overflow: 'hidden' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5, color: '#22263a' }}>
+        <thead><tr>{head.map(h => <th key={h} style={{ textAlign: 'left', padding: '10px 12px', background: '#F4F2EE', color: NAVY, fontWeight: 700 }}>{h}</th>)}</tr></thead>
+        <tbody>{rows.map((r, i) => (
+          <tr key={i} style={{ borderTop: '1px solid #EDEBE6' }}>
+            {r.map((c, j) => <td key={j} style={{ padding: '10px 12px', verticalAlign: 'top' }}>{c}</td>)}
+          </tr>
+        ))}</tbody>
+      </table>
+    </div>
+  )
+}
+
+function WhatsAppDashboard({ data, firstDay, busy, onRefresh, err }) {
+  const { review, queued, sent, newsletters = [], sent_today } = data
+  const lastNews = newsletters[0]
+  const since = addDays(data.today, -29)
+  const sentMonth = sent.filter(s => s.day >= since).length
+  const nextTitle = queued[0] ? queued[0].title : null
+  return (
+    <div className="fbp-wide" style={{ paddingBottom: 40 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '6px 0 14px' }}>
+        <p style={{ margin: 0, fontSize: 14, color: '#22263a', lineHeight: 1.6, flex: 1 }}>
+          One approved post goes into the six WhatsApp channels each morning at 7 am India time. Nothing goes out unless you approved it.
+        </p>
+        <button className="fbp-chip" onClick={onRefresh} disabled={busy}>{busy ? 'Refreshing...' : 'Refresh'}</button>
+      </div>
+      {err && <p className="fbp-err">{err}</p>}
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
+        <Tile big={review.length} label="Stories waiting for your review" />
+        <Tile big={queued.length} label="Approved and in line"
+          sub={queued.length ? `Covers the channels until ${day(addDays(firstDay, queued.length - 1))}.` : 'Nothing will go out until you approve one.'} />
+        <Tile big={nextTitle ? day(firstDay) : 'None'} label="Next channel post"
+          sub={nextTitle ? `7 am India time: ${nextTitle}` : (sent_today ? 'Today’s post has already gone.' : 'No approved post is waiting.')} />
+        <Tile big={sentMonth} label="Posts sent in the last 30 days" />
+        <Tile big={lastNews ? day(lastNews.received_at) : 'None'} label="Last idealista email"
+          sub={lastNews ? `${lastNews.kept || 0} useful stories kept from it.` : 'No idealista email has come in yet.'} />
+      </div>
+
+      <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Coming up</h2>
+      <Table head={['Date', 'Story', 'From idealista']} empty="Nothing is approved, so nothing is scheduled."
+        rows={queued.map((q, n) => [day(addDays(firstDay, n)), q.title, day(q.received_on)])} />
+
+      <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Sent</h2>
+      <Table head={['Date', 'Story', 'Sent to']} empty="Nothing has been sent from here yet."
+        rows={sent.map(s => [day(s.day), s.title || (s.texts && s.texts.en ? s.texts.en.slice(0, 80) + '...' : ''), 'You, with the publisher and John in BCC'])} />
+
+      <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>idealista emails received</h2>
+      <Table head={['Received', 'Subject', 'Useful stories']} empty="No idealista email has come in yet."
+        rows={newsletters.map(e => [time(e.received_at), e.subject, e.status === 'done' ? String(e.kept || 0) : e.status])} />
     </div>
   )
 }

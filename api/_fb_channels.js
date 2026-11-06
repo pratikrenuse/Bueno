@@ -14,7 +14,7 @@
 //   skip     "not for the channels". The story stays kept, so the LinkedIn deck is not affected.
 //   undo     back to waiting for review, from approved or skipped, as long as it has not gone.
 //   image    the photo that goes with it, one of CHANNEL_PHOTOS.
-import { gate, readBody, queuedChannelNews, reviewChannelNews, recentChannelSends, channelSentOn, getChannelNews, patchChannelNews } from './_fb_db.js';
+import { gate, readBody, readNews, queuedChannelNews, reviewChannelNews, recentChannelSends, channelSentOn, getChannelNews, patchChannelNews, usedChannelImages } from './_fb_db.js';
 import { CHANNEL_LANGS, CHANNEL_NAME, CHANNEL_PHOTOS, photoUrl, channelFromNews, channelImageFor } from './_fb_whatsapp.js';
 
 const SITE = 'https://www.247spain.es';
@@ -33,6 +33,23 @@ async function approveInDigest(pass, id) {
   } catch (e) {
     return { ok: false, error: String((e && e.message) || e) };
   } finally { clearTimeout(t); }
+}
+
+// Gives every story without a photo its own one, in CHANNEL_PHOTOS order, never one another
+// story already has (6 November 2026: the photos must not repeat). Saved, so it never changes.
+async function assignPhotos(items) {
+  const missing = items.filter(i => !i.channel_image).sort((a, b) => (a.received_on < b.received_on ? -1 : a.received_on > b.received_on ? 1 : 0));
+  if (!missing.length) return;
+  const used = await usedChannelImages();
+  let k = 0;
+  for (const i of missing) {
+    while (k < CHANNEL_PHOTOS.length && used.has(CHANNEL_PHOTOS[k])) k++;
+    // All 98 used: start again from the photo used longest ago.
+    const name = k < CHANNEL_PHOTOS.length ? CHANNEL_PHOTOS[k++] : CHANNEL_PHOTOS[(used.size + k++) % CHANNEL_PHOTOS.length];
+    used.add(name);
+    const p = await patchChannelNews(i.id, { channel_image: name });
+    if (p.ok) i.channel_image = name;
+  }
 }
 
 const card = (i) => ({
@@ -58,11 +75,8 @@ export default async function handler(req, res) {
       if (!p.ok) return res.status(500).json({ error: p.error });
     } else if (action === 'approve') {
       if (item.status !== 'pending') return res.status(409).json({ error: 'Only a story waiting for review can be approved.' });
-      // The photo shown in the deck is fixed at approval, so the email carries exactly that one.
-      if (!item.channel_image) {
-        const name = channelImageFor(item).split('/').pop().replace('.jpg', '');
-        await patchChannelNews(id, { channel_image: name });
-      }
+      // The photo shown in the deck goes with it, so the email carries exactly that one.
+      await assignPhotos([item]);
       const a = await approveInDigest(pass, id);
       if (!a.ok) return res.status(502).json({ error: `Not approved. ${a.error}` });
     } else if (action === 'skip') {
@@ -81,10 +95,12 @@ export default async function handler(req, res) {
   }
 
   const today = new Date().toISOString().slice(0, 10);
-  const [review, queued, sent, doneToday] = await Promise.all([
-    reviewChannelNews(), queuedChannelNews(), recentChannelSends(14), channelSentOn(today),
+  const [review, queued, sent, doneToday, emails] = await Promise.all([
+    reviewChannelNews(), queuedChannelNews(), recentChannelSends(60), channelSentOn(today),
+    readNews('?select=received_at,subject,status,stories,kept&source=eq.idealista&order=received_at.desc&limit=10', 'news_emails'),
   ]);
   for (const r of [review, queued, sent]) if (!r.ok) return res.status(500).json({ error: r.error });
+  await assignPhotos([...review.data, ...queued.data]);
 
   res.json({
     ok: true, today, sent_today: doneToday,
@@ -93,5 +109,6 @@ export default async function handler(req, res) {
     review: review.data.map(card),
     queued: queued.data.map(card),
     sent: sent.data,
+    newsletters: emails.ok ? emails.data : [],
   });
 }

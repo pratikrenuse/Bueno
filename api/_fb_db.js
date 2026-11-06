@@ -138,6 +138,11 @@ export async function getChannelNews(id) {
   const r = await newsFetch(`?select=${CHANNEL_FIELDS}&id=eq.${encodeURIComponent(id)}`);
   return r.ok ? (r.data[0] || null) : null;
 }
+// Every photo a story already has, so a new story never gets one of them.
+export async function usedChannelImages() {
+  const r = await newsFetch('?select=channel_image&channel_image=not.is.null');
+  return r.ok ? new Set(r.data.map(x => x.channel_image)) : new Set();
+}
 // The deck's own changes to a story: the photo, "not for the channels" (skipped, which keeps
 // it kept so the LinkedIn deck is not affected) and undo. Never touches a story already sent.
 export async function patchChannelNews(id, patch) {

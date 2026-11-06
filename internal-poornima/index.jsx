@@ -381,9 +381,15 @@ export default function InternalPratik() {
           title="Pulls in any new or rewritten posts. Never overwrites a decision, an edit or a send.">
           {busy ? 'Syncing...' : 'Sync posts'}</button>
       </nav>}
-      {!FACEBOOK_ON && <h1 className="fbp-wide" style={{ fontSize: 20, color: NAVY, margin: '18px auto 4px' }}>WhatsApp channels</h1>}
+      {!FACEBOOK_ON && <nav className="fbp-views fbp-wide" aria-label="View">
+        <button className={`fbp-chip${view !== 'wa-dashboard' ? ' current' : ''}`} aria-pressed={view !== 'wa-dashboard'}
+          onClick={() => setView('channels')}>WhatsApp posts</button>
+        <button className={`fbp-chip${view === 'wa-dashboard' ? ' current' : ''}`} aria-pressed={view === 'wa-dashboard'}
+          onClick={() => setView('wa-dashboard')}>Dashboard</button>
+      </nav>}
 
       {view === 'channels' && <Channels pass={pass} />}
+      {view === 'wa-dashboard' && <Channels pass={pass} mode="dashboard" />}
 
       {FACEBOOK_ON && view === 'dashboard' && (
         <>

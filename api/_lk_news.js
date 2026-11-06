@@ -37,21 +37,25 @@ export const englishOf = (item) => (item.edited_en && item.edited_en.trim()) ? i
 // above the navy BUENO | PROPERTY SIMPLIFIED band, no text, so one file is right in every
 // language). Pratik, 5 November 2026: the images must be in Bueno's branding as they are.
 // The frames come from public/posts, and only from posts that are no longer shown in the
-// deck, so a news post never repeats the image of a post that was approved or sent. They are
-// used in turn by day number, so no two news posts in a row share one, and the next two in
-// the pool are offered under "Change image".
+// deck, so a news post never repeats the image of a post that was approved or sent.
+//
+// 6 November 2026, Pratik: the photos kept repeating. The 52 frames are only 15 licensed
+// photographs (studio/PHOTO_POOL.md) in different layouts and crops, and the old order put
+// the same photograph on neighbouring posts. This order takes one frame of each photograph in
+// turn, so a photograph comes back only after at least ten others. The next two in the list
+// are offered under "Change image" and are always different photographs too.
 export const NEWS_FRAMES = [
-  'accountant_non_resident', 'alquiler_opcion_compra', 'brexit_buying', 'buying_2026_compliance', 'buying_fees',
-  'cash_rules', 'community_fees', 'costa_blanca_eight_towns', 'credit_card_fees', 'currency_transfer',
-  'direct_debit_switch', 'epc_certificates', 'escritura_notary', 'extension_deeds', 'free_banking_myth',
-  'frozen_account', 'gift_tax', 'healthcare_access_owners', 'hidden_bank_fees', 'hidden_time_cost',
-  'holiday_home_running_cost', 'inheritance_foreign_law', 'inheritance_tax', 'invest_locations', 'irnr_who_pays',
-  'landlord_tenant_issues', 'late_tax_penalties', 'leasehold_freehold', 'modelo210_scenarios', 'nie_to_dni',
-  'noneu_tax_proposal', 'nota_simple', 'occupation_cover', 'october_ibi_month', 'owners_year',
-  'pest_prevention_empty', 'preventative_maintenance', 'property_insurance', 'rental_rule_changes', 'retire_coast_shortlist',
-  'retirement_183_line', 'rural_property', 's1_before_you_leave', 'seasonal_rental_roi', 'seasonal_vs_tourist',
-  'solar_panels_costs', 'spanish_citizenship', 'spanish_lifestyle_owner', 'squatter_signals', 'tourist_license',
-  'utilities_setup', 'village_or_city_spain',
+  'alquiler_opcion_compra', 'costa_blanca_eight_towns', 'modelo210_scenarios', 'epc_certificates', 'accountant_non_resident',
+  'gift_tax', 'leasehold_freehold', 'currency_transfer', 'free_banking_myth', 'cash_rules',
+  'late_tax_penalties', 'buying_2026_compliance', 'credit_card_fees', 'irnr_who_pays', 'buying_fees',
+  'direct_debit_switch', 'healthcare_access_owners', 'october_ibi_month', 'extension_deeds', 'brexit_buying',
+  'hidden_bank_fees', 'noneu_tax_proposal', 'holiday_home_running_cost', 'pest_prevention_empty', 'community_fees',
+  'seasonal_rental_roi', 'escritura_notary', 'frozen_account', 'retire_coast_shortlist', 'nie_to_dni',
+  'owners_year', 'inheritance_foreign_law', 'tourist_license', 'landlord_tenant_issues', 'occupation_cover',
+  'hidden_time_cost', 'property_insurance', 'inheritance_tax', 'seasonal_vs_tourist', 'invest_locations',
+  'nota_simple', 'village_or_city_spain', 'spanish_citizenship', 'retirement_183_line', 'rural_property',
+  'utilities_setup', 'squatter_signals', 'rental_rule_changes', 'spanish_lifestyle_owner', 'preventative_maintenance',
+  's1_before_you_leave', 'solar_panels_costs',
 ];
 export const framesFor = (day) => {
   const i = ((Number(day) - FIRST_NEWS_DAY) % NEWS_FRAMES.length + NEWS_FRAMES.length) % NEWS_FRAMES.length;

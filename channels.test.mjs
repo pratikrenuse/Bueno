@@ -5,7 +5,8 @@
 // Every network call is mocked.
 import fbRouter from './api/fb.js';
 import newsRouter from './api/news.js';
-import { CHANNEL_POSTS, channelPostFor } from './api/_fb_whatsapp.js';
+import { CHANNEL_POSTS, channelPostFor, CHANNEL_PHOTOS } from './api/_fb_whatsapp.js';
+const P1 = CHANNEL_PHOTOS[40], P2 = CHANNEL_PHOTOS[41];
 
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = '') => cond ? pass++ : (fail++, console.log('FAIL', name, extra));
@@ -137,12 +138,17 @@ setNow('2031-03-10T15:00:00Z');
   await fbRouter(req('/api/fb?action=channels'), res);
   ok('the view answers', res.body && res.body.ok, JSON.stringify(res.body));
   ok('every kept story of the last week waits for review, newest first', res.body.review.map(i => i.id).join() === 'r1,r2');
-  ok('each one has a photo', res.body.review.every(i => /^https:\/\/www\.247spain\.es\/photos\/[a-z0-9_]+\.jpg$/.test(i.image)));
+  ok('each one has a photo', res.body.review.every(i => /\/studio-assets\/linkedin\/photos-v3\/[a-z0-9_]+\.jpg$/.test(i.image)), JSON.stringify(res.body.review.map(i => i.image)));
+  ok('no two stories share a photo', new Set(res.body.review.map(i => i.image)).size === res.body.review.length);
+  ok('the photo is saved, so it never changes', tables.news_items.filter(i => ['r1', 'r2'].includes(i.id)).every(i => CHANNEL_PHOTOS.includes(i.channel_image)));
+  const again0 = makeRes();
+  await fbRouter(req('/api/fb?action=channels'), again0);
+  ok('and is the same on the next load', again0.body.review.map(i => i.image).join() === res.body.review.map(i => i.image).join());
   ok('nothing is in line yet', res.body.queued.length === 0);
 
   const pic = makeRes();
-  await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: 'marina' } }), pic);
-  ok('a photo can be picked', tables.news_items[1].channel_image === 'marina' && pic.body.item.image.endsWith('/photos/marina.jpg'));
+  await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: P1 } }), pic);
+  ok('a photo can be picked', tables.news_items[1].channel_image === P1 && pic.body.item.image.endsWith(`/${P1}.jpg`));
   const badPic = makeRes();
   await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: '../x' } }), badPic);
   ok('only a known photo is accepted', badPic.statusCode === 400);
@@ -177,8 +183,8 @@ setNow('2031-03-10T15:00:00Z');
 setNow('2031-03-11T01:30:00Z');
 {
   const news = [
-    story({ id: 'a1', received_on: '2031-03-09', status: 'approved', decided_at: '2031-03-10T10:00:00Z', translations: T, en: 'First approved.', channel_image: 'marina' }),
-    story({ id: 'a2', received_on: '2031-03-10', status: 'approved', decided_at: '2031-03-10T11:00:00Z', translations: T, en: 'Second approved.', channel_image: 'g03' }),
+    story({ id: 'a1', received_on: '2031-03-09', status: 'approved', decided_at: '2031-03-10T10:00:00Z', translations: T, en: 'First approved.', channel_image: P1 }),
+    story({ id: 'a2', received_on: '2031-03-10', status: 'approved', decided_at: '2031-03-10T11:00:00Z', translations: T, en: 'Second approved.', channel_image: P2 }),
   ];
   const tables = { fb_posts: [], news_items: news, wa_channel_sends: [] };
   const calls = fakeDb(tables);
@@ -190,11 +196,11 @@ setNow('2031-03-11T01:30:00Z');
   ok('To Pratik, the publisher and John in BCC', task && task.to.join() === 'pratik.y.renuse@gmail.com' && task.bcc.join() === 'poornimanirwal@gmail.com,john@getbueno.com');
   ok('it carries the first approved post, not the second', task && task.html.includes('First approved.') && !task.html.includes('Second approved.'));
   ok('in all six languages', task && ['N', 'S', 'D', 'F', 'NL'].every(t => task.html.includes(`>${t}</div>`)) && ['Spain 24/7 (English)', 'Spania 24/7', 'Spanien 24/7 Svenska', 'Spanien 24/7 (German)', 'Espagne 24/7', 'Spanje 24/7'].every(n => task.html.includes(n)));
-  ok('each language has the photo', task && (task.html.match(/photos\/marina\.jpg" alt=""/g) || []).length === 6);
+  ok('each language has the photo', task && task.html.split(`${P1}.jpg" alt=""`).length - 1 === 6);
   ok('it opens Hi Agent and names nobody', task && /Hi Agent,/.test(task.html) && !/Poornima/i.test(task.html + task.subject));
   ok('no euro sign in the subject', task && !/€/.test(task.subject));
   ok('the post is marked sent', news[0].status === 'used' && news[0].used_on === '2031-03-11' && news[1].status === 'approved');
-  ok('the day is recorded with its photo', tables.wa_channel_sends.length === 1 && tables.wa_channel_sends[0].news_id === 'a1' && /marina/.test(tables.wa_channel_sends[0].texts.image));
+  ok('the day is recorded with its photo', tables.wa_channel_sends.length === 1 && tables.wa_channel_sends[0].news_id === 'a1' && tables.wa_channel_sends[0].texts.image.includes(P1));
   ok('one left means a reminder to Pratik', m.some(x => /only 1 approved post left/.test(x.subject) && !x.bcc));
 
   const before = mails(calls).length;
