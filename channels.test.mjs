@@ -5,9 +5,8 @@
 // Every network call is mocked.
 import fbRouter from './api/fb.js';
 import newsRouter from './api/news.js';
-import { CHANNEL_POSTS, channelPostFor, isChannelPhoto } from './api/_fb_whatsapp.js';
-const px = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1200`;
-const P1 = px(9001), P2 = px(9002);
+import { CHANNEL_POSTS, channelPostFor, isChannelPhoto, CHANNEL_PHOTOS, photoUrl } from './api/_fb_whatsapp.js';
+const P1 = photoUrl(CHANNEL_PHOTOS[5]), P2 = photoUrl(CHANNEL_PHOTOS[6]);
 
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = '') => cond ? pass++ : (fail++, console.log('FAIL', name, extra));
@@ -18,7 +17,6 @@ process.env.RESEND_API_KEY = 're_test';
 process.env.RESEND_FROM = '24/7 Spain <pratik@spanishpropertyinsights.com>';
 process.env.ANTHROPIC_API_KEY = 'sk-test';
 process.env.INTERNAL_PASSCODE = 'pw';
-process.env.PEXELS_API_KEY = 'px-test';
 delete process.env.CRON_SECRET;
 
 const RealDate = Date;
@@ -59,10 +57,6 @@ function fakeDb(tables) {
     calls.push({ url: String(url), method: init.method || 'GET', body: init.body });
     const u = new URL(String(url));
     if (u.host === 'api.resend.com') return new Response(JSON.stringify({ id: 'm1' }), { status: 200 });
-    if (u.host === 'api.pexels.com') {
-      // The same three photos come back for every search, so uniqueness is really tested.
-      return new Response(JSON.stringify({ photos: [{ id: 501 }, { id: 502 }, { id: 503 }] }), { status: 200 });
-    }
     if (u.host === 'api.anthropic.com') {
       const t = { no: 'Norsk tekst.', sv: 'Svensk text.', de: 'Deutscher Text.', fr: 'Texte français.', nl: 'Nederlandse tekst.' };
       return new Response(JSON.stringify({ content: [{ text: JSON.stringify(t) }] }), { status: 200 });
@@ -144,8 +138,8 @@ setNow('2031-03-10T15:00:00Z');
   await fbRouter(req('/api/fb?action=channels'), res);
   ok('the view answers', res.body && res.body.ok, JSON.stringify(res.body));
   ok('every kept story of the last week waits for review, newest first', res.body.review.map(i => i.id).join() === 'r1,r2');
-  ok('each one has a Pexels photo', res.body.review.every(i => isChannelPhoto(i.image)), JSON.stringify(res.body.review.map(i => i.image)));
-  ok('none is a Bueno or LinkedIn image', res.body.review.every(i => !/bueno|linkedin|247spain\.es\/(posts|photos)/i.test(i.image)));
+  ok('each one has a folder photo', res.body.review.every(i => isChannelPhoto(i.image) && /^https:\/\/www\.247spain\.es\/photos\/[a-z0-9_]+\.jpg$/.test(i.image)), JSON.stringify(res.body.review.map(i => i.image)));
+  ok('none is a Bueno or LinkedIn image', res.body.review.every(i => !/bueno|linkedin|\/posts\/|studio-assets/i.test(i.image)));
   ok('no two stories share a photo', new Set(res.body.review.map(i => i.image)).size === res.body.review.length);
   ok('the photo is saved, so it never changes', tables.news_items.filter(i => ['r1', 'r2'].includes(i.id)).every(i => isChannelPhoto(i.channel_image)));
   const again0 = makeRes();
@@ -155,15 +149,14 @@ setNow('2031-03-10T15:00:00Z');
 
   const opts = makeRes();
   await fbRouter(req('/api/fb?action=channels&photos=r2'), opts);
-  ok('"Change photo" offers only photos no story has', opts.body.ok && opts.body.photos.length === 1 && opts.body.photos[0].includes('/503/'), JSON.stringify(opts.body));
-  const taken = makeRes();
-  await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: tables.news_items[0].channel_image } }), taken);
-  ok('a photo another story has is refused', taken.statusCode === 409);
+  ok('"Change photo" offers all 15 folder photos', opts.body.ok && opts.body.photos.length === 15 && opts.body.photos.every(isChannelPhoto), JSON.stringify(opts.body));
+  ok('the unused ones first', !res.body.review.some(i => opts.body.photos.slice(0, 13).includes(i.image)));
+  ok('the greyscale and duplicate files are never used', !CHANNEL_PHOTOS.some(n => ['g00', 'golden_coast', 'arch_terrace', 'coast_bay', 'sunset_village', 'terrace_sunset'].includes(n)));
   const pic = makeRes();
   await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: P1 } }), pic);
   ok('a photo can be picked', tables.news_items[1].channel_image === P1 && pic.body.item.image === P1);
   const badPic = makeRes();
-  await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: '../x' } }), badPic);
+  await fbRouter(req('/api/fb?action=channels', { method: 'POST', body: { id: 'r2', action: 'image', image: 'https://images.pexels.com/photos/1/x.jpg' } }), badPic);
   ok('only a known photo is accepted', badPic.statusCode === 400);
 
   const ap = makeRes();

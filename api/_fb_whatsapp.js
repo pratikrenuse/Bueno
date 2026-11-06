@@ -91,13 +91,24 @@ export function channelPostFor(date) {
   return WRITTEN_CHANNEL_POSTS_ON ? (CHANNEL_POSTS[date] || null) : null;
 }
 
-// The photo that goes with a channel post. 6 November 2026, Pratik: the WhatsApp channels are
-// Spain 24/7, so no Bueno logo and no mention of Bueno anywhere, and none of the LinkedIn
-// tool's images. Each story gets its own plain photograph of Spain from Pexels
-// (api/_fb_channels.js), never one another story already has, and keeps it. The same photo
-// is right in every language because it carries no text.
-export const isChannelPhoto = (url) => /^https:\/\/images\.pexels\.com\/photos\/\d+\//.test(String(url || ''));
-export const photoIdOf = (url) => { const m = String(url || '').match(/\/photos\/(\d+)\//); return m ? m[1] : null; };
+// The photo that goes with a channel post. 6 November 2026, Pratik: the licensed stock photos
+// from the folder (studio/photos, published at /photos by the build), plain, with no Bueno logo
+// and no mention of Bueno, because the WhatsApp channels are Spain 24/7. These are the 15
+// different pictures in that folder: the greyscale call-centre shot (g00) and the files that
+// are the same picture under another name (golden_coast, arch_terrace, coast_bay,
+// sunset_village, terrace_sunset) are left out. A story gets the photo used least so far
+// (api/_fb_channels.js) and keeps it; "Change photo" offers all 15.
+export const CHANNEL_PHOTOS = [
+  'g07', 'g02', 'g08', 'g04', 'pool_dusk', 'couple_beach', 'g03', 'g05', 'marina', 'g06',
+  'g09', 'cove_house', 'g01', 'g10', 'poolside',
+];
+const SITE_PHOTOS = 'https://www.247spain.es/photos';
+export const photoUrl = (name) => `${SITE_PHOTOS}/${name}.jpg`;
+export const photoNameOf = (url) => {
+  const m = String(url || '').match(/^https:\/\/www\.247spain\.es\/photos\/([a-z0-9_]+)\.jpg$/);
+  return m && CHANNEL_PHOTOS.includes(m[1]) ? m[1] : null;
+};
+export const isChannelPhoto = (url) => !!photoNameOf(url);
 export function channelImageFor(item) {
   return item && isChannelPhoto(item.channel_image) ? item.channel_image : null;
 }
