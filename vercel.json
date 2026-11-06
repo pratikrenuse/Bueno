@@ -42,6 +42,10 @@
       "destination": "/api/news?action=:action"
     },
     {
+      "source": "/api/reels/:action",
+      "destination": "/api/reels?action=:action"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

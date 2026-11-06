@@ -1,0 +1,36 @@
+name: Instagram reels
+
+# Once a day: the site writes today's reel script from the idealista stories and translates
+# it, this job renders one video per language and uploads them, and the site emails them.
+#
+# It signs its calls to /api/reels with a hash of the Supabase service key, the same secret
+# the Studio render workflow already uses. The key itself never leaves GitHub.
+
+on:
+  schedule:
+    # 13:20 UTC = 14:20 in Spain in winter, after the morning idealista emails have come in.
+    - cron: "20 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: reels-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install --quiet pillow edge-tts
+      - name: Write, render, upload and send
+        env:
+          REELS_SITE: https://www.247spain.es
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python studio/reels/render.py
