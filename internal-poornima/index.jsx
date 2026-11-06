@@ -58,6 +58,10 @@ const PILL = {
   posted: { label: 'Live', bg: '#E9EEF9', fg: '#2f4f9e' },
 }
 
+// 6 November 2026, Pratik: for now this deck shows only the WhatsApp channel posts. The
+// Facebook review and dashboard are hidden, not deleted; set this to true to bring them back.
+const FACEBOOK_ON = false
+
 const textOf = (p) => (p.edited_text && p.edited_text.trim()) ? p.edited_text : p.post_text
 const fmt = (iso) => {
   if (!iso) return ''
@@ -83,7 +87,7 @@ export default function InternalPratik() {
   const [showTr, setShowTr] = useState(null)
   const [cursor, setCursor] = useState(0)
   const [selected, setSelected] = useState(() => new Set()) // ids ticked for approving together
-  const [view, setView] = useState('review') // 'review' first; the dashboard is one click away
+  const [view, setView] = useState(FACEBOOK_ON ? 'review' : 'channels') // the WhatsApp channels while Facebook is off
   const [dash, setDash] = useState(null)
   const cardRefs = useRef({})
 
@@ -347,7 +351,7 @@ export default function InternalPratik() {
       <div className="fbp-gate">
         <form onSubmit={e => { e.preventDefault(); setEntered(true) }}>
           <h1>Posts for Poornima</h1>
-          <p>24/7 Spain and Bueno, for Facebook groups. This deck is not the team one.</p>
+          <p>{FACEBOOK_ON ? '24/7 Spain and Bueno, for Facebook groups. This deck is not the team one.' : 'The posts for the Spain 24/7 WhatsApp channels. This deck is not the team one.'}</p>
           <input type="password" value={pass} autoFocus placeholder="Password"
             onChange={e => setPass(e.target.value)} />
           <button type="submit">Open</button>
@@ -366,7 +370,7 @@ export default function InternalPratik() {
         </div>
       </header>
 
-      <nav className="fbp-views fbp-wide" aria-label="View">
+      {FACEBOOK_ON && <nav className="fbp-views fbp-wide" aria-label="View">
         <button className={`fbp-chip${view === 'review' ? ' current' : ''}`} aria-pressed={view === 'review'}
           onClick={() => setView('review')}>Review posts ({counts.pending || 0} to review)</button>
         <button className={`fbp-chip${view === 'dashboard' ? ' current' : ''}`} aria-pressed={view === 'dashboard'}
@@ -376,11 +380,12 @@ export default function InternalPratik() {
         <button className="fbp-chip" style={{ marginLeft: 'auto' }} onClick={seed} disabled={busy}
           title="Pulls in any new or rewritten posts. Never overwrites a decision, an edit or a send.">
           {busy ? 'Syncing...' : 'Sync posts'}</button>
-      </nav>
+      </nav>}
+      {!FACEBOOK_ON && <h1 className="fbp-wide" style={{ fontSize: 20, color: NAVY, margin: '18px auto 4px' }}>WhatsApp channels</h1>}
 
       {view === 'channels' && <Channels pass={pass} />}
 
-      {view === 'dashboard' && (
+      {FACEBOOK_ON && view === 'dashboard' && (
         <>
           {err && <p className="fbp-err fbp-wide">{err}</p>}
           {flash && <p className="fbp-ok fbp-wide">{flash}</p>}
@@ -389,7 +394,7 @@ export default function InternalPratik() {
         </>
       )}
 
-      {view === 'review' && (<>
+      {FACEBOOK_ON && view === 'review' && (<>
       {/* Progress and filters for reviewing. */}
       <div className="fbp-bar">
         <div className="fbp-dash">
