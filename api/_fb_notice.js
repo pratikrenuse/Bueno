@@ -41,7 +41,7 @@ function whatsappTasksBody() {
         <div style="background:#FBF5E7;border-left:4px solid #C9A96E;border-radius:8px;padding:14px 16px;margin:0 0 18px;font-family:${SANS};font-size:14.5px;line-height:1.6;color:#010221">
           <b>Important: new tasks from today.</b> Please keep doing the daily Facebook group posts as usual and do these alongside them. Please start with tasks 1 and 2 today.
         </div>
-        ${P('Hi Agent,')}
+        ${P('Hi,')}
 
         ${H('1. Add descriptions to the WhatsApp channels')}
         ${P('You are now admin of six channels, one per language, and of the estate agents\' group. Please copy each description below into its channel exactly as written.')}

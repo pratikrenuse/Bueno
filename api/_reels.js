@@ -380,7 +380,7 @@ ${esc((s.hashtags || []).join(' '))}</div>
   }).join('');
   const missing = LANGS.filter(l => !langs.includes(l));
   const html = `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221;max-width:600px">
-  <p>Agent,</p>
+  <p>Hi,</p>
   <p>Today's Instagram reel is ready in ${langs.length} ${langs.length === 1 ? 'language' : 'languages'}. It is about this: ${esc(title)}. Each video is attached to this email, so you can download it straight to your phone.</p>
   <p>Please post each one today as a Reel on the Instagram page for its language, and paste the caption and hashtags below it. Choose the opening frame with the headline as the cover.${voiced ? '' : ' These videos have no voice-over today, so add a calm track from the Instagram music library at a low volume.'} If the page's bio does not have its WhatsApp channel link yet, add the link given under that language.</p>
   ${missing.length ? `<p style="color:#8a6d1f">No video today for ${missing.map(l => LANG_NAME[l]).join(', ')}.</p>` : ''}

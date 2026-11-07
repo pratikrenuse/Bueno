@@ -235,7 +235,7 @@ export function bodyFor(post, day = 1, { trial = false, channel = null } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi Agent,</p>
+        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi,</p>
         <p style="margin:0 0 10px;font-size:15px;font-weight:bold;color:#010221">Task for day ${esc(String(day))}: publish one post in ${esc(String(available.length + 1))} languages</p>
         <ol style="margin:0 0 16px;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
           <li>Before posting, spend about ten minutes on each account using Facebook normally. Reply to comments and messages, and like or comment on a few posts in the groups.</li>
@@ -308,7 +308,7 @@ export function channelOnlyBody(date, channel) {
         24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;WhatsApp channels, ${esc(when)}</span>
       </div>
       <div style="padding:22px">
-        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi Agent,</p>
+        <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi,</p>
         <p style="margin:0 0 4px;font-size:14px;line-height:1.6;color:#22263a;font-family:${SANS}">There is no Facebook group post today. Your tasks for today are below.</p>
         ${whatsappSection(date, channel).split('Also today: ').join('Today: ')}
         <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When it is all done</p>
@@ -454,7 +454,7 @@ export function introBody({ trial = false } = {}) {
       </div>
       <div style="padding:22px">
         ${trial ? trialBanner() : ''}
-        ${P('Hi P,')}
+        ${P('Hi,')}
         ${P('From now on you will be posting for 24/7 Spain and Bueno in Facebook groups. Before the first post reaches you, I want to explain how it works, step by step, so nothing in the daily emails is a surprise.')}
 
         ${H('How it works')}
