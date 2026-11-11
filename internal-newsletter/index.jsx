@@ -1,32 +1,42 @@
-import { useEffect, useState, useCallback, useMemo } from 'react'
-import { toHtml, toText, current } from '../api/_newsletter_render.js'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import LegacyDeck from './LegacyDeck.jsx'
 
-// Bueno newsletter review deck. Route: /internal-newsletter
-// One issue every two weeks, in English, Norwegian and Swedish. John reads each issue
-// exactly as readers will see it, edits anything in place, and approves. Approving emails
-// Pratik the paste-ready text so he can schedule it in beehiiv.
-// Same password as the other internal decks (INTERNAL_PASSCODE, studio_pass session key).
-// No meta.js on purpose: never gets a public homepage card. Shares nothing with
-// /internal-linkedin.
+// /internal-newsletter: the Bueno Newsletter dashboard.
+//
+// One edition every two weeks (from Tue 10 Nov 2026), in English, Norwegian and Swedish.
+// Each edition is built from the top three idealista stories and a NEW guide written from
+// one blog article. This page keeps track of all of it:
+//   - which article each guide came from, and which articles are still free to use
+//   - every edition, its subject lines, stories, guide PDFs and who it was sent to
+//   - whether John is on the send list yet ("launch")
+// Same password as the other internal tools (INTERNAL_PASSCODE, studio_pass session key).
+// No meta.js on purpose: never on the homepage, never in the sitemap.
 
 const NAVY = '#010221', GOLD = '#C9A96E', LBLUE = '#CBEFFF', ACCENT = '#5B7FCC'
-const OFF = '#F8F7F4', RULE = '#E3E0DA', BODY = '#2B2E45'
+const BG = '#F8F7F4', RULE = '#E3E0DA', BODY = '#2B2E45', MUTED = '#6B6F85'
 const SANS = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
 const SERIF = "'FS Siena', Georgia, serif"
 const LANGS = [['en', 'English'], ['no', 'Norsk'], ['sv', 'Svenska']]
 
-const STATUS = {
-  pending: { label: 'Waiting for review', bg: '#FBF3DF', fg: '#7a611c' },
-  approved: { label: 'Approved, with Pratik', bg: '#E8F3E8', fg: '#2e7d32' },
-  scheduled: { label: 'Scheduled in beehiiv', bg: '#E6EEFB', fg: '#2b4f9e' },
-  rejected: { label: 'Sent back', bg: '#FAEDED', fg: '#b02a2a' },
+const A_STATUS = {
+  available: { label: 'Available', bg: '#EEF1F6', fg: '#3b4a66' },
+  selected: { label: 'Picked, waiting for you', bg: '#FBF3DF', fg: '#7a611c' },
+  approved: { label: 'Approved', bg: '#E6EEFB', fg: '#2b4f9e' },
+  used: { label: 'Used', bg: '#E8F3E8', fg: '#2e7d32' },
 }
+const E_STATUS = {
+  draft: { label: 'Draft', bg: '#EEF1F6', fg: '#3b4a66' },
+  test_sent: { label: 'Test sent to Pratik', bg: '#FBF3DF', fg: '#7a611c' },
+  approved: { label: 'Approved', bg: '#E6EEFB', fg: '#2b4f9e' },
+  sent: { label: 'Sent', bg: '#E8F3E8', fg: '#2e7d32' },
+}
+const LINKS = [['en_doc', 'EN doc'], ['en_web', 'EN blog'], ['no_doc', 'NO doc'], ['no_web', 'NO blog'], ['sv_doc', 'SV doc'], ['sv_web', 'SV blog']]
 
-const fmt = (iso, opts = { weekday: 'short', day: 'numeric', month: 'short' }) =>
-  iso ? new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-GB', { ...opts, timeZone: 'UTC' }) : ''
+const fmt = (iso, o = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }) =>
+  iso ? new Date(`${String(iso).slice(0, 10)}T12:00:00Z`).toLocaleDateString('en-GB', { ...o, timeZone: 'UTC' }) : ''
 
-async function call(pass, action, { method = 'GET', body, query = '' } = {}) {
-  const r = await fetch(`/api/newsletter?action=${action}${query}`, {
+async function call(pass, { method = 'GET', body, query = '' } = {}) {
+  const r = await fetch(`/api/newsletter?action=dashboard${query}`, {
     method,
     headers: { 'x-passcode': pass, ...(body ? { 'Content-Type': 'application/json' } : {}) },
     body: body ? JSON.stringify(body) : undefined,
@@ -39,375 +49,243 @@ async function call(pass, action, { method = 'GET', body, query = '' } = {}) {
 }
 
 const btn = (kind = 'ghost') => ({
-  fontFamily: SANS, fontSize: 13, padding: '9px 16px', borderRadius: 22, cursor: 'pointer', minHeight: 38,
+  fontFamily: SANS, fontSize: 13, padding: '8px 15px', borderRadius: 22, cursor: 'pointer', minHeight: 36,
   border: kind === 'primary' ? `1px solid ${NAVY}` : kind === 'danger' ? '1px solid #d9a3a3' : `1px solid ${RULE}`,
   background: kind === 'primary' ? NAVY : '#fff', color: kind === 'primary' ? '#fff' : kind === 'danger' ? '#9b2c2c' : NAVY,
 })
+const Chip = ({ s }) => <span style={{ display: 'inline-block', fontFamily: SANS, fontSize: 11.5, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: s.bg, color: s.fg, whiteSpace: 'nowrap' }}>{s.label}</span>
+const Card = ({ children, style }) => <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: '18px 20px', ...style }}>{children}</div>
+const A = ({ href, children }) => <a href={href} target="_blank" rel="noreferrer" style={{ color: ACCENT, fontFamily: SANS, fontSize: 13, textDecoration: 'none', marginRight: 12 }}>{children}</a>
 
-const lines = (arr) => (arr || []).join('\n\n')
-const unlines = (s) => String(s || '').split(/\n\s*\n/).map(x => x.trim()).filter(Boolean)
-
-function Field({ label, value, onChange, rows = 1, hint }) {
-  const style = { width: '100%', fontFamily: SANS, fontSize: 14, lineHeight: 1.5, padding: '9px 11px', border: `1px solid ${RULE}`, borderRadius: 8, boxSizing: 'border-box', background: '#fff', color: NAVY }
+function Stat({ n, label, onClick, active }) {
   return (
-    <label style={{ display: 'block', marginBottom: 14 }}>
-      <span style={{ display: 'block', fontFamily: SANS, fontSize: 12, fontWeight: 600, color: NAVY, marginBottom: 5 }}>{label}</span>
-      {rows > 1
-        ? <textarea rows={rows} value={value} onChange={e => onChange(e.target.value)} style={{ ...style, resize: 'vertical' }} />
-        : <input value={value} onChange={e => onChange(e.target.value)} style={style} />}
-      {hint && <span style={{ display: 'block', fontFamily: SANS, fontSize: 11, color: '#777', marginTop: 4 }}>{hint}</span>}
-    </label>
+    <button onClick={onClick} style={{ textAlign: 'left', background: active ? LBLUE : '#fff', border: `1px solid ${active ? ACCENT : RULE}`, borderRadius: 12, padding: '14px 16px', cursor: 'pointer', minWidth: 0 }}>
+      <div style={{ fontFamily: SERIF, fontSize: 28, color: NAVY, lineHeight: 1 }}>{n}</div>
+      <div style={{ fontFamily: SANS, fontSize: 12.5, color: MUTED, marginTop: 6 }}>{label}</div>
+    </button>
   )
 }
 
-function Editor({ value, onSave, onCancel, saving }) {
-  const [c, setC] = useState(() => JSON.parse(JSON.stringify(value)))
-  const set = (path, v) => setC(prev => {
-    const next = JSON.parse(JSON.stringify(prev)); let o = next
-    for (let i = 0; i < path.length - 1; i++) o = o[path[i]]
-    o[path[path.length - 1]] = v; return next
-  })
-  const H = ({ children }) => <h4 style={{ fontFamily: SERIF, fontWeight: 500, fontSize: 17, color: NAVY, margin: '26px 0 12px', borderTop: `1px solid ${RULE}`, paddingTop: 18 }}>{children}</h4>
+function Edition({ e, pass, onApprove, busy }) {
+  const [open, setOpen] = useState(false)
+  const [lang, setLang] = useState('en')
+  const [html, setHtml] = useState(null)
+  const [err, setErr] = useState('')
+  async function preview() {
+    setOpen(o => !o)
+    if (html) return
+    try { const j = await call(pass, { query: `&edition=${encodeURIComponent(e.edition_key)}` }); setHtml(j.html || {}) } catch (x) { setErr(x.message) }
+  }
+  const s = E_STATUS[e.status] || E_STATUS.draft
   return (
-    <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: '6px 22px 22px' }}>
-      <H>Email</H>
-      <Field label="Subject line" value={c.subject} onChange={v => set(['subject'], v)} />
-      <Field label="Preview text" value={c.preview} onChange={v => set(['preview'], v)} />
-      <Field label="Welcome" rows={4} value={lines(c.intro)} onChange={v => set(['intro'], unlines(v))} hint="Leave a blank line between paragraphs." />
-      <H>News</H>
-      <Field label="Section heading" value={c.news_heading} onChange={v => set(['news_heading'], v)} />
-      <Field label="Line under the heading" value={c.news_kicker} onChange={v => set(['news_kicker'], v)} />
-      {c.news.map((n, i) => (
-        <div key={i} style={{ background: OFF, borderRadius: 10, padding: '12px 14px 2px', marginBottom: 12 }}>
-          <Field label={`Update ${i + 1} headline`} value={n.title} onChange={v => set(['news', i, 'title'], v)} />
-          <Field label={`Update ${i + 1} text`} rows={3} value={n.body} onChange={v => set(['news', i, 'body'], v)} />
-        </div>
-      ))}
-      <H>Bueno Tax</H>
-      <Field label="Title" value={c.tax.title} onChange={v => set(['tax', 'title'], v)} />
-      <Field label="Text" rows={6} value={lines(c.tax.paras)} onChange={v => set(['tax', 'paras'], unlines(v))} />
-      <H>Guide</H>
-      <Field label="Guide title" value={c.guide.title} onChange={v => set(['guide', 'title'], v)} />
-      <Field label="Introduction" rows={4} value={c.guide.intro} onChange={v => set(['guide', 'intro'], v)} />
-      <Field label="Key topics" rows={6} value={c.guide.topics.join('\n')} onChange={v => set(['guide', 'topics'], v.split('\n').map(x => x.trim()).filter(Boolean))} hint="One topic per line." />
-      <Field label="Link to the guide PDF" value={c.guide.url} onChange={v => set(['guide', 'url'], v)} />
-      <H>Region spotlight</H>
-      <Field label="Title" value={c.region.title} onChange={v => set(['region', 'title'], v)} />
-      <Field label="Text" rows={6} value={lines(c.region.paras)} onChange={v => set(['region', 'paras'], unlines(v))} />
-      <Field label="Line about Bueno Property" value={c.region.note} onChange={v => set(['region', 'note'], v)} />
-      <H>Reader's question</H>
-      <Field label="Question" rows={2} value={c.question.q} onChange={v => set(['question', 'q'], v)} />
-      <Field label="Answer" rows={12} value={lines(c.question.paras)} onChange={v => set(['question', 'paras'], unlines(v))} />
-      <H>Survey (optional)</H>
-      <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: SANS, fontSize: 14, color: NAVY, marginBottom: 12 }}>
-        <input type="checkbox" checked={!!c.survey.enabled} onChange={e => set(['survey', 'enabled'], e.target.checked)} /> Include a short survey in this issue
-      </label>
-      {c.survey.enabled && <>
-        <Field label="Survey question" value={c.survey.question} onChange={v => set(['survey', 'question'], v)} />
-        <Field label="Answer options" rows={4} value={(c.survey.options || []).join('\n')} onChange={v => set(['survey', 'options'], v.split('\n').map(x => x.trim()).filter(Boolean))} hint="One option per line. Set the poll up in beehiiv with the same options." />
-      </>}
-      <H>Get Bueno and sign-off</H>
-      <Field label="Title" value={c.join.title} onChange={v => set(['join', 'title'], v)} />
-      <Field label="Text" rows={5} value={c.join.body} onChange={v => set(['join', 'body'], v)} />
-      <Field label="Last line" value={c.join.line} onChange={v => set(['join', 'line'], v)} />
-      <Field label="Sign-off" rows={3} value={c.signoff.join('\n')} onChange={v => set(['signoff'], v.split('\n').map(x => x.trim()).filter(Boolean))} hint="One line each." />
-      <div style={{ display: 'flex', gap: 10, marginTop: 18, position: 'sticky', bottom: 0, background: '#fff', padding: '12px 0' }}>
-        <button style={btn('primary')} disabled={saving} onClick={() => onSave(c)}>{saving ? 'Saving...' : 'Save changes'}</button>
-        <button style={btn()} onClick={onCancel}>Cancel</button>
+    <Card style={{ marginBottom: 14 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'baseline' }}>
+        <div style={{ fontFamily: SERIF, fontSize: 19, color: NAVY }}>{fmt(e.send_date)}</div>
+        <Chip s={s} />
       </div>
-    </div>
+      <div style={{ fontFamily: SANS, fontSize: 14, color: BODY, margin: '8px 0 12px', lineHeight: 1.5 }}>{(e.subject || {}).en}</div>
+      <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, color: NAVY, marginBottom: 4 }}>Top three idealista stories</div>
+      <ol style={{ margin: '0 0 12px 18px', padding: 0, fontFamily: SANS, fontSize: 13.5, color: BODY, lineHeight: 1.6 }}>
+        {(e.stories || []).map((st, i) => <li key={i}>{st.link ? <a href={st.link} target="_blank" rel="noreferrer" style={{ color: BODY }}>{st.title}</a> : st.title}</li>)}
+      </ol>
+      <div style={{ fontFamily: SANS, fontSize: 13, color: BODY, marginBottom: 6 }}>
+        <b>Guide article:</b> {e.article_slug || 'not set'} &nbsp; <b>Region:</b> {e.region || 'not set'}
+      </div>
+      <div style={{ marginBottom: 6 }}>
+        {LANGS.map(([k, n]) => (e.guide_urls || {})[k] && <A key={k} href={e.guide_urls[k]}>Guide PDF {n}</A>)}
+      </div>
+      <div style={{ fontFamily: SANS, fontSize: 12.5, color: MUTED, marginBottom: 12 }}>
+        Sent to: {(e.recipients || []).join(', ') || 'nobody yet'}{e.note ? ` · ${e.note}` : ''}
+      </div>
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+        <button style={btn()} onClick={preview}>{open ? 'Hide the emails' : 'See the emails'}</button>
+        {e.status === 'test_sent' && <button style={btn('primary')} disabled={busy} onClick={() => onApprove(e.edition_key)}>Approve this edition</button>}
+      </div>
+      {open && (
+        <div style={{ marginTop: 14 }}>
+          {err && <div style={{ color: '#9b2c2c', fontFamily: SANS, fontSize: 13 }}>{err}</div>}
+          <div style={{ display: 'flex', gap: 6, marginBottom: 10 }}>
+            {LANGS.map(([k, n]) => <button key={k} onClick={() => setLang(k)} style={{ ...btn(lang === k ? 'primary' : 'ghost'), minHeight: 30, padding: '5px 12px' }}>{n}</button>)}
+          </div>
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: MUTED, marginBottom: 8 }}>Subject: {(e.subject || {})[lang]}</div>
+          {html && html[lang]
+            ? <iframe title={`edition-${lang}`} srcDoc={html[lang]} style={{ width: '100%', height: 900, border: `1px solid ${RULE}`, borderRadius: 8, background: BG }} />
+            : html && <div style={{ fontFamily: SANS, fontSize: 13, color: MUTED }}>The email for this language is not stored in the database. For 10 Nov 2026 it is in "Claude outputs/Newsletter 2026-11-10" in the repo and in your inbox. Later editions are stored here automatically.</div>}
+        </div>
+      )}
+    </Card>
   )
 }
 
 export default function InternalNewsletter() {
   const [pass, setPass] = useState(() => { try { return sessionStorage.getItem('studio_pass') || '' } catch { return '' } })
   const [entered, setEntered] = useState(false)
-  const [issues, setIssues] = useState([])
-  const [live, setLive] = useState(false)
-  const [sel, setSel] = useState(() => new URLSearchParams(window.location.search).get('issue') || '')
-  const [lang, setLang] = useState('en')
-  const [mode, setMode] = useState('view')       // view | edit | text
+  const [data, setData] = useState(null)
+  const [tab, setTab] = useState('editions')
+  const [filter, setFilter] = useState('all')
+  const [q, setQ] = useState('')
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState('')
   const [notice, setNotice] = useState('')
-  const [rejecting, setRejecting] = useState(null)
-  const [panel, setPanel] = useState(null)       // { kind: 'health'|'alert', data }
-  const [copied, setCopied] = useState(false)
 
   const load = useCallback(async (p) => {
     setBusy(true); setErr('')
     try {
-      let j = await call(p, 'issues')
-      // First visit after a deploy: load the written issues without anyone pressing Sync.
-      if (!j.issues.length) { await call(p, 'seed', { method: 'POST', body: {} }); j = await call(p, 'issues') }
+      const j = await call(p)
       try { sessionStorage.setItem('studio_pass', p) } catch {}
-      setEntered(true); setIssues(j.issues); setLive(!!j.emails_live)
-      setSel(s => s && j.issues.some(i => i.issue_key === s) ? s : ((j.issues.find(i => i.status === 'pending') || j.issues[0] || {}).issue_key || ''))
+      setEntered(true); setData(j)
     } catch (e) {
       if (e.status === 401) { setEntered(false); setErr('That password did not work.') } else setErr(e.message)
     }
     setBusy(false)
   }, [])
-
   useEffect(() => { if (pass) load(pass) }, []) // eslint-disable-line
 
-  const issue = useMemo(() => issues.find(i => i.issue_key === sel), [issues, sel])
-  const c = issue ? current(issue, lang) : null
-  const edited = !!(issue && issue.edited && issue.edited[lang])
-  const placeholder = !!(issue && issue.news_status === 'to_refresh')
-
-  const replace = (row) => setIssues(list => list.map(i => i.issue_key === row.issue_key ? row : i))
-
-  async function decide(action, extra = {}) {
-    if (!issue) return
+  async function act(body, message) {
     setBusy(true); setErr(''); setNotice('')
-    try {
-      const j = await call(pass, 'decide', { method: 'POST', body: { key: issue.issue_key, action, ...extra } })
-      if (j.issue) replace(j.issue)
-      if (action === 'approved' || action === 'resend') {
-        if (j.email?.ok && !j.email?.skipped) setNotice('Approved. Pratik has been emailed the final text in all three languages.')
-        else if (j.email?.held) setNotice('Approved. Emails are switched off for now, so nothing was sent. The text Pratik will receive is under "Paste-ready text".')
-        else if (j.email?.skipped) setNotice('Approved. Pratik already had this issue, so it was not emailed again.')
-        else setErr(`Approved, but the email to Pratik failed: ${j.email?.error || 'unknown error'}`)
-      }
-      if (action === 'edit') { setMode('view'); setNotice(`Your ${LANGS.find(l => l[0] === extra.lang)[1]} changes are saved.`) }
-      if (action === 'rejected') setRejecting(null)
-    } catch (e) { setErr(e.message) }
+    try { const j = await call(pass, { method: 'POST', body }); setData(j); if (message) setNotice(message) } catch (e) { setErr(e.message) }
     setBusy(false)
   }
 
-  async function sync() {
-    setBusy(true); setErr(''); setNotice('')
-    try {
-      const j = await call(pass, 'seed', { method: 'POST', body: {} })
-      setNotice(`Synced. Added ${j.inserted.length}, refreshed ${j.refreshed.length}, left ${j.kept.length} untouched because they have been worked on.`)
-      await load(pass)
-    } catch (e) { setErr(e.message) }
-    setBusy(false)
-  }
+  const articles = data ? data.articles : []
+  const waiting = articles.filter(a => a.status === 'selected')
+  const shown = useMemo(() => articles.filter(a =>
+    (filter === 'all' || a.status === filter) && (!q || a.title.toLowerCase().includes(q.toLowerCase()))), [articles, filter, q])
+  const groups = useMemo(() => {
+    const g = {}
+    for (const a of shown) (g[a.category] = g[a.category] || []).push(a)
+    return Object.entries(g)
+  }, [shown])
 
-  async function health() {
-    setBusy(true); setErr('')
-    try { setPanel({ kind: 'health', data: await call(pass, 'health') }) } catch (e) { setErr(e.message) }
-    setBusy(false)
-  }
+  const page = { minHeight: '100vh', background: BG, padding: '28px 18px 60px', boxSizing: 'border-box' }
+  const wrap = { maxWidth: 980, margin: '0 auto' }
 
-  async function alertPreview() {
-    if (!issue) return
-    setBusy(true); setErr('')
-    try { setPanel({ kind: 'alert', data: await call(pass, 'alert', { query: `&key=${issue.issue_key}&dry=1` }) }) } catch (e) { setErr(e.message) }
-    setBusy(false)
-  }
-
-  async function copyText() {
-    try { await navigator.clipboard.writeText(toText(c)); setCopied(true); setTimeout(() => setCopied(false), 1800) }
-    catch { setErr('Your browser blocked copying. Select the text below and copy it by hand.') }
-  }
-
-  // Keyboard: J/K move between issues, 1/2/3 switch language, A approve, E edit.
-  useEffect(() => {
-    const onKey = (e) => {
-      if (!entered || mode === 'edit' || rejecting || /input|textarea/i.test(e.target.tagName)) return
-      const idx = issues.findIndex(i => i.issue_key === sel)
-      if (e.key === 'j' && idx < issues.length - 1) setSel(issues[idx + 1].issue_key)
-      if (e.key === 'k' && idx > 0) setSel(issues[idx - 1].issue_key)
-      if (['1', '2', '3'].includes(e.key)) setLang(LANGS[+e.key - 1][0])
-      if (e.key === 'e') setMode('edit')
-      if (e.key === 'a' && issue?.status === 'pending' && !placeholder) decide('approved')
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  })
-
-  useEffect(() => {
-    if (!sel) return
-    const u = new URL(window.location.href); u.searchParams.set('issue', sel)
-    window.history.replaceState(null, '', u.toString())
-  }, [sel])
-
-  // ---------------------------------------------------------------------------------------
   if (!entered) {
     return (
-      <div style={{ minHeight: '100vh', background: OFF, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}>
-        <form onSubmit={e => { e.preventDefault(); load(pass) }} style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 14, padding: 32, width: '100%', maxWidth: 380 }}>
+      <div style={page}><div style={{ ...wrap, maxWidth: 420, paddingTop: 80 }}>
+        <Card>
           <div style={{ fontFamily: SERIF, fontSize: 24, color: NAVY, marginBottom: 6 }}>Bueno Newsletter</div>
-          <p style={{ fontFamily: SANS, fontSize: 14, color: BODY, margin: '0 0 18px' }}>Enter the team password to review the upcoming issues.</p>
-          <input type="password" autoFocus value={pass} onChange={e => setPass(e.target.value)} placeholder="Password"
-            style={{ width: '100%', boxSizing: 'border-box', padding: '11px 12px', fontSize: 15, border: `1px solid ${RULE}`, borderRadius: 8, marginBottom: 12 }} />
-          <button type="submit" style={{ ...btn('primary'), width: '100%' }} disabled={busy}>{busy ? 'Checking...' : 'Open the newsletter tool'}</button>
-          {err && <p style={{ color: '#b02a2a', fontFamily: SANS, fontSize: 13, marginTop: 12 }}>{err}</p>}
-        </form>
-      </div>
+          <div style={{ fontFamily: SANS, fontSize: 14, color: MUTED, marginBottom: 16 }}>Enter the internal password to open the dashboard.</div>
+          <form onSubmit={e => { e.preventDefault(); load(pass) }}>
+            <input type="password" value={pass} onChange={e => setPass(e.target.value)} placeholder="Password" autoFocus
+              style={{ width: '100%', boxSizing: 'border-box', fontFamily: SANS, fontSize: 15, padding: '11px 12px', border: `1px solid ${RULE}`, borderRadius: 8, marginBottom: 12 }} />
+            <button type="submit" disabled={busy || !pass} style={{ ...btn('primary'), width: '100%', minHeight: 44 }}>{busy ? 'Opening…' : 'Open the dashboard'}</button>
+          </form>
+          {err && <div style={{ color: '#9b2c2c', fontFamily: SANS, fontSize: 13, marginTop: 10 }}>{err}</div>}
+        </Card>
+      </div></div>
     )
   }
 
-  const pendingCount = issues.filter(i => i.status === 'pending').length
-  const next = issues.find(i => i.status !== 'scheduled' && i.send_date >= new Date().toISOString().slice(0, 10))
+  const rec = (data.settings && data.settings.recipients) || {}
+  const launched = !!rec.launched
+  const tabs = [['editions', 'Editions'], ['articles', 'Articles'], ['legacy', 'October plan (paused)']]
 
   return (
-    <div style={{ minHeight: '100vh', background: OFF, fontFamily: SANS, color: NAVY }}>
-      {/* Hero strip: the one thing that matters first. */}
-      <div style={{ background: NAVY, color: '#fff', padding: '22px 20px' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center', justifyContent: 'space-between' }}>
-          <div>
-            <div style={{ fontSize: 11, letterSpacing: '.28em', textTransform: 'uppercase', color: GOLD, marginBottom: 6 }}>Bueno Newsletter</div>
-            <div style={{ fontFamily: SERIF, fontSize: 24 }}>
-              {pendingCount ? `${pendingCount} issue${pendingCount === 1 ? '' : 's'} waiting for review` : 'Everything is reviewed'}
-            </div>
-            {next && <div style={{ fontSize: 13, color: LBLUE, marginTop: 4 }}>Next to go out: Newsletter {next.number} on {fmt(next.send_date, { weekday: 'long', day: 'numeric', month: 'long' })}</div>}
-          </div>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <button style={{ ...btn(), background: 'transparent', color: '#fff', borderColor: '#3a3d5c' }} onClick={sync} disabled={busy}>Sync issues</button>
-            <button style={{ ...btn(), background: 'transparent', color: '#fff', borderColor: '#3a3d5c' }} onClick={health} disabled={busy}>Run health check</button>
+    <div style={page}><div style={wrap}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 12, marginBottom: 18 }}>
+        <div>
+          <div style={{ fontFamily: SANS, fontSize: 11, letterSpacing: 2, textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Internal</div>
+          <h1 style={{ fontFamily: SERIF, fontWeight: 400, fontSize: 30, color: NAVY, margin: '4px 0 6px' }}>Bueno Newsletter</h1>
+          <div style={{ fontFamily: SANS, fontSize: 14, color: BODY }}>
+            Next edition: <b>{fmt(data.next_send)}</b>, every two weeks, in English, Norwegian and Swedish.
           </div>
         </div>
+        <Card style={{ padding: '12px 16px' }}>
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: MUTED, marginBottom: 6 }}>Each edition is emailed to</div>
+          <div style={{ fontFamily: SANS, fontSize: 14, color: NAVY, fontWeight: 600, marginBottom: 8 }}>{launched ? 'Pratik and John' : 'Pratik only (test mode)'}</div>
+          <button style={btn(launched ? 'ghost' : 'primary')} disabled={busy}
+            onClick={() => act({ op: 'set-launch', launched: !launched }, launched ? 'Back to test mode. Editions go to Pratik only.' : 'Launched. From the next edition, John gets every newsletter too.')}>
+            {launched ? 'Back to Pratik only' : 'Launch: add John'}
+          </button>
+        </Card>
       </div>
 
-      {!live && (
-        <div style={{ background: '#FBF3DF', color: '#7a611c', fontSize: 13, padding: '9px 20px', textAlign: 'center' }}>
-          Emails are switched off while the tool is being set up. Approving works and is saved, but nothing is emailed to anyone.
+      {notice && <div style={{ background: '#E8F3E8', color: '#2e7d32', fontFamily: SANS, fontSize: 13.5, padding: '10px 14px', borderRadius: 8, marginBottom: 12 }}>{notice}</div>}
+      {err && <div style={{ background: '#FAEDED', color: '#9b2c2c', fontFamily: SANS, fontSize: 13.5, padding: '10px 14px', borderRadius: 8, marginBottom: 12 }}>{err}</div>}
+
+      {waiting.length > 0 && (
+        <Card style={{ borderColor: GOLD, marginBottom: 18 }}>
+          <div style={{ fontFamily: SERIF, fontSize: 19, color: NAVY, marginBottom: 4 }}>Waiting for your approval</div>
+          <div style={{ fontFamily: SANS, fontSize: 13.5, color: MUTED, marginBottom: 12 }}>These articles were turned into a guide for an edition. Approve one to mark it as used for good, or reject it to free it up again.</div>
+          {waiting.map(a => {
+            const ed = (data.editions || []).find(e => e.article_slug === a.slug)
+            return (
+              <div key={a.slug} style={{ borderTop: `1px solid ${RULE}`, padding: '12px 0', display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+                <div style={{ minWidth: 0, flex: '1 1 380px' }}>
+                  <div style={{ fontFamily: SANS, fontSize: 14.5, color: NAVY, fontWeight: 600 }}>{a.title}</div>
+                  <div style={{ fontFamily: SANS, fontSize: 12.5, color: MUTED, margin: '3px 0 6px' }}>{a.used_in}{a.note ? ` · ${a.note}` : ''}</div>
+                  {ed && LANGS.map(([k, n]) => (ed.guide_urls || {})[k] && <A key={k} href={ed.guide_urls[k]}>Guide {n}</A>)}
+                </div>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <button style={btn('danger')} disabled={busy} onClick={() => act({ op: 'reject-article', slug: a.slug }, `${a.title} is free to use again.`)}>Reject</button>
+                  <button style={btn('primary')} disabled={busy} onClick={() => act({ op: 'approve-article', slug: a.slug }, `Approved. ${a.title} is now the guide for that edition.`)}>Approve</button>
+                </div>
+              </div>
+            )
+          })}
+        </Card>
+      )}
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10, marginBottom: 20 }}>
+        <Stat n={data.counts.available} label="Articles still free to use" active={tab === 'articles' && filter === 'available'} onClick={() => { setTab('articles'); setFilter('available') }} />
+        <Stat n={data.counts.selected} label="Picked, waiting for you" active={tab === 'articles' && filter === 'selected'} onClick={() => { setTab('articles'); setFilter('selected') }} />
+        <Stat n={data.counts.approved} label="Approved" active={tab === 'articles' && filter === 'approved'} onClick={() => { setTab('articles'); setFilter('approved') }} />
+        <Stat n={data.counts.used} label="Already used" active={tab === 'articles' && filter === 'used'} onClick={() => { setTab('articles'); setFilter('used') }} />
+        <Stat n={(data.editions || []).length} label="Editions so far" active={tab === 'editions'} onClick={() => setTab('editions')} />
+      </div>
+
+      <div role="tablist" style={{ display: 'flex', gap: 6, borderBottom: `1px solid ${RULE}`, marginBottom: 16, flexWrap: 'wrap' }}>
+        {tabs.map(([k, n]) => (
+          <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)}
+            style={{ fontFamily: SANS, fontSize: 14, padding: '10px 14px', border: 'none', background: 'none', cursor: 'pointer', color: tab === k ? NAVY : MUTED, fontWeight: tab === k ? 700 : 400, borderBottom: `2px solid ${tab === k ? NAVY : 'transparent'}`, marginBottom: -1 }}>{n}</button>
+        ))}
+      </div>
+
+      {tab === 'editions' && (
+        (data.editions || []).length
+          ? data.editions.map(e => <Edition key={e.edition_key} e={e} pass={pass} busy={busy} onApprove={k => act({ op: 'approve-edition', key: k }, 'Edition approved.')} />)
+          : <Card><div style={{ fontFamily: SANS, color: MUTED }}>No editions yet.</div></Card>
+      )}
+
+      {tab === 'articles' && (
+        <div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14, alignItems: 'center' }}>
+            {['all', 'available', 'selected', 'approved', 'used'].map(f => (
+              <button key={f} onClick={() => setFilter(f)} style={{ ...btn(filter === f ? 'primary' : 'ghost'), minHeight: 32, padding: '6px 13px' }}>
+                {f === 'all' ? `All (${data.counts.all})` : `${A_STATUS[f].label} (${data.counts[f]})`}
+              </button>
+            ))}
+            <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search articles" aria-label="Search articles"
+              style={{ flex: '1 1 200px', fontFamily: SANS, fontSize: 14, padding: '8px 12px', border: `1px solid ${RULE}`, borderRadius: 20 }} />
+          </div>
+          {groups.map(([cat, list]) => (
+            <Card key={cat} style={{ marginBottom: 14, padding: '6px 20px' }}>
+              <div style={{ fontFamily: SERIF, fontSize: 17, color: NAVY, padding: '12px 0 6px' }}>{cat}</div>
+              {list.map(a => (
+                <div key={a.slug} style={{ borderTop: `1px solid ${RULE}`, padding: '11px 0', display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ flex: '1 1 380px', minWidth: 0 }}>
+                    <div style={{ fontFamily: SANS, fontSize: 14, color: NAVY }}>{a.title}</div>
+                    <div style={{ fontFamily: SANS, fontSize: 12, color: MUTED, margin: '3px 0 4px' }}>
+                      {a.used_in || (a.has_text ? 'Text copy in the repo, ready to build a guide from.' : 'No text copy in the repo yet.')}
+                    </div>
+                    <div>{LINKS.map(([k, n]) => (a.links || {})[k] && <A key={k} href={a.links[k]}>{n}</A>)}</div>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <Chip s={A_STATUS[a.status] || A_STATUS.available} />
+                    {a.status === 'available' && <button style={btn()} disabled={busy} onClick={() => act({ op: 'pick-article', slug: a.slug, date: data.next_send }, `${a.title} is picked for the ${fmt(data.next_send)} edition.`)}>Use next</button>}
+                    {a.status === 'available' && <button style={btn()} disabled={busy} onClick={() => act({ op: 'mark-used', slug: a.slug }, `${a.title} is marked as used.`)}>Mark used</button>}
+                    {a.status !== 'available' && <button style={btn()} disabled={busy} onClick={() => act({ op: 'make-available', slug: a.slug }, `${a.title} is free to use again.`)}>Make available</button>}
+                  </div>
+                </div>
+              ))}
+            </Card>
+          ))}
+          {!groups.length && <Card><div style={{ fontFamily: SANS, color: MUTED }}>No articles match.</div></Card>}
         </div>
       )}
 
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '20px 16px 60px', display: 'grid', gridTemplateColumns: 'minmax(0,280px) minmax(0,1fr)', gap: 20 }} className="nl-grid">
-        <style>{`@media (max-width: 820px){.nl-grid{grid-template-columns:1fr !important}}`}</style>
-
-        {/* Issue list */}
-        <div>
-          {issues.length === 0 && (
-            <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: 18, fontSize: 14 }}>
-              No issues stored yet. Press <b>Sync issues</b> to load the written issues.
-            </div>
-          )}
-          {issues.map(i => {
-            const s = STATUS[i.status] || STATUS.pending
-            const on = i.issue_key === sel
-            return (
-              <button key={i.issue_key} onClick={() => { setSel(i.issue_key); setMode('view'); setRejecting(null) }}
-                style={{ display: 'block', width: '100%', textAlign: 'left', background: '#fff', border: on ? `2px solid ${NAVY}` : `1px solid ${RULE}`, borderRadius: 12, padding: on ? '13px 15px' : '14px 16px', marginBottom: 10, cursor: 'pointer' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                  <span style={{ fontFamily: SERIF, fontSize: 18, color: NAVY }}>No. {i.number}</span>
-                  <span style={{ fontSize: 12, color: '#666' }}>{fmt(i.send_date)}</span>
-                </div>
-                <div style={{ fontSize: 12.5, color: BODY, margin: '6px 0 8px', lineHeight: 1.4 }}>{i.content?.en?.guide?.title}</div>
-                <span style={{ display: 'inline-block', fontSize: 11, padding: '3px 9px', borderRadius: 10, background: s.bg, color: s.fg }}>{s.label}</span>
-                {i.news_status === 'to_refresh' && <span style={{ display: 'inline-block', fontSize: 11, padding: '3px 9px', borderRadius: 10, background: LBLUE, color: NAVY, marginLeft: 6 }}>News on {fmt(i.alert_date)}</span>}
-              </button>
-            )
-          })}
-          <p style={{ fontSize: 12, color: '#777', lineHeight: 1.5, marginTop: 14 }}>Keys: J and K move between issues, 1 2 3 switch language, E edits, A approves.</p>
-        </div>
-
-        {/* Selected issue */}
-        <div>
-          {err && <div style={{ background: '#FAEDED', color: '#9b2c2c', border: '1px solid #e9c2c2', borderRadius: 10, padding: '11px 14px', fontSize: 14, marginBottom: 14 }}>{err}</div>}
-          {notice && <div style={{ background: '#E8F3E8', color: '#245c27', border: '1px solid #c6e0c7', borderRadius: 10, padding: '11px 14px', fontSize: 14, marginBottom: 14 }}>{notice}</div>}
-
-          {panel && (
-            <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: 18, marginBottom: 16 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                <b style={{ fontFamily: SERIF, fontSize: 18, fontWeight: 500 }}>{panel.kind === 'health' ? 'Health check' : 'The review email John and Pratik will receive'}</b>
-                <button style={btn()} onClick={() => setPanel(null)}>Close</button>
-              </div>
-              {panel.kind === 'health' && panel.data.checks.map(ch => (
-                <div key={ch.name} style={{ display: 'flex', gap: 10, fontSize: 13.5, padding: '7px 0', borderTop: `1px solid ${RULE}` }}>
-                  <span style={{ color: ch.ok ? '#2e7d32' : '#b02a2a', fontWeight: 700, width: 18 }}>{ch.ok ? '✓' : '!'}</span>
-                  <span style={{ flex: '0 0 230px' }}>{ch.name}</span><span style={{ color: '#555' }}>{ch.detail}</span>
-                </div>
-              ))}
-              {panel.kind === 'alert' && <>
-                <p style={{ fontSize: 13, margin: '0 0 8px' }}><b>Subject:</b> {panel.data.subject}</p>
-                <div style={{ border: `1px solid ${RULE}`, borderRadius: 10, overflow: 'hidden' }} dangerouslySetInnerHTML={{ __html: panel.data.html || '' }} />
-              </>}
-            </div>
-          )}
-
-          {issue && c && <>
-            <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: '16px 18px', marginBottom: 14 }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12, alignItems: 'center' }}>
-                <div>
-                  <div style={{ fontFamily: SERIF, fontSize: 22 }}>Newsletter {issue.number}</div>
-                  <div style={{ fontSize: 13, color: '#555', marginTop: 2 }}>
-                    Goes out {fmt(issue.send_date, { weekday: 'long', day: 'numeric', month: 'long' })}. Review email to John and Pratik on {fmt(issue.alert_date, { weekday: 'long', day: 'numeric', month: 'long' })}.
-                  </div>
-                </div>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                  {issue.status === 'pending' && <>
-                    <button style={btn('primary')} disabled={busy || placeholder} title={placeholder ? 'The news for this issue is researched on its alert day.' : ''} onClick={() => decide('approved')}>Approve all three languages</button>
-                    <button style={btn('danger')} disabled={busy} onClick={() => setRejecting({ note: '' })}>Send back</button>
-                  </>}
-                  {issue.status === 'approved' && <>
-                    <button style={btn('primary')} disabled={busy} onClick={() => decide('scheduled')}>Mark as scheduled in beehiiv</button>
-                    <button style={btn()} disabled={busy} onClick={() => decide('resend')}>Email Pratik again</button>
-                  </>}
-                  {issue.status !== 'pending' && <button style={btn()} disabled={busy} onClick={() => decide('pending')}>Undo</button>}
-                </div>
-              </div>
-              {placeholder && <p style={{ fontSize: 13, background: LBLUE, borderRadius: 8, padding: '9px 12px', margin: '12px 0 0' }}>The three news updates for this issue are researched on {fmt(issue.alert_date, { weekday: 'long', day: 'numeric', month: 'long' })}, so they are current when it goes out. Everything else is ready to read and edit now.</p>}
-              {issue.status === 'rejected' && issue.reject_note && <p style={{ fontSize: 13, color: '#9b2c2c', margin: '12px 0 0' }}>Sent back: {issue.reject_note}</p>}
-              {issue.last_email && <p style={{ fontSize: 12, color: '#777', margin: '10px 0 0' }}>Last email: {issue.last_email.kind} at {new Date(issue.last_email.at).toLocaleString('en-GB')}, {issue.last_email.ok ? 'sent' : issue.last_email.held ? 'held because emails are off' : `failed (${issue.last_email.error})`}.</p>}
-              {rejecting && (
-                <div style={{ marginTop: 14 }}>
-                  <Field label="What should change?" rows={3} value={rejecting.note} onChange={v => setRejecting({ note: v })} />
-                  <div style={{ display: 'flex', gap: 8 }}>
-                    <button style={btn('danger')} disabled={busy} onClick={() => decide('rejected', { note: rejecting.note })}>Send back with this note</button>
-                    <button style={btn()} onClick={() => setRejecting(null)}>Cancel</button>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', marginBottom: 12 }}>
-              {LANGS.map(([k, label]) => (
-                <button key={k} onClick={() => { setLang(k); if (mode === 'edit') setMode('view') }}
-                  style={{ ...btn(lang === k ? 'primary' : 'ghost'), padding: '8px 16px' }}>
-                  {label}{issue.edited && issue.edited[k] ? ' (edited)' : ''}
-                </button>
-              ))}
-              <span style={{ flex: 1 }} />
-              <button style={btn(mode === 'view' ? 'primary' : 'ghost')} onClick={() => setMode('view')}>Preview</button>
-              <button style={btn(mode === 'edit' ? 'primary' : 'ghost')} onClick={() => setMode('edit')} disabled={issue.status === 'scheduled'}>Edit</button>
-              <button style={btn(mode === 'text' ? 'primary' : 'ghost')} onClick={() => setMode('text')}>Paste-ready text</button>
-            </div>
-
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, fontSize: 13, marginBottom: 12, alignItems: 'center' }}>
-              {c.guide.url && <a href={c.guide.url} target="_blank" rel="noreferrer" style={{ color: ACCENT }}>Open this issue's guide PDF</a>}
-              <button style={{ ...btn(), padding: '6px 12px', minHeight: 32, fontSize: 12 }} onClick={alertPreview}>See the review email</button>
-              {edited && <button style={{ ...btn(), padding: '6px 12px', minHeight: 32, fontSize: 12 }} onClick={() => decide('revert', { lang })}>Undo my edits in this language</button>}
-            </div>
-
-            {mode === 'edit' && <Editor key={`${issue.issue_key}-${lang}-${issue.updated_at}`} value={c} saving={busy} onCancel={() => setMode('view')} onSave={v => decide('edit', { lang, content: v })} />}
-
-            {mode === 'text' && (
-              <div style={{ background: '#fff', border: `1px solid ${RULE}`, borderRadius: 12, padding: 18 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                  <span style={{ fontSize: 13, color: '#555' }}>This is exactly what Pratik receives for beehiiv.</span>
-                  <button style={btn('primary')} onClick={copyText}>{copied ? 'Copied' : 'Copy text'}</button>
-                </div>
-                <pre style={{ whiteSpace: 'pre-wrap', fontFamily: SANS, fontSize: 14, lineHeight: 1.55, color: BODY, margin: 0 }}>{toText(c)}</pre>
-              </div>
-            )}
-
-            {mode === 'view' && (
-              <div style={{ background: '#EDEBE6', borderRadius: 12, padding: '18px 10px' }}>
-                <div style={{ maxWidth: 640, margin: '0 auto 10px', fontSize: 13, color: '#555', padding: '0 6px' }}>
-                  <b style={{ color: NAVY }}>{c.subject}</b>{c.preview ? `  ·  ${c.preview}` : ''}
-                </div>
-                <div dangerouslySetInnerHTML={{ __html: toHtml(c) }} />
-              </div>
-            )}
-
-            <details style={{ marginTop: 16, fontSize: 13 }}>
-              <summary style={{ cursor: 'pointer', color: '#555' }}>Where the figures come from</summary>
-              <ul style={{ lineHeight: 1.7 }}>
-                {Object.entries(issue.sources || {}).flatMap(([k, arr]) => (arr || []).map(u => (
-                  <li key={k + u}>{k}: {/^https?:/.test(u) ? <a href={u} target="_blank" rel="noreferrer" style={{ color: ACCENT }}>{u}</a> : u}</li>
-                )))}
-              </ul>
-            </details>
-          </>}
-        </div>
-      </div>
-    </div>
+      {tab === 'legacy' && <div style={{ margin: '0 -18px' }}><LegacyDeck /></div>}
+    </div></div>
   )
 }

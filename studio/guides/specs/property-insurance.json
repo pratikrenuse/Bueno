@@ -1,0 +1,345 @@
+{
+ "slug": "property-insurance",
+ "file": "Home-Insurance-In-Spain",
+ "meta_title": {
+  "en": "Home insurance in Spain: what to check before winter | Bueno",
+  "no": "Boligforsikring i Spania: dette bør du sjekke før vinteren | Bueno",
+  "sv": "Hemförsäkring i Spanien: det här ska du kolla före vintern | Bueno"
+ },
+ "title": {
+  "en": "Home insurance in Spain: what your policy should cover",
+  "no": "Boligforsikring i Spania: hva forsikringen bør dekke",
+  "sv": "Hemförsäkring i Spanien: vad försäkringen bör täcka"
+ },
+ "topics": {
+  "en": [
+   "The difference between building and contents cover.",
+   "Why liability cover matters in a shared building.",
+   "What the state-backed fund pays for floods and storms.",
+   "The clauses that matter when your home stands empty.",
+   "How to claim and how to cancel a policy."
+  ],
+  "no": [
+   "Forskjellen på bygningsforsikring og innboforsikring.",
+   "Hvorfor ansvarsforsikring er viktig i et sameie.",
+   "Hva det statlige fondet betaler ved flom og storm.",
+   "Vilkårene som betyr noe når boligen står tom.",
+   "Hvordan du melder en skade og sier opp en forsikring."
+  ],
+  "sv": [
+   "Skillnaden mellan byggnadsförsäkring och lösöresförsäkring.",
+   "Varför ansvarsförsäkring är viktig i ett gemensamt hus.",
+   "Vad den statliga fonden betalar vid översvämning och storm.",
+   "Villkoren som spelar roll när bostaden står tom.",
+   "Hur du anmäler en skada och säger upp en försäkring."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "couple-home",
+   "eyebrow": {
+    "en": "Your guide to home insurance",
+    "no": "Din guide til boligforsikring",
+    "sv": "Din guide till hemförsäkring"
+   },
+   "title": {
+    "en": "Home insurance in Spain: what your policy should cover",
+    "no": "Boligforsikring i Spania: hva forsikringen bør dekke",
+    "sv": "Hemförsäkring i Spanien: vad försäkringen bör täcka"
+   },
+   "sub": {
+    "en": "What to look for in a policy, how floods and storms are covered and what to check when your home stands empty for months.",
+    "no": "Hva du bør se etter i en forsikring, hvordan flom og storm dekkes og hva du bør sjekke når boligen står tom i flere måneder.",
+    "sv": "Vad du ska titta efter i en försäkring, hur översvämning och storm täcks och vad du ska kolla när bostaden står tom i flera månader."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Cover that fits a home you are often away from",
+      "no": "Forsikring som passer en bolig du ofte er borte fra",
+      "sv": "Försäkring som passar en bostad du ofta är borta från"
+     },
+     "lead": {
+      "en": "Home insurance is not compulsory by law in Spain, but a mortgage lender will require it and most owners take it out anyway. The details matter more for a holiday home, because many policies treat an empty home differently.",
+      "no": "Boligforsikring er ikke lovpålagt i Spania, men långiveren krever den ved boliglån, og de fleste eiere tegner den uansett. Detaljene betyr mer for en feriebolig, fordi mange forsikringer behandler en tom bolig annerledes.",
+      "sv": "Hemförsäkring är inte obligatorisk enligt lag i Spanien, men en långivare kräver den vid bolån och de flesta ägare tecknar den ändå. Detaljerna spelar större roll för ett fritidshus, eftersom många försäkringar behandlar en tom bostad annorlunda."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Building cover protects the structure and contents cover protects what is inside.",
+       "no": "Bygningsforsikring dekker selve bygget, og innboforsikring dekker det som er inni.",
+       "sv": "Byggnadsförsäkring skyddar själva huset och lösöresförsäkring skyddar det som finns inne."
+      },
+      {
+       "en": "Liability cover pays if water or fire from your home damages a neighbour's.",
+       "no": "Ansvarsforsikring betaler hvis vann eller brann fra boligen din skader naboens.",
+       "sv": "Ansvarsförsäkring betalar om vatten eller brand från din bostad skadar grannens."
+      },
+      {
+       "en": "Floods and extreme storms are paid by a state-backed fund through your policy.",
+       "no": "Flom og ekstrem storm dekkes av et statlig fond gjennom forsikringen din.",
+       "sv": "Översvämning och extrem storm betalas av en statlig fond genom din försäkring."
+      },
+      {
+       "en": "Many policies limit cover when a home stands empty for a long time.",
+       "no": "Mange forsikringer begrenser dekningen når en bolig står tom lenge.",
+       "sv": "Många försäkringar begränsar skyddet när en bostad står tom länge."
+      },
+      {
+       "en": "A claim should be reported within seven days of finding the damage.",
+       "no": "En skade bør meldes innen sju dager etter at du oppdaget den.",
+       "sv": "En skada bör anmälas inom sju dagar från att du upptäckte den."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "arches-terrace",
+     "h": 30,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "What a policy covers",
+      "no": "Hva en forsikring dekker",
+      "sv": "Vad en försäkring täcker"
+     },
+     "title": {
+      "en": "The parts of a Spanish home policy",
+      "no": "Delene i en spansk boligforsikring",
+      "sv": "Delarna i en spansk hemförsäkring"
+     },
+     "lead": {
+      "en": "Spanish policies are usually built from the same pieces. Knowing their names makes it much easier to compare offers.",
+      "no": "Spanske forsikringer er som regel bygget av de samme delene. Kjenner du navnene, blir det mye lettere å sammenligne tilbud.",
+      "sv": "Spanska försäkringar är oftast uppbyggda av samma delar. Känner du till namnen blir det mycket lättare att jämföra erbjudanden."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Continente",
+        "no": "Continente",
+        "sv": "Continente"
+       },
+       {
+        "en": "The building itself: walls, roof, floors, fixed fittings, and in a flat your share of the structure.",
+        "no": "Selve bygget: vegger, tak, gulv, faste installasjoner, og i en leilighet din del av bygningskroppen.",
+        "sv": "Själva byggnaden: väggar, tak, golv, fast inredning, och i en lägenhet din del av huskroppen."
+       }
+      ],
+      [
+       {
+        "en": "Contenido",
+        "no": "Contenido",
+        "sv": "Contenido"
+       },
+       {
+        "en": "Your furniture, appliances and belongings, including theft if the policy says so.",
+        "no": "Møbler, hvitevarer og eiendeler, også tyveri hvis forsikringen sier det.",
+        "sv": "Möbler, vitvaror och tillhörigheter, även stöld om försäkringen anger det."
+       }
+      ],
+      [
+       {
+        "en": "Responsabilidad civil",
+        "no": "Responsabilidad civil",
+        "sv": "Responsabilidad civil"
+       },
+       {
+        "en": "Liability cover for damage you cause to others, such as a leak into the flat below.",
+        "no": "Ansvarsdekning for skade du påfører andre, for eksempel en lekkasje til leiligheten under.",
+        "sv": "Ansvarsskydd för skada du orsakar andra, till exempel en läcka till lägenheten under."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Floods, earthquakes and storms with extreme winds are paid by the Consorcio de Compensación de Seguros, a state-backed fund. A small part of every home policy goes to it, so you are covered as long as your policy is valid and paid.",
+      "no": "Flom, jordskjelv og storm med ekstrem vind betales av Consorcio de Compensación de Seguros, et statlig fond. En liten del av hver boligforsikring går dit, så du er dekket så lenge forsikringen er gyldig og betalt.",
+      "sv": "Översvämning, jordbävning och storm med extrem vind betalas av Consorcio de Compensación de Seguros, en statlig fond. En liten del av varje hemförsäkring går dit, så du är skyddad så länge försäkringen gäller och är betald."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Holiday homes",
+      "no": "Ferieboliger",
+      "sv": "Fritidshus"
+     },
+     "title": {
+      "en": "What to check when you are away for months",
+      "no": "Dette bør du sjekke når du er borte i månedsvis",
+      "sv": "Det här ska du kolla när du är borta i flera månader"
+     },
+     "lead": {
+      "en": "Read the small print on these points before winter, when most holiday homes stand empty.",
+      "no": "Les det med liten skrift på disse punktene før vinteren, når de fleste ferieboliger står tomme.",
+      "sv": "Läs det finstilta på de här punkterna före vintern, när de flesta fritidshus står tomma."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Empty home clauses",
+        "no": "Vilkår for tom bolig",
+        "sv": "Villkor för tom bostad"
+       },
+       "paras": [
+        {
+         "en": "Some policies reduce or exclude theft and water cover if nobody has been in the home for a set number of days. Ask how many days, and whether a regular visit by a neighbour or a key holder counts.",
+         "no": "Noen forsikringer reduserer eller utelukker dekning for tyveri og vannskade hvis ingen har vært i boligen på et visst antall dager. Spør hvor mange dager, og om jevnlige besøk fra en nabo eller nøkkelholder teller.",
+         "sv": "Vissa försäkringar minskar skyddet för stöld och vattenskada om ingen har varit i bostaden på ett visst antal dagar. Fråga hur många, och om besök av en granne eller nyckelinnehavare räknas."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Letting the home",
+        "no": "Utleie av boligen",
+        "sv": "Uthyrning av bostaden"
+       },
+       "paras": [
+        {
+         "en": "If you let your home, tell the insurer. A standard home policy may not cover damage caused by guests or tenants.",
+         "no": "Leier du ut boligen, må du si fra til forsikringsselskapet. En vanlig boligforsikring dekker kanskje ikke skade gjort av gjester eller leietakere.",
+         "sv": "Om du hyr ut din bostad ska du meddela försäkringsbolaget. En vanlig hemförsäkring täcker kanske inte skador som gäster eller hyresgäster orsakar."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Reporting a claim",
+        "no": "Melde en skade",
+        "sv": "Anmäla en skada"
+       },
+       "paras": [
+        {
+         "en": "Spanish law asks you to report damage within seven days of finding it. Take photos, keep receipts and ask a neighbour or key holder to report it for you if you are abroad.",
+         "no": "Spansk lov sier at skade skal meldes innen sju dager etter at du oppdaget den. Ta bilder, ta vare på kvitteringer og be en nabo eller nøkkelholder melde den hvis du er i utlandet.",
+         "sv": "Spansk lag säger att skador ska anmälas inom sju dagar från att du upptäckte dem. Ta bilder, spara kvitton och be en granne anmäla skadan om du är utomlands."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Cancelling a policy",
+        "no": "Si opp en forsikring",
+        "sv": "Säga upp en försäkring"
+       },
+       "paras": [
+        {
+         "en": "Policies renew automatically each year. To cancel, tell the insurer in writing at least one month before the renewal date.",
+         "no": "Forsikringer fornyes automatisk hvert år. Vil du si opp, må du gi beskjed skriftlig minst én måned før fornyelsesdatoen.",
+         "sv": "Försäkringar förnyas automatiskt varje år. Vill du säga upp den ska du meddela försäkringsbolaget skriftligt minst en månad före förnyelsedagen."
+        }
+       ],
+       "tag": {
+        "en": "One month's notice",
+        "no": "Én måneds varsel",
+        "sv": "En månads uppsägning"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

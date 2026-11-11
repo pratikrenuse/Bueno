@@ -1,0 +1,643 @@
+{
+ "slug": "community-fees",
+ "file": "Community-Fees-In-Spain",
+ "meta_title": {
+  "en": "Community fees in Spain: what you pay and your rights | Bueno",
+  "no": "Fellesutgifter i Spania: hva du betaler og dine rettigheter | Bueno",
+  "sv": "Samfällighetsavgifter i Spanien: vad du betalar och dina rättigheter | Bueno"
+ },
+ "title": {
+  "en": "Community fees in Spain: what you pay and your rights",
+  "no": "Fellesutgifter i Spania: hva du betaler og dine rettigheter",
+  "sv": "Samfällighetsavgifter i Spanien: vad du betalar och dina rättigheter"
+ },
+ "topics": {
+  "en": [
+   "What your community fees pay for, and how your share is set.",
+   "How the yearly meeting works, and who gets to vote.",
+   "What can happen when a payment is late, including the new Supreme Court ruling.",
+   "Why old debts follow the home when it is bought or sold.",
+   "How to challenge a decision you disagree with, and the deadlines that apply."
+  ],
+  "no": [
+   "Hva fellesutgiftene dekker, og hvordan din andel blir satt.",
+   "Hvordan årsmøtet fungerer, og hvem som har stemmerett.",
+   "Hva som kan skje når en betaling er forsinket, inkludert den nye dommen fra Høyesterett.",
+   "Hvorfor gammel gjeld følger boligen når den kjøpes eller selges.",
+   "Hvordan du kan klage på et vedtak du er uenig i, og hvilke frister som gjelder."
+  ],
+  "sv": [
+   "Vad samfällighetsavgifterna betalar för, och hur din andel bestäms.",
+   "Hur årsstämman fungerar, och vem som får rösta.",
+   "Vad som kan hända när en betalning är sen, inklusive Högsta domstolens nya dom.",
+   "Varför gamla skulder följer med bostaden när den köps eller säljs.",
+   "Hur du överklagar ett beslut du inte håller med om, och vilka tidsfrister som gäller."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "cove-house",
+   "eyebrow": {
+    "en": "Your guide to community fees",
+    "no": "Din guide til fellesutgifter",
+    "sv": "Din guide till samfällighetsavgifter"
+   },
+   "title": {
+    "en": "Community fees in Spain: what you pay and your rights",
+    "no": "Fellesutgifter i Spania: hva du betaler og dine rettigheter",
+    "sv": "Samfällighetsavgifter i Spanien: vad du betalar och dina rättigheter"
+   },
+   "sub": {
+    "en": "What the fees cover, how decisions are made, what happens when a payment is late and how to protect yourself, explained in plain language.",
+    "no": "Hva utgiftene dekker, hvordan vedtak fattes, hva som skjer når en betaling er forsinket og hvordan du beskytter deg, forklart med enkle ord.",
+    "sv": "Vad avgifterna täcker, hur beslut fattas, vad som händer när en betalning är sen och hur du skyddar dig, förklarat med enkla ord."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Do you share a pool, a garden or a stairwell?",
+      "no": "Deler du basseng, hage eller trappeoppgang?",
+      "sv": "Delar du pool, trädgård eller trapphus?"
+     },
+     "lead": {
+      "en": "If your home shares anything with other homes, you are part of a community of owners and you pay community fees. This guide explains what those fees cover, how they are decided and what your rights are, as they stand in November 2026.",
+      "no": "Hvis boligen din deler noe med andre boliger, er du en del av et sameie og betaler fellesutgifter. Denne guiden forklarer hva utgiftene dekker, hvordan de blir bestemt og hvilke rettigheter du har, slik det står i november 2026.",
+      "sv": "Om din bostad delar något med andra bostäder är du med i en samfällighet och betalar samfällighetsavgifter. Den här guiden förklarar vad avgifterna täcker, hur de bestäms och vilka rättigheter du har, så som det ser ut i november 2026."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Every owner pays a share of the shared costs, set by the participation quota in the deeds.",
+       "no": "Hver eier betaler en andel av fellesutgiftene, satt etter eierbrøken i skjøtet.",
+       "sv": "Varje ägare betalar en andel av de gemensamma kostnaderna, som bestäms av andelstalet i lagfarten."
+      },
+      {
+       "en": "Owners who are behind with their fees can attend the meeting but cannot vote.",
+       "no": "Eiere som skylder fellesutgifter kan delta på møtet, men har ikke stemmerett.",
+       "sv": "Ägare som ligger efter med avgifterna får delta i stämman men får inte rösta."
+      },
+      {
+       "en": "Late payment penalties are allowed, but Spain's Supreme Court has ruled that they must be proportionate.",
+       "no": "Straffegebyr for sen betaling er tillatt, men Spanias høyesterett har slått fast at de må stå i forhold til gjelden.",
+       "sv": "Förseningsavgifter är tillåtna, men Spaniens högsta domstol har slagit fast att de måste stå i proportion till skulden."
+      },
+      {
+       "en": "Unpaid fees from the current year and the three years before it follow the home when it is sold.",
+       "no": "Ubetalte fellesutgifter fra inneværende år og de tre foregående årene følger boligen når den selges.",
+       "sv": "Obetalda avgifter från innevarande år och de tre föregående åren följer med bostaden när den säljs."
+      },
+      {
+       "en": "You can challenge a decision in court within three months, or within one year if it breaks the law.",
+       "no": "Du kan klage et vedtak inn for retten innen tre måneder, eller innen ett år hvis det bryter loven.",
+       "sv": "Du kan överklaga ett beslut till domstol inom tre månader, eller inom ett år om det strider mot lagen."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "terrace",
+     "h": 30,
+     "pos": "center 55%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "What you pay for",
+      "no": "Hva du betaler for",
+      "sv": "Vad du betalar för"
+     },
+     "title": {
+      "en": "What your community fees cover",
+      "no": "Hva fellesutgiftene dekker",
+      "sv": "Vad samfällighetsavgifterna täcker"
+     },
+     "lead": {
+      "en": "Community fees pay for everything that is shared: the parts of the building and the grounds that no single owner is responsible for alone.",
+      "no": "Fellesutgiftene betaler for alt som er felles: de delene av bygget og uteområdet som ingen eier har ansvar for alene.",
+      "sv": "Samfällighetsavgifterna betalar för allt som är gemensamt, alltså de delar av byggnaden och området som ingen ägare ansvarar för ensam."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Running costs",
+        "no": "Driftskostnader",
+        "sv": "Driftskostnader"
+       },
+       {
+        "en": "Cleaning of halls, stairs and garages, gardening, pool cleaning, lift and boiler maintenance, lighting of shared areas and the building's insurance.",
+        "no": "Renhold av ganger, trapper og garasjer, hagestell, rengjøring av basseng, vedlikehold av heis og fyr, lys i fellesarealer og forsikring av bygget.",
+        "sv": "Städning av entréer, trappor och garage, trädgård, poolrengöring, underhåll av hiss och värmepanna, belysning i gemensamma utrymmen och byggnadens försäkring."
+       }
+      ],
+      [
+       {
+        "en": "Reserve fund",
+        "no": "Reservefond",
+        "sv": "Reservfond"
+       },
+       {
+        "en": "By law, every community keeps a reserve fund of at least 10% of its last ordinary budget, to cover repairs that cannot wait.",
+        "no": "Etter loven skal hvert sameie ha et reservefond på minst 10 % av det siste ordinære budsjettet, til reparasjoner som ikke kan vente.",
+        "sv": "Enligt lag ska varje samfällighet ha en reservfond på minst 10 % av den senaste ordinarie budgeten, för reparationer som inte kan vänta."
+       }
+      ],
+      [
+       {
+        "en": "Extra payments",
+        "no": "Ekstra innbetalinger",
+        "sv": "Extra uttaxeringar"
+       },
+       {
+        "en": "Larger works, such as a new roof or repainting the facade, are often paid through a one-off extra payment, called a derrama, agreed at a meeting.",
+        "no": "Større arbeider, som nytt tak eller maling av fasaden, betales ofte gjennom en ekstra engangsinnbetaling, kalt derrama, som vedtas på et møte.",
+        "sv": "Större arbeten, som nytt tak eller ommålning av fasaden, betalas ofta med en extra engångsavgift, derrama, som beslutas på en stämma."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "How much you pay depends on the services your community offers and the size of your share. Many owners pay around 100 euros a quarter, while owners in developments with pools, gardens and security can pay well over 1,000 euros.",
+      "no": "Hvor mye du betaler avhenger av tjenestene sameiet tilbyr og størrelsen på andelen din. Mange eiere betaler rundt 100 euro i kvartalet, mens eiere i anlegg med basseng, hage og vakthold kan betale godt over 1 000 euro.",
+      "sv": "Hur mycket du betalar beror på samfällighetens tjänster och din andel. Många betalar runt 100 euro i kvartalet, medan ägare i anläggningar med pool, trädgård och bevakning kan betala över 1 000 euro."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Your share is in the deeds",
+        "no": "Andelen din står i skjøtet",
+        "sv": "Din andel står i lagfarten"
+       },
+       "text": {
+        "en": "Each home has a participation quota, the cuota de participación, written in the deeds. It sets your share of the costs and the weight of your vote, which is why a large penthouse usually pays more than a small ground floor flat.",
+        "no": "Hver bolig har en eierbrøk, cuota de participación, som står i skjøtet. Den bestemmer din andel av kostnadene og vekten av stemmen din, og derfor betaler en stor toppleilighet som regel mer enn en liten leilighet på bakkeplan.",
+        "sv": "Varje bostad har ett andelstal, cuota de participación, i lagfarten. Det bestämmer din andel av kostnaderna och hur mycket din röst väger, och därför betalar en stor takvåning oftast mer än en liten lägenhet i markplan."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Meetings and votes",
+      "no": "Møter og avstemninger",
+      "sv": "Stämmor och omröstningar"
+     },
+     "title": {
+      "en": "How decisions are made",
+      "no": "Slik fattes vedtakene",
+      "sv": "Så fattas besluten"
+     },
+     "lead": {
+      "en": "The community is run under Spain's Horizontal Property Law. The owners decide together at a general meeting, usually once a year.",
+      "no": "Sameiet drives etter den spanske loven om eierseksjoner. Eierne bestemmer i fellesskap på et sameiermøte, som regel én gang i året.",
+      "sv": "Samfälligheten styrs av den spanska lagen om gemensamt ägande. Ägarna beslutar tillsammans på en stämma, oftast en gång om året."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "The yearly meeting approves the budget",
+        "no": "Årsmøtet vedtar budsjettet",
+        "sv": "Årsstämman godkänner budgeten"
+       },
+       "paras": [
+        {
+         "en": "Owners vote on the budget, planned repairs and the community's own rules for shared areas, such as quiet hours by the pool or whether pets are allowed. You must be invited at least six days before the yearly meeting.",
+         "no": "Eierne stemmer over budsjettet, planlagte reparasjoner og sameiets egne regler for fellesarealer, som stilletid ved bassenget eller om dyr er tillatt. Du skal innkalles minst seks dager før årsmøtet.",
+         "sv": "Ägarna röstar om budgeten, planerade reparationer och samfällighetens egna regler för gemensamma utrymmen, som tysta timmar vid poolen eller om husdjur är tillåtna. Du ska kallas minst sex dagar före årsstämman."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Owners who are behind cannot vote",
+        "no": "Eiere som skylder kan ikke stemme",
+        "sv": "Ägare som ligger efter får inte rösta"
+       },
+       "paras": [
+        {
+         "en": "An owner who has not paid what is due can still take part in the discussion, but has no vote until the debt is paid. Paying on time keeps your voice in the decisions that affect your home.",
+         "no": "En eier som ikke har betalt det som er forfalt, kan fortsatt delta i diskusjonen, men har ikke stemmerett før gjelden er betalt. Ved å betale i tide beholder du stemmen din i vedtak som angår boligen din.",
+         "sv": "En ägare som inte har betalat det som har förfallit får fortfarande delta i diskussionen, men har ingen rösträtt förrän skulden är betald. Genom att betala i tid behåller du din röst i beslut som rör din bostad."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "You can vote through someone else",
+        "no": "Du kan stemme gjennom en annen",
+        "sv": "Du kan rösta genom någon annan"
+       },
+       "paras": [
+        {
+         "en": "If you cannot travel to Spain for the meeting, you can give another person written authority to attend and vote for you.",
+         "no": "Hvis du ikke kan reise til Spania for møtet, kan du gi en annen person skriftlig fullmakt til å møte og stemme for deg.",
+         "sv": "Om du inte kan resa till Spanien för stämman kan du ge en annan person skriftlig fullmakt att delta och rösta för dig."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "New tourist lets need the community's approval",
+        "no": "Ny turistutleie krever godkjenning fra sameiet",
+        "sv": "Ny turistuthyrning kräver samfällighetens godkännande"
+       },
+       "paras": [
+        {
+         "en": "Since April 2025, starting a tourist let in a shared building needs the approval of three fifths of the owners. With the same majority, the community can raise the fees for that home by up to 20%.",
+         "no": "Siden april 2025 krever oppstart av turistutleie i et sameie godkjenning fra tre femtedeler av eierne. Med samme flertall kan sameiet øke fellesutgiftene for den boligen med opptil 20 %.",
+         "sv": "Sedan april 2025 krävs godkännande från tre femtedelar av ägarna för att starta turistuthyrning i en byggnad med gemensamt ägande. Med samma majoritet kan samfälligheten höja avgifterna för den bostaden med upp till 20 %."
+        }
+       ],
+       "tag": {
+        "en": "Three fifths of owners",
+        "no": "Tre femtedeler av eierne",
+        "sv": "Tre femtedelar av ägarna"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "03",
+     "eyebrow": {
+      "en": "Late payments",
+      "no": "Sen betaling",
+      "sv": "Sena betalningar"
+     },
+     "title": {
+      "en": "What happens when a payment is late",
+      "no": "Hva skjer når en betaling er forsinket",
+      "sv": "Vad händer när en betalning är sen"
+     },
+     "lead": {
+      "en": "Spanish law gives communities strong tools to collect what they are owed, because every unpaid fee is covered by the other owners.",
+      "no": "Spansk lov gir sameier sterke virkemidler for å kreve inn det de har til gode, fordi hver ubetalt krone dekkes av de andre eierne.",
+      "sv": "Spansk lag ger samfälligheter starka verktyg för att driva in det de har att fordra, eftersom varje obetald avgift täcks av de andra ägarna."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Interest runs from the day the fee is due",
+        "no": "Renter løper fra forfallsdagen",
+        "sv": "Ränta löper från förfallodagen"
+       },
+       "text": {
+        "en": "Unpaid fees build up interest from the day they should have been paid. A community can agree on interest above the legal rate, as long as it is not abusive or out of proportion.",
+        "no": "Ubetalte fellesutgifter løper med renter fra dagen de skulle vært betalt. Et sameie kan vedta renter over lovens sats, så lenge de ikke er urimelige eller ute av proporsjon.",
+        "sv": "Obetalda avgifter löper med ränta från den dag de skulle ha betalats. En samfällighet kan besluta om ränta över den lagstadgade nivån, så länge den inte är oskälig eller oproportionerlig."
+       }
+      },
+      {
+       "title": {
+        "en": "Penalties must be proportionate",
+        "no": "Straffegebyr må stå i forhold",
+        "sv": "Förseningsavgifter måste vara proportionerliga"
+       },
+       "text": {
+        "en": "In November 2026, Spain's Supreme Court struck down a surcharge of 50 cents for every day a payment was late. It was the same whatever the amount owed, and the court found it disproportionate.",
+        "no": "I november 2026 opphevet Spanias høyesterett et tillegg på 50 cent for hver dag en betaling var forsinket. Det var det samme uansett hvor mye som var skyldig, og retten mente det var uforholdsmessig.",
+        "sv": "I november 2026 upphävde Spaniens högsta domstol en avgift på 50 cent för varje dag en betalning var sen. Den var densamma oavsett hur mycket som var skyldigt, och domstolen ansåg den oproportionerlig."
+       }
+      },
+      {
+       "title": {
+        "en": "The community can go to court",
+        "no": "Sameiet kan gå til retten",
+        "sv": "Samfälligheten kan gå till domstol"
+       },
+       "text": {
+        "en": "A community can claim unpaid fees through a fast court procedure for debts, the proceso monitorio. The owner who owes the money may also have to pay the legal costs.",
+        "no": "Et sameie kan kreve inn ubetalte fellesutgifter gjennom en rask rettsprosess for gjeld, proceso monitorio. Eieren som skylder pengene kan også måtte betale saksomkostningene.",
+        "sv": "En samfällighet kan kräva in obetalda avgifter genom ett snabbt domstolsförfarande för skulder, proceso monitorio. Ägaren som är skyldig pengarna kan också få betala rättegångskostnaderna."
+       }
+      },
+      {
+       "title": {
+        "en": "In the worst cases, the home can be sold",
+        "no": "I verste fall kan boligen selges",
+        "sv": "I värsta fall kan bostaden säljas"
+       },
+       "text": {
+        "en": "When a debt goes unpaid for a long time, the community can ask the court to auction the home to recover what is owed.",
+        "no": "Når gjeld står ubetalt lenge, kan sameiet be retten om å selge boligen på tvangsauksjon for å få dekket det som er skyldig.",
+        "sv": "När en skuld står obetald länge kan samfälligheten be domstolen att sälja bostaden på exekutiv auktion för att få tillbaka det som är skyldigt."
+       }
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Most owners already pay their community fees by direct debit. The simplest way to stay safe is to make sure that direct debit comes from an account that always has enough money in it.",
+      "no": "De fleste eiere betaler allerede fellesutgiftene med autotrekk. Den enkleste måten å være trygg på er å sørge for at autotrekket går fra en konto som alltid har nok penger.",
+      "sv": "De flesta ägare betalar redan samfällighetsavgifterna via autogiro. Det enklaste sättet att vara trygg är att se till att autogirot dras från ett konto som alltid har tillräckligt med pengar."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "coast-hills",
+   "num": "04",
+   "eyebrow": {
+    "en": "The Supreme Court case",
+    "no": "Saken i Høyesterett",
+    "sv": "Fallet i Högsta domstolen"
+   },
+   "title": {
+    "en": "A late fee bigger than the fee itself",
+    "no": "Et gebyr større enn selve utgiften",
+    "sv": "En avgift större än själva avgiften"
+   },
+   "lead": {
+    "en": "In 2018, a community voted to charge 50 cents for every day a payment was late. Here is what that meant for the owner of a garage space.",
+    "no": "I 2018 vedtok et sameie å kreve 50 cent for hver dag en betaling var forsinket. Slik slo det ut for eieren av en garasjeplass.",
+    "sv": "År 2018 beslutade en samfällighet att ta ut 50 cent för varje dag en betalning var sen. Så här slog det ut för ägaren till en garageplats."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Yearly fee for the garage space",
+      "no": "Årlig utgift for garasjeplassen",
+      "sv": "Årsavgift för garageplatsen"
+     },
+     "note": {
+      "en": "The normal community fee for one year.",
+      "no": "Den vanlige fellesutgiften for ett år.",
+      "sv": "Den vanliga samfällighetsavgiften för ett år."
+     },
+     "value": {
+      "en": "€135",
+      "no": "€135",
+      "sv": "€135"
+     }
+    },
+    {
+     "label": {
+      "en": "Late surcharge agreed in 2018",
+      "no": "Tillegg for sen betaling vedtatt i 2018",
+      "sv": "Förseningsavgift beslutad 2018"
+     },
+     "note": {
+      "en": "Charged for every day, whatever the amount owed.",
+      "no": "Krevd for hver dag, uansett hvor mye som var skyldig.",
+      "sv": "Togs ut för varje dag, oavsett skuldens storlek."
+     },
+     "value": {
+      "en": "€0.50 a day",
+      "no": "€0,50 per dag",
+      "sv": "€0,50 per dag"
+     }
+    },
+    {
+     "label": {
+      "en": "Surcharge over a full year",
+      "no": "Tillegget over et helt år",
+      "sv": "Avgiften under ett helt år"
+     },
+     "note": {
+      "en": "365 days at 50 cents.",
+      "no": "365 dager à 50 cent.",
+      "sv": "365 dagar à 50 cent."
+     },
+     "value": {
+      "en": "€182.50",
+      "no": "€182,50",
+      "sv": "€182,50"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Supreme Court ruling, November 2026",
+     "no": "Høyesteretts dom, november 2026",
+     "sv": "Högsta domstolens dom, november 2026"
+    },
+    "value": {
+     "en": "Struck down",
+     "no": "Opphevet",
+     "sv": "Upphävd"
+    }
+   },
+   "calc": {
+    "en": "€0.50 × 365 days = €182.50, more than the €135 fee itself.",
+    "no": "€0,50 × 365 dager = €182,50, mer enn selve utgiften på €135.",
+    "sv": "€0,50 × 365 dagar = €182,50, mer än själva avgiften på €135."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "05",
+     "eyebrow": {
+      "en": "Buying, selling and your rights",
+      "no": "Kjøp, salg og dine rettigheter",
+      "sv": "Köp, försäljning och dina rättigheter"
+     },
+     "title": {
+      "en": "Old debts follow the home",
+      "no": "Gammel gjeld følger boligen",
+      "sv": "Gamla skulder följer med bostaden"
+     },
+     "lead": {
+      "en": "Community debts are tied to the home, not only to the person who owned it. That matters every time a home changes hands.",
+      "no": "Gjeld til sameiet er knyttet til boligen, ikke bare til den som eide den. Det betyr noe hver gang en bolig skifter eier.",
+      "sv": "Skulder till samfälligheten är knutna till bostaden, inte bara till den som ägde den. Det spelar roll varje gång en bostad byter ägare."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "When you buy",
+        "no": "Når du kjøper",
+        "sv": "När du köper"
+       },
+       "paras": [
+        {
+         "en": "A buyer answers with the home for unpaid fees from the current year and the three years before it. Ask for a certificate from the community's secretary showing that the fees are paid, and make sure any debt is settled before you sign at the notary.",
+         "no": "En kjøper hefter med boligen for ubetalte fellesutgifter fra inneværende år og de tre foregående årene. Be om en attest fra sameiets sekretær som viser at utgiftene er betalt, og sørg for at eventuell gjeld er gjort opp før du signerer hos notarius.",
+         "sv": "En köpare svarar med bostaden för obetalda avgifter från innevarande år och de tre föregående åren. Be om ett intyg från samfällighetens sekreterare som visar att avgifterna är betalda, och se till att eventuell skuld är reglerad innan du skriver under hos notarien."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "When you sell",
+        "no": "Når du selger",
+        "sv": "När du säljer"
+       },
+       "paras": [
+        {
+         "en": "The seller must declare in the deed of sale that the community fees are paid up to date. Having the certificate ready avoids delays at the notary.",
+         "no": "Selgeren må erklære i skjøtet at fellesutgiftene er betalt. Har du attesten klar, unngår du forsinkelser hos notarius.",
+         "sv": "Säljaren måste intyga i köpehandlingen att samfällighetsavgifterna är betalda. Har du intyget klart undviker du förseningar hos notarien."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "6 days",
+        "no": "6 dager",
+        "sv": "6 dagar"
+       },
+       "text": {
+        "en": "The minimum notice you must get before the yearly meeting.",
+        "no": "Minste varsel du skal få før årsmøtet.",
+        "sv": "Den kortaste kallelsetid du ska få före årsstämman."
+       }
+      },
+      {
+       "date": {
+        "en": "3 months",
+        "no": "3 måneder",
+        "sv": "3 månader"
+       },
+       "text": {
+        "en": "The usual time you have to challenge a community decision in court.",
+        "no": "Vanlig frist for å klage et vedtak i sameiet inn for retten.",
+        "sv": "Den vanliga tiden du har på dig att överklaga ett beslut i samfälligheten till domstol."
+       }
+      },
+      {
+       "date": {
+        "en": "1 year",
+        "no": "1 år",
+        "sv": "1 år"
+       },
+       "text": {
+        "en": "The time you have if the decision goes against the law or the community's statutes.",
+        "no": "Fristen hvis vedtaket strider mot loven eller sameiets vedtekter.",
+        "sv": "Tiden du har om beslutet strider mot lagen eller samfällighetens stadgar."
+       }
+      }
+     ]
+    },
+    {
+     "type": "para",
+     "text": {
+      "en": "To challenge a decision, you normally need to be up to date with your fees, or to pay what is owed into court first. If you are unsure, ask a lawyer before the deadline passes.",
+      "no": "For å klage på et vedtak må du normalt ha betalt fellesutgiftene, eller først betale det som er skyldig inn til retten. Er du usikker, bør du spørre en advokat før fristen går ut.",
+      "sv": "För att överklaga ett beslut måste du normalt ha betalat dina avgifter, eller först betala in det som är skyldigt till domstolen. Om du är osäker, fråga en advokat innan fristen går ut."
+     }
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "06",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

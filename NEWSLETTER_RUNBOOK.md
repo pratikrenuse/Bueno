@@ -1,7 +1,8 @@
 # Bueno newsletter: how the system works
 
-The Bueno newsletter goes out every other Thursday, in English, Norwegian and Swedish. This
-file explains how an issue gets from written to scheduled, and where each piece lives.
+The Bueno newsletter goes out every second Monday at 08:00 IST, in English, Norwegian and Swedish,
+sent by Resend from a cloud scheduled task (no Mac needed). The section "Pre-built editions and the
+Monday send" at the end is the current process. The older beehiiv flow below is kept for reference.
 
 ## The flow
 
@@ -72,3 +73,79 @@ or `Authorization: Bearer CRON_SECRET`.
 - `alert` sends the review email for the issue that is due. `dry=1` only builds it.
 - `news` returns the issue that needs research (GET) or writes researched news (POST).
 - `health` checks env vars, the table, repeats, guide links and runway.
+
+## The fortnightly issue (from 10 Nov 2026)
+
+Every issue is built from the idealista stories that arrived since the last issue, and every
+issue gets a NEW guide. No older guide is ever reused.
+
+1. **News.** Take the stories in Supabase `news_items` since the last issue and pick the three
+   most shareable for foreign owners (records, new rules, court rulings, fines). Heading plus
+   2 to 3 sentences each.
+2. **Guide (new every issue).** Pick a topic that fits the issue's news and is not in
+   `PAST` or `GUIDES` in `api/_newsletter_registry.js`. Write a new spec in
+   `studio/guides/specs/<slug>.json` from the matching articles in `studio/articles/`,
+   updating every fact to current law (check the BOE / Agencia Tributaria, never copy an
+   article's figures blindly, and follow the editorial rules). EN, NO and SV.
+   Render with `python3 studio/guides/render.py studio/guides/specs/<slug>.json` (the Sep 2026
+   tax-guide design: navy cover, FS Siena, real Bueno logo and Bueno Brand photos, no pink or
+   sunset covers). The render must pass the overflow check, then every page is looked at.
+   Add the guide to `GUIDES` with its source articles and build date.
+3. **Region, reader's question, subject.** Region not used before in `PAST`; reader's question
+   tied to the top story; subject "This Week in Spanish Property: <top story>, Plus More Updates".
+4. **Send.** Resend, from "Bueno Newsletter <pratik@spanishpropertyinsights.com>".
+   To Pratik only until he says "launch on Resend"; then Pratik and John.
+
+First issue built this way: 10 Nov 2026, guide `community-fees` (from the articles
+community-fees, hoa-rules and direct-debit).
+
+## Pre-built editions and the Monday send (from 23 Nov 2026)
+
+Everything except the three news stories is built ahead. Ten editions are ready, 23 Nov 2026 to
+29 Mar 2027, each with a NEW guide in EN, NO and SV.
+
+| Send date | Guide | Region |
+|---|---|---|
+| 23 Nov 2026 | ibi-tax | Canary Islands |
+| 7 Dec 2026 | property-insurance | Torrevieja and Orihuela Costa |
+| 21 Dec 2026 | utilities-setup | Valencia |
+| 4 Jan 2027 | local-tax-office | Murcia and the Costa Cálida |
+| 18 Jan 2027 | buying-fees | Almería |
+| 1 Feb 2027 | landlord-tenant-issues | Costa de la Luz |
+| 15 Feb 2027 | extension-deeds | Madrid |
+| 1 Mar 2027 | epc | Balearic Islands |
+| 15 Mar 2027 | seasonal-vs-tourist-rentals | Costa Brava |
+| 29 Mar 2027 | preventative-maintenance | Costa Dorada |
+
+The Nov and Dec editions carry the "2025 return due by 31 December" tax block. From January the
+block gives the 2027 dates (Modelo 210 from 1 April to 31 December 2027; rent from Oct to Dec 2026
+declared 1 to 20 April 2027), checked against the AEAT.
+
+**Where it lives (Supabase):**
+- `newsletter_settings.template` holds the email shell per language, `template_tokens` the shared
+  inline styles. `newsletter_template(lang)` expands them.
+- `newsletter_editions` has one row per edition with status `prepared`, `fields` (guide, region,
+  reader's question and tax block per language, already HTML-escaped) and `guide_urls`.
+- `newsletter_render(edition_key, lang, vals)` returns the finished HTML. `vals` is plain text for
+  SUBJECT, PREVIEW, INTRO, N1_T, N1_B, N2_T, N2_B, N3_T, N3_B and SOURCES; it is escaped inside the
+  function, and the function refuses to return HTML with an unfilled placeholder.
+- `newsletter_articles`: each guide article is `selected` with `used_on` = its send date. Approving
+  in `/internal-newsletter` marks it `approved`; after the send it is `used`.
+
+**The Monday send (cloud scheduled task "Bueno Newsletter: fortnightly Monday send"):**
+1. Runs every Monday at 08:00 IST and stops unless the date is a whole number of 14-day steps from
+   23 Nov 2026, or there is a `prepared` edition for today.
+2. Picks the three most shareable `news_items` since the last edition, writes headline and body in
+   EN, NO and SV, plus subject ("This Week in Spanish Property: <top story>, Plus More Updates"),
+   preview and the second intro paragraph.
+3. Renders each language with `newsletter_render`, sends via Resend from
+   "Bueno Newsletter <pratik@spanishpropertyinsights.com>" to `newsletter_settings.recipients`
+   (Pratik only until launch; the dashboard "Launch: add John" switch adds John).
+4. Stores stories, subjects, HTML and Resend ids on the edition, sets it to `sent`, marks the article
+   `used`, and sends a push notification.
+
+**Source files:** `studio/newsletter/prebuilt/` (edition copy in `editions_data.py`, guide scripts
+`g1` to `g10`, template builders). Guide specs are in `studio/guides/specs/`, PDFs in
+`public/newsletter-guides/`. The guide links only work once the repo is pushed.
+
+**Next batch:** when two prepared editions are left, ask Claude for the next ten.

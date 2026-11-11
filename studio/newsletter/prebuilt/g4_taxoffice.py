@@ -1,0 +1,73 @@
+from g_common import L, cta, write
+spec = {
+ "slug": "local-tax-office", "file": "Who-Taxes-Your-Spanish-Home",
+ "meta_title": L("Who taxes your Spanish home, and your 2027 dates | Bueno", "Hvem skattlegger boligen din i Spania, og datoene for 2027 | Bueno", "Vem beskattar din bostad i Spanien, och datumen för 2027 | Bueno"),
+ "title": L("Who taxes your Spanish home, and the dates for 2027", "Hvem skattlegger boligen din i Spania, og datoene for 2027", "Vem beskattar din bostad i Spanien, och datumen för 2027"),
+ "topics": {
+  "en": ["Which office handles which tax on your home.", "What the Agencia Tributaria, your town hall and your region each do.", "How official letters reach you when you live abroad.", "The new Modelo 210 dates for 2027.", "What to do if you have missed a year."],
+  "no": ["Hvilket kontor som har ansvar for hvilken skatt på boligen.", "Hva Agencia Tributaria, kommunen og regionen gjør.", "Hvordan offisielle brev når deg når du bor i utlandet.", "De nye datoene for Modelo 210 i 2027.", "Hva du gjør hvis du har gått glipp av et år."],
+  "sv": ["Vilket kontor som sköter vilken skatt på bostaden.", "Vad Agencia Tributaria, kommunen och regionen gör.", "Hur officiella brev når dig när du bor utomlands.", "De nya datumen för Modelo 210 under 2027.", "Vad du gör om du har missat ett år."]},
+ "pages": [
+  {"type": "cover", "photo": "coast-hills",
+   "eyebrow": L("Your guide to Spanish tax offices", "Din guide til spanske skattekontorer", "Din guide till spanska skattekontor"),
+   "title": L("Who taxes your Spanish home, and the dates for 2027", "Hvem skattlegger boligen din i Spania, og datoene for 2027", "Vem beskattar din bostad i Spanien, och datumen för 2027"),
+   "sub": L("Three levels of government tax a home in Spain. This guide shows who does what, and the new filing dates that start in April 2027.",
+            "Tre forvaltningsnivåer skattlegger en bolig i Spania. Denne guiden viser hvem som gjør hva, og de nye fristene som starter i april 2027.",
+            "Tre förvaltningsnivåer beskattar en bostad i Spanien. Den här guiden visar vem som gör vad, och de nya datumen som börjar gälla i april 2027.")},
+  {"type": "content", "blocks": [
+   {"type": "section", "eyebrow": L("Introduction", "Introduksjon", "Introduksjon".replace("Introduksjon", "Introduktion")),
+    "title": L("Three offices, three kinds of tax", "Tre kontorer, tre typer skatt", "Tre kontor, tre sorters skatt"),
+    "lead": L("A home in Spain is taxed by the national tax agency, by your town hall and by your region. Each sends its own letters and sets its own dates, which is why owners abroad so often miss something.",
+              "En bolig i Spania skattlegges av den nasjonale skatteetaten, av kommunen og av regionen. Hver sender sine egne brev og setter sine egne frister, og derfor går eiere i utlandet så ofte glipp av noe.",
+              "En bostad i Spanien beskattas av den nationella skattemyndigheten, av kommunen och av regionen. Var och en skickar sina egna brev och bestämmer sina egna datum, och därför missar ägare utomlands så ofta något.")},
+   {"type": "glance", "title": L("The essentials at a glance", "Det viktigste på et øyeblikk", "Det viktigaste i korthet"),
+    "items": [
+     L("The Agencia Tributaria collects the non-resident tax, filed on the Modelo 210.", "Agencia Tributaria krever inn skatten for ikke-residenter, som leveres på Modelo 210.", "Agencia Tributaria tar in skatten för icke-residenter, som deklareras på Modelo 210."),
+     L("Your town hall, or its provincial office, collects IBI and the plusvalía tax.", "Kommunen, eller skattekontoret i provinsen, krever inn IBI og plusvalía.", "Kommunen, eller dess skattekontor i provinsen, tar in IBI och plusvalía."),
+     L("Your region collects the tax on buying a resale home and on inheritance.", "Regionen krever inn skatten ved kjøp av brukt bolig og ved arv.", "Regionen tar in skatten vid köp av en begagnad bostad och vid arv."),
+     L("From the 2026 tax year, the imputed income return is filed from 1 April to 31 December of the next year.", "Fra skatteåret 2026 leveres skattemeldingen for beregnet inntekt fra 1. april til 31. desember året etter.", "Från beskattningsåret 2026 lämnas deklarationen för schablonintäkt från 1 april till 31 december året efter."),
+     L("Official letters can be read online, so a missed letter does not have to mean a missed deadline.", "Offisielle brev kan leses på nett, så et brev du ikke fikk trenger ikke bety en tapt frist.", "Officiella brev kan läsas på nätet, så ett missat brev behöver inte betyda en missad tidsfrist.")]},
+   {"type": "photo", "src": "cove-house", "h": 30, "pos": "center 50%"}]},
+  {"type": "content", "blocks": [
+   {"type": "section", "num": "01", "eyebrow": L("Who does what", "Hvem gjør hva", "Vem gör vad"),
+    "title": L("The three tax offices for your home", "De tre skattekontorene for boligen din", "De tre skattekontoren för din bostad"),
+    "lead": L("Knowing which office a letter comes from tells you how urgent it is and where to answer.",
+              "Når du vet hvilket kontor et brev kommer fra, vet du hvor viktig det er og hvor du skal svare.",
+              "När du vet vilket kontor ett brev kommer från vet du hur brådskande det är och vart du ska svara.")},
+   {"type": "deflist", "rows": [
+     [L("Agencia Tributaria", "Agencia Tributaria", "Agencia Tributaria"),
+      L("The national tax agency. It collects the non-resident income tax on your home, filed on the Modelo 210, and the 3% that a buyer holds back when a non-resident sells.",
+        "Den nasjonale skatteetaten. Den krever inn inntektsskatten for ikke-residenter på boligen, levert på Modelo 210, og de 3 % kjøperen holder tilbake når en ikke-resident selger.",
+        "Den nationella skattemyndigheten. Den tar in inkomstskatten för icke-residenter på bostaden, som deklareras på Modelo 210, och de 3 % som köparen håller inne när en icke-resident säljer.")],
+     [L("Town hall", "Kommunen", "Kommunen"),
+      L("Your ayuntamiento, often through a provincial tax office. It collects IBI every year, the plusvalía tax when a home is sold or inherited, and in many towns a rubbish collection charge.",
+        "Ayuntamiento, ofte gjennom et skattekontor i provinsen. Den krever inn IBI hvert år, plusvalía når en bolig selges eller arves, og i mange kommuner et renovasjonsgebyr.",
+        "Ditt ayuntamiento, ofta genom ett skattekontor i provinsen. Det tar in IBI varje år, plusvalía när en bostad säljs eller ärvs, och i många kommuner en sophämtningsavgift.")],
+     [L("Your region", "Regionen", "Regionen"),
+      L("The comunidad autónoma. It collects the transfer tax on resale purchases and the inheritance and gift tax, and sets many of their rates.",
+        "Comunidad autónoma. Den krever inn overføringsskatten ved kjøp av brukt bolig og arve- og gaveavgiften, og setter mange av satsene.",
+        "Comunidad autónoma. Den tar in överlåtelseskatten vid köp av begagnade bostäder och arvs- och gåvoskatten, och bestämmer många av skattesatserna.")]]},
+   {"type": "callout", "text": L("Official notifications from the Agencia Tributaria can be read on the government's online notice service, the DEHú, once you have a digital certificate or Cl@ve access. It is worth setting up before you need it.",
+                                 "Offisielle varsler fra Agencia Tributaria kan leses i myndighetenes digitale postkasse, DEHú, når du har et digitalt sertifikat eller Cl@ve-tilgang. Det lønner seg å ordne dette før du trenger det.",
+                                 "Officiella meddelanden från Agencia Tributaria kan läsas i myndigheternas digitala brevlåda, DEHú, när du har ett digitalt certifikat eller Cl@ve-åtkomst. Det lönar sig att ordna detta innan du behöver det.")}]},
+  {"type": "content", "blocks": [
+   {"type": "section", "num": "02", "eyebrow": L("Your 2027 dates", "Datoene dine for 2027", "Dina datum för 2027"),
+    "title": L("The Modelo 210 dates have changed", "Fristene for Modelo 210 er endret", "Datumen för Modelo 210 har ändrats"),
+    "lead": L("A new order from the tax ministry, Orden HAC/623/2026, moves the filing window for the yearly return on a home you do not let out.",
+              "En ny forskrift fra finansdepartementet, Orden HAC/623/2026, flytter fristen for den årlige skattemeldingen for en bolig du ikke leier ut.",
+              "En ny förordning från finansdepartementet, Orden HAC/623/2026, flyttar fönstret för den årliga deklarationen för en bostad du inte hyr ut.")},
+   {"type": "dates", "cols": [
+     {"date": L("1 April 2027", "1. april 2027", "1 april 2027"),
+      "text": L("The window opens for the 2026 return on a home you do not let out.", "Fristen åpner for skattemeldingen for 2026 for en bolig du ikke leier ut.", "Fönstret öppnar för deklarationen för 2026 för en bostad du inte hyr ut.")},
+     {"date": L("1 to 20 April 2027", "1. til 20. april 2027", "1 till 20 april 2027"),
+      "text": L("Rent received in October, November and December 2026 is declared.", "Leieinntekter fra oktober, november og desember 2026 skal oppgis.", "Hyresintäkter från oktober, november och december 2026 ska deklareras.")},
+     {"date": L("31 December 2027", "31. desember 2027", "31 december 2027"),
+      "text": L("The last day to file the 2026 return. Direct debit payment closes on 23 December.", "Siste frist for skattemeldingen for 2026. Betaling med autotrekk stenger 23. desember.", "Sista dagen för deklarationen för 2026. Betalning via autogiro stänger den 23 december.")}]},
+   {"type": "headed", "items": [
+     {"title": L("If you have missed a year", "Hvis du har gått glipp av et år", "Om du har missat ett år"),
+      "text": L("A late return can still be filed. Filing before the tax agency contacts you keeps the surcharge lower than waiting for a letter.",
+                "En skattemelding kan leveres for sent. Leverer du før skatteetaten tar kontakt, blir tillegget lavere enn om du venter på et brev.",
+                "En sen deklaration kan fortfarande lämnas. Om du lämnar den innan skattemyndigheten kontaktar dig blir avgiften lägre än om du väntar på ett brev.")}]}]},
+  cta("03"),
+  {"type": "back"}]}
+print(write(spec))

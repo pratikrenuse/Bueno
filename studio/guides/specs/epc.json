@@ -1,0 +1,344 @@
+{
+ "slug": "epc",
+ "file": "Energy-Certificates-In-Spain",
+ "meta_title": {
+  "en": "The energy certificate for your Spanish home | Bueno",
+  "no": "Energiattesten for boligen i Spania | Bueno",
+  "sv": "Energicertifikatet för din bostad i Spanien | Bueno"
+ },
+ "title": {
+  "en": "The energy certificate for your Spanish home",
+  "no": "Energiattesten for boligen i Spania",
+  "sv": "Energicertifikatet för din bostad i Spanien"
+ },
+ "topics": {
+  "en": [
+   "What the energy certificate is and what the rating means.",
+   "When you need one, for selling and for letting.",
+   "Who can issue it and how the visit works.",
+   "How long it lasts and how it is registered.",
+   "Simple changes that can improve the rating."
+  ],
+  "no": [
+   "Hva energiattesten er og hva karakteren betyr.",
+   "Når du trenger en, ved salg og ved utleie.",
+   "Hvem som kan utstede den og hvordan besøket foregår.",
+   "Hvor lenge den varer og hvordan den registreres.",
+   "Enkle endringer som kan gi bedre karakter."
+  ],
+  "sv": [
+   "Vad energicertifikatet är och vad klassningen betyder.",
+   "När du behöver ett, vid försäljning och uthyrning.",
+   "Vem som kan utfärda det och hur besöket går till.",
+   "Hur länge det gäller och hur det registreras.",
+   "Enkla ändringar som kan förbättra klassningen."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "bay-village",
+   "eyebrow": {
+    "en": "Your guide to the energy certificate",
+    "no": "Din guide til energiattesten",
+    "sv": "Din guide till energicertifikatet"
+   },
+   "title": {
+    "en": "The energy certificate for your Spanish home",
+    "no": "Energiattesten for boligen i Spania",
+    "sv": "Energicertifikatet för din bostad i Spanien"
+   },
+   "sub": {
+    "en": "Every home that is sold or let in Spain needs an energy certificate. This guide explains what it is, who issues it and how to get it done from abroad.",
+    "no": "Alle boliger som selges eller leies ut i Spania trenger en energiattest. Denne guiden forklarer hva den er, hvem som utsteder den og hvordan du ordner den fra utlandet.",
+    "sv": "Alla bostäder som säljs eller hyrs ut i Spanien behöver ett energicertifikat. Den här guiden förklarar vad det är, vem som utfärdar det och hur du ordnar det från utlandet."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "A label for how your home uses energy",
+      "no": "En merkelapp for boligens energibruk",
+      "sv": "En etikett för hur bostaden använder energi"
+     },
+     "lead": {
+      "en": "The certificado de eficiencia energética rates a home from A, the most efficient, to G, the least. Buyers and tenants see the rating in every advert, so it shapes the first impression of your home.",
+      "no": "Certificado de eficiencia energética gir boligen en karakter fra A, den mest effektive, til G, den minst effektive. Kjøpere og leietakere ser karakteren i hver annonse, så den former førsteinntrykket.",
+      "sv": "Certificado de eficiencia energética klassar en bostad från A, den mest effektiva, till G, den minst effektiva. Köpare och hyresgäster ser klassningen i varje annons, så den formar första intrycket."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "You need a valid certificate before you advertise a home for sale or rent.",
+       "no": "Du trenger en gyldig attest før du annonserer boligen for salg eller utleie.",
+       "sv": "Du behöver ett giltigt certifikat innan du annonserar bostaden för försäljning eller uthyrning."
+      },
+      {
+       "en": "It is issued by a qualified technician, usually an architect or engineer, after a visit.",
+       "no": "Den utstedes av en kvalifisert tekniker, som regel en arkitekt eller ingeniør, etter et besøk.",
+       "sv": "Det utfärdas av en behörig tekniker, oftast en arkitekt eller ingenjör, efter ett besök."
+      },
+      {
+       "en": "The certificate must be registered with your region before it is valid.",
+       "no": "Attesten må registreres hos regionen før den er gyldig.",
+       "sv": "Certifikatet måste registreras hos regionen innan det är giltigt."
+      },
+      {
+       "en": "It lasts ten years, or five years if the rating is G.",
+       "no": "Den varer i ti år, eller fem år hvis karakteren er G.",
+       "sv": "Det gäller i tio år, eller fem år om klassningen är G."
+      },
+      {
+       "en": "The buyer or tenant receives a copy when the contract is signed.",
+       "no": "Kjøperen eller leietakeren får en kopi når kontrakten signeres.",
+       "sv": "Köparen eller hyresgästen får en kopia när avtalet skrivs under."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "arches-terrace",
+     "h": 30,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Step by step",
+      "no": "Steg for steg",
+      "sv": "Steg för steg"
+     },
+     "title": {
+      "en": "Getting the certificate from abroad",
+      "no": "Få attesten fra utlandet",
+      "sv": "Ordna certifikatet från utlandet"
+     },
+     "lead": {
+      "en": "You do not need to be in Spain. Someone with a key and a few documents is enough.",
+      "no": "Du trenger ikke være i Spania. Det holder at noen har nøkkel og noen få dokumenter.",
+      "sv": "Du behöver inte vara i Spanien. Det räcker att någon har nyckel och några dokument."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Book a qualified technician",
+        "no": "Bestill en kvalifisert tekniker",
+        "sv": "Boka en behörig tekniker"
+       },
+       "paras": [
+        {
+         "en": "Ask for a fixed price that includes the regional registration. Prices vary with the size of the home and the area.",
+         "no": "Be om en fast pris som inkluderer regional registrering. Prisen varierer med boligens størrelse og område.",
+         "sv": "Be om ett fast pris som inkluderar den regionala registreringen. Priset varierar med bostadens storlek och område."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Prepare the documents",
+        "no": "Forbered dokumentene",
+        "sv": "Förbered dokumenten"
+       },
+       "paras": [
+        {
+         "en": "The technician will usually ask for the cadastral reference, which is on your IBI bill, and any plans or details of the windows, heating and air conditioning.",
+         "no": "Teknikeren ber som regel om katastreferansen, som står på IBI-regningen, og eventuelle tegninger eller opplysninger om vinduer, oppvarming og aircondition.",
+         "sv": "Teknikern ber oftast om fastighetsbeteckningen, som står på IBI-räkningen, och eventuella ritningar eller uppgifter om fönster, värme och luftkonditionering."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Arrange the visit",
+        "no": "Avtal besøket",
+        "sv": "Ordna besöket"
+       },
+       "paras": [
+        {
+         "en": "The technician measures the rooms and checks the walls, windows and equipment. A neighbour, a key holder or your property manager can let them in.",
+         "no": "Teknikeren måler rommene og sjekker vegger, vinduer og utstyr. En nabo, en nøkkelholder eller forvalteren din kan slippe dem inn.",
+         "sv": "Teknikern mäter rummen och kontrollerar väggar, fönster och utrustning. En granne, en nyckelinnehavare eller din förvaltare kan släppa in dem."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Register and keep the label",
+        "no": "Registrer og ta vare på merket",
+        "sv": "Registrera och spara etiketten"
+       },
+       "paras": [
+        {
+         "en": "Once registered, you receive the certificate and the energy label. Use the label in your adverts and keep the certificate with your property papers.",
+         "no": "Når den er registrert, får du attesten og energimerket. Bruk merket i annonsene og oppbevar attesten sammen med eiendomspapirene.",
+         "sv": "När det är registrerat får du certifikatet och energietiketten. Använd etiketten i annonserna och spara certifikatet med fastighetspapperen."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "A better rating",
+      "no": "En bedre karakter",
+      "sv": "En bättre klassning"
+     },
+     "title": {
+      "en": "Small changes that make a difference",
+      "no": "Små endringer som gjør en forskjell",
+      "sv": "Små ändringar som gör skillnad"
+     },
+     "lead": {
+      "en": "A better rating can make your home easier to let and more comfortable all year. These are the changes technicians most often suggest.",
+      "no": "En bedre karakter kan gjøre boligen lettere å leie ut og mer behagelig hele året. Dette er endringene teknikere oftest foreslår.",
+      "sv": "En bättre klassning kan göra bostaden lättare att hyra ut och bekvämare hela året. Det här är ändringarna tekniker oftast föreslår."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Windows and shutters",
+        "no": "Vinduer og skodder",
+        "sv": "Fönster och fönsterluckor"
+       },
+       "text": {
+        "en": "Double glazing and well-sealed frames keep the heat out in summer and in during winter.",
+        "no": "Doble vinduer og tette karmer holder varmen ute om sommeren og inne om vinteren.",
+        "sv": "Dubbelglas och täta karmar håller värmen ute på sommaren och inne på vintern."
+       }
+      },
+      {
+       "title": {
+        "en": "Heating and cooling",
+        "no": "Oppvarming og kjøling",
+        "sv": "Värme och kyla"
+       },
+       "text": {
+        "en": "A modern heat pump air conditioner uses far less energy than old units or electric heaters.",
+        "no": "En moderne varmepumpe bruker langt mindre energi enn gamle anlegg eller elektriske ovner.",
+        "sv": "En modern värmepump använder mycket mindre energi än gamla aggregat eller elelement."
+       }
+      },
+      {
+       "title": {
+        "en": "Hot water and solar",
+        "no": "Varmtvann og solenergi",
+        "sv": "Varmvatten och solenergi"
+       },
+       "text": {
+        "en": "An efficient water heater, or solar panels on a house, can lift the rating by more than one letter.",
+        "no": "En effektiv varmtvannsbereder, eller solcellepaneler på et hus, kan løfte karakteren med mer enn én bokstav.",
+        "sv": "En effektiv varmvattenberedare, eller solpaneler på ett hus, kan höja klassningen med mer än en bokstav."
+       }
+      },
+      {
+       "title": {
+        "en": "Ask for a new certificate",
+        "no": "Be om en ny attest",
+        "sv": "Be om ett nytt certifikat"
+       },
+       "text": {
+        "en": "After improvements, a new certificate shows the better rating straight away.",
+        "no": "Etter forbedringer viser en ny attest den bedre karakteren med en gang.",
+        "sv": "Efter förbättringar visar ett nytt certifikat den bättre klassningen direkt."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

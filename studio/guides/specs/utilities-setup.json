@@ -1,0 +1,366 @@
+{
+ "slug": "utilities-setup",
+ "file": "Utilities-For-Your-Spanish-Home",
+ "meta_title": {
+  "en": "Utilities in Spain: electricity, water, gas and internet | Bueno",
+  "no": "Strøm, vann, gass og internett i Spania | Bueno",
+  "sv": "El, vatten, gas och internet i Spanien | Bueno"
+ },
+ "title": {
+  "en": "Electricity, water, gas and internet for your Spanish home",
+  "no": "Strøm, vann, gass og internett til boligen i Spania",
+  "sv": "El, vatten, gas och internet till din bostad i Spanien"
+ },
+ "topics": {
+  "en": [
+   "How to put each utility in your own name.",
+   "The documents and codes every supplier asks for.",
+   "How the contracted power changes your electricity bill.",
+   "What to leave on, and what to switch off, when you leave.",
+   "How to keep every bill on direct debit from abroad."
+  ],
+  "no": [
+   "Hvordan du får hver tjeneste over i ditt navn.",
+   "Dokumentene og kodene alle leverandører spør om.",
+   "Hvordan kontraktert effekt påvirker strømregningen.",
+   "Hva du bør la stå på, og hva du bør slå av, når du reiser.",
+   "Hvordan du holder alle regninger på autotrekk fra utlandet."
+  ],
+  "sv": [
+   "Hur du för över varje tjänst till ditt namn.",
+   "Dokumenten och koderna som alla leverantörer frågar efter.",
+   "Hur den avtalade effekten påverkar elräkningen.",
+   "Vad du ska låta vara på, och vad du ska stänga av, när du reser.",
+   "Hur du har alla räkningar på autogiro från utlandet."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "marina",
+   "eyebrow": {
+    "en": "Your guide to utilities",
+    "no": "Din guide til strøm, vann og internett",
+    "sv": "Din guide till el, vatten och internet"
+   },
+   "title": {
+    "en": "Electricity, water, gas and internet for your Spanish home",
+    "no": "Strøm, vann, gass og internett til boligen i Spania",
+    "sv": "El, vatten, gas och internet till din bostad i Spanien"
+   },
+   "sub": {
+    "en": "How to set up and run the services your home needs, including what to do when you lock up and leave for a while.",
+    "no": "Hvordan du setter opp og holder orden på tjenestene boligen trenger, også hva du gjør når du låser og reiser for en stund.",
+    "sv": "Hur du ordnar och sköter de tjänster bostaden behöver, även vad du gör när du låser och reser bort ett tag."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Put every contract in your own name",
+      "no": "Få alle kontrakter i ditt eget navn",
+      "sv": "Ha alla avtal i ditt eget namn"
+     },
+     "lead": {
+      "en": "When you buy a home, the electricity, water and gas contracts often stay in the seller's name. Changing them to yours, the cambio de titular, means the bills, the deposits and the right to make changes are yours.",
+      "no": "Når du kjøper bolig, står strøm, vann og gass ofte fortsatt i selgerens navn. Ved å bytte til ditt navn, cambio de titular, blir regningene, depositumene og retten til å gjøre endringer dine.",
+      "sv": "När du köper en bostad står el-, vatten- och gasavtalen ofta kvar i säljarens namn. Genom att byta till ditt namn, cambio de titular, blir räkningarna, depositionerna och rätten att göra ändringar dina."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Every supplier will ask for your NIE, a Spanish IBAN and proof that you own the home.",
+       "no": "Alle leverandører vil be om NIE, et spansk IBAN og bevis på at du eier boligen.",
+       "sv": "Alla leverantörer kommer att be om ditt NIE, ett spanskt IBAN och bevis på att du äger bostaden."
+      },
+      {
+       "en": "Electricity is identified by a CUPS code, which stays the same when you change supplier.",
+       "no": "Strøm identifiseres med en CUPS-kode, som er den samme når du bytter leverandør.",
+       "sv": "El identifieras med en CUPS-kod, som är densamma när du byter leverantör."
+      },
+      {
+       "en": "Water is run by your town or its local company, so there is usually no choice of supplier.",
+       "no": "Vann drives av kommunen eller et lokalt selskap, så du kan som regel ikke velge leverandør.",
+       "sv": "Vatten sköts av kommunen eller ett lokalt bolag, så du kan oftast inte välja leverantör."
+      },
+      {
+       "en": "Part of the electricity bill depends on the power you contract, not on what you use.",
+       "no": "En del av strømregningen avhenger av effekten du har avtalt, ikke av hva du bruker.",
+       "sv": "En del av elräkningen beror på den effekt du har avtalat, inte på vad du använder."
+      },
+      {
+       "en": "Paying every bill by direct debit keeps the home running while you are away.",
+       "no": "Når alle regninger går på autotrekk, går alt som det skal mens du er borte.",
+       "sv": "När alla räkningar går via autogiro fungerar allt medan du är borta."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "terrace",
+     "h": 30,
+     "pos": "center 60%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Setting up",
+      "no": "Oppstart",
+      "sv": "Komma igång"
+     },
+     "title": {
+      "en": "What each supplier needs from you",
+      "no": "Dette trenger leverandørene fra deg",
+      "sv": "Det här behöver leverantörerna av dig"
+     },
+     "lead": {
+      "en": "Have these ready before you call or fill in a form, and the change usually goes through in a few days.",
+      "no": "Ha dette klart før du ringer eller fyller ut et skjema, så går endringen som regel gjennom på noen få dager.",
+      "sv": "Ha det här redo innan du ringer eller fyller i ett formulär, så brukar ändringen gå igenom på några dagar."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Your identity",
+        "no": "Identiteten din",
+        "sv": "Din identitet"
+       },
+       {
+        "en": "Your NIE number and your passport.",
+        "no": "NIE-nummeret og passet ditt.",
+        "sv": "Ditt NIE-nummer och ditt pass."
+       }
+      ],
+      [
+       {
+        "en": "The home",
+        "no": "Boligen",
+        "sv": "Bostaden"
+       },
+       {
+        "en": "The deed of sale or a nota simple, and the cadastral reference from your IBI bill.",
+        "no": "Skjøtet eller en nota simple, og matrikkelnummeret fra IBI-regningen.",
+        "sv": "Köpehandlingen eller en nota simple, och fastighetsbeteckningen från IBI-räkningen."
+       }
+      ],
+      [
+       {
+        "en": "The supply",
+        "no": "Tilkoblingen",
+        "sv": "Anslutningen"
+       },
+       {
+        "en": "The CUPS code for electricity and gas, and the meter or contract number for water. All of them are on an old bill.",
+        "no": "CUPS-koden for strøm og gass, og målernummer eller kontraktsnummer for vann. Alt står på en gammel regning.",
+        "sv": "CUPS-koden för el och gas, och mätar- eller avtalsnumret för vatten. Allt står på en gammal räkning."
+       }
+      ],
+      [
+       {
+        "en": "Payment",
+        "no": "Betaling",
+        "sv": "Betalning"
+       },
+       {
+        "en": "A Spanish IBAN for the direct debit.",
+        "no": "Et spansk IBAN for autotrekket.",
+        "sv": "Ett spanskt IBAN för autogirot."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Contracted power",
+        "no": "Kontraktert effekt",
+        "sv": "Avtalad effekt"
+       },
+       "text": {
+        "en": "Your electricity contract has a set power, the potencia contratada, measured in kW. You pay for it every day even when the home is empty, so a holiday home rarely needs the highest level. Your supplier can change it.",
+        "no": "Strømkontrakten har en fast effekt, potencia contratada, målt i kW. Du betaler for den hver dag også når boligen står tom, så en feriebolig trenger sjelden det høyeste nivået. Leverandøren kan endre den.",
+        "sv": "Ditt elavtal har en bestämd effekt, potencia contratada, mätt i kW. Du betalar för den varje dag även när bostaden står tom, så ett fritidshus behöver sällan den högsta nivån. Leverantören kan ändra den."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Leaving for a while",
+      "no": "Når du reiser for en stund",
+      "sv": "När du reser bort ett tag"
+     },
+     "title": {
+      "en": "Lock up without surprises",
+      "no": "Lås og reis uten overraskelser",
+      "sv": "Lås och res utan överraskningar"
+     },
+     "lead": {
+      "en": "A few minutes before you leave saves a lot of trouble while you are away.",
+      "no": "Noen minutter før du reiser sparer deg for mye bry mens du er borte.",
+      "sv": "Några minuter innan du åker sparar dig mycket besvär medan du är borta."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Keep the electricity on",
+        "no": "La strømmen stå på",
+        "sv": "Låt elen vara på"
+       },
+       "paras": [
+        {
+         "en": "An alarm, a router or a fridge you leave running needs power. Switch off the circuits you do not need at the fuse box instead of cutting everything.",
+         "no": "En alarm, en ruter eller et kjøleskap du lar stå på, trenger strøm. Slå av kursene du ikke trenger i sikringsskapet i stedet for å kutte alt.",
+         "sv": "Ett larm, en router eller ett kylskåp som du låter stå på behöver el. Slå av de grupper du inte behöver i proppskåpet i stället för att bryta allt."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Close the water",
+        "no": "Steng vannet",
+        "sv": "Stäng av vattnet"
+       },
+       "paras": [
+        {
+         "en": "Close the main water valve to avoid a leak while nobody is there. Check what your insurance says about water damage in an empty home.",
+         "no": "Steng hovedkranen for vann for å unngå lekkasje mens ingen er der. Sjekk hva forsikringen sier om vannskade i en tom bolig.",
+         "sv": "Stäng huvudkranen för vatten för att undvika läckor medan ingen är där. Kolla vad försäkringen säger om vattenskador i en tom bostad."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Check your gas installation",
+        "no": "Sjekk gassanlegget",
+        "sv": "Kolla gasinstallationen"
+       },
+       "paras": [
+        {
+         "en": "Homes with piped gas get an official safety inspection every five years, arranged by the gas distributor. Make sure someone can let the inspector in.",
+         "no": "Boliger med gass i rør får en offisiell sikkerhetskontroll hvert femte år, ordnet av gassdistributøren. Sørg for at noen kan slippe inn kontrolløren.",
+         "sv": "Bostäder med gas i ledning får en officiell säkerhetskontroll vart femte år, som gasdistributören ordnar. Se till att någon kan släppa in kontrollanten."
+        }
+       ],
+       "tag": {
+        "en": "Every five years",
+        "no": "Hvert femte år",
+        "sv": "Vart femte år"
+       }
+      },
+      {
+       "title": {
+        "en": "Keep the direct debits running",
+        "no": "Hold autotrekkene i gang",
+        "sv": "Låt autogirona löpa"
+       },
+       "paras": [
+        {
+         "en": "An unpaid bill can lead to the supply being cut. Keep every utility on direct debit from an account that always has money in it.",
+         "no": "En ubetalt regning kan føre til at tilkoblingen blir stengt. Hold alle tjenester på autotrekk fra en konto som alltid har penger på seg.",
+         "sv": "En obetald räkning kan leda till att anslutningen stängs av. Ha alla tjänster på autogiro från ett konto som alltid har pengar på."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

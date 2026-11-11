@@ -1,0 +1,332 @@
+{
+ "slug": "extension-deeds",
+ "file": "Extending-Your-Spanish-Home-Legally",
+ "meta_title": {
+  "en": "Extending your Spanish home and adding it to the deeds | Bueno",
+  "no": "Utvide boligen i Spania og føre det inn i skjøtet | Bueno",
+  "sv": "Bygga ut din bostad i Spanien och föra in det i lagfarten | Bueno"
+ },
+ "title": {
+  "en": "Extending your Spanish home and adding it to the deeds",
+  "no": "Utvide boligen i Spania og føre det inn i skjøtet",
+  "sv": "Bygga ut din bostad i Spanien och föra in det i lagfarten"
+ },
+ "topics": {
+  "en": [
+   "Which works need a licence from your town hall.",
+   "How a finished extension is added to the deeds.",
+   "Why the Catastro needs to know, and what it changes.",
+   "The problems an unregistered extension causes when you sell.",
+   "How older works without paperwork can be put right."
+  ],
+  "no": [
+   "Hvilke arbeider som krever tillatelse fra kommunen.",
+   "Hvordan en ferdig utvidelse føres inn i skjøtet.",
+   "Hvorfor Catastro må få beskjed, og hva det endrer.",
+   "Problemene en uregistrert utvidelse gir når du selger.",
+   "Hvordan eldre arbeider uten papirer kan ordnes."
+  ],
+  "sv": [
+   "Vilka arbeten som kräver tillstånd från kommunen.",
+   "Hur en färdig utbyggnad förs in i lagfarten.",
+   "Varför Catastro behöver veta, och vad det ändrar.",
+   "Problemen en oregistrerad utbyggnad ger när du säljer.",
+   "Hur äldre arbeten utan papper kan ordnas."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "arches-terrace",
+   "eyebrow": {
+    "en": "Your guide to building work",
+    "no": "Din guide til byggearbeid",
+    "sv": "Din guide till byggarbeten"
+   },
+   "title": {
+    "en": "Extending your Spanish home and adding it to the deeds",
+    "no": "Utvide boligen i Spania og føre det inn i skjøtet",
+    "sv": "Bygga ut din bostad i Spanien och föra in det i lagfarten"
+   },
+   "sub": {
+    "en": "A new terrace, a closed porch or an extra room adds value only when the paperwork matches. This guide shows the steps from licence to deeds.",
+    "no": "En ny terrasse, en innglasset veranda eller et ekstra rom gir bare verdi når papirene stemmer. Denne guiden viser stegene fra tillatelse til skjøte.",
+    "sv": "En ny terrass, en inglasad veranda eller ett extra rum ger bara värde när papperen stämmer. Den här guiden visar stegen från tillstånd till lagfart."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "The building and the paperwork must match",
+      "no": "Bygget og papirene må stemme",
+      "sv": "Byggnaden och papperen måste stämma"
+     },
+     "lead": {
+      "en": "In Spain, a home exists three times: on the ground, in the Land Registry and in the Catastro. When you extend it, all three have to show the same thing, or selling and borrowing against it gets harder.",
+      "no": "I Spania finnes en bolig tre ganger: på bakken, i tinglysingsregisteret og i Catastro. Når du utvider, må alle tre vise det samme, ellers blir det vanskeligere å selge eller låne med boligen som sikkerhet.",
+      "sv": "I Spanien finns en bostad tre gånger: på marken, i fastighetsregistret och i Catastro. När du bygger ut måste alla tre visa samma sak, annars blir det svårare att sälja eller låna med bostaden som säkerhet."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Most building work needs a licence or a formal notice to your town hall before it starts.",
+       "no": "De fleste byggearbeider krever tillatelse eller formell melding til kommunen før de starter.",
+       "sv": "De flesta byggarbeten kräver tillstånd eller en formell anmälan till kommunen innan de börjar."
+      },
+      {
+       "en": "A finished extension is added to the deeds with a declaración de obra nueva at a notary.",
+       "no": "En ferdig utvidelse føres inn i skjøtet med en declaración de obra nueva hos notarius.",
+       "sv": "En färdig utbyggnad förs in i lagfarten med en declaración de obra nueva hos en notarie."
+      },
+      {
+       "en": "The Catastro must be updated, which usually raises the cadastral value and the IBI.",
+       "no": "Catastro må oppdateres, noe som som regel øker takstverdien og IBI.",
+       "sv": "Catastro måste uppdateras, vilket oftast höjer taxeringsvärdet och IBI."
+      },
+      {
+       "en": "An extension missing from the deeds can delay or block a sale.",
+       "no": "En utvidelse som mangler i skjøtet kan forsinke eller stoppe et salg.",
+       "sv": "En utbyggnad som saknas i lagfarten kan försena eller stoppa en försäljning."
+      },
+      {
+       "en": "Older works can often be put right, but the rules differ by region.",
+       "no": "Eldre arbeider kan ofte ordnes, men reglene varierer mellom regionene.",
+       "sv": "Äldre arbeten kan ofta ordnas, men reglerna skiljer sig mellan regionerna."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "bay-village",
+     "h": 30,
+     "pos": "center 55%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Step by step",
+      "no": "Steg for steg",
+      "sv": "Steg för steg"
+     },
+     "title": {
+      "en": "From licence to deeds",
+      "no": "Fra tillatelse til skjøte",
+      "sv": "Från tillstånd till lagfart"
+     },
+     "lead": {
+      "en": "Follow these steps in order, and keep every document. You will need them again when you sell.",
+      "no": "Følg disse stegene i rekkefølge, og ta vare på alle dokumenter. Du trenger dem igjen når du selger.",
+      "sv": "Följ stegen i ordning och spara alla dokument. Du behöver dem igen när du säljer."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Get the licence",
+        "no": "Få tillatelsen",
+        "sv": "Få tillståndet"
+       },
+       "paras": [
+        {
+         "en": "Larger works, such as a new room, need a licencia de obra mayor with an architect's project. Smaller works often need only a declaración responsable, a formal notice to the town hall.",
+         "no": "Større arbeider, som et nytt rom, krever licencia de obra mayor med et prosjekt fra arkitekt. Mindre arbeider krever ofte bare en declaración responsable, en formell melding til kommunen.",
+         "sv": "Större arbeten, som ett nytt rum, kräver licencia de obra mayor med ett projekt från en arkitekt. Mindre arbeten kräver ofta bara en declaración responsable, en formell anmälan till kommunen."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Finish and certify the work",
+        "no": "Fullfør og dokumenter arbeidet",
+        "sv": "Slutför och intyga arbetet"
+       },
+       "paras": [
+        {
+         "en": "When the work is done, the architect issues a certificate of completion, the certificado final de obra.",
+         "no": "Når arbeidet er ferdig, utsteder arkitekten en ferdigattest, certificado final de obra.",
+         "sv": "När arbetet är klart utfärdar arkitekten ett slutintyg, certificado final de obra."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Sign the declaration at a notary",
+        "no": "Signer erklæringen hos notarius",
+        "sv": "Skriv under förklaringen hos en notarie"
+       },
+       "paras": [
+        {
+         "en": "The declaración de obra nueva describes the new building in a public deed. It carries a stamp duty set by your region.",
+         "no": "Declaración de obra nueva beskriver det nye bygget i et offentlig dokument. Det har en dokumentavgift satt av regionen.",
+         "sv": "Declaración de obra nueva beskriver den nya byggnaden i en offentlig handling. Den har en stämpelskatt som regionen bestämmer."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Register it and update the Catastro",
+        "no": "Tinglys og oppdater Catastro",
+        "sv": "Registrera och uppdatera Catastro"
+       },
+       "paras": [
+        {
+         "en": "The deed is recorded at the Land Registry and the change is reported to the Catastro. Your next IBI bill will reflect the larger home.",
+         "no": "Dokumentet tinglyses, og endringen meldes til Catastro. Neste IBI-regning vil vise den større boligen.",
+         "sv": "Handlingen skrivs in i fastighetsregistret och ändringen anmäls till Catastro. Nästa IBI-räkning visar den större bostaden."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Older works",
+      "no": "Eldre arbeider",
+      "sv": "Äldre arbeten"
+     },
+     "title": {
+      "en": "When the extension is already there",
+      "no": "Når utvidelsen allerede er der",
+      "sv": "När utbyggnaden redan finns"
+     },
+     "lead": {
+      "en": "Many homes bought by foreigners have a closed terrace or extra room that never made it into the deeds. It is a common problem, and often a fixable one.",
+      "no": "Mange boliger kjøpt av utlendinger har en innglasset terrasse eller et ekstra rom som aldri kom inn i skjøtet. Det er et vanlig problem, og ofte et som kan løses.",
+      "sv": "Många bostäder som köpts av utlänningar har en inglasad terrass eller ett extra rum som aldrig kom in i lagfarten. Det är ett vanligt problem, och ofta ett som går att lösa."
+     }
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "Check before you buy",
+        "no": "Sjekk før du kjøper",
+        "sv": "Kontrollera innan du köper"
+       },
+       "text": {
+        "en": "Compare the nota simple and the Catastro record with what you see on the visit. If the home is bigger than the papers say, ask for it to be regularised before you sign.",
+        "no": "Sammenlign nota simple og Catastro-opplysningene med det du ser på visningen. Er boligen større enn papirene sier, be om at det ordnes før du signerer.",
+        "sv": "Jämför nota simple och uppgifterna i Catastro med det du ser vid visningen. Om bostaden är större än papperen säger, be att det ordnas innan du skriver under."
+       }
+      },
+      {
+       "title": {
+        "en": "Regularising older works",
+        "no": "Ordne eldre arbeider",
+        "sv": "Ordna äldre arbeten"
+       },
+       "text": {
+        "en": "Works old enough that the town hall can no longer act against them can often be added to the deeds with a technician's certificate of age. The time limit and the steps differ from region to region.",
+        "no": "Arbeider som er så gamle at kommunen ikke lenger kan gripe inn, kan ofte føres inn i skjøtet med en attest fra en tekniker om alderen. Fristen og stegene varierer mellom regionene.",
+        "sv": "Arbeten som är så gamla att kommunen inte längre kan ingripa kan ofta föras in i lagfarten med ett intyg från en tekniker om åldern. Tidsgränsen och stegen skiljer sig mellan regionerna."
+       }
+      },
+      {
+       "title": {
+        "en": "Get local advice",
+        "no": "Få lokale råd",
+        "sv": "Få lokala råd"
+       },
+       "text": {
+        "en": "A local architect or lawyer can tell you quickly whether your works can be registered, and what it will cost.",
+        "no": "En lokal arkitekt eller advokat kan raskt si om arbeidene kan registreres, og hva det vil koste.",
+        "sv": "En lokal arkitekt eller advokat kan snabbt säga om arbetena kan registreras, och vad det kommer att kosta."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

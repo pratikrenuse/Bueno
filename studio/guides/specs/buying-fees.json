@@ -1,0 +1,416 @@
+{
+ "slug": "buying-fees",
+ "file": "The-Real-Cost-Of-Buying-In-Spain",
+ "meta_title": {
+  "en": "The real cost of buying a home in Spain | Bueno",
+  "no": "Hva det egentlig koster å kjøpe bolig i Spania | Bueno",
+  "sv": "Vad det egentligen kostar att köpa bostad i Spanien | Bueno"
+ },
+ "title": {
+  "en": "The real cost of buying a home in Spain",
+  "no": "Hva det egentlig koster å kjøpe bolig i Spania",
+  "sv": "Vad det egentligen kostar att köpa bostad i Spanien"
+ },
+ "topics": {
+  "en": [
+   "The taxes on a resale home and on a new build.",
+   "The notary, Land Registry and legal costs.",
+   "Who pays the costs of a Spanish mortgage.",
+   "The 3% a buyer holds back from a non-resident seller.",
+   "A worked example of the total cost."
+  ],
+  "no": [
+   "Skattene på en brukt bolig og på en nybygd bolig.",
+   "Kostnadene til notarius, tinglysing og juridisk hjelp.",
+   "Hvem som betaler kostnadene ved et spansk boliglån.",
+   "De 3 % kjøperen holder tilbake fra en selger som ikke bor i Spania.",
+   "Et regneeksempel på totalkostnaden."
+  ],
+  "sv": [
+   "Skatterna på en begagnad bostad och på en nybyggd.",
+   "Kostnaderna för notarie, inskrivning och juridisk hjälp.",
+   "Vem som betalar kostnaderna för ett spanskt bolån.",
+   "De 3 % som köparen håller inne från en säljare som inte bor i Spanien.",
+   "Ett räkneexempel på totalkostnaden."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "terrace",
+   "eyebrow": {
+    "en": "Your guide to buying costs",
+    "no": "Din guide til kjøpskostnader",
+    "sv": "Din guide till köpkostnader"
+   },
+   "title": {
+    "en": "The real cost of buying a home in Spain",
+    "no": "Hva det egentlig koster å kjøpe bolig i Spania",
+    "sv": "Vad det egentligen kostar att köpa bostad i Spanien"
+   },
+   "sub": {
+    "en": "The price on the listing is not the price you pay. This guide sets out the taxes and fees on top, so you can plan for the full amount.",
+    "no": "Prisen i annonsen er ikke prisen du betaler. Denne guiden viser skattene og gebyrene som kommer i tillegg, så du kan planlegge for hele beløpet.",
+    "sv": "Priset i annonsen är inte priset du betalar. Den här guiden visar skatterna och avgifterna som tillkommer, så att du kan planera för hela beloppet."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Plan for more than the price",
+      "no": "Planlegg for mer enn prisen",
+      "sv": "Planera för mer än priset"
+     },
+     "lead": {
+      "en": "Buying in Spain comes with taxes and fees that are paid on top of the price. Most of them are set by law or by your region, so they can be worked out before you make an offer.",
+      "no": "Kjøp i Spania kommer med skatter og gebyrer som betales i tillegg til prisen. De fleste er satt i lov eller av regionen, så de kan regnes ut før du gir et bud.",
+      "sv": "Ett köp i Spanien kommer med skatter och avgifter som betalas utöver priset. De flesta bestäms i lag eller av regionen, så de kan räknas ut innan du lägger ett bud."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "A resale home carries a transfer tax set by your region, often between 6% and 10% of the price.",
+       "no": "En brukt bolig har en overføringsskatt satt av regionen, ofte mellom 6 % og 10 % av prisen.",
+       "sv": "En begagnad bostad har en överlåtelseskatt som regionen bestämmer, ofta mellan 6 % och 10 % av priset."
+      },
+      {
+       "en": "A new build carries 10% VAT plus a smaller stamp duty set by your region.",
+       "no": "En nybygd bolig har 10 % merverdiavgift pluss en mindre dokumentavgift satt av regionen.",
+       "sv": "En nybyggd bostad har 10 % moms plus en mindre stämpelskatt som regionen bestämmer."
+      },
+      {
+       "en": "Notary and Land Registry fees follow official scales and depend on the price.",
+       "no": "Gebyrene til notarius og tinglysing følger offisielle satser og avhenger av prisen.",
+       "sv": "Avgifterna för notarie och inskrivning följer officiella taxor och beror på priset."
+      },
+      {
+       "en": "With a mortgage, the lender pays most of the costs of setting it up.",
+       "no": "Ved boliglån betaler långiveren det meste av kostnadene ved å opprette lånet.",
+       "sv": "Vid bolån betalar långivaren det mesta av kostnaderna för att lägga upp lånet."
+      },
+      {
+       "en": "If the seller is not resident in Spain, you hold back 3% of the price and pay it to the tax agency.",
+       "no": "Bor ikke selgeren i Spania, holder du tilbake 3 % av prisen og betaler det til skatteetaten.",
+       "sv": "Om säljaren inte bor i Spanien håller du inne 3 % av priset och betalar det till skattemyndigheten."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "bay-village",
+     "h": 30,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Taxes and fees",
+      "no": "Skatter og gebyrer",
+      "sv": "Skatter och avgifter"
+     },
+     "title": {
+      "en": "What you pay on top of the price",
+      "no": "Dette betaler du i tillegg til prisen",
+      "sv": "Det här betalar du utöver priset"
+     },
+     "lead": {
+      "en": "The biggest cost depends on whether the home is a resale or a new build. The rest applies to both.",
+      "no": "Den største kostnaden avhenger av om boligen er brukt eller nybygd. Resten gjelder begge.",
+      "sv": "Den största kostnaden beror på om bostaden är begagnad eller nybyggd. Resten gäller båda."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Resale: ITP",
+        "no": "Brukt bolig: ITP",
+        "sv": "Begagnad bostad: ITP"
+       },
+       {
+        "en": "The Impuesto de Transmisiones Patrimoniales, paid to your region. Each region sets its own rate, and some charge more on expensive homes.",
+        "no": "Impuesto de Transmisiones Patrimoniales, som betales til regionen. Hver region setter sin egen sats, og noen tar mer for dyre boliger.",
+        "sv": "Impuesto de Transmisiones Patrimoniales, som betalas till regionen. Varje region bestämmer sin egen skattesats, och vissa tar mer för dyra bostäder."
+       }
+      ],
+      [
+       {
+        "en": "New build: VAT and AJD",
+        "no": "Nybygg: merverdiavgift og AJD",
+        "sv": "Nybygge: moms och AJD"
+       },
+       {
+        "en": "10% VAT on the price, paid to the developer, plus a stamp duty, the AJD, set by your region. The Canary Islands use their own tax, the IGIC, instead of VAT.",
+        "no": "10 % merverdiavgift på prisen, betalt til utbyggeren, pluss en dokumentavgift, AJD, satt av regionen. Kanariøyene bruker sin egen avgift, IGIC, i stedet for merverdiavgift.",
+        "sv": "10 % moms på priset, som betalas till byggherren, plus en stämpelskatt, AJD, som regionen bestämmer. Kanarieöarna har en egen skatt, IGIC, i stället för moms."
+       }
+      ],
+      [
+       {
+        "en": "Notary and registry",
+        "no": "Notarius og tinglysing",
+        "sv": "Notarie och inskrivning"
+       },
+       {
+        "en": "The notary who signs the deed and the Land Registry that records it charge by official scales linked to the price.",
+        "no": "Notarius som signerer skjøtet og tinglysingen som registrerer det, tar betalt etter offisielle satser knyttet til prisen.",
+        "sv": "Notarien som skriver under köpehandlingen och inskrivningsmyndigheten som registrerar den tar betalt enligt officiella taxor kopplade till priset."
+       }
+      ],
+      [
+       {
+        "en": "Legal help",
+        "no": "Juridisk hjelp",
+        "sv": "Juridisk hjälp"
+       },
+       {
+        "en": "An independent lawyer is not required, but checks the title, debts and permits for you. Agree the fee in writing first.",
+        "no": "En uavhengig advokat er ikke påkrevd, men sjekker eierskap, gjeld og tillatelser for deg. Avtal honoraret skriftlig først.",
+        "sv": "En oberoende advokat är inte obligatorisk, men kontrollerar äganderätt, skulder och tillstånd åt dig. Kom överens om arvodet skriftligt först."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Since 2019, Spanish law has the lender pay the stamp duty, notary, registry and processing costs of a mortgage. The buyer usually pays only the valuation.",
+      "no": "Siden 2019 har spansk lov lagt dokumentavgift, notarius, tinglysing og saksbehandling ved boliglån på långiveren. Kjøperen betaler som regel bare takseringen.",
+      "sv": "Sedan 2019 säger spansk lag att långivaren betalar stämpelskatt, notarie, inskrivning och handläggning för ett bolån. Köparen betalar oftast bara värderingen."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "coast-hills",
+   "num": "02",
+   "eyebrow": {
+    "en": "An example",
+    "no": "Et eksempel",
+    "sv": "Ett exempel"
+   },
+   "title": {
+    "en": "A resale home at 250,000 euros",
+    "no": "En brukt bolig til 250 000 euro",
+    "sv": "En begagnad bostad för 250 000 euro"
+   },
+   "lead": {
+    "en": "Here is the transfer tax on a resale home in a region with an 8% rate. Check the rate in your own region before you buy.",
+    "no": "Her er overføringsskatten på en brukt bolig i en region med 8 % sats. Sjekk satsen i din region før du kjøper.",
+    "sv": "Här är överlåtelseskatten på en begagnad bostad i en region med 8 % skattesats. Kontrollera skattesatsen i din region innan du köper."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Price",
+      "no": "Pris",
+      "sv": "Pris"
+     },
+     "note": {
+      "en": "Agreed with the seller.",
+      "no": "Avtalt med selgeren.",
+      "sv": "Överenskommet med säljaren."
+     },
+     "value": {
+      "en": "€250,000",
+      "no": "€250 000",
+      "sv": "€250 000"
+     }
+    },
+    {
+     "label": {
+      "en": "Transfer tax rate",
+      "no": "Sats for overføringsskatt",
+      "sv": "Skattesats för överlåtelseskatt"
+     },
+     "note": {
+      "en": "An example rate; each region sets its own.",
+      "no": "En eksempelsats; hver region setter sin egen.",
+      "sv": "En exempelsats; varje region bestämmer sin egen."
+     },
+     "value": {
+      "en": "8%",
+      "no": "8 %",
+      "sv": "8 %"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "Transfer tax to pay",
+     "no": "Overføringsskatt å betale",
+     "sv": "Överlåtelseskatt att betala"
+    },
+    "value": {
+     "en": "€20,000",
+     "no": "€20 000",
+     "sv": "€20 000"
+    }
+   },
+   "calc": {
+    "en": "€250,000 × 8% = €20,000, before notary, registry and legal fees.",
+    "no": "€250 000 × 8 % = €20 000, før notarius, tinglysing og juridisk hjelp.",
+    "sv": "€250 000 × 8 % = €20 000, före notarie, inskrivning och juridisk hjälp."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "03",
+     "eyebrow": {
+      "en": "Buying from a non-resident",
+      "no": "Kjøp fra en ikke-resident",
+      "sv": "Köp från en icke-resident"
+     },
+     "title": {
+      "en": "The 3% you hold back",
+      "no": "De 3 % du holder tilbake",
+      "sv": "De 3 % du håller inne"
+     },
+     "lead": {
+      "en": "When the seller does not live in Spain, the law asks the buyer to keep back 3% of the price and pay it straight to the Agencia Tributaria.",
+      "no": "Når selgeren ikke bor i Spania, sier loven at kjøperen skal holde tilbake 3 % av prisen og betale det direkte til Agencia Tributaria.",
+      "sv": "När säljaren inte bor i Spanien säger lagen att köparen ska hålla inne 3 % av priset och betala det direkt till Agencia Tributaria."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "It goes to the tax agency, not the seller",
+        "no": "Det går til skatteetaten, ikke til selgeren",
+        "sv": "Det går till skattemyndigheten, inte till säljaren"
+       },
+       "paras": [
+        {
+         "en": "The 3% is paid on the Modelo 211 within one month of the sale. It counts towards the seller's tax on any gain.",
+         "no": "De 3 % betales på Modelo 211 innen én måned etter salget. Beløpet trekkes fra selgerens skatt på en eventuell gevinst.",
+         "sv": "De 3 % betalas på Modelo 211 inom en månad efter försäljningen. Beloppet räknas av mot säljarens skatt på en eventuell vinst."
+        }
+       ],
+       "tag": {
+        "en": "Within one month",
+        "no": "Innen én måned",
+        "sv": "Inom en månad"
+       }
+      },
+      {
+       "title": {
+        "en": "If it is not paid",
+        "no": "Hvis det ikke blir betalt",
+        "sv": "Om det inte betalas"
+       },
+       "paras": [
+        {
+         "en": "If the 3% is not paid, the home stays tied to the seller's tax debt, so the buyer can be asked to pay it later.",
+         "no": "Hvis de 3 % ikke blir betalt, er boligen fortsatt knyttet til selgerens skattegjeld, så kjøperen kan bli bedt om å betale senere.",
+         "sv": "Om de 3 % inte betalas förblir bostaden knuten till säljarens skatteskuld, så köparen kan få betala senare."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Paying for the home",
+        "no": "Betaling for boligen",
+        "sv": "Betala för bostaden"
+       },
+       "paras": [
+        {
+         "en": "The notary checks where the money comes from, so pay from an account in your own name and keep the transfer records.",
+         "no": "Notarius sjekker hvor pengene kommer fra, så betal fra en konto i ditt eget navn og ta vare på overføringsbekreftelsene.",
+         "sv": "Notarien kontrollerar var pengarna kommer ifrån, så betala från ett konto i ditt eget namn och spara överföringsbeskeden."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "04",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

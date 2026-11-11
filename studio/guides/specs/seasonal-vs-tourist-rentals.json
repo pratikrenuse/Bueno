@@ -1,0 +1,344 @@
+{
+ "slug": "seasonal-vs-tourist-rentals",
+ "file": "Seasonal-Or-Holiday-Letting-In-Spain",
+ "meta_title": {
+  "en": "Seasonal or holiday letting in Spain | Bueno",
+  "no": "Sesongutleie eller ferieutleie i Spania | Bueno",
+  "sv": "Säsongsuthyrning eller semesteruthyrning i Spanien | Bueno"
+ },
+ "title": {
+  "en": "Seasonal or holiday letting: which one fits your Spanish home",
+  "no": "Sesongutleie eller ferieutleie: hva passer boligen i Spania",
+  "sv": "Säsongsuthyrning eller semesteruthyrning: vad passar din bostad i Spanien"
+ },
+ "topics": {
+  "en": [
+   "The difference between a seasonal let and a holiday let.",
+   "When a holiday let needs a regional licence.",
+   "Why your community of owners has a say.",
+   "How each type of letting is taxed for non-residents.",
+   "Questions to ask before you choose."
+  ],
+  "no": [
+   "Forskjellen mellom sesongutleie og ferieutleie.",
+   "Når ferieutleie krever regional lisens.",
+   "Hvorfor sameiet har noe å si.",
+   "Hvordan hver type utleie skattlegges for ikke-residenter.",
+   "Spørsmål å stille før du velger."
+  ],
+  "sv": [
+   "Skillnaden mellan säsongsuthyrning och semesteruthyrning.",
+   "När semesteruthyrning kräver regional licens.",
+   "Varför samfälligheten har något att säga till om.",
+   "Hur varje typ av uthyrning beskattas för icke-residenter.",
+   "Frågor att ställa innan du väljer."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "cove-house",
+   "eyebrow": {
+    "en": "Your guide to short lets",
+    "no": "Din guide til korttidsutleie",
+    "sv": "Din guide till korttidsuthyrning"
+   },
+   "title": {
+    "en": "Seasonal or holiday letting in Spain",
+    "no": "Sesongutleie eller ferieutleie i Spania",
+    "sv": "Säsong eller semester? Hyra ut i Spanien"
+   },
+   "sub": {
+    "en": "Spain treats a few months' let to a remote worker very differently from a week's let to holidaymakers. Choosing the right one keeps you on the right side of the rules.",
+    "no": "Spania behandler noen måneders utleie til en som jobber eksternt helt annerledes enn en ukes utleie til feriegjester. Riktig valg holder deg innenfor reglene.",
+    "sv": "Spanien behandlar några månaders uthyrning till en distansarbetare helt annorlunda än en veckas uthyrning till semesterfirare. Rätt val håller dig inom reglerna."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Two kinds of short let",
+      "no": "To typer korttidsutleie",
+      "sv": "Två typer av korttidsuthyrning"
+     },
+     "lead": {
+      "en": "A seasonal let is a contract for a tenant who needs the home for a set period, for work or study, without making it their main home. A holiday let is accommodation for tourists, regulated by each region.",
+      "no": "Sesongutleie er en kontrakt for en leietaker som trenger boligen for en bestemt periode, for jobb eller studier, uten at den blir hovedboligen. Ferieutleie er overnatting for turister, regulert av hver region.",
+      "sv": "Säsongsuthyrning är ett avtal för en hyresgäst som behöver bostaden en bestämd period, för arbete eller studier, utan att den blir hemmet. Semesteruthyrning är logi för turister och regleras av varje region."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "A seasonal let follows the tenancy law and needs a written reason for the stay.",
+       "no": "Sesongutleie følger husleieloven og krever en skriftlig grunn for oppholdet.",
+       "sv": "Säsongsuthyrning följer hyreslagen och kräver ett skriftligt skäl för vistelsen."
+      },
+      {
+       "en": "A holiday let usually needs a licence or registration with your region.",
+       "no": "Ferieutleie krever som regel lisens eller registrering hos regionen.",
+       "sv": "Semesteruthyrning kräver oftast licens eller registrering hos regionen."
+      },
+      {
+       "en": "Since April 2025, a new holiday let in a flat needs the approval of the community of owners.",
+       "no": "Siden april 2025 krever ny ferieutleie i en leilighet godkjenning fra sameiet.",
+       "sv": "Sedan april 2025 kräver ny semesteruthyrning i en lägenhet godkännande från samfälligheten."
+      },
+      {
+       "en": "Both types of income are declared in Spain on the Modelo 210.",
+       "no": "Begge typer inntekt oppgis i Spania på Modelo 210.",
+       "sv": "Båda typerna av inkomst deklareras i Spanien på Modelo 210."
+      },
+      {
+       "en": "Some towns limit or pause new holiday licences, so check locally first.",
+       "no": "Noen kommuner begrenser eller stanser nye ferielisenser, så sjekk lokalt først.",
+       "sv": "Vissa kommuner begränsar eller pausar nya semesterlicenser, så kontrollera lokalt först."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "beach-couple",
+     "h": 30,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Side by side",
+      "no": "Side om side",
+      "sv": "Sida vid sida"
+     },
+     "title": {
+      "en": "How the two compare",
+      "no": "Slik skiller de seg",
+      "sv": "Så skiljer de sig åt"
+     },
+     "lead": {
+      "en": "The right choice depends on your building, your region and how much time you want to spend on guests.",
+      "no": "Riktig valg avhenger av bygget, regionen og hvor mye tid du vil bruke på gjester.",
+      "sv": "Rätt val beror på byggnaden, regionen och hur mycket tid du vill lägga på gäster."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Seasonal let",
+        "no": "Sesongutleie",
+        "sv": "Säsongsuthyrning"
+       },
+       {
+        "en": "Stays of a few weeks to a few months under a written contract. No tourist licence is needed, but the contract should state the reason, such as work or study.",
+        "no": "Opphold fra noen uker til noen måneder med skriftlig kontrakt. Ingen turistlisens trengs, men kontrakten bør oppgi grunnen, som jobb eller studier.",
+        "sv": "Vistelser från några veckor till några månader med skriftligt avtal. Ingen turistlicens behövs, men avtalet bör ange skälet, som arbete eller studier."
+       }
+      ],
+      [
+       {
+        "en": "Holiday let",
+        "no": "Ferieutleie",
+        "sv": "Semesteruthyrning"
+       },
+       {
+        "en": "Short stays for tourists, often with cleaning and fresh linen between guests. It needs a regional licence or registration, and guests must be registered with the authorities.",
+        "no": "Korte opphold for turister, ofte med rengjøring og rent sengetøy mellom gjestene. Det krever regional lisens eller registrering, og gjestene må registreres hos myndighetene.",
+        "sv": "Korta vistelser för turister, ofta med städning och rena lakan mellan gästerna. Det kräver regional licens eller registrering, och gästerna måste registreras hos myndigheterna."
+       }
+      ],
+      [
+       {
+        "en": "Your building",
+        "no": "Bygget ditt",
+        "sv": "Din byggnad"
+       },
+       {
+        "en": "For a new holiday let in a flat, three fifths of the owners must approve it at a community meeting.",
+        "no": "For ny ferieutleie i en leilighet må tre femtedeler av eierne godkjenne det på et sameiemøte.",
+        "sv": "För ny semesteruthyrning i en lägenhet måste tre femtedelar av ägarna godkänna det på ett stämmomöte."
+       }
+      ],
+      [
+       {
+        "en": "Tax",
+        "no": "Skatt",
+        "sv": "Skatt"
+       },
+       {
+        "en": "Residents of the EU and EEA pay 19% on the net income after deductible costs, declared on the Modelo 210.",
+        "no": "Bosatte i EU og EØS betaler 19 % av nettoinntekten etter fradragsberettigede kostnader, oppgitt på Modelo 210.",
+        "sv": "Boende i EU och EES betalar 19 % på nettoinkomsten efter avdragsgilla kostnader, deklarerat på Modelo 210."
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Before you choose",
+      "no": "Før du velger",
+      "sv": "Innan du väljer"
+     },
+     "title": {
+      "en": "Four questions to answer first",
+      "no": "Fire spørsmål å svare på først",
+      "sv": "Fyra frågor att svara på först"
+     },
+     "lead": {
+      "en": "A short check now saves a great deal of trouble later.",
+      "no": "En kort sjekk nå sparer mye bry senere.",
+      "sv": "En kort kontroll nu sparar mycket besvär senare."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "What does your town allow?",
+        "no": "Hva tillater kommunen?",
+        "sv": "Vad tillåter kommunen?"
+       },
+       "paras": [
+        {
+         "en": "Ask the town hall or the regional tourism office whether new holiday licences are being issued in your area.",
+         "no": "Spør kommunen eller det regionale turistkontoret om det gis nye ferielisenser i ditt område.",
+         "sv": "Fråga kommunen eller det regionala turistkontoret om nya semesterlicenser ges ut i ditt område."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "What do the community rules say?",
+        "no": "Hva sier sameiets regler?",
+        "sv": "Vad säger samfällighetens regler?"
+       },
+       "paras": [
+        {
+         "en": "Read the statutes and recent minutes. Some buildings have already voted to limit holiday lets.",
+         "no": "Les vedtektene og nylige referater. Noen bygg har allerede stemt for å begrense ferieutleie.",
+         "sv": "Läs stadgarna och de senaste protokollen. Vissa byggnader har redan röstat för att begränsa semesteruthyrning."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Who will look after the guests?",
+        "no": "Hvem skal ta seg av gjestene?",
+        "sv": "Vem ska ta hand om gästerna?"
+       },
+       "paras": [
+        {
+         "en": "Holiday lets need check-ins, cleaning and quick repairs. A seasonal tenant needs much less day-to-day care.",
+         "no": "Ferieutleie krever innsjekking, rengjøring og raske reparasjoner. En sesongleietaker trenger langt mindre daglig oppfølging.",
+         "sv": "Semesteruthyrning kräver incheckning, städning och snabba reparationer. En säsongshyresgäst behöver mycket mindre daglig tillsyn."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Is your insurance right for it?",
+        "no": "Passer forsikringen?",
+        "sv": "Passar försäkringen?"
+       },
+       "paras": [
+        {
+         "en": "Tell your insurer how the home is let. Many standard policies do not cover holiday guests.",
+         "no": "Fortell forsikringsselskapet hvordan boligen leies ut. Mange vanlige forsikringer dekker ikke feriegjester.",
+         "sv": "Berätta för försäkringsbolaget hur bostaden hyrs ut. Många vanliga försäkringar täcker inte semestergäster."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

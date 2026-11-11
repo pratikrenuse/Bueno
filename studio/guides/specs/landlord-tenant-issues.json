@@ -1,0 +1,357 @@
+{
+ "slug": "landlord-tenant-issues",
+ "file": "Letting-To-A-Long-Term-Tenant",
+ "meta_title": {
+  "en": "Letting your Spanish home to a long-term tenant | Bueno",
+  "no": "Utleie av boligen i Spania til en langtidsleietaker | Bueno",
+  "sv": "Hyra ut din bostad i Spanien till en långtidshyresgäst | Bueno"
+ },
+ "title": {
+  "en": "Letting your Spanish home to a long-term tenant",
+  "no": "Utleie av boligen i Spania til en langtidsleietaker",
+  "sv": "Hyra ut din bostad i Spanien till en långtidshyresgäst"
+ },
+ "topics": {
+  "en": [
+   "How long a Spanish tenancy lasts, and who can end it.",
+   "The deposit and where it has to be lodged.",
+   "How rent can be updated each year.",
+   "What to do if the rent stops being paid.",
+   "How the rent is taxed when you live abroad."
+  ],
+  "no": [
+   "Hvor lenge et spansk leieforhold varer, og hvem som kan avslutte det.",
+   "Depositumet og hvor det skal settes inn.",
+   "Hvordan husleien kan justeres hvert år.",
+   "Hva du gjør hvis husleien slutter å komme.",
+   "Hvordan leieinntekten skattlegges når du bor i utlandet."
+  ],
+  "sv": [
+   "Hur länge ett spanskt hyresavtal löper, och vem som kan avsluta det.",
+   "Depositionen och var den ska sättas in.",
+   "Hur hyran kan justeras varje år.",
+   "Vad du gör om hyran slutar betalas.",
+   "Hur hyresintäkten beskattas när du bor utomlands."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "beach-couple",
+   "eyebrow": {
+    "en": "Your guide to long-term letting",
+    "no": "Din guide til langtidsutleie",
+    "sv": "Din guide till långtidsuthyrning"
+   },
+   "title": {
+    "en": "Letting your Spanish home to a long-term tenant",
+    "no": "Utleie av boligen i Spania til en langtidsleietaker",
+    "sv": "Hyra ut din bostad i Spanien till en långtidshyresgäst"
+   },
+   "sub": {
+    "en": "The rules that shape a Spanish tenancy, from how long it lasts to what happens when rent is not paid, explained for owners who live abroad.",
+    "no": "Reglene for et spansk leieforhold, fra hvor lenge det varer til hva som skjer når husleien ikke betales, forklart for eiere som bor i utlandet.",
+    "sv": "Reglerna för ett spanskt hyresavtal, från hur länge det löper till vad som händer när hyran inte betalas, förklarade för ägare som bor utomlands."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "A tenancy in Spain is built to last",
+      "no": "Et spansk leieforhold er laget for å vare",
+      "sv": "Ett spanskt hyresavtal är byggt för att vara länge"
+     },
+     "lead": {
+      "en": "Long-term lets in Spain fall under the Ley de Arrendamientos Urbanos, which gives tenants strong protection. Knowing the rules before you sign avoids most of the problems owners run into.",
+      "no": "Langtidsutleie i Spania følger Ley de Arrendamientos Urbanos, som gir leietakere sterk beskyttelse. Kjenner du reglene før du signerer, unngår du de fleste problemene eiere støter på.",
+      "sv": "Långtidsuthyrning i Spanien följer Ley de Arrendamientos Urbanos, som ger hyresgäster ett starkt skydd. Känner du till reglerna innan du skriver under slipper du de flesta problem som ägare stöter på."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "If you let as a private person, the tenant can stay for at least five years.",
+       "no": "Leier du ut som privatperson, kan leietakeren bli i minst fem år.",
+       "sv": "Om du hyr ut som privatperson får hyresgästen bo kvar i minst fem år."
+      },
+      {
+       "en": "The legal deposit is one month's rent, and many regions require it to be lodged with them.",
+       "no": "Det lovpålagte depositumet er én måneds husleie, og mange regioner krever at det settes inn hos dem.",
+       "sv": "Den lagstadgade depositionen är en månadshyra, och många regioner kräver att den sätts in hos dem."
+      },
+      {
+       "en": "Rent can be updated once a year, within the limits of an official index.",
+       "no": "Husleien kan justeres én gang i året, innenfor rammene av en offisiell indeks.",
+       "sv": "Hyran kan justeras en gång om året, inom ramen för ett officiellt index."
+      },
+      {
+       "en": "Ending a tenancy for unpaid rent goes through the courts and takes time.",
+       "no": "Å avslutte et leieforhold på grunn av ubetalt husleie går gjennom retten og tar tid.",
+       "sv": "Att avsluta ett hyresavtal på grund av obetald hyra går via domstol och tar tid."
+      },
+      {
+       "en": "As a non-resident, you declare the rent in Spain on the Modelo 210.",
+       "no": "Som ikke-resident oppgir du leieinntekten i Spania på Modelo 210.",
+       "sv": "Som icke-resident deklarerar du hyran i Spanien på Modelo 210."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "terrace",
+     "h": 30,
+     "pos": "center 45%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "The contract",
+      "no": "Kontrakten",
+      "sv": "Avtalet"
+     },
+     "title": {
+      "en": "How long it lasts and how it ends",
+      "no": "Hvor lenge det varer og hvordan det slutter",
+      "sv": "Hur länge det löper och hur det slutar"
+     },
+     "lead": {
+      "en": "These are the rules that most often surprise owners from the Nordics and the UK.",
+      "no": "Dette er reglene som oftest overrasker eiere fra Norden og Storbritannia.",
+      "sv": "Det här är reglerna som oftast överraskar ägare från Norden och Storbritannien."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Length",
+        "no": "Varighet",
+        "sv": "Löptid"
+       },
+       {
+        "en": "Even a one-year contract renews each year until the tenancy reaches five years, or seven if the landlord is a company. The tenant can leave after six months with 30 days' notice.",
+        "no": "Også en ettårig kontrakt fornyes hvert år til leieforholdet har vart i fem år, eller sju hvis utleieren er et selskap. Leietakeren kan flytte etter seks måneder med 30 dagers varsel.",
+        "sv": "Även ett ettårigt avtal förnyas varje år tills hyresförhållandet har varat i fem år, eller sju om hyresvärden är ett bolag. Hyresgästen kan flytta efter sex månader med 30 dagars uppsägning."
+       }
+      ],
+      [
+       {
+        "en": "Ending it",
+        "no": "Avslutning",
+        "sv": "Avslut"
+       },
+       {
+        "en": "To end the tenancy at the end of its term, the landlord gives four months' notice and the tenant two. Without notice, it carries on for up to three more years.",
+        "no": "For å avslutte ved utløpet gir utleieren fire måneders varsel og leietakeren to. Uten varsel fortsetter det i inntil tre år til.",
+        "sv": "För att avsluta vid löptidens slut säger hyresvärden upp fyra månader i förväg och hyresgästen två. Utan uppsägning fortsätter det i upp till tre år till."
+       }
+      ],
+      [
+       {
+        "en": "Deposit",
+        "no": "Depositum",
+        "sv": "Deposition"
+       },
+       {
+        "en": "The fianza is one month's rent. Extra guarantees are limited to two more months. Many regions require the fianza to be lodged with a regional body.",
+        "no": "Fianza er én måneds husleie. Ekstra garantier er begrenset til to måneder til. Mange regioner krever at fianza settes inn hos et regionalt organ.",
+        "sv": "Fianza är en månadshyra. Extra säkerheter är begränsade till två månader till. Många regioner kräver att fianza sätts in hos ett regionalt organ."
+       }
+      ],
+      [
+       {
+        "en": "Yearly update",
+        "no": "Årlig justering",
+        "sv": "Årlig justering"
+       },
+       {
+        "en": "Rent can be updated once a year if the contract says so. For newer contracts the update is capped by the IRAV index, published by Spain's statistics office.",
+        "no": "Husleien kan justeres én gang i året hvis kontrakten sier det. For nyere kontrakter er justeringen begrenset av IRAV-indeksen fra det spanske statistikkbyrået.",
+        "sv": "Hyran kan justeras en gång om året om avtalet säger det. För nyare avtal begränsas justeringen av IRAV-indexet från Spaniens statistikmyndighet."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Spain's rental rules change often, and some regions add their own. Check the rules that apply on the day you sign.",
+      "no": "De spanske utleiereglene endres ofte, og noen regioner har egne regler. Sjekk reglene som gjelder den dagen du signerer.",
+      "sv": "De spanska hyresreglerna ändras ofta, och vissa regioner har egna regler. Kontrollera reglerna som gäller den dag du skriver under."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "When things go wrong",
+      "no": "Når noe går galt",
+      "sv": "När något går fel"
+     },
+     "title": {
+      "en": "Protect yourself before problems start",
+      "no": "Beskytt deg før problemene starter",
+      "sv": "Skydda dig innan problemen börjar"
+     },
+     "lead": {
+      "en": "Most disputes come down to unpaid rent or damage. A little care at the start makes both easier to handle.",
+      "no": "De fleste tvister handler om ubetalt husleie eller skader. Litt omtanke i starten gjør begge deler lettere å håndtere.",
+      "sv": "De flesta tvister handlar om obetald hyra eller skador. Lite eftertanke i början gör båda lättare att hantera."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Check the tenant and write an inventory",
+        "no": "Sjekk leietakeren og lag en inventarliste",
+        "sv": "Kontrollera hyresgästen och gör en inventarieförteckning"
+       },
+       "paras": [
+        {
+         "en": "Ask for proof of income and references. Photograph every room and list the furniture in the contract, signed by both of you.",
+         "no": "Be om dokumentasjon på inntekt og referanser. Ta bilder av hvert rom og før opp møblene i kontrakten, signert av dere begge.",
+         "sv": "Be om intyg på inkomst och referenser. Fotografera varje rum och för in möblerna i avtalet, undertecknat av er båda."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Consider rent guarantee insurance",
+        "no": "Vurder husleiegarantiforsikring",
+        "sv": "Överväg hyresgarantiförsäkring"
+       },
+       "paras": [
+        {
+         "en": "A seguro de impago de alquiler pays the rent and the legal costs if the tenant stops paying. It usually requires the tenant to pass a check first.",
+         "no": "En seguro de impago de alquiler betaler husleien og saksomkostningene hvis leietakeren slutter å betale. Den krever som regel at leietakeren først blir sjekket.",
+         "sv": "En seguro de impago de alquiler betalar hyran och rättegångskostnaderna om hyresgästen slutar betala. Den kräver oftast att hyresgästen först kontrolleras."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Unpaid rent goes to court",
+        "no": "Ubetalt husleie går til retten",
+        "sv": "Obetald hyra går till domstol"
+       },
+       "paras": [
+        {
+         "en": "An owner cannot change the locks or cut the supplies. The legal route is a court claim, which can take many months, so keep every payment record.",
+         "no": "En eier kan ikke bytte lås eller stenge strøm og vann. Den lovlige veien er et søksmål, som kan ta mange måneder, så ta vare på alle betalingsbevis.",
+         "sv": "En ägare får inte byta lås eller stänga av el och vatten. Den lagliga vägen är en stämning, som kan ta många månader, så spara alla betalningsbevis."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Declare the rent in Spain",
+        "no": "Oppgi leieinntekten i Spania",
+        "sv": "Deklarera hyran i Spanien"
+       },
+       "paras": [
+        {
+         "en": "Residents of the EU and EEA, which includes Norway and Sweden, pay 19% on the net rent after deductible costs, filed on the Modelo 210.",
+         "no": "Bosatte i EU og EØS, som omfatter Norge og Sverige, betaler 19 % av netto leieinntekt etter fradragsberettigede kostnader, levert på Modelo 210.",
+         "sv": "Boende i EU och EES, som omfattar Norge och Sverige, betalar 19 % på nettohyran efter avdragsgilla kostnader, deklarerat på Modelo 210."
+        }
+       ],
+       "tag": {
+        "en": "19% on the net rent",
+        "no": "19 % av netto leie",
+        "sv": "19 % på nettohyran"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

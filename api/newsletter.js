@@ -11,6 +11,8 @@ const ROUTES = {
   alert:  () => import('./_nl_alert.js'),
   news:   () => import('./_nl_news.js'),
   health: () => import('./_nl_health.js'),
+  // The fortnightly-edition dashboard (articles, editions, settings). Added 10 Nov 2026.
+  dashboard: () => import('./_nl_dash.js'),
 };
 
 export const ACTIONS = Object.keys(ROUTES);

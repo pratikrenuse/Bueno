@@ -1,0 +1,73 @@
+from g_common import L, cta, write
+spec = {
+ "slug": "utilities-setup", "file": "Utilities-For-Your-Spanish-Home",
+ "meta_title": L("Utilities in Spain: electricity, water, gas and internet | Bueno", "Strøm, vann, gass og internett i Spania | Bueno", "El, vatten, gas och internet i Spanien | Bueno"),
+ "title": L("Electricity, water, gas and internet for your Spanish home", "Strøm, vann, gass og internett til boligen i Spania", "El, vatten, gas och internet till din bostad i Spanien"),
+ "topics": {
+  "en": ["How to put each utility in your own name.", "The documents and codes every supplier asks for.", "How the contracted power changes your electricity bill.", "What to leave on, and what to switch off, when you leave.", "How to keep every bill on direct debit from abroad."],
+  "no": ["Hvordan du får hver tjeneste over i ditt navn.", "Dokumentene og kodene alle leverandører spør om.", "Hvordan kontraktert effekt påvirker strømregningen.", "Hva du bør la stå på, og hva du bør slå av, når du reiser.", "Hvordan du holder alle regninger på autotrekk fra utlandet."],
+  "sv": ["Hur du för över varje tjänst till ditt namn.", "Dokumenten och koderna som alla leverantörer frågar efter.", "Hur den avtalade effekten påverkar elräkningen.", "Vad du ska låta vara på, och vad du ska stänga av, när du reser.", "Hur du har alla räkningar på autogiro från utlandet."]},
+ "pages": [
+  {"type": "cover", "photo": "marina",
+   "eyebrow": L("Your guide to utilities", "Din guide til strøm, vann og internett", "Din guide till el, vatten och internet"),
+   "title": L("Electricity, water, gas and internet for your Spanish home", "Strøm, vann, gass og internett til boligen i Spania", "El, vatten, gas och internet till din bostad i Spanien"),
+   "sub": L("How to set up and run the services your home needs, including what to do when you lock up and leave for a while.",
+            "Hvordan du setter opp og holder orden på tjenestene boligen trenger, også hva du gjør når du låser og reiser for en stund.",
+            "Hur du ordnar och sköter de tjänster bostaden behöver, även vad du gör när du låser och reser bort ett tag.")},
+  {"type": "content", "blocks": [
+   {"type": "section", "eyebrow": L("Introduction", "Introduksjon", "Introduktion"),
+    "title": L("Put every contract in your own name", "Få alle kontrakter i ditt eget navn", "Ha alla avtal i ditt eget namn"),
+    "lead": L("When you buy a home, the electricity, water and gas contracts often stay in the seller's name. Changing them to yours, the cambio de titular, means the bills, the deposits and the right to make changes are yours.",
+              "Når du kjøper bolig, står strøm, vann og gass ofte fortsatt i selgerens navn. Ved å bytte til ditt navn, cambio de titular, blir regningene, depositumene og retten til å gjøre endringer dine.",
+              "När du köper en bostad står el-, vatten- och gasavtalen ofta kvar i säljarens namn. Genom att byta till ditt namn, cambio de titular, blir räkningarna, depositionerna och rätten att göra ändringar dina.")},
+   {"type": "glance", "title": L("The essentials at a glance", "Det viktigste på et øyeblikk", "Det viktigaste i korthet"),
+    "items": [
+     L("Every supplier will ask for your NIE, a Spanish IBAN and proof that you own the home.", "Alle leverandører vil be om NIE, et spansk IBAN og bevis på at du eier boligen.", "Alla leverantörer kommer att be om ditt NIE, ett spanskt IBAN och bevis på att du äger bostaden."),
+     L("Electricity is identified by a CUPS code, which stays the same when you change supplier.", "Strøm identifiseres med en CUPS-kode, som er den samme når du bytter leverandør.", "El identifieras med en CUPS-kod, som är densamma när du byter leverantör."),
+     L("Water is run by your town or its local company, so there is usually no choice of supplier.", "Vann drives av kommunen eller et lokalt selskap, så du kan som regel ikke velge leverandør.", "Vatten sköts av kommunen eller ett lokalt bolag, så du kan oftast inte välja leverantör."),
+     L("Part of the electricity bill depends on the power you contract, not on what you use.", "En del av strømregningen avhenger av effekten du har avtalt, ikke av hva du bruker.", "En del av elräkningen beror på den effekt du har avtalat, inte på vad du använder."),
+     L("Paying every bill by direct debit keeps the home running while you are away.", "Når alle regninger går på autotrekk, går alt som det skal mens du er borte.", "När alla räkningar går via autogiro fungerar allt medan du är borta.")]},
+   {"type": "photo", "src": "terrace", "h": 30, "pos": "center 60%"}]},
+  {"type": "content", "blocks": [
+   {"type": "section", "num": "01", "eyebrow": L("Setting up", "Oppstart", "Komma igång"),
+    "title": L("What each supplier needs from you", "Dette trenger leverandørene fra deg", "Det här behöver leverantörerna av dig"),
+    "lead": L("Have these ready before you call or fill in a form, and the change usually goes through in a few days.",
+              "Ha dette klart før du ringer eller fyller ut et skjema, så går endringen som regel gjennom på noen få dager.",
+              "Ha det här redo innan du ringer eller fyller i ett formulär, så brukar ändringen gå igenom på några dagar.")},
+   {"type": "deflist", "rows": [
+     [L("Your identity", "Identiteten din", "Din identitet"), L("Your NIE number and your passport.", "NIE-nummeret og passet ditt.", "Ditt NIE-nummer och ditt pass.")],
+     [L("The home", "Boligen", "Bostaden"), L("The deed of sale or a nota simple, and the cadastral reference from your IBI bill.", "Skjøtet eller en nota simple, og matrikkelnummeret fra IBI-regningen.", "Köpehandlingen eller en nota simple, och fastighetsbeteckningen från IBI-räkningen.")],
+     [L("The supply", "Tilkoblingen", "Anslutningen"), L("The CUPS code for electricity and gas, and the meter or contract number for water. All of them are on an old bill.", "CUPS-koden for strøm og gass, og målernummer eller kontraktsnummer for vann. Alt står på en gammel regning.", "CUPS-koden för el och gas, och mätar- eller avtalsnumret för vatten. Allt står på en gammal räkning.")],
+     [L("Payment", "Betaling", "Betalning"), L("A Spanish IBAN for the direct debit.", "Et spansk IBAN for autotrekket.", "Ett spanskt IBAN för autogirot.")]]},
+   {"type": "headed", "items": [
+     {"title": L("Contracted power", "Kontraktert effekt", "Avtalad effekt"),
+      "text": L("Your electricity contract has a set power, the potencia contratada, measured in kW. You pay for it every day even when the home is empty, so a holiday home rarely needs the highest level. Your supplier can change it.",
+                "Strømkontrakten har en fast effekt, potencia contratada, målt i kW. Du betaler for den hver dag også når boligen står tom, så en feriebolig trenger sjelden det høyeste nivået. Leverandøren kan endre den.",
+                "Ditt elavtal har en bestämd effekt, potencia contratada, mätt i kW. Du betalar för den varje dag även när bostaden står tom, så ett fritidshus behöver sällan den högsta nivån. Leverantören kan ändra den.")}]}]},
+  {"type": "content", "blocks": [
+   {"type": "section", "num": "02", "eyebrow": L("Leaving for a while", "Når du reiser for en stund", "När du reser bort ett tag"),
+    "title": L("Lock up without surprises", "Lås og reis uten overraskelser", "Lås och res utan överraskningar"),
+    "lead": L("A few minutes before you leave saves a lot of trouble while you are away.",
+              "Noen minutter før du reiser sparer deg for mye bry mens du er borte.",
+              "Några minuter innan du åker sparar dig mycket besvär medan du är borta.")},
+   {"type": "numbered", "items": [
+     {"title": L("Keep the electricity on", "La strømmen stå på", "Låt elen vara på"),
+      "paras": [L("An alarm, a router or a fridge you leave running needs power. Switch off the circuits you do not need at the fuse box instead of cutting everything.",
+                  "En alarm, en ruter eller et kjøleskap du lar stå på, trenger strøm. Slå av kursene du ikke trenger i sikringsskapet i stedet for å kutte alt.",
+                  "Ett larm, en router eller ett kylskåp som du låter stå på behöver el. Slå av de grupper du inte behöver i proppskåpet i stället för att bryta allt.")]},
+     {"title": L("Close the water", "Steng vannet", "Stäng av vattnet"),
+      "paras": [L("Close the main water valve to avoid a leak while nobody is there. Check what your insurance says about water damage in an empty home.",
+                  "Steng hovedkranen for vann for å unngå lekkasje mens ingen er der. Sjekk hva forsikringen sier om vannskade i en tom bolig.",
+                  "Stäng huvudkranen för vatten för att undvika läckor medan ingen är där. Kolla vad försäkringen säger om vattenskador i en tom bostad.")]},
+     {"title": L("Check your gas installation", "Sjekk gassanlegget", "Kolla gasinstallationen"),
+      "paras": [L("Homes with piped gas get an official safety inspection every five years, arranged by the gas distributor. Make sure someone can let the inspector in.",
+                  "Boliger med gass i rør får en offisiell sikkerhetskontroll hvert femte år, ordnet av gassdistributøren. Sørg for at noen kan slippe inn kontrolløren.",
+                  "Bostäder med gas i ledning får en officiell säkerhetskontroll vart femte år, som gasdistributören ordnar. Se till att någon kan släppa in kontrollanten.")],
+      "tag": L("Every five years", "Hvert femte år", "Vart femte år")},
+     {"title": L("Keep the direct debits running", "Hold autotrekkene i gang", "Låt autogirona löpa"),
+      "paras": [L("An unpaid bill can lead to the supply being cut. Keep every utility on direct debit from an account that always has money in it.",
+                  "En ubetalt regning kan føre til at tilkoblingen blir stengt. Hold alle tjenester på autotrekk fra en konto som alltid har penger på seg.",
+                  "En obetald räkning kan leda till att anslutningen stängs av. Ha alla tjänster på autogiro från ett konto som alltid har pengar på.")]}]}]},
+  cta("03"),
+  {"type": "back"}]}
+print(write(spec))

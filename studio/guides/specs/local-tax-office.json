@@ -1,0 +1,337 @@
+{
+ "slug": "local-tax-office",
+ "file": "Who-Taxes-Your-Spanish-Home",
+ "meta_title": {
+  "en": "Who taxes your Spanish home, and your 2027 dates | Bueno",
+  "no": "Hvem skattlegger boligen din i Spania, og datoene for 2027 | Bueno",
+  "sv": "Vem beskattar din bostad i Spanien, och datumen för 2027 | Bueno"
+ },
+ "title": {
+  "en": "Who taxes your Spanish home, and the dates for 2027",
+  "no": "Hvem skattlegger boligen din i Spania, og datoene for 2027",
+  "sv": "Vem beskattar din bostad i Spanien, och datumen för 2027"
+ },
+ "topics": {
+  "en": [
+   "Which office handles which tax on your home.",
+   "What the Agencia Tributaria, your town hall and your region each do.",
+   "How official letters reach you when you live abroad.",
+   "The new Modelo 210 dates for 2027.",
+   "What to do if you have missed a year."
+  ],
+  "no": [
+   "Hvilket kontor som har ansvar for hvilken skatt på boligen.",
+   "Hva Agencia Tributaria, kommunen og regionen gjør.",
+   "Hvordan offisielle brev når deg når du bor i utlandet.",
+   "De nye datoene for Modelo 210 i 2027.",
+   "Hva du gjør hvis du har gått glipp av et år."
+  ],
+  "sv": [
+   "Vilket kontor som sköter vilken skatt på bostaden.",
+   "Vad Agencia Tributaria, kommunen och regionen gör.",
+   "Hur officiella brev når dig när du bor utomlands.",
+   "De nya datumen för Modelo 210 under 2027.",
+   "Vad du gör om du har missat ett år."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "coast-hills",
+   "eyebrow": {
+    "en": "Your guide to Spanish tax offices",
+    "no": "Din guide til spanske skattekontorer",
+    "sv": "Din guide till spanska skattekontor"
+   },
+   "title": {
+    "en": "Who taxes your Spanish home, and the dates for 2027",
+    "no": "Hvem skattlegger boligen din i Spania, og datoene for 2027",
+    "sv": "Vem beskattar din bostad i Spanien, och datumen för 2027"
+   },
+   "sub": {
+    "en": "Three levels of government tax a home in Spain. This guide shows who does what, and the new filing dates that start in April 2027.",
+    "no": "Tre forvaltningsnivåer skattlegger en bolig i Spania. Denne guiden viser hvem som gjør hva, og de nye fristene som starter i april 2027.",
+    "sv": "Tre förvaltningsnivåer beskattar en bostad i Spanien. Den här guiden visar vem som gör vad, och de nya datumen som börjar gälla i april 2027."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "Three offices, three kinds of tax",
+      "no": "Tre kontorer, tre typer skatt",
+      "sv": "Tre kontor, tre sorters skatt"
+     },
+     "lead": {
+      "en": "A home in Spain is taxed by the national tax agency, by your town hall and by your region. Each sends its own letters and sets its own dates, which is why owners abroad so often miss something.",
+      "no": "En bolig i Spania skattlegges av den nasjonale skatteetaten, av kommunen og av regionen. Hver sender sine egne brev og setter sine egne frister, og derfor går eiere i utlandet så ofte glipp av noe.",
+      "sv": "En bostad i Spanien beskattas av den nationella skattemyndigheten, av kommunen och av regionen. Var och en skickar sina egna brev och bestämmer sina egna datum, och därför missar ägare utomlands så ofta något."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "The Agencia Tributaria collects the non-resident tax, filed on the Modelo 210.",
+       "no": "Agencia Tributaria krever inn skatten for ikke-residenter, som leveres på Modelo 210.",
+       "sv": "Agencia Tributaria tar in skatten för icke-residenter, som deklareras på Modelo 210."
+      },
+      {
+       "en": "Your town hall, or its provincial office, collects IBI and the plusvalía tax.",
+       "no": "Kommunen, eller skattekontoret i provinsen, krever inn IBI og plusvalía.",
+       "sv": "Kommunen, eller dess skattekontor i provinsen, tar in IBI och plusvalía."
+      },
+      {
+       "en": "Your region collects the tax on buying a resale home and on inheritance.",
+       "no": "Regionen krever inn skatten ved kjøp av brukt bolig og ved arv.",
+       "sv": "Regionen tar in skatten vid köp av en begagnad bostad och vid arv."
+      },
+      {
+       "en": "From the 2026 tax year, the imputed income return is filed from 1 April to 31 December of the next year.",
+       "no": "Fra skatteåret 2026 leveres skattemeldingen for beregnet inntekt fra 1. april til 31. desember året etter.",
+       "sv": "Från beskattningsåret 2026 lämnas deklarationen för schablonintäkt från 1 april till 31 december året efter."
+      },
+      {
+       "en": "Official letters can be read online, so a missed letter does not have to mean a missed deadline.",
+       "no": "Offisielle brev kan leses på nett, så et brev du ikke fikk trenger ikke bety en tapt frist.",
+       "sv": "Officiella brev kan läsas på nätet, så ett missat brev behöver inte betyda en missad tidsfrist."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "cove-house",
+     "h": 30,
+     "pos": "center 50%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "Who does what",
+      "no": "Hvem gjør hva",
+      "sv": "Vem gör vad"
+     },
+     "title": {
+      "en": "The three tax offices for your home",
+      "no": "De tre skattekontorene for boligen din",
+      "sv": "De tre skattekontoren för din bostad"
+     },
+     "lead": {
+      "en": "Knowing which office a letter comes from tells you how urgent it is and where to answer.",
+      "no": "Når du vet hvilket kontor et brev kommer fra, vet du hvor viktig det er og hvor du skal svare.",
+      "sv": "När du vet vilket kontor ett brev kommer från vet du hur brådskande det är och vart du ska svara."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Agencia Tributaria",
+        "no": "Agencia Tributaria",
+        "sv": "Agencia Tributaria"
+       },
+       {
+        "en": "The national tax agency. It collects the non-resident income tax on your home, filed on the Modelo 210, and the 3% that a buyer holds back when a non-resident sells.",
+        "no": "Den nasjonale skatteetaten. Den krever inn inntektsskatten for ikke-residenter på boligen, levert på Modelo 210, og de 3 % kjøperen holder tilbake når en ikke-resident selger.",
+        "sv": "Den nationella skattemyndigheten. Den tar in inkomstskatten för icke-residenter på bostaden, som deklareras på Modelo 210, och de 3 % som köparen håller inne när en icke-resident säljer."
+       }
+      ],
+      [
+       {
+        "en": "Town hall",
+        "no": "Kommunen",
+        "sv": "Kommunen"
+       },
+       {
+        "en": "Your ayuntamiento, often through a provincial tax office. It collects IBI every year, the plusvalía tax when a home is sold or inherited, and in many towns a rubbish collection charge.",
+        "no": "Ayuntamiento, ofte gjennom et skattekontor i provinsen. Den krever inn IBI hvert år, plusvalía når en bolig selges eller arves, og i mange kommuner et renovasjonsgebyr.",
+        "sv": "Ditt ayuntamiento, ofta genom ett skattekontor i provinsen. Det tar in IBI varje år, plusvalía när en bostad säljs eller ärvs, och i många kommuner en sophämtningsavgift."
+       }
+      ],
+      [
+       {
+        "en": "Your region",
+        "no": "Regionen",
+        "sv": "Regionen"
+       },
+       {
+        "en": "The comunidad autónoma. It collects the transfer tax on resale purchases and the inheritance and gift tax, and sets many of their rates.",
+        "no": "Comunidad autónoma. Den krever inn overføringsskatten ved kjøp av brukt bolig og arve- og gaveavgiften, og setter mange av satsene.",
+        "sv": "Comunidad autónoma. Den tar in överlåtelseskatten vid köp av begagnade bostäder och arvs- och gåvoskatten, och bestämmer många av skattesatserna."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "Official notifications from the Agencia Tributaria can be read on the government's online notice service, the DEHú, once you have a digital certificate or Cl@ve access. It is worth setting up before you need it.",
+      "no": "Offisielle varsler fra Agencia Tributaria kan leses i myndighetenes digitale postkasse, DEHú, når du har et digitalt sertifikat eller Cl@ve-tilgang. Det lønner seg å ordne dette før du trenger det.",
+      "sv": "Officiella meddelanden från Agencia Tributaria kan läsas i myndigheternas digitala brevlåda, DEHú, när du har ett digitalt certifikat eller Cl@ve-åtkomst. Det lönar sig att ordna detta innan du behöver det."
+     }
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "02",
+     "eyebrow": {
+      "en": "Your 2027 dates",
+      "no": "Datoene dine for 2027",
+      "sv": "Dina datum för 2027"
+     },
+     "title": {
+      "en": "The Modelo 210 dates have changed",
+      "no": "Fristene for Modelo 210 er endret",
+      "sv": "Datumen för Modelo 210 har ändrats"
+     },
+     "lead": {
+      "en": "A new order from the tax ministry, Orden HAC/623/2026, moves the filing window for the yearly return on a home you do not let out.",
+      "no": "En ny forskrift fra finansdepartementet, Orden HAC/623/2026, flytter fristen for den årlige skattemeldingen for en bolig du ikke leier ut.",
+      "sv": "En ny förordning från finansdepartementet, Orden HAC/623/2026, flyttar fönstret för den årliga deklarationen för en bostad du inte hyr ut."
+     }
+    },
+    {
+     "type": "dates",
+     "cols": [
+      {
+       "date": {
+        "en": "1 April 2027",
+        "no": "1. april 2027",
+        "sv": "1 april 2027"
+       },
+       "text": {
+        "en": "The window opens for the 2026 return on a home you do not let out.",
+        "no": "Fristen åpner for skattemeldingen for 2026 for en bolig du ikke leier ut.",
+        "sv": "Fönstret öppnar för deklarationen för 2026 för en bostad du inte hyr ut."
+       }
+      },
+      {
+       "date": {
+        "en": "1 to 20 April 2027",
+        "no": "1. til 20. april 2027",
+        "sv": "1 till 20 april 2027"
+       },
+       "text": {
+        "en": "Rent received in October, November and December 2026 is declared.",
+        "no": "Leieinntekter fra oktober, november og desember 2026 skal oppgis.",
+        "sv": "Hyresintäkter från oktober, november och december 2026 ska deklareras."
+       }
+      },
+      {
+       "date": {
+        "en": "31 December 2027",
+        "no": "31. desember 2027",
+        "sv": "31 december 2027"
+       },
+       "text": {
+        "en": "The last day to file the 2026 return. Direct debit payment closes on 23 December.",
+        "no": "Siste frist for skattemeldingen for 2026. Betaling med autotrekk stenger 23. desember.",
+        "sv": "Sista dagen för deklarationen för 2026. Betalning via autogiro stänger den 23 december."
+       }
+      }
+     ]
+    },
+    {
+     "type": "headed",
+     "items": [
+      {
+       "title": {
+        "en": "If you have missed a year",
+        "no": "Hvis du har gått glipp av et år",
+        "sv": "Om du har missat ett år"
+       },
+       "text": {
+        "en": "A late return can still be filed. Filing before the tax agency contacts you keeps the surcharge lower than waiting for a letter.",
+        "no": "En skattemelding kan leveres for sent. Leverer du før skatteetaten tar kontakt, blir tillegget lavere enn om du venter på et brev.",
+        "sv": "En sen deklaration kan fortfarande lämnas. Om du lämnar den innan skattemyndigheten kontaktar dig blir avgiften lägre än om du väntar på ett brev."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "03",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}

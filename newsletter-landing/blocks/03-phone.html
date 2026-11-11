@@ -1,0 +1,78 @@
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"FS Siena";src:url("https://www.247spain.es/fonts/FSSiena-Regular.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"FS Siena";src:url("https://www.247spain.es/fonts/FSSiena-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"FS Siena";src:url("https://www.247spain.es/fonts/FSSiena-Light.otf") format("opentype");font-weight:300;font-display:swap}
+</style>
+<style>
+.bnp{display:block;text-align:left;--navy:#010221;--light:#CBEFFF;--accent:#5B7FCC;--gold:#C9A96E;--off:#F8F7F4;--warm:#D4CFC8;--mute:#4A4C63;--line:#E4E2DC;--serif:"FS Siena",Georgia,"Times New Roman",serif;--sans:"DM Sans",Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--wrap:1160px;--gutter:clamp(20px,4vw,40px);font-family:var(--sans);color:var(--navy);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;margin:0;background:transparent}
+.bnp *{box-sizing:border-box}
+.bnp h1,.bnp h2,.bnp h3,.bnp h4,.bnp p{margin:0}
+.bnp a{color:inherit;text-decoration:none}
+.bnp img{max-width:100%;display:block}
+.bnp .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.bnp .eye{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px}
+.bnp .eye .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.bnp .h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.2vw,56px);line-height:1.12;letter-spacing:-.01em;margin-top:16px}
+.bnp .h2 span{display:block;color:var(--accent)}
+
+.bnp{display:flex;justify-content:center;padding:10px 0 20px;overflow:hidden}
+.bnp .stage{position:relative;width:min(380px,100%);margin:0 auto}
+.bnp .halo{position:absolute;inset:6% -14% 6% -14%;border-radius:50%;background:radial-gradient(closest-side,rgba(203,239,255,.85),rgba(203,239,255,0));z-index:0}
+.bnp .phone{position:relative;z-index:1;width:330px;max-width:100%;height:660px;margin:0 auto;border-radius:52px;background:#1b1d33;padding:11px;box-shadow:0 40px 80px -30px rgba(1,2,33,.45),0 0 0 1px rgba(1,2,33,.15);transform:rotate(-3deg)}
+.bnp .screen{position:relative;height:100%;border-radius:42px;background:#fff;overflow:hidden}
+.bnp .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:96px;height:28px;border-radius:20px;background:#0b0c18;z-index:3}
+.bnp .status{position:absolute;top:0;left:0;right:0;height:52px;padding:16px 26px 0;display:flex;justify-content:space-between;font-size:13px;font-weight:600;background:#fff;z-index:2}
+.bnp .bar{position:absolute;top:52px;left:0;right:0;height:44px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff;z-index:2;font-size:14px;color:var(--accent)}
+.bnp .from{position:absolute;top:96px;left:0;right:0;padding:10px 18px;display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--line);background:#fff;z-index:2}
+.bnp .av{width:32px;height:32px;border-radius:9px;background:var(--navy);color:#fff;font-family:var(--serif);font-size:19px;display:flex;align-items:center;justify-content:center;flex:none}
+.bnp .from b{display:block;font-size:13px}.bnp .from small{font-size:11px;color:var(--mute)}
+.bnp .scroll{position:absolute;top:150px;bottom:0;left:0;right:0;overflow:hidden}
+.bnp .feed{animation:bnpscroll 34s linear infinite}
+.bnp .stage:hover .feed{animation-play-state:paused}
+@keyframes bnpscroll{0%,6%{transform:translateY(0)}94%,100%{transform:translateY(calc(-100% + 480px))}}
+.bnp .mail{padding:18px 18px 40px}
+.bnp .mhead{border-bottom:3px solid var(--navy);padding-bottom:12px;margin-bottom:14px}
+.bnp .mhead img{width:150px}
+.bnp .kick{font-family:var(--serif);font-size:21px;line-height:1.2}
+.bnp .date{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:6px 0 12px}
+.bnp .hi{font-size:12.5px;line-height:1.6;color:var(--mute);margin-bottom:14px}
+.bnp .story,.bnp .guide{padding:12px 0;border-top:1px solid var(--line)}
+.bnp .guide{background:var(--light);border:0;border-radius:12px;padding:14px;margin:6px 0}
+.bnp .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.bnp h4{font-family:var(--serif);font-weight:500;font-size:15.5px;line-height:1.3;margin-bottom:5px}
+.bnp .story p:not(.tag),.bnp .guide p:not(.tag){font-size:12px;line-height:1.6;color:var(--mute)}
+.bnp .btn{display:inline-block;margin-top:10px;background:var(--navy);color:#fff;font-size:11.5px;font-weight:600;padding:7px 12px;border-radius:8px}
+.bnp .sign{font-size:12px;color:var(--mute);margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.bnp .sign b{color:var(--navy)}
+.bnp .badge{position:absolute;z-index:4;right:-18px;bottom:110px;background:var(--navy);color:#fff;border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:12px;transform:rotate(3deg);box-shadow:0 18px 40px -16px rgba(1,2,33,.5)}
+.bnp .badge .n{font-family:var(--serif);font-size:44px;line-height:1;color:var(--gold)}
+.bnp .badge .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.5;max-width:150px}
+.bnp .cap{position:relative;z-index:1;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:26px}
+@media(max-width:760px){.bnp .phone{height:600px;transform:none}.bnp .badge{right:4px;bottom:90px}.bnp .cap{justify-content:center}.bnp .cap span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.bnp .feed{animation:none}}
+</style>
+<div class="bnp"><div class="stage">
+  <div class="halo"></div>
+  <div class="phone"><div class="screen">
+    <div class="island"></div>
+    <div class="status"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+    <div class="bar"><span>&#8249; Inbox</span><span>&#8943;</span></div>
+    <div class="from"><div class="av">B</div><div><b>The Bueno Newsletter</b><small>To: you, Monday 8:00 AM</small></div></div>
+    <div class="scroll"><div class="feed">
+<div class="mail">
+  <div class="mhead"><img src="https://www.247spain.es/images/pro/bueno-logo-navy.png" alt="Bueno, Property Finance Simplified"></div>
+  <p class="kick">This fortnight in Spanish property</p>
+  <p class="date">The Bueno Newsletter</p>
+  <p class="hi">It has been a big fortnight. Prices hit a new record, and the Supreme Court ruled on a community fee that many owners will recognise.</p>
+  <div class="story"><p class="tag">News</p><h4>Used home prices hit an all-time record.</h4><p>Used homes averaged 2,955 euros per square metre in October, the highest idealista has ever recorded.</p></div>
+  <div class="story"><p class="tag">News</p><h4>The Supreme Court strikes down a 50 cent a day late fee.</h4><p>Communities can still chase unpaid fees, but their penalties have to stay reasonable.</p></div>
+  <div class="guide"><p class="tag">Free guide</p><h4>Community fees in Spain: what you pay and your rights.</h4><p>What your fees pay for, how the yearly meeting works and how to challenge a decision.</p><span class="btn">Read the guide</span></div>
+  <div class="story"><p class="tag">Region spotlight</p><h4>Marbella and the western Costa del Sol.</h4><p>The OECD has named the M&aacute;laga and Marbella area the hardest place in Spain to buy a home.</p></div>
+  <div class="story"><p class="tag">Reader&#39;s question</p><h4>&ldquo;Our community wants to fine owners who pay late. Are they allowed to?&rdquo;</h4><p>Yes, but the penalty has to be in proportion to what is owed.</p></div>
+  <p class="sign">Until the next edition,<br><b>Maria, the Bueno Team</b></p>
+</div></div></div>
+  </div></div>
+  <div class="badge"><span class="n">2</span><span class="t">A two-minute read, every second Monday.</span></div>
+  <div class="cap"><span>A look inside your inbox</span><span>Hover to pause</span></div>
+</div></div>

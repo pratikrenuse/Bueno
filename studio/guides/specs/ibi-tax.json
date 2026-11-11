@@ -1,0 +1,399 @@
+{
+ "slug": "ibi-tax",
+ "file": "IBI-Property-Tax-In-Spain",
+ "meta_title": {
+  "en": "IBI in Spain: your yearly local property tax explained | Bueno",
+  "no": "IBI i Spania: den årlige lokale eiendomsskatten forklart | Bueno",
+  "sv": "IBI i Spanien: den årliga lokala fastighetsskatten förklarad | Bueno"
+ },
+ "title": {
+  "en": "IBI in Spain: your yearly local property tax explained",
+  "no": "IBI i Spania: den årlige lokale eiendomsskatten forklart",
+  "sv": "IBI i Spanien: den årliga lokala fastighetsskatten förklarad"
+ },
+ "topics": {
+  "en": [
+   "What IBI is and who has to pay it.",
+   "How your town hall works out the amount.",
+   "When and how you can pay it from abroad.",
+   "What happens if a payment is missed.",
+   "Why unpaid IBI matters when a home is sold."
+  ],
+  "no": [
+   "Hva IBI er, og hvem som må betale den.",
+   "Hvordan kommunen regner ut beløpet.",
+   "Når og hvordan du kan betale fra utlandet.",
+   "Hva som skjer hvis en betaling blir glemt.",
+   "Hvorfor ubetalt IBI betyr noe når boligen selges."
+  ],
+  "sv": [
+   "Vad IBI är och vem som ska betala den.",
+   "Hur kommunen räknar ut beloppet.",
+   "När och hur du kan betala från utlandet.",
+   "Vad som händer om en betalning missas.",
+   "Varför obetald IBI spelar roll när bostaden säljs."
+  ]
+ },
+ "pages": [
+  {
+   "type": "cover",
+   "photo": "bay-village",
+   "eyebrow": {
+    "en": "Your guide to IBI",
+    "no": "Din guide til IBI",
+    "sv": "Din guide till IBI"
+   },
+   "title": {
+    "en": "IBI in Spain: your yearly local property tax explained",
+    "no": "IBI i Spania: den årlige lokale eiendomsskatten forklart",
+    "sv": "IBI i Spanien: den årliga lokala fastighetsskatten förklarad"
+   },
+   "sub": {
+    "en": "What the tax is, how it is worked out, how to pay it from abroad and what happens if a payment is missed, explained in plain language.",
+    "no": "Hva skatten er, hvordan den regnes ut, hvordan du betaler fra utlandet og hva som skjer hvis en betaling blir glemt, forklart med enkle ord.",
+    "sv": "Vad skatten är, hur den räknas ut, hur du betalar från utlandet och vad som händer om en betalning missas, förklarat med enkla ord."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "eyebrow": {
+      "en": "Introduction",
+      "no": "Introduksjon",
+      "sv": "Introduktion"
+     },
+     "title": {
+      "en": "The one tax every owner in Spain pays",
+      "no": "Skatten alle eiere i Spania betaler",
+      "sv": "Skatten som alla ägare i Spanien betalar"
+     },
+     "lead": {
+      "en": "IBI, the Impuesto sobre Bienes Inmuebles, is the yearly tax your town hall charges on property. Residents and non-residents pay it in the same way, whether the home is lived in, let out or empty.",
+      "no": "IBI, Impuesto sobre Bienes Inmuebles, er den årlige skatten kommunen krever på eiendom. Residenter og ikke-residenter betaler den på samme måte, enten boligen er bebodd, utleid eller står tom.",
+      "sv": "IBI, Impuesto sobre Bienes Inmuebles, är den årliga skatt som kommunen tar ut på fastigheter. Residenter och icke-residenter betalar den på samma sätt, oavsett om bostaden bebos, hyrs ut eller står tom."
+     }
+    },
+    {
+     "type": "glance",
+     "title": {
+      "en": "The essentials at a glance",
+      "no": "Det viktigste på et øyeblikk",
+      "sv": "Det viktigaste i korthet"
+     },
+     "items": [
+      {
+       "en": "Whoever owns the home on 1 January pays IBI for the whole year.",
+       "no": "Den som eier boligen 1. januar, betaler IBI for hele året.",
+       "sv": "Den som äger bostaden den 1 januari betalar IBI för hela året."
+      },
+      {
+       "en": "The amount is the cadastral value of your home multiplied by your town's rate.",
+       "no": "Beløpet er boligens takstverdi ganget med kommunens sats.",
+       "sv": "Beloppet är bostadens taxeringsvärde gånger kommunens skattesats."
+      },
+      {
+       "en": "Each town sets its own payment window, so dates differ from place to place.",
+       "no": "Hver kommune setter sitt eget betalingsvindu, så datoene varierer fra sted til sted.",
+       "sv": "Varje kommun bestämmer sitt eget betalningsfönster, så datumen skiljer sig åt mellan orter."
+      },
+      {
+       "en": "A late payment adds a surcharge of 5% to 20%, plus interest.",
+       "no": "Sen betaling gir et tillegg på 5 % til 20 %, pluss renter.",
+       "sv": "En sen betalning ger en avgift på 5 % till 20 %, plus ränta."
+      },
+      {
+       "en": "Unpaid IBI stays tied to the home, so a buyer can end up paying it.",
+       "no": "Ubetalt IBI følger boligen, så en kjøper kan ende opp med å betale den.",
+       "sv": "Obetald IBI följer med bostaden, så en köpare kan få betala den."
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "src": "terrace",
+     "h": 30,
+     "pos": "center 55%"
+    }
+   ]
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "01",
+     "eyebrow": {
+      "en": "How it is worked out",
+      "no": "Slik regnes den ut",
+      "sv": "Så räknas den ut"
+     },
+     "title": {
+      "en": "Two numbers decide your bill",
+      "no": "To tall avgjør regningen",
+      "sv": "Två siffror avgör din räkning"
+     },
+     "lead": {
+      "en": "Your IBI bill comes from the value the land registry office gives your home and the rate your town hall chooses.",
+      "no": "IBI-regningen kommer fra verdien eiendomsregisteret har satt på boligen og satsen kommunen velger.",
+      "sv": "Din IBI-räkning bygger på det värde som fastighetsregistret har satt på bostaden och den skattesats som kommunen väljer."
+     }
+    },
+    {
+     "type": "deflist",
+     "rows": [
+      [
+       {
+        "en": "Cadastral value",
+        "no": "Takstverdi",
+        "sv": "Taxeringsvärde"
+       },
+       {
+        "en": "The valor catastral set by Spain's Catastro. It is usually well below the market price, and you find it on your IBI bill.",
+        "no": "Valor catastral, satt av det spanske Catastro. Den er som regel godt under markedsprisen, og du finner den på IBI-regningen.",
+        "sv": "Valor catastral, som bestäms av spanska Catastro. Det ligger oftast en bra bit under marknadspriset, och du hittar det på IBI-räkningen."
+       }
+      ],
+      [
+       {
+        "en": "Town rate",
+        "no": "Kommunal sats",
+        "sv": "Kommunal skattesats"
+       },
+       {
+        "en": "Each town hall sets its own rate within limits set by national law. For homes it usually falls between 0.4% and 1.1%.",
+        "no": "Hver kommune setter sin egen sats innenfor rammer i nasjonal lov. For boliger ligger den som regel mellom 0,4 % og 1,1 %.",
+        "sv": "Varje kommun bestämmer sin egen skattesats inom ramar i nationell lag. För bostäder ligger den oftast mellan 0,4 % och 1,1 %."
+       }
+      ],
+      [
+       {
+        "en": "Discounts",
+        "no": "Rabatter",
+        "sv": "Rabatter"
+       },
+       {
+        "en": "Some towns give a small discount for paying by direct debit or for large families. Ask your town hall or its tax office what applies.",
+        "no": "Noen kommuner gir litt rabatt for betaling med autotrekk eller for storfamilier. Spør kommunen eller skattekontoret hva som gjelder.",
+        "sv": "Vissa kommuner ger en liten rabatt för betalning via autogiro eller för stora familjer. Fråga kommunen eller dess skattekontor vad som gäller."
+       }
+      ]
+     ]
+    },
+    {
+     "type": "callout",
+     "text": {
+      "en": "The same cadastral value is used for your non-resident tax return, the Modelo 210, so it is worth keeping your latest IBI bill safe.",
+      "no": "Den samme takstverdien brukes i skattemeldingen for ikke-residenter, Modelo 210, så det lønner seg å ta vare på den siste IBI-regningen.",
+      "sv": "Samma taxeringsvärde används i deklarationen för icke-residenter, Modelo 210, så det lönar sig att spara den senaste IBI-räkningen."
+     }
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "photo": "coast-hills",
+   "num": "02",
+   "eyebrow": {
+    "en": "An example",
+    "no": "Et eksempel",
+    "sv": "Ett exempel"
+   },
+   "title": {
+    "en": "What a typical bill looks like",
+    "no": "Slik kan en vanlig regning se ut",
+    "sv": "Så kan en vanlig räkning se ut"
+   },
+   "lead": {
+    "en": "Here is an apartment with a cadastral value of 120,000 euros in a town with a rate of 0.6%.",
+    "no": "Her er en leilighet med en takstverdi på 120 000 euro i en kommune med en sats på 0,6 %.",
+    "sv": "Här är en lägenhet med ett taxeringsvärde på 120 000 euro i en kommun med en skattesats på 0,6 %."
+   },
+   "rows": [
+    {
+     "label": {
+      "en": "Cadastral value",
+      "no": "Takstverdi",
+      "sv": "Taxeringsvärde"
+     },
+     "note": {
+      "en": "From the IBI bill.",
+      "no": "Fra IBI-regningen.",
+      "sv": "Från IBI-räkningen."
+     },
+     "value": {
+      "en": "€120,000",
+      "no": "€120 000",
+      "sv": "€120 000"
+     }
+    },
+    {
+     "label": {
+      "en": "Town rate",
+      "no": "Kommunal sats",
+      "sv": "Kommunal skattesats"
+     },
+     "note": {
+      "en": "Set by the town hall each year.",
+      "no": "Satt av kommunen hvert år.",
+      "sv": "Bestäms av kommunen varje år."
+     },
+     "value": {
+      "en": "0.6%",
+      "no": "0,6 %",
+      "sv": "0,6 %"
+     }
+    }
+   ],
+   "total": {
+    "label": {
+     "en": "IBI for the year",
+     "no": "IBI for året",
+     "sv": "IBI för året"
+    },
+    "value": {
+     "en": "€720",
+     "no": "€720",
+     "sv": "€720"
+    }
+   },
+   "calc": {
+    "en": "€120,000 × 0.6% = €720 for the year.",
+    "no": "€120 000 × 0,6 % = €720 for året.",
+    "sv": "€120 000 × 0,6 % = €720 för året."
+   }
+  },
+  {
+   "type": "content",
+   "blocks": [
+    {
+     "type": "section",
+     "num": "03",
+     "eyebrow": {
+      "en": "Paying from abroad",
+      "no": "Betaling fra utlandet",
+      "sv": "Betala från utlandet"
+     },
+     "title": {
+      "en": "Paying on time, and what happens if you do not",
+      "no": "Betal i tide, og hva som skjer hvis du ikke gjør det",
+      "sv": "Betala i tid, och vad som händer om du inte gör det"
+     },
+     "lead": {
+      "en": "Many towns pass IBI collection to a provincial tax office, which sends the bill and sets the dates. Your bill tells you who collects it and when.",
+      "no": "Mange kommuner lar et skattekontor i provinsen kreve inn IBI, og det sender regningen og setter datoene. Regningen viser hvem som krever inn og når.",
+      "sv": "Många kommuner låter ett skattekontor i provinsen ta in IBI, och det skickar räkningen och bestämmer datumen. Räkningen visar vem som tar in skatten och när."
+     }
+    },
+    {
+     "type": "numbered",
+     "items": [
+      {
+       "title": {
+        "en": "Pay by direct debit",
+        "no": "Betal med autotrekk",
+        "sv": "Betala via autogiro"
+       },
+       "paras": [
+        {
+         "en": "A direct debit from a Spanish account is the easiest way to make sure IBI is paid every year, even when you are not in Spain.",
+         "no": "Autotrekk fra en spansk konto er den enkleste måten å sikre at IBI blir betalt hvert år, også når du ikke er i Spania.",
+         "sv": "Autogiro från ett spanskt konto är det enklaste sättet att se till att IBI betalas varje år, även när du inte är i Spanien."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "A missed payment gets more expensive",
+        "no": "En glemt betaling blir dyrere",
+        "sv": "En missad betalning blir dyrare"
+       },
+       "paras": [
+        {
+         "en": "Once the payment window closes, a surcharge of 5% applies at first. It rises to 10% and then 20% if the debt is not paid after the formal notice, and interest is added.",
+         "no": "Når betalingsvinduet stenger, kommer først et tillegg på 5 %. Det øker til 10 % og deretter 20 % hvis gjelden ikke betales etter det formelle varselet, og renter kommer i tillegg.",
+         "sv": "När betalningsfönstret stänger tillkommer först en avgift på 5 %. Den höjs till 10 % och sedan 20 % om skulden inte betalas efter den formella påminnelsen, och ränta läggs till."
+        }
+       ]
+      },
+      {
+       "title": {
+        "en": "Unpaid IBI follows the home",
+        "no": "Ubetalt IBI følger boligen",
+        "sv": "Obetald IBI följer med bostaden"
+       },
+       "paras": [
+        {
+         "en": "If IBI is left unpaid and the home is sold, the new owner can be asked to pay it. Buyers should always ask for proof that recent IBI bills are paid before signing.",
+         "no": "Hvis IBI står ubetalt og boligen selges, kan den nye eieren bli bedt om å betale. Kjøpere bør alltid be om bevis på at de siste IBI-regningene er betalt før de signerer.",
+         "sv": "Om IBI lämnas obetald och bostaden säljs kan den nya ägaren få betala den. Köpare bör alltid be om bevis på att de senaste IBI-räkningarna är betalda innan de skriver under."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "num": "04",
+   "photo": "support",
+   "eyebrow": {
+    "en": "Bueno Account",
+    "no": "Bueno-kontoen",
+    "sv": "Bueno-kontot"
+   },
+   "title": {
+    "en": "Your home in Spain, without the paperwork",
+    "no": "Boligen i Spania, uten papirarbeidet",
+    "sv": "Din bostad i Spanien, utan pappersarbetet"
+   },
+   "lead": {
+    "en": "Bueno brings the running of your Spanish home into one place, with a professional team that helps you whenever you need it.",
+    "no": "Bueno samler driften av boligen din i Spania på ett sted, med et profesjonelt team som hjelper deg når du trenger det.",
+    "sv": "Bueno samlar skötseln av din bostad i Spanien på ett ställe, med ett professionellt team som hjälper dig när du behöver det."
+   },
+   "steps": [
+    {
+     "en": "Our team is there when you need us, by phone, WhatsApp, chat and email.",
+     "no": "Teamet vårt er der når du trenger oss, på telefon, WhatsApp, chat og e-post.",
+     "sv": "Vårt team finns där när du behöver oss, via telefon, WhatsApp, chatt och e-post."
+    },
+    {
+     "en": "You register a direct debit change in the app, and we handle the rest.",
+     "no": "Du registrerer en endring av autotrekk i appen, og vi tar oss av resten.",
+     "sv": "Du registrerar en ändring av autogiro i appen, och vi sköter resten."
+    },
+    {
+     "en": "You can see what your home is worth today and keep your property papers in one place.",
+     "no": "Du kan se hva boligen er verdt i dag og samle eiendomspapirene på ett sted.",
+     "sv": "Du kan se vad din bostad är värd i dag och samla dina fastighetspapper på ett ställe."
+    },
+    {
+     "en": "We file your Spanish non-resident tax return, the Modelo 210, for you.",
+     "no": "Vi leverer den spanske skattemeldingen for ikke-residenter, Modelo 210, for deg.",
+     "sv": "Vi lämnar den spanska deklarationen för icke-residenter, Modelo 210, åt dig."
+    }
+   ],
+   "price": {
+    "en": "€99 a year",
+    "no": "€99 per år",
+    "sv": "€99 per år"
+   },
+   "price_note": {
+    "en": "Bueno is used by property owners from over 30 countries, who rate us 4.9 out of 5. Tax filing starts from €50.",
+    "no": "Bueno brukes av eiendomseiere fra over 30 land, som gir oss 4,9 av 5. Levering av skattemeldingen starter fra €50.",
+    "sv": "Bueno används av fastighetsägare från över 30 länder, som ger oss 4,9 av 5. Deklarationen kostar från €50."
+   },
+   "button": {
+    "en": "Get started at getbueno.com",
+    "no": "Kom i gang på getbueno.com/no",
+    "sv": "Kom igång på getbueno.com/se"
+   }
+  },
+  {
+   "type": "back"
+  }
+ ]
+}
