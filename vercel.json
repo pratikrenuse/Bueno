@@ -18,6 +18,18 @@
     {
       "path": "/api/fb/dispatch",
       "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/social?action=run&slot=morning",
+      "schedule": "40 6 * * *"
+    },
+    {
+      "path": "/api/social?action=run&slot=midday",
+      "schedule": "40 11 * * *"
+    },
+    {
+      "path": "/api/social?action=run&slot=evening",
+      "schedule": "40 16 * * *"
     }
   ],
   "rewrites": [
@@ -44,6 +56,10 @@
     {
       "source": "/api/reels/:action",
       "destination": "/api/reels?action=:action"
+    },
+    {
+      "source": "/api/social/:action",
+      "destination": "/api/social?action=:action"
     },
     {
       "source": "/api/(.*)",
