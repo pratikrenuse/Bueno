@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Dashboard from './Dashboard.jsx'
 import Channels from './Channels.jsx'
+import Profiles from './Profiles.jsx'
 
-// The Facebook group posts that go to Poornima. Route: /internal-poornima.
+// Everything Poornima posts. Route: /internal-poornima.
 //
+// 17 November 2026: the deck is now about the Maria Lopez persona profiles (Profiles.jsx): one
+// reel a day on 28 profiles, sent by itself in the daily task email. The WhatsApp channels
+// (Channels.jsx) also go out by themselves now. Nothing in either needs approving. The
+// Facebook group review below is paused and hidden (FACEBOOK_ON).
+//
+// The history of the Facebook part:
 // Pratik reviews and approves here; Poornima publishes. The route used to be /internal-pratik
 // and was renamed on 8 October 2026 so the name says who the posts are for. The old address
 // still works and forwards here.
@@ -87,7 +94,7 @@ export default function InternalPratik() {
   const [showTr, setShowTr] = useState(null)
   const [cursor, setCursor] = useState(0)
   const [selected, setSelected] = useState(() => new Set()) // ids ticked for approving together
-  const [view, setView] = useState(FACEBOOK_ON ? 'review' : 'channels') // the WhatsApp channels while Facebook is off
+  const [view, setView] = useState(FACEBOOK_ON ? 'review' : 'profiles') // the profile posts while Facebook is off
   const [dash, setDash] = useState(null)
   const cardRefs = useRef({})
 
@@ -351,7 +358,7 @@ export default function InternalPratik() {
       <div className="fbp-gate">
         <form onSubmit={e => { e.preventDefault(); setEntered(true) }}>
           <h1>Posts for Poornima</h1>
-          <p>{FACEBOOK_ON ? '24/7 Spain and Bueno, for Facebook groups. This deck is not the team one.' : 'The posts for the Spain 24/7 WhatsApp channels. This deck is not the team one.'}</p>
+          <p>{FACEBOOK_ON ? '24/7 Spain and Bueno, for Facebook groups. This deck is not the team one.' : 'The Maria Lopez profile posts and the Spain 24/7 WhatsApp channels. This deck is not the team one.'}</p>
           <input type="password" value={pass} autoFocus placeholder="Password"
             onChange={e => setPass(e.target.value)} />
           <button type="submit">Open</button>
@@ -382,12 +389,14 @@ export default function InternalPratik() {
           {busy ? 'Syncing...' : 'Sync posts'}</button>
       </nav>}
       {!FACEBOOK_ON && <nav className="fbp-views fbp-wide" aria-label="View">
-        <button className={`fbp-chip${view !== 'wa-dashboard' ? ' current' : ''}`} aria-pressed={view !== 'wa-dashboard'}
-          onClick={() => setView('channels')}>WhatsApp posts</button>
-        <button className={`fbp-chip${view === 'wa-dashboard' ? ' current' : ''}`} aria-pressed={view === 'wa-dashboard'}
-          onClick={() => setView('wa-dashboard')}>Dashboard</button>
+        {[['profiles', 'Profile posts'], ['accounts', 'Accounts'], ['channels', 'WhatsApp channels'], ['wa-dashboard', 'WhatsApp dashboard']].map(([k, label]) => (
+          <button key={k} className={`fbp-chip${view === k ? ' current' : ''}`} aria-pressed={view === k}
+            onClick={() => setView(k)}>{label}</button>
+        ))}
       </nav>}
 
+      {view === 'profiles' && <Profiles pass={pass} />}
+      {view === 'accounts' && <Profiles pass={pass} mode="accounts" />}
       {view === 'channels' && <Channels pass={pass} />}
       {view === 'wa-dashboard' && <Channels pass={pass} mode="dashboard" />}
 

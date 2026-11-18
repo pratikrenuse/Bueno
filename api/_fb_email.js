@@ -7,10 +7,11 @@
 // plumbing it needs rather than importing any of it. The isolation test enforces that a
 // file in this surface imports nothing but its own siblings.
 //
-// WHO GETS WHAT (Pratik, 15 October 2026)
-// Every email that goes to the publisher is addressed To Pratik, with the publisher and John
-// in BCC. Both see Pratik's address, neither sees the other's, and the email never names the
-// publisher. Pratik keeps a record of exactly what left.
+// WHO GETS WHAT (Pratik, 17 November 2026, replacing the BCC rule of 15 October)
+// Every email that goes to the publisher is addressed To the publisher with Pratik in CC,
+// always. The daily task email (persona profile posts and the WhatsApp channels) goes to the
+// publisher and Pratik and nobody else. The Facebook group post email, paused since November,
+// also has John in BCC, as it always had. The email never names the publisher.
 //
 // WHAT ONE EMAIL IS
 // One post, on one day, in seven languages. Each language has its own Facebook account,
@@ -22,19 +23,24 @@
 import { TRANSLATION_LANGS, LANG_NAME, LANGS, commentFor } from './_fb_content.js';
 import { ACCOUNT, GROUPS, groupsFor, perDay, DAILY_START, MAX_PER_DAY } from './_fb_groups.js';
 import { cardFor, isCard } from './_fb_images.js';
+import { LANGS7, LANG_LABEL, PROFILES, captionFor, xTextFor, videoUrl, posterUrl } from './_fb_profiles.js';
 import { CHANNEL_LANGS, CHANNEL_NAME, channelPostFor, agentPostFor, hubPostFor, AGENT_COMMENT, AGENT_GROUPS_PER_DAY } from './_fb_whatsapp.js';
 
 const PUBLISHER = 'poornimanirwal@gmail.com';
 const JOHN = 'john@getbueno.com';
 const PRATIK = 'pratik.y.renuse@gmail.com';
 
-// Visible recipient of every publisher email, and the hidden ones.
-export const SEND_TO = [PRATIK];
-export const SEND_BCC = [PUBLISHER, JOHN];
+// Every publisher email: To the publisher, Pratik in CC. John only on the Facebook group posts.
+export const SEND_TO = [PUBLISHER];
+export const SEND_CC = [PRATIK];
+export const SEND_BCC = [JOHN];
 // Pratik alone, for the notes that are only for him (queue empty, queue low, trials).
 export const PRATIK_ONLY = [PRATIK];
 // Who a sent post reached, as recorded on the row.
-export const RECIPIENTS = [PRATIK, ...SEND_BCC];
+export const RECIPIENTS = [...SEND_TO, ...SEND_CC, ...SEND_BCC];
+// The daily task email: the publisher, with Pratik in CC, and no one else.
+export const DAILY_TO = [PUBLISHER];
+export const DAILY_CC = [PRATIK];
 export const REPLY_TO = PRATIK;
 
 const esc = (s) => String(s ?? '')
@@ -277,6 +283,7 @@ export function bodyFor(post, day = 1, { trial = false, channel = null } = {}) {
 export async function sendPost(post, day = 1, { channel = null } = {}) {
   const result = await sendMail({
     to: SEND_TO,
+    cc: SEND_CC,
     bcc: SEND_BCC,
     subject: subjectFor(post, day),
     html: bodyFor(post, day, { channel }),
@@ -286,45 +293,108 @@ export async function sendPost(post, day = 1, { channel = null } = {}) {
       ...result,
       warning: 'RESEND_FROM is not set in Vercel, so this went out from the Resend sandbox sender, '
         + 'which only delivers to the address that owns the Resend account. '
-        + `${SEND_BCC.join(', ')} will not have received it.`,
+        + `${[...SEND_TO, ...SEND_BCC].join(', ')} will not have received it.`,
     };
   }
   return result;
 }
 
-/**
- * The daily task on a day with no Facebook post (6 November 2026). The Facebook group posts
- * are on hold, but the WhatsApp channels still get their post every day, so the same people
- * get the same daily email with only the WhatsApp tasks in it. Same envelope as sendPost:
- * Pratik in To, the publisher and John in BCC.
- */
-export function channelOnlyBody(date, channel) {
+// ---------------------------------------------------------------------------
+// The daily task email (17 November 2026): today's persona profile post on the 28 Maria
+// Lopez profiles, and today's WhatsApp channel post. It goes out every day by itself, with no
+// approval, To the publisher with Pratik in CC and nobody else.
+// ---------------------------------------------------------------------------
+
+const box = (label, text) => `
+          <p style="margin:12px 0 4px;font-size:12px;font-weight:bold;color:#55596b;font-family:${SANS};text-transform:uppercase;letter-spacing:.04em">${esc(label)}</p>
+          ${pre(text)}`;
+
+function accountRows(lang) {
+  const a = PROFILES[lang];
+  const row = (label, who, login, note) => `<tr>
+            <td style="padding:5px 10px 5px 0;font-family:${SANS};font-size:13px;color:#010221;font-weight:bold;white-space:nowrap;vertical-align:top">${esc(label)}</td>
+            <td style="padding:5px 0;font-family:${SANS};font-size:13px;color:#22263a">${esc(who)}<br><span style="color:#55596b">Log in with ${esc(login)}</span>${note ? `<br><span style="color:#8a6d1f">${esc(note)}</span>` : ''}</td></tr>`;
+  return `<table cellpadding="0" cellspacing="0" style="margin:6px 0 0">
+          ${row(`Instagram ${a.instagram.n}`, `@${a.instagram.handle}`, a.instagram.login, a.instagram.note)}
+          ${row(`Facebook ${a.facebook.n}`, a.facebook.name, a.facebook.login)}
+          ${row(`LinkedIn ${a.linkedin.n}`, a.linkedin.name, a.linkedin.login)}
+          ${row(`X ${a.x.n}`, `@${a.x.handle}`, a.x.login)}
+        </table>`;
+}
+
+export function profileSection(post) {
+  if (!post) return '';
+  return `
+        <div style="border-top:3px solid #C9A96E;margin:8px 0 0;padding-top:18px">
+          <p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">Today: post on the Maria Lopez profiles</p>
+          <ol style="margin:0 0 14px;padding-left:20px;font-family:${SANS};font-size:13.5px;line-height:1.6;color:#22263a">
+            <li>Each language below has its own video and its own four accounts. Use only the accounts listed under that language, and never post one language's video from another language's account.</li>
+            <li>Before posting, spend a few minutes on each account using it normally: like and comment on a few posts.</li>
+            <li>Download the video. On Instagram and Facebook post it as a Reel with the caption. On LinkedIn post the video with the caption. On X post the video with the short text.</li>
+            <li>Copy the text exactly as written. Do not add links, emojis or extra hashtags, and do not change any words.</li>
+            <li>Add the link to each post in your tracking sheet.</li>
+          </ol>
+          ${LANGS7.map(lang => `
+          <div style="border:1px solid #E0DFDC;border-radius:12px;padding:14px;margin:0 0 16px">
+            <p style="margin:0 0 10px;font-size:15px;font-weight:bold;color:#010221;font-family:${SANS}">${esc(LANG_LABEL[lang])}</p>
+            <table cellpadding="0" cellspacing="0" width="100%"><tr>
+              <td width="150" style="vertical-align:top;padding-right:14px">
+                <a href="${esc(videoUrl(post.key, lang))}"><img src="${esc(posterUrl(post.key, lang))}" alt="" width="140" style="display:block;width:140px;height:auto;border-radius:8px"></a>
+                <p style="margin:6px 0 0;font-size:12.5px;font-family:${SANS}"><a href="${esc(videoUrl(post.key, lang))}" style="color:#5B7FCC">Download the video</a></p>
+              </td>
+              <td style="vertical-align:top">${accountRows(lang)}</td>
+            </tr></table>
+            ${box('Caption for Instagram, Facebook and LinkedIn', captionFor(post, lang))}
+            ${box('Short text for X', xTextFor(post, lang))}
+          </div>`).join('')}
+        </div>`;
+}
+
+const whenOf = (date) => {
   const d = new Date(`${date}T12:00:00Z`);
-  const when = `${d.getUTCDate()} ${MONTH[d.getUTCMonth()]}`;
+  return `${d.getUTCDate()} ${MONTH[d.getUTCMonth()]}`;
+};
+
+export function dailyTasksBody(date, { channel = null, profile = null } = {}) {
+  const parts = [profile ? 'the profile posts' : null, channel ? 'the WhatsApp channels' : null].filter(Boolean);
   return `
   <div style="background:#F4F2EE;padding:24px 12px;font-family:Georgia,serif">
     <div style="max-width:620px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #E0DFDC">
       <div style="background:#010221;color:#ffffff;padding:16px 22px;font-size:18px;font-weight:bold">
-        24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;WhatsApp channels, ${esc(when)}</span>
+        24<span style="color:#C9A96E">/</span>7 SPAIN<span style="font-weight:normal;font-size:12px;color:#CBEFFF"> &nbsp;Today's tasks, ${esc(whenOf(date))}</span>
       </div>
       <div style="padding:22px">
         <p style="margin:0 0 6px;font-size:15px;color:#010221">Hi,</p>
-        <p style="margin:0 0 4px;font-size:14px;line-height:1.6;color:#22263a;font-family:${SANS}">There is no Facebook group post today. Your tasks for today are below.</p>
-        ${whatsappSection(date, channel).split('Also today: ').join('Today: ')}
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.6;color:#22263a;font-family:${SANS}">Your tasks for today are below: ${esc(parts.join(' and '))}.</p>
+        ${profileSection(profile)}
+        ${channel ? whatsappSection(date, channel).split('Also today: ').join('Today: ') : ''}
         <p style="margin:28px 0 8px;font-size:15px;font-weight:bold;color:#010221">When it is all done</p>
-        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Reply to this email with one line saying the task is done, and list anything that failed. Send any question as a reply to this email too.</p>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#22263a;font-family:${SANS}">Reply to this email with one line saying the tasks are done, and list anything that failed. Send any question as a reply to this email too.</p>
       </div>
     </div>
   </div>`;
 }
 
-export async function sendChannelOnly(date, channel) {
-  const d = new Date(`${date}T12:00:00Z`);
+export async function sendDailyTasks(date, { channel = null, profile = null } = {}) {
+  const what = [profile ? 'profile posts' : null, channel ? 'WhatsApp channels' : null].filter(Boolean).join(' and ');
   return sendMail({
-    to: SEND_TO,
-    bcc: SEND_BCC,
-    subject: `Today's task: post in the WhatsApp channels (${d.getUTCDate()} ${MONTH[d.getUTCMonth()]})`,
-    html: channelOnlyBody(date, channel),
+    to: DAILY_TO,
+    cc: DAILY_CC,
+    subject: `Today's tasks: ${what} (${whenOf(date)})`,
+    html: dailyTasksBody(date, { channel, profile }),
+  });
+}
+
+// Pratik alone, when the rendered batch of profile posts is running out.
+export async function sendProfilesLow(left) {
+  return sendMail({
+    to: PRATIK_ONLY,
+    subject: left === 0 ? 'Profile posts: the batch has run out' : `Profile posts: only ${left} day${left === 1 ? '' : 's'} left`,
+    html: `<div style="font-family:${SANS};font-size:14px;line-height:1.6;color:#010221"><p>Hi Pratik,</p>
+      <p>${left === 0 ? 'Every profile post in the current batch has gone out, so tomorrow there is no profile post in the daily email.'
+        : `Only ${esc(String(left))} profile post${left === 1 ? ' is' : 's are'} left in the current batch, and one goes out each day.`}
+      Ask Claude for the next batch of Maria Lopez reels.</p>
+      <p>See what is lined up: <a href="https://www.247spain.es/internal-poornima" style="color:#5B7FCC">https://www.247spain.es/internal-poornima</a></p></div>`,
   });
 }
 
@@ -492,11 +562,11 @@ export function introBody({ trial = false } = {}) {
   </div>`;
 }
 
-/** The instructions email: To Pratik, with the publisher and John in BCC. */
+/** The instructions email: To the publisher, Pratik in CC, John in BCC. */
 export async function sendIntro() {
-  const result = await sendMail({ to: SEND_TO, bcc: SEND_BCC, subject: INTRO_SUBJECT, html: introBody() });
+  const result = await sendMail({ to: SEND_TO, cc: SEND_CC, bcc: SEND_BCC, subject: INTRO_SUBJECT, html: introBody() });
   if (result.ok && usingSandboxSender()) {
-    return { ...result, warning: `RESEND_FROM is not set in Vercel, so ${SEND_BCC.join(', ')} will not have received the instructions.` };
+    return { ...result, warning: `RESEND_FROM is not set in Vercel, so ${[...SEND_TO, ...SEND_BCC].join(', ')} will not have received the instructions.` };
   }
   return result;
 }

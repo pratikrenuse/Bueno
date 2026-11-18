@@ -1,0 +1,886 @@
+{
+ "items": [
+  {
+   "key": "foreign-buyers-record",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_02.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_02.jpg",
+    "Claude outputs/Maria NE Lopez/model_18.jpg",
+    "Claude outputs/Maria NE Lopez/model_17.jpg"
+   ],
+   "lines": [
+    "Okay, this one honestly surprised me.",
+    "Spaniards are buying fewer homes, but foreigners are buying more than ever.",
+    "We bought 16% of every home sold last quarter."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_18.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_18.jpg",
+    "Claude outputs/Maria NE Lopez/model_17.jpg",
+    "Claude outputs/Maria NE Lopez/model_15.jpg"
+   ],
+   "lines": [
+    "Ok, denne overrasket meg ærlig talt.",
+    "Spanjolene kjøper færre boliger, men utlendinger kjøper mer enn noen gang.",
+    "Vi kjøpte 16 % av alle boliger som ble solgt sist kvartal."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png",
+    "Claude outputs/Maria SD Lopez/Handmade Bowl in a Sunlit Pottery Studio-8.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Mediterranean Seaside Stroll-16.png"
+   ],
+   "lines": [
+    "Okej, den här överraskade mig faktiskt.",
+    "Spanjorerna köper färre bostäder, men utlänningar köper mer än någonsin.",
+    "Vi köpte 16 % av alla bostäder som såldes förra kvartalet."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png",
+    "Claude outputs/Maria SD Lopez/Serene Café Portrait with Coffee and Croissant-8.png",
+    "Claude outputs/Maria SD Lopez/Contemporary Gallery Portrait with Abstract Art-1.png"
+   ],
+   "lines": [
+    "Okay, den her overraskede mig ærligt talt.",
+    "Spanierne køber færre boliger, men udlændinge køber mere end nogensinde.",
+    "Vi købte 16 % af alle boliger, der blev solgt sidste kvartal."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Autumn City Stroll with Coffee-1.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Autumn City Stroll with Coffee-1.png",
+    "Claude outputs/Maria FG Lopez/Smiling Blonde in a Sunlit Garden-1.png",
+    "Claude outputs/Maria FG Lopez/Sunlit Mediterranean Shore Portrait-4.png"
+   ],
+   "lines": [
+    "Okay, das hat mich ehrlich überrascht.",
+    "Die Spanier kaufen weniger Wohnungen, aber Ausländer kaufen mehr denn je.",
+    "Wir haben letztes Quartal 16 % aller Wohnungen gekauft."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Smiling Shopper at the Farmers’ Market-6.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Smiling Shopper at the Farmers’ Market-6.png",
+    "Claude outputs/Maria FG Lopez/Sunny Mediterranean Street Stroll-2.png",
+    "Claude outputs/Maria FG Lopez/Golden-Hour Terrace by the Coast-4.png"
+   ],
+   "lines": [
+    "Bon, celle-là m'a vraiment surprise.",
+    "Les Espagnols achètent moins de logements, mais les étrangers en achètent plus que jamais.",
+    "Nous avons acheté 16 % des logements vendus le trimestre dernier."
+   ]
+  },
+  {
+   "key": "foreign-buyers-record",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png",
+    "Claude outputs/Maria SD Lopez/Clay Craft in a Sunlit Pottery Studio-14.png",
+    "Claude outputs/Maria SD Lopez/Modern City Plaza Portrait-1.png"
+   ],
+   "lines": [
+    "Oké, deze verraste me echt.",
+    "Spanjaarden kopen minder woningen, maar buitenlanders kopen er meer dan ooit.",
+    "Wij kochten vorig kwartaal 16% van alle verkochte woningen."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_07.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_07.jpg",
+    "Claude outputs/Maria NE Lopez/model_20.jpg",
+    "Claude outputs/Maria NE Lopez/model_02.jpg"
+   ],
+   "lines": [
+    "Everyone keeps asking me if prices are about to drop.",
+    "Sales just had their biggest fall in over two years.",
+    "Prices hit a record anyway."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_20.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_20.jpg",
+    "Claude outputs/Maria NE Lopez/model_02.jpg",
+    "Claude outputs/Maria NE Lopez/model_18.jpg"
+   ],
+   "lines": [
+    "Alle spør meg om prisene snart skal falle.",
+    "Salget har nettopp hatt sitt største fall på over to år.",
+    "Prisene satte rekord likevel."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Clay Craft in a Sunlit Pottery Studio-14.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Clay Craft in a Sunlit Pottery Studio-14.png",
+    "Claude outputs/Maria SD Lopez/Modern City Plaza Portrait-1.png",
+    "Claude outputs/Maria SD Lopez/Sunset Rooftop Dining Portrait-13.png"
+   ],
+   "lines": [
+    "Alla frågar mig om priserna snart ska sjunka.",
+    "Försäljningen har just haft sitt största ras på över två år.",
+    "Priserna slog rekord ändå."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Farmers’ Market Portrait-15.png",
+    "Claude outputs/Maria SD Lopez/Elegant Rider in a Lavender Field-22.png"
+   ],
+   "lines": [
+    "Alle spørger mig, om priserne snart falder.",
+    "Salget har lige haft sit største fald i over to år.",
+    "Priserne satte rekord alligevel."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/European Cobblestone Café Stroll-1.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/European Cobblestone Café Stroll-1.png",
+    "Claude outputs/Maria FG Lopez/Smiling Blonde on a Sunlit Street-2.png",
+    "Claude outputs/Maria FG Lopez/Sunlit Smile in the City Plaza-1.png"
+   ],
+   "lines": [
+    "Alle fragen mich, ob die Preise bald fallen.",
+    "Die Verkäufe hatten gerade den größten Einbruch seit über zwei Jahren.",
+    "Die Preise haben trotzdem einen Rekord erreicht."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Smiling Stroll Through a Sunlit European Lane-3.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Smiling Stroll Through a Sunlit European Lane-3.png",
+    "Claude outputs/Maria FG Lopez/Warm Candlelit Restaurant Portrait-5.png",
+    "Claude outputs/Maria FG Lopez/Rooftop Dining at Dusk-3.png"
+   ],
+   "lines": [
+    "Tout le monde me demande si les prix vont baisser.",
+    "Les ventes viennent de connaître leur plus forte chute depuis plus de deux ans.",
+    "Les prix ont quand même battu un record."
+   ]
+  },
+  {
+   "key": "prices-record-sales-falling",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Serene Café Portrait with Coffee and Croissant-8.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Serene Café Portrait with Coffee and Croissant-8.png",
+    "Claude outputs/Maria SD Lopez/Contemporary Gallery Portrait with Abstract Art-1.png",
+    "Claude outputs/Maria SD Lopez/Modern Entrance with Blooming Planter-2.png"
+   ],
+   "lines": [
+    "Iedereen vraagt me of de prijzen gaan dalen.",
+    "De verkopen hadden net hun grootste daling in ruim twee jaar.",
+    "De prijzen braken toch een record."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_08.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_08.jpg",
+    "Claude outputs/Maria NE Lopez/model_22.jpg",
+    "Claude outputs/Maria NE Lopez/model_07.jpg"
+   ],
+   "lines": [
+    "26,531 rental homes disappeared in one month.",
+    "And that is from just one website.",
+    "If you rent out your home in Spain, read this."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_22.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_22.jpg",
+    "Claude outputs/Maria NE Lopez/model_07.jpg",
+    "Claude outputs/Maria NE Lopez/model_20.jpg"
+   ],
+   "lines": [
+    "26 531 utleieboliger forsvant på én måned.",
+    "Og det er bare fra ett nettsted.",
+    "Leier du ut boligen din i Spania, les dette."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Contemporary Gallery Portrait with Abstract Art-1.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Contemporary Gallery Portrait with Abstract Art-1.png",
+    "Claude outputs/Maria SD Lopez/Modern Entrance with Blooming Planter-2.png",
+    "Claude outputs/Maria SD Lopez/The Wild Gardener in a Cosy Bookshop-23.png"
+   ],
+   "lines": [
+    "26 531 hyresbostäder försvann på en månad.",
+    "Och det är bara från en enda sajt.",
+    "Hyr du ut din bostad i Spanien, läs det här."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Handmade Bowl in a Sunlit Pottery Studio-8.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Handmade Bowl in a Sunlit Pottery Studio-8.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Mediterranean Seaside Stroll-16.png",
+    "Claude outputs/Maria SD Lopez/Emerald Elegance at the Gallery-1.png"
+   ],
+   "lines": [
+    "26.531 lejeboliger forsvandt på én måned.",
+    "Og det er kun fra én hjemmeside.",
+    "Lejer du din bolig ud i Spanien, så læs det her."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Golden Hour Cityscape Portrait-3.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Golden Hour Cityscape Portrait-3.png",
+    "Claude outputs/Maria FG Lopez/Smiling Shopper at the Farmers’ Market-6.png",
+    "Claude outputs/Maria FG Lopez/Sunny Mediterranean Street Stroll-2.png"
+   ],
+   "lines": [
+    "26.531 Mietwohnungen sind in einem Monat verschwunden.",
+    "Und das nur auf einer einzigen Website.",
+    "Wenn du deine Wohnung in Spanien vermietest, lies das."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Smiling at Sunset on the Rooftop-5.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Smiling at Sunset on the Rooftop-5.png",
+    "Claude outputs/Maria FG Lopez/Autumn City Stroll with Coffee-1.png",
+    "Claude outputs/Maria FG Lopez/Smiling Blonde in a Sunlit Garden-1.png"
+   ],
+   "lines": [
+    "26 531 locations ont disparu en un mois.",
+    "Et ce n'est que sur un seul site.",
+    "Si vous louez votre logement en Espagne, lisez ceci."
+   ]
+  },
+  {
+   "key": "rentals-vanished",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Sunlit Farmers’ Market Portrait-15.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Sunlit Farmers’ Market Portrait-15.png",
+    "Claude outputs/Maria SD Lopez/Elegant Rider in a Lavender Field-22.png",
+    "Claude outputs/Maria SD Lopez/Poised Stroll on a European Street-4.png"
+   ],
+   "lines": [
+    "26.531 huurwoningen verdwenen in één maand.",
+    "En dat is maar van één website.",
+    "Verhuur je je woning in Spanje, lees dit dan."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_09.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_09.jpg",
+    "Claude outputs/Maria NE Lopez/model_23.jpg",
+    "Claude outputs/Maria NE Lopez/model_08.jpg"
+   ],
+   "lines": [
+    "An agency asked a couple for 9,000 euros in fees.",
+    "The sale never even happened.",
+    "A court said they do not have to pay a cent."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_23.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_23.jpg",
+    "Claude outputs/Maria NE Lopez/model_08.jpg",
+    "Claude outputs/Maria NE Lopez/model_22.jpg"
+   ],
+   "lines": [
+    "Et byrå krevde 9 000 euro i honorar fra et par.",
+    "Salget ble aldri noe av.",
+    "En domstol sa at de ikke trenger å betale en krone."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Elegant Rider in a Lavender Field-22.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Elegant Rider in a Lavender Field-22.png",
+    "Claude outputs/Maria SD Lopez/Poised Stroll on a European Street-4.png",
+    "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png"
+   ],
+   "lines": [
+    "En mäklarbyrå krävde ett par på 9 000 euro i arvode.",
+    "Affären blev aldrig av.",
+    "En domstol sa att de inte behöver betala ett öre."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Modern City Plaza Portrait-1.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Modern City Plaza Portrait-1.png",
+    "Claude outputs/Maria SD Lopez/Sunset Rooftop Dining Portrait-13.png",
+    "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png"
+   ],
+   "lines": [
+    "Et mæglerfirma krævede 9.000 euro i salær af et par.",
+    "Handlen blev aldrig til noget.",
+    "En domstol sagde, at de ikke skal betale en krone."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Golden-Hour Bookshop Café Moment-3.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Golden-Hour Bookshop Café Moment-3.png",
+    "Claude outputs/Maria FG Lopez/Smiling Stroll Through a Sunlit European Lane-3.png",
+    "Claude outputs/Maria FG Lopez/Warm Candlelit Restaurant Portrait-5.png"
+   ],
+   "lines": [
+    "Ein Makler wollte von einem Paar 9.000 Euro Provision.",
+    "Der Verkauf ist nie zustande gekommen.",
+    "Ein Gericht sagt, sie müssen keinen Cent zahlen."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Smiling in a Sunlit Garden-2.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Smiling in a Sunlit Garden-2.png",
+    "Claude outputs/Maria FG Lopez/European Cobblestone Café Stroll-1.png",
+    "Claude outputs/Maria FG Lopez/Smiling Blonde on a Sunlit Street-2.png"
+   ],
+   "lines": [
+    "Une agence a réclamé 9 000 euros de frais à un couple.",
+    "La vente n'a même jamais eu lieu.",
+    "Un tribunal a dit qu'ils ne doivent pas un centime."
+   ]
+  },
+  {
+   "key": "agency-fee-court",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Sunlit Mediterranean Seaside Stroll-16.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Sunlit Mediterranean Seaside Stroll-16.png",
+    "Claude outputs/Maria SD Lopez/Emerald Elegance at the Gallery-1.png",
+    "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png"
+   ],
+   "lines": [
+    "Een makelaar vroeg een stel 9.000 euro aan courtage.",
+    "De verkoop is nooit doorgegaan.",
+    "Een rechter zegt dat ze geen cent hoeven te betalen."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_10.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_10.jpg",
+    "Claude outputs/Maria NE Lopez/model_26.jpg",
+    "Claude outputs/Maria NE Lopez/model_09.jpg"
+   ],
+   "lines": [
+    "Spain votes on 29 November.",
+    "If you rent out a home here, this one matters.",
+    "The two main parties want very different rules."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_26.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_26.jpg",
+    "Claude outputs/Maria NE Lopez/model_09.jpg",
+    "Claude outputs/Maria NE Lopez/model_23.jpg"
+   ],
+   "lines": [
+    "Spania går til valg 29. november.",
+    "Leier du ut en bolig her, betyr dette valget mye.",
+    "De to store partiene vil ha helt forskjellige regler."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Emerald Elegance at the Gallery-1.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Emerald Elegance at the Gallery-1.png",
+    "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png",
+    "Claude outputs/Maria SD Lopez/Clay Craft in a Sunlit Pottery Studio-14.png"
+   ],
+   "lines": [
+    "Spanien går till val den 29 november.",
+    "Hyr du ut en bostad här spelar det här valet roll.",
+    "De två stora partierna vill ha helt olika regler."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Modern Entrance with Blooming Planter-2.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Modern Entrance with Blooming Planter-2.png",
+    "Claude outputs/Maria SD Lopez/The Wild Gardener in a Cosy Bookshop-23.png",
+    "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png"
+   ],
+   "lines": [
+    "Spanien går til valg den 29. november.",
+    "Lejer du en bolig ud her, betyder det her valg noget.",
+    "De to store partier vil have vidt forskellige regler."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Golden-Hour Harbor Overlook-6.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Golden-Hour Harbor Overlook-6.png",
+    "Claude outputs/Maria FG Lopez/Smiling at Sunset on the Rooftop-5.png",
+    "Claude outputs/Maria FG Lopez/Autumn City Stroll with Coffee-1.png"
+   ],
+   "lines": [
+    "Spanien wählt am 29. November.",
+    "Wenn du hier vermietest, ist diese Wahl wichtig.",
+    "Die zwei großen Parteien wollen ganz andere Regeln."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Sunlit Beach Portrait with Palms-2.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Sunlit Beach Portrait with Palms-2.png",
+    "Claude outputs/Maria FG Lopez/Golden Hour Cityscape Portrait-3.png",
+    "Claude outputs/Maria FG Lopez/Smiling Shopper at the Farmers’ Market-6.png"
+   ],
+   "lines": [
+    "L'Espagne vote le 29 novembre.",
+    "Si vous louez un logement ici, ce vote compte.",
+    "Les deux grands partis veulent des règles très différentes."
+   ]
+  },
+  {
+   "key": "election-housing-promises",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Sunset Rooftop Dining Portrait-13.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Sunset Rooftop Dining Portrait-13.png",
+    "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png",
+    "Claude outputs/Maria SD Lopez/Serene Café Portrait with Coffee and Croissant-8.png"
+   ],
+   "lines": [
+    "Spanje stemt op 29 november.",
+    "Verhuur je hier een woning, dan doet deze verkiezing ertoe.",
+    "De twee grote partijen willen heel andere regels."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_12.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_12.jpg",
+    "Claude outputs/Maria NE Lopez/model_33.jpg",
+    "Claude outputs/Maria NE Lopez/model_10.jpg"
+   ],
+   "lines": [
+    "Keeping your tenant's deposit for a fresh coat of paint?",
+    "A court in Barcelona just said no.",
+    "Here is what you can and cannot charge."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_33.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_33.jpg",
+    "Claude outputs/Maria NE Lopez/model_10.jpg",
+    "Claude outputs/Maria NE Lopez/model_26.jpg"
+   ],
+   "lines": [
+    "Skal du beholde depositumet for å male på nytt?",
+    "En domstol i Barcelona sa nettopp nei.",
+    "Her er hva du kan og ikke kan kreve."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Golden-Hour Hillside Muse-6.png",
+    "Claude outputs/Maria SD Lopez/Serene Café Portrait with Coffee and Croissant-8.png",
+    "Claude outputs/Maria SD Lopez/Contemporary Gallery Portrait with Abstract Art-1.png"
+   ],
+   "lines": [
+    "Tänker du behålla depositionen för en ny målning?",
+    "En domstol i Barcelona sa just nej.",
+    "Här är vad du får och inte får ta betalt för."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Poised Stroll on a European Street-4.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Poised Stroll on a European Street-4.png",
+    "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png",
+    "Claude outputs/Maria SD Lopez/Handmade Bowl in a Sunlit Pottery Studio-8.png"
+   ],
+   "lines": [
+    "Vil du beholde depositummet til en ny gang maling?",
+    "En domstol i Barcelona har lige sagt nej.",
+    "Her er, hvad du må og ikke må kræve."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Golden-Hour Terrace by the Coast-4.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Golden-Hour Terrace by the Coast-4.png",
+    "Claude outputs/Maria FG Lopez/Smiling in a Sunlit Garden-2.png",
+    "Claude outputs/Maria FG Lopez/European Cobblestone Café Stroll-1.png"
+   ],
+   "lines": [
+    "Willst du die Kaution für einen neuen Anstrich behalten?",
+    "Ein Gericht in Barcelona hat gerade Nein gesagt.",
+    "Das darfst du verlangen und das nicht."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Sunlit Mediterranean Shore Portrait-4.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Sunlit Mediterranean Shore Portrait-4.png",
+    "Claude outputs/Maria FG Lopez/Golden-Hour Bookshop Café Moment-3.png",
+    "Claude outputs/Maria FG Lopez/Smiling Stroll Through a Sunlit European Lane-3.png"
+   ],
+   "lines": [
+    "Vous comptez garder la caution pour repeindre ?",
+    "Un tribunal de Barcelone vient de dire non.",
+    "Voici ce que vous pouvez facturer, et ce que vous ne pouvez pas."
+   ]
+  },
+  {
+   "key": "deposit-repaint-court",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/The Wild Gardener in a Cosy Bookshop-23.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/The Wild Gardener in a Cosy Bookshop-23.png",
+    "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Farmers’ Market Portrait-15.png"
+   ],
+   "lines": [
+    "Wil je de borg houden voor een nieuw likje verf?",
+    "Een rechter in Barcelona zei net nee.",
+    "Dit mag je wel en niet in rekening brengen."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "en",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/EN_Spain24x7.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_15.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_15.jpg",
+    "Claude outputs/Maria NE Lopez/model_04.jpg",
+    "Claude outputs/Maria NE Lopez/model_12.jpg"
+   ],
+   "lines": [
+    "A community fined late payers 50 cents a day.",
+    "Spain's Supreme Court shut it down.",
+    "Your community cannot just make up penalties."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "no",
+   "persona": "NE",
+   "folder": "Maria NE Lopez",
+   "avatar": "public/ig-setup/NO_p.jpg",
+   "photo": "Claude outputs/Maria NE Lopez/model_04.jpg",
+   "photos": [
+    "Claude outputs/Maria NE Lopez/model_04.jpg",
+    "Claude outputs/Maria NE Lopez/model_12.jpg",
+    "Claude outputs/Maria NE Lopez/model_33.jpg"
+   ],
+   "lines": [
+    "Et sameie bøtela sene betalere med 50 cent om dagen.",
+    "Spanias høyesterett satte en stopper for det.",
+    "Sameiet ditt kan ikke bare finne på straffer."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "sv",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/SV_ibex.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Golden-Hour Vineyard Harvest Portrait-20.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Farmers’ Market Portrait-15.png",
+    "Claude outputs/Maria SD Lopez/Elegant Rider in a Lavender Field-22.png"
+   ],
+   "lines": [
+    "En förening tog 50 cent om dagen av dem som betalade sent.",
+    "Spaniens högsta domstol satte stopp för det.",
+    "Din förening kan inte bara hitta på straffavgifter."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "da",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/DA_hindi.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Sailboat Deck Portrait by the Sea-5.png",
+    "Claude outputs/Maria SD Lopez/Clay Craft in a Sunlit Pottery Studio-14.png",
+    "Claude outputs/Maria SD Lopez/Modern City Plaza Portrait-1.png"
+   ],
+   "lines": [
+    "En ejerforening tog 50 cent om dagen af dem, der betalte for sent.",
+    "Spaniens højesteret satte en stopper for det.",
+    "Din ejerforening kan ikke bare finde på straffe."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "de",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/DE_pr.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Rooftop Dining at Dusk-3.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Rooftop Dining at Dusk-3.png",
+    "Claude outputs/Maria FG Lopez/Sunlit Beach Portrait with Palms-2.png",
+    "Claude outputs/Maria FG Lopez/Golden Hour Cityscape Portrait-3.png"
+   ],
+   "lines": [
+    "Eine Gemeinschaft verlangte 50 Cent pro Tag von Säumigen.",
+    "Spaniens Oberster Gerichtshof hat das gekippt.",
+    "Deine Gemeinschaft kann sich keine Strafen ausdenken."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "fr",
+   "persona": "FG",
+   "folder": "Maria FG Lopez",
+   "avatar": "public/ig-setup/FR_gmp.jpg",
+   "photo": "Claude outputs/Maria FG Lopez/Sunlit Smile in the City Plaza-1.png",
+   "photos": [
+    "Claude outputs/Maria FG Lopez/Sunlit Smile in the City Plaza-1.png",
+    "Claude outputs/Maria FG Lopez/Golden-Hour Harbor Overlook-6.png",
+    "Claude outputs/Maria FG Lopez/Smiling at Sunset on the Rooftop-5.png"
+   ],
+   "lines": [
+    "Une copropriété facturait 50 centimes par jour de retard.",
+    "La Cour suprême espagnole y a mis fin.",
+    "Votre copropriété ne peut pas inventer des pénalités."
+   ]
+  },
+  {
+   "key": "community-late-fee-supreme-court",
+   "lang": "nl",
+   "persona": "SD",
+   "folder": "Maria SD Lopez",
+   "avatar": "public/ig-setup/NL_xyz.jpg",
+   "photo": "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png",
+   "photos": [
+    "Claude outputs/Maria SD Lopez/Blonde Muse in a Blue Jazz Lounge-21.png",
+    "Claude outputs/Maria SD Lopez/Handmade Bowl in a Sunlit Pottery Studio-8.png",
+    "Claude outputs/Maria SD Lopez/Sunlit Mediterranean Seaside Stroll-16.png"
+   ],
+   "lines": [
+    "Een vereniging rekende 50 cent per dag voor te laat betalen.",
+    "Het Spaanse hooggerechtshof heeft er een eind aan gemaakt.",
+    "Je vereniging kan niet zomaar boetes verzinnen."
+   ]
+  }
+ ]
+}

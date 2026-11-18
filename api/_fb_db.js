@@ -200,3 +200,51 @@ export async function recentChannelSends(limit = 14) {
 export async function readNews(path, table = NEWS_TABLE) {
   return newsFetch(path, {}, table);
 }
+
+// --- Automatic channel posts (17 November 2026) -----------------------------------------
+// Pratik: the WhatsApp channels go out every day by default, with no approval from him. When
+// nothing is in line, the daily send takes the newest kept story from the last AUTO_DAYS days
+// that has not been set aside, approves it in the digest (which translates it) and uses it.
+export const AUTO_DAYS = 14;
+export async function autoChannelCandidates(limit = 20) {
+  const since = new Date(Date.now() - (AUTO_DAYS - 1) * 864e5).toISOString().slice(0, 10);
+  return newsFetch(`?select=${CHANNEL_FIELDS}&keep=eq.true&status=eq.pending&used_on=is.null&received_on=gte.${since}&order=received_on.desc,score.desc,position.asc&limit=${limit}`);
+}
+// Every day the channels had a post, newest first, with where it came from (for the evergreen
+// fallback, which must not repeat a post until all have gone).
+export async function allChannelSends() {
+  return sendsFetch('?select=day,source,title&order=day.desc&limit=1000');
+}
+
+// --- Persona profile posts (17 November 2026) --------------------------------------------
+// persona_posts: one row per post that has gone out or that Pratik has parked. A post with no
+// row is simply waiting its turn (api/_fb_profiles.js PROFILE_ORDER).
+export const PERSONA_TABLE = 'persona_posts';
+async function personaFetch(path, init = {}) {
+  const url = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').replace(/\/$/, '');
+  const key = process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key) return { ok: false, error: 'Supabase is not configured.' };
+  try {
+    const r = await fetch(`${url}/rest/v1/${PERSONA_TABLE}${path}`, {
+      ...init,
+      headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
+    });
+    const text = await r.text();
+    if (!r.ok) return { ok: false, error: `Supabase ${r.status}: ${text.slice(0, 200)}` };
+    let data = [];
+    try { data = text ? JSON.parse(text) : []; } catch { data = []; }
+    return { ok: true, data };
+  } catch (e) {
+    return { ok: false, error: String((e && e.message) || e) };
+  }
+}
+export async function personaRows() {
+  return personaFetch('?select=*');
+}
+export async function setPersona(post_key, patch) {
+  return personaFetch('?on_conflict=post_key', {
+    method: 'POST',
+    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+    body: JSON.stringify([{ post_key, ...patch, updated_at: new Date().toISOString() }]),
+  });
+}

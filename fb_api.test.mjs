@@ -11,7 +11,7 @@
 
 import { createHash } from 'node:crypto';
 import fbRouter, { resolveAction, ACTIONS } from './api/fb.js';
-import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO_SUBJECT, SEND_TO, SEND_BCC, RECIPIENTS } from './api/_fb_email.js';
+import { finalText, subjectFor, bodyFor, groupsToday, introBody, planDays, INTRO_SUBJECT, SEND_TO, SEND_CC, SEND_BCC, RECIPIENTS, REPLY_TO, DAILY_TO, DAILY_CC } from './api/_fb_email.js';
 import { GROUPS } from './api/_fb_groups.js';
 import { hashOf, isCurrent, checkTranslation } from './api/_fb_translate.js';
 import { queueOf, nextDay, sentOn } from './api/_fb_queue.js';
@@ -23,6 +23,8 @@ let pass = 0, fail = 0;
 const ok = (name, cond, extra = '') => cond ? pass++ : (fail++, console.log('FAIL', name, extra));
 
 process.env.INTERNAL_PASSCODE = 'test-pass';
+// The Facebook group posts are paused in production (FB_GROUPS_ON unset). These tests run them.
+process.env.FB_GROUPS_ON = '1';
 process.env.SUPABASE_URL = 'https://example.supabase.co';
 process.env.SUPABASE_SERVICE_KEY = 'service-key';
 process.env.RESEND_API_KEY = 'resend-key';
@@ -67,6 +69,10 @@ function fakeSupabase(table, mail = { ok: true }, translation = null) {
         : { ok: false, status: 422, json: async () => ({ message: mail.error || 'refused' }) };
     }
     if (!/\/rest\/v1\/fb_posts/.test(u)) {
+      // The daily task email's tables (persona_posts, news_items, wa_channel_sends): empty.
+      if (/\/rest\/v1\/(persona_posts|news_items|wa_channel_sends)/.test(u)) {
+        return { ok: true, status: (init.method || 'GET') === 'GET' ? 200 : 201, text: async () => '[]' };
+      }
       return { ok: false, status: 400, text: async () => `unexpected table in ${u}` };
     }
     const idMatch = u.match(/[?&]id=eq\.([^&]+)/);
@@ -87,9 +93,12 @@ function fakeSupabase(table, mail = { ok: true }, translation = null) {
   LAST_CALLS = calls;
   return calls;
 }
-const mails = (calls) => calls.filter(c => /resend/.test(c.url));
+// The daily task email (profile posts and WhatsApp channels) is tested in channels.test.mjs
+// and fb_profiles.test.mjs; here only the Facebook group emails count.
+const isDaily = (c) => /^(Today's tasks|Profile posts:)/.test(JSON.parse(c.body || '{}').subject || '');
+const mails = (calls) => calls.filter(c => /resend/.test(c.url) && !isDaily(c));
 // Emails that carry a post to the publisher, leaving out Pratik's own reminders.
-const postMails = (calls) => mails(calls).filter(c => (JSON.parse(c.body).bcc || []).includes('poornimanirwal@gmail.com'));
+const postMails = (calls) => mails(calls).filter(c => /task\. Publish/.test(JSON.parse(c.body).subject || ''));
 const lowMails = (calls) => mails(calls).filter(c => /left, approve more|queue is now empty/.test(JSON.parse(c.body).subject || ''));
 
 const ENGLISH = 'First line of the original.\n\nSecond paragraph with enough text in it.';
@@ -107,7 +116,7 @@ const samplePost = (over = {}) => ({
 });
 
 // Routing
-ok('the router knows eight actions', ACTIONS.length === 8 && ['seed', 'dispatch', 'trial', 'intro', 'channels'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
+ok('the router knows nine actions', ACTIONS.length === 9 && ['seed', 'dispatch', 'trial', 'intro', 'channels', 'profiles'].every(a => ACTIONS.includes(a)), ACTIONS.join(','));
 ok('query form resolves', resolveAction(req('/api/fb?action=posts')) === 'posts');
 ok('path form resolves', resolveAction(req('/api/fb/decide')) === 'decide');
 ok('hyphen form resolves', resolveAction(req('/api/fb-seed')) === 'seed');
@@ -305,7 +314,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('the email says which day it is', /day 3/i.test(html) && /^Day 3 task\. Publish this Facebook post:/.test(subjectFor(p, 3)));
   ok('the email names no other company', !/\b(Sabadell|BBVA|CaixaBank|Revolut|Wise)\b/i.test(html));
   ok('the subject is one post, not one language', !/\(German\)/.test(subjectFor(p, 3)));
-  ok('To Pratik, with the publisher and John hidden in BCC', SEND_TO.join() === 'pratik.y.renuse@gmail.com' && SEND_BCC.join() === 'poornimanirwal@gmail.com,john@getbueno.com');
+  ok('To the publisher, Pratik in CC, John in BCC (17 Nov 2026)', SEND_TO.length === 1 && /^poornima/.test(SEND_TO[0]) && SEND_CC.length === 1 && /^pratik\./.test(SEND_CC[0]) && SEND_BCC.length === 1 && /^john@/.test(SEND_BCC[0]));
   ok('the email never names the publisher', !/Poornima/.test(html));
 
   // The groups. Every language names its account and that day's groups, as links.
@@ -419,7 +428,7 @@ ok('a blank edit does not win', finalText(samplePost({ edited_text: '   ' })).st
   ok('send now takes the next day number', res.body.day === 5 && res.body.post.send_day === 5);
   ok('send now records when and to whom', !!res.body.post.sent_at && res.body.post.sent_to === RECIPIENTS.join(', '));
   const sent = JSON.parse(mails(calls)[0].body);
-  ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc), JSON.stringify({to: sent.to, bcc: sent.bcc}));
+  ok('To the publisher, Pratik in CC, John in BCC', sent.to.join() === SEND_TO.join() && (sent.cc || []).join() === SEND_CC.join() && (sent.bcc || []).join() === SEND_BCC.join(), JSON.stringify({ to: sent.to, cc: sent.cc, bcc: sent.bcc }));
   ok('and a reply goes back to Pratik', sent.reply_to === 'pratik.y.renuse@gmail.com');
   ok('the subject carries the day', /^Day 5 task\./.test(sent.subject));
 }
@@ -684,7 +693,7 @@ const row = (n, over = {}) => samplePost({ id: `r${n}`, idea_key: QUEUE_ORDER[n]
   ok('exactly one post email goes out', postMails(calls).length === 1);
   ok('it is the post at the front of the queue', res.body.idea_key === QUEUE_ORDER[0]);
   const sent = JSON.parse(postMails(calls)[0].body);
-  ok('To Pratik, publisher and John in BCC', (sent.to.join() === 'pratik.y.renuse@gmail.com' && (sent.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !sent.cc));
+  ok('To the publisher, Pratik in CC, John in BCC', sent.to.join() === SEND_TO.join() && (sent.cc || []).join() === SEND_CC.join() && (sent.bcc || []).join() === SEND_BCC.join(), JSON.stringify({ to: sent.to, cc: sent.cc, bcc: sent.bcc }));
   ok('the post email does not name the publisher', !/Poornima/.test(sent.html));
   ok('the email is day 1 and carries day 1 groups', /^Day 1 task\./.test(sent.subject)
      && groupsFor('en', 1).every(g => sent.html.includes(`href="${g.url}"`)));
@@ -797,7 +806,7 @@ for (const d of [1, 2, 3, 5, 6, 7, 9, 12, 20]) {
 }
 {
   const html = bodyFor(samplePost(), 6);
-  ok('the email reads as a task brief addressed to the agent', /Hi Agent,/.test(html) && /Task for day 6/.test(html) && !/Hi P\b/.test(html)
+  ok('the email reads as a task brief that opens with just Hi,', /Hi,/.test(html) && !/Hi Agent,/.test(html) && /Task for day 6/.test(html) && !/Hi P\b/.test(html)
      && /When every language is posted/.test(html) && /Reply to this email with one line saying the task is done/.test(html));
 }
 
@@ -862,16 +871,16 @@ for (const d of [1, 2, 3, 5, 6, 7, 9, 12, 20]) {
   const res2 = makeRes();
   await fbRouter(post('/api/fb?action=intro', { confirm: true }), res2);
   const m = JSON.parse(mails(calls)[0].body);
-  ok('the real instructions go To Pratik, publisher and John in BCC',
-     res2.body.ok === true && m.to.join() === 'pratik.y.renuse@gmail.com' && (m.bcc || []).join() === 'poornimanirwal@gmail.com,john@getbueno.com' && !/Poornima/.test(m.html)
+  ok('the real instructions go To the publisher, Pratik in CC, John in BCC',
+     res2.body.ok === true && m.to.join() === SEND_TO.join() && (m.cc || []).join() === SEND_CC.join() && (m.bcc || []).join() === SEND_BCC.join() && !/Poornima/.test(m.html)
      && m.subject === INTRO_SUBJECT && !/Trial/.test(m.html));
   const res3 = makeRes();
   await fbRouter({ ...post('/api/fb?action=trial', {}), headers: { 'x-passcode': 'wrong' } }, res3);
   ok('a trial needs the password', res3.code === 401);
 }
 {
-  // Everything that goes to the publisher is addressed To Pratik.
-  ok('every send to the publisher is To Pratik', SEND_TO.join() === 'pratik.y.renuse@gmail.com');
+  // 17 November 2026: everything that goes to the publisher is addressed to her, Pratik in CC.
+  ok('every send to the publisher has Pratik in CC', SEND_CC.join() === REPLY_TO && DAILY_CC.join() === REPLY_TO && SEND_TO.join() === DAILY_TO.join());
 }
 
 // The deck keeps unsent, unedited rows in step with the written posts (15 October 2026),

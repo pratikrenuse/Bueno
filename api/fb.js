@@ -1,4 +1,5 @@
-// One serverless function for the Facebook post deck at /internal-poornima.
+// One serverless function for /internal-poornima: the persona profile posts, the WhatsApp
+// channels and the (paused) Facebook group posts.
 //
 // SEPARATION, WHICH IS THE WHOLE POINT OF THIS FILE EXISTING SEPARATELY
 // The team's LinkedIn surface is api/linkedin.js with its api/_lk_*.js handlers, reading
@@ -20,6 +21,7 @@ const ROUTES = {
   intro:    () => import('./_fb_trial.js'),
   news:     () => import('./_fb_news.js'),
   channels: () => import('./_fb_channels.js'),
+  profiles: () => import('./_fb_profiles_view.js'),
 };
 
 // An edited post is translated into six languages on the way out, which takes longer than

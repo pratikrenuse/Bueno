@@ -22,7 +22,7 @@ All the folders are under `Claude outputs/` in the repo root
 | Folder | Languages | Who she looks like | Photos |
 |---|---|---|---|
 | `Maria NE Lopez` | **Norwegian + English** | Shoulder-length wavy golden blonde hair, blue eyes, soft closed-lip smile. Polished and calm. | 75 |
-| `Maria SD Lopez` | **Swedish + Dutch** | Long, straight, very light platinum-blonde hair with a middle part, pale blue eyes, a cool and reserved expression. Minimal Scandinavian style. | 45 |
+| `Maria SD Lopez` | **Swedish + Dutch** (and Danish since 17 Nov 2026) | Long, straight, very light platinum-blonde hair with a middle part, pale blue eyes, a cool and reserved expression. Minimal Scandinavian style. | 45 |
 | `Maria FG Lopez` | **French + German** | Long, tousled honey-blonde hair, freckles, a big open smile and hoop earrings. Warm and relaxed. | 32 |
 
 Quick lookup, by language:
@@ -30,6 +30,7 @@ Quick lookup, by language:
 - Norwegian: NE
 - Swedish: SD
 - Dutch: SD
+- Danish: SD (17 Nov 2026; its profile picture DA_hindi.jpg came from this folder)
 - French: FG
 - German: FG
 
@@ -46,18 +47,21 @@ Quick lookup, by language:
 
 (The original single `Maria Lopez` folder was renamed to `Maria NE Lopez` on 8 Nov 2026.)
 
-## Instagram handles
+## Instagram handles (from Pratik's sheet, 17 November 2026)
 
-| Language | Persona folder | Instagram handle |
-|---|---|---|
-| English | Maria NE Lopez | (to be supplied by Pratik) |
-| Norwegian | Maria NE Lopez | (to be supplied by Pratik) |
-| Swedish | Maria SD Lopez | (to be supplied by Pratik) |
-| Dutch | Maria SD Lopez | (to be supplied by Pratik) |
-| French | Maria FG Lopez | (to be supplied by Pratik) |
-| German | Maria FG Lopez | (to be supplied by Pratik) |
+| Language | Persona folder | Instagram handle | Profile picture |
+|---|---|---|---|
+| English | Maria NE Lopez | maria.lopez.spain | public/ig-setup/EN_Spain24x7.jpg |
+| Norwegian | Maria NE Lopez | maria.lopez.spania | public/ig-setup/NO_p.jpg |
+| Swedish | Maria SD Lopez | maria.lopez.ispanien | public/ig-setup/SV_ibex.jpg |
+| Dutch | Maria SD Lopez | maria.lopez.inspanje | public/ig-setup/NL_xyz.jpg |
+| Danish | Maria SD Lopez | maria.lopez.spanien (was hindi.quotes.illustrations) | public/ig-setup/DA_hindi.jpg |
+| French | Maria FG Lopez | maria.lopez.espange | public/ig-setup/FR_gmp.jpg |
+| German | Maria FG Lopez | maria.lopez.inspanien | public/ig-setup/DE_pr.jpg |
 
-Update this table as soon as Pratik gives the handles.
+All 28 profiles (Instagram, Facebook, LinkedIn, X) with their logins are in
+`api/_fb_profiles.js`, which is the one place the persona lock is decided. The daily reels
+are made by `studio/personas/` (see PERSONA_REELS_RUNBOOK.md).
 
 ## Voice and content (decided 8 Nov 2026)
 

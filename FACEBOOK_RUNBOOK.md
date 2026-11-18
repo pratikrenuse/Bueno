@@ -4,6 +4,14 @@ One post goes out every day, in seven languages, to Facebook groups for foreign 
 property in Spain. The goal is tax leads for Bueno. This file explains how a post gets from
 written to published, and where each piece lives. Set up on 6 October 2026.
 
+
+**17 November 2026.** The Facebook group posts are paused: the daily send does not touch their
+queue unless `FB_GROUPS_ON` is set to `1` in Vercel. The deck now opens on the persona profile
+posts (PERSONA_REELS_RUNBOOK.md) and the WhatsApp channels go out by themselves
+(NEWS_RUNBOOK.md). Every email to the publisher is now To her with Pratik in CC; the Facebook
+post email also keeps John in BCC. Where this file says "To Pratik, with Poornima and John in
+BCC", read that instead.
+
 ## The flow
 
 1. **Posts are written ahead.** They live in `api/_fb_content.js`, each one in English,

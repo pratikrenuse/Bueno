@@ -8,7 +8,7 @@
 // date. So no new table, and a notice can never go twice.
 //
 // Recipients are the same as the daily post: To Pratik, with the publisher and John in BCC.
-import { sendMail, SEND_TO, SEND_BCC } from './_fb_email.js';
+import { sendMail, SEND_TO, SEND_CC, SEND_BCC } from './_fb_email.js';
 import { WHATSAPP_AGENTS_HUB } from './_fb_content.js';
 
 const esc = (s) => String(s ?? '')
@@ -96,7 +96,7 @@ export function dueNotices(rows, now = new Date()) {
 export async function sendNotices(rows, now = new Date()) {
   const out = [];
   for (const n of dueNotices(rows, now)) {
-    const r = await sendMail({ to: SEND_TO, bcc: SEND_BCC, subject: n.subject, html: n.body() });
+    const r = await sendMail({ to: SEND_TO, cc: SEND_CC, bcc: SEND_BCC, subject: n.subject, html: n.body() });
     out.push({ id: n.id, ok: r.ok, error: r.error || null });
   }
   return out;

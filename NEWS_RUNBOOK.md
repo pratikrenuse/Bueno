@@ -89,3 +89,20 @@ tasks in it. With nothing approved, nothing goes to the publisher. Each day is r
 
 Pratik alone gets a reminder on the morning run when fewer than three approved posts are left,
 with how many stories wait for his review. Tests: `node channels.test.mjs`.
+
+## The WhatsApp channels go out by themselves (17 November 2026)
+
+Pratik: no approval any more. The daily task email (api/_fb_dispatch.js, 01:30 UTC with a
+catch-up at 12:00 UTC) picks the channel post itself, in this order:
+
+1. a story that is already approved and translated (none, normally);
+2. otherwise the newest story the digest kept in the last 14 days (`AUTO_DAYS` in
+   api/_fb_db.js) that nobody set aside. The send gives it the least used folder photo,
+   approves it through `/api/news?action=decide` (which translates it, so INTERNAL_PASSCODE
+   must be set in Vercel, as it already is) and uses it;
+3. otherwise an evergreen post: one of the 30 written Facebook posts (api/_fb_content.js),
+   already in every channel language, with a folder photo. Never repeated until all have gone.
+
+The email goes To the publisher with Pratik in CC and nobody else. There are no approval
+reminders. In the deck's WhatsApp channels view Pratik can still change a story's photo or
+press "Not for the channels" to keep one out. Tests: `node channels.test.mjs`.

@@ -105,20 +105,28 @@ const story = (over) => ({ keep: true, status: 'pending', score: 4, position: 0,
   translations: null, translations_of: null, is_proposal: false, title_en: 'A story', used_on: null, ...over });
 const T = { no: 'N', sv: 'S', de: 'D', fr: 'F', nl: 'NL' };
 
-// --- 1. Nothing goes out unapproved ---------------------------------------------------
+// --- 1. No approval needed (17 November 2026) -------------------------------------------
+const { DAILY_TO, DAILY_CC } = await import('./api/_fb_email.js');
 const handDay = Object.keys(CHANNEL_POSTS).sort().pop();
 ok('the hand-written days are no longer sent', channelPostFor(handDay) === null);
 setNow('2031-03-10T01:30:00Z');
 {
-  const tables = { fb_posts: [], news_items: [story({ id: 'p1', received_on: '2031-03-09', score: 5 })], wa_channel_sends: [] };
+  const tables = { fb_posts: [], persona_posts: [], news_items: [
+    story({ id: 'old', received_on: '2031-02-01', score: 5, en: 'Too old.' }),
+    story({ id: 'p0', received_on: '2031-03-08', score: 5, en: 'Older story.' }),
+    story({ id: 'p1', received_on: '2031-03-09', score: 4, en: 'Newest story.' }),
+  ], wa_channel_sends: [] };
   const calls = fakeDb(tables);
   const res = makeRes();
   await fbRouter(cron(), res);
   const m = mails(calls);
-  ok('a story nobody approved never reaches the publisher', !m.some(x => (x.bcc || []).length), JSON.stringify(m.map(x => x.subject)));
-  ok('the story is untouched', tables.news_items[0].status === 'pending' && !tables.news_items[0].used_on);
-  ok('Pratik is reminded to approve, and told one story is waiting', m.some(x => /nothing approved for tomorrow/.test(x.subject) && /1 idealista story/.test(x.html) && x.to.join() === 'pratik.y.renuse@gmail.com'));
-  ok('nothing is recorded as sent', tables.wa_channel_sends.length === 0);
+  const task = m.find(x => /Today's tasks/.test(x.subject));
+  ok('the newest kept story goes out by itself', task && task.html.includes('Newest story.') && !task.html.includes('Older story.'), JSON.stringify(res.body));
+  ok('it was approved and translated on the way', tables.news_items[2].status === 'used' && tables.news_items[2].used_on === '2031-03-10' && tables.news_items[2].translations && tables.news_items[2].translations.no === 'Norsk tekst.');
+  ok('a story older than two weeks is never picked', tables.news_items[0].status === 'pending');
+  ok('the day is recorded', tables.wa_channel_sends.length === 1 && tables.wa_channel_sends[0].news_id === 'p1');
+  ok('To the publisher, Pratik in CC, nobody else', task && task.to.join() === DAILY_TO.join() && task.cc.join() === DAILY_CC.join() && !task.bcc && DAILY_TO.length === 1 && DAILY_CC.length === 1 && /pratik/.test(DAILY_CC[0]) && !/john/.test(JSON.stringify(task)));
+  ok('no approval reminder goes to Pratik', !m.some(x => /approve/i.test(x.subject)));
 }
 
 // --- 2. The deck: review, approve, photo, undo, skip ------------------------------------
@@ -185,30 +193,30 @@ setNow('2031-03-10T15:00:00Z');
   ok('the view needs the passcode', noPass.statusCode === 401);
 }
 
-// --- 3. The daily email with an approved post and no Facebook post -----------------------
+// --- 3. Stories already approved go first -----------------------------------------------
 setNow('2031-03-11T01:30:00Z');
 {
   const news = [
     story({ id: 'a1', received_on: '2031-03-09', status: 'approved', decided_at: '2031-03-10T10:00:00Z', translations: T, en: 'First approved.', channel_image: P1 }),
     story({ id: 'a2', received_on: '2031-03-10', status: 'approved', decided_at: '2031-03-10T11:00:00Z', translations: T, en: 'Second approved.', channel_image: P2 }),
   ];
-  const tables = { fb_posts: [], news_items: news, wa_channel_sends: [] };
+  const tables = { fb_posts: [], persona_posts: [], news_items: news, wa_channel_sends: [] };
   const calls = fakeDb(tables);
   const res = makeRes();
   await fbRouter(cron(), res);
   const m = mails(calls);
-  const task = m.find(x => /WhatsApp channels/.test(x.subject));
-  ok('the WhatsApp task email goes out', !!task && res.body.channel_sent === true, JSON.stringify(res.body));
-  ok('To Pratik, the publisher and John in BCC', task && task.to.join() === 'pratik.y.renuse@gmail.com' && task.bcc.join() === 'poornimanirwal@gmail.com,john@getbueno.com');
+  const task = m.find(x => /Today's tasks/.test(x.subject));
+  const wa = task ? task.html.slice(task.html.indexOf('post in the WhatsApp channels')) : '';
+  ok('the daily task email goes out', !!task && res.body.daily.sent === true, JSON.stringify(res.body));
+  ok('To the publisher with Pratik in CC', task && task.to.join() === DAILY_TO.join() && task.cc.join() === DAILY_CC.join() && !task.bcc);
   ok('it carries the first approved post, not the second', task && task.html.includes('First approved.') && !task.html.includes('Second approved.'));
-  ok('in all six languages', task && ['N', 'S', 'D', 'F', 'NL'].every(t => task.html.includes(`>${t}</div>`)) && ['Spain 24/7 (English)', 'Spania 24/7', 'Spanien 24/7 Svenska', 'Spanien 24/7 (German)', 'Espagne 24/7', 'Spanje 24/7'].every(n => task.html.includes(n)));
-  ok('each language has the photo', task && task.html.split(`${P1.replace(/&/g, '&amp;')}" alt=""`).length - 1 === 6, task && task.html.slice(0, 0));
-  ok('it opens Hi Agent and names nobody', task && /Hi Agent,/.test(task.html) && !/Poornima/i.test(task.html + task.subject));
+  ok('in all six languages', task && ['N', 'S', 'D', 'F', 'NL'].every(t => wa.includes(`>${t}</div>`)) && ['Spain 24/7 (English)', 'Spania 24/7', 'Spanien 24/7 Svenska', 'Spanien 24/7 (German)', 'Espagne 24/7', 'Spanje 24/7'].every(n => wa.includes(n)));
+  ok('each language has the photo', task && wa.split(`${P1.replace(/&/g, '&amp;')}" alt=""`).length - 1 === 6);
+  ok('it opens Hi, and names nobody', task && /Hi,/.test(task.html) && !/Hi (Agent|P),/.test(task.html) && !/Poornima/i.test(task.html + task.subject));
   ok('no euro sign in the subject', task && !/€/.test(task.subject));
-  ok('the email never mentions Bueno', task && !/bueno/i.test(task.html + task.subject));
+  ok('the WhatsApp part never mentions Bueno', task && wa && !/bueno/i.test(wa));
   ok('the post is marked sent', news[0].status === 'used' && news[0].used_on === '2031-03-11' && news[1].status === 'approved');
   ok('the day is recorded with its photo', tables.wa_channel_sends.length === 1 && tables.wa_channel_sends[0].news_id === 'a1' && tables.wa_channel_sends[0].texts.image.includes(P1));
-  ok('one left means a reminder to Pratik', m.some(x => /only 1 approved post left/.test(x.subject) && !x.bcc));
 
   const before = mails(calls).length;
   setNow('2031-03-11T12:00:00Z');
@@ -217,24 +225,40 @@ setNow('2031-03-11T01:30:00Z');
 
   setNow('2031-03-12T01:30:00Z');
   await fbRouter(cron(), makeRes());
-  ok('the next day takes the next approved post', mails(calls).some(x => /WhatsApp channels/.test(x.subject) && x.html.includes('Second approved.')));
+  ok('the next day takes the next approved post', mails(calls).some(x => /Today's tasks/.test(x.subject) && x.html.includes('Second approved.')));
 }
 
-// --- 4. The channels already had their post, then a Facebook post goes ------------------
+// --- 4. No story at all: an evergreen post still goes -------------------------------------
+setNow('2031-03-13T01:30:00Z');
+{
+  const tables = { fb_posts: [], persona_posts: [], news_items: [], wa_channel_sends: [] };
+  const calls = fakeDb(tables);
+  const res = makeRes();
+  await fbRouter(cron(), res);
+  const task = mails(calls).find(x => /Today's tasks/.test(x.subject));
+  const w = tables.wa_channel_sends[0];
+  ok('a ready-written post goes into the channels', task && /WhatsApp channels/.test(task.subject) && w && w.source === 'evergreen', JSON.stringify(res.body));
+  ok('in all six languages with a folder photo', w && ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => w.texts[l]) && isChannelPhoto(w.texts.image));
+  ok('the evergreen text names no company and has no link', w && ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => !/bueno|24\/7|https?:/i.test(w.texts[l])));
+  setNow('2031-03-14T01:30:00Z');
+  await fbRouter(cron(), makeRes());
+  ok('the next day is a different post', tables.wa_channel_sends.length === 2 && tables.wa_channel_sends[1].title !== w.title);
+}
+
+// --- 5. The Facebook group posts are paused -----------------------------------------------
 setNow('2031-03-10T12:00:00Z');
 {
   const { QUEUE_ORDER } = await import('./api/_fb_content.js');
   const { hashOf } = await import('./api/_fb_translate.js');
   const fbT = { no: 'Norsk.', sv: 'Svensk.', da: 'Dansk.', de: 'Deutsch.', fr: 'Français.', nl: 'Nederlands.' };
   const fb = [{ id: 'p1', idea_key: QUEUE_ORDER[0], status: 'approved', post_text: 'Facebook text here.', translations: fbT, translations_of: hashOf('Facebook text here.') }];
-  const tables = { fb_posts: fb, news_items: [story({ id: 'n2', received_on: '2031-03-09', status: 'approved', decided_at: '2031-03-09T10:00:00Z', translations: T, en: 'A second story.' })],
-    wa_channel_sends: [{ day: '2031-03-10', source: 'news', texts: { en: 'x' } }] };
+  const tables = { fb_posts: fb, persona_posts: [], news_items: [], wa_channel_sends: [{ day: '2031-03-10', source: 'news', texts: { en: 'x' } }] };
   const calls = fakeDb(tables);
   const res = makeRes();
-  await fbRouter(cron({ force: true }), res);
-  const sent = mails(calls).find(x => /task\. Publish/.test(x.subject));
-  ok('the approved Facebook post still goes', res.body.sent === true && !!sent, JSON.stringify(res.body));
-  ok('but without a second channel post', sent && !sent.html.includes('post in the WhatsApp channels') && tables.news_items[0].status === 'approved');
+  await fbRouter(cron(), res);
+  ok('no Facebook group post goes out while paused', !mails(calls).some(x => /task\. Publish/.test(x.subject)) && res.body.facebook.paused === true);
+  const task = mails(calls).find(x => /Today's tasks/.test(x.subject));
+  ok('the profile post still goes, without a second channel post', task && /profile posts/.test(task.subject) && !/WhatsApp/.test(task.subject));
 }
 
 globalThis.Date = RealDate;

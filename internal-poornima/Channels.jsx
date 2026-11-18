@@ -2,10 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 
 // The WhatsApp channels view on /internal-poornima (6 November 2026).
 //
-// Every story the idealista digest keeps shows up here by itself. Nothing goes into the six
-// Spain 24/7 WhatsApp channels unless Pratik approves it here. Approving translates it into
-// the five other channel languages and puts it in line; each morning the daily task email
-// carries the next one, with its photo and the text in all six languages.
+// 17 November 2026: nothing is approved here any more. Every morning the daily task email
+// carries one channel post by itself: a story already in line, otherwise the newest story the
+// idealista digest kept (the send approves and translates it), otherwise an evergreen post.
+// This shows that line-up and what went out. A photo can still be changed, and a story can be
+// set aside so it never goes.
 // Data: /api/fb?action=channels. Not a route of its own: the folder's index.jsx renders it.
 
 const NAVY = '#010221'
@@ -146,7 +147,7 @@ export default function Channels({ pass, mode = 'posts' }) {
     <div className="fbp-wide" style={{ paddingBottom: 40 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '6px 0 14px' }}>
         <p style={{ margin: 0, fontSize: 14, color: '#22263a', lineHeight: 1.6, flex: 1 }}>
-          New idealista stories appear here by themselves. Nothing goes into the WhatsApp channels until you approve it. Each morning at 7 am India time the daily email carries the next approved post, with its photo and the text in all six languages.
+          One post goes into the six WhatsApp channels every morning at 7 am India time, by itself. It is the newest useful idealista story, translated when it goes out. If there is no story, a ready-written post goes instead. You only need to act if you want to change a photo or keep a story out.
         </p>
         <button className="fbp-chip" onClick={load} disabled={busy}>{busy ? 'Refreshing...' : 'Refresh'}</button>
       </div>
@@ -154,26 +155,7 @@ export default function Channels({ pass, mode = 'posts' }) {
       {photo_error && <p className="fbp-err">The photos could not be fetched: {photo_error}</p>}
       {flash && <p className="fbp-ok">{flash}</p>}
 
-      <h2 style={{ fontSize: 17, color: NAVY, margin: '18px 0 10px' }}>To review ({review.length})</h2>
-      {review.length === 0 && <p style={{ fontSize: 14, color: '#22263a' }}>Nothing is waiting. The next idealista newsletter adds its stories here.</p>}
-      {review.map(i => (
-        <Story key={i.id} item={i} {...common} picking={picking === i.id} onPick={() => setPicking(null)}
-          onPhoto={(url) => act(i.id, 'image', { image: url })}
-          head={<>
-            <b style={{ color: NAVY }}>{i.title}</b>
-            {pill(`idealista, ${day(i.received_on)}`, '#CBEFFF', NAVY)}
-            {i.is_proposal && pill('Proposal, not law', '#FBF3E2', '#8a6d1f')}
-          </>}>
-          <button style={btn(true)} disabled={!!working} onClick={() => act(i.id, 'approve')}>
-            {doing(i.id, 'approve') ? 'Approving and translating...' : 'Approve'}</button>
-          <button style={btn(false)} disabled={!!working} onClick={() => openPicker(i.id)}>Change photo</button>
-          <button style={btn(false)} disabled={!!working} onClick={() => act(i.id, 'skip')}>
-            {doing(i.id, 'skip') ? 'Setting aside...' : 'Not for the channels'}</button>
-        </Story>
-      ))}
-
-      <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Approved, in line ({queued.length})</h2>
-      {queued.length === 0 && <p style={{ fontSize: 14, color: '#22263a' }}>Nothing is approved yet, so nothing will go into the channels.</p>}
+      {queued.length > 0 && <h2 style={{ fontSize: 17, color: NAVY, margin: '18px 0 10px' }}>Already translated, these go first ({queued.length})</h2>}
       {queued.map((i, n) => (
         <Story key={i.id} item={i} {...common} picking={picking === i.id} onPick={() => setPicking(null)}
           onPhoto={(url) => act(i.id, 'image', { image: url })}
@@ -184,7 +166,24 @@ export default function Channels({ pass, mode = 'posts' }) {
           </>}>
           <button style={btn(false)} disabled={!!working} onClick={() => openPicker(i.id)}>Change photo</button>
           <button style={btn(false)} disabled={!!working} onClick={() => act(i.id, 'undo')}>
-            {doing(i.id, 'undo') ? 'Undoing...' : 'Undo approval'}</button>
+            {doing(i.id, 'undo') ? 'Moving...' : 'Back to the line'}</button>
+        </Story>
+      ))}
+
+
+      <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Next in line, the newest story goes first ({review.length})</h2>
+      {review.length === 0 && <p style={{ fontSize: 14, color: '#22263a' }}>No idealista story is waiting, so a ready-written post goes out instead.</p>}
+      {review.map(i => (
+        <Story key={i.id} item={i} {...common} picking={picking === i.id} onPick={() => setPicking(null)}
+          onPhoto={(url) => act(i.id, 'image', { image: url })}
+          head={<>
+            <b style={{ color: NAVY }}>{i.title}</b>
+            {pill(`idealista, ${day(i.received_on)}`, '#CBEFFF', NAVY)}
+            {i.is_proposal && pill('Proposal, not law', '#FBF3E2', '#8a6d1f')}
+          </>}>
+          <button style={btn(false)} disabled={!!working} onClick={() => openPicker(i.id)}>Change photo</button>
+          <button style={btn(false)} disabled={!!working} onClick={() => act(i.id, 'skip')}>
+            {doing(i.id, 'skip') ? 'Setting aside...' : 'Not for the channels'}</button>
         </Story>
       ))}
 
@@ -241,35 +240,34 @@ function WhatsAppDashboard({ data, firstDay, busy, onRefresh, err }) {
   const lastNews = newsletters[0]
   const since = addDays(data.today, -29)
   const sentMonth = sent.filter(s => s.day >= since).length
-  const nextTitle = queued[0] ? queued[0].title : null
+  const nextTitle = queued[0] ? queued[0].title : (review[0] ? review[0].title : null)
   return (
     <div className="fbp-wide" style={{ paddingBottom: 40 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '6px 0 14px' }}>
         <p style={{ margin: 0, fontSize: 14, color: '#22263a', lineHeight: 1.6, flex: 1 }}>
-          One approved post goes into the six WhatsApp channels each morning at 7 am India time. Nothing goes out unless you approved it.
+          One post goes into the six WhatsApp channels each morning at 7 am India time, by itself, with nothing to approve.
         </p>
         <button className="fbp-chip" onClick={onRefresh} disabled={busy}>{busy ? 'Refreshing...' : 'Refresh'}</button>
       </div>
       {err && <p className="fbp-err">{err}</p>}
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
-        <Tile big={review.length} label="Stories waiting for your review" />
-        <Tile big={queued.length} label="Approved and in line"
-          sub={queued.length ? `Covers the channels until ${day(addDays(firstDay, queued.length - 1))}.` : 'Nothing will go out until you approve one.'} />
-        <Tile big={nextTitle ? day(firstDay) : 'None'} label="Next channel post"
-          sub={nextTitle ? `7 am India time: ${nextTitle}` : (sent_today ? 'Today’s post has already gone.' : 'No approved post is waiting.')} />
+        <Tile big={queued.length + review.length} label="Stories in line"
+          sub={(queued.length + review.length) ? `Covers the channels until ${day(addDays(firstDay, queued.length + review.length - 1))}.` : 'A ready-written post goes out instead.'} />
+        <Tile big={day(firstDay)} label="Next channel post"
+          sub={nextTitle ? `7 am India time: ${nextTitle}` : (sent_today ? 'Today’s post has already gone.' : '7 am India time, chosen by itself.')} />
         <Tile big={sentMonth} label="Posts sent in the last 30 days" />
         <Tile big={lastNews ? day(lastNews.received_at) : 'None'} label="Last idealista email"
           sub={lastNews ? `${lastNews.kept || 0} useful stories kept from it.` : 'No idealista email has come in yet.'} />
       </div>
 
       <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Coming up</h2>
-      <Table head={['Date', 'Story', 'From idealista']} empty="Nothing is approved, so nothing is scheduled."
-        rows={queued.map((q, n) => [day(addDays(firstDay, n)), q.title, day(q.received_on)])} />
+      <Table head={['Date', 'Story', 'From idealista']} empty="No story is waiting, so ready-written posts go out."
+        rows={[...queued, ...review].map((q, n) => [day(addDays(firstDay, n)), q.title, day(q.received_on)])} />
 
       <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>Sent</h2>
       <Table head={['Date', 'Story', 'Sent to']} empty="Nothing has been sent from here yet."
-        rows={sent.map(s => [day(s.day), s.title || (s.texts && s.texts.en ? s.texts.en.slice(0, 80) + '...' : ''), 'You, with the publisher and John in BCC'])} />
+        rows={sent.map(s => [day(s.day), s.title || (s.texts && s.texts.en ? s.texts.en.slice(0, 80) + '...' : ''), (s.day >= '2026-11-18' ? 'The publisher, you in CC' : 'You, with the publisher and John in BCC')])} />
 
       <h2 style={{ fontSize: 17, color: NAVY, margin: '26px 0 10px' }}>idealista emails received</h2>
       <Table head={['Received', 'Subject', 'Useful stories']} empty="No idealista email has come in yet."

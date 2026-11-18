@@ -1,26 +1,26 @@
 // GET  /api/fb?action=channels                              the deck's WhatsApp channels view
 // POST /api/fb?action=channels { id, action, image? }       approve | skip | undo | image
 //
-// WHY (6 November 2026)
-// Pratik: every idealista newsletter should show up in /internal-poornima for the WhatsApp
-// channels, and nothing goes into the channels unless he approves it. This lists the stories
-// the digest kept in the last week that wait for his decision, the approved ones in the order
-// they will go out (one a day, in the daily task email, with a photo and the text in all six
-// channel languages), and what already went out.
+// WHY
+// 6 November 2026: every idealista story showed up here and waited for Pratik's approval.
+// 17 November 2026, Pratik: no approval any more. The channels get a post every day by
+// default. The daily send (api/_fb_dispatch.js) takes what is in line, otherwise the newest
+// kept story (it approves and translates it itself), otherwise an evergreen post. This view
+// shows that line-up and what went out. Pratik can still change a photo or set a story aside.
 //
-//   approve  translates the story into the five other languages and puts it in line. The
+//   approve  (still accepted, no longer shown) translates the story into the five other languages and puts it in line. The
 //            translating belongs to the digest (api/_news_decide.js) and is reached over HTTP,
 //            never by import, so the two surfaces stay apart.
 //   skip     "not for the channels". The story stays kept, so the LinkedIn deck is not affected.
 //   undo     back to waiting for review, from approved or skipped, as long as it has not gone.
 //   image    the photo that goes with it, one of the 15 folder photos (GET ?action=channels&photos=<id>).
-import { gate, readBody, readNews, queuedChannelNews, reviewChannelNews, recentChannelSends, channelSentOn, getChannelNews, patchChannelNews, usedChannelImages } from './_fb_db.js';
+import { gate, readBody, readNews, queuedChannelNews, autoChannelCandidates, recentChannelSends, channelSentOn, getChannelNews, patchChannelNews, usedChannelImages } from './_fb_db.js';
 import { CHANNEL_LANGS, CHANNEL_NAME, CHANNEL_PHOTOS, channelFromNews, channelImageFor, isChannelPhoto, photoNameOf, photoUrl } from './_fb_whatsapp.js';
 
 const SITE = 'https://www.247spain.es';
 const englishOf = (i) => (i.edited_en && String(i.edited_en).trim()) ? i.edited_en : (i.en || '');
 
-async function approveInDigest(pass, id) {
+export async function approveInDigest(pass, id) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 55000);
   try {
@@ -46,7 +46,7 @@ async function photoCounts() {
   return counts;
 }
 
-async function assignPhotos(items) {
+export async function assignPhotos(items) {
   const missing = items.filter(i => !isChannelPhoto(i.channel_image))
     .sort((a, b) => (a.received_on < b.received_on ? -1 : a.received_on > b.received_on ? 1 : (a.position || 0) - (b.position || 0)));
   if (!missing.length) return null;
@@ -110,7 +110,7 @@ export default async function handler(req, res) {
 
   const today = new Date().toISOString().slice(0, 10);
   const [review, queued, sent, doneToday, emails] = await Promise.all([
-    reviewChannelNews(), queuedChannelNews(), recentChannelSends(60), channelSentOn(today),
+    autoChannelCandidates(30), queuedChannelNews(), recentChannelSends(60), channelSentOn(today),
     readNews('?select=received_at,subject,status,stories,kept&source=eq.idealista&order=received_at.desc&limit=10', 'news_emails'),
   ]);
   for (const r of [review, queued, sent]) if (!r.ok) return res.status(500).json({ error: r.error });

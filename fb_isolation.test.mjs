@@ -80,9 +80,13 @@ ok('only _fb_db.js builds a Supabase URL', handlersNameTable.length === 0, handl
 const email = code('./api/_fb_email.js');
 ok('the publisher address is there',
    /poornimanirwal@gmail\.com/.test(email));
-ok('every publisher email is To Pratik', /export const SEND_TO = \[PRATIK\]/.test(email));
-ok('the publisher and John are in BCC', /export const SEND_BCC = \[PUBLISHER, JOHN\]/.test(email) && /john@getbueno\.com/.test(email));
-for (const f of FB.filter(x => x !== '_fb_email.js')) {
+// 17 November 2026: To the publisher, Pratik in CC on everything; John only in BCC on the
+// Facebook group posts, never on the daily task email.
+ok('every publisher email is To the publisher', /export const SEND_TO = \[PUBLISHER\]/.test(email) && /export const DAILY_TO = \[PUBLISHER\]/.test(email));
+ok('Pratik is in CC on every publisher email', /export const SEND_CC = \[PRATIK\]/.test(email) && /export const DAILY_CC = \[PRATIK\]/.test(email));
+ok('John is in BCC on the Facebook posts only', /export const SEND_BCC = \[JOHN\]/.test(email) && /john@getbueno\.com/.test(email) && !/DAILY_BCC/.test(email));
+// _fb_profiles.js holds the logins of the 28 persona profiles (account names, never recipients).
+for (const f of FB.filter(x => x !== '_fb_email.js' && x !== '_fb_profiles.js')) {
   ok(`api/${f} names no email address`, !/@[a-z0-9.-]+\.[a-z]{2,}/i.test(code(`./api/${f}`)));
 }
 // John is in BCC on the publisher emails since 15 October 2026 (Pratik's request), and only
