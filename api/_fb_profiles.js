@@ -1270,7 +1270,7 @@ export const xTextFor = (post, lang) => post.overlay[lang].join(' ');
 
 const REELS = `${SITE}/persona-reels`;
 // REELS_VERSION busts caches when a batch is re-rendered. Bump it with every new render.
-export const REELS_VERSION = 2;
+export const REELS_VERSION = 3;
 export const videoUrl = (key, lang) => `${REELS}/${key}/${lang}.mp4?v=${REELS_VERSION}`;
 export const posterUrl = (key, lang) => `${REELS}/${key}/${lang}.jpg?v=${REELS_VERSION}`;
 

@@ -7,7 +7,7 @@ site: it needs ffmpeg and the persona photos in "Claude outputs/".
 What a reel looks like, built to read as a personal post, not an ad:
   - three scenes, each a different photo of the same persona, full screen and always moving
     (slow zoom and drift, a different direction per scene), joined by a quick zoom-and-fade cut
-  - her profile picture and name slide in at the top, with story-style progress bars above
+  - nothing on top of the photo but the words: no name, profile picture or progress bar
   - each scene says one line of the post; the words pop in one by one, big and bold,
     numbers lit up in yellow, and the line lifts away before the next cut
   - the last line gets a yellow underline that sweeps across once it is complete
@@ -279,7 +279,6 @@ def frame_maker(item):
     photos = item.get("photos") or [item["photo"]] * 3
     scenes = [Scene(p, MOVES[i]) for i, p in enumerate(photos)]
     lines = [Line(text, i) for i, text in enumerate(item["lines"])]
-    head = make_header(item["avatar"])
     n = len(scenes)
 
     def scene_frame(i, t):
@@ -299,14 +298,7 @@ def frame_maker(item):
             p = (t - SCENES[i]) / CUT
             prev = scene_frame(i - 1, t)
             f = Image.blend(prev, f, ease_out(p))
-        # Header slides down at the start and stays.
-        hy = int(260 - (1 - ease_out(t / 0.5)) * 60)
-        hl = head
-        if t < 0.5:
-            hl = head.copy()
-            hl.putalpha(head.getchannel("A").point(lambda v, a=ease_out(t / 0.5): int(v * a)))
-        f.alpha_composite(hl, (0, hy))
-        draw_progress(f, t)
+        # No name, profile picture or progress bar on the video (Pratik, 18 Nov 2026).
         return f.convert("RGB")
 
     return frame
