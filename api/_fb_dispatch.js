@@ -131,7 +131,7 @@ export async function evergreen() {
   const sends = await allChannelSends();
   const last = new Map();
   for (const s of (sends.ok ? sends.data : [])) {
-    if (s.source === 'evergreen' && s.title && !last.has(s.title)) last.set(s.title, s.day);
+    if (isEvergreenSend(s) && s.title && !last.has(s.title)) last.set(s.title, s.day);
   }
   const usable = QUEUE_ORDER
     .map(k => IDEAS.find(i => i.key === k))
@@ -142,15 +142,20 @@ export async function evergreen() {
     || [...usable].sort((a, b) => (last.get(a.key) < last.get(b.key) ? -1 : 1))[0];
   const texts = {};
   for (const l of CHANNEL_LANGS) texts[l] = renderBody(pick, l);
-  const n = sends.ok ? sends.data.filter(s => s.source === 'evergreen').length : 0;
+  const n = sends.ok ? sends.data.filter(isEvergreenSend).length : 0;
   texts.image = photoUrl(CHANNEL_PHOTOS[n % CHANNEL_PHOTOS.length]);
   return { source: 'evergreen', title: pick.key, texts };
 }
 
+// The table's check constraint accepts only 'written' and 'news' as a source, so an evergreen
+// post is logged as 'written' (19 November 2026). Before this, every evergreen send was
+// refused without an error, nothing was logged, and the same day could go out twice.
+const isEvergreenSend = (s) => s.source === 'evergreen' || s.source === 'written';
+
 async function recordChannel(today, channel) {
   if (channel.news) await markChannelNewsUsed(channel.news.id, today);
   await logChannelSend({
-    day: today, source: channel.source === 'evergreen' ? 'evergreen' : 'news',
+    day: today, source: channel.source === 'evergreen' ? 'written' : 'news',
     news_id: channel.news ? channel.news.id : null, title: channel.title || null,
     texts: channel.texts, via: 'daily tasks',
   });

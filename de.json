@@ -701,6 +701,12 @@
     "footer_answers": "Fragen und Antworten",
     "footer_guides": "Ratgeber",
     "footer_about": "Über Spain 24/7",
-    "footer_wa_channel": "WhatsApp-Kanal"
+    "footer_wa_channel": "WhatsApp-Kanal",
+    "news_title": "Die neuesten Immobiliennachrichten aus Spanien",
+    "news_sub": "Die Immobiliennachrichten, die für Eigentümer und Käufer in Spanien zählen, in wenigen Sätzen erklärt.",
+    "news_proposal": "Das ist ein Vorschlag und noch kein Gesetz.",
+    "news_live": "An jedem Werktag kommen neue Meldungen hinzu.",
+    "news_updated": "Zuletzt aktualisiert am {date}.",
+    "news_follow": "Möchten Sie jede Meldung sofort erhalten? Folgen Sie unserem WhatsApp-Kanal, dann kommt sie direkt auf Ihr Handy."
   }
 }

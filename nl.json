@@ -701,6 +701,12 @@
     "footer_answers": "Vragen en antwoorden",
     "footer_guides": "Gidsen",
     "footer_about": "Over Spain 24/7",
-    "footer_wa_channel": "WhatsApp-kanaal"
+    "footer_wa_channel": "WhatsApp-kanaal",
+    "news_title": "Het laatste vastgoednieuws uit Spanje",
+    "news_sub": "Het vastgoednieuws dat ertoe doet voor eigenaren en kopers in Spanje, uitgelegd in een paar zinnen.",
+    "news_proposal": "Dit is een voorstel en nog geen wet.",
+    "news_live": "Elke werkdag komen er nieuwe berichten bij.",
+    "news_updated": "Laatst bijgewerkt op {date}.",
+    "news_follow": "Wilt u elk bericht meteen ontvangen? Volg ons WhatsApp-kanaal, dan komt het direct op uw telefoon."
   }
 }

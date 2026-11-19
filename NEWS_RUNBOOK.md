@@ -106,3 +106,41 @@ catch-up at 12:00 UTC) picks the channel post itself, in this order:
 The email goes To the publisher with Pratik in CC and nobody else. There are no approval
 reminders. In the deck's WhatsApp channels view Pratik can still change a story's photo or
 press "Not for the channels" to keep one out. Tests: `node channels.test.mjs`.
+
+## LinkedIn content comes from the digest only (19 November 2026)
+
+Pratik: the team's LinkedIn posts come from the idealista stories only, because they are
+checked and current. The Tuesday and Thursday send (api/_lk_dispatch.js) and its "coming up"
+list (api/_dispatch.js) now read only the news posts (batch 100). An older written post is never
+sent, even if it is approved. Approval is unchanged: nothing goes to the team until John
+approves it in /internal-linkedin.
+
+## The news section on the 247spain.es home page (19 November 2026)
+
+The home page (src/Home.jsx, NewsSection.jsx) shows the six newest kept stories with a score
+of 4 or 5 from the last 21 days, in the reader's language, with the date and a note when a
+story is only a proposal. A green marker says new stories come every weekday and when it was
+last updated, and the section ends with a button to follow the WhatsApp channel. Copy is under
+`home2.news_*` in the six locale files.
+
+Pratik: the page never names the newsletter the stories come from. Every language, English
+included, is rewritten once without it, and the code refuses any copy that still says
+"idealista".
+
+- `GET /api/news?action=public&lang=xx` is public and read-only. It is cached at Vercel's edge
+  for 15 minutes, or for 1 minute while a story's copy is still on its way.
+- The copy is made once per story by `POST /api/news?action=site` (passcode), stored in
+  `news_items.site_copy` (en, no, sv, de, fr, nl) with a hash of the English in `site_copy_of`.
+  An edit in /internal-news gets fresh copy. `site_lock` stops two runs paying for the same
+  story. The digest asks for it after every email (feedDecks), and the public call asks again
+  whenever it finds a story without it.
+- A story whose copy is not ready yet is left out. If the call fails, the section is not shown.
+- No new serverless function and no new env var: it lives on api/news.js.
+
+## The channel send log (19 November 2026)
+
+`wa_channel_sends` has a check that accepts only 'written' and 'news' as a source, but since
+17 November the daily email logged evergreen posts as 'evergreen'. Those rows were refused
+without an error, so nothing was logged, the same day could go out twice, and the evergreen
+order did not move on. Evergreen sends are now logged as 'written', and api/_fb_dispatch.js
+reads both as evergreen.

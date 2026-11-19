@@ -7,6 +7,8 @@
 //   POST /api/news?action=reprocess  retry an email that failed         (passcode)
 //   POST /api/news?action=resend     send the summary email again       (passcode)
 //   GET  /api/news?action=health     env vars, tables, last email       (passcode)
+//   GET  /api/news?action=public     the home page's news section, any language (public, cached)
+//   POST /api/news?action=site       translate the stories that section shows   (passcode)
 //
 // Same shape as api/fb.js and api/linkedin.js: helpers start with "_" so the whole surface
 // costs one function slot. Nothing here imports from the LinkedIn, Facebook or newsletter
@@ -21,6 +23,8 @@ const ROUTES = {
   reprocess: async () => (await import('./_news_decide.js')).reprocess,
   resend: async () => (await import('./_news_decide.js')).resend,
   announce: async () => (await import('./_news_decide.js')).announce,
+  public: async () => (await import('./_news_site.js')).publicNews,
+  site: async () => (await import('./_news_site.js')).site,
 };
 
 // Sorting one newsletter with Claude takes 20 to 40 seconds.

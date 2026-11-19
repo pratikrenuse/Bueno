@@ -78,7 +78,9 @@ export async function processEmail(email, { notify = true } = {}) {
 // api/_fb_news.js exists but nothing calls it until he says so.
 // The WhatsApp channel posts are not fed from here: Pratik approves each one in the Facebook
 // deck's WhatsApp channels view, which reads news_items itself (api/_fb_channels.js).
-const DECKS = ['/api/linkedin?action=news'];
+// Since 19 November 2026 the same stories also go on the 247spain.es home page in six
+// languages; '/api/news?action=site' translates them (api/_news_site.js).
+const DECKS = ['/api/linkedin?action=news', '/api/news?action=site'];
 export async function feedDecks() {
   const pass = process.env.INTERNAL_PASSCODE;
   if (!pass) return 'Missing env var: INTERNAL_PASSCODE';

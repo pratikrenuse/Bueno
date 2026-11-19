@@ -237,7 +237,8 @@ setNow('2031-03-13T01:30:00Z');
   await fbRouter(cron(), res);
   const task = mails(calls).find(x => /Today's tasks/.test(x.subject));
   const w = tables.wa_channel_sends[0];
-  ok('a ready-written post goes into the channels', task && /WhatsApp channels/.test(task.subject) && w && w.source === 'evergreen', JSON.stringify(res.body));
+  // Logged as 'written': the live table's check only accepts 'written' and 'news' (19 Nov 2026).
+  ok('a ready-written post goes into the channels', task && /WhatsApp channels/.test(task.subject) && w && w.source === 'written', JSON.stringify(res.body));
   ok('in all six languages with a folder photo', w && ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => w.texts[l]) && isChannelPhoto(w.texts.image));
   ok('the evergreen text names no company and has no link', w && ['en', 'no', 'sv', 'de', 'fr', 'nl'].every(l => !/bueno|24\/7|https?:/i.test(w.texts[l])));
   setNow('2031-03-14T01:30:00Z');

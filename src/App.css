@@ -4459,3 +4459,28 @@ button.fbp-d-tile:hover { border-color: #5B7FCC; }
   .waf-float-btn { width: 56px; min-height: 56px; padding: 0; justify-content: center; }
 }
 @media print { .waf-float, .waf-band { display: none; } }
+
+/* The news section (NewsSection.jsx), 19 November 2026 */
+.h7 .h7-news{background:#fff}
+.h7-news-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.h7-news-top .h7-head{margin-bottom:0}
+.h7-news-live{flex:none;display:flex;align-items:flex-start;gap:14px;background:var(--h7-light);border-radius:18px;padding:18px 22px;max-width:340px}
+.h7-news-live p{margin:0;font-size:16px;line-height:1.45}
+.h7-news-live-a{font-weight:600;color:var(--h7-navy)}
+.h7-news-live-b{color:var(--h7-muted)}
+.h7-news-dot{position:relative;flex:none;width:12px;height:12px;margin-top:6px;border-radius:50%;background:#1f9d55}
+.h7-news-dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#1f9d55;animation:h7pulse 2s ease-out infinite}
+@keyframes h7pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.8);opacity:0}}
+.h7-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.h7-news-item{border:1px solid #e4e4ec;border-radius:24px;padding:36px;background:var(--h7-off);display:flex;flex-direction:column;gap:14px}
+.h7-news-item time{font:600 15px 'DM Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--h7-accent)}
+.h7-news-item h3{font:400 clamp(24px,2vw,28px)/1.25 'FS Siena',Georgia,serif;margin:0}
+.h7-news-item p{font-size:18px;line-height:1.6;color:var(--h7-muted);margin:0}
+.h7-news-item .h7-news-flag{align-self:flex-start;font-size:15px;font-weight:600;color:var(--h7-navy);background:var(--h7-light);border-radius:12px;padding:8px 14px}
+.h7-news-follow{margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:28px;background:var(--h7-off);border:1px solid #e4e4ec;border-radius:24px;padding:28px 36px}
+.h7-news-follow p{margin:0;font-size:20px;line-height:1.5;color:var(--h7-navy);max-width:720px}
+.h7-news-follow .h7-btn{flex:none}
+@media (max-width:1100px){.h7-news-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.h7-news-top{flex-direction:column;align-items:flex-start;gap:24px}.h7-news-live{max-width:none}}
+@media (max-width:700px){.h7-news-grid{grid-template-columns:1fr}.h7-news-item{padding:28px}.h7-news-follow{flex-direction:column;align-items:flex-start;padding:24px}}
+@media (prefers-reduced-motion:reduce){.h7-news-dot::after{animation:none}}

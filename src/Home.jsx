@@ -9,6 +9,7 @@ import { buenoHome } from '../SiteFooter.jsx'
 import { TOOL_COPY } from '../seo/copy.js'
 import { whatsappChannel } from '../whatsapp.js'
 import { WhatsAppOtherLangs } from '../WhatsAppFollow.jsx'
+import NewsSection from '../NewsSection.jsx'
 
 // The owners' home page, rebuilt October 2026.
 //
@@ -300,6 +301,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <NewsSection />
 
         <section className="h7-stats-band">
           <div className="h7-wrap">

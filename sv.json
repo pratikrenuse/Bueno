@@ -701,6 +701,12 @@
     "footer_answers": "Frågor och svar",
     "footer_guides": "Guider",
     "footer_about": "Om Spain 24/7",
-    "footer_wa_channel": "WhatsApp-kanal"
+    "footer_wa_channel": "WhatsApp-kanal",
+    "news_title": "De senaste fastighetsnyheterna från Spanien",
+    "news_sub": "Fastighetsnyheterna som spelar roll för ägare och köpare i Spanien, förklarade med några få meningar.",
+    "news_proposal": "Det här är ett förslag och är ännu inte lag.",
+    "news_live": "Nya nyheter läggs till varje vardag.",
+    "news_updated": "Senast uppdaterad {date}.",
+    "news_follow": "Vill du få varje nyhet så fort den kommer? Följ vår WhatsApp-kanal, så hamnar den direkt i telefonen."
   }
 }

@@ -701,6 +701,12 @@
     "footer_answers": "Questions and answers",
     "footer_guides": "Guides",
     "footer_about": "About Spain 24/7",
-    "footer_wa_channel": "WhatsApp channel"
+    "footer_wa_channel": "WhatsApp channel",
+    "news_title": "The latest property news from Spain",
+    "news_sub": "The property news that matters to owners and buyers in Spain, explained in a few sentences.",
+    "news_proposal": "This is a proposal and is not law yet.",
+    "news_live": "New stories are added every weekday.",
+    "news_updated": "Last updated on {date}.",
+    "news_follow": "Would you like each story as soon as it comes in? Follow our WhatsApp channel and it arrives on your phone."
   }
 }

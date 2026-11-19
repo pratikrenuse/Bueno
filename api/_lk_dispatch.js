@@ -10,6 +10,7 @@
 import { getApiKey } from './_translate.js';
 import { TEAM_CC } from './_email.js';
 import { sendPostToTeam } from './_dispatch.js';
+import { NEWS_BATCH } from './_lk_news.js';
 
 export default async function handler(req, res) {
   try {
@@ -47,9 +48,11 @@ export default async function handler(req, res) {
       if (!streamMembers.length) { results.push({ stream, skipped: 'no members with an email on this stream' }); continue; }
 
       const pr = await fetch(
-        // batch.desc puts the idealista news posts (batch 100, api/_lk_news.js) first, because news
-      // goes stale; the written posts follow in day order as before.
-      `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&audience=eq.${stream}&language=eq.en&order=batch.desc,day.asc&limit=1&select=*`,
+        // 19 November 2026, Pratik: the team's LinkedIn content comes from the idealista digest
+        // only, because those stories are checked and current. So only the news posts (batch
+        // 100, api/_lk_news.js) can be sent; an older written post is never sent, even if it
+        // was approved.
+      `${url}/rest/v1/linkedin_posts?status=eq.approved&sent_at=is.null&batch=eq.${NEWS_BATCH}&audience=eq.${stream}&language=eq.en&order=day.asc&limit=1&select=*`,
         { headers: H });
       if (!pr.ok) return res.status(500).json({ error: `Supabase posts ${pr.status}: ${await pr.text()}` });
       const post = (await pr.json())[0];

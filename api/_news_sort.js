@@ -5,8 +5,8 @@
 // nothing and an edited one is translated from the edit.
 
 export const CHANNEL_LANGS = ['en', 'no', 'sv', 'de', 'fr', 'nl'];
-const LANG_NAME = { no: 'Norwegian (Bokmål)', sv: 'Swedish', de: 'German', fr: 'French', nl: 'Dutch' };
-const LANG_RULES = {
+export const LANG_NAME = { no: 'Norwegian (Bokmål)', sv: 'Swedish', de: 'German', fr: 'French', nl: 'Dutch' };
+export const LANG_RULES = {
   no: 'address the reader as "du"; thousands with a space (49 319), decimals with a comma, a non-breaking space before % (3,4 %)',
   sv: 'address the reader as "du"; thousands with a space (49 319), decimals with a comma, a space before % (3,4 %)',
   de: 'address the reader as "Sie"; thousands with a period (49.319), decimals with a comma, a space before % (3,4 %)',
