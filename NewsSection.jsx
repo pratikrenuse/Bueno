@@ -47,30 +47,32 @@ export default function NewsSection() {
 
   return (
     <section className="h7-news" id="news" aria-labelledby="h7-news-title">
-      <div className="h7-wrap">
-        <div className="h7-news-top">
-          <div className="h7-head">
-            <h2 id="h7-news-title">{t('home2.news_title')}</h2>
-            <p>{t('home2.news_sub')}</p>
-          </div>
-          <div className="h7-news-live" role="status">
+      <div className="h7-wrap h7-news-wrap">
+        <header className="h7-news-head">
+          <h2 id="h7-news-title">{t('home2.news_title')}</h2>
+          <p>{t('home2.news_sub')}</p>
+          <p className="h7-news-live" role="status">
             <span className="h7-news-dot" aria-hidden="true" />
-            <div>
-              <p className="h7-news-live-a">{t('home2.news_live')}</p>
-              {updatedOn && <p className="h7-news-live-b">{t('home2.news_updated').replace('{date}', updatedOn)}</p>}
-            </div>
-          </div>
-        </div>
-        <div className="h7-news-grid">
+            <span>
+              {t('home2.news_live')}
+              {updatedOn && <> {t('home2.news_updated').replace('{date}', updatedOn)}</>}
+            </span>
+          </p>
+        </header>
+        <ol className="h7-news-list">
           {stories.map((s) => (
-            <article key={s.id} className="h7-news-item" lang={locale}>
-              <time dateTime={s.date}>{formatDate(s.date, locale)}</time>
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-              {s.proposal && <p className="h7-news-flag">{t('home2.news_proposal')}</p>}
-            </article>
+            <li key={s.id}>
+              <article className="h7-news-item" lang={locale}>
+                <time dateTime={s.date}>{formatDate(s.date, locale)}</time>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                  {s.proposal && <p className="h7-news-flag">{t('home2.news_proposal')}</p>}
+                </div>
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
         <div className="h7-news-follow">
           <p>{t('home2.news_follow')}</p>
           <a className="h7-btn h7-btn-navy" href={whatsappChannel(locale)} target="_blank" rel="noopener">

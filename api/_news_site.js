@@ -34,8 +34,11 @@ export const SHOW = 6;          // stories on the page
 export const MIN_SCORE = 4;     // the same bar as the LinkedIn posts (api/_lk_news.js)
 export const DAYS = 21;         // nothing older than three weeks
 const LOCK_MS = 3 * 60 * 1000;  // a lock older than this belongs to a run that died
-const BUDGET_MS = 40000;
-const PER_CALL = 3;
+// One story per Claude call, and no new call after 20 seconds: a story in six languages takes
+// Claude about 15 to 30 seconds, and Vercel stops the function at 60. Three stories in one
+// call ran past that (19 November 2026), so the run was killed before it saved anything.
+const BUDGET_MS = 20000;
+const PER_CALL = 1;
 const SITE = 'https://www.247spain.es';
 
 export const englishOf = (row) => (row.edited_en && row.edited_en.trim()) ? row.edited_en : (row.en || '');
@@ -134,7 +137,7 @@ export async function translateMissing({ budgetMs = BUDGET_MS } = {}) {
   for (let i = 0; i < mine.length; i += PER_CALL) {
     const batch = mine.slice(i, i + PER_CALL);
     if (Date.now() - started > budgetMs) { for (const r of batch) await unlock(r.id); continue; }
-    const r = await callClaude(sitePrompt(batch), { maxTokens: 8000 });
+    const r = await callClaude(sitePrompt(batch), { maxTokens: 3000 });
     const j = r.ok ? parseJson(r.text) : null;
     for (const row of batch) {
       const checked = j ? checkCopy(j[row.id]) : { error: r.ok ? 'the answer could not be read' : r.error };
